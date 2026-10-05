@@ -8,22 +8,27 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/device/BillingPlatformUtils.tsx");
 
 export const isPremiumGiftingSupported = function isPremiumGiftingSupported() {
-  return !MetaQuestUtils.isMetaQuest();
+  const obj = MetaQuestUtils;
+  return !obj.isMetaQuest();
 };
 export const isGooglePlayBillingSupported = function isGooglePlayBillingSupported() {
-  let isAndroidResult = PlatformUtils.isAndroid();
+  const obj = PlatformUtils;
+  let isAndroidResult = obj.isAndroid();
   if (isAndroidResult) {
-    isAndroidResult = !MetaQuestUtils.isMetaQuest();
     const tmpResult = MetaQuestUtils;
+    isAndroidResult = !tmpResult.isMetaQuest();
   }
   return isAndroidResult;
 };
 export const isCollectibleGiftingSupported = function isCollectibleGiftingSupported() {
-  return !MetaQuestUtils.isMetaQuest();
+  const obj = MetaQuestUtils;
+  return !obj.isMetaQuest();
 };
 export const isSocialLayerStorefrontGiftingSupported = function isSocialLayerStorefrontGiftingSupported() {
-  return !MetaQuestUtils.isMetaQuest();
+  const obj = MetaQuestUtils;
+  return !obj.isMetaQuest();
 };
 export const isSocialLayerStorefrontPurchaseSupported = function isSocialLayerStorefrontPurchaseSupported() {
-  return !MetaQuestUtils.isMetaQuest();
+  const obj = MetaQuestUtils;
+  return !obj.isMetaQuest();
 };

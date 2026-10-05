@@ -1,41 +1,41 @@
 // === Module 7104: ConversationVisibilityStore ===
 
 // Module 7104 (ConversationVisibilityStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
+import size from "module_2" /* 2 */;
 
-const highlightingEnabled = true;
-const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
+let flag = true;
+const DeviceSettingsStore = get_initializedDefault.DeviceSettingsStore;
 class ConversationVisibilityStore extends DeviceSettingsStore {
+  initialize(highlightingEnabled) {
+    flag = undefined;
+    if (highlightingEnabled != null) {
+      flag = highlightingEnabled.highlightingEnabled;
+    }
+    if (flag == null) {
+      flag = true;
+    }
+  }
+  isHighlightingEnabled() {
+    return flag;
+  }
+  getState() {
+    return { highlightingEnabled: flag };
+  }
+  getUserAgnosticState() {
+    return { highlightingEnabled: flag };
+  }
 }
 const prototype = ConversationVisibilityStore.prototype;
-prototype["initialize"] = function initialize(highlightingEnabled) {
-  let flag;
-  if (highlightingEnabled != null) {
-    flag = highlightingEnabled.highlightingEnabled;
-  }
-  if (flag == null) {
-    flag = true;
-  }
-  closure_0 = flag;
-};
-prototype["isHighlightingEnabled"] = function isHighlightingEnabled() {
-  return closure_0;
-};
-prototype["getState"] = function getState() {
-  return { highlightingEnabled };
-};
-prototype["getUserAgnosticState"] = function getUserAgnosticState() {
-  return { highlightingEnabled };
-};
 ConversationVisibilityStore.displayName = "ConversationVisibilityStore";
 ConversationVisibilityStore.persistKey = "ConversationVisibilityStore";
-const conversationVisibilityStore = new ConversationVisibilityStore(DispatcherDefault, {
+const obj = {
   CONVERSATIONS_TOGGLE_HIGHLIGHTING: function handleToggleHighlighting() {
-    closure_0 = !closure_0;
+
   }
-});
-const size = fn(2);
+};
+const conversationVisibilityStore = new ConversationVisibilityStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/conversations/ConversationVisibilityStore.tsx");
 
 export default conversationVisibilityStore;

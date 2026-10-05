@@ -1,65 +1,55 @@
 // === Module 5311: PremiumPaymentModalStore ===
 
 // Module 5311 (PremiumPaymentModalStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5312 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
 function handleSubscribeFailure(error) {
-  error = error.error;
+  billingError = error.error;
 }
 function handleClearError() {
-  error = null;
+  billingError = null;
 }
-let error = null;
+let billingError = null;
 let code = null;
 let skuId = null;
 let loadId = null;
 let c6 = false;
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class PremiumPaymentModalStore extends Store {
+  getGiftCode(arg0) {
+    let tmp = null;
+    if (arg0 === skuId) {
+      tmp = code;
+    }
+    return tmp;
+  }
+  isGiftCodeDeliveryReady(arg0) {
+    return null != arg0 && arg0 === loadId && c6;
+  }
 }
-const prototype = PremiumPaymentModalStore.prototype;
-Object.defineProperty(prototype, "paymentError", {
+Object.defineProperty(PremiumPaymentModalStore.prototype, "paymentError", {
   get: function paymentError() {
-    return error;
+    return billingError;
   },
   set: undefined
 });
-prototype["getGiftCode"] = function getGiftCode(arg0) {
-  let tmp = null;
-  if (arg0 === skuId) {
-    tmp = code;
-  }
-  return tmp;
-};
-prototype["isGiftCodeDeliveryReady"] = function isGiftCodeDeliveryReady(arg0) {
-  let tmp = null != arg0;
-  if (tmp) {
-    tmp = arg0 === loadId;
-  }
-  if (tmp) {
-    tmp = c6;
-  }
-  return tmp;
-};
 PremiumPaymentModalStore.displayName = "PremiumPaymentModalStore";
-const premiumPaymentModalStore = new PremiumPaymentModalStore(DispatcherDefault, {
+const obj = {
   PREMIUM_PAYMENT_SUBSCRIBE_FAIL: handleSubscribeFailure,
   PREMIUM_PAYMENT_UPDATE_FAIL: handleSubscribeFailure,
   PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: function handleSubscribeSuccess() {
-    error = null;
+    billingError = null;
   },
   PREMIUM_PAYMENT_UPDATE_SUCCESS: handleClearError,
   PREMIUM_PAYMENT_ERROR_CLEAR: handleClearError,
   BRAINTREE_TOKENIZE_PAYPAL_FAIL: function handlePayPalTokenizeFailure(message) {
-    const billingError = new V6OrEarlierAPIError.BillingError(message.message);
-    error = billingError;
+    billingError = new V6OrEarlierAPIError.BillingError(message.message);
   },
   BRAINTREE_TOKENIZE_VENMO_FAIL: function handleVenmoTokenizeFailure(message) {
-    const billingError = new V6OrEarlierAPIError.BillingError(message.message);
-    error = billingError;
+    billingError = new V6OrEarlierAPIError.BillingError(message.message);
   },
   SKU_PURCHASE_START: function handleSKUPurchaseStart(isGift) {
     let tmp = null;
@@ -75,16 +65,13 @@ const premiumPaymentModalStore = new PremiumPaymentModalStore(DispatcherDefault,
   },
   SKU_PURCHASE_SUCCESS: function handleSKUPurchaseSuccess(loadId) {
     ({ giftCode: code, skuId } = loadId);
-    let tmp = null != loadId.loadId;
-    if (tmp) {
-      tmp = loadId.loadId === loadId;
-    }
+    const tmp = null != loadId.loadId && loadId.loadId === loadId;
     if (tmp) {
       c6 = true;
     }
   },
   SKU_PURCHASE_FAIL: function handleSKUPurchaseFail(error) {
-    error = error.error;
+    billingError = error.error;
   },
   SKU_PURCHASE_AWAIT_CONFIRMATION: function handleSKUPurchaseAwaitConfirmation(isGift) {
     if (isGift.isGift) {
@@ -107,8 +94,8 @@ const premiumPaymentModalStore = new PremiumPaymentModalStore(DispatcherDefault,
       c6 = true;
     }
   }
-});
-const size = fn(2);
+};
+const premiumPaymentModalStore = new PremiumPaymentModalStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("stores/PremiumPaymentModalStore.tsx");
 
 export default premiumPaymentModalStore;

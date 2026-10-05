@@ -1,64 +1,74 @@
 // === Module 12082: ChatInputGuardMessageRequest ===
 
 // Module 12082 (ChatInputGuardMessageRequest)
+import Fragment from "Fragment" /* 21 */;
 import ChatInputGuardDefault from "ChatInputGuard" /* 12090 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "module_19" /* 19 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
+let c1, channel, dependencyMap, id, importDefault, navigation;
 
-const require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardMessageRequest.tsx");
-
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
-  const cResult = require("c").c(29);
+const jsx = Fragment.jsx;
+const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+  let acceptMessageRequest;
+  let first;
+  let isAcceptLoading;
+  let isOptimisticAccepted;
+  let isOptimisticRejected;
+  let isRejectLoading;
+  let isUserProfileLoading;
+  let obj5;
+  let tmp10;
+  let tmp8;
+  const tmp = channel;
+  const tmp2 = acceptMessageRequest;
+  let obj = channel(acceptMessageRequest[5]);
+  const cResult = obj.c(29);
   channel = channel.channel;
-  _require = channel;
-  let obj = require("c");
-  const navigation = require("useNavigation").useNavigation();
-  let obj2 = require("useNavigation");
-  const isMessageRequestRestrictedViewer = require("useIsMessageRequestRestrictedViewer").useIsMessageRequestRestrictedViewer();
+  let obj2 = channel(acceptMessageRequest[6]);
+  navigation = obj2.useNavigation();
+  let obj3 = channel(acceptMessageRequest[7]);
+  const isMessageRequestRestrictedViewer = obj3.useIsMessageRequestRestrictedViewer();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== channel) {
     const fn = function c() {
-      return UserStore.getUser(recipientId.getRecipientId());
+      return UserStore.getUser(channel.getRecipientId());
     };
     cResult[1] = channel;
     cResult[2] = fn;
-    let tmp8 = fn;
+    tmp8 = fn;
   } else {
     tmp8 = cResult[2];
   }
-  let obj3 = require("useIsMessageRequestRestrictedViewer");
-  const stateFromStores = require("initialize").useStateFromStores(first, tmp8);
+  const tmpResult = tmp(tmp2[8]);
+  const stateFromStores = tmpResult.useStateFromStores(first, tmp8);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function y() {
-      const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
-      const intl = recipientId(acceptMessageRequest[10]).intl;
-      obj2.content = intl.string(recipientId(acceptMessageRequest[10]).t["EDYbS+"]);
-      obj2.icon = navigation(acceptMessageRequest[11]);
-      navigation(acceptMessageRequest[9]).open(obj2);
+      let intl;
+      const obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: intl.string(channel(acceptMessageRequest[10]).t["EDYbS+"]), icon: navigation(acceptMessageRequest[11]) };
+      const open = navigation(acceptMessageRequest[9]).open;
+      navigation(acceptMessageRequest[9]);
+      intl = channel(acceptMessageRequest[10]).intl;
+      open(obj);
     };
     cResult[3] = fn2;
-    let tmp10 = fn2;
+    tmp10 = fn2;
   } else {
     tmp10 = cResult[3];
   }
   if (cResult[4] !== navigation) {
     class S {
       constructor() {
-        arr = closure_1.pop();
-        return;
+        navigation.pop();
       }
     }
     cResult[4] = navigation;
@@ -66,192 +76,150 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
   } else {
     class S {
       constructor() {
-        arr = closure_1.pop();
-        return;
+        navigation.pop();
       }
     }
   }
   if (cResult[6] === S) {
     class S {
       constructor() {
-        arr = closure_1.pop();
-        return;
+        navigation.pop();
       }
     }
-    const messageRequestActions = tmp(tmp2[12]).useMessageRequestActions(obj5);
+    const tmpResult2 = tmp(tmp2[12]);
+    const messageRequestActions = tmpResult2.useMessageRequestActions(obj5);
     acceptMessageRequest = messageRequestActions.acceptMessageRequest;
     const rejectMessageRequest = messageRequestActions.rejectMessageRequest;
     ({ isAcceptLoading, isRejectLoading, isUserProfileLoading, isOptimisticAccepted, isOptimisticRejected } = messageRequestActions);
-    if (!isAcceptLoading) {
-      class S {
-        constructor() {
-          arr = closure_1.pop();
-          return;
-        }
-      }
-    }
-    if (!isAcceptLoading) {
-      class S {
-        constructor() {
-          arr = closure_1.pop();
-          return;
-        }
-      }
-    }
-    if (!isAcceptLoading) {
-      class S {
-        constructor() {
-          arr = closure_1.pop();
-          return;
-        }
-      }
-    }
-    if (!isAcceptLoading) {
-      class S {
-        constructor() {
-          arr = closure_1.pop();
-          return;
-        }
-      }
-    }
+    const tmp13 = isAcceptLoading || isRejectLoading || isUserProfileLoading || isOptimisticAccepted || isOptimisticRejected;
     if (cResult[9] === acceptMessageRequest) {
       class S {
         constructor() {
-          arr = closure_1.pop();
-          return;
+          navigation.pop();
         }
       }
       if (cResult[12] === channel.id) {
+        let tmp18;
+        let tmp23;
         class S {
           constructor() {
-            arr = closure_1.pop();
-            return;
+            navigation.pop();
           }
         }
         const _Symbol = Symbol;
         if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
           class S {
             constructor() {
-              arr = closure_1.pop();
-              return;
+              navigation.pop();
             }
           }
           const stringResult = obj7.string(tmp(tmp2[10]).t["e/eQVB"]);
           cResult[15] = stringResult;
-          const tmp18 = stringResult;
+          tmp18 = stringResult;
         } else {
           class S {
             constructor() {
-              arr = closure_1.pop();
-              return;
+              navigation.pop();
             }
           }
         }
         if (cResult[16] !== isMessageRequestRestrictedViewer) {
           class S {
             constructor() {
-              arr = closure_1.pop();
-              return;
+              navigation.pop();
             }
           }
+          const string = tmp21.string;
           const t = tmp(tmp2[10]).t;
-          const stringResult1 = obj8.string(isMessageRequestRestrictedViewer ? t.YQ0uUE : t.HcVzGI);
           cResult[16] = isMessageRequestRestrictedViewer;
-          cResult[17] = stringResult1;
+          cResult[17] = string(isMessageRequestRestrictedViewer ? t.YQ0uUE : t.HcVzGI);
+          const stringResult1 = string(isMessageRequestRestrictedViewer ? t.YQ0uUE : t.HcVzGI);
         } else {
           class S {
             constructor() {
-              arr = closure_1.pop();
-              return;
+              navigation.pop();
             }
-          }
-          const _Symbol2 = Symbol;
-          if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-            class S {
-              constructor() {
-                arr = closure_1.pop();
-                return;
-              }
-            }
-            const stringResult2 = obj9.string(tmp(tmp2[10]).t.Kz8Pwr);
-            cResult[18] = stringResult2;
-            const tmp23 = stringResult2;
-          } else {
-            class S {
-              constructor() {
-                arr = closure_1.pop();
-                return;
-              }
-            }
-          }
-          if (!isAcceptLoading) {
-            class S {
-              constructor() {
-                arr = closure_1.pop();
-                return;
-              }
-            }
-          }
-          if (!isAcceptLoading) {
-            class S {
-              constructor() {
-                arr = closure_1.pop();
-                return;
-              }
-            }
-          }
-          if (cResult[19] !== isMessageRequestRestrictedViewer) {
-            class S {
-              constructor() {
-                arr = closure_1.pop();
-                return;
-              }
-            }
-            const t2 = tmp(tmp2[10]).t;
-            const stringResult3 = obj10.string(isMessageRequestRestrictedViewer ? t2.BVN4pL : t2.B2nygW);
-            cResult[19] = isMessageRequestRestrictedViewer;
-            cResult[20] = stringResult3;
-          } else {
-            class S {
-              constructor() {
-                arr = closure_1.pop();
-                return;
-              }
-            }
-            if (!isRejectLoading) {
-              class S {
-                constructor() {
-                  arr = closure_1.pop();
-                  return;
-                }
-              }
-            }
-            if (cResult[21] === isAcceptLoading) {
-              class S {
-                constructor() {
-                  arr = closure_1.pop();
-                  return;
-                }
-              }
-            }
-            let obj4 = { type: "button-action", message: tmp18, subtext: tmp20, buttonPrimaryText: tmp23, buttonPrimaryOnPress: tmp14, buttonPrimaryDisabled: isAcceptLoading, buttonPrimaryLoading: isAcceptLoading, buttonSecondaryText: tmp25, buttonSecondaryOnPress: tmp16, buttonSecondaryDisabled: isAcceptLoading, buttonSecondaryLoading: isRejectLoading };
-            const tmp31 = jsx(navigation(tmp2[14]), { type: "button-action", message: tmp18, subtext: tmp20, buttonPrimaryText: tmp23, buttonPrimaryOnPress: tmp14, buttonPrimaryDisabled: isAcceptLoading, buttonPrimaryLoading: isAcceptLoading, buttonSecondaryText: tmp25, buttonSecondaryOnPress: tmp16, buttonSecondaryDisabled: isAcceptLoading, buttonSecondaryLoading: isRejectLoading });
-            cResult[21] = isAcceptLoading;
-            cResult[22] = tmp14;
-            cResult[23] = tmp16;
-            cResult[24] = isAcceptLoading;
-            cResult[25] = tmp25;
-            cResult[26] = isRejectLoading;
-            cResult[27] = tmp20;
-            cResult[28] = tmp31;
           }
         }
+        const _Symbol2 = Symbol;
+        if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
+          class S {
+            constructor() {
+              navigation.pop();
+            }
+          }
+          const stringResult2 = obj8.string(tmp(tmp2[10]).t.Kz8Pwr);
+          cResult[18] = stringResult2;
+          tmp23 = stringResult2;
+        } else {
+          class S {
+            constructor() {
+              navigation.pop();
+            }
+          }
+        }
+        if (!isAcceptLoading) {
+          class S {
+            constructor() {
+              navigation.pop();
+            }
+          }
+        }
+        if (!isAcceptLoading) {
+          class S {
+            constructor() {
+              navigation.pop();
+            }
+          }
+        }
+        if (cResult[19] !== isMessageRequestRestrictedViewer) {
+          class S {
+            constructor() {
+              navigation.pop();
+            }
+          }
+          const string2 = tmp26.string;
+          const t2 = tmp(tmp2[10]).t;
+          cResult[19] = isMessageRequestRestrictedViewer;
+          cResult[20] = string2(isMessageRequestRestrictedViewer ? t2.BVN4pL : t2.B2nygW);
+          const string2Result = string2(isMessageRequestRestrictedViewer ? t2.BVN4pL : t2.B2nygW);
+        } else {
+          class S {
+            constructor() {
+              navigation.pop();
+            }
+          }
+        }
+        if (!isRejectLoading) {
+          class S {
+            constructor() {
+              navigation.pop();
+            }
+          }
+        }
+        if (cResult[21] === tmp13) {
+          class S {
+            constructor() {
+              navigation.pop();
+            }
+          }
+        }
+        cResult[21] = tmp13;
+        cResult[22] = tmp14;
+        cResult[23] = tmp16;
+        cResult[24] = isAcceptLoading;
+        cResult[25] = tmp25;
+        cResult[26] = isRejectLoading;
+        cResult[27] = tmp20;
+        cResult[28] = jsx(navigation(tmp2[14]), { type: "button-action", message: tmp18, subtext: tmp20, buttonPrimaryText: tmp23, buttonPrimaryOnPress: tmp14, buttonPrimaryDisabled: tmp13, buttonPrimaryLoading: isAcceptLoading, buttonSecondaryText: tmp25, buttonSecondaryOnPress: tmp16, buttonSecondaryDisabled: tmp13, buttonSecondaryLoading: isRejectLoading });
+        const tmp31 = jsx(navigation(tmp2[14]), { type: "button-action", message: tmp18, subtext: tmp20, buttonPrimaryText: tmp23, buttonPrimaryOnPress: tmp14, buttonPrimaryDisabled: tmp13, buttonPrimaryLoading: isAcceptLoading, buttonSecondaryText: tmp25, buttonSecondaryOnPress: tmp16, buttonSecondaryDisabled: tmp13, buttonSecondaryLoading: isRejectLoading });
       }
-      _require = rejectMessageRequest(function*(arg0) {
+      let closure_0 = rejectMessageRequest(function*(arg0) {
+        closure_0 = arg0;
         if (c1 === 2) {
           c1 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
+        } else if (tmp2 === 3) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
@@ -289,31 +257,26 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
               c1 = 3;
               return { value: "IconComponent", done: null };
             }
-          } catch (tmp9) {
-            c1 = tmp;
-            throw tmp9;
+          } catch (tmp8) {
+            c1 = 3;
+            throw tmp8;
           }
         }
       });
       function onRejectClick() {
-        const self = this;
-        const apply = closure_0.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
+        return closure_0(...arguments);
       }
       cResult[12] = channel.id;
       cResult[13] = rejectMessageRequest;
       cResult[14] = onRejectClick;
     }
-    _require = rejectMessageRequest(function*(arg0) {
+    closure_0 = rejectMessageRequest(function*(arg0) {
+      let v1;
+      closure_0 = arg0;
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+      } else if (tmp2 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -334,7 +297,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              closure_1 = tmp4;
+              let closure_1 = tmp3;
               closure_0.stopPropagation();
               v1 = 1;
               c3 = 1;
@@ -349,230 +312,219 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
             const obj5 = { value, done: true };
             return obj5;
           } else {
-            closure_0(acceptMessageRequest[13]).transitionToChannel(closure_0.id, { navigationReplace: true });
+            const obj = closure_0(acceptMessageRequest[13]);
+            obj.transitionToChannel(closure_0.id, { navigationReplace: true });
             c3 = 3;
             return { value: "IconComponent", done: null };
           }
-        } catch (tmp14) {
-          c3 = tmp;
-          throw tmp14;
+        } catch (tmp13) {
+          c3 = 3;
+          throw tmp13;
         }
       }
     });
     function onAcceptClick() {
-      const self = this;
-      const apply = closure_0.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
+      return closure_0(...arguments);
     }
     cResult[9] = acceptMessageRequest;
     cResult[10] = channel.id;
     cResult[11] = onAcceptClick;
-    const tmpResult2 = tmp(tmp2[12]);
   }
   obj5 = { user: stateFromStores, onError: tmp10, onRejectSuccess: S };
   cResult[6] = S;
   cResult[7] = stateFromStores;
   cResult[8] = obj5;
-  const tmpResult = require("initialize");
 }) : ((channel) => {
+  let _undefined;
+  let c2;
+  let c3;
+  let intl;
+  let intl3;
+  let isAcceptLoading;
+  let isOptimisticAccepted;
+  let isOptimisticRejected;
+  let isRejectLoading;
+  let isUserProfileLoading;
+  let string;
+  let string2;
+  let t;
+  let t2;
   channel = channel.channel;
   dependencyMap = undefined;
   c3 = undefined;
-  closure_4 = async function _onAcceptClick2(arg0) {
-    if (c3 === 2) {
-      c3 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+  let obj = function _onAcceptClick2() {
+    obj = _asyncToGenerator(async (arg0) => {
+      let closure_0;
+      id = arg0;
+      if (c3 === 2) {
+        c3 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp2 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "IconComponent", done: null };
+        }
       } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
+        try {
+          c3 = 2;
+          if (0 === c2) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              closure_1 = tmp3;
+              id.stopPropagation();
+              c2 = 1;
+              c3 = 1;
+              const obj4 = { value: _undefined(id.id), done: false };
+              return obj4;
+            }
+          } else if (arg0 === 1) {
             c3 = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
-            closure_1 = tmp4;
-            channel.stopPropagation();
-            c2 = 1;
-            c3 = 1;
-            const obj4 = { value: _undefined(id.id), done: false };
-            return obj4;
+            obj = id(c2[13]);
+            obj.transitionToChannel(closure_129_0.id, { navigationReplace: true });
+            c3 = 3;
+            return { value: "IconComponent", done: null };
           }
-        } else if (arg0 === 1) {
+        } catch (tmp13) {
           c3 = 3;
+          throw tmp13;
+        }
+      }
+    });
+    return obj(...arguments);
+  };
+  obj = function _onRejectClick2() {
+    obj = _asyncToGenerator(async (arg0) => {
+      let closure_0;
+      id = arg0;
+      if (c1 === 2) {
+        c1 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp2 === 3) {
+        if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          c3 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
-          channel(c2[13]).transitionToChannel(closure_129_0.id, { navigationReplace: true });
-          c3 = 3;
           return { value: "IconComponent", done: null };
         }
-      } catch (tmp14) {
-        c3 = tmp;
-        throw tmp14;
-      }
-    }
-  };
-  closure_5 = async function _onRejectClick2(arg0) {
-    if (c1 === 2) {
-      c1 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
       } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c1 = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
+        try {
+          c1 = 2;
+          if (0 === c2) {
+            if (arg0 === 1) {
+              c1 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c1 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              id.stopPropagation();
+              c2 = 1;
+              c1 = 1;
+              const obj4 = { value: _undefined(id.id), done: false };
+              return obj4;
+            }
+          } else if (arg0 === 1) {
             c1 = 3;
             throw value;
           } else if (arg0 === 2) {
             c1 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            obj = { value, done: true };
+            return obj;
           } else {
-            channel.stopPropagation();
-            c2 = 1;
-            c1 = 1;
-            const obj4 = { value: asyncGeneratorStep(id.id), done: false };
-            return obj4;
+            c1 = 3;
+            return { value: "IconComponent", done: null };
           }
-        } else if (arg0 === 1) {
+        } catch (tmp8) {
           c1 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c1 = 3;
-          const obj = { value, done: true };
-          return obj;
-        } else {
-          c1 = 3;
-          return { value: "IconComponent", done: null };
+          throw tmp8;
         }
-      } catch (tmp9) {
-        c1 = tmp;
-        throw tmp9;
       }
-    }
+    });
+    return obj(...arguments);
   };
-  importDefault = channel(1490).useNavigation();
-  let obj = channel(1490);
-  const isMessageRequestRestrictedViewer = channel(12083).useIsMessageRequestRestrictedViewer();
+  const tmp = channel;
+  const tmp2 = dependencyMap;
+  obj = channel(1490);
+  importDefault = obj.useNavigation();
   let obj2 = channel(12083);
-  const items = [closure_4];
-  const stateFromStores = channel(504).useStateFromStores(items, () => UserStore.getUser(channel.getRecipientId()));
+  const isMessageRequestRestrictedViewer = obj2.useIsMessageRequestRestrictedViewer();
   let obj3 = channel(504);
-  const messageRequestActions = channel(12084).useMessageRequestActions({
-    user: stateFromStores,
-    onError: function handleRequestError() {
-      const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
-      const intl = channel(_undefined[10]).intl;
-      obj2.content = intl.string(channel(_undefined[10]).t["EDYbS+"]);
-      obj2.icon = closure_1(_undefined[11]);
-      closure_1(_undefined[9]).open(obj2);
-    },
-    onRejectSuccess: function handleRejectSuccess() {
-      closure_1.pop();
-    }
-  });
-  ({ acceptMessageRequest: c2, rejectMessageRequest: c3, isAcceptLoading, isRejectLoading, isUserProfileLoading, isOptimisticAccepted, isOptimisticRejected } = messageRequestActions);
-  let tmp6 = isAcceptLoading;
-  if (!isAcceptLoading) {
-    tmp6 = isRejectLoading;
-  }
-  if (!tmp6) {
-    tmp6 = isUserProfileLoading;
-  }
-  if (!tmp6) {
-    tmp6 = isOptimisticAccepted;
-  }
-  if (!tmp6) {
-    tmp6 = isOptimisticRejected;
-  }
-  const obj6 = { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null };
+  const items = [obj];
+  const stateFromStores = obj3.useStateFromStores(items, () => UserStore.getUser(channel.getRecipientId()));
   let obj4 = channel(12084);
   let obj5 = {
     user: stateFromStores,
     onError: function handleRequestError() {
-      const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
-      const intl = channel(_undefined[10]).intl;
-      obj2.content = intl.string(channel(_undefined[10]).t["EDYbS+"]);
-      obj2.icon = closure_1(_undefined[11]);
-      closure_1(_undefined[9]).open(obj2);
+      let intl;
+      obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: intl.string(channel(c2[10]).t["EDYbS+"]), icon: closure_1(c2[11]) };
+      const open = closure_1(c2[9]).open;
+      closure_1(c2[9]);
+      intl = channel(c2[10]).intl;
+      open(obj);
     },
     onRejectSuccess: function handleRejectSuccess() {
       closure_1.pop();
     }
   };
-  const tmp7 = closure_5;
-  let intl = tmp(1126).intl;
-  obj6.message = intl.string(channel(1126).t["e/eQVB"]);
-  const intl2 = tmp(1126).intl;
-  const t = tmp(1126).t;
-  obj6.subtext = intl2.string(isMessageRequestRestrictedViewer ? t.YQ0uUE : t.HcVzGI);
-  const intl3 = tmp(1126).intl;
-  obj6.buttonPrimaryText = intl3.string(channel(1126).t.Kz8Pwr);
-  obj6.buttonPrimaryOnPress = function onAcceptClick(arg0) {
-    const self = this;
-    const apply = closure_4.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
+  const messageRequestActions = obj4.useMessageRequestActions(obj5);
+  ({ acceptMessageRequest: c2, rejectMessageRequest: c3, isAcceptLoading, isRejectLoading, isUserProfileLoading, isOptimisticAccepted, isOptimisticRejected } = messageRequestActions);
+  const obj6 = {
+    type: "button-action",
+    message: intl.string(tmp(1126).t["e/eQVB"]),
+    subtext: string(isMessageRequestRestrictedViewer ? t.YQ0uUE : t.HcVzGI),
+    buttonPrimaryText: intl3.string(tmp(1126).t.Kz8Pwr),
+    buttonPrimaryOnPress: function onAcceptClick(arg0) {
+      return obj(...arguments);
+    },
+    buttonPrimaryDisabled: isAcceptLoading || isRejectLoading || isUserProfileLoading || isOptimisticAccepted || isOptimisticRejected,
+    buttonPrimaryLoading: isAcceptLoading,
+    buttonSecondaryText: string2(isMessageRequestRestrictedViewer ? t2.BVN4pL : t2.B2nygW),
+    buttonSecondaryOnPress: function onRejectClick(arg0) {
+      return obj(...arguments);
+    },
+    buttonSecondaryDisabled: isAcceptLoading || isRejectLoading || isUserProfileLoading || isOptimisticAccepted || isOptimisticRejected,
+    buttonSecondaryLoading: isRejectLoading
   };
-  obj6.buttonPrimaryDisabled = tmp6;
+  const tmp8 = ChatInputGuardDefault;
+  intl = tmp(1126).intl;
+  const intl2 = tmp(1126).intl;
+  string = intl2.string;
+  t = tmp(1126).t;
+  intl3 = tmp(1126).intl;
+  const tmp7 = obj;
   if (!isAcceptLoading) {
     isAcceptLoading = isUserProfileLoading;
   }
   if (!isAcceptLoading) {
     isAcceptLoading = isOptimisticAccepted;
   }
-  obj6.buttonPrimaryLoading = isAcceptLoading;
   const intl4 = tmp(1126).intl;
-  const t2 = tmp(1126).t;
-  obj6.buttonSecondaryText = intl4.string(isMessageRequestRestrictedViewer ? t2.BVN4pL : t2.B2nygW);
-  obj6.buttonSecondaryOnPress = function onRejectClick(arg0) {
-    const self = this;
-    const apply = closure_5.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  };
-  obj6.buttonSecondaryDisabled = tmp6;
+  string2 = intl4.string;
+  t2 = tmp(1126).t;
   if (!isRejectLoading) {
     isRejectLoading = isOptimisticRejected;
   }
-  obj6.buttonSecondaryLoading = isRejectLoading;
-  return tmp7(ChatInputGuardDefault, obj6);
+  return tmp7(tmp8, obj6);
 }));
+const result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardMessageRequest.tsx");
+
+export default memoResult;

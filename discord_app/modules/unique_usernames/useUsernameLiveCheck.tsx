@@ -4,26 +4,36 @@
 import _mod12 from "module_12" /* 12 */;
 import UniqueUsernamesActionCreatorsDefault from "UniqueUsernamesActionCreators" /* 14520 */;
 import UniqueUsernamesUtils from "UniqueUsernamesUtils" /* 14521 */;
-import noop from "module_19" /* 19 */;
+import react_mod from "react" /* 19 */;
 import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14519 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, dependencyMap;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/unique_usernames/useUsernameLiveCheck.tsx");
-
-export const useUsernameLiveCheck = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2, arg3) => {
+let react = react_mod;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2, arg3) => {
+  let closure_0;
+  let closure_2;
+  let closure_3;
+  let first;
+  let stateFromStores;
+  let tmp10;
+  let tmp12;
+  let tmp13;
+  let tmp9;
   _require = arg0;
-  const cResult = require("c").c(18);
-  closure_1 = tmp4;
+  let tmp = _require;
+  const obj = require("react");
+  const cResult = obj.c(18);
+  let closure_1 = tmp4;
   dependencyMap = tmp5;
-  noop = tmp6;
+  react = tmp6;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [stateFromStores];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -35,48 +45,51 @@ export const useUsernameLiveCheck = ReactCompilerGating.isReactCompilerEnabled()
     cResult[1] = arg0;
     cResult[2] = fn;
     cResult[3] = items1;
-    let tmp10 = items1;
-    let tmp9 = fn;
+    tmp10 = items1;
+    tmp9 = fn;
   } else {
     tmp9 = cResult[2];
     tmp10 = cResult[3];
   }
-  const obj = require("c");
-  stateFromStores = require("useStateFromStores").useStateFromStores(first, tmp9, tmp10);
+  const tmpResult = tmp(573);
+  stateFromStores = tmpResult.useStateFromStores(first, tmp9, tmp10);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [stateFromStores];
     class U {
       constructor() {
-        return closure_4.isRateLimited();
+        return stateFromStores.isRateLimited();
       }
     }
     cResult[4] = items2;
     cResult[5] = U;
-    let tmp13 = U;
-    let tmp12 = items2;
+    tmp13 = U;
+    tmp12 = items2;
   } else {
     tmp12 = cResult[4];
     tmp13 = cResult[5];
   }
-  const tmpResult = require("useStateFromStores");
-  const stateFromStores1 = require("useStateFromStores").useStateFromStores(tmp12, tmp13);
+  const tmpResult3 = tmp(573);
+  const stateFromStores1 = tmpResult3.useStateFromStores(tmp12, tmp13);
   if (cResult[6] === (undefined !== arg2 && arg2)) {
-    if (cResult[7] === tmp6) {
-      let tmp16 = cResult[8];
+    let tmp16;
+    if (cResult[7] === (undefined !== arg3 && arg3)) {
+      tmp16 = cResult[8];
     }
-    closure_6 = tmp16;
-    if (cResult[9] === tmp4) {
+    let closure_6 = tmp16;
+    if (cResult[9] === (undefined === arg1 || arg1)) {
       if (cResult[10] === tmp16) {
         if (cResult[11] === stateFromStores1) {
           if (cResult[12] === arg0) {
+            let tmp18;
+            let tmp19;
             if (cResult[13] === stateFromStores) {
-              let tmp18 = cResult[14];
-              let tmp19 = cResult[15];
+              tmp18 = cResult[14];
+              tmp19 = cResult[15];
             }
-            const effect = noop.useEffect(tmp19, tmp18);
+            const effect = react.useEffect(tmp19, tmp18);
             class U {
               constructor() {
-                return closure_4.isRateLimited();
+                return stateFromStores.isRateLimited();
               }
             }
             return tmp23;
@@ -86,11 +99,11 @@ export const useUsernameLiveCheck = ReactCompilerGating.isReactCompilerEnabled()
     }
     class U {
       constructor() {
-        return closure_4.isRateLimited();
+        return stateFromStores.isRateLimited();
       }
     }
     const items3 = [tmp4, stateFromStores1, stateFromStores, arg0, tmp16];
-    cResult[9] = tmp4;
+    cResult[9] = undefined === arg1 || arg1;
     cResult[10] = tmp16;
     cResult[11] = stateFromStores1;
     cResult[12] = arg0;
@@ -100,19 +113,22 @@ export const useUsernameLiveCheck = ReactCompilerGating.isReactCompilerEnabled()
     tmp19 = tmp20;
     tmp18 = items3;
   }
-  const tmpResult3 = require("useStateFromStores");
-  const debounceResult = require("module_12").debounce((arg0) => {
+  const tmpResult4 = tmp(12);
+  const debounceResult = tmpResult4.debounce((arg0) => {
     let str = "modal";
+    const attemptUsername = UniqueUsernamesActionCreatorsDefault.attemptUsername;
+    UniqueUsernamesActionCreatorsDefault;
     if (closure_2) {
       str = "registration";
     }
-    return UniqueUsernamesActionCreatorsDefault.attemptUsername(arg0, str, closure_2, closure_3);
+    return attemptUsername(arg0, str, closure_2, closure_3);
   }, 800);
   cResult[6] = undefined !== arg2 && arg2;
   cResult[7] = undefined !== arg3 && arg3;
   cResult[8] = debounceResult;
   tmp16 = debounceResult;
 }) : ((arg0) => {
+  let closure_0;
   _require = arg0;
   let flag = arg1;
   if (arg1 === undefined) {
@@ -127,32 +143,29 @@ export const useUsernameLiveCheck = ReactCompilerGating.isReactCompilerEnabled()
     flag3 = false;
   }
   let stateFromStores;
+  let obj = require("useStateFromStores");
   const items = [stateFromStores];
   const items1 = [arg0];
-  stateFromStores = require("useStateFromStores").useStateFromStores(items, () => UniqueUsernamesStore.validate(closure_0), items1);
-  let obj = require("useStateFromStores");
+  stateFromStores = obj.useStateFromStores(items, () => UniqueUsernamesStore.validate(closure_0), items1);
   const items2 = [stateFromStores];
-  const stateFromStores1 = require("useStateFromStores").useStateFromStores(items2, () => stateFromStores.isRateLimited());
+  const obj2 = require("useStateFromStores");
+  const stateFromStores1 = obj2.useStateFromStores(items2, () => stateFromStores.isRateLimited());
   const items3 = [flag2, flag3];
-  const memo = flag3.useMemo(() => _mod12.debounce((arg0) => {
-    let str = "modal";
-    if (closure_1_2) {
-      str = "registration";
-    }
-    return flag(flag2[6]).attemptUsername(arg0, str, closure_1_2, flag3);
-  }, 800), items3);
+  const memo = flag3.useMemo(() => {
+    const obj = _mod12;
+    return obj.debounce((arg0) => {
+      let str = "modal";
+      const attemptUsername = flag(flag2[6]).attemptUsername;
+      flag(flag2[6]);
+      if (closure_1_2) {
+        str = "registration";
+      }
+      return attemptUsername(arg0, str, closure_1_2, flag3);
+    }, 800);
+  }, items3);
   const items4 = [flag, stateFromStores1, stateFromStores, arg0, memo];
   const effect = flag3.useEffect(() => {
-    let tmp = flag;
-    if (flag) {
-      tmp = !stateFromStores1;
-    }
-    if (tmp) {
-      tmp = null == stateFromStores;
-    }
-    if (tmp) {
-      tmp = "" !== closure_0;
-    }
+    const tmp = flag && !stateFromStores1 && null == stateFromStores && "" !== closure_0;
     if (tmp) {
       memo(closure_0);
     }
@@ -161,8 +174,12 @@ export const useUsernameLiveCheck = ReactCompilerGating.isReactCompilerEnabled()
   return flag3.useMemo(() => {
     let result;
     if (null != stateFromStores) {
-      result = UniqueUsernamesUtils.formatUsernameLiveCheckValidation(tmp);
+      const obj = UniqueUsernamesUtils;
+      result = obj.formatUsernameLiveCheckValidation(tmp);
     }
     return result;
   }, items5);
 });
+let result = size.fileFinishedImporting("modules/unique_usernames/useUsernameLiveCheck.tsx");
+
+export const useUsernameLiveCheck = tmp2;

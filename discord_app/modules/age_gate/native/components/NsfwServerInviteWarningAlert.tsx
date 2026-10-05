@@ -1,28 +1,35 @@
 // === Module 9425: NsfwServerInviteWarningAlert ===
 
 // Module 9425 (NsfwServerInviteWarningAlert)
+import Fragment from "Fragment" /* 21 */;
 import useAlertStore from "useAlertStore" /* 5709 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8084 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8086 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const jsx = fn(21).jsx;
+let tmp, tmp3, tmp4, tmp5, tmp9;
+
+const jsx = Fragment.jsx;
 let c5 = "nsfw-server-invite-warning";
-const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
-  const cResult = onConfirm(_confirm[3]).c(21);
-  onConfirm = onConfirm.onConfirm;
+  let _confirm;
+  let description;
+  let tmp6;
   let obj = onConfirm(_confirm[3]);
-  const dismissModalCallback = onConfirm(_confirm[4]).useDismissModalCallback();
-  let obj2 = onConfirm(_confirm[4]);
-  const gatedAgeGroup = onConfirm(_confirm[5]).useGatedAgeGroup();
+  const cResult = obj.c(21);
+  onConfirm = onConfirm.onConfirm;
+  const obj2 = onConfirm(_confirm[4]);
+  const dismissModalCallback = obj2.useDismissModalCallback();
+  const obj3 = onConfirm(_confirm[5]);
+  const gatedAgeGroup = obj3.useGatedAgeGroup();
   if (cResult[0] !== gatedAgeGroup) {
-    const nsfwServerInviteWarningVariant = tmp(_confirm[5]).getNsfwServerInviteWarningVariant(gatedAgeGroup);
+    const tmpResult = onConfirm(_confirm[5]);
+    const nsfwServerInviteWarningVariant = tmpResult.getNsfwServerInviteWarningVariant(gatedAgeGroup);
     cResult[0] = gatedAgeGroup;
     cResult[1] = nsfwServerInviteWarningVariant;
-    let tmp6 = nsfwServerInviteWarningVariant;
-    const tmpResult = tmp(_confirm[5]);
+    tmp6 = nsfwServerInviteWarningVariant;
   } else {
     tmp6 = cResult[1];
   }
@@ -30,8 +37,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
   const goBackIsPrimary = tmp6.goBackIsPrimary;
   if (cResult[2] === _confirm.joins) {
     if (cResult[3] === dismissModalCallback) {
+      let tmp8;
       if (cResult[4] === onConfirm) {
-        let tmp8 = cResult[5];
+        tmp8 = cResult[5];
       }
       let str2 = "primary";
       if (goBackIsPrimary) {
@@ -39,6 +47,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
       }
       if (cResult[6] === _confirm.text) {
         if (cResult[7] === tmp8) {
+          let tmp13;
+          let tmp15;
+          let tmp18;
+          let tmp21;
           let str4 = "secondary";
           if (goBackIsPrimary) {
             str4 = "primary";
@@ -46,53 +58,54 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
           const _Symbol = Symbol;
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
             const intl = tmp(_confirm[9]).intl;
-            const stringResult = intl.string(tmp(_confirm[9]).t["/g10LC"]);
+            const stringResult = intl.string(onConfirm(_confirm[9]).t["/g10LC"]);
             cResult[10] = stringResult;
-            let tmp13 = stringResult;
+            tmp13 = stringResult;
           } else {
             tmp13 = cResult[10];
           }
           if (cResult[11] !== str4) {
-            const obj4 = { variant: str4, text: tmp13 };
-            const tmp17 = jsx(tmp(_confirm[8]).AlertActionButton, { variant: str4, text: tmp13 }, "go-back");
+            const tmp17 = jsx(onConfirm(_confirm[8]).AlertActionButton, { variant: str4, text: tmp13 }, "go-back");
             cResult[11] = str4;
             cResult[12] = tmp17;
-            let tmp15 = tmp17;
+            tmp15 = tmp17;
           } else {
             tmp15 = cResult[12];
           }
           const _Symbol2 = Symbol;
           if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
             const intl2 = tmp(_confirm[9]).intl;
-            const stringResult1 = intl2.string(tmp(_confirm[9]).t.xi46lg);
+            const stringResult1 = intl2.string(onConfirm(_confirm[9]).t.xi46lg);
             cResult[13] = stringResult1;
-            let tmp18 = stringResult1;
+            tmp18 = stringResult1;
           } else {
             tmp18 = cResult[13];
           }
           if (cResult[14] === tmp9) {
             if (cResult[15] === tmp15) {
+              let tmp20;
               if (cResult[16] === goBackIsPrimary) {
-                if (cResult[18] === description) {
-                  if (cResult[19] === tmp20) {
-                    let tmp23 = cResult[20];
-                  }
-                  return tmp23;
-                }
-                const obj5 = { title: tmp18, content: description, actions: cResult[17] };
-                const tmp25 = jsx(tmp(_confirm[8]).AlertModal, { title: tmp18, content: description, actions: cResult[17] });
-                cResult[18] = description;
-                cResult[19] = cResult[17];
-                cResult[20] = tmp25;
-                tmp23 = tmp25;
+                tmp20 = cResult[17];
               }
+              if (cResult[18] === description) {
+                let tmp22;
+                if (cResult[19] === tmp20) {
+                  tmp22 = cResult[20];
+                }
+                return tmp22;
+              }
+              const tmp24 = jsx(onConfirm(_confirm[8]).AlertModal, { title: tmp18, content: description, actions: tmp20 });
+              cResult[18] = description;
+              cResult[19] = tmp20;
+              cResult[20] = tmp24;
+              tmp22 = tmp24;
             }
           }
           const items = [, ];
           if (goBackIsPrimary) {
             items[0] = tmp15;
             items[1] = tmp9;
-            let tmp21 = items;
+            tmp21 = items;
           } else {
             items[0] = tmp9;
             items[1] = tmp15;
@@ -103,67 +116,70 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
           class A {
             constructor() {
               if (confirm.joins) {
-                tmp7 = onConfirm;
-                tmp8 = onConfirm();
+                tmp8 = onConfirm;
+                tmp9 = onConfirm();
               } else {
                 tmp = closure_1;
                 tmp2 = closure_1();
                 tmp3 = closure_1;
                 tmp4 = closure_2;
-                obj = closure_1(closure_2[6]);
-                obj1 = { entryPoint: null };
-                tmp5 = closure_0;
-                obj1.entryPoint = closure_0(closure_2[7]).AgeVerificationModalEntryPoint.NSFW_AGE_GATE;
-                result = obj.showAgeVerificationGetStartedModal(obj1);
+                tmp5 = closure_1(closure_2[6]);
+                obj = { entryPoint: null };
+                tmp6 = closure_0;
+                showAgeVerificationGetStartedModal = tmp5.showAgeVerificationGetStartedModal;
+                obj.entryPoint = closure_0(closure_2[7]).AgeVerificationModalEntryPoint.NSFW_AGE_GATE;
+                result = showAgeVerificationGetStartedModal(obj);
               }
               return;
             }
           }
           cResult[17] = tmp21;
+          tmp20 = tmp21;
         }
       }
-      const obj6 = { variant: str2, text: _confirm.text, onPress: tmp8 };
       cResult[6] = _confirm.text;
       cResult[7] = tmp8;
       cResult[8] = str2;
-      cResult[9] = jsx(tmp(_confirm[8]).AlertActionButton, { variant: str2, text: _confirm.text, onPress: tmp8 }, "confirm");
+      cResult[9] = jsx(onConfirm(_confirm[8]).AlertActionButton, { variant: str2, text: _confirm.text, onPress: tmp8 }, "confirm");
+      jsx(onConfirm(_confirm[8]).AlertActionButton, { variant: str2, text: _confirm.text, onPress: tmp8 }, "confirm");
       class A {
         constructor() {
           if (confirm.joins) {
-            tmp7 = onConfirm;
-            tmp8 = onConfirm();
+            tmp8 = onConfirm;
+            tmp9 = onConfirm();
           } else {
             tmp = closure_1;
             tmp2 = closure_1();
             tmp3 = closure_1;
             tmp4 = closure_2;
-            obj = closure_1(closure_2[6]);
-            obj1 = { entryPoint: null };
-            tmp5 = closure_0;
-            obj1.entryPoint = closure_0(closure_2[7]).AgeVerificationModalEntryPoint.NSFW_AGE_GATE;
-            result = obj.showAgeVerificationGetStartedModal(obj1);
+            tmp5 = closure_1(closure_2[6]);
+            obj = { entryPoint: null };
+            tmp6 = closure_0;
+            showAgeVerificationGetStartedModal = tmp5.showAgeVerificationGetStartedModal;
+            obj.entryPoint = closure_0(closure_2[7]).AgeVerificationModalEntryPoint.NSFW_AGE_GATE;
+            result = showAgeVerificationGetStartedModal(obj);
           }
           return;
         }
       }
-      const tmp11 = jsx(tmp(_confirm[8]).AlertActionButton, { variant: str2, text: _confirm.text, onPress: tmp8 }, "confirm");
     }
   }
   class A {
     constructor() {
       if (confirm.joins) {
-        tmp7 = onConfirm;
-        tmp8 = onConfirm();
+        tmp8 = onConfirm;
+        tmp9 = onConfirm();
       } else {
         tmp = closure_1;
         tmp2 = closure_1();
         tmp3 = closure_1;
         tmp4 = closure_2;
-        obj = closure_1(closure_2[6]);
-        obj1 = { entryPoint: null };
-        tmp5 = closure_0;
-        obj1.entryPoint = closure_0(closure_2[7]).AgeVerificationModalEntryPoint.NSFW_AGE_GATE;
-        result = obj.showAgeVerificationGetStartedModal(obj1);
+        tmp5 = closure_1(closure_2[6]);
+        obj = { entryPoint: null };
+        tmp6 = closure_0;
+        showAgeVerificationGetStartedModal = tmp5.showAgeVerificationGetStartedModal;
+        obj.entryPoint = closure_0(closure_2[7]).AgeVerificationModalEntryPoint.NSFW_AGE_GATE;
+        result = showAgeVerificationGetStartedModal(obj);
       }
       return;
     }
@@ -173,63 +189,67 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
   cResult[4] = onConfirm;
   cResult[5] = A;
   tmp8 = A;
-  const obj3 = onConfirm(_confirm[5]);
 }) : ((onConfirm) => {
+  let tmp10;
   onConfirm = onConfirm.onConfirm;
   let _confirm;
-  const dismissModalCallback = onConfirm(_confirm[4]).useDismissModalCallback();
   let obj = onConfirm(_confirm[4]);
-  let obj2 = onConfirm(_confirm[5]);
-  const nsfwServerInviteWarningVariant = obj2.getNsfwServerInviteWarningVariant(onConfirm(_confirm[5]).useGatedAgeGroup());
+  const dismissModalCallback = obj.useDismissModalCallback();
+  const getNsfwServerInviteWarningVariant = onConfirm(_confirm[5]).getNsfwServerInviteWarningVariant;
+  onConfirm(_confirm[5]);
+  const obj2 = onConfirm(_confirm[5]);
+  const nsfwServerInviteWarningVariant = getNsfwServerInviteWarningVariant(obj2.useGatedAgeGroup());
   _confirm = nsfwServerInviteWarningVariant.confirm;
   const goBackIsPrimary = nsfwServerInviteWarningVariant.goBackIsPrimary;
   const items = [_confirm.joins, dismissModalCallback, onConfirm];
-  const callback = noop.useCallback(() => {
+  const description = nsfwServerInviteWarningVariant.description;
+  const callback = react.useCallback(() => {
     if (_confirm.joins) {
       onConfirm();
     } else {
       dismissModalCallback();
-      const obj2 = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.NSFW_AGE_GATE };
-      const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj2);
+      const obj = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.NSFW_AGE_GATE };
+      const showAgeVerificationGetStartedModal = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal;
+      AgeVerificationActionCreatorsDefault;
+      const result = showAgeVerificationGetStartedModal(obj);
     }
   }, items);
   let str = "primary";
+  const AlertActionButton = onConfirm(_confirm[8]).AlertActionButton;
   if (goBackIsPrimary) {
     str = "secondary";
   }
-  const tmp6Result = jsx(onConfirm(_confirm[8]).AlertActionButton, { variant: str, text: _confirm.text, onPress: callback }, "confirm");
+  const tmp7Result = <AlertActionButton key="confirm" variant={str} text={_confirm.text} onPress={callback} />;
   let str2 = "secondary";
+  const AlertActionButton2 = tmp(tmp2[8]).AlertActionButton;
   if (goBackIsPrimary) {
     str2 = "primary";
   }
-  const obj5 = { variant: str2, text: null };
   const intl = tmp(tmp2[9]).intl;
-  obj5.text = intl.string(onConfirm(_confirm[9]).t["/g10LC"]);
-  const tmp6Result2 = jsx(onConfirm(_confirm[8]).AlertActionButton, { variant: str2, text: null }, "go-back");
-  const obj6 = { title: null, content: null, actions: null };
+  const tmp7Result2 = <AlertActionButton2 key="go-back" variant={str2} text={intl.string(onConfirm(_confirm[9]).t["/g10LC"])} />;
+  const AlertModal = tmp(tmp2[8]).AlertModal;
   const intl2 = tmp(tmp2[9]).intl;
-  obj6.title = intl2.string(onConfirm(_confirm[9]).t.xi46lg);
-  obj6.content = nsfwServerInviteWarningVariant.description;
   const items1 = [, ];
   if (goBackIsPrimary) {
-    items1[0] = tmp6Result2;
-    items1[1] = tmp6Result;
-    let tmp9 = items1;
+    items1[0] = tmp7Result2;
+    items1[1] = tmp7Result;
+    tmp10 = items1;
   } else {
-    items1[0] = tmp6Result;
-    items1[1] = tmp6Result2;
-    tmp9 = items1;
+    items1[0] = tmp7Result;
+    items1[1] = tmp7Result2;
+    tmp10 = items1;
   }
-  obj6.actions = tmp9;
-  return jsx(onConfirm(_confirm[8]).AlertModal, { title: null, content: null, actions: null });
+  return <AlertModal title={intl2.string(onConfirm(_confirm[9]).t.xi46lg)} content={description} actions={tmp10} />;
 });
 let closure_6 = tmp2;
-const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_gate/native/components/NsfwServerInviteWarningAlert.tsx");
 
 export default tmp2;
 export const NSFW_SERVER_INVITE_WARNING_ALERT_KEY = "nsfw-server-invite-warning";
 export const showNsfwServerInviteWarningAlert = function showNsfwServerInviteWarningAlert(arg0) {
+  let onConfirm;
+  let onDismiss;
   ({ onConfirm, onDismiss } = arg0);
-  useAlertStore.openAlert(c5, <closure_6 onConfirm={onConfirm} />, onDismiss);
+  const obj = useAlertStore;
+  obj.openAlert(c5, <closure_6 onConfirm={onConfirm} />, onDismiss);
 };

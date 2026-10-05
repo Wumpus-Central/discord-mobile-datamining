@@ -1,23 +1,82 @@
 // === Module 17555: GameOrganizationInviteActionCreators ===
 
 // Module 17555 (GameOrganizationInviteActionCreators)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
-let closure_4 = async function _fetchGameOrganizationInvite() {
-  closure_1 = tmp4;
-  closure_129_0 = closure_0;
-  await new Promise((arg0) => setTimeout(arg0, 250));
-  return closure_130_0(closure_130_2[1]).makeGameOrganizationInviteFixture(closure_129_0);
+let c4, c5, closure_2;
+
+let obj = function _fetchGameOrganizationInvite() {
+  obj = _asyncToGenerator(async function(arg0) {
+    let closure_0 = arg0;
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp2 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            let c2 = 0;
+            let closure_1 = tmp3;
+            const self = this;
+            const self2 = this;
+            const promise = new Promise((arg0) => setTimeout(arg0, 250));
+            c3 = 1;
+            c4 = 1;
+            const obj4 = { value: promise, done: false };
+            return obj4;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          c4 = 3;
+          const obj6 = { value: obj.makeGameOrganizationInviteFixture(closure_0), done: true };
+          obj = closure_130_0(closure_130_2[1]);
+          return obj6;
+        }
+      } catch (tmp13) {
+        c4 = 3;
+        throw tmp13;
+      }
+    }
+  });
+  return obj(...arguments);
 };
-const obj = {
+obj = {
   resolveGameOrganizationInvite(arg0) {
-    closure_0 = arg0;
+    let closure_0 = arg0;
     return (async () => {
+      let closure_1;
+      let obj11;
+      function fetchGameOrganizationInvite() {
+        return closure_1_4(...arguments);
+      }
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp6 === 3) {
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -27,7 +86,9 @@ const obj = {
           return { value: "IconComponent", done: null };
         }
       } else {
+        let c3;
         try {
+          let invite;
           c5 = 2;
           if (0 === c4) {
             if (arg0 === 1) {
@@ -38,91 +99,80 @@ const obj = {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const code = tmp7;
-              closure_128_0 = undefined;
-              if (obj15.isDispatching()) {
+              invite = undefined;
+              const obj14 = tmp(closure_2[2]);
+              if (obj14.isDispatching()) {
                 c4 = 1;
                 c5 = 1;
-                const obj5 = { value: Promise.resolve(), done: false };
-                return obj5;
+                const obj4 = { value: Promise.resolve(), done: false };
+                return obj4;
               } else {
-                const obj6 = { type: "GAME_ORGANIZATION_INVITE_RESOLVE", code };
-                tmp3(tmp37[2]).dispatch(obj6);
+                const obj5 = { type: "GAME_ORGANIZATION_INVITE_RESOLVE", code: invite };
+                const obj8 = tmp(closure_2[2]);
+                obj8.dispatch(obj5);
                 c3 = 1;
                 c4 = 3;
                 c5 = 1;
-                const obj7 = {
-                  value: (function fetchGameOrganizationInvite() {
-                              const self = this;
-                              const apply = closure_1_4.apply;
-                              if (typeof apply === "unknown") {
-                                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                              } else {
-                                applyArgumentsResult = apply(self, arguments);
-                              }
-                              return applyArgumentsResult;
-                            })(code),
-                  done: false
-                };
-                return obj7;
+                const obj6 = { value: fetchGameOrganizationInvite(invite), done: false };
+                return obj6;
               }
-              obj15 = tmp3(tmp37[2]);
             }
-          } else if (1 === tmp7) {
+          } else if (1 === c4) {
             if (arg0 === 1) {
               c5 = 3;
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              const obj8 = { value, done: true };
-              return obj8;
+              const obj7 = { value, done: true };
+              return obj7;
             } else {
               c5 = 3;
-              const obj10 = { value: c5.resolveGameOrganizationInvite(closure_129_0), done: true };
-              return obj10;
+              const obj9 = { value: c5.resolveGameOrganizationInvite(closure_129_0), done: true };
+              return obj9;
             }
-          } else if (2 === tmp7) {
+          } else if (2 === c4) {
             c3 = 0;
-            closure_128_1 = tmp37;
-            const obj11 = { type: "GAME_ORGANIZATION_INVITE_RESOLVE_FAILURE", code: closure_129_0, error: null };
+            const obj10 = { type: "GAME_ORGANIZATION_INVITE_RESOLVE_FAILURE", code: closure_129_0, error: obj11 };
             const _Error = Error;
             let message;
-            if (closure_128_1 instanceof Error) {
-              message = closure_128_1.message;
+            const dispatch = closure_2(closure_2[2]).dispatch;
+            const tmp18 = closure_2(closure_2[2]);
+            if (closure_2 instanceof Error) {
+              message = tmp.message;
             }
-            const obj12 = { message };
-            obj11.error = obj12;
-            tmp3(tmp37[2]).dispatch(obj11);
-            throw closure_128_1;
+            obj11 = { message };
+            dispatch(obj10);
+            throw closure_2;
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 0;
             c5 = 3;
-            const obj13 = { value, done: true };
-            return obj13;
+            const obj12 = { value, done: true };
+            return obj12;
           } else {
-            closure_128_0 = value;
-            const obj14 = { type: "GAME_ORGANIZATION_INVITE_RESOLVE_SUCCESS", code: closure_129_0, invite: closure_128_0 };
-            tmp3(tmp37[2]).dispatch(obj14);
+            invite = value;
+            const obj13 = { type: "GAME_ORGANIZATION_INVITE_RESOLVE_SUCCESS", code: closure_129_0, invite };
+            obj = tmp(closure_2[2]);
+            obj.dispatch(obj13);
             c3 = 0;
             c5 = 3;
             return { value: "IconComponent", done: null };
           }
-        } catch (tmp37) {
-          if (tmp4 === c3) {
-            c5 = tmp2;
-            throw tmp37;
+        } catch (tmp35) {
+          closure_2 = tmp35;
+          if (0 === c3) {
+            c5 = 3;
+            throw tmp35;
           } else {
-            c4 = tmp;
+            c4 = 2;
           }
         }
       }
     })();
   }
 };
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/GameOrganizationInviteActionCreators.tsx");
 
 export default obj;

@@ -1,44 +1,49 @@
 // === Module 13534: GuildFriendshipStore ===
 
 // Module 13534 (GuildFriendshipStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5705 */;
+import size from "module_2" /* 2 */;
+
+let closure_3;
 
 function resetStates() {
   closure_3 = {};
 }
-const constants = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED" };
-const dependencyMap = {};
-const Store = initializeDefault.Store;
+const React2 = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED" };
+const _false = {};
+const length = 0;
+const Store = get_initializedDefault.Store;
 class GuildFriendshipStore extends Store {
+  isFetchingFriendsForGuild(arg0) {
+    let fetchState;
+    if (closure_3[arg0] != null) {
+      fetchState = tmp.fetchState;
+    }
+    if (fetchState == null) {
+      fetchState = constants.NOT_FETCHED;
+    }
+    return fetchState === constants.FETCHING;
+  }
+  fetchFriendMembersIfNotFetched(id1, items) {
+    let fetchState;
+    if (closure_3[id1] != null) {
+      fetchState = tmp.fetchState;
+    }
+    if (fetchState == null) {
+      fetchState = constants.NOT_FETCHED;
+    }
+    if (fetchState === constants.NOT_FETCHED) {
+      const obj = { fetchState: tmp4.FETCHING, foundMembers: 0, notFoundMembers: 0 };
+      closure_3[id1] = obj;
+      const obj2 = GuildActionCreatorsDefault;
+      const membersById = obj2.requestMembersById(id1, items, false);
+    }
+  }
 }
 const prototype = GuildFriendshipStore.prototype;
-prototype["isFetchingFriendsForGuild"] = function isFetchingFriendsForGuild(arg0) {
-  let fetchState;
-  if (dependencyMap[arg0] != null) {
-    fetchState = tmp.fetchState;
-  }
-  if (fetchState == null) {
-    fetchState = constants.NOT_FETCHED;
-  }
-  return fetchState === constants.FETCHING;
-};
-prototype["fetchFriendMembersIfNotFetched"] = function fetchFriendMembersIfNotFetched(id1, items) {
-  let fetchState;
-  if (dependencyMap[id1] != null) {
-    fetchState = tmp.fetchState;
-  }
-  if (fetchState == null) {
-    fetchState = constants.NOT_FETCHED;
-  }
-  if (fetchState === constants.NOT_FETCHED) {
-    const obj = { fetchState: tmp4.FETCHING, foundMembers: 0, notFoundMembers: 0 };
-    dependencyMap[id1] = obj;
-    const membersById = GuildActionCreatorsDefault.requestMembersById(id1, items, false);
-  }
-};
-const guildFriendshipStore = new GuildFriendshipStore(DispatcherDefault, {
+let obj = {
   CONNECTION_OPEN: resetStates,
   LOGOUT: resetStates,
   RELATIONSHIP_ADD: resetStates,
@@ -47,30 +52,31 @@ const guildFriendshipStore = new GuildFriendshipStore(DispatcherDefault, {
     const first = arg0.chunks[0];
     const guildId = first.guildId;
     let fetchState;
-    if (dependencyMap[guildId] != null) {
+    if (closure_3[guildId] != null) {
       fetchState = tmp2.fetchState;
     }
     if (fetchState == null) {
       fetchState = constants.NOT_FETCHED;
     }
     if (fetchState === constants.FETCHING) {
-      dependencyMap[guildId].foundMembers = dependencyMap[guildId].foundMembers + first.members.length;
+      closure_3[guildId].foundMembers = closure_3[guildId].foundMembers + first.members.length;
       const notFound = first.notFound;
       let num;
+      const notFoundMembers = tmp13.notFoundMembers;
       if (notFound != null) {
         num = notFound.length;
       }
       if (num == null) {
         num = 0;
       }
-      dependencyMap[guildId].notFoundMembers = dependencyMap[guildId].notFoundMembers + num;
-      if (dependencyMap[guildId].foundMembers + dependencyMap[guildId].notFoundMembers >= length) {
-        dependencyMap[guildId].fetchState = tmp5.FETCHED;
+      closure_3[guildId].notFoundMembers = notFoundMembers + num;
+      if (closure_3[guildId].foundMembers + closure_3[guildId].notFoundMembers >= length) {
+        closure_3[guildId].fetchState = tmp5.FETCHED;
       }
     }
   }
-});
-const size = fn(2);
+};
+const guildFriendshipStore = new GuildFriendshipStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/relationships/GuildFriendshipStore.tsx");
 
 export default guildFriendshipStore;

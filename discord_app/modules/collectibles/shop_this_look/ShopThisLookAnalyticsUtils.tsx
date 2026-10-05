@@ -14,16 +14,29 @@ export const ShopThisLookMenuAction = { MENU_VIEWED: "menu_viewed", COACHMARK_VI
 export const ShopThisLookRowAction = { ROW_VIEWED: "row_viewed", ROW_CLICKED: "row_clicked" };
 export { ShopThisLookProductType };
 export const trackShopThisLookMenuAction = function trackShopThisLookMenuAction(COACHMARK_CTA_CLICKED, ACTION_SHEET) {
-  const obj2 = { action: COACHMARK_CTA_CLICKED, source: ACTION_SHEET };
-  AnalyticsUtilsDefault.track(AnalyticEvents.SHOP_THIS_LOOK_MENU_ACTION, obj2);
+  let tmp;
+  const obj = { action: COACHMARK_CTA_CLICKED, source: tmp };
+  const track = AnalyticsUtilsDefault.track;
+  const SHOP_THIS_LOOK_MENU_ACTION = AnalyticEvents.SHOP_THIS_LOOK_MENU_ACTION;
+  AnalyticsUtilsDefault;
+  track(SHOP_THIS_LOOK_MENU_ACTION, obj);
+  tmp = ACTION_SHEET;
 };
 export const trackShopThisLookRowAction = function trackShopThisLookRowAction(arg0) {
+  let NAMEPLATE;
+  let action;
+  let isDisabled;
+  let productType;
+  let skuId;
+  let source;
   ({ productType, source } = arg0);
   ({ action, skuId, isDisabled } = arg0);
-  const obj = AnalyticsUtilsDefault;
-  const obj2 = { action, sku_id: skuId, product_type: null, is_disabled: null, source: null };
+  const obj = { action, sku_id: skuId, product_type: NAMEPLATE, is_disabled: isDisabled, source };
+  const track = AnalyticsUtilsDefault.track;
+  const SHOP_THIS_LOOK_ROW_ACTION = AnalyticEvents.SHOP_THIS_LOOK_ROW_ACTION;
+  AnalyticsUtilsDefault;
   if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === productType) {
-    let NAMEPLATE = obj.PROFILE_FRAME;
+    NAMEPLATE = obj.PROFILE_FRAME;
   } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === productType) {
     NAMEPLATE = obj.PROFILE_EFFECT;
   } else if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === productType) {
@@ -31,8 +44,5 @@ export const trackShopThisLookRowAction = function trackShopThisLookRowAction(ar
   } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === productType) {
     NAMEPLATE = obj.NAMEPLATE;
   }
-  obj2.product_type = NAMEPLATE;
-  obj2.is_disabled = isDisabled;
-  obj2.source = source;
-  obj.track(AnalyticEvents.SHOP_THIS_LOOK_ROW_ACTION, obj2);
+  track(SHOP_THIS_LOOK_ROW_ACTION, obj);
 };

@@ -3,21 +3,24 @@
 // Module 16702 (useConjurePublishedAppName)
 import ApplicationStore from "ApplicationStore" /* 5118 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 8699 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/publish/useConjurePublishedAppName.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let closure_0;
+  let first;
+  let tmp7;
   _require = arg0;
-  const cResult = require("c").c(3);
+  const obj = require("react");
+  const cResult = obj.c(3);
+  const tmp = _require;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ConjureProjectStore, ApplicationStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -40,16 +43,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     };
     cResult[1] = arg0;
     cResult[2] = fn;
-    let tmp7 = fn;
+    tmp7 = fn;
   } else {
     tmp7 = cResult[2];
   }
-  const obj = require("c");
-  return require("initialize").useStateFromStores(first, tmp7);
+  const tmpResult = tmp(504);
+  return tmpResult.useStateFromStores(first, tmp7);
 }) : ((arg0) => {
+  let closure_0;
   _require = arg0;
   const items = [ConjureProjectStore, ApplicationStore];
-  return require("initialize").useStateFromStores(items, () => {
+  const obj = require("get initialized");
+  return obj.useStateFromStores(items, () => {
     const project = ConjureProjectStore.getProject(closure_0);
     let str = "";
     if (null != project) {
@@ -66,3 +71,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     return str;
   });
 });
+const result = size.fileFinishedImporting("modules/conjure/publish/useConjurePublishedAppName.tsx");
+
+export default tmp2;

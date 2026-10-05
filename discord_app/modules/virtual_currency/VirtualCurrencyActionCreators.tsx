@@ -3,369 +3,285 @@
 // Module 8511 (VirtualCurrencyActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
+import Constants from "Constants" /* 1085 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import SKUStore from "SKUStore" /* 5695 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+let c6;
+
 function fetchVirtualCurrencyBalance() {
-  const self = this;
-  const apply = closure_8.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 }
-let closure_8 = async function _fetchVirtualCurrencyBalance() {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
+let obj = function _fetchVirtualCurrencyBalance() {
+  obj = _asyncToGenerator(async function() {
+    let billingError;
+    let c3;
+    let c4;
+    let c5;
+    let closure_1;
+    let closure_0 = tmp4;
+    const obj10 = DispatcherDefault;
+    obj10.wait(() => {
+      obj = closure_1_1(closure_1_2[4]);
+      obj.dispatch({ type: "VIRTUAL_CURRENCY_BALANCE_FETCH" });
+    });
+    const HTTP = HTTPUtils.HTTP;
+    const obj4 = { url: constants.VIRTUAL_CURRENCY_USER_BALANCE, rejectWithError: false };
+    await HTTP.get(obj4);
+    let closure_3 = closure_2;
+    if (closure_3 instanceof closure_129_0(closure_129_2[6]).BillingError) {
+      billingError = closure_3;
     } else {
-      return { value: "IconComponent", done: null };
+      const self = this;
+      const self2 = this;
+      billingError = new closure_129_0(closure_129_2[6]).BillingError(closure_3);
     }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_1 = tmp3;
-          closure_0 = tmp7;
-          closure_128_0 = undefined;
-          let balance;
-          closure_128_2 = undefined;
-          DispatcherDefault.wait(() => {
-            closure_1_1(closure_1_2[4]).dispatch({ type: "VIRTUAL_CURRENCY_BALANCE_FETCH" });
-          });
-          c3 = 1;
-          const HTTP = HTTPUtils.HTTP;
-          const obj4 = { url: constants.VIRTUAL_CURRENCY_USER_BALANCE, rejectWithError: false };
-          c4 = 2;
-          c5 = 1;
-          const obj6 = { value: HTTP.get(obj4), done: false };
-          return obj6;
-        }
-      } else if (1 === tmp7) {
-        c3 = 0;
-        closure_128_3 = closure_2;
-        if (closure_128_3 instanceof closure_129_0(closure_129_2[6]).BillingError) {
-          let billingError = closure_128_3;
-        } else {
-          billingError = new closure_129_0(closure_129_2[6]).BillingError(closure_128_3);
-        }
-        closure_128_2 = billingError;
-        const obj7 = { type: "VIRTUAL_CURRENCY_BALANCE_FETCH_FAIL", error: closure_128_2 };
-        closure_129_1(closure_129_2[4]).dispatch(obj7);
-        c5 = 3;
-        const obj5 = closure_129_1(closure_129_2[4]);
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c3 = 0;
-        c5 = 3;
-        const obj8 = { value, done: true };
-        return obj8;
-      } else {
-        closure_128_0 = value;
-        balance = closure_128_0.body.balance;
-        const obj9 = { type: "VIRTUAL_CURRENCY_BALANCE_FETCH_SUCCESS", balance };
-        closure_129_1(closure_129_2[4]).dispatch(obj9);
-        c3 = 0;
-        c5 = 3;
-        const obj11 = { value: closure_128_0.body, done: true };
-        return obj11;
-      }
-    } catch (tmp37) {
-      closure_2 = tmp37;
-      if (tmp4 === c3) {
-        c5 = tmp2;
-        throw tmp37;
-      } else {
-        c4 = tmp;
-      }
-    }
-  }
+    const obj7 = { type: "VIRTUAL_CURRENCY_BALANCE_FETCH_FAIL", error: billingError };
+    const obj5 = closure_129_1(closure_129_2[4]);
+    const dispatchResult = obj5.dispatch(obj7);
+    await "IconComponent";
+    closure_0 = value;
+    const balance = closure_0.body.balance;
+    obj = closure_129_1(closure_129_2[4]);
+    const obj9 = { type: "VIRTUAL_CURRENCY_BALANCE_FETCH_SUCCESS", balance };
+    obj.dispatch(obj9);
+    return closure_0.body;
+  });
+  return obj(...arguments);
 };
-let closure_9 = async function _fetchVirtualCurrencyTotalRedeemed() {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
+obj = function _fetchVirtualCurrencyTotalRedeemed() {
+  obj = _asyncToGenerator(async function() {
+    let billingError;
+    let c3;
+    let c4;
+    let c5;
+    let closure_1;
+    let closure_0 = tmp4;
+    const obj10 = DispatcherDefault;
+    obj10.wait(() => {
+      obj = closure_1_1(closure_1_2[4]);
+      obj.dispatch({ type: "VIRTUAL_CURRENCY_TOTAL_REDEEMED_FETCH" });
+    });
+    const HTTP = HTTPUtils.HTTP;
+    const obj4 = { url: constants.VIRTUAL_CURRENCY_USER_TOTAL_REDEEMED, rejectWithError: false };
+    await HTTP.get(obj4);
+    let closure_3 = closure_2;
+    if (closure_3 instanceof closure_129_0(closure_129_2[6]).BillingError) {
+      billingError = closure_3;
     } else {
-      return { value: "IconComponent", done: null };
+      const self = this;
+      const self2 = this;
+      billingError = new closure_129_0(closure_129_2[6]).BillingError(closure_3);
     }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_1 = tmp3;
-          closure_0 = tmp7;
-          closure_128_0 = undefined;
-          let total_redeemed;
-          closure_128_2 = undefined;
-          DispatcherDefault.wait(() => {
-            closure_1_1(closure_1_2[4]).dispatch({ type: "VIRTUAL_CURRENCY_TOTAL_REDEEMED_FETCH" });
-          });
-          c3 = 1;
-          const HTTP = HTTPUtils.HTTP;
-          const obj4 = { url: constants.VIRTUAL_CURRENCY_USER_TOTAL_REDEEMED, rejectWithError: false };
-          c4 = 2;
-          c5 = 1;
-          const obj6 = { value: HTTP.get(obj4), done: false };
-          return obj6;
-        }
-      } else if (1 === tmp7) {
-        c3 = 0;
-        closure_128_3 = closure_2;
-        if (closure_128_3 instanceof closure_129_0(closure_129_2[6]).BillingError) {
-          let billingError = closure_128_3;
-        } else {
-          billingError = new closure_129_0(closure_129_2[6]).BillingError(closure_128_3);
-        }
-        closure_128_2 = billingError;
-        const obj7 = { type: "VIRTUAL_CURRENCY_TOTAL_REDEEMED_FETCH_FAIL", error: closure_128_2 };
-        closure_129_1(closure_129_2[4]).dispatch(obj7);
-        c5 = 3;
-        const obj5 = closure_129_1(closure_129_2[4]);
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c3 = 0;
-        c5 = 3;
-        const obj8 = { value, done: true };
-        return obj8;
-      } else {
-        closure_128_0 = value;
-        total_redeemed = closure_128_0.body.total_redeemed;
-        const obj9 = { type: "VIRTUAL_CURRENCY_TOTAL_REDEEMED_FETCH_SUCCESS", totalRedeemed: total_redeemed };
-        closure_129_1(closure_129_2[4]).dispatch(obj9);
-        c3 = 0;
-        c5 = 3;
-        const obj11 = { value: closure_128_0.body, done: true };
-        return obj11;
-      }
-    } catch (tmp37) {
-      closure_2 = tmp37;
-      if (tmp4 === c3) {
-        c5 = tmp2;
-        throw tmp37;
-      } else {
-        c4 = tmp;
-      }
-    }
-  }
+    const obj7 = { type: "VIRTUAL_CURRENCY_TOTAL_REDEEMED_FETCH_FAIL", error: billingError };
+    const obj5 = closure_129_1(closure_129_2[4]);
+    const dispatchResult = obj5.dispatch(obj7);
+    await "IconComponent";
+    closure_0 = value;
+    const total_redeemed = closure_0.body.total_redeemed;
+    obj = closure_129_1(closure_129_2[4]);
+    const obj9 = { type: "VIRTUAL_CURRENCY_TOTAL_REDEEMED_FETCH_SUCCESS", totalRedeemed: total_redeemed };
+    obj.dispatch(obj9);
+    return closure_0.body;
+  });
+  return obj(...arguments);
 };
-let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp3;
-          closure_1 = tmp7;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          closure_129_3 = undefined;
-          closure_129_4 = undefined;
-          closure_129_5 = undefined;
-          ({ skuId: closure_129_0, loadId: closure_129_1, onRedeemStart: closure_129_2, onRedeemSucceed: closure_129_3, onRedeemFail: closure_129_4, shouldRefetchBalance } = skuId);
-          if (shouldRefetchBalance === undefined) {
-            shouldRefetchBalance = true;
-          }
-          closure_129_5 = shouldRefetchBalance;
-          closure_129_6 = undefined;
-          closure_129_7 = undefined;
-          closure_129_8 = undefined;
-          closure_129_9 = undefined;
-          let body;
-          closure_129_11 = undefined;
-          closure_129_12 = undefined;
-          closure_129_13 = undefined;
-          c5 = 1;
-          c6 = 1;
-          return { value: "Set", done: true };
-        }
-      } else if (1 === tmp7) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
-        } else {
-          closure_130_1(closure_130_2[4]).wait(() => {
-            closure_1(closure_2[4]).dispatch({ type: "VIRTUAL_CURRENCY_REDEEM_START", skuId });
-          });
-          if (closure_129_2 != null) {
-            closure_129_2();
-          }
-          c4 = 1;
-          closure_129_6 = closure_130_4.get(closure_129_0);
-          let applicationId;
-          if (closure_129_6 != null) {
-            applicationId = closure_129_6.applicationId;
-          }
-          closure_129_7 = applicationId;
-          let result = null != closure_129_7;
-          if (result) {
-            result = closure_130_0(closure_130_2[7]).isTestModeForApplication(closure_129_7);
-            const obj9 = closure_130_0(closure_130_2[7]);
-          }
-          closure_129_8 = result;
-          const obj6 = { checkout_session_id: closure_129_1 };
-          closure_129_9 = obj6;
-          if (closure_129_8) {
-            closure_129_9.test_mode = true;
-          }
-          const HTTP = closure_130_0(closure_130_2[5]).HTTP;
-          const request = { url: closure_130_5.VIRTUAL_CURRENCY_SKU_REDEEM(closure_129_0), body: closure_129_9, rejectWithError: false };
-          c5 = 3;
-          c6 = 1;
-          const obj8 = { value: HTTP.post(request), done: false };
-          return obj8;
-        }
-      } else if (2 === tmp7) {
-        c4 = 0;
-        closure_129_14 = closure_3;
-        if (closure_129_14 instanceof closure_130_0(closure_130_2[6]).BillingError) {
-          let billingError = closure_129_14;
-        } else {
-          billingError = new closure_130_0(closure_130_2[6]).BillingError(closure_129_14);
-        }
-        closure_129_13 = billingError;
-        const obj10 = { type: "VIRTUAL_CURRENCY_REDEEM_FAIL", skuId: closure_129_0, error: closure_129_13 };
-        closure_130_1(closure_130_2[4]).dispatch(obj10);
-        if (closure_129_5) {
-          closure_130_7();
-        }
-        if (closure_129_4 != null) {
-          tmp69(closure_129_13);
-        }
-        c6 = 3;
+obj = function _redeemVirtualCurrencyForSKU() {
+  obj = _asyncToGenerator(async function(skuId) {
+    let c0;
+    let c1;
+    let c2;
+    let c3;
+    let c4;
+    let shouldRefetchBalance;
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (skuId === 1) {
+        throw value;
+      } else if (skuId === 2) {
+        let obj2 = { value, done: true };
+        return obj2;
+      } else {
         return { value: "IconComponent", done: null };
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 0;
-        c6 = 3;
-        const obj11 = { value, done: true };
-        return obj11;
-      } else {
-        body = value.body;
-        if (null != body) {
-          const _Array = Array;
-          if (Array.isArray(body)) {
-            const obj12 = { type: "VIRTUAL_CURRENCY_REDEEM_SUCCESS", skuId: closure_129_0, entitlements: body };
-            closure_130_1(closure_130_2[4]).dispatch(obj12);
-            if (closure_129_5) {
-              closure_130_7();
-            }
-            if (closure_129_3 != null) {
-              tmp20(body);
-            }
-            c4 = 0;
-            c6 = 3;
-            const obj13 = { value: body, done: true };
-            return obj13;
-          }
-        }
-        closure_129_11 = "Could not read entitlements from Virtual Currency redemption response. Response: ";
-        const _Error = Error;
-        const error = new Error(closure_129_11, body);
-        closure_129_12 = error;
-        closure_130_6.error(closure_129_11, body);
-        const obj14 = { tags: { app_context: "virtual_currency" } };
-        closure_130_1(closure_130_2[8]).captureException(closure_129_12, obj14);
-        throw closure_129_12;
       }
-    } catch (tmp98) {
-      closure_3 = tmp98;
-      if (tmp4 === c4) {
-        c6 = tmp2;
-        throw tmp98;
-      } else {
-        c5 = tmp;
+    } else {
+      try {
+        let checkout_session_id;
+        let applicationId;
+        let c8;
+        let obj6;
+        let body;
+        let c11;
+        let error;
+        let billingError;
+        c6 = 2;
+        if (0 === c5) {
+          if (skuId === 1) {
+            c6 = 3;
+            throw value;
+          } else if (skuId === 2) {
+            c6 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            let closure_2 = tmp;
+            let closure_1 = tmp4;
+            skuId = undefined;
+            checkout_session_id = undefined;
+            c3 = undefined;
+            c4 = undefined;
+            shouldRefetchBalance = undefined;
+            ({ skuId: c0, loadId: c1, onRedeemStart: c2, onRedeemSucceed: c3, onRedeemFail: c4, shouldRefetchBalance } = skuId);
+            if (shouldRefetchBalance === undefined) {
+              shouldRefetchBalance = true;
+            }
+            applicationId = undefined;
+            c8 = undefined;
+            obj6 = undefined;
+            body = undefined;
+            c11 = undefined;
+            error = undefined;
+            billingError = undefined;
+            c5 = 1;
+            c6 = 1;
+            return { value: "Set", done: true };
+          }
+        } else if (1 === c5) {
+          if (skuId === 1) {
+            c6 = 3;
+            throw value;
+          } else if (skuId === 2) {
+            c6 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            const obj16 = closure_130_1(closure_130_2[4]);
+            obj16.wait(() => {
+              obj = checkout_session_id(closure_2[4]);
+              const obj2 = { type: "VIRTUAL_CURRENCY_REDEEM_START", skuId };
+              obj.dispatch(obj2);
+            });
+            if (tmp != null) {
+              tmp();
+            }
+            c4 = 1;
+            closure_130_4.get(skuId);
+            applicationId = undefined;
+            if (applicationId != null) {
+              applicationId = applicationId.applicationId;
+            }
+            let result = null != applicationId;
+            if (result) {
+              const obj9 = closure_130_0(closure_130_2[7]);
+              result = obj9.isTestModeForApplication(applicationId);
+            }
+            c8 = result;
+            obj6 = { checkout_session_id };
+            const tmp82 = c8;
+            if (tmp82) {
+              obj6.test_mode = true;
+            }
+            const HTTP = closure_130_0(closure_130_2[5]).HTTP;
+            const request = { url: closure_130_5.VIRTUAL_CURRENCY_SKU_REDEEM(skuId), body: obj6, rejectWithError: false };
+            const post = HTTP.post;
+            c5 = 3;
+            c6 = 1;
+            const obj8 = { value: post(request), done: false };
+            return obj8;
+          }
+        } else if (2 === c5) {
+          c4 = 0;
+          let closure_14 = closure_3;
+          if (closure_14 instanceof closure_130_0(closure_130_2[6]).BillingError) {
+            billingError = closure_14;
+          } else {
+            const self3 = this;
+            const self4 = this;
+            billingError = new closure_130_0(closure_130_2[6]).BillingError(closure_14);
+          }
+          const obj10 = { type: "VIRTUAL_CURRENCY_REDEEM_FAIL", skuId, error: billingError };
+          const obj7 = closure_130_1(closure_130_2[4]);
+          const dispatchResult = obj7.dispatch(obj10);
+          const tmp57 = shouldRefetchBalance;
+          if (tmp57) {
+            closure_130_7();
+          }
+          if (c4 != null) {
+            tmp62(billingError);
+          }
+          c6 = 3;
+          return { value: "IconComponent", done: null };
+        } else if (skuId === 1) {
+          c6 = 3;
+          throw value;
+        } else if (skuId === 2) {
+          c4 = 0;
+          c6 = 3;
+          const obj11 = { value, done: true };
+          return obj11;
+        } else {
+          body = value.body;
+          if (null != body) {
+            const _Array = Array;
+            if (Array.isArray(body)) {
+              obj = closure_130_1(closure_130_2[4]);
+              const obj12 = { type: "VIRTUAL_CURRENCY_REDEEM_SUCCESS", skuId, entitlements: body };
+              obj.dispatch(obj12);
+              const tmp12 = shouldRefetchBalance;
+              if (tmp12) {
+                closure_130_7();
+              }
+              if (c3 != null) {
+                tmp17(body);
+              }
+              c4 = 0;
+              c6 = 3;
+              const obj13 = { value: body, done: true };
+              return obj13;
+            }
+          }
+          c11 = "Could not read entitlements from Virtual Currency redemption response. Response: ";
+          const _Error = Error;
+          const self = this;
+          const self2 = this;
+          error = new Error(c11, body);
+          closure_130_6.error(c11, body);
+          const obj14 = { tags: { app_context: "virtual_currency" } };
+          const obj4 = closure_130_1(closure_130_2[8]);
+          obj4.captureException(error, obj14);
+          throw error;
+        }
+      } catch (tmp91) {
+        closure_3 = tmp91;
+        if (0 === c4) {
+          c6 = 3;
+          throw tmp91;
+        } else {
+          c5 = 2;
+        }
       }
     }
-  }
+  });
+  return obj(...arguments);
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = Constants.Endpoints;
 let closure_6 = new LoggerDefault("VirtualCurrencyActionCreators");
-const size = fn(2);
+new LoggerDefault("VirtualCurrencyActionCreators");
 let result = size.fileFinishedImporting("modules/virtual_currency/VirtualCurrencyActionCreators.tsx");
 
 export { fetchVirtualCurrencyBalance };
 export const fetchVirtualCurrencyTotalRedeemed = function fetchVirtualCurrencyTotalRedeemed() {
-  const self = this;
-  const apply = closure_9.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const redeemVirtualCurrencyForSKU = function redeemVirtualCurrencyForSKU() {
-  const self = this;
-  const apply = closure_10.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const setBalancePillOverlay = function setBalancePillOverlay(balancePillOverlay) {
-  return DispatcherDefault.dispatch({ type: "VIRTUAL_CURRENCY_SET_BALANCE_PILL_OVERLAY", balancePillOverlay });
+  obj = DispatcherDefault;
+  const obj2 = { type: "VIRTUAL_CURRENCY_SET_BALANCE_PILL_OVERLAY", balancePillOverlay };
+  return obj.dispatch(obj2);
 };

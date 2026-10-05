@@ -4,6 +4,8 @@
 import flattenDefault from "flatten" /* 5000 */;
 import size from "module_2" /* 2 */;
 
+let id;
+
 function matchesDeep(item10014, item10021) {
   if (Array.isArray(item10014)) {
     const obj2 = item10014[Symbol.iterator]();
@@ -20,7 +22,7 @@ function matchesDeep(item10014, item10021) {
         const _Object = Object;
         const values = Object.values(item10014);
         for (const item10014 of values) {
-          if (matchesDeep(item10014, arg1)) {
+          if (matchesDeep(item10014, item10021)) {
             obj.return();
             let flag2 = true;
             return true;
@@ -49,7 +51,10 @@ export const getExperimentDateFromId = function getExperimentDateFromId(arg0) {
   return tmp2;
 };
 export const getEntries = function getEntries(arg0) {
-  return Array.from(Object.entries(arg0)).map((item) => {
+  const arr = Array.from(Object.entries(arg0));
+  return arr.map((item) => {
+    let tmp;
+    let tmp2;
     [tmp, tmp2] = item;
     return { id, experiment };
   });
@@ -106,14 +111,14 @@ export const sortEntries = function sortEntries(entries, memo1) {
     return title.localeCompare(id2.experiment.title);
   });
 };
-export const getBestMatches = function getBestMatches(tmpResult3, str) {
+export const getBestMatches = function getBestMatches(arg0, str) {
   const parts = str.split(/\s+/g);
   const found = parts.filter((item) => "" !== item);
   if (0 === found.length) {
-    return tmpResult3;
+    return arg0;
   } else {
     const items = [];
-    const iter = tmpResult3[Symbol.iterator]();
+    const iter = arg0[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp4 = nextResult;
@@ -133,7 +138,8 @@ export const getBestMatches = function getBestMatches(tmpResult3, str) {
       }
       continue;
     }
+    const tmp18 = flattenDefault;
     const found1 = items.filter((item) => undefined !== item);
-    return flattenDefault(found1.reverse());
+    return tmp18(found1.reverse());
   }
 };

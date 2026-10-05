@@ -6,8 +6,9 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/sanitizeMediaDimension.tsx");
 
 export const sanitizeMediaDimension = function sanitizeMediaDimension(height) {
+  let num;
   if (typeof height !== "number") {
-    let num = height;
+    num = height;
   } else {
     const _Number = Number;
     num = 0;

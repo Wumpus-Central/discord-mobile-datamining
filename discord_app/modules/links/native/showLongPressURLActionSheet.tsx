@@ -11,6 +11,18 @@ import size from "module_2" /* 2 */;
 let result = size.fileFinishedImporting("modules/links/native/showLongPressURLActionSheet.tsx");
 
 export default function showLongPressURLActionSheet(urlString) {
+  let channelId;
+  let closure_3;
+  let disableHapticFeedback;
+  let guildId;
+  let intl;
+  let intl2;
+  let intl3;
+  let intl4;
+  let intl5;
+  let intl6;
+  let messageId;
+  let obj9;
   const str = urlString.urlString;
   ({ guildId: importDefault, channelId } = urlString);
   ({ messageId: closure_3, disableHapticFeedback } = urlString);
@@ -19,74 +31,91 @@ export default function showLongPressURLActionSheet(urlString) {
   }
   let match;
   if (!disableHapticFeedback) {
-    const result = str(channelId[0]).triggerHapticFeedback(str(channelId[0]).HapticFeedbackTypes.IMPACT_LIGHT);
     let obj = str(channelId[0]);
+    const result = obj.triggerHapticFeedback(str(channelId[0]).HapticFeedbackTypes.IMPACT_LIGHT);
   }
   const items = [];
   match = str.match(/^(tel|sms|mailto):([^?;]+)/);
   if (null != match) {
+    let ZYLVKo;
+    const push2 = items.push;
     const intl7 = str(channelId[1]).intl;
+    const string = intl7.string;
     if ("mailto" === match[1]) {
-      let ZYLVKo = tmp13(tmp14[1]).t.ZYLVKo;
+      ZYLVKo = tmp15(tmp16[1]).t.ZYLVKo;
     } else {
-      ZYLVKo = tmp13(tmp14[1]).t["3zozoR"];
+      ZYLVKo = tmp15(tmp16[1]).t["3zozoR"];
     }
-    const obj2 = {
-      label: intl7.string(ZYLVKo),
+    let obj2 = {
+      label: string(ZYLVKo),
       onPress() {
-          ToastUtils.presentLinkCopied();
-          ClipboardUtils.copy(match[2]);
+          const obj = ToastUtils;
+          obj.presentLinkCopied();
+          const obj2 = ClipboardUtils;
+          obj2.copy(match[2]);
         }
     };
-    items.push(obj2);
+    push2(obj2);
     if ("tel" === match[1]) {
-      const obj3 = { label: null, onPress: null };
-      const intl = tmp13(tmp14[1]).intl;
-      obj3.label = intl.string(tmp13(tmp14[1]).t["+wbjMW"]);
-      obj3.onPress = function onPress() {
-        LinkingDefault.openURL(str.replace("tel:", "sms:"));
+      const push = items.push;
+      const obj3 = {
+        label: intl.string(str(channelId[1]).t["+wbjMW"]),
+        onPress() {
+              const obj = LinkingDefault;
+              obj.openURL(str.replace("tel:", "sms:"));
+            }
       };
-      items.push(obj3);
+      intl = tmp15(tmp16[1]).intl;
+      push(obj3);
     }
   }
-  const obj4 = { label: null, onPress: null };
-  const intl2 = str(channelId[1]).intl;
-  obj4.label = intl2.string(str(channelId[1]).t.wuRE8M);
-  obj4.onPress = function onPress() {
-    LinkingDefault.openURL(str);
+  const obj4 = {
+    label: intl2.string(str(channelId[1]).t.wuRE8M),
+    onPress() {
+      const obj = LinkingDefault;
+      obj.openURL(str);
+    }
   };
+  intl2 = str(channelId[1]).intl;
   const items1 = [obj4, , ];
-  const obj5 = { label: null, onPress: null };
-  const intl3 = str(channelId[1]).intl;
-  obj5.label = intl3.string(str(channelId[1]).t.WqhZss);
-  obj5.onPress = function onPress() {
-    ToastUtils.presentLinkCopied();
-    ClipboardUtils.copy(str);
+  const obj5 = {
+    label: intl3.string(str(channelId[1]).t.WqhZss),
+    onPress() {
+      const obj = ToastUtils;
+      obj.presentLinkCopied();
+      const obj2 = ClipboardUtils;
+      obj2.copy(str);
+    }
   };
+  intl3 = str(channelId[1]).intl;
   items1[1] = obj5;
-  const obj6 = { label: null, onPress: null };
-  const intl4 = str(channelId[1]).intl;
-  obj6.label = intl4.string(str(channelId[1]).t.Ej3B3Y);
-  obj6.onPress = function onPress() {
-    showShareActionSheet.showShareActionSheet({ url: str }, "Share Link");
+  const obj6 = {
+    label: intl4.string(str(channelId[1]).t.Ej3B3Y),
+    onPress() {
+      const obj = showShareActionSheet;
+      const obj2 = { url: str };
+      obj.showShareActionSheet(obj2, "Share Link");
+    }
   };
-  items1[HermesBuiltin.arraySpread(items, 2)] = obj6;
+  const arraySpreadResult = HermesBuiltin.arraySpread(items1, items, 2);
+  intl4 = str(channelId[1]).intl;
+  items1[arraySpreadResult] = obj6;
   if (null != channelId) {
-    const obj7 = { label: null, onPress: null };
-    const intl5 = tmp8(tmp9[1]).intl;
-    obj7.label = intl5.string(tmp8(tmp9[1]).t.aW2YlJ);
-    obj7.onPress = function onPress() {
-      handleContentLinkingDefault({ guildId, channelId, messageId, navigationSettings: { navigationReplace: true, safe: true } });
+    const unshift = items1.unshift;
+    const obj7 = {
+      label: intl5.string(str(channelId[1]).t.aW2YlJ),
+      onPress() {
+          const obj = { guildId: importDefault, channelId, messageId, navigationSettings: { navigationReplace: true, safe: true } };
+          handleContentLinkingDefault(obj);
+        }
     };
-    items1.unshift(obj7);
+    intl5 = tmp9(tmp10[1]).intl;
+    unshift(obj7);
   }
-  const arraySpreadResult = HermesBuiltin.arraySpread(items, 2);
-  const obj8 = { key: "LongPressUrl", header: null, options: null, hasIcons: false };
-  const obj9 = { title: null, subtitle: null };
-  const intl6 = tmp8(tmp9[1]).intl;
-  obj9.title = intl6.string(str(channelId[1]).t["5oIOLX"]);
-  obj9.subtitle = str;
-  obj8.header = obj9;
-  obj8.options = items1;
-  const result1 = str(channelId[7]).showSimpleActionSheet(obj8);
+  const obj8 = { key: "LongPressUrl", header: obj9, options: items1, hasIcons: false };
+  obj9 = { title: intl6.string(str(channelId[1]).t["5oIOLX"]), subtitle: str };
+  const showSimpleActionSheet = str(channelId[7]).showSimpleActionSheet;
+  str(channelId[7]);
+  intl6 = tmp9(tmp10[1]).intl;
+  const result1 = showSimpleActionSheet(obj8);
 };

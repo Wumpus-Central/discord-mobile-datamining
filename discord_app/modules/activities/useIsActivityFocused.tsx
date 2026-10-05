@@ -4,81 +4,98 @@
 import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9016 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-require = fn;
-const ReactCompilerGating = fn(558);
 function isActivityFocused(channelId) {
+  let compositeInstanceId;
   ({ ChannelRTCStore, EmbeddedActivitiesStore } = channelId);
   const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channelId.channelId);
   const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
   let tmp3 = null != selectedParticipant && null != currentEmbeddedActivity;
   if (tmp3) {
-    const obj2 = { applicationId: currentEmbeddedActivity.applicationId, instanceId: null };
-    let compositeInstanceId;
+    const id = selectedParticipant.id;
+    const obj = { applicationId: currentEmbeddedActivity.applicationId, instanceId: compositeInstanceId };
+    compositeInstanceId = undefined;
+    const getEmbeddedActivityParticipantId = ChannelRTCParticipants.getEmbeddedActivityParticipantId;
+    ChannelRTCParticipants;
     if (currentEmbeddedActivity != null) {
       compositeInstanceId = currentEmbeddedActivity.compositeInstanceId;
     }
-    obj2.instanceId = compositeInstanceId;
-    tmp3 = selectedParticipant.id === ChannelRTCParticipants.getEmbeddedActivityParticipantId(obj2);
+    tmp3 = id === getEmbeddedActivityParticipantId(obj);
   }
   return tmp3;
 }
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/activities/useIsActivityFocused.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let closure_0;
+  let first;
+  let tmp7;
   _require = arg0;
-  const cResult = require("c").c(3);
+  let obj = require("react");
+  const cResult = obj.c(3);
+  const tmp = _require;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelRTCStore, EmbeddedActivitiesStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
     const fn = function s() {
+      let compositeInstanceId;
       const selectedParticipant = ChannelRTCStore.getSelectedParticipant(closure_0);
       const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
       let tmp3 = null != selectedParticipant && null != currentEmbeddedActivity;
       if (tmp3) {
-        const obj2 = { applicationId: currentEmbeddedActivity.applicationId, instanceId: null };
-        let compositeInstanceId;
+        const id = selectedParticipant.id;
+        const obj = { applicationId: currentEmbeddedActivity.applicationId, instanceId: compositeInstanceId };
+        compositeInstanceId = undefined;
+        const getEmbeddedActivityParticipantId = ChannelRTCParticipants.getEmbeddedActivityParticipantId;
+        ChannelRTCParticipants;
         if (currentEmbeddedActivity != null) {
           compositeInstanceId = currentEmbeddedActivity.compositeInstanceId;
         }
-        obj2.instanceId = compositeInstanceId;
-        tmp3 = selectedParticipant.id === ChannelRTCParticipants.getEmbeddedActivityParticipantId(obj2);
+        tmp3 = id === getEmbeddedActivityParticipantId(obj);
       }
       return tmp3;
     };
     cResult[1] = arg0;
     cResult[2] = fn;
-    let tmp7 = fn;
+    tmp7 = fn;
   } else {
     tmp7 = cResult[2];
   }
-  let obj = require("c");
-  return require("initialize").useStateFromStores(first, tmp7);
+  const tmpResult = tmp(504);
+  return tmpResult.useStateFromStores(first, tmp7);
 }) : ((arg0) => {
+  let closure_0;
   _require = arg0;
+  let obj = require("get initialized");
   const items = [ChannelRTCStore, EmbeddedActivitiesStore];
-  return require("initialize").useStateFromStores(items, () => {
+  return obj.useStateFromStores(items, () => {
+    let compositeInstanceId;
     const selectedParticipant = ChannelRTCStore.getSelectedParticipant(closure_0);
     const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
     let tmp3 = null != selectedParticipant && null != currentEmbeddedActivity;
     if (tmp3) {
-      const obj2 = { applicationId: currentEmbeddedActivity.applicationId, instanceId: null };
-      let compositeInstanceId;
+      const id = selectedParticipant.id;
+      const obj = { applicationId: currentEmbeddedActivity.applicationId, instanceId: compositeInstanceId };
+      compositeInstanceId = undefined;
+      const getEmbeddedActivityParticipantId = ChannelRTCParticipants.getEmbeddedActivityParticipantId;
+      ChannelRTCParticipants;
       if (currentEmbeddedActivity != null) {
         compositeInstanceId = currentEmbeddedActivity.compositeInstanceId;
       }
-      obj2.instanceId = compositeInstanceId;
-      tmp3 = selectedParticipant.id === ChannelRTCParticipants.getEmbeddedActivityParticipantId(obj2);
+      tmp3 = id === getEmbeddedActivityParticipantId(obj);
     }
     return tmp3;
   });
 });
+const result = size.fileFinishedImporting("modules/activities/useIsActivityFocused.tsx");
+
+export default tmp2;
 export { isActivityFocused };

@@ -1,20 +1,21 @@
 // === Module 13125: useRefreshSavedMessages ===
 
 // Module 13125 (useRefreshSavedMessages)
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
 import SavedMessagesActions from "SavedMessagesActions" /* 11335 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/saved_messages/useRefreshSavedMessages.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(2);
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let tmp2;
+  let tmp3;
+  let obj = react2;
+  const cResult = obj.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t() {
-      const andUpdateSavedMessages = SavedMessagesActions.fetchAndUpdateSavedMessages();
+      const obj = SavedMessagesActions;
+      const andUpdateSavedMessages = obj.fetchAndUpdateSavedMessages();
     };
     const items = [];
     cResult[0] = fn;
@@ -24,9 +25,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp2, tmp3] = cResult;
   }
-  const effect = noop.useEffect(tmp2, tmp3);
+  const effect = react.useEffect(tmp2, tmp3);
 }) : (() => {
-  const effect = noop.useEffect(() => {
-    const andUpdateSavedMessages = SavedMessagesActions.fetchAndUpdateSavedMessages();
+  const effect = react.useEffect(() => {
+    const obj = SavedMessagesActions;
+    const andUpdateSavedMessages = obj.fetchAndUpdateSavedMessages();
   }, []);
 });
+const result = size.fileFinishedImporting("modules/saved_messages/useRefreshSavedMessages.tsx");
+
+export default tmp2;

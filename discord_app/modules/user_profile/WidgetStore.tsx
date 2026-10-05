@@ -2,163 +2,168 @@
 
 // Module 8588 (WidgetStore)
 import _modDef12 from "module_12" /* 12 */;
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import UserStore from "UserStore" /* 1377 */;
 import UserProfileStore from "UserProfileStore" /* 7111 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-let c6 = null;
-let c7 = null;
+let map, map1, uniqueKey;
+
+const metroRequire = null;
+const metroImportDefault = null;
 let c8 = false;
 let closure_9 = { suggestedGamesIds: [], suggestedWishlistGamesIds: [] };
 let c10 = false;
 let c11 = false;
 let c12 = false;
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class WidgetStore extends Store {
-}
-const prototype = WidgetStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(UserStore);
-};
-prototype["getPendingWidgets"] = function getPendingWidgets() {
-  return c6;
-};
-prototype["getSaveablePendingWidgets"] = function getSaveablePendingWidgets() {
-  let found1 = null;
-  if (null != _null) {
-    const mapped = _null.map((isUpdatable) => {
-      let tmp = isUpdatable;
-      if (!isUpdatable.isUpdatable()) {
-        let found;
-        if (_null2 != null) {
-          found = _null2.find((getUniqueKey) => {
-            const uniqueKey = getUniqueKey.getUniqueKey();
-            return uniqueKey === isUpdatable.getUniqueKey();
-          });
-        }
-        tmp = found;
-      }
-      return tmp;
-    });
-    let found = mapped.filter(GlobalUtils.isNotNullish);
-    found1 = found.filter((isDiscardable) => !isDiscardable.isDiscardable());
+  initialize() {
+    this.waitFor(UserStore);
   }
-  return found1;
-};
-prototype["hasPendingChanges"] = function hasPendingChanges() {
-  let tmp = null !== c6;
-  if (tmp) {
-    let tmp3 = null === c7;
-    if (!tmp3) {
-      tmp3 = !_modDef12.isEqual(c6, c7);
+  getPendingWidgets() {
+    return c6;
+  }
+  getSaveablePendingWidgets() {
+    let found1 = null;
+    if (null != _null) {
+      const mapped = _null.map((isUpdatable) => {
+        let tmp = isUpdatable;
+        let closure_0 = isUpdatable;
+        if (!isUpdatable.isUpdatable()) {
+          let found;
+          if (_null2 != null) {
+            found = _null2.find((getUniqueKey) => {
+              uniqueKey = getUniqueKey.getUniqueKey();
+              return uniqueKey === uniqueKey.getUniqueKey();
+            });
+          }
+          tmp = found;
+        }
+        return tmp;
+      });
+      let found = mapped.filter(GlobalUtils.isNotNullish);
+      found1 = found.filter((isDiscardable) => !isDiscardable.isDiscardable());
     }
-    tmp = tmp3;
+    return found1;
   }
-  return tmp;
-};
-prototype["getWidgetUpdates"] = function getWidgetUpdates() {
-  let changedWidgets = this.getSaveablePendingWidgets();
-  if (null != changedWidgets) {
-    if (null != _null2) {
-      const _Map = Map;
-      const map = new Map(_null2.map((id) => {
-        const items = [id.id, id];
-        return items;
-      }));
-      const _Map2 = Map;
-      const map1 = new Map(changedWidgets.map((id) => {
-        const items = [id.id, id];
-        return items;
-      }));
-      let items = [];
-      const items1 = [];
-      const tmp37 = map1[Symbol.iterator]();
-      while (tmp37 !== undefined) {
-        let tmp5 = _slicedToArray(tmp2, 2);
-        let obj = tmp5[1];
-        value = map.get(tmp5[0]);
-        let isEqualResult = null != value;
-        if (isEqualResult) {
-          isEqualResult = obj.isEqual(tmp7);
-        }
-        if (!isEqualResult) {
-          let arr = items.push(obj);
-        }
-        continue;
+  hasPendingChanges() {
+    let tmp = null !== c6;
+    if (tmp) {
+      let tmp3 = null === c7;
+      if (!tmp3) {
+        const obj = _modDef12;
+        tmp3 = !obj.isEqual(c6, c7);
       }
-      for (const item10029 of tmp32) {
-        let tmp16 = _slicedToArray(item10029, 2);
-        let tmp17 = tmp16[1];
-        if (!map1.has(tmp16[0])) {
-          let arr2 = items1.push(tmp17);
+      tmp = tmp3;
+    }
+    return tmp;
+  }
+  getWidgetUpdates() {
+    let changedWidgets = this.getSaveablePendingWidgets();
+    if (null != changedWidgets) {
+      if (null != _null2) {
+        const _Map = Map;
+        const self = this;
+        const self2 = this;
+        const _Map2 = Map;
+        const self3 = this;
+        const self4 = this;
+        map = new Map(_null2.map((id) => {
+          const items = [id.id, id];
+          return items;
+        }));
+        map1 = new Map(changedWidgets.map((id) => {
+          const items = [id.id, id];
+          return items;
+        }));
+        let items = [];
+        const items1 = [];
+        const tmp33 = map1[Symbol.iterator]();
+        while (tmp33 !== undefined) {
+          let tmp5 = _slicedToArray(tmp2, 2);
+          let obj = tmp5[1];
+          let value = map.get(tmp5[0]);
+          let isEqualResult = null != value;
+          if (isEqualResult) {
+            isEqualResult = obj.isEqual(tmp7);
+          }
+          if (!isEqualResult) {
+            let arr = items.push(obj);
+          }
+          continue;
         }
-        continue;
-      }
-      let num = 0;
-      let flag = false;
-      if (0 < changedWidgets.length) {
-        while (true) {
-          let tmp20 = changedWidgets[num];
-          let id;
-          if (tmp20 != null) {
-            id = tmp20.id;
+        for (const item10029 of tmp30) {
+          let tmp16 = _slicedToArray(item10029, 2);
+          let tmp17 = tmp16[1];
+          if (!map1.has(tmp16[0])) {
+            let arr2 = items1.push(tmp17);
           }
-          let tmp24 = _null2[num];
-          let id1;
-          if (tmp24 != null) {
-            id1 = tmp24.id;
-          }
-          flag = true;
-          if (id !== id1) {
-            break;
-          } else {
-            let sum = num + 1;
-            num = sum;
-            flag = false;
-            if (sum >= changedWidgets.length) {
+          continue;
+        }
+        let num = 0;
+        let flag = false;
+        if (0 < changedWidgets.length) {
+          while (true) {
+            let tmp20 = changedWidgets[num];
+            let id;
+            if (tmp20 != null) {
+              id = tmp20.id;
+            }
+            let tmp24 = _null2[num];
+            let id1;
+            if (tmp24 != null) {
+              id1 = tmp24.id;
+            }
+            flag = true;
+            if (id !== id1) {
               break;
+            } else {
+              let sum = num + 1;
+              num = sum;
+              flag = false;
+              if (sum >= changedWidgets.length) {
+                break;
+              }
             }
           }
         }
+        return { changedWidgets: items, removedWidgets: items1, hasOrderChanges: flag };
       }
-      const obj2 = { changedWidgets: items, removedWidgets: items1, hasOrderChanges: flag };
-      return obj2;
     }
+    if (changedWidgets == null) {
+      changedWidgets = [];
+    }
+    return { changedWidgets, removedWidgets: [], hasOrderChanges: false };
   }
-  if (changedWidgets == null) {
-    changedWidgets = [];
+  getChangedWidgets() {
+    return this.getWidgetUpdates().changedWidgets;
   }
-  return { changedWidgets, removedWidgets: [], hasOrderChanges: false };
-};
-prototype["getChangedWidgets"] = function getChangedWidgets() {
-  return this.getWidgetUpdates().changedWidgets;
-};
-prototype["getRemovedWidgets"] = function getRemovedWidgets() {
-  return this.getWidgetUpdates().removedWidgets;
-};
-prototype["hasUnsavedChanges"] = function hasUnsavedChanges() {
-  const widgetUpdates = this.getWidgetUpdates();
-  let hasOrderChanges = widgetUpdates.changedWidgets.length > 0;
-  if (!hasOrderChanges) {
-    hasOrderChanges = widgetUpdates.removedWidgets.length > 0;
+  getRemovedWidgets() {
+    return this.getWidgetUpdates().removedWidgets;
   }
-  if (!hasOrderChanges) {
-    hasOrderChanges = widgetUpdates.hasOrderChanges;
+  hasUnsavedChanges() {
+    const widgetUpdates = this.getWidgetUpdates();
+    let tmp2 = widgetUpdates.changedWidgets.length > 0;
+    const hasOrderChanges = widgetUpdates.hasOrderChanges;
+    if (!tmp2) {
+      tmp2 = widgetUpdates.removedWidgets.length > 0;
+    }
+    if (!tmp2) {
+      tmp2 = hasOrderChanges;
+    }
+    return tmp2;
   }
-  return hasOrderChanges;
-};
-prototype["canSaveChanges"] = function canSaveChanges() {
-  const saveablePendingWidgets = this.getSaveablePendingWidgets();
-  let everyResult = null != saveablePendingWidgets;
-  if (everyResult) {
-    everyResult = saveablePendingWidgets.every((isValid) => isValid.isValid());
+  canSaveChanges() {
+    const saveablePendingWidgets = this.getSaveablePendingWidgets();
+    const everyResult = null != saveablePendingWidgets && saveablePendingWidgets.every((isValid) => isValid.isValid());
+    return everyResult;
   }
-  return everyResult;
-};
+}
+const prototype = WidgetStore.prototype;
 Object.defineProperty(prototype, "isSubmitting", {
   get: function isSubmitting() {
     return c8;
@@ -189,7 +194,7 @@ Object.defineProperty(prototype, "suggestedGameIds", {
   },
   set: undefined
 });
-const widgetStore = new WidgetStore(DispatcherDefault, {
+let obj = {
   WIDGET_PENDING_SET: function handleSetPendingWidgets(widgets) {
     const widgets2 = widgets.widgets;
     if (null === c7) {
@@ -213,7 +218,7 @@ const widgetStore = new WidgetStore(DispatcherDefault, {
   WIDGET_PENDING_SAVE_SUCCESS: function handleSavePendingWidgetsSuccess() {
     c8 = false;
     if (null !== c6) {
-      c7 = null;
+      let c7 = null;
       c6 = null;
     }
   },
@@ -235,8 +240,8 @@ const widgetStore = new WidgetStore(DispatcherDefault, {
     c12 = true;
   },
   WIDGET_PENDING_CLEAR: function handleClearPendingWidgets() {
-    c6 = null;
-    c7 = null;
+    let c6 = null;
+    let c7 = null;
   },
   WIDGET_SUGGESTED_REMOVE_GAME: function handleRemoveApplicationIdFromSuggestedGames(applicationId) {
     applicationId = applicationId.applicationId;
@@ -245,8 +250,8 @@ const widgetStore = new WidgetStore(DispatcherDefault, {
     const prop = closure_9.suggestedWishlistGamesIds;
     closure_9.suggestedWishlistGamesIds = prop.filter((item) => item !== applicationId);
   }
-});
-const size = fn(2);
+};
+const widgetStore = new WidgetStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/user_profile/WidgetStore.tsx");
 
 export default widgetStore;

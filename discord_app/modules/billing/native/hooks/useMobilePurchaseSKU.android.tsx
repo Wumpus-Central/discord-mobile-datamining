@@ -3,27 +3,28 @@
 // Module 10544 (useMobilePurchaseSKU)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "module_19" /* 19 */;
+import Constants from "Constants" /* 1085 */;
+import Constants2 from "Constants" /* 6740 */;
+import NativeCheckoutStore from "NativeCheckoutStore" /* 6930 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
+import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
+let closure_3, v3;
 
-const require = fn;
-let closure_5 = fn(6930).useNativeCheckoutStoreOrNull;
-const CurrencyCodes = fn(1085).CurrencyCodes;
-fn(6740).GPlayBillingResult;
-let closure_9 = new LoggerDefault("useMobilePurchaseSKU.android");
-const size = fn(2);
+let closure_5 = NativeCheckoutStore.useNativeCheckoutStoreOrNull;
+const CurrencyCodes = Constants.CurrencyCodes;
+const metroImportAll = Constants2.GPlayBillingResult;
+const tmp2 = new LoggerDefault("useMobilePurchaseSKU.android");
+let closure_9 = tmp2;
 let result = size.fileFinishedImporting("modules/billing/native/hooks/useMobilePurchaseSKU.android.tsx");
 
 export default function useMobilePurchaseSKU(skuId) {
   skuId = skuId.skuId;
-  _require = skuId;
-  let platformSkuId = skuId.platformSkuId;
-  const analyticsLocations = skuId.analyticsLocations;
+  const platformSkuId = skuId.platformSkuId;
+  let analyticsLocations = skuId.analyticsLocations;
   let analyticsLoadId = skuId.analyticsLoadId;
-  asyncGeneratorStep = analyticsLoadId;
   const analyticsData = skuId.analyticsData;
   const onPurchaseComplete = skuId.onPurchaseComplete;
   const onPurchaseError = skuId.onPurchaseError;
@@ -40,20 +41,25 @@ export default function useMobilePurchaseSKU(skuId) {
   let callback2;
   let callback3;
   const currentUser = onPurchaseError.getCurrentUser();
-  const handlePremiumPurchase = require("handlePremiumPurchase").useHandlePremiumPurchase();
+  const tmp = analyticsLocations;
+  let obj2 = skuId(analyticsLocations[7]);
+  const handlePremiumPurchase = obj2.useHandlePremiumPurchase();
   const tmp3 = onPurchaseComplete((setOrder) => setOrder.setOrder);
-  closure_13 = tmp3;
+  let closure_13 = tmp3;
   const tmp4 = onPurchaseComplete((setCheckoutSucceeded) => setCheckoutSucceeded.setCheckoutSucceeded);
-  closure_14 = tmp4;
+  let closure_14 = tmp4;
   const tmp5 = onPurchaseComplete((getPurchaseInFlight) => getPurchaseInFlight.getPurchaseInFlight);
-  closure_15 = tmp5;
+  let closure_15 = tmp5;
   const tmp6 = onPurchaseComplete((setPurchaseInFlight) => setPurchaseInFlight.setPurchaseInFlight);
-  closure_16 = tmp6;
+  let closure_16 = tmp6;
   let tmp7 = onPurchaseComplete((contextMetadata) => contextMetadata.contextMetadata.loadId);
   const tmp8 = undefined !== currentUser && currentUser.isStaff();
-  closure_17 = tmp8;
+  let closure_17 = tmp8;
   let flag2;
-  let obj2 = require("handlePremiumPurchase");
+  const tmp9 = platformSkuId(tmp[8])(() => {
+    const obj = skuId(analyticsLocations[9]);
+    return obj.getNewAnalyticsLoadId();
+  });
   if (giftParams != null) {
     flag2 = giftParams.isGift;
   }
@@ -64,12 +70,12 @@ export default function useMobilePurchaseSKU(skuId) {
     if (tmp7 == null) {
       tmp7 = tmp9;
     }
-    asyncGeneratorStep = tmp7;
     analyticsLoadId = tmp7;
   }
   const items = [onPurchaseComplete, tmp4, tmp6];
   callback = analyticsData.useCallback(() => {
-    DispatcherDefault.unsubscribe("GPLAY_PURCHASE_VERIFIED", callback);
+    const obj = DispatcherDefault;
+    obj.unsubscribe("GPLAY_PURCHASE_VERIFIED", callback);
     if (closure_16 != null) {
       tmp2(false);
     }
@@ -80,7 +86,8 @@ export default function useMobilePurchaseSKU(skuId) {
   }, items);
   const items1 = [onPurchaseError, callback, tmp6];
   callback1 = analyticsData.useCallback(() => {
-    DispatcherDefault.unsubscribe("GPLAY_PURCHASE_VERIFIED", callback);
+    const obj = DispatcherDefault;
+    obj.unsubscribe("GPLAY_PURCHASE_VERIFIED", callback);
     if (closure_16 != null) {
       tmp2(false);
     }
@@ -93,25 +100,29 @@ export default function useMobilePurchaseSKU(skuId) {
     }
     onPurchaseError();
   }, items2);
-  _require = asyncGeneratorStep(async (skuId) => {
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    return (async (arg0) => {
+  const useCallback = analyticsData.useCallback;
+  let closure_0 = analyticsLoadId((skuId) => {
+    let closure_1;
+    let c5 = 0;
+    let c6 = 0;
+    let c4 = 0;
+    return (function*(arg0) {
+      let obj7;
+      let obj9;
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp6 === 3) {
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          const obj3 = { value, done: true };
-          return obj3;
+          return { value, done: true };
         } else {
           return { value: "IconComponent", done: null };
         }
       } else {
         try {
+          let error;
           v3 = 2;
           if (0 === c5) {
             if (arg0 === 1) {
@@ -119,54 +130,57 @@ export default function useMobilePurchaseSKU(skuId) {
               throw value;
             } else if (arg0 === 2) {
               v3 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
+              return { value, done: true };
             } else {
-              closure_2 = tmp3;
-              platformSkuId = tmp7;
-              closure_129_0 = undefined;
-              if (skuId.billingResult === onPurchasePending.OK) {
+              closure_2 = tmp;
+              error = tmp4;
+              skuId = undefined;
+              if (skuId.billingResult === constants.OK) {
                 if (closure_1_16 != null) {
                   closure_1_16(true);
                 }
               } else {
-                platformSkuId(analyticsLocations[10]).unsubscribe("GPLAY_PURCHASE_VERIFIED", callback);
-                if (null != orderId) {
-                  const obj5 = { orderId, platformSkuId, skuId };
-                  giftParams.info("[handleGPlayUpdatePurchaseAction] User canceled purchase, canceling order signing", obj5);
-                  c4 = 1;
-                  c5 = 2;
-                  v3 = 1;
-                  const obj6 = { value: skuId(analyticsLocations[11]).cancelOrderSigning(orderId), done: false };
-                  return obj6;
-                }
                 const obj11 = platformSkuId(analyticsLocations[10]);
+                obj11.unsubscribe("GPLAY_PURCHASE_VERIFIED", closure_1_19);
+                if (null != orderId) {
+                  if (skuId.isActivePurchase) {
+                    if (skuId.billingResult === tmp50.USER_CANCELED) {
+                      const obj5 = { orderId, platformSkuId: error, skuId };
+                      logger.info("[handleGPlayUpdatePurchaseAction] User canceled purchase, canceling order signing", obj5);
+                      c4 = 1;
+                      c5 = 2;
+                      v3 = 1;
+                      const obj6 = { value: obj7.cancelOrderSigning(orderId), done: false };
+                      obj7 = skuId(analyticsLocations[11]);
+                      return obj6;
+                    }
+                  }
+                }
               }
               closure_1_8();
               v3 = 3;
+              return { value: "IconComponent", done: null };
             }
-          } else if (1 === tmp7) {
+          } else if (1 === c5) {
             c4 = 0;
-            closure_129_1 = closure_3;
-            const obj8 = { tags: { source: "useMobilePurchaseSKU_cancelOrderSigning" }, extra: null };
-            const obj9 = { orderId };
-            obj8.extra = obj9;
-            const result = skuId(analyticsLocations[12]).captureBillingException(closure_129_1, obj8);
-            const obj10 = { error: closure_129_1, orderId, skuId };
-            giftParams.error("Failed to cancel order signing", obj10);
+            error = closure_3;
+            const obj8 = { tags: { source: "useMobilePurchaseSKU_cancelOrderSigning" }, extra: obj9 };
+            obj9 = { orderId };
             const obj2 = skuId(analyticsLocations[12]);
+            const result = obj2.captureBillingException(error, obj8);
+            const obj10 = { error, orderId, skuId };
+            logger.error("Failed to cancel order signing", obj10);
           } else if (arg0 === 1) {
             v3 = 3;
             throw value;
           } else if (arg0 === 2) {
             c4 = 0;
             v3 = 3;
-            const obj = { value, done: true };
-            return obj;
+            return { value, done: true };
           } else {
-            closure_129_0 = value;
+            skuId = value;
             if (closure_1_13 != null) {
-              tmp10(closure_129_0);
+              tmp7(skuId);
             }
             c4 = 0;
           }
@@ -174,48 +188,51 @@ export default function useMobilePurchaseSKU(skuId) {
             closure_1_16(false);
           }
           v3();
-        } catch (tmp45) {
-          closure_3 = tmp45;
-          if (tmp4 === c4) {
-            v3 = tmp2;
-            throw tmp45;
+        } catch (tmp42) {
+          closure_3 = tmp42;
+          if (0 === c4) {
+            v3 = 3;
+            throw tmp42;
           } else {
-            c5 = tmp;
+            c5 = 1;
           }
         }
       }
     })();
   });
   const items3 = [callback, onPurchaseError, onPurchasePending, tmp6, orderId, tmp3, platformSkuId, skuId];
-  callback3 = analyticsData.useCallback(function() {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
+  callback3 = useCallback(function() {
+    return closure_0(...arguments);
   }, items3);
   const items4 = [callback3, callback, callback1];
   const effect = analyticsData.useEffect(() => {
-    const subscription = DispatcherDefault.subscribe("GPLAY_UPDATE_PURCHASE_STATE", callback3);
-    const subscription1 = DispatcherDefault.subscribe("GPLAY_PURCHASE_VERIFIED", callback);
-    const subscription2 = DispatcherDefault.subscribe("GPLAY_PURCHASE_VERIFICATION_FAILED", callback1);
+    let obj = DispatcherDefault;
+    const subscription = obj.subscribe("GPLAY_UPDATE_PURCHASE_STATE", callback3);
+    let obj2 = DispatcherDefault;
+    const subscription1 = obj2.subscribe("GPLAY_PURCHASE_VERIFIED", callback);
+    let obj3 = DispatcherDefault;
+    const subscription2 = obj3.subscribe("GPLAY_PURCHASE_VERIFICATION_FAILED", callback1);
     return () => {
-      platformSkuId(analyticsLocations[10]).unsubscribe("GPLAY_UPDATE_PURCHASE_STATE", callback3);
       const obj = platformSkuId(analyticsLocations[10]);
-      platformSkuId(analyticsLocations[10]).unsubscribe("GPLAY_PURCHASE_VERIFIED", callback);
+      obj.unsubscribe("GPLAY_UPDATE_PURCHASE_STATE", callback3);
       const obj2 = platformSkuId(analyticsLocations[10]);
-      platformSkuId(analyticsLocations[10]).unsubscribe("GPLAY_PURCHASE_VERIFICATION_FAILED", callback1);
+      obj2.unsubscribe("GPLAY_PURCHASE_VERIFIED", callback);
+      const obj3 = platformSkuId(analyticsLocations[10]);
+      obj3.unsubscribe("GPLAY_PURCHASE_VERIFICATION_FAILED", callback1);
     };
   }, items4);
   const items5 = [skuId, platformSkuId, tmp8, flag2, handlePremiumPurchase, onPurchaseComplete, onPurchaseError, freePurchaseCallback, analyticsLoadId, analyticsLocations, analyticsData, giftParams, callback2, flag, tmp4, tmp5, tmp6, orderId];
-  return analyticsData.useCallback(asyncGeneratorStep(async () => {
+  return analyticsData.useCallback(analyticsLoadId(function*() {
+    let closure_2;
+    let obj11;
+    let obj13;
+    let obj9;
+    let options;
+    let purchaseSKU;
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp8 === 3) {
+    } else if (tmp3 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -225,7 +242,9 @@ export default function useMobilePurchaseSKU(skuId) {
         return { value: "IconComponent", done: null };
       }
     } else {
+      let c4;
       try {
+        let error;
         c6 = 2;
         if (0 === c5) {
           if (arg0 === 1) {
@@ -236,18 +255,24 @@ export default function useMobilePurchaseSKU(skuId) {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            closure_1 = tmp9;
-            let tmp52;
+            analyticsLocations = tmp;
+            error = tmp4;
+            let tmp47;
             if (closure_15 != null) {
-              tmp52 = closure_15();
+              tmp47 = closure_15();
             }
-            if (true === tmp52) {
+            if (true === tmp47) {
               const _Error2 = Error;
-              const error = new Error("Purchase already in progress");
+              const self3 = this;
+              const self4 = this;
+              error = new Error("Purchase already in progress");
               throw error;
             } else {
+              const obj17 = purchaseSKU(analyticsLocations[13]);
               if (obj17.isNullOrEmpty(platformSkuId)) {
                 const _Error = Error;
+                const self = this;
+                const self2 = this;
                 const error1 = new Error("Missing google play sku ID");
                 throw error1;
               } else {
@@ -256,17 +281,18 @@ export default function useMobilePurchaseSKU(skuId) {
                   closure_16(true);
                 }
                 if (closure_17) {
-                  if (flag) {
-                    if (!flag2) {
+                  if (true) {
+                    if (!false) {
                       c4 = 3;
-                      let purchaseSKU = freePurchaseCallback;
+                      purchaseSKU = freePurchaseCallback;
                       if (freePurchaseCallback == null) {
-                        purchaseSKU = purchaseSKU(tmp4[14]).purchaseSKU;
+                        purchaseSKU = purchaseSKU(analyticsLocations[14]).purchaseSKU;
                       }
-                      const obj5 = { expectedAmount: 0, expectedCurrency: constants.USD, loadId: purchaseSKU(tmp4[15]).v4() };
+                      const obj5 = { expectedAmount: 0, expectedCurrency: constants.USD, loadId: obj9.v4() };
+                      obj9 = purchaseSKU(analyticsLocations[15]);
                       c5 = 4;
                       c6 = 1;
-                      const obj6 = { value: purchaseSKU("collectibles", closure_0, obj5), done: false };
+                      const obj6 = { value: purchaseSKU("collectibles", skuId, obj5), done: false };
                       return obj6;
                     }
                   }
@@ -275,33 +301,34 @@ export default function useMobilePurchaseSKU(skuId) {
                   c4 = 4;
                   c5 = 6;
                   c6 = 1;
-                  const obj7 = { value: purchaseSKU(tmp4[11]).markOrderAsSigningInProgress(orderId), done: false };
+                  const obj7 = { value: obj13.markOrderAsSigningInProgress(orderId), done: false };
+                  obj13 = purchaseSKU(analyticsLocations[11]);
                   return obj7;
                 }
               }
-              obj17 = purchaseSKU(tmp4[13]);
             }
           }
-        } else if (1 === tmp9) {
+        } else if (1 === c5) {
           c4 = 0;
-          closure_129_2 = closure_3;
+          analyticsLocations = closure_3;
           if (closure_130_16 != null) {
             closure_130_16(false);
           }
-          throw closure_129_2;
-        } else if (2 === tmp9) {
+          throw analyticsLocations;
+        } else if (2 === c5) {
           c4 = 1;
+          const tmp37 = closure_3;
           if (closure_130_16 != null) {
             closure_130_16(false);
           }
-          throw closure_3;
-        } else if (3 === tmp9) {
+          throw tmp37;
+        } else if (3 === c5) {
           c4 = 2;
-          closure_129_0 = closure_3;
+          let closure_0 = closure_3;
           closure_130_6();
-          throw closure_129_0;
+          throw closure_0;
         } else {
-          if (4 === tmp9) {
+          if (4 === c5) {
             if (arg0 === 1) {
               c6 = 3;
               throw value;
@@ -324,17 +351,17 @@ export default function useMobilePurchaseSKU(skuId) {
                 closure_130_16(false);
               }
             }
-          } else if (5 === tmp9) {
+          } else if (5 === c5) {
             c4 = 1;
-            closure_129_1 = closure_3;
-            const obj10 = { tags: { source: "useMobilePurchaseSKU_markSigning" }, extra: null };
-            const obj11 = { orderId: closure_130_11 };
-            obj10.extra = obj11;
-            const result = purchaseSKU(tmp4[12]).captureBillingException(closure_129_1, obj10);
-            const obj12 = { error: closure_129_1, skuId: closure_130_0, orderId: closure_130_11 };
+            error = closure_3;
+            const obj10 = { tags: { source: "useMobilePurchaseSKU_markSigning" }, extra: obj11 };
+            obj11 = { orderId: closure_130_11 };
+            const obj3 = purchaseSKU(analyticsLocations[12]);
+            const result = obj3.captureBillingException(error, obj10);
+            const obj12 = { error, skuId: closure_130_0, orderId: closure_130_11 };
             logger.error("Failed to mark order signing-in-progress", obj12);
-            throw closure_129_1;
-          } else if (6 === tmp9) {
+            throw error;
+          } else if (6 === c5) {
             if (arg0 === 1) {
               c6 = 3;
               throw value;
@@ -359,30 +386,28 @@ export default function useMobilePurchaseSKU(skuId) {
           c6 = 3;
           return { value: "IconComponent", done: null };
         }
-        const obj15 = { productId: closure_130_1, skuId: closure_130_0, isOneTimePurchase: true, analyticsLoadId: closure_130_3, analyticsLocations: closure_130_2, analyticsData: closure_130_4, isGift: closure_130_18, giftInfoOptions: null, onPurchaseError: null };
+        const obj15 = { productId: closure_130_1, skuId: closure_130_0, isOneTimePurchase: true, analyticsLoadId: closure_130_3, analyticsLocations: closure_130_2, analyticsData: closure_130_4, isGift: closure_130_18, giftInfoOptions: options, onPurchaseError: closure_130_21 };
         options = undefined;
         if (closure_130_9 != null) {
           options = closure_130_9.options;
         }
-        obj15.giftInfoOptions = options;
-        obj15.onPurchaseError = closure_130_21;
         c5 = 7;
         c6 = 1;
         const obj16 = { value: closure_130_12(obj15), done: false };
         return obj16;
-      } catch (tmp88) {
-        closure_3 = tmp88;
-        if (tmp5 === c4) {
-          c6 = tmp3;
-          throw tmp88;
-        } else if (tmp2 === tmp90) {
-          c5 = tmp2;
-        } else if (tmp === tmp90) {
-          c5 = tmp;
-        } else if (tmp3 === tmp90) {
-          c5 = tmp3;
+      } catch (tmp79) {
+        closure_3 = tmp79;
+        if (0 === c4) {
+          c6 = 3;
+          throw tmp79;
+        } else if (1 === c4) {
+          c5 = 1;
+        } else if (2 === c4) {
+          c5 = 2;
+        } else if (3 === c4) {
+          c5 = 3;
         } else {
-          c5 = tmp6;
+          c5 = 5;
         }
       }
     }

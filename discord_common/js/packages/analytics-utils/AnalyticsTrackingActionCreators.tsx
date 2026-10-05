@@ -5,29 +5,30 @@ import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsTrackingActionCreators.tsx");
 
-export (dispatcher, TRACK_ACTION_NAME) => {
-  closure_0 = dispatcher;
-  closure_1 = TRACK_ACTION_NAME;
+export const queueTrackingEventMaker = (dispatcher, TRACK_ACTION_NAME) => {
+  let closure_0 = dispatcher;
+  let closure_1 = TRACK_ACTION_NAME;
   return (event, arg1, arg2) => {
-    closure_1 = arg1;
-    closure_2 = arg2;
-    return new Promise((resolve) => {
-      const obj = { type: properties, event, properties, flush: null, fingerprint: null, resolve: null };
+    let closure_1 = arg1;
+    let closure_2 = arg2;
+    const promise = new Promise((resolve) => {
+      let fingerprint;
       let flag;
+      const obj = { type: properties, event, properties, flush: flag, fingerprint, resolve };
+      flag = undefined;
+      const dispatch = event.dispatch;
       if (closure_2 != null) {
         flag = closure_2.flush;
       }
       if (flag == null) {
         flag = false;
       }
-      obj.flush = flag;
-      let fingerprint;
+      fingerprint = undefined;
       if (closure_2 != null) {
         fingerprint = closure_2.fingerprint;
       }
-      obj.fingerprint = fingerprint;
-      obj.resolve = resolve;
-      event.dispatch(obj);
+      dispatch(obj);
     });
+    return promise;
   };
-}
+};

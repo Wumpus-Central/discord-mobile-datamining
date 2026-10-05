@@ -1,22 +1,23 @@
 // === Module 6534: RunAfterInteractionsUtils ===
 
 // Module 6534 (RunAfterInteractionsUtils)
-import _mod17 from "module_17" /* 17 */;
+import react_native from "react-native" /* 17 */;
 import Timers from "Timers" /* 2046 */;
 import size from "module_2" /* 2 */;
 
 function runAfterInteractions(preloadTimestampParser) {
+  let closure_0 = preloadTimestampParser;
   let num = MINUTE;
   if (MINUTE === undefined) {
     num = 2000;
   }
-  closure_1 = InteractionManager.runAfterInteractions(() => {
+  let closure_1 = InteractionManager.runAfterInteractions(() => {
     delayedCall.cancel();
-    preloadTimestampParser();
+    closure_0();
   });
   const delayedCall = new Timers.DelayedCall(num, () => {
     closure_1.cancel();
-    preloadTimestampParser();
+    closure_0();
   });
   delayedCall.delay();
   return {
@@ -26,7 +27,7 @@ function runAfterInteractions(preloadTimestampParser) {
     }
   };
 }
-const InteractionManager = _mod17.InteractionManager;
+const InteractionManager = react_native.InteractionManager;
 const result = size.fileFinishedImporting("utils/native/RunAfterInteractionsUtils.tsx");
 
 export default { runAfterInteractions };

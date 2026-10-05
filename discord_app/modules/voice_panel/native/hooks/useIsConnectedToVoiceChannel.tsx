@@ -1,25 +1,29 @@
 // === Module 17190: useIsConnectedToVoiceChannel ===
 
 // Module 17190 (useIsConnectedToVoiceChannel)
+import Constants from "Constants" /* 1085 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
 import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const RTCConnectionStates = fn(1085).RTCConnectionStates;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useIsConnectedToVoiceChannel.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const RTCConnectionStates = Constants.RTCConnectionStates;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let closure_0;
+  let first;
+  let tmp8;
   _require = arg0;
-  const cResult = require("c").c(3);
+  const obj = require("react");
+  const cResult = obj.c(3);
+  const tmp = _require;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [RTCConnectionStore, VoiceStateStore, AuthenticationStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -35,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       } else if (VoiceStateStore.isInChannel(tmp2, AuthenticationStore.getId())) {
         return true;
       } else {
-        state = RTCConnectionStore.getState();
+        const state = RTCConnectionStore.getState();
         if (RTCConnectionStates.DISCONNECTED !== state) {
           if (RTCConnectionStates.NO_ROUTE !== state) {
             return true;
@@ -46,16 +50,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     };
     cResult[1] = arg0;
     cResult[2] = fn;
-    let tmp8 = fn;
+    tmp8 = fn;
   } else {
     tmp8 = cResult[2];
   }
-  const obj = require("c");
-  return require("initialize").useStateFromStores(first, tmp8);
+  const tmpResult = tmp(504);
+  return tmpResult.useStateFromStores(first, tmp8);
 }) : ((arg0) => {
+  let closure_0;
   _require = arg0;
   const items = [RTCConnectionStore, VoiceStateStore, AuthenticationStore];
-  return require("initialize").useStateFromStores(items, () => {
+  const obj = require("get initialized");
+  return obj.useStateFromStores(items, () => {
     const channelId = RTCConnectionStore.getChannelId();
     let tmp2 = closure_0;
     if (closure_0 == null) {
@@ -66,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     } else if (VoiceStateStore.isInChannel(tmp2, AuthenticationStore.getId())) {
       return true;
     } else {
-      state = RTCConnectionStore.getState();
+      const state = RTCConnectionStore.getState();
       if (RTCConnectionStates.DISCONNECTED !== state) {
         if (RTCConnectionStates.NO_ROUTE !== state) {
           return true;
@@ -76,3 +82,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   });
 });
+const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useIsConnectedToVoiceChannel.tsx");
+
+export default tmp2;

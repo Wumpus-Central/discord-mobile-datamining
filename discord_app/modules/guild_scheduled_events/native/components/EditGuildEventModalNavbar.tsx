@@ -1,210 +1,261 @@
 // === Module 9183: EditGuildEventModalNavbar ===
 
 // Module 9183 (EditGuildEventModalNavbar)
-import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
+import react_native from "react-native" /* 17 */;
+import react2 from "react" /* 576 */;
+import intl3 from "intl" /* 1126 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import _modDef4809 from "module_4809" /* 4809 */;
+import AssetRegistryDefault from "AssetRegistry" /* 4809 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6469 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 6619 */;
-import HeaderActionButton from "HeaderActionButton" /* 6880 */;
+import HeaderActionButton2 from "HeaderActionButton" /* 6880 */;
 import EditGuildEventUtils from "EditGuildEventUtils" /* 9179 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4890);
+let hasOwnProperty;
+let metroRequire;
+const View = react_native.View;
+({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
 let closure_7 = createStyles.createStyles({ header: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: 4, paddingVertical: 8 }, headerTitle: { lineHeight: 28, textTransform: "uppercase" }, buttonContainer: { width: 60 }, rightButton: { marginLeft: 12 } });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventModalNavbar.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(40);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let flag;
+  let items;
+  let items1;
+  let onClose;
+  let screen;
+  let str;
+  let tmp10;
+  let tmp11;
+  let tmp12;
+  let tmp15;
+  let tmp16;
+  let tmp17;
+  let tmp6;
+  let tmp7;
+  let tmp8;
+  let tmp9;
+  const obj = react2;
+  const cResult = obj.c(40);
   ({ screen, onClose } = arg0);
   const tmp4 = closure_7();
-  variant = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow("EditGuildEventModalNavbar", "text-xs/bold");
-  if (cResult[0] === variant.style) {
-    if (cResult[1] === variant.variant) {
+  const obj2 = useTypeConsolidationTextTransform;
+  const typeConsolidationEyebrow = obj2.useTypeConsolidationEyebrow("EditGuildEventModalNavbar", "text-xs/bold");
+  if (cResult[0] === typeConsolidationEyebrow.style) {
+    if (cResult[1] === typeConsolidationEyebrow.variant) {
       if (cResult[2] === screen) {
         if (cResult[3] === tmp4.buttonContainer) {
           if (cResult[4] === tmp4.header) {
             if (cResult[5] === tmp4.headerTitle) {
-              if (cResult[20] === cResult[6]) {
-                if (cResult[21] === tmp7) {
-                  if (cResult[22] === tmp8) {
-                    if (cResult[23] === tmp9) {
-                      if (cResult[24] === tmp10) {
-                        let tmp31 = cResult[25];
+              tmp6 = cResult[6];
+              tmp7 = cResult[7];
+              tmp8 = cResult[8];
+              tmp9 = cResult[9];
+              str = cResult[10];
+              tmp10 = cResult[11];
+              flag = cResult[12];
+              tmp11 = cResult[13];
+              tmp12 = cResult[14];
+            }
+            if (cResult[20] === tmp6) {
+              if (cResult[21] === tmp8) {
+                if (cResult[22] === tmp9) {
+                  if (cResult[23] === str) {
+                    let tmp23;
+                    let tmp27;
+                    if (cResult[24] === tmp10) {
+                      tmp23 = cResult[25];
+                    }
+                    const _Symbol = Symbol;
+                    const buttonContainer = tmp4.buttonContainer;
+                    if (cResult[26] === Symbol.for("react.memo_cache_sentinel")) {
+                      const intl2 = intl3.intl;
+                      const stringResult = intl2.string(intl3.t.cpT0Cq);
+                      cResult[26] = stringResult;
+                      tmp27 = stringResult;
+                    } else {
+                      tmp27 = cResult[26];
+                    }
+                    if (cResult[27] === onClose) {
+                      let tmp29;
+                      if (cResult[28] === tmp4.rightButton) {
+                        tmp29 = cResult[29];
                       }
-                      const _Symbol = Symbol;
-                      if (cResult[26] === Symbol.for("react.memo_cache_sentinel")) {
-                        const intl2 = util.intl;
-                        const stringResult = intl2.string(util.t.cpT0Cq);
-                        cResult[26] = stringResult;
-                        let tmp35 = stringResult;
-                      } else {
-                        tmp35 = cResult[26];
-                      }
-                      if (cResult[27] === onClose) {
-                        if (cResult[28] === tmp4.rightButton) {
-                          let tmp37 = cResult[29];
+                      if (cResult[30] === tmp4.buttonContainer) {
+                        let tmp33;
+                        if (cResult[31] === tmp29) {
+                          tmp33 = cResult[32];
                         }
-                        if (cResult[30] === tmp4.buttonContainer) {
-                          if (cResult[31] === tmp37) {
-                            let tmp41 = cResult[32];
-                          }
-                          if (cResult[33] === tmp6) {
-                            if (cResult[34] === tmp41) {
-                              if (cResult[35] === tmp11) {
-                                if (cResult[36] === tmp12) {
-                                  if (cResult[37] === tmp13) {
-                                    if (cResult[38] === tmp31) {
-                                      let tmp45 = cResult[39];
-                                    }
-                                    return tmp45;
+                        if (cResult[33] === tmp7) {
+                          if (cResult[34] === tmp33) {
+                            if (cResult[35] === flag) {
+                              if (cResult[36] === tmp11) {
+                                if (cResult[37] === tmp12) {
+                                  let tmp37;
+                                  if (cResult[38] === tmp23) {
+                                    tmp37 = cResult[39];
                                   }
+                                  return tmp37;
                                 }
                               }
                             }
                           }
-                          const obj3 = { top: tmp11, style: tmp12, children: null };
-                          const items = [tmp13, tmp31, tmp41];
-                          obj3.children = items;
-                          const tmp47 = timestampProducer(tmp6, obj3);
-                          cResult[33] = tmp6;
-                          cResult[34] = tmp41;
-                          cResult[35] = tmp11;
-                          cResult[36] = tmp12;
-                          cResult[37] = tmp13;
-                          cResult[38] = tmp31;
-                          cResult[39] = tmp47;
-                          tmp45 = tmp47;
                         }
-                        const obj4 = { style: tmp4.buttonContainer, children: tmp37 };
-                        const tmp44 = hasOwnProperty(View, obj4);
-                        cResult[30] = tmp4.buttonContainer;
-                        cResult[31] = tmp37;
-                        cResult[32] = tmp44;
-                        tmp41 = tmp44;
+                        const obj3 = { top: flag, style: tmp11, children: items };
+                        items = [tmp12, tmp23, tmp33];
+                        const tmp39 = metroRequire(tmp7, obj3);
+                        cResult[33] = tmp7;
+                        cResult[34] = tmp33;
+                        cResult[35] = flag;
+                        cResult[36] = tmp11;
+                        cResult[37] = tmp12;
+                        cResult[38] = tmp23;
+                        cResult[39] = tmp39;
+                        tmp37 = tmp39;
                       }
-                      const obj5 = { accessibilityLabel: tmp35, onPress: onClose, source: _modDef4809, style: tmp4.rightButton };
-                      const tmp40 = hasOwnProperty(HeaderActionButton.HeaderActionButton, obj5);
-                      cResult[27] = onClose;
-                      cResult[28] = tmp4.rightButton;
-                      cResult[29] = tmp40;
-                      tmp37 = tmp40;
+                      const obj4 = { style: buttonContainer, children: tmp29 };
+                      const tmp36 = hasOwnProperty(View, obj4);
+                      cResult[30] = tmp4.buttonContainer;
+                      cResult[31] = tmp29;
+                      cResult[32] = tmp36;
+                      tmp33 = tmp36;
                     }
+                    const obj5 = { accessibilityLabel: tmp27, onPress: onClose, source: AssetRegistryDefault, style: tmp4.rightButton };
+                    const HeaderActionButton = HeaderActionButton2.HeaderActionButton;
+                    const tmp32 = hasOwnProperty(HeaderActionButton, obj5);
+                    cResult[27] = onClose;
+                    cResult[28] = tmp4.rightButton;
+                    cResult[29] = tmp32;
+                    tmp29 = tmp32;
                   }
                 }
               }
-              const obj6 = { style: cResult[8], variant: cResult[9], color: cResult[10], children: cResult[11] };
-              const tmp33 = hasOwnProperty(cResult[6], obj6);
-              cResult[20] = cResult[6];
-              cResult[21] = cResult[8];
-              cResult[22] = cResult[9];
-              cResult[23] = cResult[10];
-              cResult[24] = cResult[11];
-              cResult[25] = tmp33;
-              tmp31 = tmp33;
             }
+            const obj6 = { style: tmp8, variant: tmp9, color: str, children: tmp10 };
+            const tmp25 = hasOwnProperty(tmp6, obj6);
+            cResult[20] = tmp6;
+            cResult[21] = tmp8;
+            cResult[22] = tmp9;
+            cResult[23] = str;
+            cResult[24] = tmp10;
+            cResult[25] = tmp25;
+            tmp23 = tmp25;
           }
         }
       }
     }
   }
   if (EditGuildEventUtils.EditGuildEventScreens.CHANNEL_SELECTOR === screen) {
-    let items1 = [1, 3];
+    items1 = [1, 3];
   } else if (EditGuildEventUtils.EditGuildEventScreens.DETAILS === screen) {
     items1 = [2, 3];
   } else if (EditGuildEventUtils.EditGuildEventScreens.PREVIEW === screen) {
     items1 = [3, 3];
   } else {
-    GlobalUtils.assertNever(screen);
     const tmpResult = GlobalUtils;
+    tmpResult.assertNever(screen);
   }
-  let num = 2;
-  [tmp16, tmp17] = items1;
+  [tmp15, tmp16] = items1;
+  _slicedToArray(items1, 2);
   const SafeAreaPaddingView = common_SafeAreaView.SafeAreaPaddingView;
   const header = tmp4.header;
   if (cResult[15] !== tmp4.buttonContainer) {
     const obj7 = { style: tmp4.buttonContainer };
-    const tmp21 = hasOwnProperty(View, obj7);
+    const tmp20 = hasOwnProperty(View, obj7);
     cResult[15] = tmp4.buttonContainer;
-    cResult[16] = tmp21;
-    let tmp18 = tmp21;
+    cResult[16] = tmp20;
+    tmp17 = tmp20;
   } else {
-    tmp18 = cResult[16];
+    tmp17 = cResult[16];
   }
   const Text = Text_Text.Text;
-  if (cResult[17] === variant.style) {
+  if (cResult[17] === typeConsolidationEyebrow.style) {
+    let tmp21;
     if (cResult[18] === tmp4.headerTitle) {
-      let tmp22 = cResult[19];
+      tmp21 = cResult[19];
     }
-    const variant2 = variant.variant;
-    const intl = util.intl;
-    const obj8 = { step: tmp16, total: tmp17 };
-    const formatResult = intl.format(util.t["42HaFY"], obj8);
-    ({ style: tmp3[0], variant } = variant);
-    cResult[1] = variant;
-    cResult[num] = screen;
+    const variant = typeConsolidationEyebrow.variant;
+    const intl = intl3.intl;
+    const obj8 = { step: tmp15, total: tmp16 };
+    const formatResult = intl.format(intl3.t["42HaFY"], obj8);
+    cResult[0] = typeConsolidationEyebrow.style;
+    cResult[1] = typeConsolidationEyebrow.variant;
+    cResult[2] = screen;
     cResult[3] = tmp4.buttonContainer;
     cResult[4] = tmp4.header;
     cResult[5] = tmp4.headerTitle;
     cResult[6] = Text;
     cResult[7] = SafeAreaPaddingView;
-    cResult[8] = tmp22;
-    cResult[9] = variant2;
-    screen = "text-default";
+    cResult[8] = tmp21;
+    cResult[9] = variant;
     cResult[10] = "text-default";
     cResult[11] = formatResult;
     cResult[12] = true;
     cResult[13] = header;
-    num = 14;
-    cResult[14] = tmp18;
+    cResult[14] = tmp17;
+    tmp8 = tmp21;
+    tmp12 = tmp17;
+    tmp11 = header;
+    flag = true;
+    tmp10 = formatResult;
+    str = "text-default";
+    tmp9 = variant;
+    tmp7 = SafeAreaPaddingView;
+    tmp6 = Text;
   }
-  const items2 = [tmp4.headerTitle, variant.style];
-  cResult[17] = variant.style;
+  const items2 = [tmp4.headerTitle, typeConsolidationEyebrow.style];
+  cResult[17] = typeConsolidationEyebrow.style;
   cResult[18] = tmp4.headerTitle;
   cResult[19] = items2;
-  tmp22 = items2;
-  const tmp15 = _slicedToArray(items1, 2);
+  tmp21 = items2;
 }) : ((screen) => {
+  let HeaderActionButton;
+  let intl;
+  let intl2;
+  let items;
+  let items1;
+  let items2;
+  let obj6;
+  let tmp7;
+  let tmp8;
   screen = screen.screen;
+  const onClose = screen.onClose;
   const tmp = closure_7();
-  const typeConsolidationEyebrow = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow("EditGuildEventModalNavbar", "text-xs/bold");
+  const obj = useTypeConsolidationTextTransform;
+  const typeConsolidationEyebrow = obj.useTypeConsolidationEyebrow("EditGuildEventModalNavbar", "text-xs/bold");
   if (EditGuildEventUtils.EditGuildEventScreens.CHANNEL_SELECTOR === screen) {
-    let items = [1, 3];
+    items = [1, 3];
   } else if (EditGuildEventUtils.EditGuildEventScreens.DETAILS === screen) {
     items = [2, 3];
   } else if (EditGuildEventUtils.EditGuildEventScreens.PREVIEW === screen) {
     items = [3, 3];
   } else {
-    GlobalUtils.assertNever(screen);
     const tmp2Result = GlobalUtils;
+    tmp2Result.assertNever(screen);
   }
   [tmp7, tmp8] = items;
-  const obj2 = { top: true, style: tmp.header, children: null };
-  const items1 = [hasOwnProperty(View, { style: tmp.buttonContainer }), , ];
-  const obj4 = { style: null, variant: typeConsolidationEyebrow.variant, color: "text-default", children: null };
-  const items2 = [tmp.headerTitle, typeConsolidationEyebrow.style];
-  obj4.style = items2;
-  const intl = util.intl;
-  obj4.children = intl.format(util.t["42HaFY"], { step: tmp7, total: tmp8 });
-  items1[1] = hasOwnProperty(Text_Text.Text, obj4);
-  const obj5 = { style: tmp.buttonContainer, children: null };
-  const obj6 = { accessibilityLabel: null, onPress: null, source: null, style: null };
-  const intl2 = util.intl;
-  obj6.accessibilityLabel = intl2.string(util.t.cpT0Cq);
-  obj6.onPress = screen.onClose;
-  obj6.source = _modDef4809;
-  obj6.style = tmp.rightButton;
-  obj5.children = hasOwnProperty(HeaderActionButton.HeaderActionButton, obj6);
+  const obj2 = { top: true, style: tmp.header, children: items1 };
+  const obj3 = { style: tmp.buttonContainer };
+  _slicedToArray(items, 2);
+  const SafeAreaPaddingView = common_SafeAreaView.SafeAreaPaddingView;
+  items1 = [hasOwnProperty(View, obj3), , ];
+  const obj4 = { style: items2, variant: typeConsolidationEyebrow.variant, color: "text-default", children: intl.format(intl3.t["42HaFY"], { step: tmp7, total: tmp8 }) };
+  items2 = [tmp.headerTitle, typeConsolidationEyebrow.style];
+  const Text = Text_Text.Text;
+  intl = intl3.intl;
+  items1[1] = hasOwnProperty(Text, obj4);
+  const obj5 = { style: tmp.buttonContainer, children: hasOwnProperty(HeaderActionButton, obj6) };
+  obj6 = { accessibilityLabel: intl2.string(intl3.t.cpT0Cq), onPress: onClose, source: AssetRegistryDefault, style: tmp.rightButton };
+  HeaderActionButton = HeaderActionButton2.HeaderActionButton;
+  intl2 = intl3.intl;
   items1[2] = hasOwnProperty(View, obj5);
-  obj2.children = items1;
-  return timestampProducer(common_SafeAreaView.SafeAreaPaddingView, obj2);
+  return metroRequire(SafeAreaPaddingView, obj2);
 });
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventModalNavbar.tsx");
+
+export default tmp4;

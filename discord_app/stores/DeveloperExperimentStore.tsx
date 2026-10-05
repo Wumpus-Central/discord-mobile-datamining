@@ -1,33 +1,35 @@
 // === Module 7204: DeveloperExperimentStore ===
 
 // Module 7204 (DeveloperExperimentStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import UserStoreUtils from "UserStoreUtils" /* 1388 */;
+import UserStoreConstants from "UserStoreConstants" /* 1389 */;
+import ExperimentConstants from "ExperimentConstants" /* 4777 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import UserStore from "UserStore" /* 1377 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ExperimentBuckets = fn(4777).ExperimentBuckets;
-const Environments = fn(1389).Environments;
+const ExperimentBuckets = ExperimentConstants.ExperimentBuckets;
+const Environments = UserStoreConstants.Environments;
 let tmp2 = "production" === Environments.DEVELOPMENT;
 if (!tmp2) {
   const _window = window;
   tmp2 = window.GLOBAL_ENV.RELEASE_CHANNEL === Environments.STAGING;
 }
 function init() {
-  closure_5 = UserStoreUtils.isStaffEnv(UserStore.getCurrentUser());
+  const obj = UserStoreUtils;
+  closure_5 = obj.isStaffEnv(UserStore.getCurrentUser());
 }
 let closure_5 = tmp2;
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class DeveloperExperimentStore extends Store {
-}
-const prototype = DeveloperExperimentStore.prototype;
-prototype["initialize"] = function initialize() {
-  const self = this;
-  this.waitFor(UserStore, GuildStore);
-  const obj = {
-    isDeveloper: {
+  initialize() {
+    let obj2;
+    const self = this;
+    this.waitFor(UserStore, GuildStore);
+    const obj = { isDeveloper: obj2 };
+    obj2 = {
       configurable: false,
       get() {
         return closure_5;
@@ -35,23 +37,25 @@ prototype["initialize"] = function initialize() {
       set() {
 
       }
-    }
-  };
-  Object.defineProperties(this, obj);
-  closure_5 = self(1388).isStaffEnv(UserStore.getCurrentUser());
-  const timerId = setTimeout(() => Object.freeze(self));
-};
-prototype["getExperimentDescriptor"] = function getExperimentDescriptor() {
-  let tmp = null;
-  if (closure_5) {
-    const obj = { type: "developer", name: "discord_dev_testing", revision: 1, override: true, bucket: ExperimentBuckets.TREATMENT_1 };
-    tmp = obj;
+    };
+    Object.defineProperties(this, obj);
+    const obj3 = self(1388);
+    closure_5 = obj3.isStaffEnv(UserStore.getCurrentUser());
+    const timerId = setTimeout(() => Object.freeze(self));
   }
-  return tmp;
-};
+  getExperimentDescriptor() {
+    let tmp = null;
+    if (closure_5) {
+      tmp = { type: "developer", name: "discord_dev_testing", revision: 1, override: true, bucket: ExperimentBuckets.TREATMENT_1 };
+      const obj = { type: "developer", name: "discord_dev_testing", revision: 1, override: true, bucket: ExperimentBuckets.TREATMENT_1 };
+    }
+    return tmp;
+  }
+}
+const prototype = DeveloperExperimentStore.prototype;
 DeveloperExperimentStore.displayName = "DeveloperExperimentStore";
-const developerExperimentStore = new DeveloperExperimentStore(DispatcherDefault, { CONNECTION_OPEN: init, OVERLAY_INITIALIZE: init, CURRENT_USER_UPDATE: init });
-const size = fn(2);
+let obj = { CONNECTION_OPEN: init, OVERLAY_INITIALIZE: init, CURRENT_USER_UPDATE: init };
+const developerExperimentStore = new DeveloperExperimentStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("stores/DeveloperExperimentStore.tsx");
 
 export default developerExperimentStore;

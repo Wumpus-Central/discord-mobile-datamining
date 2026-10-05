@@ -2,33 +2,42 @@
 
 // Module 15029 (useActiveGuildSubscriptions)
 import actions_BillingActionCreatorsAll from "actions/BillingActionCreators" /* 5404 */;
+import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants" /* 15023 */;
 import useUserRoleSubscriptionRelationshipDefault from "useUserRoleSubscriptionRelationship" /* 15024 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import SubscriptionStore from "SubscriptionStore" /* 4534 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, activeGuildSubscriptions, importAll, importDefault, tmp10, tmp3, tmp9;
 
-const require = fn;
-const constants = fn(15023).UserGuildRoleSubscriptionRelationship;
+const constants = GuildRoleSubscriptionsConstants.UserGuildRoleSubscriptionRelationship;
 let closure_7 = [];
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useActiveGuildSubscriptions.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = require("c").c(8);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let closure_0;
+  let closure_1;
+  let ref;
+  let tmp4;
+  let tmp7;
+  let tmp8;
+  const obj = require("react");
+  const cResult = obj.c(8);
+  const tmp = _require;
   if (cResult[0] !== arg0) {
     let obj2 = arg0;
     if (undefined === arg0) {
       obj2 = {};
     }
+    let num = 0;
     cResult[0] = arg0;
     cResult[1] = obj2;
-    let tmp4 = obj2;
+    tmp4 = obj2;
   } else {
     tmp4 = cResult[1];
   }
   const ensureFresh = tmp4.ensureFresh;
+  let tmp5 = undefined !== ensureFresh && ensureFresh;
   _require = tmp5;
   let tmp6 = useUserRoleSubscriptionRelationshipDefault() === constants.SUBSCRIBED;
   importDefault = tmp6;
@@ -41,21 +50,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     cResult[2] = items;
     cResult[3] = S;
-    let tmp8 = S;
-    let tmp7 = items;
+    tmp8 = S;
+    tmp7 = items;
   } else {
     tmp7 = cResult[2];
     tmp8 = cResult[3];
   }
-  const obj = require("c");
-  const stateFromStores = require("initialize").useStateFromStores(tmp7, tmp8);
-  importAll = noop.useRef(false);
-  if (cResult[4] === (undefined !== ensureFresh && ensureFresh)) {
+  const tmpResult = tmp(504);
+  const stateFromStores = tmpResult.useStateFromStores(tmp7, tmp8);
+  importAll = react.useRef(false);
+  if (cResult[4] === tmp5) {
+    let tmp11;
+    let tmp12;
     if (cResult[5] === tmp6) {
-      let tmp11 = cResult[6];
-      let tmp12 = cResult[7];
+      tmp11 = cResult[6];
+      tmp12 = cResult[7];
     }
-    const effect = noop.useEffect(tmp11, tmp12);
+    const effect = react.useEffect(tmp11, tmp12);
     class S {
       constructor() {
         return closure_1_5.getActiveGuildSubscriptions();
@@ -87,10 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
         tmp7 = !tmp6;
         if (tmp6) {
-          tmp8 = !current;
-          if (!current) {
-            tmp8 = !obj.hasFetchedSubscriptions();
-          }
+          tmp8 = !current && !obj.hasFetchedSubscriptions();
           tmp7 = tmp8;
         }
         tmp5 = tmp7;
@@ -106,15 +114,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       return;
     }
   }
-  const items1 = [undefined !== ensureFresh && ensureFresh, tmp6];
-  cResult[4] = undefined !== ensureFresh && ensureFresh;
+  const items1 = [tmp5, tmp6];
+  cResult[4] = tmp5;
   cResult[5] = tmp6;
   cResult[6] = F;
   cResult[7] = items1;
   tmp12 = items1;
   tmp11 = F;
-  const tmpResult = require("initialize");
 }) : (() => {
+  let closure_1;
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -125,11 +133,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const tmp = useUserRoleSubscriptionRelationshipDefault() === constants.SUBSCRIBED;
   importDefault = tmp;
+  let obj2 = flag(504);
   const items = [SubscriptionStore];
-  let stateFromStores = flag(504).useStateFromStores(items, () => activeGuildSubscriptions.getActiveGuildSubscriptions());
-  noop.useRef(false);
+  let stateFromStores = obj2.useStateFromStores(items, () => activeGuildSubscriptions.getActiveGuildSubscriptions());
+  const ref = react.useRef(false);
   const items1 = [flag, tmp];
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(() => {
     const current = ref.current;
     activeGuildSubscriptions = SubscriptionStore.getActiveGuildSubscriptions();
     let num;
@@ -142,22 +151,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     let tmp5 = !tmp4;
     if (0 !== num || !closure_1) {
       let tmp6 = !tmp;
-      if (tmp) {
+      if (flag) {
         tmp6 = current;
       }
       let tmp7 = !tmp6;
       if (tmp6) {
-        let tmp8 = !current;
-        if (!current) {
-          tmp8 = !SubscriptionStore.hasFetchedSubscriptions();
-        }
-        tmp7 = tmp8;
+        tmp7 = !current && !SubscriptionStore.hasFetchedSubscriptions();
+        !current && !SubscriptionStore.hasFetchedSubscriptions();
       }
       tmp5 = tmp7;
     }
     if (tmp5) {
       ref.current = true;
-      const subscriptions = actions_BillingActionCreatorsAll.fetchSubscriptions();
+      const obj2 = actions_BillingActionCreatorsAll;
+      const subscriptions = obj2.fetchSubscriptions();
     }
   }, items1);
   if (stateFromStores == null) {
@@ -165,3 +172,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   return stateFromStores;
 });
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useActiveGuildSubscriptions.tsx");
+
+export default tmp2;

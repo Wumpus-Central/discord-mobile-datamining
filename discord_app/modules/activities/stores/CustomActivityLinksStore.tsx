@@ -1,35 +1,42 @@
 // === Module 12744: CustomActivityLinksStore ===
 
 // Module 12744 (CustomActivityLinksStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import CustomActivityLinkRecord from "CustomActivityLinkRecord" /* 12745 */;
+import size from "module_2" /* 2 */;
 
-const dependencyMap = {};
-const Store = initializeDefault.Store;
+let closure_1;
+
+const Store = get_initializedDefault.Store;
 class CustomActivityLinksStore extends Store {
-}
-CustomActivityLinksStore.prototype["getOne"] = function getOne(id, linkId) {
-  if (null != dependencyMap[id]) {
-    return dependencyMap[id][linkId];
-  }
-};
-CustomActivityLinksStore.displayName = "CustomActivityLinksStore";
-const customActivityLinksStore = new CustomActivityLinksStore(DispatcherDefault, {
-  CUSTOM_ACTIVITY_LINK_FETCH_SUCCESS: function handleFetchSuccess(arg0) {
-    ({ applicationId, link } = arg0);
-    if (null == dependencyMap[applicationId]) {
-      const _Object = Object;
-      dependencyMap[applicationId] = Object.create(null);
+  getOne(id, linkId) {
+    if (null != closure_1[id]) {
+      return closure_1[id][linkId];
     }
-    dependencyMap[applicationId][link.link_id] = new CustomActivityLinkRecord(link);
-    const tmp3 = new CustomActivityLinkRecord(link);
+  }
+}
+const prototype = CustomActivityLinksStore.prototype;
+CustomActivityLinksStore.displayName = "CustomActivityLinksStore";
+const obj = {
+  CUSTOM_ACTIVITY_LINK_FETCH_SUCCESS: function handleFetchSuccess(arg0) {
+    let applicationId;
+    let link;
+    ({ applicationId, link } = arg0);
+    if (null == closure_1[applicationId]) {
+      const _Object = Object;
+      closure_1[applicationId] = Object.create(null);
+    }
+    const link_id = link.link_id;
+    const tmp3 = closure_1[applicationId];
+    tmp3[link_id] = new CustomActivityLinkRecord(link);
+    new CustomActivityLinkRecord(link);
   },
   LOGOUT: function handleLogout() {
     closure_1 = {};
   }
-});
-const size = fn(2);
+};
+const customActivityLinksStore = new CustomActivityLinksStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/activities/stores/CustomActivityLinksStore.tsx");
 
 export default customActivityLinksStore;

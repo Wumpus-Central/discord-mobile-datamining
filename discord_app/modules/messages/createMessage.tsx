@@ -2,19 +2,40 @@
 
 // Module 7248 (createMessage)
 import _modDef38 from "module_38" /* 38 */;
+import ReferencedMessageStore2 from "ReferencedMessageStore" /* 7102 */;
 import createNonce from "createNonce" /* 7249 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7102 */;
 import UserRecord from "UserRecord" /* 1391 */;
 import UserStore from "UserStore" /* 1377 */;
+import Constants from "Constants" /* 1085 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ReferencedMessageState = fn(7102).ReferencedMessageState;
-const Constants = fn(1085);
-({ MessageStates: closure_7, MessageTypes: closure_8, LOCAL_BOT_ID: closure_9, NON_USER_BOT_DISCRIMINATOR: c10, MessageFlags: closure_11 } = Constants);
-const size = fn(2);
+const ReferencedMessageStore = ReferencedMessageStore2;
+
+let c10;
+let c9;
+let metroImportAll;
+let metroImportDefault;
+let unpackModuleId;
+const ReferencedMessageState = ReferencedMessageStore2.ReferencedMessageState;
+({ MessageStates: metroImportDefault, MessageTypes: metroImportAll, LOCAL_BOT_ID: c9, NON_USER_BOT_DISCRIMINATOR: c10, MessageFlags: unpackModuleId } = Constants);
 const result = size.fileFinishedImporting("modules/messages/createMessage.tsx");
 
 export default function createMessage(tts) {
+  let allowedMentions;
+  let author;
+  let boostingPrompt;
+  let changelogId;
+  let channelId;
+  let content;
+  let date;
+  let flags;
+  let giftingPrompt;
+  let mediaMention;
+  let messageReference;
+  let nonce;
+  let poll;
+  let sharedCustomTheme;
+  let state;
   let flag = tts.tts;
   ({ channelId, content } = tts);
   if (flag === undefined) {
@@ -22,12 +43,12 @@ export default function createMessage(tts) {
   }
   let DEFAULT = tts.type;
   if (DEFAULT === undefined) {
-    DEFAULT = constants2.DEFAULT;
+    DEFAULT = metroImportAll.DEFAULT;
   }
   ({ messageReference, allowedMentions, author, nonce, state } = tts);
   const items = [];
   ({ flags, poll, sharedCustomTheme, changelogId, giftingPrompt, boostingPrompt, mediaMention } = tts);
-  if (DEFAULT === constants2.REPLY) {
+  if (DEFAULT === metroImportAll.REPLY) {
     _modDef38(null != messageReference, "Replies must have a message reference");
     if (null == allowedMentions) {
       const messageByReference = ReferencedMessageStore.getMessageByReference(messageReference);
@@ -47,52 +68,45 @@ export default function createMessage(tts) {
   }
   let tmp8 = author;
   if (author instanceof UserRecord) {
-    ({ id: obj2.id, username: obj2.username, avatar: obj2.avatar, discriminator: obj2.discriminator, bot: obj2.bot, globalName: obj2.global_name, primaryGuild: obj2.primary_guild } = author);
-    tmp8 = { id: null, username: null, avatar: null, discriminator: null, bot: null, global_name: null, primary_guild: null };
     const obj4 = { id: null, username: null, avatar: null, discriminator: null, bot: null, global_name: null, primary_guild: null };
+    ({ id: obj2.id, username: obj2.username, avatar: obj2.avatar, discriminator: obj2.discriminator, bot: obj2.bot, globalName: obj2.global_name, primaryGuild: obj2.primary_guild } = author);
+    tmp8 = obj4;
   }
   _modDef38(null != tmp8, "createMessage: author cannot be undefined");
   let nonce1 = nonce;
   if (nonce == null) {
-    nonce1 = createNonce.createNonce();
+    const obj3 = createNonce;
+    nonce1 = obj3.createNonce();
   }
-  const obj5 = { id: nonce1, type: DEFAULT, content, channel_id: channelId, author: tmp8, attachments: [], embeds: [], pinned: false, mentions: items, mention_channels: [], mention_roles: [], mention_everyone: false, timestamp: new Date().toISOString(), state: null, tts: null, message_reference: null, message_snapshots: null, flags: null, nonce: null, poll: null, shared_client_theme: null, changelog_id: null, gifting_prompt: null, boosting_prompt: null, media_mention: null };
+  const obj5 = { id: nonce1, type: DEFAULT, content, channel_id: channelId, author: tmp8, attachments: [], embeds: [], pinned: false, mentions: items, mention_channels: [], mention_roles: [], mention_everyone: false, timestamp: date.toISOString(), state, tts: flag, message_reference: messageReference, message_snapshots: [], flags, nonce, poll, shared_client_theme: sharedCustomTheme, changelog_id: changelogId, gifting_prompt: giftingPrompt, boosting_prompt: boostingPrompt, media_mention: mediaMention };
+  date = new Date();
   if (state == null) {
-    state = constants.SENDING;
+    state = metroImportDefault.SENDING;
   }
-  obj5.state = state;
-  obj5.tts = flag;
-  obj5.message_reference = messageReference;
-  obj5.message_snapshots = [];
-  obj5.flags = flags;
-  obj5.nonce = nonce;
-  obj5.poll = poll;
-  obj5.shared_client_theme = sharedCustomTheme;
-  obj5.changelog_id = changelogId;
-  obj5.gifting_prompt = giftingPrompt;
-  obj5.boosting_prompt = boostingPrompt;
-  obj5.media_mention = mediaMention;
   return obj5;
 };
 export const userRecordToServer = function userRecordToServer(currentUser) {
   return { id: currentUser.id, username: currentUser.username, avatar: currentUser.avatar, discriminator: currentUser.discriminator, bot: currentUser.bot, global_name: currentUser.globalName, primary_guild: currentUser.primaryGuild };
 };
 export const createBotMessage = function createBotMessage(arg0) {
+  let channelId;
+  let content;
+  let date;
+  let embeds;
+  let loggingName;
+  let messageId;
+  let obj3;
   ({ messageId, embeds } = arg0);
   ({ channelId, content, loggingName } = arg0);
   if (messageId == null) {
-    messageId = createNonce.createNonce();
+    const obj = createNonce;
+    messageId = obj.createNonce();
   }
-  const obj2 = { id: messageId, type: constants2.DEFAULT, flags: constants3.EPHEMERAL, content, channel_id: channelId, author: { id, username: "Clyde", discriminator, avatar: "clyde", bot: true }, attachments: [], embeds: null, pinned: false, mentions: null, mention_channels: null, mention_roles: null, mention_everyone: false, timestamp: null, state: null, tts: false, loggingName: null };
+  const obj2 = { id: messageId, type: metroImportAll.DEFAULT, flags: unpackModuleId.EPHEMERAL, content, channel_id: channelId, author: obj3, attachments: [], embeds, pinned: false, mentions: [], mention_channels: [], mention_roles: [], mention_everyone: false, timestamp: date.toISOString(), state: metroImportDefault.SENT, tts: false, loggingName };
+  obj3 = { id, username: "Clyde", discriminator, avatar: "clyde", bot: true };
   if (embeds == null) {
     embeds = [];
   }
-  obj2.embeds = embeds;
-  obj2.mentions = [];
-  obj2.mention_channels = [];
-  obj2.mention_roles = [];
-  obj2.timestamp = new Date().toISOString();
-  obj2.state = constants.SENT;
-  obj2.loggingName = loggingName;
+  date = new Date();
   return obj2;
 };

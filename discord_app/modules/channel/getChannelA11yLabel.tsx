@@ -1,21 +1,40 @@
 // === Module 9260: getChannelA11yLabel ===
 
 // Module 9260 (getChannelA11yLabel)
-import util from "util" /* 1126 */;
+import intl18 from "intl" /* 1126 */;
 import UserUtils from "UserUtils" /* 4722 */;
 import useChannelName from "useChannelName" /* 5043 */;
 import isRoleRequiredDefault from "isRoleRequired" /* 5846 */;
 import utils from "utils" /* 7818 */;
 import RelationshipStore from "RelationshipStore" /* 4519 */;
 import UserStore from "UserStore" /* 1377 */;
+import Constants from "Constants" /* 1085 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const Constants = fn(1085);
+let nick;
+
+let hasOwnProperty;
+let metroRequire;
 ({ ChannelTypes: hasOwnProperty, StatusTypes: metroRequire } = Constants);
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/getChannelA11yLabel.tsx");
 
 export default function getChannelA11yLabel(mentionCount) {
+  let activityNames;
+  let channel;
+  let embeddedActivitiesCount;
+  let g8ONM0;
+  let ignored;
+  let isIncomingCall;
+  let isSubscriptionGated;
+  let items4;
+  let joined;
+  let needSubscriptionToAccess;
+  let obj9;
+  let stringResult1;
+  let tmpResult;
+  let unread;
+  let voiceChannelStartTime;
+  let voiceStates;
   ({ channel, unread } = mentionCount);
   if (unread === undefined) {
     unread = false;
@@ -40,259 +59,289 @@ export default function getChannelA11yLabel(mentionCount) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  const channelName = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
+  let obj = useChannelName;
+  const channelName = obj.computeChannelName(channel, UserStore, RelationshipStore);
+  let stringResult;
   if (isRoleRequiredDefault(channel)) {
-    const intl = util.intl;
-    const stringResult = intl.string(util.t["4qvAtn"]);
+    const intl = intl18.intl;
+    stringResult = intl.string(intl18.t["4qvAtn"]);
   }
   if (flag2) {
-    const intl3 = util.intl;
-    let stringResult1 = intl3.string(util.t.dByf4y);
+    const intl3 = intl18.intl;
+    stringResult1 = intl3.string(intl18.t.dByf4y);
   } else if (ignored) {
-    const intl2 = util.intl;
-    stringResult1 = intl2.string(util.t.mMCUM9);
+    const intl2 = intl18.intl;
+    stringResult1 = intl2.string(intl18.t.mMCUM9);
   }
   const type = channel.type;
-  if (constants.DM === type) {
+  if (hasOwnProperty.DM === type) {
+    let TO8LYt;
     if (num > 0) {
-      let TO8LYt = util.t.TO8LYt;
+      TO8LYt = intl18.t.TO8LYt;
     } else {
-      const t8 = util.t;
+      const t8 = intl18.t;
       TO8LYt = unread ? t8.F2MZsu : t8.fYqXVY;
     }
-  } else {
-    if (constants.GROUP_DM === type) {
-      if (num > 0) {
-        let Lo0dCa = util.t.Lo0dCa;
-      } else {
-        const t7 = util.t;
-        Lo0dCa = unread ? t7["fxxUo/"] : t7.lts3Ld;
-      }
-      const intl11 = util.intl;
-      const obj2 = { channelName, mentionCount: num };
-      const items = [intl11.formatToPlainString(Lo0dCa, obj2), ];
-      const intl12 = util.intl;
-      const obj3 = { members: channel.recipients.length + 1 };
-      items[1] = intl12.formatToPlainString(util.t.CxSA5N, obj3);
-      let joined = items.join(", ");
-    } else if (constants.GUILD_STORE === type) {
-      let g8ONM0 = util.t.Bo4msg;
-    } else if (constants.GUILD_DIRECTORY === type) {
-      g8ONM0 = util.t["92EAF2"];
-    } else if (constants.GUILD_ANNOUNCEMENT === type) {
-      if (num > 0) {
-        let sDKIpm = util.t.sDKIpm;
-      } else {
-        const t6 = util.t;
-        sDKIpm = unread ? t6.VM7z8f : t6.WJ3MPt;
-      }
-      g8ONM0 = sDKIpm;
-    } else if (constants.GUILD_APP === type) {
-      if (num > 0) {
-        let BILI3J = util.t.BILI3J;
-      } else {
-        const t5 = util.t;
-        BILI3J = unread ? t5["xzhzM/"] : t5.F98YPC;
-      }
-      g8ONM0 = BILI3J;
-    } else if (constants.GUILD_FORUM === type) {
-      if (num > 0) {
-        let rSsuUF = util.t.rSsuUF;
-      } else {
-        const t4 = util.t;
-        rSsuUF = unread ? t4["dr/Oik"] : t4.Ajnhpa;
-      }
-      g8ONM0 = rSsuUF;
-    } else if (constants.GUILD_MEDIA === type) {
-      if (num > 0) {
-        let KqEUsJ = util.t.KqEUsJ;
-      } else {
-        const t3 = util.t;
-        KqEUsJ = unread ? t3["37AyNG"] : t3.KuUltE;
-      }
-      g8ONM0 = KqEUsJ;
-    } else if (constants.GUILD_VOICE === type) {
-      const intl4 = util.intl;
-      const obj4 = { channelName };
-      const items1 = [intl4.formatToPlainString(util.t.bkpadO, obj4)];
-      if (num > 0) {
-        const intl5 = util.intl;
-        const obj5 = { mentionCount: num };
-        items1.push(intl5.formatToPlainString(util.t["3l1GOx"], obj5));
-      }
-      if (unread) {
-        const intl6 = util.intl;
-        items1.push(intl6.string(util.t.x5zAGZ));
-      }
-      const userLimit = channel.userLimit;
-      if (null != voiceStates) {
-        if (voiceStates.length > 0) {
-          const diff = voiceStates.length - 3;
-          const substr = voiceStates.slice(0, 3);
-          const mapped = substr.map((nick) => {
-            nick = nick.nick;
-            if (nick == null) {
-              nick = UserUtils.getName(tmp);
-            }
-            return nick;
-          });
-          items1.push(mapped.join(", "));
-          if (0 < diff) {
-            const intl7 = util.intl;
-            const obj6 = { overflow: diff };
-            items1.push(intl7.formatToPlainString(util.t.sfgpgr, obj6));
+    g8ONM0 = TO8LYt;
+  } else if (hasOwnProperty.GROUP_DM === type) {
+    let Lo0dCa;
+    if (num > 0) {
+      Lo0dCa = intl18.t.Lo0dCa;
+    } else {
+      const t7 = intl18.t;
+      Lo0dCa = unread ? t7["fxxUo/"] : t7.lts3Ld;
+    }
+    const intl11 = intl18.intl;
+    const obj2 = { channelName, mentionCount: num };
+    const items = [intl11.formatToPlainString(Lo0dCa, obj2), ];
+    const intl12 = intl18.intl;
+    const obj3 = { members: channel.recipients.length + 1 };
+    items[1] = intl12.formatToPlainString(intl18.t.CxSA5N, obj3);
+    joined = items.join(", ");
+  } else if (hasOwnProperty.GUILD_STORE === type) {
+    g8ONM0 = intl18.t.Bo4msg;
+  } else if (hasOwnProperty.GUILD_DIRECTORY === type) {
+    g8ONM0 = intl18.t["92EAF2"];
+  } else if (hasOwnProperty.GUILD_ANNOUNCEMENT === type) {
+    let sDKIpm;
+    if (num > 0) {
+      sDKIpm = intl18.t.sDKIpm;
+    } else {
+      const t6 = intl18.t;
+      sDKIpm = unread ? t6.VM7z8f : t6.WJ3MPt;
+    }
+    g8ONM0 = sDKIpm;
+  } else if (hasOwnProperty.GUILD_APP === type) {
+    let BILI3J;
+    if (num > 0) {
+      BILI3J = intl18.t.BILI3J;
+    } else {
+      const t5 = intl18.t;
+      BILI3J = unread ? t5["xzhzM/"] : t5.F98YPC;
+    }
+    g8ONM0 = BILI3J;
+  } else if (hasOwnProperty.GUILD_FORUM === type) {
+    let rSsuUF;
+    if (num > 0) {
+      rSsuUF = intl18.t.rSsuUF;
+    } else {
+      const t4 = intl18.t;
+      rSsuUF = unread ? t4["dr/Oik"] : t4.Ajnhpa;
+    }
+    g8ONM0 = rSsuUF;
+  } else if (hasOwnProperty.GUILD_MEDIA === type) {
+    let KqEUsJ;
+    if (num > 0) {
+      KqEUsJ = intl18.t.KqEUsJ;
+    } else {
+      const t3 = intl18.t;
+      KqEUsJ = unread ? t3["37AyNG"] : t3.KuUltE;
+    }
+    g8ONM0 = KqEUsJ;
+  } else if (hasOwnProperty.GUILD_VOICE === type) {
+    const intl4 = intl18.intl;
+    const obj4 = { channelName };
+    const items1 = [intl4.formatToPlainString(intl18.t.bkpadO, obj4)];
+    if (num > 0) {
+      const push = items1.push;
+      const intl5 = intl18.intl;
+      const obj5 = { mentionCount: num };
+      push(intl5.formatToPlainString(intl18.t["3l1GOx"], obj5));
+    }
+    if (unread) {
+      const push2 = items1.push;
+      const intl6 = intl18.intl;
+      push2(intl6.string(intl18.t.x5zAGZ));
+    }
+    const userLimit = channel.userLimit;
+    if (null != voiceStates) {
+      if (voiceStates.length > 0) {
+        const diff = voiceStates.length - 3;
+        const substr = voiceStates.slice(0, 3);
+        const mapped = substr.map((nick) => {
+          nick = nick.nick;
+          if (nick == null) {
+            const obj = UserUtils;
+            nick = obj.getName(tmp);
           }
-          if (tmp13) {
-            const intl8 = util.intl;
-            const obj7 = { userCount: voiceStates.length, limit: userLimit };
-            items1.push(intl8.formatToPlainString(util.t["6qgTOF"], obj7));
-          }
-          tmp13 = null != userLimit && userLimit > 0;
+          return nick;
+        });
+        items1.push(mapped.join(", "));
+        if (0 < diff) {
+          const push3 = items1.push;
+          const intl7 = intl18.intl;
+          const obj6 = { overflow: diff };
+          push3(intl7.formatToPlainString(intl18.t.sfgpgr, obj6));
+        }
+        const tmp13 = null != userLimit && userLimit > 0;
+        if (tmp13) {
+          const push4 = items1.push;
+          const intl8 = intl18.intl;
+          const obj7 = { userCount: voiceStates.length, limit: userLimit };
+          push4(intl8.formatToPlainString(intl18.t["6qgTOF"], obj7));
         }
       }
-      if (null != voiceChannelStartTime) {
-        const intl9 = util.intl;
-        const obj8 = { duration: null };
-        const obj9 = { start: voiceChannelStartTime };
-        const _Date = Date;
-        obj8.duration = utils.formatActiveA11yTimestamp(obj9, Date.now());
-        items1.push(intl9.formatToPlainString(util.t.JQtsGh, obj8));
-        const tmpResult = utils;
-      }
-      if (tmp17) {
-        const intl10 = util.intl;
-        const obj10 = { activeActivities: activityNames.join(", ") };
-        items1.push(intl10.formatToPlainString(util.t.LmYuHT, obj10));
-      }
-      joined = items1.join(", ");
-      tmp17 = null != activityNames && activityNames.length > 0;
-    } else if (constants.GUILD_STAGE_VOICE === type) {
-      g8ONM0 = util.t.TPPk2T;
-    } else {
-      if (constants.ANNOUNCEMENT_THREAD !== type) {
-        if (constants.PUBLIC_THREAD !== type) {
-          if (constants.PRIVATE_THREAD !== type) {
-            if (constants.MEDIA_THREAD !== type) {
-              if (constants.GUILD_TEXT !== type) {
-                if (constants.GUILD_CATEGORY !== type) {
-                  if (constants.GUILD_SPACE !== type) {
-                    const UNKNOWN = constants.UNKNOWN;
-                  }
+    }
+    if (null != voiceChannelStartTime) {
+      const push5 = items1.push;
+      const intl9 = intl18.intl;
+      const formatToPlainString = intl9.formatToPlainString;
+      const obj8 = { duration: tmpResult.formatActiveA11yTimestamp(obj9, Date.now()) };
+      const JQtsGh = intl18.t.JQtsGh;
+      const _Date = Date;
+      obj9 = { start: voiceChannelStartTime };
+      tmpResult = utils;
+      push5(formatToPlainString(JQtsGh, obj8));
+    }
+    const tmp17 = null != activityNames && activityNames.length > 0;
+    if (tmp17) {
+      const push6 = items1.push;
+      const intl10 = intl18.intl;
+      const formatToPlainString2 = intl10.formatToPlainString;
+      const obj10 = { activeActivities: activityNames.join(", ") };
+      const LmYuHT = intl18.t.LmYuHT;
+      push6(formatToPlainString2(LmYuHT, obj10));
+    }
+    joined = items1.join(", ");
+  } else if (hasOwnProperty.GUILD_STAGE_VOICE === type) {
+    g8ONM0 = intl18.t.TPPk2T;
+  } else {
+    let prop;
+    if (hasOwnProperty.ANNOUNCEMENT_THREAD !== type) {
+      if (hasOwnProperty.PUBLIC_THREAD !== type) {
+        if (hasOwnProperty.PRIVATE_THREAD !== type) {
+          if (hasOwnProperty.MEDIA_THREAD !== type) {
+            if (hasOwnProperty.GUILD_TEXT !== type) {
+              if (hasOwnProperty.GUILD_CATEGORY !== type) {
+                if (hasOwnProperty.GUILD_SPACE !== type) {
+                  const UNKNOWN = hasOwnProperty.UNKNOWN;
                 }
               }
-              if (num > 0) {
-                g8ONM0 = util.t.g8ONM0;
-              } else {
-                const t = util.t;
-                g8ONM0 = unread ? t.smf1CZ : t.s0JADj;
-              }
+            }
+            if (num > 0) {
+              g8ONM0 = intl18.t.g8ONM0;
+            } else {
+              const t = intl18.t;
+              g8ONM0 = unread ? t.smf1CZ : t.s0JADj;
             }
           }
         }
       }
-      if (num > 0) {
-        let prop = util.t["ZL7+I6"];
-      } else {
-        const t2 = util.t;
-        prop = unread ? t2.YlVvmc : t2["0nZpiF"];
-      }
-      g8ONM0 = prop;
     }
-    if (null != joined) {
-      const items2 = [joined];
-      let items4 = items2;
-    } else if (null != g8ONM0) {
-      const intl13 = util.intl;
-      const obj11 = { channelName, mentionCount: num };
-      const items3 = [intl13.formatToPlainString(g8ONM0, obj11)];
-      items4 = items3;
+    if (num > 0) {
+      prop = intl18.t["ZL7+I6"];
     } else {
-      items4 = [];
+      const t2 = intl18.t;
+      prop = unread ? t2.YlVvmc : t2["0nZpiF"];
     }
-    if (null != stringResult1) {
-      items4.unshift(stringResult1);
-    }
-    if (isIncomingCall) {
-      const intl15 = util.intl;
-      items4.push(intl15.string(util.t["fk1/bX"]));
-    } else if (flag) {
-      const intl14 = util.intl;
-      items4.push(intl14.string(util.t["NGg/fm"]));
-    }
-    let tmp24 = null != embeddedActivitiesCount;
-    if (tmp24) {
-      tmp24 = embeddedActivitiesCount > 0;
-    }
-    if (tmp24) {
-      const intl16 = util.intl;
-      const obj12 = { activitiesCount: embeddedActivitiesCount };
-      items4.push(intl16.formatToPlainString(util.t.O6PLYd, obj12));
-    }
-    if (!isSubscriptionGated) {
-      if (null != undefined) {
-        items4.push(undefined);
-      }
-      if (null != stringResult) {
-        items4.push(stringResult);
-      }
-      return items4.join(", ");
-    } else {
-      const intl17 = util.intl;
-      const string = intl17.string;
-      let t1 = util.t;
-      if (needSubscriptionToAccess) {
-        t1 = t1["oj+HOs"];
-        let stringResult2 = string(t1);
-      } else {
-        stringResult2 = string(t1.xI3TQQ);
-      }
-    }
+    g8ONM0 = prop;
   }
+  if (null != joined) {
+    const items2 = [joined];
+    items4 = items2;
+  } else if (null != g8ONM0) {
+    const intl13 = intl18.intl;
+    const obj11 = { channelName, mentionCount: num };
+    const items3 = [intl13.formatToPlainString(g8ONM0, obj11)];
+    items4 = items3;
+  } else {
+    items4 = [];
+  }
+  if (null != stringResult1) {
+    items4.unshift(stringResult1);
+  }
+  if (isIncomingCall) {
+    const push8 = items4.push;
+    const intl15 = intl18.intl;
+    push8(intl15.string(intl18.t["fk1/bX"]));
+  } else if (flag) {
+    const push7 = items4.push;
+    const intl14 = intl18.intl;
+    push7(intl14.string(intl18.t["NGg/fm"]));
+  }
+  const tmp22 = null != embeddedActivitiesCount && embeddedActivitiesCount > 0;
+  if (tmp22) {
+    const push9 = items4.push;
+    const intl16 = intl18.intl;
+    const obj12 = { activitiesCount: embeddedActivitiesCount };
+    push9(intl16.formatToPlainString(intl18.t.O6PLYd, obj12));
+  }
+  let tmp24;
+  if (isSubscriptionGated) {
+    let stringResult2;
+    const intl17 = intl18.intl;
+    const string = intl17.string;
+    const t9 = intl18.t;
+    if (needSubscriptionToAccess) {
+      stringResult2 = string(t9["oj+HOs"]);
+    } else {
+      stringResult2 = string(t9.xI3TQQ);
+    }
+    tmp24 = stringResult2;
+  }
+  if (null != tmp24) {
+    items4.push(tmp24);
+  }
+  if (null != stringResult) {
+    items4.push(stringResult);
+  }
+  return items4.join(", ");
 };
 export const getStatusLabel = function getStatusLabel(status) {
-  if (constants2.ONLINE === status) {
-    return UserUtils.humanizeStatus(constants2.ONLINE);
-  } else if (constants2.IDLE === status) {
-    return UserUtils.humanizeStatus(constants2.IDLE);
-  } else if (constants2.DND === status) {
-    return UserUtils.humanizeStatus(constants2.DND);
-  } else if (constants2.INVISIBLE === status) {
-    return UserUtils.humanizeStatus(constants2.INVISIBLE);
+  if (metroRequire.ONLINE === status) {
+    const obj4 = UserUtils;
+    return obj4.humanizeStatus(metroRequire.ONLINE);
+  } else if (metroRequire.IDLE === status) {
+    const obj3 = UserUtils;
+    return obj3.humanizeStatus(metroRequire.IDLE);
+  } else if (metroRequire.DND === status) {
+    const obj2 = UserUtils;
+    return obj2.humanizeStatus(metroRequire.DND);
+  } else if (metroRequire.INVISIBLE === status) {
+    const obj = UserUtils;
+    return obj.humanizeStatus(metroRequire.INVISIBLE);
   } else {
     return "";
   }
 };
 export const getChannelA11yHint = function getChannelA11yHint(userStatus) {
+  let channel;
+  let muted;
   userStatus = userStatus.userStatus;
   const items = [];
   ({ channel, muted } = userStatus);
   if (userStatus.isFavorite) {
-    const intl = util.intl;
-    items.push(intl.string(util.t.cCPjSK));
+    const push = items.push;
+    const intl = intl18.intl;
+    push(intl.string(intl18.t.cCPjSK));
   }
   if (true === muted) {
-    const intl2 = util.intl;
-    items.push(intl2.string(util.t.C4zCMb));
+    const push2 = items.push;
+    const intl2 = intl18.intl;
+    push2(intl2.string(intl18.t.C4zCMb));
     return items.join(", ");
   } else {
-    if (channel.type === constants.DM) {
+    if (channel.type === hasOwnProperty.DM) {
       if (null != userStatus) {
-        let ONLINE = constants2;
-        if (constants2.ONLINE === userStatus) {
-          ONLINE = ONLINE.ONLINE;
-          let str = UserUtils.humanizeStatus(ONLINE);
+        let str;
+        const push3 = items.push;
+        if (metroRequire.ONLINE === userStatus) {
+          const obj3 = UserUtils;
+          str = obj3.humanizeStatus(metroRequire.ONLINE);
+        } else if (metroRequire.IDLE === userStatus) {
+          const obj2 = UserUtils;
+          str = obj2.humanizeStatus(metroRequire.IDLE);
+        } else if (metroRequire.DND === userStatus) {
+          const obj = UserUtils;
+          str = obj.humanizeStatus(metroRequire.DND);
         } else {
-          if (ONLINE.IDLE === userStatus) {
-            str = UserUtils.humanizeStatus(ONLINE.IDLE);
-          } else if (ONLINE.DND !== userStatus) {
-            str = "";
-            if (ONLINE.INVISIBLE === userStatus) {
-              str = UserUtils.humanizeStatus(ONLINE.INVISIBLE);
-            }
+          str = "";
+          if (metroRequire.INVISIBLE === userStatus) {
+            const obj4 = UserUtils;
+            str = obj4.humanizeStatus(metroRequire.INVISIBLE);
           }
-          str = UserUtils.humanizeStatus(ONLINE.DND);
         }
-        items.push(str);
+        push3(str);
       }
     }
     let joined;

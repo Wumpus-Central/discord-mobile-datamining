@@ -8,11 +8,13 @@ import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1238 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1194 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import ThemeConstants from "ThemeConstants" /* 1196 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ThemeConstants = fn(1196);
-({ PROTO_THEME_MAP_MOBILE_REFRESH: metroRequire, SystemTheme: closure_7, SystemThemeState: closure_8 } = ThemeConstants);
-const size = fn(2);
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+({ PROTO_THEME_MAP_MOBILE_REFRESH: metroRequire, SystemTheme: metroImportDefault, SystemThemeState: metroImportAll } = ThemeConstants);
 const result = size.fileFinishedImporting("modules/themes/resolveTheme.native.tsx");
 
 export default function resolveTheme(arg0, arg1) {
@@ -20,9 +22,13 @@ export default function resolveTheme(arg0, arg1) {
   if (undefined !== previewTheme) {
     return previewTheme.baseTheme;
   } else {
+    let customUserThemeSettings;
+    const useSystemTheme = UnsyncedUserSettingsStore.useSystemTheme;
+    const obj6 = AuthenticationUtils;
     if (!obj6.isAuthenticated()) {
-      if (arg0 !== constants.NO_PREFERENCE) {
-        return ClientThemesUtils.resolveThemeWithCustomSettings(arg1[arg0], CustomThemeMobileStore.getCustomTheme());
+      if (arg0 !== metroImportDefault.NO_PREFERENCE) {
+        const tmp17Result = ClientThemesUtils;
+        return tmp17Result.resolveThemeWithCustomSettings(arg1[arg0], CustomThemeMobileStore.getCustomTheme());
       }
     }
     const appearanceSettings = SelectivelySyncedUserSettingsStore.getAppearanceSettings();
@@ -37,7 +43,7 @@ export default function resolveTheme(arg0, arg1) {
       if (clientThemeSettings2 != null) {
         prop = clientThemeSettings2.customUserThemeSettings;
       }
-      let customUserThemeSettings = prop;
+      customUserThemeSettings = prop;
     } else if (appearance != null) {
       const clientThemeSettings = appearance.clientThemeSettings;
       if (clientThemeSettings != null) {
@@ -45,7 +51,8 @@ export default function resolveTheme(arg0, arg1) {
       }
     }
     if (null != theme) {
-      return ClientThemesUtils.resolveThemeWithCustomSettings(theme, customUserThemeSettings);
+      const tmp17Result4 = ClientThemesUtils;
+      return tmp17Result4.resolveThemeWithCustomSettings(theme, customUserThemeSettings);
     } else {
       let theme1;
       if (appearance != null) {
@@ -55,15 +62,15 @@ export default function resolveTheme(arg0, arg1) {
         theme1 = preloaded_user_settings.Theme.UNSET;
       }
       if (theme1 === preloaded_user_settings.Theme.UNSET) {
-        if (arg0 !== constants.NO_PREFERENCE) {
-          let themeWithCustomSettings = ClientThemesUtils.resolveThemeWithCustomSettings(arg1[arg0], customUserThemeSettings);
+        let themeWithCustomSettings;
+        if (arg0 !== metroImportDefault.NO_PREFERENCE) {
           const tmp17Result5 = ClientThemesUtils;
+          themeWithCustomSettings = tmp17Result5.resolveThemeWithCustomSettings(arg1[arg0], customUserThemeSettings);
         }
         return themeWithCustomSettings;
       }
-      themeWithCustomSettings = ClientThemesUtils.resolveThemeWithCustomSettings(timestampProducer[theme1], customUserThemeSettings);
       const tmp17Result6 = ClientThemesUtils;
+      themeWithCustomSettings = tmp17Result6.resolveThemeWithCustomSettings(metroRequire[theme1], customUserThemeSettings);
     }
-    obj6 = AuthenticationUtils;
   }
 };

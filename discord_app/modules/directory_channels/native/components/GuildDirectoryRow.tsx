@@ -1,225 +1,253 @@
 // === Module 11963: GuildDirectoryRow ===
 
 // Module 11963 (GuildDirectoryRow)
+import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
+import Constants from "Constants" /* 1085 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
 import GuildIconDefault from "GuildIcon" /* 5971 */;
 import GuildDirectoryMoreMenuDefault from "GuildDirectoryMoreMenu" /* 11941 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import size_mod from "module_2" /* 2 */;
 
-const require = fn;
-const View = fn(17).View;
-const JoinGuildSources = fn(1085).JoinGuildSources;
-const jsxProd = fn(21);
-({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4890);
-let obj = { container: { flexDirection: "row", padding: 16, marginVertical: 6, marginHorizontal: 8 }, guildInfoContainer: { flexDirection: "column", flex: 1 }, guildIcon: { borderRadius: nativeDefault.radii.sm, marginRight: 16 }, guildWrapper: { flex: 1 }, guildDescription: { flexShrink: 1, marginBottom: 8 }, memberInfo: { flexDirection: "row", alignItems: "center", marginBottom: 8 }, dotOnline: null, dotOffline: null, headerContainer: null, titleContainer: null, flex: null };
-let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.sm, marginRight: 4, backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
-obj.dotOnline = size;
-const size1 = { width: 8, height: 8, borderRadius: nativeDefault.radii.sm, marginRight: 4, marginLeft: 16, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_400 };
-obj.dotOffline = size1;
-obj.headerContainer = { flexDirection: "row", marginBottom: 4, justifyContent: "space-between" };
-obj.titleContainer = { flexDirection: "row", flex: 1 };
-obj.flex = { flex: 1, height: 4 };
-let closure_13 = createStyles.createStyles(obj);
-let obj3 = { borderRadius: nativeDefault.radii.sm, marginRight: 16 };
-size = fn(2);
-let result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryRow.tsx");
+let c4, c5, closure_2, dependencyMap, importDefault;
 
-export default noop.memo(function GuildDirectoryRow(entry) {
+let c10;
+let closure_12;
+let obj2;
+let size;
+let size1;
+let unpackModuleId;
+const View = react_native.View;
+const JoinGuildSources = Constants.JoinGuildSources;
+({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { container: { flexDirection: "row", padding: 16, marginVertical: 6, marginHorizontal: 8 }, guildInfoContainer: { flexDirection: "column", flex: 1 }, guildIcon: obj2, guildWrapper: { flex: 1 }, guildDescription: { flexShrink: 1, marginBottom: 8 }, memberInfo: { flexDirection: "row", alignItems: "center", marginBottom: 8 }, dotOnline: size, dotOffline: size1, headerContainer: { flexDirection: "row", marginBottom: 4, justifyContent: "space-between" }, titleContainer: { flexDirection: "row", flex: 1 }, flex: { flex: 1, height: 4 } };
+obj2 = { borderRadius: nativeDefault.radii.sm, marginRight: 16 };
+createStyles = createStyles.createStyles;
+size = { width: 8, height: 8, borderRadius: nativeDefault.radii.sm, marginRight: 4, backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
+size1 = { width: 8, height: 8, borderRadius: nativeDefault.radii.sm, marginRight: 4, marginLeft: 16, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_400 };
+let closure_13 = createStyles(obj);
+const memoResult = react.memo(function GuildDirectoryRow(entry) {
+  let approximateMemberCount;
+  let approximatePresenceCount;
+  let closure_1;
+  let description;
+  let first;
+  let intl3;
+  let intl4;
+  let items1;
+  let items2;
+  let items3;
+  let items4;
+  let items5;
+  let items6;
+  let items7;
+  let obj14;
+  let obj18;
+  let obj5;
+  let result;
+  let str2;
   entry = entry.entry;
-  closure_3 = async function _handleJoinGuild() {
-    if (c5 === 2) {
-      c5 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
+  dependencyMap = undefined;
+  let obj = function _handleJoinGuild() {
+    obj = _asyncToGenerator(async () => {
+      let closure_0;
+      let obj2;
+      if (c5 === 2) {
+        c5 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          return { value: "IconComponent", done: null };
+        }
       } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
+        let c3;
+        try {
+          let channel2;
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              const obj4 = { value, done: true };
+              return obj4;
+            } else {
+              channel2 = undefined;
+              closure_2_2(true);
+              c3 = 1;
+              if (closure_2_1) {
+                const obj5 = channel2(closure_2[11]);
+                obj5.transitionToGuild(entry.guildId);
+                c3 = 0;
+                closure_2_2(false);
+                c5 = 3;
+                const obj6 = { value: undefined, done: true };
+                return obj6;
+              } else {
+                const obj7 = { source: constants.DIRECTORY_ENTRY };
+                c4 = 2;
+                c5 = 1;
+                const obj8 = { value: obj2.joinGuild(entry.guildId, obj7), done: false };
+                obj2 = tmp(closure_2[12]);
+                return obj8;
+              }
+            }
+          } else if (1 === c4) {
+            c3 = 0;
+            closure_129_2(false);
+            throw closure_2;
+          } else if (arg0 === 1) {
             c5 = 3;
             throw value;
           } else if (arg0 === 2) {
+            c3 = 0;
+            closure_129_2(false);
             c5 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
+            obj = { value, done: true };
+            return obj;
           } else {
-            entry = tmp7;
-            let channel2;
-            dependencyMap(true);
-            c3 = 1;
-            if (importDefault) {
-              entry(tmp37[11]).transitionToGuild(entry.guildId);
+            channel2 = channel.getChannel(closure_129_0.channelId);
+            if (null == channel2) {
               c3 = 0;
-              dependencyMap(false);
+              closure_129_2(false);
               c5 = 3;
-              const obj6 = { value: undefined, done: true };
-              return obj6;
+              return { value: "IconComponent", done: null };
             } else {
-              const obj7 = { source: constants.DIRECTORY_ENTRY };
-              c4 = 2;
-              c5 = 1;
-              const obj8 = { value: tmp3(tmp37[12]).joinGuild(entry.guildId, obj7), done: false };
-              return obj8;
+              let guildId;
+              const setHubProgressActionComplete = channel2(closure_2[13]).setHubProgressActionComplete;
+              const obj9 = channel2;
+              const tmp50 = channel2(closure_2[13]);
+              if (channel2 != null) {
+                guildId = obj9.getGuildId();
+              }
+              const result = setHubProgressActionComplete(guildId, channel2(closure_2[14]).HubProgressStep.JOIN_GUILD);
+              c3 = 0;
+              closure_129_2(false);
+              c5 = 3;
+              return { value: "IconComponent", done: null };
             }
           }
-        } else if (1 === tmp7) {
-          c3 = 0;
-          closure_129_2(false);
-          throw tmp37;
-        } else if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c3 = 0;
-          closure_129_2(false);
-          c5 = 3;
-          const obj = { value, done: true };
-          return obj;
-        } else {
-          channel2 = channel.getChannel(closure_129_0.channelId);
-          if (null == channel2) {
-            c3 = 0;
-            closure_129_2(false);
+        } catch (tmp34) {
+          closure_2 = tmp34;
+          if (0 === c3) {
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            throw tmp34;
           } else {
-            let guildId;
-            if (channel2 != null) {
-              guildId = channel2.getGuildId();
-            }
-            const result = entry(tmp37[13]).setHubProgressActionComplete(guildId, entry(tmp37[14]).HubProgressStep.JOIN_GUILD);
-            c3 = 0;
-            closure_129_2(false);
-            c5 = 3;
-            return { value: "IconComponent", done: null };
+            c4 = 1;
           }
-        }
-      } catch (tmp37) {
-        if (tmp4 === c3) {
-          c5 = tmp2;
-          throw tmp37;
-        } else {
-          c4 = tmp;
         }
       }
-    }
+    });
+    return obj(...arguments);
   };
   const tmp = closure_13();
   ({ description, approximateMemberCount, approximatePresenceCount } = entry);
+  const tmp3 = dependencyMap;
+  const name = entry.name;
+  obj = entry(504);
   const items = [GuildStore];
-  const tmp4 = null != entry(504).useStateFromStores(items, () => GuildStore.getGuild(entry.guildId));
+  const tmp4 = null != obj.useStateFromStores(items, () => GuildStore.getGuild(entry.guildId));
   importDefault = tmp4;
-  const tmp5 = _slicedToArray(noop.useState(false), 2);
-  dependencyMap = tmp5[1];
-  let obj = entry(504);
-  const guildIconURL = AvatarUtilsDefault.getGuildIconURL({ id: entry.guildId, icon: entry.icon, size: 40 });
+  [first, dependencyMap] = react.useState(false);
+  let obj2 = AvatarUtilsDefault;
+  let obj3 = { id: entry.guildId, icon: entry.icon, size: 40 };
+  const guildIconURL = obj2.getGuildIconURL(obj3);
   const intl = tmp2(1126).intl;
   let stringResult = intl.string(tmp2(1126).t.VJlc0S);
   if (tmp4) {
     const intl2 = tmp2(1126).intl;
     stringResult = intl2.string(tmp2(1126).t.cqWE2Z);
   }
-  let obj4 = { style: tmp.container, children: null };
-  const obj5 = { style: tmp.guildWrapper, children: null };
-  let obj6 = { style: tmp.headerContainer, children: null };
-  let obj7 = { style: tmp.titleContainer, children: null };
-  let obj8 = { style: tmp.guildIcon, icon: guildIconURL, guild: null, selected: false };
-  let result;
-  let obj3 = { id: entry.guildId, icon: entry.icon, size: 40 };
+  let obj4 = { style: tmp.container, children: closure_12(View, obj5) };
+  obj5 = { style: tmp.guildWrapper, children: items7 };
+  let obj6 = { style: tmp.headerContainer, children: items6 };
+  let obj7 = { style: tmp.titleContainer, children: items1 };
+  const Card = tmp2(5995).Card;
+  let obj8 = { style: tmp.guildIcon, icon: guildIconURL, guild: result, selected: false };
+  result = undefined;
+  const tmp7Result = GuildIconDefault;
   if (null == guildIconURL) {
-    result = tmp2(2066).fromGuildDirectoryEntry(entry);
-    const tmp2Result = tmp2(2066);
+    const tmp2Result = entry(2066);
+    result = tmp2Result.fromGuildDirectoryEntry(entry);
   }
-  obj8.guild = result;
-  const items1 = [closure_10(GuildIconDefault, obj8), ];
-  const obj9 = { style: tmp.guildInfoContainer, children: null };
-  const items2 = [closure_10(entry(4886).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: entry.name }), ];
-  const obj10 = { style: tmp.memberInfo, children: null };
-  let tmp10Result = null;
+  items1 = [closure_10(tmp7Result, obj8), ];
+  let obj9 = { style: tmp.guildInfoContainer, children: items2 };
+  items2 = [closure_10(entry(4886).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: name }), ];
+  let tmp11Result = null;
+  const obj10 = { style: tmp.memberInfo, children: items4 };
   if (null != approximatePresenceCount) {
-    const obj11 = { children: null };
+    const obj11 = { children: items3 };
     const obj12 = { style: tmp.dotOnline };
-    const items3 = [closure_10(View, obj12), ];
-    const obj13 = { variant: "text-xs/medium", color: "text-default", children: null };
-    const intl3 = tmp2(1126).intl;
-    const obj14 = { membersOnline: approximatePresenceCount };
-    obj13.children = intl3.format(tmp2(1126).t["LC+S+m"], obj14);
-    items3[1] = closure_10(tmp2(4886).Text, obj13);
-    obj11.children = items3;
-    tmp10Result = closure_12(closure_11, obj11);
+    items3 = [closure_10(View, obj12), ];
+    const obj13 = { variant: "text-xs/medium", color: "text-default", children: intl3.format(entry(1126).t["LC+S+m"], obj14) };
+    const Text = tmp2(4886).Text;
+    intl3 = tmp2(1126).intl;
+    obj14 = { membersOnline: approximatePresenceCount };
+    items3[1] = closure_10(Text, obj13);
+    tmp11Result = closure_12(closure_11, obj11);
   }
-  const items4 = [tmp10Result, ];
-  let tmp10Result2 = null;
+  items4 = [tmp11Result, ];
+  let tmp11Result2 = null;
   if (null != approximateMemberCount) {
-    const obj15 = { children: null };
+    const obj15 = { children: items5 };
     const obj16 = { style: tmp.dotOffline };
-    const items5 = [closure_10(View, obj16), ];
-    const obj17 = { variant: "text-xs/medium", color: "text-default", children: null };
-    const intl4 = tmp2(1126).intl;
-    const obj18 = { count: approximateMemberCount };
-    obj17.children = intl4.format(tmp2(1126).t.zRl6XR, obj18);
-    items5[1] = closure_10(tmp2(4886).Text, obj17);
-    obj15.children = items5;
-    tmp10Result2 = closure_12(closure_11, obj15);
+    items5 = [closure_10(View, obj16), ];
+    const obj17 = { variant: "text-xs/medium", color: "text-default", children: intl4.format(entry(1126).t.zRl6XR, obj18) };
+    const Text2 = tmp2(4886).Text;
+    intl4 = tmp2(1126).intl;
+    obj18 = { count: approximateMemberCount };
+    items5[1] = closure_10(Text2, obj17);
+    tmp11Result2 = closure_12(closure_11, obj15);
   }
-  items4[1] = tmp10Result2;
-  obj10.children = items4;
+  items4[1] = tmp11Result2;
   items2[1] = closure_12(View, obj10);
-  obj9.children = items2;
   items1[1] = closure_12(View, obj9);
-  obj7.children = items1;
-  const items6 = [closure_12(View, obj7), ];
-  const tmp6Result = GuildIconDefault;
-  items6[1] = closure_10(View, { children: closure_10(GuildDirectoryMoreMenuDefault, { entry }) });
-  obj6.children = items6;
-  const items7 = [closure_12(View, obj6), , , ];
-  let tmp9Result = null != description;
-  if (tmp9Result) {
-    tmp9Result = "" !== description;
+  items6 = [closure_12(View, obj7), ];
+  const obj19 = { children: closure_10(GuildDirectoryMoreMenuDefault, { entry }) };
+  items6[1] = closure_10(View, obj19);
+  items7 = [closure_12(View, obj6), , , ];
+  let tmp10Result = null != description;
+  if (tmp10Result) {
+    tmp10Result = "" !== description;
   }
-  if (tmp9Result) {
+  if (tmp10Result) {
     const obj20 = { lineClamp: 3, style: tmp.guildDescription, variant: "text-sm/medium", color: "text-default", children: description };
-    tmp9Result = closure_10(tmp2(4886).Text, obj20);
+    tmp10Result = closure_10(tmp2(4886).Text, obj20);
   }
-  items7[1] = tmp9Result;
-  items7[2] = closure_10(View, { style: tmp.flex });
+  items7[1] = tmp10Result;
+  const obj21 = { style: tmp.flex };
+  items7[2] = closure_10(View, obj21);
   const obj22 = {
-    loading: tmp5[0],
+    loading: first,
     onPress: function handleJoinGuild() {
-      const self = this;
-      const apply = closure_3.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
+      return obj(...arguments);
     },
-    variant: null,
-    text: null
+    variant: str2,
+    text: stringResult
   };
-  let str2 = "active";
+  str2 = "active";
+  const Button = tmp2(5594).Button;
   if (tmp4) {
     str2 = "secondary";
   }
-  obj22.variant = str2;
-  obj22.text = stringResult;
-  items7[3] = closure_10(entry(5594).Button, obj22);
-  obj5.children = items7;
-  obj4.children = closure_12(View, obj5);
-  return closure_10(entry(5995).Card, obj4);
+  items7[3] = closure_10(Button, obj22);
+  return closure_10(Card, obj4);
 });
+size = size_mod;
+let result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryRow.tsx");
+
+export default memoResult;

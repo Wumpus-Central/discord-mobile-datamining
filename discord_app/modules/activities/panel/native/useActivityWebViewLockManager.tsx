@@ -2,110 +2,118 @@
 
 // Module 17166 (useActivityWebViewLockManager)
 import native from "native" /* 4589 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const size = fn(2);
+let c0, closure_0, map, set;
+
 let result = size.fileFinishedImporting("modules/activities/panel/native/useActivityWebViewLockManager.tsx");
 
 export default function useActivityWebViewLockManager() {
-  return noop.useState(() => {
+  return react.useState(() => {
     function getCanRender(arg0) {
       let tmp = 0 === set.size;
       if (!tmp) {
-        const iter2 = set.values().next();
-        value = undefined;
+        const iter = set.values();
+        const iter2 = iter.next();
+        let value;
         if (iter2 != null) {
           value = iter2.value;
         }
         tmp = value === arg0;
-        const iter = set.values();
       }
       return tmp;
     }
-    const set = new Set();
-    const map = new Map();
+    set = new Set();
+    map = new Map();
     return () => {
-      const id = getCanRender.useId();
-      closure_0 = id;
+      let id = getCanRender.useId();
       let tmp2 = map(getCanRender.useState(() => {
         let tmp2 = 0 === set.size;
         if (!tmp2) {
-          const iter2 = set.values().next();
-          value = undefined;
+          const iter = set.values();
+          const iter2 = iter.next();
+          let value;
           if (iter2 != null) {
             value = iter2.value;
           }
           tmp2 = value === tmp;
-          const iter = set.values();
         }
         return tmp2;
       }), 2);
-      let callback = tmp3;
+      let tmp4 = tmp2[1];
+      let callback = tmp4;
       const items = [id];
+      const first = tmp2[0];
       const insertionEffect = getCanRender.useInsertionEffect(() => {
-        set.add(closure_0);
-        const obj2 = { callback, canRender: null };
-        let tmp4 = 0 === set.size;
+        let tmp4;
+        set.add(id);
+        const obj2 = { callback, canRender: tmp4 };
+        tmp4 = 0 === set.size;
+        const obj = set;
+        set = map.set;
         if (!tmp4) {
-          const iter2 = set.values().next();
-          value = undefined;
+          const iter = obj.values();
+          const iter2 = iter.next();
+          let value;
           if (iter2 != null) {
             value = iter2.value;
           }
-          tmp4 = value === closure_0;
-          const iter = set.values();
+          tmp4 = value === id;
         }
-        obj2.canRender = tmp4;
-        const result = map.set(closure_0, obj2);
+        const result = set(id, obj2);
         return () => {
-          set.delete(closure_1_0);
-          set.delete(closure_1_0);
+          set.delete(id);
+          set.delete(id);
         };
       }, items);
-      const items1 = [id, tmp2[1]];
+      const items1 = [id, tmp4];
       const layoutEffect = getCanRender.useLayoutEffect(() => {
-        if (null == closure_0) {
-          let resolved = Promise.resolve();
-          closure_0 = resolved.then(() => {
-            while (tmp2 !== undefined) {
-              let tmp5 = set(tmp3, 2);
-              [tmp6, tmp8] = tmp5;
-              callback = tmp8.callback;
-              let tmp10 = closure_1_3(tmp6);
-              let tmp11 = tmp10;
-              if (tmp10 !== tmp8.canRender) {
-                let obj = { canRender: null, callback: null };
-                obj.canRender = tmp11;
-                obj.callback = callback;
-                let result = closure_1_2.set(tmp6, obj);
-                let callbackResult = callback(tmp11);
-              }
-              continue;
+        const f153639 = () => {
+          let tmp6;
+          let tmp8;
+          const tmp2 = closure_1_2[Symbol.iterator]();
+          while (tmp2 !== undefined) {
+            let tmp5 = set(tmp3, 2);
+            [tmp6, tmp8] = tmp5;
+            callback = tmp8.callback;
+            let canRender = tmp8.canRender;
+            let tmp10 = closure_1_3(tmp6);
+            let tmp11 = tmp10;
+            if (tmp10 !== canRender) {
+              let obj = { canRender: tmp11, callback };
+              let result = closure_1_2.set(tmp6, obj);
+              let callbackResult = callback(tmp11);
             }
-            c0 = undefined;
-            tmp2 = closure_1_2[Symbol.iterator]();
-          });
+            continue;
+          }
+          c0 = undefined;
+        };
+        if (null == id) {
+          let resolved = Promise.resolve();
+          id = resolved.then(f153639);
         }
         return () => {
           if (null == closure_0) {
             const resolved = Promise.resolve();
-            closure_0 = resolved.then(() => { ... });
+            closure_0 = resolved.then(f153639);
           }
         };
       }, items1);
-      return tmp2[0];
+      return first;
     };
   })[0];
 };
 export const useLockedWebView = function useLockedWebView(transitionState) {
   transitionState = transitionState.transitionState;
   let shown;
-  shown = transitionState(shown[2]).useSharedValue(false);
-  const renderWebView = noop.useContext(transitionState.context).useActivityWebViewLock();
+  const context = transitionState.context;
+  const obj = transitionState(shown[2]);
+  shown = obj.useSharedValue(false);
+  const renderWebView = react.useContext(context).useActivityWebViewLock();
   const items = [shown, transitionState, renderWebView];
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(() => {
     if (transitionState !== native.TransitionStates.YEETED) {
       if (renderWebView) {
         const result = shown.set(true);

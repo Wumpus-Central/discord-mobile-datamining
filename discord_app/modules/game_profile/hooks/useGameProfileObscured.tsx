@@ -1,28 +1,28 @@
 // === Module 5896: useGameProfileObscured ===
 
 // Module 5896 (useGameProfileObscured)
-import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
+import get_initialized from "get initialized" /* 504 */;
+import react from "react" /* 576 */;
 import utils from "utils" /* 5897 */;
 import UserStore from "UserStore" /* 1377 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ReactCompilerGating = fn(558);
+let currentUser;
+
 function isGameProfileObscured(game, nsfwAllowed) {
-  let result = null != game;
+  let result = null != game && false === nsfwAllowed;
   if (result) {
-    result = false === nsfwAllowed;
-  }
-  if (result) {
-    result = utils.isAgeRestrictedContentClassification(game.contentClassification);
+    const obj = utils;
+    result = obj.isAgeRestrictedContentClassification(game.contentClassification);
   }
   return result;
 }
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileObscured.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((contentClassification) => {
-  const cResult = c.c(5);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((contentClassification) => {
+  let tmp4;
+  let tmp5;
+  const obj = react;
+  const cResult = obj.c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
     const fn = function n() {
@@ -40,37 +40,35 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((contentClassific
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
+  const tmpResult = get_initialized;
+  const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
   if (cResult[2] === contentClassification) {
+    let tmp8;
     if (cResult[3] === stateFromStores) {
-      let tmp8 = cResult[4];
+      tmp8 = cResult[4];
     }
     return tmp8;
   }
-  let result = null != contentClassification;
+  let result = null != contentClassification && false === stateFromStores;
   if (result) {
-    result = false === stateFromStores;
-  }
-  if (result) {
-    result = utils.isAgeRestrictedContentClassification(contentClassification.contentClassification);
     const tmpResult2 = utils;
+    result = tmpResult2.isAgeRestrictedContentClassification(contentClassification.contentClassification);
   }
   cResult[2] = contentClassification;
   cResult[3] = stateFromStores;
   cResult[4] = result;
   tmp8 = result;
-  const tmpResult = initialize;
 }) : ((contentClassification) => {
-  initialize;
+  get_initialized;
   [][0] = UserStore;
-  let result = null != contentClassification;
+  let result = null != contentClassification && false === tmp4;
   if (result) {
-    result = false === tmp4;
-  }
-  if (result) {
-    result = utils.isAgeRestrictedContentClassification(contentClassification.contentClassification);
     const tmpResult = utils;
+    result = tmpResult.isAgeRestrictedContentClassification(contentClassification.contentClassification);
   }
   return result;
 });
+let result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileObscured.tsx");
+
+export default tmp2;
 export { isGameProfileObscured };

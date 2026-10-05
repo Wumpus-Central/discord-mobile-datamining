@@ -2,21 +2,28 @@
 
 // Module 7728 (useMaybeFetchReferralsRemaining)
 import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 6898 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReferralTrialStore from "ReferralTrialStore" /* 6961 */;
+import PremiumConstants from "PremiumConstants" /* 1379 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, importDefault;
 
-const require = fn;
-const PremiumConstants = fn(1379);
-({ PremiumTypes: metroRequire, FractionalPremiumStates: closure_7 } = PremiumConstants);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/premium/referral_program/hooks/useMaybeFetchReferralsRemaining.tsx");
-
-export const useMaybeFetchReferralsRemaining = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = require("c").c(11);
+let metroImportDefault;
+let metroRequire;
+({ PremiumTypes: metroRequire, FractionalPremiumStates: metroImportDefault } = PremiumConstants);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let closure_0;
+  let closure_1;
+  let currentUser;
+  let tmp5;
+  let tmp6;
+  let tmp = _require;
+  const obj = require("react");
+  const cResult = obj.c(11);
   _require = tmp4;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -30,38 +37,38 @@ export const useMaybeFetchReferralsRemaining = ReactCompilerGating.isReactCompil
   } else {
     [tmp5, tmp6] = cResult;
   }
-  const obj = require("c");
-  const stateFromStores = require("initialize").useStateFromStores(tmp5, tmp6);
-  const tmpResult = require("initialize");
-  const hasDiscountApplied = require("PremiumSubscriptionOfferUtil").useHasDiscountApplied();
-  const tmpResult4 = require("PremiumSubscriptionOfferUtil");
-  const hasActiveTrial = require("PremiumSubscriptionTrialUtil").useHasActiveTrial();
+  const tmpResult = tmp(504);
+  const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
+  const tmpResult4 = tmp(7729);
+  const hasDiscountApplied = tmpResult4.useHasDiscountApplied();
+  const tmpResult5 = tmp(7730);
+  const hasActiveTrial = tmpResult5.useHasActiveTrial();
   const tmp11 = useFractionalPremiumInfoDefault();
   if (cResult[2] === stateFromStores) {
     if (cResult[3] === tmp11) {
       if (cResult[4] === hasActiveTrial) {
+        let tmp12;
         if (cResult[5] === hasDiscountApplied) {
-          let tmp12 = cResult[6];
+          tmp12 = cResult[6];
         }
         importDefault = tmp12;
-        if (cResult[7] === tmp4) {
+        if (cResult[7] === (undefined !== arg0 && arg0)) {
+          let tmp16;
+          let tmp17;
           if (cResult[8] === tmp12) {
-            let tmp16 = cResult[9];
-            let tmp17 = cResult[10];
+            tmp16 = cResult[9];
+            tmp17 = cResult[10];
           }
-          const effect = noop.useEffect(tmp16, tmp17);
+          const effect = react.useEffect(tmp16, tmp17);
         }
         const fn2 = function y() {
-          let tmp = closure_1;
-          if (closure_1) {
-            tmp = !closure_0;
-          }
+          const tmp = closure_1 && !closure_0;
           if (tmp) {
             const result = ReferralTrialStore.checkAndFetchReferralsRemaining();
           }
         };
-        const items1 = [tmp12, tmp4];
-        cResult[7] = tmp4;
+        const items1 = [tmp12, undefined !== arg0 && arg0];
+        cResult[7] = undefined !== arg0 && arg0;
         cResult[8] = tmp12;
         cResult[9] = fn2;
         cResult[10] = items1;
@@ -76,8 +83,8 @@ export const useMaybeFetchReferralsRemaining = ReactCompilerGating.isReactCompil
   }
   let fetched = true === verified;
   if (fetched) {
-    fetched = tmp(1976).isPremiumExactly(stateFromStores, closure_6.TIER_2);
     const tmpResult6 = tmp(1976);
+    fetched = tmpResult6.isPremiumExactly(stateFromStores, closure_6.TIER_2);
   }
   if (fetched) {
     fetched = tmp11.fetched;
@@ -97,20 +104,21 @@ export const useMaybeFetchReferralsRemaining = ReactCompilerGating.isReactCompil
   cResult[5] = hasDiscountApplied;
   cResult[6] = fetched;
   tmp12 = fetched;
-  const tmpResult5 = require("PremiumSubscriptionTrialUtil");
 }) : (() => {
+  let currentUser;
   let flag = arg0;
   if (arg0 === undefined) {
     flag = false;
   }
   let fetched;
-  const items = [UserStore];
-  const stateFromStores = flag(504).useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj = flag(504);
   let tmp = flag;
-  const hasDiscountApplied = flag(7729).useHasDiscountApplied();
+  const items = [UserStore];
+  const obj = flag(504);
+  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj2 = flag(7729);
-  const hasActiveTrial = flag(7730).useHasActiveTrial();
+  const hasDiscountApplied = obj2.useHasDiscountApplied();
+  const obj3 = flag(7730);
+  const hasActiveTrial = obj3.useHasActiveTrial();
   const tmp6 = fetched(6898)();
   let verified;
   if (stateFromStores != null) {
@@ -118,8 +126,8 @@ export const useMaybeFetchReferralsRemaining = ReactCompilerGating.isReactCompil
   }
   fetched = true === verified;
   if (fetched) {
-    fetched = tmp(1976).isPremiumExactly(stateFromStores, closure_6.TIER_2);
     const tmpResult = tmp(1976);
+    fetched = tmpResult.isPremiumExactly(stateFromStores, closure_6.TIER_2);
   }
   if (fetched) {
     fetched = tmp6.fetched;
@@ -134,14 +142,13 @@ export const useMaybeFetchReferralsRemaining = ReactCompilerGating.isReactCompil
     fetched = !hasActiveTrial;
   }
   const items1 = [fetched, flag];
-  const effect = noop.useEffect(() => {
-    let tmp = fetched;
-    if (fetched) {
-      tmp = !flag;
-    }
+  const effect = react.useEffect(() => {
+    const tmp = fetched && !flag;
     if (tmp) {
       const result = ReferralTrialStore.checkAndFetchReferralsRemaining();
     }
   }, items1);
-  const obj3 = flag(7730);
 });
+let result = size.fileFinishedImporting("modules/premium/referral_program/hooks/useMaybeFetchReferralsRemaining.tsx");
+
+export const useMaybeFetchReferralsRemaining = tmp3;

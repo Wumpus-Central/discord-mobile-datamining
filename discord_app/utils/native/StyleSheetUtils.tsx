@@ -3,8 +3,9 @@
 // Module 5910 (StyleSheetUtils)
 import size from "module_2" /* 2 */;
 
-const obj = { getStyleProp: null };
-function getStyleProp(style, borderRadius) {
+let getStyleProp;
+const obj = { getStyleProp };
+getStyleProp = function getStyleProp(style, borderRadius) {
   if (null != borderRadius) {
     if ("" !== borderRadius) {
       const _Array = Array;
@@ -24,8 +25,7 @@ function getStyleProp(style, borderRadius) {
       }
     }
   }
-}
-obj.getStyleProp = getStyleProp;
+};
 const result = size.fileFinishedImporting("utils/native/StyleSheetUtils.tsx");
 
 export default obj;

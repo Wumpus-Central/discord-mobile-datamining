@@ -2,154 +2,172 @@
 
 // Module 6811 (ForumPostRecentMessageStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 5112 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import UserStore from "UserStore" /* 1377 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+let closure_5;
+
 function handleLoadThreadsSuccess(arg0) {
+  let mostRecentMessages;
+  let threads;
   ({ threads, mostRecentMessages } = arg0);
   const item = threads.forEach((id) => {
-    dependencyMap[id.id] = { loaded: true, message: null };
+    closure_1_5[id.id] = { loaded: true, message: null };
     return true;
   });
   if (mostRecentMessages != null) {
     const found = mostRecentMessages.filter(GlobalUtils.isNotNullish);
     const item1 = found.forEach((channel_id) => {
       let messageRecord = null;
+      channel_id = channel_id.channel_id;
       if (null != channel_id) {
-        messageRecord = MessageRecordUtils.createMessageRecord(channel_id);
+        const obj = MessageRecordUtils;
+        messageRecord = obj.createMessageRecord(channel_id);
       }
-      closure_1_5[channel_id.channel_id] = { loaded: true, message: messageRecord };
+      closure_1_5[channel_id] = { loaded: true, message: messageRecord };
     });
   }
 }
-const dependencyMap = {};
-const Store = initializeDefault.Store;
+const hasOwnProperty = {};
+const Store = get_initializedDefault.Store;
 class ForumPostRecentMessageStore extends Store {
+  initialize() {
+    this.waitFor(ChannelStore, UserStore);
+  }
+  getMessageState(id) {
+    if (!(id in closure_5)) {
+      closure_5[id] = { loaded: false, message: null };
+    }
+    return closure_5[id];
+  }
 }
 const prototype = ForumPostRecentMessageStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(ChannelStore, UserStore);
-};
-prototype["getMessageState"] = function getMessageState(id) {
-  if (!(id in dependencyMap)) {
-    dependencyMap[id] = { loaded: false, message: null };
-  }
-  return dependencyMap[id];
-};
 ForumPostRecentMessageStore.displayName = "ForumPostRecentMessageStore";
-const forumPostRecentMessageStore = new ForumPostRecentMessageStore(DispatcherDefault, {
+let obj = {
   CONNECTION_OPEN: function handleConnectionOpen() {
     closure_5 = {};
   },
   MESSAGE_CREATE: function handleMessageCreate(isPushNotification) {
-    let tmp = isPushNotification;
-    isPushNotification = isPushNotification.isPushNotification;
-    if (isPushNotification) {
-      return !isPushNotification;
-    } else {
-      const message = tmp.message;
-      let channel_id;
+    let tmp = !isPushNotification.isPushNotification;
+    if (tmp) {
+      const message = isPushNotification.message;
+      let channel_id1;
+      const getChannel = ChannelStore.getChannel;
       if (message != null) {
-        channel_id = message.channel_id;
+        channel_id1 = message.channel_id;
       }
-      const channel = ChannelStore.getChannel(channel_id);
+      const channel = getChannel(channel_id1);
       let flag = false;
       if (null != channel) {
         flag = false;
         if (channel.isForumPost()) {
           let id;
+          const compare = SnowflakeUtilsDefault.compare;
+          SnowflakeUtilsDefault;
           if (message != null) {
             id = message.id;
           }
           let id1;
-          if (dependencyMap[channel.id] != null) {
+          if (closure_5[channel.id] != null) {
             const message2 = tmp6.message;
             if (message2 != null) {
               id1 = message2.id;
             }
           }
-          flag = SnowflakeUtilsDefault.compare(id, id1) > -1;
+          flag = compare(id, id1) > -1;
         }
       }
       if (flag) {
-        if (tmp.message.channel_id !== obj3.castMessageIdAsChannelId(tmp.message.id)) {
-          const message3 = tmp.message;
+        const channel_id = isPushNotification.message.channel_id;
+        const obj2 = SnowflakeUtilsDefault;
+        if (channel_id === obj2.castMessageIdAsChannelId(isPushNotification.message.id)) {
+          const obj = { loaded: true, message: null };
+          closure_5[isPushNotification.message.channel_id] = obj;
+        } else {
+          const message3 = isPushNotification.message;
           let messageRecord = null;
+          const channel_id2 = isPushNotification.message.channel_id;
           if (null != message3) {
-            messageRecord = MessageRecordUtils.createMessageRecord(message3);
+            const obj3 = MessageRecordUtils;
+            messageRecord = obj3.createMessageRecord(message3);
           }
-          const obj = { loaded: true, message: messageRecord };
-          dependencyMap[tmp.message.channel_id] = obj;
+          const obj4 = { loaded: true, message: messageRecord };
+          closure_5[channel_id2] = obj4;
         }
-        obj3 = SnowflakeUtilsDefault;
       }
-      tmp = dependencyMap;
-      const obj5 = { loaded: true, message: null };
-      dependencyMap[tmp.message.channel_id] = obj5;
+      tmp = tmp12;
     }
+    return tmp;
   },
   MESSAGE_UPDATE: function handleMessageUpdate(message) {
+    let obj3;
     message = message.message;
     let channel_id1;
+    const getChannel = ChannelStore.getChannel;
     if (message != null) {
       channel_id1 = message.channel_id;
     }
-    const channel = ChannelStore.getChannel(channel_id1);
+    const channel = getChannel(channel_id1);
     let flag = false;
     if (null != channel) {
       flag = false;
       if (channel.isForumPost()) {
         let id;
+        const compare = SnowflakeUtilsDefault.compare;
+        SnowflakeUtilsDefault;
         if (message != null) {
           id = message.id;
         }
         let id1;
-        if (dependencyMap[channel.id] != null) {
+        if (closure_5[channel.id] != null) {
           const message2 = tmp4.message;
           if (message2 != null) {
             id1 = message2.id;
           }
         }
-        flag = SnowflakeUtilsDefault.compare(id, id1) > -1;
+        flag = compare(id, id1) > -1;
       }
     }
-    let tmp9 = flag;
-    if (tmp9) {
+    let tmp10 = flag;
+    if (tmp10) {
       if (message.message.channel_id !== message.message.id) {
         const channel_id = message.message.channel_id;
         let message1;
-        if (dependencyMap[channel_id] != null) {
-          message1 = tmp14.message;
+        const message3 = message.message;
+        if (closure_5[channel_id] != null) {
+          message1 = tmp15.message;
         }
-        if (tmp16) {
-          const obj = {};
-          const merged = Object.assign(tmp12);
-          obj.message = MessageRecordUtils.updateMessageRecord(message1, message.message);
-          dependencyMap[channel_id] = obj;
+        const tmp17 = null != closure_5[channel_id] && null != message1;
+        if (tmp17) {
+          const obj = { message: obj3.updateMessageRecord(message1, message3) };
+          const merged = Object.assign(tmp13);
+          closure_5[channel_id] = obj;
+          obj3 = MessageRecordUtils;
         }
-        tmp16 = null != dependencyMap[channel_id] && null != message1;
       }
-      tmp9 = tmp10;
+      tmp10 = tmp11;
     }
-    return tmp9;
+    return tmp10;
   },
-  MESSAGE_DELETE: function handleMessageDelete(id) {
+  MESSAGE_DELETE: function handleMessageDelete(channelId) {
+    channelId = channelId.channelId;
     let message;
-    if (dependencyMap[id.channelId] != null) {
-      message = tmp3.message;
+    const id = channelId.id;
+    if (closure_5[channelId] != null) {
+      message = tmp.message;
     }
-    id = undefined;
+    let id1;
     if (message != null) {
-      id = message.id;
+      id1 = message.id;
     }
-    let flag = id === id.id;
+    let flag = id1 === id;
     if (flag) {
-      delete tmp[tmp2];
+      delete closure_5[channelId];
       flag = true;
     }
     return flag;
@@ -170,8 +188,8 @@ const forumPostRecentMessageStore = new ForumPostRecentMessageStore(DispatcherDe
   },
   LOAD_ARCHIVED_THREADS_SUCCESS: handleLoadThreadsSuccess,
   LOAD_THREADS_SUCCESS: handleLoadThreadsSuccess
-});
-const size = fn(2);
+};
+const forumPostRecentMessageStore = new ForumPostRecentMessageStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/forums/ForumPostRecentMessageStore.tsx");
 
 export default forumPostRecentMessageStore;

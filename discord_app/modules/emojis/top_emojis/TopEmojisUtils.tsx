@@ -5,9 +5,8 @@ import TopEmojisActionCreators from "TopEmojisActionCreators" /* 9873 */;
 import UserStore from "UserStore" /* 1377 */;
 import EmojiStore from "EmojiStore" /* 5638 */;
 import TopEmojiStore from "TopEmojiStore" /* 5641 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/emojis/top_emojis/TopEmojisUtils.tsx");
 
 export const maybeFetchTopEmojisByGuild = function maybeFetchTopEmojisByGuild(guildId) {
@@ -21,7 +20,8 @@ export const maybeFetchTopEmojisByGuild = function maybeFetchTopEmojisByGuild(gu
         }
       }
       if (!TopEmojiStore.getIsFetching(guildId)) {
-        const topEmojis = TopEmojisActionCreators.fetchTopEmojis(guildId);
+        const obj = TopEmojisActionCreators;
+        const topEmojis = obj.fetchTopEmojis(guildId);
       }
     }
   }

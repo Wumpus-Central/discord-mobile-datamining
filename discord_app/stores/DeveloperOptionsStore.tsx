@@ -1,46 +1,57 @@
 // === Module 1357: DeveloperOptionsStore ===
 
 // Module 1357 (DeveloperOptionsStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
+import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import DurationsDefault from "Durations" /* 1102 */;
+import TokenManagerAll from "TokenManager" /* 1111 */;
+import SentryUtilsDefault from "SentryUtils" /* 1242 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
 import Backoff from "Backoff" /* 569 */;
 import size from "module_2" /* 2 */;
 
 const UserFlags = Constants.UserFlags;
 function refreshSourceMapCookie() {
-  const HTTP = url(1282).HTTP;
-  obj = { url, headers: null, oldFormErrors: true, rejectWithError: true };
-  const obj2 = { Authorization: importDefaultResult1(1111).getToken() };
-  obj.headers = obj2;
-  const obj3 = importDefaultResult1(1111);
-  HTTP.put(obj).then((status) => {
+  let closure_1;
+  let obj2;
+  let obj3;
+  const HTTP = HTTPUtils.HTTP;
+  obj = { url, headers: obj2, oldFormErrors: true, rejectWithError: true };
+  const put = HTTP.put;
+  obj2 = { Authorization: obj3.getToken() };
+  obj3 = TokenManagerAll;
+  const putResult = put(obj);
+  putResult.then((status) => {
     if (401 !== status.status) {
       if (403 !== status.status) {
         if (200 !== status.status) {
           const _setTimeout2 = setTimeout;
-          let timeout = setTimeout(dependencyMap, importDefaultResult1.fail());
+          let timeout = setTimeout(closure_1_3, importDefaultResult1.fail());
         } else {
           importDefaultResult1.succeed();
           const _setTimeout = setTimeout;
-          timeout = setTimeout(dependencyMap, status.body.sourceMapCookieTTLSeconds * c1(refreshSourceMapCookie[2]).Millis.SECOND * 0.75);
+          timeout = setTimeout(closure_1_3, status.body.sourceMapCookieTTLSeconds * c1(refreshSourceMapCookie[2]).Millis.SECOND * 0.75);
         }
       }
     }
     timeout = null;
-    const result = closure_0(refreshSourceMapCookie[5]).setDeveloperOptionSettings({ sourceMapsEnabled: false });
-    obj = closure_0(refreshSourceMapCookie[5]);
+    obj = url(refreshSourceMapCookie[5]);
+    const result = obj.setDeveloperOptionSettings({ sourceMapsEnabled: false });
   }, () => {
-    const timeout = setTimeout(dependencyMap, importDefaultResult1.fail());
+    const timeout = setTimeout(refreshSourceMapCookie, importDefaultResult1.fail());
   });
 }
-const url = "" + location.protocol + "//" + location.host + "/__development/source_maps";
+const React = "" + location.protocol + "//" + location.host + "/__development/source_maps";
 let c1 = null;
 let result = 5 * DurationsDefault.Millis.SECOND;
 const importDefaultResult1 = new Backoff(result, DurationsDefault.Millis.MINUTE, true);
 let closure_5 = {
   set(arg0) {
+    let obj2;
+    let obj3;
+    let timeout;
     if (arg0 !== null != timeout) {
       if (arg0) {
         const _setTimeout = setTimeout;
@@ -49,40 +60,55 @@ let closure_5 = {
         const _clearTimeout = clearTimeout;
         clearTimeout(timeout);
         timeout = null;
-        const HTTP = url(1282).HTTP;
-        obj = { url, headers: null, oldFormErrors: true, rejectWithError: true };
-        const obj2 = { Authorization: importDefaultResult1(1111).getToken() };
-        obj.headers = obj2;
-        HTTP.del(obj);
-        const obj3 = importDefaultResult1(1111);
+        const HTTP = HTTPUtils.HTTP;
+        obj = { url, headers: obj2, oldFormErrors: true, rejectWithError: true };
+        const del = HTTP.del;
+        obj2 = { Authorization: obj3.getToken() };
+        obj3 = TokenManagerAll;
+        del(obj);
       }
     }
   }
 };
-const DeveloperOptionsStore = "DeveloperOptionsStore";
+const DeveloperOptionsStore_str = "DeveloperOptionsStore";
 let obj = { trace: false, canary: false, logGatewayEvents: false, logOverlayEvents: false, logAnalyticsEvents: false, logInteractionTTIAnalytics: false, sourceMapsEnabled: false, axeEnabled: false, cssDebuggingEnabled: false, layoutDebuggingEnabled: false, bugReporterEnabled: true, idleStatusIndicatorEnabled: false, onlyShowPreviewAppCollections: false, disableAppCollectionsCache: false, isStreamInfoOverlayEnabled: false, preventPopoutClose: false, logKeyboardMismatches: false, alertStartupMetrics: false, logQuestEvents: false };
+let obj2 = {};
 let merged = Object.assign(obj);
-obj = {};
+obj = obj2;
 const DeveloperOptionsRoutingKey = "DeveloperOptionsRoutingKey";
 let tags = [];
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class DeveloperOptionsStore extends Store {
+  initialize() {
+    const Storage = Storage3.Storage;
+    const value = Storage.get(DeveloperOptionsStore_str);
+    if (null != value) {
+      obj = {};
+      const merged = Object.assign(obj);
+      const merged1 = Object.assign(value);
+    }
+    const Storage2 = Storage3.Storage;
+    const value2 = Storage2.get(DeveloperOptionsRoutingKey);
+    if (null != value2) {
+      tags = value2;
+    }
+  }
+  getDebugOptionsHeaderValue() {
+    const keys = Object.keys(obj);
+    const mapped = keys.map((item) => obj[item]);
+    const keys1 = Object.keys(obj);
+    const found = keys1.filter((item) => obj[item]);
+    return found.join(",");
+  }
+  getRoutingKeyHeaderValue() {
+    let joined = null;
+    if (0 !== tags.length) {
+      joined = tags.join(",");
+    }
+    return joined;
+  }
 }
 const prototype = DeveloperOptionsStore.prototype;
-prototype["initialize"] = function initialize() {
-  const Storage = url(refreshSourceMapCookie[6]).Storage;
-  value = Storage.get(DeveloperOptionsStore);
-  if (null != value) {
-    obj = {};
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(value);
-  }
-  const Storage2 = url(refreshSourceMapCookie[6]).Storage;
-  value2 = Storage2.get(DeveloperOptionsRoutingKey);
-  if (null != value2) {
-    tags = value2;
-  }
-};
 Object.defineProperty(prototype, "isTracingRequests", {
   get: function isTracingRequests() {
     return obj.trace;
@@ -197,38 +223,24 @@ Object.defineProperty(prototype, "isLoggingQuestEvents", {
   },
   set: undefined
 });
-prototype["getDebugOptionsHeaderValue"] = function getDebugOptionsHeaderValue() {
-  const keys = Object.keys(obj);
-  const mapped = keys.map((item) => dependencyMap[item]);
-  const keys1 = Object.keys(obj);
-  const found = keys1.filter((item) => dependencyMap[item]);
-  return found.join(",");
-};
 Object.defineProperty(prototype, "routingKeyTags", {
   get: function routingKeyTags() {
     return tags;
   },
   set: undefined
 });
-prototype["getRoutingKeyHeaderValue"] = function getRoutingKeyHeaderValue() {
-  let joined = null;
-  if (0 !== tags.length) {
-    joined = tags.join(",");
-  }
-  return joined;
-};
 DeveloperOptionsStore.displayName = "DeveloperOptionsStore";
-const developerOptionsStore = new DeveloperOptionsStore(DispatcherDefault, {
+let obj3 = {
   LOGOUT: function handleLogout(arg0) {
     obj = {};
     const merged = Object.assign(obj);
     const merged1 = Object.assign(obj);
     const merged2 = Object.assign(obj);
     const result = closure_5.set(obj.sourceMapsEnabled);
-    const Storage = url(refreshSourceMapCookie[6]).Storage;
-    const result1 = Storage.set(DeveloperOptionsStore, obj);
+    const Storage = Storage3.Storage;
+    const result1 = Storage.set(DeveloperOptionsStore_str, obj);
     tags = [];
-    const Storage2 = url(refreshSourceMapCookie[6]).Storage;
+    const Storage2 = Storage3.Storage;
     const result2 = Storage2.set(DeveloperOptionsRoutingKey, tags);
   },
   CONNECTION_OPEN: function handleConnectionOpen(user) {
@@ -236,32 +248,31 @@ const developerOptionsStore = new DeveloperOptionsStore(DispatcherDefault, {
     if (num == null) {
       num = 0;
     }
-    let str = tmp;
-    if ((num & UserFlags.STAFF) !== UserFlags.STAFF) {
-      str = null != user.user.personal_connection_id;
-    }
+    const str = (num & UserFlags.STAFF) === UserFlags.STAFF || null != user.user.personal_connection_id;
     if ((num & UserFlags.STAFF) === UserFlags.STAFF) {
       const result = closure_5.set(obj.sourceMapsEnabled);
     }
-    obj = _null(refreshSourceMapCookie[7]);
-    obj.setTags({ isStaff: str.toString() });
+    obj = SentryUtilsDefault;
     const obj2 = { isStaff: str.toString() };
+    obj.setTags(obj2);
   },
   DEVELOPER_OPTIONS_UPDATE_SETTINGS: function handleUpdateSettings(settings) {
+    settings = settings.settings;
     obj = {};
     const merged = Object.assign(obj);
     const merged1 = Object.assign(obj);
-    const merged2 = Object.assign(settings.settings);
+    const merged2 = Object.assign(settings);
     const result = closure_5.set(obj.sourceMapsEnabled);
-    const Storage = url(refreshSourceMapCookie[6]).Storage;
-    const result1 = Storage.set(DeveloperOptionsStore, obj);
+    const Storage = Storage3.Storage;
+    const result1 = Storage.set(DeveloperOptionsStore_str, obj);
   },
   DEVELOPER_OPTIONS_SET_ROUTING_KEY: function handleSetRoutingKey(tags) {
     tags = tags.tags;
-    const Storage = url(refreshSourceMapCookie[6]).Storage;
+    const Storage = Storage3.Storage;
     const result = Storage.set(DeveloperOptionsRoutingKey, tags);
   }
-});
+};
+const developerOptionsStore = new DeveloperOptionsStore(DispatcherDefault, obj3);
 let result1 = size.fileFinishedImporting("stores/DeveloperOptionsStore.tsx");
 
 export default developerOptionsStore;

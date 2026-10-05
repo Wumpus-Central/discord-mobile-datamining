@@ -1,7 +1,7 @@
 // === Module 13138: MobileRoadblockCtaUtils ===
 
 // Module 13138 (MobileRoadblockCtaUtils)
-import util from "util" /* 1126 */;
+import intl3 from "intl" /* 1126 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import PremiumUtils from "PremiumUtils" /* 4528 */;
 import getTrialCtaOverride from "getTrialCtaOverride" /* 8875 */;
@@ -12,16 +12,20 @@ const PremiumSubscriptionSKUs = PremiumConstants.PremiumSubscriptionSKUs;
 let result = size.fileFinishedImporting("modules/premium/roadblocks/native/utils/MobileRoadblockCtaUtils.tsx");
 
 export const formatMobileRoadblockOfferText = function formatMobileRoadblockOfferText(arg0) {
+  let discountOffer;
+  let subscriptionTier;
+  let trialOffer;
   ({ subscriptionTier, trialOffer, discountOffer } = arg0);
   if (subscriptionTier !== PremiumSubscriptionSKUs.TIER_2) {
     return null;
   } else if (null != discountOffer) {
-    const intl = util.intl;
+    const intl = intl3.intl;
     const obj3 = { percent: discountOffer.discount.amount };
-    return intl.formatToPlainString(util.t.bkQ4bH, obj3);
+    return intl.formatToPlainString(intl3.t.bkQ4bH, obj3);
   } else {
+    let subscriptionTrial;
     if (trialOffer != null) {
-      const subscriptionTrial = trialOffer.subscriptionTrial;
+      subscriptionTrial = trialOffer.subscriptionTrial;
     }
     let result = null;
     if (null != trialOffer) {
@@ -31,9 +35,10 @@ export const formatMobileRoadblockOfferText = function formatMobileRoadblockOffe
         if (subscriptionTrial.skuId === subscriptionTier) {
           result = null;
           if (!trialOffer.isReferralTrial) {
-            ({ interval: obj2.intervalType, intervalCount: obj2.intervalCount } = subscriptionTrial);
-            result = PremiumUtils.formatTrialCtaIntervalDuration({ intervalType: null, intervalCount: null });
             const obj5 = { intervalType: null, intervalCount: null };
+            ({ interval: obj2.intervalType, intervalCount: obj2.intervalCount } = subscriptionTrial);
+            const obj = PremiumUtils;
+            result = obj.formatTrialCtaIntervalDuration(obj5);
           }
         }
       }
@@ -42,23 +47,28 @@ export const formatMobileRoadblockOfferText = function formatMobileRoadblockOffe
   }
 };
 export const getMobileRoadblockButtonText = function getMobileRoadblockButtonText(arg0) {
+  let discountOffer;
+  let subscriptionTier;
+  let trialOffer;
   ({ subscriptionTier, trialOffer, discountOffer } = arg0);
   let isReferralTrial;
   if (trialOffer != null) {
     isReferralTrial = trialOffer.isReferralTrial;
   }
   if (true === isReferralTrial) {
-    return getTrialCtaOverride.getTrialCtaOverride(trialOffer, subscriptionTier);
+    const obj5 = getTrialCtaOverride;
+    return obj5.getTrialCtaOverride(trialOffer, subscriptionTier);
   } else {
     let formatToPlainStringResult = null;
     if (subscriptionTier === PremiumSubscriptionSKUs.TIER_2) {
       if (null != discountOffer) {
-        const intl = util.intl;
+        const intl = intl3.intl;
         const obj3 = { percent: discountOffer.discount.amount };
-        formatToPlainStringResult = intl.formatToPlainString(util.t.bkQ4bH, obj3);
+        formatToPlainStringResult = intl.formatToPlainString(intl3.t.bkQ4bH, obj3);
       } else {
+        let subscriptionTrial;
         if (trialOffer != null) {
-          const subscriptionTrial = trialOffer.subscriptionTrial;
+          subscriptionTrial = trialOffer.subscriptionTrial;
         }
         let result = null;
         if (null != trialOffer) {
@@ -68,9 +78,10 @@ export const getMobileRoadblockButtonText = function getMobileRoadblockButtonTex
             if (subscriptionTrial.skuId === subscriptionTier) {
               result = null;
               if (!trialOffer.isReferralTrial) {
-                ({ interval: obj2.intervalType, intervalCount: obj2.intervalCount } = subscriptionTrial);
-                result = PremiumUtils.formatTrialCtaIntervalDuration({ intervalType: null, intervalCount: null });
                 const obj7 = { intervalType: null, intervalCount: null };
+                ({ interval: obj2.intervalType, intervalCount: obj2.intervalCount } = subscriptionTrial);
+                const obj = PremiumUtils;
+                result = obj.formatTrialCtaIntervalDuration(obj7);
               }
             }
           }
@@ -80,12 +91,12 @@ export const getMobileRoadblockButtonText = function getMobileRoadblockButtonTex
     }
     let tmp8 = null;
     if (null != formatToPlainStringResult) {
+      const obj4 = MobileRoadblockOfferCtaExperiment;
       if (!obj4.getMobileRoadblockOfferCtaEnabled()) {
-        const intl2 = util.intl;
-        formatToPlainStringResult = intl2.string(util.t["8x0jKT"]);
+        const intl2 = intl3.intl;
+        formatToPlainStringResult = intl2.string(intl3.t["8x0jKT"]);
       }
       tmp8 = formatToPlainStringResult;
-      obj4 = MobileRoadblockOfferCtaExperiment;
     }
     return tmp8;
   }

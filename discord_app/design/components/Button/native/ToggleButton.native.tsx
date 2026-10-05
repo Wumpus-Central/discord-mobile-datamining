@@ -1,27 +1,35 @@
 // === Module 14249: ToggleButton ===
 
 // Module 14249 (ToggleButton)
-import c from "c" /* 576 */;
-import BaseTextButton from "BaseTextButton" /* 5595 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
+import BaseTextButton2 from "BaseTextButton" /* 5595 */;
 import useToggleButtonProps from "useToggleButtonProps" /* 14250 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+let pressed;
+
 let closure_2 = ["pressed"];
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-let obj = { Icon: fn(5595).BaseTextButton.Icon };
-let merged = Object.assign(noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((pressed, ref) => {
-  const cResult = c.c(9);
+const jsx = Fragment.jsx;
+const forwardRef = react.forwardRef;
+let obj = { Icon: BaseTextButton2.BaseTextButton.Icon };
+const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((pressed, ref) => {
+  let tmp4;
+  let tmp5;
+  let tmp9;
+  const obj = react2;
+  const cResult = obj.c(9);
   if (cResult[0] !== pressed) {
     pressed = pressed.pressed;
     const tmp8 = _objectWithoutProperties(pressed, closure_2);
     cResult[0] = pressed;
     cResult[1] = pressed;
     cResult[2] = tmp8;
-    let tmp5 = tmp8;
-    let tmp4 = pressed;
+    tmp5 = tmp8;
+    tmp4 = pressed;
   } else {
     tmp4 = cResult[1];
     tmp5 = cResult[2];
@@ -30,49 +38,47 @@ let merged = Object.assign(noop.forwardRef(ReactCompilerGating.isReactCompilerEn
     const obj2 = { on: tmp5, off: tmp5 };
     cResult[3] = tmp5;
     cResult[4] = obj2;
-    let tmp9 = obj2;
+    tmp9 = obj2;
   } else {
     tmp9 = cResult[4];
   }
-  const toggleButtonProps = useToggleButtonProps.useToggleButtonProps(tmp9, tmp4);
+  const tmpResult = useToggleButtonProps;
+  const toggleButtonProps = tmpResult.useToggleButtonProps(tmp9, tmp4);
   let str = "toggle-off";
   if (tmp4) {
     str = "toggle-on";
   }
   if (cResult[5] === ref) {
     if (cResult[6] === str) {
+      let tmp11;
       if (cResult[7] === toggleButtonProps) {
-        let tmp11 = cResult[8];
+        tmp11 = cResult[8];
       }
       return tmp11;
     }
   }
-  const obj3 = {};
+  const BaseTextButton = BaseTextButton2.BaseTextButton;
   const merged = Object.assign(toggleButtonProps);
-  obj3.ref = ref;
-  obj3.variant = str;
-  const tmp13 = jsx(BaseTextButton.BaseTextButton, {});
+  const tmp13 = <BaseTextButton ref={ref} variant={str} />;
   cResult[5] = ref;
   cResult[6] = str;
   cResult[7] = toggleButtonProps;
   cResult[8] = tmp13;
   tmp11 = tmp13;
-  const tmpResult = useToggleButtonProps;
 }) : ((pressed, ref) => {
   pressed = pressed.pressed;
   const merged = Object.assign(pressed, Object.assign({ pressed: 0 }));
-  const toggleButtonProps = useToggleButtonProps.useToggleButtonProps({ on: merged, off: merged }, pressed);
-  const obj2 = {};
+  const obj = useToggleButtonProps;
+  const toggleButtonProps = obj.useToggleButtonProps({ on: merged, off: merged }, pressed);
+  const BaseTextButton = BaseTextButton2.BaseTextButton;
   const merged1 = Object.assign(toggleButtonProps);
-  obj2.ref = ref;
   let str = "toggle-off";
   if (pressed) {
     str = "toggle-on";
   }
-  obj2.variant = str;
-  return jsx(BaseTextButton.BaseTextButton, {});
-})), obj);
-const size = fn(2);
+  return <BaseTextButton ref={ref} variant={str} />;
+}));
+let obj2 = assign(forwardRefResult, obj);
 const result = size.fileFinishedImporting("design/components/Button/native/ToggleButton.native.tsx");
 
-export const ToggleButton = merged;
+export const ToggleButton = obj2;

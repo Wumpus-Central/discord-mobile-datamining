@@ -1,33 +1,35 @@
 // === Module 8978: FramesNativeManager ===
 
 // Module 8978 (FramesNativeManager)
+import react_native from "react-native" /* 17 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import util from "util" /* 1126 */;
+import intl2 from "intl" /* 1126 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
-import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 8979 */;
+import react_nativeDefault from "react-native" /* 8979 */;
 import FramesStore from "FramesStore" /* 8703 */;
+import PlatformUtils from "utils/PlatformUtils" /* 1370 */;
 import FramesManager from "FramesManager" /* 8980 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const PlatformUtils = fn(1370);
+const NativeEventEmitter = react_native.NativeEventEmitter;
 let nativeEventEmitter = null;
 if (PlatformUtils.isAndroid()) {
-  nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAppLifecycleModuleDefault);
+  let self = this;
+  const self2 = this;
+  nativeEventEmitter = new NativeEventEmitter(react_nativeDefault);
 }
-class FramesNativeManager extends tmp5 {
+class FramesNativeManager extends FramesManager {
   _initialize() {
-    self = this;
-    _initializeResult = super._initialize();
-    lifecycleSubscription = this.lifecycleSubscription;
+    const self = this;
+    super._initialize();
+    const lifecycleSubscription = this.lifecycleSubscription;
     if (lifecycleSubscription != null) {
-      removeResult = lifecycleSubscription.remove();
+      lifecycleSubscription.remove();
     }
-    obj = closure_4;
-    addListenerResult = undefined;
-    if (closure_4 != null) {
-      str = "onHostDestroy";
-      addListenerResult = obj.addListener("onHostDestroy", () => {
+    let addListenerResult;
+    if (nativeEventEmitter != null) {
+      addListenerResult = nativeEventEmitter.addListener("onHostDestroy", () => {
         const allFrames = FramesStore.getAllFrames();
         for (const item10007 of allFrames) {
           let leaveFrameResult = self.leaveFrame(item10007.id);
@@ -36,42 +38,38 @@ class FramesNativeManager extends tmp5 {
       });
     }
     this.lifecycleSubscription = addListenerResult;
-    return;
   }
   _terminate() {
-    _terminateResult = super._terminate();
-    lifecycleSubscription = this.lifecycleSubscription;
+    super._terminate();
+    const lifecycleSubscription = this.lifecycleSubscription;
     if (lifecycleSubscription != null) {
-      removeResult = lifecycleSubscription.remove();
+      lifecycleSubscription.remove();
     }
-    return;
   }
-  leaveFrame(arg0) {
-    tmp = closure_2;
-    obj = closure_0(closure_2[7]);
-    if (obj.isNotNullish(global)) {
-      tmp2 = closure_1;
-      obj2 = closure_1(tmp[8]);
-      obj1 = { type: "FRAME_SET_ORIENTATION_LOCK_STATE", frameId: null, lockState: null, pictureInPictureLockState: null };
-      obj1.frameId = global;
-      dispatchResult = obj2.dispatch(obj1);
+  showRPCDisconnectErrorUI(reason) {
+    let code;
+    let intl;
+    let message;
+    ({ code, message } = reason);
+    const obj = { title: intl.formatToPlainString(intl2.t.hbiAO6, { code }), body: message };
+    const show = actions_AlertActionCreatorsDefault.show;
+    actions_AlertActionCreatorsDefault;
+    intl = intl2.intl;
+    show(obj);
+  }
+  leaveFrame(frameId) {
+    const obj = GlobalUtils;
+    if (obj.isNotNullish(frameId)) {
+      const obj3 = { type: "FRAME_SET_ORIENTATION_LOCK_STATE", frameId, lockState: null, pictureInPictureLockState: null };
+      const obj2 = DispatcherDefault;
+      obj2.dispatch(obj3);
     }
-    leaveFrameResult = super.leaveFrame(global);
-    return;
+    super.leaveFrame(frameId);
   }
 }
-const prototype = FramesNativeManager.prototype;
-prototype["showRPCDisconnectErrorUI"] = function showRPCDisconnectErrorUI(reason) {
-  ({ code, message } = reason);
-  const obj2 = { title: null, body: null };
-  const intl = util.intl;
-  obj2.title = intl.formatToPlainString(util.t.hbiAO6, { code });
-  obj2.body = message;
-  actions_AlertActionCreatorsDefault.show(obj2);
-};
+let closure_5 = FramesNativeManager.prototype;
 FramesNativeManager.displayName = "FramesNativeManager";
 const framesNativeManager = new FramesNativeManager();
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/FramesNativeManager.tsx");
 
 export default framesNativeManager;

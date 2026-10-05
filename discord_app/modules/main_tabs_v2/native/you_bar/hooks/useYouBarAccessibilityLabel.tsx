@@ -1,7 +1,7 @@
 // === Module 16309: useYouBarAccessibilityLabel ===
 
 // Module 16309 (useYouBarAccessibilityLabel)
-import util from "util" /* 1126 */;
+import intl5 from "intl" /* 1126 */;
 import UserUtils from "UserUtils" /* 4722 */;
 import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10611 */;
 import useUserVoiceActivity from "useUserVoiceActivity" /* 10612 */;
@@ -14,20 +14,25 @@ import PresenceStore from "PresenceStore" /* 4930 */;
 import RelationshipStore from "RelationshipStore" /* 4519 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 5438 */;
 import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import Constants from "Constants" /* 1085 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, dependencyMap, flag, id, obj1, obj8, obj9, str, str2, tmp10, tmp11, tmp12, tmp17, tmp19, tmp2, tmp22, tmp4, tmp5, tmp6, tmp8, type;
 
-require = fn;
-const Constants = fn(1085);
-({ ActivityTypes: c10, StatusTypes: closure_11 } = Constants);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarAccessibilityLabel.tsx");
-
-export const useYouBarAccessibilityLabel = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
-  const cResult = name(gameMentionsAsPlainText[9]).c(6);
+let c10;
+let unpackModuleId;
+({ ActivityTypes: c10, StatusTypes: unpackModuleId } = Constants);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+  let first;
+  let gameMentionsAsPlainText;
+  let name;
+  const tmp = name;
   let obj = name(gameMentionsAsPlainText[9]);
-  name = id(gameMentionsAsPlainText[10]).useName(id);
+  const cResult = obj.c(6);
+  let obj2 = id(gameMentionsAsPlainText[10]);
+  name = obj2.useName(id);
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -38,18 +43,20 @@ export const useYouBarAccessibilityLabel = ReactCompilerGating.isReactCompilerEn
   if (setting != null) {
     text = setting.text;
   }
-  const obj2 = id(gameMentionsAsPlainText[10]);
-  let tmp8 = null;
+  let tmp9 = null;
+  const useGameMentionsAsPlainText = tmp(gameMentionsAsPlainText[12]).useGameMentionsAsPlainText;
+  tmp(gameMentionsAsPlainText[12]);
   if ("" !== text) {
-    tmp8 = text;
+    tmp9 = text;
   }
-  gameMentionsAsPlainText = name(gameMentionsAsPlainText[12]).useGameMentionsAsPlainText(tmp8);
-  const tmpResult = name(gameMentionsAsPlainText[12]);
+  gameMentionsAsPlainText = useGameMentionsAsPlainText(tmp9);
   let primaryGuild;
+  const getUserPrimaryGuild = tmp(gameMentionsAsPlainText[13]).getUserPrimaryGuild;
+  tmp(gameMentionsAsPlainText[13]);
   if (id != null) {
     primaryGuild = id.primaryGuild;
   }
-  const userPrimaryGuild = name(gameMentionsAsPlainText[13]).getUserPrimaryGuild(primaryGuild);
+  const userPrimaryGuild = getUserPrimaryGuild(primaryGuild);
   let tag;
   if (userPrimaryGuild != null) {
     tag = userPrimaryGuild.tag;
@@ -57,17 +64,19 @@ export const useYouBarAccessibilityLabel = ReactCompilerGating.isReactCompilerEn
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [SelfPresenceStore, tag, RelationshipStore, ChannelStore, PermissionStore, VoiceStateStore, PresenceStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === gameMentionsAsPlainText) {
     if (cResult[2] === tag) {
       if (cResult[3] === name) {
+        let tmp23;
         if (cResult[4] === id) {
-          let tmp21 = cResult[5];
+          tmp23 = cResult[5];
         }
-        return tmp(tmp2[19]).useStateFromStores(first, tmp21);
+        const tmpResult4 = tmp(gameMentionsAsPlainText[19]);
+        return tmpResult4.useStateFromStores(first, tmp23);
       }
     }
   }
@@ -103,7 +112,7 @@ export const useYouBarAccessibilityLabel = ReactCompilerGating.isReactCompilerEn
           if (status !== StatusTypes.OFFLINE) {
             text = null;
             if (status !== StatusTypes.INVISIBLE) {
-              tmp24 = closure_6;
+              tmp23 = closure_6;
               activities = closure_6.getActivities(tmp6);
               if (null != discoverableApplicationStream) {
                 name = undefined;
@@ -114,21 +123,22 @@ export const useYouBarAccessibilityLabel = ReactCompilerGating.isReactCompilerEn
                     name = found.name;
                   }
                 }
-                if (null == name) {
-                  intl3 = tmp4(tmp5[17]).intl;
-                  stringResult = intl3.string(tmp4(tmp5[17]).t.eXan7B);
-                  tmp22 = stringResult;
-                } else {
+                if (null != name) {
                   str = "";
+                  if ("" !== name) {
+                    intl4 = tmp4(tmp5[17]).intl;
+                    obj9 = { name: null };
+                    obj9.name = name;
+                    formatToPlainStringResult = intl4.formatToPlainString(tmp4(tmp5[17]).t["0wJXSh"], obj9);
+                  }
+                  text = formatToPlainStringResult;
                 }
-                intl4 = tmp4(tmp5[17]).intl;
-                obj9 = { name: null };
-                obj9.name = name;
-                stringResult = intl4.formatToPlainString(tmp4(tmp5[17]).t["0wJXSh"], obj9);
+                intl3 = tmp4(tmp5[17]).intl;
+                formatToPlainStringResult = intl3.string(tmp4(tmp5[17]).t.eXan7B);
               } else {
                 found1 = undefined;
                 if (activities != null) {
-                  found1 = activities.find(() => { ... });
+                  found1 = activities.find(() => { /* body not rendered: F145801 */ });
                 }
                 if (null != found1) {
                   tmp17 = closure_1;
@@ -144,15 +154,15 @@ export const useYouBarAccessibilityLabel = ReactCompilerGating.isReactCompilerEn
                         string = intl.string;
                         t = tmp4(tmp5[17]).t;
                         if (isGuildStageVoiceResult) {
-                          stringResult1 = string(t.QygGCN);
+                          stringResult = string(t.QygGCN);
                         } else {
-                          stringResult1 = string(t.msxteM);
+                          stringResult = string(t.msxteM);
                         }
                       }
-                      text = stringResult1;
+                      text = stringResult;
                     }
                     intl2 = tmp4(tmp5[17]).intl;
-                    stringResult1 = intl2.string(tmp4(tmp5[17]).t["9FaEzi"]);
+                    stringResult = intl2.string(tmp4(tmp5[17]).t["9FaEzi"]);
                   }
                 }
               }
@@ -168,10 +178,10 @@ export const useYouBarAccessibilityLabel = ReactCompilerGating.isReactCompilerEn
         }
         items1 = [, , ];
         items1[0] = tmp;
-        tmp23 = tag;
+        tmp22 = tag;
         items1[1] = tag;
         items1[2] = text;
-        found2 = items1.filter(() => { ... });
+        found2 = items1.filter(() => { /* body not rendered: F145802 */ });
         str2 = ", ";
         return found2.join(", ");
       } else {
@@ -184,10 +194,13 @@ export const useYouBarAccessibilityLabel = ReactCompilerGating.isReactCompilerEn
   cResult[3] = name;
   cResult[4] = id;
   cResult[5] = A;
-  tmp21 = A;
-  const tmpResult3 = name(gameMentionsAsPlainText[13]);
+  tmp23 = A;
 }) : ((id) => {
-  _require = id(4722).useName(id);
+  let closure_0;
+  let closure_2;
+  const tmp = dependencyMap;
+  let obj = id(4722);
+  _require = obj.useName(id);
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -198,38 +211,42 @@ export const useYouBarAccessibilityLabel = ReactCompilerGating.isReactCompilerEn
   if (setting != null) {
     text = setting.text;
   }
-  let obj = id(4722);
-  let tmp6 = null;
+  let tmp7 = null;
+  const useGameMentionsAsPlainText = require("useGameMentionsAsPlainText").useGameMentionsAsPlainText;
+  require("useGameMentionsAsPlainText");
   if ("" !== text) {
-    tmp6 = text;
+    tmp7 = text;
   }
-  dependencyMap = require("useGameMentionsAsPlainText").useGameMentionsAsPlainText(tmp6);
-  const tmp3Result = require("useGameMentionsAsPlainText");
+  dependencyMap = useGameMentionsAsPlainText(tmp7);
   let primaryGuild;
+  const getUserPrimaryGuild = require("GuildTagUtils").getUserPrimaryGuild;
+  require("GuildTagUtils");
   if (id != null) {
     primaryGuild = id.primaryGuild;
   }
-  const userPrimaryGuild = require("GuildTagUtils").getUserPrimaryGuild(primaryGuild);
+  const userPrimaryGuild = getUserPrimaryGuild(primaryGuild);
   let tag;
   if (userPrimaryGuild != null) {
     tag = userPrimaryGuild.tag;
   }
-  const tmp3Result3 = require("GuildTagUtils");
   let items = [SelfPresenceStore, tag, RelationshipStore, ChannelStore, PermissionStore, VoiceStateStore, PresenceStore];
-  return require("initialize").useStateFromStores(items, () => {
+  const tmp3Result4 = require("get initialized");
+  return tmp3Result4.useStateFromStores(items, () => {
     if (null != closure_0) {
       const status = SelfPresenceStore.getStatus();
       const items = [ApplicationStreamingStore, RelationshipStore];
-      const discoverableApplicationStream = useDiscoverableApplicationStream.getDiscoverableApplicationStream(id, items);
+      const obj = useDiscoverableApplicationStream;
+      const discoverableApplicationStream = obj.getDiscoverableApplicationStream(id, items);
       const obj3 = { userId: id };
       const obj4 = { ChannelStore, PermissionStore, VoiceStateStore };
-      const voiceChannel = useUserVoiceActivity.getVisibleUserVoiceActivity(obj3, obj4).voiceChannel;
+      const obj2 = useUserVoiceActivity;
+      const voiceChannel = obj2.getVisibleUserVoiceActivity(obj3, obj4).voiceChannel;
       let text = null;
       if (null != id) {
         text = null;
-        if (status !== constants.OFFLINE) {
+        if (status !== unpackModuleId.OFFLINE) {
           text = null;
-          if (status !== constants.INVISIBLE) {
+          if (status !== unpackModuleId.INVISIBLE) {
             const activities = PresenceStore.getActivities(id);
             if (null != discoverableApplicationStream) {
               let name;
@@ -239,13 +256,17 @@ export const useYouBarAccessibilityLabel = ReactCompilerGating.isReactCompilerEn
                   name = found.name;
                 }
               }
-              if (null == name) {
-                const intl3 = util.intl;
-                let stringResult = intl3.string(util.t.eXan7B);
+              if (null != name) {
+                let formatToPlainStringResult;
+                if ("" !== name) {
+                  const intl4 = intl5.intl;
+                  const obj5 = { name };
+                  formatToPlainStringResult = intl4.formatToPlainString(intl5.t["0wJXSh"], obj5);
+                }
+                text = formatToPlainStringResult;
               }
-              const intl4 = util.intl;
-              const obj5 = { name };
-              stringResult = intl4.formatToPlainString(util.t["0wJXSh"], obj5);
+              const intl3 = intl5.intl;
+              formatToPlainStringResult = intl3.string(intl5.t.eXan7B);
             } else {
               let found1;
               if (activities != null) {
@@ -260,21 +281,22 @@ export const useYouBarAccessibilityLabel = ReactCompilerGating.isReactCompilerEn
                 text = null;
                 if (null != voiceChannel) {
                   if (!voiceChannel.isDM()) {
+                    let stringResult;
                     if (!voiceChannel.isGroupDM()) {
-                      const intl = util.intl;
+                      const isGuildStageVoiceResult = voiceChannel.isGuildStageVoice();
+                      const intl = intl5.intl;
                       const string = intl.string;
-                      const t = util.t;
+                      const t = intl5.t;
                       if (isGuildStageVoiceResult) {
-                        let stringResult1 = string(t.QygGCN);
+                        stringResult = string(t.QygGCN);
                       } else {
-                        stringResult1 = string(t.msxteM);
+                        stringResult = string(t.msxteM);
                       }
-                      isGuildStageVoiceResult = voiceChannel.isGuildStageVoice();
                     }
-                    text = stringResult1;
+                    text = stringResult;
                   }
-                  const intl2 = util.intl;
-                  stringResult1 = intl2.string(util.t["9FaEzi"]);
+                  const intl2 = intl5.intl;
+                  stringResult = intl2.string(intl5.t["9FaEzi"]);
                 }
               }
             }
@@ -285,8 +307,8 @@ export const useYouBarAccessibilityLabel = ReactCompilerGating.isReactCompilerEn
         text = closure_2;
       }
       if (text == null) {
-        text = UserUtils.humanizeStatus(status);
         const tmp4Result = UserUtils;
+        text = tmp4Result.humanizeStatus(status);
       }
       const items1 = [tmp, tag, text];
       const found2 = items1.filter((item) => null != item);
@@ -294,3 +316,6 @@ export const useYouBarAccessibilityLabel = ReactCompilerGating.isReactCompilerEn
     }
   });
 });
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarAccessibilityLabel.tsx");
+
+export const useYouBarAccessibilityLabel = tmp3;

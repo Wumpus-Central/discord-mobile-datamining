@@ -1,16 +1,26 @@
 // === Module 573: useStateFromStores ===
 
 // Module 573 (useStateFromStores)
-import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
-import _slicedToArray from "module_32" /* 32 */;
+import shallowEqual from "shallowEqual" /* 568 */;
+import _slicedToArray_mod from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const discord_common_shallowEqualDefault = discord_common_shallowEqual;
+const require = globalThis.__r;
+const shallowEqualDefault = shallowEqual;
+let _require, dependencyMap, stateFromStores;
 
-require = fn;
+let closure_4;
+let hasOwnProperty;
+let metroRequire;
 function defaultAreStatesEqual(arg0, arg1) {
   return arg0 === arg1;
 }
 function useStateFromStores(items, cResult, items1) {
+  let closure_3;
+  let prevDeps;
+  let tmp5;
   _require = items;
   const getStateFromStores = cResult;
   dependencyMap = items1;
@@ -20,8 +30,8 @@ function useStateFromStores(items, cResult, items1) {
   }
   _slicedToArray = tmp;
   let current;
-  state = undefined;
-  closure_6 = undefined;
+  let state;
+  let closure_6;
   const tmp2 = state(null);
   if (null == tmp2.current) {
     const obj = { stores: items, areStatesEqual: tmp, getStateFromStores: cResult, prevDeps: "Boolean", state: "unicodeVersion" };
@@ -31,15 +41,15 @@ function useStateFromStores(items, cResult, items1) {
   state = current.state;
   if (null == items1) {
     const tmp6 = cResult();
-    let tmp5 = state;
+    tmp5 = state;
+    const tmp7 = null != state && tmp(state, tmp6);
     if (!tmp7) {
       state = tmp6;
       tmp5 = tmp6;
     }
-    tmp7 = null != state && tmp(state, tmp6);
   } else {
     tmp5 = state;
-    const obj2 = require("discord_common/shallowEqual");
+    require("shallowEqual");
   }
   closure_6(() => {
     current.getStateFromStores = getStateFromStores;
@@ -48,31 +58,31 @@ function useStateFromStores(items, cResult, items1) {
   });
   closure_6 = _slicedToArray(current(null), 2)[1];
   closure_6(() => {
+    let batchedStoreListener;
     batchedStoreListener = new items(prevDeps[3]).BatchedStoreListener(batchedStoreListener, () => {
+      const tmp = stateFromStores;
       stateFromStores = stateFromStores.getStateFromStores();
       if (!closure_1_3(stateFromStores.state, stateFromStores)) {
         tmp.state = stateFromStores;
         closure_1_6({});
       }
-      tmp = stateFromStores;
     });
     batchedStoreListener.attach("useStateFromStores");
     return () => batchedStoreListener.detach();
   }, []);
   return tmp5;
 }
-const noop = fn(19);
-({ useState: closure_4, useRef: hasOwnProperty, useInsertionEffect: metroRequire } = noop);
-let ReactCompilerGating = fn(558);
+let _slicedToArray = _slicedToArray_mod;
+({ useState: closure_4, useRef: hasOwnProperty, useInsertionEffect: metroRequire } = react);
+let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const size = fn(2);
 const result2 = size.fileFinishedImporting("../discord_common/js/packages/flux/useStateFromStores.tsx");
 
 export function statesWillNeverBeEqual() {
   return false;
 }
 export { useStateFromStores };
-export const useStateFromStoresObject = (items, cResult, items1) => useStateFromStores(items, cResult, items1, discord_common_shallowEqualDefault);
-export const useStateFromStoresArray = (items, cResult, items1) => useStateFromStores(items, cResult, items1, discord_common_shallowEqual.areArraysShallowEqual);
+export const useStateFromStoresObject = (items, cResult, items1) => useStateFromStores(items, cResult, items1, shallowEqualDefault);
+export const useStateFromStoresArray = (items, cResult, items1) => useStateFromStores(items, cResult, items1, shallowEqual.areArraysShallowEqual);

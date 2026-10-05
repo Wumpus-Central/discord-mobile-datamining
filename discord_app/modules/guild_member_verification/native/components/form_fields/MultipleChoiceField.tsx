@@ -1,144 +1,171 @@
 // === Module 6583: MultipleChoiceField ===
 
 // Module 6583 (MultipleChoiceField)
+import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import noop from "module_19" /* 19 */;
+import Constants from "Constants" /* 1096 */;
+import react from "react" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles_mod from "createStyles" /* 4890 */;
 import TextStyles from "TextStyles" /* 5915 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let hasIcons;
 
-const require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { container: { marginVertical: 12, flexDirection: "column" }, formHeader: null };
-let obj3 = {};
-const merged = Object.assign(TextStyles(fn(1096).Fonts.DISPLAY_SEMIBOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 16, { uppercase: false }));
-obj3.paddingBottom = 16;
-obj2.formHeader = obj3;
-let closure_6 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/MultipleChoiceField.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((hasIcons) => {
-  const cResult = onChange(576).c(20);
+let closure_4;
+let hasOwnProperty;
+let obj2;
+const View = react_native.View;
+const Fonts = Constants.Fonts;
+({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { container: { marginVertical: 12, flexDirection: "column" }, formHeader: obj2 };
+obj2 = { paddingBottom: 16 };
+createStyles = createStyles.createStyles;
+const DISPLAY_SEMIBOLD = Fonts.DISPLAY_SEMIBOLD;
+const merged = Object.assign(TextStyles(DISPLAY_SEMIBOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 16, { uppercase: false }));
+let closure_6 = createStyles(obj);
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((hasIcons) => {
+  let arr;
+  let choices;
+  let field;
+  let label;
+  let onChange;
+  let response;
+  let obj = onChange(576);
+  const cResult = obj.c(20);
   ({ field, onChange } = hasIcons);
   hasIcons = hasIcons.hasIcons;
   const tmp4 = closure_6();
   ({ label, choices, response } = field);
   if (cResult[0] !== choices) {
+    let tmp6;
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
       const fn = function t(name, value) {
         return { name, value };
       };
       cResult[2] = fn;
-      let tmp6 = fn;
+      tmp6 = fn;
     } else {
       tmp6 = cResult[2];
     }
     const mapped = choices.map(tmp6);
     cResult[0] = choices;
     cResult[1] = mapped;
+    arr = mapped;
   } else {
-    if (cResult[3] === label) {
-      if (response == null) {
-        response = -1;
-      }
-      if (cResult[6] !== onChange) {
-        class C {
-          constructor(arg0) {
-            return onChange(hasIcons);
-          }
-        }
-        cResult[6] = onChange;
-        cResult[7] = C;
-      } else {
-        class C {
-          constructor(arg0) {
-            return onChange(hasIcons);
-          }
+    arr = cResult[1];
+  }
+  if (cResult[3] === label) {
+    if (response == null) {
+      response = -1;
+    }
+    if (cResult[6] !== onChange) {
+      class C {
+        constructor(arg0) {
+          return onChange(arg0);
         }
       }
-      if (cResult[8] !== arr) {
-        class C {
-          constructor(arg0) {
-            return onChange(hasIcons);
-          }
+      cResult[6] = onChange;
+      cResult[7] = C;
+    } else {
+      class C {
+        constructor(arg0) {
+          return onChange(arg0);
         }
-        const _Symbol2 = Symbol;
-        if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-          class M {
-            constructor(arg0) {
-              obj = { label: hasIcons.name, value: hasIcons.value };
-              return closure_1_4(onChange(closure_1_1[10]).TableRadioRow, obj, hasIcons.value);
-            }
-          }
-          cResult[10] = M;
-        } else {
-          class M {
-            constructor(arg0) {
-              obj = { label: hasIcons.name, value: hasIcons.value };
-              return closure_1_4(onChange(closure_1_1[10]).TableRadioRow, obj, hasIcons.value);
-            }
-          }
-        }
-        const mapped1 = arr.map(M);
-        cResult[8] = arr;
-        cResult[9] = mapped1;
-      } else {
-        class M {
-          constructor(arg0) {
-            obj = { label: hasIcons.name, value: hasIcons.value };
-            return closure_1_4(onChange(closure_1_1[10]).TableRadioRow, obj, hasIcons.value);
-          }
-        }
-        if (cResult[11] === hasIcons) {
-          class M {
-            constructor(arg0) {
-              obj = { label: hasIcons.name, value: hasIcons.value };
-              return closure_1_4(onChange(closure_1_1[10]).TableRadioRow, obj, hasIcons.value);
-            }
-          }
-        }
-        const obj2 = { defaultValue: response, onChange: C, hasIcons, children: tmp14 };
-        const tmp20 = closure_4(onChange(6072).TableRadioGroup, obj2);
-        cResult[11] = hasIcons;
-        cResult[12] = response;
-        cResult[13] = C;
-        cResult[14] = tmp14;
-        cResult[15] = tmp20;
       }
     }
-    const obj3 = { style: tmp4.formHeader, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: label };
-    const tmp11 = closure_4(onChange(4886).Text, obj3);
-    cResult[3] = label;
-    cResult[4] = tmp4.formHeader;
-    cResult[5] = tmp11;
+    if (cResult[8] !== arr) {
+      class C {
+        constructor(arg0) {
+          return onChange(arg0);
+        }
+      }
+      const _Symbol2 = Symbol;
+      if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+        class M {
+          constructor(label) {
+            const obj = { label: label.name, value: label.value };
+            return closure_1_4(onChange(dependencyMap[10]).TableRadioRow, obj, label.value);
+          }
+        }
+        cResult[10] = M;
+      } else {
+        class M {
+          constructor(label) {
+            const obj = { label: label.name, value: label.value };
+            return closure_1_4(onChange(dependencyMap[10]).TableRadioRow, obj, label.value);
+          }
+        }
+      }
+      const mapped1 = arr.map(M);
+      cResult[8] = arr;
+      cResult[9] = mapped1;
+    } else {
+      class M {
+        constructor(label) {
+          const obj = { label: label.name, value: label.value };
+          return closure_1_4(onChange(dependencyMap[10]).TableRadioRow, obj, label.value);
+        }
+      }
+    }
+    if (cResult[11] === hasIcons) {
+      class M {
+        constructor(label) {
+          const obj = { label: label.name, value: label.value };
+          return closure_1_4(onChange(dependencyMap[10]).TableRadioRow, obj, label.value);
+        }
+      }
+    }
+    const obj2 = { defaultValue: response, onChange: C, hasIcons, children: tmp12 };
+    cResult[11] = hasIcons;
+    cResult[12] = response;
+    cResult[13] = C;
+    cResult[14] = tmp12;
+    cResult[15] = closure_4(onChange(6072).TableRadioGroup, obj2);
+    const tmp17 = closure_4(onChange(6072).TableRadioGroup, obj2);
   }
-  const obj = onChange(576);
+  const obj3 = { style: tmp4.formHeader, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: label };
+  cResult[3] = label;
+  cResult[4] = tmp4.formHeader;
+  cResult[5] = closure_4(onChange(4886).Text, obj3);
+  closure_4(onChange(4886).Text, obj3);
 }) : ((hasIcons) => {
+  let field;
+  let items1;
   ({ field, onChange: require } = hasIcons);
+  hasIcons = hasIcons.hasIcons;
   const tmp = closure_6();
   const choices = field.choices;
   let num = field.response;
   const items = [choices];
-  const memo = noop.useMemo(() => choices.map((name, value) => ({ name, value })), items);
-  const obj = { style: tmp.container, children: null };
-  const items1 = [closure_4(require("Text/Text").Text, { style: tmp.formHeader, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: field.label }), ];
+  const label = field.label;
+  const memo = react.useMemo(() => choices.map((name, value) => ({ name, value })), items);
+  let obj = { style: tmp.container, children: items1 };
+  items1 = [, ];
+  const obj2 = { style: tmp.formHeader, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: label };
+  items1[0] = closure_4(require("Text/Text").Text, obj2);
+  const TableRadioGroup = require("TableRadioGroup").TableRadioGroup;
   if (num == null) {
     num = -1;
   }
-  items1[1] = closure_4(require("TableRadioGroup").TableRadioGroup, {
+  const obj3 = {
     defaultValue: num,
     onChange(arg0) {
       return require(arg0);
     },
-    hasIcons: hasIcons.hasIcons,
-    children: memo.map((label) => closure_1_4(require("TableRadioRow").TableRadioRow, { label: label.name, value: label.value }, label.value))
-  });
-  obj.children = items1;
+    hasIcons,
+    children: memo.map((label) => {
+      const obj = { label: label.name, value: label.value };
+      return closure_1_4(require("TableRadioRow").TableRadioRow, obj, label.value);
+    })
+  };
+  items1[1] = closure_4(TableRadioGroup, obj3);
   return closure_5(View, obj);
 });
+const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/MultipleChoiceField.tsx");
+
+export default tmp6;

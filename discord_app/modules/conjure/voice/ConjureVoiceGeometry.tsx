@@ -6,6 +6,10 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/conjure/voice/ConjureVoiceGeometry.tsx");
 
 export const toListenerRelativePosition = function toListenerRelativePosition(forward, position) {
+  let point7;
+  let x;
+  let y;
+  let z;
   forward = forward.forward;
   ({ x, y, z } = forward);
   const sqrtResult = Math.sqrt(x * x + y * y + z * z);
@@ -46,7 +50,7 @@ export const toListenerRelativePosition = function toListenerRelativePosition(fo
   const diff7 = position.y - forward.position.y;
   const diff8 = position.z - forward.position.z;
   if (Math.sqrt(diff6 * diff6 + diff7 * diff7 + diff8 * diff8) < 0.001) {
-    let point7 = { x: 0, y: 0, z: -0.001 };
+    point7 = { x: 0, y: 0, z: -0.001 };
   } else {
     point7 = { x: diff6 * point3.x + diff7 * point3.y + diff8 * point3.z, y: diff6 * point4.x + diff7 * point4.y + diff8 * point4.z, z: -diff6 * point.x + diff7 * point.y + diff8 * point.z };
   }

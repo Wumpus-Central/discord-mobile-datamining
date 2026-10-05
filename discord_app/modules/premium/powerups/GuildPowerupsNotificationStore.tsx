@@ -1,38 +1,42 @@
 // === Module 12151: GuildPowerupsNotificationStore ===
 
 // Module 12151 (GuildPowerupsNotificationStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 12152 */;
+import getExpiringGuildEntitlements2 from "getExpiringGuildEntitlements" /* 12152 */;
 import GameServerStore from "GameServerStore" /* 7672 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 4767 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-let closure_5 = {};
-const PersistedStore = initializeDefault.PersistedStore;
+let closure_5;
+
+const hasOwnProperty = {};
+const PersistedStore = get_initializedDefault.PersistedStore;
 class GuildPowerupsNotificationStore extends PersistedStore {
+  getState() {
+    return closure_5;
+  }
+  initialize(arg0) {
+    this.waitFor(GameServerStore, GuildPowerupsStore, GuildStore);
+    if (null != arg0) {
+      closure_5 = arg0;
+    }
+  }
+  getNotificationStateForGuild(arg0) {
+    return closure_5[arg0];
+  }
 }
 const prototype = GuildPowerupsNotificationStore.prototype;
-prototype["getState"] = function getState() {
-  return closure_5;
-};
-prototype["initialize"] = function initialize(arg0) {
-  this.waitFor(GameServerStore, GuildPowerupsStore, GuildStore);
-  if (null != arg0) {
-    closure_5 = arg0;
-  }
-};
-prototype["getNotificationStateForGuild"] = function getNotificationStateForGuild(arg0) {
-  return closure_5[arg0];
-};
 GuildPowerupsNotificationStore.displayName = "GuildPowerupsNotificationStore";
 GuildPowerupsNotificationStore.persistKey = "GuildPowerupsNotificationStore";
 let items = [
   (arg0) => {
-    closure_0 = arg0;
+    let closure_0 = arg0;
     const entries = Object.entries(arg0);
     const item = entries.forEach((item) => {
+      let tmp;
+      let tmp2;
       [tmp, tmp2] = item;
       closure_0[tmp] = tmp2;
     });
@@ -40,10 +44,11 @@ let items = [
   }
 ];
 GuildPowerupsNotificationStore.migrations = items;
-const guildPowerupsNotificationStore = new GuildPowerupsNotificationStore(DispatcherDefault, {
+let obj = {
   GUILD_POWERUPS_ACK_NOTIFICATION: function handleAckNotification(guildId) {
+    let _Date1;
     guildId = guildId.guildId;
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     let num;
     if (guild != null) {
       num = guild.premiumSubscriberCount;
@@ -54,43 +59,48 @@ const guildPowerupsNotificationStore = new GuildPowerupsNotificationStore(Dispat
     const stateForGuild = GuildPowerupsStore.getStateForGuild(guildId);
     const stateForGuild1 = GameServerStore.getStateForGuild(guildId);
     let unlockedPowerups;
+    const getExpiringGuildEntitlements = getExpiringGuildEntitlements2.getExpiringGuildEntitlements;
+    const _Object = Object;
+    getExpiringGuildEntitlements2;
     if (stateForGuild != null) {
       unlockedPowerups = stateForGuild.unlockedPowerups;
     }
     if (unlockedPowerups == null) {
       unlockedPowerups = {};
     }
-    const items = [...Object.values(unlockedPowerups)];
+    const items = [...values(unlockedPowerups)];
     let entitlements;
+    const _Object2 = Object;
+    const values2 = Object.values;
     if (stateForGuild1 != null) {
       entitlements = stateForGuild1.entitlements;
     }
     if (entitlements == null) {
       entitlements = {};
     }
-    HermesBuiltin.arraySpread(Object.values(entitlements), tmp4);
-    const expiringGuildEntitlements = getExpiringGuildEntitlements.getExpiringGuildEntitlements(items);
-    const obj2 = {};
+    HermesBuiltin.arraySpread(items, values2(entitlements), tmp6);
+    const expiringGuildEntitlements = getExpiringGuildEntitlements(items);
+    const obj = {};
     const merged = Object.assign(closure_5);
     let ends_at;
+    const _Date = Date;
     if (expiringGuildEntitlements[expiringGuildEntitlements.length - 1] != null) {
-      ends_at = tmp7.ends_at;
+      ends_at = tmp9.ends_at;
     }
     if (ends_at == null) {
-      const _Date = Date;
+      const _Date2 = Date;
       ends_at = Date.now();
     }
-    const obj3 = { lastSeenWarningNotification: null, lastBoostCount: null };
-    obj3.lastSeenWarningNotification = new Date(ends_at).getTime();
-    obj3.lastBoostCount = num;
-    obj2[guildId] = obj3;
-    closure_5 = obj2;
+    const obj2 = { lastSeenWarningNotification: _Date1.getTime(), lastBoostCount: num };
+    _Date1 = new _Date(ends_at);
+    obj[guildId] = obj2;
+    closure_5 = obj;
   },
   GUILD_POWERUPS_RESET_NOTIFICATIONS: function handleResetNotifications() {
     closure_5 = {};
   }
-});
-const size = fn(2);
+};
+const guildPowerupsNotificationStore = new GuildPowerupsNotificationStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/premium/powerups/GuildPowerupsNotificationStore.tsx");
 
 export default guildPowerupsNotificationStore;

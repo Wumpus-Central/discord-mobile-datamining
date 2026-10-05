@@ -1,19 +1,21 @@
 // === Module 14407: SettingHookHarness ===
 
 // Module 14407 (SettingHookHarness)
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import SettingRendererConstants from "SettingRendererConstants" /* 11130 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
 import SettingBlocklistStore from "SettingBlocklistStore" /* 14408 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
-const NodeType = fn(11130).NodeType;
+let set;
+
+const NodeType = SettingRendererConstants.NodeType;
 let closure_6 = [];
 const map = new Map();
 const map1 = new Map();
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/settings/native/renderer/SettingHookHarness.tsx");
-
-export default noop.memo(function SettingHookHarness() {
+const memoResult = react.memo(function SettingHookHarness() {
+  let obj2;
+  let tmp3;
   const field = SettingBlocklistStore.getField("blocklist");
   const items = [];
   const items1 = [];
@@ -40,29 +42,29 @@ export default noop.memo(function SettingHookHarness() {
           if (useSearchTerms != null) {
             searchTerms = useSearchTerms();
           }
+          set = map1.set;
           if (searchTerms == null) {
             searchTerms = closure_6;
           }
-          let result1 = map1.set(tmp3, searchTerms);
+          let result1 = set(tmp3, searchTerms);
         }
         num = num + 1;
         if (num >= entries.length) {
           break;
         }
       }
-      let hasItem = !tmp6;
-      if (!tmp6) {
-        hasItem = field.has(tmp3);
-      }
-      if (hasItem) {
+      let tmp8 = !tmp6 && field.has(tmp3);
+      if (tmp8) {
         let arr2 = items1.push(tmp3);
       }
     }
   }
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(function() {
     if (items.length > 0) {
       const _Set = Set;
-      const set = new Set(SettingBlocklistStore.getField("blocklist"));
+      const self = this;
+      const self2 = this;
+      set = new Set(SettingBlocklistStore.getField("blocklist"));
       const item = items.forEach((item) => set.add(item));
       const item1 = items1.forEach((item) => set.delete(item));
       const obj = { blocklist: set };
@@ -71,11 +73,14 @@ export default noop.memo(function SettingHookHarness() {
   });
   return null;
 });
+let result = size.fileFinishedImporting("modules/settings/native/renderer/SettingHookHarness.tsx");
+
+export default memoResult;
 export const getCachedSettingTitle = function getCachedSettingTitle(setting) {
   return map.get(setting);
 };
 export const getCachedSettingSearchTerms = function getCachedSettingSearchTerms(arg0) {
-  value = map1.get(arg0);
+  let value = map1.get(arg0);
   if (value == null) {
     value = closure_6;
   }

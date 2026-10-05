@@ -2,32 +2,26 @@
 
 // Module 12873 (useNote)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "module_19" /* 19 */;
+import Constants from "Constants" /* 1085 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import react from "react" /* 19 */;
 import NoteStore from "NoteStore" /* 12874 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, c5, c6;
 
-const require = fn;
 function fetchNote() {
-  const self = this;
-  const apply = closure_8.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 }
-let closure_8 = async function _fetchNote() {
-  c5 = 0;
-  c6 = 0;
-  c4 = 0;
-  return (async (arg0) => {
+let obj = function _fetchNote() {
+  obj = _asyncToGenerator(async function(arg0) {
+    let closure_0;
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
+    } else if (tmp3 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -37,7 +31,9 @@ let closure_8 = async function _fetchNote() {
         return { value: "IconComponent", done: null };
       }
     } else {
+      let c4;
       try {
+        let body;
         c6 = 2;
         if (0 === c5) {
           if (arg0 === 1) {
@@ -48,27 +44,27 @@ let closure_8 = async function _fetchNote() {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            closure_2 = tmp3;
-            closure_1 = tmp7;
-            closure_129_0 = userId;
-            let body;
-            const obj5 = { type: "USER_NOTE_LOAD_START", userId };
-            DispatcherDefault.dispatch(obj5);
+            let closure_2 = tmp;
+            let closure_1 = tmp4;
+            body = undefined;
+            const obj5 = { type: "USER_NOTE_LOAD_START", userId: id };
+            const obj9 = DispatcherDefault;
+            obj9.dispatch(obj5);
             c4 = 1;
             const HTTP = require("HTTPUtils").HTTP;
-            const obj6 = { url: Endpoints.NOTE(userId), oldFormErrors: true, rejectWithError: true };
+            const obj6 = { url: Endpoints.NOTE(id), oldFormErrors: true, rejectWithError: true };
+            const get = HTTP.get;
             c5 = 2;
             c6 = 1;
-            const obj7 = { value: HTTP.get(obj6), done: false };
+            const obj7 = { value: get(obj6), done: false };
             return obj7;
           }
         } else {
-          if (1 === tmp7) {
+          if (1 === c5) {
             c4 = 0;
-            const obj8 = { type: "USER_NOTE_UPDATE", id: closure_129_0 };
-            closure_130_1(closure_130_2[7]).dispatch(obj8);
-            c6 = 3;
+            const obj8 = { type: "USER_NOTE_UPDATE", id };
             const obj4 = closure_130_1(closure_130_2[7]);
+            obj4.dispatch(obj8);
           } else if (arg0 === 1) {
             c6 = 3;
             throw value;
@@ -79,41 +75,48 @@ let closure_8 = async function _fetchNote() {
             return obj10;
           } else {
             body = value.body;
-            if (body.note_user_id === closure_129_0) {
-              const obj11 = { type: "USER_NOTE_UPDATE", id: closure_129_0, note: body.note };
-              closure_130_1(closure_130_2[7]).dispatch(obj11);
+            if (body.note_user_id !== id) {
+              const _Error = Error;
+              const self = this;
+              const self2 = this;
+              const error = new Error("Invalid response from server");
+              throw error;
+            } else {
+              const obj11 = { type: "USER_NOTE_UPDATE", id, note: body.note };
+              obj = closure_130_1(closure_130_2[7]);
+              obj.dispatch(obj11);
               c4 = 0;
-              const obj = closure_130_1(closure_130_2[7]);
             }
           }
-          const _Error = Error;
-          const error = new Error("Invalid response from server");
-          throw error;
+          c6 = 3;
+          return { value: "IconComponent", done: null };
         }
-      } catch (tmp26) {
-        closure_3 = tmp26;
-        if (tmp4 === c4) {
-          c6 = tmp2;
-          throw tmp26;
+      } catch (tmp21) {
+        let closure_3 = tmp21;
+        if (0 === c4) {
+          c6 = 3;
+          throw tmp21;
         } else {
-          c5 = tmp;
+          c5 = 1;
         }
       }
     }
-  })();
+  });
+  return obj(...arguments);
 };
-const Endpoints = fn(1085).Endpoints;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_profile/hooks/useNote.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const Endpoints = Constants.Endpoints;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let closure_0;
+  let first;
+  let tmp6;
   _require = arg0;
-  const cResult = require("c").c(9);
+  obj = require("react");
+  const cResult = obj.c(9);
+  const tmp = _require;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [NoteStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -123,18 +126,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     };
     cResult[1] = arg0;
     cResult[2] = fn;
-    let tmp6 = fn;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
-  const obj = require("c");
-  const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
+  const tmpResult = tmp(504);
+  const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
   if (cResult[3] === stateFromStores) {
+    let tmp8;
+    let tmp9;
+    let tmp12;
     if (cResult[4] === arg0) {
-      let tmp8 = cResult[5];
-      let tmp9 = cResult[6];
+      tmp8 = cResult[5];
+      tmp9 = cResult[6];
     }
-    const effect = noop.useEffect(tmp8, tmp9);
+    const effect = react.useEffect(tmp8, tmp9);
     if (cResult[7] !== stateFromStores) {
       let obj2 = stateFromStores;
       if (stateFromStores == null) {
@@ -142,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
       cResult[7] = stateFromStores;
       cResult[8] = obj2;
-      let tmp12 = obj2;
+      tmp12 = obj2;
     } else {
       tmp12 = cResult[8];
     }
@@ -160,13 +166,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = items1;
   tmp9 = items1;
   tmp8 = fn2;
-  const tmpResult = require("initialize");
 }) : ((arg0) => {
+  let closure_0;
   _require = arg0;
   const items = [NoteStore];
-  let stateFromStores = require("initialize").useStateFromStores(items, () => NoteStore.getNote(closure_0));
+  obj = require("get initialized");
+  let stateFromStores = obj.useStateFromStores(items, () => NoteStore.getNote(closure_0));
   const items1 = [stateFromStores, arg0];
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(() => {
     if (null == stateFromStores) {
       fetchNote(closure_0);
     }
@@ -176,3 +183,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   return stateFromStores;
 });
+const result = size.fileFinishedImporting("modules/user_profile/hooks/useNote.tsx");
+
+export default tmp2;

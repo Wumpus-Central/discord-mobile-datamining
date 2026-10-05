@@ -1,318 +1,423 @@
 // === Module 5620: LegacyTokens ===
 
 // Module 5620 (LegacyTokens)
-import _mod17 from "module_17" /* 17 */;
+import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import ColorUtils from "ColorUtils" /* 4727 */;
 import shared from "shared" /* 4729 */;
 import createStyles_mod from "createStyles" /* 4890 */;
 import size from "module_2" /* 2 */;
 
-const Platform = _mod17.Platform;
+let theme;
+
+const Platform = react_native.Platform;
 let createStyles = createStyles_mod;
 const result = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_630 : unsafe_rawColors.PRIMARY_230;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_630 : unsafe_rawColors.PRIMARY_230;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result1 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_660;
+  return isThemeDarkResult ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_660;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result2 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.BLACK : unsafe_rawColors.PRIMARY_100;
+  return isThemeDarkResult ? unsafe_rawColors.BLACK : unsafe_rawColors.PRIMARY_100;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result3 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_300 : unsafe_rawColors.PRIMARY_400;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_300 : unsafe_rawColors.PRIMARY_400;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result4 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_600;
+  return isThemeDarkResult ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_600;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result5 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_630 : unsafe_rawColors.PRIMARY_100;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_630 : unsafe_rawColors.PRIMARY_100;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result6 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.BLACK;
+  return isThemeDarkResult ? unsafe_rawColors.WHITE : unsafe_rawColors.BLACK;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result7 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_700 : unsafe_rawColors.PRIMARY_100;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_700 : unsafe_rawColors.PRIMARY_100;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result8 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_300 : unsafe_rawColors.PRIMARY_500;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_300 : unsafe_rawColors.PRIMARY_500;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result9 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_100 : unsafe_rawColors.PRIMARY_500;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_100 : unsafe_rawColors.PRIMARY_500;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result10 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_100;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_100;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result11 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_430;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_430;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result12 = createStyles.experimental_createToken((primaryColor) => {
+  let PROFILE_GRADIENT_ROLE_PILL_BORDER;
   if (null == primaryColor.primaryColor) {
-    let PROFILE_GRADIENT_ROLE_PILL_BORDER = nativeDefault.colors.BORDER_SUBTLE;
+    PROFILE_GRADIENT_ROLE_PILL_BORDER = nativeDefault.colors.BORDER_SUBTLE;
   } else {
     PROFILE_GRADIENT_ROLE_PILL_BORDER = nativeDefault.colors.PROFILE_GRADIENT_ROLE_PILL_BORDER;
   }
   return PROFILE_GRADIENT_ROLE_PILL_BORDER;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result13 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.BRAND_260 : unsafe_rawColors.BRAND_200;
+  return isThemeDarkResult ? unsafe_rawColors.BRAND_260 : unsafe_rawColors.BRAND_200;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result14 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_700 : unsafe_rawColors.PRIMARY_260;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_700 : unsafe_rawColors.PRIMARY_260;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result15 = createStyles.experimental_createToken((theme) => {
+  let PRIMARY_160;
+  const obj = shared;
   if (obj.isThemeDark(theme.theme)) {
-    let PRIMARY_160 = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.25);
     const tmpResult = ColorUtils;
+    PRIMARY_160 = tmpResult.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.25);
   } else {
     PRIMARY_160 = nativeDefault.unsafe_rawColors.PRIMARY_160;
   }
   return PRIMARY_160;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result16 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.GUILD_BOOSTING_PINK;
+  return isThemeDarkResult ? unsafe_rawColors.WHITE : unsafe_rawColors.GUILD_BOOSTING_PINK;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result17 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_360 : unsafe_rawColors.PRIMARY_400;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_360 : unsafe_rawColors.PRIMARY_400;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result18 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_630 : unsafe_rawColors.WHITE;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_630 : unsafe_rawColors.WHITE;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result19 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_400;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_400;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result20 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_400 : unsafe_rawColors.PRIMARY_360;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_400 : unsafe_rawColors.PRIMARY_360;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result21 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.BRAND_330 : unsafe_rawColors.BRAND_530;
+  return isThemeDarkResult ? unsafe_rawColors.BRAND_330 : unsafe_rawColors.BRAND_530;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result22 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.BLACK : unsafe_rawColors.PRIMARY_400;
+  return isThemeDarkResult ? unsafe_rawColors.BLACK : unsafe_rawColors.PRIMARY_400;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result23 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_700 : unsafe_rawColors.WHITE;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_700 : unsafe_rawColors.WHITE;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result24 = createStyles.experimental_createToken((theme) => {
-  if (obj.isThemeDark(theme.theme)) {
-    let BACKGROUND_BASE_LOW = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
+  let BACKGROUND_BASE_LOW;
+  theme = theme.theme;
+  const obj = shared;
+  if (obj.isThemeDark(theme)) {
     const tmpResult = ColorUtils;
+    BACKGROUND_BASE_LOW = tmpResult.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
   } else {
     BACKGROUND_BASE_LOW = nativeDefault.colors.BACKGROUND_BASE_LOW;
   }
   return BACKGROUND_BASE_LOW;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result25 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_600 : unsafe_rawColors.WHITE;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_600 : unsafe_rawColors.WHITE;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result26 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PLATFORM_PLAYSTATION;
+  return isThemeDarkResult ? unsafe_rawColors.WHITE : unsafe_rawColors.PLATFORM_PLAYSTATION;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result27 = createStyles.experimental_createToken((theme) => {
-  if (obj.isThemeDark(theme.theme)) {
-    let WHITE = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
+  let WHITE;
+  theme = theme.theme;
+  const obj = shared;
+  if (obj.isThemeDark(theme)) {
     const tmpResult = ColorUtils;
+    WHITE = tmpResult.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
   } else {
     WHITE = nativeDefault.unsafe_rawColors.WHITE;
   }
   return WHITE;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result28 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.RED_500 : unsafe_rawColors.RED_400;
+  return isThemeDarkResult ? unsafe_rawColors.RED_500 : unsafe_rawColors.RED_400;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result29 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.RED_400 : unsafe_rawColors.RED_360;
+  return isThemeDarkResult ? unsafe_rawColors.RED_400 : unsafe_rawColors.RED_360;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result30 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_700 : unsafe_rawColors.PRIMARY_230;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_700 : unsafe_rawColors.PRIMARY_230;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result31 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_800 : unsafe_rawColors.PRIMARY_200;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_800 : unsafe_rawColors.PRIMARY_200;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result32 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.YELLOW_460 : unsafe_rawColors.YELLOW_200;
+  return isThemeDarkResult ? unsafe_rawColors.YELLOW_460 : unsafe_rawColors.YELLOW_200;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result33 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_400 : unsafe_rawColors.PRIMARY_300;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_400 : unsafe_rawColors.PRIMARY_300;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result34 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result35 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_200 : unsafe_rawColors.PRIMARY_400;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_200 : unsafe_rawColors.PRIMARY_400;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result36 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
+  return isThemeDarkResult ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result37 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_330 : unsafe_rawColors.PRIMARY_460;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_330 : unsafe_rawColors.PRIMARY_460;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result38 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_200;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_200;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result39 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_230;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_230;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result40 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_600 : unsafe_rawColors.PRIMARY_130;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_600 : unsafe_rawColors.PRIMARY_130;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result41 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_660 : unsafe_rawColors.PRIMARY_130;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_660 : unsafe_rawColors.PRIMARY_130;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result42 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_800 : unsafe_rawColors.PRIMARY_300;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_800 : unsafe_rawColors.PRIMARY_300;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result43 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_660 : unsafe_rawColors.PRIMARY_300;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_660 : unsafe_rawColors.PRIMARY_300;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result44 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_630 : unsafe_rawColors.TRANSPARENT;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_630 : unsafe_rawColors.TRANSPARENT;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result45 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.TRANSPARENT : unsafe_rawColors.WHITE;
+  return isThemeDarkResult ? unsafe_rawColors.TRANSPARENT : unsafe_rawColors.WHITE;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result46 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_630 : unsafe_rawColors.PRIMARY_160;
+  return isThemeDarkResult ? unsafe_rawColors.PRIMARY_630 : unsafe_rawColors.PRIMARY_160;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result47 = createStyles.experimental_createToken((theme) => {
   let str = "#dee0e4";
+  const obj = shared;
   if (obj.isThemeDark(theme.theme)) {
     str = "#393c42";
   }
   return str;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result48 = createStyles.experimental_createToken((theme) => {
   let num = 1;
+  const obj = shared;
   if (obj.isThemeDark(theme.theme)) {
     num = 0;
   }
   return num;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result49 = createStyles.experimental_createToken((theme) => {
   let num = 0.8;
+  const obj = shared;
   if (obj.isThemeDark(theme.theme)) {
     num = 1;
   }
   return num;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result50 = createStyles.experimental_createToken((theme) => {
   let num = 0.4;
+  const obj = shared;
   if (obj.isThemeDark(theme.theme)) {
     num = 1;
   }
   return num;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result51 = createStyles.experimental_createToken((theme) => {
   let num = 0.2;
+  const obj = shared;
   if (obj.isThemeDark(theme.theme)) {
     num = 0.3;
   }
   return num;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result52 = createStyles.experimental_createToken((theme) => {
   let num = 0.16;
+  const obj = shared;
   if (obj.isThemeDark(theme.theme)) {
     num = 0.24;
   }
   return num;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result53 = createStyles.experimental_createToken((theme) => {
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   if (isThemeDarkResult) {
     const PRIMARY_200 = unsafe_rawColors.PRIMARY_200;
@@ -320,62 +425,73 @@ const result53 = createStyles.experimental_createToken((theme) => {
     const PRIMARY_500 = unsafe_rawColors.PRIMARY_500;
   }
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result54 = createStyles.experimental_createToken((theme) => {
   let str = "rgba(0, 0, 0, 0.16)";
+  const obj = shared;
   if (obj.isThemeDark(theme.theme)) {
     str = "rgba(0, 0, 0, 0.24)";
   }
   return str;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result55 = createStyles.experimental_createToken((theme) => {
   let str = "rgba(106, 116, 128, 0.16)";
+  const obj = shared;
   if (obj.isThemeDark(theme.theme)) {
     str = "rgba(79, 84, 92, 0.4)";
   }
   return str;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 let c3 = 0.5;
 const result56 = createStyles.experimental_createToken((theme) => {
   let str = "rgba(106, 116, 128, 0.16)";
+  const obj = shared;
   if (obj.isThemeDark(theme.theme)) {
     str = "rgba(79, 84, 92, 0.4)";
   }
   return str;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result57 = createStyles.experimental_createToken((theme) => {
-  const isThemeDarkResult = shared.isThemeDark(theme.theme);
+  let hexWithOpacityResult;
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const hexWithOpacity = ColorUtils.hexWithOpacity;
+  ColorUtils;
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   if (isThemeDarkResult) {
-    let hexWithOpacityResult = hexWithOpacity(unsafe_rawColors.PRIMARY_100, c3);
+    hexWithOpacityResult = hexWithOpacity(unsafe_rawColors.PRIMARY_100, c3);
   } else {
     hexWithOpacityResult = hexWithOpacity(unsafe_rawColors.PRIMARY_500, c3);
   }
   return hexWithOpacityResult;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result58 = createStyles.experimental_createToken((theme) => {
-  const isThemeDarkResult = shared.isThemeDark(theme.theme);
+  let hexWithOpacityResult;
+  const obj = shared;
+  const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const hexWithOpacity = ColorUtils.hexWithOpacity;
+  ColorUtils;
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   if (isThemeDarkResult) {
-    let hexWithOpacityResult = hexWithOpacity(unsafe_rawColors.PRIMARY_500, c3);
+    hexWithOpacityResult = hexWithOpacity(unsafe_rawColors.PRIMARY_500, c3);
   } else {
     hexWithOpacityResult = hexWithOpacity(unsafe_rawColors.PRIMARY_430, c3);
   }
   return hexWithOpacityResult;
 });
-let createStyles = createStyles_mod;
+createStyles = createStyles_mod;
 const result59 = createStyles.experimental_createToken((theme) => {
+  let PRIMARY_500;
+  const obj = shared;
   if (obj.isThemeDark(theme.theme)) {
-    let PRIMARY_500 = nativeDefault.unsafe_rawColors.PRIMARY_500;
+    PRIMARY_500 = nativeDefault.unsafe_rawColors.PRIMARY_500;
   } else {
-    PRIMARY_500 = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_500, 0.3);
     const tmpResult = ColorUtils;
+    PRIMARY_500 = tmpResult.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_500, 0.3);
   }
   return PRIMARY_500;
 });

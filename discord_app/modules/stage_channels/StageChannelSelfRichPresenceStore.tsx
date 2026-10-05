@@ -1,11 +1,12 @@
 // === Module 11119: StageChannelSelfRichPresenceStore ===
 
 // Module 11119 (StageChannelSelfRichPresenceStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _modDef1342 from "module_1342" /* 1342 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
 import useChannelName from "useChannelName" /* 5043 */;
+import StageChannelsConstants from "StageChannelsConstants" /* 5571 */;
 import StageMediaHooks from "StageMediaHooks" /* 5574 */;
 import StageChannelParticipants from "StageChannelParticipants" /* 5582 */;
 import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10626 */;
@@ -17,9 +18,20 @@ import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import UserStore from "UserStore" /* 1377 */;
 import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5575 */;
 import StageInstanceStore from "StageInstanceStore" /* 2056 */;
+import Constants from "Constants" /* 1085 */;
+import size_mod from "module_2" /* 2 */;
 
-require = fn;
+let closure_14;
+let closure_15;
+let closure_16;
+let map1;
 function handleUpdateActivity() {
+  let items;
+  let obj4;
+  let obj5;
+  let obj6;
+  let tmp12Result2;
+  let topic;
   const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
   let tmp2 = null;
   if (null != voiceChannelId) {
@@ -30,14 +42,16 @@ function handleUpdateActivity() {
       tmp2 = null;
       if (null != channel) {
         tmp2 = null;
+        const obj2 = PermissionUtilsAll;
         if (obj2.canEveryone(constants2.VIEW_CHANNEL, channel)) {
-          guild = GuildStore.getGuild(channel.getGuildId());
+          const guild = GuildStore.getGuild(channel.getGuildId());
           tmp2 = null;
           if (null != guild) {
             const features = guild.features;
             tmp2 = null;
             if (features.has(constants.DISCOVERABLE)) {
-              const result = StageChannelRichPresenceUtils.packStageChannelPartyId(channel, stageInstanceByChannel);
+              const obj3 = StageChannelRichPresenceUtils;
+              const result = obj3.packStageChannelPartyId(channel, stageInstanceByChannel);
               let id;
               if (obj != null) {
                 const party = obj.party;
@@ -52,7 +66,7 @@ function handleUpdateActivity() {
               const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(channel.id, StageChannelParticipants.StageChannelParticipantNamedIndex.SPEAKER);
               const length = mutableParticipants.filter((type) => type.type === StageChannelParticipants.StageChannelParticipantTypes.STREAM).length;
               const diff = mutableParticipants.length - length;
-              let size;
+              size = undefined;
               const diff1 = StageChannelParticipantStore.getParticipantCount(voiceChannelId) - length;
               if (tmp15 != null) {
                 const party2 = tmp15.party;
@@ -64,18 +78,17 @@ function handleUpdateActivity() {
               if (null != size) {
                 num = tmp15.party.size[1];
               }
-              obj = { application_id: STAGE_APPLICATION_ID, name: null, type: null, timestamps: null, assets: null, party: null };
-              let topic = stageInstanceByChannel.topic;
+              obj = { application_id: STAGE_APPLICATION_ID, name: topic, type: tmp12Result2.getStageHasMedia(channel.id) ? map1.WATCHING : map1.LISTENING, timestamps: obj4, assets: obj5, party: obj6 };
+              topic = stageInstanceByChannel.topic;
               if (topic == null) {
                 topic = channel.topic;
               }
               if (topic == null) {
-                topic = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
                 const tmp12Result = useChannelName;
+                topic = tmp12Result.computeChannelName(channel, UserStore, RelationshipStore);
               }
-              obj.name = topic;
-              obj.type = StageMediaHooks.getStageHasMedia(channel.id) ? __initData2.WATCHING : __initData2.LISTENING;
               let start;
+              tmp12Result2 = StageMediaHooks;
               if (tmp15 != null) {
                 const timestamps = tmp15.timestamps;
                 if (timestamps != null) {
@@ -84,51 +97,46 @@ function handleUpdateActivity() {
               }
               if (start == null) {
                 const _Date = Date;
+                const self = this;
+                const self2 = this;
                 const date = new Date();
                 start = date.getTime();
               }
-              const obj4 = { start };
-              obj.timestamps = obj4;
               const icon = guild.icon;
-              const obj5 = { small_image: icon, small_text: guild.name };
-              obj.assets = obj5;
-              const obj6 = { id: result, size: null };
-              const items = [diff, ];
+              obj6 = { id: result, size: items };
+              items = [diff, ];
               const _Math = Math;
+              obj4 = { start };
+              obj5 = { small_image: icon, small_text: guild.name };
               items[1] = Math.max(diff1, num);
-              obj6.size = items;
-              obj.party = obj6;
               tmp2 = obj;
-              const tmp12Result2 = StageMediaHooks;
             }
           }
         }
-        obj2 = PermissionUtilsAll;
       }
     }
   }
-  const tmp30 = _modDef1342(tmp2, obj);
-  let flag = !tmp30;
-  if (!tmp30) {
+  let flag = !_modDef1342(tmp2, obj);
+  _modDef1342(tmp2, obj);
+  if (flag) {
     obj = tmp2;
     flag = true;
   }
   return flag;
 }
-const STAGE_APPLICATION_ID = fn(5571).STAGE_APPLICATION_ID;
-const Constants = fn(1085);
+const STAGE_APPLICATION_ID = StageChannelsConstants.STAGE_APPLICATION_ID;
 ({ ActivityTypes: map1, GuildFeatures: closure_14, Permissions: closure_15, RTCConnectionStates: closure_16 } = Constants);
 let obj = null;
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class StageChannelSelfRichPresenceStore extends Store {
+  initialize() {
+    this.waitFor(ChannelStore, GuildStore, RTCConnectionStore, SelectedChannelStore, StageChannelParticipantStore, StageInstanceStore);
+  }
+  getActivity() {
+    return obj;
+  }
 }
 const prototype = StageChannelSelfRichPresenceStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(ChannelStore, GuildStore, RTCConnectionStore, SelectedChannelStore, StageChannelParticipantStore, StageInstanceStore);
-};
-prototype["getActivity"] = function getActivity() {
-  return obj;
-};
 StageChannelSelfRichPresenceStore.displayName = "StageChannelSelfRichPresenceStore";
 obj = {
   CONNECTION_OPEN: handleUpdateActivity,
@@ -138,10 +146,11 @@ obj = {
   VOICE_CHANNEL_SELECT: handleUpdateActivity,
   RTC_CONNECTION_STATE: function handleUpdateRTCConnection(state) {
     let num;
+    state = state.state;
     if (obj != null) {
       const party = obj.party;
       if (party != null) {
-        const size = party.size;
+        size = party.size;
         if (size != null) {
           num = size[1];
         }
@@ -150,32 +159,26 @@ obj = {
     if (num == null) {
       num = 0;
     }
-    let tmp = state.state !== constants3.RTC_CONNECTED;
-    if (!tmp) {
-      tmp = num > 0;
-    }
-    let tmp2 = !tmp;
-    if (!tmp) {
-      tmp2 = handleUpdateActivity();
-    }
+    const tmp = state !== constants3.RTC_CONNECTED || num > 0;
+    const tmp2 = !tmp && handleUpdateActivity();
     return tmp2;
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
-    c0 = undefined;
+    let c0;
     if (null != obj) {
       obj = StageChannelRichPresenceUtils;
       const result = obj.unpackStageChannelParty(obj);
       c0 = result;
+      const tmp5 = null != result && null != voiceStates.find((channelId) => channelId.channelId === _undefined.channelId);
       if (tmp5) {
         handleUpdateActivity();
       }
-      tmp5 = null != result && null != voiceStates.find((channelId) => channelId.channelId === _undefined.channelId);
     }
   }
 };
 const stageChannelSelfRichPresenceStore = new StageChannelSelfRichPresenceStore(DispatcherDefault, obj);
-let size = fn(2);
+let size = size_mod;
 let result = size.fileFinishedImporting("modules/stage_channels/StageChannelSelfRichPresenceStore.tsx");
 
 export default stageChannelSelfRichPresenceStore;

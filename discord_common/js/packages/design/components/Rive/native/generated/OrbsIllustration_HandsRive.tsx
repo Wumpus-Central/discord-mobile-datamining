@@ -1,44 +1,78 @@
 // === Module 4686: OrbsIllustration_HandsRive ===
 
 // Module 4686 (OrbsIllustration_HandsRive)
-import c from "c" /* 576 */;
-import BaseRive from "BaseRive" /* 4606 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4659 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
+import BaseRive2 from "BaseRive" /* 4606 */;
+import RiveErrorBoundary2 from "RiveErrorBoundary" /* 4659 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import "ReactCompilerGating";
+import size from "module_2" /* 2 */;
 
-require = fn;
+const require = globalThis.__r;
+let dataBinding, importDefault, tmp3, tmp5;
+
 let closure_3 = ["fallback", "artboard", "stateMachine", "defaultViewModelInstance", "dataBinding", "onDataBindingChange"];
 let closure_4 = ["fallback", "artboard", "stateMachine", "defaultViewModelInstance", "dataBinding", "onDataBindingChange"];
-const jsx = fn(21).jsx;
+const jsx = Fragment.jsx;
 const artboardProperties = { "Bounties Illo Hands": { reducedMotion: "boolean" }, "Orb shine": { reducedMotion: "boolean" } };
 const artboardViewModelInstances = { "Bounties Illo Hands": ["Instance"], "Orb shine": ["Instance"] };
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let obj = {
   "Bounties Illo Hands": ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+    let instance;
+    let playIfNeeded;
+    let reducedMotionEnabled;
     ({ instance, reducedMotionEnabled, playIfNeeded } = arg0);
-    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled, undefined, playIfNeeded);
+    obj = BaseRive2;
+    const booleanBinding = obj.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled, undefined, playIfNeeded);
     return null;
   }) : ((arg0) => {
+    let instance;
+    let playIfNeeded;
+    let reducedMotionEnabled;
     ({ instance, reducedMotionEnabled, playIfNeeded } = arg0);
-    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled, undefined, playIfNeeded);
+    obj = BaseRive2;
+    const booleanBinding = obj.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled, undefined, playIfNeeded);
     return null;
   }),
-  "Orb shine": null
+  "Orb shine": ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+    let instance;
+    let playIfNeeded;
+    let reducedMotionEnabled;
+    ({ instance, reducedMotionEnabled, playIfNeeded } = arg0);
+    obj = BaseRive2;
+    const booleanBinding = obj.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled, undefined, playIfNeeded);
+    return null;
+  }) : ((arg0) => {
+    let instance;
+    let playIfNeeded;
+    let reducedMotionEnabled;
+    ({ instance, reducedMotionEnabled, playIfNeeded } = arg0);
+    obj = BaseRive2;
+    const booleanBinding = obj.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled, undefined, playIfNeeded);
+    return null;
+  })
 };
-ReactCompilerGating = fn(558);
-obj["Orb shine"] = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  ({ instance, reducedMotionEnabled, playIfNeeded } = arg0);
-  const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled, undefined, playIfNeeded);
-  return null;
-}) : ((arg0) => {
-  ({ instance, reducedMotionEnabled, playIfNeeded } = arg0);
-  const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled, undefined, playIfNeeded);
-  return null;
-});
-ReactCompilerGating = fn(558);
-let closure_11 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
-  const cResult = require("c").c(18);
+ReactCompilerGating = ReactCompilerGating_mod;
+let closure_11 = react.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
+  let _require;
+  let artboard;
+  let defaultViewModelInstance;
+  let fallback;
+  let onDataBindingChange;
+  let stateMachine;
+  let str;
+  let tmp6;
+  let tmp7;
+  let tmp8;
+  let tmp9;
+  let tmp2 = str;
+  obj = require("react");
+  const cResult = obj.c(18);
+  const tmp = _require;
   if (cResult[0] !== arg0) {
     ({ fallback, artboard, stateMachine, defaultViewModelInstance, dataBinding, onDataBindingChange } = arg0);
     const tmp12 = _objectWithoutProperties(arg0, closure_3);
@@ -69,10 +103,10 @@ let closure_11 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? 
     cResult[4] = stateMachine;
     cResult[5] = artboard;
     cResult[6] = defaultViewModelInstance;
-    let tmp9 = defaultViewModelInstance;
-    let tmp8 = artboard;
-    let tmp7 = stateMachine;
-    let tmp6 = tmp12;
+    tmp9 = defaultViewModelInstance;
+    tmp8 = artboard;
+    tmp7 = stateMachine;
+    tmp6 = tmp12;
   } else {
     _require = cResult[1];
     importDefault = cResult[2];
@@ -91,16 +125,18 @@ let closure_11 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? 
   }
   if (cResult[7] === str) {
     if (cResult[8] === dataBinding) {
+      let tmp13;
       if (cResult[9] === onDataBindingChange) {
-        let tmp13 = cResult[10];
+        tmp13 = cResult[10];
       }
       if (cResult[11] === str) {
         if (cResult[12] === str2) {
           if (cResult[13] === ref) {
             if (cResult[14] === tmp13) {
               if (cResult[15] === tmp6) {
+                let tmp15;
                 if (cResult[16] === tmp7) {
-                  let tmp15 = cResult[17];
+                  tmp15 = cResult[17];
                 }
                 return tmp15;
               }
@@ -108,7 +144,7 @@ let closure_11 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? 
           }
         }
       }
-      const obj2 = { ref, src: require("module_4687"), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: null, stateMachine: null, renderDataBinding: null };
+      const BaseRive = tmp(tmp2[4]).BaseRive;
       class V {
         constructor(arg0) {
           tmp = closure_10[closure_2];
@@ -128,10 +164,8 @@ let closure_11 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? 
           return tmp2;
         }
       }
-      obj2.stateMachine = tmp7;
-      obj2.renderDataBinding = tmp13;
       let merged = Object.assign(tmp6);
-      const tmp23 = jsx(tmp(tmp2[4]).BaseRive, { ref, src: require("module_4687"), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: null, stateMachine: null, renderDataBinding: null });
+      const tmp23 = <BaseRive ref={ref} src={require("module_4687")} artboard={str} artboardProperties={artboardProperties} artboardViewModelInstances={artboardViewModelInstances} defaultViewModelInstance={null} stateMachine={tmp7} renderDataBinding={tmp13} />;
       cResult[11] = str;
       cResult[12] = str2;
       cResult[13] = ref;
@@ -166,9 +200,9 @@ let closure_11 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? 
   cResult[9] = onDataBindingChange;
   cResult[10] = V;
   tmp13 = V;
-  obj = require("c");
-  tmp = _require;
 }) : ((defaultViewModelInstance, ref) => {
+  let artboard;
+  let fallback;
   ({ fallback, artboard } = defaultViewModelInstance);
   let str = "Bounties Illo Hands";
   if (undefined !== artboard) {
@@ -176,45 +210,43 @@ let closure_11 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? 
   }
   defaultViewModelInstance = defaultViewModelInstance.defaultViewModelInstance;
   let str2 = "Instance";
+  const stateMachine = defaultViewModelInstance.stateMachine;
   if (undefined !== defaultViewModelInstance) {
     str2 = defaultViewModelInstance;
   }
   dataBinding = defaultViewModelInstance.dataBinding;
   const onDataBindingChange = defaultViewModelInstance.onDataBindingChange;
   const items = [str, dataBinding, onDataBindingChange];
-  const callback = noop.useCallback((arg0) => {
+  const tmp = _objectWithoutProperties(defaultViewModelInstance, closure_4);
+  const callback = react.useCallback((arg0) => {
     let tmp2 = null;
     if (null != obj[str]) {
-      obj = {};
       const merged = Object.assign(arg0);
-      obj.dataBinding = dataBinding;
-      obj.onDataBindingChange = onDataBindingChange;
-      tmp2 = <tmp />;
+      tmp2 = <tmp dataBinding={dataBinding} onDataBindingChange={onDataBindingChange} />;
     }
     return tmp2;
   }, items);
-  const tmp = _objectWithoutProperties(defaultViewModelInstance, closure_4);
+  const BaseRive = str(onDataBindingChange[4]).BaseRive;
   let merged = Object.assign(tmp);
-  return jsx(str(onDataBindingChange[4]).BaseRive, { ref, src: dataBinding(onDataBindingChange[6]), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: defaultViewModelInstance.stateMachine, renderDataBinding: callback });
+  return <BaseRive ref={ref} src={dataBinding(onDataBindingChange[6])} artboard={str} artboardProperties={artboardProperties} artboardViewModelInstances={artboardViewModelInstances} defaultViewModelInstance={str2} stateMachine={stateMachine} renderDataBinding={callback} />;
 }));
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/OrbsIllustration_HandsRive.tsx");
-
-export const OrbsIllustration_HandsRive = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((fallback, ref) => {
-  const cResult = c.c(6);
+ReactCompilerGating = ReactCompilerGating_mod;
+const forwardRefResult = react.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((fallback, ref) => {
+  obj = react2;
+  const cResult = obj.c(6);
   if (cResult[0] === fallback) {
+    let tmp4;
     if (cResult[1] === ref) {
-      let tmp4 = cResult[2];
+      tmp4 = cResult[2];
     }
     if (cResult[3] === fallback.fallback) {
+      let tmp7;
       if (cResult[4] === tmp4) {
-        let tmp7 = cResult[5];
+        tmp7 = cResult[5];
       }
       return tmp7;
     }
-    const obj2 = { fallback: fallback.fallback, children: tmp4 };
-    const tmp9 = jsx(RiveErrorBoundary.RiveErrorBoundary, { fallback: fallback.fallback, children: tmp4 });
+    const tmp9 = jsx(RiveErrorBoundary2.RiveErrorBoundary, { fallback: fallback.fallback, children: tmp4 });
     cResult[3] = fallback.fallback;
     cResult[4] = tmp4;
     cResult[5] = tmp9;
@@ -226,10 +258,11 @@ export const OrbsIllustration_HandsRive = noop.forwardRef(ReactCompilerGating.is
   cResult[1] = ref;
   cResult[2] = tmp6;
   tmp4 = tmp6;
-  const obj3 = { ref };
 }) : ((fallback, ref) => {
-  obj = { fallback: fallback.fallback, children: null };
+  const RiveErrorBoundary = RiveErrorBoundary2.RiveErrorBoundary;
   const merged = Object.assign(fallback);
-  obj.children = <closure_11 ref={ref} />;
-  return jsx(RiveErrorBoundary.RiveErrorBoundary, { fallback: fallback.fallback, children: null });
+  return <RiveErrorBoundary fallback={fallback.fallback}>{null}</RiveErrorBoundary>;
 }));
+const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/OrbsIllustration_HandsRive.tsx");
+
+export const OrbsIllustration_HandsRive = forwardRefResult;

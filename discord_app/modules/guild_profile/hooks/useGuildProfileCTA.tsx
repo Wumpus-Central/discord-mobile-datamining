@@ -5,28 +5,37 @@ import FlagUtils from "FlagUtils" /* 1390 */;
 import GuildTagUtils from "GuildTagUtils" /* 7836 */;
 import GuildInviteFlags from "GuildInviteFlags" /* 8068 */;
 import usePendingFolderGuildIds from "usePendingFolderGuildIds" /* 9415 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import InviteStore from "InviteStore" /* 4871 */;
 import UserStore from "UserStore" /* 1377 */;
+import Constants from "Constants" /* 1085 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 const usePendingFolderGuildIdsDefault = usePendingFolderGuildIds;
+let _require, closure_12, dependencyMap, importDefault, tmp2;
 
-require = fn;
-const Constants = fn(1085);
-({ InviteStates: closure_9, GuildFeatures: c10 } = Constants);
+let c10;
+let c9;
+({ InviteStates: c9, GuildFeatures: c10 } = Constants);
 const CTATypes = { IS_MEMBER: 0, [0]: "IS_MEMBER", ADOPT_TAG: 1, [1]: "ADOPT_TAG", HAS_APPLICATION: 2, [2]: "HAS_APPLICATION", APPLY_TO_JOIN: 3, [3]: "APPLY_TO_JOIN", LURK_DISCOVERABLE: 4, [4]: "LURK_DISCOVERABLE", JOIN_VIA_INVITE: 5, [5]: "JOIN_VIA_INVITE", ACCEPT_ROLES: 6, [6]: "ACCEPT_ROLES" };
 let obj2 = { INVITE: "INVITE" };
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_profile/hooks/useGuildProfileCTA.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) => {
+  let closure_0;
+  let stateFromStores;
+  let tmp12;
+  let tmp14;
+  let tmp22;
+  let tmp4;
+  let tmp5;
+  let tmp8;
   _require = arg2;
-  let obj = require("c");
+  const tmp = _require;
+  let obj = require("react");
   const cResult = obj.c(23);
   id = id.id;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -36,13 +45,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
         return closure_1_4.getId();
       }
     }
+    let num = 0;
     cResult[0] = items;
     cResult[1] = P;
     tmp4 = items;
   } else {
     [tmp4, tmp5] = cResult;
   }
-  stateFromStores = require("initialize").useStateFromStores(tmp4, P);
+  const tmpResult = tmp(stateFromStores[9]);
+  stateFromStores = tmpResult.useStateFromStores(tmp4, P);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [GuildStore];
     class P {
@@ -51,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
       }
     }
     cResult[2] = items1;
-    let tmp8 = items1;
+    tmp8 = items1;
   } else {
     tmp8 = cResult[2];
   }
@@ -75,8 +86,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
       }
     }
   }
-  const tmpResult = require("initialize");
-  const stateFromStores1 = require("initialize").useStateFromStores(tmp8, L);
+  const tmpResult5 = tmp(stateFromStores[9]);
+  const stateFromStores1 = tmpResult5.useStateFromStores(tmp8, L);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     class L {
       constructor() {
@@ -90,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
       }
     }
     cResult[5] = items2;
-    const tmp12 = items2;
+    tmp12 = items2;
   } else {
     class L {
       constructor() {
@@ -113,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
     cResult[6] = stateFromStores;
     cResult[7] = tmp15;
     cResult[8] = items3;
-    let tmp14 = items3;
+    tmp14 = items3;
   } else {
     class L {
       constructor() {
@@ -122,8 +133,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
     }
     tmp14 = cResult[8];
   }
-  const tmpResult5 = require("initialize");
-  const stateFromStores2 = require("initialize").useStateFromStores(tmp12, tmp15, tmp14);
+  const tmpResult6 = tmp(stateFromStores[9]);
+  const stateFromStores2 = tmpResult6.useStateFromStores(tmp12, tmp15, tmp14);
   if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
     class L {
       constructor() {
@@ -145,12 +156,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
     }
   }
   if (cResult[10] === stateFromStores) {
+    let tmp20;
     class L {
       constructor() {
         return closure_6.getGuild(id);
       }
     }
-    tmp(tmp2[9]);
+    tmp(stateFromStores[9]);
     const _Symbol = Symbol;
     class P {
       constructor() {
@@ -170,7 +182,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
         }
       }
       cResult[14] = items5;
-      const tmp20 = items5;
+      tmp20 = items5;
     } else {
       class L {
         constructor() {
@@ -179,12 +191,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
       }
     }
     if (cResult[15] === id) {
+      let IS_MEMBER;
       class L {
         constructor() {
           return closure_6.getGuild(id);
         }
       }
-      const stateFromStoresObject = tmp(tmp2[9]).useStateFromStoresObject(tmp20, D, tmp22);
+      const tmpResult8 = tmp(stateFromStores[9]);
+      const stateFromStoresObject = tmpResult8.useStateFromStoresObject(tmp20, D, tmp22);
       class P {
         constructor() {
           return closure_1_4.getId();
@@ -207,17 +221,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
           }
           if (null != invite) {
             if (invite.state !== InviteStates.BANNED) {
-              if (invite.state !== tmp8.EXPIRED) {
+              if (invite.state !== tmp9.EXPIRED) {
                 obj = { validInviteKey: null, isBypassInvite: null, inviteRoles: null };
                 obj.validInviteKey = inviteKeyForGuildId;
                 tmp6 = closure_0;
                 tmp7 = closure_2;
-                obj2 = closure_0(closure_2[10]);
+                tmp8 = closure_0(closure_2[10]);
                 num = invite.flags;
+                hasFlag = tmp8.hasFlag;
                 if (num == null) {
                   num = 0;
                 }
-                obj.isBypassInvite = obj2.hasFlag(num, tmp6(tmp7[11]).GuildInviteFlags.IS_APPLICATION_BYPASS);
+                obj.isBypassInvite = hasFlag(num, tmp6(tmp7[11]).GuildInviteFlags.IS_APPLICATION_BYPASS);
                 obj.inviteRoles = invite.roles;
               }
               return obj;
@@ -233,6 +248,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
             return closure_6.getGuild(id);
           }
         }
+        const tmp26 = obj2;
         if (arg1 === obj2.INVITE) {
           class L {
             constructor() {
@@ -281,17 +297,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
             }
             if (null != invite) {
               if (invite.state !== InviteStates.BANNED) {
-                if (invite.state !== tmp8.EXPIRED) {
+                if (invite.state !== tmp9.EXPIRED) {
                   obj = { validInviteKey: null, isBypassInvite: null, inviteRoles: null };
                   obj.validInviteKey = inviteKeyForGuildId;
                   tmp6 = closure_0;
                   tmp7 = closure_2;
-                  obj2 = closure_0(closure_2[10]);
+                  tmp8 = closure_0(closure_2[10]);
                   num = invite.flags;
+                  hasFlag = tmp8.hasFlag;
                   if (num == null) {
                     num = 0;
                   }
-                  obj.isBypassInvite = obj2.hasFlag(num, tmp6(tmp7[11]).GuildInviteFlags.IS_APPLICATION_BYPASS);
+                  obj.isBypassInvite = hasFlag(num, tmp6(tmp7[11]).GuildInviteFlags.IS_APPLICATION_BYPASS);
                   obj.inviteRoles = invite.roles;
                 }
                 return obj;
@@ -301,6 +318,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
             return;
           }
         }
+        const tmp29 = undefined === id;
         if (tmp29) {
           class L {
             constructor() {
@@ -327,9 +345,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
             }
           }
         }
-        const IS_MEMBER = obj.IS_MEMBER;
-        tmp26 = obj2;
-        tmp29 = undefined === id;
+        IS_MEMBER = obj.IS_MEMBER;
       } else {
         class L {
           constructor() {
@@ -349,7 +365,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
       cResult[20] = id;
       cResult[21] = tmp24;
       cResult[22] = obj2;
-      const tmpResult8 = tmp(tmp2[9]);
     }
     class D {
       constructor() {
@@ -366,17 +381,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
         }
         if (null != invite) {
           if (invite.state !== InviteStates.BANNED) {
-            if (invite.state !== tmp8.EXPIRED) {
+            if (invite.state !== tmp9.EXPIRED) {
               obj = { validInviteKey: null, isBypassInvite: null, inviteRoles: null };
               obj.validInviteKey = inviteKeyForGuildId;
               tmp6 = closure_0;
               tmp7 = closure_2;
-              obj2 = closure_0(closure_2[10]);
+              tmp8 = closure_0(closure_2[10]);
               num = invite.flags;
+              hasFlag = tmp8.hasFlag;
               if (num == null) {
                 num = 0;
               }
-              obj.isBypassInvite = obj2.hasFlag(num, tmp6(tmp7[11]).GuildInviteFlags.IS_APPLICATION_BYPASS);
+              obj.isBypassInvite = hasFlag(num, tmp6(tmp7[11]).GuildInviteFlags.IS_APPLICATION_BYPASS);
               obj.inviteRoles = invite.roles;
             }
             return obj;
@@ -413,26 +429,30 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
   cResult[11] = id;
   cResult[12] = F;
   cResult[13] = items7;
-  const tmpResult6 = require("initialize");
 }) : ((id, arg1, arg2) => {
+  let closure_1;
+  let closure_2;
+  let stateFromStores1;
+  let stateFromStores3;
   _require = id;
   importDefault = arg1;
   dependencyMap = arg2;
   id = id.id;
   const features = id.features;
+  let obj = require("get initialized");
   const items = [features];
-  const stateFromStores = require("initialize").useStateFromStores(items, () => features.getId());
-  let obj = require("initialize");
+  const stateFromStores = obj.useStateFromStores(items, () => features.getId());
+  obj2 = require("get initialized");
   const items1 = [stateFromStores1];
-  stateFromStores1 = require("initialize").useStateFromStores(items1, () => GuildStore.getGuild(id));
-  obj2 = require("initialize");
+  stateFromStores1 = obj2.useStateFromStores(items1, () => GuildStore.getGuild(id));
   const items2 = [stateFromStores3];
   const items3 = [stateFromStores];
-  const stateFromStores2 = require("initialize").useStateFromStores(items2, () => UserStore.getUser(stateFromStores), items3);
-  const obj3 = require("initialize");
+  const obj3 = require("get initialized");
+  const stateFromStores2 = obj3.useStateFromStores(items2, () => UserStore.getUser(stateFromStores), items3);
   const items4 = [stateFromStores];
   const items5 = [id, stateFromStores];
-  stateFromStores3 = require("initialize").useStateFromStores(items4, () => {
+  const obj4 = require("get initialized");
+  stateFromStores3 = obj4.useStateFromStores(items4, () => {
     let member = null;
     if (null != id) {
       member = GuildMemberStore.getMember(tmp, stateFromStores);
@@ -443,10 +463,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
     }
     return null != joinedAt;
   }, items5);
-  const obj4 = require("initialize");
   const items6 = [stateFromStores2];
   const items7 = [id, arg2];
-  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items6, () => {
+  const obj5 = require("get initialized");
+  const stateFromStoresObject = obj5.useStateFromStoresObject(items6, () => {
+    let hasFlag;
+    let num;
     let inviteKeyForGuildId = closure_2;
     if (closure_2 == null) {
       inviteKeyForGuildId = InviteStore.getInviteKeyForGuildId(id);
@@ -456,15 +478,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
       invite = InviteStore.getInvite(inviteKeyForGuildId);
     }
     if (null != invite) {
-      if (invite.state !== constants.BANNED) {
-        if (invite.state !== tmp8.EXPIRED) {
-          let obj = { validInviteKey: inviteKeyForGuildId, isBypassInvite: null, inviteRoles: null };
-          let num = invite.flags;
+      if (invite.state !== validInviteKey.BANNED) {
+        let obj;
+        if (invite.state !== tmp9.EXPIRED) {
+          obj = { validInviteKey: inviteKeyForGuildId, isBypassInvite: hasFlag(num, GuildInviteFlags.GuildInviteFlags.IS_APPLICATION_BYPASS), inviteRoles: invite.roles };
+          num = invite.flags;
+          hasFlag = FlagUtils.hasFlag;
+          FlagUtils;
           if (num == null) {
             num = 0;
           }
-          obj.isBypassInvite = FlagUtils.hasFlag(num, GuildInviteFlags.GuildInviteFlags.IS_APPLICATION_BYPASS);
-          obj.inviteRoles = invite.roles;
         }
         return obj;
       }
@@ -483,27 +506,30 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
   items8[9] = stateFromStores1;
   items8[10] = inviteRoles;
   items8[11] = stateFromStores2;
-  const obj5 = require("initialize");
-  return {
+  const obj6 = {
     guildId: id,
-    ctaType: id.useMemo(() => {
+    ctaType: id.useMemo(function() {
       if (stateFromStores3) {
+        const tmp23 = obj2;
         if (closure_1 === obj2.INVITE) {
           if (null != inviteRoles) {
             if (inviteRoles.length > 0) {
               if (null != stateFromStores2) {
                 const member = GuildMemberStore.getMember(id, tmp24.id);
                 let roles;
+                const _Set = Set;
                 if (member != null) {
                   roles = member.roles;
                 }
                 if (roles == null) {
                   roles = [];
                 }
-                if (inviteRoles.some((id) => !set.has(id.id))) {
+                const self = this;
+                const self2 = this;
+                const _Set1 = new _Set(roles);
+                if (inviteRoles.some((id) => !_Set1.has(id.id))) {
                   return features.ACCEPT_ROLES;
                 }
-                const set = new Set(roles);
               }
             }
           }
@@ -516,21 +542,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
         if (primaryGuild != null) {
           identityGuildId = primaryGuild.identityGuildId;
         }
-        let tmp38 = identityGuildId === id;
-        if (tmp38) {
+        let tmp36 = identityGuildId === id;
+        if (tmp36) {
           let identityEnabled;
           if (primaryGuild != null) {
             identityEnabled = primaryGuild.identityEnabled;
           }
-          tmp38 = true === identityEnabled;
+          tmp36 = true === identityEnabled;
         }
         if (closure_1 !== tmp23.INVITE) {
           if (null != id.tag) {
-            if (!tmp38) {
+            if (!tmp36) {
               if (null != stateFromStores1) {
+                let IS_MEMBER;
                 obj2 = GuildTagUtils;
-                if (obj2.guildSupportsTags(tmp41)) {
-                  let IS_MEMBER = features.ADOPT_TAG;
+                if (obj2.guildSupportsTags(tmp39)) {
+                  IS_MEMBER = features.ADOPT_TAG;
                 }
                 return IS_MEMBER;
               }
@@ -538,19 +565,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
           }
         }
         IS_MEMBER = features.IS_MEMBER;
-        tmp23 = obj2;
       } else {
+        let APPLY_TO_JOIN;
         if (closure_12.includes(id)) {
-          let APPLY_TO_JOIN = features.HAS_APPLICATION;
+          APPLY_TO_JOIN = features.HAS_APPLICATION;
         } else {
+          let JOIN_VIA_INVITE;
           let hasItem;
           if (features != null) {
-            hasItem = features.includes(constants2.MEMBER_VERIFICATION_GATE_ENABLED);
+            hasItem = features.includes(isBypassInvite.MEMBER_VERIFICATION_GATE_ENABLED);
           }
           if (hasItem) {
             let hasItem1;
             if (features != null) {
-              hasItem1 = features.includes(constants2.MEMBER_VERIFICATION_MANUAL_APPROVAL);
+              hasItem1 = features.includes(isBypassInvite.MEMBER_VERIFICATION_MANUAL_APPROVAL);
             }
             if (hasItem1) {
               if (null != validInviteKey) {
@@ -561,27 +589,34 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
             }
           }
           if (null != validInviteKey) {
-            let JOIN_VIA_INVITE = features.JOIN_VIA_INVITE;
+            JOIN_VIA_INVITE = features.JOIN_VIA_INVITE;
           } else {
             let hasItem2;
             if (features != null) {
-              hasItem2 = features.includes(constants2.DISCOVERABLE);
+              hasItem2 = features.includes(isBypassInvite.DISCOVERABLE);
             }
             JOIN_VIA_INVITE = null;
             if (hasItem2) {
               JOIN_VIA_INVITE = features.LURK_DISCOVERABLE;
             }
           }
+          APPLY_TO_JOIN = JOIN_VIA_INVITE;
         }
         return APPLY_TO_JOIN;
       }
     }, items8),
     validInviteKey
   };
+  return obj6;
 });
+const result = size.fileFinishedImporting("modules/guild_profile/hooks/useGuildProfileCTA.tsx");
+
+export default tmp3;
 export { CTATypes };
 export const GuildProfileCTAContext = obj2;
 export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfileFromInvite, code) {
+  let features;
+  let id;
   ({ id, features } = guildProfileFromInvite);
   const id1 = AuthenticationStore.getId();
   const user = UserStore.getUser(id1);
@@ -594,6 +629,7 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
     joinedAt = member.joinedAt;
   }
   let inviteKeyForGuildId = code;
+  const tmp7 = null != joinedAt;
   if (code == null) {
     inviteKeyForGuildId = InviteStore.getInviteKeyForGuildId(id);
   }
@@ -610,17 +646,19 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
       flag = false;
       tmp11 = null;
       if (invite.state !== tmp12.EXPIRED) {
-        const obj = FlagUtils;
         let num = invite.flags;
+        const hasFlag = FlagUtils.hasFlag;
+        FlagUtils;
         if (num == null) {
           num = 0;
         }
-        flag = obj.hasFlag(num, GuildInviteFlags.GuildInviteFlags.IS_APPLICATION_BYPASS);
+        flag = hasFlag(num, GuildInviteFlags.GuildInviteFlags.IS_APPLICATION_BYPASS);
         tmp11 = inviteKeyForGuildId;
       }
     }
   }
-  const pendingFolderGuildIds = usePendingFolderGuildIds.getPendingFolderGuildIds();
+  const obj = usePendingFolderGuildIds;
+  const pendingFolderGuildIds = obj.getPendingFolderGuildIds();
   if (tmp7) {
     let roles1;
     if (invite != null) {
@@ -631,25 +669,30 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
         if (null != user) {
           const member1 = GuildMemberStore.getMember(id, user.id);
           let roles2;
+          const _Set = Set;
           if (member1 != null) {
             roles2 = member1.roles;
           }
           if (roles2 == null) {
             roles2 = [];
           }
+          const self = this;
+          const self2 = this;
+          const _Set1 = new _Set(roles2);
           const roles = invite.roles;
-          if (roles.some((id) => !set.has(id.id))) {
+          if (roles.some((id) => !_Set1.has(id.id))) {
             return obj.ACCEPT_ROLES;
           }
-          const set = new Set(roles2);
         }
       }
     }
     return obj.IS_MEMBER;
   } else {
+    let APPLY_TO_JOIN;
     if (pendingFolderGuildIds.includes(id)) {
-      let APPLY_TO_JOIN = obj.HAS_APPLICATION;
+      APPLY_TO_JOIN = obj.HAS_APPLICATION;
     } else {
+      let JOIN_VIA_INVITE;
       let hasItem;
       if (features != null) {
         hasItem = features.includes(constants2.MEMBER_VERIFICATION_GATE_ENABLED);
@@ -668,7 +711,7 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
         }
       }
       if (null != tmp11) {
-        let JOIN_VIA_INVITE = obj.JOIN_VIA_INVITE;
+        JOIN_VIA_INVITE = obj.JOIN_VIA_INVITE;
       } else {
         let hasItem2;
         if (features != null) {
@@ -679,8 +722,8 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
           JOIN_VIA_INVITE = obj.LURK_DISCOVERABLE;
         }
       }
+      APPLY_TO_JOIN = JOIN_VIA_INVITE;
     }
     return APPLY_TO_JOIN;
   }
-  tmp7 = null != joinedAt;
 };

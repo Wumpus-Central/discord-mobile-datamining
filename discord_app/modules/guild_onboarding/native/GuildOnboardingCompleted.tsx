@@ -6,79 +6,101 @@ import GlobalUtils from "GlobalUtils" /* 1375 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
 import timing from "timing" /* 4891 */;
 import UserProfileRolesCard from "UserProfileRolesCard" /* 6684 */;
-import noop from "module_19" /* 19 */;
+import react_mod from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;
 import GuildRoleStore from "GuildRoleStore" /* 2106 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import UserStore from "UserStore" /* 1377 */;
 import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6595 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
+let guildId, navigation;
+
+let StyleSheet;
+let c10;
+let closure_4;
+let items;
+let obj2;
+let obj3;
+let obj4;
+let obj5;
+let obj6;
+let unpackModuleId;
+let react = react_mod;
+({ View: closure_4, StyleSheet } = react_native);
+({ jsx: c10, jsxs: unpackModuleId } = Fragment);
 let c12 = 400;
-const createStyles = fn(4890);
-let obj2 = { screen: { flex: 1, position: "relative" }, container: { backgroundColor: "rgba(0, 0, 0, 0.5)", paddingHorizontal: 24, display: "flex", justifyContent: "center", flexGrow: 1 }, containerWithoutSplash: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, backgroundImage: { position: "absolute", width: "100%", height: "100%" }, title: {}, subtitle: { marginTop: 16 }, card: null, username: null, rolesHeader: null, roles: null, role: null, roleOverflow: null, animation: null, wave: null, animationText: null, getStartedButton: null };
-let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
-obj2.card = { marginTop: 24, padding: 16, paddingBottom: 32, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-obj2.username = { marginTop: 16 };
-obj2.rolesHeader = { marginTop: 8 };
-obj2.roles = { marginTop: 12, display: "flex", flexDirection: "row", flexWrap: "wrap" };
-obj2.role = { marginRight: 8 };
-let obj4 = { marginTop: 24, padding: 16, paddingBottom: 32, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-obj2.roleOverflow = { paddingHorizontal: 8, height: 28, borderRadius: nativeDefault.radii.xs, display: "flex", justifyContent: "center", borderWidth: StyleSheet.hairlineWidth, borderColor: nativeDefault.colors.BORDER_SUBTLE };
-let obj5 = { paddingHorizontal: 8, height: 28, borderRadius: nativeDefault.radii.xs, display: "flex", justifyContent: "center", borderWidth: StyleSheet.hairlineWidth, borderColor: nativeDefault.colors.BORDER_SUBTLE };
-obj2.animation = { marginTop: 24, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 2, borderRadius: nativeDefault.radii.sm, padding: 12, display: "flex", flexDirection: "row", alignItems: "center" };
-let obj7 = { transform: null };
-let items = [{ translateX: 24 }, { rotate: "5deg" }];
-obj7.transform = items;
-obj2.wave = obj7;
-obj2.animationText = { flexGrow: 1, marginLeft: 8 };
-obj2.getStartedButton = { marginTop: 24 };
-let closure_13 = createStyles.createStyles(obj2);
+let createStyles = createStyles_mod;
+let obj = { screen: { flex: 1, position: "relative" }, container: { backgroundColor: "rgba(0, 0, 0, 0.5)", paddingHorizontal: 24, display: "flex", justifyContent: "center", flexGrow: 1 }, containerWithoutSplash: obj2, backgroundImage: { position: "absolute", width: "100%", height: "100%" }, title: {}, subtitle: { marginTop: 16 }, card: obj3, username: { marginTop: 16 }, rolesHeader: { marginTop: 8 }, roles: { marginTop: 12, display: "flex", flexDirection: "row", flexWrap: "wrap" }, role: { marginRight: 8 }, roleOverflow: obj4, animation: obj5, wave: obj6, animationText: { flexGrow: 1, marginLeft: 8 }, getStartedButton: { marginTop: 24 } };
+obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+createStyles = createStyles.createStyles;
+obj3 = { marginTop: 24, padding: 16, paddingBottom: 32, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj4 = { paddingHorizontal: 8, height: 28, borderRadius: nativeDefault.radii.xs, display: "flex", justifyContent: "center", borderWidth: StyleSheet.hairlineWidth, borderColor: nativeDefault.colors.BORDER_SUBTLE };
+obj5 = { marginTop: 24, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 2, borderRadius: nativeDefault.radii.sm, padding: 12, display: "flex", flexDirection: "row", alignItems: "center" };
+obj6 = { transform: items };
+items = [{ translateX: 24 }, { rotate: "5deg" }];
+let closure_13 = createStyles(obj);
 let closure_14 = { code: "function GuildOnboardingCompletedTsx1(){const{withSequence,withTiming,withDelay,ANIMATION_DURATION,Easing,useReducedMotion}=this.__closure;const opacity=withSequence(withTiming(0,{duration:0}),withDelay(ANIMATION_DURATION,withTiming(0.5,{duration:ANIMATION_DURATION})),withTiming(1,{duration:ANIMATION_DURATION,easing:Easing.out(Easing.ease)}));const scale=withSequence(withTiming(1,{duration:0}),withDelay(ANIMATION_DURATION,withTiming(1.5,{duration:ANIMATION_DURATION,easing:Easing.out(Easing.ease)})),withTiming(1,{duration:useReducedMotion?1:ANIMATION_DURATION,easing:Easing.out(Easing.ease)}));const rawRotation=withSequence(withTiming(\"0deg\",{duration:0}),withDelay(ANIMATION_DURATION,withTiming(\"-2deg\",{duration:ANIMATION_DURATION})),withTiming(\"-5deg\",{duration:ANIMATION_DURATION}));return{opacity:opacity,transform:[{rotate:rawRotation},{scale:scale}]};}" };
 const __initData = { code: "function GuildOnboardingCompletedTsx2(){const{withSequence,withTiming,withDelay,ANIMATION_DURATION,Easing,useReducedMotion}=this.__closure;const opacity=withSequence(withTiming(0,{duration:0}),withDelay(ANIMATION_DURATION,withTiming(0.5,{duration:ANIMATION_DURATION})),withTiming(1,{duration:ANIMATION_DURATION,easing:Easing.out(Easing.ease)}));const scale=withSequence(withTiming(1,{duration:0}),withDelay(ANIMATION_DURATION,withTiming(1.5,{duration:ANIMATION_DURATION,easing:Easing.out(Easing.ease)})),withTiming(1,{duration:useReducedMotion?1:ANIMATION_DURATION,easing:Easing.out(Easing.ease)}));const rawRotation=withSequence(withTiming('0deg',{duration:0}),withDelay(ANIMATION_DURATION,withTiming('-2deg',{duration:ANIMATION_DURATION})),withTiming('-5deg',{duration:ANIMATION_DURATION}));return{opacity:opacity,transform:[{rotate:rawRotation},{scale:scale}]};}" };
-const ReactCompilerGating = fn(558);
-let obj6 = { marginTop: 24, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 2, borderRadius: nativeDefault.radii.sm, padding: 12, display: "flex", flexDirection: "row", alignItems: "center" };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingCompleted.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
-  const cResult = guildId(onClose[11]).c(126);
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+  let allSelectedRoleIds;
+  let completeOnboarding;
+  let duration;
+  let isScreenReaderEnabled;
+  let numSharedRoleMembers;
+  let onClose;
+  let prompts;
+  let role;
+  let stateFromStoresArray;
+  let tmp11;
+  let tmp24;
+  let tmp25;
+  let tmp26;
+  let tmp38;
+  let tmp40;
+  let tmp41;
+  let tmp7;
+  let tmp8;
+  const tmp3 = onClose;
+  let obj = guildId(onClose[11]);
+  const cResult = obj.c(126);
   guildId = guildId.guildId;
   ({ prompts, completeOnboarding } = guildId);
   onClose = guildId.onClose;
-  let obj = guildId(onClose[11]);
-  const role = closure_13();
-  const tmp4 = closure_13();
-  const navigation = guildId(onClose[12]).useNavigation();
+  const tmp5 = closure_13();
+  react = tmp5;
+  let obj2 = guildId(onClose[12]);
+  navigation = obj2.useNavigation();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let items = [UserStore];
+    let items = [allSelectedRoleIds];
     const fn = function w() {
-      return currentUser.getCurrentUser();
+      return allSelectedRoleIds.getCurrentUser();
     };
+    let num = 0;
     cResult[0] = items;
     cResult[1] = fn;
-    tmp6 = items;
-    tmp7 = fn;
+    tmp8 = fn;
+    tmp7 = items;
   } else {
-    [tmp6, tmp7] = cResult;
+    [tmp7, tmp8] = cResult;
   }
-  let obj2 = guildId(onClose[12]);
-  const stateFromStores = guildId(onClose[13]).useStateFromStores(tmp6, tmp7);
+  const tmp2Result = guildId(tmp3[13]);
+  const stateFromStores = tmp2Result.useStateFromStores(tmp7, tmp8);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [stateFromStoresArray];
     cResult[2] = items1;
-    let tmp10 = items1;
+    tmp11 = items1;
   } else {
-    tmp10 = cResult[2];
+    tmp11 = cResult[2];
   }
   if (cResult[3] !== guildId) {
     class E {
       constructor() {
-        return closure_7.getGuild(guildId);
+        return GuildStore.getGuild(guildId);
       }
     }
     cResult[3] = guildId;
@@ -86,201 +108,396 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   } else {
     class E {
       constructor() {
-        return closure_7.getGuild(guildId);
+        return GuildStore.getGuild(guildId);
       }
     }
   }
-  let tmpResult = guildId(onClose[13]);
-  const stateFromStores1 = guildId(onClose[13]).useStateFromStores(tmp10, E);
-  let tmpResult5 = guildId(onClose[13]);
-  closure_6 = completeOnboarding(onClose[14])(guildId);
-  const tmp15 = completeOnboarding(onClose[14])(guildId);
-  let tmpResult6 = guildId(onClose[15]);
-  const profileThemeValues = guildId(onClose[16]).useProfileThemeValues(tmpResult6.useThemeContext().theme);
+  const tmp2Result7 = guildId(tmp3[13]);
+  const stateFromStores1 = tmp2Result7.useStateFromStores(tmp11, E);
+  const tmp16 = completeOnboarding(tmp3[14])(guildId);
+  let closure_6 = tmp16;
+  const tmp2Result8 = guildId(tmp3[15]);
+  const theme = tmp2Result8.useThemeContext().theme;
+  const tmp2Result9 = guildId(tmp3[16]);
+  const profileThemeValues = tmp2Result9.useProfileThemeValues(theme);
   if (profileThemeValues != null) {
     class E {
       constructor() {
-        return closure_7.getGuild(guildId);
+        return GuildStore.getGuild(guildId);
       }
     }
   }
   if (cResult[5] !== undefined) {
     class E {
       constructor() {
-        return closure_7.getGuild(guildId);
+        return GuildStore.getGuild(guildId);
       }
     }
-    tmp19[0] = tmp17;
-    cResult[5] = tmp17;
-    cResult[6] = tmp19;
+    tmp20[0] = undefined;
+    cResult[5] = undefined;
+    cResult[6] = tmp20;
   } else {
     class E {
       constructor() {
-        return closure_7.getGuild(guildId);
+        return GuildStore.getGuild(guildId);
       }
     }
   }
   if (cResult[7] !== stateFromStores1) {
+    let guildSplashURL;
     class E {
       constructor() {
-        return closure_7.getGuild(guildId);
+        return GuildStore.getGuild(guildId);
       }
     }
     if (null != stateFromStores1) {
       class E {
         constructor() {
-          return closure_7.getGuild(guildId);
+          return GuildStore.getGuild(guildId);
         }
       }
-      let obj3 = { id: null, splash: null, size: null };
-      ({ id: obj8.id, splash: obj8.splash } = stateFromStores1);
-      obj3.size = 400 * completeOnboarding(tmp2[18])();
-      const guildSplashURL = obj7.getGuildSplashURL(obj3);
+      let obj3 = { id: null, splash: null, size: 400 * completeOnboarding(tmp3[18])() };
+      ({ id: obj7.id, splash: obj7.splash } = stateFromStores1);
+      const getGuildSplashURL = tmp23.getGuildSplashURL;
+      guildSplashURL = getGuildSplashURL(obj3);
     }
     cResult[7] = stateFromStores1;
     cResult[8] = guildSplashURL;
   } else {
     class E {
       constructor() {
-        return closure_7.getGuild(guildId);
+        return GuildStore.getGuild(guildId);
       }
     }
   }
   if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
     class E {
       constructor() {
-        return closure_7.getGuild(guildId);
+        return GuildStore.getGuild(guildId);
       }
     }
-    const items2 = [GuildOnboardingPromptsStore];
+    const items2 = [isScreenReaderEnabled];
     cResult[9] = items2;
-    const tmp22 = items2;
+    tmp24 = items2;
   } else {
     class E {
       constructor() {
-        return closure_7.getGuild(guildId);
+        return GuildStore.getGuild(guildId);
       }
     }
   }
   if (cResult[10] !== guildId) {
     class H {
       constructor() {
-        return closure_9.getOnboardingResponses(guildId);
+        return GuildOnboardingPromptsStore.getOnboardingResponses(guildId);
       }
     }
     const items3 = [guildId];
     cResult[10] = guildId;
     cResult[11] = items3;
     cResult[12] = H;
-    let tmp24 = H;
-    const tmp23 = items3;
+    tmp26 = H;
+    tmp25 = items3;
   } else {
     class H {
       constructor() {
-        return closure_9.getOnboardingResponses(guildId);
+        return GuildOnboardingPromptsStore.getOnboardingResponses(guildId);
       }
     }
-    tmp24 = cResult[12];
+    tmp26 = cResult[12];
   }
-  let tmpResult7 = guildId(onClose[16]);
-  stateFromStoresArray = guildId(onClose[13]).useStateFromStoresArray(tmp22, tmp24, tmp23);
+  const tmp2Result10 = guildId(tmp3[13]);
+  stateFromStoresArray = tmp2Result10.useStateFromStoresArray(tmp24, tmp26, tmp25);
   if (cResult[13] === prompts) {
     class H {
       constructor() {
-        return closure_9.getOnboardingResponses(guildId);
+        return GuildOnboardingPromptsStore.getOnboardingResponses(guildId);
       }
     }
+    if (cResult[19] === tmp16) {
+      class H {
+        constructor() {
+          return GuildOnboardingPromptsStore.getOnboardingResponses(guildId);
+        }
+      }
+      if (cResult[24] === tmp31) {
+        let tmp39;
+        class H {
+          constructor() {
+            return GuildOnboardingPromptsStore.getOnboardingResponses(guildId);
+          }
+        }
+        ({ numSharedRoleMembers, allSelectedRoleIds } = tmp38);
+        const _Symbol2 = Symbol;
+        if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
+          class H {
+            constructor() {
+              return GuildOnboardingPromptsStore.getOnboardingResponses(guildId);
+            }
+          }
+          const items4 = [closure_6];
+          cResult[27] = items4;
+          tmp39 = items4;
+        } else {
+          class H {
+            constructor() {
+              return GuildOnboardingPromptsStore.getOnboardingResponses(guildId);
+            }
+          }
+        }
+        if (cResult[28] === allSelectedRoleIds) {
+          let tmp44;
+          class H {
+            constructor() {
+              return GuildOnboardingPromptsStore.getOnboardingResponses(guildId);
+            }
+          }
+          const tmp2Result11 = guildId(tmp3[13]);
+          const stateFromStoresArray1 = tmp2Result11.useStateFromStoresArray(tmp39, tmp40, tmp41);
+          if (cResult[32] !== navigation) {
+            class H {
+              constructor() {
+                return GuildOnboardingPromptsStore.getOnboardingResponses(guildId);
+              }
+            }
+            const items5 = [navigation];
+            cResult[32] = navigation;
+            cResult[33] = tmp45;
+            cResult[34] = items5;
+            tmp44 = items5;
+          } else {
+            class H {
+              constructor() {
+                return GuildOnboardingPromptsStore.getOnboardingResponses(guildId);
+              }
+            }
+            tmp44 = cResult[34];
+          }
+          const layoutEffect = react.useLayoutEffect(tmp45, tmp44);
+          const tmp2Result12 = guildId(tmp3[20]);
+          isScreenReaderEnabled = tmp2Result12.useIsScreenReaderEnabled();
+          const flag = false;
+          const ref = react.useRef(false);
+          if (cResult[35] === completeOnboarding) {
+            class H {
+              constructor() {
+                return GuildOnboardingPromptsStore.getOnboardingResponses(guildId);
+              }
+            }
+          }
+          function de() {
+            let closure_0;
+            if (isScreenReaderEnabled) {
+              if (!ref.current) {
+                tmp3.current = true;
+                completeOnboarding();
+              }
+            } else {
+              const _setTimeout = setTimeout;
+              const timeout = setTimeout(() => {
+                if (!ref.current) {
+                  tmp.current = true;
+                  completeOnboarding();
+                }
+                onClose();
+              }, 3600);
+              return () => clearTimeout(closure_0);
+            }
+          }
+          const items6 = [completeOnboarding, onClose, isScreenReaderEnabled];
+          cResult[35] = completeOnboarding;
+          cResult[36] = isScreenReaderEnabled;
+          cResult[37] = onClose;
+          cResult[38] = de;
+          cResult[39] = items6;
+        }
+        function te() {
+          return GuildRoleStore.getManyRoles(guildId, allSelectedRoleIds);
+        }
+        const items7 = [allSelectedRoleIds, guildId];
+        cResult[28] = allSelectedRoleIds;
+        cResult[29] = guildId;
+        cResult[30] = te;
+        cResult[31] = items7;
+        tmp40 = te;
+        tmp41 = items7;
+      }
+      let obj4 = { numSharedRoleMembers: tmp32, allSelectedRoleIds: tmp31 };
+      cResult[24] = tmp31;
+      cResult[25] = tmp32;
+      cResult[26] = obj4;
+      tmp38 = obj4;
+    }
+    const _Symbol = Symbol;
+    if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
+      class J {
+        constructor(roleIds) {
+          return roleIds.roleIds;
+        }
+      }
+      cResult[23] = J;
+    } else {
+      class J {
+        constructor(roleIds) {
+          return roleIds.roleIds;
+        }
+      }
+    }
+    const mapped = arr5.map(J);
+    const flatResult = mapped.flat();
+    const found = flatResult.filter(tmp2(tmp3[19]).isNotNullish);
+    let num20 = 0;
+    if (null != tmp16) {
+      class J {
+        constructor(roleIds) {
+          return roleIds.roleIds;
+        }
+      }
+      if (found.length > 0) {
+        class J {
+          constructor(roleIds) {
+            return roleIds.roleIds;
+          }
+        }
+        const items8 = [];
+        HermesBuiltin.arraySpread(items8, found.map((item) => {
+          let num = closure_6[item];
+          if (num == null) {
+            num = 0;
+          }
+          return num;
+        }), 0);
+        const _Math = Math;
+        num20 = HermesBuiltin.apply(max, items8, Math);
+      }
+    }
+    cResult[19] = tmp16;
+    cResult[20] = arr5;
+    cResult[21] = found;
+    cResult[22] = num20;
   }
   if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-    class V {
-      constructor(arg0) {
-        return guildId.options;
+    class J {
+      constructor(roleIds) {
+        return roleIds.roleIds;
       }
     }
     cResult[16] = V;
-    let flatResult = V;
   } else {
-    class V {
-      constructor(arg0) {
-        return guildId.options;
+    class J {
+      constructor(roleIds) {
+        return roleIds.roleIds;
       }
     }
   }
   if (cResult[17] !== stateFromStoresArray) {
-    class X {
-      constructor(arg0) {
-        return closure_7.includes(guildId.id);
+    class J {
+      constructor(roleIds) {
+        return roleIds.roleIds;
       }
     }
     cResult[17] = stateFromStoresArray;
     cResult[18] = X;
   } else {
-    class X {
-      constructor(arg0) {
-        return closure_7.includes(guildId.id);
+    class J {
+      constructor(roleIds) {
+        return roleIds.roleIds;
       }
     }
   }
-  const mapped = prompts.map(flatResult);
-  flatResult = mapped.flat();
-  const found = flatResult.filter(X);
+  const mapped1 = prompts.map(V);
+  const flatResult1 = mapped1.flat();
+  const found1 = flatResult1.filter(X);
   cResult[13] = prompts;
   cResult[14] = stateFromStoresArray;
-  cResult[15] = found;
-  const tmpResult8 = guildId(onClose[13]);
+  cResult[15] = found1;
 }) : ((guildId) => {
+  let Button;
+  let Text4;
+  let allSelectedRoleIds;
+  let completeOnboarding;
+  let duration;
+  let intl;
+  let intl2;
+  let intl3;
+  let intl4;
+  let intl5;
+  let items10;
+  let items13;
+  let items14;
+  let items15;
+  let items16;
+  let items17;
+  let items18;
+  let numSharedRoleMembers;
+  let obj11;
+  let obj19;
+  let obj22;
+  let obj27;
+  let obj31;
+  let obj32;
+  let obj33;
+  let prompts;
+  let role;
+  let rolePillBackgroundColor;
+  let str2;
   guildId = guildId.guildId;
   ({ prompts, completeOnboarding } = guildId);
   const onClose = guildId.onClose;
-  closure_7 = undefined;
+  let closure_7;
   let found;
   allSelectedRoleIds = undefined;
   let isScreenReaderEnabled;
   let ref;
   let stateFromStores2;
   const tmp = closure_13();
-  noop = tmp;
-  const navigation = guildId(onClose[12]).useNavigation();
+  react = tmp;
+  const tmp3 = onClose;
   let obj = guildId(onClose[12]);
-  let items = [found];
-  const stateFromStores = guildId(onClose[13]).useStateFromStores(items, () => found.getCurrentUser());
+  navigation = obj.useNavigation();
   let obj2 = guildId(onClose[13]);
-  const items1 = [closure_7];
-  const stateFromStores1 = guildId(onClose[13]).useStateFromStores(items1, () => GuildStore.getGuild(guildId));
-  const tmp8 = completeOnboarding(onClose[14])(guildId);
-  closure_6 = tmp8;
+  let items = [found];
+  const stateFromStores = obj2.useStateFromStores(items, () => found.getCurrentUser());
   let obj3 = guildId(onClose[13]);
+  const items1 = [closure_7];
+  const stateFromStores1 = obj3.useStateFromStores(items1, () => GuildStore.getGuild(guildId));
+  const tmp8 = completeOnboarding(onClose[14])(guildId);
+  let closure_6 = tmp8;
   let obj4 = guildId(onClose[15]);
-  const profileThemeValues = guildId(onClose[16]).useProfileThemeValues(obj4.useThemeContext().theme);
+  const theme = obj4.useThemeContext().theme;
+  let obj5 = guildId(onClose[16]);
+  const profileThemeValues = obj5.useProfileThemeValues(theme);
   if (profileThemeValues != null) {
-    const rolePillBackgroundColor = profileThemeValues.rolePillBackgroundColor;
+    rolePillBackgroundColor = profileThemeValues.rolePillBackgroundColor;
   }
   let guildSplashURL = null;
   if (null != stateFromStores1) {
-    let obj6 = { id: null, splash: null, size: null };
-    ({ id: obj7.id, splash: obj7.splash } = stateFromStores1);
-    obj6.size = 400 * tmp7(tmp3[18])();
-    guildSplashURL = tmp7(tmp3[17]).getGuildSplashURL(obj6);
-    const tmp7Result = tmp7(tmp3[17]);
+    let obj7 = { id: null, splash: null, size: 400 * completeOnboarding(tmp3[18])() };
+    ({ id: obj6.id, splash: obj6.splash } = stateFromStores1);
+    const getGuildSplashURL = completeOnboarding(tmp3[17]).getGuildSplashURL;
+    let num = 400;
+    completeOnboarding(tmp3[17]);
+    guildSplashURL = getGuildSplashURL(obj7);
   }
-  let obj5 = guildId(onClose[16]);
   const items2 = [allSelectedRoleIds];
   const items3 = [guildId];
-  closure_7 = guildId(onClose[13]).useStateFromStoresArray(items2, () => GuildOnboardingPromptsStore.getOnboardingResponses(guildId), items3);
+  const tmp2Result = guildId(tmp3[13]);
+  closure_7 = tmp2Result.useStateFromStoresArray(items2, () => GuildOnboardingPromptsStore.getOnboardingResponses(guildId), items3);
   let mapped = prompts.map((options) => options.options);
-  const tmp2Result = guildId(onClose[13]);
-  found = mapped.flat().filter((id) => closure_7.includes(id.id));
+  let flatResult = mapped.flat();
+  found = flatResult.filter((id) => closure_7.includes(id.id));
   const items4 = [tmp8, found];
-  const memo = noop.useMemo(() => {
+  const memo = react.useMemo(() => {
     const mapped = found.map((roleIds) => roleIds.roleIds);
-    allSelectedRoleIds = mapped.flat().filter(GlobalUtils.isNotNullish);
+    const flatResult = mapped.flat();
+    allSelectedRoleIds = flatResult.filter(GlobalUtils.isNotNullish);
     let numSharedRoleMembers = 0;
     if (null != closure_6) {
       numSharedRoleMembers = 0;
       if (allSelectedRoleIds.length > 0) {
         const _Math = Math;
         const items = [];
-        HermesBuiltin.arraySpread(allSelectedRoleIds.map((item) => {
+        HermesBuiltin.arraySpread(items, allSelectedRoleIds.map((item) => {
           let num = closure_1_6[item];
           if (num == null) {
             num = 0;
@@ -288,32 +505,34 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
           return num;
         }), 0);
         const _Math2 = Math;
-        numSharedRoleMembers = HermesBuiltin.apply(items, Math);
+        numSharedRoleMembers = HermesBuiltin.apply(max, items, Math);
       }
     }
     return { numSharedRoleMembers, allSelectedRoleIds };
   }, items4);
   ({ numSharedRoleMembers, allSelectedRoleIds } = memo);
-  const flatResult = mapped.flat();
   const items5 = [closure_6];
   const items6 = [allSelectedRoleIds, guildId];
-  const stateFromStoresArray = guildId(onClose[13]).useStateFromStoresArray(items5, () => GuildRoleStore.getManyRoles(guildId, allSelectedRoleIds), items6);
+  const tmp2Result5 = guildId(tmp3[13]);
+  const stateFromStoresArray = tmp2Result5.useStateFromStoresArray(items5, () => GuildRoleStore.getManyRoles(guildId, allSelectedRoleIds), items6);
   const items7 = [navigation];
-  const layoutEffect = noop.useLayoutEffect(() => {
-    navigation.setOptions({
+  const layoutEffect = react.useLayoutEffect(() => {
+    const obj = {
       headerLeft() {
         return null;
       }
-    });
+    };
+    navigation.setOptions(obj);
   }, items7);
-  const tmp2Result5 = guildId(onClose[13]);
-  isScreenReaderEnabled = guildId(onClose[20]).useIsScreenReaderEnabled();
-  ref = noop.useRef(false);
+  const tmp2Result6 = guildId(tmp3[20]);
+  isScreenReaderEnabled = tmp2Result6.useIsScreenReaderEnabled();
+  ref = react.useRef(false);
   const items8 = [completeOnboarding, onClose, isScreenReaderEnabled];
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(() => {
+    let closure_0;
     if (isScreenReaderEnabled) {
       if (!ref.current) {
-        tmp2.current = true;
+        tmp3.current = true;
         completeOnboarding();
       }
     } else {
@@ -328,173 +547,182 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       return () => clearTimeout(closure_0);
     }
   }, items8);
-  const tmp2Result6 = guildId(onClose[20]);
   const items9 = [stateFromStores1];
-  stateFromStores2 = guildId(onClose[13]).useStateFromStores(items9, () => stateFromStores1.useReducedMotion);
-  guildId(onClose[21]);
+  const tmp2Result7 = guildId(tmp3[13]);
+  stateFromStores2 = tmp2Result7.useStateFromStores(items9, () => stateFromStores1.useReducedMotion);
+  guildId(tmp3[21]);
   const fn = function k() {
-    const obj = ReanimatedRexport;
-    const withTimingResult = timing.withTiming(0, { duration: 0 });
-    const obj3 = ReanimatedRexport;
-    const obj5 = { duration };
-    const withDelayResult = obj3.withDelay(duration, timing.withTiming(0.5, { duration }));
-    const obj7 = { duration, easing: null };
-    const Easing = ReanimatedRexport.Easing;
-    obj7.easing = Easing.out(ReanimatedRexport.Easing.ease);
-    const withSequenceResult = obj.withSequence(withTimingResult, withDelayResult, timing.withTiming(1, obj7));
-    const obj8 = ReanimatedRexport;
-    const withTimingResult1 = timing.withTiming(1, { duration: 0 });
-    const obj10 = ReanimatedRexport;
-    const obj12 = { duration, easing: null };
-    const Easing2 = ReanimatedRexport.Easing;
-    obj12.easing = Easing2.out(ReanimatedRexport.Easing.ease);
-    const withDelayResult1 = obj10.withDelay(duration, timing.withTiming(1.5, obj12));
+    let Easing;
+    let Easing2;
+    let Easing3;
+    let items;
+    let tmpResult8;
+    let withDelay3Result;
+    let withSequence3;
+    let withTimingResult2;
+    const withSequence = ReanimatedRexport.withSequence;
+    ReanimatedRexport;
+    const obj = timing;
+    const withTimingResult = obj.withTiming(0, { duration: 0 });
+    const withDelay = ReanimatedRexport.withDelay;
+    ReanimatedRexport;
+    const obj2 = timing;
+    const obj3 = { duration };
+    const withDelayResult = withDelay(duration, obj2.withTiming(0.5, obj3));
+    const obj4 = { duration, easing: Easing.out(ReanimatedRexport.Easing.ease) };
+    const withTiming = timing.withTiming;
+    timing;
+    Easing = ReanimatedRexport.Easing;
+    const withSequenceResult = withSequence(withTimingResult, withDelayResult, withTiming(1, obj4));
+    const withSequence2 = ReanimatedRexport.withSequence;
+    ReanimatedRexport;
+    const obj5 = timing;
+    const withTimingResult1 = obj5.withTiming(1, { duration: 0 });
+    const withDelay2 = ReanimatedRexport.withDelay;
+    ReanimatedRexport;
+    const obj6 = { duration, easing: Easing2.out(ReanimatedRexport.Easing.ease) };
+    const withTiming2 = timing.withTiming;
+    timing;
+    Easing2 = ReanimatedRexport.Easing;
     let num = 1;
+    const withDelay2Result = withDelay2(duration, withTiming2(1.5, obj6));
+    const withTiming3 = timing.withTiming;
+    timing;
     if (!stateFromStores2) {
       num = duration;
     }
-    const obj14 = { duration: num, easing: null };
-    const Easing3 = ReanimatedRexport.Easing;
-    obj14.easing = Easing3.out(ReanimatedRexport.Easing.ease);
-    const obj15 = { opacity: withSequenceResult, transform: null };
-    const obj16 = { rotate: null };
-    const withSequenceResult1 = obj8.withSequence(withTimingResult1, withDelayResult1, timing.withTiming(1, obj14));
-    const tmpResult = ReanimatedRexport;
+    const obj7 = { duration: num, easing: Easing3.out(ReanimatedRexport.Easing.ease) };
+    Easing3 = ReanimatedRexport.Easing;
+    const obj8 = { opacity: withSequenceResult, transform: items };
+    const obj9 = { rotate: withSequence3(withTimingResult2, withDelay3Result, tmpResult8.withTiming("-5deg", { duration })) };
+    const withSequence2Result = withSequence2(withTimingResult1, withDelay2Result, withTiming3(1, obj7));
+    withSequence3 = ReanimatedRexport.withSequence;
+    ReanimatedRexport;
     const tmpResult5 = timing;
-    const withTimingResult2 = timing.withTiming("0deg", { duration: 0 });
-    const tmpResult6 = ReanimatedRexport;
+    withTimingResult2 = tmpResult5.withTiming("0deg", { duration: 0 });
+    const withDelay3 = ReanimatedRexport.withDelay;
+    ReanimatedRexport;
     const tmpResult7 = timing;
-    const withDelayResult2 = tmpResult6.withDelay(duration, timing.withTiming("-2deg", { duration }));
-    obj16.rotate = tmpResult.withSequence(withTimingResult2, withDelayResult2, timing.withTiming("-5deg", { duration }));
-    const items = [obj16, { scale: withSequenceResult1 }];
-    obj15.transform = items;
-    return obj15;
+    withDelay3Result = withDelay3(duration, tmpResult7.withTiming("-2deg", { duration }));
+    items = [obj9, { scale: withSequence2Result }];
+    tmpResult8 = timing;
+    return obj8;
   };
-  const tmp2Result7 = guildId(onClose[13]);
-  fn.__closure = { withSequence: guildId(onClose[21]).withSequence, withTiming: guildId(onClose[22]).withTiming, withDelay: guildId(onClose[21]).withDelay, ANIMATION_DURATION: stateFromStores2, Easing: guildId(onClose[21]).Easing, useReducedMotion: stateFromStores2 };
+  let obj8 = { withSequence: tmp2(tmp3[21]).withSequence, withTiming: tmp2(tmp3[22]).withTiming, withDelay: tmp2(tmp3[21]).withDelay, ANIMATION_DURATION: stateFromStores2, Easing: tmp2(tmp3[21]).Easing, useReducedMotion: stateFromStores2 };
+  fn.__closure = obj8;
   fn.__workletHash = 1704563603649;
   fn.__initData = __initData;
   if (null != stateFromStores) {
     if (null != stateFromStores1) {
       const diff = stateFromStoresArray.length - 3;
-      let obj9 = { style: tmp.screen, children: null };
-      let tmp20 = null;
+      let obj9 = { style: tmp.screen, children: items10 };
+      let tmp21 = null;
       if (null != guildSplashURL) {
-        let obj10 = { source: null, style: null };
-        let obj11 = { uri: guildSplashURL };
-        obj10.source = obj11;
-        obj10.style = tmp.backgroundImage;
-        tmp20 = isScreenReaderEnabled(tmp7(tmp3[23]), obj10);
+        const obj10 = { source: obj11, style: tmp.backgroundImage };
+        obj11 = { uri: guildSplashURL };
+        tmp21 = isScreenReaderEnabled(tmp7(tmp3[23]), obj10);
       }
-      const items10 = [tmp20, ];
+      items10 = [tmp21, ];
       const items11 = [tmp.container, ];
       let prop = null;
+      const SafeAreaPaddingView = tmp2(tmp3[32]).SafeAreaPaddingView;
       if (null == guildSplashURL) {
         prop = tmp.containerWithoutSplash;
       }
-      let obj12 = { bottom: true, style: null, children: null };
       items11[1] = prop;
-      obj12.style = items11;
-      let obj13 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xxl/extrabold", color: null, children: null };
+      const obj12 = { bottom: true, style: items11, children: ref(navigation, obj33) };
       let str = "text-overlay-light";
-      let str2 = "text-overlay-light";
+      const obj13 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xxl/extrabold", color: str2, children: intl.string(guildId(tmp3[24]).t.PFWIYe) };
+      str2 = "text-overlay-light";
+      const Text = tmp2(tmp3[25]).Text;
       if (null == guildSplashURL) {
         str2 = "mobile-text-heading-primary";
       }
-      obj13.color = str2;
-      const intl = tmp2(tmp3[24]).intl;
-      obj13.children = intl.string(tmp2(tmp3[24]).t.PFWIYe);
-      const items12 = [isScreenReaderEnabled(tmp2(tmp3[25]).Text, obj13), , , ];
-      let obj14 = { style: tmp.subtitle, accessibilityRole: "header", variant: "text-md/medium", color: null, children: null };
+      intl = tmp2(tmp3[24]).intl;
+      const items12 = [isScreenReaderEnabled(Text, obj13), , , ];
+      const obj14 = { style: tmp.subtitle, accessibilityRole: "header", variant: "text-md/medium", color: str, children: intl2.string(guildId(tmp3[24]).t.og4NNr) };
+      const Text2 = tmp2(tmp3[25]).Text;
       if (null == guildSplashURL) {
         str = "text-muted";
       }
-      obj14.color = str;
-      const intl2 = tmp2(tmp3[24]).intl;
-      obj14.children = intl2.string(tmp2(tmp3[24]).t.og4NNr);
-      items12[1] = isScreenReaderEnabled(tmp2(tmp3[25]).Text, obj14);
-      let obj15 = { style: tmp.card, children: null };
-      let obj16 = { size: tmp2(tmp3[26]).AvatarSizes.XXLARGE, user: stateFromStores, guildId, animate: false };
-      const items13 = [isScreenReaderEnabled(tmp2(tmp3[26]).Avatar, obj16), , , , ];
+      intl2 = tmp2(tmp3[24]).intl;
+      items12[1] = isScreenReaderEnabled(Text2, obj14);
+      const obj15 = { style: tmp.card, children: items13 };
+      const obj16 = { size: guildId(tmp3[26]).AvatarSizes.XXLARGE, user: stateFromStores, guildId, animate: false };
+      const Avatar = tmp2(tmp3[26]).Avatar;
+      items13 = [isScreenReaderEnabled(Avatar, obj16), , , , ];
       const obj17 = { style: tmp.username, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: stateFromStores.username };
-      items13[1] = isScreenReaderEnabled(tmp2(tmp3[25]).Text, obj17);
-      let tmp21Result = null;
+      items13[1] = isScreenReaderEnabled(guildId(tmp3[25]).Text, obj17);
+      let tmp22Result = null;
       if (numSharedRoleMembers > 0) {
-        const obj18 = { style: tmp.rolesHeader, variant: "text-sm/normal", color: "text-muted", children: null };
-        const intl3 = tmp2(tmp3[24]).intl;
-        const obj19 = { numSharedRoleMembers };
-        obj18.children = intl3.format(tmp2(tmp3[24]).t.l1Jc1n, obj19);
-        tmp21Result = tmp21(tmp2(tmp3[25]).Text, obj18);
+        const obj18 = { style: tmp.rolesHeader, variant: "text-sm/normal", color: "text-muted", children: intl3.format(guildId(tmp3[24]).t.l1Jc1n, obj19) };
+        const Text3 = tmp2(tmp3[25]).Text;
+        intl3 = tmp2(tmp3[24]).intl;
+        obj19 = { numSharedRoleMembers };
+        tmp22Result = tmp22(Text3, obj18);
       }
-      items13[2] = tmp21Result;
-      const obj20 = { style: tmp.roles, children: null };
+      items13[2] = tmp22Result;
+      const obj20 = { style: tmp.roles, children: items14 };
       const substr = stateFromStoresArray.slice(0, 3);
-      const items14 = [
+      items14 = [
         substr.map((role) => {
-              const obj = { style: role.role, children: v65535(UserProfileRolesCard.RoleItem, { role, guildId: stateFromStores1.id, disableInteraction: true }) };
-              return v65535(React4, obj, role.id);
+              let obj2;
+              const obj = { style: role.role, children: authStore(UserProfileRolesCard.RoleItem, obj2) };
+              obj2 = { role, guildId: stateFromStores1.id, disableInteraction: true };
+              return authStore(React3, obj, role.id);
             }),
 
       ];
-      let tmp21Result3 = null;
+      let tmp22Result3 = null;
       if (0 < diff) {
-        const obj21 = { style: null, children: null };
-        const items15 = [tmp.roleOverflow, { backgroundColor: rolePillBackgroundColor }];
-        obj21.style = items15;
-        const obj22 = { variant: "heading-deprecated-12/semibold", color: "mobile-text-heading-primary", children: null };
+        const obj21 = { style: items15, children: isScreenReaderEnabled(Text4, obj22) };
+        items15 = [tmp.roleOverflow, { backgroundColor: rolePillBackgroundColor }];
         const _HermesInternal = HermesInternal;
-        obj22.children = "+" + diff;
-        obj21.children = tmp21(tmp2(tmp3[25]).Text, obj22);
-        tmp21Result3 = tmp21(tmp32, obj21);
+        obj22 = { variant: "heading-deprecated-12/semibold", color: "mobile-text-heading-primary", children: "+" + diff };
+        Text4 = tmp2(tmp3[25]).Text;
+        tmp22Result3 = tmp22(tmp33, obj21);
       }
-      items14[1] = tmp21Result3;
-      obj20.children = items14;
+      items14[1] = tmp22Result3;
       items13[3] = ref(navigation, obj20);
-      const obj23 = { style: null, children: null };
-      const items16 = [tmp.animation, tmp18];
-      obj23.style = items16;
-      const obj24 = { guild: stateFromStores1, size: tmp2(tmp3[28]).GuildIconSizes.LARGE };
-      const items17 = [isScreenReaderEnabled(tmp7(tmp3[28]), obj24), , ];
-      const obj25 = { style: tmp.animationText, children: null };
-      const obj26 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: null };
-      const intl4 = tmp2(tmp3[24]).intl;
-      const obj27 = { guildName: stateFromStores1.name };
-      obj26.children = intl4.format(tmp2(tmp3[24]).t.FXREhf, obj27);
-      const items18 = [isScreenReaderEnabled(tmp2(tmp3[25]).Text, obj26), ];
-      const obj28 = { variant: "text-xs/normal", color: "text-muted", children: null };
-      const tmp7Result3 = tmp7(tmp3[28]);
+      const obj23 = { style: items16, children: items17 };
+      items16 = [tmp.animation, tmp19];
+      const View = tmp7(tmp3[21]).View;
+      const obj24 = { guild: stateFromStores1, size: guildId(tmp3[28]).GuildIconSizes.LARGE };
+      const tmp7Result3 = completeOnboarding(tmp3[28]);
+      items17 = [isScreenReaderEnabled(tmp7Result3, obj24), , ];
+      const obj25 = { style: tmp.animationText, children: items18 };
+      const obj26 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: intl4.format(guildId(tmp3[24]).t.FXREhf, obj27) };
+      const Text5 = tmp2(tmp3[25]).Text;
+      intl4 = tmp2(tmp3[24]).intl;
+      obj27 = { guildName: stateFromStores1.name };
+      items18 = [isScreenReaderEnabled(Text5, obj26), ];
+      const obj28 = { variant: "text-xs/normal", color: "text-muted", children: "" + obj32.format("LL") };
+      const Text6 = tmp2(tmp3[25]).Text;
       const _HermesInternal2 = HermesInternal;
-      obj28.children = "" + tmp7(tmp3[29])().format("LL");
-      items18[1] = isScreenReaderEnabled(tmp2(tmp3[25]).Text, obj28);
-      obj25.children = items18;
+      obj32 = completeOnboarding(tmp3[29])();
+      items18[1] = isScreenReaderEnabled(Text6, obj28);
       items17[1] = ref(navigation, obj25);
-      const obj29 = { source: null, style: null };
-      const obj33 = tmp7(tmp3[29])();
-      obj29.source = tmp7(tmp3[30]);
-      obj29.style = tmp.wave;
-      items17[2] = isScreenReaderEnabled(tmp7(tmp3[23]), obj29);
-      obj23.children = items17;
-      items13[4] = ref(tmp7(tmp3[21]).View, obj23);
-      obj15.children = items13;
+      const obj29 = { source: completeOnboarding(tmp3[30]), style: tmp.wave };
+      const tmp7Result4 = completeOnboarding(tmp3[23]);
+      items17[2] = isScreenReaderEnabled(tmp7Result4, obj29);
+      items13[4] = ref(View, obj23);
       items12[2] = ref(navigation, obj15);
-      let tmp21Result4 = null;
+      let tmp22Result4 = null;
       if (isScreenReaderEnabled) {
-        const obj30 = { style: tmp.getStartedButton, children: null };
-        const obj31 = { variant: "primary", size: "md", grow: true, text: null, onPress: null };
-        const intl5 = tmp2(tmp3[24]).intl;
-        obj31.text = intl5.string(tmp2(tmp3[24]).t.LhlgY9);
-        obj31.onPress = onClose;
-        obj30.children = tmp21(tmp2(tmp3[31]).Button, obj31);
-        tmp21Result4 = tmp21(tmp32, obj30);
+        const obj30 = { style: tmp.getStartedButton, children: isScreenReaderEnabled(Button, obj31) };
+        obj31 = { variant: "primary", size: "md", grow: true, text: intl5.string(guildId(tmp3[24]).t.LhlgY9), onPress: onClose };
+        Button = tmp2(tmp3[31]).Button;
+        intl5 = tmp2(tmp3[24]).intl;
+        tmp22Result4 = tmp22(tmp33, obj30);
       }
-      const obj32 = { children: null };
-      items12[3] = tmp21Result4;
-      obj32.children = items12;
-      obj12.children = ref(navigation, obj32);
-      items10[1] = isScreenReaderEnabled(tmp2(tmp3[32]).SafeAreaPaddingView, obj12);
-      obj9.children = items10;
+      obj33 = { children: items12 };
+      items12[3] = tmp22Result4;
+      items10[1] = isScreenReaderEnabled(SafeAreaPaddingView, obj12);
       return ref(navigation, obj9);
     }
   }
   return null;
 });
+const result = size.fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingCompleted.tsx");
+
+export default tmp5;

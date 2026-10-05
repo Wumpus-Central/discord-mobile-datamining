@@ -1,37 +1,37 @@
 // === Module 17973: GuildSettingsRoleSubscriptionsPayments ===
 
 // Module 17973 (GuildSettingsRoleSubscriptionsPayments)
-import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
+import intl3 from "intl" /* 1126 */;
 import UnavailableNoticeDefault from "UnavailableNotice" /* 16490 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsPayments.tsx");
-
-export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(1);
+const jsx = Fragment.jsx;
+const forwardRef = react.forwardRef;
+const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let first;
+  const obj = react2;
+  const cResult = obj.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { title: null, description: null, brightTitle: true };
-    const intl = util.intl;
-    obj2.title = intl.string(util.t.qAMb9K);
-    const intl2 = util.intl;
-    obj2.description = intl2.string(util.t.pRuzXJ);
-    const tmp8 = jsx(UnavailableNoticeDefault, { title: null, description: null, brightTitle: true });
+    UnavailableNoticeDefault;
+    const intl = intl3.intl;
+    const intl2 = intl3.intl;
+    const tmp8 = <tmp7 title={intl.string(intl3.t.qAMb9K)} description={intl2.string(intl3.t.pRuzXJ)} brightTitle />;
     cResult[0] = tmp8;
-    let first = tmp8;
+    first = tmp8;
   } else {
     first = cResult[0];
   }
   return first;
 }) : (() => {
-  const obj = { title: null, description: null, brightTitle: true };
-  const intl = util.intl;
-  obj.title = intl.string(util.t.qAMb9K);
-  const intl2 = util.intl;
-  obj.description = intl2.string(util.t.pRuzXJ);
-  return jsx(UnavailableNoticeDefault, { title: null, description: null, brightTitle: true });
+  UnavailableNoticeDefault;
+  const intl = intl3.intl;
+  const intl2 = intl3.intl;
+  return <tmp title={intl.string(intl3.t.qAMb9K)} description={intl2.string(intl3.t.pRuzXJ)} brightTitle />;
 }));
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsPayments.tsx");
+
+export default forwardRefResult;

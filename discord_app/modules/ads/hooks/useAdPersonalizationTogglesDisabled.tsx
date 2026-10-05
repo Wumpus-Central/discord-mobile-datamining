@@ -1,17 +1,18 @@
 // === Module 15765: useAdPersonalizationTogglesDisabled ===
 
 // Module 15765 (useAdPersonalizationTogglesDisabled)
-import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
+import get_initialized from "get initialized" /* 504 */;
+import react from "react" /* 576 */;
 import AdPersonalizationStore from "AdPersonalizationStore" /* 13495 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/ads/hooks/useAdPersonalizationTogglesDisabled.tsx");
-
-export const useAdPersonalizationTogglesDisabled = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(2);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let tmp4;
+  let tmp5;
+  let togglesDisabled;
+  const obj = react;
+  const cResult = obj.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AdPersonalizationStore];
     const fn = function t() {
@@ -24,8 +25,14 @@ export const useAdPersonalizationTogglesDisabled = ReactCompilerGating.isReactCo
   } else {
     [tmp4, tmp5] = cResult;
   }
-  return initialize.useStateFromStores(tmp4, tmp5);
+  const tmpResult = get_initialized;
+  return tmpResult.useStateFromStores(tmp4, tmp5);
 }) : (() => {
+  let togglesDisabled;
   const items = [AdPersonalizationStore];
-  return initialize.useStateFromStores(items, () => togglesDisabled.isTogglesDisabled());
+  const obj = get_initialized;
+  return obj.useStateFromStores(items, () => togglesDisabled.isTogglesDisabled());
 });
+const result = size.fileFinishedImporting("modules/ads/hooks/useAdPersonalizationTogglesDisabled.tsx");
+
+export const useAdPersonalizationTogglesDisabled = tmp2;

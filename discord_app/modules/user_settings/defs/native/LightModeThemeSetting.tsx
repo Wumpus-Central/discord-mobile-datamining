@@ -1,18 +1,29 @@
 // === Module 15123: LightModeThemeSetting ===
 
 // Module 15123 (LightModeThemeSetting)
-import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
+import get_initialized from "get initialized" /* 504 */;
+import react from "react" /* 576 */;
+import Constants from "Constants" /* 1085 */;
+import intl2 from "intl" /* 1126 */;
+import ThemeConstants from "ThemeConstants" /* 1196 */;
+import SettingsConstants from "SettingsConstants" /* 7634 */;
 import useSyncedModeThemeName from "useSyncedModeThemeName" /* 15124 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import SettingBuilders from "SettingBuilders" /* 11129 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const SystemTheme = fn(1196).SystemTheme;
-const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11129);
+const require = globalThis.__r;
+
+const SystemTheme = ThemeConstants.SystemTheme;
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+const UserSettingsSections = Constants.UserSettingsSections;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(2);
+  let sameAsDeviceThemeEnabled;
+  let tmp4;
+  let tmp5;
+  const obj = react;
+  const cResult = obj.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ThemeStore];
     const fn = function n() {
@@ -25,47 +36,33 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  return initialize.useStateFromStores(tmp4, tmp5);
+  const tmpResult = get_initialized;
+  return tmpResult.useStateFromStores(tmp4, tmp5);
 }) : (() => {
+  let sameAsDeviceThemeEnabled;
   const items = [ThemeStore];
-  return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
+  const obj = get_initialized;
+  return obj.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
 });
-const route = SettingBuilders.createRoute({
+let obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t.NoFvjZ);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.NoFvjZ);
   },
-  parent: fn(7634).MobileUserSettings.APPEARANCE,
-  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-    const cResult = c.c(2);
-    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const items = [ThemeStore];
-      const fn = function n() {
-        return sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled();
-      };
-      cResult[0] = items;
-      cResult[1] = fn;
-      tmp4 = items;
-      tmp5 = fn;
-    } else {
-      [tmp4, tmp5] = cResult;
-    }
-    return initialize.useStateFromStores(tmp4, tmp5);
-  }) : (() => {
-    const items = [ThemeStore];
-    return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
-  }),
+  parent: MobileUserSettings.APPEARANCE,
+  usePredicate: tmp2,
   useTrailing() {
-    return useSyncedModeThemeName.useSyncedModeThemeName(SystemTheme.LIGHT);
+    const obj = useSyncedModeThemeName;
+    return obj.useSyncedModeThemeName(SystemTheme.LIGHT);
   },
   screen: {
-    route: fn(1085).UserSettingsSections.APPEARANCE_LIGHT_MODE_THEME_PICKER,
+    route: UserSettingsSections.APPEARANCE_LIGHT_MODE_THEME_PICKER,
     getComponent() {
       return require("SettingsAppearanceLightModeThemePickerScreen").default;
     }
   }
-});
-const size = fn(2);
+};
+const route = SettingBuilders.createRoute(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/LightModeThemeSetting.tsx");
 
 export default route;

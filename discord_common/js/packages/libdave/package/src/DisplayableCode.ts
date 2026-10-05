@@ -8,14 +8,20 @@ const result = size.fileFinishedImporting("../discord_common/js/packages/libdave
 export const generateDisplayableCode = function generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize) {
   if (toByteArrayResult.byteLength < desiredLength) {
     const _Error4 = Error;
+    const self7 = this;
+    const self8 = this;
     const error = new Error("data.byteLength must be greater than or equal to desiredLength");
     throw error;
   } else if (desiredLength % chunkSize != 0) {
     const _Error3 = Error;
+    const self5 = this;
+    const self6 = this;
     const error1 = new Error("desiredLength must be a multiple of groupSize");
     throw error1;
   } else if (chunkSize > 8) {
     const _Error2 = Error;
+    const self3 = this;
+    const self4 = this;
     const error2 = new Error("groupSize must be less than or equal to 8");
     throw error2;
   } else {
@@ -41,13 +47,13 @@ export const generateDisplayableCode = function generateDisplayableCode(toByteAr
             continue;
           }
           let _Error = Error;
-          let tmp10 = new.target;
+          let self = this;
           let str4 = "Out of bounds access from data array";
-          let tmp11 = new.target;
+          let self2 = this;
           let error3 = new Error("Out of bounds access from data array");
           throw error3;
         }
-        let str = tmp4 % tmp32;
+        let str = tmp4 % tmp24;
         let str1 = str.toString();
         str2 = str2 + str1.padStart(chunkSize, "0");
         num = num + chunkSize;

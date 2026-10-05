@@ -1,74 +1,90 @@
 // === Module 9092: StreamTile ===
 
 // Module 9092 (StreamTile)
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
+import Constants from "Constants" /* 1085 */;
 import native from "native" /* 1188 */;
 import Text_Text from "Text/Text" /* 4886 */;
+import Constants2 from "Constants" /* 4915 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5042 */;
 import Pressables from "Pressables" /* 5909 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
 import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 9090 */;
 import useVideoStreamErrorDefault from "useVideoStreamError" /* 9093 */;
+import VideoEmptyStateDefault from "VideoEmptyState" /* 9096 */;
 import StreamQualityLiveIndicatorDefault from "StreamQualityLiveIndicator" /* 9100 */;
 import VideoRenderer from "VideoRenderer" /* 9105 */;
-import _modDef9118 from "module_9118" /* 9118 */;
-import noop from "module_19" /* 19 */;
+import AssetRegistryDefault from "AssetRegistry" /* 9118 */;
+import react from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import ColorUtils_mod from "ColorUtils" /* 4727 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size_mod from "module_2" /* 2 */;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const ApplicationStreamStates = fn(1085).ApplicationStreamStates;
-const MediaEngineContextTypes = fn(4915).MediaEngineContextTypes;
-const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4890);
-let obj = { container: { flex: 1, alignItems: "center", justifyContent: "center", overflow: "hidden", width: "100%", backgroundColor: nativeDefault.colors.BLACK }, screenMessageContainer: null, screenMessageText: null, screenMessageSubtext: null, statusWrapper: null, liveTag: null };
-let obj4 = {};
+const VideoRendererDefault = VideoRenderer;
+let importDefault, participant;
+
+let ColorUtils;
+let StyleSheet;
+let c10;
+let closure_12;
+let closure_4;
+let obj2;
+let obj3;
+let obj4;
+let size;
+let unpackModuleId;
+({ View: closure_4, StyleSheet } = react_native);
+const ApplicationStreamStates = Constants.ApplicationStreamStates;
+const MediaEngineContextTypes = Constants2.MediaEngineContextTypes;
+({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { container: obj2, screenMessageContainer: obj3, screenMessageText: { lineHeight: 18 }, screenMessageSubtext: obj4, statusWrapper: size, liveTag: { position: "absolute", right: 8, top: 8 } };
+obj2 = { flex: 1, alignItems: "center", justifyContent: "center", overflow: "hidden", width: "100%", backgroundColor: nativeDefault.colors.BLACK };
+createStyles = createStyles.createStyles;
+obj3 = { flex: 1, padding: 8, alignItems: "center", justifyContent: "center", backgroundColor: ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7) };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj4.flex = 1;
-obj4.padding = 8;
-obj4.alignItems = "center";
-obj4.justifyContent = "center";
-let ColorUtils = fn(4727);
-obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7);
-obj.screenMessageContainer = obj4;
-obj.screenMessageText = { lineHeight: 18 };
-let obj3 = { flex: 1, alignItems: "center", justifyContent: "center", overflow: "hidden", width: "100%", backgroundColor: nativeDefault.colors.BLACK };
-obj.screenMessageSubtext = { color: nativeDefault.unsafe_rawColors.PRIMARY_300, fontSize: 14, lineHeight: 18, textAlign: "center" };
-let size = { position: "absolute", bottom: 8, right: 8, backgroundColor: null, borderRadius: null, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
-ColorUtils = fn(4727);
-size.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.5);
-size.borderRadius = nativeDefault.radii.md;
-obj.statusWrapper = size;
-obj.liveTag = { position: "absolute", right: 8, top: 8 };
-let closure_13 = createStyles.createStyles(obj);
-let ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(10);
+ColorUtils = ColorUtils_mod;
+obj4 = { color: nativeDefault.unsafe_rawColors.PRIMARY_300, fontSize: 14, lineHeight: 18, textAlign: "center" };
+size = { position: "absolute", bottom: 8, right: 8, backgroundColor: ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.5), borderRadius: nativeDefault.radii.md, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
+ColorUtils = ColorUtils_mod;
+let closure_13 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let items;
+  let subtext;
+  let title;
+  const obj = react2;
+  const cResult = obj.c(10);
   ({ title, subtext } = arg0);
   const tmp4 = closure_13();
   if (cResult[0] === tmp4.screenMessageText) {
+    let tmp5;
     if (cResult[1] === title) {
-      let tmp5 = cResult[2];
+      tmp5 = cResult[2];
     }
     if (cResult[3] === tmp4.screenMessageSubtext) {
+      let tmp7;
       if (cResult[4] === subtext) {
-        let tmp7 = cResult[5];
+        tmp7 = cResult[5];
       }
       if (cResult[6] === tmp4.screenMessageContainer) {
         if (cResult[7] === tmp5) {
+          let tmp10;
           if (cResult[8] === tmp7) {
-            let tmp10 = cResult[9];
+            tmp10 = cResult[9];
           }
           return tmp10;
         }
       }
-      const obj2 = { style: tmp4.screenMessageContainer, children: null };
-      const items = [tmp5, tmp7];
-      obj2.children = items;
-      const tmp13 = closure_1_11(React4, obj2);
+      const obj2 = { style: tmp4.screenMessageContainer, children: items };
+      items = [tmp5, tmp7];
+      const tmp13 = unpackModuleId(React3, obj2);
       cResult[6] = tmp4.screenMessageContainer;
       cResult[7] = tmp5;
       cResult[8] = tmp7;
@@ -78,37 +94,53 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     let tmp8 = null;
     if (null != subtext) {
       const obj3 = { style: tmp4.screenMessageSubtext, children: subtext };
-      tmp8 = v65535(native.LegacyText, obj3);
+      tmp8 = authStore(native.LegacyText, obj3);
     }
     cResult[3] = tmp4.screenMessageSubtext;
     cResult[4] = subtext;
     cResult[5] = tmp8;
     tmp7 = tmp8;
   }
-  const tmp6 = v65535(Text_Text.Text, { style: tmp4.screenMessageText, variant: "text-md/semibold", color: "text-overlay-light", children: title });
+  const obj4 = { style: tmp4.screenMessageText, variant: "text-md/semibold", color: "text-overlay-light", children: title };
+  const tmp6 = authStore(Text_Text.Text, obj4);
   cResult[0] = tmp4.screenMessageText;
   cResult[1] = title;
   cResult[2] = tmp6;
   tmp5 = tmp6;
-  const obj4 = { style: tmp4.screenMessageText, variant: "text-md/semibold", color: "text-overlay-light", children: title };
-}) : ((children) => {
-  const subtext = children.subtext;
+}) : ((subtext) => {
+  let items;
+  subtext = subtext.subtext;
+  const title = subtext.title;
   const tmp = closure_13();
-  const obj = { style: tmp.screenMessageContainer, children: null };
-  const items = [v65535(Text_Text.Text, { style: tmp.screenMessageText, variant: "text-md/semibold", color: "text-overlay-light", children: children.title }), ];
+  const obj = { style: tmp.screenMessageContainer, children: items };
+  items = [, ];
+  const obj2 = { style: tmp.screenMessageText, variant: "text-md/semibold", color: "text-overlay-light", children: title };
+  items[0] = authStore(Text_Text.Text, obj2);
   let tmp4Result = null;
   if (null != subtext) {
     const obj3 = { style: tmp.screenMessageSubtext, children: subtext };
-    tmp4Result = v65535(native.LegacyText, obj3);
+    tmp4Result = authStore(native.LegacyText, obj3);
   }
   items[1] = tmp4Result;
-  obj.children = items;
-  return closure_1_11(React4, obj);
+  return unpackModuleId(React3, obj);
 });
-let closure_14 = tmp5;
-ReactCompilerGating = fn(558);
-let closure_15 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((participant) => {
-  const cResult = participant(576).c(38);
+let closure_14 = tmp7;
+const memo = react.memo;
+ReactCompilerGating = ReactCompilerGating_mod;
+let closure_15 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((participant) => {
+  let first;
+  let gestureEnabled;
+  let intl3;
+  let liveTag;
+  let removeEmptyStateButton;
+  let removeEmptyStateImage;
+  let resizeMode;
+  let streamId;
+  let tmp7;
+  let tmp9Result5;
+  let user;
+  let obj = participant(576);
+  const cResult = obj.c(38);
   participant = participant.participant;
   ({ streamId, user, resizeMode, gestureEnabled, removeEmptyStateButton, removeEmptyStateImage } = participant);
   const tmp4 = closure_13();
@@ -116,7 +148,7 @@ let closure_15 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((part
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ApplicationStreamingStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -126,73 +158,76 @@ let closure_15 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((part
     };
     cResult[1] = participant.id;
     cResult[2] = fn;
-    let tmp7 = fn;
+    tmp7 = fn;
   } else {
     tmp7 = cResult[2];
   }
-  const obj = participant(576);
-  const stateFromStores = participant(504).useStateFromStores(first, tmp7);
+  const tmpResult = participant(504);
+  const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
   const tmp10 = useVideoStreamErrorDefault(MediaEngineContextTypes.STREAM, participant.user.id);
   if (null != stateFromStores) {
-    state = stateFromStores.state;
+    const state = stateFromStores.state;
     if (ApplicationStreamStates.FAILED === state) {
       if (cResult[3] === stateFromStores) {
         if (cResult[4] === removeEmptyStateButton) {
+          let tmp40;
           if (cResult[5] === removeEmptyStateImage) {
-            let tmp41 = cResult[6];
+            tmp40 = cResult[6];
           }
-          return tmp41;
+          return tmp40;
         }
       }
-      const obj2 = { stream: stateFromStores, removeCloseButton: removeEmptyStateButton, removeSplashImage: removeEmptyStateImage, type: tmp(9096).VideoEmptyTypes.STREAM_FAILED, style: StyleSheet.absoluteFill };
-      const tmp45 = closure_10(tmp9(9096), obj2);
+      const obj2 = { stream: stateFromStores, removeCloseButton: removeEmptyStateButton, removeSplashImage: removeEmptyStateImage, type: participant(9096).VideoEmptyTypes.STREAM_FAILED, style: StyleSheet.absoluteFill };
+      const tmp9Result = VideoEmptyStateDefault;
+      const tmp44 = closure_10(tmp9Result, obj2);
       cResult[3] = stateFromStores;
       cResult[4] = removeEmptyStateButton;
       cResult[5] = removeEmptyStateImage;
-      cResult[6] = tmp45;
-      tmp41 = tmp45;
-      const tmp9Result = tmp9(9096);
+      cResult[6] = tmp44;
+      tmp40 = tmp44;
     } else if (ApplicationStreamStates.ENDED === state) {
       if (cResult[7] === stateFromStores) {
         if (cResult[8] === removeEmptyStateButton) {
+          let tmp35;
           if (cResult[9] === removeEmptyStateImage) {
-            let tmp36 = cResult[10];
+            tmp35 = cResult[10];
           }
-          return tmp36;
+          return tmp35;
         }
       }
-      const obj3 = { stream: stateFromStores, removeCloseButton: removeEmptyStateButton, removeSplashImage: removeEmptyStateImage, type: tmp(9096).VideoEmptyTypes.STREAM_ENDED, style: StyleSheet.absoluteFill };
-      const tmp40 = closure_10(tmp9(9096), obj3);
+      const obj3 = { stream: stateFromStores, removeCloseButton: removeEmptyStateButton, removeSplashImage: removeEmptyStateImage, type: participant(9096).VideoEmptyTypes.STREAM_ENDED, style: StyleSheet.absoluteFill };
+      const tmp9Result4 = VideoEmptyStateDefault;
+      const tmp39 = closure_10(tmp9Result4, obj3);
       cResult[7] = stateFromStores;
       cResult[8] = removeEmptyStateButton;
       cResult[9] = removeEmptyStateImage;
-      cResult[10] = tmp40;
-      tmp36 = tmp40;
-      const tmp9Result4 = tmp9(9096);
-    } else if (ApplicationStreamStates.RECONNECTING === state) {
-      const _Symbol = Symbol;
-      if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj4 = { title: null };
-        const intl3 = tmp(1126).intl;
-        obj4.title = intl3.string(tmp(1126).t["pdFFK+"]);
-        const tmp24 = closure_10(closure_14, obj4);
-        cResult[11] = tmp24;
-      }
+      cResult[10] = tmp39;
+      tmp35 = tmp39;
     } else {
-      if (ApplicationStreamStates.PAUSED === state) {
+      if (ApplicationStreamStates.RECONNECTING === state) {
+        const _Symbol = Symbol;
+        if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+          const obj4 = { title: intl3.string(participant(1126).t["pdFFK+"]) };
+          intl3 = tmp(1126).intl;
+          const tmp24 = closure_10(closure_14, obj4);
+          cResult[11] = tmp24;
+        }
+      } else if (ApplicationStreamStates.PAUSED === state) {
+        let tmp12;
         const _Symbol2 = Symbol;
         if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
           const intl = tmp(1126).intl;
-          const stringResult = intl.string(tmp(1126).t["5q17w5"]);
+          const stringResult = intl.string(participant(1126).t["5q17w5"]);
           cResult[12] = stringResult;
-          let tmp12 = stringResult;
+          tmp12 = stringResult;
         } else {
           tmp12 = cResult[12];
         }
         if (cResult[13] === stateFromStores.channelId) {
           if (cResult[14] === stateFromStores.guildId) {
+            let tmp14;
             if (cResult[15] === user) {
-              let tmp14 = cResult[16];
+              tmp14 = cResult[16];
             }
             if (cResult[17] !== tmp14) {
               const obj5 = { title: tmp12, subtext: tmp14 };
@@ -203,204 +238,184 @@ let closure_15 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((part
           }
         }
         const intl2 = tmp(1126).intl;
-        const obj6 = { username: tmp9(5042).getName(stateFromStores.guildId, stateFromStores.channelId, user) };
-        const formatToPlainStringResult = intl2.formatToPlainString(tmp(1126).t.meVVlb, obj6);
+        const formatToPlainString = intl2.formatToPlainString;
+        const obj6 = { username: tmp9Result5.getName(stateFromStores.guildId, stateFromStores.channelId, user) };
+        const meVVlb = tmp(1126).t.meVVlb;
+        tmp9Result5 = NicknameUtilsDefault;
+        const formatToPlainStringResult = formatToPlainString(meVVlb, obj6);
         cResult[13] = stateFromStores.channelId;
         cResult[14] = stateFromStores.guildId;
         cResult[15] = user;
         cResult[16] = formatToPlainStringResult;
         tmp14 = formatToPlainStringResult;
-        const tmp9Result5 = tmp9(5042);
       }
       if (null != tmp10) {
         if (cResult[19] === stateFromStores) {
           if (cResult[20] === removeEmptyStateButton) {
             if (cResult[21] === removeEmptyStateImage) {
+              let tmp30;
               if (cResult[22] === tmp10) {
-                let tmp31 = cResult[23];
+                tmp30 = cResult[23];
               }
-              return tmp31;
+              return tmp30;
             }
           }
         }
-        const obj7 = { stream: stateFromStores, removeCloseButton: removeEmptyStateButton, removeSplashImage: removeEmptyStateImage, type: tmp(9096).VideoEmptyTypes.STREAM_FAILED, style: StyleSheet.absoluteFill, avError: tmp10 };
-        const tmp35 = closure_10(tmp9(9096), obj7);
+        const obj7 = { stream: stateFromStores, removeCloseButton: removeEmptyStateButton, removeSplashImage: removeEmptyStateImage, type: participant(9096).VideoEmptyTypes.STREAM_FAILED, style: StyleSheet.absoluteFill, avError: tmp10 };
+        const tmp9Result6 = VideoEmptyStateDefault;
+        const tmp34 = closure_10(tmp9Result6, obj7);
         cResult[19] = stateFromStores;
         cResult[20] = removeEmptyStateButton;
         cResult[21] = removeEmptyStateImage;
         cResult[22] = tmp10;
-        cResult[23] = tmp35;
-        tmp31 = tmp35;
-        const tmp9Result6 = tmp9(9096);
+        cResult[23] = tmp34;
+        tmp30 = tmp34;
       } else {
+        const ownerId = stateFromStores.ownerId;
         if (cResult[24] === participant) {
+          let tmp25;
+          let REMOTE_STREAM;
           if (cResult[25] === tmp4.liveTag) {
-            let tmp26 = cResult[26];
+            tmp25 = cResult[26];
           }
-          if (stateFromStores.ownerId === tmp47) {
-            let REMOTE_STREAM = tmp(9104).VideoSpinnerContext.SELF_STREAM;
+          if (ownerId === tmp46) {
+            REMOTE_STREAM = tmp(9104).VideoSpinnerContext.SELF_STREAM;
           } else {
             REMOTE_STREAM = tmp(9104).VideoSpinnerContext.REMOTE_STREAM;
           }
           class P {
             constructor() {
-              obj = { style: closure_1.liveTag, participant };
-              return jsx(closure_1(closure_2[19]), obj);
+              const obj = { style: liveTag.liveTag, participant };
+              return authStore(StreamQualityLiveIndicatorDefault, obj);
             }
           }
-          const obj8 = { resizeMode, streamId, gestureEnabled, renderTag: tmp26, videoSpinnerContext: REMOTE_STREAM, userId: user.id, paused: stateFromStores.state === ApplicationStreamStates.PAUSED };
-          const tmp30 = closure_10(tmp9(9105), obj8);
+          const obj8 = { resizeMode, streamId, gestureEnabled, renderTag: tmp25, videoSpinnerContext: REMOTE_STREAM, userId: user.id, paused: stateFromStores.state === ApplicationStreamStates.PAUSED };
           cResult[27] = gestureEnabled;
           cResult[28] = resizeMode;
           cResult[29] = streamId;
-          cResult[30] = tmp26;
+          cResult[30] = tmp25;
           cResult[31] = REMOTE_STREAM;
           cResult[32] = stateFromStores.state === ApplicationStreamStates.PAUSED;
           cResult[33] = user.id;
-          cResult[34] = tmp30;
+          cResult[34] = closure_10(VideoRendererDefault, obj8);
+          const tmp29 = closure_10(VideoRendererDefault, obj8);
         }
         class P {
           constructor() {
-            obj = { style: closure_1.liveTag, participant };
-            return jsx(closure_1(closure_2[19]), obj);
+            const obj = { style: liveTag.liveTag, participant };
+            return authStore(StreamQualityLiveIndicatorDefault, obj);
           }
         }
         cResult[24] = participant;
         cResult[25] = tmp4.liveTag;
         cResult[26] = P;
-        tmp26 = P;
+        tmp25 = P;
       }
     }
   } else {
     return null;
   }
-  const tmpResult = participant(504);
 }) : ((participant) => {
+  let REMOTE_STREAM;
+  let formatToPlainString;
+  let gestureEnabled;
+  let intl;
+  let intl2;
+  let items1;
+  let liveTag;
+  let meVVlb;
+  let obj6;
+  let removeEmptyStateButton;
+  let removeEmptyStateImage;
+  let resizeMode;
+  let streamId;
+  let tmp4Result6;
+  let user;
   participant = participant.participant;
   ({ user, removeEmptyStateButton, removeEmptyStateImage } = participant);
   ({ streamId, resizeMode, gestureEnabled } = participant);
   importDefault = closure_13();
+  let obj = participant(504);
   const items = [ApplicationStreamingStore];
-  const stateFromStores = participant(504).useStateFromStores(items, () => ApplicationStreamingStore.getActiveStreamForStreamKey(participant.id));
+  const stateFromStores = obj.useStateFromStores(items, () => ApplicationStreamingStore.getActiveStreamForStreamKey(participant.id));
   const tmp5 = useVideoStreamErrorDefault(MediaEngineContextTypes.STREAM, participant.user.id);
   if (null != stateFromStores) {
-    state = stateFromStores.state;
+    const state = stateFromStores.state;
     if (ApplicationStreamStates.FAILED === state) {
-      const obj2 = { stream: stateFromStores, removeCloseButton: removeEmptyStateButton, removeSplashImage: removeEmptyStateImage, type: tmp(9096).VideoEmptyTypes.STREAM_FAILED, style: StyleSheet.absoluteFill };
-      return closure_10(tmp4(9096), obj2);
+      const obj2 = { stream: stateFromStores, removeCloseButton: removeEmptyStateButton, removeSplashImage: removeEmptyStateImage, type: participant(9096).VideoEmptyTypes.STREAM_FAILED, style: StyleSheet.absoluteFill };
+      const tmp4Result = VideoEmptyStateDefault;
+      return closure_10(tmp4Result, obj2);
     } else if (ApplicationStreamStates.ENDED === state) {
-      const obj3 = { stream: stateFromStores, removeCloseButton: removeEmptyStateButton, removeSplashImage: removeEmptyStateImage, type: tmp(9096).VideoEmptyTypes.STREAM_ENDED, style: StyleSheet.absoluteFill };
-      return closure_10(tmp4(9096), obj3);
+      const obj3 = { stream: stateFromStores, removeCloseButton: removeEmptyStateButton, removeSplashImage: removeEmptyStateImage, type: participant(9096).VideoEmptyTypes.STREAM_ENDED, style: StyleSheet.absoluteFill };
+      const tmp4Result5 = VideoEmptyStateDefault;
+      return closure_10(tmp4Result5, obj3);
     } else {
+      let tmp9;
       if (ApplicationStreamStates.RECONNECTING === state) {
-        const obj4 = { title: null };
-        const intl = tmp(1126).intl;
-        obj4.title = intl.string(tmp(1126).t["pdFFK+"]);
-        let tmp9 = closure_10(closure_14, obj4);
+        const obj4 = { title: intl.string(participant(1126).t["pdFFK+"]) };
+        intl = tmp(1126).intl;
+        tmp9 = closure_10(closure_14, obj4);
       } else {
         tmp9 = null;
         if (ApplicationStreamStates.PAUSED === state) {
-          const obj5 = { title: null, subtext: null };
-          const intl2 = tmp(1126).intl;
-          obj5.title = intl2.string(tmp(1126).t["5q17w5"]);
+          const obj5 = { title: intl2.string(participant(1126).t["5q17w5"]), subtext: formatToPlainString(meVVlb, obj6) };
+          intl2 = tmp(1126).intl;
           const intl3 = tmp(1126).intl;
-          const obj6 = { username: tmp4(5042).getName(stateFromStores.guildId, stateFromStores.channelId, user) };
-          obj5.subtext = intl3.formatToPlainString(tmp(1126).t.meVVlb, obj6);
+          formatToPlainString = intl3.formatToPlainString;
+          obj6 = { username: tmp4Result6.getName(stateFromStores.guildId, stateFromStores.channelId, user) };
+          meVVlb = tmp(1126).t.meVVlb;
+          tmp4Result6 = NicknameUtilsDefault;
           tmp9 = closure_10(closure_14, obj5);
-          const tmp4Result6 = tmp4(5042);
         }
       }
       if (null != tmp5) {
-        const obj7 = { stream: stateFromStores, removeCloseButton: removeEmptyStateButton, removeSplashImage: removeEmptyStateImage, type: tmp(9096).VideoEmptyTypes.STREAM_FAILED, style: StyleSheet.absoluteFill, avError: tmp5 };
-        return closure_10(tmp4(9096), obj7);
+        const obj7 = { stream: stateFromStores, removeCloseButton: removeEmptyStateButton, removeSplashImage: removeEmptyStateImage, type: participant(9096).VideoEmptyTypes.STREAM_FAILED, style: StyleSheet.absoluteFill, avError: tmp5 };
+        const tmp4Result7 = VideoEmptyStateDefault;
+        return closure_10(tmp4Result7, obj7);
       } else {
+        const ownerId = stateFromStores.ownerId;
         const id = AuthenticationStore.getId();
         const obj8 = {
           resizeMode,
           streamId,
           gestureEnabled,
           renderTag() {
-                  return v65535(StreamQualityLiveIndicatorDefault, { style: liveTag.liveTag, participant });
+                  const obj = { style: liveTag.liveTag, participant };
+                  return authStore(StreamQualityLiveIndicatorDefault, obj);
                 },
-          videoSpinnerContext: null,
-          userId: null,
-          paused: null
+          videoSpinnerContext: REMOTE_STREAM,
+          userId: user.id,
+          paused: stateFromStores.state === ApplicationStreamStates.PAUSED
         };
-        if (stateFromStores.ownerId === id) {
-          let REMOTE_STREAM = tmp(9104).VideoSpinnerContext.SELF_STREAM;
+        const tmp4Result8 = VideoRendererDefault;
+        if (ownerId === id) {
+          REMOTE_STREAM = tmp(9104).VideoSpinnerContext.SELF_STREAM;
         } else {
           REMOTE_STREAM = tmp(9104).VideoSpinnerContext.REMOTE_STREAM;
         }
-        const obj9 = { children: null };
-        obj8.videoSpinnerContext = REMOTE_STREAM;
-        obj8.userId = user.id;
-        obj8.paused = stateFromStores.state === ApplicationStreamStates.PAUSED;
-        const items1 = [closure_10(tmp4(9105), obj8), tmp9];
-        obj9.children = items1;
+        const obj9 = { children: items1 };
+        items1 = [closure_10(tmp4Result8, obj8), tmp9];
         return closure_11(closure_12, obj9);
       }
     }
   } else {
     return null;
   }
-  const obj = participant(504);
 }));
-fn(558);
-let obj5 = { color: nativeDefault.unsafe_rawColors.PRIMARY_300, fontSize: 14, lineHeight: 18, textAlign: "center" };
-ReactCompilerGating = fn(558);
-let closure_16 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(8);
-  ({ onFullScreen, style } = arg0);
-  const tmp4 = closure_13();
-  if (cResult[0] === style) {
-    if (cResult[1] === tmp4.statusWrapper) {
-      let tmp5 = cResult[2];
-    }
-    const _Symbol = Symbol;
-    if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const rect = { top: 4, left: 4, right: 4, bottom: 4 };
-      const obj2 = { source: _modDef9118, size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE };
-      const tmp11 = v65535(native.Icon, obj2);
-      cResult[3] = rect;
-      cResult[4] = tmp11;
-      let tmp8 = tmp11;
-      let tmp7 = rect;
-    } else {
-      tmp7 = cResult[3];
-      tmp8 = cResult[4];
-    }
-    if (cResult[5] === onFullScreen) {
-      if (cResult[6] === tmp5) {
-        let tmp12 = cResult[7];
-      }
-      return tmp12;
-    }
-    const obj3 = { accessibilityRole: "button", onPress: onFullScreen, style: tmp5, hitSlop: tmp7, children: tmp8 };
-    const tmp14 = v65535(Pressables.PressableOpacity, obj3);
-    cResult[5] = onFullScreen;
-    cResult[6] = tmp5;
-    cResult[7] = tmp14;
-    tmp12 = tmp14;
-  }
-  const items = [tmp4.statusWrapper, style];
-  cResult[0] = style;
-  cResult[1] = tmp4.statusWrapper;
-  cResult[2] = items;
-  tmp5 = items;
-}) : ((arg0) => {
-  ({ onFullScreen, style } = arg0);
-  const obj = { accessibilityRole: "button", onPress: onFullScreen, style: null, hitSlop: { top: 4, left: 4, right: 4, bottom: 4 }, children: null };
-  const items = [closure_13().statusWrapper, style];
-  obj.style = items;
-  const tmp = closure_13();
-  obj.children = v65535(native.Icon, { source: _modDef9118, size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE });
-  return v65535(Pressables.PressableOpacity, obj);
-}));
-size = fn(2);
-const result = size.fileFinishedImporting("modules/video_calls/native/components/StreamTile.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((participant) => {
-  const cResult = c.c(30);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((participant) => {
+  let fullscreenIconStyle;
+  let gestureEnabled;
+  let items;
+  let onFullScreen;
+  let removeEmptyStateButton;
+  let removeEmptyStateImage;
+  let resizeMode;
+  let streamId;
+  let style;
+  let user;
+  const obj = react2;
+  const cResult = obj.c(30);
   participant = participant.participant;
   const onSingleTap = participant.onSingleTap;
   const onDoubleTap = participant.onDoubleTap;
@@ -410,19 +425,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((participant) => 
   }
   const tmp4 = closure_13();
   if (cResult[0] === onSingleTap) {
+    let tmp5;
     if (cResult[1] === participant) {
-      let tmp5 = cResult[2];
+      tmp5 = cResult[2];
     }
     if (cResult[3] === onDoubleTap) {
+      let tmp6;
       if (cResult[4] === participant) {
-        let tmp6 = cResult[5];
+        tmp6 = cResult[5];
       }
       if (cResult[6] === tmp6) {
         class F {
           constructor() {
-            tmpResult = undefined;
+            let tmpResult;
             if (onDoubleTap != null) {
-              tmp3 = participant;
               tmpResult = tmp(participant);
             }
             return tmpResult;
@@ -430,8 +446,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((participant) => 
         }
         ({ streamId, user } = participant);
         if (cResult[9] === style) {
+          let tmp11;
           if (cResult[10] === tmp4.container) {
-            let tmp11 = cResult[11];
+            tmp11 = cResult[11];
           }
           if (cResult[12] === gestureEnabled) {
             if (cResult[13] === participant) {
@@ -439,36 +456,39 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((participant) => 
                 if (cResult[15] === removeEmptyStateImage) {
                   if (cResult[16] === resizeMode) {
                     if (cResult[17] === streamId) {
+                      let tmp12;
                       if (cResult[18] === user) {
-                        let tmp12 = cResult[19];
+                        tmp12 = cResult[19];
                       }
                       if (cResult[20] === fullscreenIconStyle) {
+                        let tmp15;
                         if (cResult[21] === onFullScreen) {
-                          let tmp15 = cResult[22];
+                          tmp15 = cResult[22];
                         }
                         if (cResult[23] === tmp11) {
                           if (cResult[24] === tmp12) {
+                            let tmp20;
                             if (cResult[25] === tmp15) {
-                              let tmp20 = cResult[26];
+                              tmp20 = cResult[26];
                             }
                             if (cResult[27] === tmp10) {
+                              let tmp23;
                               if (cResult[28] === tmp20) {
-                                let tmp23 = cResult[29];
+                                tmp23 = cResult[29];
                               }
                               return tmp23;
                             }
                             class F {
                               constructor() {
-                                tmpResult = undefined;
+                                let tmpResult;
                                 if (onDoubleTap != null) {
-                                  tmp3 = participant;
                                   tmpResult = tmp(participant);
                                 }
                                 return tmpResult;
                               }
                             }
                             const obj2 = { gesture: tmp10, children: tmp20 };
-                            const tmp24 = v65535(LegacyBaseButton.GestureDetector, obj2);
+                            const tmp24 = authStore(LegacyBaseButton.GestureDetector, obj2);
                             cResult[27] = tmp10;
                             cResult[28] = tmp20;
                             cResult[29] = tmp24;
@@ -477,18 +497,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((participant) => 
                         }
                         class F {
                           constructor() {
-                            tmpResult = undefined;
+                            let tmpResult;
                             if (onDoubleTap != null) {
-                              tmp3 = participant;
                               tmpResult = tmp(participant);
                             }
                             return tmpResult;
                           }
                         }
-                        const obj3 = { style: tmp11, children: null };
-                        const items = [tmp12, tmp15];
-                        obj3.children = items;
-                        const tmp22 = closure_1_11(React4, obj3);
+                        const obj3 = { style: tmp11, children: items };
+                        items = [tmp12, tmp15];
+                        const tmp22 = unpackModuleId(React3, obj3);
                         cResult[23] = tmp11;
                         cResult[24] = tmp12;
                         cResult[25] = tmp15;
@@ -497,9 +515,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((participant) => 
                       }
                       class F {
                         constructor() {
-                          tmpResult = undefined;
+                          let tmpResult;
                           if (onDoubleTap != null) {
-                            tmp3 = participant;
                             tmpResult = tmp(participant);
                           }
                           return tmpResult;
@@ -509,9 +526,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((participant) => 
                       if (tmp16) {
                         class F {
                           constructor() {
-                            tmpResult = undefined;
+                            let tmpResult;
                             if (onDoubleTap != null) {
-                              tmp3 = participant;
                               tmpResult = tmp(participant);
                             }
                             return tmpResult;
@@ -519,7 +535,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((participant) => 
                         }
                         tmp19[0] = onFullScreen;
                         tmp19[1] = fullscreenIconStyle;
-                        tmp16 = v65535(closure_16, tmp19);
+                        tmp16 = authStore(closure_16, tmp19);
                       }
                       cResult[20] = fullscreenIconStyle;
                       cResult[21] = onFullScreen;
@@ -533,16 +549,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((participant) => 
           }
           class F {
             constructor() {
-              tmpResult = undefined;
+              let tmpResult;
               if (onDoubleTap != null) {
-                tmp3 = participant;
                 tmpResult = tmp(participant);
               }
               return tmpResult;
             }
           }
           const obj4 = { streamId, participant, user, resizeMode, gestureEnabled, removeEmptyStateButton, removeEmptyStateImage };
-          const tmp14 = v65535(closure_15, obj4);
+          const tmp14 = authStore(closure_15, obj4);
           cResult[12] = gestureEnabled;
           cResult[13] = participant;
           cResult[14] = removeEmptyStateButton;
@@ -561,9 +576,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((participant) => 
       }
       class F {
         constructor() {
-          tmpResult = undefined;
+          let tmpResult;
           if (onDoubleTap != null) {
-            tmp3 = participant;
             tmpResult = tmp(participant);
           }
           return tmpResult;
@@ -577,9 +591,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((participant) => 
     }
     class F {
       constructor() {
-        tmpResult = undefined;
+        let tmpResult;
         if (onDoubleTap != null) {
-          tmp3 = participant;
           tmpResult = tmp(participant);
         }
         return tmpResult;
@@ -602,6 +615,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((participant) => 
   cResult[2] = fn;
   tmp5 = fn;
 }) : ((participant) => {
+  let fullscreenIconStyle;
+  let gestureEnabled;
+  let items2;
+  let items3;
+  let obj2;
+  let removeEmptyStateButton;
+  let removeEmptyStateImage;
+  let streamId;
+  let style;
+  let user;
   participant = participant.participant;
   const onSingleTap = participant.onSingleTap;
   const onDoubleTap = participant.onDoubleTap;
@@ -613,35 +636,101 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((participant) => 
   ({ gestureEnabled, removeEmptyStateButton, removeEmptyStateImage, fullscreenIconStyle, style } = participant);
   const items = [onSingleTap, participant];
   const items1 = [onDoubleTap, participant];
-  const callback = noop.useCallback(() => {
+  const tmp3 = closure_13();
+  const callback = react.useCallback(() => {
     let tmpResult;
     if (onSingleTap != null) {
       tmpResult = tmp(participant);
     }
     return tmpResult;
   }, items);
-  const callback1 = noop.useCallback(() => {
+  const callback1 = react.useCallback(() => {
     let tmpResult;
     if (onDoubleTap != null) {
       tmpResult = tmp(participant);
     }
     return tmpResult;
   }, items1);
-  const tmp3 = closure_13();
   ({ streamId, user } = participant);
-  const obj = { gesture: useParticipantTileTapGestureDefault({ onSingleTapStart: callback, onDoubleTapStart: callback1 }), children: null };
-  const obj2 = { style: null, children: null };
-  const items2 = [tmp3.container, style];
-  obj2.style = items2;
-  const items3 = [v65535(closure_15, { streamId, participant, user, resizeMode: CONTAIN, gestureEnabled, removeEmptyStateButton, removeEmptyStateImage }), ];
+  const obj = { gesture: useParticipantTileTapGestureDefault({ onSingleTapStart: callback, onDoubleTapStart: callback1 }), children: unpackModuleId(React3, obj2) };
+  obj2 = { style: items2, children: items3 };
+  items2 = [tmp3.container, style];
+  const GestureDetector = LegacyBaseButton.GestureDetector;
+  items3 = [authStore(closure_15, { streamId, participant, user, resizeMode: CONTAIN, gestureEnabled, removeEmptyStateButton, removeEmptyStateImage }), ];
   let tmp7Result = null != onFullScreen;
   if (tmp7Result) {
     const obj3 = { onFullScreen, style: fullscreenIconStyle };
-    tmp7Result = v65535(closure_16, obj3);
+    tmp7Result = authStore(closure_16, obj3);
   }
   items3[1] = tmp7Result;
-  obj2.children = items3;
-  obj.children = closure_1_11(React4, obj2);
-  return v65535(LegacyBaseButton.GestureDetector, obj);
+  return authStore(GestureDetector, obj);
 });
-export const StreamTextOverlay = tmp5;
+const memo2 = react.memo;
+ReactCompilerGating = ReactCompilerGating_mod;
+let closure_16 = memo2(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let onFullScreen;
+  let style;
+  const obj = react2;
+  const cResult = obj.c(8);
+  ({ onFullScreen, style } = arg0);
+  const tmp4 = closure_13();
+  if (cResult[0] === style) {
+    let tmp5;
+    let tmp8;
+    let tmp7;
+    if (cResult[1] === tmp4.statusWrapper) {
+      tmp5 = cResult[2];
+    }
+    const _Symbol = Symbol;
+    if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+      const rect = { top: 4, left: 4, right: 4, bottom: 4 };
+      const obj2 = { source: AssetRegistryDefault, size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE };
+      const Icon = native.Icon;
+      const tmp11 = authStore(Icon, obj2);
+      cResult[3] = rect;
+      cResult[4] = tmp11;
+      tmp8 = tmp11;
+      tmp7 = rect;
+    } else {
+      tmp7 = cResult[3];
+      tmp8 = cResult[4];
+    }
+    if (cResult[5] === onFullScreen) {
+      let tmp12;
+      if (cResult[6] === tmp5) {
+        tmp12 = cResult[7];
+      }
+      return tmp12;
+    }
+    const obj3 = { accessibilityRole: "button", onPress: onFullScreen, style: tmp5, hitSlop: tmp7, children: tmp8 };
+    const tmp14 = authStore(Pressables.PressableOpacity, obj3);
+    cResult[5] = onFullScreen;
+    cResult[6] = tmp5;
+    cResult[7] = tmp14;
+    tmp12 = tmp14;
+  }
+  const items = [tmp4.statusWrapper, style];
+  cResult[0] = style;
+  cResult[1] = tmp4.statusWrapper;
+  cResult[2] = items;
+  tmp5 = items;
+}) : ((arg0) => {
+  let Icon;
+  let items;
+  let obj2;
+  let onFullScreen;
+  let style;
+  ({ onFullScreen, style } = arg0);
+  const obj = { accessibilityRole: "button", onPress: onFullScreen, style: items, hitSlop: { top: 4, left: 4, right: 4, bottom: 4 }, children: authStore(Icon, obj2) };
+  items = [closure_13().statusWrapper, style];
+  closure_13();
+  const PressableOpacity = Pressables.PressableOpacity;
+  obj2 = { source: AssetRegistryDefault, size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE };
+  Icon = native.Icon;
+  return authStore(PressableOpacity, obj);
+}));
+size = size_mod;
+const result = size.fileFinishedImporting("modules/video_calls/native/components/StreamTile.tsx");
+
+export default tmp8;
+export const StreamTextOverlay = tmp7;

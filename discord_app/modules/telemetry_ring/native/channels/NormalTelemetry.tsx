@@ -3,21 +3,21 @@
 // Module 13895 (NormalTelemetry)
 import TelemetryRingNative2 from "TelemetryRingNative" /* 1994 */;
 import BaseTelemetryChannel from "BaseTelemetryChannel" /* 1993 */;
+import size from "module_2" /* 2 */;
 
 const TelemetryRingNative = TelemetryRingNative2;
 
-require = fn;
-class NormalTelemetryImpl extends tmp3 {
+class NormalTelemetryImpl extends BaseTelemetryChannel {
   constructor() {
-    tmp2 = closure_1(closure_2[1]);
-    items = [];
-    items[0] = closure_0(closure_2[1]).TelemetryChannel.NORMAL;
-    tmp1 = new tmp(tmp2, items, closure_1, new.target);
-    return tmp1;
+    const items = [];
+    const tmp2 = TelemetryRingNative;
+    items[0] = TelemetryRingNative2.TelemetryChannel.NORMAL;
+    const tmp3 = new tmp(tmp2, items, importDefault, new.target);
+    return tmp3;
   }
 }
-let items = [fn(1994).TelemetryChannel.NORMAL];
-const size = fn(2);
+let items = [TelemetryRingNative2.TelemetryChannel.NORMAL];
+const importDefaultResult2 = new BaseTelemetryChannel(TelemetryRingNative, items, tmp, Object, NormalTelemetryImpl, BaseTelemetryChannel, TelemetryRingNative);
 const result = size.fileFinishedImporting("modules/telemetry_ring/native/channels/NormalTelemetry.tsx");
 
-export default new BaseTelemetryChannel(TelemetryRingNative, items, tmp, Object, NormalTelemetryImpl, BaseTelemetryChannel, TelemetryRingNative);
+export default importDefaultResult2;

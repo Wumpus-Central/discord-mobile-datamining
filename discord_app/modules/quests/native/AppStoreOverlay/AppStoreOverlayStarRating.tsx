@@ -1,55 +1,71 @@
 // === Module 10927: AppStoreOverlayStarRating ===
 
 // Module 10927 (AppStoreOverlayStarRating)
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import StarIcon from "StarIcon" /* 9943 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 9945 */;
-import noop from "module_19" /* 19 */;
+import StarIcon2 from "StarIcon" /* 9943 */;
+import StarOutlineIcon2 from "StarOutlineIcon" /* 9945 */;
+import react from "react" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size_mod from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { row: { flexDirection: "row", alignItems: "center", gap: 2 }, star: null, starIcon: null, starFillMask: null };
-let size = { width: nativeDefault.space.PX_10, height: nativeDefault.space.PX_10, position: "relative" };
-obj2.star = size;
-const size1 = { width: nativeDefault.space.PX_10, height: nativeDefault.space.PX_10, position: "absolute", left: 0, top: 0 };
-obj2.starIcon = size1;
-const rect = { position: "absolute", left: 0, top: 0, height: nativeDefault.space.PX_10, overflow: "hidden" };
-obj2.starFillMask = rect;
-let closure_6 = createStyles.createStyles(obj2);
-let ReactCompilerGating = fn(558);
+let fillAmounts;
+
+let closure_4;
+let hasOwnProperty;
+let rect;
+let size;
+let size1;
+const View = react_native.View;
+({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { row: { flexDirection: "row", alignItems: "center", gap: 2 }, star: size, starIcon: size1, starFillMask: rect };
+size = { width: nativeDefault.space.PX_10, height: nativeDefault.space.PX_10, position: "relative" };
+createStyles = createStyles.createStyles;
+size1 = { width: nativeDefault.space.PX_10, height: nativeDefault.space.PX_10, position: "absolute", left: 0, top: 0 };
+rect = { position: "absolute", left: 0, top: 0, height: nativeDefault.space.PX_10, overflow: "hidden" };
+let closure_6 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((fillAmount) => {
-  const cResult = c.c(10);
+  let StarIcon;
+  let items;
+  let items1;
+  let obj6;
+  let tmp5;
+  const obj = react2;
+  const cResult = obj.c(10);
   fillAmount = fillAmount.fillAmount;
   const tmp4 = closure_6();
   if (cResult[0] !== tmp4.starIcon) {
     const obj2 = { size: "custom", color: nativeDefault.colors.TEXT_MUTED, style: tmp4.starIcon };
-    const tmp8 = React4(StarOutlineIcon.StarOutlineIcon, obj2);
+    const StarOutlineIcon = StarOutlineIcon2.StarOutlineIcon;
+    const tmp8 = React3(StarOutlineIcon, obj2);
     cResult[0] = tmp4.starIcon;
     cResult[1] = tmp8;
-    let tmp5 = tmp8;
+    tmp5 = tmp8;
   } else {
     tmp5 = cResult[1];
   }
   if (cResult[2] === fillAmount) {
     if (cResult[3] === tmp4.starFillMask) {
+      let tmp9;
       if (cResult[4] === tmp4.starIcon) {
-        let tmp9 = cResult[5];
+        tmp9 = cResult[5];
       }
       if (cResult[6] === tmp4.star) {
         if (cResult[7] === tmp5) {
+          let tmp14;
           if (cResult[8] === tmp9) {
-            let tmp14 = cResult[9];
+            tmp14 = cResult[9];
           }
           return tmp14;
         }
       }
-      const obj3 = { style: tmp4.star, importantForAccessibility: "no", accessibilityElementsHidden: true, children: null };
-      const items = [tmp5, tmp9];
-      obj3.children = items;
+      const obj3 = { style: tmp4.star, importantForAccessibility: "no", accessibilityElementsHidden: true, children: items };
+      items = [tmp5, tmp9];
       const tmp17 = hasOwnProperty(View, obj3);
       cResult[6] = tmp4.star;
       cResult[7] = tmp5;
@@ -60,14 +76,13 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((fillAmount) => 
   }
   let tmp10 = fillAmount > 0;
   if (tmp10) {
-    const obj4 = { style: null, children: null };
-    const items1 = [tmp4.starFillMask, ];
+    const obj4 = { style: items1, children: React3(StarIcon, obj6) };
+    items1 = [tmp4.starFillMask, ];
+    items1[1] = { width: nativeDefault.space.PX_10 * fillAmount };
     const obj5 = { width: nativeDefault.space.PX_10 * fillAmount };
-    items1[1] = obj5;
-    obj4.style = items1;
-    const obj6 = { size: "custom", color: nativeDefault.colors.TEXT_MUTED, style: tmp4.starIcon };
-    obj4.children = React4(StarIcon.StarIcon, obj6);
-    tmp10 = React4(View, obj4);
+    obj6 = { size: "custom", color: nativeDefault.colors.TEXT_MUTED, style: tmp4.starIcon };
+    StarIcon = StarIcon2.StarIcon;
+    tmp10 = React3(View, obj4);
   }
   cResult[2] = fillAmount;
   cResult[3] = tmp4.starFillMask;
@@ -75,62 +90,81 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((fillAmount) => 
   cResult[5] = tmp10;
   tmp9 = tmp10;
 }) : ((fillAmount) => {
+  let StarIcon;
+  let items;
+  let items1;
+  let obj5;
   fillAmount = fillAmount.fillAmount;
   const tmp = closure_6();
-  const obj = { style: tmp.star, importantForAccessibility: "no", accessibilityElementsHidden: true, children: null };
-  const items = [React4(StarOutlineIcon.StarOutlineIcon, { size: "custom", color: nativeDefault.colors.TEXT_MUTED, style: tmp.starIcon }), ];
+  const obj = { style: tmp.star, importantForAccessibility: "no", accessibilityElementsHidden: true, children: items };
+  const obj2 = { size: "custom", color: nativeDefault.colors.TEXT_MUTED, style: tmp.starIcon };
+  const StarOutlineIcon = StarOutlineIcon2.StarOutlineIcon;
+  items = [React3(StarOutlineIcon, obj2), ];
   let tmp4Result = fillAmount > 0;
   if (tmp4Result) {
-    const obj3 = { style: null, children: null };
-    const items1 = [tmp.starFillMask, ];
+    const obj3 = { style: items1, children: React3(StarIcon, obj5) };
+    items1 = [tmp.starFillMask, ];
+    items1[1] = { width: nativeDefault.space.PX_10 * fillAmount };
     const obj4 = { width: nativeDefault.space.PX_10 * fillAmount };
-    items1[1] = obj4;
-    obj3.style = items1;
-    const obj5 = { size: "custom", color: nativeDefault.colors.TEXT_MUTED, style: tmp.starIcon };
-    obj3.children = React4(StarIcon.StarIcon, obj5);
-    tmp4Result = React4(View, obj3);
+    obj5 = { size: "custom", color: nativeDefault.colors.TEXT_MUTED, style: tmp.starIcon };
+    StarIcon = StarIcon2.StarIcon;
+    tmp4Result = React3(View, obj3);
   }
   items[1] = tmp4Result;
-  obj.children = items;
   return hasOwnProperty(View, obj);
 });
-ReactCompilerGating = fn(558);
-size = fn(2);
-const result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayStarRating.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((fillAmounts) => {
-  const cResult = c.c(6);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((fillAmounts) => {
+  let tmp3;
+  let obj = react2;
+  const cResult = obj.c(6);
   fillAmounts = fillAmounts.fillAmounts;
   const tmp2 = closure_6();
+  const row = tmp2.row;
   if (cResult[0] !== fillAmounts) {
+    let tmp5;
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
       const fn = function u(fillAmount, arg1) {
-        return closure_1_4(closure_1_7, { fillAmount }, arg1);
+        const obj = { fillAmount };
+        return closure_1_4(closure_1_7, obj, arg1);
       };
       cResult[2] = fn;
-      let tmp6 = fn;
+      tmp5 = fn;
     } else {
-      tmp6 = cResult[2];
+      tmp5 = cResult[2];
     }
-    const mapped = fillAmounts.map(tmp6);
+    const mapped = fillAmounts.map(tmp5);
     cResult[0] = fillAmounts;
     cResult[1] = mapped;
+    tmp3 = mapped;
   } else {
-    if (cResult[3] === tmp2.row) {
-      if (cResult[4] === tmp4) {
-        let tmp9 = cResult[5];
-      }
-      return tmp9;
-    }
-    const obj2 = { style: tmp3, children: cResult[1] };
-    const tmp12 = React4(View, obj2);
-    cResult[3] = tmp2.row;
-    cResult[4] = cResult[1];
-    cResult[5] = tmp12;
-    tmp9 = tmp12;
+    tmp3 = cResult[1];
   }
+  if (cResult[3] === tmp2.row) {
+    let tmp7;
+    if (cResult[4] === tmp3) {
+      tmp7 = cResult[5];
+    }
+    return tmp7;
+  }
+  const tmp8 = React3(View, { style: row, children: tmp3 });
+  cResult[3] = tmp2.row;
+  cResult[4] = tmp3;
+  cResult[5] = tmp8;
+  tmp7 = tmp8;
 }) : ((fillAmounts) => {
   fillAmounts = fillAmounts.fillAmounts;
-  return React4(View, { style: closure_6().row, children: fillAmounts.map((fillAmount, index) => closure_1_4(closure_1_7, { fillAmount }, index)) });
+  let obj = {
+    style: closure_6().row,
+    children: fillAmounts.map((fillAmount, index) => {
+      const obj = { fillAmount };
+      return closure_1_4(closure_1_7, obj, index);
+    })
+  };
+  return React3(View, obj);
 });
+size = size_mod;
+const result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayStarRating.tsx");
+
+export default tmp5;

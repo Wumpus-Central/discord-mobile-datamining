@@ -2,8 +2,9 @@
 
 // Module 14167 (ReactotronConfig)
 import reactNativeCorePlugins from "reactNativeCorePlugins" /* 14168 */;
+import size from "module_2" /* 2 */;
 
-const reactNative = reactNativeCorePlugins.configure({}).useReactNative();
+const configureResult = reactNativeCorePlugins.configure({});
+const reactNative = configureResult.useReactNative();
 reactNative.connect();
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/debug/native/ReactotronConfig.tsx");

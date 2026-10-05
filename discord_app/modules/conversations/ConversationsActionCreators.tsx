@@ -2,353 +2,366 @@
 
 // Module 7550 (ConversationsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
+import Constants from "Constants" /* 1085 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 5080 */;
 import SurveyActionTypes from "SurveyActionTypes" /* 5088 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 6965 */;
+import ConversationConstants from "ConversationConstants" /* 7105 */;
 import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7552 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import ChannelConversationsStore from "ChannelConversationsStore" /* 7103 */;
 import ConversationPreviewStore from "ConversationPreviewStore" /* 7108 */;
 import TopicalNavigationSurveyStore from "TopicalNavigationSurveyStore" /* 7551 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-let closure_9 = async function _fetchChannelConversations(arg0) {
-  let hydrateMessages = arg0;
-  c7 = 0;
-  c8 = 0;
-  c6 = 0;
-  let iter = (async (arg0) => {
-    if (1 === tmp7) {
-      if (arg0 === 1) {
-        c8 = 3;
+let obj = function _fetchChannelConversations() {
+  obj = _asyncToGenerator(async function(channelId) {
+    let _false;
+    let _undefined;
+    let c0;
+    let c1;
+    let c2;
+    let c3;
+    let c5;
+    let closure_4;
+    let closure_5;
+    let hydrateMessages;
+    let isJump;
+    let limit1;
+    let limit2;
+    let requestKey;
+    let throwOnError;
+    if (1 === c7) {
+      if (channelId === 1) {
+        let c8 = 3;
         throw value;
-      } else if (arg0 === 2) {
+      } else if (channelId === 2) {
         c8 = 3;
-        return { value, done: true };
+        const obj5 = { value, done: true };
+        return obj5;
       } else {
-        if (obj15.isTopicalNavEnabled(closure_132_1, "fetch_channel_conversations")) {
+        const obj13 = closure_133_0(closure_133_2[6]);
+        if (obj13.isTopicalNavEnabled(isJump, "fetch_channel_conversations")) {
           const _HermesInternal = HermesInternal;
-          closure_132_8 = "" + closure_132_2 + ":" + closure_132_3 + ":" + closure_132_4 + ":" + true === closure_132_5;
-          if (!closure_133_4.isListFetchPending(closure_132_0, closure_132_8)) {
-            const obj7 = { type: "CHANNEL_CONVERSATIONS_FETCH_START", channelId: closure_132_0, direction: closure_132_2, requestKey: closure_132_8, isJump: null };
-            isJump = closure_132_5;
-            if (closure_132_5 == null) {
+          requestKey = "" + _undefined + ":" + _false + ":" + limit2 + ":" + true === c5;
+          if (!closure_133_4.isListFetchPending(channelId, requestKey)) {
+            const obj6 = { type: "CHANNEL_CONVERSATIONS_FETCH_START", channelId, direction: _undefined, requestKey, isJump };
+            isJump = c5;
+            const dispatch = closure_133_1(closure_133_2[7]).dispatch;
+            const tmp33 = closure_133_1(closure_133_2[7]);
+            if (c5 == null) {
               isJump = false;
             }
-            obj7.isJump = isJump;
-            closure_133_1(closure_133_2[7]).dispatch(obj7);
-            closure_132_9 = { limit: closure_132_4 };
-            if (null != closure_132_3) {
-              if ("before" === closure_132_2) {
-                closure_132_9.before = closure_132_3;
-              } else if ("after" === closure_132_2) {
-                closure_132_9.after = closure_132_3;
+            dispatch(obj6);
+            const obj7 = { limit: limit2 };
+            if (null != _false) {
+              if ("before" === _undefined) {
+                obj7.before = _false;
+              } else if ("after" === _undefined) {
+                obj7.after = _false;
               } else {
-                closure_132_9.around = closure_132_3;
+                obj7.around = _false;
               }
             }
             if (null != hydrateMessages) {
-              closure_132_9.include_messages = true;
+              obj7.include_messages = true;
               const limit = hydrateMessages.limit;
-              message_limit = limit;
+              _undefined = limit;
+              const tmp56 = obj7;
               if (limit == null) {
-                message_limit = undefined;
+                _undefined = undefined;
               }
-              closure_132_9.message_limit = message_limit;
+              tmp56.message_limit = _undefined;
             }
-            c6 = 1;
+            let c6 = 1;
             const HTTP = closure_133_0(closure_133_2[8]).HTTP;
-            const request = { url: closure_133_8.CHANNEL_CONVERSATIONS(closure_132_0), query: closure_132_9, oldFormErrors: true, rejectWithError: true };
+            const request = { url: closure_133_8.CHANNEL_CONVERSATIONS(channelId), query: obj7, oldFormErrors: true, rejectWithError: true };
+            const get = HTTP.get;
             c7 = 3;
             c8 = 1;
-            return { value: HTTP.get(request), done: false };
+            const obj8 = { value: get(request), done: false };
+            return obj8;
           }
         }
-        obj15 = closure_133_0(closure_133_2[6]);
       }
-    } else if (2 === tmp7) {
+    } else if (2 === c7) {
       c6 = 0;
-      closure_133_1(closure_133_2[7]).dispatch({ type: "CHANNEL_CONVERSATIONS_FETCH_FAILURE", channelId: closure_132_0, requestKey: closure_132_8 });
-      if (closure_132_6) {
+      const obj9 = { type: "CHANNEL_CONVERSATIONS_FETCH_FAILURE", channelId, requestKey };
+      const obj3 = closure_133_1(closure_133_2[7]);
+      obj3.dispatch(obj9);
+      const tmp17 = throwOnError;
+      if (tmp17) {
         const _Error = Error;
+        const self = this;
+        const self2 = this;
         const error = new Error("Failed to fetch conversations");
         throw error;
       }
-      closure_133_1(closure_133_2[7]);
-    } else if (arg0 === 1) {
+    } else if (channelId === 1) {
       c8 = 3;
       throw value;
-    } else if (arg0 === 2) {
+    } else if (channelId === 2) {
       c6 = 0;
       c8 = 3;
-      return { value, done: true };
+      const obj10 = { value, done: true };
+      return obj10;
     } else {
       const conversations = value.body.conversations;
-      const obj12 = { type: "CHANNEL_CONVERSATIONS_FETCH_SUCCESS", channelId: closure_132_0, rawConversations: conversations, direction: closure_132_2, requestKey: closure_132_8, anchor: closure_132_3, isJump: null, fullyHydrated: null };
-      isJump2 = closure_132_5;
-      if (closure_132_5 == null) {
-        isJump2 = false;
+      const obj11 = { type: "CHANNEL_CONVERSATIONS_FETCH_SUCCESS", channelId, rawConversations: conversations, direction: _undefined, requestKey, anchor: _false, isJump: _false, fullyHydrated: null == limit1 };
+      _false = c5;
+      const dispatch2 = closure_133_1(closure_133_2[7]).dispatch;
+      const tmp77 = closure_133_1(closure_133_2[7]);
+      if (c5 == null) {
+        _false = false;
       }
-      obj12.isJump = isJump2;
-      let limit1;
+      limit1 = undefined;
       if (hydrateMessages != null) {
         limit1 = hydrateMessages.limit;
       }
-      obj12.fullyHydrated = null == limit1;
-      closure_133_1(closure_133_2[7]).dispatch(obj12);
+      dispatch2(obj11);
       c6 = 0;
       c8 = 3;
-      return { value: conversations, done: true };
+      obj = { value: conversations, done: true };
+      return obj;
     }
     await "IconComponent";
-    closure_5 = tmp3;
-    ({ channelId: closure_132_0, guildId: closure_132_1, direction: closure_132_2, anchor: closure_132_3, limit: limit2 } = hydrateMessages);
+    ({ channelId: c0, guildId: c1, direction: c2, anchor: c3, limit: limit2 } = channelId);
     if (limit2 === undefined) {
       limit2 = FETCH_LIMIT;
     }
-    closure_132_4 = limit2;
-    ({ isJump: closure_132_5, throwOnError } = hydrateMessages);
+    ({ isJump: c5, throwOnError } = channelId);
     if (throwOnError === undefined) {
       throwOnError = false;
     }
-    closure_132_6 = throwOnError;
-    hydrateMessages = hydrateMessages.hydrateMessages;
+    hydrateMessages = channelId.hydrateMessages;
     return "Set";
-  })();
-  iter.next();
-  return iter;
+  });
+  return obj(...arguments);
 };
-let closure_10 = async function _fetchConversation(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
+obj = function _fetchConversation() {
+  obj = _asyncToGenerator(async (channelId, arg1) => {
+    let body = arg1;
+    let c5 = 0;
+    let c6 = 0;
+    let c4 = 0;
+    return (async (arg0, value) => {
+      if (c6 === 2) {
+        c6 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          c6 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c6 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          return { value, done: true };
         } else {
-          closure_3 = tmp3;
-          closure_2 = tmp7;
-          closure_130_0 = closure_0;
-          closure_130_1 = undefined;
-          if (!ConversationPreviewStore.touchConversation(closure_1)) {
-            c4 = 1;
-            const HTTP = HTTPUtils.HTTP;
-            const obj4 = { url: Endpoints.CHANNEL_CONVERSATION(closure_0, closure_1), oldFormErrors: true, rejectWithError: true };
-            c5 = 2;
-            c6 = 1;
-            const obj5 = { value: HTTP.get(obj4), done: false };
-            return obj5;
-          }
+          return { value: "IconComponent", done: null };
         }
       } else {
-        if (1 === tmp7) {
-          c4 = 0;
-        } else if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          closure_130_1 = value;
-          const obj6 = { type: "CONVERSATION_FETCH_SUCCESS", channelId: closure_130_0, rawConversation: closure_130_1.body };
-          closure_131_1(closure_131_2[7]).dispatch(obj6);
-          c4 = 0;
-          const obj = closure_131_1(closure_131_2[7]);
-        }
-        c4 = 0;
-        c6 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
-      }
-      c6 = 3;
-    } catch (tmp18) {
-      if (tmp4 === c4) {
-        c6 = tmp2;
-        throw tmp18;
-      } else {
-        c5 = tmp;
-      }
-    }
-  }
-};
-function fetchConversationMessages() {
-  const self = this;
-  const apply = closure_12.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-let closure_12 = async function _fetchConversationMessages() {
-  closure_2 = arg2;
-  c7 = 0;
-  c8 = 0;
-  c6 = 0;
-  return (async (arg0, value, arg2) => {
-    if (c8 === 2) {
-      c8 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c8 = 2;
-        if (0 === c7) {
-          if (arg0 === 1) {
-            c8 = 3;
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              return { value, done: true };
+            } else {
+              closure_3 = tmp;
+              closure_2 = tmp4;
+              body = undefined;
+              const tmp21 = body;
+              if (!ConversationPreviewStore.touchConversation(body)) {
+                c4 = 1;
+                const HTTP = HTTPUtils.HTTP;
+                const get = HTTP.get;
+                c5 = 2;
+                c6 = 1;
+                const obj4 = { url: Endpoints.CHANNEL_CONVERSATION(channelId, tmp21), oldFormErrors: true, rejectWithError: true };
+                const obj5 = { value: get(obj4), done: false };
+                return obj5;
+              }
+            }
+          } else if (1 === c5) {
+            c4 = 0;
+          } else if (arg0 === 1) {
+            c6 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c8 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
+            c4 = 0;
+            c6 = 3;
+            return { value, done: true };
           } else {
-            closure_5 = tmp3;
-            closure_4 = tmp7;
-            closure_132_0 = channelId;
-            closure_132_1 = conversationId;
-            closure_132_2 = undefined;
-            closure_132_3 = undefined;
-            closure_132_4 = undefined;
-            closure_3 = closure_2;
-            if (closure_2 == null) {
-              closure_3 = {};
-            }
-            ({ previewLimit, isStandalone } = closure_3);
-            let tmp18 = undefined !== isStandalone;
-            ({ includeMessageReferences, includeReactions } = closure_3);
-            if (tmp18) {
-              tmp18 = isStandalone;
-            }
-            closure_132_2 = tmp18;
-            closure_132_3 = tmp19;
-            if (null == previewLimit) {
-              if (tmp18) {
-                let isFullyHydratedResult = ConversationPreviewStore.isFullyHydrated(conversationId);
-              } else {
-                isFullyHydratedResult = ChannelConversationsStore.isFullyHydrated(channelId, conversationId);
-              }
-              if (isFullyHydratedResult) {
-                c8 = 3;
-                return { value: "IconComponent", done: null };
-              }
-            } else {
-              if (tmp18) {
-                let hydratedMessages = ConversationPreviewStore.getHydratedMessages(conversationId);
-              } else {
-                hydratedMessages = ChannelConversationsStore.getHydratedMessages(channelId, conversationId);
-              }
-              if (null != hydratedMessages) {
-                c8 = 3;
-                return { value: "IconComponent", done: null };
-              }
-            }
-            if (tmp18) {
-              let result = ConversationPreviewStore.isConversationFetchPending(conversationId, tmp19);
-            } else {
-              result = ChannelConversationsStore.isConversationFetchPending(conversationId, tmp19);
-            }
-            if (!result) {
-              const obj6 = { type: "CONVERSATION_MESSAGES_FETCH_START", channelId, conversationId, full: tmp19, isStandalone: tmp18 };
-              DispatcherDefault.dispatch(obj6);
-              c6 = 1;
-              const HTTP = HTTPUtils.HTTP;
-              const request = { url: Endpoints.CHANNEL_CONVERSATION_MESSAGES(channelId, conversationId), query: null, oldFormErrors: true, rejectWithError: true };
-              const obj7 = { limit: previewLimit, include_message_references: includeMessageReferences, include_reactions: includeReactions };
-              request.query = obj7;
-              c7 = 2;
-              c8 = 1;
-              const obj8 = { value: HTTP.get(request), done: false };
-              return obj8;
-            }
+            body = value;
+            const obj7 = { type: "CONVERSATION_FETCH_SUCCESS", channelId, rawConversation: body.body };
+            obj = closure_131_1(closure_131_2[7]);
+            obj.dispatch(obj7);
+            c4 = 0;
           }
+          c6 = 3;
+          return { value: "IconComponent", done: null };
+        } catch (tmp15) {
+          if (0 === c4) {
+            c6 = 3;
+            throw tmp15;
+          } else {
+            c5 = 1;
+          }
+        }
+      }
+    })();
+  });
+  return obj(...arguments);
+};
+function fetchConversationMessages() {
+  return obj(...arguments);
+}
+obj = function _fetchConversationMessages() {
+  obj = _asyncToGenerator(async (channelId, conversationId, arg2) => {
+    let closure_3;
+    let closure_2 = arg2;
+    let c7 = 0;
+    let c8 = 0;
+    let c6 = 0;
+    return (async (arg0, value, arg2) => {
+      let includeMessageReferences;
+      let includeReactions;
+      let isStandalone;
+      let obj7;
+      let previewLimit;
+      if (c8 === 2) {
+        c8 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          return { value, done: true };
         } else {
-          if (1 === tmp7) {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          let fullyHydrated;
+          c8 = 2;
+          if (0 === c7) {
+            if (arg0 === 1) {
+              c8 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c8 = 3;
+              return { value, done: true };
+            } else {
+              let result;
+              closure_5 = tmp;
+              isStandalone = undefined;
+              closure_4 = undefined;
+              fullyHydrated = closure_2;
+              if (closure_2 == null) {
+                fullyHydrated = {};
+              }
+              ({ previewLimit, isStandalone } = fullyHydrated);
+              let tmp15 = undefined !== isStandalone;
+              ({ includeMessageReferences, includeReactions } = fullyHydrated);
+              if (tmp15) {
+                tmp15 = isStandalone;
+              }
+              isStandalone = tmp15;
+              fullyHydrated = tmp16;
+              if (null == previewLimit) {
+                let isFullyHydratedResult;
+                if (tmp15) {
+                  isFullyHydratedResult = ConversationPreviewStore.isFullyHydrated(conversationId);
+                } else {
+                  isFullyHydratedResult = ChannelConversationsStore.isFullyHydrated(channelId, conversationId);
+                }
+                if (isFullyHydratedResult) {
+                  c8 = 3;
+                  return { value: "IconComponent", done: null };
+                }
+              } else {
+                let hydratedMessages;
+                if (tmp15) {
+                  hydratedMessages = ConversationPreviewStore.getHydratedMessages(conversationId);
+                } else {
+                  hydratedMessages = ChannelConversationsStore.getHydratedMessages(channelId, conversationId);
+                }
+                if (null != hydratedMessages) {
+                  c8 = 3;
+                  return { value: "IconComponent", done: null };
+                }
+              }
+              if (tmp15) {
+                result = ConversationPreviewStore.isConversationFetchPending(conversationId, tmp16);
+              } else {
+                result = ChannelConversationsStore.isConversationFetchPending(conversationId, tmp16);
+              }
+              if (!result) {
+                const obj6 = { type: "CONVERSATION_MESSAGES_FETCH_START", channelId, conversationId, full: null == previewLimit, isStandalone: tmp15 };
+                const obj4 = DispatcherDefault;
+                obj4.dispatch(obj6);
+                c6 = 1;
+                const HTTP = HTTPUtils.HTTP;
+                const request = { url: Endpoints.CHANNEL_CONVERSATION_MESSAGES(channelId, conversationId), query: obj7, oldFormErrors: true, rejectWithError: true };
+                const get = HTTP.get;
+                c7 = 2;
+                c8 = 1;
+                obj7 = { limit: previewLimit, include_message_references: includeMessageReferences, include_reactions: includeReactions };
+                const obj8 = { value: get(request), done: false };
+                return obj8;
+              }
+            }
+          } else if (1 === c7) {
             c6 = 0;
-            const obj9 = { type: "CONVERSATION_MESSAGES_FETCH_FAILURE", channelId: closure_132_0, conversationId: closure_132_1, full: closure_132_3, isStandalone: closure_132_2 };
-            closure_133_1(closure_133_2[7]).dispatch(obj9);
+            const obj9 = { type: "CONVERSATION_MESSAGES_FETCH_FAILURE", channelId, conversationId, full: fullyHydrated, isStandalone };
             const obj2 = closure_133_1(closure_133_2[7]);
+            obj2.dispatch(obj9);
           } else if (arg0 === 1) {
             c8 = 3;
             throw value;
-          } else if (arg0 !== 2) {
-            closure_132_4 = value;
-            const obj10 = { type: "CONVERSATION_MESSAGES_FETCH_SUCCESS", channelId: closure_132_0, conversationId: closure_132_1, messages: closure_132_4.body.messages, messageReferences: closure_132_4.body.reference_messages, fullyHydrated: closure_132_3, isStandalone: closure_132_2 };
-            closure_133_1(closure_133_2[7]).dispatch(obj10);
+          } else if (arg0 === 2) {
             c6 = 0;
+            c8 = 3;
+            return { value, done: true };
+          } else {
+            closure_4 = value;
+            const obj10 = { type: "CONVERSATION_MESSAGES_FETCH_SUCCESS", channelId, conversationId, messages: closure_4.body.messages, messageReferences: closure_4.body.reference_messages, fullyHydrated, isStandalone };
             const obj11 = closure_133_1(closure_133_2[7]);
+            obj11.dispatch(obj10);
+            c6 = 0;
           }
-          c6 = 0;
           c8 = 3;
-          const obj = { value, done: true };
-          return obj;
-        }
-        c8 = 3;
-      } catch (tmp35) {
-        if (tmp4 === c6) {
-          c8 = tmp2;
-          throw tmp35;
-        } else {
-          c7 = tmp;
+          return { value: "IconComponent", done: null };
+        } catch (tmp32) {
+          if (0 === c6) {
+            c8 = 3;
+            throw tmp32;
+          } else {
+            c7 = 1;
+          }
         }
       }
-    }
-  })();
+    })();
+  });
+  return obj(...arguments);
 };
-const FETCH_LIMIT = fn(7105).FETCH_LIMIT;
-const Endpoints = fn(1085).Endpoints;
-const size = fn(2);
+const FETCH_LIMIT = ConversationConstants.FETCH_LIMIT;
+const Endpoints = Constants.Endpoints;
 let result = size.fileFinishedImporting("modules/conversations/ConversationsActionCreators.tsx");
 
 export const fetchChannelConversations = function fetchChannelConversations() {
-  const self = this;
-  const apply = closure_9.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const fetchConversation = function fetchConversation() {
-  const self = this;
-  const apply = closure_10.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const toggleConversationHighlighting = function toggleConversationHighlighting() {
-  DispatcherDefault.dispatch({ type: "CONVERSATIONS_TOGGLE_HIGHLIGHTING" });
+  obj = DispatcherDefault;
+  obj.dispatch({ type: "CONVERSATIONS_TOGGLE_HIGHLIGHTING" });
 };
 export const setSelectedConversation = function setSelectedConversation(channelId, conversationId, arg2) {
-  let obj = arg2;
+  obj = arg2;
   if (arg2 === undefined) {
     obj = {};
   }
@@ -358,7 +371,8 @@ export const setSelectedConversation = function setSelectedConversation(channelI
   }
   if (null != conversationId) {
     const obj2 = { type: "SET_SELECTED_CONVERSATION", channelId, conversationId };
-    DispatcherDefault.dispatch(obj2);
+    const obj4 = DispatcherDefault;
+    obj4.dispatch(obj2);
     fetchConversationMessages(channelId, conversationId, { includeReactions: true, includeMessageReferences: true });
     if (flag) {
       const conversationMetadata = ChannelConversationsStore.getConversationMetadata(channelId, conversationId);
@@ -368,28 +382,35 @@ export const setSelectedConversation = function setSelectedConversation(channelI
       }
       if (null != startMessageId) {
         const obj3 = { channelId, messageId: startMessageId, flash: false };
-        MessageActionCreatorsDefault.jumpToMessage(obj3);
         const tmp6Result = MessageActionCreatorsDefault;
+        tmp6Result.jumpToMessage(obj3);
       }
     }
   }
 };
 export const clearConversationSelection = function clearConversationSelection(channelId, conversationId) {
-  DispatcherDefault.dispatch({ type: "CLEAR_CONVERSATION_SELECTION", channelId, conversationId });
+  obj = DispatcherDefault;
+  const obj2 = { type: "CLEAR_CONVERSATION_SELECTION", channelId, conversationId };
+  obj.dispatch(obj2);
 };
 export const requestConversationFocus = function requestConversationFocus() {
-  DispatcherDefault.dispatch({ type: "CONVERSATION_FOCUS_REQUEST" });
+  obj = DispatcherDefault;
+  obj.dispatch({ type: "CONVERSATION_FOCUS_REQUEST" });
 };
 export const setConversationFeedbackRating = function setConversationFeedbackRating(channelId, conversationId, down) {
-  DispatcherDefault.dispatch({ type: "SET_CONVERSATION_FEEDBACK_RATING", channelId, conversationId, rating: down });
+  obj = DispatcherDefault;
+  const obj2 = { type: "SET_CONVERSATION_FEEDBACK_RATING", channelId, conversationId, rating: down };
+  obj.dispatch(obj2);
 };
 export { fetchConversationMessages };
 export const trackTopicalNavigationEntrypointImpression = function trackTopicalNavigationEntrypointImpression(id, stateFromStores1) {
   const ConversationsAnalytics = ConversationsAnalytics2.ConversationsAnalytics;
-  const result = ConversationsAnalytics.trackEntrypointImpression({ channelId: id, conversationCount: stateFromStores1 });
+  obj = { channelId: id, conversationCount: stateFromStores1 };
+  const result = ConversationsAnalytics.trackEntrypointImpression(obj);
   if (TopicalNavigationSurveyStore.shouldTriggerOnNextExposure()) {
-    QualtricsActionCreatorsDefault.fireSurveyAction(SurveyActionTypes.SurveyActionTypes.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS);
+    const obj2 = QualtricsActionCreatorsDefault;
+    obj2.fireSurveyAction(SurveyActionTypes.SurveyActionTypes.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS);
   }
-  DispatcherDefault.dispatch({ type: "TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION" });
-  const obj = { channelId: id, conversationCount: stateFromStores1 };
+  const obj3 = DispatcherDefault;
+  obj3.dispatch({ type: "TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION" });
 };

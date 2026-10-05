@@ -1,26 +1,31 @@
 // === Module 18067: EnterEmailScreen ===
 
 // Module 18067 (EnterEmailScreen)
+import Fragment from "Fragment" /* 21 */;
 import _modDef2787 from "module_2787" /* 2787 */;
 import types from "types" /* 18059 */;
 import SafetyFlowTaskScreenDefault from "SafetyFlowTaskScreen" /* 18068 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, navigation;
 
-require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/safety_flows/native/tasks/EnterEmailScreen.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = navigation(576).c(9);
+const jsx = Fragment.jsx;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let first;
+  let tmp13;
+  let tmp14;
+  let tmp7;
+  let tmp8;
+  let tmp9;
   const obj = navigation(576);
-  navigation = navigation(1490).useNavigation();
-  const tmp5 = _slicedToArray(noop.useState(""), 2);
-  const first = tmp5[0];
+  const cResult = obj.c(9);
+  const obj2 = navigation(1490);
+  navigation = obj2.useNavigation();
+  [first, tmp7] = react.useState("");
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1126).intl;
     const stringResult = intl.string(_modDef2787.bFbsV6);
@@ -28,10 +33,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const stringResult1 = intl2.string(_modDef2787.RRBNpv);
     cResult[0] = stringResult;
     cResult[1] = stringResult1;
-    tmp7 = stringResult;
-    tmp8 = stringResult1;
+    tmp8 = stringResult;
+    tmp9 = stringResult1;
   } else {
-    [tmp7, tmp8] = cResult;
+    [tmp8, tmp9] = cResult;
   }
   if (cResult[2] !== navigation) {
     const fn = function c() {
@@ -39,46 +44,47 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     };
     cResult[2] = navigation;
     cResult[3] = fn;
-    let tmp12 = fn;
+    tmp13 = fn;
   } else {
-    tmp12 = cResult[3];
+    tmp13 = cResult[3];
   }
   if (cResult[4] !== first) {
-    const obj3 = { children: null };
-    const obj4 = { label: "Email", value: first, onChange: tmp5[1] };
-    obj3.children = jsx(tmp(6098).TextInput, { label: "Email", value: first, onChange: tmp5[1] });
-    const tmp15 = jsx(tmp(5593).Stack, { children: null });
+    const Stack = tmp(5593).Stack;
+    const tmp16 = <Stack>{null}</Stack>;
     cResult[4] = first;
-    cResult[5] = tmp15;
-    let tmp13 = tmp15;
+    cResult[5] = tmp16;
+    tmp14 = tmp16;
   } else {
-    tmp13 = cResult[5];
+    tmp14 = cResult[5];
   }
-  if (cResult[6] === tmp12) {
-    if (cResult[7] === tmp13) {
-      let tmp16 = cResult[8];
+  if (cResult[6] === tmp13) {
+    let tmp17;
+    if (cResult[7] === tmp14) {
+      tmp17 = cResult[8];
     }
-    return tmp16;
+    return tmp17;
   }
-  const tmp17 = jsx(SafetyFlowTaskScreenDefault, { title: tmp7, action: tmp8, onAction: tmp12, children: tmp13 });
-  cResult[6] = tmp12;
-  cResult[7] = tmp13;
-  cResult[8] = tmp17;
-  tmp16 = tmp17;
-  const obj2 = navigation(1490);
+  const tmp18 = jsx(SafetyFlowTaskScreenDefault, { title: tmp8, action: tmp9, onAction: tmp13, children: tmp14 });
+  cResult[6] = tmp13;
+  cResult[7] = tmp14;
+  cResult[8] = tmp18;
+  tmp17 = tmp18;
 }) : (() => {
-  _require = require("useNavigation").useNavigation();
+  let closure_0;
+  let tmp2;
+  let tmp3;
   const obj = require("useNavigation");
-  [tmp2, tmp3] = noop.useState("");
-  const obj2 = { title: null, action: null, onAction: null, children: null };
-  const tmp = _slicedToArray(noop.useState(""), 2);
-  const intl = require("util").intl;
-  obj2.title = intl.string(_modDef2787.bFbsV6);
-  const intl2 = require("util").intl;
-  obj2.action = intl2.string(_modDef2787.RRBNpv);
-  obj2.onAction = function onAction() {
+  _require = obj.useNavigation();
+  [tmp2, tmp3] = react.useState("");
+  _slicedToArray(react.useState(""), 2);
+  SafetyFlowTaskScreenDefault;
+  const intl = require("intl").intl;
+  const intl2 = require("intl").intl;
+  const Stack = require("Stack/Stack").Stack;
+  return <tmp4 title={intl.string(_modDef2787.bFbsV6)} action={intl2.string(_modDef2787.RRBNpv)} onAction={function onAction() {
     closure_0.push(types.SafetyFlowScreens.VERIFY_EMAIL);
-  };
-  obj2.children = jsx(require("Stack/Stack").Stack, { children: jsx(require("TextInput").TextInput, { label: "Email", value: tmp2, onChange: tmp3 }) });
-  return <tmp4 title={null} action={null} onAction={null}>{null}</tmp4>;
+  }}>{null}</tmp4>;
 });
+const result = size.fileFinishedImporting("modules/safety_flows/native/tasks/EnterEmailScreen.tsx");
+
+export default tmp2;

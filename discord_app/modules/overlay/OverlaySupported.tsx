@@ -8,7 +8,7 @@ let flag = PlatformUtils.isPlatformEmbedded;
 if (flag) {
   const _module = PlatformUtils;
   flag = _module.isWindows() || false;
-  const tmp2 = _module.isWindows() || false;
+  _module.isWindows() || false;
 }
 if (flag) {
   flag = false;

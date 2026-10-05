@@ -2,31 +2,52 @@
 
 // Module 14471 (UserPrimaryGuildListBottomSheet)
 import _modDef12 from "module_12" /* 12 */;
+import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import GuildIconDefault from "GuildIcon" /* 5971 */;
+import GuildTagConstants from "GuildTagConstants" /* 7603 */;
 import Form from "Form" /* 8895 */;
-import noop from "module_19" /* 19 */;
+import react_mod from "react" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const GuildTagBadgeSize = fn(7603).GuildTagBadgeSize;
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4890);
-let obj = { titleContainer: { paddingHorizontal: 16, flexDirection: "row", alignItems: "center", justifyContent: "center" }, guildIcon: { marginLeft: 4 }, tag: { padding: 2 }, tagStyles: null, divider: null, itemTrailingStyle: null };
-const PlatformUtils = fn(1369);
-let num = 18;
+let BottomSheet, dependencyMap, hideActionSheetResult;
+
+let metroImportDefault;
+let metroRequire;
+let num;
+let obj2;
+let react = react_mod;
+const View = react_native.View;
+const GuildTagBadgeSize = GuildTagConstants.GuildTagBadgeSize;
+({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { titleContainer: { paddingHorizontal: 16, flexDirection: "row", alignItems: "center", justifyContent: "center" }, guildIcon: { marginLeft: 4 }, tag: { padding: 2 }, tagStyles: { lineHeight: num }, divider: obj2, itemTrailingStyle: { flexDirection: "row", alignItems: "center", gap: 8, height: 20 } };
+createStyles = createStyles.createStyles;
+num = 18;
 if (PlatformUtils.isAndroid()) {
   num = 16;
 }
-obj.tagStyles = { lineHeight: num };
-obj.divider = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-obj.itemTrailingStyle = { flexDirection: "row", alignItems: "center", gap: 8, height: 20 };
-let closure_8 = createStyles.createStyles(obj);
-let ReactCompilerGating = fn(558);
-let closure_9 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = item(576).c(34);
+obj2 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+let closure_8 = createStyles(obj);
+let memo = react.memo;
+let ReactCompilerGating = ReactCompilerGating_mod;
+let closure_9 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let accessibilityRole;
+  let accessibilityState;
+  let end;
+  let item;
+  let items;
+  let onSelectGuild;
+  let selected;
+  let start;
+  let tag;
+  let obj = item(576);
+  const cResult = obj.c(34);
   ({ start, end, item } = arg0);
   ({ selected, onSelectGuild } = arg0);
   const tmp4 = closure_8();
@@ -35,191 +56,202 @@ let closure_9 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0)
     profile = item.profile;
   }
   let badge;
+  const first = cResult[0];
   if (profile != null) {
     badge = profile.badge;
   }
-  if (cResult[0] === badge) {
+  if (first === badge) {
+    let tmp8;
+    let tmp14;
     if (cResult[1] === item) {
-      let tmp7 = cResult[2];
+      tmp8 = cResult[2];
     }
     if (cResult[3] !== selected) {
       const obj2 = { selected };
       cResult[3] = selected;
       cResult[4] = obj2;
-      let tmp12 = obj2;
+      tmp14 = obj2;
     } else {
-      tmp12 = cResult[4];
+      tmp14 = cResult[4];
     }
-    const radioA11yNative = item(4594).useRadioA11yNative(tmp12);
+    const tmpResult = item(4594);
+    const radioA11yNative = tmpResult.useRadioA11yNative(tmp14);
     ({ accessibilityRole, accessibilityState } = radioA11yNative);
-    let id;
+    let id1;
+    const tmp16 = cResult[5];
     if (item != null) {
-      id = item.id;
+      id1 = item.id;
     }
-    if (cResult[5] === id) {
+    if (tmp16 === id1) {
+      let tmp18;
+      let tmp20;
       if (cResult[6] === onSelectGuild) {
-        let tmp15 = cResult[7];
+        tmp18 = cResult[7];
       }
       if (cResult[8] !== item) {
+        let name;
         if (null != item) {
-          let name = item.name;
+          name = item.name;
         } else {
           const intl = item(1126).intl;
           name = intl.string(item(1126).t.PoWNfe);
         }
         cResult[8] = item;
         cResult[9] = name;
+        tmp20 = name;
       } else {
-        if (cResult[10] === item) {
-          if (cResult[11] === tmp4.guildIcon) {
-            let tmp19 = cResult[12];
-          }
-          if (cResult[13] === tmp7) {
-            if (cResult[14] === profile) {
-              if (cResult[15] === item) {
-                if (cResult[16] === tmp4.tag) {
-                  if (cResult[17] === tmp4.tagStyles) {
-                    let tmp24 = cResult[18];
-                  }
-                  if (cResult[19] !== selected) {
-                    const obj3 = { selected };
-                    const tmp30 = closure_6(item(6075).FormRadio, obj3);
-                    cResult[19] = selected;
-                    cResult[20] = tmp30;
-                    let tmp28 = tmp30;
-                  } else {
-                    tmp28 = cResult[20];
-                  }
-                  if (cResult[21] === tmp4.itemTrailingStyle) {
-                    if (cResult[22] === tmp24) {
-                      if (cResult[23] === tmp28) {
-                        let tmp31 = cResult[24];
-                      }
-                      if (cResult[25] === accessibilityRole) {
-                        if (cResult[26] === accessibilityState) {
-                          if (cResult[27] === end) {
-                            if (cResult[28] === start) {
-                              if (cResult[29] === tmp15) {
-                                if (cResult[30] === tmp17) {
-                                  if (cResult[31] === tmp19) {
-                                    if (cResult[32] === tmp31) {
-                                      let tmp35 = cResult[33];
-                                    }
-                                    return tmp35;
+        tmp20 = cResult[9];
+      }
+      if (cResult[10] === item) {
+        let tmp21;
+        if (cResult[11] === tmp4.guildIcon) {
+          tmp21 = cResult[12];
+        }
+        if (cResult[13] === tmp8) {
+          if (cResult[14] === profile) {
+            if (cResult[15] === item) {
+              if (cResult[16] === tmp4.tag) {
+                let tmp26;
+                let tmp30;
+                if (cResult[17] === tmp4.tagStyles) {
+                  tmp26 = cResult[18];
+                }
+                if (cResult[19] !== selected) {
+                  const obj3 = { selected };
+                  const tmp32 = closure_6(item(6075).FormRadio, obj3);
+                  cResult[19] = selected;
+                  cResult[20] = tmp32;
+                  tmp30 = tmp32;
+                } else {
+                  tmp30 = cResult[20];
+                }
+                if (cResult[21] === tmp4.itemTrailingStyle) {
+                  if (cResult[22] === tmp26) {
+                    let tmp33;
+                    if (cResult[23] === tmp30) {
+                      tmp33 = cResult[24];
+                    }
+                    if (cResult[25] === accessibilityRole) {
+                      if (cResult[26] === accessibilityState) {
+                        if (cResult[27] === end) {
+                          if (cResult[28] === start) {
+                            if (cResult[29] === tmp18) {
+                              if (cResult[30] === tmp20) {
+                                if (cResult[31] === tmp21) {
+                                  let tmp37;
+                                  if (cResult[32] === tmp33) {
+                                    tmp37 = cResult[33];
                                   }
+                                  return tmp37;
                                 }
                               }
                             }
                           }
                         }
                       }
-                      const obj4 = { start, end, onPress: tmp15, label: tmp17, icon: tmp19, accessibilityRole, accessibilityState, trailing: tmp31 };
-                      class G {
-                        constructor() {
-                          id = undefined;
-                          tmp = onSelectGuild;
-                          if (item != null) {
-                            id = item.id;
-                          }
-                          if (id == null) {
-                            id = null;
-                          }
-                          tmpResult = tmp(id);
-                          obj = closure_1(closure_2[11]);
-                          hideActionSheetResult = obj.hideActionSheet();
-                          return;
+                    }
+                    class G {
+                      constructor() {
+                        id = undefined;
+                        tmp = onSelectGuild;
+                        if (item != null) {
+                          id = item.id;
                         }
+                        if (id == null) {
+                          id = null;
+                        }
+                        tmpResult = tmp(id);
+                        obj = closure_1(closure_2[11]);
+                        hideActionSheetResult = obj.hideActionSheet();
+                        return;
                       }
-                      cResult[25] = accessibilityRole;
-                      cResult[26] = accessibilityState;
-                      cResult[27] = end;
-                      cResult[28] = start;
-                      cResult[29] = tmp15;
-                      cResult[30] = tmp17;
-                      cResult[31] = tmp19;
-                      cResult[32] = tmp31;
-                      cResult[33] = tmp37;
-                      tmp35 = tmp37;
                     }
+                    cResult[25] = accessibilityRole;
+                    cResult[26] = accessibilityState;
+                    cResult[27] = end;
+                    cResult[28] = start;
+                    cResult[29] = tmp18;
+                    cResult[30] = tmp20;
+                    cResult[31] = tmp21;
+                    cResult[32] = tmp33;
+                    cResult[33] = tmp39;
+                    tmp37 = tmp39;
                   }
-                  const obj5 = { style: tmp4.itemTrailingStyle, children: null };
-                  const items = [tmp24, tmp28];
-                  obj5.children = items;
-                  const tmp34 = closure_7(View, obj5);
-                  class G {
-                    constructor() {
-                      id = undefined;
-                      tmp = onSelectGuild;
-                      if (item != null) {
-                        id = item.id;
-                      }
-                      if (id == null) {
-                        id = null;
-                      }
-                      tmpResult = tmp(id);
-                      obj = closure_1(closure_2[11]);
-                      hideActionSheetResult = obj.hideActionSheet();
-                      return;
-                    }
-                  }
-                  cResult[21] = tmp4.itemTrailingStyle;
-                  cResult[22] = tmp24;
-                  cResult[23] = tmp28;
-                  cResult[24] = tmp34;
-                  tmp31 = tmp34;
                 }
+                const obj6 = { style: tmp4.itemTrailingStyle, children: items };
+                items = [tmp26, tmp30];
+                const tmp36 = closure_7(View, obj6);
+                class G {
+                  constructor() {
+                    id = undefined;
+                    tmp = onSelectGuild;
+                    if (item != null) {
+                      id = item.id;
+                    }
+                    if (id == null) {
+                      id = null;
+                    }
+                    tmpResult = tmp(id);
+                    obj = closure_1(closure_2[11]);
+                    hideActionSheetResult = obj.hideActionSheet();
+                    return;
+                  }
+                }
+                cResult[21] = tmp4.itemTrailingStyle;
+                cResult[22] = tmp26;
+                cResult[23] = tmp30;
+                cResult[24] = tmp36;
+                tmp33 = tmp36;
               }
             }
           }
-          let tmp26Result = null != item && null != profile;
-          if (tmp26Result) {
-            const obj7 = { containerStyles: null, textStyle: null, guildTag: null, guildBadge: null, badgeSize: null, textVariant: "heading-md/semibold", textColor: "text-strong" };
-            ({ tag: obj6.containerStyles, tagStyles: obj6.textStyle } = tmp4);
-            const tag = profile.tag;
-            obj7.guildTag = tag;
-            obj7.guildBadge = tmp7;
-            obj7.badgeSize = GuildTagBadgeSize.SIZE_16;
-            tmp26Result = closure_6(item(9395).BaseGuildTagChiplet, obj7);
-          }
-          cResult[13] = tmp7;
-          cResult[14] = profile;
-          cResult[15] = item;
-          cResult[16] = tmp4.tag;
-          class G {
-            constructor() {
-              id = undefined;
-              tmp = onSelectGuild;
-              if (item != null) {
-                id = item.id;
-              }
-              if (id == null) {
-                id = null;
-              }
-              tmpResult = tmp(id);
-              obj = closure_1(closure_2[11]);
-              hideActionSheetResult = obj.hideActionSheet();
-              return;
+        }
+        let tmp28Result = null != item && null != profile;
+        if (tmp28Result) {
+          const obj7 = { containerStyles: null, textStyle: null, guildTag: tag, guildBadge: tmp8, badgeSize: GuildTagBadgeSize.SIZE_16, textVariant: "heading-md/semibold", textColor: "text-strong" };
+          ({ tag: obj5.containerStyles, tagStyles: obj5.textStyle } = tmp4);
+          tag = profile.tag;
+          const BaseGuildTagChiplet = item(9395).BaseGuildTagChiplet;
+          tmp28Result = closure_6(BaseGuildTagChiplet, obj7);
+        }
+        cResult[13] = tmp8;
+        cResult[14] = profile;
+        cResult[15] = item;
+        cResult[16] = tmp4.tag;
+        class G {
+          constructor() {
+            id = undefined;
+            tmp = onSelectGuild;
+            if (item != null) {
+              id = item.id;
             }
+            if (id == null) {
+              id = null;
+            }
+            tmpResult = tmp(id);
+            obj = closure_1(closure_2[11]);
+            hideActionSheetResult = obj.hideActionSheet();
+            return;
           }
-          cResult[17] = tmp4.tagStyles;
-          cResult[18] = tmp26Result;
-          tmp24 = tmp26Result;
         }
-        let tmp20 = null;
-        if (null != item) {
-          const obj8 = { style: tmp4.guildIcon, guild: item, size: item(5971).GuildIconSizes.SMALL_32 };
-          tmp20 = closure_6(onSelectGuild(5971), obj8);
-          const tmp23 = onSelectGuild(5971);
-        }
-        cResult[10] = item;
-        cResult[11] = tmp4.guildIcon;
-        cResult[12] = tmp20;
-        tmp19 = tmp20;
+        cResult[17] = tmp4.tagStyles;
+        cResult[18] = tmp28Result;
+        tmp26 = tmp28Result;
       }
+      let tmp22 = null;
+      if (null != item) {
+        const obj8 = { style: tmp4.guildIcon, guild: item, size: item(5971).GuildIconSizes.SMALL_32 };
+        const tmp25 = onSelectGuild(5971);
+        tmp22 = closure_6(tmp25, obj8);
+      }
+      cResult[10] = item;
+      cResult[11] = tmp4.guildIcon;
+      cResult[12] = tmp22;
+      tmp21 = tmp22;
     }
-    let id1;
+    let id2;
     if (item != null) {
-      id1 = item.id;
+      id2 = item.id;
     }
     class G {
       constructor() {
@@ -237,20 +269,21 @@ let closure_9 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0)
         return;
       }
     }
-    cResult[5] = id1;
+    cResult[5] = id2;
     cResult[6] = onSelectGuild;
     cResult[7] = G;
-    tmp15 = G;
-    const tmpResult = item(4594);
+    tmp18 = G;
   }
   let guildTagBadgeUrl = null != item;
   if (guildTagBadgeUrl) {
     let badge1;
+    const getGuildTagBadgeUrl = item(7836).getGuildTagBadgeUrl;
+    let id = item.id;
+    item(7836);
     if (profile != null) {
       badge1 = profile.badge;
     }
-    guildTagBadgeUrl = item(7836).getGuildTagBadgeUrl(item.id, badge1, GuildTagBadgeSize.SIZE_24);
-    const tmpResult2 = item(7836);
+    guildTagBadgeUrl = getGuildTagBadgeUrl(id, badge1, GuildTagBadgeSize.SIZE_24);
   }
   let badge2;
   if (profile != null) {
@@ -259,28 +292,41 @@ let closure_9 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0)
   cResult[0] = badge2;
   cResult[1] = item;
   cResult[2] = guildTagBadgeUrl;
-  tmp7 = guildTagBadgeUrl;
-  let obj = item(576);
+  tmp8 = guildTagBadgeUrl;
 }) : ((item) => {
+  let accessibilityRole;
+  let accessibilityState;
+  let end;
+  let items;
+  let name;
+  let obj4;
+  let profile;
+  let selected;
+  let start;
+  let tag;
+  let tmp11Result;
   item = item.item;
   ({ selected, onSelectGuild: importDefault } = item);
   ({ start, end } = item);
   const tmp = closure_8();
   if (item != null) {
-    const profile = item.profile;
+    profile = item.profile;
   }
   let guildTagBadgeUrl = null != item;
   if (guildTagBadgeUrl) {
     let badge;
+    const getGuildTagBadgeUrl = item(7836).getGuildTagBadgeUrl;
+    let id = item.id;
+    item(7836);
     if (profile != null) {
       badge = profile.badge;
     }
-    guildTagBadgeUrl = item(7836).getGuildTagBadgeUrl(item.id, badge, GuildTagBadgeSize.SIZE_24);
-    let obj = item(7836);
+    guildTagBadgeUrl = getGuildTagBadgeUrl(id, badge, GuildTagBadgeSize.SIZE_24);
   }
-  const radioA11yNative = item(4594).useRadioA11yNative({ selected });
+  let obj = item(4594);
+  const radioA11yNative = obj.useRadioA11yNative({ selected });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
-  const obj3 = {
+  const obj2 = {
     start,
     end,
     onPress() {
@@ -291,225 +337,218 @@ let closure_9 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0)
       if (id == null) {
         id = null;
       }
-      closure_1_1(id);
-      ActionSheetActionCreatorsDefault.hideActionSheet();
+      importDefault(id);
+      const obj = ActionSheetActionCreatorsDefault;
+      obj.hideActionSheet();
     },
-    label: null,
-    icon: null,
-    accessibilityRole: null,
-    accessibilityState: null,
-    trailing: null
+    label: name,
+    icon: tmp11Result,
+    accessibilityRole,
+    accessibilityState,
+    trailing: closure_7(View, obj4)
   };
+  const TableRow = item(5993).TableRow;
   if (null != item) {
-    let name = item.name;
+    name = item.name;
   } else {
-    const intl = tmp7(1126).intl;
-    name = intl.string(tmp7(1126).t.PoWNfe);
+    const intl = tmp8(1126).intl;
+    name = intl.string(tmp8(1126).t.PoWNfe);
   }
-  obj3.label = name;
-  let tmp10Result = null;
+  tmp11Result = null;
   if (null != item) {
-    const obj4 = { style: tmp.guildIcon, guild: item, size: tmp7(5971).GuildIconSizes.SMALL_32 };
-    tmp10Result = closure_6(GuildIconDefault, obj4);
+    const obj3 = { style: tmp.guildIcon, guild: item, size: item(5971).GuildIconSizes.SMALL_32 };
+    const tmp14 = GuildIconDefault;
+    tmp11Result = closure_6(tmp14, obj3);
   }
-  obj3.icon = tmp10Result;
-  obj3.accessibilityRole = accessibilityRole;
-  obj3.accessibilityState = accessibilityState;
-  const obj5 = { style: tmp.itemTrailingStyle, children: null };
-  let tmp10Result2 = null != item;
-  if (tmp10Result2) {
-    tmp10Result2 = null != profile;
+  let tmp11Result2 = null != item && null != profile;
+  obj4 = { style: tmp.itemTrailingStyle, children: items };
+  if (tmp11Result2) {
+    const obj9 = { containerStyles: null, textStyle: null, guildTag: tag, guildBadge: guildTagBadgeUrl, badgeSize: GuildTagBadgeSize.SIZE_16, textVariant: "heading-md/semibold", textColor: "text-strong" };
+    ({ tag: obj5.containerStyles, tagStyles: obj5.textStyle } = tmp);
+    tag = profile.tag;
+    const BaseGuildTagChiplet = tmp8(9395).BaseGuildTagChiplet;
+    tmp11Result2 = closure_6(BaseGuildTagChiplet, obj9);
   }
-  if (tmp10Result2) {
-    const obj10 = { containerStyles: null, textStyle: null, guildTag: null, guildBadge: null, badgeSize: null, textVariant: "heading-md/semibold", textColor: "text-strong" };
-    ({ tag: obj6.containerStyles, tagStyles: obj6.textStyle } = tmp);
-    const tag = profile.tag;
-    obj10.guildTag = tag;
-    obj10.guildBadge = guildTagBadgeUrl;
-    obj10.badgeSize = GuildTagBadgeSize.SIZE_16;
-    tmp10Result2 = closure_6(tmp7(9395).BaseGuildTagChiplet, obj10);
-  }
-  const items = [tmp10Result2, closure_6(item(6075).FormRadio, { selected })];
-  obj5.children = items;
-  obj3.trailing = closure_7(View, obj5);
-  return closure_6(item(5993).TableRow, obj3);
+  items = [tmp11Result2, closure_6(item(6075).FormRadio, { selected })];
+  return closure_6(TableRow, obj2);
 }));
-ReactCompilerGating = fn(558);
-let obj3 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/profiles/native/UserPrimaryGuildListBottomSheet.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSelectGuild) => {
-  const cResult = selectedGuildId(576).c(21);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onSelectGuild) => {
+  let availableGuilds;
+  let data;
+  let divider;
+  let intl;
+  let selectedGuildId;
+  let tmp11;
+  let tmp18;
+  let tmp19;
+  let tmp3 = dependencyMap;
+  let obj = selectedGuildId(576);
+  const cResult = obj.c(21);
   ({ availableGuilds, selectedGuildId } = onSelectGuild);
   onSelectGuild = onSelectGuild.onSelectGuild;
-  const tmp4 = closure_8();
-  dependencyMap = tmp4;
+  const tmp5 = closure_8();
+  dependencyMap = tmp5;
   if (cResult[0] !== availableGuilds) {
+    let tmp7;
     const _Symbol = Symbol;
+    let str = "react.memo_cache_sentinel";
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
       const fn = function o(name) {
-        return name.name.toLowerCase();
+        const str = name.name;
+        return str.toLowerCase();
       };
       cResult[2] = fn;
-      let tmp6 = fn;
+      tmp7 = fn;
     } else {
-      tmp6 = cResult[2];
+      tmp7 = cResult[2];
     }
     const items = [null];
-    HermesBuiltin.arraySpread(onSelectGuild(12).sortBy(availableGuilds, tmp6), 1);
+    const obj2 = onSelectGuild(12);
+    HermesBuiltin.arraySpread(items, obj2.sortBy(availableGuilds, tmp7), 1);
     cResult[0] = availableGuilds;
     cResult[1] = items;
-    const obj2 = onSelectGuild(12);
+    data = items;
   } else {
-    const data = cResult[1];
-    const _Symbol2 = Symbol;
-    if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj3 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
-      const intl = selectedGuildId(1126).intl;
-      obj3.children = intl.string(selectedGuildId(1126).t.Fo0g9x);
-      const tmp14 = closure_6(selectedGuildId(4886).Text, obj3);
-      cResult[3] = tmp14;
-      let tmp12 = tmp14;
-    } else {
-      tmp12 = cResult[3];
-    }
-    if (cResult[4] !== tmp4.titleContainer) {
-      const obj4 = { style: tmp4.titleContainer, children: tmp12 };
-      const tmp18 = closure_6(View, obj4);
-      cResult[4] = tmp4.titleContainer;
-      cResult[5] = tmp18;
-    }
-    if (cResult[6] !== tmp4.divider) {
-      const fn2 = function f() {
-        return timestampProducer(Form.FormDivider, { iconPush: true, style: divider.divider });
-      };
-      cResult[6] = tmp4.divider;
-      cResult[7] = fn2;
-      let tmp19 = fn2;
-    } else {
-      tmp19 = cResult[7];
-    }
-    const _Symbol3 = Symbol;
-    if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj5 = { padding: 16 };
-      class C {
-        constructor(arg0) {
-          str = "none-guild-type";
-          if (null != onSelectGuild) {
-            str = onSelectGuild.id;
-          }
-          return str;
-        }
-      }
-      cResult[8] = obj5;
-      cResult[9] = C;
-      let tmp20 = obj5;
-    } else {
-      tmp20 = cResult[8];
-      class C {
-        constructor(arg0) {
-          str = "none-guild-type";
-          if (null != onSelectGuild) {
-            str = onSelectGuild.id;
-          }
-          return str;
-        }
-      }
-    }
-    if (cResult[10] === data.length) {
-      if (cResult[11] === onSelectGuild) {
-        if (cResult[12] === selectedGuildId) {
-          let tmp22 = cResult[13];
-        }
-        class C {
-          constructor(arg0) {
-            str = "none-guild-type";
-            if (null != onSelectGuild) {
-              str = onSelectGuild.id;
-            }
-            return str;
-          }
-        }
-        const obj6 = { ItemSeparatorComponent: tmp19, data, contentContainerStyle: tmp20, keyExtractor: C, renderItem: tmp22 };
-        const tmp25 = closure_6(selectedGuildId(8371).BottomSheetFlashList, obj6);
-        cResult[14] = data;
-        class G {
-          constructor(arg0) {
-            ({ item, index } = onSelectGuild);
-            obj = { start: 0 === index, end: index === closure_3.length - 1, item, selected: null, onSelectGuild: null };
-            tmp3 = selectedGuildId;
-            tmp = jsx;
-            tmp2 = closure_9;
-            if (selectedGuildId == null) {
-              tmp3 = null;
-            }
-            id = undefined;
-            if (item != null) {
-              id = item.id;
-            }
-            if (id == null) {
-              id = null;
-            }
-            obj.selected = tmp3 === id;
-            obj.onSelectGuild = onSelectGuild;
-            return tmp(tmp2, obj);
-          }
-        }
-        cResult[16] = tmp22;
-        cResult[17] = tmp25;
-      }
-    }
-    class G {
-      constructor(arg0) {
-        ({ item, index } = onSelectGuild);
-        obj = { start: 0 === index, end: index === closure_3.length - 1, item, selected: null, onSelectGuild: null };
-        tmp3 = selectedGuildId;
-        tmp = jsx;
-        tmp2 = closure_9;
-        if (selectedGuildId == null) {
-          tmp3 = null;
-        }
-        id = undefined;
-        if (item != null) {
-          id = item.id;
-        }
-        if (id == null) {
-          id = null;
-        }
-        obj.selected = tmp3 === id;
-        obj.onSelectGuild = onSelectGuild;
-        return tmp(tmp2, obj);
-      }
-    }
-    cResult[10] = data.length;
-    cResult[11] = onSelectGuild;
-    cResult[12] = selectedGuildId;
-    cResult[13] = G;
-    tmp22 = G;
+    data = cResult[1];
   }
-  let obj = selectedGuildId(576);
+  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj3 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: intl.string(selectedGuildId(1126).t.Fo0g9x) };
+    const Text = selectedGuildId(4886).Text;
+    intl = selectedGuildId(1126).intl;
+    const tmp13 = closure_6(Text, obj3);
+    cResult[3] = tmp13;
+    tmp11 = tmp13;
+  } else {
+    tmp11 = cResult[3];
+  }
+  if (cResult[4] !== tmp5.titleContainer) {
+    const obj4 = { style: tmp5.titleContainer, children: tmp11 };
+    cResult[4] = tmp5.titleContainer;
+    cResult[5] = closure_6(View, obj4);
+    const tmp17 = closure_6(View, obj4);
+  }
+  if (cResult[6] !== tmp5.divider) {
+    const fn2 = function f() {
+      const obj = { iconPush: true, style: divider.divider };
+      return metroRequire(Form.FormDivider, obj);
+    };
+    cResult[6] = tmp5.divider;
+    cResult[7] = fn2;
+    tmp18 = fn2;
+  } else {
+    tmp18 = cResult[7];
+  }
+  if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj5 = { padding: 16 };
+    class C {
+      constructor(id) {
+        let str = "none-guild-type";
+        if (null != id) {
+          str = id.id;
+        }
+        return str;
+      }
+    }
+    cResult[8] = obj5;
+    cResult[9] = C;
+    tmp19 = obj5;
+  } else {
+    tmp19 = cResult[8];
+    class C {
+      constructor(id) {
+        let str = "none-guild-type";
+        if (null != id) {
+          str = id.id;
+        }
+        return str;
+      }
+    }
+  }
+  if (cResult[10] === data.length) {
+    if (cResult[11] === onSelectGuild) {
+      let tmp21;
+      if (cResult[12] === selectedGuildId) {
+        tmp21 = cResult[13];
+      }
+      class C {
+        constructor(id) {
+          let str = "none-guild-type";
+          if (null != id) {
+            str = id.id;
+          }
+          return str;
+        }
+      }
+      const obj6 = { ItemSeparatorComponent: tmp18, data, contentContainerStyle: tmp19, keyExtractor: C, renderItem: tmp21 };
+      cResult[14] = data;
+      cResult[15] = tmp18;
+      cResult[16] = tmp21;
+      cResult[17] = closure_6(selectedGuildId(8371).BottomSheetFlashList, obj6);
+      const tmp24 = closure_6(selectedGuildId(8371).BottomSheetFlashList, obj6);
+    }
+  }
+  class G {
+    constructor(arg0) {
+      let id;
+      let index;
+      let item;
+      let tmp3;
+      ({ item, index } = arg0);
+      const obj = { start: 0 === index, end: index === arr.length - 1, item, selected: tmp3 === id, onSelectGuild };
+      tmp3 = selectedGuildId;
+      if (selectedGuildId == null) {
+        tmp3 = null;
+      }
+      id = undefined;
+      if (item != null) {
+        id = item.id;
+      }
+      if (id == null) {
+        id = null;
+      }
+      return metroRequire(closure_9, obj);
+    }
+  }
+  cResult[10] = data.length;
+  cResult[11] = onSelectGuild;
+  cResult[12] = selectedGuildId;
+  cResult[13] = G;
+  tmp21 = G;
 }) : ((availableGuilds) => {
+  let Text;
+  let divider;
+  let intl;
+  let obj2;
+  let obj3;
+  let obj4;
+  let onSelectGuild;
   availableGuilds = availableGuilds.availableGuilds;
   ({ selectedGuildId: importDefault, onSelectGuild: dependencyMap } = availableGuilds);
   const tmp = closure_8();
-  noop = tmp;
+  react = tmp;
   let items = [availableGuilds];
-  const memo = noop.useMemo(() => {
-    const items = [null];
-    HermesBuiltin.arraySpread(_modDef12.sortBy(availableGuilds, (name) => name.name.toLowerCase()), 1);
+  const memo = react.useMemo(() => {
+    const items = [
+      null,
+      ..._modDef12.sortBy(availableGuilds, (name) => {
+        const str = name.name;
+        return str.toLowerCase();
+      })
+    ];
+    _modDef12;
     return items;
   }, items);
-  let obj = { scrollable: true, startExpanded: true, header: null, children: null };
-  const obj2 = { style: tmp.titleContainer, children: null };
-  const obj3 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
-  const intl = availableGuilds(1126).intl;
-  obj3.children = intl.string(availableGuilds(1126).t.Fo0g9x);
-  obj2.children = closure_6(availableGuilds(4886).Text, obj3);
-  obj.header = closure_6(memo, obj2);
-  obj.children = closure_6(availableGuilds(8371).BottomSheetFlashList, {
+  let obj = { scrollable: true, startExpanded: true, header: closure_6(memo, obj2), children: closure_6(availableGuilds(8371).BottomSheetFlashList, obj4) };
+  obj2 = { style: tmp.titleContainer, children: closure_6(Text, obj3) };
+  BottomSheet = availableGuilds(6645).BottomSheet;
+  obj3 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: intl.string(availableGuilds(1126).t.Fo0g9x) };
+  Text = availableGuilds(4886).Text;
+  intl = availableGuilds(1126).intl;
+  obj4 = {
     ItemSeparatorComponent() {
-      return timestampProducer(Form.FormDivider, { iconPush: true, style: divider.divider });
+      const obj = { iconPush: true, style: divider.divider };
+      return metroRequire(Form.FormDivider, obj);
     },
     data: memo,
     contentContainerStyle: { padding: 16 },
@@ -521,23 +560,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSelectGuild) =
       return str;
     },
     renderItem(arg0) {
+      let id;
+      let index;
+      let item;
+      let tmp3;
       ({ item, index } = arg0);
-      const obj = { start: 0 === index, end: index === memo.length - 1, item, selected: null, onSelectGuild: null };
-      let tmp3 = importDefault;
+      const obj = { start: 0 === index, end: index === memo.length - 1, item, selected: tmp3 === id, onSelectGuild: dependencyMap };
+      tmp3 = importDefault;
       if (importDefault == null) {
         tmp3 = null;
       }
-      let id;
+      id = undefined;
       if (item != null) {
         id = item.id;
       }
       if (id == null) {
         id = null;
       }
-      obj.selected = tmp3 === id;
-      obj.onSelectGuild = onSelectGuild;
-      return timestampProducer(closure_9, obj);
+      return metroRequire(closure_9, obj);
     }
-  });
-  return closure_6(availableGuilds(6645).BottomSheet, obj);
+  };
+  return closure_6(BottomSheet, obj);
 });
+const result = size.fileFinishedImporting("modules/user_settings/profiles/native/UserPrimaryGuildListBottomSheet.tsx");
+
+export default tmp5;

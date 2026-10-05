@@ -1,29 +1,40 @@
 // === Module 16875: GroupDMNitroUpsellBanner ===
 
 // Module 16875 (GroupDMNitroUpsellBanner)
-import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
+import get_initialized from "get initialized" /* 504 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import util from "util" /* 1126 */;
+import intl4 from "intl" /* 1126 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import components_Button_Button from "components/Button/Button" /* 5594 */;
 import spring from "spring" /* 5597 */;
-import _modDef7722 from "module_7722" /* 7722 */;
+import AssetRegistryDefault from "AssetRegistry" /* 7722 */;
 import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11213 */;
+import GroupDMConstants from "GroupDMConstants" /* 11215 */;
 import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11216 */;
 import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 11220 */;
 import GroupDMNitroCapBannerDefault from "GroupDMNitroCapBanner" /* 16876 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _slicedToArray_mod from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const number = fn(11215).MAX_GROUP_DM_NITRO_PARTICIPANTS;
-const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
+let set, set2, visible;
+
+let c10;
+let c9;
+let hasOwnProperty;
+let metroRequire;
+let obj2;
+let _slicedToArray = _slicedToArray_mod;
+({ StyleSheet: hasOwnProperty, View: metroRequire } = react_native);
+const number = GroupDMConstants.MAX_GROUP_DM_NITRO_PARTICIPANTS;
+({ jsx: c9, jsxs: c10 } = Fragment);
 const PX_40 = nativeDefault.space.PX_40;
 const PX_16 = nativeDefault.space.PX_16;
 let c13 = 0.4;
@@ -31,16 +42,24 @@ const PX_24 = nativeDefault.space.PX_24;
 const PX_8 = nativeDefault.space.PX_8;
 const locations = [0, 0.225, 1];
 let closure_17 = { mass: 0.8, stiffness: 400, damping: 32, overshootClamping: true };
-const createStyles = fn(4890);
-let obj2 = { floatingOverlay: { position: "absolute", left: 0, right: 0, bottom: 0 }, floatingContent: { justifyContent: "flex-end" }, floatingBanner: { backgroundColor: "transparent", paddingTop: 0, paddingBottom: nativeDefault.space.PX_16 } };
-let closure_18 = createStyles.createStyles(obj2);
+let obj = { floatingOverlay: { position: "absolute", left: 0, right: 0, bottom: 0 }, floatingContent: { justifyContent: "flex-end" }, floatingBanner: obj2 };
+obj2 = { backgroundColor: "transparent", paddingTop: 0, paddingBottom: nativeDefault.space.PX_16 };
+let closure_18 = createStyles.createStyles(obj);
 const __initData = { code: "function GroupDMNitroUpsellBannerTsx1(){const{opacity,translateY}=this.__closure;return{opacity:opacity.get(),transform:[{translateY:translateY.get()}]};}" };
 const __initData2 = { code: "function GroupDMNitroUpsellBannerTsx2(){const{keyboardHeight,safeAreaBottom}=this.__closure;return{bottom:Math.max(keyboardHeight.get()-safeAreaBottom,0)};}" };
 const __initData3 = { code: "function GroupDMNitroUpsellBannerTsx3(){const{opacity,translateY}=this.__closure;return{opacity:opacity.get(),transform:[{translateY:translateY.get()}]};}" };
 const __initData4 = { code: "function GroupDMNitroUpsellBannerTsx4(){const{keyboardHeight,safeAreaBottom}=this.__closure;return{bottom:Math.max(keyboardHeight.get()-safeAreaBottom,0)};}" };
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
-  const cResult = visible(bottom[9]).c(48);
+  let bottom;
+  let closure_3;
+  let hideGradient;
+  let items;
+  let onListInsetChange;
+  let tmp9;
+  let tmp = visible;
+  let obj = visible(bottom[9]);
+  const cResult = obj.c(48);
   visible = visible.visible;
   ({ hideGradient, onListInsetChange } = visible);
   const children = visible.children;
@@ -48,32 +67,38 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
   bottom = onListInsetChange(bottom[10])().bottom;
   const tmp6 = onListInsetChange(bottom[11])();
   _slicedToArray = tmp6;
-  let obj = visible(bottom[9]);
-  const token = visible(bottom[12]).useToken(onListInsetChange(bottom[6]).colors.MOBILE_ACTIONSHEET_BACKGROUND);
   const obj2 = visible(bottom[12]);
-  [tmp9, noop] = noop.useState(0);
-  const tmp8 = _slicedToArray(noop.useState(0), 2);
+  const token = obj2.useToken(onListInsetChange(bottom[6]).colors.MOBILE_ACTIONSHEET_BACKGROUND);
+  const tmp8 = _slicedToArray(react.useState(0), 2);
+  [tmp9, react] = tmp8;
   let num = 0;
+  const useSharedValue = visible(bottom[13]).useSharedValue;
+  visible(bottom[13]);
   if (visible) {
     num = c13;
   }
-  const sharedValue = visible(bottom[13]).useSharedValue(num);
-  const obj4 = visible(bottom[13]);
-  const sharedValue1 = visible(bottom[13]).useSharedValue(PX_16);
+  const sharedValue = useSharedValue(num);
+  const tmpResult = tmp(tmp2[13]);
+  const sharedValue1 = tmpResult.useSharedValue(PX_16);
   const bound = Math.max(125, tmp9 + PX_40);
   const bound1 = Math.max(onListInsetChange(tmp2[6]).space.PX_12, tmp9 - PX_8 + PX_24);
   if (cResult[0] === bound1) {
     if (cResult[1] === onListInsetChange) {
+      let tmp15;
+      let tmp16;
+      let tmp19;
+      let tmp21;
+      let tmp23;
       if (cResult[2] === visible) {
-        let tmp14 = cResult[3];
-        let tmp15 = cResult[4];
+        tmp15 = cResult[3];
+        tmp16 = cResult[4];
       }
-      const effect = noop.useEffect(tmp14, tmp15);
+      const effect = react.useEffect(tmp15, tmp16);
       const _Symbol = Symbol;
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function h(nativeEvent) {
           const height = nativeEvent.nativeEvent.layout.height;
-          noop((arg0) => {
+          let tmp = react((arg0) => {
             let tmp = height;
             if (arg0 === height) {
               tmp = arg0;
@@ -81,471 +106,418 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
             return tmp;
           });
         };
+        let num2 = 5;
         cResult[5] = fn2;
       }
       if (cResult[6] !== token) {
-        const obj6 = onListInsetChange(tmp2[14])(token);
-        const hexResult = onListInsetChange(tmp2[14])(token).alpha(0).hex();
+        const obj5 = onListInsetChange(bottom[14])(token);
+        const alphaResult = obj5.alpha(0);
+        const hexResult = alphaResult.hex();
         cResult[6] = token;
         cResult[7] = hexResult;
-        let tmp18 = hexResult;
-        const alphaResult = onListInsetChange(tmp2[14])(token).alpha(0);
+        tmp19 = hexResult;
       } else {
-        tmp18 = cResult[7];
+        tmp19 = cResult[7];
       }
       if (cResult[8] !== token) {
-        const obj8 = onListInsetChange(tmp2[14])(token);
-        const hexResult1 = onListInsetChange(tmp2[14])(token).alpha(1).hex();
+        const obj7 = onListInsetChange(bottom[14])(token);
+        const alphaResult1 = obj7.alpha(1);
+        const hexResult1 = alphaResult1.hex();
         cResult[8] = token;
         cResult[9] = hexResult1;
-        let tmp20 = hexResult1;
-        const alphaResult1 = onListInsetChange(tmp2[14])(token).alpha(1);
+        tmp21 = hexResult1;
       } else {
-        tmp20 = cResult[9];
+        tmp21 = cResult[9];
       }
       if (cResult[10] !== token) {
-        const obj10 = onListInsetChange(tmp2[14])(token);
-        const hexResult2 = onListInsetChange(tmp2[14])(token).alpha(1).hex();
+        const obj9 = onListInsetChange(bottom[14])(token);
+        const alphaResult2 = obj9.alpha(1);
+        const hexResult2 = alphaResult2.hex();
         cResult[10] = token;
         cResult[11] = hexResult2;
-        let tmp22 = hexResult2;
-        const alphaResult2 = onListInsetChange(tmp2[14])(token).alpha(1);
+        tmp23 = hexResult2;
       } else {
-        tmp22 = cResult[11];
+        tmp23 = cResult[11];
       }
-      if (cResult[12] === tmp18) {
-        if (cResult[13] === tmp20) {
-          if (cResult[14] === tmp22) {
-            let tmp24 = cResult[15];
+      if (cResult[12] === tmp19) {
+        if (cResult[13] === tmp21) {
+          let tmp25;
+          if (cResult[14] === tmp23) {
+            tmp25 = cResult[15];
           }
           if (cResult[16] === sharedValue) {
             if (cResult[17] === sharedValue1) {
+              let tmp26;
+              let tmp27;
+              let tmp35;
               if (cResult[18] === visible) {
-                let tmp25 = cResult[19];
-                let tmp26 = cResult[20];
+                tmp26 = cResult[19];
+                tmp27 = cResult[20];
               }
-              const effect1 = noop.useEffect(tmp25, tmp26);
+              const effect1 = react.useEffect(tmp26, tmp27);
               class Z {
                 constructor() {
-                  tmp = visible;
                   if (visible) {
-                    tmp2 = closure_5;
-                    tmp3 = c13;
-                    result = closure_5.set(c13);
-                    tmp5 = closure_6;
-                    tmp6 = PX_16;
-                    result1 = closure_6.set(PX_16);
+                    const result = sharedValue.set(c13);
+                    const result1 = sharedValue1.set(PX_16);
                   }
-                  tmp8 = closure_5;
-                  tmp9 = closure_0;
-                  tmp10 = closure_2;
-                  obj = closure_0(closure_2[15]);
-                  num = 0;
-                  if (tmp) {
+                  let num = 0;
+                  set = sharedValue.set;
+                  const withSpring = spring.withSpring;
+                  spring;
+                  if (visible) {
                     num = 1;
                   }
-                  tmp11 = closure_17;
-                  result2 = closure_5.set(obj.withSpring(num, closure_17));
-                  tmp13 = closure_6;
-                  tmp9Result = tmp9(tmp10[15]);
-                  num2 = 0;
-                  if (!tmp) {
+                  const result2 = set(withSpring(num, closure_17));
+                  let num2 = 0;
+                  set2 = sharedValue1.set;
+                  const withSpring2 = spring.withSpring;
+                  spring;
+                  if (!visible) {
                     num2 = PX_16;
                   }
-                  result3 = closure_6.set(tmp9Result.withSpring(num2, tmp11));
-                  return;
+                  set2(withSpring2(num2, closure_17));
                 }
               }
               class W {
                 constructor() {
-                  obj = { opacity: closure_5.get(), transform: null };
-                  obj1 = { translateY: closure_6.get() };
-                  items = [];
-                  items[0] = obj1;
-                  obj.transform = items;
+                  let items;
+                  const obj = { opacity: sharedValue.get(), transform: items };
+                  items = [{ translateY: sharedValue1.get() }];
+                  ({ translateY: sharedValue1.get() });
                   return obj;
                 }
               }
-              const obj5 = { opacity: sharedValue, translateY: sharedValue1 };
-              W.__closure = obj5;
+              const obj4 = { opacity: sharedValue, translateY: sharedValue1 };
+              W.__closure = obj4;
               W.__workletHash = 9160619443528;
               W.__initData = __initData;
-              const animatedStyle = obj12.useAnimatedStyle(W);
+              const animatedStyle = obj11.useAnimatedStyle(W);
               const fn3 = function $() {
-                return { bottom: Math.max(closure_3.get() - bottom, 0) };
+                const obj = { bottom: Math.max(closure_3.get() - bottom, 0) };
+                return obj;
               };
-              const obj7 = { keyboardHeight: tmp6, safeAreaBottom: bottom };
-              fn3.__closure = obj7;
+              const obj6 = { keyboardHeight: tmp6, safeAreaBottom: bottom };
+              fn3.__closure = obj6;
               fn3.__workletHash = 9321236677185;
               fn3.__initData = __initData2;
-              const animatedStyle1 = tmp(tmp2[13]).useAnimatedStyle(fn3);
+              const tmpResult2 = tmp(bottom[13]);
+              const animatedStyle1 = tmpResult2.useAnimatedStyle(fn3);
               const sum = bound + bottom;
               if (cResult[21] !== sum) {
-                const obj9 = { height: sum };
+                const obj8 = { height: sum };
                 class Z {
                   constructor() {
-                    tmp = visible;
                     if (visible) {
-                      tmp2 = closure_5;
-                      tmp3 = c13;
-                      result = closure_5.set(c13);
-                      tmp5 = closure_6;
-                      tmp6 = PX_16;
-                      result1 = closure_6.set(PX_16);
+                      const result = sharedValue.set(c13);
+                      const result1 = sharedValue1.set(PX_16);
                     }
-                    tmp8 = closure_5;
-                    tmp9 = closure_0;
-                    tmp10 = closure_2;
-                    obj = closure_0(closure_2[15]);
-                    num = 0;
-                    if (tmp) {
+                    let num = 0;
+                    set = sharedValue.set;
+                    const withSpring = spring.withSpring;
+                    spring;
+                    if (visible) {
                       num = 1;
                     }
-                    tmp11 = closure_17;
-                    result2 = closure_5.set(obj.withSpring(num, closure_17));
-                    tmp13 = closure_6;
-                    tmp9Result = tmp9(tmp10[15]);
-                    num2 = 0;
-                    if (!tmp) {
+                    const result2 = set(withSpring(num, closure_17));
+                    let num2 = 0;
+                    set2 = sharedValue1.set;
+                    const withSpring2 = spring.withSpring;
+                    spring;
+                    if (!visible) {
                       num2 = PX_16;
                     }
-                    result3 = closure_6.set(tmp9Result.withSpring(num2, tmp11));
-                    return;
+                    set2(withSpring2(num2, closure_17));
                   }
                 }
                 class W {
                   constructor() {
-                    obj = { opacity: closure_5.get(), transform: null };
-                    obj1 = { translateY: closure_6.get() };
-                    items = [];
-                    items[0] = obj1;
-                    obj.transform = items;
+                    let items;
+                    const obj = { opacity: sharedValue.get(), transform: items };
+                    items = [{ translateY: sharedValue1.get() }];
+                    ({ translateY: sharedValue1.get() });
                     return obj;
                   }
                 }
-                cResult[22] = obj9;
-                let tmp34 = obj9;
+                cResult[22] = obj8;
+                tmp35 = obj8;
               } else {
-                tmp34 = cResult[22];
+                tmp35 = cResult[22];
               }
               if (cResult[23] === animatedStyle1) {
                 if (cResult[24] === tmp4.floatingOverlay) {
+                  let tmp37;
                   class Z {
                     constructor() {
-                      tmp = visible;
                       if (visible) {
-                        tmp2 = closure_5;
-                        tmp3 = c13;
-                        result = closure_5.set(c13);
-                        tmp5 = closure_6;
-                        tmp6 = PX_16;
-                        result1 = closure_6.set(PX_16);
+                        const result = sharedValue.set(c13);
+                        const result1 = sharedValue1.set(PX_16);
                       }
-                      tmp8 = closure_5;
-                      tmp9 = closure_0;
-                      tmp10 = closure_2;
-                      obj = closure_0(closure_2[15]);
-                      num = 0;
-                      if (tmp) {
+                      let num = 0;
+                      set = sharedValue.set;
+                      const withSpring = spring.withSpring;
+                      spring;
+                      if (visible) {
                         num = 1;
                       }
-                      tmp11 = closure_17;
-                      result2 = closure_5.set(obj.withSpring(num, closure_17));
-                      tmp13 = closure_6;
-                      tmp9Result = tmp9(tmp10[15]);
-                      num2 = 0;
-                      if (!tmp) {
+                      const result2 = set(withSpring(num, closure_17));
+                      let num2 = 0;
+                      set2 = sharedValue1.set;
+                      const withSpring2 = spring.withSpring;
+                      spring;
+                      if (!visible) {
                         num2 = PX_16;
                       }
-                      result3 = closure_6.set(tmp9Result.withSpring(num2, tmp11));
-                      return;
+                      set2(withSpring2(num2, closure_17));
                     }
                   }
                   class W {
                     constructor() {
-                      obj = { opacity: closure_5.get(), transform: null };
-                      obj1 = { translateY: closure_6.get() };
-                      items = [];
-                      items[0] = obj1;
-                      obj.transform = items;
+                      let items;
+                      const obj = { opacity: sharedValue.get(), transform: items };
+                      items = [{ translateY: sharedValue1.get() }];
+                      ({ translateY: sharedValue1.get() });
                       return obj;
                     }
                   }
                   if (cResult[27] !== bottom) {
-                    const obj11 = { paddingBottom: bottom };
+                    const obj10 = { paddingBottom: bottom };
                     class Z {
                       constructor() {
-                        tmp = visible;
                         if (visible) {
-                          tmp2 = closure_5;
-                          tmp3 = c13;
-                          result = closure_5.set(c13);
-                          tmp5 = closure_6;
-                          tmp6 = PX_16;
-                          result1 = closure_6.set(PX_16);
+                          const result = sharedValue.set(c13);
+                          const result1 = sharedValue1.set(PX_16);
                         }
-                        tmp8 = closure_5;
-                        tmp9 = closure_0;
-                        tmp10 = closure_2;
-                        obj = closure_0(closure_2[15]);
-                        num = 0;
-                        if (tmp) {
+                        let num = 0;
+                        set = sharedValue.set;
+                        const withSpring = spring.withSpring;
+                        spring;
+                        if (visible) {
                           num = 1;
                         }
-                        tmp11 = closure_17;
-                        result2 = closure_5.set(obj.withSpring(num, closure_17));
-                        tmp13 = closure_6;
-                        tmp9Result = tmp9(tmp10[15]);
-                        num2 = 0;
-                        if (!tmp) {
+                        const result2 = set(withSpring(num, closure_17));
+                        let num2 = 0;
+                        set2 = sharedValue1.set;
+                        const withSpring2 = spring.withSpring;
+                        spring;
+                        if (!visible) {
                           num2 = PX_16;
                         }
-                        result3 = closure_6.set(tmp9Result.withSpring(num2, tmp11));
-                        return;
+                        set2(withSpring2(num2, closure_17));
                       }
                     }
                     class W {
                       constructor() {
-                        obj = { opacity: closure_5.get(), transform: null };
-                        obj1 = { translateY: closure_6.get() };
-                        items = [];
-                        items[0] = obj1;
-                        obj.transform = items;
+                        let items;
+                        const obj = { opacity: sharedValue.get(), transform: items };
+                        items = [{ translateY: sharedValue1.get() }];
+                        ({ translateY: sharedValue1.get() });
                         return obj;
                       }
                     }
-                    cResult[28] = obj11;
-                    let tmp36 = obj11;
+                    cResult[28] = obj10;
+                    tmp37 = obj10;
                   } else {
-                    tmp36 = cResult[28];
+                    tmp37 = cResult[28];
                   }
                   if (cResult[29] === animatedStyle) {
                     if (cResult[30] === tmp4.floatingContent) {
-                      if (cResult[31] === tmp36) {
-                        let tmp37 = cResult[32];
+                      let tmp38;
+                      if (cResult[31] === tmp37) {
+                        tmp38 = cResult[32];
                       }
-                      if (cResult[33] === tmp24) {
+                      if (cResult[33] === tmp25) {
+                        let tmp40;
+                        let tmp42;
                         if (cResult[34] === hideGradient) {
-                          let tmp39 = cResult[35];
+                          tmp40 = cResult[35];
                         }
                         if (cResult[36] !== children) {
                           class Z {
                             constructor() {
-                              tmp = visible;
                               if (visible) {
-                                tmp2 = closure_5;
-                                tmp3 = c13;
-                                result = closure_5.set(c13);
-                                tmp5 = closure_6;
-                                tmp6 = PX_16;
-                                result1 = closure_6.set(PX_16);
+                                const result = sharedValue.set(c13);
+                                const result1 = sharedValue1.set(PX_16);
                               }
-                              tmp8 = closure_5;
-                              tmp9 = closure_0;
-                              tmp10 = closure_2;
-                              obj = closure_0(closure_2[15]);
-                              num = 0;
-                              if (tmp) {
+                              let num = 0;
+                              set = sharedValue.set;
+                              const withSpring = spring.withSpring;
+                              spring;
+                              if (visible) {
                                 num = 1;
                               }
-                              tmp11 = closure_17;
-                              result2 = closure_5.set(obj.withSpring(num, closure_17));
-                              tmp13 = closure_6;
-                              tmp9Result = tmp9(tmp10[15]);
-                              num2 = 0;
-                              if (!tmp) {
+                              const result2 = set(withSpring(num, closure_17));
+                              let num2 = 0;
+                              set2 = sharedValue1.set;
+                              const withSpring2 = spring.withSpring;
+                              spring;
+                              if (!visible) {
                                 num2 = PX_16;
                               }
-                              result3 = closure_6.set(tmp9Result.withSpring(num2, tmp11));
-                              return;
+                              set2(withSpring2(num2, closure_17));
                             }
                           }
                           class W {
                             constructor() {
-                              obj = { opacity: closure_5.get(), transform: null };
-                              obj1 = { translateY: closure_6.get() };
-                              items = [];
-                              items[0] = obj1;
-                              obj.transform = items;
+                              let items;
+                              const obj = { opacity: sharedValue.get(), transform: items };
+                              items = [{ translateY: sharedValue1.get() }];
+                              ({ translateY: sharedValue1.get() });
                               return obj;
                             }
                           }
-                          tmp44[1] = children;
-                          const tmp45 = closure_9(sharedValue1, tmp44);
+                          tmp45[1] = children;
+                          const tmp46 = closure_9(sharedValue1, tmp45);
                           cResult[36] = children;
-                          cResult[37] = tmp45;
-                          let tmp41 = tmp45;
+                          cResult[37] = tmp46;
+                          tmp42 = tmp46;
                         } else {
-                          tmp41 = cResult[37];
+                          tmp42 = cResult[37];
                         }
                         class Z {
                           constructor() {
-                            tmp = visible;
                             if (visible) {
-                              tmp2 = closure_5;
-                              tmp3 = c13;
-                              result = closure_5.set(c13);
-                              tmp5 = closure_6;
-                              tmp6 = PX_16;
-                              result1 = closure_6.set(PX_16);
+                              const result = sharedValue.set(c13);
+                              const result1 = sharedValue1.set(PX_16);
                             }
-                            tmp8 = closure_5;
-                            tmp9 = closure_0;
-                            tmp10 = closure_2;
-                            obj = closure_0(closure_2[15]);
-                            num = 0;
-                            if (tmp) {
+                            let num = 0;
+                            set = sharedValue.set;
+                            const withSpring = spring.withSpring;
+                            spring;
+                            if (visible) {
                               num = 1;
                             }
-                            tmp11 = closure_17;
-                            result2 = closure_5.set(obj.withSpring(num, closure_17));
-                            tmp13 = closure_6;
-                            tmp9Result = tmp9(tmp10[15]);
-                            num2 = 0;
-                            if (!tmp) {
+                            const result2 = set(withSpring(num, closure_17));
+                            let num2 = 0;
+                            set2 = sharedValue1.set;
+                            const withSpring2 = spring.withSpring;
+                            spring;
+                            if (!visible) {
                               num2 = PX_16;
                             }
-                            result3 = closure_6.set(tmp9Result.withSpring(num2, tmp11));
-                            return;
+                            set2(withSpring2(num2, closure_17));
                           }
                         }
                         class W {
                           constructor() {
-                            obj = { opacity: closure_5.get(), transform: null };
-                            obj1 = { translateY: closure_6.get() };
-                            items = [];
-                            items[0] = obj1;
-                            obj.transform = items;
+                            let items;
+                            const obj = { opacity: sharedValue.get(), transform: items };
+                            items = [{ translateY: sharedValue1.get() }];
+                            ({ translateY: sharedValue1.get() });
                             return obj;
                           }
                         }
-                        const obj13 = { style: tmp37, children: null };
-                        let items = [tmp39, tmp41];
-                        obj13.children = items;
-                        const tmp47 = closure_10(onListInsetChange(tmp2[13]).View, obj13);
-                        cResult[38] = tmp37;
-                        cResult[39] = tmp39;
-                        cResult[40] = tmp41;
-                        cResult[41] = tmp47;
+                        const obj12 = { style: tmp38, children: items };
+                        items = [tmp40, tmp42];
+                        cResult[38] = tmp38;
+                        cResult[39] = tmp40;
+                        cResult[40] = tmp42;
+                        cResult[41] = closure_10(onListInsetChange(bottom[13]).View, obj12);
+                        const tmp48 = closure_10(onListInsetChange(bottom[13]).View, obj12);
                       }
                       class Z {
                         constructor() {
-                          tmp = visible;
                           if (visible) {
-                            tmp2 = closure_5;
-                            tmp3 = c13;
-                            result = closure_5.set(c13);
-                            tmp5 = closure_6;
-                            tmp6 = PX_16;
-                            result1 = closure_6.set(PX_16);
+                            const result = sharedValue.set(c13);
+                            const result1 = sharedValue1.set(PX_16);
                           }
-                          tmp8 = closure_5;
-                          tmp9 = closure_0;
-                          tmp10 = closure_2;
-                          obj = closure_0(closure_2[15]);
-                          num = 0;
-                          if (tmp) {
+                          let num = 0;
+                          set = sharedValue.set;
+                          const withSpring = spring.withSpring;
+                          spring;
+                          if (visible) {
                             num = 1;
                           }
-                          tmp11 = closure_17;
-                          result2 = closure_5.set(obj.withSpring(num, closure_17));
-                          tmp13 = closure_6;
-                          tmp9Result = tmp9(tmp10[15]);
-                          num2 = 0;
-                          if (!tmp) {
+                          const result2 = set(withSpring(num, closure_17));
+                          let num2 = 0;
+                          set2 = sharedValue1.set;
+                          const withSpring2 = spring.withSpring;
+                          spring;
+                          if (!visible) {
                             num2 = PX_16;
                           }
-                          result3 = closure_6.set(tmp9Result.withSpring(num2, tmp11));
-                          return;
+                          set2(withSpring2(num2, closure_17));
                         }
                       }
                       class W {
                         constructor() {
-                          obj = { opacity: closure_5.get(), transform: null };
-                          obj1 = { translateY: closure_6.get() };
-                          items = [];
-                          items[0] = obj1;
-                          obj.transform = items;
+                          let items;
+                          const obj = { opacity: sharedValue.get(), transform: items };
+                          items = [{ translateY: sharedValue1.get() }];
+                          ({ translateY: sharedValue1.get() });
                           return obj;
                         }
                       }
-                      cResult[33] = tmp24;
+                      cResult[33] = tmp25;
                       cResult[34] = hideGradient;
-                      cResult[35] = tmp40;
-                      tmp39 = tmp40;
+                      cResult[35] = tmp41;
+                      tmp40 = tmp41;
                     }
                   }
-                  const items1 = [sharedValue.absoluteFillObject, tmp4.floatingContent, tmp36, animatedStyle];
+                  const items1 = [sharedValue.absoluteFillObject, tmp4.floatingContent, tmp37, animatedStyle];
                   cResult[29] = animatedStyle;
                   cResult[30] = tmp4.floatingContent;
-                  cResult[31] = tmp36;
+                  cResult[31] = tmp37;
                   cResult[32] = items1;
-                  tmp37 = items1;
+                  tmp38 = items1;
                 }
               }
-              const items2 = [tmp4.floatingOverlay, tmp34, animatedStyle1];
+              const items2 = [tmp4.floatingOverlay, tmp35, animatedStyle1];
               cResult[23] = animatedStyle1;
               cResult[24] = tmp4.floatingOverlay;
-              cResult[25] = tmp34;
+              cResult[25] = tmp35;
               cResult[26] = items2;
-              const tmpResult2 = tmp(tmp2[13]);
             }
           }
           class Z {
             constructor() {
-              tmp = visible;
               if (visible) {
-                tmp2 = closure_5;
-                tmp3 = c13;
-                result = closure_5.set(c13);
-                tmp5 = closure_6;
-                tmp6 = PX_16;
-                result1 = closure_6.set(PX_16);
+                const result = sharedValue.set(c13);
+                const result1 = sharedValue1.set(PX_16);
               }
-              tmp8 = closure_5;
-              tmp9 = closure_0;
-              tmp10 = closure_2;
-              obj = closure_0(closure_2[15]);
-              num = 0;
-              if (tmp) {
+              let num = 0;
+              set = sharedValue.set;
+              const withSpring = spring.withSpring;
+              spring;
+              if (visible) {
                 num = 1;
               }
-              tmp11 = closure_17;
-              result2 = closure_5.set(obj.withSpring(num, closure_17));
-              tmp13 = closure_6;
-              tmp9Result = tmp9(tmp10[15]);
-              num2 = 0;
-              if (!tmp) {
+              const result2 = set(withSpring(num, closure_17));
+              let num2 = 0;
+              set2 = sharedValue1.set;
+              const withSpring2 = spring.withSpring;
+              spring;
+              if (!visible) {
                 num2 = PX_16;
               }
-              result3 = closure_6.set(tmp9Result.withSpring(num2, tmp11));
-              return;
+              set2(withSpring2(num2, closure_17));
             }
           }
-          tmp27[0] = visible;
-          tmp27[1] = sharedValue;
-          tmp27[2] = sharedValue1;
+          tmp28[0] = visible;
+          tmp28[1] = sharedValue;
+          tmp28[2] = sharedValue1;
           cResult[16] = sharedValue;
           cResult[17] = sharedValue1;
           cResult[18] = visible;
           cResult[19] = Z;
-          cResult[20] = tmp27;
-          tmp26 = tmp27;
-          tmp25 = Z;
+          cResult[20] = tmp28;
+          tmp27 = tmp28;
+          tmp26 = Z;
         }
       }
-      const items3 = [tmp18, tmp20, tmp22];
-      cResult[12] = tmp18;
-      cResult[13] = tmp20;
-      cResult[14] = tmp22;
+      const items3 = [tmp19, tmp21, tmp23];
+      cResult[12] = tmp19;
+      cResult[13] = tmp21;
+      cResult[14] = tmp23;
       cResult[15] = items3;
-      tmp24 = items3;
+      tmp25 = items3;
     }
   }
   const fn = function c() {
     if (onListInsetChange != null) {
+      let PX_12;
       if (visible) {
-        let PX_12 = bound1;
+        PX_12 = bound1;
       } else {
         PX_12 = nativeDefault.space.PX_12;
       }
@@ -558,39 +530,56 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
   cResult[2] = visible;
   cResult[3] = fn;
   cResult[4] = items4;
-  tmp15 = items4;
-  tmp14 = fn;
-  const tmpResult = visible(bottom[13]);
-}) : ((children) => {
-  const visible = children.visible;
-  ({ hideGradient, onListInsetChange } = children);
+  tmp16 = items4;
+  tmp15 = fn;
+}) : ((visible) => {
+  let View2;
+  let _undefined;
+  let c5;
+  let closure_3;
+  let hideGradient;
+  let items3;
+  let items4;
+  let items5;
+  let obj4;
+  let onListInsetChange;
+  let str;
+  let str2;
+  let tmp8;
+  visible = visible.visible;
+  ({ hideGradient, onListInsetChange } = visible);
   let bottom;
   c5 = undefined;
   let sharedValue;
   let sharedValue1;
   let bound1;
+  const children = visible.children;
   let tmp = closure_18();
   bottom = onListInsetChange(bottom[10])().bottom;
   const tmp4 = onListInsetChange(bottom[11])();
   _slicedToArray = tmp4;
-  const token = visible(bottom[12]).useToken(onListInsetChange(bottom[6]).colors.MOBILE_ACTIONSHEET_BACKGROUND);
   let obj = visible(bottom[12]);
+  const token = obj.useToken(onListInsetChange(bottom[6]).colors.MOBILE_ACTIONSHEET_BACKGROUND);
+  const obj2 = token;
   [tmp8, c5] = token.useState(0);
-  const tmp7 = _slicedToArray(token.useState(0), 2);
+  _slicedToArray(token.useState(0), 2);
   let num = 0;
+  const useSharedValue = visible(bottom[13]).useSharedValue;
+  visible(bottom[13]);
   if (visible) {
     num = c13;
   }
-  sharedValue = visible(bottom[13]).useSharedValue(num);
-  let obj3 = visible(bottom[13]);
-  sharedValue1 = visible(bottom[13]).useSharedValue(PX_16);
+  sharedValue = useSharedValue(num);
+  const tmp5Result = visible(bottom[13]);
+  sharedValue1 = tmp5Result.useSharedValue(PX_16);
   const bound = Math.max(125, tmp8 + PX_40);
   bound1 = Math.max(onListInsetChange(tmp3[6]).space.PX_12, tmp8 - PX_8 + PX_24);
   let items = [bound1, onListInsetChange, visible];
   const effect = obj2.useEffect(() => {
     if (onListInsetChange != null) {
+      let PX_12;
       if (visible) {
-        let PX_12 = bound1;
+        PX_12 = bound1;
       } else {
         PX_12 = nativeDefault.space.PX_12;
       }
@@ -600,7 +589,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
   const items1 = [token];
   const callback = obj2.useCallback((nativeEvent) => {
     const height = nativeEvent.nativeEvent.layout.height;
-    _undefined((arg0) => {
+    let tmp = _undefined((arg0) => {
       let tmp = height;
       if (arg0 === height) {
         tmp = arg0;
@@ -610,14 +599,16 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
   }, []);
   const items2 = [visible, sharedValue, sharedValue1];
   const memo = obj2.useMemo(() => {
+    const items = [, , ];
     const obj = _modDef683(token);
-    const items = [_modDef683(token).alpha(0).hex(), , ];
-    const alphaResult = _modDef683(token).alpha(0);
+    const alphaResult = obj.alpha(0);
+    items[0] = alphaResult.hex();
     const obj3 = _modDef683(token);
-    items[1] = _modDef683(token).alpha(1).hex();
-    const alphaResult1 = _modDef683(token).alpha(1);
+    const alphaResult1 = obj3.alpha(1);
+    items[1] = alphaResult1.hex();
     const obj5 = _modDef683(token);
-    items[2] = _modDef683(token).alpha(1).hex();
+    const alphaResult2 = obj5.alpha(1);
+    items[2] = alphaResult2.hex();
     return items;
   }, items1);
   const effect1 = obj2.useEffect(() => {
@@ -626,77 +617,88 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((visible) => {
       const result1 = sharedValue1.set(PX_16);
     }
     let num = 0;
+    set = sharedValue.set;
+    const withSpring = spring.withSpring;
+    spring;
     if (visible) {
       num = 1;
     }
-    const result2 = sharedValue.set(spring.withSpring(num, closure_17));
+    const result2 = set(withSpring(num, closure_17));
     let num2 = 0;
+    set2 = sharedValue1.set;
+    const withSpring2 = spring.withSpring;
+    spring;
     if (!visible) {
       num2 = PX_16;
     }
-    const result3 = sharedValue1.set(spring.withSpring(num2, closure_17));
-    const tmp9Result = spring;
+    set2(withSpring2(num2, closure_17));
   }, items2);
-  const tmp5Result = visible(bottom[13]);
+  const tmp5Result3 = visible(bottom[13]);
   class U {
     constructor() {
-      obj = { opacity: closure_6.get(), transform: null };
-      obj1 = { translateY: closure_7.get() };
-      items = [];
-      items[0] = obj1;
-      obj.transform = items;
+      let items;
+      const obj = { opacity: sharedValue.get(), transform: items };
+      items = [{ translateY: sharedValue1.get() }];
+      ({ translateY: sharedValue1.get() });
       return obj;
     }
   }
   U.__closure = { opacity: sharedValue, translateY: sharedValue1 };
   U.__workletHash = 10761841231690;
   U.__initData = __initData3;
-  const animatedStyle = visible(bottom[13]).useAnimatedStyle(U);
-  const tmp5Result3 = visible(bottom[13]);
+  const animatedStyle = tmp5Result3.useAnimatedStyle(U);
+  const tmp5Result4 = visible(bottom[13]);
   class X {
     constructor() {
-      obj = { bottom: Math.max(closure_3.get() - bottom, 0) };
+      const obj = { bottom: Math.max(closure_3.get() - bottom, 0) };
       return obj;
     }
   }
   X.__closure = { keyboardHeight: tmp4, safeAreaBottom: bottom };
   X.__workletHash = 16605597336903;
   X.__initData = __initData4;
-  const animatedStyle1 = visible(bottom[13]).useAnimatedStyle(X);
-  const obj4 = { style: null, pointerEvents: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
-  const items3 = [tmp.floatingOverlay, { height: bound + bottom }, animatedStyle1];
-  obj4.style = items3;
-  let str = "none";
+  const animatedStyle1 = tmp5Result4.useAnimatedStyle(X);
+  let obj3 = { style: items3, pointerEvents: str, accessibilityElementsHidden: !visible, importantForAccessibility: str2, children: closure_10(View2, obj4) };
+  items3 = [tmp.floatingOverlay, { height: bound + bottom }, animatedStyle1];
+  str = "none";
+  const View = onListInsetChange(tmp3[13]).View;
   if (visible) {
     str = "box-none";
   }
-  obj4.pointerEvents = str;
-  obj4.accessibilityElementsHidden = !visible;
-  let str2 = "no-hide-descendants";
+  str2 = "no-hide-descendants";
   if (visible) {
     str2 = "auto";
   }
-  obj4.importantForAccessibility = str2;
-  let obj5 = { style: null, children: null };
-  const items4 = [c5.absoluteFillObject, tmp.floatingContent, { paddingBottom: bottom }, animatedStyle];
-  obj5.style = items4;
-  let tmp19Result = !hideGradient;
+  obj4 = { style: items4, children: items5 };
+  items4 = [c5.absoluteFillObject, tmp.floatingContent, { paddingBottom: bottom }, animatedStyle];
+  let tmp20Result = !hideGradient;
+  View2 = onListInsetChange(tmp3[13]).View;
   if (!hideGradient) {
-    const obj6 = { style: tmp21.absoluteFill, colors: memo, locations, start: { x: 0.5, y: 0 }, end: { x: 0.5, y: 1 }, pointerEvents: "none" };
-    tmp19Result = closure_9(onListInsetChange(tmp3[16]), obj6);
+    let obj5 = { style: tmp22.absoluteFill, colors: memo, locations, start: { x: 0.5, y: 0 }, end: { x: 0.5, y: 1 }, pointerEvents: "none" };
+    tmp20Result = closure_9(onListInsetChange(tmp3[16]), obj5);
   }
-  const items5 = [tmp19Result, closure_9(sharedValue, { onLayout: callback, children: children.children })];
-  obj5.children = items5;
-  obj4.children = closure_10(onListInsetChange(bottom[13]).View, obj5);
-  return closure_9(onListInsetChange(bottom[13]).View, obj4);
+  items5 = [tmp20Result, closure_9(sharedValue, { onLayout: callback, children })];
+  return closure_9(View, obj3);
 });
-ReactCompilerGating = fn(558);
-let obj3 = { backgroundColor: "transparent", paddingTop: 0, paddingBottom: nativeDefault.space.PX_16 };
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/group_dm/native/GroupDMNitroUpsellBanner.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(33);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let _location;
+  let floating;
+  let hideFloatingGradient;
+  let intl2;
+  let intl3;
+  let items1;
+  let memberCount;
+  let obj6;
+  let onFloatingListInsetChange;
+  let recipientLimit;
+  let tmp10;
+  let tmp6;
+  let tmp7;
+  let useReducedMotion;
+  let wrapperStyle;
+  const obj = react2;
+  const cResult = obj.c(33);
   ({ location: _location, floating, hideFloatingGradient, onFloatingListInsetChange, wrapperStyle } = arg0);
   let tmp4 = undefined !== floating;
   ({ memberCount, recipientLimit } = arg0);
@@ -716,27 +718,31 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     [tmp6, tmp7] = cResult;
   }
-  const stateFromStores = initialize.useStateFromStores(tmp6, tmp7);
+  const tmpResult = get_initialized;
+  const stateFromStores = tmpResult.useStateFromStores(tmp6, tmp7);
   if (cResult[2] !== _location) {
     const obj2 = { location: _location };
     cResult[2] = _location;
     cResult[3] = obj2;
-    let tmp10 = obj2;
+    tmp10 = obj2;
   } else {
     tmp10 = cResult[3];
   }
-  const tmpResult = initialize;
-  const enabled = GroupDMNitroCapExperimentDefault.useConfig(tmp10).enabled;
-  const groupDMNitroAudience = GroupDMNitroUpsellModel.useGroupDMNitroAudience();
+  const obj4 = GroupDMNitroCapExperimentDefault;
+  const enabled = obj4.useConfig(tmp10).enabled;
+  const tmpResult4 = GroupDMNitroUpsellModel;
+  const groupDMNitroAudience = tmpResult4.useGroupDMNitroAudience();
   if (cResult[4] === groupDMNitroAudience) {
+    let tmp13;
     if (cResult[5] === _location) {
-      let tmp13 = cResult[6];
+      tmp13 = cResult[6];
     }
     const tmp14 = useGroupDMNitroUpsellActionDefault(tmp13);
     if (cResult[7] === groupDMNitroAudience) {
       if (cResult[8] === enabled) {
-        if (cResult[9] === tmp15) {
-          let tmp16 = cResult[10];
+        let tmp16;
+        if (cResult[9] === memberCount >= recipientLimit) {
+          tmp16 = cResult[10];
         }
         if (!tmp4) {
           if (!tmp16) {
@@ -745,62 +751,66 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
         if (cResult[11] === tmp4) {
           if (cResult[12] === tmp5) {
+            let tmp19;
+            let tmp21;
             if (cResult[13] === wrapperStyle) {
-              let tmp19 = cResult[14];
+              tmp19 = cResult[14];
             }
             if (cResult[15] !== groupDMNitroAudience) {
-              const intl = util.intl;
-              const stringResult = intl.string(GroupDMNitroUpsellModel.getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
+              const intl = intl4.intl;
+              const string = intl.string;
+              const tmpResult5 = GroupDMNitroUpsellModel;
+              const stringResult = string(tmpResult5.getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
               cResult[15] = groupDMNitroAudience;
               cResult[16] = stringResult;
-              let tmp21 = stringResult;
-              const tmpResult5 = GroupDMNitroUpsellModel;
+              tmp21 = stringResult;
             } else {
               tmp21 = cResult[16];
             }
-            let tmp23 = tmp16;
-            if (tmp16) {
-              tmp23 = !stateFromStores;
-            }
             if (cResult[17] === tmp14) {
               if (cResult[18] === tmp21) {
-                if (cResult[19] === tmp23) {
-                  let tmp24 = cResult[20];
+                let tmp24;
+                let tmp27;
+                let tmp30;
+                if (cResult[19] === (tmp16 && !stateFromStores)) {
+                  tmp24 = cResult[20];
                 }
                 const _Symbol = Symbol;
                 if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
-                  const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-                  const intl2 = util.intl;
-                  obj3.children = intl2.string(util.t.KCD0Hp);
-                  const tmp29 = options(Text_Text.Text, obj3);
+                  const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: intl2.string(intl4.t.KCD0Hp) };
+                  const Text = Text_Text.Text;
+                  intl2 = intl4.intl;
+                  const tmp29 = React4(Text, obj3);
                   cResult[21] = tmp29;
-                  let tmp27 = tmp29;
+                  tmp27 = tmp29;
                 } else {
                   tmp27 = cResult[21];
                 }
                 const _Symbol2 = Symbol;
                 if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
-                  const obj5 = { variant: "text-xs/medium", color: "mobile-text-heading-primary", children: null };
-                  const intl3 = util.intl;
-                  const obj6 = { number };
-                  obj5.children = intl3.formatToPlainString(util.t["8o8Zk5"], obj6);
-                  const tmp33 = options(Text_Text.Text, obj5);
+                  const obj5 = { variant: "text-xs/medium", color: "mobile-text-heading-primary", children: intl3.formatToPlainString(intl4.t["8o8Zk5"], obj6) };
+                  const Text2 = Text_Text.Text;
+                  intl3 = intl4.intl;
+                  obj6 = { number };
+                  const tmp33 = React4(Text2, obj5);
                   cResult[22] = tmp33;
-                  let tmp30 = tmp33;
+                  tmp30 = tmp33;
                 } else {
                   tmp30 = cResult[22];
                 }
                 if (cResult[23] === tmp24) {
                   if (cResult[24] === tmp30) {
+                    let tmp34;
                     if (cResult[25] === tmp19) {
-                      let tmp34 = cResult[26];
+                      tmp34 = cResult[26];
                     }
                     if (cResult[27] === tmp34) {
                       if (cResult[28] === tmp4) {
                         if (cResult[29] === hideFloatingGradient) {
                           if (cResult[30] === tmp16) {
+                            let tmp37;
                             if (cResult[31] === onFloatingListInsetChange) {
-                              let tmp37 = cResult[32];
+                              tmp37 = cResult[32];
                             }
                             return tmp37;
                           }
@@ -810,7 +820,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                     let tmp38 = tmp34;
                     if (tmp4) {
                       const obj7 = { visible: tmp16, hideGradient: hideFloatingGradient, onListInsetChange: onFloatingListInsetChange, children: tmp34 };
-                      tmp38 = options(closure_23, obj7);
+                      tmp38 = React4(closure_23, obj7);
                     }
                     cResult[27] = tmp34;
                     cResult[28] = tmp4;
@@ -821,10 +831,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                     tmp37 = tmp38;
                   }
                 }
-                const obj8 = { showLeadingIcon: false, wrapperStyle: tmp19, trailing: tmp24, children: null };
-                const items1 = [tmp27, tmp30];
-                obj8.children = items1;
-                const tmp36 = v65535(GroupDMNitroCapBannerDefault, obj8);
+                const obj8 = { showLeadingIcon: false, wrapperStyle: tmp19, trailing: tmp24, children: items1 };
+                items1 = [tmp27, tmp30];
+                const tmp36 = authStore(GroupDMNitroCapBannerDefault, obj8);
                 cResult[23] = tmp24;
                 cResult[24] = tmp30;
                 cResult[25] = tmp19;
@@ -832,11 +841,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 tmp34 = tmp36;
               }
             }
-            const obj9 = { text: tmp21, size: "sm", variant: "experimental_premium-primary", shiny: tmp23, icon: _modDef7722, onPress: tmp14 };
-            const tmp26 = options(components_Button_Button.Button, obj9);
+            const obj9 = { text: tmp21, size: "sm", variant: "experimental_premium-primary", shiny: tmp16 && !stateFromStores, icon: AssetRegistryDefault, onPress: tmp14 };
+            const Button = components_Button_Button.Button;
+            const tmp26 = React4(Button, obj9);
             cResult[17] = tmp14;
             cResult[18] = tmp21;
-            cResult[19] = tmp23;
+            cResult[19] = tmp16 && !stateFromStores;
             cResult[20] = tmp26;
             tmp24 = tmp26;
           }
@@ -853,21 +863,35 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         tmp19 = tmp20;
       }
     }
-    const tmp17 = GroupDMNitroUpsellModel.isGroupDMNitroUpsellAudience(groupDMNitroAudience) && memberCount >= recipientLimit && enabled;
+    const tmpResult6 = GroupDMNitroUpsellModel;
+    const tmp17 = tmpResult6.isGroupDMNitroUpsellAudience(groupDMNitroAudience) && memberCount >= recipientLimit && enabled;
     cResult[7] = groupDMNitroAudience;
     cResult[8] = enabled;
     cResult[9] = memberCount >= recipientLimit;
     cResult[10] = tmp17;
     tmp16 = tmp17;
-    const tmpResult6 = GroupDMNitroUpsellModel;
   }
   const obj10 = { audience: groupDMNitroAudience, location: _location, acquisitionStrategy: GroupDMNitroUpsellModel.GroupDMNitroAcquisitionStrategy.MARKETING };
   cResult[4] = groupDMNitroAudience;
   cResult[5] = _location;
   cResult[6] = obj10;
   tmp13 = obj10;
-  const tmpResult4 = GroupDMNitroUpsellModel;
 }) : ((wrapperStyle) => {
+  let Button;
+  let _location;
+  let floating;
+  let hideFloatingGradient;
+  let intl2;
+  let intl3;
+  let items2;
+  let memberCount;
+  let obj10;
+  let obj7;
+  let onFloatingListInsetChange;
+  let recipientLimit;
+  let string;
+  let tmp2Result;
+  let useReducedMotion;
   ({ location: _location, floating } = wrapperStyle);
   ({ memberCount, recipientLimit } = wrapperStyle);
   if (floating === undefined) {
@@ -875,52 +899,53 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   wrapperStyle = wrapperStyle.wrapperStyle;
   ({ hideFloatingGradient, onFloatingListInsetChange } = wrapperStyle);
-  const tmp = closure_18();
   const items = [AccessibilityStore];
-  const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const tmp = closure_18();
+  const obj = get_initialized;
+  const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const obj2 = GroupDMNitroCapExperimentDefault;
-  const groupDMNitroAudience = GroupDMNitroUpsellModel.useGroupDMNitroAudience();
-  const obj4 = { audience: groupDMNitroAudience, location: _location, acquisitionStrategy: null };
-  obj4.acquisitionStrategy = GroupDMNitroUpsellModel.GroupDMNitroAcquisitionStrategy.MARKETING;
-  const tmp7Result = useGroupDMNitroUpsellActionDefault(obj4);
-  const tmp9 = GroupDMNitroUpsellModel.isGroupDMNitroUpsellAudience(groupDMNitroAudience) && memberCount >= recipientLimit && obj2.useConfig({ location: _location }).enabled;
+  const enabled = obj2.useConfig({ location: _location }).enabled;
+  const obj3 = GroupDMNitroUpsellModel;
+  const groupDMNitroAudience = obj3.useGroupDMNitroAudience();
+  const obj4 = { audience: groupDMNitroAudience, location: _location, acquisitionStrategy: GroupDMNitroUpsellModel.GroupDMNitroAcquisitionStrategy.MARKETING };
+  const tmp7 = useGroupDMNitroUpsellActionDefault;
+  const tmp7Result = tmp7(obj4);
+  const obj5 = GroupDMNitroUpsellModel;
+  const tmp9 = obj5.isGroupDMNitroUpsellAudience(groupDMNitroAudience) && memberCount >= recipientLimit && enabled;
   if (!floating) {
     if (!tmp9) {
       return null;
     }
   }
   let tmp13 = wrapperStyle;
+  const tmp5Result = GroupDMNitroCapBannerDefault;
   if (floating) {
     const items1 = [tmp.floatingBanner, wrapperStyle];
     tmp13 = items1;
   }
-  const obj6 = { showLeadingIcon: false, wrapperStyle: tmp13, trailing: null, children: null };
-  const obj7 = { text: null, size: "sm", variant: "experimental_premium-primary", shiny: null, icon: null, onPress: null };
-  const intl = util.intl;
-  const tmp5Result = GroupDMNitroCapBannerDefault;
-  obj7.text = intl.string(GroupDMNitroUpsellModel.getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
-  let tmp15 = tmp9;
-  if (tmp9) {
-    tmp15 = !stateFromStores;
-  }
-  obj7.shiny = tmp15;
-  obj7.icon = _modDef7722;
-  obj7.onPress = tmp7Result;
-  obj6.trailing = options(components_Button_Button.Button, obj7);
-  const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl2 = util.intl;
-  obj8.children = intl2.string(util.t.KCD0Hp);
-  const items2 = [options(Text_Text.Text, obj8), ];
-  const obj9 = { variant: "text-xs/medium", color: "mobile-text-heading-primary", children: null };
-  const intl3 = util.intl;
-  obj9.children = intl3.formatToPlainString(util.t["8o8Zk5"], { number });
-  items2[1] = options(Text_Text.Text, obj9);
-  obj6.children = items2;
-  const tmp11Result = v65535(tmp5Result, obj6);
+  const obj6 = { showLeadingIcon: false, wrapperStyle: tmp13, trailing: React4(Button, obj7), children: items2 };
+  obj7 = { text: string(tmp2Result.getGroupDMNitroCapCTAMessage(groupDMNitroAudience)), size: "sm", variant: "experimental_premium-primary", shiny: tmp9 && !stateFromStores, icon: AssetRegistryDefault, onPress: tmp7Result };
+  Button = components_Button_Button.Button;
+  const intl = intl4.intl;
+  string = intl.string;
+  tmp2Result = GroupDMNitroUpsellModel;
+  const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: intl2.string(intl4.t.KCD0Hp) };
+  const Text = Text_Text.Text;
+  intl2 = intl4.intl;
+  items2 = [React4(Text, obj8), ];
+  const obj9 = { variant: "text-xs/medium", color: "mobile-text-heading-primary", children: intl3.formatToPlainString(intl4.t["8o8Zk5"], obj10) };
+  const Text2 = Text_Text.Text;
+  intl3 = intl4.intl;
+  obj10 = { number };
+  items2[1] = React4(Text2, obj9);
+  const tmp11Result = authStore(tmp5Result, obj6);
   let tmp14Result = tmp11Result;
   if (floating) {
     const obj11 = { visible: tmp9, hideGradient: hideFloatingGradient, onListInsetChange: onFloatingListInsetChange, children: tmp11Result };
-    tmp14Result = options(closure_23, obj11);
+    tmp14Result = React4(closure_23, obj11);
   }
   return tmp14Result;
 });
+let result = size.fileFinishedImporting("modules/group_dm/native/GroupDMNitroUpsellBanner.tsx");
+
+export default tmp4;

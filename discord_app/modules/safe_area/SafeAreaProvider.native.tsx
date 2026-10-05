@@ -1,41 +1,51 @@
 // === Module 14404: SafeAreaProvider ===
 
 // Module 14404 (SafeAreaProvider)
-import c from "c" /* 576 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
+import react_native2 from "react-native" /* 1259 */;
 import SafeAreaConstants from "SafeAreaConstants" /* 1620 */;
 import _mod1621 from "module_1621" /* 1621 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
+let dependencyMap;
+
+const View = react_native.View;
+const jsx = Fragment.jsx;
 const style = { position: "absolute", width: 0, height: 0 };
-fn(558);
-const ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = safeAreaInsets(576).c(9);
+  let ref;
+  let safeAreaInsets;
   let obj = safeAreaInsets(576);
-  safeAreaInsets = safeAreaInsets(1621).useSafeAreaInsets();
+  const cResult = obj.c(9);
   const obj2 = safeAreaInsets(1621);
-  const appEntryKey = safeAreaInsets(1487).useAppEntryKey();
+  safeAreaInsets = obj2.useSafeAreaInsets();
+  const obj3 = safeAreaInsets(1487);
+  const appEntryKey = obj3.useAppEntryKey();
   if (cResult[0] === appEntryKey) {
+    let tmp4;
+    let tmp5;
     if (cResult[1] === safeAreaInsets) {
-      let tmp4 = cResult[2];
-      let tmp5 = cResult[3];
+      tmp4 = cResult[2];
+      tmp5 = cResult[3];
     }
-    const layoutEffect = noop.useLayoutEffect(tmp4, tmp5);
-    dependencyMap = noop.useRef(false);
+    const layoutEffect = react.useLayoutEffect(tmp4, tmp5);
+    dependencyMap = react.useRef(false);
     if (cResult[4] === appEntryKey) {
+      let tmp8;
+      let tmp9;
       if (cResult[5] === safeAreaInsets) {
-        let tmp8 = cResult[6];
+        tmp8 = cResult[6];
       }
       if (cResult[7] !== tmp8) {
-        const obj4 = { style, onLayout: tmp8 };
         const tmp13 = <View style={style} onLayout={tmp8} />;
         cResult[7] = tmp8;
         cResult[8] = tmp13;
-        let tmp9 = tmp13;
+        tmp9 = tmp13;
       } else {
         tmp9 = cResult[8];
       }
@@ -44,17 +54,23 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const fn2 = function y() {
       if (!ref.current) {
         tmp.current = true;
-        closure_0 = safeAreaInsets;
-        closure_1 = appEntryKey;
-        ReactBatchUpdates.batchUpdates(() => {
+        let closure_0 = safeAreaInsets;
+        let closure_1 = appEntryKey;
+        const obj = react_native2;
+        obj.batchUpdates(() => {
+          let META_QUEST_SAFE_AREA_INSETS;
+          const tmp = META_QUEST_SAFE_AREA_INSETS;
+          let obj = closure_0(closure_1_2[3]);
           if (obj.isMetaQuest()) {
-            let META_QUEST_SAFE_AREA_INSETS = closure_0(ref[4]).META_QUEST_SAFE_AREA_INSETS;
+            META_QUEST_SAFE_AREA_INSETS = closure_0(closure_1_2[4]).META_QUEST_SAFE_AREA_INSETS;
           } else {
             META_QUEST_SAFE_AREA_INSETS = tmp;
+            const tmp3Result = closure_0(closure_1_2[5]);
             if (tmp3Result.isAndroid()) {
-              safeAreaInsets = closure_1(ref[6]).getState().byAppEntry[closure_1].safeAreaInsets;
-              let obj3 = closure_1(ref[6]);
-              const rect = closure_1(ref[7]).getStableSafeAreaInsets(closure_1);
+              let obj3 = closure_1(closure_1_2[6]);
+              safeAreaInsets = obj3.getState().byAppEntry[closure_1].safeAreaInsets;
+              const obj4 = closure_1(closure_1_2[7]);
+              const rect = obj4.getStableSafeAreaInsets(closure_1);
               let tmp7 = tmp;
               if (null != rect) {
                 if (rect.bottom === safeAreaInsets.bottom) {
@@ -68,25 +84,22 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 safeAreaInsets = rect1;
               }
               META_QUEST_SAFE_AREA_INSETS = tmp7;
-              const obj4 = closure_1(ref[7]);
             }
-            tmp3Result = closure_0(ref[5]);
           }
-          obj = closure_0(ref[3]);
-          closure_1(ref[6]).setState((byAppEntry) => {
+          const obj6 = closure_1(closure_1_2[6]);
+          obj6.setState((byAppEntry) => {
+            let obj2;
             let tmp3 = byAppEntry;
             if (byAppEntry.byAppEntry[closure_1].safeAreaInsets !== META_QUEST_SAFE_AREA_INSETS) {
-              const obj = { byAppEntry: null };
-              const obj2 = {};
+              const obj = { byAppEntry: obj2 };
+              obj2 = {};
               const merged = Object.assign(byAppEntry.byAppEntry);
               const obj3 = { safeAreaInsets: tmp2 };
               obj2[tmp] = obj3;
-              obj.byAppEntry = obj2;
               tmp3 = obj;
             }
             return tmp3;
           });
-          const obj6 = closure_1(ref[6]);
         });
       }
     };
@@ -96,17 +109,23 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp8 = fn2;
   }
   const fn = function u() {
-    closure_0 = safeAreaInsets;
-    closure_1 = appEntryKey;
-    ReactBatchUpdates.batchUpdates(() => {
+    let closure_0 = safeAreaInsets;
+    let closure_1 = appEntryKey;
+    const obj = react_native2;
+    obj.batchUpdates(() => {
+      let META_QUEST_SAFE_AREA_INSETS;
+      const tmp = META_QUEST_SAFE_AREA_INSETS;
+      let obj = closure_0(closure_1_2[3]);
       if (obj.isMetaQuest()) {
-        let META_QUEST_SAFE_AREA_INSETS = closure_0(ref[4]).META_QUEST_SAFE_AREA_INSETS;
+        META_QUEST_SAFE_AREA_INSETS = closure_0(closure_1_2[4]).META_QUEST_SAFE_AREA_INSETS;
       } else {
         META_QUEST_SAFE_AREA_INSETS = tmp;
+        const tmp3Result = closure_0(closure_1_2[5]);
         if (tmp3Result.isAndroid()) {
-          safeAreaInsets = closure_1(ref[6]).getState().byAppEntry[closure_1].safeAreaInsets;
-          let obj3 = closure_1(ref[6]);
-          const rect = closure_1(ref[7]).getStableSafeAreaInsets(closure_1);
+          let obj3 = closure_1(closure_1_2[6]);
+          safeAreaInsets = obj3.getState().byAppEntry[closure_1].safeAreaInsets;
+          const obj4 = closure_1(closure_1_2[7]);
+          const rect = obj4.getStableSafeAreaInsets(closure_1);
           let tmp7 = tmp;
           if (null != rect) {
             if (rect.bottom === safeAreaInsets.bottom) {
@@ -120,25 +139,22 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             safeAreaInsets = rect1;
           }
           META_QUEST_SAFE_AREA_INSETS = tmp7;
-          const obj4 = closure_1(ref[7]);
         }
-        tmp3Result = closure_0(ref[5]);
       }
-      obj = closure_0(ref[3]);
-      closure_1(ref[6]).setState((byAppEntry) => {
+      const obj6 = closure_1(closure_1_2[6]);
+      obj6.setState((byAppEntry) => {
+        let obj2;
         let tmp3 = byAppEntry;
         if (byAppEntry.byAppEntry[closure_1].safeAreaInsets !== META_QUEST_SAFE_AREA_INSETS) {
-          const obj = { byAppEntry: null };
-          const obj2 = {};
+          const obj = { byAppEntry: obj2 };
+          obj2 = {};
           const merged = Object.assign(byAppEntry.byAppEntry);
           const obj3 = { safeAreaInsets: tmp2 };
           obj2[tmp] = obj3;
-          obj.byAppEntry = obj2;
           tmp3 = obj;
         }
         return tmp3;
       });
-      const obj6 = closure_1(ref[6]);
     });
   };
   const items = [safeAreaInsets, appEntryKey];
@@ -148,24 +164,32 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[3] = items;
   tmp5 = items;
   tmp4 = fn;
-  const obj3 = safeAreaInsets(1487);
 }) : (() => {
-  safeAreaInsets = safeAreaInsets(1621).useSafeAreaInsets();
+  let ref;
+  let safeAreaInsets;
   let obj = safeAreaInsets(1621);
-  const appEntryKey = safeAreaInsets(1487).useAppEntryKey();
+  safeAreaInsets = obj.useSafeAreaInsets();
+  let obj2 = safeAreaInsets(1487);
+  const appEntryKey = obj2.useAppEntryKey();
   const items = [safeAreaInsets, appEntryKey];
-  const layoutEffect = noop.useLayoutEffect(() => {
-    closure_0 = safeAreaInsets;
-    closure_1 = appEntryKey;
-    ReactBatchUpdates.batchUpdates(() => {
+  const layoutEffect = react.useLayoutEffect(() => {
+    let closure_0 = safeAreaInsets;
+    let closure_1 = appEntryKey;
+    const obj = react_native2;
+    obj.batchUpdates(() => {
+      let META_QUEST_SAFE_AREA_INSETS;
+      const tmp = META_QUEST_SAFE_AREA_INSETS;
+      let obj = closure_0(closure_1_2[3]);
       if (obj.isMetaQuest()) {
-        let META_QUEST_SAFE_AREA_INSETS = closure_0(ref[4]).META_QUEST_SAFE_AREA_INSETS;
+        META_QUEST_SAFE_AREA_INSETS = closure_0(closure_1_2[4]).META_QUEST_SAFE_AREA_INSETS;
       } else {
         META_QUEST_SAFE_AREA_INSETS = tmp;
+        const tmp3Result = closure_0(closure_1_2[5]);
         if (tmp3Result.isAndroid()) {
-          safeAreaInsets = closure_1(ref[6]).getState().byAppEntry[closure_1].safeAreaInsets;
-          let obj3 = closure_1(ref[6]);
-          const rect = closure_1(ref[7]).getStableSafeAreaInsets(closure_1);
+          let obj3 = closure_1(closure_1_2[6]);
+          safeAreaInsets = obj3.getState().byAppEntry[closure_1].safeAreaInsets;
+          const obj4 = closure_1(closure_1_2[7]);
+          const rect = obj4.getStableSafeAreaInsets(closure_1);
           let tmp7 = tmp;
           if (null != rect) {
             if (rect.bottom === safeAreaInsets.bottom) {
@@ -179,44 +203,47 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             safeAreaInsets = rect1;
           }
           META_QUEST_SAFE_AREA_INSETS = tmp7;
-          const obj4 = closure_1(ref[7]);
         }
-        tmp3Result = closure_0(ref[5]);
       }
-      obj = closure_0(ref[3]);
-      closure_1(ref[6]).setState((byAppEntry) => {
+      const obj6 = closure_1(closure_1_2[6]);
+      obj6.setState((byAppEntry) => {
+        let obj2;
         let tmp3 = byAppEntry;
         if (byAppEntry.byAppEntry[closure_1].safeAreaInsets !== META_QUEST_SAFE_AREA_INSETS) {
-          const obj = { byAppEntry: null };
-          const obj2 = {};
+          const obj = { byAppEntry: obj2 };
+          obj2 = {};
           const merged = Object.assign(byAppEntry.byAppEntry);
           const obj3 = { safeAreaInsets: tmp2 };
           obj2[tmp] = obj3;
-          obj.byAppEntry = obj2;
           tmp3 = obj;
         }
         return tmp3;
       });
-      const obj6 = closure_1(ref[6]);
     });
   }, items);
-  dependencyMap = noop.useRef(false);
+  dependencyMap = react.useRef(false);
   const items1 = [safeAreaInsets, appEntryKey];
-  let obj2 = safeAreaInsets(1487);
-  return <View style={style} onLayout={noop.useCallback(() => {
+  return <View style={style} onLayout={react.useCallback(() => {
+    let tmp;
     if (!ref.current) {
       tmp.current = true;
-      closure_0 = safeAreaInsets;
-      closure_1 = appEntryKey;
-      ReactBatchUpdates.batchUpdates(() => {
+      let closure_0 = safeAreaInsets;
+      let closure_1 = appEntryKey;
+      let obj = react_native2;
+      obj.batchUpdates(() => {
+        let META_QUEST_SAFE_AREA_INSETS;
+        const tmp = META_QUEST_SAFE_AREA_INSETS;
+        let obj = closure_0(closure_1_2[3]);
         if (obj.isMetaQuest()) {
-          let META_QUEST_SAFE_AREA_INSETS = closure_0(ref[4]).META_QUEST_SAFE_AREA_INSETS;
+          META_QUEST_SAFE_AREA_INSETS = closure_0(closure_1_2[4]).META_QUEST_SAFE_AREA_INSETS;
         } else {
           META_QUEST_SAFE_AREA_INSETS = tmp;
+          const tmp3Result = closure_0(closure_1_2[5]);
           if (tmp3Result.isAndroid()) {
-            safeAreaInsets = closure_1(ref[6]).getState().byAppEntry[closure_1].safeAreaInsets;
-            let obj3 = closure_1(ref[6]);
-            const rect = closure_1(ref[7]).getStableSafeAreaInsets(closure_1);
+            let obj3 = closure_1(closure_1_2[6]);
+            safeAreaInsets = obj3.getState().byAppEntry[closure_1].safeAreaInsets;
+            const obj4 = closure_1(closure_1_2[7]);
+            const rect = obj4.getStableSafeAreaInsets(closure_1);
             let tmp7 = tmp;
             if (null != rect) {
               if (rect.bottom === safeAreaInsets.bottom) {
@@ -230,49 +257,53 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               safeAreaInsets = rect1;
             }
             META_QUEST_SAFE_AREA_INSETS = tmp7;
-            const obj4 = closure_1(ref[7]);
           }
-          tmp3Result = closure_0(ref[5]);
         }
-        obj = closure_0(ref[3]);
-        closure_1(ref[6]).setState((byAppEntry) => {
+        const obj6 = closure_1(closure_1_2[6]);
+        obj6.setState((byAppEntry) => {
+          let obj2;
           let tmp3 = byAppEntry;
           if (byAppEntry.byAppEntry[closure_1].safeAreaInsets !== META_QUEST_SAFE_AREA_INSETS) {
-            const obj = { byAppEntry: null };
-            const obj2 = {};
+            const obj = { byAppEntry: obj2 };
+            obj2 = {};
             const merged = Object.assign(byAppEntry.byAppEntry);
             const obj3 = { safeAreaInsets: tmp2 };
             obj2[tmp] = obj3;
-            obj.byAppEntry = obj2;
             tmp3 = obj;
           }
           return tmp3;
         });
-        const obj6 = closure_1(ref[6]);
       });
     }
   }, items1)} />;
 });
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/safe_area/SafeAreaProvider.native.tsx");
-
-export const SafeAreaReporter = tmp2;
-export const SafeAreaProvider = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(3);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let children;
+  const obj = react2;
+  const cResult = obj.c(3);
   ({ children, style } = arg0);
   if (cResult[0] === children) {
+    let tmp4;
     if (cResult[1] === style) {
-      let tmp4 = cResult[2];
+      tmp4 = cResult[2];
     }
     return tmp4;
   }
-  const tmp5 = jsx(_mod1621.SafeAreaProvider, { initialMetrics: SafeAreaConstants.INITIAL_SAFE_AREA_METRICS, children, style });
+  const SafeAreaProvider = _mod1621.SafeAreaProvider;
+  const tmp5 = <SafeAreaProvider initialMetrics={SafeAreaConstants.INITIAL_SAFE_AREA_METRICS} style={style}>{children}</SafeAreaProvider>;
   cResult[0] = children;
   cResult[1] = style;
   cResult[2] = tmp5;
   tmp4 = tmp5;
-  const obj2 = { initialMetrics: SafeAreaConstants.INITIAL_SAFE_AREA_METRICS, children, style };
 }) : ((arg0) => {
+  let children;
   ({ children, style } = arg0);
-  return jsx(_mod1621.SafeAreaProvider, { initialMetrics: SafeAreaConstants.INITIAL_SAFE_AREA_METRICS, children, style });
+  const SafeAreaProvider = _mod1621.SafeAreaProvider;
+  return <SafeAreaProvider initialMetrics={SafeAreaConstants.INITIAL_SAFE_AREA_METRICS} style={style}>{children}</SafeAreaProvider>;
 });
+const result = size.fileFinishedImporting("modules/safe_area/SafeAreaProvider.native.tsx");
+const SafeAreaProvider_export = tmp3;
+
+export const SafeAreaReporter = tmp2;
+export { SafeAreaProvider_export as SafeAreaProvider };

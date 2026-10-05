@@ -2,6 +2,7 @@
 
 // Module 13660 (findCodedLinkUrlsUsingRegex)
 import ip from "ip" /* 1372 */;
+import size from "module_2" /* 2 */;
 
 function trimTrailingPunctuation(str) {
   return str.replace(re2, "");
@@ -9,7 +10,6 @@ function trimTrailingPunctuation(str) {
 const regExp = new RegExp("(?:(?:(?:https?:)?//)|www\\.)(?:[^\\s:@]+(?::[^\\s@]*)?@)?(?:localhost|" + ip.v4().source + "|(?:[a-z\\u00a1-\\uffff0-9-_]+\\.)+(?:(?:[a-z\\u00a1-\\uffff]{2,})))(?::\\d{2,5})?(?:[/?#][^\\s\"()\\[\\]<>]*)?", "ig");
 const re1 = /`{3,}[\s\S]*?(?:`{3,}|$)|(`{1,2})[^`]+\1(?!`)/g;
 const re2 = /[.,;:?'*_~|]+$/;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/coded_links/findCodedLinkUrlsUsingRegex.tsx");
 
 export default function findCodedLinkUrlsUsingRegex(str) {

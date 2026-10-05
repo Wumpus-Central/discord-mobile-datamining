@@ -1,64 +1,71 @@
 // === Module 10107: GIFPickerCategoryView ===
 
 // Module 10107 (GIFPickerCategoryView)
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
+import Constants from "Constants" /* 1085 */;
+import intl2 from "intl" /* 1126 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import FastImageDefault from "FastImage" /* 5974 */;
 import useAccessibilityPressDefault from "useAccessibilityPress" /* 9239 */;
-import StarIcon from "StarIcon" /* 9943 */;
-import AnalyticsIcon from "AnalyticsIcon" /* 10108 */;
-import noop from "module_19" /* 19 */;
+import StarIcon2 from "StarIcon" /* 9943 */;
+import AnalyticsIcon2 from "AnalyticsIcon" /* 10108 */;
+import react from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ StyleSheet, View: closure_4, TouchableOpacity: hasOwnProperty } = get_ActivityIndicator);
-fn(1085).GIFPickerResultTypes;
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { container: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, flex: 1 }, gifImage: null, gifOverlay: null, categoryName: null, categoryNameIcon: null };
-let obj3 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, flex: 1 };
-obj2.gifImage = { borderRadius: nativeDefault.radii.xs, flex: 1 };
-let obj5 = {};
+let onSelectCategory;
+
+let StyleSheet;
+let closure_4;
+let hasOwnProperty;
+let metroImportAll;
+let metroImportDefault;
+let obj2;
+let obj3;
+let obj4;
+let obj5;
+let obj6;
+({ StyleSheet, View: closure_4, TouchableOpacity: hasOwnProperty } = react_native);
+const GIFPickerResultTypes = Constants.GIFPickerResultTypes;
+({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { container: obj2, gifImage: obj3, gifOverlay: obj4, categoryName: obj5, categoryNameIcon: obj6 };
+obj2 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, flex: 1 };
+createStyles = createStyles.createStyles;
+obj3 = { borderRadius: nativeDefault.radii.xs, flex: 1 };
+obj4 = { backgroundColor: nativeDefault.unsafe_rawColors.BLACK, borderRadius: nativeDefault.radii.xs, opacity: 0.6 };
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-obj5.backgroundColor = nativeDefault.unsafe_rawColors.BLACK;
-obj5.borderRadius = nativeDefault.radii.xs;
-obj5.opacity = 0.6;
-obj2.gifOverlay = obj5;
-let obj6 = {};
+obj5 = { margin: nativeDefault.space.PX_8, justifyContent: "center", flexDirection: "row", alignItems: "center" };
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
-obj6.margin = nativeDefault.space.PX_8;
-obj6.justifyContent = "center";
-obj6.flexDirection = "row";
-obj6.alignItems = "center";
-obj2.categoryName = obj6;
-let obj4 = { borderRadius: nativeDefault.radii.xs, flex: 1 };
-obj2.categoryNameIcon = { marginRight: nativeDefault.space.PX_4 };
-let closure_9 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj7 = { marginRight: nativeDefault.space.PX_4 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerCategoryView.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSelectCategory) => {
-  const cResult = c.c(30);
+obj6 = { marginRight: nativeDefault.space.PX_4 };
+let closure_9 = createStyles(obj);
+const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((onSelectCategory) => {
+  let items;
+  let items1;
+  const obj = react2;
+  const cResult = obj.c(30);
   onSelectCategory = onSelectCategory.onSelectCategory;
   const item = onSelectCategory.item;
   const tmp4 = closure_9();
   if (cResult[0] === item.name) {
     if (cResult[1] === item.type) {
+      let tmp5;
+      let tmp6;
+      let tmp10;
       if (cResult[2] === onSelectCategory) {
-        let tmp5 = cResult[3];
+        tmp5 = cResult[3];
       }
       if (cResult[4] !== item.name) {
-        const intl = util.intl;
+        const intl = intl2.intl;
         const obj2 = { categoryName: item.name };
-        const formatToPlainStringResult = intl.formatToPlainString(util.t["j+63pw"], obj2);
+        const formatToPlainStringResult = intl.formatToPlainString(intl2.t["j+63pw"], obj2);
         cResult[4] = item.name;
         cResult[5] = formatToPlainStringResult;
-        let tmp6 = formatToPlainStringResult;
+        tmp6 = formatToPlainStringResult;
       } else {
         tmp6 = cResult[5];
       }
@@ -67,98 +74,107 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSelectCategory
         const obj3 = { uri: item.src };
         cResult[6] = item.src;
         cResult[7] = obj3;
-        let tmp10 = obj3;
+        tmp10 = obj3;
       } else {
         tmp10 = cResult[7];
       }
       if (cResult[8] === tmp4.gifImage) {
+        let tmp11;
+        let tmp14;
+        let tmp20;
         if (cResult[9] === tmp10) {
-          let tmp11 = cResult[10];
+          tmp11 = cResult[10];
         }
         if (cResult[11] !== tmp4.gifOverlay) {
           const obj4 = { style: tmp4.gifOverlay };
-          const tmp17 = React5(React4, obj4);
+          const tmp17 = metroImportDefault(React3, obj4);
           cResult[11] = tmp4.gifOverlay;
           cResult[12] = tmp17;
-          let tmp14 = tmp17;
+          tmp14 = tmp17;
         } else {
           tmp14 = cResult[12];
         }
         if (cResult[13] === item.type) {
+          let tmp18;
+          let tmp23;
           if (cResult[14] === tmp4.categoryNameIcon) {
-            if (cResult[16] !== item.name) {
-              const obj5 = { variant: "text-sm/semibold", color: "text-overlay-light", maxFontSizeMultiplier: 2, accessible: false, children: item.name };
-              const tmp26 = React5(Text_Text.Text, obj5);
-              cResult[16] = item.name;
-              cResult[17] = tmp26;
-              let tmp24 = tmp26;
-            } else {
-              tmp24 = cResult[17];
-            }
-            if (cResult[18] === tmp4.categoryName) {
-              if (cResult[19] === tmp18) {
-                if (cResult[20] === tmp24) {
-                  let tmp27 = cResult[21];
-                }
-                if (cResult[22] === tmp6) {
-                  if (cResult[23] === tmp9) {
-                    if (cResult[24] === tmp5) {
-                      if (cResult[25] === tmp4.container) {
-                        if (cResult[26] === tmp11) {
-                          if (cResult[27] === tmp14) {
-                            if (cResult[28] === tmp27) {
-                              let tmp31 = cResult[29];
-                            }
-                            return tmp31;
+            tmp18 = cResult[15];
+          }
+          if (cResult[16] !== item.name) {
+            const obj5 = { variant: "text-sm/semibold", color: "text-overlay-light", maxFontSizeMultiplier: 2, accessible: false, children: item.name };
+            const tmp25 = metroImportDefault(Text_Text.Text, obj5);
+            cResult[16] = item.name;
+            cResult[17] = tmp25;
+            tmp23 = tmp25;
+          } else {
+            tmp23 = cResult[17];
+          }
+          if (cResult[18] === tmp4.categoryName) {
+            if (cResult[19] === tmp18) {
+              let tmp26;
+              if (cResult[20] === tmp23) {
+                tmp26 = cResult[21];
+              }
+              if (cResult[22] === tmp6) {
+                if (cResult[23] === tmp9) {
+                  if (cResult[24] === tmp5) {
+                    if (cResult[25] === tmp4.container) {
+                      if (cResult[26] === tmp11) {
+                        if (cResult[27] === tmp14) {
+                          let tmp30;
+                          if (cResult[28] === tmp26) {
+                            tmp30 = cResult[29];
                           }
+                          return tmp30;
                         }
                       }
                     }
                   }
                 }
-                const obj6 = { style: tmp4.container, onPress: tmp5, accessible: true, accessibilityRole: "button", accessibilityLabel: tmp6 };
-                const merged = Object.assign(tmp9);
-                const items = [tmp11, tmp14, tmp27];
-                obj6.children = items;
-                const tmp37 = closure_1_8(hasOwnProperty, obj6);
-                cResult[22] = tmp6;
-                cResult[23] = tmp9;
-                cResult[24] = tmp5;
-                cResult[25] = tmp4.container;
-                cResult[26] = tmp11;
-                cResult[27] = tmp14;
-                cResult[28] = tmp27;
-                cResult[29] = tmp37;
-                tmp31 = tmp37;
               }
+              const obj6 = { style: tmp4.container, onPress: tmp5, accessible: true, accessibilityRole: "button", accessibilityLabel: tmp6, children: items };
+              const merged = Object.assign(tmp9);
+              items = [tmp11, tmp14, tmp26];
+              const tmp36 = metroImportAll(hasOwnProperty, obj6);
+              cResult[22] = tmp6;
+              cResult[23] = tmp9;
+              cResult[24] = tmp5;
+              cResult[25] = tmp4.container;
+              cResult[26] = tmp11;
+              cResult[27] = tmp14;
+              cResult[28] = tmp26;
+              cResult[29] = tmp36;
+              tmp30 = tmp36;
             }
-            const obj7 = { style: tmp4.categoryName, accessible: false, children: null };
-            const items1 = [cResult[15], tmp24];
-            obj7.children = items1;
-            const tmp30 = closure_1_8(React4, obj7);
-            cResult[18] = tmp4.categoryName;
-            cResult[19] = cResult[15];
-            cResult[20] = tmp24;
-            cResult[21] = tmp30;
-            tmp27 = tmp30;
           }
+          const obj7 = { style: tmp4.categoryName, accessible: false, children: items1 };
+          items1 = [tmp18, tmp23];
+          const tmp29 = metroImportAll(React3, obj7);
+          cResult[18] = tmp4.categoryName;
+          cResult[19] = tmp18;
+          cResult[20] = tmp23;
+          cResult[21] = tmp29;
+          tmp26 = tmp29;
         }
         if (item.type === GIFPickerResultTypes.TRENDING_GIFS) {
           const obj8 = { size: "sm", style: tmp4.categoryNameIcon, color: nativeDefault.colors.WHITE };
-          let tmp20 = React5(AnalyticsIcon.AnalyticsIcon, obj8);
+          const AnalyticsIcon = AnalyticsIcon2.AnalyticsIcon;
+          tmp20 = metroImportDefault(AnalyticsIcon, obj8);
         } else {
           tmp20 = null;
           if (item.type === tmp19.FAVORITES) {
             const obj9 = { size: "sm", style: tmp4.categoryNameIcon, color: nativeDefault.colors.WHITE };
-            tmp20 = React5(StarIcon.StarIcon, obj9);
+            const StarIcon = StarIcon2.StarIcon;
+            tmp20 = metroImportDefault(StarIcon, obj9);
           }
         }
         cResult[13] = item.type;
         cResult[14] = tmp4.categoryNameIcon;
         cResult[15] = tmp20;
+        tmp18 = tmp20;
       }
       const obj10 = { style: tmp4.gifImage, source: tmp10 };
-      const tmp13 = React5(FastImageDefault, obj10);
+      const tmp13 = metroImportDefault(FastImageDefault, obj10);
       cResult[8] = tmp4.gifImage;
       cResult[9] = tmp10;
       cResult[10] = tmp13;
@@ -174,32 +190,45 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSelectCategory
   cResult[3] = fn;
   tmp5 = fn;
 }) : ((onSelectCategory) => {
+  let items1;
+  let items2;
+  let tmp10Result;
   onSelectCategory = onSelectCategory.onSelectCategory;
   const item = onSelectCategory.item;
   const tmp = closure_9();
   const items = [onSelectCategory, item];
-  const callback = noop.useCallback(() => {
+  const callback = react.useCallback(() => {
     onSelectCategory(item.type, item.name);
   }, items);
-  const intl = util.intl;
-  const formatToPlainStringResult = intl.formatToPlainString(util.t["j+63pw"], { categoryName: item.name });
-  const obj2 = { style: tmp.container, onPress: callback, accessible: true, accessibilityRole: "button", accessibilityLabel: formatToPlainStringResult };
+  const intl = intl2.intl;
+  const obj = { categoryName: item.name };
+  const formatToPlainStringResult = intl.formatToPlainString(intl2.t["j+63pw"], obj);
+  const obj2 = { style: tmp.container, onPress: callback, accessible: true, accessibilityRole: "button", accessibilityLabel: formatToPlainStringResult, children: items1 };
   const merged = Object.assign(useAccessibilityPressDefault(callback, formatToPlainStringResult));
-  const items1 = [React5(FastImageDefault, { style: tmp.gifImage, source: { uri: item.src } }), React5(React4, { style: tmp.gifOverlay }), ];
-  const obj5 = { style: tmp.categoryName, accessible: false, children: null };
+  items1 = [, , ];
+  const obj3 = { style: tmp.gifImage, source: { uri: item.src } };
+  items1[0] = metroImportDefault(FastImageDefault, obj3);
+  const obj4 = { style: tmp.gifOverlay };
+  items1[1] = metroImportDefault(React3, obj4);
+  const obj5 = { style: tmp.categoryName, accessible: false, children: items2 };
   if (item.type === GIFPickerResultTypes.TRENDING_GIFS) {
     const obj6 = { size: "sm", style: tmp.categoryNameIcon, color: nativeDefault.colors.WHITE };
-    let tmp10Result = React5(AnalyticsIcon.AnalyticsIcon, obj6);
+    const AnalyticsIcon = AnalyticsIcon2.AnalyticsIcon;
+    tmp10Result = metroImportDefault(AnalyticsIcon, obj6);
   } else {
     tmp10Result = null;
     if (item.type === tmp12.FAVORITES) {
       const obj7 = { size: "sm", style: tmp.categoryNameIcon, color: nativeDefault.colors.WHITE };
-      tmp10Result = React5(StarIcon.StarIcon, obj7);
+      const StarIcon = StarIcon2.StarIcon;
+      tmp10Result = metroImportDefault(StarIcon, obj7);
     }
   }
-  const items2 = [tmp10Result, React5(Text_Text.Text, { variant: "text-sm/semibold", color: "text-overlay-light", maxFontSizeMultiplier: 2, accessible: false, children: item.name })];
-  obj5.children = items2;
-  items1[2] = closure_1_8(React4, obj5);
-  obj2.children = items1;
-  return closure_1_8(hasOwnProperty, obj2);
+  items2 = [tmp10Result, ];
+  const obj8 = { variant: "text-sm/semibold", color: "text-overlay-light", maxFontSizeMultiplier: 2, accessible: false, children: item.name };
+  items2[1] = metroImportDefault(Text_Text.Text, obj8);
+  items1[2] = metroImportAll(React3, obj5);
+  return metroImportAll(hasOwnProperty, obj2);
 });
+const result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerCategoryView.tsx");
+
+export default tmp7;

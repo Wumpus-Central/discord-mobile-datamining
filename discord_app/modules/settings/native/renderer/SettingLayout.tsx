@@ -1,40 +1,42 @@
 // === Module 14499: SettingLayout ===
 
 // Module 14499 (SettingLayout)
-import c from "c" /* 576 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
+import SettingRendererConstants from "SettingRendererConstants" /* 11130 */;
 import SettingListRenderer from "SettingListRenderer" /* 14500 */;
 import SettingSegmentedControlRendererDefault from "SettingSegmentedControlRenderer" /* 14513 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const NodeType = fn(11130).NodeType;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/settings/native/renderer/SettingLayout.tsx");
+let node;
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((node) => {
-  const cResult = c.c(4);
+const NodeType = SettingRendererConstants.NodeType;
+const jsx = Fragment.jsx;
+const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((node) => {
+  const obj = react2;
+  const cResult = obj.c(4);
   node = node.node;
   const type = node.type;
   if (NodeType.LIST === type) {
+    let tmp9;
     if (cResult[0] !== node) {
-      const obj2 = { node };
       const tmp11 = jsx(SettingListRenderer.SettingsList, { node });
       cResult[0] = node;
       cResult[1] = tmp11;
-      let tmp9 = tmp11;
+      tmp9 = tmp11;
     } else {
       tmp9 = cResult[1];
     }
     return tmp9;
   } else if (tmp4.SEGMENTED_CONTROL === type) {
+    let tmp5;
     if (cResult[2] !== node) {
-      const obj3 = { node };
       const tmp8 = jsx(SettingSegmentedControlRendererDefault, { node });
       cResult[2] = node;
       cResult[3] = tmp8;
-      let tmp5 = tmp8;
+      tmp5 = tmp8;
     } else {
       tmp5 = cResult[3];
     }
@@ -44,10 +46,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((node) 
   node = node.node;
   const type = node.type;
   if (NodeType.LIST === type) {
-    const obj2 = { node };
     return jsx(SettingListRenderer.SettingsList, { node });
   } else if (tmp.SEGMENTED_CONTROL === type) {
-    const obj = { node };
     return jsx(SettingSegmentedControlRendererDefault, { node });
   }
 }));
+const result = size.fileFinishedImporting("modules/settings/native/renderer/SettingLayout.tsx");
+
+export default memoResult;

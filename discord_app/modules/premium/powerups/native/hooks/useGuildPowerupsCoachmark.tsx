@@ -1,7 +1,10 @@
 // === Module 16096: useGuildPowerupsCoachmark ===
 
 // Module 16096 (useGuildPowerupsCoachmark)
+import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
+import Constants2 from "Constants" /* 1096 */;
+import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
 import useThemeDefault from "useTheme" /* 4791 */;
 import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12138 */;
 import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12170 */;
@@ -15,51 +18,68 @@ import _modDef16098 from "module_16098" /* 16098 */;
 import _modDef16099 from "module_16099" /* 16099 */;
 import _modDef16100 from "module_16100" /* 16100 */;
 import _modDef16101 from "module_16101" /* 16101 */;
-import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import react_mod from "react" /* 19 */;
+import AccessibilityStore_mod from "AccessibilityStore" /* 4879 */;
 import GuildStore from "GuildStore" /* 2074 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4768 */;
+import Constants from "Constants" /* 1085 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size_mod from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let closure_5, dependencyMap, importDefault;
 
-require = fn;
-const GuildPowerupsConstants = fn(4768);
-({ GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET: metroRequire, GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET: closure_7, GuildPowerupType: closure_8 } = GuildPowerupsConstants);
-const Constants = fn(1085);
-({ AnalyticsPages: closure_9, AnalyticsSections: c10 } = Constants);
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
-const ThemeTypes = fn(1096).ThemeTypes;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+let c10;
+let c9;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+let react = react_mod;
+let AccessibilityStore = AccessibilityStore_mod;
+({ GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET: metroRequire, GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET: metroImportDefault, GuildPowerupType: metroImportAll } = GuildPowerupsConstants);
+({ AnalyticsPages: c9, AnalyticsSections: c10 } = Constants);
+const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
+const ThemeTypes = Constants2.ThemeTypes;
+const jsx = Fragment.jsx;
 let closure_14 = createStyles.createStyles((arg0) => {
-  const obj = { coachmarkImage: null, coachmarkCover: null, boostGemBackground: null };
-  const size = { height: 120, width: 260 - 2 * nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md };
-  obj.coachmarkImage = size;
-  obj.coachmarkCover = { resizeMode: "cover" };
-  let str = "#0000003D";
+  let str;
+  const obj = { coachmarkImage: size, coachmarkCover: { resizeMode: "cover" }, boostGemBackground: { width: 50, height: 50, backgroundColor: str } };
+  size = { height: 120, width: 260 - 2 * nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md };
+  str = "#0000003D";
   if (arg0 === ThemeTypes.LIGHT) {
     str = "#0000001A";
   }
-  obj.boostGemBackground = { width: 50, height: 50, backgroundColor: str };
   return obj;
 });
-const ReactCompilerGating = fn(558);
-let size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupsCoachmark.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, guildId, type) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, guildId, type) => {
+  let closure_2;
+  let closure_4;
+  let first;
+  let imageUrl;
+  let length;
+  let tmp11;
+  let tmp12;
+  let tmp18;
+  let tmp22;
+  let tmp6;
+  let tmp7;
+  let type2;
   const _require = guildId;
   importDefault = type;
-  const cResult = require("c").c(144);
+  const tmp = _require;
+  let obj = require("react");
+  const cResult = obj.c(144);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [GuildStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== guildId) {
     const fn = function y() {
-      guild = GuildStore.getGuild(closure_0);
+      const guild = GuildStore.getGuild(guildId);
       let name;
       if (guild != null) {
         name = guild.name;
@@ -70,14 +90,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, guildId, t
     cResult[1] = guildId;
     cResult[2] = fn;
     cResult[3] = items1;
-    let tmp7 = items1;
-    let tmp6 = fn;
+    tmp7 = items1;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[2];
     tmp7 = cResult[3];
   }
-  let obj = require("c");
-  const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
+  const tmpResult = tmp(504);
+  const stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
   const tmp10 = closure_14(useThemeDefault());
   dependencyMap = tmp10;
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
@@ -89,37 +109,37 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, guildId, t
     }
     cResult[4] = items2;
     cResult[5] = S;
-    let tmp12 = S;
-    let tmp11 = items2;
+    tmp12 = S;
+    tmp11 = items2;
   } else {
     tmp11 = cResult[4];
     tmp12 = cResult[5];
   }
-  const tmpResult = require("initialize");
-  const stateFromStores1 = require("initialize").useStateFromStores(tmp11, tmp12);
+  const tmpResult3 = tmp(504);
+  const stateFromStores1 = tmpResult3.useStateFromStores(tmp11, tmp12);
+  const available = tmp9(7671)(guildId).available;
   const tmp15 = useHasAllocateBoostPermissionDefault(guildId);
   let type1;
   if (type != null) {
     type1 = type.type;
   }
   let powerup;
-  if (type1 === require("GuildPowerupsNotification").GuildPowerupNotificationPopoutType.BOOST_TO_UNLOCK) {
+  if (type1 === tmp(12154).GuildPowerupNotificationPopoutType.BOOST_TO_UNLOCK) {
     powerup = type.powerup;
   }
   let num7 = 0;
   if (null != powerup) {
-    num7 = powerup.cost - tmp9(7671)(guildId).available;
+    num7 = powerup.cost - available;
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-    let obj2 = { page: constants2.GUILD_CHANNEL, section: null };
+    let obj2 = { page: constants2.GUILD_CHANNEL, section: constants3.GUILD_HEADER };
     class S {
       constructor() {
         return closure_4.useReducedMotion;
       }
     }
-    obj2.section = constants3.GUILD_HEADER;
     cResult[6] = obj2;
-    let tmp18 = obj2;
+    tmp18 = obj2;
   } else {
     tmp18 = cResult[6];
   }
@@ -132,12 +152,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, guildId, t
           if (cResult[11] === tmp20) {
             if (cResult[12] === type) {
               if (cResult[13] === tmp10) {
-                if (cResult[14] === stateFromStores1) {
-                  tmp(9882);
-                  class S {
-                    constructor() {
-                      return closure_4.useReducedMotion;
-                    }
+                tmp(9882);
+                class S {
+                  constructor() {
+                    return closure_4.useReducedMotion;
                   }
                 }
               }
@@ -162,26 +180,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, guildId, t
         return closure_4.useReducedMotion;
       }
     }
-    let tmp22 = obj3;
+    tmp22 = obj3;
   } else {
     tmp22 = cResult[16];
   }
+  const tmp23 = tmp22;
   if (null != type) {
     if (cResult[17] === guildId) {
       class W {
         constructor() {
-          obj = closure_1;
-          if (null != closure_1) {
-            tmp = ContentDismissActionType;
-            markAsDismissedResult = obj.markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-            tmp3 = closure_1;
-            tmp4 = closure_2;
-            obj1 = { guildId: null };
-            tmp5 = closure_0;
-            obj1.guildId = closure_0;
-            tmp6 = closure_1(closure_2[18])(obj1);
+          if (null != type) {
+            type.markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+            const obj2 = { guildId };
+            openGuildPowerupsModalDefault(obj2);
           }
-          return;
         }
       }
       type = type.type;
@@ -193,18 +205,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, guildId, t
     }
     class W {
       constructor() {
-        obj = closure_1;
-        if (null != closure_1) {
-          tmp = ContentDismissActionType;
-          markAsDismissedResult = obj.markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-          tmp3 = closure_1;
-          tmp4 = closure_2;
-          obj1 = { guildId: null };
-          tmp5 = closure_0;
-          obj1.guildId = closure_0;
-          tmp6 = closure_1(closure_2[18])(obj1);
+        if (null != type) {
+          type.markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+          const obj2 = { guildId };
+          openGuildPowerupsModalDefault(obj2);
         }
-        return;
       }
     }
     class S {
@@ -223,27 +228,34 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, guildId, t
   cResult[12] = type;
   cResult[13] = tmp10;
   cResult[14] = stateFromStores1;
-  cResult[15] = tmp22;
-  const tmpResult3 = require("initialize");
+  cResult[15] = tmp23;
 }) : ((arg0, arg1, type) => {
+  let closure_0;
+  let closure_3;
+  let stateFromStores;
+  let stateFromStores1;
   const _require = arg1;
   importDefault = type;
+  let tmp = _require;
+  const tmp2 = stateFromStores;
+  let obj = require("get initialized");
   let items = [closure_5];
   const items1 = [arg1];
-  stateFromStores = require("initialize").useStateFromStores(items, () => {
-    guild = GuildStore.getGuild(closure_0);
+  stateFromStores = obj.useStateFromStores(items, () => {
+    const guild = GuildStore.getGuild(closure_0);
     let name;
     if (guild != null) {
       name = guild.name;
     }
     return name;
   }, items1);
+  const tmp4 = importDefault;
   const tmp5 = closure_14(require("useTheme")());
-  noop = tmp5;
-  let obj = require("initialize");
-  let tmp4 = importDefault;
+  react = tmp5;
+  let obj2 = require("get initialized");
   const items2 = [stateFromStores1];
-  stateFromStores1 = require("initialize").useStateFromStores(items2, () => stateFromStores1.useReducedMotion);
+  stateFromStores1 = obj2.useStateFromStores(items2, () => stateFromStores1.useReducedMotion);
+  const available = require("useGuildPowerupsBoostCount")(arg1).available;
   const tmp7 = require("useHasAllocateBoostPermission")(arg1);
   closure_5 = tmp7;
   type = undefined;
@@ -251,17 +263,50 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, guildId, t
     type = type.type;
   }
   let powerup;
-  if (type === require("GuildPowerupsNotification").GuildPowerupNotificationPopoutType.BOOST_TO_UNLOCK) {
+  if (type === tmp(tmp2[16]).GuildPowerupNotificationPopoutType.BOOST_TO_UNLOCK) {
     powerup = type.powerup;
   }
   let num = 0;
   if (null != powerup) {
-    num = powerup.cost - require("useGuildPowerupsBoostCount")(arg1).available;
+    num = powerup.cost - available;
   }
-  const tmp10 = tmp4(stateFromStores[17])(arg1, powerup, num, "boost_to_unlock_coachmark", { page: constants2.GUILD_CHANNEL, section: constants3.GUILD_HEADER });
-  closure_7 = tmp10;
+  let obj3 = { page: constants2.GUILD_CHANNEL, section: constants3.GUILD_HEADER };
+  const tmp10 = tmp4(tmp2[17])(arg1, powerup, num, "boost_to_unlock_coachmark", obj3);
+  let closure_7 = tmp10;
   const items3 = [num, tmp7, arg1, stateFromStores, tmp10, type, tmp5, stateFromStores1];
-  const memo = noop.useMemo(() => {
+  const memo = react.useMemo(() => {
+    let LmpChE;
+    let formatToPlainString2;
+    let found1;
+    let guildPowerupBannerImage;
+    let intl;
+    let intl10;
+    let intl11;
+    let intl12;
+    let intl13;
+    let intl14;
+    let intl15;
+    let intl16;
+    let intl21;
+    let intl22;
+    let intl23;
+    let intl24;
+    let intl25;
+    let intl26;
+    let intl27;
+    let intl28;
+    let intl29;
+    let intl30;
+    let intl4;
+    let intl5;
+    let intl6;
+    let intl7;
+    let intl8;
+    let intl9;
+    let obj10;
+    let obj3;
+    let obj4;
+    let str5;
     let obj = {
       title: "",
       description: "",
@@ -271,6 +316,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, guildId, t
 
       }
     };
+    const tmp = guildPowerupBannerImage;
     if (null == guildPowerupBannerImage) {
       return obj;
     } else {
@@ -288,259 +334,280 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, guildId, t
       }
       type = tmp.type;
       if (closure_0(stateFromStores[16]).GuildPowerupNotificationPopoutType.LEVEL_REACHED === type) {
-        let obj2 = {};
-        const merged = Object.assign(obj);
-        obj2.visible = true;
-        obj2.renderImgComponent = function renderImgComponent() {
-          return jsx(guildPowerupBannerImage(stateFromStores[19]), { style: powerup.boostGemBackground, gemWidth: 30, gemHeight: 30 });
+        let obj2 = {
+          visible: true,
+          renderImgComponent() {
+                return jsx(guildPowerupBannerImage(stateFromStores[19]), { style: powerup.boostGemBackground, gemWidth: 30, gemHeight: 30 });
+              },
+          title: intl25.formatToPlainString(type(stateFromStores[21])["Zg/m9K"], obj3),
+          description: intl26.formatToPlainString(type(stateFromStores[21])["1EGXSK"], obj4),
+          buttonLabel: intl27.string(closure_0(stateFromStores[20]).t.RzWDqY),
+          buttonVariant: "primary",
+          onButtonPress: handleButtonPress,
+          onDismiss: handleDismiss
         };
-        const intl24 = closure_0(stateFromStores[20]).intl;
-        let obj3 = { perkName: tmp.powerup.title };
-        obj2.title = intl24.formatToPlainString(type(stateFromStores[21])["Zg/m9K"], obj3);
-        const intl25 = closure_0(stateFromStores[20]).intl;
-        const obj4 = { perkName: tmp.powerup.title };
-        obj2.description = intl25.formatToPlainString(type(stateFromStores[21])["1EGXSK"], obj4);
-        const intl26 = closure_0(stateFromStores[20]).intl;
-        obj2.buttonLabel = intl26.string(closure_0(stateFromStores[20]).t.RzWDqY);
-        obj2.buttonVariant = "primary";
-        obj2.onButtonPress = handleButtonPress;
-        obj2.onDismiss = handleDismiss;
+        const merged = Object.assign(obj);
+        intl25 = closure_0(stateFromStores[20]).intl;
+        obj3 = { perkName: tmp.powerup.title };
+        intl26 = closure_0(stateFromStores[20]).intl;
+        obj4 = { perkName: tmp.powerup.title };
+        intl27 = closure_0(stateFromStores[20]).intl;
         return obj2;
       } else if (closure_0(stateFromStores[16]).GuildPowerupNotificationPopoutType.PERKS_AVAILABLE === type) {
-        const obj5 = {};
-        const merged1 = Object.assign(obj);
-        obj5.visible = true;
-        obj5.renderImgComponent = function renderImgComponent() {
-          return jsx(guildPowerupBannerImage(stateFromStores[19]), { style: powerup.boostGemBackground, gemWidth: 30, gemHeight: 30 });
+        const obj5 = {
+          visible: true,
+          renderImgComponent() {
+                return jsx(guildPowerupBannerImage(stateFromStores[19]), { style: powerup.boostGemBackground, gemWidth: 30, gemHeight: 30 });
+              },
+          title: intl22.string(type(stateFromStores[21]).QpQBPQ),
+          description: intl23.string(type(stateFromStores[21])["6hn0xF"]),
+          buttonLabel: intl24.string(closure_0(stateFromStores[20]).t.RzWDqY),
+          buttonVariant: "primary",
+          onButtonPress: handleButtonPress,
+          onDismiss: handleDismiss
         };
-        const intl21 = closure_0(stateFromStores[20]).intl;
-        obj5.title = intl21.string(type(stateFromStores[21]).QpQBPQ);
-        const intl22 = closure_0(stateFromStores[20]).intl;
-        obj5.description = intl22.string(type(stateFromStores[21])["6hn0xF"]);
-        const intl23 = closure_0(stateFromStores[20]).intl;
-        obj5.buttonLabel = intl23.string(closure_0(stateFromStores[20]).t.RzWDqY);
-        obj5.buttonVariant = "primary";
-        obj5.onButtonPress = handleButtonPress;
-        obj5.onDismiss = handleDismiss;
+        const merged1 = Object.assign(obj);
+        intl22 = closure_0(stateFromStores[20]).intl;
+        intl23 = closure_0(stateFromStores[20]).intl;
+        intl24 = closure_0(stateFromStores[20]).intl;
         return obj5;
       } else if (closure_0(stateFromStores[16]).GuildPowerupNotificationPopoutType.PERKS_PURCHASABLE === type) {
         const powerups = tmp.powerups;
         if (0 === powerups.length) {
           return obj;
         } else {
+          let formatToPlainStringResult;
+          let tmp35;
           if (powerups.length >= 3) {
-            const intl18 = closure_0(stateFromStores[20]).intl;
+            const intl19 = closure_0(stateFromStores[20]).intl;
             const obj6 = { perk: powerups[0].title, perk2: powerups[1].title, perk3: powerups[2].title };
-            let formatToPlainStringResult = intl18.formatToPlainString(type(stateFromStores[21])["6Sv+3M"], obj6);
-            let tmp35 = type;
+            formatToPlainStringResult = intl19.formatToPlainString(type(stateFromStores[21])["6Sv+3M"], obj6);
+            tmp35 = type;
           } else if (2 === powerups.length) {
-            const intl17 = closure_0(stateFromStores[20]).intl;
-            const obj7 = { perks: null };
+            const intl18 = closure_0(stateFromStores[20]).intl;
+            const formatToPlainString = intl18.formatToPlainString;
             const _HermesInternal = HermesInternal;
-            obj7.perks = "" + powerups[0].title + " & " + powerups[1].title;
-            formatToPlainStringResult = intl17.formatToPlainString(type(stateFromStores[21]).wcQOqC, obj7);
+            const obj7 = { perks: "" + powerups[0].title + " & " + powerups[1].title };
+            const wcQOqC = type(stateFromStores[21]).wcQOqC;
+            formatToPlainStringResult = formatToPlainString(wcQOqC, obj7);
             tmp35 = type;
           } else {
-            const intl16 = closure_0(stateFromStores[20]).intl;
-            const obj8 = { perk: powerups[0].title };
+            const intl17 = closure_0(stateFromStores[20]).intl;
             tmp35 = type;
-            formatToPlainStringResult = intl16.formatToPlainString(type(stateFromStores[21]).ZF8NT6, obj8);
+            const obj8 = { perk: powerups[0].title };
+            formatToPlainStringResult = intl17.formatToPlainString(type(stateFromStores[21]).ZF8NT6, obj8);
           }
-          const obj9 = {};
-          const merged2 = Object.assign(obj);
-          obj9.visible = true;
-          obj9.renderImgComponent = function renderImgComponent() {
-            if (powerups.length > 1) {
-              let str = _modDef16098;
-            } else {
-              str = useGetGuildPowerupBannerImage.getGuildPowerupBannerImage(powerups[0], stateFromStores1, true);
-              if (str == null) {
-                str = "";
-              }
-            }
-            const obj2 = { imageUrl: str, isAnimated: 1 === powerups.length, style: null };
-            const items = [, ];
-            ({ coachmarkImage: arr2[0], coachmarkCover: arr2[1] } = closure_3);
-            obj2.style = items;
-            return jsx(GuildPowerupsImageDefault, { imageUrl: str, isAnimated: 1 === powerups.length, style: null });
+          const obj9 = {
+            visible: true,
+            renderImgComponent() {
+                    let str;
+                    GuildPowerupsImageDefault;
+                    if (powerups.length > 1) {
+                      str = _modDef16098;
+                    } else {
+                      const obj = useGetGuildPowerupBannerImage;
+                      str = obj.getGuildPowerupBannerImage(powerups[0], stateFromStores1, true);
+                      if (str == null) {
+                        str = "";
+                      }
+                    }
+                    const items = [, ];
+                    ({ coachmarkImage: arr2[0], coachmarkCover: arr2[1] } = closure_3);
+                    return <tmp4 imageUrl={str} isAnimated={1 === powerups.length} style={items} />;
+                  },
+            title: formatToPlainString2(LmpChE, obj10),
+            description: formatToPlainStringResult,
+            buttonLabel: intl21.string(closure_0(stateFromStores[20]).t.RzWDqY),
+            buttonVariant: "primary",
+            onButtonPress: handleButtonPress,
+            onDismiss: handleDismiss
           };
-          const intl19 = closure_0(stateFromStores[20]).intl;
+          const merged2 = Object.assign(obj);
+          const intl20 = closure_0(stateFromStores[20]).intl;
+          formatToPlainString2 = intl20.formatToPlainString;
           let str10 = found1;
+          LmpChE = tmp35(stateFromStores[21]).LmpChE;
           if (found1 == null) {
             str10 = "";
           }
-          const obj10 = { guildName: str10 };
-          obj9.title = intl19.formatToPlainString(tmp35(stateFromStores[21]).LmpChE, obj10);
-          obj9.description = formatToPlainStringResult;
-          const intl20 = closure_0(stateFromStores[20]).intl;
-          obj9.buttonLabel = intl20.string(closure_0(stateFromStores[20]).t.RzWDqY);
-          obj9.buttonVariant = "primary";
-          obj9.onButtonPress = handleButtonPress;
-          obj9.onDismiss = handleDismiss;
+          obj10 = { guildName: str10 };
+          intl21 = closure_0(stateFromStores[20]).intl;
           return obj9;
         }
       } else if (closure_0(stateFromStores[16]).GuildPowerupNotificationPopoutType.NEW_PERK_AVAILABLE === type) {
+        let tmp18;
         const powerups1 = tmp.powerups;
         const found = powerups1.find((skuId) => skuId.skuId === powerups(found1[25]).GUILD_POWERUP_TAG_SKU_ID);
         if (null != found) {
-          guildPowerupBannerImage = closure_0(stateFromStores[24]).getGuildPowerupBannerImage(found, stateFromStores1, true);
+          const tmp51Result = closure_0(stateFromStores[24]);
+          guildPowerupBannerImage = tmp51Result.getGuildPowerupBannerImage(found, stateFromStores1, true);
           if (null != guildPowerupBannerImage) {
-            const obj11 = {};
-            const merged3 = Object.assign(obj);
-            obj11.visible = true;
-            obj11.renderImgComponent = function renderImgComponent() {
-              return jsx(GuildPowerupsImageDefault, { imageUrl: guildPowerupBannerImage, isAnimated: !stateFromStores1, style: powerup.coachmarkImage });
+            const obj11 = {
+              visible: true,
+              renderImgComponent() {
+                        return jsx(GuildPowerupsImageDefault, { imageUrl: guildPowerupBannerImage, isAnimated: !stateFromStores1, style: powerup.coachmarkImage });
+                      },
+              title: intl14.string(type(stateFromStores[21]).GcEkAP),
+              description: intl15.string(type(stateFromStores[21]).yo0g7X),
+              buttonLabel: intl16.string(closure_0(stateFromStores[20]).t.RzWDqY),
+              buttonVariant: "primary",
+              onButtonPress: handleButtonPress,
+              onDismiss: handleDismiss
             };
-            const intl13 = closure_0(stateFromStores[20]).intl;
-            obj11.title = intl13.string(type(stateFromStores[21]).GcEkAP);
-            const intl14 = closure_0(stateFromStores[20]).intl;
-            obj11.description = intl14.string(type(stateFromStores[21]).yo0g7X);
-            const intl15 = closure_0(stateFromStores[20]).intl;
-            obj11.buttonLabel = intl15.string(closure_0(stateFromStores[20]).t.RzWDqY);
-            obj11.buttonVariant = "primary";
-            obj11.onButtonPress = handleButtonPress;
-            obj11.onDismiss = handleDismiss;
+            const merged3 = Object.assign(obj);
+            intl14 = closure_0(stateFromStores[20]).intl;
+            intl15 = closure_0(stateFromStores[20]).intl;
+            intl16 = closure_0(stateFromStores[20]).intl;
             return obj11;
           }
-          const tmp51Result = closure_0(stateFromStores[24]);
         }
         found1 = powerups1.find((skuId) => skuId.skuId === powerups(found1[25]).GUILD_POWERUP_GUILD_THEME_SKU_ID);
         if (null != found1) {
-          const obj12 = {};
-          const merged4 = Object.assign(obj);
-          obj12.visible = true;
-          obj12.renderImgComponent = function renderImgComponent() {
-            guildPowerupBannerImage = useGetGuildPowerupBannerImage.getGuildPowerupBannerImage(found1, stateFromStores1, true);
-            if (guildPowerupBannerImage == null) {
-              guildPowerupBannerImage = _modDef16094;
-            }
-            const obj2 = { imageUrl: guildPowerupBannerImage, isAnimated: !stateFromStores1, style: null };
-            const items = [, ];
-            ({ coachmarkImage: arr[0], coachmarkCover: arr[1] } = closure_3);
-            obj2.style = items;
-            return <tmp4 imageUrl={guildPowerupBannerImage} isAnimated={!stateFromStores1} style={null} />;
+          const obj12 = {
+            visible: true,
+            renderImgComponent() {
+                    GuildPowerupsImageDefault;
+                    const obj = useGetGuildPowerupBannerImage;
+                    guildPowerupBannerImage = obj.getGuildPowerupBannerImage(found1, stateFromStores1, true);
+                    if (guildPowerupBannerImage == null) {
+                      guildPowerupBannerImage = _modDef16094;
+                    }
+                    const items = [, ];
+                    ({ coachmarkImage: arr[0], coachmarkCover: arr[1] } = closure_3);
+                    return <tmp4 imageUrl={guildPowerupBannerImage} isAnimated={!stateFromStores1} style={items} />;
+                  },
+            title: found1.title,
+            description: str5,
+            buttonLabel: intl13.string(closure_0(stateFromStores[20]).t.RzWDqY),
+            buttonVariant: "primary",
+            onButtonPress: handleButtonPress,
+            onDismiss: handleDismiss
           };
-          obj12.title = found1.title;
-          let str5 = "";
+          const merged4 = Object.assign(obj);
+          str5 = "";
           if (typeof found1.description === "string") {
             str5 = found1.description;
           }
-          obj12.description = str5;
-          const intl12 = closure_0(stateFromStores[20]).intl;
-          obj12.buttonLabel = intl12.string(closure_0(stateFromStores[20]).t.RzWDqY);
-          obj12.buttonVariant = "primary";
-          obj12.onButtonPress = handleButtonPress;
-          obj12.onDismiss = handleDismiss;
-          let tmp18 = obj12;
+          intl13 = closure_0(stateFromStores[20]).intl;
+          tmp18 = obj12;
         } else if (null != powerups1.find((skuId) => skuId.skuId === powerups(found1[25]).VANITY_URL_POWERUP_SKU_ID)) {
-          const obj13 = {};
-          const merged5 = Object.assign(obj);
-          obj13.visible = true;
-          obj13.renderImgComponent = function renderImgComponent() {
-            const obj = { imageUrl: guildPowerupBannerImage(stateFromStores[27]), style: powerup.coachmarkImage };
-            return jsx(guildPowerupBannerImage(stateFromStores[22]), { imageUrl: guildPowerupBannerImage(stateFromStores[27]), style: powerup.coachmarkImage });
+          const obj13 = {
+            visible: true,
+            renderImgComponent() {
+                    guildPowerupBannerImage(stateFromStores[22]);
+                    return <tmp imageUrl={guildPowerupBannerImage(stateFromStores[27])} style={powerup.coachmarkImage} />;
+                  },
+            title: intl10.string(type(stateFromStores[21]).Ygpx4Q),
+            description: intl11.string(type(stateFromStores[21]).mmNkUA),
+            buttonLabel: intl12.string(closure_0(stateFromStores[20]).t.RzWDqY),
+            buttonVariant: "primary",
+            onButtonPress: handleButtonPress,
+            onDismiss: handleDismiss
           };
-          const intl9 = closure_0(stateFromStores[20]).intl;
-          obj13.title = intl9.string(type(stateFromStores[21]).Ygpx4Q);
-          const intl10 = closure_0(stateFromStores[20]).intl;
-          obj13.description = intl10.string(type(stateFromStores[21]).mmNkUA);
-          const intl11 = closure_0(stateFromStores[20]).intl;
-          obj13.buttonLabel = intl11.string(closure_0(stateFromStores[20]).t.RzWDqY);
-          obj13.buttonVariant = "primary";
-          obj13.onButtonPress = handleButtonPress;
-          obj13.onDismiss = handleDismiss;
+          const merged5 = Object.assign(obj);
+          intl10 = closure_0(stateFromStores[20]).intl;
+          intl11 = closure_0(stateFromStores[20]).intl;
+          intl12 = closure_0(stateFromStores[20]).intl;
           tmp18 = obj13;
         } else if (null != powerups1.find((skuId) => set2.has(skuId.skuId))) {
-          const obj14 = {};
+          const obj14 = {
+            visible: true,
+            renderImgComponent() {
+                    guildPowerupBannerImage(stateFromStores[22]);
+                    return <tmp imageUrl={guildPowerupBannerImage(stateFromStores[28])} style={powerup.coachmarkImage} />;
+                  },
+            title: intl7.string(type(stateFromStores[21])["kA2c+n"]),
+            description: intl8.string(type(stateFromStores[21]).TUilLj),
+            buttonLabel: intl9.string(closure_0(stateFromStores[20]).t.RzWDqY),
+            buttonVariant: "primary",
+            onButtonPress: handleButtonPress,
+            onDismiss: handleDismiss
+          };
           const merged6 = Object.assign(obj);
-          obj14.visible = true;
-          obj14.renderImgComponent = function renderImgComponent() {
-            const obj = { imageUrl: guildPowerupBannerImage(stateFromStores[28]), style: powerup.coachmarkImage };
-            return jsx(guildPowerupBannerImage(stateFromStores[22]), { imageUrl: guildPowerupBannerImage(stateFromStores[28]), style: powerup.coachmarkImage });
-          };
-          const intl6 = closure_0(stateFromStores[20]).intl;
-          obj14.title = intl6.string(type(stateFromStores[21])["kA2c+n"]);
-          const intl7 = closure_0(stateFromStores[20]).intl;
-          obj14.description = intl7.string(type(stateFromStores[21]).TUilLj);
-          const intl8 = closure_0(stateFromStores[20]).intl;
-          obj14.buttonLabel = intl8.string(closure_0(stateFromStores[20]).t.RzWDqY);
-          obj14.buttonVariant = "primary";
-          obj14.onButtonPress = handleButtonPress;
-          obj14.onDismiss = handleDismiss;
+          intl7 = closure_0(stateFromStores[20]).intl;
+          intl8 = closure_0(stateFromStores[20]).intl;
+          intl9 = closure_0(stateFromStores[20]).intl;
           tmp18 = obj14;
-        } else if (null != powerups1.find((skuId) => set.has(skuId.skuId))) {
-          const obj15 = {};
-          const merged7 = Object.assign(obj);
-          obj15.visible = true;
-          obj15.renderImgComponent = function renderImgComponent() {
-            const obj = { imageUrl: guildPowerupBannerImage(stateFromStores[29]), style: powerup.coachmarkImage };
-            return jsx(guildPowerupBannerImage(stateFromStores[22]), { imageUrl: guildPowerupBannerImage(stateFromStores[29]), style: powerup.coachmarkImage });
+        } else if (null != powerups1.find((skuId) => num.has(skuId.skuId))) {
+          const obj15 = {
+            visible: true,
+            renderImgComponent() {
+                    guildPowerupBannerImage(stateFromStores[22]);
+                    return <tmp imageUrl={guildPowerupBannerImage(stateFromStores[29])} style={powerup.coachmarkImage} />;
+                  },
+            title: intl4.string(type(stateFromStores[21])["kA2c+n"]),
+            description: intl5.string(type(stateFromStores[21]).TUilLj),
+            buttonLabel: intl6.string(closure_0(stateFromStores[20]).t.RzWDqY),
+            buttonVariant: "primary",
+            onButtonPress: handleButtonPress,
+            onDismiss: handleDismiss
           };
-          const intl3 = closure_0(stateFromStores[20]).intl;
-          obj15.title = intl3.string(type(stateFromStores[21])["kA2c+n"]);
-          const intl4 = closure_0(stateFromStores[20]).intl;
-          obj15.description = intl4.string(type(stateFromStores[21]).TUilLj);
-          const intl5 = closure_0(stateFromStores[20]).intl;
-          obj15.buttonLabel = intl5.string(closure_0(stateFromStores[20]).t.RzWDqY);
-          obj15.buttonVariant = "primary";
-          obj15.onButtonPress = handleButtonPress;
-          obj15.onDismiss = handleDismiss;
+          const merged7 = Object.assign(obj);
+          intl4 = closure_0(stateFromStores[20]).intl;
+          intl5 = closure_0(stateFromStores[20]).intl;
+          intl6 = closure_0(stateFromStores[20]).intl;
           tmp18 = obj15;
         } else {
           tmp18 = obj;
           if (null != powerups1.find((skuId) => skuId.skuId === powerups(found1[25]).GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID)) {
-            const obj16 = {};
-            const merged8 = Object.assign(obj);
-            obj16.visible = true;
-            obj16.renderImgComponent = function renderImgComponent() {
-              const obj = { imageUrl: guildPowerupBannerImage(stateFromStores[30]), isAnimated: false, style: powerup.coachmarkImage };
-              return jsx(guildPowerupBannerImage(stateFromStores[22]), { imageUrl: guildPowerupBannerImage(stateFromStores[30]), isAnimated: false, style: powerup.coachmarkImage });
+            const obj16 = {
+              visible: true,
+              renderImgComponent() {
+                        guildPowerupBannerImage(stateFromStores[22]);
+                        return <tmp imageUrl={guildPowerupBannerImage(stateFromStores[30])} isAnimated={false} style={powerup.coachmarkImage} />;
+                      },
+              title: intl28.string(type(stateFromStores[21]).rp0Ff1),
+              description: intl29.string(type(stateFromStores[21])["3L/DZq"]),
+              buttonLabel: intl30.string(closure_0(stateFromStores[20]).t.RzWDqY),
+              buttonVariant: "primary",
+              onButtonPress: handleButtonPress,
+              onDismiss: handleDismiss
             };
-            const intl27 = closure_0(stateFromStores[20]).intl;
-            obj16.title = intl27.string(type(stateFromStores[21]).rp0Ff1);
-            const intl28 = closure_0(stateFromStores[20]).intl;
-            obj16.description = intl28.string(type(stateFromStores[21])["3L/DZq"]);
-            const intl29 = closure_0(stateFromStores[20]).intl;
-            obj16.buttonLabel = intl29.string(closure_0(stateFromStores[20]).t.RzWDqY);
-            obj16.buttonVariant = "primary";
-            obj16.onButtonPress = handleButtonPress;
-            obj16.onDismiss = handleDismiss;
+            const merged8 = Object.assign(obj);
+            intl28 = closure_0(stateFromStores[20]).intl;
+            intl29 = closure_0(stateFromStores[20]).intl;
+            intl30 = closure_0(stateFromStores[20]).intl;
             tmp18 = obj16;
           }
         }
         return tmp18;
       } else if (closure_0(stateFromStores[16]).GuildPowerupNotificationPopoutType.BOOST_TO_UNLOCK === type) {
         const powerup = tmp.powerup;
-        const obj17 = {};
-        const merged9 = Object.assign(obj);
-        obj17.visible = true;
-        obj17.offsetY = 8;
-        obj17.renderImgComponent = function renderImgComponent() {
-          if (powerup.type === constants.LEVEL) {
-            const obj2 = { style: powerup.boostGemBackground, gemWidth: 30, gemHeight: 30 };
-            let tmp9Result = jsx(GuildPowerupsBoostGemDefault, { style: powerup.boostGemBackground, gemWidth: 30, gemHeight: 30 });
-          } else {
-            let str = useGetGuildPowerupBannerImage.getGuildPowerupBannerImage(tmp, stateFromStores1, true);
-            if (str == null) {
-              str = "";
-            }
-            const obj = { imageUrl: str, isAnimated: !stateFromStores1, style: null };
-            const items = [powerup.coachmarkImage, powerup.coachmarkCover];
-            obj.style = items;
-            tmp9Result = <tmp12 imageUrl={str} isAnimated={!stateFromStores1} style={null} />;
-          }
-          return tmp9Result;
+        const obj17 = {
+          visible: true,
+          offsetY: 8,
+          renderImgComponent() {
+                let tmp9Result;
+                if (powerup.type === metroImportAll.LEVEL) {
+                  tmp9Result = jsx(GuildPowerupsBoostGemDefault, { style: powerup.boostGemBackground, gemWidth: 30, gemHeight: 30 });
+                } else {
+                  GuildPowerupsImageDefault;
+                  const obj3 = useGetGuildPowerupBannerImage;
+                  let str = obj3.getGuildPowerupBannerImage(tmp, stateFromStores1, true);
+                  if (str == null) {
+                    str = "";
+                  }
+                  const items = [powerup.coachmarkImage, powerup.coachmarkCover];
+                  tmp9Result = <tmp12 imageUrl={str} isAnimated={!stateFromStores1} style={items} />;
+                }
+                return tmp9Result;
+              },
+          title: intl.string(type(stateFromStores[21]).n37JhA)
         };
-        const intl = closure_0(stateFromStores[20]).intl;
-        obj17.title = intl.string(type(stateFromStores[21]).n37JhA);
+        const merged9 = Object.assign(obj);
+        num = 8;
+        intl = closure_0(stateFromStores[20]).intl;
+        const intl2 = closure_0(stateFromStores[20]).intl;
         if (true !== closure_5) {
+          let Yr1ogl;
           if (powerup.type !== constants.LEVEL) {
-            let Yr1ogl = tmp5(stateFromStores[21])["7MZ2tu"];
+            Yr1ogl = tmp5(stateFromStores[21])["7MZ2tu"];
           }
           const obj18 = { boostCount: num, perkName: powerup.title };
           obj17.description = tmp6(Yr1ogl, obj18);
-          const intl2 = closure_0(stateFromStores[20]).intl;
-          obj17.buttonLabel = intl2.string(closure_0(stateFromStores[20]).t.oPAx73);
+          const intl3 = closure_0(stateFromStores[20]).intl;
+          obj17.buttonLabel = intl3.string(closure_0(stateFromStores[20]).t.oPAx73);
+          let str = "primary";
           obj17.buttonVariant = "primary";
           obj17.onButtonPress = function onButtonPress() {
             guildPowerupBannerImage.markAsDismissed(constants2.TAKE_ACTION);
@@ -560,7 +627,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, guildId, t
       }
     }
   }, items3);
-  let obj2 = require("initialize");
-  let obj3 = { page: constants2.GUILD_CHANNEL, section: constants3.GUILD_HEADER };
-  const coachmark = require("useCoachmark").useCoachmark(arg0, memo);
+  const tmpResult = tmp(tmp2[31]);
+  const coachmark = tmpResult.useCoachmark(arg0, memo);
 });
+let size = size_mod;
+const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupsCoachmark.tsx");
+
+export default tmp4;

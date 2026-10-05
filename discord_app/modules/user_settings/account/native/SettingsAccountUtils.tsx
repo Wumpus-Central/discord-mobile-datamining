@@ -2,15 +2,20 @@
 
 // Module 14494 (SettingsAccountUtils)
 import useStateFromStores from "useStateFromStores" /* 573 */;
-import c from "c" /* 576 */;
+import react from "react" /* 576 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1377 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-fn(558);
-let ReactCompilerGating = fn(558);
+let currentUser;
+
+let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(2);
+  let tmp4;
+  let tmp5;
+  const obj = react;
+  const cResult = obj.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
     const fn = function s() {
@@ -31,10 +36,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  return useStateFromStores.useStateFromStores(tmp4, tmp5);
+  const tmpResult = useStateFromStores;
+  return tmpResult.useStateFromStores(tmp4, tmp5);
 }) : (() => {
   const items = [UserStore];
-  return useStateFromStores.useStateFromStores(items, () => {
+  const obj = useStateFromStores;
+  return obj.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
     if (currentUser != null) {
@@ -46,9 +53,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     return flag;
   });
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(2);
+  let tmp4;
+  let tmp5;
+  const obj = react;
+  const cResult = obj.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AuthenticationStore];
     const fn = function s() {
@@ -61,18 +71,19 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  return useStateFromStores.useStateFromStores(tmp4, tmp5);
+  const tmpResult = useStateFromStores;
+  return tmpResult.useStateFromStores(tmp4, tmp5);
 }) : (() => {
   const items = [AuthenticationStore];
-  return useStateFromStores.useStateFromStores(items, () => AuthenticationStore.hasTOTPEnabled());
+  const obj = useStateFromStores;
+  return obj.useStateFromStores(items, () => AuthenticationStore.hasTOTPEnabled());
 });
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/account/native/SettingsAccountUtils.tsx");
-
-export const useIs2FAEnabled = tmp2;
-export const useIsTOTPEnabled = tmp3;
-export const useIsUserVerified = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(2);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let tmp4;
+  let tmp5;
+  const obj = react;
+  const cResult = obj.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
     const fn = function s() {
@@ -93,10 +104,12 @@ export const useIsUserVerified = ReactCompilerGating.isReactCompilerEnabled() ? 
   } else {
     [tmp4, tmp5] = cResult;
   }
-  return useStateFromStores.useStateFromStores(tmp4, tmp5);
+  const tmpResult = useStateFromStores;
+  return tmpResult.useStateFromStores(tmp4, tmp5);
 }) : (() => {
   const items = [UserStore];
-  return useStateFromStores.useStateFromStores(items, () => {
+  const obj = useStateFromStores;
+  return obj.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
     if (currentUser != null) {
@@ -108,3 +121,8 @@ export const useIsUserVerified = ReactCompilerGating.isReactCompilerEnabled() ? 
     return flag;
   });
 });
+const result = size.fileFinishedImporting("modules/user_settings/account/native/SettingsAccountUtils.tsx");
+
+export const useIs2FAEnabled = tmp2;
+export const useIsTOTPEnabled = tmp3;
+export const useIsUserVerified = tmp4;

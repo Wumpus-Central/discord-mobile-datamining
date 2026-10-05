@@ -1,86 +1,98 @@
 // === Module 16065: useFavoritesGuildResetAction ===
 
 // Module 16065 (useFavoritesGuildResetAction)
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
+import Constants from "Constants" /* 1085 */;
 import router_utils from "router_utils" /* 1112 */;
-import util from "util" /* 1126 */;
+import intl3 from "intl" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import FavoritesUtils from "FavoritesUtils" /* 2077 */;
 import _modDef3367 from "module_3367" /* 3367 */;
 import FavoritesActionCreators from "FavoritesActionCreators" /* 10035 */;
-import noop from "module_19" /* 19 */;
+import FavoritesHooks from "FavoritesHooks" /* 10036 */;
+import react from "react" /* 19 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const Routes = fn(1085).Routes;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildResetAction.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(5);
+const Routes = Constants.Routes;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let first;
+  let guildId;
+  let tmp11;
+  let tmp6;
+  let tmp7;
+  let obj = react2;
+  const cResult = obj.c(5);
   const DeveloperMode = UserSettings.DeveloperMode;
-  let hasAccess = DeveloperMode.useSetting();
+  let setting = DeveloperMode.useSetting();
+  const obj2 = FavoritesHooks;
+  const hasAccess = obj2.useFavoritesAccess().hasAccess;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function s() {
+      const obj = FavoritesUtils;
       if (obj.isFavoritesGuildId(guildId.getGuildId())) {
-        router_utils.transitionTo(constants.ME);
         const tmpResult = router_utils;
+        tmpResult.transitionTo(constants.ME);
       }
-      obj = FavoritesUtils;
-      FavoritesActionCreators.resetFavoritesGuild();
       const tmpResult2 = FavoritesActionCreators;
+      tmpResult2.resetFavoritesGuild();
     };
     cResult[0] = fn;
-    let first = fn;
+    first = fn;
   } else {
     first = cResult[0];
   }
-  if (hasAccess) {
-    hasAccess = obj2.useFavoritesAccess().hasAccess;
+  if (setting) {
+    setting = hasAccess;
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = util.intl;
+    const intl = intl3.intl;
     const stringResult = intl.string(_modDef3367.YkET6R);
-    const intl2 = util.intl;
+    const intl2 = intl3.intl;
     const stringResult1 = intl2.string(_modDef3367.ZzcwNk);
     cResult[1] = stringResult;
     cResult[2] = stringResult1;
-    let tmp6 = stringResult1;
-    let tmp5 = stringResult;
+    tmp7 = stringResult1;
+    tmp6 = stringResult;
   } else {
-    tmp5 = cResult[1];
-    tmp6 = cResult[2];
+    tmp6 = cResult[1];
+    tmp7 = cResult[2];
   }
-  if (cResult[3] !== hasAccess) {
-    const obj3 = { isAvailable: hasAccess, label: tmp5, subLabel: tmp6, perform: first };
-    cResult[3] = hasAccess;
+  if (cResult[3] !== setting) {
+    const obj3 = { isAvailable: setting, label: tmp6, subLabel: tmp7, perform: first };
+    cResult[3] = setting;
     cResult[4] = obj3;
-    let tmp10 = obj3;
+    tmp11 = obj3;
   } else {
-    tmp10 = cResult[4];
+    tmp11 = cResult[4];
   }
-  return tmp10;
+  return tmp11;
 }) : (() => {
+  let guildId;
+  let intl;
+  let intl2;
   const DeveloperMode = UserSettings.DeveloperMode;
-  let hasAccess = DeveloperMode.useSetting();
-  const callback = noop.useCallback(() => {
+  let setting = DeveloperMode.useSetting();
+  let obj = FavoritesHooks;
+  const hasAccess = obj.useFavoritesAccess().hasAccess;
+  const callback = react.useCallback(() => {
+    const obj = FavoritesUtils;
     if (obj.isFavoritesGuildId(guildId.getGuildId())) {
-      router_utils.transitionTo(constants.ME);
       const tmpResult = router_utils;
+      tmpResult.transitionTo(constants.ME);
     }
-    obj = FavoritesUtils;
-    FavoritesActionCreators.resetFavoritesGuild();
     const tmpResult2 = FavoritesActionCreators;
+    tmpResult2.resetFavoritesGuild();
   }, []);
-  if (hasAccess) {
-    hasAccess = obj.useFavoritesAccess().hasAccess;
+  if (setting) {
+    setting = hasAccess;
   }
-  const obj2 = { isAvailable: hasAccess, label: null, subLabel: null, perform: null };
-  const intl = util.intl;
-  obj2.label = intl.string(_modDef3367.YkET6R);
-  const intl2 = util.intl;
-  obj2.subLabel = intl2.string(_modDef3367.ZzcwNk);
-  obj2.perform = callback;
+  const obj2 = { isAvailable: setting, label: intl.string(_modDef3367.YkET6R), subLabel: intl2.string(_modDef3367.ZzcwNk), perform: callback };
+  intl = intl3.intl;
+  intl2 = intl3.intl;
   return obj2;
 });
+const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildResetAction.tsx");
+
+export default tmp2;

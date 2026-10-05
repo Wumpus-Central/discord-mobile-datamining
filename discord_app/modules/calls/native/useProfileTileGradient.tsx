@@ -2,24 +2,31 @@
 
 // Module 7923 (useProfileTileGradient)
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7858 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/calls/native/useProfileTileGradient.tsx");
+let tmp, tmp3, userId;
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
-  const cResult = userId(isVideoBackgroundProfileFetchEnabled[3]).c(7);
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+  let isVideoBackgroundProfileFetchEnabled;
+  let tmp10;
+  let tmp11;
+  let tmp7;
+  let tmp2 = isVideoBackgroundProfileFetchEnabled;
+  let obj = userId(isVideoBackgroundProfileFetchEnabled[3]);
+  const cResult = obj.c(7);
   userId = userId.userId;
   const guildId = userId.guildId;
+  const _location = userId.location;
   const tmp4 = guildId(isVideoBackgroundProfileFetchEnabled[4])(userId, guildId);
   let themeColors;
+  const first = cResult[0];
   if (tmp4 != null) {
     themeColors = tmp4.themeColors;
   }
-  if (cResult[0] !== themeColors) {
+  if (first !== themeColors) {
     let themeColors1;
     if (tmp4 != null) {
       themeColors1 = tmp4.themeColors;
@@ -33,22 +40,26 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     }
     cResult[0] = themeColors2;
     cResult[1] = themeColors1;
-    let tmp6 = themeColors1;
+    tmp7 = themeColors1;
   } else {
-    tmp6 = cResult[1];
+    tmp7 = cResult[1];
   }
-  let obj = userId(isVideoBackgroundProfileFetchEnabled[3]);
-  [tmp9, tmp10] = tmp6;
-  const tmp8 = _slicedToArray(tmp6, 2);
-  isVideoBackgroundProfileFetchEnabled = userId(isVideoBackgroundProfileFetchEnabled[5]).useIsVideoBackgroundProfileFetchEnabled(userId.location);
+  [tmp10, tmp11] = tmp7;
+  _slicedToArray(tmp7, 2);
+  const tmpResult = userId(tmp2[5]);
+  isVideoBackgroundProfileFetchEnabled = tmpResult.useIsVideoBackgroundProfileFetchEnabled(_location);
   if (cResult[2] === guildId) {
     if (cResult[3] === isVideoBackgroundProfileFetchEnabled) {
+      let tmp13;
+      let tmp14;
       if (cResult[4] === userId) {
-        let tmp12 = cResult[5];
-        let tmp13 = cResult[6];
+        tmp13 = cResult[5];
+        tmp14 = cResult[6];
       }
-      const effect = noop.useEffect(tmp12, tmp13);
-      return tmp(tmp2[7]).useVideoTileGradientColors(tmp9, tmp10);
+      const effect = react.useEffect(tmp13, tmp14);
+      const useVideoTileGradientColors = userId(tmp2[7]).useVideoTileGradientColors;
+      userId(tmp2[7]);
+      return useVideoTileGradientColors(tmp10, tmp11);
     }
   }
   class I {
@@ -75,13 +86,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   cResult[4] = userId;
   cResult[5] = I;
   cResult[6] = items;
-  tmp13 = items;
-  tmp12 = I;
-  const tmpResult = userId(isVideoBackgroundProfileFetchEnabled[5]);
+  tmp14 = items;
+  tmp13 = I;
 }) : ((userId) => {
+  let tmp5;
+  let tmp6;
   userId = userId.userId;
   const guildId = userId.guildId;
   let isVideoBackgroundProfileFetchEnabled;
+  const _location = userId.location;
   let tmp2 = guildId(isVideoBackgroundProfileFetchEnabled[4])(userId, guildId);
   let themeColors;
   if (tmp2 != null) {
@@ -91,19 +104,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     themeColors = [];
   }
   [tmp5, tmp6] = themeColors;
-  const tmp3Result = _slicedToArray(themeColors, 2);
-  isVideoBackgroundProfileFetchEnabled = userId(isVideoBackgroundProfileFetchEnabled[5]).useIsVideoBackgroundProfileFetchEnabled(userId.location);
+  _slicedToArray(themeColors, 2);
+  let obj = userId(tmp[5]);
+  isVideoBackgroundProfileFetchEnabled = obj.useIsVideoBackgroundProfileFetchEnabled(_location);
   const items = [isVideoBackgroundProfileFetchEnabled, userId, guildId];
-  const effect = noop.useEffect(() => {
-    let tmp2 = null != userId;
-    if (tmp2) {
-      tmp2 = isVideoBackgroundProfileFetchEnabled;
-    }
+  const effect = react.useEffect(() => {
+    const tmp2 = null != userId && isVideoBackgroundProfileFetchEnabled;
     if (tmp2) {
       const obj = { guildId, dispatchWait: true };
       maybeFetchUserProfileDefault(userId, undefined, obj);
     }
   }, items);
-  let obj = userId(isVideoBackgroundProfileFetchEnabled[5]);
-  return userId(isVideoBackgroundProfileFetchEnabled[7]).useVideoTileGradientColors(tmp5, tmp6);
+  const useVideoTileGradientColors = userId(isVideoBackgroundProfileFetchEnabled[7]).useVideoTileGradientColors;
+  userId(isVideoBackgroundProfileFetchEnabled[7]);
+  return useVideoTileGradientColors(tmp5, tmp6);
 });
+const result = size.fileFinishedImporting("modules/calls/native/useProfileTileGradient.tsx");
+
+export default tmp2;

@@ -3,8 +3,8 @@
 // Module 14815 (BountiesModalConstants)
 import size from "module_2" /* 2 */;
 
-function getBountyVideoEndPeekScale(value, c14) {
-  return 1 + (c14 - 1) * value;
+function getBountyVideoEndPeekScale(arg0, arg1) {
+  return 1 + (arg1 - 1) * arg0;
 }
 getBountyVideoEndPeekScale.__closure = {};
 getBountyVideoEndPeekScale.__workletHash = 16304629459688;
@@ -23,13 +23,14 @@ export const getBountyVideoEndAppStoreSheetHeight = function getBountyVideoEndAp
 };
 export const getBountyVideoEndPeekTargetScale = function getBountyVideoEndPeekTargetScale(windowHeight) {
   windowHeight = windowHeight.windowHeight;
+  const videoTop = windowHeight.videoTop;
   const bound = Math.min(windowHeight.videoWidth, windowHeight.videoHeight);
   if (bound <= 0) {
     return 1;
   } else {
     const _Math = Math;
     const _Math2 = Math;
-    return Math.min(1, Math.max(0.1, (windowHeight - 0.6 * windowHeight - windowHeight.videoTop - 8) / bound));
+    return Math.min(1, Math.max(0.1, (windowHeight - 0.6 * windowHeight - videoTop - 8) / bound));
   }
 };
 export { getBountyVideoEndPeekScale };

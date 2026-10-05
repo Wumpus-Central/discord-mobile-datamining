@@ -1,332 +1,394 @@
 // === Module 15685: UserSettingsDesignSystemSheets ===
 
 // Module 15685 (UserSettingsDesignSystemSheets)
-import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
+import react_native from "react-native" /* 17 */;
+import react2 from "react" /* 576 */;
+import Constants from "Constants" /* 1085 */;
+import intl2 from "intl" /* 1126 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import Stack_Stack from "Stack/Stack" /* 5593 */;
 import components_Button_Button from "components/Button/Button" /* 5594 */;
-import Card from "Card" /* 5995 */;
-import TextInput from "TextInput" /* 6098 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6644 */;
+import Card_Card from "Card/Card" /* 5995 */;
+import TextInput_TextInput from "TextInput/TextInput" /* 6098 */;
+import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6644 */;
+import ActionSheetCloseButton from "ActionSheetCloseButton" /* 6696 */;
 import ActionSheetRow from "ActionSheetRow" /* 6697 */;
-import ActionSheet from "ActionSheet" /* 6701 */;
-import PromoSheet from "PromoSheet" /* 10045 */;
+import ActionSheet2 from "ActionSheet" /* 6701 */;
+import ActionSheetHeaderPressableText from "ActionSheetHeaderPressableText" /* 9195 */;
+import PromoSheet2 from "PromoSheet" /* 10045 */;
 import _modDef15686 from "module_15686" /* 15686 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+let importDefault;
+
+let metroImportAll;
+let metroImportDefault;
 function showDemoPromoSheet() {
-  ActionSheetActionCreatorsDefault.openLazy(() => Promise.resolve(closure_1_12), "promo-sheet-demo");
+  const obj = ActionSheetActionCreatorsDefault;
+  obj.openLazy(() => Promise.resolve(closure_1_12), "promo-sheet-demo");
 }
-const ScrollView = fn(17).ScrollView;
-const NOOP = fn(1085).NOOP;
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4890);
+const ScrollView = react_native.ScrollView;
+const NOOP = Constants.NOOP;
+({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
 let closure_9 = createStyles.createStyles({ container: { padding: 16, alignItems: "center" } });
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(36);
-  [tmp5, tmp6] = noop.useState(false);
-  const tmp7 = _slicedToArray(noop.useState(false), 2);
-  const first = tmp7[0];
-  const tmp9 = _slicedToArray(noop.useState("Header title"), 2);
-  const first1 = tmp9[0];
-  const tmp4 = _slicedToArray(noop.useState(false), 2);
-  [tmp12, tmp13] = noop.useState("Header subtitle");
-  require = tmp13;
-  const tmp11 = _slicedToArray(noop.useState("Header subtitle"), 2);
-  [tmp15, tmp16] = noop.useState("Reset");
-  importDefault = tmp16;
-  if (cResult[0] === tmp15) {
+  let first;
+  let first1;
+  let items;
+  let items1;
+  let items2;
+  let tmp12;
+  let tmp14;
+  let tmp15;
+  let tmp17;
+  let tmp18;
+  let tmp5;
+  let tmp6;
+  let tmp9;
+  const obj = react2;
+  const cResult = obj.c(36);
+  [tmp5, tmp6] = react.useState(false);
+  _slicedToArray(react.useState(false), 2);
+  [first, tmp9] = react.useState(false);
+  [first1, tmp12] = react.useState("Header title");
+  [tmp14, tmp15] = react.useState("Header subtitle");
+  let closure_0 = tmp15;
+  _slicedToArray(react.useState("Header subtitle"), 2);
+  [tmp17, tmp18] = react.useState("Reset");
+  importDefault = tmp18;
+  _slicedToArray(react.useState("Reset"), 2);
+  if (cResult[0] === tmp17) {
+    let tmp20;
+    let tmp23;
     if (cResult[1] === first) {
-      let tmp18 = cResult[2];
+      tmp20 = cResult[2];
     }
     if (cResult[3] !== tmp5) {
-      let tmp22 = tmp5;
-      if (tmp5) {
+      let tmp24 = tmp5;
+      if (tmp24) {
         const obj2 = { onPress: NOOP };
-        tmp22 = React5(tmp(6696).ActionSheetCloseButton, obj2);
+        tmp24 = metroImportDefault(ActionSheetCloseButton.ActionSheetCloseButton, obj2);
       }
       cResult[3] = tmp5;
-      cResult[4] = tmp22;
-      let tmp21 = tmp22;
+      cResult[4] = tmp24;
+      tmp23 = tmp24;
     } else {
-      tmp21 = cResult[4];
+      tmp23 = cResult[4];
     }
-    if (cResult[5] === tmp12) {
-      if (cResult[6] === tmp18) {
-        if (cResult[7] === tmp21) {
+    if (cResult[5] === tmp14) {
+      if (cResult[6] === tmp20) {
+        if (cResult[7] === tmp23) {
+          let tmp30;
+          let tmp34;
+          let tmp35;
           if (cResult[10] !== first1) {
-            const obj3 = { value: first1, onChange: tmp9[1], label: "Title" };
-            const tmp30 = React5(tmp(6098).TextInput, obj3);
+            const obj3 = { value: first1, onChange: tmp12, label: "Title" };
+            const tmp32 = metroImportDefault(TextInput_TextInput.TextInput, obj3);
             cResult[10] = first1;
-            cResult[11] = tmp30;
-            let tmp28 = tmp30;
+            cResult[11] = tmp32;
+            tmp30 = tmp32;
           } else {
-            tmp28 = cResult[11];
+            tmp30 = cResult[11];
           }
           const _Symbol = Symbol;
           if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
             const fn = function b() {
-              return tmp13("");
+              return tmp15("");
             };
             cResult[12] = fn;
-            let tmp32 = fn;
+            tmp34 = fn;
           } else {
-            tmp32 = cResult[12];
+            tmp34 = cResult[12];
           }
-          if (cResult[13] !== tmp12) {
-            const obj4 = { value: tmp12, onChange: tmp13, label: "Subtitle", maxLength: 100, clearable: true, onClear: tmp32 };
-            const tmp35 = React5(tmp(6098).TextInput, obj4);
-            cResult[13] = tmp12;
-            cResult[14] = tmp35;
-            let tmp33 = tmp35;
+          if (cResult[13] !== tmp14) {
+            const obj4 = { value: tmp14, onChange: tmp15, label: "Subtitle", maxLength: 100, clearable: true, onClear: tmp34 };
+            const tmp37 = metroImportDefault(TextInput_TextInput.TextInput, obj4);
+            cResult[13] = tmp14;
+            cResult[14] = tmp37;
+            tmp35 = tmp37;
           } else {
-            tmp33 = cResult[14];
+            tmp35 = cResult[14];
           }
-          if (cResult[15] === tmp28) {
-            if (cResult[16] === tmp33) {
-              let tmp36 = cResult[17];
+          if (cResult[15] === tmp30) {
+            let tmp38;
+            let tmp41;
+            let tmp44;
+            if (cResult[16] === tmp35) {
+              tmp38 = cResult[17];
             }
             if (cResult[18] !== first) {
-              const obj5 = { value: first, onValueChange: tmp7[1], label: "Show Leading" };
-              const tmp41 = React5(tmp(6697).ActionSheetSwitchRow, obj5);
+              const obj5 = { value: first, onValueChange: tmp9, label: "Show Leading" };
+              const tmp43 = metroImportDefault(ActionSheetRow.ActionSheetSwitchRow, obj5);
               cResult[18] = first;
-              cResult[19] = tmp41;
-              let tmp39 = tmp41;
+              cResult[19] = tmp43;
+              tmp41 = tmp43;
             } else {
-              tmp39 = cResult[19];
+              tmp41 = cResult[19];
             }
             if (cResult[20] !== tmp5) {
               const obj6 = { value: tmp5, onValueChange: tmp6, label: "Show Trailing" };
-              const tmp44 = React5(tmp(6697).ActionSheetSwitchRow, obj6);
+              const tmp46 = metroImportDefault(ActionSheetRow.ActionSheetSwitchRow, obj6);
               cResult[20] = tmp5;
-              cResult[21] = tmp44;
-              let tmp42 = tmp44;
+              cResult[21] = tmp46;
+              tmp44 = tmp46;
             } else {
-              tmp42 = cResult[21];
+              tmp44 = cResult[21];
             }
-            if (cResult[22] === tmp39) {
-              if (cResult[23] === tmp42) {
-                let tmp45 = cResult[24];
+            if (cResult[22] === tmp41) {
+              let tmp47;
+              if (cResult[23] === tmp44) {
+                tmp47 = cResult[24];
               }
               const _Symbol2 = Symbol;
               if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
                 class N {
                   constructor() {
-                    return closure_1("");
+                    return tmp18("");
                   }
                 }
                 cResult[25] = N;
               } else {
                 class N {
                   constructor() {
-                    return closure_1("");
+                    return tmp18("");
                   }
                 }
               }
-              if (cResult[26] === tmp15) {
+              if (cResult[26] === tmp17) {
                 class N {
                   constructor() {
-                    return closure_1("");
+                    return tmp18("");
                   }
                 }
-                if (cResult[29] === tmp45) {
+                if (cResult[29] === tmp47) {
                   class N {
                     constructor() {
-                      return closure_1("");
+                      return tmp18("");
                     }
                   }
                 }
-                const obj7 = { spacing: 24, children: null };
-                const items = [tmp36, tmp45, tmp50];
-                obj7.children = items;
-                const tmp55 = closure_1_8(tmp(5593).Stack, obj7);
-                cResult[29] = tmp45;
-                cResult[30] = tmp50;
-                cResult[31] = tmp36;
-                cResult[32] = tmp55;
+                const obj7 = { spacing: 24, children: items };
+                items = [tmp38, tmp47, tmp52];
+                cResult[29] = tmp47;
+                cResult[30] = tmp52;
+                cResult[31] = tmp38;
+                cResult[32] = metroImportAll(Stack_Stack.Stack, obj7);
+                const tmp57 = metroImportAll(Stack_Stack.Stack, obj7);
               }
-              const obj8 = { value: tmp15, onChange: tmp16, label: "Leading", disabled: !first, clearable: true, onClear: N };
-              const tmp52 = React5(tmp(6098).TextInput, obj8);
-              cResult[26] = tmp15;
+              const obj8 = { value: tmp17, onChange: tmp18, label: "Leading", disabled: !first, clearable: true, onClear: N };
+              cResult[26] = tmp17;
               cResult[27] = !first;
-              cResult[28] = tmp52;
+              cResult[28] = metroImportDefault(TextInput_TextInput.TextInput, obj8);
+              const tmp54 = metroImportDefault(TextInput_TextInput.TextInput, obj8);
             }
-            const obj9 = { hasIcons: false, children: null };
-            const items1 = [tmp39, tmp42];
-            obj9.children = items1;
-            const tmp47 = closure_1_8(tmp(6697).ActionSheetRow.Group, obj9);
-            cResult[22] = tmp39;
-            cResult[23] = tmp42;
-            cResult[24] = tmp47;
-            tmp45 = tmp47;
+            const obj9 = { hasIcons: false, children: items1 };
+            items1 = [tmp41, tmp44];
+            const tmp49 = metroImportAll(ActionSheetRow.ActionSheetRow.Group, obj9);
+            cResult[22] = tmp41;
+            cResult[23] = tmp44;
+            cResult[24] = tmp49;
+            tmp47 = tmp49;
           }
-          const obj10 = { children: null };
-          const items2 = [tmp28, tmp33];
-          obj10.children = items2;
-          const tmp38 = closure_1_8(tmp(5593).Stack, obj10);
-          cResult[15] = tmp28;
-          cResult[16] = tmp33;
-          cResult[17] = tmp38;
-          tmp36 = tmp38;
+          const obj10 = { children: items2 };
+          items2 = [tmp30, tmp35];
+          const tmp40 = metroImportAll(Stack_Stack.Stack, obj10);
+          cResult[15] = tmp30;
+          cResult[16] = tmp35;
+          cResult[17] = tmp40;
+          tmp38 = tmp40;
         }
       }
     }
-    const obj11 = { title: first1, subtitle: tmp12, leading: tmp18, trailing: tmp21 };
-    const tmp27 = React5(tmp(6644).BottomSheetTitleHeader, obj11);
-    cResult[5] = tmp12;
-    cResult[6] = tmp18;
-    cResult[7] = tmp21;
+    const obj11 = { title: first1, subtitle: tmp14, leading: tmp20, trailing: tmp23 };
+    cResult[5] = tmp14;
+    cResult[6] = tmp20;
+    cResult[7] = tmp23;
     cResult[8] = first1;
-    cResult[9] = tmp27;
+    cResult[9] = metroImportDefault(BottomSheetTitleHeader2.BottomSheetTitleHeader, obj11);
+    const tmp29 = metroImportDefault(BottomSheetTitleHeader2.BottomSheetTitleHeader, obj11);
   }
-  let tmp19 = first;
-  if (first) {
+  let tmp21 = first;
+  if (tmp21) {
     class N {
       constructor() {
-        return closure_1("");
+        return tmp18("");
       }
     }
-    const obj12 = { onPress: NOOP, label: tmp15 };
-    tmp19 = React5(tmp(9195).ActionSheetHeaderPressableText, obj12);
+    const obj12 = { onPress: NOOP, label: tmp17 };
+    tmp21 = metroImportDefault(ActionSheetHeaderPressableText.ActionSheetHeaderPressableText, obj12);
   }
-  cResult[0] = tmp15;
+  cResult[0] = tmp17;
   cResult[1] = first;
-  cResult[2] = tmp19;
-  tmp18 = tmp19;
-  const tmp14 = _slicedToArray(noop.useState("Reset"), 2);
+  cResult[2] = tmp21;
+  tmp20 = tmp21;
 }) : (() => {
-  [tmp2, tmp3] = noop.useState(false);
-  const tmp4 = _slicedToArray(noop.useState(false), 2);
-  const first = tmp4[0];
-  const tmp6 = _slicedToArray(noop.useState("Header title"), 2);
-  const first1 = tmp6[0];
-  const tmp = _slicedToArray(noop.useState(false), 2);
-  [tmp9, tmp10] = noop.useState("Header subtitle");
-  require = tmp10;
-  const tmp8 = _slicedToArray(noop.useState("Header subtitle"), 2);
-  [tmp12, tmp13] = noop.useState("Reset");
-  importDefault = tmp13;
-  const obj = { title: first1, subtitle: null, leading: null, trailing: null };
-  let tmp17;
-  if ("" !== tmp9) {
-    tmp17 = tmp9;
+  let Stack;
+  let first;
+  let first1;
+  let items;
+  let items1;
+  let items2;
+  let obj5;
+  let tmp11;
+  let tmp12;
+  let tmp14;
+  let tmp15;
+  let tmp16Result;
+  let tmp16Result2;
+  let tmp19;
+  let tmp2;
+  let tmp3;
+  let tmp6;
+  let tmp9;
+  [tmp2, tmp3] = react.useState(false);
+  _slicedToArray(react.useState(false), 2);
+  [first, tmp6] = react.useState(false);
+  [first1, tmp9] = react.useState("Header title");
+  [tmp11, tmp12] = react.useState("Header subtitle");
+  let closure_0 = tmp12;
+  _slicedToArray(react.useState("Header subtitle"), 2);
+  [tmp14, tmp15] = react.useState("Reset");
+  let closure_1 = tmp15;
+  _slicedToArray(react.useState("Reset"), 2);
+  const ActionSheet = ActionSheet2.ActionSheet;
+  const obj = { title: first1, subtitle: tmp19, leading: tmp16Result, trailing: tmp16Result2 };
+  tmp19 = undefined;
+  const BottomSheetTitleHeader = BottomSheetTitleHeader2.BottomSheetTitleHeader;
+  if ("" !== tmp11) {
+    tmp19 = tmp11;
   }
-  obj.subtitle = tmp17;
-  let tmp14Result = first;
-  if (first) {
-    const obj2 = { onPress: NOOP, label: tmp12 };
-    tmp14Result = React5(tmp15(9195).ActionSheetHeaderPressableText, obj2);
+  tmp16Result = first;
+  if (tmp16Result) {
+    const obj2 = { onPress: NOOP, label: tmp14 };
+    tmp16Result = metroImportDefault(ActionSheetHeaderPressableText.ActionSheetHeaderPressableText, obj2);
   }
-  obj.leading = tmp14Result;
-  let tmp14Result2 = tmp2;
-  if (tmp2) {
+  tmp16Result2 = tmp2;
+  if (tmp16Result2) {
     const obj3 = { onPress: NOOP };
-    tmp14Result2 = React5(tmp15(6696).ActionSheetCloseButton, obj3);
+    tmp16Result2 = metroImportDefault(ActionSheetCloseButton.ActionSheetCloseButton, obj3);
   }
-  const obj4 = { header: React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj), children: null };
-  obj.trailing = tmp14Result2;
-  const obj5 = { spacing: 24, children: null };
-  const obj6 = { children: null };
-  const items = [
-    React5(TextInput.TextInput, { value: first1, onChange: tmp6[1], label: "Title" }),
-    React5(TextInput.TextInput, {
-      value: tmp9,
-      onChange: tmp10,
-      label: "Subtitle",
-      maxLength: 100,
-      clearable: true,
-      onClear() {
-        return tmp10("");
-      }
-    })
-  ];
-  obj6.children = items;
-  const items1 = [closure_1_8(Stack_Stack.Stack, obj6), , ];
-  const obj8 = { hasIcons: false, children: null };
-  const items2 = [React5(ActionSheetRow.ActionSheetSwitchRow, { value: first, onValueChange: tmp4[1], label: "Show Leading" }), React5(ActionSheetRow.ActionSheetSwitchRow, { value: tmp2, onValueChange: tmp3, label: "Show Trailing" })];
-  obj8.children = items2;
-  items1[1] = closure_1_8(ActionSheetRow.ActionSheetRow.Group, obj8);
-  items1[2] = React5(TextInput.TextInput, {
-    value: tmp12,
-    onChange: tmp13,
+  const obj4 = { header: metroImportDefault(BottomSheetTitleHeader, obj), children: metroImportAll(Stack, obj5) };
+  obj5 = { spacing: 24, children: items1 };
+  Stack = Stack_Stack.Stack;
+  const obj6 = { children: items };
+  const Stack2 = Stack_Stack.Stack;
+  items = [metroImportDefault(TextInput_TextInput.TextInput, { value: first1, onChange: tmp9, label: "Title" }), ];
+  const obj7 = {
+    value: tmp11,
+    onChange: tmp12,
+    label: "Subtitle",
+    maxLength: 100,
+    clearable: true,
+    onClear() {
+      return tmp12("");
+    }
+  };
+  items[1] = metroImportDefault(TextInput_TextInput.TextInput, obj7);
+  items1 = [metroImportAll(Stack2, obj6), , ];
+  const obj8 = { hasIcons: false, children: items2 };
+  const Group = ActionSheetRow.ActionSheetRow.Group;
+  items2 = [metroImportDefault(ActionSheetRow.ActionSheetSwitchRow, { value: first, onValueChange: tmp6, label: "Show Leading" }), metroImportDefault(ActionSheetRow.ActionSheetSwitchRow, { value: tmp2, onValueChange: tmp3, label: "Show Trailing" })];
+  items1[1] = metroImportAll(Group, obj8);
+  const obj9 = {
+    value: tmp14,
+    onChange: tmp15,
     label: "Leading",
     disabled: !first,
     clearable: true,
     onClear() {
-      return tmp13("");
+      return tmp15("");
     }
-  });
-  obj5.children = items1;
-  obj4.children = closure_1_8(Stack_Stack.Stack, obj5);
-  return React5(ActionSheet.ActionSheet, obj4);
+  };
+  items1[2] = metroImportDefault(TextInput_TextInput.TextInput, obj9);
+  return metroImportDefault(ActionSheet, obj4);
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(2);
+  let first;
+  let intl;
+  let obj4;
+  let obj5;
+  let tmp7;
+  let obj = react2;
+  const cResult = obj.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = {
       size: "lg",
       onPress() {
-          return ActionSheetActionCreatorsDefault.hideActionSheet("promo-sheet-demo");
+          const obj = ActionSheetActionCreatorsDefault;
+          return obj.hideActionSheet("promo-sheet-demo");
         },
-      text: null
+      text: intl.string(intl2.t.BddRzS)
     };
-    const intl = util.intl;
-    obj2.text = intl.string(util.t.BddRzS);
-    const tmp6 = React5(components_Button_Button.Button, obj2);
+    const Button = components_Button_Button.Button;
+    intl = intl2.intl;
+    const tmp6 = metroImportDefault(Button, obj2);
     cResult[0] = tmp6;
-    let first = tmp6;
+    first = tmp6;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { graphic: null, gradientColor: "purple", title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: null };
-    const obj4 = { type: "image", src: null, aspectRatio: "16/9" };
-    const obj5 = { uri: _modDef15686 };
-    obj4.src = obj5;
-    obj3.graphic = obj4;
-    obj3.actions = first;
-    const tmp10 = React5(PromoSheet.PromoSheet, obj3);
+    const obj3 = { graphic: obj4, gradientColor: "purple", title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: first };
+    obj4 = { type: "image", src: obj5, aspectRatio: "16/9" };
+    obj5 = { uri: _modDef15686 };
+    const PromoSheet = PromoSheet2.PromoSheet;
+    const tmp10 = metroImportDefault(PromoSheet, obj3);
     cResult[1] = tmp10;
-    let tmp7 = tmp10;
+    tmp7 = tmp10;
   } else {
     tmp7 = cResult[1];
   }
   return tmp7;
 }) : (() => {
-  const obj = {
+  let intl;
+  let obj3;
+  let obj4;
+  let tmp;
+  let obj = {
     size: "lg",
     onPress() {
-      return ActionSheetActionCreatorsDefault.hideActionSheet("promo-sheet-demo");
+      const obj = ActionSheetActionCreatorsDefault;
+      return obj.hideActionSheet("promo-sheet-demo");
     },
-    text: null
+    text: intl.string(intl2.t.BddRzS)
   };
-  const intl = util.intl;
-  obj.text = intl.string(util.t.BddRzS);
-  const obj2 = { graphic: null, gradientColor: "purple", title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: null };
-  const obj3 = { type: "image", src: null, aspectRatio: "16/9" };
-  const tmp = React5(components_Button_Button.Button, obj);
-  obj3.src = { uri: _modDef15686 };
-  obj2.graphic = obj3;
-  obj2.actions = tmp;
-  return React5(PromoSheet.PromoSheet, obj2);
+  const Button = components_Button_Button.Button;
+  intl = intl2.intl;
+  const obj2 = { graphic: obj3, gradientColor: "purple", title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: tmp };
+  obj3 = { type: "image", src: obj4, aspectRatio: "16/9" };
+  obj4 = { uri: _modDef15686 };
+  tmp = metroImportDefault(Button, obj);
+  const PromoSheet = PromoSheet2.PromoSheet;
+  return metroImportDefault(PromoSheet, obj2);
 });
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemSheets.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(6);
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let Stack;
+  let Stack3;
+  let items;
+  let items1;
+  let items2;
+  let obj3;
+  let obj7;
+  let tmp10;
+  let tmp14;
+  let tmp19;
+  let tmp5;
+  let tmp6;
+  let obj = react2;
+  const cResult = obj.c(6);
   const tmp4 = closure_9();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp8 = React5(Text_Text.Text, { variant: "text-lg/bold", children: "Action Sheet with Title Header" });
-    const tmp9 = React5(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "An action sheet with a centered title and subtitle, with optional leading and Trailing elements." });
+    const tmp8 = metroImportDefault(Text_Text.Text, { variant: "text-lg/bold", children: "Action Sheet with Title Header" });
+    const tmp9 = metroImportDefault(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "An action sheet with a centered title and subtitle, with optional leading and Trailing elements." });
     cResult[0] = tmp8;
     cResult[1] = tmp9;
     tmp5 = tmp8;
@@ -335,77 +397,90 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp5, tmp6] = cResult;
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { children: null };
-    const obj3 = { children: null };
-    const items = [tmp5, tmp6, ];
+    const obj2 = { children: metroImportAll(Stack, obj3) };
+    const Card = Card_Card.Card;
+    obj3 = { children: items };
+    items = [tmp5, tmp6, ];
+    Stack = Stack_Stack.Stack;
     const obj4 = {
       onPress() {
-          ActionSheetActionCreatorsDefault.openLazy(() => Promise.resolve(closure_1_10), "demo-sheet");
+          const obj = ActionSheetActionCreatorsDefault;
+          obj.openLazy(() => Promise.resolve(closure_1_10), "demo-sheet");
         },
       text: "Show Action Sheet"
     };
-    items[2] = React5(components_Button_Button.Button, obj4);
-    obj3.children = items;
-    obj2.children = closure_1_8(Stack_Stack.Stack, obj3);
-    const tmp13 = React5(Card.Card, obj2);
+    items[2] = metroImportDefault(components_Button_Button.Button, obj4);
+    const tmp13 = metroImportDefault(Card, obj2);
     cResult[2] = tmp13;
-    let tmp10 = tmp13;
+    tmp10 = tmp13;
   } else {
     tmp10 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj5 = { children: null };
-    const items1 = [tmp10, ];
-    const obj6 = { children: null };
-    const obj7 = { children: null };
-    const items2 = [React5(Text_Text.Text, { variant: "text-lg/bold", children: "Promo Sheet" }), React5(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "A sheet with an illustration, title, description, and actions." }), ];
+    const obj5 = { children: items1 };
+    items1 = [tmp10, ];
+    const Stack2 = Stack_Stack.Stack;
+    const obj6 = { children: metroImportAll(Stack3, obj7) };
+    const Card2 = Card_Card.Card;
+    obj7 = { children: items2 };
+    Stack3 = Stack_Stack.Stack;
+    items2 = [metroImportDefault(Text_Text.Text, { variant: "text-lg/bold", children: "Promo Sheet" }), metroImportDefault(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "A sheet with an illustration, title, description, and actions." }), ];
     const obj8 = { onPress: showDemoPromoSheet, text: "Show Promo Sheet" };
-    items2[2] = React5(components_Button_Button.Button, obj8);
-    obj7.children = items2;
-    obj6.children = closure_1_8(Stack_Stack.Stack, obj7);
-    items1[1] = React5(Card.Card, obj6);
-    obj5.children = items1;
-    const tmp18 = closure_1_8(Stack_Stack.Stack, obj5);
+    items2[2] = metroImportDefault(components_Button_Button.Button, obj8);
+    items1[1] = metroImportDefault(Card2, obj6);
+    const tmp18 = metroImportAll(Stack2, obj5);
     cResult[3] = tmp18;
-    let tmp14 = tmp18;
+    tmp14 = tmp18;
   } else {
     tmp14 = cResult[3];
   }
   if (cResult[4] !== tmp4.container) {
     const obj9 = { contentContainerStyle: tmp4.container, children: tmp14 };
-    const tmp22 = React5(ScrollView, obj9);
+    const tmp22 = metroImportDefault(ScrollView, obj9);
     cResult[4] = tmp4.container;
     cResult[5] = tmp22;
-    let tmp19 = tmp22;
+    tmp19 = tmp22;
   } else {
     tmp19 = cResult[5];
   }
   return tmp19;
 }) : (() => {
-  const obj = { contentContainerStyle: closure_9().container, children: null };
-  const obj2 = { children: null };
-  const obj3 = { children: null };
-  const obj4 = { children: null };
-  const items = [
-    React5(Text_Text.Text, { variant: "text-lg/bold", children: "Action Sheet with Title Header" }),
-    React5(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "An action sheet with a centered title and subtitle, with optional leading and Trailing elements." }),
-    React5(components_Button_Button.Button, {
-      onPress() {
-        ActionSheetActionCreatorsDefault.openLazy(() => Promise.resolve(closure_1_10), "demo-sheet");
-      },
-      text: "Show Action Sheet"
-    })
-  ];
-  obj4.children = items;
-  obj3.children = closure_1_8(Stack_Stack.Stack, obj4);
-  const items1 = [React5(Card.Card, obj3), ];
-  const obj6 = { children: null };
-  const obj7 = { children: null };
-  const items2 = [React5(Text_Text.Text, { variant: "text-lg/bold", children: "Promo Sheet" }), React5(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "A sheet with an illustration, title, description, and actions." }), React5(components_Button_Button.Button, { onPress: showDemoPromoSheet, text: "Show Promo Sheet" })];
-  obj7.children = items2;
-  obj6.children = closure_1_8(Stack_Stack.Stack, obj7);
-  items1[1] = React5(Card.Card, obj6);
-  obj2.children = items1;
-  obj.children = closure_1_8(Stack_Stack.Stack, obj2);
-  return React5(ScrollView, obj);
+  let Stack;
+  let Stack2;
+  let Stack3;
+  let items;
+  let items1;
+  let items2;
+  let obj2;
+  let obj4;
+  let obj7;
+  let obj = { contentContainerStyle: closure_9().container, children: metroImportAll(Stack, obj2) };
+  obj2 = { children: items1 };
+  Stack = Stack_Stack.Stack;
+  const obj3 = { children: metroImportAll(Stack2, obj4) };
+  const Card = Card_Card.Card;
+  obj4 = { children: items };
+  Stack2 = Stack_Stack.Stack;
+  items = [metroImportDefault(Text_Text.Text, { variant: "text-lg/bold", children: "Action Sheet with Title Header" }), metroImportDefault(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "An action sheet with a centered title and subtitle, with optional leading and Trailing elements." }), ];
+  const obj5 = {
+    onPress() {
+      const obj = ActionSheetActionCreatorsDefault;
+      obj.openLazy(() => Promise.resolve(closure_1_10), "demo-sheet");
+    },
+    text: "Show Action Sheet"
+  };
+  items[2] = metroImportDefault(components_Button_Button.Button, obj5);
+  items1 = [metroImportDefault(Card, obj3), ];
+  const obj6 = { children: metroImportAll(Stack3, obj7) };
+  const Card2 = Card_Card.Card;
+  obj7 = { children: items2 };
+  Stack3 = Stack_Stack.Stack;
+  items2 = [metroImportDefault(Text_Text.Text, { variant: "text-lg/bold", children: "Promo Sheet" }), metroImportDefault(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "A sheet with an illustration, title, description, and actions." }), ];
+  const obj8 = { onPress: showDemoPromoSheet, text: "Show Promo Sheet" };
+  items2[2] = metroImportDefault(components_Button_Button.Button, obj8);
+  items1[1] = metroImportDefault(Card2, obj6);
+  return metroImportDefault(ScrollView, obj);
 });
+const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemSheets.tsx");
+
+export default tmp3;

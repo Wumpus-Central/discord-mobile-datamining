@@ -4,74 +4,75 @@
 import logger_Logger from "logger/Logger" /* 4 */;
 import SessionManager2 from "SessionManager" /* 14942 */;
 import MuxIntegration2 from "MuxIntegration" /* 14943 */;
-import UDefault from "U" /* 14944 */;
+import _modDef14944 from "module_14944" /* 14944 */;
 import size from "module_2" /* 2 */;
 
 const logger = new logger_Logger.Logger("SimpleMuxWrapper");
 const result = size.fileFinishedImporting("modules/video-qoe/SimpleMuxWrapper.tsx");
 class SimpleMuxWrapper {
-  constructor(arg0) {
-    merged = Object.assign({ isMonitoring: false });
-    merged.config = global;
-    merged.videoElement = global.videoElement;
-    SessionManager = closure_0(closure_2[1]).SessionManager;
+  constructor(config) {
+    const merged = Object.assign({ isMonitoring: false });
+    merged.config = config;
+    merged.videoElement = config.videoElement;
+    const SessionManager = SessionManager2.SessionManager;
     merged.sessionId = SessionManager.generateSessionId();
-    merged.hlsInstance = global.hlsInstance;
+    merged.hlsInstance = config.hlsInstance;
     return merged;
+  }
+  initialize() {
+    let MuxIntegration;
+    const self = this;
+    let flag = this.config.debug;
+    if (flag == null) {
+      flag = false;
+    }
+    const obj = { debug: flag, disableCookies: true, respectDoNotTrack: true, data: MuxIntegration.mapDiscordToMuxMetadata(self.config, self.sessionId) };
+    MuxIntegration = MuxIntegration2.MuxIntegration;
+    if (null != self.hlsInstance) {
+      obj.hlsjs = self.hlsInstance;
+      obj.Hls = self.hlsInstance.constructor;
+    }
+    try {
+      const obj2 = _modDef14944;
+      obj2.monitor(self.videoElement, obj);
+      self.isMonitoring = true;
+    } catch (tmp4) {
+      logger.error("Error creating Mux monitor", tmp4);
+      self.isMonitoring = false;
+    }
+  }
+  endSession() {
+    const self = this;
+    if (this.isMonitoring) {
+      try {
+        if (typeof _modDef14944.destroyMonitor === "function") {
+          const tmpResult = _modDef14944;
+          tmpResult.destroyMonitor(self.videoElement);
+        }
+        self.isMonitoring = false;
+      } catch (tmp3) {
+        logger.error("Error ending Mux session", tmp3);
+      }
+    }
+  }
+  destroy() {
+    const self = this;
+    if (this.isMonitoring) {
+      try {
+        if (typeof _modDef14944.destroyMonitor === "function") {
+          const tmpResult = _modDef14944;
+          tmpResult.destroyMonitor(self.videoElement);
+        }
+        self.isMonitoring = false;
+      } catch (tmp3) {
+        logger.error("Error destroying Mux monitor", tmp3);
+      }
+    }
+  }
+  getSessionId() {
+    return this.sessionId;
   }
 }
 const prototype = SimpleMuxWrapper.prototype;
-prototype["initialize"] = function initialize() {
-  const self = this;
-  let flag = this.config.debug;
-  if (flag == null) {
-    flag = false;
-  }
-  const obj = { debug: flag, disableCookies: true, respectDoNotTrack: true, data: null };
-  const MuxIntegration = MuxIntegration2.MuxIntegration;
-  obj.data = MuxIntegration.mapDiscordToMuxMetadata(self.config, self.sessionId);
-  if (null != self.hlsInstance) {
-    obj.hlsjs = self.hlsInstance;
-    obj.Hls = self.hlsInstance.constructor;
-  }
-  try {
-    UDefault.monitor(self.videoElement, obj);
-    self.isMonitoring = true;
-  } catch (tmp5) {
-    logger.error("Error creating Mux monitor", tmp5);
-    tmp.isMonitoring = false;
-  }
-};
-prototype["endSession"] = function endSession() {
-  const self = this;
-  if (this.isMonitoring) {
-    try {
-      if (typeof UDefault.destroyMonitor === "function") {
-        UDefault.destroyMonitor(self.videoElement);
-        const tmpResult = UDefault;
-      }
-      self.isMonitoring = false;
-    } catch (tmp3) {
-      logger.error("Error ending Mux session", tmp3);
-    }
-  }
-};
-prototype["destroy"] = function destroy() {
-  const self = this;
-  if (this.isMonitoring) {
-    try {
-      if (typeof UDefault.destroyMonitor === "function") {
-        UDefault.destroyMonitor(self.videoElement);
-        const tmpResult = UDefault;
-      }
-      self.isMonitoring = false;
-    } catch (tmp3) {
-      logger.error("Error destroying Mux monitor", tmp3);
-    }
-  }
-};
-prototype["getSessionId"] = function getSessionId() {
-  return this.sessionId;
-};
 
 export { SimpleMuxWrapper };

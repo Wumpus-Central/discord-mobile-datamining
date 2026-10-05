@@ -1,7 +1,7 @@
 // === Module 4703: DefaultRouteStore ===
 
 // Module 4703 (DefaultRouteStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
@@ -11,20 +11,23 @@ const Routes = Constants.Routes;
 const obj = { lastViewedPath: null, lastViewedNonVoicePath: null };
 let closure_4 = obj;
 const LAST_VIEWED_PATH = "LAST_VIEWED_PATH";
-const PersistedStore = initializeDefault.PersistedStore;
+const PersistedStore = get_initializedDefault.PersistedStore;
 class DefaultRouteStore extends PersistedStore {
+  initialize() {
+    let tmp = arg0;
+    if (arg0 === undefined) {
+      tmp = obj;
+    }
+    if (tmp == null) {
+      tmp = obj;
+    }
+    closure_4 = tmp;
+  }
+  getState() {
+    return closure_4;
+  }
 }
 const prototype = DefaultRouteStore.prototype;
-prototype["initialize"] = function initialize() {
-  let tmp = arg0;
-  if (arg0 === undefined) {
-    tmp = obj;
-  }
-  if (tmp == null) {
-    tmp = obj;
-  }
-  closure_4 = tmp;
-};
 Object.defineProperty(prototype, "defaultRoute", {
   get: function defaultRoute() {
     let ME = closure_4.lastViewedPath;
@@ -51,9 +54,6 @@ Object.defineProperty(prototype, "fallbackRoute", {
   },
   set: undefined
 });
-prototype["getState"] = function getState() {
-  return closure_4;
-};
 DefaultRouteStore.displayName = "DefaultRouteStore";
 DefaultRouteStore.persistKey = "DefaultRouteStore";
 const items = [
@@ -66,7 +66,7 @@ const items = [
   }
 ];
 DefaultRouteStore.migrations = items;
-const defaultRouteStore = new DefaultRouteStore(DispatcherDefault, {
+const obj2 = {
   SAVE_LAST_ROUTE: function handleSaveRoute(path) {
     closure_4.lastViewedPath = path.path;
     return true;
@@ -78,7 +78,8 @@ const defaultRouteStore = new DefaultRouteStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     closure_4 = { lastViewedPath: null, lastViewedNonVoicePath: null };
   }
-});
+};
+const defaultRouteStore = new DefaultRouteStore(DispatcherDefault, obj2);
 const result = size.fileFinishedImporting("stores/DefaultRouteStore.tsx");
 
 export default defaultRouteStore;

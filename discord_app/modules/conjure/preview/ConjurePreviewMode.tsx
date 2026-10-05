@@ -1,7 +1,7 @@
 // === Module 16587: ConjurePreviewMode ===
 
 // Module 16587 (ConjurePreviewMode)
-import util from "util" /* 1126 */;
+import intl2 from "intl" /* 1126 */;
 import _modDef3723 from "module_3723" /* 3723 */;
 import size from "module_2" /* 2 */;
 
@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/conjure/preview/ConjurePrevie
 
 export const CONJURE_PREVIEW_MODE_ORDER = ["frame", "widget", "bot"];
 export const getPreviewModeLabel = function getPreviewModeLabel(id) {
-  const intl = util.intl;
+  const intl = intl2.intl;
   return intl.string(obj[id]);
 };
 export const getPreviewModePanelId = function getPreviewModePanelId(arg0) {

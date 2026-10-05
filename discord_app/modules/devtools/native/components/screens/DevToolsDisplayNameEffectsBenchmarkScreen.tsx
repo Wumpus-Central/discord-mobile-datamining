@@ -1,195 +1,255 @@
 // === Module 15609: DevToolsDisplayNameEffectsBenchmarkScreen ===
 
 // Module 15609 (DevToolsDisplayNameEffectsBenchmarkScreen)
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
+import intl2 from "intl" /* 1126 */;
+import DisplayNameStylesConstants from "DisplayNameStylesConstants" /* 1395 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1396 */;
 import _modDef2883 from "module_2883" /* 2883 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import Stack_Stack from "Stack/Stack" /* 5593 */;
+import components_Button_Button from "components/Button/Button" /* 5594 */;
 import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10633 */;
 import types from "types" /* 10634 */;
 import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10636 */;
 import _mod10640 from "module_10640" /* 10640 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
 import UserStore from "UserStore" /* 1377 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
+let _require, closure_0, onChange, set;
 
-require = fn;
+let c9;
+let hasOwnProperty;
+let metroImportAll;
+let metroRequire;
+let obj2;
+let obj3;
 function effectName(arg0) {
-  const intl = util.intl;
+  const intl = intl2.intl;
+  const string = intl.string;
   let OpWJ3f = useDisplayNameStylesEffectConfigs.DISPLAY_NAME_STYLES_EFFECT_NAMES[arg0];
   if (OpWJ3f == null) {
     OpWJ3f = _modDef2883.OpWJ3f;
   }
-  return intl.string(OpWJ3f);
+  return string(OpWJ3f);
 }
-get_ActivityIndicator = fn(17);
-({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let items = [...fn(1395).EFFECT_ORDER, fn(1396).DisplayNameEffect.GUMMY];
+({ ScrollView: hasOwnProperty, View: metroRequire } = react_native);
+const EFFECT_ORDER = DisplayNameStylesConstants.EFFECT_ORDER;
+({ jsx: metroImportAll, jsxs: c9 } = Fragment);
+let items = [...EFFECT_ORDER, DisplayNameEffect.DisplayNameEffect.GUMMY];
 let closure_12 = [10, 50, 100, 200];
 let items1 = [{ key: "short", label: "Short", name: "Pixel7" }, { key: "medium", label: "Medium", name: "NebulaWanderer" }, { key: "long", label: "Long", name: "GalacticOverlord2049" }];
-const createStyles = fn(4890);
-let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 }, container: null, batchRow: null, optionButtons: null };
-let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 };
-obj2.container = { paddingVertical: nativeDefault.space.PX_16 };
-obj2.batchRow = { paddingVertical: 2 };
-obj2.optionButtons = { flexWrap: "wrap" };
-let closure_14 = createStyles.createStyles(obj2);
-let ReactCompilerGating = fn(558);
+let createStyles = createStyles_mod;
+let obj = { wrap: obj2, container: obj3, batchRow: { paddingVertical: 2 }, optionButtons: { flexWrap: "wrap" } };
+obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 };
+createStyles = createStyles.createStyles;
+obj3 = { paddingVertical: nativeDefault.space.PX_16 };
+let closure_14 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((onChange) => {
-  const cResult = c.c(15);
+  let caption;
+  let options;
+  let tmp5;
+  let tmp9;
+  let value;
+  let obj = react2;
+  const cResult = obj.c(15);
   ({ caption, options, value } = onChange);
   const require = value;
   onChange = onChange.onChange;
   const tmp4 = closure_14();
   if (cResult[0] !== caption) {
     const obj2 = { variant: "text-sm/semibold", color: "text-subtle", children: caption };
-    const tmp7 = closure_8(tmp(4886).Text, obj2);
+    const tmp7 = closure_8(Text_Text.Text, obj2);
     cResult[0] = caption;
     cResult[1] = tmp7;
-    let tmp5 = tmp7;
+    tmp5 = tmp7;
   } else {
     tmp5 = cResult[1];
   }
   if (cResult[2] === onChange) {
     if (cResult[3] === options) {
       if (cResult[4] === value) {
-        if (cResult[9] === tmp4.optionButtons) {
-          if (cResult[10] === tmp9) {
-            let tmp13 = cResult[11];
-          }
-          if (cResult[12] === tmp5) {
-            if (cResult[13] === tmp13) {
-              let tmp16 = cResult[14];
-            }
-            return tmp16;
-          }
-          const obj3 = { spacing: 8, children: null };
-          items = [tmp5, tmp13];
-          obj3.children = items;
-          const tmp18 = closure_9(tmp(5593).Stack, obj3);
-          cResult[12] = tmp5;
-          cResult[13] = tmp13;
-          cResult[14] = tmp18;
-          tmp16 = tmp18;
-        }
-        const obj4 = { direction: "horizontal", spacing: 8, style: tmp8, children: cResult[5] };
-        const tmp15 = closure_8(tmp(5593).Stack, obj4);
-        cResult[9] = tmp4.optionButtons;
-        cResult[10] = cResult[5];
-        cResult[11] = tmp15;
-        tmp13 = tmp15;
+        tmp9 = cResult[5];
       }
+      if (cResult[9] === tmp4.optionButtons) {
+        let tmp12;
+        if (cResult[10] === tmp9) {
+          tmp12 = cResult[11];
+        }
+        if (cResult[12] === tmp5) {
+          let tmp15;
+          if (cResult[13] === tmp12) {
+            tmp15 = cResult[14];
+          }
+          return tmp15;
+        }
+        const obj3 = { spacing: 8, children: items };
+        items = [tmp5, tmp12];
+        const tmp17 = closure_9(Stack_Stack.Stack, obj3);
+        cResult[12] = tmp5;
+        cResult[13] = tmp12;
+        cResult[14] = tmp17;
+        tmp15 = tmp17;
+      }
+      const obj4 = { direction: "horizontal", spacing: 8, style: tmp8, children: tmp9 };
+      const tmp14 = closure_8(Stack_Stack.Stack, obj4);
+      cResult[9] = tmp4.optionButtons;
+      cResult[10] = tmp9;
+      cResult[11] = tmp14;
+      tmp12 = tmp14;
     }
   }
   if (cResult[6] === onChange) {
+    let tmp10;
     if (cResult[7] === value) {
-      let tmp10 = cResult[8];
+      tmp10 = cResult[8];
     }
     const mapped = options.map(tmp10);
     cResult[2] = onChange;
     cResult[3] = options;
     cResult[4] = value;
     cResult[5] = mapped;
+    tmp9 = mapped;
   }
   const fn = function y(label) {
-    const obj = { size: "sm", text: label.label, variant: null, onPress: null };
-    let str = "secondary";
+    let str;
+    const obj = {
+      size: "sm",
+      text: label.label,
+      variant: str,
+      onPress() {
+        return onChange(label.value);
+      }
+    };
+    str = "secondary";
+    const Button = components_Button_Button.Button;
     if (label.value === label) {
       str = "primary";
     }
-    obj.variant = str;
-    obj.onPress = function onPress() {
-      return onChange(label.value);
-    };
-    return closure_1_8(value(dependencyMap[16]).Button, obj, String(label.value));
+    return closure_1_8(Button, obj, String(label.value));
   };
   cResult[6] = onChange;
   cResult[7] = value;
   cResult[8] = fn;
   tmp10 = fn;
-}) : ((children) => {
-  ({ options, value: require, onChange: importDefault } = children);
-  let obj = { spacing: 8, children: null };
-  items = [closure_8(Text_Text.Text, { variant: "text-sm/semibold", color: "text-subtle", children: children.caption }), ];
+}) : ((caption) => {
+  let options;
+  let require;
+  ({ options, value: require, onChange: importDefault } = caption);
+  caption = caption.caption;
+  let obj = { spacing: 8, children: items };
   const tmp = closure_14();
-  items[1] = closure_8(Stack_Stack.Stack, {
+  const Stack = Stack_Stack.Stack;
+  items = [closure_8(Text_Text.Text, { variant: "text-sm/semibold", color: "text-subtle", children: caption }), ];
+  const obj2 = {
     direction: "horizontal",
     spacing: 8,
-    style: closure_14().optionButtons,
+    style: tmp.optionButtons,
     children: options.map((label) => {
-      const obj = { size: "sm", text: label.label, variant: null, onPress: null };
-      let str = "secondary";
+      let str;
+      const obj = {
+        size: "sm",
+        text: label.label,
+        variant: str,
+        onPress() {
+          return importDefault(label.value);
+        }
+      };
+      str = "secondary";
+      const Button = require("components/Button/Button").Button;
       if (label.value === label) {
         str = "primary";
       }
-      obj.variant = str;
-      obj.onPress = function onPress() {
-        return importDefault(label.value);
-      };
-      return closure_1_8(require("components/Button/Button").Button, obj, String(label.value));
+      return closure_1_8(Button, obj, String(label.value));
     })
-  });
-  obj.children = items;
-  return closure_9(Stack_Stack.Stack, obj);
+  };
+  const Stack2 = Stack_Stack.Stack;
+  items[1] = closure_8(Stack2, obj2);
+  return closure_9(Stack, obj);
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(7);
+  let effect;
+  let style;
+  let userId;
+  let userName;
+  const obj = react2;
+  const cResult = obj.c(7);
   ({ userId, userName, style, effect } = arg0);
-  const displayNameStylesEffectConfig = useDisplayNameStylesEffectConfigs.useDisplayNameStylesEffectConfig(effect);
+  const obj2 = useDisplayNameStylesEffectConfigs;
+  const displayNameStylesEffectConfig = obj2.useDisplayNameStylesEffectConfig(effect);
   if (cResult[0] === displayNameStylesEffectConfig.previewStyles) {
     if (cResult[1] === userId) {
+      let tmp5;
       if (cResult[2] === userName) {
-        let tmp5 = cResult[3];
+        tmp5 = cResult[3];
       }
       if (cResult[4] === style) {
+        let tmp8;
         if (cResult[5] === tmp5) {
-          let tmp8 = cResult[6];
+          tmp8 = cResult[6];
         }
         return tmp8;
       }
       const obj3 = { style, children: tmp5 };
-      const tmp11 = closure_1_8(timestampProducer, obj3);
+      const tmp11 = metroImportAll(metroRequire, obj3);
       cResult[4] = style;
       cResult[5] = tmp5;
       cResult[6] = tmp11;
       tmp8 = tmp11;
     }
   }
-  const obj4 = { userId, userName, effectDisplayType: null, pendingDisplayNameStyles: null, variant: "text-md/semibold" };
-  obj4.effectDisplayType = types.EffectDisplayType.STATIC;
-  obj4.pendingDisplayNameStyles = displayNameStylesEffectConfig.previewStyles;
-  const tmp7 = closure_1_8(UsernameWithEffectsDefault, obj4);
+  const obj4 = { userId, userName, effectDisplayType: types.EffectDisplayType.STATIC, pendingDisplayNameStyles: displayNameStylesEffectConfig.previewStyles, variant: "text-md/semibold" };
+  const tmp6 = UsernameWithEffectsDefault;
+  const tmp7 = metroImportAll(tmp6, obj4);
   cResult[0] = displayNameStylesEffectConfig.previewStyles;
   cResult[1] = userId;
   cResult[2] = userName;
   cResult[3] = tmp7;
   tmp5 = tmp7;
 }) : ((arg0) => {
+  let effect;
+  let obj3;
+  let style;
+  let tmp2;
+  let userId;
+  let userName;
   ({ userId, effect, userName, style } = arg0);
-  const obj2 = { style, children: null };
-  const displayNameStylesEffectConfig = useDisplayNameStylesEffectConfigs.useDisplayNameStylesEffectConfig(effect);
-  const obj3 = { userId, userName, effectDisplayType: null, pendingDisplayNameStyles: null, variant: "text-md/semibold" };
-  obj3.effectDisplayType = types.EffectDisplayType.STATIC;
-  obj3.pendingDisplayNameStyles = displayNameStylesEffectConfig.previewStyles;
-  obj2.children = closure_1_8(UsernameWithEffectsDefault, obj3);
-  return closure_1_8(timestampProducer, obj2);
+  const obj2 = { style, children: metroImportAll(tmp2, obj3) };
+  const obj = useDisplayNameStylesEffectConfigs;
+  const displayNameStylesEffectConfig = obj.useDisplayNameStylesEffectConfig(effect);
+  obj3 = { userId, userName, effectDisplayType: types.EffectDisplayType.STATIC, pendingDisplayNameStyles: displayNameStylesEffectConfig.previewStyles, variant: "text-md/semibold" };
+  tmp2 = UsernameWithEffectsDefault;
+  return metroImportAll(metroRequire, obj2);
 });
-ReactCompilerGating = fn(558);
-let obj4 = { paddingVertical: nativeDefault.space.PX_16 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsDisplayNameEffectsBenchmarkScreen.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = require("c").c(66);
-  let obj = require("c");
-  _require = effectLabel();
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let addMount;
+  let addScroll;
+  let arr2;
+  let arr3;
+  let closure_3;
+  let first;
+  let first1;
+  let results;
+  let str;
+  let tmp19;
+  let tmp5;
+  let tmp6;
+  let tmp9;
+  let tmp = _require;
+  let obj = require("react");
+  const cResult = obj.c(66);
+  _require = str();
+  str();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     items = [addScroll];
     const fn = function s() {
@@ -207,37 +267,36 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp5, tmp6] = cResult;
   }
-  const tmp4 = effectLabel();
-  const stateFromStores = require("initialize").useStateFromStores(tmp5, tmp6);
+  const tmpResult = tmp(first[20]);
+  const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function k() {
       items = [closure_0(first[6]).DisplayNameEffect.GUMMY];
-      return new Set(items);
+      set = new Set(items);
+      return set;
     };
     cResult[2] = fn2;
-    let tmp9 = fn2;
+    tmp9 = fn2;
   } else {
     tmp9 = cResult[2];
   }
   [first, _slicedToArray] = first1.useState(tmp9);
-  const tmpResult = require("initialize");
-  first1 = _slicedToArray(first1.useState(100), 2)[0];
-  const tmp12 = _slicedToArray(first1.useState(100), 2);
+  [first1] = first1.useState(100);
   const first2 = _slicedToArray(first1.useState("long"), 2)[0];
-  const tmp14 = _slicedToArray(first1.useState("long"), 2);
-  const benchmarkResults = require("FRAME_BUDGET_MS").useBenchmarkResults();
+  _slicedToArray(first1.useState("long"), 2);
+  const tmpResult3 = tmp(first[21]);
+  const benchmarkResults = tmpResult3.useBenchmarkResults();
   ({ results, addMount } = benchmarkResults);
   addScroll = benchmarkResults.addScroll;
-  const tmpResult3 = require("FRAME_BUDGET_MS");
-  const mountTimer = require("FRAME_BUDGET_MS").useMountTimer();
+  const tmpResult4 = tmp(first[21]);
+  const mountTimer = tmpResult4.useMountTimer();
   const run = mountTimer.run;
   const begin = mountTimer.begin;
   const measure = mountTimer.measure;
   if (cResult[3] !== addScroll) {
     class T {
       constructor(arg0) {
-        tmp = addScroll(arg0);
-        return;
+        addScroll(arg0);
       }
     }
     cResult[3] = addScroll;
@@ -245,129 +304,136 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     class T {
       constructor(arg0) {
-        tmp = addScroll(arg0);
-        return;
+        addScroll(arg0);
       }
     }
   }
   if (cResult[5] !== first2) {
     class T {
       constructor(arg0) {
-        tmp = addScroll(arg0);
-        return;
+        addScroll(arg0);
       }
     }
     const found = arr3.find((key) => key.key === first2);
     cResult[5] = first2;
     cResult[6] = found;
-    const tmp19 = found;
+    tmp19 = found;
   } else {
     class T {
       constructor(arg0) {
-        tmp = addScroll(arg0);
-        return;
+        addScroll(arg0);
       }
     }
   }
-  const name = tmp19.name;
+  let name = tmp19.name;
   if (cResult[7] !== name) {
     class T {
       constructor(arg0) {
-        tmp = addScroll(arg0);
-        return;
+        addScroll(arg0);
       }
     }
     let splitGraphemesResult = obj5.splitGraphemes(name);
     cResult[7] = name;
     cResult[8] = splitGraphemesResult;
-    const arr2 = splitGraphemesResult;
+    arr2 = splitGraphemesResult;
   } else {
     class T {
       constructor(arg0) {
-        tmp = addScroll(arg0);
-        return;
+        addScroll(arg0);
       }
     }
   }
+  let length = arr2.length;
   if (cResult[9] !== first) {
     class T {
       constructor(arg0) {
-        tmp = addScroll(arg0);
-        return;
+        addScroll(arg0);
       }
     }
     const found1 = measure.filter((item) => first.has(item));
     cResult[9] = first;
     cResult[10] = found1;
+    arr3 = found1;
   } else {
     class T {
       constructor(arg0) {
-        tmp = addScroll(arg0);
-        return;
+        addScroll(arg0);
       }
     }
   }
-  if (arr3.length === measure.length) {
+  str = "All (rotation)";
+  if (arr3.length !== measure.length) {
     class T {
       constructor(arg0) {
-        tmp = addScroll(arg0);
-        return;
+        addScroll(arg0);
       }
     }
-    const _Symbol = Symbol;
-    if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-      class T {
-        constructor(arg0) {
-          tmp = addScroll(arg0);
-          return;
-        }
-      }
-      cResult[13] = tmp26;
-    } else {
-      class T {
-        constructor(arg0) {
-          tmp = addScroll(arg0);
-          return;
-        }
+    str = tmp23;
+  }
+  if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
+    class T {
+      constructor(arg0) {
+        addScroll(arg0);
       }
     }
-    closure_15 = tmp26;
-    if (cResult[14] === begin) {
-      class T {
-        constructor(arg0) {
-          tmp = addScroll(arg0);
-          return;
-        }
-      }
-    }
-    function re() {
-      if (0 !== arr3.length) {
-        const obj = { effects: tmp, effectLabel, rowCount: first1, name, graphemeCount: length };
-        begin(obj);
-      }
-    }
-    cResult[14] = begin;
-    cResult[15] = "All (rotation)";
-    cResult[16] = length;
-    cResult[17] = name;
-    cResult[18] = first1;
-    cResult[19] = arr3;
-    cResult[20] = re;
+    cResult[13] = tmp25;
   } else {
     class T {
       constructor(arg0) {
-        tmp = addScroll(arg0);
-        return;
+        addScroll(arg0);
       }
     }
   }
-  length = arr2.length;
-  const tmpResult4 = require("FRAME_BUDGET_MS");
+  closure_15 = tmp25;
+  if (cResult[14] === begin) {
+    class T {
+      constructor(arg0) {
+        addScroll(arg0);
+      }
+    }
+  }
+  function re() {
+    if (0 !== arr3.length) {
+      const obj = { effects: tmp, effectLabel: str, rowCount: first1, name, graphemeCount: length };
+      begin(obj);
+    }
+  }
+  cResult[14] = begin;
+  cResult[15] = str;
+  cResult[16] = length;
+  cResult[17] = name;
+  cResult[18] = first1;
+  cResult[19] = arr3;
+  cResult[20] = re;
 }) : (() => {
+  let MountMeasure;
+  let Stack;
+  let Stack2;
+  let addScroll;
+  let clear;
+  let closure_3;
+  let first;
+  let first1;
+  let first2;
+  let items10;
+  let items11;
+  let items8;
+  let items9;
+  let memo3;
+  let obj10;
+  let obj12;
+  let obj16;
+  let obj17;
+  let obj7;
+  let results;
+  let tmp12;
+  let tmp23;
+  let tmp9;
   let tmp = memo3();
   _require = tmp;
+  let obj = require("get initialized");
   items = [addScroll];
-  const stateFromStores = require("initialize").useStateFromStores(items, () => {
+  const stateFromStores = obj.useStateFromStores(items, () => {
     const currentUser = addScroll.getCurrentUser();
     let id;
     if (currentUser != null) {
@@ -377,30 +443,33 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   });
   [first, _slicedToArray] = first1.useState(() => {
     items = [closure_0(first[6]).DisplayNameEffect.GUMMY];
-    return new Set(items);
+    set = new Set(items);
+    return set;
   });
-  const tmp7 = _slicedToArray(first1.useState(100), 2);
-  first1 = tmp7[0];
-  const tmp9 = _slicedToArray(first1.useState("long"), 2);
-  const first2 = tmp9[0];
-  let obj = require("initialize");
-  const benchmarkResults = require("FRAME_BUDGET_MS").useBenchmarkResults();
+  [first1, tmp9] = first1.useState(100);
+  [first2, tmp12] = first1.useState("long");
+  const obj2 = require("FRAME_BUDGET_MS");
+  const benchmarkResults = obj2.useBenchmarkResults();
   const addMount = benchmarkResults.addMount;
   addScroll = benchmarkResults.addScroll;
   ({ results, clear } = benchmarkResults);
-  const obj2 = require("FRAME_BUDGET_MS");
-  const mountTimer = require("FRAME_BUDGET_MS").useMountTimer();
+  let obj3 = require("FRAME_BUDGET_MS");
+  const mountTimer = obj3.useMountTimer();
   const run = mountTimer.run;
   const begin = mountTimer.begin;
   const measure = mountTimer.measure;
   items1 = [addScroll];
+  const cancel = mountTimer.cancel;
   const items2 = [first2];
   const callback = first1.useCallback((arg0) => {
     addScroll(arg0);
   }, items1);
   const memo = first1.useMemo(() => items1.find((key) => key.key === first2).name, items2);
   const items3 = [memo];
-  const memo1 = first1.useMemo(() => _mod10640.splitGraphemes(memo).length, items3);
+  const memo1 = first1.useMemo(() => {
+    const obj = _mod10640;
+    return obj.splitGraphemes(memo).length;
+  }, items3);
   const items4 = [first];
   const memo2 = first1.useMemo(() => items.filter((item) => set.has(item)), items4);
   const items5 = [memo2];
@@ -414,9 +483,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }, items5);
   closure_15 = first1.useCallback((arg0, arg1) => {
     closure_0 = arg0;
-    closure_1 = arg1;
+    let closure_1 = arg1;
     closure_3((items) => {
-      const set = new Set(items);
+      set = new Set(items);
       if (closure_1) {
         set.add(closure_0);
       } else {
@@ -440,106 +509,105 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       addMount("" + effectLabel.effectLabel + " \u00B7 " + effectLabel.rowCount + " rows \u00B7 " + effectLabel.graphemeCount + " graphemes", tmp);
     }
   }, items7);
-  let tmp18 = null != stateFromStores;
-  if (tmp18) {
-    tmp18 = memo2.length > 0;
-  }
-  const obj4 = { style: tmp.wrap, contentContainerStyle: tmp.container, children: null };
-  const obj5 = { title: "Configuration", hasIcons: false, children: null };
-  const obj6 = { label: null };
-  const obj7 = { spacing: 8, children: null };
-  const items8 = [run(require("Text/Text").Text, { variant: "text-sm/semibold", color: "text-subtle", children: "Effects (checked render in rotation)" }), ];
-  const obj3 = require("FRAME_BUDGET_MS");
-  const tmp20 = first2;
-  const tmp21 = begin;
-  items8[1] = run(require("Stack/Stack").Stack, {
-    spacing: 4,
-    children: measure.map((item) => {
-      closure_0 = item;
-      const intl = closure_0(first[8]).intl;
-      let OpWJ3f = closure_0(first[9]).DISPLAY_NAME_STYLES_EFFECT_NAMES[item];
-      if (OpWJ3f == null) {
-        OpWJ3f = stateFromStores(first[10]).OpWJ3f;
-      }
-      return run(closure_0(first[22]).Checkbox, {
-        label: intl.string(OpWJ3f),
-        checked: first.has(item),
-        onToggle(arg0) {
-          return closure_15(closure_0, arg0);
-        }
-      }, item);
-    })
-  });
-  obj7.children = items8;
-  obj6.label = begin(require("Stack/Stack").Stack, obj7);
-  const items9 = [run(require("TableRow").TableRow, obj6), , ];
-  const obj9 = { label: null };
+  const tmp20 = null != stateFromStores && memo2.length > 0;
+  const obj4 = { style: tmp.wrap, contentContainerStyle: tmp.container, children: tmp23(Stack, { spacing: 16, children: items10 }) };
+  Stack = tmp2(tmp3[17]).Stack;
+  const obj5 = { title: "Configuration", hasIcons: false, children: items9 };
+  const TableRowGroup = tmp2(tmp3[24]).TableRowGroup;
+  const obj6 = { label: begin(Stack2, obj7) };
+  const TableRow = tmp2(tmp3[23]).TableRow;
+  obj7 = { spacing: 8, children: items8 };
+  Stack2 = tmp2(tmp3[17]).Stack;
+  items8 = [run(tmp2(tmp3[15]).Text, { variant: "text-sm/semibold", color: "text-subtle", children: "Effects (checked render in rotation)" }), ];
   const obj8 = {
     spacing: 4,
     children: measure.map((item) => {
       closure_0 = item;
+      const Checkbox = closure_0(first[22]).Checkbox;
       const intl = closure_0(first[8]).intl;
+      const string = intl.string;
       let OpWJ3f = closure_0(first[9]).DISPLAY_NAME_STYLES_EFFECT_NAMES[item];
       if (OpWJ3f == null) {
         OpWJ3f = stateFromStores(first[10]).OpWJ3f;
       }
-      return run(closure_0(first[22]).Checkbox, {
-        label: intl.string(OpWJ3f),
+      const obj = {
+        label: string(OpWJ3f),
         checked: first.has(item),
         onToggle(arg0) {
-          return closure_15(closure_0, arg0);
+          return closure_15(item, arg0);
         }
-      }, item);
+      };
+      return run(Checkbox, obj, item);
     })
   };
-  obj9.label = run(closure_15, { caption: "Rows", value: first1, onChange: tmp7[1], options: memo1.map((value) => ({ value, label: String(value) })) });
-  items9[1] = run(require("TableRow").TableRow, obj9);
-  const obj11 = { label: null };
-  const obj10 = { caption: "Rows", value: first1, onChange: tmp7[1], options: memo1.map((value) => ({ value, label: String(value) })) };
-  obj11.label = run(closure_15, { caption: "Name length (" + memo1 + " graphemes)", value: first2, onChange: tmp9[1], options: memo2.map((key) => ({ value: key.key, label: key.label })) });
-  items9[2] = run(require("TableRow").TableRow, obj11);
-  obj5.children = items9;
-  const items10 = [begin(require("TableRowGroup").TableRowGroup, obj5), , , ];
-  const obj13 = { title: "Run", hasIcons: false, children: null };
-  const items11 = [run(require("TableRow").TableRow, { label: "Measure mount + layout", subLabel: "Mounts the batch and times until native layout completes.", arrow: true, disabled: !tmp18, onPress: callback1 }), run(require("FRAME_BUDGET_MS").ScrollBenchmark, { onResult: callback, subLabel: "Records frame times while you scroll the batch below." })];
-  obj13.children = items11;
-  items10[1] = begin(require("TableRowGroup").TableRowGroup, obj13);
+  const Stack3 = tmp2(tmp3[17]).Stack;
+  items8[1] = run(Stack3, obj8);
+  items9 = [run(TableRow, obj6), , ];
+  const obj9 = { label: run(closure_15, obj10) };
+  obj10 = {
+    caption: "Rows",
+    value: first1,
+    onChange: tmp9,
+    options: memo1.map((value) => {
+      const obj = { value, label: String(value) };
+      return obj;
+    })
+  };
+  const TableRow2 = tmp2(tmp3[23]).TableRow;
+  items9[1] = run(TableRow2, obj9);
+  const obj11 = { label: run(closure_15, obj12) };
+  obj12 = { caption: "Name length (" + memo1 + " graphemes)", value: first2, onChange: tmp12, options: memo2.map((key) => ({ value: key.key, label: key.label })) };
+  const TableRow3 = tmp2(tmp3[23]).TableRow;
+  items9[2] = run(TableRow3, obj11);
+  items10 = [begin(TableRowGroup, obj5), , , ];
+  const obj13 = { title: "Run", hasIcons: false, children: items11 };
+  const TableRowGroup2 = tmp2(tmp3[24]).TableRowGroup;
+  items11 = [, ];
+  const obj14 = { label: "Measure mount + layout", subLabel: "Mounts the batch and times until native layout completes.", arrow: true, disabled: !tmp20, onPress: callback1 };
+  items11[0] = run(require("TableRow").TableRow, obj14);
+  items11[1] = run(require("FRAME_BUDGET_MS").ScrollBenchmark, { onResult: callback, subLabel: "Records frame times while you scroll the batch below." });
+  items10[1] = begin(TableRowGroup2, obj13);
   items10[2] = run(require("FRAME_BUDGET_MS").BenchmarkResultsList, { results, onClear: clear });
-  let tmp19Result = null;
+  let tmp21Result = null;
+  const tmp22 = first2;
+  tmp23 = begin;
   if (null != run) {
-    tmp19Result = null;
+    tmp21Result = null;
     if (null != stateFromStores) {
-      const obj15 = { value: { overrideSettings: true }, children: null };
-      const obj16 = {
+      const obj15 = { value: { overrideSettings: true }, children: run(MountMeasure, obj16, run.batchKey) };
+      const Provider = tmp2(tmp3[25]).DisplayNameStylesContext.Provider;
+      const _Array = Array;
+      obj16 = {
         batchKey: run.batchKey,
-        onCancel: mountTimer.cancel,
+        onCancel: cancel,
         onMeasure(arg0) {
               return closure_16(arg0, run.params);
             },
-        children: null
+        children: Array.from(obj17, (arg0, id) => {
+              let sum;
+              const name = run.params.name;
+              const obj = { userId: stateFromStores, effect: run.params.effects[id % run.params.effects.length], userName: sum, style: closure_0.batchRow };
+              const length = String(Math.max(run.params.rowCount - 1, 0)).length;
+              const StringResult = String(id);
+              const padStartResult = StringResult.padStart(length, "0");
+              const obj3 = _mod10640;
+              const splitGraphemesResult = obj3.splitGraphemes(name);
+              sum = padStartResult;
+              if (splitGraphemesResult.length > length) {
+                const substr = splitGraphemesResult.slice(0, splitGraphemesResult.length - length);
+                sum = substr.join("") + padStartResult;
+              }
+              return metroImportAll(closure_16, obj, id);
+            })
       };
-      const _Array = Array;
-      const obj17 = { length: run.params.rowCount };
-      obj16.children = Array.from(obj17, (arg0, arg1) => {
-        const obj = { userId: stateFromStores, effect: run.params.effects[arg1 % run.params.effects.length], userName: null, style: null };
-        const length = String(Math.max(run.params.rowCount - 1, 0)).length;
-        const padStartResult = String(arg1).padStart(length, "0");
-        const StringResult = String(arg1);
-        const splitGraphemesResult = _mod10640.splitGraphemes(run.params.name);
-        let sum = padStartResult;
-        if (splitGraphemesResult.length > length) {
-          const substr = splitGraphemesResult.slice(0, splitGraphemesResult.length - length);
-          sum = substr.join("") + padStartResult;
-        }
-        obj.userName = sum;
-        obj.style = closure_0.batchRow;
-        return closure_2_8(closure_16, obj, arg1);
-      });
-      obj15.children = tmp19(tmp2(tmp3[21]).MountMeasure, obj16, run.batchKey);
-      tmp19Result = tmp19(tmp2(tmp3[25]).DisplayNameStylesContext.Provider, obj15);
+      obj17 = { length: run.params.rowCount };
+      MountMeasure = tmp2(tmp3[21]).MountMeasure;
+      tmp21Result = tmp21(Provider, obj15);
     }
   }
-  items10[3] = tmp19Result;
-  obj4.children = tmp21(require("Stack/Stack").Stack, { spacing: 16, children: items10 });
-  return run(tmp20, obj4);
+  items10[3] = tmp21Result;
+  return run(tmp22, obj4);
 });
+const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsDisplayNameEffectsBenchmarkScreen.tsx");
+
+export default tmp5;

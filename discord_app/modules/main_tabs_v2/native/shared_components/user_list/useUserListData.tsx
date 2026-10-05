@@ -3,38 +3,40 @@
 // Module 10594 (useUserListData)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import util from "util" /* 1126 */;
+import Constants from "Constants" /* 1085 */;
+import intl6 from "intl" /* 1126 */;
 import GuildUtilsDefault from "GuildUtils" /* 5704 */;
 import UserSearchItemsDefault from "UserSearchItems" /* 7141 */;
 import UserSearchUtils from "UserSearchUtils" /* 7145 */;
 import UserSearchManagerDefault from "UserSearchManager" /* 9500 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
 import FriendSuggestionStore from "FriendSuggestionStore" /* 7146 */;
 import GameRelationshipStore from "GameRelationshipStore" /* 7142 */;
 import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7143 */;
 import UserRecord from "UserRecord" /* 1391 */;
 import RelationshipStore from "RelationshipStore" /* 4519 */;
 import UserStore from "UserStore" /* 1377 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+const require = globalThis.__r;
+let _require, otherUserId, results;
+
 function _toPropertyKey(obj) {
   let StringResult = obj;
   if (typeof obj === "object") {
     StringResult = obj;
-    if (obj) {
+    if (StringResult) {
       const _Symbol = Symbol;
       if (undefined !== obj[Symbol.toPrimitive]) {
-        const call = tmp3.call;
-        if (typeof call === "unknown") {
-          let callResult = tmp3("string");
-        } else {
-          callResult = call(obj, "string");
-        }
+        const callResult = obj[Symbol.toPrimitive].call(obj[Symbol.toPrimitive], "string");
         StringResult = callResult;
         if (typeof callResult === "object") {
           const _TypeError = TypeError;
+          const self = this;
+          const self2 = this;
           const typeError = new TypeError("@@toPrimitive must return a primitive value.");
           throw typeError;
         }
@@ -51,15 +53,15 @@ function _toPropertyKey(obj) {
   return text;
 }
 function isMatch(arg0, arg1, arg2) {
-  closure_0 = arg1;
+  let closure_0 = arg1;
   let obj = arg2;
   if (arg2 == null) {
     obj = {};
   }
   const exact = obj.exact;
-  closure_1 = undefined !== exact && exact;
+  let closure_1 = undefined !== exact && exact;
   const contains = obj.contains;
-  closure_2 = undefined !== contains && contains;
+  let closure_2 = undefined !== contains && contains;
   function _loop(arr) {
     closure_0 = arr;
     if (arr.some((item) => {
@@ -71,33 +73,59 @@ function isMatch(arg0, arg1, arg2) {
         const joined = closure_0.join(" ");
         let startsWithResult = joined.startsWith(closure_0);
         if (!startsWithResult) {
-          let hasItem = closure_2;
-          if (closure_2) {
-            hasItem = joined.includes(closure_0);
-          }
-          startsWithResult = hasItem;
+          startsWithResult = closure_2 && joined.includes(closure_0);
+          closure_2 && joined.includes(closure_0);
         }
         return startsWithResult;
       }
     })) {
-      const obj = { v };
-      return obj;
+      return { v };
     }
   }
   const entries = Object.entries(arg0);
   const obj2 = entries[Symbol.iterator]();
   while (obj2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);
-    let v = tmp5[0];
+    let closure_3 = tmp5[0];
     let _loopResult = _loop(tmp5[1]);
-    if (_loopResult) {
+    let tmp7 = _loopResult;
+    if (tmp7) {
+      let v = _loopResult.v;
       obj2.return();
-      return _loopResult.v;
+      return v;
     }
   }
   return null;
 }
 function parseUserSearchResults(affinitySuggestionsLimit) {
+  let AffinitySuggestions;
+  let FriendRequests;
+  let FriendRequestsIncoming;
+  let FriendRequestsOutgoing;
+  let FriendRequestsSpam;
+  let FriendSuggestions;
+  let Friends;
+  let GuildMembers;
+  let data;
+  let excludeCurrentUser;
+  let intl;
+  let intl2;
+  let intl3;
+  let intl4;
+  let intl5;
+  let items11;
+  let obj5;
+  let obj7;
+  let valueResult2;
+  let withAffinitySuggestions;
+  let withFriendRequests;
+  let withFriendRequestsIncoming;
+  let withFriendRequestsOutgoing;
+  let withFriendRequestsSpam;
+  let withFriendSuggestions;
+  let withFriends;
+  let withGuildMembers;
+  const f104636 = (items) => items.items;
   ({ data, withFriends, excludeCurrentUser } = affinitySuggestionsLimit);
   ({ withGuildMembers, withAffinitySuggestions, withFriendSuggestions, withFriendRequests, withFriendRequestsIncoming, withFriendRequestsOutgoing, withFriendRequestsSpam } = affinitySuggestionsLimit);
   if (excludeCurrentUser === undefined) {
@@ -146,6 +174,7 @@ function parseUserSearchResults(affinitySuggestionsLimit) {
     items7 = [];
   }
   const items8 = [AffinitySuggestions, FriendRequests, FriendRequestsIncoming, FriendRequestsOutgoing, FriendRequestsSpam, FriendSuggestions, Friends, GuildMembers];
+  const tmp2 = _objectWithoutProperties(data, items8.map(_toPropertyKey));
   const currentUser = UserStore.getCurrentUser();
   id = undefined;
   if (currentUser != null) {
@@ -156,35 +185,32 @@ function parseUserSearchResults(affinitySuggestionsLimit) {
     found = items7.filter((user) => user.user.id !== id);
   }
   if (withFriends) {
-    const mapped = _modDef12(tmp).map((items, title) => ({ title, items }));
-    const arr12 = _modDef12(tmp);
-    let items11 = mapped.sortBy((title) => title.title).value();
+    const arr12 = _modDef12(tmp2);
+    const mapped = arr12.map((items, title) => ({ title, items }));
     const iter = mapped.sortBy((title) => title.title);
+    items11 = iter.value();
   } else {
     items11 = [];
   }
-  tmp = _objectWithoutProperties(data, items8.map(_toPropertyKey));
-  let items9 = [{ title: null, items: items11.flatMap((items) => items.items) }];
-  const obj2 = { title: null, items: null };
-  const intl = util.intl;
-  obj2.title = intl.string(util.t.HbJ7eD);
+  let items9 = [{ title: null, items: items11.flatMap(f104636) }];
+  const obj = { title: null, items: items11.flatMap(f104636) };
+  const obj2 = { title: intl.string(intl6.t.HbJ7eD), items: valueResult2 };
+  intl = intl6.intl;
   if (withAffinitySuggestions) {
     const obj4 = _modDef12(items);
-    const sortByResult = _modDef12(items).sortBy((affinity) => -affinity.affinity);
-    let valueResult2 = _modDef12(items).sortBy((affinity) => -affinity.affinity).slice(0, num).value();
-    const iter2 = _modDef12(items).sortBy((affinity) => -affinity.affinity).slice(0, num);
+    const sortByResult = obj4.sortBy((affinity) => -affinity.affinity);
+    const iter2 = sortByResult.slice(0, num);
+    valueResult2 = iter2.value();
   } else {
     valueResult2 = [];
   }
-  obj2.items = valueResult2;
   const items10 = [obj2, , , , , , , ];
-  const obj3 = { title: null, items: null };
-  const intl2 = util.intl;
-  obj3.title = intl2.formatToPlainString(util.t.zsVtft, { pendingRequestNumber: items1.length });
+  const obj3 = { title: intl2.formatToPlainString(intl6.t.zsVtft, obj5), items: items1 };
+  intl2 = intl6.intl;
+  obj5 = { pendingRequestNumber: items1.length };
   if (!withFriendRequests) {
     items1 = [];
   }
-  obj3.items = items1;
   items10[1] = obj3;
   if (!withFriendRequestsIncoming) {
     items2 = [];
@@ -198,54 +224,51 @@ function parseUserSearchResults(affinitySuggestionsLimit) {
     items4 = [];
   }
   items10[4] = { title: null, items: items4 };
-  const obj6 = { title: null, items: null };
-  const intl3 = util.intl;
-  obj6.title = intl3.formatToPlainString(util.t["DYMZ/p"], { count: items5.length });
+  const obj6 = { title: intl3.formatToPlainString(intl6.t["DYMZ/p"], obj7), items: items5 };
+  intl3 = intl6.intl;
+  obj7 = { count: items5.length };
   if (!withFriendSuggestions) {
     items5 = [];
   }
-  obj6.items = items5;
   items10[5] = obj6;
-  const obj8 = { title: null, items: null };
-  const intl4 = util.intl;
-  obj8.title = intl4.string(util.t.TdEu5X);
+  const obj8 = { title: intl4.string(intl6.t.TdEu5X), items: items6 };
+  intl4 = intl6.intl;
   if (!withFriends) {
     items6 = [];
   }
-  obj8.items = items6;
   items10[6] = obj8;
-  const obj9 = { title: null, items: null };
-  const intl5 = util.intl;
-  obj9.title = intl5.string(util.t.y29JXs);
+  const obj9 = { title: intl5.string(intl6.t.y29JXs), items: found };
+  intl5 = intl6.intl;
   if (!withGuildMembers) {
     found = [];
   }
-  obj9.items = found;
   items10[7] = obj9;
   if (flag) {
     items9 = items11;
   }
-  HermesBuiltin.arraySpread(items9, 8);
+  HermesBuiltin.arraySpread(items10, items9, 8);
   return items10;
 }
-const RelationshipTypes = fn(1085).RelationshipTypes;
+const RelationshipTypes = Constants.RelationshipTypes;
 let items = [, , , ];
 ({ FRIEND: arr[0], SUGGESTION: arr[1], PENDING_INCOMING: arr[2], PENDING_OUTGOING: arr[3] } = RelationshipTypes);
 const set = new Set(items);
-let closure_16 = { AffinitySuggestions: "AFFINITY_SUGGESTIONS", Friends: "FRIENDS", FriendRequests: "FRIEND_REQUESTS", FriendRequestsIncoming: "FRIEND_REQUESTS_INCOMING", FriendRequestsOutgoing: "FRIEND_REQUESTS_OUTGOING", FriendRequestsSpam: "FRIEND_REQUESTS_SPAM", FriendSuggestions: "FRIEND_SUGGESTIONS", GuildMembers: "GUILD_MEMBERS" };
+const authStore3 = { AffinitySuggestions: "AFFINITY_SUGGESTIONS", Friends: "FRIENDS", FriendRequests: "FRIEND_REQUESTS", FriendRequestsIncoming: "FRIEND_REQUESTS_INCOMING", FriendRequestsOutgoing: "FRIEND_REQUESTS_OUTGOING", FriendRequestsSpam: "FRIEND_REQUESTS_SPAM", FriendSuggestions: "FRIEND_SUGGESTIONS", GuildMembers: "GUILD_MEMBERS" };
 class UserSearch {
   constructor(arg0) {
-    closure_0 = global;
-    flag = fn;
-    if (fn === undefined) {
+    let spam;
+    let closure_0 = arg0;
+    let flag = withGameFriends;
+    if (withGameFriends === undefined) {
       flag = false;
     }
-    obj = Object.create(new.target.prototype);
-    closure_0 = obj;
+    let obj = Object.create(new.target.prototype);
     obj.currentQuery = "";
     obj.affinities = {};
     obj.userSearchContext = null;
-    secondaryIndexMap = new closure_0(closure_2[10]).SecondaryIndexMap((arg0) => {
+    const secondaryIndexMap = new obj(4504).SecondaryIndexMap((arg0) => {
+      let names;
+      let type;
       ({ names, type } = arg0);
       const items = [];
       if (constants.PENDING_INCOMING === type) {
@@ -269,8 +292,10 @@ class UserSearch {
         const keys = Object.keys();
         if (keys !== undefined) {
           if (keys[tmp] !== undefined) {
-            items.push(names[tmp21][0].charAt(0).toLocaleUpperCase());
-            const charAtResult = names[tmp21][0].charAt(0);
+            const push2 = items.push;
+            const str = names[keys[tmp]][0];
+            const charAtResult = str.charAt(0);
+            push2(charAtResult.toLocaleUpperCase());
           }
         }
       }
@@ -280,7 +305,7 @@ class UserSearch {
       const keys = Object.keys();
       if (keys !== undefined) {
         if (keys[tmp] !== undefined) {
-          return names[tmp3][0];
+          return names[keys[tmp]][0];
         }
       }
       return "";
@@ -348,15 +373,13 @@ class UserSearch {
         }
       }
     };
-    obj.handleGuildMembersChunkBatch = function handleGuildMembersChunkBatch(arg0) {
+    obj.handleGuildMembersChunkBatch = function handleGuildMembersChunkBatch(chunks) {
+      chunks = chunks.chunks;
       let flag = false;
-      for (const item10007 of tmp) {
+      for (const item10007 of chunks) {
         let members = item10007.members;
         for (const item10013 of members) {
-          let updateUserResult = obj.updateUser(item10013.user.id);
-          if (!updateUserResult) {
-            updateUserResult = flag;
-          }
+          let updateUserResult = obj.updateUser(item10013.user.id) || flag;
           flag = updateUserResult;
           continue;
         }
@@ -370,6 +393,7 @@ class UserSearch {
       }
     };
     obj.handleUserAffinitiesUpdate = function handleUserAffinitiesUpdate(arg0) {
+      let affinities;
       let flag = arg0;
       if (arg0 === undefined) {
         flag = false;
@@ -392,312 +416,360 @@ class UserSearch {
       }
     };
     obj.withGameFriends = flag;
-    if (closure_1(closure_2[11]).shouldUseCache) {
-      result = obj.initializeUsersFromCache();
-      nextPromise = result.then(() => {
+    if (UserSearchItemsDefault.shouldUseCache) {
+      let result = obj.initializeUsersFromCache();
+      result.then(() => {
         let tmp;
-        if (obj != null) {
-          tmp = obj();
+        if (closure_0 != null) {
+          tmp = closure_0();
         }
         return tmp;
       });
     } else {
-      result1 = obj.initializeUsersFromStores();
+      const result1 = obj.initializeUsersFromStores();
     }
     return obj;
   }
-}
-const prototype = UserSearch.prototype;
-prototype["subscribe"] = function subscribe(onUpdate) {
-  const self = this;
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = true;
-  }
-  self.onUpdate = onUpdate;
-  let userSearchContext = null;
-  if (flag) {
-    userSearchContext = UserSearchManagerDefault.getUserSearchContext((results) => {
-      results = results.results;
-      let items;
-      if (items.currentQuery === results.query) {
-        items = [];
-        if (results.reduce((acc, id) => {
-          if (UserSearchItemsDefault.shouldUseCache) {
-            return false;
-          } else if (set.has(RelationshipStore.getRelationshipType(id.id))) {
-            return acc;
-          } else {
-            if (self.withGameFriends) {
-              if (GameRelationshipStore.getGameFriendsForUser(id.id).length > 0) {
-                return acc;
+  subscribe(onUpdate) {
+    const self = this;
+    let flag = arg1;
+    if (arg1 === undefined) {
+      flag = true;
+    }
+    self.onUpdate = onUpdate;
+    let userSearchContext = null;
+    if (flag) {
+      const obj = UserSearchManagerDefault;
+      userSearchContext = obj.getUserSearchContext((results) => {
+        results = results.results;
+        let items;
+        if (items.currentQuery === results.query) {
+          items = [];
+          let flag = false;
+          if (results.reduce((acc, id) => {
+            if (UserSearchItemsDefault.shouldUseCache) {
+              return false;
+            } else if (set.has(RelationshipStore.getRelationshipType(id.id))) {
+              return acc;
+            } else {
+              if (self.withGameFriends) {
+                if (GameRelationshipStore.getGameFriendsForUser(id.id).length > 0) {
+                  return acc;
+                }
               }
+              const value = self.getItem(id.id);
+              let flag = acc;
+              if (null != value) {
+                items.push(value);
+                flag = true;
+              }
+              return flag;
             }
-            value = self.getItem(id.id);
-            let flag = acc;
-            if (null != value) {
-              items.push(value);
-              flag = true;
+          }, false)) {
+            items.filteredGuildMembers = items;
+            const onUpdate = tmp.onUpdate;
+            if (onUpdate != null) {
+              onUpdate();
             }
-            return flag;
-          }
-        }, false)) {
-          tmp.filteredGuildMembers = items;
-          const onUpdate = tmp.onUpdate;
-          if (onUpdate != null) {
-            onUpdate();
           }
         }
-      }
-    }, 20);
-  }
-  self.userSearchContext = userSearchContext;
-  const subscription = DispatcherDefault.subscribe("POST_CONNECTION_OPEN", self.handlePostConnectionOpen);
-  const subscription1 = DispatcherDefault.subscribe("RELATIONSHIP_ADD", self.handleRelationship);
-  const subscription2 = DispatcherDefault.subscribe("RELATIONSHIP_REMOVE", self.handleRelationship);
-  const subscription3 = DispatcherDefault.subscribe("RELATIONSHIP_UPDATE", self.handleRelationship);
-  const subscription4 = DispatcherDefault.subscribe("GAME_RELATIONSHIP_ADD", self.handleGameRelationshipAdd);
-  const subscription5 = DispatcherDefault.subscribe("GAME_RELATIONSHIP_REMOVE", self.handleGameRelationshipRemove);
-  const subscription6 = DispatcherDefault.subscribe("FRIEND_SUGGESTION_CREATE", self.handleFriendSuggestionCreate);
-  const subscription7 = DispatcherDefault.subscribe("FRIEND_SUGGESTION_DELETE", self.handleFriendSuggestionDelete);
-  const subscription8 = DispatcherDefault.subscribe("GUILD_MEMBER_ADD", self.handleGuildMember);
-  const subscription9 = DispatcherDefault.subscribe("GUILD_MEMBER_UPDATE", self.handleGuildMember);
-  const subscription10 = DispatcherDefault.subscribe("GUILD_MEMBER_REMOVE", self.handleGuildMember);
-  const subscription11 = DispatcherDefault.subscribe("GUILD_MEMBERS_CHUNK_BATCH", self.handleGuildMembersChunkBatch);
-  UserAffinitiesV2Store.addChangeListener(self.handleUserAffinitiesUpdate);
-};
-prototype["unsubscribe"] = function unsubscribe() {
-  const self = this;
-  this.onUpdate = undefined;
-  const userSearchContext = this.userSearchContext;
-  if (userSearchContext != null) {
-    userSearchContext.destroy();
-  }
-  DispatcherDefault.unsubscribe("POST_CONNECTION_OPEN", self.handlePostConnectionOpen);
-  DispatcherDefault.unsubscribe("RELATIONSHIP_ADD", self.handleRelationship);
-  DispatcherDefault.unsubscribe("RELATIONSHIP_REMOVE", self.handleRelationship);
-  DispatcherDefault.unsubscribe("RELATIONSHIP_UPDATE", self.handleRelationship);
-  DispatcherDefault.unsubscribe("GAME_RELATIONSHIP_ADD", self.handleGameRelationshipAdd);
-  DispatcherDefault.unsubscribe("GAME_RELATIONSHIP_REMOVE", self.handleGameRelationshipRemove);
-  DispatcherDefault.unsubscribe("FRIEND_SUGGESTION_CREATE", self.handleFriendSuggestionCreate);
-  DispatcherDefault.unsubscribe("FRIEND_SUGGESTION_DELETE", self.handleFriendSuggestionDelete);
-  DispatcherDefault.unsubscribe("GUILD_MEMBER_ADD", self.handleGuildMember);
-  DispatcherDefault.unsubscribe("GUILD_MEMBER_UPDATE", self.handleGuildMember);
-  DispatcherDefault.unsubscribe("GUILD_MEMBER_REMOVE", self.handleGuildMember);
-  DispatcherDefault.unsubscribe("GUILD_MEMBERS_CHUNK_BATCH", self.handleGuildMembersChunkBatch);
-  UserAffinitiesV2Store.removeChangeListener(self.handleUserAffinitiesUpdate);
-};
-prototype["fetch"] = function fetch(toLocaleLowerCase, arg1) {
-  const self = this;
-  const cleanStringResult = UserSearchUtils.cleanString(toLocaleLowerCase);
-  if ("" === cleanStringResult) {
-    const userSearchContext2 = self.userSearchContext;
-    if (userSearchContext2 != null) {
-      userSearchContext2.clearQuery();
+      }, 20);
     }
-  } else {
-    if (arg1) {
-      const members = GuildUtilsDefault.requestMembers(null, cleanStringResult);
-    }
-    const userSearchContext = self.userSearchContext;
+    self.userSearchContext = userSearchContext;
+    const obj2 = DispatcherDefault;
+    const subscription = obj2.subscribe("POST_CONNECTION_OPEN", self.handlePostConnectionOpen);
+    const obj3 = DispatcherDefault;
+    const subscription1 = obj3.subscribe("RELATIONSHIP_ADD", self.handleRelationship);
+    const obj4 = DispatcherDefault;
+    const subscription2 = obj4.subscribe("RELATIONSHIP_REMOVE", self.handleRelationship);
+    const obj5 = DispatcherDefault;
+    const subscription3 = obj5.subscribe("RELATIONSHIP_UPDATE", self.handleRelationship);
+    const obj6 = DispatcherDefault;
+    const subscription4 = obj6.subscribe("GAME_RELATIONSHIP_ADD", self.handleGameRelationshipAdd);
+    const obj7 = DispatcherDefault;
+    const subscription5 = obj7.subscribe("GAME_RELATIONSHIP_REMOVE", self.handleGameRelationshipRemove);
+    const obj8 = DispatcherDefault;
+    const subscription6 = obj8.subscribe("FRIEND_SUGGESTION_CREATE", self.handleFriendSuggestionCreate);
+    const obj9 = DispatcherDefault;
+    const subscription7 = obj9.subscribe("FRIEND_SUGGESTION_DELETE", self.handleFriendSuggestionDelete);
+    const obj10 = DispatcherDefault;
+    const subscription8 = obj10.subscribe("GUILD_MEMBER_ADD", self.handleGuildMember);
+    const obj11 = DispatcherDefault;
+    const subscription9 = obj11.subscribe("GUILD_MEMBER_UPDATE", self.handleGuildMember);
+    const obj12 = DispatcherDefault;
+    const subscription10 = obj12.subscribe("GUILD_MEMBER_REMOVE", self.handleGuildMember);
+    const obj13 = DispatcherDefault;
+    const subscription11 = obj13.subscribe("GUILD_MEMBERS_CHUNK_BATCH", self.handleGuildMembersChunkBatch);
+    UserAffinitiesV2Store.addChangeListener(self.handleUserAffinitiesUpdate);
+  }
+  unsubscribe() {
+    const self = this;
+    this.onUpdate = undefined;
+    const userSearchContext = this.userSearchContext;
     if (userSearchContext != null) {
-      const obj3 = { query: cleanStringResult, boosters: self.affinities, boosterFallback: 0.002592 };
-      userSearchContext.setQuery(obj3);
+      userSearchContext.destroy();
     }
+    const obj = DispatcherDefault;
+    obj.unsubscribe("POST_CONNECTION_OPEN", self.handlePostConnectionOpen);
+    const obj2 = DispatcherDefault;
+    obj2.unsubscribe("RELATIONSHIP_ADD", self.handleRelationship);
+    const obj3 = DispatcherDefault;
+    obj3.unsubscribe("RELATIONSHIP_REMOVE", self.handleRelationship);
+    const obj4 = DispatcherDefault;
+    obj4.unsubscribe("RELATIONSHIP_UPDATE", self.handleRelationship);
+    const obj5 = DispatcherDefault;
+    obj5.unsubscribe("GAME_RELATIONSHIP_ADD", self.handleGameRelationshipAdd);
+    const obj6 = DispatcherDefault;
+    obj6.unsubscribe("GAME_RELATIONSHIP_REMOVE", self.handleGameRelationshipRemove);
+    const obj7 = DispatcherDefault;
+    obj7.unsubscribe("FRIEND_SUGGESTION_CREATE", self.handleFriendSuggestionCreate);
+    const obj8 = DispatcherDefault;
+    obj8.unsubscribe("FRIEND_SUGGESTION_DELETE", self.handleFriendSuggestionDelete);
+    const obj9 = DispatcherDefault;
+    obj9.unsubscribe("GUILD_MEMBER_ADD", self.handleGuildMember);
+    const obj10 = DispatcherDefault;
+    obj10.unsubscribe("GUILD_MEMBER_UPDATE", self.handleGuildMember);
+    const obj11 = DispatcherDefault;
+    obj11.unsubscribe("GUILD_MEMBER_REMOVE", self.handleGuildMember);
+    const obj12 = DispatcherDefault;
+    obj12.unsubscribe("GUILD_MEMBERS_CHUNK_BATCH", self.handleGuildMembersChunkBatch);
+    UserAffinitiesV2Store.removeChangeListener(self.handleUserAffinitiesUpdate);
   }
-};
-prototype["filter"] = function filter(toLocaleLowerCase) {
-  const self = this;
-  _require = toLocaleLowerCase;
-  const cleanStringResult = require("UserSearchUtils").cleanString(toLocaleLowerCase);
-  _require = cleanStringResult;
-  if (this.currentQuery === cleanStringResult) {
-    if ("" === self.currentQuery) {
-      const obj2 = {};
-      const indexMap2 = self.indexMap;
-      let merged = Object.assign(indexMap2.indexes());
-      const Friends = closure_16.Friends;
-      delete tmp[tmp2];
-      return obj2;
-    } else {
-      const obj3 = {};
-      const obj4 = self(12);
-      obj3[closure_16.Friends] = obj4.sortBy(self(12).uniqBy(self.filteredFriends, (user) => user.user.id), (names) => {
-        let num = 0;
-        if (null != isMatch(names.names, closure_0, { exact: true })) {
-          num = -1000;
-        }
-        return num;
-      }, (affinity) => -affinity.affinity);
-      const obj5 = self(12);
-      const obj6 = self(12);
-      obj3[closure_16.GuildMembers] = obj6.sortBy(self(12).uniqBy(self.filteredGuildMembers, (user) => user.user.id), (names) => {
-        let num = 0;
-        if (null != isMatch(names.names, closure_0, { exact: true })) {
-          num = -1000;
-        }
-        return num;
-      }, (affinity) => -affinity.affinity);
-      return obj3;
-    }
-  } else {
+  fetch(toLocaleLowerCase, arg1) {
+    const self = this;
+    const obj = UserSearchUtils;
+    const cleanStringResult = obj.cleanString(toLocaleLowerCase);
     if ("" === cleanStringResult) {
-      self.filteredFriends = null;
-      self.filteredGuildMembers = null;
+      const userSearchContext2 = self.userSearchContext;
+      if (userSearchContext2 != null) {
+        userSearchContext2.clearQuery();
+      }
     } else {
-      self.filteredFriends = [];
-      const indexMap = self.indexMap;
-      const values = indexMap.values(closure_16.Friends);
-      const item = values.forEach((names) => {
-        const tmp = isMatch(names.names, closure_0, { contains: true });
-        if (null != tmp) {
-          const filteredFriends = self.filteredFriends;
-          if (filteredFriends != null) {
-            const obj = {};
-            const merged = Object.assign(names);
-            obj.firstMatch = tmp;
-            filteredFriends.push(obj);
-          }
-        }
-      });
+      const tmp3 = arg1;
+      if (tmp3) {
+        const obj2 = GuildUtilsDefault;
+        const members = obj2.requestMembers(null, cleanStringResult);
+      }
+      const userSearchContext = self.userSearchContext;
+      if (userSearchContext != null) {
+        const obj3 = { query: cleanStringResult, boosters: self.affinities, boosterFallback: 0.002592 };
+        userSearchContext.setQuery(obj3);
+      }
     }
-    self.currentQuery = cleanStringResult;
   }
-  let obj = require("UserSearchUtils");
-};
-prototype["initializeUsersFromStores"] = function initializeUsersFromStores() {
-  const self = this;
-  const mutableRelationships = RelationshipStore.getMutableRelationships();
-  const keys = mutableRelationships.keys();
-  for (const item10010 of keys) {
-    let updateUserResult = self.updateUser(item10010);
-    continue;
+  filter(toLocaleLowerCase) {
+    const self = this;
+    _require = toLocaleLowerCase;
+    let obj = require("UserSearchUtils");
+    const cleanStringResult = obj.cleanString(toLocaleLowerCase);
+    _require = cleanStringResult;
+    if (this.currentQuery !== cleanStringResult) {
+      if ("" === cleanStringResult) {
+        self.filteredFriends = null;
+        self.filteredGuildMembers = null;
+      } else {
+        self.filteredFriends = [];
+        const indexMap = self.indexMap;
+        const values = indexMap.values(closure_16.Friends);
+        const item = values.forEach((names) => {
+          const tmp = isMatch(names.names, toLocaleLowerCase, { contains: true });
+          if (null != tmp) {
+            const filteredFriends = self.filteredFriends;
+            if (filteredFriends != null) {
+              const push = filteredFriends.push;
+              const obj = { firstMatch: tmp };
+              const merged = Object.assign(names);
+              push(obj);
+            }
+          }
+        });
+      }
+      self.currentQuery = cleanStringResult;
+    }
+    if ("" === self.currentQuery) {
+      const indexMap2 = self.indexMap;
+      const obj3 = {};
+      let merged = Object.assign(indexMap2.indexes());
+      delete obj2[closure_16.Friends];
+      return obj3;
+    } else {
+      const obj7 = {};
+      const Friends = closure_16.Friends;
+      const sortBy = self(12).sortBy;
+      self(12);
+      const obj4 = self(12);
+      obj7[Friends] = sortBy(obj4.uniqBy(self.filteredFriends, (user) => user.user.id), (names) => {
+        let num = 0;
+        if (null != isMatch(names.names, toLocaleLowerCase, { exact: true })) {
+          num = -1000;
+        }
+        return num;
+      }, (affinity) => -affinity.affinity);
+      const GuildMembers = closure_16.GuildMembers;
+      const sortBy2 = self(12).sortBy;
+      self(12);
+      const obj5 = self(12);
+      obj7[GuildMembers] = sortBy2(obj5.uniqBy(self.filteredGuildMembers, (user) => user.user.id), (names) => {
+        let num = 0;
+        if (null != isMatch(names.names, toLocaleLowerCase, { exact: true })) {
+          num = -1000;
+        }
+        return num;
+      }, (affinity) => -affinity.affinity);
+      return obj7;
+    }
   }
-  if (self.withGameFriends) {
-    const gameRelationships = GameRelationshipStore.getGameRelationships();
-    const values = gameRelationships.values();
-    const item = values.forEach((id) => {
-      self.updateUser(id.id);
-    });
-  }
-  const suggestions = FriendSuggestionStore.getSuggestions();
-  for (const item10030 of suggestions) {
-    let updateUserResult1 = self.updateUser(item10030.user.id);
-    continue;
-  }
-  const result = self.handleUserAffinitiesUpdate(true);
-};
-prototype["initializeUsersFromCache"] = function initializeUsersFromCache() {
-  const self = this;
-  const all = UserSearchItemsDefault.getAll();
-  return all.then((result) => {
-    while (tmp !== undefined) {
-      let updateUserCachedResult = self.updateUserCached(tmp2);
+  initializeUsersFromStores() {
+    const self = this;
+    const mutableRelationships = RelationshipStore.getMutableRelationships();
+    const keys = mutableRelationships.keys();
+    for (const item10010 of keys) {
+      let updateUserResult = self.updateUser(item10010);
       continue;
     }
-    tmp = result[Symbol.iterator]();
-  });
-};
-prototype["updateUser"] = function updateUser(id) {
-  if (UserSearchItemsDefault.shouldUseCache) {
-    return false;
-  } else {
+    if (self.withGameFriends) {
+      const gameRelationships = GameRelationshipStore.getGameRelationships();
+      const values = gameRelationships.values();
+      const item = values.forEach((id) => {
+        self.updateUser(id.id);
+      });
+    }
+    const suggestions = FriendSuggestionStore.getSuggestions();
+    for (const item10030 of suggestions) {
+      let updateUserResult1 = self.updateUser(item10030.user.id);
+      continue;
+    }
+    const result = self.handleUserAffinitiesUpdate(true);
+  }
+  initializeUsersFromCache() {
     const self = this;
-    if (!this.withGameFriends) {
-      if (!set.has(obj.getRelationshipType(id))) {
-        const indexMap = self.indexMap;
-        return indexMap.delete(id);
+    const obj = UserSearchItemsDefault;
+    const all = obj.getAll();
+    return all.then((result) => {
+      const tmp = result[Symbol.iterator]();
+      while (tmp !== undefined) {
+        let updateUserCachedResult = self.updateUserCached(tmp2);
+        continue;
       }
-      obj = UserSearchUtils;
-    }
-    value = self.getItem(id);
-    if (null == value) {
-      const indexMap3 = self.indexMap;
-      let deleteResult = indexMap3.delete(id);
-    } else {
-      const indexMap2 = self.indexMap;
-      deleteResult = indexMap2.set(id, value);
-    }
-    return deleteResult;
+    });
   }
-};
-prototype["getItem"] = function getItem(id) {
-  const user = UserStore.getUser(id);
-  if (null == user) {
-    return null;
-  } else {
+  updateUser(id) {
+    if (UserSearchItemsDefault.shouldUseCache) {
+      return false;
+    } else {
+      let deleteResult;
+      const self = this;
+      if (!this.withGameFriends) {
+        const has = set.has;
+        const obj = UserSearchUtils;
+        if (!has(obj.getRelationshipType(id))) {
+          const indexMap = self.indexMap;
+          return indexMap.delete(id);
+        }
+      }
+      const value = self.getItem(id);
+      if (null == value) {
+        const indexMap3 = self.indexMap;
+        deleteResult = indexMap3.delete(id);
+      } else {
+        const indexMap2 = self.indexMap;
+        deleteResult = indexMap2.set(id, value);
+      }
+      return deleteResult;
+    }
+  }
+  getItem(id) {
+    let names;
+    let nick;
+    let num;
+    const user = UserStore.getUser(id);
+    if (null == user) {
+      return null;
+    } else {
+      const self = this;
+      const obj4 = UserSearchUtils;
+      const names1 = obj4.getNames(user);
+      ({ nick, names } = names1);
+      const obj = { user, names, affinity: num, firstMatch: nick };
+      num = this.affinities[user.id];
+      if (num == null) {
+        num = 0;
+      }
+      if ("" !== self.currentQuery) {
+        nick = isMatch(names, self.currentQuery, { contains: true });
+      }
+      const tmp12Result = UserSearchUtils;
+      const relationshipType = tmp12Result.getRelationshipType(user.id);
+      if (relationshipType !== RelationshipTypes.FRIEND) {
+        const gameFriendsForUser = GameRelationshipStore.getGameFriendsForUser(id);
+        if (gameFriendsForUser.length > 0) {
+          const obj2 = { type: gameFriendsForUser[0].type };
+          const merged = Object.assign(obj);
+          return obj2;
+        }
+      }
+      const obj3 = { type: relationshipType };
+      const merged1 = Object.assign(obj);
+      return obj3;
+    }
+  }
+  updateUserCached(type) {
     const self = this;
-    const names1 = UserSearchUtils.getNames(user);
-    ({ nick, names } = names1);
-    const obj = { user, names, affinity: null, firstMatch: null };
-    let num = this.affinities[user.id];
-    if (num == null) {
-      num = 0;
-    }
-    obj.affinity = num;
-    if ("" !== self.currentQuery) {
-      nick = isMatch(names, self.currentQuery, { contains: true });
-    }
-    obj.firstMatch = nick;
-    const relationshipType = UserSearchUtils.getRelationshipType(user.id);
-    if (relationshipType !== RelationshipTypes.FRIEND) {
-      const gameFriendsForUser = GameRelationshipStore.getGameFriendsForUser(id);
-      if (gameFriendsForUser.length > 0) {
-        const obj2 = {};
-        const merged = Object.assign(obj);
-        obj2.type = gameFriendsForUser[0].type;
-        return obj2;
+    if (set.has(type.type)) {
+      let deleteResult;
+      const itemCached = self.getItemCached(type);
+      if (null == itemCached) {
+        const indexMap3 = self.indexMap;
+        deleteResult = indexMap3.delete(type.id);
+      } else {
+        const indexMap2 = self.indexMap;
+        deleteResult = indexMap2.set(type.id, itemCached);
       }
-    }
-    const obj3 = {};
-    const merged1 = Object.assign(obj);
-    obj3.type = relationshipType;
-    return obj3;
-  }
-};
-prototype["updateUserCached"] = function updateUserCached(type) {
-  const self = this;
-  if (set.has(type.type)) {
-    const itemCached = self.getItemCached(type);
-    if (null == itemCached) {
-      const indexMap3 = self.indexMap;
-      let deleteResult = indexMap3.delete(type.id);
+      return deleteResult;
     } else {
-      const indexMap2 = self.indexMap;
-      deleteResult = indexMap2.set(type.id, itemCached);
+      const indexMap = self.indexMap;
+      return indexMap.delete(type.id);
     }
-    return deleteResult;
-  } else {
-    const indexMap = self.indexMap;
-    return indexMap.delete(type.id);
   }
-};
-prototype["getItemCached"] = function getItemCached(type) {
-  let names = type;
-  if (null == type) {
-    return null;
-  } else {
-    let self = this;
-    const obj = { type: names.type, user: null, names: null, affinity: null, firstMatch: null };
-    const tmp4 = new UserRecord(names.user);
-    obj.user = tmp4;
-    ({ names: obj.names, affinity: obj.affinity } = names);
-    if ("" !== this.currentQuery) {
-      names = names.names;
-      self = self.currentQuery;
-      let nick = isMatch(names, self);
-    } else {
-      nick = names.nick;
+  getItemCached(type) {
+    let nick;
+    let tmp3;
+    let tmp = null;
+    if (null != type) {
+      const obj = { type: type.type, user: tmp3, names: null, affinity: null, firstMatch: nick };
+      const self2 = this;
+      const self3 = this;
+      const self = this;
+      ({ names: obj.names, affinity: obj.affinity } = type);
+      tmp3 = new UserRecord(type.user);
+      if ("" !== this.currentQuery) {
+        nick = isMatch(type.names, self.currentQuery);
+      } else {
+        nick = type.nick;
+      }
+      tmp = obj;
     }
-    obj.firstMatch = nick;
+    return tmp;
   }
-};
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useUserListData.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserListData(query) {
-  const cResult = query(576).c(34);
+}
+const prototype = UserSearch.prototype;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUserListData(query) {
+  let affinitySuggestionsLimit;
+  let arr;
+  let excludeCurrentUser;
+  let first;
+  let tmp6;
+  let withAffinitySuggestions;
+  let withAlphabeticalSections;
+  let withFriendRequests;
+  let withFriendRequestsIncoming;
+  let withFriendRequestsOutgoing;
+  let withFriendRequestsSpam;
+  let withFriendSuggestions;
+  let withFriends;
+  let withGameFriends;
+  let obj = query(576);
+  const cResult = obj.c(34);
   query = query.query;
   const withGuildMembers = query.withGuildMembers;
   ({ withAffinitySuggestions, withFriends, withGameFriends, withFriendSuggestions, withFriendRequests, withFriendRequestsIncoming, withFriendRequestsOutgoing, withFriendRequestsSpam, excludeCurrentUser, affinitySuggestionsLimit, withAlphabeticalSections } = query);
@@ -705,70 +777,76 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserL
   if (undefined !== affinitySuggestionsLimit) {
     num = affinitySuggestionsLimit;
   }
-  const obj = query(576);
-  [tmp6, dependencyMap] = noop.useState(0);
+  [tmp6, dependencyMap] = react.useState(0);
+  _slicedToArray(react.useState(0), 2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function s() {
       return dependencyMap(Date.now());
     };
     cResult[0] = fn;
-    let first = fn;
+    first = fn;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== withGameFriends) {
-    const tmp12 = new UserSearch(first, withGameFriends);
+    const self = this;
+    const tmp11 = new UserSearch(first, withGameFriends);
     cResult[1] = withGameFriends;
-    cResult[2] = tmp12;
-    let arr = tmp12;
+    cResult[2] = tmp11;
+    arr = tmp11;
   } else {
     arr = cResult[2];
   }
   if (cResult[3] === query) {
+    let tmp12;
     if (cResult[4] === arr) {
-      let tmp13 = cResult[5];
+      tmp12 = cResult[5];
     }
-    if (cResult[6] === tmp13) {
+    if (cResult[6] === tmp12) {
+      let tmp14;
       if (cResult[7] === tmp6) {
-        let tmp15 = cResult[8];
+        tmp14 = cResult[8];
       }
-      const first1 = _slicedToArray(tmp15, 1)[0];
+      const first1 = _slicedToArray(tmp14, 1)[0];
       if (cResult[9] === arr) {
+        let tmp16;
+        let tmp17;
         if (cResult[10] === withGuildMembers) {
-          let tmp17 = cResult[11];
-          let tmp18 = cResult[12];
+          tmp16 = cResult[11];
+          tmp17 = cResult[12];
         }
-        const effect = noop.useEffect(tmp17, tmp18);
+        const effect = react.useEffect(tmp16, tmp17);
         if (cResult[13] === query) {
           if (cResult[14] === arr) {
+            let tmp19;
+            let tmp20;
             if (cResult[15] === withGuildMembers) {
-              let tmp20 = cResult[16];
-              let tmp21 = cResult[17];
+              tmp19 = cResult[16];
+              tmp20 = cResult[17];
             }
-            const effect1 = noop.useEffect(tmp20, tmp21);
+            const effect1 = react.useEffect(tmp19, tmp20);
             const _Symbol = Symbol;
             class T {
               constructor() {
-                response = closure_3.fetch(query, withGuildMembers);
-                return;
+                const response = arr.fetch(query, withGuildMembers);
               }
             }
             class O {
               constructor() {
                 obj = withGuildMembers(closure_2[16]);
-                closure_0 = obj.debounce(() => dependencyMap(Date.now()), 0);
+                closure_0 = obj.debounce(() => closure_1_2(Date.now()), 0);
                 subscription = closure_3.subscribe(() => {
                   closure_0();
                 }, withGuildMembers);
                 return () => arr.unsubscribe();
               }
             }
-            const effect2 = noop.useEffect(tmp24, tmp25);
+            const effect2 = react.useEffect(tmp23, tmp24);
             if (cResult[20] === num) {
               if (cResult[21] === first1) {
-                if (cResult[22] === tmp2) {
+                if (cResult[22] === (undefined !== excludeCurrentUser && excludeCurrentUser)) {
                   if (cResult[23] === withAffinitySuggestions) {
-                    if (cResult[24] === tmp3) {
+                    if (cResult[24] === (undefined === withAlphabeticalSections || withAlphabeticalSections)) {
                       if (cResult[25] === withFriendRequests) {
                         if (cResult[26] === withFriendRequestsIncoming) {
                           if (cResult[27] === withFriendRequestsOutgoing) {
@@ -776,10 +854,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserL
                               if (cResult[29] === withFriendSuggestions) {
                                 if (cResult[30] === withFriends) {
                                   if (cResult[31] === withGameFriends) {
+                                    let tmp26;
                                     if (cResult[32] === withGuildMembers) {
-                                      let tmp27 = cResult[33];
+                                      tmp26 = cResult[33];
                                     }
-                                    return tmp27;
+                                    return tmp26;
                                   }
                                 }
                               }
@@ -792,13 +871,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserL
                 }
               }
             }
-            const obj3 = { data: first1, withGuildMembers, withAffinitySuggestions, withFriends, withGameFriends, withFriendSuggestions, withFriendRequests, withFriendRequestsIncoming, withFriendRequestsOutgoing, withFriendRequestsSpam, excludeCurrentUser: tmp2, affinitySuggestionsLimit: num, withAlphabeticalSections: tmp3 };
-            const tmp29 = parseUserSearchResults(obj3);
+            const obj3 = { data: first1, withGuildMembers, withAffinitySuggestions, withFriends, withGameFriends, withFriendSuggestions, withFriendRequests, withFriendRequestsIncoming, withFriendRequestsOutgoing, withFriendRequestsSpam, excludeCurrentUser: undefined !== excludeCurrentUser && excludeCurrentUser, affinitySuggestionsLimit: num, withAlphabeticalSections: undefined === withAlphabeticalSections || withAlphabeticalSections };
+            const tmp28 = parseUserSearchResults(obj3);
             cResult[20] = num;
             cResult[21] = first1;
-            cResult[22] = tmp2;
+            cResult[22] = undefined !== excludeCurrentUser && excludeCurrentUser;
             cResult[23] = withAffinitySuggestions;
-            cResult[24] = tmp3;
+            cResult[24] = undefined === withAlphabeticalSections || withAlphabeticalSections;
             cResult[25] = withFriendRequests;
             cResult[26] = withFriendRequestsIncoming;
             cResult[27] = withFriendRequestsOutgoing;
@@ -807,41 +886,40 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserL
             cResult[30] = withFriends;
             cResult[31] = withGameFriends;
             cResult[32] = withGuildMembers;
-            cResult[33] = tmp29;
-            tmp27 = tmp29;
+            cResult[33] = tmp28;
+            tmp26 = tmp28;
           }
         }
         class T {
           constructor() {
-            response = closure_3.fetch(query, withGuildMembers);
-            return;
+            const response = arr.fetch(query, withGuildMembers);
           }
         }
         class O {
           constructor() {
             obj = withGuildMembers(closure_2[16]);
-            closure_0 = obj.debounce(() => dependencyMap(Date.now()), 0);
+            closure_0 = obj.debounce(() => closure_1_2(Date.now()), 0);
             subscription = closure_3.subscribe(() => {
               closure_0();
             }, withGuildMembers);
             return () => arr.unsubscribe();
           }
         }
-        tmp22[0] = arr;
-        tmp22[1] = query;
-        tmp22[2] = withGuildMembers;
+        tmp21[0] = arr;
+        tmp21[1] = query;
+        tmp21[2] = withGuildMembers;
         cResult[13] = query;
         cResult[14] = arr;
         cResult[15] = withGuildMembers;
         cResult[16] = T;
-        cResult[17] = tmp22;
-        tmp21 = tmp22;
-        tmp20 = T;
+        cResult[17] = tmp21;
+        tmp20 = tmp21;
+        tmp19 = T;
       }
       class O {
         constructor() {
           obj = withGuildMembers(closure_2[16]);
-          closure_0 = obj.debounce(() => dependencyMap(Date.now()), 0);
+          closure_0 = obj.debounce(() => closure_1_2(Date.now()), 0);
           subscription = closure_3.subscribe(() => {
             closure_0();
           }, withGuildMembers);
@@ -853,21 +931,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserL
       cResult[10] = withGuildMembers;
       cResult[11] = O;
       cResult[12] = items;
-      tmp18 = items;
-      tmp17 = O;
+      tmp17 = items;
+      tmp16 = O;
     }
     const items1 = [, ];
-    cResult[6] = tmp13;
+    cResult[6] = tmp12;
     cResult[7] = tmp6;
     cResult[8] = items1;
-    tmp15 = items1;
+    tmp14 = items1;
   }
   const found = arr.filter(query);
   cResult[3] = query;
   cResult[4] = arr;
   cResult[5] = found;
-  tmp13 = found;
-  const tmp5 = _slicedToArray(noop.useState(0), 2);
+  tmp12 = found;
 }) : (function useUserListData(query) {
   query = query.query;
   const withGuildMembers = query.withGuildMembers;
@@ -893,7 +970,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserL
   }
   const tmp = withGameFriends(withFriendSuggestions.useState(0), 2);
   const first = tmp[0];
-  closure_14 = tmp3;
+  let closure_14 = tmp3;
   let items = [tmp[1], withGameFriends];
   const memo = withFriendSuggestions.useMemo(() => new UserSearch(() => closure_1_14(Date.now()), withGameFriends), items);
   const items1 = [first, memo, query];
@@ -903,7 +980,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserL
   }, items1), 1)[0];
   const items2 = [memo, withGuildMembers];
   const effect = withFriendSuggestions.useEffect(() => {
-    closure_0 = withGuildMembers(withAffinitySuggestions[16]).debounce(() => closure_1_14(Date.now()), 0);
+    const obj = withGuildMembers(withAffinitySuggestions[16]);
+    let closure_0 = obj.debounce(() => closure_1_14(Date.now()), 0);
     const subscription = memo.subscribe(() => {
       closure_0();
     }, withGuildMembers);
@@ -914,10 +992,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserL
     const response = memo.fetch(query, withGuildMembers);
   }, items3);
   const effect2 = withFriendSuggestions.useEffect(() => {
-    const userAffinitiesV2 = query(withAffinitySuggestions[20]).fetchUserAffinitiesV2();
+    const obj = query(withAffinitySuggestions[20]);
+    const userAffinitiesV2 = obj.fetchUserAffinitiesV2();
   }, []);
   const items4 = [first1, withGuildMembers, withAffinitySuggestions, withFriends, withGameFriends, withFriendSuggestions, withFriendRequests, withFriendRequestsIncoming, withFriendRequestsOutgoing, withFriendRequestsSpam, flag, num, flag2];
-  return withFriendSuggestions.useMemo(() => parseUserSearchResults({ data: first1, withGuildMembers, withAffinitySuggestions, withFriends, withGameFriends, withFriendSuggestions, withFriendRequests, withFriendRequestsIncoming, withFriendRequestsOutgoing, withFriendRequestsSpam, excludeCurrentUser: flag, affinitySuggestionsLimit: num, withAlphabeticalSections: flag2 }), items4);
+  return withFriendSuggestions.useMemo(() => {
+    const obj = { data: first1, withGuildMembers, withAffinitySuggestions, withFriends, withGameFriends, withFriendSuggestions, withFriendRequests, withFriendRequestsIncoming, withFriendRequestsOutgoing, withFriendRequestsSpam, excludeCurrentUser: flag, affinitySuggestionsLimit: num, withAlphabeticalSections: flag2 };
+    return parseUserSearchResults(obj);
+  }, items4);
 });
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useUserListData.tsx");
+
+export default tmp3;
 export { UserSearch };
 export { parseUserSearchResults };

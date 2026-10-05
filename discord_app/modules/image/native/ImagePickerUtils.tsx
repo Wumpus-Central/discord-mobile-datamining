@@ -7,8 +7,10 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/image/native/ImagePickerUtils.tsx");
 
 export const isActionPickSupported = function isActionPickSupported() {
-  return !MetaQuestUtils.isMetaQuest();
+  const obj = MetaQuestUtils;
+  return !obj.isMetaQuest();
 };
 export const isImageCaptureIntentSupported = function isImageCaptureIntentSupported() {
-  return !MetaQuestUtils.isMetaQuest();
+  const obj = MetaQuestUtils;
+  return !obj.isMetaQuest();
 };

@@ -2,56 +2,61 @@
 
 // Module 6789 (GuildChannelSubscriptions)
 import _modDef12 from "module_12" /* 12 */;
-import privDefault from "priv" /* 1444 */;
+import LRUCacheDefault from "LRUCache" /* 1444 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("lib/guild/GuildChannelSubscriptions.tsx");
 class GuildChannelSubscriptions {
-  constructor(arg0) {
-    merged = Object.assign({ _subscriptions: null });
+  constructor(_onChange) {
+    const merged = Object.assign({ _subscriptions: null });
     merged[0] = {};
-    merged._onChange = global;
+    merged._onChange = _onChange;
     return merged;
   }
-}
-const prototype = GuildChannelSubscriptions.prototype;
-prototype["reset"] = function reset() {
-  this._subscriptions = {};
-};
-prototype["get"] = function get(arg0) {
-  const obj = {};
-  const item = this._get(arg0).forEach((item, index) => {
-    obj2[index] = item;
-  });
-  return obj;
-};
-prototype["_get"] = function _get(arg0) {
-  let tmp = this._subscriptions[arg0];
-  if (tmp == null) {
-    tmp = new privDefault({ max: 5 });
+  reset() {
+    this._subscriptions = {};
   }
-  return tmp;
-};
-prototype["clear"] = function clear(arg0) {
-  delete tmp2[tmp];
-};
-prototype["subscribe"] = function subscribe(arg0, arg1, arg2) {
-  const self = this;
-  const _getResult = this._get(arg0);
-  const isEqualResult = _modDef12.isEqual(_getResult.get(arg1), arg2);
-  let flag = !isEqualResult;
-  if (!isEqualResult) {
-    const result = _getResult.set(arg1, arg2);
-    self._subscriptions[arg0] = _getResult;
-    const obj2 = {};
+  get(arg0) {
+    const obj = {};
+    const _getResult = this._get(arg0);
     const item = _getResult.forEach((item, index) => {
       obj2[index] = item;
     });
-    self._onChange(arg0, obj2);
-    flag = true;
+    return obj;
   }
-  return flag;
-};
+  _get(arg0) {
+    let tmp = this._subscriptions[arg0];
+    if (tmp == null) {
+      const self = this;
+      const self2 = this;
+      tmp = new LRUCacheDefault({ max: 5 });
+    }
+    return tmp;
+  }
+  clear(arg0) {
+    delete this._subscriptions[arg0];
+  }
+  subscribe(arg0, arg1, arg2) {
+    const self = this;
+    const _getResult = this._get(arg0);
+    const obj = _modDef12;
+    let flag = !obj.isEqual(_getResult.get(arg1), arg2);
+    obj.isEqual(_getResult.get(arg1), arg2);
+    if (flag) {
+      const result = _getResult.set(arg1, arg2);
+      self._subscriptions[arg0] = _getResult;
+      const obj2 = {};
+      const _onChange = self._onChange;
+      const item = _getResult.forEach((item, index) => {
+        obj2[index] = item;
+      });
+      _onChange(arg0, obj2);
+      flag = true;
+    }
+    return flag;
+  }
+}
+const prototype = GuildChannelSubscriptions.prototype;
 const items = [[0, 99]];
 
 export default GuildChannelSubscriptions;

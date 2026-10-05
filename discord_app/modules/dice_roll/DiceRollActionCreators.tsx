@@ -7,5 +7,7 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/dice_roll/DiceRollActionCreators.tsx");
 
 export const startDiceRoll = function startDiceRoll(channelId, diceCount, diceSides) {
-  DispatcherDefault.dispatch({ type: "DICE_ROLL_START", channelId, diceCount, diceSides });
+  const obj = DispatcherDefault;
+  const obj2 = { type: "DICE_ROLL_START", channelId, diceCount, diceSides };
+  obj.dispatch(obj2);
 };

@@ -1,33 +1,34 @@
 // === Module 11686: ApplicationDirectoryCategoriesStore ===
 
 // Module 11686 (ApplicationDirectoryCategoriesStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
+import size from "module_2" /* 2 */;
 
 let categories = [];
 let closure_1 = null;
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class ApplicationDirectoryCategoriesStore extends Store {
+  getLastFetchTimeMs() {
+    return closure_1;
+  }
+  getCategories() {
+    return categories;
+  }
+  getCategory(arg0) {
+    let closure_0 = arg0;
+    return categories.find((id) => id.id === closure_0);
+  }
 }
 const prototype = ApplicationDirectoryCategoriesStore.prototype;
-prototype["getLastFetchTimeMs"] = function getLastFetchTimeMs() {
-  return closure_1;
-};
-prototype["getCategories"] = function getCategories() {
-  return categories;
-};
-prototype["getCategory"] = function getCategory(arg0) {
-  closure_0 = arg0;
-  return categories.find((id) => id.id === closure_0);
-};
 ApplicationDirectoryCategoriesStore.displayName = "ApplicationDirectoryCategoriesStore";
-const applicationDirectoryCategoriesStore = new ApplicationDirectoryCategoriesStore(DispatcherDefault, {
+const obj = {
   APPLICATION_DIRECTORY_FETCH_CATEGORIES_SUCCESS: function handleFetchAppDirectoryCategoriesSuccess(categories) {
     categories = categories.categories;
     closure_1 = Date.now();
   }
-});
-const size = fn(2);
+};
+const applicationDirectoryCategoriesStore = new ApplicationDirectoryCategoriesStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectoryCategoriesStore.tsx");
 
 export default applicationDirectoryCategoriesStore;

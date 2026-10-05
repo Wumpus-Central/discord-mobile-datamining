@@ -3,6 +3,7 @@
 // Module 4514 (PermissionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import Server from "Server" /* 1985 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 2107 */;
 import GuildRoleUtils from "GuildRoleUtils" /* 2110 */;
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4496 */;
 import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4515 */;
@@ -10,21 +11,34 @@ import AppChannelPermissions from "AppChannelPermissions" /* 4516 */;
 import ImpersonateStore from "ImpersonateStore" /* 2105 */;
 import LurkingStore from "LurkingStore" /* 4510 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4511 */;
+import ChannelRecord from "ChannelRecord" /* 2055 */;
+import GuildRecord from "GuildRecord" /* 2070 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildRoleStore from "GuildRoleStore" /* 2106 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import UserStore from "UserStore" /* 1377 */;
+import Constants from "Constants" /* 1085 */;
 import BigFlagUtils_mod from "BigFlagUtils" /* 1097 */;
-import apply from "module_12" /* 12 */;
+import module_12 from "module_12" /* 12 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+let c10;
+let c9;
+let closure_19;
+let closure_20;
+let closure_21;
+let closure_22;
+let metroImportAll;
+let metroImportDefault;
 function applyOverwrites(id, member, deserializeResult, overwrites) {
   let addResult = deserializeResult;
   if (null != overwrites[id]) {
-    const removeResult = BigFlagUtils.remove(deserializeResult, tmp.deny);
-    addResult = BigFlagUtils.add(removeResult, tmp.allow);
+    const obj = BigFlagUtils;
+    const removeResult = obj.remove(deserializeResult, overwrites[id].deny);
+    const obj2 = BigFlagUtils;
+    addResult = obj2.add(removeResult, tmp.allow);
   }
   let found1 = addResult;
   if (null != member) {
@@ -51,62 +65,70 @@ function applyOverwrites(id, member, deserializeResult, overwrites) {
         tmp18 = addResult1;
       } while (num < member.roles.length);
     }
-    const removeResult1 = BigFlagUtils.remove(addResult, tmp17);
-    const addResult3 = BigFlagUtils.add(removeResult1, tmp18);
+    const obj5 = BigFlagUtils;
+    const removeResult1 = obj5.remove(addResult, tmp17);
+    const obj6 = BigFlagUtils;
+    const addResult3 = obj6.add(removeResult1, tmp18);
     let addResult4 = addResult3;
     if (null != overwrites[member.userId]) {
       const tmp19Result = BigFlagUtils;
-      const removeResult2 = BigFlagUtils.remove(addResult3, tmp23.deny);
-      addResult4 = BigFlagUtils.add(removeResult2, tmp23.allow);
+      const removeResult2 = tmp19Result.remove(addResult3, overwrites[member.userId].deny);
       const tmp19Result5 = BigFlagUtils;
+      addResult4 = tmp19Result5.add(removeResult2, tmp23.allow);
     }
-    const hasItem = BigFlagUtils.has(addResult4, Permissions.ADMINISTRATOR);
     const tmp19Result6 = BigFlagUtils;
-    const result = AutomodPermissionUtils.hasAutomodQuarantinedProfile(member);
-    let tmp31 = result;
-    if (result) {
-      tmp31 = !hasItem;
-    }
+    const hasItem = tmp19Result6.has(addResult4, Permissions.ADMINISTRATOR);
+    const obj10 = AutomodPermissionUtils;
+    const result = obj10.hasAutomodQuarantinedProfile(member);
     let found = addResult4;
+    const tmp31 = result && !hasItem;
     if (tmp31) {
-      found = BigFlagUtils.filter(addResult4, closure_29);
       const tmp19Result7 = BigFlagUtils;
+      found = tmp19Result7.filter(addResult4, closure_29);
     }
-    const tmp28Result = CommunicationDisabledUtils;
     found1 = found;
+    const tmp28Result = CommunicationDisabledUtils;
+    const tmp34 = tmp28Result.isMemberCommunicationDisabled(member) && !hasItem;
     if (tmp34) {
-      found1 = BigFlagUtils.filter(found, closure_28);
       const tmp19Result8 = BigFlagUtils;
+      found1 = tmp19Result8.filter(found, closure_28);
     }
-    tmp34 = CommunicationDisabledUtils.isMemberCommunicationDisabled(member) && !hasItem;
   }
   return found1;
 }
-function computePermissionsForMember(excludeGuildPermissions) {
-  ({ member, guild, overwrites, roles, checkElevated } = excludeGuildPermissions);
+function computePermissionsForMember(userId) {
+  let checkElevated;
+  let guild;
+  let member;
+  let overwrites;
+  let roles;
+  ({ member, guild, overwrites, roles, checkElevated } = userId);
+  userId = userId.userId;
   if (checkElevated === undefined) {
     checkElevated = true;
   }
-  let flag = excludeGuildPermissions.excludeGuildPermissions;
+  let flag = userId.excludeGuildPermissions;
   if (flag === undefined) {
     flag = false;
   }
-  let lurkerPermissionsMask = excludeGuildPermissions.lurkerPermissionsMask;
+  let lurkerPermissionsMask = userId.lurkerPermissionsMask;
   if (lurkerPermissionsMask === undefined) {
     lurkerPermissionsMask = closure_26;
   }
   if (flag) {
     return applyOverwrites(guild.id, member, deserializeResult, overwrites);
   } else {
+    let unsafeMutableRoles;
+    let tmp29;
     if (null != roles) {
       const obj = {};
       const merged = Object.assign(GuildRoleStore.getUnsafeMutableRoles(guild.id));
       const merged1 = Object.assign(roles);
-      let unsafeMutableRoles = obj;
+      unsafeMutableRoles = obj;
     } else {
       unsafeMutableRoles = GuildRoleStore.getUnsafeMutableRoles(guild.id);
     }
-    const tmp11 = unsafeMutableRoles[options(undefined, guild)];
+    const tmp11 = unsafeMutableRoles[React4(undefined, guild)];
     const tmp12 = null != tmp11 ? tmp11.permissions : combineResult;
     let tmp13 = tmp12;
     if (null != member) {
@@ -127,8 +149,9 @@ function computePermissionsForMember(excludeGuildPermissions) {
         } while (num < member.roles.length);
       }
     }
+    const obj3 = BigFlagUtils;
     if (obj3.has(tmp13, Permissions.ADMINISTRATOR)) {
-      let tmp29 = applyResult;
+      tmp29 = applyResult;
     } else {
       tmp29 = applyOverwrites(guild.id, member, tmp24, overwrites);
     }
@@ -142,13 +165,13 @@ function computePermissionsForMember(excludeGuildPermissions) {
     }
     let found = tmp29;
     if (isLurkingResult) {
-      found = BigFlagUtils.filter(tmp29, lurkerPermissionsMask);
       const tmp21Result = BigFlagUtils;
+      found = tmp21Result.filter(tmp29, lurkerPermissionsMask);
     }
     let found1 = found;
     if (GuildMemberStore.isCurrentUserGuest(guild.id)) {
-      found1 = BigFlagUtils.filter(found, closure_27);
       const tmp21Result3 = BigFlagUtils;
+      found1 = tmp21Result3.filter(found, closure_27);
     }
     if (checkElevated === undefined) {
       checkElevated = true;
@@ -157,7 +180,7 @@ function computePermissionsForMember(excludeGuildPermissions) {
       checkElevated = guild.mfaLevel === constants.ELEVATED;
     }
     if (checkElevated) {
-      checkElevated = excludeGuildPermissions.userId === AuthenticationStore.getId();
+      checkElevated = userId === AuthenticationStore.getId();
     }
     let tmp39 = found1;
     if (checkElevated) {
@@ -168,8 +191,8 @@ function computePermissionsForMember(excludeGuildPermissions) {
       }
       let removeResult = found1;
       if (!mfaEnabled) {
-        removeResult = BigFlagUtils.remove(found1, guild_id);
         const tmp21Result4 = BigFlagUtils;
+        removeResult = tmp21Result4.remove(found1, closure_19);
       }
       tmp39 = removeResult;
     }
@@ -177,6 +200,11 @@ function computePermissionsForMember(excludeGuildPermissions) {
   }
 }
 function computePermissions(excludeGuildPermissions) {
+  let checkElevated;
+  let context;
+  let overwrites;
+  let roles;
+  let user;
   ({ user, context, overwrites, roles, checkElevated } = excludeGuildPermissions);
   if (checkElevated === undefined) {
     checkElevated = true;
@@ -188,14 +216,18 @@ function computePermissions(excludeGuildPermissions) {
   if (null == user) {
     return deserializeResult;
   } else {
+    let tmp4;
+    let tmp3;
+    let obj;
+    let tmp21;
     let id = user;
     if (typeof user !== "string") {
       id = user.id;
     }
-    if (context instanceof closure_1_8) {
+    if (context instanceof metroImportAll) {
       if (context.isScheduledForDeletion()) {
         return deserializeResult;
-      } else if (set.has(context.type)) {
+      } else if (metroImportDefault.has(context.type)) {
         const channel = ChannelStore.getChannel(context.parent_id);
         if (null != channel) {
           if (!channel.isScheduledForDeletion()) {
@@ -204,16 +236,15 @@ function computePermissions(excludeGuildPermissions) {
             if (currentUser != null) {
               id1 = currentUser.id;
             }
-            let hasJoinedResult = id === id1;
-            if (hasJoinedResult) {
-              hasJoinedResult = JoinedThreadsStore.hasJoined(context.id);
-            }
+            const hasJoinedResult = id === id1 && JoinedThreadsStore.hasJoined(context.id);
             const obj2 = { user, context: channel, overwrites, roles, checkElevated, excludeGuildPermissions: flag };
-            return applyThreadPermissions(context, computePermissions(obj2), hasJoinedResult, GuildMemberStore.isCurrentUserGuest(context.guild_id));
+            const tmp38 = computePermissions(obj2);
+            return applyThreadPermissions(context, tmp38, hasJoinedResult, GuildMemberStore.isCurrentUserGuest(context.guild_id));
           }
         }
         return deserializeResult;
       } else {
+        let permissionOverwrites;
         let lurkerPermissionsAllowList = context.computeLurkerPermissionsAllowList();
         if (lurkerPermissionsAllowList == null) {
           lurkerPermissionsAllowList = closure_26;
@@ -222,18 +253,18 @@ function computePermissions(excludeGuildPermissions) {
           const obj4 = {};
           const merged = Object.assign(context.permissionOverwrites);
           const merged1 = Object.assign(overwrites);
-          let permissionOverwrites = obj4;
+          permissionOverwrites = obj4;
         } else {
           permissionOverwrites = context.permissionOverwrites;
         }
         const guildId = context.getGuildId();
-        guild = null;
+        let guild = null;
         if (null != guildId) {
           guild = GuildStore.getGuild(guildId);
         }
-        let tmp4 = guild;
-        let tmp3 = lurkerPermissionsAllowList;
-        let obj = permissionOverwrites;
+        tmp4 = guild;
+        tmp3 = lurkerPermissionsAllowList;
+        obj = permissionOverwrites;
       }
     } else {
       obj = overwrites;
@@ -244,7 +275,7 @@ function computePermissions(excludeGuildPermissions) {
       tmp4 = context;
     }
     if (null == tmp4) {
-      let tmp21 = deserializeResult;
+      tmp21 = deserializeResult;
     } else {
       const currentUser1 = UserStore.getCurrentUser();
       let id2;
@@ -252,7 +283,7 @@ function computePermissions(excludeGuildPermissions) {
         id2 = currentUser1.id;
       }
       if (id !== id2) {
-        if (v65535(tmp4, id)) {
+        if (authStore(tmp4, id)) {
           let flag2 = checkElevated;
           if (checkElevated === undefined) {
             flag2 = true;
@@ -272,7 +303,8 @@ function computePermissions(excludeGuildPermissions) {
             }
             let removeResult = applyResult;
             if (!mfaEnabled) {
-              removeResult = BigFlagUtils.remove(applyResult, guild_id);
+              const obj3 = BigFlagUtils;
+              removeResult = obj3.remove(applyResult, closure_19);
             }
             tmp21 = removeResult;
           }
@@ -286,116 +318,135 @@ function computePermissions(excludeGuildPermissions) {
 }
 function applyThreadPermissions(context, permissions, hasJoinedResult, GuildMemberStore) {
   if (context.type === constants2.MEDIA_THREAD) {
-    combineResult = BigFlagUtils.combine(Permissions.READ_MESSAGE_HISTORY, Permissions.VIEW_CHANNEL);
+    const obj7 = BigFlagUtils;
+    combineResult = obj7.combine(Permissions.READ_MESSAGE_HISTORY, Permissions.VIEW_CHANNEL);
   } else {
+    let removeResult1;
     if (context.type === tmp.PRIVATE_THREAD) {
-      if (!hasJoinedResult) {
-        if (!GuildMemberStore) {
+      const tmp2 = hasJoinedResult;
+      if (!tmp2) {
+        const tmp3 = GuildMemberStore;
+        if (!tmp3) {
+          const obj = BigFlagUtils;
           if (!obj.has(permissions, Permissions.MANAGE_THREADS)) {
             combineResult = deserializeResult;
           }
-          obj = BigFlagUtils;
         }
       }
     }
-    let tmp8 = importAll;
-    let combine = dependencyMap;
-    let SEND_MESSAGES = Permissions;
-    if (!obj2.has(permissions, Permissions.SEND_MESSAGES_IN_THREADS)) {
-      tmp8(1097).remove(permissions, SEND_MESSAGES.SEND_MESSAGES);
-      const tmp8Result = tmp8(1097);
-    }
-    if (context.isLockedThread()) {
-      if (!tmp8Result3.has(permissions, SEND_MESSAGES.MANAGE_THREADS)) {
-        let removeResult1 = tmp8(1097).remove(permissions, SEND_MESSAGES.SEND_MESSAGES);
-        const tmp8Result4 = tmp8(1097);
+    const obj2 = BigFlagUtils;
+    if (obj2.has(permissions, Permissions.SEND_MESSAGES_IN_THREADS)) {
+      if (context.isLockedThread()) {
+        let removeResult;
+        const tmp8Result = BigFlagUtils;
+        if (!tmp8Result.has(permissions, Permissions.MANAGE_THREADS)) {
+          const tmp8Result4 = BigFlagUtils;
+          removeResult = tmp8Result4.remove(permissions, Permissions.SEND_MESSAGES);
+        }
+        removeResult1 = removeResult;
       }
-      tmp8Result3 = tmp8(1097);
+      const tmp8Result5 = BigFlagUtils;
+      removeResult = tmp8Result5.combine(permissions, Permissions.SEND_MESSAGES);
+    } else {
+      const tmp8Result6 = BigFlagUtils;
+      removeResult1 = tmp8Result6.remove(permissions, Permissions.SEND_MESSAGES);
     }
-    tmp8 = tmp8(1097);
-    combine = tmp8.combine;
-    SEND_MESSAGES = SEND_MESSAGES.SEND_MESSAGES;
-    removeResult1 = combine(permissions, SEND_MESSAGES);
-    obj2 = BigFlagUtils;
+    combineResult = removeResult1;
   }
   return combineResult;
 }
 function getSyncedPermissionOverwrites(guild_id, appChannelBotUserId) {
+  let add;
+  let allow;
+  let deny;
+  let remove;
   guild_id = guild_id.guild_id;
   const obj = {};
   const merged = Object.assign(guild_id.permissionOverwrites);
+  const tmp2 = null != guild_id && null == obj[guild_id];
   if (tmp2) {
+    obj[guild_id] = { id: guild_id, type: Server.PermissionOverwriteType.ROLE, allow: deserializeResult, deny: deserializeResult };
     const obj2 = { id: guild_id, type: Server.PermissionOverwriteType.ROLE, allow: deserializeResult, deny: deserializeResult };
-    obj[guild_id] = obj2;
   }
   if (null != appChannelBotUserId) {
-    const obj3 = { id: appChannelBotUserId, type: Server.PermissionOverwriteType.MEMBER, allow: null, deny: null };
-    let allow;
+    const obj3 = { id: appChannelBotUserId, type: Server.PermissionOverwriteType.MEMBER, allow: add(allow, AppChannelPermissions.APP_CHANNEL_MINIMUM_BOT_PERMISSIONS), deny: remove(deny, AppChannelPermissions.APP_CHANNEL_MINIMUM_BOT_PERMISSIONS) };
+    allow = undefined;
+    add = BigFlagUtils.add;
+    BigFlagUtils;
     if (obj[appChannelBotUserId] != null) {
-      allow = tmp8.allow;
+      allow = tmp9.allow;
     }
     if (allow == null) {
       allow = deserializeResult;
     }
-    obj3.allow = BigFlagUtils.add(allow, AppChannelPermissions.APP_CHANNEL_MINIMUM_BOT_PERMISSIONS);
-    let deny;
+    deny = undefined;
+    remove = BigFlagUtils.remove;
+    BigFlagUtils;
     if (obj[appChannelBotUserId] != null) {
-      deny = tmp8.deny;
+      deny = tmp9.deny;
     }
     if (deny == null) {
       deny = deserializeResult;
     }
-    obj3.deny = BigFlagUtils.remove(deny, AppChannelPermissions.APP_CHANNEL_MINIMUM_BOT_PERMISSIONS);
     obj[appChannelBotUserId] = obj3;
-    const tmp11Result = BigFlagUtils;
   }
   return obj;
 }
-const ChannelRecord = fn(2055);
-({ THREAD_CHANNEL_TYPES: closure_7, ChannelRecordBase: closure_8 } = ChannelRecord);
-const GuildRecord = fn(2070);
-({ getGuildEveryoneRoleId: closure_9, isGuildOwner: c10 } = GuildRecord);
-const hasPermission = fn(2107).hasPermission;
-const Constants = fn(1085);
+({ THREAD_CHANNEL_TYPES: metroImportDefault, ChannelRecordBase: metroImportAll } = ChannelRecord);
+({ getGuildEveryoneRoleId: c9, isGuildOwner: c10 } = GuildRecord);
+const hasPermission = GuildRoleRecord.hasPermission;
 const Permissions = Constants.Permissions;
 ({ ElevatedPermissions: closure_19, MFALevels: closure_20, ChannelTypes: closure_21, EMPTY_STRING_SNOWFLAKE_ID: closure_22 } = Constants);
 let BigFlagUtils = BigFlagUtils_mod;
 const deserializeResult = BigFlagUtils.deserialize(0);
-let BigFlagUtils = BigFlagUtils_mod;
+BigFlagUtils = BigFlagUtils_mod;
+const combine = BigFlagUtils.combine;
 const items = [...importDefaultResult.values(Permissions)];
-const applyResult = BigFlagUtils.combine.apply(items);
-let BigFlagUtils = BigFlagUtils_mod;
+const applyResult = combine.apply(items);
+BigFlagUtils = BigFlagUtils_mod;
 let combineResult = BigFlagUtils.combine(Permissions.CREATE_INSTANT_INVITE, Permissions.CHANGE_NICKNAME, Permissions.VIEW_CHANNEL, Permissions.SEND_MESSAGES, Permissions.EMBED_LINKS, Permissions.ATTACH_FILES, Permissions.READ_MESSAGE_HISTORY, Permissions.MENTION_EVERYONE, Permissions.USE_EXTERNAL_EMOJIS, Permissions.USE_EXTERNAL_STICKERS, Permissions.ADD_REACTIONS, Permissions.CREATE_PUBLIC_THREADS, Permissions.CREATE_PRIVATE_THREADS, Permissions.SEND_MESSAGES_IN_THREADS, Permissions.SEND_POLLS, Permissions.CONNECT, Permissions.SPEAK, Permissions.USE_VAD, Permissions.STREAM, Permissions.USE_EMBEDDED_ACTIVITIES, Permissions.USE_SOUNDBOARD, Permissions.REQUEST_TO_SPEAK, Permissions.USE_APPLICATION_COMMANDS, Permissions.CREATE_GUILD_EXPRESSIONS, Permissions.CREATE_EVENTS, Permissions.USE_EXTERNAL_APPS);
-let BigFlagUtils = BigFlagUtils_mod;
+BigFlagUtils = BigFlagUtils_mod;
 let closure_26 = BigFlagUtils.combine(Permissions.VIEW_CHANNEL, Permissions.READ_MESSAGE_HISTORY);
-let BigFlagUtils = BigFlagUtils_mod;
+BigFlagUtils = BigFlagUtils_mod;
 let closure_27 = BigFlagUtils.combine(Permissions.VIEW_CHANNEL, Permissions.SEND_MESSAGES, Permissions.CONNECT, Permissions.SPEAK, Permissions.STREAM, Permissions.USE_EMBEDDED_ACTIVITIES, Permissions.USE_EXTERNAL_APPS, Permissions.USE_EXTERNAL_EMOJIS, Permissions.USE_EXTERNAL_SOUNDS, Permissions.USE_EXTERNAL_STICKERS, Permissions.USE_SOUNDBOARD, Permissions.USE_VAD, Permissions.SEND_MESSAGES_IN_THREADS, Permissions.EMBED_LINKS, Permissions.ATTACH_FILES, Permissions.ADD_REACTIONS);
-let BigFlagUtils = BigFlagUtils_mod;
+BigFlagUtils = BigFlagUtils_mod;
 let closure_28 = BigFlagUtils.combine(Permissions.VIEW_CHANNEL, Permissions.READ_MESSAGE_HISTORY);
-let BigFlagUtils = BigFlagUtils_mod;
+BigFlagUtils = BigFlagUtils_mod;
 let closure_29 = BigFlagUtils.combine(Permissions.VIEW_CHANNEL, Permissions.READ_MESSAGE_HISTORY, Permissions.CHANGE_NICKNAME);
-let BigFlagUtils = BigFlagUtils_mod;
-const size = fn(2);
+BigFlagUtils = BigFlagUtils_mod;
+const combineResult1 = BigFlagUtils.combine(Permissions.MANAGE_GUILD, Permissions.MANAGE_ROLES, Permissions.ADMINISTRATOR, Permissions.BAN_MEMBERS, Permissions.MANAGE_NICKNAMES, Permissions.CREATE_GUILD_EXPRESSIONS, Permissions.MANAGE_GUILD_EXPRESSIONS, Permissions.MANAGE_WEBHOOKS, Permissions.VIEW_AUDIT_LOG, Permissions.VIEW_GUILD_ANALYTICS);
 let result = size.fileFinishedImporting("utils/PermissionUtils.tsx");
 function computePermissionsForRoles(excludeGuildPermissions) {
+  let checkElevated;
+  let context;
+  let date;
+  let forceRoles;
+  let obj;
+  let obj5;
+  let overwrites;
+  let roles;
+  let tmp3;
+  let tmp4;
   ({ forceRoles, context, overwrites, roles, checkElevated } = excludeGuildPermissions);
   if (checkElevated === undefined) {
     checkElevated = true;
   }
   excludeGuildPermissions = excludeGuildPermissions.excludeGuildPermissions;
-  if (context instanceof closure_1_8) {
+  if (context instanceof metroImportAll) {
     if (context.isScheduledForDeletion()) {
       return deserializeResult;
-    } else if (set.has(context.type)) {
+    } else if (metroImportDefault.has(context.type)) {
+      let tmp23;
       const channel = ChannelStore.getChannel(context.parent_id);
       if (null == channel) {
-        let tmp23 = deserializeResult;
+        tmp23 = deserializeResult;
       } else {
         const obj2 = { forceRoles, context: channel, overwrites, roles, checkElevated, excludeGuildPermissions };
         tmp23 = applyThreadPermissions(context, computePermissionsForRoles(obj2), false, false);
       }
       return tmp23;
     } else {
+      let permissionOverwrites;
       let lurkerPermissionsAllowList = context.computeLurkerPermissionsAllowList();
       if (lurkerPermissionsAllowList == null) {
         lurkerPermissionsAllowList = closure_26;
@@ -404,18 +455,18 @@ function computePermissionsForRoles(excludeGuildPermissions) {
         const obj3 = {};
         const merged = Object.assign(context.permissionOverwrites);
         const merged1 = Object.assign(overwrites);
-        let permissionOverwrites = obj3;
+        permissionOverwrites = obj3;
       } else {
         permissionOverwrites = context.permissionOverwrites;
       }
       const guildId = context.getGuildId();
-      guild = null;
+      let guild = null;
       if (null != guildId) {
         guild = GuildStore.getGuild(guildId);
       }
-      let tmp4 = guild;
-      let tmp3 = lurkerPermissionsAllowList;
-      let obj = permissionOverwrites;
+      tmp4 = guild;
+      tmp3 = lurkerPermissionsAllowList;
+      obj = permissionOverwrites;
     }
   } else {
     obj = overwrites;
@@ -428,10 +479,12 @@ function computePermissionsForRoles(excludeGuildPermissions) {
   if (null == tmp4) {
     return deserializeResult;
   } else {
-    const obj4 = { userId, nick: "", guildId: tmp4.id, guildMemberAvatar: null, roles: SnowflakeUtilsDefault.keys(forceRoles), colorString: null, colorStrings: null, hoistRoleId: null, premiumSince: null, isPending: false, joinedAt: null, communicationDisabledUntil: null };
+    const obj4 = { userId, nick: "", guildId: tmp4.id, guildMemberAvatar: null, roles: obj5.keys(forceRoles), colorString: null, colorStrings: null, hoistRoleId: null, premiumSince: null, isPending: false, joinedAt: date.toISOString(), communicationDisabledUntil: null };
     const _Date = Date;
-    const date = new Date();
-    obj4.joinedAt = date.toISOString();
+    const self = this;
+    const self2 = this;
+    obj5 = SnowflakeUtilsDefault;
+    date = new Date();
     const obj6 = { userId, member: obj4, guild: tmp4, overwrites: obj, roles, checkElevated, excludeGuildPermissions, lurkerPermissionsMask: tmp3 };
     return computePermissionsForMember(obj6);
   }
@@ -440,7 +493,7 @@ function computePermissionsForRoles(excludeGuildPermissions) {
 export const NONE = deserializeResult;
 export const ALL = applyResult;
 export const DEFAULT = combineResult;
-export const VIEW_GUILD_SETTINGS = BigFlagUtils.combine(Permissions.MANAGE_GUILD, Permissions.MANAGE_ROLES, Permissions.ADMINISTRATOR, Permissions.BAN_MEMBERS, Permissions.MANAGE_NICKNAMES, Permissions.CREATE_GUILD_EXPRESSIONS, Permissions.MANAGE_GUILD_EXPRESSIONS, Permissions.MANAGE_WEBHOOKS, Permissions.VIEW_AUDIT_LOG, Permissions.VIEW_GUILD_ANALYTICS);
+export const VIEW_GUILD_SETTINGS = combineResult1;
 export { computePermissionsForRoles };
 export { computePermissions };
 export { applyThreadPermissions };
@@ -449,16 +502,19 @@ export const areChannelsLocked = function areChannelsLocked(c18, c19, appChannel
   if (set.has(Permissions.type)) {
     return true;
   } else {
+    const tmp = guild_id;
     guild_id = Permissions.guild_id;
+    const tmp2 = null;
     if (null != guild_id) {
       if (null != guild_id) {
         if (guild_id === guild_id.guild_id) {
           let obj2 = {};
           const merged = Object.assign(Permissions.permissionOverwrites);
           const tmp12 = getSyncedPermissionOverwrites(guild_id, appChannelBotUserId);
-          closure_1 = tmp12;
+          let closure_1 = tmp12;
           if (null == obj2[guild_id]) {
             let obj = { id: guild_id, type: obj2(1985).PermissionOverwriteType.ROLE, allow: deserializeResult, deny: deserializeResult };
+            let tmp3 = obj2;
             obj2[guild_id] = obj;
           }
           const _Object = Object;
@@ -470,7 +526,8 @@ export const areChannelsLocked = function areChannelsLocked(c18, c19, appChannel
             tmp7 = !keys.some((item) => {
               let tmp3 = null == tmp2;
               if (!tmp3) {
-                tmp3 = !BigFlagUtils.equals(tmp2.deny, tmp.deny);
+                const obj = BigFlagUtils;
+                tmp3 = !obj.equals(tmp2.deny, tmp.deny);
               }
               if (!tmp3) {
                 obj2 = BigFlagUtils;
@@ -488,11 +545,9 @@ export const areChannelsLocked = function areChannelsLocked(c18, c19, appChannel
 };
 export const getGuildVisualOwnerId = function getGuildVisualOwnerId(guild) {
   let tmp;
+  const obj = module_12;
   if (!obj.some(GuildRoleStore.getUnsafeMutableRoles(guild.id), (hoist) => {
-    hoist = hoist.hoist;
-    if (hoist) {
-      hoist = hasPermission(hoist, constants.ADMINISTRATOR);
-    }
+    hoist = hoist.hoist && hasPermission(hoist, constants.ADMINISTRATOR);
     return hoist;
   })) {
     const ownerId = guild.ownerId;
@@ -500,18 +555,16 @@ export const getGuildVisualOwnerId = function getGuildVisualOwnerId(guild) {
   }
   return tmp;
 };
-export const isRoleHigher = function isRoleHigher(guild, id, guildId, id) {
-  let tmp = null == id;
-  if (!tmp) {
-    tmp = !v65535(guild, id);
-  }
+export const isRoleHigher = function isRoleHigher(guild, id, guildId, id2) {
+  const tmp = null == id || !authStore(guild, id);
   let tmp4 = !tmp;
   if (tmp) {
     let tmp6 = null != guildId;
     if (tmp6) {
       let doesRoleSortHigherResult = null == id;
       if (!doesRoleSortHigherResult) {
-        doesRoleSortHigherResult = GuildRoleUtils.doesRoleSortHigher(guildId, id);
+        const obj = GuildRoleUtils;
+        doesRoleSortHigherResult = obj.doesRoleSortHigher(guildId, id);
       }
       tmp6 = doesRoleSortHigherResult;
     }
@@ -519,7 +572,7 @@ export const isRoleHigher = function isRoleHigher(guild, id, guildId, id) {
   }
   return tmp4;
 };
-export const getHighestRole = function getHighestRole(id, id) {
+export const getHighestRole = function getHighestRole(id, id2) {
   const member = GuildMemberStore.getMember(id.id, id);
   if (null != member) {
     const sortedRoles = GuildRoleStore.getSortedRoles(id.id);
@@ -537,71 +590,93 @@ export const getHighestHoistedRole = function getHighestHoistedRole(id, hoistRol
   return role;
 };
 export const makeEveryoneOverwrite = function makeEveryoneOverwrite(guildId1) {
-  return { id: guildId1, type: Server.PermissionOverwriteType.ROLE, allow: deserializeResult, deny: deserializeResult };
+  const obj = { id: guildId1, type: Server.PermissionOverwriteType.ROLE, allow: deserializeResult, deny: deserializeResult };
+  return obj;
 };
 export const canManageACategory = function canManageACategory(currentUser, guild, categories) {
+  let context;
+  let excludeGuildPermissions;
+  let overwrites;
+  let permission;
+  let roles;
+  let user;
   user = currentUser;
-  ({ permission, user, context, overwrites, roles, excludeGuildPermissions } = { permission: Permissions.MANAGE_CHANNELS, user: currentUser, context: guild });
-  let someResult = BigFlagUtils.has(computePermissions({ user, context, overwrites, roles, checkElevated: true, excludeGuildPermissions }), permission);
-  if (!someResult) {
-    someResult = categories.some((channel) => {
-      channel = channel.channel;
-      let hasItem = "null" !== channel.id;
-      if (hasItem) {
-        const obj = { permission: Permissions.MANAGE_CHANNELS, user, context: channel };
-        ({ permission, user, context, overwrites, roles, excludeGuildPermissions } = obj);
-        const obj3 = { user, context, overwrites, roles, checkElevated: true, excludeGuildPermissions };
-        hasItem = BigFlagUtils.has(computePermissions(obj3), permission);
-      }
-      return hasItem;
-    });
-  }
+  let obj = { permission: Permissions.MANAGE_CHANNELS, user: currentUser, context: guild };
+  ({ permission, user, context, overwrites, roles, excludeGuildPermissions } = obj);
+  let obj2 = BigFlagUtils;
+  const someResult = obj2.has(computePermissions({ user, context, overwrites, roles, checkElevated: true, excludeGuildPermissions }), permission) || categories.some((channel) => {
+    let context;
+    let excludeGuildPermissions;
+    let overwrites;
+    let permission;
+    let roles;
+    channel = channel.channel;
+    let hasItem = "null" !== channel.id;
+    if (hasItem) {
+      const obj = { permission: Permissions.MANAGE_CHANNELS, user, context: channel };
+      ({ permission, user, context, overwrites, roles, excludeGuildPermissions } = obj);
+      const obj3 = { user, context, overwrites, roles, checkElevated: true, excludeGuildPermissions };
+      const obj2 = BigFlagUtils;
+      hasItem = obj2.has(computePermissions(obj3), permission);
+    }
+    return hasItem;
+  });
   return someResult;
 };
 export const can = function can(arg0) {
+  let context;
+  let excludeGuildPermissions;
+  let overwrites;
+  let permission;
+  let roles;
+  let user;
   ({ permission, user, context, overwrites, roles, excludeGuildPermissions } = arg0);
-  return BigFlagUtils.has(computePermissions({ user, context, overwrites, roles, checkElevated: true, excludeGuildPermissions }), permission);
+  const obj = BigFlagUtils;
+  return obj.has(computePermissions({ user, context, overwrites, roles, checkElevated: true, excludeGuildPermissions }), permission);
 };
 export const ALLOW = "ALLOW";
 export const DENY = "DENY";
 export const PASSTHROUGH = "PASSTHROUGH";
 export const canEveryoneRole = function canEveryoneRole(VIEW_CHANNEL, channel) {
-  let tmp = channel;
-  if (channel instanceof closure_1_8) {
+  let tmp2 = channel;
+  if (channel instanceof metroImportAll) {
     if (channel.type === constants2.PRIVATE_THREAD) {
       return false;
     } else {
-      if (set.has(channel.type)) {
+      if (metroImportDefault.has(channel.type)) {
         channel = ChannelStore.getChannel(channel.parent_id);
         if (null == channel) {
           return false;
         }
       }
+      const permissionOverwrites = channel.permissionOverwrites;
       const guildId = channel.getGuildId();
-      guild = null;
+      let guild = null;
       if (null != guildId) {
         guild = GuildStore.getGuild(guildId);
       }
-      tmp = guild;
-      const permissionOverwrites = channel.permissionOverwrites;
+      tmp2 = guild;
     }
   }
-  if (null == tmp) {
+  if (null == tmp2) {
     return false;
   } else {
-    const permissions = GuildRoleStore.getEveryoneRole(tmp).permissions;
-    const tmp17 = {}[tmp.id];
+    const permissions = GuildRoleStore.getEveryoneRole(tmp2).permissions;
+    const tmp18 = {}[tmp2.id];
     let addResult = permissions;
-    if (null != tmp17) {
-      const removeResult = BigFlagUtils.remove(permissions, tmp17.deny);
-      addResult = BigFlagUtils.add(removeResult, tmp17.allow);
+    if (null != tmp18) {
+      const obj2 = BigFlagUtils;
+      const removeResult = obj2.remove(permissions, tmp18.deny);
+      const obj3 = BigFlagUtils;
+      addResult = obj3.add(removeResult, tmp18.allow);
     }
-    return BigFlagUtils.has(addResult, VIEW_CHANNEL);
+    const obj4 = BigFlagUtils;
+    return obj4.has(addResult, VIEW_CHANNEL);
   }
 };
 export const canEveryone = function canEveryone(VIEW_CHANNEL, channel) {
-  closure_0 = VIEW_CHANNEL;
-  let tmp = channel;
+  let closure_0 = VIEW_CHANNEL;
+  let tmp2 = channel;
   if (channel instanceof closure_8) {
     if (channel.type === constants2.PRIVATE_THREAD) {
       return false;
@@ -612,22 +687,26 @@ export const canEveryone = function canEveryone(VIEW_CHANNEL, channel) {
           return false;
         }
       }
+      const permissionOverwrites = channel.permissionOverwrites;
       const guildId = channel.getGuildId();
-      guild = null;
+      let guild = null;
       if (null != guildId) {
         guild = GuildStore.getGuild(guildId);
       }
-      tmp = guild;
-      const permissionOverwrites = channel.permissionOverwrites;
+      tmp2 = guild;
     }
   }
-  if (null == tmp) {
+  if (null == tmp2) {
     return false;
   } else {
-    let tmp10 = hasPermission(GuildRoleStore.getEveryoneRole(tmp), VIEW_CHANNEL);
-    if (tmp10) {
-      tmp10 = !apply.some({}, (deny) => BigFlagUtils.has(deny.deny, closure_0));
+    let tmp11 = hasPermission(GuildRoleStore.getEveryoneRole(tmp2), VIEW_CHANNEL);
+    if (tmp11) {
+      const obj2 = module_12;
+      tmp11 = !obj2.some({}, (deny) => {
+        const obj = BigFlagUtils;
+        return obj.has(deny.deny, VIEW_CHANNEL);
+      });
     }
-    return tmp10;
+    return tmp11;
   }
 };

@@ -9,5 +9,7 @@ const UserSettingsSections = Constants.UserSettingsSections;
 const result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/native/openAccountStanding.tsx");
 
 export const openAccountStanding = function openAccountStanding() {
-  openUserSettings.openUserSettings({ screen: UserSettingsSections.ACCOUNT_STANDING });
+  const obj = openUserSettings;
+  const obj2 = { screen: UserSettingsSections.ACCOUNT_STANDING };
+  obj.openUserSettings(obj2);
 };

@@ -1,48 +1,49 @@
 // === Module 5714: OverlayView ===
 
 // Module 5714 (OverlayView)
-import c from "c" /* 576 */;
-import _modDef5764 from "module_5764" /* 5764 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
+import enableScreens from "enableScreens" /* 5715 */;
+import react_nativeDefault from "react-native" /* 5764 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
+import PlatformUtils_mod from "PlatformUtils" /* 1369 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+let children;
+
 let closure_2 = ["children"];
-get_ActivityIndicator = fn(17);
-let View = get_ActivityIndicator.View;
-const StyleSheet = get_ActivityIndicator.StyleSheet;
-const jsx = fn(21).jsx;
-let PlatformUtils = fn(1369);
+let View = react_native.View;
+const StyleSheet = react_native.StyleSheet;
+const jsx = Fragment.jsx;
+let PlatformUtils = PlatformUtils_mod;
 let FullWindowOverlay = View;
 if (PlatformUtils.isIOS()) {
-  FullWindowOverlay = fn(5715).FullWindowOverlay;
+  FullWindowOverlay = enableScreens.FullWindowOverlay;
 }
-const ReactCompilerGating = fn(558);
-PlatformUtils = fn(1369);
-if (PlatformUtils.isIOS()) {
-  View = _modDef5764;
-}
-const size = fn(2);
-const result = size.fileFinishedImporting("design/void/OverlayView/native/OverlayView.tsx");
-
-export default FullWindowOverlay;
-export const TransitionGroupOverlayView = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
-  const cResult = c.c(6);
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+  let arr;
+  let tmp2;
+  const obj = react2;
+  const cResult = obj.c(6);
   if (cResult[0] !== children) {
     children = children.children;
     const tmp5 = _objectWithoutProperties(children, closure_2);
     cResult[0] = children;
     cResult[1] = children;
     cResult[2] = tmp5;
-    let tmp2 = tmp5;
-    let arr = children;
+    tmp2 = tmp5;
+    arr = children;
   } else {
     arr = cResult[1];
     tmp2 = cResult[2];
   }
   if (cResult[3] === arr) {
+    let tmp6;
     if (cResult[4] === tmp2) {
-      let tmp6 = cResult[5];
+      tmp6 = cResult[5];
     }
     return tmp6;
   }
@@ -50,11 +51,7 @@ export const TransitionGroupOverlayView = ReactCompilerGating.isReactCompilerEna
   if (Array.isArray(arr)) {
     tmp7 = null;
     if (arr.length > 0) {
-      const obj2 = { style: StyleSheet.absoluteFill, children: null };
-      const obj3 = {};
       const merged = Object.assign(tmp2);
-      obj3.children = arr;
-      obj2.children = <View />;
       tmp7 = <FullWindowOverlay style={StyleSheet.absoluteFill}>{null}</FullWindowOverlay>;
     }
   }
@@ -69,14 +66,18 @@ export const TransitionGroupOverlayView = ReactCompilerGating.isReactCompilerEna
   if (Array.isArray(children)) {
     tmp2 = null;
     if (children.length > 0) {
-      const obj = { style: StyleSheet.absoluteFill, children: null };
-      const obj2 = {};
       const merged1 = Object.assign(merged);
-      obj2.children = children;
-      obj.children = <View />;
       tmp2 = <FullWindowOverlay style={StyleSheet.absoluteFill}>{null}</FullWindowOverlay>;
     }
   }
   return tmp2;
 });
+PlatformUtils = PlatformUtils_mod;
+if (PlatformUtils.isIOS()) {
+  View = react_nativeDefault;
+}
+const result = size.fileFinishedImporting("design/void/OverlayView/native/OverlayView.tsx");
+
+export default FullWindowOverlay;
+export const TransitionGroupOverlayView = tmp4;
 export const NonExpandingOverlayView = View;

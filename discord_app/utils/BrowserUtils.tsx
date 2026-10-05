@@ -2,6 +2,7 @@
 
 // Module 5402 (BrowserUtils)
 import _modDef5403 from "module_5403" /* 5403 */;
+import size from "module_2" /* 2 */;
 
 let str = _modDef5403.name;
 if (str == null) {
@@ -9,55 +10,64 @@ if (str == null) {
 }
 const str2 = str.toLowerCase();
 let num = -1;
+let num2 = -1;
 if ("chrome" === str2.toLowerCase()) {
+  const _parseInt = parseInt;
   let str3 = _modDef5403.version;
   if (str3 == null) {
     str3 = "";
   }
-  const num2 = parseInt(str3, 10);
+  num2 = _parseInt(str3, 10);
 }
-let parsed = num;
+let _parseInt2Result = num;
 if ("electron" === str2.toLowerCase()) {
+  const _parseInt2 = parseInt;
   let str4 = _modDef5403.version;
   if (str4 == null) {
     str4 = "";
   }
-  parsed = parseInt(str4, 10);
+  _parseInt2Result = _parseInt2(str4, 10);
 }
-let parsed1 = num;
+const map = _parseInt2Result;
+let _parseInt3Result = num;
 if ("firefox" === str2.toLowerCase()) {
+  const _parseInt3 = parseInt;
   let str5 = _modDef5403.version;
   if (str5 == null) {
     str5 = "";
   }
-  parsed1 = parseInt(str5, 10);
+  _parseInt3Result = _parseInt3(str5, 10);
 }
-let parsed2 = num;
+let c2 = _parseInt3Result;
+let _parseInt4Result = num;
 if ("edge" === str2.toLowerCase()) {
+  const _parseInt4 = parseInt;
   let str6 = _modDef5403.version;
   if (str6 == null) {
     str6 = "";
   }
-  parsed2 = parseInt(str6, 10);
+  _parseInt4Result = _parseInt4(str6, 10);
 }
+let c3 = _parseInt4Result;
 if ("safari" === str2.toLowerCase()) {
+  const _parseInt5 = parseInt;
   let str7 = _modDef5403.version;
   if (str7 == null) {
     str7 = "";
   }
-  num = parseInt(str7, 10);
+  num = _parseInt5(str7, 10);
 }
 function getChromeVersion() {
   return num2;
 }
 function getElectronVersion() {
-  return parsed;
+  return map;
 }
 function getFirefoxVersion() {
-  return parsed1;
+  return c2;
 }
 function getEdgeVersion() {
-  return parsed2;
+  return c3;
 }
 function getSafariVersion() {
   return num;
@@ -69,16 +79,9 @@ function isSafari() {
     str = navigator.userAgent;
   }
   const formatted = str.toLowerCase();
-  let tmp2 = -1 !== formatted.indexOf("safari");
-  if (tmp2) {
-    tmp2 = -1 === formatted.indexOf("chrome");
-  }
-  if (tmp2) {
-    tmp2 = -1 !== formatted.indexOf("version/");
-  }
+  const tmp2 = -1 !== formatted.indexOf("safari") && -1 === formatted.indexOf("chrome") && -1 !== formatted.indexOf("version/");
   return tmp2;
 }
-const size = fn(2);
 const result = size.fileFinishedImporting("utils/BrowserUtils.tsx");
 
 export { getChromeVersion };
@@ -87,20 +90,7 @@ export { getFirefoxVersion };
 export { getEdgeVersion };
 export { getSafariVersion };
 export const canUseWebp = function canUseWebp() {
-  let tmp = -1 !== num2;
-  if (!tmp) {
-    tmp = -1 !== parsed;
-  }
-  if (!tmp) {
-    tmp = -1 !== parsed1;
-  }
-  if (!tmp) {
-    tmp = -1 !== parsed2;
-  }
-  if (!tmp) {
-    tmp = num >= 14;
-  }
-  return tmp;
+  return -1 !== num2 || -1 !== map || -1 !== c2 || -1 !== c3 || num >= 14;
 };
 export { isSafari };
 export const isFirefox = function isFirefox() {
@@ -120,20 +110,12 @@ export const supportsHEVCAlpha = function supportsHEVCAlpha() {
     decodingInfo = mediaCapabilities.decodingInfo;
   }
   let str = _navigator.userAgent;
+  const tmp2 = null != decodingInfo;
   if (str === undefined) {
     const _navigator2 = navigator;
     str = navigator.userAgent;
   }
   const formatted = str.toLowerCase();
-  let tmp3 = -1 !== formatted.indexOf("safari");
-  if (tmp3) {
-    tmp3 = -1 === formatted.indexOf("chrome");
-  }
-  if (tmp3) {
-    tmp3 = -1 !== formatted.indexOf("version/");
-  }
-  if (tmp3) {
-    tmp3 = tmp2;
-  }
+  const tmp3 = -1 !== formatted.indexOf("safari") && -1 === formatted.indexOf("chrome") && -1 !== formatted.indexOf("version/") && tmp2;
   return tmp3;
 };

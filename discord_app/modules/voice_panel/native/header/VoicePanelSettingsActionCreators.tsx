@@ -1,7 +1,7 @@
 // === Module 17249: VoicePanelSettingsActionCreators ===
 
 // Module 17249 (VoicePanelSettingsActionCreators)
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import asyncRequire from "asyncRequire" /* 1987 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import size from "module_2" /* 2 */;
 
@@ -10,8 +10,11 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/header/Voi
 
 export const VOICE_PANEL_SETTINGS_ACTION_SHEET_KEY = "VoicePanelSettingsActionSheet";
 export const closeVoicePanelSettingsActionSheet = function closeVoicePanelSettingsActionSheet() {
-  ActionSheetActionCreatorsDefault.hideActionSheet(VoicePanelSettingsActionSheet);
+  const obj = ActionSheetActionCreatorsDefault;
+  obj.hideActionSheet(VoicePanelSettingsActionSheet);
 };
 export const openVoicePanelSettingsActionSheet = function openVoicePanelSettingsActionSheet(guildId, channelId) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17250, dependencyMap.paths), VoicePanelSettingsActionSheet, { guildId, channelId });
+  const obj = ActionSheetActionCreatorsDefault;
+  const obj2 = { guildId, channelId };
+  obj.openLazy(asyncRequire(17250, dependencyMap.paths), VoicePanelSettingsActionSheet, obj2);
 };

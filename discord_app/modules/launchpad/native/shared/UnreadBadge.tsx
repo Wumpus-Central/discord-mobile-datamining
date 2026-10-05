@@ -1,43 +1,52 @@
 // === Module 17398: UnreadBadge ===
 
 // Module 17398 (UnreadBadge)
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
+import ReadStateConstants from "ReadStateConstants" /* 5072 */;
 import useFontScale from "useFontScale" /* 5602 */;
-import Badge from "Badge" /* 7503 */;
+import shared_components_Badge from "shared_components/Badge" /* 7503 */;
+import RedesignChannelListConstants from "RedesignChannelListConstants" /* 11697 */;
 import getLayoutStylesDefault from "getLayoutStyles" /* 16832 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size_mod from "module_2" /* 2 */;
 
-const BadgeDefault = Badge;
+const shared_components_BadgeDefault = shared_components_Badge;
 
-require = fn;
-const View = fn(17).View;
-const MUTED_OPACITY_CONTENT = fn(11697).MUTED_OPACITY_CONTENT;
-const UnreadSetting = fn(5072).UnreadSetting;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+const View = react_native.View;
+const MUTED_OPACITY_CONTENT = RedesignChannelListConstants.MUTED_OPACITY_CONTENT;
+const UnreadSetting = ReadStateConstants.UnreadSetting;
+const jsx = Fragment.jsx;
 let closure_7 = createStyles.createStyles({ unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" } });
-const ReactCompilerGating = fn(558);
-let size = fn(2);
-const result = size.fileFinishedImporting("modules/launchpad/native/shared/UnreadBadge.tsx");
-
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(7);
+const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let first;
+  let items1;
+  let muted;
+  let resolvedUnreadSetting;
+  let unread;
+  const obj = react2;
+  const cResult = obj.c(7);
   ({ unread, resolvedUnreadSetting, muted } = arg0);
   const tmp4 = closure_7();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const tmp7 = getLayoutStylesDefault();
     cResult[0] = tmp7;
-    let first = tmp7;
+    first = tmp7;
   } else {
     first = cResult[0];
   }
-  const fontScale = useFontScale.useFontScale();
+  const tmpResult = useFontScale;
+  const fontScale = tmpResult.useFontScale();
   if (cResult[1] === fontScale) {
     if (cResult[2] === muted) {
       if (cResult[3] === resolvedUnreadSetting) {
         if (cResult[4] === tmp4) {
+          let tmp9;
           if (cResult[5] === unread) {
-            let tmp9 = cResult[6];
+            tmp9 = cResult[6];
           }
           return tmp9;
         }
@@ -46,24 +55,21 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   }
   let tmp11Result = null;
   if (unread) {
-    const obj2 = { style: null, children: null };
+    let num3;
     const items = [tmp4.unreadBadge, first.unreadBadge.position, ];
-    const size = { width: first.unreadBadge.size, height: first.unreadBadge.size };
+    size = { width: first.unreadBadge.size, height: first.unreadBadge.size };
     items[2] = size;
-    obj2.style = items;
-    const obj3 = { classic: true, size: null, badgeStyle: null };
+    ({ classic: true, size: shared_components_Badge.CHANNEL_BADGE_SIZE * Math.max(fontScale, 1), badgeStyle: items1 });
     const _Math = Math;
-    obj3.size = Badge.CHANNEL_BADGE_SIZE * Math.max(fontScale, 1);
+    shared_components_BadgeDefault;
     if (resolvedUnreadSetting !== UnreadSetting.ALL_MESSAGES) {
-      let num3 = MUTED_OPACITY_CONTENT;
+      num3 = MUTED_OPACITY_CONTENT;
     } else {
       num3 = 1;
     }
+    items1 = [{ opacity: num3 }];
+    tmp11Result = <View style={items}>{null}</View>;
     const obj4 = { opacity: num3 };
-    const items1 = [obj4];
-    obj3.badgeStyle = items1;
-    obj2.children = jsx(BadgeDefault, { classic: true, size: null, badgeStyle: null });
-    tmp11Result = <View style={null}>{null}</View>;
   }
   cResult[1] = fontScale;
   cResult[2] = muted;
@@ -72,32 +78,36 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[5] = unread;
   cResult[6] = tmp11Result;
   tmp9 = tmp11Result;
-  const tmpResult = useFontScale;
 }) : ((arg0) => {
+  let items1;
+  let muted;
+  let resolvedUnreadSetting;
+  let unread;
   ({ unread, resolvedUnreadSetting, muted } = arg0);
+  const tmp = closure_7();
   const tmp4 = getLayoutStylesDefault();
   useFontScale;
   let tmp9Result = null;
   if (unread) {
-    const obj = { style: null, children: null };
+    let num2;
     const items = [tmp.unreadBadge, tmp4.unreadBadge.position, ];
-    const size = { width: tmp4.unreadBadge.size, height: tmp4.unreadBadge.size };
+    size = { width: tmp4.unreadBadge.size, height: tmp4.unreadBadge.size };
     items[2] = size;
-    obj.style = items;
-    const obj2 = { classic: true, size: null, badgeStyle: null };
+    ({ classic: true, size: shared_components_Badge.CHANNEL_BADGE_SIZE * Math.max(tmp7, 1), badgeStyle: items1 });
     const _Math = Math;
-    obj2.size = Badge.CHANNEL_BADGE_SIZE * Math.max(tmp7, 1);
+    shared_components_BadgeDefault;
     if (resolvedUnreadSetting !== UnreadSetting.ALL_MESSAGES) {
-      let num2 = MUTED_OPACITY_CONTENT;
+      num2 = MUTED_OPACITY_CONTENT;
     } else {
       num2 = 1;
     }
+    items1 = [{ opacity: num2 }];
+    tmp9Result = <View style={items}>{null}</View>;
     const obj3 = { opacity: num2 };
-    const items1 = [obj3];
-    obj2.badgeStyle = items1;
-    obj.children = jsx(BadgeDefault, { classic: true, size: null, badgeStyle: null });
-    tmp9Result = <View style={null}>{null}</View>;
-    const tmp2Result = BadgeDefault;
   }
   return tmp9Result;
 }));
+let size = size_mod;
+const result = size.fileFinishedImporting("modules/launchpad/native/shared/UnreadBadge.tsx");
+
+export default memoResult;

@@ -1,12 +1,11 @@
 // === Module 10438: hooks/usePremiumDiscountOffer ===
 
 // Module 10438 (hooks/usePremiumDiscountOffer)
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 7731 */;
 import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
-
 const result = size.fileFinishedImporting("modules/premium/hooks/usePremiumDiscountOffer.native.tsx");
-for (const key10018 in require("usePremiumDiscountOffer")) {
-  arg5[key10018] = require("usePremiumDiscountOffer")[key10018];
+for (const key10018 in usePremiumDiscountOffer) {
+  exports[key10018] = usePremiumDiscountOffer[key10018];
   continue;
 }

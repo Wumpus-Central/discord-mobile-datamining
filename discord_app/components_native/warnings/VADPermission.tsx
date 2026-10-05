@@ -1,33 +1,32 @@
 // === Module 17102: VADPermission ===
 
 // Module 17102 (VADPermission)
-import util from "util" /* 1126 */;
-import common_AlertDefault from "common/Alert" /* 5783 */;
+import Fragment from "Fragment" /* 21 */;
+import intl3 from "intl" /* 1126 */;
+import AlertDefault from "Alert" /* 5783 */;
 import PermissionActionCreatorsDefault from "PermissionActionCreators" /* 17099 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const jsx = fn(21).jsx;
-const Component = noop.Component;
+const jsx = Fragment.jsx;
+const Component = react.Component;
 class VADPermission extends Component {
   constructor() {
-    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
     applyArgumentsResult.close = function close() {
-      PermissionActionCreatorsDefault.clearVADWarning();
+      const obj = PermissionActionCreatorsDefault;
+      obj.clearVADWarning();
     };
     return applyArgumentsResult;
   }
+  render() {
+    AlertDefault;
+    const intl = intl3.intl;
+    const intl2 = intl3.intl;
+    return <tmp title={intl.string(intl3.t.NYklhr)} body={intl2.string(intl3.t.EJ26Oh)} onConfirm={this.close} />;
+  }
 }
-VADPermission.prototype["render"] = function render() {
-  const obj = { title: null, body: null, onConfirm: null };
-  const intl = util.intl;
-  obj.title = intl.string(util.t.NYklhr);
-  const intl2 = util.intl;
-  obj.body = intl2.string(util.t.EJ26Oh);
-  obj.onConfirm = this.close;
-  return jsx(common_AlertDefault, { title: null, body: null, onConfirm: null });
-};
-const size = fn(2);
+const prototype = VADPermission.prototype;
 const result = size.fileFinishedImporting("components_native/warnings/VADPermission.tsx");
 
 export default VADPermission;

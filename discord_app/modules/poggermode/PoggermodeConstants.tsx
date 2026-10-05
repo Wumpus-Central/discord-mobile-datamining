@@ -3,6 +3,11 @@
 // Module 7163 (PoggermodeConstants)
 import size from "module_2" /* 2 */;
 
+let items;
+let items1;
+let items2;
+let items3;
+let items4;
 let obj = { LEVEL_1: 0, [0]: "LEVEL_1", LEVEL_2: 1, [1]: "LEVEL_2", LEVEL_3: 2, [2]: "LEVEL_3", LEVEL_4: 3, [3]: "LEVEL_4", LEVEL_5: 4, [4]: "LEVEL_5" };
 const obj2 = { [obj.LEVEL_1]: items, [obj.LEVEL_2]: items1, [obj.LEVEL_3]: items2, [obj.LEVEL_4]: items3, [obj.LEVEL_5]: items4 };
 items = [[1, 0.0001], [25, 0.05], [50, 0.1], [100, 0.5], [250, 1], [500, 2], [1000, 3], [9001, 4]];
@@ -14,7 +19,9 @@ const keys = Object.keys(obj2);
 const reduced = keys.reduce((acc, item) => {
   const obj = {};
   const merged = Object.assign(acc);
-  obj[item] = obj2[item].map((item) => {
+  const arr = obj2[item];
+  obj[item] = arr.map((item) => {
+    let tmp;
     [tmp] = item;
     return tmp;
   });
@@ -24,7 +31,9 @@ const keys1 = Object.keys(obj2);
 const reduced1 = keys1.reduce((acc, item) => {
   const obj = {};
   const merged = Object.assign(acc);
-  obj[item] = obj2[item].map((item) => {
+  const arr = obj2[item];
+  obj[item] = arr.map((item) => {
+    let tmp;
     [, tmp] = item;
     return tmp;
   });

@@ -1,105 +1,115 @@
-// === Module 8371: ? ===
+// === Module 8371: defaultMVCPConfig ===
 
-// Module 8371
-import c from "c" /* 576 */;
-import PlatformUtils2 from "PlatformUtils" /* 1369 */;
+// Module 8371 (defaultMVCPConfig)
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
 import BottomSheetModal from "BottomSheetModal" /* 6112 */;
-import _modDef6336 from "module_6336" /* 6336 */;
+import BottomSheetFlashListDefault from "BottomSheetFlashList" /* 6336 */;
 import _mod6337 from "module_6337" /* 6337 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop_mod from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import ReanimatedRexport_mod from "ReanimatedRexport" /* 4612 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+let obj;
+
 let closure_3 = ["preventNativeModalDismiss"];
 let closure_4 = ["preventNativeModalDismiss", "refreshControl"];
 let closure_5 = ["preventNativeModalDismiss", "refreshControl"];
-let noop = noop_mod;
-const RefreshControl = fn(17).RefreshControl;
-const jsx = fn(21).jsx;
-const PlatformUtils = fn(1369);
+const RefreshControl = react_native.RefreshControl;
+const jsx = Fragment.jsx;
 let defaultMVCPConfig;
 if (PlatformUtils.isAndroid()) {
   defaultMVCPConfig = { disabled: true };
 }
-noop = function noop() {
+function noop() {
 
-};
-let ReactCompilerGating = fn(558);
+}
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
-  const cResult = c.c(1);
+  obj = react2;
+  const cResult = obj.c(1);
   let tmp4 = arg1;
   if (null == arg1) {
     tmp4 = arg1;
     if (true === arg0) {
       tmp4 = arg1;
+      const tmpResult = PlatformUtils;
       if (tmpResult.isIOS()) {
+        let first;
         const _Symbol = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { refreshing: false, onRefresh: noop, tintColor: "transparent" };
           const tmp11 = <RefreshControl refreshing={false} onRefresh={noop} tintColor="transparent" />;
           cResult[0] = tmp11;
-          let first = tmp11;
+          first = tmp11;
         } else {
           first = cResult[0];
         }
+        tmp4 = first;
       }
-      tmpResult = PlatformUtils2;
     }
   }
   return tmp4;
 }) : ((arg0, arg1) => {
-  closure_0 = arg0;
-  closure_1 = arg1;
+  let closure_0 = arg0;
+  let closure_1 = arg1;
   const items = [arg0, arg1];
-  return noop.useMemo(() => {
+  return react.useMemo(() => {
     let tmp2 = closure_1;
     if (null == closure_1) {
       tmp2 = closure_1;
       if (true === closure_0) {
         tmp2 = closure_1;
+        obj = PlatformUtils;
         if (obj.isIOS()) {
-          const obj2 = { refreshing: false, onRefresh: noop, tintColor: "transparent" };
           tmp2 = <RefreshControl refreshing={false} onRefresh={noop} tintColor="transparent" />;
         }
-        obj = PlatformUtils2;
       }
     }
     return tmp2;
   }, items);
 });
-fn(558);
-let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_13 = ReanimatedRexport.createAnimatedComponent(fn(6337).FlashList);
-ReactCompilerGating = fn(558);
-const forwardRefResult = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
-  const maintainVisibleContentPosition = c;
+const forwardRef = react.forwardRef;
+ReactCompilerGating = ReactCompilerGating_mod;
+const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
+  const maintainVisibleContentPosition = react2;
   const cResult = maintainVisibleContentPosition.c(3);
   if (cResult[0] === arg0) {
+    let tmp4;
     if (cResult[1] === ref) {
-      let tmp4 = cResult[2];
+      tmp4 = cResult[2];
     }
     return tmp4;
   }
+  const FlashList = _mod6337.FlashList;
   const merged = Object.assign(arg0);
-  const tmp6 = jsx(_mod6337.FlashList, { maintainVisibleContentPosition, ref });
+  const tmp6 = <FlashList maintainVisibleContentPosition={maintainVisibleContentPosition} ref={ref} />;
   cResult[0] = arg0;
   cResult[1] = ref;
   cResult[2] = tmp6;
   tmp4 = tmp6;
-  const obj2 = { maintainVisibleContentPosition, ref };
 }) : ((arg0, ref) => {
+  let maintainVisibleContentPosition;
   maintainVisibleContentPosition = { maintainVisibleContentPosition, ref };
+  const FlashList = _mod6337.FlashList;
   const merged = Object.assign(arg0);
-  return jsx(_mod6337.FlashList, { maintainVisibleContentPosition, ref });
+  return <FlashList maintainVisibleContentPosition={maintainVisibleContentPosition} ref={ref} />;
 }));
-ReactCompilerGating = fn(558);
-const forwardRefResult1 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
-  const maintainVisibleContentPosition = c;
+let ReanimatedRexport = ReanimatedRexport_mod;
+let closure_13 = ReanimatedRexport.createAnimatedComponent(_mod6337.FlashList);
+const forwardRef2 = react.forwardRef;
+ReactCompilerGating = ReactCompilerGating_mod;
+const forwardRef3 = react.forwardRef;
+const forwardRef2Result = forwardRef2(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
+  const maintainVisibleContentPosition = react2;
   const cResult = maintainVisibleContentPosition.c(3);
   if (cResult[0] === arg0) {
+    let tmp2;
     if (cResult[1] === ref) {
-      let tmp2 = cResult[2];
+      tmp2 = cResult[2];
     }
     return tmp2;
   }
@@ -110,47 +120,59 @@ const forwardRefResult1 = noop.forwardRef(ReactCompilerGating.isReactCompilerEna
   cResult[2] = tmp4;
   tmp2 = tmp4;
 }) : ((arg0, ref) => {
+  let maintainVisibleContentPosition;
   maintainVisibleContentPosition = { maintainVisibleContentPosition, ref };
   const merged = Object.assign(arg0);
   return <closure_13 maintainVisibleContentPosition={maintainVisibleContentPosition} ref={ref} />;
 }));
-let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_14 = ReanimatedRexport.createAnimatedComponent(fn(6337).FlashList);
-ReactCompilerGating = fn(558);
-const forwardRefResult2 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((preventNativeModalDismiss, ref) => {
-  const maintainVisibleContentPosition = c;
+ReactCompilerGating = ReactCompilerGating_mod;
+const forwardRef3Result = forwardRef3(ReactCompilerGating.isReactCompilerEnabled() ? ((preventNativeModalDismiss, ref) => {
+  let tmp4;
+  const maintainVisibleContentPosition = react2;
   const cResult = maintainVisibleContentPosition.c(5);
   if (cResult[0] !== preventNativeModalDismiss) {
     preventNativeModalDismiss = preventNativeModalDismiss.preventNativeModalDismiss;
     const tmp7 = _objectWithoutProperties(preventNativeModalDismiss, closure_3);
     cResult[0] = preventNativeModalDismiss;
     cResult[1] = tmp7;
-    let tmp4 = tmp7;
+    tmp4 = tmp7;
   } else {
     tmp4 = cResult[1];
   }
   if (cResult[2] === tmp4) {
+    let tmp8;
     if (cResult[3] === ref) {
-      let tmp8 = cResult[4];
+      tmp8 = cResult[4];
     }
     return tmp8;
   }
+  const FlashList = _mod6337.FlashList;
   const merged = Object.assign(tmp4);
-  const tmp10 = jsx(_mod6337.FlashList, { ref, maintainVisibleContentPosition, masonry: true });
+  const tmp10 = <FlashList ref={ref} maintainVisibleContentPosition={maintainVisibleContentPosition} masonry />;
   cResult[2] = tmp4;
   cResult[3] = ref;
   cResult[4] = tmp10;
   tmp8 = tmp10;
-  const obj2 = { ref, maintainVisibleContentPosition, masonry: true };
 }) : ((arg0, ref) => {
+  let maintainVisibleContentPosition;
   const merged = Object.assign(arg0, Object.assign({ preventNativeModalDismiss: 0 }));
   maintainVisibleContentPosition = { ref, maintainVisibleContentPosition, masonry: true };
+  const FlashList = _mod6337.FlashList;
   const merged1 = Object.assign(merged);
-  return jsx(_mod6337.FlashList, { ref, maintainVisibleContentPosition, masonry: true });
+  return <FlashList ref={ref} maintainVisibleContentPosition={maintainVisibleContentPosition} masonry />;
 }));
-ReactCompilerGating = fn(558);
-const forwardRefResult3 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
-  const maintainVisibleContentPosition = c;
+ReanimatedRexport = ReanimatedRexport_mod;
+let closure_14 = ReanimatedRexport.createAnimatedComponent(_mod6337.FlashList);
+const forwardRef4 = react.forwardRef;
+ReactCompilerGating = ReactCompilerGating_mod;
+const forwardRef5 = react.forwardRef;
+const forwardRef4Result = forwardRef4(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
+  let preventNativeModalDismiss;
+  let refreshControl;
+  let tmp3;
+  let tmp4;
+  let tmp5;
+  const maintainVisibleContentPosition = react2;
   const cResult = maintainVisibleContentPosition.c(8);
   if (cResult[0] !== arg0) {
     ({ preventNativeModalDismiss, refreshControl } = arg0);
@@ -159,9 +181,9 @@ const forwardRefResult3 = noop.forwardRef(ReactCompilerGating.isReactCompilerEna
     cResult[1] = preventNativeModalDismiss;
     cResult[2] = tmp8;
     cResult[3] = refreshControl;
-    let tmp5 = refreshControl;
-    let tmp4 = tmp8;
-    let tmp3 = preventNativeModalDismiss;
+    tmp5 = refreshControl;
+    tmp4 = tmp8;
+    tmp3 = preventNativeModalDismiss;
   } else {
     tmp3 = cResult[1];
     tmp4 = cResult[2];
@@ -170,127 +192,97 @@ const forwardRefResult3 = noop.forwardRef(ReactCompilerGating.isReactCompilerEna
   const tmp9 = closure_12(tmp3, tmp5);
   if (cResult[4] === tmp9) {
     if (cResult[5] === tmp4) {
+      let tmp10;
       if (cResult[6] === ref) {
-        let tmp10 = cResult[7];
+        tmp10 = cResult[7];
       }
       return tmp10;
     }
   }
-  const obj2 = { ref, maintainVisibleContentPosition };
+  BottomSheetFlashListDefault;
   const merged = Object.assign(tmp4);
-  obj2.refreshControl = tmp9;
-  const tmp13 = jsx(_modDef6336, { ref, maintainVisibleContentPosition });
+  const tmp13 = <tmp11 ref={ref} maintainVisibleContentPosition={maintainVisibleContentPosition} refreshControl={tmp9} />;
   cResult[4] = tmp9;
   cResult[5] = tmp4;
   cResult[6] = ref;
   cResult[7] = tmp13;
   tmp10 = tmp13;
 }) : ((arg0, ref) => {
+  let maintainVisibleContentPosition;
+  let preventNativeModalDismiss;
+  let refreshControl;
+  let tmp2;
   ({ preventNativeModalDismiss, refreshControl } = arg0);
   const merged = Object.assign(arg0, Object.assign({ preventNativeModalDismiss: 0, refreshControl: 0 }));
-  maintainVisibleContentPosition = { ref, maintainVisibleContentPosition };
-  const tmp2 = closure_12(preventNativeModalDismiss, refreshControl);
+  maintainVisibleContentPosition = { ref, maintainVisibleContentPosition, refreshControl: tmp2 };
+  tmp2 = closure_12(preventNativeModalDismiss, refreshControl);
+  BottomSheetFlashListDefault;
   const merged1 = Object.assign(merged);
-  maintainVisibleContentPosition.refreshControl = tmp2;
-  return jsx(_modDef6336, { ref, maintainVisibleContentPosition });
+  return <tmp3 ref={ref} maintainVisibleContentPosition={maintainVisibleContentPosition} refreshControl={tmp2} />;
 }));
-const size = fn(2);
+ReactCompilerGating = ReactCompilerGating_mod;
+const forwardRef5Result = forwardRef5(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
+  let preventNativeModalDismiss;
+  let refreshControl;
+  let tmp4;
+  let tmp5;
+  let tmp6;
+  const maintainVisibleContentPosition = react2;
+  const cResult = maintainVisibleContentPosition.c(8);
+  if (cResult[0] !== arg0) {
+    ({ preventNativeModalDismiss, refreshControl } = arg0);
+    const tmp9 = _objectWithoutProperties(arg0, closure_5);
+    cResult[0] = arg0;
+    cResult[1] = preventNativeModalDismiss;
+    cResult[2] = tmp9;
+    cResult[3] = refreshControl;
+    tmp6 = refreshControl;
+    tmp5 = tmp9;
+    tmp4 = preventNativeModalDismiss;
+  } else {
+    tmp4 = cResult[1];
+    tmp5 = cResult[2];
+    tmp6 = cResult[3];
+  }
+  const tmp10 = closure_12(tmp4, tmp6);
+  if (cResult[4] === tmp10) {
+    if (cResult[5] === tmp5) {
+      let tmp11;
+      if (cResult[6] === ref) {
+        tmp11 = cResult[7];
+      }
+      return tmp11;
+    }
+  }
+  const merged = Object.assign(tmp5);
+  const tmp13 = <closure_14 ref={ref} maintainVisibleContentPosition={maintainVisibleContentPosition} masonry renderScrollComponent={BottomSheetModal.BottomSheetScrollView} refreshControl={tmp10} />;
+  cResult[4] = tmp10;
+  cResult[5] = tmp5;
+  cResult[6] = ref;
+  cResult[7] = tmp13;
+  tmp11 = tmp13;
+}) : ((arg0, ref) => {
+  let maintainVisibleContentPosition;
+  let preventNativeModalDismiss;
+  let refreshControl;
+  let tmp2;
+  ({ preventNativeModalDismiss, refreshControl } = arg0);
+  const merged = Object.assign(arg0, Object.assign({ preventNativeModalDismiss: 0, refreshControl: 0 }));
+  maintainVisibleContentPosition = { ref, maintainVisibleContentPosition, masonry: true, renderScrollComponent: BottomSheetModal.BottomSheetScrollView, refreshControl: tmp2 };
+  tmp2 = closure_12(preventNativeModalDismiss, refreshControl);
+  const merged1 = Object.assign(merged);
+  return <closure_14 ref={ref} maintainVisibleContentPosition={maintainVisibleContentPosition} masonry renderScrollComponent={BottomSheetModal.BottomSheetScrollView} refreshControl={tmp2} />;
+}));
 const result = size.fileFinishedImporting("../discord_common/js/packages/flash-list/index.js");
-for (const key10093 in require("module_6337")) {
-  arg5[key10093] = require("module_6337")[key10093];
+for (const key10093 in _mod6337) {
+  exports[key10093] = _mod6337[key10093];
   continue;
 }
-const forwardRefResult4 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
-  const maintainVisibleContentPosition = c;
-  const cResult = maintainVisibleContentPosition.c(8);
-  if (cResult[0] !== arg0) {
-    ({ preventNativeModalDismiss, refreshControl } = arg0);
-    const tmp9 = _objectWithoutProperties(arg0, closure_5);
-    cResult[0] = arg0;
-    cResult[1] = preventNativeModalDismiss;
-    cResult[2] = tmp9;
-    cResult[3] = refreshControl;
-    let tmp6 = refreshControl;
-    let tmp5 = tmp9;
-    let tmp4 = preventNativeModalDismiss;
-  } else {
-    tmp4 = cResult[1];
-    tmp5 = cResult[2];
-    tmp6 = cResult[3];
-  }
-  const tmp10 = closure_12(tmp4, tmp6);
-  if (cResult[4] === tmp10) {
-    if (cResult[5] === tmp5) {
-      if (cResult[6] === ref) {
-        let tmp11 = cResult[7];
-      }
-      return tmp11;
-    }
-  }
-  const obj2 = { ref, maintainVisibleContentPosition, masonry: true, renderScrollComponent: BottomSheetModal.BottomSheetScrollView };
-  const merged = Object.assign(tmp5);
-  obj2.refreshControl = tmp10;
-  const tmp13 = <closure_14 ref={ref} maintainVisibleContentPosition={maintainVisibleContentPosition} masonry renderScrollComponent={BottomSheetModal.BottomSheetScrollView} />;
-  cResult[4] = tmp10;
-  cResult[5] = tmp5;
-  cResult[6] = ref;
-  cResult[7] = tmp13;
-  tmp11 = tmp13;
-}) : ((arg0, ref) => {
-  ({ preventNativeModalDismiss, refreshControl } = arg0);
-  const merged = Object.assign(arg0, Object.assign({ preventNativeModalDismiss: 0, refreshControl: 0 }));
-  maintainVisibleContentPosition = { ref, maintainVisibleContentPosition, masonry: true, renderScrollComponent: BottomSheetModal.BottomSheetScrollView };
-  const merged1 = Object.assign(merged);
-  maintainVisibleContentPosition.refreshControl = closure_12(preventNativeModalDismiss, refreshControl);
-  return <closure_14 ref={ref} maintainVisibleContentPosition={maintainVisibleContentPosition} masonry renderScrollComponent={BottomSheetModal.BottomSheetScrollView} />;
-}));
+const FlashList_export = forwardRefResult;
 
 export { defaultMVCPConfig };
-export const FlashList = forwardRefResult;
-export const AnimatedFlashList = forwardRefResult1;
-export const MasonryFlashList = forwardRefResult2;
-export const BottomSheetFlashList = forwardRefResult3;
-export const BottomSheetMasonryFlashList = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
-  const maintainVisibleContentPosition = c;
-  const cResult = maintainVisibleContentPosition.c(8);
-  if (cResult[0] !== arg0) {
-    ({ preventNativeModalDismiss, refreshControl } = arg0);
-    const tmp9 = _objectWithoutProperties(arg0, closure_5);
-    cResult[0] = arg0;
-    cResult[1] = preventNativeModalDismiss;
-    cResult[2] = tmp9;
-    cResult[3] = refreshControl;
-    let tmp6 = refreshControl;
-    let tmp5 = tmp9;
-    let tmp4 = preventNativeModalDismiss;
-  } else {
-    tmp4 = cResult[1];
-    tmp5 = cResult[2];
-    tmp6 = cResult[3];
-  }
-  const tmp10 = closure_12(tmp4, tmp6);
-  if (cResult[4] === tmp10) {
-    if (cResult[5] === tmp5) {
-      if (cResult[6] === ref) {
-        let tmp11 = cResult[7];
-      }
-      return tmp11;
-    }
-  }
-  const obj2 = { ref, maintainVisibleContentPosition, masonry: true, renderScrollComponent: BottomSheetModal.BottomSheetScrollView };
-  const merged = Object.assign(tmp5);
-  obj2.refreshControl = tmp10;
-  const tmp13 = <closure_14 ref={ref} maintainVisibleContentPosition={maintainVisibleContentPosition} masonry renderScrollComponent={BottomSheetModal.BottomSheetScrollView} />;
-  cResult[4] = tmp10;
-  cResult[5] = tmp5;
-  cResult[6] = ref;
-  cResult[7] = tmp13;
-  tmp11 = tmp13;
-}) : ((arg0, ref) => {
-  ({ preventNativeModalDismiss, refreshControl } = arg0);
-  const merged = Object.assign(arg0, Object.assign({ preventNativeModalDismiss: 0, refreshControl: 0 }));
-  maintainVisibleContentPosition = { ref, maintainVisibleContentPosition, masonry: true, renderScrollComponent: BottomSheetModal.BottomSheetScrollView };
-  const merged1 = Object.assign(merged);
-  maintainVisibleContentPosition.refreshControl = closure_12(preventNativeModalDismiss, refreshControl);
-  return <closure_14 ref={ref} maintainVisibleContentPosition={maintainVisibleContentPosition} masonry renderScrollComponent={BottomSheetModal.BottomSheetScrollView} />;
-}));
+export { FlashList_export as FlashList };
+export const AnimatedFlashList = forwardRef2Result;
+export const MasonryFlashList = forwardRef3Result;
+export const BottomSheetFlashList = forwardRef4Result;
+export const BottomSheetMasonryFlashList = forwardRef5Result;

@@ -1,6 +1,7 @@
 // === Module 15980: MessagesLegendList ===
 
 // Module 15980 (MessagesLegendList)
+import Fragment from "Fragment" /* 21 */;
 import MessagesItemChannel from "MessagesItemChannel" /* 15957 */;
 import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 15967 */;
 import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 15969 */;
@@ -10,19 +11,38 @@ import MessagesItemEmptyStateDefault from "MessagesItemEmptyState" /* 16019 */;
 import MessagesItemSeparator from "MessagesItemSeparator" /* 16020 */;
 import MessagesItemSuggestedFriendsHeader from "MessagesItemSuggestedFriendsHeader" /* 16021 */;
 import MessagesItemAddFriendsWidgetDefault from "MessagesItemAddFriendsWidget" /* 16022 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const MessagesItemSeparatorDefault = MessagesItemSeparator;
 const MessagesItemSuggestedFriendsHeaderDefault = MessagesItemSuggestedFriendsHeader;
+let item, obj1, obj5, obj6, str, str2, str3, str4, str5, tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20, tmp3, tmp6, tmp8, tmp9;
 
-require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesLegendList.tsx");
-
-export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((listItemSuggestedFriendHeight, arg1) => {
-  const cResult = listItemHeight(listLeft[3]).c(46);
+const jsx = Fragment.jsx;
+const memoResult = react.memo(react.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((listItemSuggestedFriendHeight, arg1) => {
+  let accessibilityLabel;
+  let data;
+  let friendsHeaderIndex;
+  let friendsHeaderOffset;
+  let handleScrollAnimated;
+  let insetEnd;
+  let listData;
+  let listItemHeight;
+  let listLeft;
+  let listRefHappeningNow;
+  let listTop;
+  let recycleItems;
+  let renderFooter;
+  let renderHeader;
+  let scrollIndicatorInsetBottom;
+  let scrollPosition;
+  let setAddedFriendSuggestions;
+  let tmp4;
+  let tmp7;
+  let tmp = listLeft;
+  let obj = listItemHeight(listLeft[3]);
+  const cResult = obj.c(46);
   ({ accessibilityLabel, data, handleScrollAnimated, insetEnd, listItemHeight } = listItemSuggestedFriendHeight);
   listItemSuggestedFriendHeight = listItemSuggestedFriendHeight.listItemSuggestedFriendHeight;
   listLeft = listItemSuggestedFriendHeight.listLeft;
@@ -30,22 +50,22 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   ({ recycleItems, scrollIndicatorInsetBottom, scrollPosition } = listItemSuggestedFriendHeight);
   const friendSuggestions = data.friendSuggestions;
   ({ renderHeader, renderFooter, setAddedFriendSuggestions } = data);
-  listTop.useRef(null);
+  const ref = listTop.useRef(null);
   if (cResult[0] !== listItemHeight) {
-    let obj3 = { listItemHeight };
+    const obj3 = { listItemHeight };
     cResult[0] = listItemHeight;
     cResult[1] = obj3;
-    let tmp4 = obj3;
+    tmp4 = obj3;
   } else {
     tmp4 = cResult[1];
   }
-  const tmp5 = listItemSuggestedFriendHeight(listLeft[4])(data, tmp4);
+  const tmp5 = listItemSuggestedFriendHeight(tmp[4])(data, tmp4);
   ({ listData, friendsHeaderIndex, friendsHeaderOffset } = tmp5);
   const listHeaderHeight = tmp5.listHeaderHeight;
   if (cResult[2] !== listHeaderHeight) {
     class L {
       constructor() {
-        obj = { scrollToTop() { ... } };
+        obj = { scrollToTop() { /* body not rendered: F145395 */ } };
         return obj;
       }
     }
@@ -53,11 +73,11 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
     cResult[2] = listHeaderHeight;
     cResult[3] = L;
     cResult[4] = items;
-    let tmp7 = items;
+    tmp7 = items;
   } else {
     class L {
       constructor() {
-        obj = { scrollToTop() { ... } };
+        obj = { scrollToTop() { /* body not rendered: F145395 */ } };
         return obj;
       }
     }
@@ -67,7 +87,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   if (cResult[5] === friendSuggestions) {
     class L {
       constructor() {
-        obj = { scrollToTop() { ... } };
+        obj = { scrollToTop() { /* body not rendered: F145395 */ } };
         return obj;
       }
     }
@@ -147,8 +167,12 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   cResult[11] = scrollPosition;
   cResult[12] = setAddedFriendSuggestions;
   cResult[13] = R;
-  let obj = listItemHeight(listLeft[3]);
 }) : ((listItemHeight, arg1) => {
+  let accessibilityLabel;
+  let data;
+  let handleScrollAnimated;
+  let insetEnd;
+  let recycleItems;
   ({ data, insetEnd } = listItemHeight);
   const estimatedItemSize = listItemHeight.listItemHeight;
   const listItemSuggestedFriendHeight = listItemHeight.listItemSuggestedFriendHeight;
@@ -163,24 +187,29 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   const setAddedFriendSuggestions = data.setAddedFriendSuggestions;
   ({ accessibilityLabel, handleScrollAnimated, recycleItems } = listItemHeight);
   const ref = listLeft.useRef(null);
-  const data2 = estimatedItemSize(listItemSuggestedFriendHeight[4])(data, { listItemHeight: estimatedItemSize });
-  const friendsHeaderIndex = data2.friendsHeaderIndex;
-  const friendsHeaderOffset = data2.friendsHeaderOffset;
-  const estimatedHeaderSize = data2.listHeaderHeight;
+  let tmp2 = estimatedItemSize(listItemSuggestedFriendHeight[4])(data, { listItemHeight: estimatedItemSize });
+  const friendsHeaderIndex = tmp2.friendsHeaderIndex;
+  const friendsHeaderOffset = tmp2.friendsHeaderOffset;
+  const estimatedHeaderSize = tmp2.listHeaderHeight;
   let items = [estimatedHeaderSize];
-  const imperativeHandle = listLeft.useImperativeHandle(arg1, () => ({
-    scrollToTop() {
-      let flag = arg0;
-      if (arg0 === undefined) {
-        flag = false;
+  const data2 = tmp2.listData;
+  const imperativeHandle = listLeft.useImperativeHandle(arg1, () => {
+    let offset;
+    let obj = {
+      scrollToTop() {
+        let flag = arg0;
+        if (arg0 === undefined) {
+          flag = false;
+        }
+        const current = ref.current;
+        if (current != null) {
+          const obj = { offset, animated: flag };
+          current.scrollToOffset(obj);
+        }
       }
-      const current = ref.current;
-      if (current != null) {
-        const obj = { offset, animated: flag };
-        current.scrollToOffset(obj);
-      }
-    }
-  }), items);
+    };
+    return obj;
+  }, items);
   const items1 = [estimatedItemSize, scrollPosition, friendsHeaderOffset, listTop, listLeft, listItemSuggestedFriendHeight, friendSuggestions, setAddedFriendSuggestions];
   const renderItem = listLeft.useCallback((item) => {
     item = item.item;
@@ -190,13 +219,10 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
         if ("separator" === kind) {
           return jsx(MessagesItemSeparatorDefault, {});
         } else if ("friendsHeader" === kind) {
-          const obj2 = { scrollPosition, stickyAt: friendsHeaderOffset, stickyTop: listTop, stickyLeft: listLeft };
           return jsx(MessagesItemSuggestedFriendsHeaderDefault, { scrollPosition, stickyAt: friendsHeaderOffset, stickyTop: listTop, stickyLeft: listLeft });
         } else if ("suggestedFriend" === kind) {
-          const obj3 = { height: listItemSuggestedFriendHeight, suggestedFriend: friendSuggestions[item.row], onAddFriendSuggestions: setAddedFriendSuggestions };
           return jsx(MessagesItemSuggestedFriend.MessagesItemSuggestedFriendLegend, { height: listItemSuggestedFriendHeight, suggestedFriend: friendSuggestions[item.row], onAddFriendSuggestions: setAddedFriendSuggestions });
         } else if ("placeholder" === kind) {
-          const obj = { row: item.row, height: estimatedItemSize };
           return jsx(MessagesItemPlaceholderDefault, { row: item.row, height: estimatedItemSize });
         }
       }
@@ -254,7 +280,6 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   const items5 = [renderFooter];
   const ListHeaderComponent = listLeft.useMemo(() => {
     if (useMessagesData.MessagesDataHeader.HappeningNow === renderHeader) {
-      const obj = { listRef: listRefHappeningNow };
       return jsx(MessagesItemHappeningNowDefault, { listRef: listRefHappeningNow });
     } else if (useMessagesData.MessagesDataHeader.EmptyState === renderHeader) {
       return jsx(MessagesItemEmptyStateDefault, {});
@@ -282,5 +307,8 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   const items8 = [scrollIndicatorInsetBottom];
   const contentContainerStyle = listLeft.useMemo(() => ({ paddingBottom: insetEnd }), items7);
   const scrollIndicatorInsets = listLeft.useMemo(() => ({ bottom: scrollIndicatorInsetBottom }), items8);
-  return listRefHappeningNow(insetEnd(listItemSuggestedFriendHeight[14]).AnimatedLegendList, { ref, accessibilityLabel, contentContainerStyle, data: data2.listData, estimatedHeaderSize, estimatedItemSize, getFixedItemSize, getItemType, keyExtractor, ListFooterComponent, ListHeaderComponent, onScroll, recycleItems, renderItem, scrollIndicatorInsets, stickyHeaderIndices });
+  return listRefHappeningNow(insetEnd(listItemSuggestedFriendHeight[14]).AnimatedLegendList, { ref, accessibilityLabel, contentContainerStyle, data: data2, estimatedHeaderSize, estimatedItemSize, getFixedItemSize, getItemType, keyExtractor, ListFooterComponent, ListHeaderComponent, onScroll, recycleItems, renderItem, scrollIndicatorInsets, stickyHeaderIndices });
 })));
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesLegendList.tsx");
+
+export default memoResult;

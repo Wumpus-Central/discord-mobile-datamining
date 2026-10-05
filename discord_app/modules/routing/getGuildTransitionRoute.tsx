@@ -1,8 +1,11 @@
 // === Module 6717: getGuildTransitionRoute ===
 
 // Module 6717 (getGuildTransitionRoute)
+import Constants from "Constants" /* 1085 */;
+import ChannelConstants from "ChannelConstants" /* 2058 */;
 import FavoritesUtils from "FavoritesUtils" /* 2077 */;
 import OnboardingHomeUtils from "OnboardingHomeUtils" /* 6723 */;
+import canUseGuildSpace from "canUseGuildSpace" /* 6725 */;
 import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6727 */;
 import ConjureUtils from "ConjureUtils" /* 6746 */;
 import ConjureBuilderRouteStore from "ConjureBuilderRouteStore" /* 6718 */;
@@ -13,35 +16,35 @@ import GuildChannelStore from "GuildChannelStore" /* 4507 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import PrivateChannelSortStore from "PrivateChannelSortStore" /* 6719 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ME = fn(1085).ME;
-const StaticChannelRoute = fn(2058).StaticChannelRoute;
-const size = fn(2);
+const ME = Constants.ME;
+const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
 const result = size.fileFinishedImporting("modules/routing/getGuildTransitionRoute.tsx");
 
-export const getGuildTransitionRoute = function getGuildTransitionRoute(guildId) {
-  const lastProjectId = ConjureBuilderRouteStore.getLastProjectId(guildId);
+export const getGuildTransitionRoute = function getGuildTransitionRoute(id) {
+  const lastProjectId = ConjureBuilderRouteStore.getLastProjectId(id);
   if (null != lastProjectId) {
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(id);
     let canAccessConjureResult = null != guild;
     if (canAccessConjureResult) {
-      canAccessConjureResult = ConjureUtils.canAccessConjure(guild, "getChannelIdForGuildTransition");
+      const obj = ConjureUtils;
+      canAccessConjureResult = obj.canAccessConjure(guild, "getChannelIdForGuildTransition");
     }
     if (canAccessConjureResult) {
       const items = [StaticChannelRoute.CONJURE, lastProjectId];
       return items;
     }
   }
-  const channelId = SelectedChannelStore.getChannelId(guildId);
-  const defaultChannel = GuildChannelStore.getDefaultChannel(guildId);
-  let id;
+  const channelId = SelectedChannelStore.getChannelId(id);
+  const defaultChannel = GuildChannelStore.getDefaultChannel(id);
+  id = undefined;
   if (defaultChannel != null) {
     id = defaultChannel.id;
   }
   if (id == null) {
     let tmp11;
-    if (guildId === ME) {
+    if (id === ME) {
       const privateChannelIds = PrivateChannelSortStore.getPrivateChannelIds();
       let first;
       if (privateChannelIds.length > 0) {
@@ -52,24 +55,26 @@ export const getGuildTransitionRoute = function getGuildTransitionRoute(guildId)
     id = tmp11;
   }
   if (channelId === StaticChannelRoute.GUILD_ONBOARDING) {
-    if (!GuildOnboardingStore.shouldShowOnboarding(guildId)) {
+    if (!GuildOnboardingStore.shouldShowOnboarding(id)) {
       const items1 = [id, null];
       return items1;
     }
   }
   if (channelId === StaticChannelRoute.GUILD_HOME) {
-    if (!obj2.canSeeOnboardingHome(guildId)) {
+    const obj2 = OnboardingHomeUtils;
+    if (!obj2.canSeeOnboardingHome(id)) {
       const items2 = [id, null];
       return items2;
     }
-    obj2 = OnboardingHomeUtils;
   }
   if (channelId === StaticChannelRoute.GUILD_SPACE) {
+    let tmp33;
     const items3 = [, ];
-    if (obj7.canUseGuildSpace(GuildStore.getGuild(guildId), "getChannelIdForGuildTransition")) {
+    const obj7 = canUseGuildSpace;
+    if (obj7.canUseGuildSpace(GuildStore.getGuild(id), "getChannelIdForGuildTransition")) {
       items3[0] = channelId;
       items3[1] = null;
-      let tmp33 = items3;
+      tmp33 = items3;
     } else {
       items3[0] = id;
       items3[1] = null;
@@ -78,23 +83,25 @@ export const getGuildTransitionRoute = function getGuildTransitionRoute(guildId)
     return tmp33;
   } else {
     if (channelId === StaticChannelRoute.GAME_SHOP) {
-      if (obj3.canSeeGameShop(guildId)) {
+      const obj3 = SlayerStorefrontUtils;
+      if (obj3.canSeeGameShop(id)) {
         const items4 = [channelId, null];
         return items4;
       }
-      obj3 = SlayerStorefrontUtils;
     }
     if (channelId === StaticChannelRoute.CONJURE) {
-      const guild1 = GuildStore.getGuild(guildId);
+      let tmp29;
+      const guild1 = GuildStore.getGuild(id);
       let canAccessConjureResult1 = null != guild1;
       if (canAccessConjureResult1) {
-        canAccessConjureResult1 = ConjureUtils.canAccessConjure(guild1, "getChannelIdForGuildTransition");
+        const obj6 = ConjureUtils;
+        canAccessConjureResult1 = obj6.canAccessConjure(guild1, "getChannelIdForGuildTransition");
       }
       const items5 = [, ];
       if (canAccessConjureResult1) {
         items5[0] = channelId;
         items5[1] = null;
-        let tmp29 = items5;
+        tmp29 = items5;
       } else {
         items5[0] = id;
         items5[1] = null;
@@ -104,9 +111,10 @@ export const getGuildTransitionRoute = function getGuildTransitionRoute(guildId)
     } else {
       const channel = ChannelStore.getChannel(channelId);
       if (null != channel) {
+        let items6;
         if (!channel.isGuildVocal()) {
           FavoritesUtils;
-          let items6 = [channelId, null];
+          items6 = [channelId, null];
         }
         return items6;
       }

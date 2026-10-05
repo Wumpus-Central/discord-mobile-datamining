@@ -1,8 +1,8 @@
 // === Module 15792: GuildSettingActivityJoining ===
 
 // Module 15792 (GuildSettingActivityJoining)
-import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
+import react from "react" /* 576 */;
+import intl2 from "intl" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 6491 */;
 import SettingsConstants from "SettingsConstants" /* 7634 */;
@@ -11,15 +11,20 @@ import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import SettingBuilders from "SettingBuilders" /* 11129 */;
 import size from "module_2" /* 2 */;
 
+let c2;
+let c3;
 ({ getSelectedGuildId: c2, useUserSafetySettingsSelectedGuildStore: c3 } = UserSettingsSafetySelectedGuildStore);
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(3);
-  const selectedGuildId = React3().selectedGuildId;
+  const obj = react;
+  const cResult = obj.c(3);
+  const selectedGuildId = _false().selectedGuildId;
   const ActivityJoiningRestrictedGuilds = UserSettings.ActivityJoiningRestrictedGuilds;
   const setting = ActivityJoiningRestrictedGuilds.useSetting();
   if (cResult[0] === selectedGuildId) {
+    let tmp2;
     if (cResult[1] === setting) {
-      let tmp2 = cResult[2];
+      tmp2 = cResult[2];
     }
     return !tmp2;
   }
@@ -29,45 +34,28 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[2] = hasItem;
   tmp2 = hasItem;
 }) : (() => {
+  const selectedGuildId = _false().selectedGuildId;
   const ActivityJoiningRestrictedGuilds = UserSettings.ActivityJoiningRestrictedGuilds;
   const setting = ActivityJoiningRestrictedGuilds.useSetting();
-  return !setting.includes(React3().selectedGuildId);
+  return !setting.includes(selectedGuildId);
 });
-const toggle = SettingBuilders.createToggle({
+let obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t["T+nevN"]);
+    const intl = intl2.intl;
+    return intl.string(intl2.t["T+nevN"]);
   },
   useDescription() {
-    const intl = util.intl;
-    return intl.string(util.t["b+bVSw"]);
+    const intl = intl2.intl;
+    return intl.string(intl2.t["b+bVSw"]);
   },
-  parent: SettingsConstants.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-    const cResult = c.c(3);
-    const selectedGuildId = React3().selectedGuildId;
-    const ActivityJoiningRestrictedGuilds = UserSettings.ActivityJoiningRestrictedGuilds;
-    const setting = ActivityJoiningRestrictedGuilds.useSetting();
-    if (cResult[0] === selectedGuildId) {
-      if (cResult[1] === setting) {
-        let tmp2 = cResult[2];
-      }
-      return !tmp2;
-    }
-    const hasItem = setting.includes(selectedGuildId);
-    cResult[0] = selectedGuildId;
-    cResult[1] = setting;
-    cResult[2] = hasItem;
-    tmp2 = hasItem;
-  }) : (() => {
-    const ActivityJoiningRestrictedGuilds = UserSettings.ActivityJoiningRestrictedGuilds;
-    const setting = ActivityJoiningRestrictedGuilds.useSetting();
-    return !setting.includes(React3().selectedGuildId);
-  }),
+  parent: MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  useValue: tmp3,
   onValueChange(arg0) {
     const tmp = React2();
-    const sanitizedActivityJoiningRestrictedGuilds = UserSettingsUtils.getSanitizedActivityJoiningRestrictedGuilds();
-    if (arg0) {
+    const obj = UserSettingsUtils;
+    const sanitizedActivityJoiningRestrictedGuilds = obj.getSanitizedActivityJoiningRestrictedGuilds();
+    const tmp4 = arg0;
+    if (tmp4) {
       sanitizedActivityJoiningRestrictedGuilds.delete(tmp);
     } else {
       sanitizedActivityJoiningRestrictedGuilds.add(tmp);
@@ -76,7 +64,8 @@ const toggle = SettingBuilders.createToggle({
     const items = [...sanitizedActivityJoiningRestrictedGuilds];
     ActivityJoiningRestrictedGuilds.updateSetting(items);
   }
-});
+};
+const toggle = SettingBuilders.createToggle(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/GuildSettingActivityJoining.tsx");
 
 export default toggle;

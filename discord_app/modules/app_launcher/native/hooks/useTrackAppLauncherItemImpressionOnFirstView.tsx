@@ -3,91 +3,124 @@
 // Module 11725 (useTrackAppLauncherItemImpressionOnFirstView)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import useTrackImpression from "useTrackImpression" /* 8422 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useTrackAppLauncherItemImpressionOnFirstView.tsx");
+let dependencyMap, set;
 
-export const useTrackAppLauncherItemImpressionOnFirstView = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = entrypoint(576).c(6);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function() {
+  let entrypoint;
+  let first;
+  let ref;
+  let tmp10;
+  let tmp7;
+  let tmp9;
   let obj = entrypoint(576);
+  const cResult = obj.c(6);
+  let obj2 = entrypoint(10994);
   const tmp = entrypoint;
-  entrypoint = entrypoint(10994).useAppLauncherContext().entrypoint;
+  entrypoint = obj2.useAppLauncherContext().entrypoint;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const _Set = Set;
-    const set = new Set();
+    const self = this;
+    const self2 = this;
+    set = new Set();
     cResult[0] = set;
-    let first = set;
+    first = set;
   } else {
     first = cResult[0];
   }
-  dependencyMap = noop.useRef(first);
+  dependencyMap = react.useRef(first);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function c() {
       const current = ref.current;
       current.clear();
     };
     cResult[1] = fn;
-    let tmp9 = fn;
+    tmp7 = fn;
   } else {
-    tmp9 = cResult[1];
+    tmp7 = cResult[1];
   }
-  let obj2 = entrypoint(10994);
-  const focusEffect = tmp(1491).useFocusEffect(tmp9);
+  const tmpResult = tmp(1491);
+  const focusEffect = tmpResult.useFocusEffect(tmp7);
   if (cResult[2] !== entrypoint) {
     const fn2 = function p(itemKey) {
+      let applicationFlags;
+      let applicationId;
+      let commandId;
+      let obj2;
+      let sectionName;
+      let sectionOverallPosition;
+      let sectionPosition;
       itemKey = itemKey.itemKey;
       const current = ref.current;
       ({ sectionName, sectionPosition, sectionOverallPosition, applicationId, commandId, applicationFlags } = itemKey);
       if (!current.has(itemKey)) {
         const current2 = ref.current;
         current2.add(itemKey);
-        const obj2 = { type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW, name: discord_common_AnalyticsUtils.ImpressionNames.APP_LAUNCHER_ITEM, properties: null };
-        const obj3 = { source: entrypoint, section_name: sectionName, section_position: sectionPosition, section_overall_position: sectionOverallPosition, application_id: applicationId, command_id: commandId, application_flags: applicationFlags };
-        obj2.properties = obj3;
-        useTrackImpression.trackImpression(obj2);
+        const obj = { type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW, name: discord_common_AnalyticsUtils.ImpressionNames.APP_LAUNCHER_ITEM, properties: obj2 };
+        const trackImpression = useTrackImpression.trackImpression;
+        useTrackImpression;
+        obj2 = { source: entrypoint, section_name: sectionName, section_position: sectionPosition, section_overall_position: sectionOverallPosition, application_id: applicationId, command_id: commandId, application_flags: applicationFlags };
+        trackImpression(obj);
       }
     };
     cResult[2] = entrypoint;
     cResult[3] = fn2;
-    let tmp11 = fn2;
+    tmp9 = fn2;
   } else {
-    tmp11 = cResult[3];
+    tmp9 = cResult[3];
   }
-  if (cResult[4] !== tmp11) {
-    let obj3 = { trackAppLauncherItemImpressionOnFirstView: tmp11 };
-    cResult[4] = tmp11;
+  if (cResult[4] !== tmp9) {
+    const obj3 = { trackAppLauncherItemImpressionOnFirstView: tmp9 };
+    cResult[4] = tmp9;
     cResult[5] = obj3;
-    let tmp12 = obj3;
+    tmp10 = obj3;
   } else {
-    tmp12 = cResult[5];
+    tmp10 = cResult[5];
   }
-  return tmp12;
+  return tmp10;
 }) : (() => {
-  entrypoint = entrypoint(10994).useAppLauncherContext().entrypoint;
+  let entrypoint;
+  let items;
+  let ref;
   let obj = entrypoint(10994);
-  dependencyMap = noop.useRef(new Set());
-  const set = new Set();
-  const focusEffect = entrypoint(1491).useFocusEffect(noop.useCallback(() => {
+  entrypoint = obj.useAppLauncherContext().entrypoint;
+  const useRef = react.useRef;
+  set = new Set();
+  dependencyMap = useRef(set);
+  let obj2 = entrypoint(1491);
+  const focusEffect = obj2.useFocusEffect(react.useCallback(() => {
     const current = ref.current;
     current.clear();
   }, []));
-  let obj3 = { trackAppLauncherItemImpressionOnFirstView: null };
-  const items = [entrypoint];
-  obj3.trackAppLauncherItemImpressionOnFirstView = noop.useCallback((itemKey) => {
-    itemKey = itemKey.itemKey;
-    const current = ref.current;
-    ({ sectionName, sectionPosition, sectionOverallPosition, applicationId, commandId, applicationFlags } = itemKey);
-    if (!current.has(itemKey)) {
-      const current2 = ref.current;
-      current2.add(itemKey);
-      const obj2 = { type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW, name: discord_common_AnalyticsUtils.ImpressionNames.APP_LAUNCHER_ITEM, properties: null };
-      const obj3 = { source: entrypoint, section_name: sectionName, section_position: sectionPosition, section_overall_position: sectionOverallPosition, application_id: applicationId, command_id: commandId, application_flags: applicationFlags };
-      obj2.properties = obj3;
-      useTrackImpression.trackImpression(obj2);
-    }
-  }, items);
+  const obj3 = {
+    trackAppLauncherItemImpressionOnFirstView: react.useCallback((itemKey) => {
+      let applicationFlags;
+      let applicationId;
+      let commandId;
+      let obj2;
+      let sectionName;
+      let sectionOverallPosition;
+      let sectionPosition;
+      itemKey = itemKey.itemKey;
+      const current = ref.current;
+      ({ sectionName, sectionPosition, sectionOverallPosition, applicationId, commandId, applicationFlags } = itemKey);
+      if (!current.has(itemKey)) {
+        const current2 = ref.current;
+        current2.add(itemKey);
+        const obj = { type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW, name: discord_common_AnalyticsUtils.ImpressionNames.APP_LAUNCHER_ITEM, properties: obj2 };
+        const trackImpression = useTrackImpression.trackImpression;
+        useTrackImpression;
+        obj2 = { source: entrypoint, section_name: sectionName, section_position: sectionPosition, section_overall_position: sectionOverallPosition, application_id: applicationId, command_id: commandId, application_flags: applicationFlags };
+        trackImpression(obj);
+      }
+    }, items)
+  };
+  items = [entrypoint];
   return obj3;
 });
+const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useTrackAppLauncherItemImpressionOnFirstView.tsx");
+
+export const useTrackAppLauncherItemImpressionOnFirstView = tmp2;

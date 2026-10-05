@@ -1,69 +1,78 @@
 // === Module 7873: useFramePreviewOverrideFrame ===
 
 // Module 7873 (useFramePreviewOverrideFrame)
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
-import noop from "module_19" /* 19 */;
+import FramePreviewOverrideStore from "FramePreviewOverrideStore" /* 7874 */;
+import react from "react" /* 19 */;
 import ProfileFrameRecord from "ProfileFrameRecord" /* 7060 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-let closure_4 = fn(7874).useFramePreviewOverrideStore;
+let closure_4 = FramePreviewOverrideStore.useFramePreviewOverrideStore;
 let c5 = "frame-preview-override";
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/collectibles/profile_frames/hooks/useFramePreviewOverrideFrame.native.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let PROFILE_FRAME = dependencyMap;
-  const cResult = c.c(8);
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function() {
+  let first;
+  const obj = react2;
+  const cResult = obj.c(8);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function o(override) {
       return override.override;
     };
     cResult[0] = fn;
-    let first = fn;
+    first = fn;
   } else {
     first = cResult[0];
   }
-  overflowTop = closure_4(first);
-  if (null == overflowTop) {
-    return null;
-  } else {
-    if (cResult[1] === overflowTop.frameKey) {
-      if (cResult[2] === overflowTop.innerWidth) {
-        if (cResult[3] === overflowTop.layers) {
-          if (cResult[4] === overflowTop.overflowBottom) {
-            if (cResult[5] === overflowTop.overflowHorizontal) {
+  const tmp5 = closure_4(first);
+  let tmp6 = null;
+  if (null != tmp5) {
+    if (cResult[1] === tmp5.frameKey) {
+      if (cResult[2] === tmp5.innerWidth) {
+        if (cResult[3] === tmp5.layers) {
+          if (cResult[4] === tmp5.overflowBottom) {
+            if (cResult[5] === tmp5.overflowHorizontal) {
+              let tmp7;
+              if (cResult[6] === tmp5.overflowTop) {
+                tmp7 = cResult[7];
+              }
+              tmp6 = tmp7;
             }
           }
         }
       }
     }
-    const obj3 = { type: null, skuId: null, label: null, layers: null, innerWidth: null, overflowTop: null, overflowBottom: null, overflowHorizontal: null };
-    PROFILE_FRAME = CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME;
-    obj3.type = PROFILE_FRAME;
-    obj3.skuId = skuId;
-    ({ frameKey: obj2.label, layers: obj2.layers, innerWidth: obj2.innerWidth, overflowTop: obj2.overflowTop, overflowBottom: obj2.overflowBottom, overflowHorizontal: obj2.overflowHorizontal } = overflowTop);
-    const tmp10 = new ProfileFrameRecord(obj3);
-    cResult[1] = overflowTop.frameKey;
-    cResult[2] = overflowTop.innerWidth;
-    cResult[3] = overflowTop.layers;
-    cResult[4] = overflowTop.overflowBottom;
-    ({ overflowHorizontal: tmp2[5], overflowTop } = overflowTop);
-    cResult[6] = overflowTop;
-    cResult[7] = tmp10;
+    ({ frameKey: obj2.label, layers: obj2.layers, innerWidth: obj2.innerWidth, overflowTop: obj2.overflowTop, overflowBottom: obj2.overflowBottom, overflowHorizontal: obj2.overflowHorizontal } = tmp5);
+    const self = this;
+    const self2 = this;
+    const obj3 = { type: CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME, skuId, label: null, layers: null, innerWidth: null, overflowTop: null, overflowBottom: null, overflowHorizontal: null };
+    const tmp11 = new ProfileFrameRecord(obj3);
+    cResult[1] = tmp5.frameKey;
+    cResult[2] = tmp5.innerWidth;
+    cResult[3] = tmp5.layers;
+    cResult[4] = tmp5.overflowBottom;
+    cResult[5] = tmp5.overflowHorizontal;
+    cResult[6] = tmp5.overflowTop;
+    cResult[7] = tmp11;
+    tmp7 = tmp11;
   }
+  return tmp6;
 }) : (() => {
   const tmp = closure_4((override) => override.override);
-  closure_0 = tmp;
+  let closure_0 = tmp;
   const items = [tmp];
-  return noop.useMemo(() => {
+  return react.useMemo(function() {
     let tmp2 = null;
     if (null != closure_0) {
       const obj = { type: CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME, skuId, label: null, layers: null, innerWidth: null, overflowTop: null, overflowBottom: null, overflowHorizontal: null };
       ({ frameKey: obj.label, layers: obj.layers, innerWidth: obj.innerWidth, overflowTop: obj.overflowTop, overflowBottom: obj.overflowBottom, overflowHorizontal: obj.overflowHorizontal } = closure_0);
+      const self = this;
+      const self2 = this;
       tmp2 = new ProfileFrameRecord(obj);
     }
     return tmp2;
   }, items);
 });
+const result = size.fileFinishedImporting("modules/collectibles/profile_frames/hooks/useFramePreviewOverrideFrame.native.tsx");
+
+export default tmp2;

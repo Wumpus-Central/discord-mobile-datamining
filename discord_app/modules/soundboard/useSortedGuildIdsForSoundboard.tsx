@@ -1,23 +1,32 @@
 // === Module 17232: useSortedGuildIdsForSoundboard ===
 
 // Module 17232 (useSortedGuildIdsForSoundboard)
-import noop from "module_19" /* 19 */;
+import Constants from "Constants" /* 1085 */;
+import Constants2 from "Constants" /* 1096 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
+import react from "react" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4509 */;
 import SortedGuildStore from "SortedGuildStore" /* 5616 */;
 import UserStore from "UserStore" /* 1377 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, guild_id;
 
-const require = fn;
-const EMPTY_STRING_SNOWFLAKE_ID = fn(1085).EMPTY_STRING_SNOWFLAKE_ID;
-const Permissions = fn(1096).Permissions;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/soundboard/useSortedGuildIdsForSoundboard.tsx");
-
-export const useSortedGuildIdsForSoundboard = ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id, arg1) => {
+const EMPTY_STRING_SNOWFLAKE_ID = Constants.EMPTY_STRING_SNOWFLAKE_ID;
+const Permissions = Constants2.Permissions;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id, arg1) => {
+  let currentUser;
+  let flattenedGuildIds;
+  let tmp10;
+  let tmp13;
+  let tmp4;
+  let tmp5;
+  let tmp9;
   _require = guild_id;
-  const cResult = require("c").c(13);
+  const obj = require("react");
+  const cResult = obj.c(13);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
     const fn = function c() {
@@ -30,9 +39,9 @@ export const useSortedGuildIdsForSoundboard = ReactCompilerGating.isReactCompile
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const obj = require("c");
   guild_id = undefined;
-  const stateFromStores = require("useStateFromStores").useStateFromStores(tmp4, tmp5);
+  const tmpResult = require("useStateFromStores");
+  const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
   if (guild_id != null) {
     guild_id = guild_id.guild_id;
   }
@@ -43,92 +52,68 @@ export const useSortedGuildIdsForSoundboard = ReactCompilerGating.isReactCompile
     const items1 = [SortedGuildStore];
     class F {
       constructor() {
-        return closure_1_5.getFlattenedGuildIds();
+        return flattenedGuildIds.getFlattenedGuildIds();
       }
     }
     cResult[2] = items1;
     cResult[3] = F;
-    let tmp10 = F;
-    let tmp9 = items1;
+    tmp10 = F;
+    tmp9 = items1;
   } else {
     tmp9 = cResult[2];
     tmp10 = cResult[3];
   }
-  const tmpResult = require("useStateFromStores");
-  const stateFromStores1 = require("useStateFromStores").useStateFromStores(tmp9, tmp10);
+  const tmpResult3 = require("useStateFromStores");
+  const stateFromStores1 = tmpResult3.useStateFromStores(tmp9, tmp10);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [PermissionStore];
     class F {
       constructor() {
-        return closure_1_5.getFlattenedGuildIds();
+        return flattenedGuildIds.getFlattenedGuildIds();
       }
     }
     cResult[4] = items2;
-    let tmp13 = items2;
+    tmp13 = items2;
   } else {
     tmp13 = cResult[4];
   }
   if (cResult[5] !== guild_id) {
     class U {
       constructor() {
-        tmp = closure_0;
-        canResult = null == closure_0 || null == tmp.guild_id;
-        if (!canResult) {
-          tmp3 = closure_4;
-          tmp4 = Permissions;
-          canResult = closure_4.can(Permissions.USE_EXTERNAL_SOUNDS, tmp);
-        }
+        const canResult = null == guild_id || null == guild_id.guild_id || PermissionStore.can(Permissions.USE_EXTERNAL_SOUNDS, guild_id);
         return canResult;
       }
     }
     cResult[5] = guild_id;
     class F {
       constructor() {
-        return closure_1_5.getFlattenedGuildIds();
+        return flattenedGuildIds.getFlattenedGuildIds();
       }
     }
     cResult[6] = U;
   } else {
     class U {
       constructor() {
-        tmp = closure_0;
-        canResult = null == closure_0 || null == tmp.guild_id;
-        if (!canResult) {
-          tmp3 = closure_4;
-          tmp4 = Permissions;
-          canResult = closure_4.can(Permissions.USE_EXTERNAL_SOUNDS, tmp);
-        }
+        const canResult = null == guild_id || null == guild_id.guild_id || PermissionStore.can(Permissions.USE_EXTERNAL_SOUNDS, guild_id);
         return canResult;
       }
     }
   }
-  const tmpResult3 = require("useStateFromStores");
-  const stateFromStores2 = require("useStateFromStores").useStateFromStores(tmp13, U);
   const tmpResult4 = require("useStateFromStores");
+  const stateFromStores2 = tmpResult4.useStateFromStores(tmp13, U);
+  const obj5 = guild_id(4528);
   if (obj5.canUseSoundboardEverywhere(stateFromStores)) {
     class U {
       constructor() {
-        tmp = closure_0;
-        canResult = null == closure_0 || null == tmp.guild_id;
-        if (!canResult) {
-          tmp3 = closure_4;
-          tmp4 = Permissions;
-          canResult = closure_4.can(Permissions.USE_EXTERNAL_SOUNDS, tmp);
-        }
+        const canResult = null == guild_id || null == guild_id.guild_id || PermissionStore.can(Permissions.USE_EXTERNAL_SOUNDS, guild_id);
         return canResult;
       }
     }
-    return tmp18;
+    return tmp19;
   } else {
     class U {
       constructor() {
-        tmp = closure_0;
-        canResult = null == closure_0 || null == tmp.guild_id;
-        if (!canResult) {
-          tmp3 = closure_4;
-          tmp4 = Permissions;
-          canResult = closure_4.can(Permissions.USE_EXTERNAL_SOUNDS, tmp);
-        }
+        const canResult = null == guild_id || null == guild_id.guild_id || PermissionStore.can(Permissions.USE_EXTERNAL_SOUNDS, guild_id);
         return canResult;
       }
     }
@@ -136,43 +121,34 @@ export const useSortedGuildIdsForSoundboard = ReactCompilerGating.isReactCompile
   if (cResult[11] !== guild_id) {
     class U {
       constructor() {
-        tmp = closure_0;
-        canResult = null == closure_0 || null == tmp.guild_id;
-        if (!canResult) {
-          tmp3 = closure_4;
-          tmp4 = Permissions;
-          canResult = closure_4.can(Permissions.USE_EXTERNAL_SOUNDS, tmp);
-        }
+        const canResult = null == guild_id || null == guild_id.guild_id || PermissionStore.can(Permissions.USE_EXTERNAL_SOUNDS, guild_id);
         return canResult;
       }
     }
-    tmp18[0] = guild_id;
+    tmp19[0] = guild_id;
     class F {
       constructor() {
-        return closure_1_5.getFlattenedGuildIds();
+        return flattenedGuildIds.getFlattenedGuildIds();
       }
     }
-    cResult[12] = tmp18;
+    cResult[12] = tmp19;
   } else {
     class U {
       constructor() {
-        tmp = closure_0;
-        canResult = null == closure_0 || null == tmp.guild_id;
-        if (!canResult) {
-          tmp3 = closure_4;
-          tmp4 = Permissions;
-          canResult = closure_4.can(Permissions.USE_EXTERNAL_SOUNDS, tmp);
-        }
+        const canResult = null == guild_id || null == guild_id.guild_id || PermissionStore.can(Permissions.USE_EXTERNAL_SOUNDS, guild_id);
         return canResult;
       }
     }
   }
-  obj5 = guild_id(4528);
 }) : ((guild_id, arg1) => {
+  let currentUser;
+  let stateFromStores;
+  let stateFromStores2;
   _require = guild_id;
-  closure_1 = arg1;
+  let closure_1 = arg1;
+  let obj = require("useStateFromStores");
   let items = [UserStore];
-  stateFromStores = require("useStateFromStores").useStateFromStores(items, () => currentUser.getCurrentUser());
+  stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   guild_id = undefined;
   if (guild_id != null) {
     guild_id = guild_id.guild_id;
@@ -180,24 +156,23 @@ export const useSortedGuildIdsForSoundboard = ReactCompilerGating.isReactCompile
   if (guild_id == null) {
     guild_id = EMPTY_STRING_SNOWFLAKE_ID;
   }
-  const obj = require("useStateFromStores");
   const items1 = [stateFromStores2];
-  const stateFromStores1 = require("useStateFromStores").useStateFromStores(items1, () => stateFromStores2.getFlattenedGuildIds());
   const tmpResult = require("useStateFromStores");
+  const stateFromStores1 = tmpResult.useStateFromStores(items1, () => stateFromStores2.getFlattenedGuildIds());
   const items2 = [stateFromStores1];
-  stateFromStores2 = require("useStateFromStores").useStateFromStores(items2, () => {
-    let canResult = null == guild_id || null == guild_id.guild_id;
-    if (!canResult) {
-      canResult = PermissionStore.can(Permissions.USE_EXTERNAL_SOUNDS, guild_id);
-    }
+  const tmpResult2 = require("useStateFromStores");
+  stateFromStores2 = tmpResult2.useStateFromStores(items2, () => {
+    const canResult = null == guild_id || null == guild_id.guild_id || PermissionStore.can(Permissions.USE_EXTERNAL_SOUNDS, guild_id);
     return canResult;
   });
   const items3 = [stateFromStores, arg1, guild_id, stateFromStores1, stateFromStores2];
   return guild_id.useMemo(() => {
+    const obj = PremiumUtilsDefault;
     if (obj.canUseSoundboardEverywhere(stateFromStores)) {
       if (stateFromStores2) {
+        let found;
         if ("" !== guild_id) {
-          let found = stateFromStores1.filter((item) => item !== guild_id);
+          found = stateFromStores1.filter((item) => item !== guild_id);
         } else {
           found = stateFromStores1;
         }
@@ -211,3 +186,6 @@ export const useSortedGuildIdsForSoundboard = ReactCompilerGating.isReactCompile
     return items;
   }, items3);
 });
+const result = size.fileFinishedImporting("modules/soundboard/useSortedGuildIdsForSoundboard.tsx");
+
+export const useSortedGuildIdsForSoundboard = tmp2;

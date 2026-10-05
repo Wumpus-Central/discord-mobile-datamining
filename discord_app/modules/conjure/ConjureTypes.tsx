@@ -10,6 +10,7 @@ let c3 = 52428800;
 const items = [{ id: "claude-fable-5-1", label: "Claude Fable 5.1", provider: "anthropic" }, { id: "claude-opus-5-5", label: "Claude Opus 5.5", provider: "anthropic" }, { id: "claude-sonnet-5-5", label: "Claude Sonnet 5.5", provider: "anthropic" }, { id: "claude-haiku-4-5", label: "Claude Haiku 4.5", provider: "anthropic" }, { id: "gpt-6-astra", label: "GPT-6 Astra", provider: "openai", supports_fast: true }, { id: "gpt-6.1-sol", label: "GPT-6.1 Sol", provider: "openai", supports_fast: true }, { id: "gpt-6-luna", label: "GPT-6 Luna", provider: "openai", supports_fast: true }, { id: "xai/grok-4.7", label: "Grok 4.7", provider: "xai" }];
 let obj = { main: items, subagent: items, thinking: ["low", "medium", "high", "xhigh", "max"] };
 const items1 = [{ id: "deepseek/deepseek-flash", label: "DeepSeek V4.1 Flash", provider: "deepseek" }, { id: "moonshotai/kimi-k3", label: "Kimi K3", provider: "moonshotai" }];
+const obj2 = { main: items1, subagent: items1, thinking: obj.thinking };
 const result = size.fileFinishedImporting("modules/conjure/ConjureTypes.tsx");
 
 export const UNNAMED_PROJECT_NAME = "Untitled App";
@@ -38,10 +39,11 @@ export const projectUsesNativeAppChannels = function projectUsesNativeAppChannel
 };
 export const conjureCreateFlags = function conjureCreateFlags(c5) {
   let num = 0;
+  const PUBLIC = frozen.PUBLIC;
   if (c5) {
     num = frozen.NATIVE_APP_CHANNELS;
   }
-  return frozen.PUBLIC | num;
+  return PUBLIC | num;
 };
 export const projectSupportsVisibility = function projectSupportsVisibility(stateFromStores) {
   return null != stateFromStores.flags;
@@ -92,6 +94,6 @@ export const formatConjureAttachmentLimit = function formatConjureAttachmentLimi
 };
 export const CONJURE_MODEL_TIERS = ["simple", "balanced", "complex"];
 export const CONJURE_FALLBACK_MODEL_CHOICES = obj;
-export const CONJURE_DEV_FALLBACK_MODEL_CHOICES = { main: items1, subagent: items1, thinking: obj.thinking };
+export const CONJURE_DEV_FALLBACK_MODEL_CHOICES = obj2;
 export const CONJURE_DEFAULT_TIER_SETTINGS = { tier: "balanced", provider: "openai" };
 export const CONJURE_LANDING_TIER_SEATS = { simple: { model: "gpt-6-luna", thinking: "high" }, balanced: { model: "claude-sonnet-5-5", thinking: "high" }, complex: { model: "claude-opus-5-5", thinking: "high" } };

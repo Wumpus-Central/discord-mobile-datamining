@@ -1,52 +1,42 @@
 // === Module 13643: openGuildLimitedAccessInfoModal ===
 
 // Module 13643 (openGuildLimitedAccessInfoModal)
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import asyncRequire from "asyncRequire" /* 1987 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, closure_0;
 
-require = fn;
-const Keyboard = fn(17).Keyboard;
-const jsx = fn(21).jsx;
-const size = fn(2);
+const Keyboard = react_native.Keyboard;
+const jsx = Fragment.jsx;
 const result = size.fileFinishedImporting("modules/guild_limited_access/openGuildLimitedAccessInfoModal.native.tsx");
 
 export default function openGuildLimitedAccessInfoModal(arg0) {
   _require = arg0;
   Keyboard.dismiss();
-  const bestActiveInput = require("ChatInputUtils").getBestActiveInput();
+  const obj = require("ChatInputUtils");
+  const bestActiveInput = obj.getBestActiveInput();
   if (bestActiveInput != null) {
     bestActiveInput.blur();
   }
-  let obj = require("ChatInputUtils");
-  actions_AlertActionCreatorsDefault.openLazy({
-    importer() {
-      return asyncRequireImpl(13644, dependencyMap.paths).then((result) => {
-        closure_0 = result.default;
-        return (arg0) => {
-          const obj = {};
-          const merged = Object.assign(arg0);
-          obj.guildId = guildId;
-          return <closure_0 />;
-        };
-      });
-    },
-    isDismissable: false
-  });
   const obj2 = {
     importer() {
-      return asyncRequireImpl(13644, dependencyMap.paths).then((result) => {
+      let guildId;
+      const promise = asyncRequire(13644, dependencyMap.paths);
+      return promise.then((result) => {
         closure_0 = result.default;
         return (arg0) => {
-          const obj = {};
           const merged = Object.assign(arg0);
-          obj.guildId = guildId;
-          return <closure_0 />;
+          return <closure_0 guildId={guildId} />;
         };
       });
     },
     isDismissable: false
   };
+  const obj3 = actions_AlertActionCreatorsDefault;
+  obj3.openLazy(obj2);
 };

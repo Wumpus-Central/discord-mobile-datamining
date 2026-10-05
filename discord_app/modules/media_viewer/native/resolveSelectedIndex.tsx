@@ -4,6 +4,9 @@
 import size from "module_2" /* 2 */;
 
 function resolveSelectedIndex(arg0) {
+  let maxIndex;
+  let offsetX;
+  let pageSize;
   ({ offsetX, pageSize, maxIndex } = arg0);
   if (pageSize > 0) {
     const _Number = Number;

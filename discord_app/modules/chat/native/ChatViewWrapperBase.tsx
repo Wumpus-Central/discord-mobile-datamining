@@ -1,42 +1,52 @@
 // === Module 9782: ChatViewWrapperBase ===
 
 // Module 9782 (ChatViewWrapperBase)
-import c from "c" /* 576 */;
-import LayerScope from "LayerScope" /* 6651 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
+import LayerScope2 from "LayerScope" /* 6651 */;
 import useChatViewPointerEventsDefault from "useChatViewPointerEvents" /* 9780 */;
-import StickyWrapper from "StickyWrapper" /* 9781 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/chat/native/ChatViewWrapperBase.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
-  const cResult = c.c(5);
+const jsx = Fragment.jsx;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+  let children;
+  let stickyHeader;
+  let style;
+  const obj = react2;
+  const cResult = obj.c(5);
   ({ children, stickyHeader, style } = channelId);
   const tmp4 = useChatViewPointerEventsDefault(channelId.channelId);
   if (cResult[0] === children) {
     if (cResult[1] === tmp4) {
       if (cResult[2] === stickyHeader) {
+        let tmp5;
         if (cResult[3] === style) {
-          let tmp5 = cResult[4];
+          tmp5 = cResult[4];
         }
         return tmp5;
       }
     }
   }
-  const tmp6 = jsx(LayerScope.LayerScope, { children: jsx(StickyWrapper.StickyWrapper, { header: stickyHeader, style, pointerEvents: tmp4, children }) });
+  const LayerScope = LayerScope2.LayerScope;
+  const tmp6 = <LayerScope>{null}</LayerScope>;
   cResult[0] = children;
   cResult[1] = tmp4;
   cResult[2] = stickyHeader;
   cResult[3] = style;
   cResult[4] = tmp6;
   tmp5 = tmp6;
-  const obj2 = { children: jsx(StickyWrapper.StickyWrapper, { header: stickyHeader, style, pointerEvents: tmp4, children }) };
 }) : ((arg0) => {
+  let channelId;
+  let children;
+  let stickyHeader;
+  let style;
   ({ channelId, children, stickyHeader, style } = arg0);
-  const tmp = useChatViewPointerEventsDefault(channelId);
-  return jsx(LayerScope.LayerScope, { children: jsx(StickyWrapper.StickyWrapper, { header: stickyHeader, style, pointerEvents: useChatViewPointerEventsDefault(channelId), children }) });
+  useChatViewPointerEventsDefault(channelId);
+  const LayerScope = LayerScope2.LayerScope;
+  return <LayerScope>{null}</LayerScope>;
 });
+const result = size.fileFinishedImporting("modules/chat/native/ChatViewWrapperBase.tsx");
+
+export default tmp3;

@@ -2,23 +2,27 @@
 
 // Module 9487 (CreateInviteModalActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
+import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8054 */;
 import CreateInviteModalStore from "CreateInviteModalStore" /* 9482 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const size = fn(2);
-const result = size.fileFinishedImporting("actions/CreateInviteModalActionCreators.tsx");
-
-export default {
+const AnalyticEvents = Constants.AnalyticEvents;
+let obj = {
   init(guildId, channelId, location) {
+    let skipCreateInvite;
+    let targetApplicationId;
+    let targetType;
+    let targetUserId;
     let str = location.location;
     if (str === undefined) {
       str = "";
     }
     ({ targetType, targetUserId, targetApplicationId, skipCreateInvite } = location);
-    DispatcherDefault.dispatch({ type: "CREATE_INVITE_MODAL_INIT", guildId, channelId, targetType, targetUserId, targetApplicationId });
+    const obj = DispatcherDefault;
+    const obj2 = { type: "CREATE_INVITE_MODAL_INIT", guildId, channelId, targetType, targetUserId, targetApplicationId };
+    obj.dispatch(obj2);
     if (!skipCreateInvite) {
       const self = this;
       const invite = this.createInvite(str, true);
@@ -26,24 +30,37 @@ export default {
   },
   openSettings(guildId, channelId, source, onClose) {
     const inviteSettings = CreateInviteModalStore.getInviteSettings();
-    const obj2 = { type: "CREATE_INVITE_MODAL_OPEN" };
+    const obj = { type: "CREATE_INVITE_MODAL_OPEN", guildId, channelId, onClose };
+    const dispatch = DispatcherDefault.dispatch;
+    DispatcherDefault;
     const merged = Object.assign(inviteSettings);
-    obj2.guildId = guildId;
-    obj2.channelId = channelId;
-    obj2.onClose = onClose;
-    DispatcherDefault.dispatch(obj2);
-    AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type: "Instant Invite", source });
+    dispatch(obj);
+    const obj2 = AnalyticsUtilsDefault;
+    const obj3 = { type: "Instant Invite", source };
+    obj2.track(AnalyticEvents.OPEN_MODAL, obj3);
   },
   updateSettings(settings) {
-    DispatcherDefault.dispatch({ type: "CREATE_INVITE_MODAL_UPDATE_SETTINGS", settings });
+    const obj = DispatcherDefault;
+    const obj2 = { type: "CREATE_INVITE_MODAL_UPDATE_SETTINGS", settings };
+    obj.dispatch(obj2);
   },
   resetSettings() {
-    DispatcherDefault.dispatch({ type: "CREATE_INVITE_MODAL_RESET_SETTINGS" });
+    const obj = DispatcherDefault;
+    obj.dispatch({ type: "CREATE_INVITE_MODAL_RESET_SETTINGS" });
   },
   createInvite(arg0, arg1) {
+    let flags;
+    let maxAge;
+    let maxUses;
+    let roleIds;
+    let targetApplicationId;
+    let targetType;
+    let targetUserId;
+    let temporary;
     const pendingSettings = CreateInviteModalStore.getPendingSettings();
     if (null != pendingSettings) {
-      DispatcherDefault.dispatch({ type: "CREATE_INVITE_MODAL_GENERATE_INVITE" });
+      const obj3 = DispatcherDefault;
+      obj3.dispatch({ type: "CREATE_INVITE_MODAL_GENERATE_INVITE" });
       const channelId = pendingSettings.channelId;
       ({ maxAge, maxUses, temporary, targetType, targetUserId, targetApplicationId, flags, roleIds } = pendingSettings);
       const invite = CreateInviteModalStore.getInvite();
@@ -54,22 +71,19 @@ export default {
           code = invite.code;
         }
       }
-      const obj2 = { temporary, validate: code, max_age: null, max_uses: null, target_type: null, target_user_id: null, target_application_id: null, flags: null, role_ids: null };
+      let obj2 = { temporary, validate: code, max_age: parseInt(maxAge, 10), max_uses: parseInt(maxUses, 10), target_type: targetType, target_user_id: targetUserId, target_application_id: targetApplicationId, flags, role_ids: roleIds };
       const _parseInt = parseInt;
-      obj2.max_age = parseInt(maxAge, 10);
+      const createInvite = InstantInviteActionCreatorsDefault.createInvite;
+      InstantInviteActionCreatorsDefault;
       const _parseInt2 = parseInt;
-      obj2.max_uses = parseInt(maxUses, 10);
-      obj2.target_type = targetType;
-      obj2.target_user_id = targetUserId;
-      obj2.target_application_id = targetApplicationId;
-      obj2.flags = flags;
-      obj2.role_ids = roleIds;
-      const invite1 = InstantInviteActionCreatorsDefault.createInvite(channelId, obj2, arg0);
+      const invite1 = createInvite(channelId, obj2, arg0);
       invite1.then(() => {
-        DispatcherDefault.dispatch({ type: "CREATE_INVITE_MODAL_GENERATE_INVITE_SUCCESS", channelId });
+        const obj = DispatcherDefault;
+        const obj2 = { type: "CREATE_INVITE_MODAL_GENERATE_INVITE_SUCCESS", channelId };
+        obj.dispatch(obj2);
       }, (message) => {
-        const intl = channelId(1126).intl;
-        message = intl.string(channelId(1126).t.WB1ip6);
+        const intl = channelId(dependencyMap[5]).intl;
+        message = intl.string(channelId(dependencyMap[5]).t.WB1ip6);
         let message1;
         if (message != null) {
           message1 = message.message;
@@ -77,16 +91,20 @@ export default {
         if (null != message1) {
           message = message.message;
         }
-        DispatcherDefault.dispatch({ type: "CREATE_INVITE_MODAL_GENERATE_INVITE_FAILURE", message });
+        const obj = DispatcherDefault;
+        obj.dispatch({ type: "CREATE_INVITE_MODAL_GENERATE_INVITE_FAILURE", message });
       });
-      const tmp7Result = InstantInviteActionCreatorsDefault;
     }
   },
   close() {
     const onClose = CreateInviteModalStore.onClose;
-    DispatcherDefault.dispatch({ type: "CREATE_INVITE_MODAL_CLOSE" });
+    const obj = DispatcherDefault;
+    obj.dispatch({ type: "CREATE_INVITE_MODAL_CLOSE" });
     if (onClose != null) {
       onClose();
     }
   }
 };
+const result = size.fileFinishedImporting("actions/CreateInviteModalActionCreators.tsx");
+
+export default obj;

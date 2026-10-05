@@ -1,119 +1,132 @@
 // === Module 12333: ContactSyncActionCreators ===
 
 // Module 12333 (ContactSyncActionCreators)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import FlagUtils from "FlagUtils" /* 1390 */;
+import UserSettings from "UserSettings" /* 2028 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5440 */;
+import Constants from "Constants" /* 1085 */;
+import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
+let c5, c6, constants;
 
-let closure_8 = async function _updateDiscoverability(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj4 = { value, done: true };
-      return obj4;
+let hasOwnProperty;
+let metroImportDefault;
+let metroRequire;
+let obj = function _updateDiscoverability() {
+  let constants2;
+  obj = _asyncToGenerator(async (arg0) => {
+    let discoverable_email;
+    let discoverable_phone;
+    let obj3;
+    let closure_0 = arg0;
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj4 = { value, done: true };
+        return obj4;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
     } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
+      try {
+        let phone;
+        let email;
+        let setting;
+        let name;
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj7 = { value, done: true };
+            return obj7;
+          } else {
+            let closure_4 = tmp4;
+            let closure_3 = tmp;
+            phone = closure_0.phone;
+            email = closure_0.email;
+            const FriendDiscoverySettings2 = UserSettings.FriendDiscoverySettings;
+            setting = FriendDiscoverySettings2.getSetting();
+            localAccount = localAccount.getLocalAccount(constants2.CONTACTS);
+            name = undefined;
+            if (localAccount != null) {
+              name = localAccount.name;
+            }
+            let setFlagResult = setting;
+            if (null != phone) {
+              const obj5 = FlagUtils;
+              setFlagResult = obj5.setFlag(setting, constants.FIND_BY_PHONE, phone);
+            }
+            let setFlagResult1 = setFlagResult;
+            if (null != email) {
+              const obj6 = FlagUtils;
+              setFlagResult1 = obj6.setFlag(setFlagResult, constants.FIND_BY_EMAIL, email);
+            }
+            const FriendDiscoverySettings = UserSettings.FriendDiscoverySettings;
+            c5 = 1;
+            c6 = 1;
+            const obj8 = { value: FriendDiscoverySettings.updateSetting(setFlagResult1), done: false };
+            return obj8;
+          }
+        } else if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
+          const obj9 = { value, done: true };
+          return obj9;
         } else {
-          closure_4 = tmp5;
-          closure_3 = tmp2;
-          closure_131_0 = undefined;
-          closure_131_1 = undefined;
-          closure_131_2 = undefined;
-          closure_131_3 = undefined;
-          const phone = closure_0.phone;
-          closure_131_0 = phone;
-          const email = closure_0.email;
-          closure_131_1 = email;
-          const FriendDiscoverySettings2 = React(2028).FriendDiscoverySettings;
-          const setting = FriendDiscoverySettings2.getSetting();
-          closure_131_2 = setting;
-          localAccount = localAccount.getLocalAccount(constants2.CONTACTS);
-          let name;
-          if (localAccount != null) {
-            name = localAccount.name;
+          const obj10 = { has_name: typeof name === "string", discoverable_phone, discoverable_email, contact_sync_enabled: obj3.isContactSyncEnabled(closure_132_4.getLocalAccount(closure_132_7.CONTACTS)) };
+          discoverable_phone = phone;
+          const track = closure_132_1(closure_132_2[5]).track;
+          const USER_DISCOVERY_UPDATED = closure_132_5.USER_DISCOVERY_UPDATED;
+          const tmp46 = closure_132_1(closure_132_2[5]);
+          if (phone == null) {
+            obj = closure_132_0(closure_132_2[4]);
+            discoverable_phone = obj.hasFlag(setting, closure_132_6.FIND_BY_PHONE);
           }
-          closure_131_3 = name;
-          let setFlagResult = setting;
-          if (null != phone) {
-            setFlagResult = React(1390).setFlag(setting, constants.FIND_BY_PHONE, phone);
-            const obj5 = React(1390);
+          discoverable_email = email;
+          if (email == null) {
+            const obj2 = closure_132_0(closure_132_2[4]);
+            discoverable_email = obj2.hasFlag(setting, closure_132_6.FIND_BY_EMAIL);
           }
-          let setFlagResult1 = setFlagResult;
-          if (null != email) {
-            setFlagResult1 = React(1390).setFlag(setFlagResult, constants.FIND_BY_EMAIL, email);
-            const obj6 = React(1390);
-          }
-          const FriendDiscoverySettings = React(2028).FriendDiscoverySettings;
-          c5 = 1;
-          c6 = 1;
-          const obj8 = { value: FriendDiscoverySettings.updateSetting(setFlagResult1), done: false };
-          return obj8;
+          obj3 = closure_132_0(closure_132_2[6]);
+          track(USER_DISCOVERY_UPDATED, obj10);
+          c6 = 3;
+          return { value: "IconComponent", done: null };
         }
-      } else if (arg0 === 1) {
+      } catch (tmp38) {
         c6 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c6 = 3;
-        const obj9 = { value, done: true };
-        return obj9;
-      } else {
-        const obj11 = { has_name: typeof closure_131_3 === "string", discoverable_phone: null, discoverable_email: null, contact_sync_enabled: null };
-        let discoverable_phone = closure_131_0;
-        if (closure_131_0 == null) {
-          discoverable_phone = closure_132_0(closure_132_2[4]).hasFlag(closure_131_2, closure_132_6.FIND_BY_PHONE);
-          const obj = closure_132_0(closure_132_2[4]);
-        }
-        obj11.discoverable_phone = discoverable_phone;
-        let discoverable_email = closure_131_1;
-        if (closure_131_1 == null) {
-          discoverable_email = closure_132_0(closure_132_2[4]).hasFlag(closure_131_2, closure_132_6.FIND_BY_EMAIL);
-          const obj2 = closure_132_0(closure_132_2[4]);
-        }
-        obj11.discoverable_email = discoverable_email;
-        const obj10 = closure_132_1(closure_132_2[5]);
-        obj11.contact_sync_enabled = closure_132_0(closure_132_2[6]).isContactSyncEnabled(closure_132_4.getLocalAccount(closure_132_7.CONTACTS));
-        obj10.track(closure_132_5.USER_DISCOVERY_UPDATED, obj11);
-        c6 = 3;
-        return { value: "IconComponent", done: null };
+        throw tmp38;
       }
-    } catch (tmp39) {
-      c6 = tmp;
-      throw tmp39;
     }
-  }
+  });
+  return obj(...arguments);
 };
-const Constants = fn(1085);
-({ AnalyticEvents: hasOwnProperty, FriendDiscoveryFlags: metroRequire, PlatformTypes: closure_7 } = Constants);
-asyncGeneratorStep(async (name) => {
-  c3 = 0;
-  c4 = 0;
+({ AnalyticEvents: hasOwnProperty, FriendDiscoveryFlags: metroRequire, PlatformTypes: metroImportDefault } = Constants);
+_asyncToGenerator(async (name) => {
+  let closure_1;
+  let constants2;
+  let c3 = 0;
+  let c4 = 0;
   return (async (arg0) => {
+    let num4;
+    let obj3;
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp5 === 3) {
+    } else if (tmp4 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        return { value, done: true };
       } else {
         return { value: "IconComponent", done: null };
       }
@@ -126,14 +139,14 @@ asyncGeneratorStep(async (name) => {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
+            return { value, done: true };
           } else {
-            closure_129_0 = name;
-            const obj5 = { name };
+            closure_2 = tmp;
             c3 = 1;
             c4 = 1;
-            const obj6 = { value: tmp3(tmp2[7]).update(constants2.CONTACTS, "@me", obj5), done: false };
+            const obj5 = { name };
+            const obj6 = { value: obj3.update(constants2.CONTACTS, "@me", obj5), done: false };
+            obj3 = tmp2(closure_2[7]);
             return obj6;
           }
         } else {
@@ -143,35 +156,44 @@ asyncGeneratorStep(async (name) => {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj7 = { value, done: true };
-            return obj7;
+            return { value, done: true };
           } else {
-            if (null != closure_129_0) {
-              num3 = closure_129_0.split(" ").length;
+            const track = tmp2(closure_2[5]).track;
+            const NAME_SUBMITTED = constants.NAME_SUBMITTED;
+            tmp2(closure_2[5]);
+            if (null != name) {
+              num3 = name.split(" ").length;
             }
-            const obj = { num_words: num3, num_chars: null };
-            let num4 = 0;
-            if (null != closure_129_0) {
-              num4 = closure_129_0.length;
+            obj = { num_words: num3, num_chars: num4 };
+            num4 = 0;
+            if (null != name) {
+              num4 = name.length;
             }
-            obj.num_chars = num4;
-            tmp3(tmp2[5]).track(constants.NAME_SUBMITTED, obj);
+            track(NAME_SUBMITTED, obj);
             c4 = 3;
             return { value: "IconComponent", done: null };
           }
         }
-      } catch (tmp18) {
-        c4 = tmp;
-        throw tmp18;
+      } catch (tmp17) {
+        c4 = 3;
+        throw tmp17;
       }
     }
   })();
 });
-let closure_0 = asyncGeneratorStep(async (arg0, arg1) => {
+let closure_0 = _asyncToGenerator(async (arg0, arg1) => {
+  let am_discoverable_email;
+  let closure_2;
+  let num3;
+  let num8;
+  let obj10;
+  let obj12;
+  closure_0 = arg0;
+  let closure_1 = arg1;
   if (constants === 2) {
     constants = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp5 === 3) {
+  } else if (tmp4 === 3) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
@@ -182,8 +204,12 @@ let closure_0 = asyncGeneratorStep(async (arg0, arg1) => {
     }
   } else {
     try {
+      let enabled;
+      let name;
+      let setting;
+      let am_discoverable_phone;
       constants = 2;
-      if (0 === localAccount) {
+      if (0 === am_discoverable_email) {
         if (arg0 === 1) {
           constants = 3;
           throw value;
@@ -192,44 +218,43 @@ let closure_0 = asyncGeneratorStep(async (arg0, arg1) => {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          closure_3 = tmp2;
-          closure_130_0 = undefined;
-          closure_130_1 = undefined;
-          let setting;
-          closure_130_3 = undefined;
-          closure_130_4 = undefined;
-          localAccount = localAccount.getLocalAccount(constants3.CONTACTS);
+          enabled = undefined;
+          name = undefined;
+          setting = undefined;
+          am_discoverable_phone = undefined;
+          am_discoverable_email = undefined;
+          const localAccount = am_discoverable_email.getLocalAccount(constants3.CONTACTS);
           let id;
           if (localAccount != null) {
             id = localAccount.id;
           }
-          const enabled = closure_0.enabled;
-          closure_130_0 = enabled;
-          const name = closure_0.name;
-          closure_130_1 = name;
+          enabled = closure_0.enabled;
+          name = closure_0.name;
           if (null == id) {
-            const obj15 = require("ConnectedAccountsActionCreators");
+            const obj15 = closure_1(setting[7]);
             const obj4 = { friend_sync: enabled };
-            localAccount = 1;
+            am_discoverable_email = 1;
             constants = 1;
-            const obj8 = { value: obj15.connect(constants3.CONTACTS, "@me", name, importDefault, obj4), done: false };
+            const obj8 = { value: obj15.connect(constants3.CONTACTS, "@me", name, closure_1, obj4), done: false };
             return obj8;
           } else if (undefined !== name) {
             const obj9 = { friend_sync: enabled, name };
-            localAccount = 3;
+            am_discoverable_email = 3;
             constants = 1;
-            const obj11 = { value: require("ConnectedAccountsActionCreators").update(constants3.CONTACTS, id, obj9), done: false };
+            const obj11 = { value: obj12.update(constants3.CONTACTS, id, obj9), done: false };
+            obj12 = closure_1(setting[7]);
             return obj11;
           } else {
-            localAccount = 2;
+            am_discoverable_email = 2;
             constants = 1;
-            const obj13 = { value: require("ConnectedAccountsActionCreators").setFriendSync(constants3.CONTACTS, id, enabled), done: false };
+            const obj13 = { value: obj10.setFriendSync(constants3.CONTACTS, id, enabled), done: false };
+            obj10 = closure_1(setting[7]);
             return obj13;
           }
         }
       } else {
         let num7 = 1;
-        if (1 === tmp6) {
+        if (1 === am_discoverable_email) {
           if (arg0 === num7) {
             constants = 3;
             throw value;
@@ -237,99 +262,80 @@ let closure_0 = asyncGeneratorStep(async (arg0, arg1) => {
             constants = 3;
             const obj14 = { value, done: true };
             return obj14;
-          } else if (undefined !== closure_130_1) {
-            if (null != closure_130_1) {
-              num7 = closure_130_1.split(" ").length;
+          } else if (undefined !== name) {
+            const track2 = closure_1(setting[5]).track;
+            const NAME_SUBMITTED2 = constants.NAME_SUBMITTED;
+            const tmp64 = closure_1(setting[5]);
+            if (null != name) {
+              num7 = name.split(" ").length;
             }
-            const obj16 = { num_words: num7, num_chars: null };
-            let num8 = 0;
-            if (null != closure_130_1) {
-              num8 = closure_130_1.length;
+            const obj16 = { num_words: num7, num_chars: num8 };
+            num8 = 0;
+            if (null != name) {
+              num8 = name.length;
             }
-            obj16.num_chars = num8;
-            require("AnalyticsUtils").track(constants.NAME_SUBMITTED, obj16);
-            const obj21 = require("AnalyticsUtils");
+            track2(NAME_SUBMITTED2, obj16);
           }
-        } else {
-          if (2 === tmp6) {
-            if (arg0 === num7) {
-              constants = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              constants = 3;
-              const obj17 = { value, done: true };
-              return obj17;
-            }
-          } else if (arg0 === num7) {
+        } else if (2 === am_discoverable_email) {
+          if (arg0 === num7) {
             constants = 3;
             throw value;
-          } else if (arg0 !== 2) {
-            let length = num7;
-            if (null != closure_130_1) {
-              length = closure_130_1.split(" ").length;
-            }
-            const obj = { num_words: length, num_chars: null };
-            let num3 = 0;
-            if (null != closure_130_1) {
-              num3 = closure_130_1.length;
-            }
-            obj.num_chars = num3;
-            require("AnalyticsUtils").track(constants.NAME_SUBMITTED, obj);
-            const obj20 = require("AnalyticsUtils");
+          } else if (arg0 === 2) {
+            constants = 3;
+            const obj17 = { value, done: true };
+            return obj17;
           }
+        } else if (arg0 === num7) {
+          constants = 3;
+          throw value;
+        } else if (arg0 === 2) {
           constants = 3;
           const obj18 = { value, done: true };
           return obj18;
+        } else {
+          let length = num7;
+          const track = closure_1(setting[5]).track;
+          const NAME_SUBMITTED = constants.NAME_SUBMITTED;
+          const tmp55 = closure_1(setting[5]);
+          if (null != name) {
+            length = name.split(" ").length;
+          }
+          obj = { num_words: length, num_chars: num3 };
+          num3 = 0;
+          if (null != name) {
+            num3 = name.length;
+          }
+          track(NAME_SUBMITTED, obj);
         }
-        const FriendDiscoverySettings = closure_0(tmp3[3]).FriendDiscoverySettings;
+        const FriendDiscoverySettings = closure_0(setting[3]).FriendDiscoverySettings;
         setting = FriendDiscoverySettings.getSetting();
-        closure_130_3 = closure_0(tmp3[4]).hasFlag(setting, constants2.FIND_BY_PHONE);
-        const obj5 = closure_0(tmp3[4]);
-        closure_130_4 = closure_0(tmp3[4]).hasFlag(setting, constants2.FIND_BY_EMAIL);
-        const obj6 = closure_0(tmp3[4]);
-        const obj19 = { is_enabled: closure_130_0, am_discoverable_phone: closure_130_3, am_discoverable_email: closure_130_4 };
-        require("AnalyticsUtils").track(constants.CONTACT_SYNC_TOGGLED, obj19);
+        const obj5 = closure_0(setting[4]);
+        am_discoverable_phone = obj5.hasFlag(setting, constants2.FIND_BY_PHONE);
+        const obj6 = closure_0(setting[4]);
+        am_discoverable_email = obj6.hasFlag(setting, constants2.FIND_BY_EMAIL);
+        const obj19 = { is_enabled: enabled, am_discoverable_phone, am_discoverable_email };
+        const obj7 = closure_1(setting[5]);
+        obj7.track(constants.CONTACT_SYNC_TOGGLED, obj19);
         constants = 3;
-        const obj7 = require("AnalyticsUtils");
+        return { value: "IconComponent", done: null };
       }
-    } catch (tmp48) {
-      constants = tmp;
-      throw tmp48;
+    } catch (tmp47) {
+      constants = 3;
+      throw tmp47;
     }
   }
 });
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/contact_sync/native/ContactSyncActionCreators.tsx");
-
-export default {
+obj = {
   updateName: function() {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
+    return closure_0(...arguments);
   },
   updateDiscoverability() {
-    const self = this;
-    const apply = closure_8.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
+    return obj(...arguments);
   },
   updateContactSyncEnabled: function() {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
+    return closure_0(...arguments);
   }
 };
+const result = size.fileFinishedImporting("modules/contact_sync/native/ContactSyncActionCreators.tsx");
+
+export default obj;

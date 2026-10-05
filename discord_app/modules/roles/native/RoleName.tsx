@@ -1,29 +1,42 @@
 // === Module 11449: RoleName ===
 
 // Module 11449 (RoleName)
-import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import get_initialized from "get initialized" /* 504 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7620 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 }, name: { flexShrink: 1 } };
-let closure_6 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/roles/native/RoleName.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(23);
+let closure_4;
+let hasOwnProperty;
+let obj2;
+const View = react_native.View;
+({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
+let obj = { container: obj2, name: { flexShrink: 1 } };
+obj2 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+let closure_6 = createStyles.createStyles(obj);
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let children;
+  let colorString;
+  let colorStrings;
+  let dotBackground;
+  let guildId;
+  let items1;
+  let role;
+  let roleStyle;
+  let textVariant;
+  let tmp6;
+  let tmp7;
+  const obj = react2;
+  const cResult = obj.c(23);
   ({ role, children, textVariant, dotBackground } = arg0);
   let str = "text-md/medium";
   if (undefined !== textVariant) {
@@ -42,30 +55,34 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     [tmp6, tmp7] = cResult;
   }
-  const stateFromStores = initialize.useStateFromStores(tmp6, tmp7);
+  const tmpResult = get_initialized;
+  const stateFromStores = tmpResult.useStateFromStores(tmp6, tmp7);
   ({ guildId, colorString, colorStrings } = role);
-  const tmpResult = initialize;
-  const processColorStringsArray = enhanced_role_colors_EnhancedRoleColorUtils.useProcessColorStringsArray(colorStrings);
   const tmpResult3 = enhanced_role_colors_EnhancedRoleColorUtils;
+  const processColorStringsArray = tmpResult3.useProcessColorStringsArray(colorStrings);
   let tmp12 = "username" === stateFromStores;
-  const isRoleStyleAndRoleColorsEligibleForERC = enhanced_role_colors_EnhancedRoleColorUtils.useIsRoleStyleAndRoleColorsEligibleForERC(guildId, undefined, stateFromStores, processColorStringsArray);
+  const tmpResult4 = enhanced_role_colors_EnhancedRoleColorUtils;
+  const isRoleStyleAndRoleColorsEligibleForERC = tmpResult4.useIsRoleStyleAndRoleColorsEligibleForERC(guildId, undefined, stateFromStores, processColorStringsArray);
   if (tmp12) {
     tmp12 = null != colorString;
   }
   if (cResult[2] === colorString) {
     if (cResult[3] === colorStrings) {
-      if (cResult[4] === tmp4) {
+      if (cResult[4] === (undefined !== dotBackground && dotBackground)) {
         if (cResult[5] === guildId) {
+          let tmp14;
           if (cResult[6] === stateFromStores) {
-            let tmp14 = cResult[7];
+            tmp14 = cResult[7];
           }
           if (cResult[8] === colorString) {
+            let tmp18;
             if (cResult[9] === tmp12) {
-              let tmp18 = cResult[10];
+              tmp18 = cResult[10];
             }
             if (cResult[11] === tmp5.name) {
+              let tmp20;
               if (cResult[12] === tmp18) {
-                let tmp20 = cResult[13];
+                tmp20 = cResult[13];
               }
               let tmp21;
               if (isRoleStyleAndRoleColorsEligibleForERC) {
@@ -74,20 +91,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               if (cResult[14] === children) {
                 if (cResult[15] === tmp20) {
                   if (cResult[16] === tmp21) {
+                    let tmp22;
                     if (cResult[17] === str) {
-                      let tmp22 = cResult[18];
+                      tmp22 = cResult[18];
                     }
                     if (cResult[19] === tmp5.container) {
                       if (cResult[20] === tmp14) {
+                        let tmp25;
                         if (cResult[21] === tmp22) {
-                          let tmp25 = cResult[22];
+                          tmp25 = cResult[22];
                         }
                         return tmp25;
                       }
                     }
-                    const obj2 = { style: tmp5.container, children: null };
-                    const items1 = [tmp14, tmp22];
-                    obj2.children = items1;
+                    const obj2 = { style: tmp5.container, children: items1 };
+                    items1 = [tmp14, tmp22];
                     const tmp28 = hasOwnProperty(View, obj2);
                     cResult[19] = tmp5.container;
                     cResult[20] = tmp14;
@@ -98,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 }
               }
               const obj3 = { variant: str, style: tmp20, lineClamp: 1, gradientColors: tmp21, children };
-              const tmp24 = React4(Text_Text.Text, obj3);
+              const tmp24 = React3(Text_Text.Text, obj3);
               cResult[14] = children;
               cResult[15] = tmp20;
               cResult[16] = tmp21;
@@ -114,8 +132,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
           let tmp19;
           if (tmp12) {
+            tmp19 = { color: colorString };
             const obj4 = { color: colorString };
-            tmp19 = obj4;
           }
           cResult[8] = colorString;
           cResult[9] = tmp12;
@@ -125,13 +143,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
   }
-  let tmp15 = "dot" === stateFromStores;
+  let tmp15 = "dot" === stateFromStores && null != colorString;
   if (tmp15) {
-    tmp15 = null != colorString;
-  }
-  if (tmp15) {
-    const obj5 = { color: colorString, colors: colorStrings, guildId, background: tmp4 };
-    tmp15 = React4(native.RoleDot, obj5);
+    const obj5 = { color: colorString, colors: colorStrings, guildId, background: undefined !== dotBackground && dotBackground };
+    tmp15 = React3(native.RoleDot, obj5);
   }
   cResult[2] = colorString;
   cResult[3] = colorStrings;
@@ -140,50 +155,62 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = stateFromStores;
   cResult[7] = tmp15;
   tmp14 = tmp15;
-  const tmpResult4 = enhanced_role_colors_EnhancedRoleColorUtils;
-}) : ((dotBackground) => {
-  ({ role, textVariant } = dotBackground);
+}) : ((children) => {
+  let colorString;
+  let colorStrings;
+  let guildId;
+  let items1;
+  let items2;
+  let role;
+  let roleStyle;
+  let textVariant;
+  let tmp15;
+  ({ role, textVariant } = children);
+  children = children.children;
   if (textVariant === undefined) {
     textVariant = "text-md/medium";
   }
-  let flag = dotBackground.dotBackground;
+  let flag = children.dotBackground;
   if (flag === undefined) {
     flag = false;
   }
   const tmp = closure_6();
   const items = [AccessibilityStore];
-  const stateFromStores = initialize.useStateFromStores(items, () => roleStyle.roleStyle);
+  const obj = get_initialized;
+  const stateFromStores = obj.useStateFromStores(items, () => roleStyle.roleStyle);
   ({ guildId, colorString, colorStrings } = role);
-  const processColorStringsArray = enhanced_role_colors_EnhancedRoleColorUtils.useProcessColorStringsArray(colorStrings);
-  const obj4 = { style: tmp.container, children: null };
+  const obj2 = enhanced_role_colors_EnhancedRoleColorUtils;
+  const processColorStringsArray = obj2.useProcessColorStringsArray(colorStrings);
   let tmp9 = "dot" === stateFromStores;
-  const isRoleStyleAndRoleColorsEligibleForERC = enhanced_role_colors_EnhancedRoleColorUtils.useIsRoleStyleAndRoleColorsEligibleForERC(guildId, undefined, stateFromStores, processColorStringsArray);
+  const obj4 = { style: tmp.container, children: items1 };
+  const obj3 = enhanced_role_colors_EnhancedRoleColorUtils;
+  const isRoleStyleAndRoleColorsEligibleForERC = obj3.useIsRoleStyleAndRoleColorsEligibleForERC(guildId, undefined, stateFromStores, processColorStringsArray);
   if (tmp9) {
     tmp9 = null != colorString;
   }
   if (tmp9) {
     const obj5 = { color: colorString, colors: colorStrings, guildId, background: flag };
-    tmp9 = React4(native.RoleDot, obj5);
+    tmp9 = React3(native.RoleDot, obj5);
   }
-  const items1 = [tmp9, ];
-  const obj6 = { variant: textVariant, style: null, lineClamp: 1, gradientColors: null, children: null };
-  const items2 = [tmp.name, ];
+  items1 = [tmp9, ];
+  const obj6 = { variant: textVariant, style: items2, lineClamp: 1, gradientColors: tmp15, children };
+  items2 = [tmp.name, ];
   let tmp13;
+  const Text = Text_Text.Text;
   if ("username" === stateFromStores) {
     if (null != colorString) {
+      tmp13 = { color: colorString };
       const obj7 = { color: colorString };
-      tmp13 = obj7;
     }
   }
   items2[1] = tmp13;
-  obj6.style = items2;
-  let tmp15;
+  tmp15 = undefined;
   if (isRoleStyleAndRoleColorsEligibleForERC) {
     tmp15 = processColorStringsArray;
   }
-  obj6.gradientColors = tmp15;
-  obj6.children = dotBackground.children;
-  items1[1] = React4(Text_Text.Text, obj6);
-  obj4.children = items1;
+  items1[1] = React3(Text, obj6);
   return hasOwnProperty(View, obj4);
 });
+const result = size.fileFinishedImporting("modules/roles/native/RoleName.tsx");
+
+export default tmp4;

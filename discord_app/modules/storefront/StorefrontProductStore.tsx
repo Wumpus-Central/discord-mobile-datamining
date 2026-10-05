@@ -1,168 +1,179 @@
 // === Module 7890: StorefrontProductStore ===
 
 // Module 7890 (StorefrontProductStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
+import size from "module_2" /* 2 */;
 
-const dependencyMap = {};
-const dependencyMap2 = {};
-const Store = initializeDefault.Store;
+let closure_0, closure_1, id, set;
+
+const React = {};
+const Store = get_initializedDefault.Store;
 class StorefrontProductStore extends Store {
-}
-const prototype = StorefrontProductStore.prototype;
-prototype["getFetchState"] = function getFetchState(arg0) {
-  let tmp;
-  if (null != arg0) {
-    state = undefined;
-    if (dependencyMap[arg0] != null) {
-      state = tmp3.state;
+  getFetchState(arg0) {
+    let tmp;
+    if (null != arg0) {
+      let state;
+      if (closure_0[arg0] != null) {
+        state = tmp3.state;
+      }
+      tmp = state;
     }
-    tmp = state;
+    return tmp;
   }
-  return tmp;
-};
-prototype["getFetchStateForSku"] = function getFetchStateForSku(item10006) {
-  let tmp;
-  if (null != item10006) {
-    state = undefined;
-    if (dependencyMap2[item10006] != null) {
-      state = tmp3.state;
+  getFetchStateForSku(item10006) {
+    let tmp;
+    if (null != item10006) {
+      let state;
+      if (closure_1[item10006] != null) {
+        state = tmp3.state;
+      }
+      tmp = state;
     }
-    tmp = state;
+    return tmp;
   }
-  return tmp;
-};
-prototype["getFetchedAt"] = function getFetchedAt(arg0) {
-  let tmp;
-  if (null != arg0) {
-    let fetchedAt;
-    if (dependencyMap[arg0] != null) {
-      fetchedAt = tmp3.fetchedAt;
+  getFetchedAt(arg0) {
+    let tmp;
+    if (null != arg0) {
+      let fetchedAt;
+      if (closure_0[arg0] != null) {
+        fetchedAt = tmp3.fetchedAt;
+      }
+      tmp = fetchedAt;
     }
-    tmp = fetchedAt;
+    return tmp;
   }
-  return tmp;
-};
-prototype["getFetchedAtForSku"] = function getFetchedAtForSku(item10006) {
-  let tmp;
-  if (null != item10006) {
-    let fetchedAt;
-    if (dependencyMap2[item10006] != null) {
-      fetchedAt = tmp3.fetchedAt;
+  getFetchedAtForSku(item10006) {
+    let tmp;
+    if (null != item10006) {
+      let fetchedAt;
+      if (closure_1[item10006] != null) {
+        fetchedAt = tmp3.fetchedAt;
+      }
+      tmp = fetchedAt;
     }
-    tmp = fetchedAt;
+    return tmp;
   }
-  return tmp;
-};
-prototype["getFetchError"] = function getFetchError(arg0) {
-  let tmp;
-  if (null != arg0) {
-    let fetchError;
-    if (dependencyMap[arg0] != null) {
-      fetchError = tmp3.fetchError;
+  getFetchError(arg0) {
+    let tmp;
+    if (null != arg0) {
+      let fetchError;
+      if (closure_0[arg0] != null) {
+        fetchError = tmp3.fetchError;
+      }
+      tmp = fetchError;
     }
-    tmp = fetchError;
+    return tmp;
   }
-  return tmp;
-};
-prototype["getFetchErrorForSku"] = function getFetchErrorForSku(arg0) {
-  let tmp;
-  if (null != arg0) {
-    let fetchError;
-    if (dependencyMap2[arg0] != null) {
-      fetchError = tmp3.fetchError;
+  getFetchErrorForSku(arg0) {
+    let tmp;
+    if (null != arg0) {
+      let fetchError;
+      if (closure_1[arg0] != null) {
+        fetchError = tmp3.fetchError;
+      }
+      tmp = fetchError;
     }
-    tmp = fetchError;
+    return tmp;
   }
-  return tmp;
-};
-prototype["getProduct"] = function getProduct(arg0) {
-  let tmp = null;
-  if (null != arg0) {
-    tmp = dependencyMap[arg0];
-  }
-  let product = null;
-  if (null != tmp) {
-    state = undefined;
-    if (tmp != null) {
-      state = tmp.state;
+  getProduct(arg0) {
+    let tmp = null;
+    if (null != arg0) {
+      tmp = closure_0[arg0];
     }
-    product = null;
-    if ("error" !== state) {
+    let product = null;
+    if (null != tmp) {
+      let state;
+      if (tmp != null) {
+        state = tmp.state;
+      }
       product = null;
-      if (null != tmp.product) {
-        product = tmp.product;
+      if ("error" !== state) {
+        product = null;
+        if (null != tmp.product) {
+          product = tmp.product;
+        }
       }
     }
+    return product;
   }
-  return product;
-};
-prototype["getProductsForSku"] = function getProductsForSku(skuId) {
-  let tmp;
-  if (null != skuId) {
-    let products;
-    if (dependencyMap2[skuId] != null) {
-      products = tmp3.products;
+  getProductsForSku(skuId) {
+    let tmp;
+    if (null != skuId) {
+      let products;
+      if (closure_1[skuId] != null) {
+        products = tmp3.products;
+      }
+      tmp = products;
     }
-    tmp = products;
+    return tmp;
   }
-  return tmp;
-};
-prototype["hasPricingCoverage"] = function hasPricingCoverage(arg0) {
-  let tmp = null != arg0;
-  if (tmp) {
-    let includePricing;
-    if (dependencyMap[arg0] != null) {
-      includePricing = tmp3.includePricing;
+  hasPricingCoverage(arg0) {
+    let tmp = null != arg0;
+    if (tmp) {
+      let includePricing;
+      if (closure_0[arg0] != null) {
+        includePricing = tmp3.includePricing;
+      }
+      tmp = includePricing;
     }
-    tmp = includePricing;
+    return true === tmp;
   }
-  return true === tmp;
-};
+}
+const prototype = StorefrontProductStore.prototype;
 StorefrontProductStore.displayName = "StorefrontProductStore";
-const storefrontProductStore = new StorefrontProductStore(DispatcherDefault, {
+let obj = {
   STOREFRONT_PRODUCTS_WITH_SKUS_FETCH: function handleProductsWithSkusFetch(productIds) {
     productIds = productIds.productIds;
     const item = productIds.forEach((item) => {
       let product;
-      if (dependencyMap[item] != null) {
+      if (closure_1_0[item] != null) {
         product = tmp2.product;
       }
-      dependencyMap[item] = { state: "loading", product, includePricing: true };
+      closure_1_0[item] = { state: "loading", product, includePricing: true };
     });
   },
   STOREFRONT_PRODUCTS_WITH_SKUS_FETCH_SUCCESS: function handleProductsWithSkusFetchSuccess(arg0) {
+    let productIds;
+    let products;
     ({ productIds, products } = arg0);
     const fetchedAt = Date.now();
-    const set = new Set();
+    set = new Set();
     const item = products.forEach((id) => {
       set.add(id.id);
-      fetchedAt[id.id] = { state: "success", product: id, fetchedAt, includePricing: true };
+      const obj = { state: "success", product: id, fetchedAt, includePricing: true };
+      fetchedAt[id.id] = obj;
     });
     const item1 = productIds.forEach((item) => {
+      const tmp = item;
       if (!set.has(item)) {
-        delete tmp[tmp2];
+        delete closure_0[tmp];
       }
     });
   },
   STOREFRONT_PRODUCTS_WITH_SKUS_FETCH_FAILURE: function handleProductsWithSkusFetchFailure(arg0) {
+    let fetchError;
+    let productIds;
     ({ productIds, apiError: closure_0 } = arg0);
     const fetchedAt = Date.now();
     const item = productIds.forEach((item) => {
-      closure_0[item] = { state: "error", fetchedAt, fetchError };
+      const obj = { state: "error", fetchedAt, fetchError };
+      fetchError[item] = obj;
     });
   },
   STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH: function handleProductsBySkuIdsFetch(skuIds) {
     skuIds = skuIds.skuIds;
     const item = skuIds.forEach((item) => {
       let products;
-      if (dependencyMap2[item] != null) {
+      if (closure_1_1[item] != null) {
         products = tmp2.products;
       }
-      dependencyMap2[item] = { state: "loading", products };
+      closure_1_1[item] = { state: "loading", products };
     });
   },
   STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH_SUCCESS: function handleProductsBySkuIdsFetchSuccess(arg0) {
+    let products;
+    let skuIds;
     ({ skuIds, products } = arg0);
     const fetchedAt = Date.now();
     closure_1 = products.reduce((acc, skuIds) => {
@@ -170,88 +181,98 @@ const storefrontProductStore = new StorefrontProductStore(DispatcherDefault, {
       skuIds = skuIds.skuIds;
       const item = skuIds.forEach((item) => {
         if (null == acc[item]) {
-          const items = [closure_1];
+          const items = [skuIds];
           acc[item] = items;
         } else {
-          acc[item].push(closure_1);
+          const arr = acc[item];
+          arr.push(skuIds);
         }
       });
       return acc;
     }, {});
     let item = skuIds.forEach((item) => {
       if (null != closure_1[item]) {
-        const obj = { state: "success", products: tmp3[item], fetchedAt };
+        const obj = { state: "success", products: tmp2[item], fetchedAt };
         closure_1[item] = obj;
       } else {
-        delete tmp[tmp2];
+        delete closure_1[tmp];
       }
     });
     const item1 = products.forEach((product) => {
-      fetchedAt[product.id] = { state: "success", product, fetchedAt, includePricing: true };
+      const obj = { state: "success", product, fetchedAt, includePricing: true };
+      fetchedAt[product.id] = obj;
     });
   },
   STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH_FAILURE: function handleProductsBySkuIdsFetchFailure(arg0) {
+    let fetchError;
+    let skuIds;
     ({ skuIds, apiError: closure_0 } = arg0);
     const fetchedAt = Date.now();
     const item = skuIds.forEach((item) => {
-      fetchedAt[item] = { state: "error", fetchedAt, fetchError };
+      const obj = { state: "error", fetchedAt, fetchError };
+      fetchedAt[item] = obj;
     });
   },
   STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH_SUCCESS: function handleCollectionsWithProductsFetchSuccess(arg0) {
+    let collections;
     ({ collections, includePricing: closure_0 } = arg0);
     closure_1 = Date.now();
     let item = collections.forEach((products) => {
+      let fetchedAt;
       products = products.products;
       let item = products.forEach((id) => {
         includePricing = id;
         if (!includePricing) {
-          state = undefined;
-          if (tmp3 != null) {
+          let state;
+          if (includePricing[id.id] != null) {
             state = tmp3.state;
           }
           if ("success" === state) {
-            if (tmp3.includePricing) {
-              let obj = {};
+            if (includePricing[id.id].includePricing) {
+              let obj = { fetchedAt };
+              id = id.id;
               const merged = Object.assign(tmp3);
-              obj.fetchedAt = fetchedAt;
-              closure_1_0[id.id] = obj;
+              includePricing[id] = obj;
             }
-            if (tmp2) {
+            if (includePricing) {
               const skuIds = id.skuIds;
               const item = skuIds.forEach((item) => {
-                const obj = { state: "success", products: null, fetchedAt };
-                const items = [closure_0];
-                obj.products = items;
+                let items;
+                const obj = { state: "success", products: items, fetchedAt };
+                items = [id];
                 closure_1[item] = obj;
               });
             }
           }
         }
-        closure_1_0[id.id] = { state: "success", product: id, fetchedAt, includePricing };
+        includePricing[id.id] = { state: "success", product: id, fetchedAt, includePricing };
       });
     });
   },
   STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_SUCCESS: function handleCollectionsForApplicationFetchSuccess(arg0) {
+    let collections;
     ({ collections, includePricing: closure_0 } = arg0);
     closure_1 = Date.now();
     let item = collections.forEach((products) => {
+      let fetchedAt;
+      let includePricing;
       products = products.products;
       const item = products.forEach((id) => {
         if (!includePricing) {
-          state = undefined;
-          if (tmp3 != null) {
+          let state;
+          if (includePricing[id.id] != null) {
             state = tmp3.state;
           }
           if ("success" === state) {
-            if (tmp3.includePricing) {
-              const obj = {};
+            if (includePricing[id.id].includePricing) {
+              id = id.id;
+              const obj = { fetchedAt };
               const merged = Object.assign(tmp3);
-              obj.fetchedAt = fetchedAt;
-              dependencyMap[id.id] = obj;
+              includePricing[id] = obj;
             }
           }
         }
-        dependencyMap[id.id] = { state: "success", product: id, fetchedAt, includePricing };
+        includePricing[id.id] = { state: "success", product: id, fetchedAt, includePricing };
       });
     });
   },
@@ -262,13 +283,14 @@ const storefrontProductStore = new StorefrontProductStore(DispatcherDefault, {
       products = products.products;
       let item = products.forEach((product) => {
         fetchedAt = product;
-        closure_1_0[product.id] = { state: "success", product, fetchedAt, includePricing: true };
+        let obj = { state: "success", product, fetchedAt, includePricing: true };
+        closure_1_0[product.id] = obj;
         const skuIds = product.skuIds;
         const item = skuIds.forEach((item) => {
-          const obj = { state: "success", products: null, fetchedAt };
-          const items = [closure_0];
-          obj.products = items;
-          dependencyMap2[item] = obj;
+          let items;
+          const obj = { state: "success", products: items, fetchedAt };
+          items = [closure_0];
+          closure_3_1[item] = obj;
         });
       });
     });
@@ -277,8 +299,8 @@ const storefrontProductStore = new StorefrontProductStore(DispatcherDefault, {
     closure_0 = {};
     closure_1 = {};
   }
-});
-const size = fn(2);
+};
+const storefrontProductStore = new StorefrontProductStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/storefront/StorefrontProductStore.tsx");
 
 export default storefrontProductStore;

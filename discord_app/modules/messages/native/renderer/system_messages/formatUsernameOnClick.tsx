@@ -4,18 +4,29 @@
 import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7620 */;
 import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 7622 */;
 import UserStore from "UserStore" /* 1377 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/formatUsernameOnClick.tsx");
 
 export default function formatUsernameOnClick(arg0) {
+  let author;
+  let colorString;
+  let displayNameFontIdForMobileUser;
+  let guildId;
+  let message;
+  let messageChannelId;
+  let roleStyle;
+  let tmp7;
+  let tmp8;
+  let userId;
   ({ userId, message, author, roleStyle, messageChannelId } = arg0);
   ({ colorString, guildId } = author);
+  const colorStrings = author.colorStrings;
   if (userId == null) {
     userId = message.author.id;
   }
-  const result = enhanced_role_colors_EnhancedRoleColorUtils.isNativeMessageEligibleForEnhancedRoleColors(guildId, userId);
+  const obj = enhanced_role_colors_EnhancedRoleColorUtils;
+  const result = obj.isNativeMessageEligibleForEnhancedRoleColors(guildId, userId);
   let user = UserStore.getUser(userId);
   if (user == null) {
     let author1 = null;
@@ -24,24 +35,19 @@ export default function formatUsernameOnClick(arg0) {
     }
     user = author1;
   }
-  const obj2 = { action: "bindUserMenu", userId, linkColor: null, roleColor: null, roleColors: null, shouldShowRoleDot: null, messageChannelId: null, medium: true, fontId: null };
-  let tmp7 = null;
-  const displayNameFontIdForMobileUser = createDisplayNameStylesMobile.getDisplayNameFontIdForMobileUser(user, guildId);
+  const obj2 = { action: "bindUserMenu", userId, linkColor: tmp7, roleColor: colorString, roleColors: tmp8, shouldShowRoleDot: "dot" === roleStyle && null != colorString, messageChannelId, medium: true, fontId: displayNameFontIdForMobileUser };
+  tmp7 = null;
+  const tmpResult = createDisplayNameStylesMobile;
+  displayNameFontIdForMobileUser = tmpResult.getDisplayNameFontIdForMobileUser(user, guildId);
   if ("username" === roleStyle) {
     tmp7 = colorString;
   }
-  obj2.linkColor = tmp7;
-  obj2.roleColor = colorString;
-  let colorStrings = null;
+  tmp8 = null;
   if (result) {
-    colorStrings = author.colorStrings;
+    tmp8 = colorStrings;
   }
-  obj2.roleColors = colorStrings;
-  obj2.shouldShowRoleDot = "dot" === roleStyle && null != colorString;
   if (messageChannelId == null) {
     messageChannelId = message.channel_id;
   }
-  obj2.messageChannelId = messageChannelId;
-  obj2.fontId = displayNameFontIdForMobileUser;
   return obj2;
 };

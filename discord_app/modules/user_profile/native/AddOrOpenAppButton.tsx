@@ -1,197 +1,244 @@
 // === Module 12816: AddOrOpenAppButton ===
 
 // Module 12816 (AddOrOpenAppButton)
-import c from "c" /* 576 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
+import Constants from "Constants" /* 1085 */;
+import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1489 */;
 import ToastUtils from "ToastUtils" /* 4567 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import ClipboardUtils from "ClipboardUtils" /* 6688 */;
 import ApplicationUtils from "ApplicationUtils" /* 8709 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 8795 */;
 import getApplicationInstallURL from "getApplicationInstallURL" /* 11756 */;
 import useIsAppDMDefault from "useIsAppDM" /* 11769 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _asyncToGenerator_mod from "_asyncToGenerator" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const getSection = fn(8795).getSection;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const AppLauncherRouteName = fn(1489).AppLauncherRouteName;
-const jsx = fn(21).jsx;
-fn(558);
-let ReactCompilerGating = fn(558);
+let c3, c4, profileApplication;
+
+let _asyncToGenerator = _asyncToGenerator_mod;
+const getSection = ApplicationCommandIndexStore.getSection;
+const AnalyticEvents = Constants.AnalyticEvents;
+const AppLauncherRouteName = AppLauncherNativeConstants.AppLauncherRouteName;
+const jsx = Fragment.jsx;
+let ReactCompilerGating = ReactCompilerGating_mod;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let application;
+  let botUserId;
+  let channel;
+  let guildId;
+  let tmp3;
+  const obj = react2;
+  const cResult = obj.c(6);
+  ({ application, botUserId, channel, guildId } = arg0);
+  const tmp2 = useIsAppDMDefault(channel);
+  if (cResult[0] === application) {
+    if (cResult[1] === botUserId) {
+      if (cResult[2] === channel) {
+        if (cResult[3] === guildId) {
+          if (cResult[4] === tmp2) {
+            tmp3 = cResult[5];
+          }
+          return tmp3;
+        }
+      }
+    }
+  }
+  if (tmp2) {
+    let tmp5;
+    if (null != channel) {
+      tmp5 = <closure_11 profileApplication={application} botUserId={botUserId} channel={channel} />;
+    }
+    cResult[0] = application;
+    cResult[1] = botUserId;
+    cResult[2] = channel;
+    cResult[3] = guildId;
+    cResult[4] = tmp2;
+    cResult[5] = tmp5;
+    tmp3 = tmp5;
+  }
+  tmp5 = <closure_10 application={application} guildId={guildId} />;
+}) : ((arg0) => {
+  let application;
+  let botUserId;
+  let channel;
+  let guildId;
+  ({ application, channel } = arg0);
+  ({ botUserId, guildId } = arg0);
+  if (useIsAppDMDefault(channel)) {
+    let tmp2;
+    if (null != channel) {
+      tmp2 = <closure_11 profileApplication={application} botUserId={botUserId} channel={channel} />;
+    }
+    return tmp2;
+  }
+  tmp2 = <closure_10 application={application} guildId={guildId} />;
+});
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((application) => {
-  const cResult = application(576).c(19);
+  let intl;
+  const tmp = application;
+  let obj = application(576);
+  const cResult = obj.c(19);
   application = application.application;
   const guildId = application.guildId;
   if (cResult[0] === application.customInstallUrl) {
     if (cResult[1] === application.id) {
       if (cResult[2] === application.installParams) {
         if (cResult[3] === application.integrationTypesConfig) {
+          let tmp4;
+          let tmp5;
           if (cResult[4] === guildId) {
-            let tmp4 = cResult[5];
+            tmp4 = cResult[5];
           }
           if (cResult[6] !== application) {
             const fn2 = function c() {
-              const obj = ClipboardUtils;
-              obj.copy(getApplicationInstallURL.getApplicationInstallURL(application));
-              ToastUtils.presentLinkCopied();
+              const copy = ClipboardUtils.copy;
+              ClipboardUtils;
+              const obj = getApplicationInstallURL;
+              copy(obj.getApplicationInstallURL(application));
+              const obj2 = ToastUtils;
+              obj2.presentLinkCopied();
             };
             cResult[6] = application;
             cResult[7] = fn2;
-            let tmp5 = fn2;
+            tmp5 = fn2;
           } else {
             tmp5 = cResult[7];
           }
           const customInstallUrl = application.customInstallUrl;
           if (null != customInstallUrl) {
+            let PlusSmallIcon;
+            let tmp9;
+            let tmp11;
+            let obj2 = guildId(1371);
             if (!obj2.isDiscordUrl(customInstallUrl)) {
-              let PlusSmallIcon = tmp(8263).LinkExternalSmallIcon;
+              PlusSmallIcon = tmp(8263).LinkExternalSmallIcon;
             }
             const _Symbol = Symbol;
             if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-              let obj3 = { name: "longpress", label: null };
-              const intl = tmp(1126).intl;
-              obj3.label = intl.string(tmp(1126).t.XWDihq);
+              let obj3 = { name: "longpress", label: intl.string(tmp(1126).t.XWDihq) };
+              intl = tmp(1126).intl;
               const items = [obj3];
               cResult[8] = items;
-              let tmp9 = items;
+              tmp9 = items;
             } else {
               tmp9 = cResult[8];
             }
             if (cResult[9] !== application) {
               class C {
-                constructor(arg0) {
-                  if ("longPress" === application.nativeEvent.actionName) {
-                    tmp = closure_0;
-                    tmp2 = closure_2;
-                    obj = closure_0(closure_2[12]);
-                    obj2 = closure_0(closure_2[13]);
-                    tmp3 = application;
-                    copyResult = obj.copy(obj2.getApplicationInstallURL(application));
-                    obj3 = closure_0(closure_2[14]);
-                    presentLinkCopiedResult = obj3.presentLinkCopied();
+                constructor(nativeEvent) {
+                  if ("longPress" === nativeEvent.nativeEvent.actionName) {
+                    const copy = ClipboardUtils.copy;
+                    ClipboardUtils;
+                    const obj = getApplicationInstallURL;
+                    copy(obj.getApplicationInstallURL(application));
+                    const obj2 = ToastUtils;
+                    obj2.presentLinkCopied();
                   }
-                  return;
                 }
               }
               cResult[9] = application;
               cResult[10] = C;
             } else {
               class C {
-                constructor(arg0) {
-                  if ("longPress" === application.nativeEvent.actionName) {
-                    tmp = closure_0;
-                    tmp2 = closure_2;
-                    obj = closure_0(closure_2[12]);
-                    obj2 = closure_0(closure_2[13]);
-                    tmp3 = application;
-                    copyResult = obj.copy(obj2.getApplicationInstallURL(application));
-                    obj3 = closure_0(closure_2[14]);
-                    presentLinkCopiedResult = obj3.presentLinkCopied();
+                constructor(nativeEvent) {
+                  if ("longPress" === nativeEvent.nativeEvent.actionName) {
+                    const copy = ClipboardUtils.copy;
+                    ClipboardUtils;
+                    const obj = getApplicationInstallURL;
+                    copy(obj.getApplicationInstallURL(application));
+                    const obj2 = ToastUtils;
+                    obj2.presentLinkCopied();
                   }
-                  return;
                 }
               }
             }
             const _Symbol2 = Symbol;
             if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
               class C {
-                constructor(arg0) {
-                  if ("longPress" === application.nativeEvent.actionName) {
-                    tmp = closure_0;
-                    tmp2 = closure_2;
-                    obj = closure_0(closure_2[12]);
-                    obj2 = closure_0(closure_2[13]);
-                    tmp3 = application;
-                    copyResult = obj.copy(obj2.getApplicationInstallURL(application));
-                    obj3 = closure_0(closure_2[14]);
-                    presentLinkCopiedResult = obj3.presentLinkCopied();
+                constructor(nativeEvent) {
+                  if ("longPress" === nativeEvent.nativeEvent.actionName) {
+                    const copy = ClipboardUtils.copy;
+                    ClipboardUtils;
+                    const obj = getApplicationInstallURL;
+                    copy(obj.getApplicationInstallURL(application));
+                    const obj2 = ToastUtils;
+                    obj2.presentLinkCopied();
                   }
-                  return;
                 }
               }
               const stringResult = obj4.string(tmp(1126).t.NgXl3C);
               cResult[11] = stringResult;
-              const tmp11 = stringResult;
+              tmp11 = stringResult;
             } else {
               class C {
-                constructor(arg0) {
-                  if ("longPress" === application.nativeEvent.actionName) {
-                    tmp = closure_0;
-                    tmp2 = closure_2;
-                    obj = closure_0(closure_2[12]);
-                    obj2 = closure_0(closure_2[13]);
-                    tmp3 = application;
-                    copyResult = obj.copy(obj2.getApplicationInstallURL(application));
-                    obj3 = closure_0(closure_2[14]);
-                    presentLinkCopiedResult = obj3.presentLinkCopied();
+                constructor(nativeEvent) {
+                  if ("longPress" === nativeEvent.nativeEvent.actionName) {
+                    const copy = ClipboardUtils.copy;
+                    ClipboardUtils;
+                    const obj = getApplicationInstallURL;
+                    copy(obj.getApplicationInstallURL(application));
+                    const obj2 = ToastUtils;
+                    obj2.presentLinkCopied();
                   }
-                  return;
                 }
               }
             }
             if (cResult[12] !== PlusSmallIcon) {
               class C {
-                constructor(arg0) {
-                  if ("longPress" === application.nativeEvent.actionName) {
-                    tmp = closure_0;
-                    tmp2 = closure_2;
-                    obj = closure_0(closure_2[12]);
-                    obj2 = closure_0(closure_2[13]);
-                    tmp3 = application;
-                    copyResult = obj.copy(obj2.getApplicationInstallURL(application));
-                    obj3 = closure_0(closure_2[14]);
-                    presentLinkCopiedResult = obj3.presentLinkCopied();
+                constructor(nativeEvent) {
+                  if ("longPress" === nativeEvent.nativeEvent.actionName) {
+                    const copy = ClipboardUtils.copy;
+                    ClipboardUtils;
+                    const obj = getApplicationInstallURL;
+                    copy(obj.getApplicationInstallURL(application));
+                    const obj2 = ToastUtils;
+                    obj2.presentLinkCopied();
                   }
-                  return;
                 }
               }
-              const obj5 = { size: "sm", color: guildId(587).colors.WHITE };
               const tmp15 = <PlusSmallIcon size="sm" color={guildId(587).colors.WHITE} />;
               cResult[12] = PlusSmallIcon;
               cResult[13] = tmp15;
             } else {
               class C {
-                constructor(arg0) {
-                  if ("longPress" === application.nativeEvent.actionName) {
-                    tmp = closure_0;
-                    tmp2 = closure_2;
-                    obj = closure_0(closure_2[12]);
-                    obj2 = closure_0(closure_2[13]);
-                    tmp3 = application;
-                    copyResult = obj.copy(obj2.getApplicationInstallURL(application));
-                    obj3 = closure_0(closure_2[14]);
-                    presentLinkCopiedResult = obj3.presentLinkCopied();
+                constructor(nativeEvent) {
+                  if ("longPress" === nativeEvent.nativeEvent.actionName) {
+                    const copy = ClipboardUtils.copy;
+                    ClipboardUtils;
+                    const obj = getApplicationInstallURL;
+                    copy(obj.getApplicationInstallURL(application));
+                    const obj2 = ToastUtils;
+                    obj2.presentLinkCopied();
                   }
-                  return;
                 }
               }
             }
             if (cResult[14] === C) {
               class C {
-                constructor(arg0) {
-                  if ("longPress" === application.nativeEvent.actionName) {
-                    tmp = closure_0;
-                    tmp2 = closure_2;
-                    obj = closure_0(closure_2[12]);
-                    obj2 = closure_0(closure_2[13]);
-                    tmp3 = application;
-                    copyResult = obj.copy(obj2.getApplicationInstallURL(application));
-                    obj3 = closure_0(closure_2[14]);
-                    presentLinkCopiedResult = obj3.presentLinkCopied();
+                constructor(nativeEvent) {
+                  if ("longPress" === nativeEvent.nativeEvent.actionName) {
+                    const copy = ClipboardUtils.copy;
+                    ClipboardUtils;
+                    const obj = getApplicationInstallURL;
+                    copy(obj.getApplicationInstallURL(application));
+                    const obj2 = ToastUtils;
+                    obj2.presentLinkCopied();
                   }
-                  return;
                 }
               }
             }
-            const obj6 = { text: tmp11, onPress: tmp4, onLongPress: tmp5, accessibilityActions: tmp9, onAccessibilityAction: C, icon: tmp13 };
-            const tmp18 = jsx(tmp(5594).Button, { text: tmp11, onPress: tmp4, onLongPress: tmp5, accessibilityActions: tmp9, onAccessibilityAction: C, icon: tmp13 });
             cResult[14] = C;
             cResult[15] = tmp5;
             cResult[16] = tmp4;
             cResult[17] = tmp13;
-            cResult[18] = tmp18;
-            obj2 = guildId(1371);
+            cResult[18] = jsx(tmp(5594).Button, { text: tmp11, onPress: tmp4, onLongPress: tmp5, accessibilityActions: tmp9, onAccessibilityAction: C, icon: tmp13 });
+            const tmp18 = jsx(tmp(5594).Button, { text: tmp11, onPress: tmp4, onLongPress: tmp5, accessibilityActions: tmp9, onAccessibilityAction: C, icon: tmp13 });
           }
           PlusSmallIcon = tmp(8529).PlusSmallIcon;
         }
@@ -199,9 +246,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((application) =
     }
   }
   const fn = function t() {
-    ApplicationUtils.installApplication({ applicationId: application.id, customInstallUrl: application.customInstallUrl, installParams: application.installParams, integrationTypesConfig: application.integrationTypesConfig, guildId });
+    const obj = ApplicationUtils;
     const obj2 = { applicationId: application.id, customInstallUrl: application.customInstallUrl, installParams: application.installParams, integrationTypesConfig: application.integrationTypesConfig, guildId };
-    ActionSheetActionCreatorsDefault.hideActionSheet();
+    obj.installApplication(obj2);
+    const obj3 = ActionSheetActionCreatorsDefault;
+    obj3.hideActionSheet();
   };
   cResult[0] = application.customInstallUrl;
   cResult[1] = application.id;
@@ -210,7 +259,6 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((application) =
   cResult[4] = guildId;
   cResult[5] = fn;
   tmp4 = fn;
-  let obj = application(576);
 }) : ((application) => {
   application = application.application;
   const guildId = application.guildId;
@@ -218,76 +266,82 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((application) =
   ({ customInstallUrl: arr[0], id: arr[1], installParams: arr[2], integrationTypesConfig: arr[3] } = application);
   items[4] = guildId;
   [][0] = application;
-  const callback = noop.useCallback(() => {
-    ApplicationUtils.installApplication({ applicationId: application.id, customInstallUrl: application.customInstallUrl, installParams: application.installParams, integrationTypesConfig: application.integrationTypesConfig, guildId });
+  const callback = react.useCallback(() => {
+    const obj = ApplicationUtils;
     const obj2 = { applicationId: application.id, customInstallUrl: application.customInstallUrl, installParams: application.installParams, integrationTypesConfig: application.integrationTypesConfig, guildId };
-    ActionSheetActionCreatorsDefault.hideActionSheet();
+    obj.installApplication(obj2);
+    const obj3 = ActionSheetActionCreatorsDefault;
+    obj3.hideActionSheet();
   }, items);
   const customInstallUrl = application.customInstallUrl;
   if (null != customInstallUrl) {
+    let tmp6;
+    let obj2 = guildId(1371);
     if (!obj2.isDiscordUrl(customInstallUrl)) {
       let PlusSmallIcon = application(8263).LinkExternalSmallIcon;
-      let tmp6 = application;
+      tmp6 = application;
     }
     const items1 = [application];
-    const memo = noop.useMemo(() => {
-      const obj = { name: "longpress", label: null };
-      const intl = application(1126).intl;
-      obj.label = intl.string(application(1126).t.XWDihq);
+    const memo = react.useMemo(() => {
+      let intl;
+      const obj = { name: "longpress", label: intl.string(application(dependencyMap[18]).t.XWDihq) };
+      intl = application(dependencyMap[18]).intl;
       const items = [obj];
       return items;
     }, []);
-    const callback1 = noop.useCallback((nativeEvent) => {
+    const callback1 = react.useCallback((nativeEvent) => {
       if ("longPress" === nativeEvent.nativeEvent.actionName) {
-        const obj = ClipboardUtils;
-        obj.copy(getApplicationInstallURL.getApplicationInstallURL(application));
-        ToastUtils.presentLinkCopied();
+        const copy = ClipboardUtils.copy;
+        ClipboardUtils;
+        const obj = getApplicationInstallURL;
+        copy(obj.getApplicationInstallURL(application));
+        const obj2 = ToastUtils;
+        obj2.presentLinkCopied();
       }
     }, items1);
-    let obj3 = { text: null, onPress: null, onLongPress: null, accessibilityActions: null, onAccessibilityAction: null, icon: null };
+    const Button = tmp6(5594).Button;
     let intl = tmp6(1126).intl;
-    obj3.text = intl.string(tmp6(1126).t.NgXl3C);
-    obj3.onPress = callback;
-    obj3.onLongPress = tmp2;
-    obj3.accessibilityActions = memo;
-    obj3.onAccessibilityAction = callback1;
-    const obj4 = { size: "sm", color: guildId(587).colors.WHITE };
-    obj3.icon = <PlusSmallIcon size="sm" color={guildId(587).colors.WHITE} />;
-    return jsx(tmp6(5594).Button, { text: null, onPress: null, onLongPress: null, accessibilityActions: null, onAccessibilityAction: null, icon: null });
+    ({ size: "sm", color: guildId(587).colors.WHITE });
+    return <Button text={intl.string(tmp6(1126).t.NgXl3C)} onPress={callback} onLongPress={tmp2} accessibilityActions={memo} onAccessibilityAction={callback1} icon={null} />;
   }
   PlusSmallIcon = application(8529).PlusSmallIcon;
   tmp6 = application;
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((profileApplication) => {
-  const cResult = require("c").c(8);
+  let channel;
+  let tmp5;
+  const tmp = profileApplication;
+  let obj = profileApplication(channel[8]);
+  const cResult = obj.c(8);
   profileApplication = profileApplication.profileApplication;
-  _require = profileApplication;
   const botUserId = profileApplication.botUserId;
   channel = profileApplication.channel;
-  let obj = require("c");
-  [tmp5, asyncGeneratorStep] = noop.useState(false);
+  const tmp4 = _slicedToArray(react.useState(false), 2);
+  [tmp5, _asyncToGenerator] = tmp4;
   if (cResult[0] === botUserId) {
     if (cResult[1] === channel) {
+      let tmp6;
+      let tmp8;
       if (cResult[2] === profileApplication.id) {
-        let tmp6 = cResult[3];
+        tmp6 = cResult[3];
       }
       const _Symbol = Symbol;
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(tmp2[18]).intl;
-        const stringResult = intl.string(tmp(tmp2[18]).t["Cia+A8"]);
+        const stringResult = intl.string(tmp(channel[18]).t["Cia+A8"]);
         cResult[4] = stringResult;
-        let tmp8 = stringResult;
+        tmp8 = stringResult;
       } else {
         tmp8 = cResult[4];
       }
       if (cResult[5] === tmp5) {
+        let tmp10;
         if (cResult[6] === tmp6) {
-          let tmp10 = cResult[7];
+          tmp10 = cResult[7];
         }
         return tmp10;
       }
-      let obj2 = { text: tmp8, loading: tmp5, onPress: tmp6 };
       const tmp12 = jsx(tmp(tmp2[20]).Button, { text: tmp8, loading: tmp5, onPress: tmp6 });
       cResult[5] = tmp5;
       cResult[6] = tmp6;
@@ -295,11 +349,15 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((profileApplica
       tmp10 = tmp12;
     }
   }
-  _require = asyncGeneratorStep(async () => {
+  let closure_0 = _asyncToGenerator(async () => {
+    let application1;
+    let obj6;
+    let obj9;
+    let v2;
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
+    } else if (tmp3 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -310,6 +368,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((profileApplica
       }
     } else {
       try {
+        let recipientIds;
         c4 = 2;
         if (0 === v2) {
           if (arg0 === 1) {
@@ -320,122 +379,117 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((profileApplica
             let obj3 = { value, done: true };
             return obj3;
           } else {
-            channel = tmp5;
-            const recipientIds = tmp2;
-            closure_129_0 = undefined;
-            closure_129_1 = undefined;
+            channel = tmp4;
+            recipientIds = undefined;
             const obj4 = { type: "channel", channel };
-            const tmp43 = getSection(obj4, id.id);
-            closure_129_0 = tmp43;
-            const descriptor2 = tmp43.descriptor;
+            const tmp41 = getSection(obj4, application1.id);
+            closure_0 = tmp41;
+            const descriptor2 = tmp41.descriptor;
             let application;
+            const tmp40 = application1;
             if (descriptor2 != null) {
               application = descriptor2.application;
             }
             if (null == application) {
               v2(true);
             }
-            const descriptor = tmp43.descriptor;
-            let application1;
+            const descriptor = tmp41.descriptor;
+            application1 = undefined;
             if (descriptor != null) {
               application1 = descriptor.application;
             }
-            id = application1;
             if (application1 == null) {
               v2 = 1;
               c4 = 1;
-              const obj7 = { value: botUserId(channel[21]).fetchApplication(tmp42.id), done: false };
+              const obj7 = { value: obj9.fetchApplication(tmp40.id), done: false };
+              obj9 = botUserId(channel[21]);
               return obj7;
-            } else {
-              closure_129_1 = id;
-              v2(false);
-              if (null != closure_129_0) {
-                botUserId(channel[11]).hideAllActionSheets();
-                const obj5 = botUserId(channel[11]);
-                const obj8 = { recipientIds };
-                v2 = 2;
-                c4 = 1;
-                const obj10 = { value: botUserId(channel[22]).openPrivateChannel(obj8), done: false };
-                return obj10;
-              } else {
-                c4 = 3;
-              }
             }
-            tmp42 = id;
           }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
+        } else {
+          if (1 === v2) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj8 = { value, done: true };
+              return obj8;
+            } else {
+              application1 = value;
+            }
+          } else if (arg0 === 1) {
             c4 = 3;
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj11 = { value, done: true };
-            return obj11;
+            const obj10 = { value, done: true };
+            return obj10;
           } else {
-            id = value;
-          }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          const _setTimeout = setTimeout;
-          const timerId = setTimeout(() => {
-            const bestActiveInput = closure_0(dependencyMap[23]).getBestActiveInput();
-            if (bestActiveInput != null) {
-              const obj2 = { type: closure_0(dependencyMap[24]).KeyboardTypes.APP_LAUNCHER, context: null };
-              const obj3 = { initialRouteName: constants.APPLICATION_VIEW, initiallyExpanded: true, application, installOnDemand: null };
-              const isGuildInstalled = id.isGuildInstalled;
-              let tmp5 = !isGuildInstalled;
-              if (!isGuildInstalled) {
-                tmp5 = !id.isUserInstalled;
+            const _setTimeout = setTimeout;
+            const timerId = setTimeout(() => {
+              let obj3;
+              const obj = application1(channel[23]);
+              const bestActiveInput = obj.getBestActiveInput();
+              if (bestActiveInput != null) {
+                const openCustomKeyboard = bestActiveInput.openCustomKeyboard;
+                const obj2 = { type: application1(channel[24]).KeyboardTypes.APP_LAUNCHER, context: obj3 };
+                obj3 = { initialRouteName: constants.APPLICATION_VIEW, initiallyExpanded: true, application, installOnDemand: !closure_1_0.isGuildInstalled && !closure_1_0.isUserInstalled };
+                openCustomKeyboard(obj2);
               }
-              obj3.installOnDemand = tmp5;
-              obj2.context = obj3;
-              bestActiveInput.openCustomKeyboard(obj2);
-            }
-            const obj = closure_0(dependencyMap[23]);
-          }, 0);
-          const obj12 = { application_id: closure_129_1.id };
-          botUserId(channel[25]).track(constants.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, obj12);
-          let obj = botUserId(channel[25]);
+            }, 0);
+            let obj = botUserId(channel[25]);
+            const obj11 = { application_id: recipientIds.id };
+            obj.track(constants.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, obj11);
+          }
+          c4 = 3;
+          return { value: "IconComponent", done: null };
         }
+        recipientIds = application1;
+        v2(false);
+        if (null != closure_0) {
+          const obj5 = botUserId(channel[11]);
+          obj5.hideAllActionSheets();
+          const obj12 = { recipientIds };
+          v2 = 2;
+          c4 = 1;
+          const obj13 = { value: obj6.openPrivateChannel(obj12), done: false };
+          obj6 = botUserId(channel[22]);
+          return obj13;
+        }
+      } catch (tmp34) {
         c4 = 3;
-        const obj13 = { value, done: true };
-        return obj13;
-      } catch (tmp35) {
-        c4 = tmp;
-        throw tmp35;
+        throw tmp34;
       }
     }
   });
   const fn = function() {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
+    return closure_0(...arguments);
   };
   cResult[0] = botUserId;
   cResult[1] = channel;
   cResult[2] = profileApplication.id;
   cResult[3] = fn;
   tmp6 = fn;
-  const tmp4 = _slicedToArray(noop.useState(false), 2);
 }) : ((profileApplication) => {
+  let closure_3;
+  let first;
   profileApplication = profileApplication.profileApplication;
   const botUserId = profileApplication.botUserId;
-  const channel = profileApplication.channel;
-  asyncGeneratorStep = undefined;
-  [obj.loading, asyncGeneratorStep] = noop.useState(false);
+  let channel = profileApplication.channel;
+  _asyncToGenerator = undefined;
+  [first, _asyncToGenerator] = react.useState(false);
   const items = [botUserId, channel, profileApplication.id];
-  const callback = noop.useCallback(asyncGeneratorStep(async () => {
+  const callback = react.useCallback(_asyncToGenerator(async () => {
+    let c2;
+    let closure_1;
+    let constants2;
+    let obj6;
+    let obj9;
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
+    } else if (tmp3 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -446,6 +500,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((profileApplica
       }
     } else {
       try {
+        let tmp;
+        let closure_0;
+        let application1;
         c4 = 2;
         if (0 === c3) {
           if (arg0 === 1) {
@@ -456,13 +513,12 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((profileApplica
             let obj3 = { value, done: true };
             return obj3;
           } else {
-            dependencyMap = 0;
-            closure_129_0 = undefined;
-            closure_129_1 = undefined;
+            channel = 0;
+            tmp = undefined;
             const obj4 = { type: "channel", channel };
-            const tmp43 = getSection(obj4, profileApplication.id);
-            closure_129_0 = tmp43;
-            const descriptor2 = tmp43.descriptor;
+            const tmp41 = getSection(obj4, profileApplication.id);
+            closure_0 = tmp41;
+            const descriptor2 = tmp41.descriptor;
             let application;
             if (descriptor2 != null) {
               application = descriptor2.application;
@@ -470,122 +526,80 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((profileApplica
             if (null == application) {
               v2(true);
             }
-            const descriptor = tmp43.descriptor;
-            let application1;
+            const descriptor = tmp41.descriptor;
+            application1 = undefined;
             if (descriptor != null) {
               application1 = descriptor.application;
             }
-            closure_0 = application1;
             if (application1 == null) {
               c3 = 1;
               c4 = 1;
-              const obj7 = { value: tmp2(6658).fetchApplication(profileApplication.id), done: false };
+              const obj7 = { value: obj9.fetchApplication(profileApplication.id), done: false };
+              obj9 = tmp(channel[21]);
               return obj7;
-            } else {
-              closure_129_1 = closure_0;
-              closure_130_3(false);
-              if (null != closure_129_0) {
-                tmp2(4854).hideAllActionSheets();
-                const obj5 = tmp2(4854);
-                const obj8 = { recipientIds: closure_130_1 };
-                c3 = 2;
-                c4 = 1;
-                const obj10 = { value: tmp2(4903).openPrivateChannel(obj8), done: false };
-                return obj10;
-              } else {
-                c4 = 3;
-              }
             }
           }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
+        } else {
+          if (1 === tmp4) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj8 = { value, done: true };
+              return obj8;
+            } else {
+              application1 = value;
+            }
+          } else if (arg0 === 1) {
             c4 = 3;
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj11 = { value, done: true };
-            return obj11;
+            const obj10 = { value, done: true };
+            return obj10;
           } else {
-            closure_0 = value;
-          }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          const _setTimeout = setTimeout;
-          const timerId = setTimeout(() => {
-            const bestActiveInput = closure_0(dependencyMap[23]).getBestActiveInput();
-            if (bestActiveInput != null) {
-              const obj2 = { type: closure_0(dependencyMap[24]).KeyboardTypes.APP_LAUNCHER, context: null };
-              const obj3 = { initialRouteName: constants2.APPLICATION_VIEW, initiallyExpanded: true, application, installOnDemand: null };
-              const isGuildInstalled = closure_1_0.isGuildInstalled;
-              let tmp5 = !isGuildInstalled;
-              if (!isGuildInstalled) {
-                tmp5 = !closure_1_0.isUserInstalled;
+            const _setTimeout = setTimeout;
+            const timerId = setTimeout(() => {
+              let obj3;
+              const obj = application1(c2[23]);
+              const bestActiveInput = obj.getBestActiveInput();
+              if (bestActiveInput != null) {
+                const openCustomKeyboard = bestActiveInput.openCustomKeyboard;
+                const obj2 = { type: application1(c2[24]).KeyboardTypes.APP_LAUNCHER, context: obj3 };
+                obj3 = { initialRouteName: constants2.APPLICATION_VIEW, initiallyExpanded: true, application, installOnDemand: !closure_1_0.isGuildInstalled && !closure_1_0.isUserInstalled };
+                openCustomKeyboard(obj2);
               }
-              obj3.installOnDemand = tmp5;
-              obj2.context = obj3;
-              bestActiveInput.openCustomKeyboard(obj2);
-            }
-            const obj = closure_0(dependencyMap[23]);
-          }, 0);
-          const obj12 = { application_id: closure_129_1.id };
-          tmp2(1252).track(constants.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, obj12);
-          let obj = tmp2(1252);
+            }, 0);
+            let obj = tmp(channel[25]);
+            const obj11 = { application_id: tmp.id };
+            obj.track(constants.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, obj11);
+          }
+          c4 = 3;
+          return { value: "IconComponent", done: null };
         }
+        tmp = application1;
+        closure_130_3(false);
+        if (null != closure_0) {
+          const obj5 = tmp(channel[11]);
+          obj5.hideAllActionSheets();
+          const obj12 = { recipientIds: closure_130_1 };
+          c3 = 2;
+          c4 = 1;
+          const obj13 = { value: obj6.openPrivateChannel(obj12), done: false };
+          obj6 = tmp(channel[22]);
+          return obj13;
+        }
+      } catch (tmp34) {
         c4 = 3;
-        const obj13 = { value, done: true };
-        return obj13;
-      } catch (tmp35) {
-        c4 = tmp;
-        throw tmp35;
+        throw tmp34;
       }
     }
   }), items);
-  let obj = { text: null, loading: null, onPress: null };
+  const Button = profileApplication(channel[20]).Button;
   const intl = profileApplication(channel[18]).intl;
-  obj.text = intl.string(profileApplication(channel[18]).t["Cia+A8"]);
-  obj.onPress = callback;
-  return jsx(profileApplication(channel[20]).Button, { text: null, loading: null, onPress: null });
+  return <Button text={intl.string(profileApplication(channel[18]).t["Cia+A8"])} loading={first} onPress={callback} />;
 });
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/AddOrOpenAppButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(6);
-  ({ application, botUserId, channel, guildId } = arg0);
-  const tmp2 = useIsAppDMDefault(channel);
-  if (cResult[0] === application) {
-    if (cResult[1] === botUserId) {
-      if (cResult[2] === channel) {
-        if (cResult[3] === guildId) {
-          if (cResult[4] === tmp2) {
-            return cResult[5];
-          }
-        }
-      }
-    }
-  }
-  if (!tmp2) {
-    const obj2 = { application, guildId };
-    let tmp6 = <closure_10 application={application} guildId={guildId} />;
-    cResult[0] = application;
-    cResult[1] = botUserId;
-    cResult[2] = channel;
-    cResult[3] = guildId;
-    cResult[4] = tmp2;
-    cResult[5] = tmp6;
-  }
-  tmp6 = <closure_11 profileApplication={application} botUserId={botUserId} channel={channel} />;
-}) : ((arg0) => {
-  ({ application, channel } = arg0);
-  ({ botUserId, guildId } = arg0);
-  if (useIsAppDMDefault(channel)) {
-    if (null != channel) {
-      const obj = { profileApplication: application, botUserId, channel };
-      let tmp2 = <closure_11 profileApplication={application} botUserId={botUserId} channel={channel} />;
-    }
-    return tmp2;
-  }
-  tmp2 = <closure_10 application={application} guildId={guildId} />;
-});
+export default tmp2;

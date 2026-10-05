@@ -5,12 +5,15 @@ import nativeDefault from "native" /* 587 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
 const result = size.fileFinishedImporting("design/components/Card/native/CardTokens.native.tsx");
 
 export const createCardShadowToken = function createCardShadowToken(arg0) {
+  let closure_0;
   _require = arg0;
-  return require("createStyles").experimental_createToken((gradient) => {
+  const obj = require("createStyles");
+  return obj.experimental_createToken((gradient) => {
     if (null == gradient.gradient) {
       if ("none" !== closure_0) {
         if ("border" === closure_0) {

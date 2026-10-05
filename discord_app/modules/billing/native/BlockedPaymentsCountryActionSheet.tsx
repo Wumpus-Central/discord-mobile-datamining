@@ -1,26 +1,33 @@
 // === Module 11093: BlockedPaymentsCountryActionSheet ===
 
 // Module 11093 (BlockedPaymentsCountryActionSheet)
-import c from "c" /* 576 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6645 */;
-import BlockedPaymentsCountryDisplayDefault from "BlockedPaymentsCountryDisplay" /* 11094 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/billing/native/BlockedPaymentsCountryActionSheet.tsx");
+let BottomSheet;
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(1);
+const jsx = Fragment.jsx;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let first;
+  const obj = react2;
+  const cResult = obj.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { children: jsx(BlockedPaymentsCountryDisplayDefault, {}) };
-    const tmp7 = jsx(Sheet_BottomSheet.BottomSheet, { children: jsx(BlockedPaymentsCountryDisplayDefault, {}) });
+    BottomSheet = Sheet_BottomSheet.BottomSheet;
+    const tmp7 = <BottomSheet>{null}</BottomSheet>;
     cResult[0] = tmp7;
-    let first = tmp7;
+    first = tmp7;
   } else {
     first = cResult[0];
   }
   return first;
-}) : (() => jsx(Sheet_BottomSheet.BottomSheet, { children: jsx(BlockedPaymentsCountryDisplayDefault, {}) }));
+}) : (() => {
+  BottomSheet = Sheet_BottomSheet.BottomSheet;
+  return <BottomSheet>{null}</BottomSheet>;
+});
+const result = size.fileFinishedImporting("modules/billing/native/BlockedPaymentsCountryActionSheet.tsx");
+
+export default tmp3;

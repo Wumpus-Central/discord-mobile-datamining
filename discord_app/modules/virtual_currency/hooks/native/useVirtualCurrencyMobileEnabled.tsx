@@ -7,10 +7,14 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/virtual_currency/hooks/native/useVirtualCurrencyMobileEnabled.tsx");
 
 export const isVirtualCurrencyEnabled = function isVirtualCurrencyEnabled() {
-  const obj = { enabled: !MetaQuestUtils.isMetaQuest() };
+  let obj2;
+  const obj = { enabled: !obj2.isMetaQuest() };
+  obj2 = MetaQuestUtils;
   return obj;
 };
 export const useVirtualCurrencyMobileEnabled = function useVirtualCurrencyMobileEnabled() {
-  const obj = { enabled: !MetaQuestUtils.isMetaQuest() };
+  let obj2;
+  const obj = { enabled: !obj2.isMetaQuest() };
+  obj2 = MetaQuestUtils;
   return obj;
 };

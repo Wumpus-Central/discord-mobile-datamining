@@ -1,35 +1,40 @@
 // === Module 12444: useIsHubRealNamePromptShowing ===
 
 // Module 12444 (useIsHubRealNamePromptShowing)
+import Constants from "Constants" /* 1085 */;
+import Constants2 from "Constants" /* 12446 */;
 import GuildPromptsActionCreatorsDefault from "GuildPromptsActionCreators" /* 12447 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import GuildPromptsStore from "GuildPromptsStore" /* 12445 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import UserStore from "UserStore" /* 1377 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const GuildFeatures = fn(1085).GuildFeatures;
-const GuildPrompts = fn(12446).GuildPrompts;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/hub/useIsHubRealNamePromptShowing.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const GuildFeatures = Constants.GuildFeatures;
+const GuildPrompts = Constants2.GuildPrompts;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let closure_0;
+  let first;
+  let tmp9;
   _require = arg0;
-  const cResult = require("c").c(7);
+  let obj = require("react");
+  const cResult = obj.c(7);
+  const tmp = _require;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildStore, GuildPromptsStore, UserStore, GuildMemberStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
     const fn = function _() {
-      guild = GuildStore.getGuild(closure_0);
+      const guild = GuildStore.getGuild(closure_0);
       let hasItem;
       if (guild != null) {
         const features = guild.features;
@@ -44,11 +49,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         if (null == currentUser) {
           return null;
         } else {
-          let id;
+          let id1;
+          const getMember = GuildMemberStore.getMember;
+          const id = guild.id;
           if (currentUser != null) {
-            id = currentUser.id;
+            id1 = currentUser.id;
           }
-          const member = GuildMemberStore.getMember(guild.id, id);
+          const member = getMember(id, id1);
           let nick;
           if (member != null) {
             nick = member.nick;
@@ -59,39 +66,31 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     };
     cResult[1] = arg0;
     cResult[2] = fn;
-    let tmp9 = fn;
+    tmp9 = fn;
   } else {
     tmp9 = cResult[2];
   }
-  let obj = require("c");
-  const stateFromStores = require("initialize").useStateFromStores(first, tmp9);
+  const tmpResult = tmp(504);
+  const stateFromStores = tmpResult.useStateFromStores(first, tmp9);
   if (cResult[3] === arg0) {
+    let tmp11;
+    let tmp12;
     if (cResult[4] === stateFromStores) {
-      let tmp11 = cResult[5];
-      let tmp12 = cResult[6];
+      tmp11 = cResult[5];
+      tmp12 = cResult[6];
     }
-    const effect = noop.useEffect(tmp11, tmp12);
+    const effect = react.useEffect(tmp11, tmp12);
     return true === stateFromStores;
   }
   class E {
     constructor() {
-      tmp2 = null != closure_0;
-      tmp = closure_0;
+      const tmp2 = null != closure_0 && null != stateFromStores;
       if (tmp2) {
-        tmp3 = closure_1;
-        tmp2 = null != closure_1;
-      }
-      if (tmp2) {
-        tmp4 = closure_1;
-        if (!closure_1) {
-          tmp5 = closure_1;
-          tmp6 = closure_2;
-          obj = closure_1(closure_2[10]);
-          tmp7 = GuildPrompts;
-          viewPromptResult = obj.viewPrompt(GuildPrompts.REAL_NAME_PROMPT, tmp);
+        if (!stateFromStores) {
+          const obj = GuildPromptsActionCreatorsDefault;
+          obj.viewPrompt(GuildPrompts.REAL_NAME_PROMPT, closure_0);
         }
       }
-      return;
     }
   }
   const items1 = [stateFromStores, arg0];
@@ -101,12 +100,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = items1;
   tmp12 = items1;
   tmp11 = E;
-  const tmpResult = require("initialize");
 }) : ((arg0) => {
+  let closure_0;
   _require = arg0;
+  let obj = require("get initialized");
   const items = [GuildStore, GuildPromptsStore, UserStore, GuildMemberStore];
-  const stateFromStores = require("initialize").useStateFromStores(items, () => {
-    guild = GuildStore.getGuild(closure_0);
+  const stateFromStores = obj.useStateFromStores(items, () => {
+    const guild = GuildStore.getGuild(closure_0);
     let hasItem;
     if (guild != null) {
       const features = guild.features;
@@ -121,11 +121,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       if (null == currentUser) {
         return null;
       } else {
-        let id;
+        let id1;
+        const getMember = GuildMemberStore.getMember;
+        const id = guild.id;
         if (currentUser != null) {
-          id = currentUser.id;
+          id1 = currentUser.id;
         }
-        const member = GuildMemberStore.getMember(guild.id, id);
+        const member = getMember(id, id1);
         let nick;
         if (member != null) {
           nick = member.nick;
@@ -135,16 +137,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   });
   const items1 = [stateFromStores, arg0];
-  const effect = noop.useEffect(() => {
-    let tmp2 = null != closure_0;
-    if (tmp2) {
-      tmp2 = null != stateFromStores;
-    }
+  const effect = react.useEffect(() => {
+    const tmp2 = null != closure_0 && null != stateFromStores;
     if (tmp2) {
       if (!stateFromStores) {
-        GuildPromptsActionCreatorsDefault.viewPrompt(GuildPrompts.REAL_NAME_PROMPT, closure_0);
+        const obj = GuildPromptsActionCreatorsDefault;
+        obj.viewPrompt(GuildPrompts.REAL_NAME_PROMPT, closure_0);
       }
     }
   }, items1);
   return true === stateFromStores;
 });
+const result = size.fileFinishedImporting("modules/hub/useIsHubRealNamePromptShowing.tsx");
+
+export default tmp2;

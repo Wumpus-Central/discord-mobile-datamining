@@ -6,7 +6,7 @@ import Constants from "Constants" /* 1085 */;
 import router_utils from "router_utils" /* 1112 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
 import ChannelConstants from "ChannelConstants" /* 2058 */;
-import Client from "Client" /* 4787 */;
+import flow_Client from "flow/Client" /* 4787 */;
 import SidebarActionTypes from "SidebarActionTypes" /* 6785 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 6965 */;
 import MessageManagerDefault from "MessageManager" /* 7517 */;
@@ -17,55 +17,71 @@ import size from "module_2" /* 2 */;
 let closure_3 = ChannelRecord.isChannelThreadsForcedOpenedInFullView;
 const Routes = Constants.Routes;
 const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
-const result = size.fileFinishedImporting("modules/sidebar/SidebarActionCreators.tsx");
-
-export default {
+let obj = {
   openPrivateChannelAsSidebar(arg0) {
+    let baseChannelId;
+    let channelId;
+    let hasSingleMessageRequest;
+    let messageId;
     ({ channelId, messageId } = arg0);
     ({ baseChannelId, hasSingleMessageRequest } = arg0);
     const obj = DispatcherDefault;
-    obj.dispatch({ type: "SIDEBAR_VIEW_CHANNEL", sidebarType: SidebarActionTypes.SidebarType.VIEW_MESSAGE_REQUEST, baseChannelId, channelId, details: { hasSingleMessageRequest } });
+    const obj2 = { type: "SIDEBAR_VIEW_CHANNEL", sidebarType: SidebarActionTypes.SidebarType.VIEW_MESSAGE_REQUEST, baseChannelId, channelId, details: { hasSingleMessageRequest } };
+    obj.dispatch(obj2);
     if (null != messageId) {
       const obj3 = { channelId, messageId, flash: true };
-      MessageActionCreatorsDefault.jumpToMessage(obj3);
       const tmpResult = MessageActionCreatorsDefault;
+      tmpResult.jumpToMessage(obj3);
     } else {
       const obj4 = { channelId };
-      const messages = MessageManagerDefault.fetchMessages(obj4);
       const tmpResult2 = MessageManagerDefault;
+      const messages = tmpResult2.fetchMessages(obj4);
     }
-    const obj2 = { type: "SIDEBAR_VIEW_CHANNEL", sidebarType: SidebarActionTypes.SidebarType.VIEW_MESSAGE_REQUEST, baseChannelId, channelId, details: { hasSingleMessageRequest } };
   },
   openChannelAsSidebar(baseChannelId) {
+    let channelId;
+    let flash;
+    let guildId;
     ({ guildId, channelId, flash } = baseChannelId);
+    baseChannelId = baseChannelId.baseChannelId;
     if (flash === undefined) {
       flash = true;
     }
     const details = baseChannelId.details;
     const obj = DispatcherDefault;
-    obj.dispatch({ type: "SIDEBAR_VIEW_CHANNEL", sidebarType: SidebarActionTypes.SidebarType.VIEW_CHANNEL, guildId, baseChannelId: baseChannelId.baseChannelId, channelId, details });
+    const obj2 = { type: "SIDEBAR_VIEW_CHANNEL", sidebarType: SidebarActionTypes.SidebarType.VIEW_CHANNEL, guildId, baseChannelId, channelId, details };
+    obj.dispatch(obj2);
     if (null != details.initialMessageId) {
-      const obj3 = { channelId, messageId: details.initialMessageId, flash, jumpType: Client.JumpType.INSTANT };
-      MessageActionCreatorsDefault.jumpToMessage(obj3);
-      const tmpResult = MessageActionCreatorsDefault;
+      const obj3 = { channelId, messageId: details.initialMessageId, flash, jumpType: flow_Client.JumpType.INSTANT };
+      const jumpToMessage = MessageActionCreatorsDefault.jumpToMessage;
+      MessageActionCreatorsDefault;
+      jumpToMessage(obj3);
     } else {
       const obj4 = { guildId, channelId };
-      const messages = MessageManagerDefault.fetchMessages(obj4);
       const tmpResult2 = MessageManagerDefault;
+      const messages = tmpResult2.fetchMessages(obj4);
     }
-    const obj2 = { type: "SIDEBAR_VIEW_CHANNEL", sidebarType: SidebarActionTypes.SidebarType.VIEW_CHANNEL, guildId, baseChannelId: baseChannelId.baseChannelId, channelId, details };
   },
   openResourceChannelAsSidebar(arg0) {
+    let channelId;
+    let guildId;
+    let obj3;
     ({ guildId, channelId } = arg0);
     if (null != guildId) {
-      const homeResourceChannel = GuildOnboardingHomeActionCreators.selectHomeResourceChannel(guildId, channelId, false);
-      const obj3 = { type: "SIDEBAR_VIEW_CHANNEL", sidebarType: SidebarActionTypes.SidebarType.VIEW_CHANNEL, guildId, baseChannelId: StaticChannelRoute.GUILD_HOME, channelId, details: null };
-      const obj4 = { type: SidebarActionTypes.ViewChannelDetailType.CHAT };
-      obj3.details = obj4;
-      DispatcherDefault.dispatch(obj3);
+      const obj = GuildOnboardingHomeActionCreators;
+      const homeResourceChannel = obj.selectHomeResourceChannel(guildId, channelId, false);
+      const obj2 = { type: "SIDEBAR_VIEW_CHANNEL", sidebarType: SidebarActionTypes.SidebarType.VIEW_CHANNEL, guildId, baseChannelId: StaticChannelRoute.GUILD_HOME, channelId, details: obj3 };
+      const dispatch = DispatcherDefault.dispatch;
+      DispatcherDefault;
+      obj3 = { type: SidebarActionTypes.ViewChannelDetailType.CHAT };
+      dispatch(obj2);
     }
   },
   openModReportAsSidebar(details) {
+    let baseChannelId;
+    let channelId;
+    let flash;
+    let guildId;
     ({ channelId, flash } = details);
     ({ guildId, baseChannelId } = details);
     if (flash === undefined) {
@@ -73,23 +89,28 @@ export default {
     }
     details = details.details;
     const obj = DispatcherDefault;
-    obj.dispatch({ type: "SIDEBAR_VIEW_CHANNEL", sidebarType: SidebarActionTypes.SidebarType.VIEW_MOD_REPORT, baseChannelId, channelId, details });
+    const obj2 = { type: "SIDEBAR_VIEW_CHANNEL", sidebarType: SidebarActionTypes.SidebarType.VIEW_MOD_REPORT, baseChannelId, channelId, details };
+    obj.dispatch(obj2);
     let initialMessageId;
     if (details != null) {
       initialMessageId = details.initialMessageId;
     }
     if (null != initialMessageId) {
-      const obj3 = { channelId, messageId: details.initialMessageId, flash, jumpType: Client.JumpType.INSTANT };
-      MessageActionCreatorsDefault.jumpToMessage(obj3);
-      const tmpResult = MessageActionCreatorsDefault;
+      const obj3 = { channelId, messageId: details.initialMessageId, flash, jumpType: flow_Client.JumpType.INSTANT };
+      const jumpToMessage = MessageActionCreatorsDefault.jumpToMessage;
+      MessageActionCreatorsDefault;
+      jumpToMessage(obj3);
     } else {
       const obj4 = { guildId, channelId };
-      const messages = MessageManagerDefault.fetchMessages(obj4);
       const tmpResult2 = MessageManagerDefault;
+      const messages = tmpResult2.fetchMessages(obj4);
     }
-    const obj2 = { type: "SIDEBAR_VIEW_CHANNEL", sidebarType: SidebarActionTypes.SidebarType.VIEW_MOD_REPORT, baseChannelId, channelId, details };
   },
   openThreadAsSidebar(details) {
+    let baseChannelId;
+    let channelId;
+    let flash;
+    let guildId;
     ({ guildId, baseChannelId, channelId, flash } = details);
     if (flash === undefined) {
       flash = true;
@@ -99,33 +120,51 @@ export default {
     if (null != channel) {
       if (closure_3(channel.type)) {
         const initialMessageId = details.initialMessageId;
-        router_utils.replaceWith(Routes.CHANNEL(guildId, channelId, initialMessageId));
+        const replaceWith = router_utils.replaceWith;
+        const CHANNEL = Routes.CHANNEL;
+        router_utils;
+        replaceWith(CHANNEL(guildId, channelId, initialMessageId));
       }
     }
     const obj = DispatcherDefault;
-    obj.dispatch({ type: "SIDEBAR_VIEW_CHANNEL", sidebarType: SidebarActionTypes.SidebarType.VIEW_CHANNEL, baseChannelId, channelId, details });
+    const obj2 = { type: "SIDEBAR_VIEW_CHANNEL", sidebarType: SidebarActionTypes.SidebarType.VIEW_CHANNEL, baseChannelId, channelId, details };
+    obj.dispatch(obj2);
     if (null != details.initialMessageId) {
-      const obj3 = { channelId, messageId: details.initialMessageId, flash, jumpType: Client.JumpType.INSTANT };
-      MessageActionCreatorsDefault.jumpToMessage(obj3);
-      const tmp3Result = MessageActionCreatorsDefault;
+      const obj3 = { channelId, messageId: details.initialMessageId, flash, jumpType: flow_Client.JumpType.INSTANT };
+      const jumpToMessage = MessageActionCreatorsDefault.jumpToMessage;
+      MessageActionCreatorsDefault;
+      jumpToMessage(obj3);
     } else {
       const obj4 = { guildId, channelId };
-      const messages = MessageManagerDefault.fetchMessages(obj4);
       const tmp3Result2 = MessageManagerDefault;
+      const messages = tmp3Result2.fetchMessages(obj4);
     }
-    const obj2 = { type: "SIDEBAR_VIEW_CHANNEL", sidebarType: SidebarActionTypes.SidebarType.VIEW_CHANNEL, baseChannelId, channelId, details };
   },
   closeChannelSidebar(baseChannelId) {
-    DispatcherDefault.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId });
+    const obj = DispatcherDefault;
+    const obj2 = { type: "SIDEBAR_CLOSE", baseChannelId };
+    obj.dispatch(obj2);
   },
   openGuildSidebar(arg0) {
+    let baseChannelId;
+    let details;
+    let guildId;
+    let sidebarType;
     ({ guildId, baseChannelId, sidebarType, details } = arg0);
-    return DispatcherDefault.dispatch({ type: "SIDEBAR_VIEW_GUILD", sidebarType, baseChannelId, guildId, details });
+    const obj = DispatcherDefault;
+    return obj.dispatch({ type: "SIDEBAR_VIEW_GUILD", sidebarType, baseChannelId, guildId, details });
   },
   closeGuildSidebar(guildId) {
-    DispatcherDefault.dispatch({ type: "SIDEBAR_CLOSE_GUILD", guildId });
+    const obj = DispatcherDefault;
+    const obj2 = { type: "SIDEBAR_CLOSE_GUILD", guildId };
+    obj.dispatch(obj2);
   },
   setSelectedSearchContext(searchContextId) {
-    DispatcherDefault.dispatch({ type: "SIDEBAR_SET_SELECTED_SEARCH_CONTEXT", searchContextId });
+    const obj = DispatcherDefault;
+    const obj2 = { type: "SIDEBAR_SET_SELECTED_SEARCH_CONTEXT", searchContextId };
+    obj.dispatch(obj2);
   }
 };
+const result = size.fileFinishedImporting("modules/sidebar/SidebarActionCreators.tsx");
+
+export default obj;

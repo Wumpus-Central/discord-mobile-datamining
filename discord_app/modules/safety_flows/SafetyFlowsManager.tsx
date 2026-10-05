@@ -3,26 +3,30 @@
 // Module 18057 (SafetyFlowsManager)
 import openSafetyFlow from "openSafetyFlow" /* 18058 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
 function handleConnectionOpenSupplemental() {
-  openSafetyFlow.openSafetyFlow();
+  const obj = openSafetyFlow;
+  obj.openSafetyFlow();
 }
 function handleSafetyFlowsModalOpen() {
-  openSafetyFlow.openSafetyFlow();
+  const obj = openSafetyFlow;
+  obj.openSafetyFlow();
 }
 function handleUserRequiredActionUpdate(requiredAction) {
-  openSafetyFlow.openSafetyFlow({ requiredAction: requiredAction.requiredAction });
+  requiredAction = requiredAction.requiredAction;
+  const obj = openSafetyFlow;
+  obj.openSafetyFlow({ requiredAction });
 }
-const prototype = function SafetyFlowsManager() {
-  const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult.actions = { CONNECTION_OPEN_SUPPLEMENTAL: handleConnectionOpenSupplemental, SAFETY_FLOWS_MODAL_OPEN: handleSafetyFlowsModalOpen, USER_REQUIRED_ACTION_UPDATE: handleUserRequiredActionUpdate };
-  return applyArgumentsResult;
-}.prototype;
-class prototype extends tmp2 {
+class SafetyFlowsManager extends AutomaticLifecycleManager {
+  constructor() {
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    const obj = { CONNECTION_OPEN_SUPPLEMENTAL: handleConnectionOpenSupplemental, SAFETY_FLOWS_MODAL_OPEN: handleSafetyFlowsModalOpen, USER_REQUIRED_ACTION_UPDATE: handleUserRequiredActionUpdate };
+    applyArgumentsResult.actions = obj;
+    return applyArgumentsResult;
+  }
 }
-const prototype1 = new prototype();
-const size = fn(2);
+const safetyFlowsManager = new SafetyFlowsManager();
 const result = size.fileFinishedImporting("modules/safety_flows/SafetyFlowsManager.tsx");
 
-export default prototype1;
+export default safetyFlowsManager;

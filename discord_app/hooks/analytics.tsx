@@ -2,12 +2,12 @@
 
 // Module 9101 (analytics)
 import AnalyticsUtils from "AnalyticsUtils" /* 1252 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const size = fn(2);
 const result1 = size.fileFinishedImporting("hooks/analytics.tsx");
 
-export const useAnalyticsContext = () => noop.useContext(AnalyticsUtils.AnalyticsContext);
+export const useAnalyticsContext = () => react.useContext(AnalyticsUtils.AnalyticsContext);

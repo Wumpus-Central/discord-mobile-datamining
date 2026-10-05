@@ -1,45 +1,52 @@
 // === Module 16236: useHomeDrawerToggleAccessibilityAction ===
 
 // Module 16236 (useHomeDrawerToggleAccessibilityAction)
-import util from "util" /* 1126 */;
+import intl2 from "intl" /* 1126 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4590 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4736 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-require = fn;
 let c3 = "toggle-home-drawer";
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/home_drawer/native/useHomeDrawerToggleAccessibilityAction.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+  let closure_0;
   _require = arg1;
-  const cResult = require("c").c(7);
-  if (!arg0) {
-    return null;
-  } else if (cResult[0] !== arg1) {
-    let intl = tmp(1126).intl;
-    let string = intl.string;
-    let h8xFEv = tmp(1126).t;
-    if (arg1) {
-      h8xFEv = h8xFEv.h8xFEv;
-      let stringResult = string(h8xFEv);
+  let obj = require("react");
+  const cResult = obj.c(7);
+  let tmp4 = null;
+  if (arg0) {
+    let tmp5;
+    let tmp7;
+    if (cResult[0] !== arg1) {
+      let stringResult;
+      let intl = tmp(1126).intl;
+      let string = intl.string;
+      let t = tmp(1126).t;
+      if (arg1) {
+        stringResult = string(t.h8xFEv);
+      } else {
+        stringResult = string(t["Rgk/2h"]);
+      }
+      cResult[0] = arg1;
+      cResult[1] = stringResult;
+      tmp5 = stringResult;
     } else {
-      stringResult = string(h8xFEv["Rgk/2h"]);
+      tmp5 = cResult[1];
     }
-    cResult[0] = arg1;
-    cResult[1] = stringResult;
-  } else {
     if (cResult[2] !== arg1) {
       const fn = function u() {
-        NavigationRouteUtils.setHomeDrawerState(!closure_0);
-        const intl = util.intl;
+        let stringResult;
+        const obj = NavigationRouteUtils;
+        obj.setHomeDrawerState(!closure_0);
+        const intl = intl2.intl;
         const string = intl.string;
-        const t = util.t;
+        const t = intl2.t;
         if (closure_0) {
-          let stringResult = string(t["0s/g+O"]);
+          stringResult = string(t["0s/g+O"]);
         } else {
           stringResult = string(t.hfxfVb);
         }
@@ -48,29 +55,36 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
       };
       cResult[2] = arg1;
       cResult[3] = fn;
-      let tmp7 = fn;
+      tmp7 = fn;
     } else {
       tmp7 = cResult[3];
     }
     if (cResult[4] === tmp7) {
+      let tmp8;
+      if (cResult[5] === tmp5) {
+        tmp8 = cResult[6];
+      }
+      tmp4 = tmp8;
     }
-    const obj2 = { name, label: cResult[1], action: tmp7 };
+    const obj2 = { name, label: tmp5, action: tmp7 };
     cResult[4] = tmp7;
-    cResult[5] = cResult[1];
+    cResult[5] = tmp5;
     cResult[6] = obj2;
+    tmp8 = obj2;
   }
-  let obj = require("c");
+  return tmp4;
 }) : ((arg0, arg1) => {
-  closure_0 = arg0;
-  closure_1 = arg1;
+  let closure_0 = arg0;
+  let closure_1 = arg1;
   const items = [arg0, arg1];
-  return noop.useMemo(() => {
+  return react.useMemo(() => {
     if (closure_0) {
-      let intl = util.intl;
+      let stringResult;
+      let intl = intl2.intl;
       let string = intl.string;
-      let t = util.t;
-      if (dependencyMap) {
-        let stringResult = string(t.h8xFEv);
+      let t = intl2.t;
+      if (closure_1) {
+        stringResult = string(t.h8xFEv);
       } else {
         stringResult = string(t["Rgk/2h"]);
       }
@@ -78,18 +92,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
         name,
         label: stringResult,
         action() {
-            closure_0(4736).setHomeDrawerState(!dependencyMap);
-            const intl = closure_0(1126).intl;
+            let stringResult;
+            const obj = closure_0(closure_1[4]);
+            obj.setHomeDrawerState(!closure_1_1);
+            const intl = closure_0(closure_1[3]).intl;
             const string = intl.string;
-            const t = closure_0(1126).t;
-            if (dependencyMap) {
-              let stringResult = string(t["0s/g+O"]);
+            const t = closure_0(closure_1[3]).t;
+            if (closure_1_1) {
+              stringResult = string(t["0s/g+O"]);
             } else {
               stringResult = string(t.hfxfVb);
             }
-            const AccessibilityAnnouncer = closure_0(4590).AccessibilityAnnouncer;
+            const AccessibilityAnnouncer = closure_0(closure_1[5]).AccessibilityAnnouncer;
             AccessibilityAnnouncer.announce(stringResult);
-            const obj = closure_0(4736);
           }
       };
       return obj;
@@ -98,4 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     }
   }, items);
 });
+const result = size.fileFinishedImporting("modules/home_drawer/native/useHomeDrawerToggleAccessibilityAction.tsx");
+
+export default tmp2;
 export const TOGGLE_HOME_DRAWER_A11Y_ACTION = "toggle-home-drawer";

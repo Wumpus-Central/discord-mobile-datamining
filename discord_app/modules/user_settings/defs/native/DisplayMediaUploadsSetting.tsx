@@ -1,21 +1,23 @@
 // === Module 15283: DisplayMediaUploadsSetting ===
 
 // Module 15283 (DisplayMediaUploadsSetting)
-import util from "util" /* 1126 */;
+import intl2 from "intl" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import SettingsConstants from "SettingsConstants" /* 7634 */;
 import SettingBuilders from "SettingBuilders" /* 11129 */;
 import size from "module_2" /* 2 */;
 
-const toggle = SettingBuilders.createToggle({
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+const obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t.VP11No);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.VP11No);
   },
-  parent: SettingsConstants.MobileUserSettings.CHAT,
+  parent: MobileUserSettings.CHAT,
   useValue: UserSettings.InlineAttachmentMedia.useSetting,
   onValueChange: UserSettings.InlineAttachmentMedia.updateSetting
-});
+};
+const toggle = SettingBuilders.createToggle(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/DisplayMediaUploadsSetting.tsx");
 
 export default toggle;

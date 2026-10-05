@@ -1,8 +1,9 @@
 // === Module 9157: StageChannelCallNavigator ===
 
 // Module 9157 (StageChannelCallNavigator)
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
+import Constants from "Constants" /* 1096 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4612 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5091 */;
 import spring from "spring" /* 5597 */;
@@ -11,45 +12,70 @@ import participantHasVideoDefault from "participantHasVideo" /* 9119 */;
 import StageActionBarButtons from "StageActionBarButtons" /* 9558 */;
 import JoinStageViewDefault from "JoinStageView" /* 9623 */;
 import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 9758 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _slicedToArray_mod from "_slicedToArray" /* 32 */;
+import react_mod from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import createStyles from "createStyles" /* 4890 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const ThemeTypes = fn(1096).ThemeTypes;
-const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
+const require = globalThis.__r;
+let channel, importDefault;
+
+let c10;
+let c9;
+let hasOwnProperty;
+let metroImportAll;
+let metroRequire;
+let obj2;
+let _slicedToArray = _slicedToArray_mod;
+let react = react_mod;
+({ StyleSheet: hasOwnProperty, View: metroRequire } = react_native);
+const ThemeTypes = Constants.ThemeTypes;
+({ jsx: metroImportAll, jsxs: c9, Fragment: c10 } = Fragment);
 const viewAnimationConfig = { mass: 0.5, stiffness: 600, damping: 30, overshootClamping: false, restSpeedThreshold: 0.01, restDisplacementThreshold: 0.01 };
 const fullScreen = { fullScreen: { flex: 1 } };
 let c13 = 500;
 const __initData = { code: "function StageChannelCallNavigatorTsx1(){const{withSpring,showStartStageView,viewAnimationConfig}=this.__closure;return{opacity:withSpring(showStartStageView?1:0,viewAnimationConfig)};}" };
 const __initData2 = { code: "function StageChannelCallNavigatorTsx2(){const{withSpring,showStartStageView,viewAnimationConfig}=this.__closure;return{opacity:withSpring(showStartStageView?1:0,viewAnimationConfig)};}" };
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
-  let tmp = first1;
-  const cResult = first(first1[6]).c(14);
-  channel = channel.channel;
+  let closure_1;
+  let closure_3;
+  let first;
+  let first1;
+  let tmp10;
+  let tmp22;
+  let tmp9;
+  const tmp = first1;
   let obj = first(first1[6]);
-  const tmp3 = _slicedToArray(first(first1[7]).useModeratorOverlayChannelState(channel.id), 2);
+  const cResult = obj.c(14);
+  channel = channel.channel;
+  const obj2 = first(first1[7]);
+  const tmp3 = _slicedToArray(obj2.useModeratorOverlayChannelState(channel.id), 2);
   first = tmp3[0];
   importDefault = tmp5;
-  [first1, _slicedToArray] = noop.useState(first);
-  const obj2 = first(first1[7]);
+  [first1, _slicedToArray] = react.useState(first);
   const fn = function c() {
     let num = 0;
+    const withSpring = spring.withSpring;
+    spring;
     if (first1) {
       num = 1;
     }
-    return { opacity: spring.withSpring(num, closure_11) };
+    const obj = { opacity: withSpring(num, viewAnimationConfig) };
+    return obj;
   };
   const obj4 = first(first1[8]);
   fn.__closure = { withSpring: first(first1[9]).withSpring, showStartStageView: first1, viewAnimationConfig };
   fn.__workletHash = 3663814804791;
   fn.__initData = __initData;
+  ({ withSpring: first(first1[9]).withSpring, showStartStageView: first1, viewAnimationConfig });
   const animatedStyle = obj4.useAnimatedStyle(fn);
   if (cResult[0] !== first) {
     const fn2 = function s() {
+      let closure_0;
       const timeout = setTimeout(() => {
         if (!closure_0) {
           closure_1_3(false);
@@ -60,146 +86,144 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       };
     };
     const items = [first];
+    let num = 0;
     cResult[0] = first;
     cResult[1] = fn2;
     cResult[2] = items;
-    let tmp10 = items;
-    let tmp9 = fn2;
+    tmp10 = items;
+    tmp9 = fn2;
   } else {
     tmp9 = cResult[1];
     tmp10 = cResult[2];
   }
-  const effect = noop.useEffect(tmp9, tmp10);
+  const effect = react.useEffect(tmp9, tmp10);
   if (cResult[3] !== tmp3[1]) {
     class S {
       constructor() {
-        tmp = closure_3(false);
-        tmp2 = closure_1();
-        return;
+        closure_3(false);
+        closure_1();
       }
     }
-    cResult[3] = tmp5;
+    cResult[3] = tmp3[1];
     cResult[4] = S;
   } else {
     class S {
       constructor() {
-        tmp = closure_3(false);
-        tmp2 = closure_1();
-        return;
+        closure_3(false);
+        closure_1();
       }
     }
   }
-  if (!first1) {
+  let tmp13 = null;
+  if (first1) {
     class S {
       constructor() {
-        tmp = closure_3(false);
-        tmp2 = closure_1();
-        return;
-      }
-    }
-  } else {
-    class S {
-      constructor() {
-        tmp = closure_3(false);
-        tmp2 = closure_1();
-        return;
+        closure_3(false);
+        closure_1();
       }
     }
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
       class S {
         constructor() {
-          tmp = closure_3(false);
-          tmp2 = closure_1();
-          return;
+          closure_3(false);
+          closure_1();
         }
       }
-      tmp14[0] = require("native").unsafe_rawColors.PRIMARY_800;
-      cResult[5] = tmp14;
+      tmp15[0] = require("native").unsafe_rawColors.PRIMARY_800;
+      cResult[5] = tmp15;
     } else {
       class S {
         constructor() {
-          tmp = closure_3(false);
-          tmp2 = closure_1();
-          return;
+          closure_3(false);
+          closure_1();
         }
       }
     }
     if (cResult[6] !== animatedStyle) {
       class S {
         constructor() {
-          tmp = closure_3(false);
-          tmp2 = closure_1();
-          return;
+          closure_3(false);
+          closure_1();
         }
       }
-      const items1 = [closure_5.absoluteFill, tmp14, animatedStyle];
+      const items1 = [closure_5.absoluteFill, tmp15, animatedStyle];
       cResult[6] = animatedStyle;
       cResult[7] = items1;
     } else {
       class S {
         constructor() {
-          tmp = closure_3(false);
-          tmp2 = closure_1();
-          return;
+          closure_3(false);
+          closure_1();
         }
       }
     }
     if (cResult[8] === channel) {
       class S {
         constructor() {
-          tmp = closure_3(false);
-          tmp2 = closure_1();
-          return;
+          closure_3(false);
+          closure_1();
         }
       }
-      if (cResult[11] === tmp16) {
+      if (cResult[11] === tmp17) {
         class S {
           constructor() {
-            tmp = closure_3(false);
-            tmp2 = closure_1();
-            return;
+            closure_3(false);
+            closure_1();
           }
         }
+        tmp13 = tmp22;
       }
-      const obj6 = { style: tmp16, children: tmp17 };
-      tmp = closure_8(require("ReanimatedRexport").View, obj6);
-      cResult[11] = tmp16;
-      cResult[12] = tmp17;
-      cResult[13] = tmp;
+      const obj6 = { style: tmp17, children: tmp18 };
+      const tmp25 = closure_8(require("ReanimatedRexport").View, obj6);
+      cResult[11] = tmp17;
+      cResult[12] = tmp18;
+      cResult[13] = tmp25;
+      tmp22 = tmp25;
     }
     const obj7 = { channel, onSkip: S };
-    const tmp20 = closure_8(require("ModeratorStartStageView"), obj7);
     cResult[8] = channel;
     cResult[9] = S;
-    cResult[10] = tmp20;
+    cResult[10] = closure_8(require("ModeratorStartStageView"), obj7);
+    const tmp21 = closure_8(require("ModeratorStartStageView"), obj7);
   }
-  const obj5 = { withSpring: first(first1[9]).withSpring, showStartStageView: first1, viewAnimationConfig };
+  return tmp13;
 }) : ((channel) => {
+  let closure_1;
+  let closure_3;
+  let first;
+  let items1;
+  let obj6;
   channel = channel.channel;
   first = undefined;
   let first1;
   _slicedToArray = undefined;
-  [first, [][0]] = first(first1[7]).useModeratorOverlayChannelState(channel.id);
+  const tmp = first1;
+  let obj = first(first1[7]);
+  [first, [][0]] = obj.useModeratorOverlayChannelState(channel.id);
   importDefault = tmp4;
-  const tmp5 = _slicedToArray(noop.useState(first), 2);
+  const tmp5 = _slicedToArray(react.useState(first), 2);
   first1 = tmp5[0];
   _slicedToArray = tmp5[1];
-  let obj = first(first1[7]);
   const fn = function c() {
     let num = 0;
+    const withSpring = spring.withSpring;
+    spring;
     if (first1) {
       num = 1;
     }
-    return { opacity: spring.withSpring(num, closure_11) };
+    const obj = { opacity: withSpring(num, viewAnimationConfig) };
+    return obj;
   };
   const obj2 = first(first1[8]);
   fn.__closure = { withSpring: first(first1[9]).withSpring, showStartStageView: first1, viewAnimationConfig };
   fn.__workletHash = 4916554991060;
   fn.__initData = __initData2;
   const items = [first];
+  ({ withSpring: first(first1[9]).withSpring, showStartStageView: first1, viewAnimationConfig });
   const animatedStyle = obj2.useAnimatedStyle(fn);
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(() => {
+    let closure_0;
     const timeout = setTimeout(() => {
       if (!closure_0) {
         closure_1_3(false);
@@ -211,40 +235,51 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   }, items);
   let tmp10 = null;
   if (first1) {
-    const obj4 = { style: null, children: null };
-    const items1 = [closure_5.absoluteFill, , ];
+    const obj4 = { style: items1, children: closure_8(require("ModeratorStartStageView"), obj6) };
+    items1 = [closure_5.absoluteFill, , ];
     const obj5 = { backgroundColor: require("native").unsafe_rawColors.PRIMARY_800 };
+    const View = require("ReanimatedRexport").View;
     items1[1] = obj5;
     items1[2] = animatedStyle;
-    obj4.style = items1;
-    const obj6 = { channel, onSkip: tmp9 };
-    obj4.children = closure_8(require("ModeratorStartStageView"), obj6);
-    tmp10 = closure_8(require("ReanimatedRexport").View, obj4);
+    obj6 = { channel, onSkip: tmp9 };
+    tmp10 = closure_8(View, obj4);
   }
   return tmp10;
 });
 const __initData3 = { code: "function StageChannelCallNavigatorTsx3(){const{withSpring,showOverlay,viewAnimationConfig}=this.__closure;return{opacity:withSpring(showOverlay?1:0,viewAnimationConfig)};}" };
 const __initData4 = { code: "function StageChannelCallNavigatorTsx4(){const{withSpring,showOverlay,viewAnimationConfig}=this.__closure;return{opacity:withSpring(showOverlay?1:0,viewAnimationConfig)};}" };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
-  const cResult = showOverlay(576).c(10);
-  channel = channel.channel;
-  [showOverlay, importDefault] = noop.useState(false);
+  let closure_1;
+  let showOverlay;
+  let tmp11;
+  let tmp13;
+  let tmp6;
+  let tmp7;
+  let tmp9;
   let obj = showOverlay(576);
+  const cResult = obj.c(10);
+  channel = channel.channel;
+  [showOverlay, importDefault] = react.useState(false);
   const fn = function c() {
     let num = 0;
+    const withSpring = spring.withSpring;
+    spring;
     if (first) {
       num = 1;
     }
-    return { opacity: spring.withSpring(num, closure_11) };
+    const obj = { opacity: withSpring(num, viewAnimationConfig) };
+    return obj;
   };
   const obj3 = showOverlay(4612);
   fn.__closure = { withSpring: showOverlay(5597).withSpring, showOverlay, viewAnimationConfig };
   fn.__workletHash = 3866068723381;
   fn.__initData = __initData3;
+  ({ withSpring: showOverlay(5597).withSpring, showOverlay, viewAnimationConfig });
   const animatedStyle = obj3.useAnimatedStyle(fn);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function s() {
+      let closure_0;
       const timeout = setTimeout(() => {
         closure_1_1(true);
       }, closure_1_13);
@@ -253,6 +288,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       };
     };
     const items = [];
+    let num = 0;
     cResult[0] = fn2;
     cResult[1] = items;
     tmp6 = fn2;
@@ -260,11 +296,11 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   } else {
     [tmp6, tmp7] = cResult;
   }
-  const effect = noop.useEffect(tmp6, tmp7);
+  const effect = react.useEffect(tmp6, tmp7);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const obj5 = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_800 };
     cResult[2] = obj5;
-    let tmp9 = obj5;
+    tmp9 = obj5;
   } else {
     tmp9 = cResult[2];
   }
@@ -272,7 +308,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     const items1 = [closure_5.absoluteFill, tmp9, animatedStyle];
     cResult[3] = animatedStyle;
     cResult[4] = items1;
-    let tmp11 = items1;
+    tmp11 = items1;
   } else {
     tmp11 = cResult[4];
   }
@@ -281,13 +317,14 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     const tmp16 = closure_8(JoinStageViewDefault, obj6);
     cResult[5] = channel;
     cResult[6] = tmp16;
-    let tmp13 = tmp16;
+    tmp13 = tmp16;
   } else {
     tmp13 = cResult[6];
   }
   if (cResult[7] === tmp11) {
+    let tmp17;
     if (cResult[8] === tmp13) {
-      let tmp17 = cResult[9];
+      tmp17 = cResult[9];
     }
     return tmp17;
   }
@@ -296,24 +333,32 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[8] = tmp13;
   cResult[9] = tmp18;
   tmp17 = tmp18;
-  const obj4 = { withSpring: showOverlay(5597).withSpring, showOverlay, viewAnimationConfig };
 }) : ((channel) => {
+  let closure_1;
+  let items;
+  let showOverlay;
   showOverlay = undefined;
   importDefault = undefined;
-  [showOverlay, importDefault] = noop.useState(false);
+  channel = channel.channel;
+  [showOverlay, importDefault] = react.useState(false);
+  let obj = showOverlay(4612);
   const fn = function c() {
     let num = 0;
+    const withSpring = spring.withSpring;
+    spring;
     if (first) {
       num = 1;
     }
-    return { opacity: spring.withSpring(num, closure_11) };
+    const obj = { opacity: withSpring(num, viewAnimationConfig) };
+    return obj;
   };
-  let obj = showOverlay(4612);
   fn.__closure = { withSpring: showOverlay(5597).withSpring, showOverlay, viewAnimationConfig };
   fn.__workletHash = 17555856853074;
   fn.__initData = __initData4;
+  ({ withSpring: showOverlay(5597).withSpring, showOverlay, viewAnimationConfig });
   const animatedStyle = obj.useAnimatedStyle(fn);
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(() => {
+    let closure_0;
     const timeout = setTimeout(() => {
       closure_1_1(true);
     }, closure_1_13);
@@ -321,59 +366,68 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       clearTimeout(closure_0);
     };
   }, []);
-  const obj3 = { style: null, children: null };
-  const items = [closure_5.absoluteFill, , ];
-  const obj2 = { withSpring: showOverlay(5597).withSpring, showOverlay, viewAnimationConfig };
-  items[1] = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_800 };
+  const obj3 = { style: items, children: closure_8(JoinStageViewDefault, { channel }) };
+  items = [closure_5.absoluteFill, , ];
+  const obj4 = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_800 };
+  const View = ReanimatedRexportDefault.View;
+  items[1] = obj4;
   items[2] = animatedStyle;
-  obj3.style = items;
-  obj3.children = closure_8(JoinStageViewDefault, { channel: channel.channel });
-  return closure_8(ReanimatedRexportDefault.View, obj3);
+  return closure_8(View, obj3);
 });
-ReactCompilerGating = fn(558);
-const createStyles = fn(4890);
-let obj5 = { startStagePrompt: null };
+ReactCompilerGating = ReactCompilerGating_mod;
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
-  const cResult = channel(first[6]).c(31);
-  channel = channel.channel;
-  let obj = channel(first[6]);
+  let closure_1;
+  let closure_3;
+  let closure_4;
+  let closure_5;
+  let first1;
+  let isLive;
+  let isModerator;
+  let items2;
   let tmp = channel;
-  const stageChannelStartEvent = channel(first[13]).useStageChannelStartEvent(channel.id);
+  let tmp2 = first1;
+  let obj = channel(first1[6]);
+  const cResult = obj.c(31);
+  channel = channel.channel;
+  let obj2 = channel(first1[13]);
+  const stageChannelStartEvent = obj2.useStageChannelStartEvent(channel.id);
   ({ isModerator, isLive } = stageChannelStartEvent);
-  const obj2 = channel(first[13]);
-  let tmp7 = isModerator;
-  const isConnectedToVoiceChannel = channel(first[14]).useIsConnectedToVoiceChannel(channel);
+  const first = _slicedToArray(react.useState(isLive), 1)[0];
+  let tmp8 = isModerator;
+  const obj4 = channel(first1[14]);
+  const isConnectedToVoiceChannel = obj4.useIsConnectedToVoiceChannel(channel);
   if (isModerator) {
-    tmp7 = !isLive;
+    tmp8 = !isLive;
   }
-  importDefault = tmp7;
-  const obj4 = channel(first[14]);
-  [first] = tmp(first[7]).useModeratorOverlayChannelState(channel.id);
-  _slicedToArray = tmp10;
+  importDefault = tmp8;
+  const tmpResult = tmp(tmp2[7]);
+  const tmp5Result = _slicedToArray(tmpResult.useModeratorOverlayChannelState(channel.id), 2);
+  first1 = tmp5Result[0];
+  _slicedToArray = tmp11;
   if (isLive) {
     isLive = !isConnectedToVoiceChannel;
   }
   if (isLive) {
-    isLive = !first;
-  }
-  if (isModerator) {
-    isModerator = !_slicedToArray(noop.useState(isLive), 1)[0];
+    isLive = !first1;
   }
   if (isModerator) {
     isModerator = !first;
   }
-  const tmp11 = require("useSelectedParticipant")(channel);
-  noop = tmp11;
-  const tmpResult = tmp(first[7]);
-  [r10046, closure_5] = noop.useState(false);
+  if (isModerator) {
+    isModerator = !first1;
+  }
+  const tmp12 = require("useSelectedParticipant")(channel);
+  react = tmp12;
+  [r10046, closure_5] = react.useState(false);
+  _slicedToArray(react.useState(false), 2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function o() {
-      return closure_1_5(true);
+      return closure_5(true);
     };
     cResult[0] = fn;
-    let first1 = fn;
+    let first2 = fn;
   } else {
-    first1 = cResult[0];
+    first2 = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     class Y {
@@ -390,18 +444,18 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     }
   }
   if (cResult[2] === channel.guild_id) {
+    let tmp20;
     class Y {
       constructor() {
         return closure_5(false);
       }
     }
     const effect = obj3.useEffect(B, items2);
-    obj3.useRef(channel.id);
+    const ref = obj3.useRef(channel.id);
     if (cResult[6] !== channel.id) {
       class U {
         constructor() {
-          closure_6.current = channel.id;
-          return;
+          ref.current = channel.id;
         }
       }
       cResult[6] = channel.id;
@@ -409,82 +463,65 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     } else {
       class U {
         constructor() {
-          closure_6.current = channel.id;
-          return;
+          ref.current = channel.id;
         }
       }
     }
     const effect1 = obj3.useEffect(U);
-    if (cResult[8] !== tmp11) {
+    if (cResult[8] !== tmp12) {
       class U {
         constructor() {
-          closure_6.current = channel.id;
-          return;
+          ref.current = channel.id;
         }
       }
-      const items = [tmp11];
-      cResult[8] = tmp11;
-      cResult[9] = tmp20;
+      const items = [tmp12];
+      cResult[8] = tmp12;
+      cResult[9] = tmp21;
       class J {
         constructor() {
-          tmp = closure_2;
-          if (closure_2) {
-            tmp2 = closure_1;
-            tmp = !closure_1;
-          }
+          const tmp = first1 && !closure_1;
           if (tmp) {
-            tmp3 = closure_3;
-            tmp4 = closure_3();
+            closure_3();
           }
-          return;
         }
       }
-      let tmp19 = items;
+      tmp20 = items;
     } else {
       class U {
         constructor() {
-          closure_6.current = channel.id;
-          return;
+          ref.current = channel.id;
         }
       }
-      tmp19 = cResult[10];
+      tmp20 = cResult[10];
     }
-    const effect2 = obj3.useEffect(tmp20, tmp19);
-    if (cResult[11] === tmp7) {
+    const effect2 = obj3.useEffect(tmp21, tmp20);
+    if (cResult[11] === tmp8) {
       class U {
         constructor() {
-          closure_6.current = channel.id;
-          return;
+          ref.current = channel.id;
         }
       }
     }
     class J {
       constructor() {
-        tmp = closure_2;
-        if (closure_2) {
-          tmp2 = closure_1;
-          tmp = !closure_1;
-        }
+        const tmp = first1 && !closure_1;
         if (tmp) {
-          tmp3 = closure_3;
-          tmp4 = closure_3();
+          closure_3();
         }
-        return;
       }
     }
-    const items1 = [tmp7, tmp10, first];
-    cResult[11] = tmp7;
-    cResult[12] = tmp10;
-    cResult[13] = first;
+    const items1 = [tmp8, tmp5Result[1], first1];
+    cResult[11] = tmp8;
+    cResult[12] = tmp5Result[1];
+    cResult[13] = first1;
     cResult[14] = J;
     cResult[15] = items1;
   }
   class B {
     constructor() {
-      obj = closure_1(closure_2[16]);
-      obj1 = { guildId: channel.guild_id, channelId: channel.id };
-      messages = obj.fetchMessages(obj1);
-      return;
+      const obj = MessageManagerDefault;
+      const obj2 = { guildId: channel.guild_id, channelId: channel.id };
+      const messages = obj.fetchMessages(obj2);
     }
   }
   items2 = [, ];
@@ -492,180 +529,203 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[3] = channel.id;
   cResult[4] = B;
   cResult[5] = items2;
-  const tmp5Result2 = _slicedToArray(noop.useState(false), 2);
 }) : ((channel) => {
+  let _undefined;
+  let c5;
+  let closure_1;
+  let closure_3;
+  let closure_4;
+  let isLive;
+  let isModerator;
+  let items3;
+  let items5;
+  let obj11;
+  let obj15;
+  let obj7;
+  let obj9;
+  let tmp11Result;
+  let tmp14;
+  let tmp19Result;
+  let tmp19Result2;
   channel = channel.channel;
   importDefault = undefined;
-  let first;
+  let first1;
   _slicedToArray = undefined;
-  noop = undefined;
+  react = undefined;
   c5 = undefined;
   let ref;
-  const stageChannelStartEvent = channel(first[13]).useStageChannelStartEvent(channel.id);
+  let tmp = channel;
+  let tmp2 = first1;
+  let obj = channel(first1[13]);
+  const stageChannelStartEvent = obj.useStageChannelStartEvent(channel.id);
   ({ isModerator, isLive } = stageChannelStartEvent);
-  let obj = channel(first[13]);
-  let tmp6 = isModerator;
-  const isConnectedToVoiceChannel = channel(first[14]).useIsConnectedToVoiceChannel(channel);
+  let obj2 = react;
+  const first = _slicedToArray(react.useState(isLive), 1)[0];
+  let tmp7 = isModerator;
+  const obj3 = channel(first1[14]);
+  const isConnectedToVoiceChannel = obj3.useIsConnectedToVoiceChannel(channel);
   if (isModerator) {
-    tmp6 = !isLive;
+    tmp7 = !isLive;
   }
-  importDefault = tmp6;
-  const obj3 = channel(first[14]);
-  const tmp4Result = _slicedToArray(channel(first[7]).useModeratorOverlayChannelState(channel.id), 2);
-  first = tmp4Result[0];
-  _slicedToArray = tmp9;
-  const tmp11 = require("useSelectedParticipant")(channel);
-  noop = tmp11;
-  const tmpResult = channel(first[7]);
-  [tmp13, c5] = noop.useState(false);
+  importDefault = tmp7;
+  const tmpResult = tmp(tmp2[7]);
+  const tmp4Result = _slicedToArray(tmpResult.useModeratorOverlayChannelState(channel.id), 2);
+  first1 = tmp4Result[0];
+  _slicedToArray = tmp10;
+  const tmp12 = require("useSelectedParticipant")(channel);
+  react = tmp12;
+  [tmp14, c5] = _slicedToArray(obj2.useState(false), 2);
   const items = [, ];
   ({ id: arr[0], guild_id: arr[1] } = channel);
+  _slicedToArray(obj2.useState(false), 2);
   const effect = obj2.useEffect(() => {
-    const messages = MessageManagerDefault.fetchMessages({ guildId: channel.guild_id, channelId: channel.id });
+    const obj = MessageManagerDefault;
+    const obj2 = { guildId: channel.guild_id, channelId: channel.id };
+    const messages = obj.fetchMessages(obj2);
   }, items);
   ref = obj2.useRef(channel.id);
   const effect1 = obj2.useEffect(() => {
-    closure_6.current = channel.id;
+    ref.current = channel.id;
   });
-  const items1 = [tmp11];
+  const items1 = [tmp12];
   const effect2 = obj2.useEffect(() => {
-    let tmp2 = null == closure_4;
+    const tmp2 = null == closure_4 || participantHasVideoDefault(tmp);
     if (!tmp2) {
-      tmp2 = participantHasVideoDefault(tmp);
-    }
-    if (!tmp2) {
-      const participant = ChannelRTCActionCreatorsDefault.selectParticipant(ref.current, null);
+      const obj = ChannelRTCActionCreatorsDefault;
+      const participant = obj.selectParticipant(ref.current, null);
     }
   }, items1);
-  const items2 = [tmp6, tmp4Result[1], first];
+  const items2 = [tmp7, tmp4Result[1], first1];
   const effect3 = obj2.useEffect(() => {
-    let tmp = first;
-    if (first) {
-      tmp = !closure_1;
-    }
+    const tmp = first1 && !closure_1;
     if (tmp) {
       closure_3();
     }
   }, items2);
   const obj4 = { actionBar: closure_8(require("StageActionBar"), { channel }), expandedControls: closure_8(require("StageChannelExpandedControls"), { channel }), isTouchingLeftScreenEdge: true, channel };
-  const obj5 = { theme: ThemeTypes.DARK, children: null };
-  if (null != tmp11) {
-    const obj6 = { style: fullScreen.fullScreen, children: null };
-    const obj7 = { channel, children: null };
-    const obj8 = { children: null };
-    const tmp10Result = tmp10(tmp2[22]);
-    const tmp26 = ref;
-    const obj9 = { channel, selectedParticipant: tmp11 };
-    obj8.children = closure_8(tmp(tmp2[24]).ChannelCallSingleController, obj9);
-    const items3 = [closure_8(tmp10(tmp2[23]), obj8), , ];
-    const obj10 = { header: null };
-    const tmp10Result5 = tmp10(tmp2[23]);
-    const obj11 = {
+  const obj5 = { theme: ThemeTypes.DARK, children: tmp19Result2 };
+  const ThemeContextProvider = tmp(tmp2[21]).ThemeContextProvider;
+  if (null != tmp12) {
+    const obj6 = { style: fullScreen.fullScreen, children: closure_9(tmp11Result, obj7) };
+    obj7 = { channel, children: items3 };
+    const obj8 = { children: closure_8(tmp(tmp2[24]).ChannelCallSingleController, obj9) };
+    obj9 = { channel, selectedParticipant: tmp12 };
+    tmp11Result = require("RevealProvider");
+    const tmp11Result5 = require("GestureContainer");
+    items3 = [closure_8(tmp11Result5, obj8), , ];
+    const obj10 = { header: closure_8(require("StageActionHeader"), obj11) };
+    obj11 = {
       channel,
       fullscreenStream: true,
       onOpenRTCDebugOverlay() {
           return _undefined(true);
         }
     };
-    obj10.header = closure_8(tmp10(tmp2[26]), obj11);
+    const tmp11Result6 = require("FocusedControls");
     const merged = Object.assign(obj4);
-    items3[1] = closure_8(tmp10(tmp2[25]), obj10);
-    if (tmp18Result) {
+    items3[1] = closure_8(tmp11Result6, obj10);
+    const tmp27 = ref;
+    if (tmp19Result) {
       const obj12 = {
         onClose() {
               return _undefined(false);
             }
       };
-      tmp18Result = closure_8(tmp10(tmp2[27]), obj12);
+      tmp19Result = closure_8(require("RTCDebugOverlay"), obj12);
     }
-    items3[2] = tmp18Result;
-    obj7.children = items3;
-    obj6.children = closure_9(tmp10Result, obj7);
-    let tmp18Result2 = closure_8(tmp26, obj6);
-    const tmp10Result6 = tmp10(tmp2[25]);
+    items3[2] = tmp19Result;
+    tmp19Result2 = closure_8(tmp27, obj6);
   } else {
-    if (first) {
-      let tmp10Result7 = closure_16;
+    let tmp11Result7;
+    if (first1) {
+      tmp11Result7 = closure_16;
     } else {
       if (isLive) {
         if (!isConnectedToVoiceChannel) {
-          if (!first) {
-            tmp10Result7 = closure_19;
+          if (!first1) {
+            tmp11Result7 = closure_19;
           }
         }
       }
-      tmp10Result7 = tmp10(tmp2[28]);
+      tmp11Result7 = tmp11(tmp2[28]);
     }
     const obj13 = { channel };
-    const items4 = [closure_8(tmp10Result7, obj13), ];
-    const obj14 = { header: null };
-    const obj15 = { channel };
-    obj14.header = closure_8(tmp10(first ? tmp2[29] : tmp2[26]), obj15);
+    const items4 = [closure_8(tmp11Result7, obj13), ];
+    const obj14 = { header: closure_8(importDefault(first1 ? tmp2[29] : tmp2[26]), obj15), children: items5 };
+    obj15 = { channel };
+    const tmp11Result8 = require("FocusedControls");
     const merged1 = Object.assign(obj4);
     const obj16 = { channel };
-    const items5 = [closure_8(tmp10(tmp2[30]), obj16), ];
-    if (isModerator) {
-      isModerator = !_slicedToArray(noop.useState(isLive), 1)[0];
-    }
+    items5 = [closure_8(require("ActiveSpeakerTooltip"), obj16), ];
     if (isModerator) {
       isModerator = !first;
+    }
+    if (isModerator) {
+      isModerator = !first1;
     }
     if (isModerator) {
       const obj17 = { channel };
       isModerator = closure_8(closure_21, obj17);
     }
-    const obj18 = { children: null };
+    const obj18 = { children: items4 };
     items5[1] = isModerator;
-    obj14.children = items5;
-    items4[1] = closure_9(tmp10(tmp2[25]), obj14);
-    obj18.children = items4;
-    tmp18Result2 = closure_9(closure_10, obj18);
-    const tmp10Result8 = tmp10(tmp2[25]);
+    items4[1] = closure_9(tmp11Result8, obj14);
+    tmp19Result2 = closure_9(closure_10, obj18);
   }
-  obj5.children = tmp18Result2;
-  return closure_8(channel(first[21]).ThemeContextProvider, obj5);
+  return closure_8(ThemeContextProvider, obj5);
 });
-obj5.startStagePrompt = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-let closure_20 = createStyles.createStyles(obj5);
-ReactCompilerGating = fn(558);
+let obj = { startStagePrompt: obj2 };
+obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+let closure_20 = createStyles.createStyles(obj);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
-  const cResult = c.c(2);
+  let obj3;
+  let tmp4;
+  const obj = react2;
+  const cResult = obj.c(2);
   channel = channel.channel;
   if (cResult[0] !== channel) {
-    const obj2 = { children: null };
-    const obj3 = { channel };
-    obj2.children = closure_1_8(closure_22, obj3);
-    const tmp7 = closure_1_8(ThemeContextProvider_RootThemeContextProvider.DisableCustomTheme, obj2);
+    const obj2 = { children: metroImportAll(closure_22, obj3) };
+    obj3 = { channel };
+    const DisableCustomTheme = ThemeContextProvider_RootThemeContextProvider.DisableCustomTheme;
+    const tmp7 = metroImportAll(DisableCustomTheme, obj2);
     cResult[0] = channel;
     cResult[1] = tmp7;
-    let tmp4 = tmp7;
+    tmp4 = tmp7;
   } else {
     tmp4 = cResult[1];
   }
   return tmp4;
-}) : ((channel) => closure_1_8(ThemeContextProvider_RootThemeContextProvider.DisableCustomTheme, { children: closure_1_8(closure_22, { channel: channel.channel }) }));
-ReactCompilerGating = fn(558);
+}) : ((channel) => {
+  channel = channel.channel;
+  const obj = { children: metroImportAll(closure_22, { channel }) };
+  const DisableCustomTheme = ThemeContextProvider_RootThemeContextProvider.DisableCustomTheme;
+  return metroImportAll(DisableCustomTheme, obj);
+});
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
-  const cResult = c.c(3);
+  const obj = react2;
+  const cResult = obj.c(3);
   channel = channel.channel;
   const tmp4 = closure_20();
   if (cResult[0] === channel) {
+    let tmp5;
     if (cResult[1] === tmp4.startStagePrompt) {
-      let tmp5 = cResult[2];
+      tmp5 = cResult[2];
     }
     return tmp5;
   }
-  const tmp6 = closure_1_8(StageActionBarButtons.AnimatedStartStagePrompt, { channel, style: tmp4.startStagePrompt });
+  const obj2 = { channel, style: tmp4.startStagePrompt };
+  const tmp6 = metroImportAll(StageActionBarButtons.AnimatedStartStagePrompt, obj2);
   cResult[0] = channel;
   cResult[1] = tmp4.startStagePrompt;
   cResult[2] = tmp6;
   tmp5 = tmp6;
-  const obj2 = { channel, style: tmp4.startStagePrompt };
 }) : ((channel) => {
-  const tmp = closure_20();
-  return closure_1_8(StageActionBarButtons.AnimatedStartStagePrompt, { channel: channel.channel, style: closure_20().startStagePrompt });
+  channel = channel.channel;
+  const obj = { channel, style: closure_20().startStagePrompt };
+  return metroImportAll(StageActionBarButtons.AnimatedStartStagePrompt, obj);
 });
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageChannelCallNavigator.tsx");
 
 export default tmp4;

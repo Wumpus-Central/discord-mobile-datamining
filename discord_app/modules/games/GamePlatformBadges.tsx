@@ -1,7 +1,7 @@
 // === Module 12029: GamePlatformBadges ===
 
 // Module 12029 (GamePlatformBadges)
-import util from "util" /* 1126 */;
+import intl4 from "intl" /* 1126 */;
 import GamePlatformAvailability from "GamePlatformAvailability" /* 12028 */;
 import GamePlatformAvailabilityUtils from "GamePlatformAvailabilityUtils" /* 12030 */;
 import size from "module_2" /* 2 */;
@@ -12,13 +12,13 @@ export const GAME_PLATFORM_AVAILABILITY_ORDER = GamePlatformAvailabilityUtils.GA
 export const sortGamePlatformAvailability = GamePlatformAvailabilityUtils.getOrderedGamePlatforms;
 export const getGamePlatformAvailabilityLabel = function getGamePlatformAvailabilityLabel(item) {
   if (GamePlatformAvailability.GamePlatformAvailability.DESKTOP === item) {
-    const intl3 = util.intl;
-    return intl3.string(util.t.KT6uCJ);
+    const intl3 = intl4.intl;
+    return intl3.string(intl4.t.KT6uCJ);
   } else if (GamePlatformAvailability.GamePlatformAvailability.MOBILE === item) {
-    const intl2 = util.intl;
-    return intl2.string(util.t["0DvssQ"]);
+    const intl2 = intl4.intl;
+    return intl2.string(intl4.t["0DvssQ"]);
   } else if (GamePlatformAvailability.GamePlatformAvailability.CONSOLE === item) {
-    const intl = util.intl;
-    return intl.string(util.t.RT9Ccb);
+    const intl = intl4.intl;
+    return intl.string(intl4.t.RT9Ccb);
   }
 };

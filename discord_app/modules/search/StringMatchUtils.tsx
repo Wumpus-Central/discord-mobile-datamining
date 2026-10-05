@@ -145,8 +145,9 @@ export const calculateJaroWinklerSimilarity = function calculateJaroWinklerSimil
   }
   const caseSensitive = obj.caseSensitive;
   if (undefined !== caseSensitive) {
+    let tmp2;
     if (caseSensitive) {
-      let tmp2 = calculateJaroWinklerDistance(toLocaleLowerCaseResult, item);
+      tmp2 = calculateJaroWinklerDistance(toLocaleLowerCaseResult, item);
     }
     return tmp2;
   }

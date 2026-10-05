@@ -3,85 +3,85 @@
 // Module 15362 (SupportUtils)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
 import LinkingDefault from "Linking" /* 4565 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
-let closure_6 = async function _emailSupport() {
-  if (c3 === 2) {
-    c3 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj3 = { value, done: true };
-      return obj3;
-    } else {
-      return { value: "IconComponent", done: null };
+let c2, c3, constants;
+
+let obj = function _emailSupport() {
+  obj = _asyncToGenerator(async () => {
+    function getSessionInfo() {
+      obj = closure_1_2(closure_1_3[2]);
+      constants = obj.getConstants();
+      let str2 = "N/A";
+      const str = constants.Manifest;
+      if (str.trim().length > 0) {
+        str2 = constants.Manifest;
+      }
+      const Version = constants.Version;
+      const obj2 = openURL(closure_1_3[3]);
+      const systemVersion = obj2.getSystemVersion();
+      const obj3 = openURL(closure_1_3[3]);
+      return "App version: " + Version + "\n  Manifest: " + str2 + "\n  iOS version: " + systemVersion + "\n  Device: " + obj3.getDeviceInfo() + "\n  Language: " + locale.locale;
     }
-  } else {
-    try {
-      c3 = 2;
-      if (0 === c2) {
-        if (arg0 === 1) {
+    if (c3 === 2) {
+      c3 = 3;
+      let str = "Generator functions may not be called on executing generators";
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp2 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj3 = { value, done: true };
+        return obj3;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        let openURL;
+        c3 = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            const tmp9 = LinkingDefault;
+            let closure_1 = tmp9;
+            openURL = tmp9.openURL;
+            let obj2 = HelpdeskUtilsDefault;
+            c2 = 1;
+            c3 = 1;
+            const obj5 = { value: obj2.getSubmitRequestURL(getSessionInfo()), done: false };
+            return obj5;
+          }
+        } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          obj = { value, done: true };
+          return obj;
         } else {
-          const tmp10 = LinkingDefault;
-          closure_1 = tmp10;
-          const openURL = tmp10.openURL;
-          c2 = 1;
-          c3 = 1;
-          const obj5 = {
-            value: HelpdeskUtilsDefault.getSubmitRequestURL((function getSessionInfo() {
-                      constants = closure_1_2(dependencyMap[2]).getConstants();
-                      let str2 = "N/A";
-                      if (str.trim().length > 0) {
-                        str2 = constants.Manifest;
-                      }
-                      const obj = closure_1_2(dependencyMap[2]);
-                      str = constants.Manifest;
-                      const systemVersion = openURL(dependencyMap[3]).getSystemVersion();
-                      const obj2 = openURL(dependencyMap[3]);
-                      return "App version: " + constants.Version + "\n  Manifest: " + str2 + "\n  iOS version: " + systemVersion + "\n  Device: " + openURL(dependencyMap[3]).getDeviceInfo() + "\n  Language: " + locale.locale;
-                    })()),
-            done: false
-          };
-          return obj5;
+          openURL(value);
+          c3 = 3;
+          return { value: "IconComponent", done: null };
         }
-      } else if (arg0 === 1) {
+      } catch (tmp10) {
         c3 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c3 = 3;
-        let obj = { value, done: true };
-        return obj;
-      } else {
-        openURL(value);
-        c3 = 3;
-        return { value: "IconComponent", done: null };
+        throw tmp10;
       }
-    } catch (tmp11) {
-      c3 = tmp;
-      throw tmp11;
     }
-  }
+  });
+  return obj(...arguments);
 };
-const size = fn(2);
 const result = size.fileFinishedImporting("utils/native/SupportUtils.tsx");
 
 export const emailSupport = function emailSupport() {
-  const self = this;
-  const apply = closure_6.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };

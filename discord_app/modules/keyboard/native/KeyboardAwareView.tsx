@@ -1,20 +1,22 @@
 // === Module 6537: KeyboardAwareView ===
 
 // Module 6537 (KeyboardAwareView)
+import Fragment from "Fragment" /* 21 */;
 import useKeyboardDuration from "useKeyboardDuration" /* 6472 */;
 import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6473 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1486 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/keyboard/native/KeyboardAwareView.tsx");
-
-export default noop.memo(function KeyboardAwareView(style) {
+let closure_4;
+let hasOwnProperty;
+({ View: closure_4, StyleSheet: hasOwnProperty } = react_native);
+const jsx = Fragment.jsx;
+const memoResult = react.memo(function KeyboardAwareView(style) {
+  let children;
+  let pointerEvents;
   style = style.style;
   let flag = style.animated;
   ({ children, pointerEvents } = style);
@@ -26,79 +28,83 @@ export default noop.memo(function KeyboardAwareView(style) {
     num = 0;
   }
   let marginBottom;
-  closure_5 = undefined;
+  let closure_5;
   let ref;
-  let systemKeyboardHeight = style(flag[5]).getSystemKeyboardHeight();
+  let obj = ref;
+  const tmp = style;
+  const useRef = ref.useRef;
+  let _Math = Math;
+  const obj2 = style(flag[5]);
+  let systemKeyboardHeight = obj2.getSystemKeyboardHeight();
   if (0 === systemKeyboardHeight) {
-    let keyboardType = tmp(tmp2[6]).getKeyboardType();
+    const tmpResult = tmp(flag[6]);
+    let keyboardType = tmpResult.getKeyboardType();
     let num2 = 0;
-    if (keyboardType !== tmp(tmp2[7]).KeyboardTypes.SYSTEM) {
-      num2 = tmp(tmp2[8]).getCustomKeyboardHeight();
-      const tmpResult2 = tmp(tmp2[8]);
+    if (keyboardType !== tmp(flag[7]).KeyboardTypes.SYSTEM) {
+      const tmpResult2 = tmp(flag[8]);
+      num2 = tmpResult2.getCustomKeyboardHeight();
     }
     systemKeyboardHeight = num2;
-    const tmpResult = tmp(tmp2[6]);
   }
-  ref = ref.useRef(Math.max(0, systemKeyboardHeight + num));
-  const tmp6 = num(ref.useState(ref.current), 2);
+  ref = useRef(max(0, systemKeyboardHeight + num));
+  const tmp6 = num(obj.useState(ref.current), 2);
   marginBottom = tmp6[0];
   closure_5 = tmp6[1];
   const items = [num];
   const effect = obj.useEffect(() => subscribeToKeyboardUIStore(() => {
-    let systemKeyboardHeight = style(flag[5]).getSystemKeyboardHeight();
+    const _Math = Math;
+    const obj = style(flag[5]);
+    let systemKeyboardHeight = obj.getSystemKeyboardHeight();
     if (0 === systemKeyboardHeight) {
-      const keyboardType = style(flag[6]).getKeyboardType();
+      const tmp2Result = style(flag[6]);
+      const keyboardType = tmp2Result.getKeyboardType();
       num = 0;
       if (keyboardType !== style(flag[7]).KeyboardTypes.SYSTEM) {
-        num = style(flag[8]).getCustomKeyboardHeight();
         const tmp2Result2 = style(flag[8]);
+        num = tmp2Result2.getCustomKeyboardHeight();
       }
       systemKeyboardHeight = num;
-      const tmp2Result = style(flag[6]);
     }
-    const bound = Math.max(0, systemKeyboardHeight + closure_1_2);
-    if (ref.current !== bound) {
-      ref.current = bound;
-      closure_1_5(bound);
+    const maxResult = max(0, systemKeyboardHeight + closure_1_2);
+    if (ref.current !== maxResult) {
+      ref.current = maxResult;
+      closure_1_5(maxResult);
     }
-    const obj = style(flag[5]);
   }), items);
   ref = obj.useRef(false);
   const items1 = [flag, marginBottom];
   const effect1 = obj.useEffect(() => {
     if (ref.current) {
-      const keyboardDuration = useKeyboardDuration.getKeyboardDuration();
-      let tmp5 = flag;
-      if (flag) {
-        tmp5 = keyboardDuration > 0;
-      }
+      const obj = useKeyboardDuration;
+      const keyboardDuration = obj.getKeyboardDuration();
+      const tmp5 = flag && keyboardDuration > 0;
       if (tmp5) {
-        const result = DeprecatedLayoutAnimation.DeprecatedLayoutAnimationKeyboard(keyboardDuration);
         const tmp2Result = DeprecatedLayoutAnimation;
+        const result = tmp2Result.DeprecatedLayoutAnimationKeyboard(keyboardDuration);
       }
     } else {
       tmp.current = true;
     }
   }, items1);
   const items2 = [marginBottom, style];
-  let obj2 = style(flag[5]);
-  return <marginBottom style={ref.useMemo(() => {
+  return <marginBottom style={obj.useMemo(() => {
     if (null == style) {
-      const obj2 = { marginBottom };
-      return obj2;
+      return { marginBottom };
     } else {
+      let obj3;
       const flattenResult = hasOwnProperty.flatten(tmp);
       if (typeof flattenResult.marginBottom === "number") {
-        const obj = {};
+        const obj = { marginBottom: flattenResult.marginBottom + marginBottom };
         const merged = Object.assign(flattenResult);
-        obj.marginBottom = flattenResult.marginBottom + marginBottom;
-        let obj3 = obj;
+        obj3 = obj;
       } else {
-        obj3 = {};
+        obj3 = { marginBottom };
         const merged1 = Object.assign(flattenResult);
-        obj3.marginBottom = marginBottom;
       }
       return obj3;
     }
   }, items2)} pointerEvents={pointerEvents}>{children}</marginBottom>;
 });
+let result = size.fileFinishedImporting("modules/keyboard/native/KeyboardAwareView.tsx");
+
+export default memoResult;

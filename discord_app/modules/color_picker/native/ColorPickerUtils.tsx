@@ -18,6 +18,11 @@ normalizeValue.__closure = {};
 normalizeValue.__workletHash = 4078966449794;
 normalizeValue.__initData = { code: "function normalizeValue_ColorPickerUtilsTsx1(value){if(value<0)return 0;if(value>1)return 1;return value;}" };
 function hsvToRgbWorklet(h) {
+  let num5;
+  let num6;
+  let num7;
+  let s;
+  let v;
   ({ s, v } = h);
   const result = 6 * (h.h / 360);
   const rounded = Math.floor(result);
@@ -27,9 +32,9 @@ function hsvToRgbWorklet(h) {
   const result3 = v * (1 - (1 - diff) * s);
   const result4 = rounded % 6;
   if (0 === result4) {
-    let num5 = result1;
-    let num6 = result3;
-    let num7 = v;
+    num5 = result1;
+    num6 = result3;
+    num7 = v;
   } else if (1 === result4) {
     num5 = result1;
     num6 = v;
@@ -63,6 +68,8 @@ hsvToRgbWorklet.__closure = {};
 hsvToRgbWorklet.__workletHash = 14555937576302;
 hsvToRgbWorklet.__initData = { code: "function hsvToRgbWorklet_ColorPickerUtilsTsx2({h:h,s:s,v:v}){let r=0;let g=0;let b=0;h/=360;var i=Math.floor(h*6);var f=h*6-i;var p=v*(1-s);var q=v*(1-f*s);var t=v*(1-(1-f)*s);switch(i%6){case 0:r=v;g=t;b=p;break;case 1:r=q;g=v;b=p;break;case 2:r=p;g=v;b=t;break;case 3:r=p;g=q;b=v;break;case 4:r=t;g=p;b=v;break;case 5:r=v;g=p;b=q;break;}return[Math.round(r*255),Math.round(g*255),Math.round(b*255)];}" };
 function hslToRgbWorklet(s) {
+  let h;
+  let l;
   ({ h, l } = s);
   const result = (1 - Math.abs(2 * l - 1)) * s.s;
   const result1 = result * (1 - Math.abs(h / 60 % 2 - 1));
@@ -79,12 +86,12 @@ function hslToRgbWorklet(s) {
               num = 0;
               num2 = 0;
               num3 = 0;
+              const tmp4 = 300 <= h && h < 360;
               if (tmp4) {
                 num = result1;
                 num2 = 0;
                 num3 = result;
               }
-              tmp4 = 300 <= h && h < 360;
             } else {
               num = result;
               num2 = 0;

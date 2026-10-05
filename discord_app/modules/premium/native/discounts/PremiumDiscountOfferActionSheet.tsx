@@ -1,29 +1,41 @@
 // === Module 17113: PremiumDiscountOfferActionSheet ===
 
 // Module 17113 (PremiumDiscountOfferActionSheet)
+import Fragment from "Fragment" /* 21 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
 import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 6928 */;
 import UserOfferActionCreators from "UserOfferActionCreators" /* 7733 */;
 import openPremiumModalDefault from "openPremiumModal" /* 8914 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import PremiumConstants from "PremiumConstants" /* 1379 */;
+import Constants from "Constants" /* 1085 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const PremiumConstants = fn(1379);
+let BottomSheet;
+
+let AnalyticsObjectTypes;
+let AnalyticsPages;
+let AnalyticsSections;
+let closure_4;
+let hasOwnProperty;
+let metroRequire;
 ({ PremiumTypes: closure_4, SubscriptionPlanInfo: hasOwnProperty } = PremiumConstants);
-const Constants = fn(1085);
 ({ AnalyticEvents: metroRequire, AnalyticsObjectTypes, AnalyticsPages, AnalyticsSections } = Constants);
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
-const jsx = fn(21).jsx;
+const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
+const jsx = Fragment.jsx;
 let closure_9 = { page: AnalyticsPages.USER_SETTINGS, section: AnalyticsSections.SETTINGS_PREMIUM, objectType: AnalyticsObjectTypes.BUY };
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/discounts/PremiumDiscountOfferActionSheet.tsx");
 
 export default function _default(markAsDismissed) {
+  let analyticsLocation;
   markAsDismissed = markAsDismissed.markAsDismissed;
   const userDiscountOffer = markAsDismissed.userDiscountOffer;
   let analyticsLocations;
   let memo;
-  analyticsLocations = userDiscountOffer(analyticsLocations[5])(userDiscountOffer(analyticsLocations[6]).PREMIUM_DISCOUNT_OFFER_ACTION_SHEET).analyticsLocations;
+  let tmp2 = analyticsLocations;
+  const tmp3 = userDiscountOffer(analyticsLocations[5]);
+  analyticsLocations = tmp3(userDiscountOffer(analyticsLocations[6]).PREMIUM_DISCOUNT_OFFER_ACTION_SHEET).analyticsLocations;
   const items = [userDiscountOffer];
   memo = memo.useMemo(() => {
     let first;
@@ -52,8 +64,10 @@ export default function _default(markAsDismissed) {
   const effect = memo.useEffect(() => {
     if (null != userDiscountOffer) {
       const obj2 = { location: analyticsLocations, discount_offer_id: userDiscountOffer.id };
-      AnalyticsUtilsDefault.track(constants.PREMIUM_DISCOUNT_OFFER_ACTION_SHEET_VIEWED, obj2);
-      UserOfferActionCreators.acknowledgeUserOffer(undefined, userDiscountOffer);
+      const obj = AnalyticsUtilsDefault;
+      obj.track(metroRequire.PREMIUM_DISCOUNT_OFFER_ACTION_SHEET_VIEWED, obj2);
+      const obj3 = UserOfferActionCreators;
+      obj3.acknowledgeUserOffer(undefined, userDiscountOffer);
     }
   }, []);
   const items1 = [userDiscountOffer, markAsDismissed];
@@ -65,25 +79,27 @@ export default function _default(markAsDismissed) {
   const items2 = [analyticsLocations, markAsDismissed, userDiscountOffer];
   const items3 = [analyticsLocations, markAsDismissed, userDiscountOffer, memo];
   const callback = memo.useCallback(() => {
-    const obj2 = { location: analyticsLocations, discount_offer_id: null };
     let id;
+    const obj = { location: analyticsLocations, discount_offer_id: id };
+    id = undefined;
+    const track = AnalyticsUtilsDefault.track;
+    const PREMIUM_DISCOUNT_OFFER_ACTION_SHEET_DISMISSED = metroRequire.PREMIUM_DISCOUNT_OFFER_ACTION_SHEET_DISMISSED;
+    AnalyticsUtilsDefault;
     if (userDiscountOffer != null) {
       id = userDiscountOffer.id;
     }
-    obj2.discount_offer_id = id;
-    AnalyticsUtilsDefault.track(constants.PREMIUM_DISCOUNT_OFFER_ACTION_SHEET_DISMISSED, obj2);
+    track(PREMIUM_DISCOUNT_OFFER_ACTION_SHEET_DISMISSED, obj);
     markAsDismissed(ContentDismissActionType.USER_DISMISS);
   }, items2);
   let tmp10Result = null;
   if (null != userDiscountOffer) {
-    let obj = { startExpanded: true, onDismiss: callback, children: null };
+    BottomSheet = markAsDismissed(tmp2[11]).BottomSheet;
     let obj2 = { discountOffer: userDiscountOffer, onConfirm: tmp8 };
-    obj.children = jsx(userDiscountOffer(tmp2[12]), { discountOffer: userDiscountOffer, onConfirm: tmp8 });
     let id;
     if (userDiscountOffer != null) {
       id = userDiscountOffer.id;
     }
-    tmp10Result = jsx(markAsDismissed(tmp2[11]).BottomSheet, { startExpanded: true, onDismiss: callback, children: null }, id);
+    tmp10Result = <BottomSheet key={id} startExpanded onDismiss={callback}>{null}</BottomSheet>;
   }
   return tmp10Result;
 };

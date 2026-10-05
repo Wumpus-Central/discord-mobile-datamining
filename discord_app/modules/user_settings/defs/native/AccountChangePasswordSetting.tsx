@@ -2,26 +2,29 @@
 
 // Module 14560 (AccountChangePasswordSetting)
 import Constants from "Constants" /* 1085 */;
-import util from "util" /* 1126 */;
+import intl2 from "intl" /* 1126 */;
 import SettingsConstants from "SettingsConstants" /* 7634 */;
 import SettingBuilders from "SettingBuilders" /* 11129 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-const route = SettingBuilders.createRoute({
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+const UserSettingsSections = Constants.UserSettingsSections;
+const obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t["CIGa+7"]);
+    const intl = intl2.intl;
+    return intl.string(intl2.t["CIGa+7"]);
   },
-  parent: SettingsConstants.MobileUserSettings.ACCOUNT,
+  parent: MobileUserSettings.ACCOUNT,
   screen: {
-    route: Constants.UserSettingsSections.ACCOUNT_CHANGE_PASSWORD,
+    route: UserSettingsSections.ACCOUNT_CHANGE_PASSWORD,
     getComponent() {
       return require("AccountEditPassword").default;
     }
   }
-});
+};
+const route = SettingBuilders.createRoute(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountChangePasswordSetting.tsx");
 
 export default route;

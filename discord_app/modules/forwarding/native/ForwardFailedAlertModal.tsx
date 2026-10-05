@@ -1,54 +1,59 @@
 // === Module 11332: ForwardFailedAlertModal ===
 
 // Module 11332 (ForwardFailedAlertModal)
+import Fragment from "Fragment" /* 21 */;
 import ForwardModalUtils from "ForwardModalUtils" /* 11306 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/forwarding/native/ForwardFailedAlertModal.tsx");
+let message;
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
-  const cResult = message(forwardOptions[3]).c(11);
+const jsx = Fragment.jsx;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
+  let forwardOptions;
+  let obj = message(forwardOptions[3]);
+  const cResult = obj.c(11);
   message = message.message;
   const failedDestinations = message.failedDestinations;
   forwardOptions = message.forwardOptions;
   if (cResult[0] === failedDestinations) {
     if (cResult[1] === forwardOptions) {
+      let tmp4;
+      let tmp6;
+      let tmp8;
       if (cResult[2] === message) {
-        let tmp4 = cResult[3];
+        tmp4 = cResult[3];
       }
       const _Symbol = Symbol;
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(tmp2[5]).intl;
-        const stringResult = intl.string(tmp(tmp2[5]).t["/OPIaM"]);
+        const stringResult = intl.string(message(forwardOptions[5]).t["/OPIaM"]);
         cResult[4] = stringResult;
-        let tmp6 = stringResult;
+        tmp6 = stringResult;
       } else {
         tmp6 = cResult[4];
       }
       if (cResult[5] !== failedDestinations.length) {
         const intl2 = tmp(tmp2[5]).intl;
-        const obj2 = { count: failedDestinations.length };
-        const formatToPlainStringResult = intl2.formatToPlainString(tmp(tmp2[5]).t.cn9vFb, obj2);
+        let obj2 = { count: failedDestinations.length };
+        const formatToPlainStringResult = intl2.formatToPlainString(message(forwardOptions[5]).t.cn9vFb, obj2);
         cResult[5] = failedDestinations.length;
         cResult[6] = formatToPlainStringResult;
-        let tmp8 = formatToPlainStringResult;
+        tmp8 = formatToPlainStringResult;
       } else {
         tmp8 = cResult[6];
       }
       if (cResult[7] === failedDestinations) {
         if (cResult[8] === tmp4) {
+          let tmp10;
           if (cResult[9] === tmp8) {
-            let tmp10 = cResult[10];
+            tmp10 = cResult[10];
           }
           return tmp10;
         }
       }
-      const obj3 = { title: tmp6, content: tmp8, failedDestinations, onRetry: tmp4 };
-      const tmp13 = jsx(failedDestinations(tmp2[6]), { title: tmp6, content: tmp8, failedDestinations, onRetry: tmp4 });
+      const tmp13 = jsx(failedDestinations(forwardOptions[6]), { title: tmp6, content: tmp8, failedDestinations, onRetry: tmp4 });
       cResult[7] = failedDestinations;
       cResult[8] = tmp4;
       cResult[9] = tmp8;
@@ -57,28 +62,31 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
     }
   }
   const fn = function o() {
-    ForwardModalUtils.openForwardModal({ message, source: "retry-modal", initialSelectedDestinations: failedDestinations, forwardOptions });
+    const obj = ForwardModalUtils;
+    const obj2 = { message, source: "retry-modal", initialSelectedDestinations: failedDestinations, forwardOptions };
+    obj.openForwardModal(obj2);
   };
   cResult[0] = failedDestinations;
   cResult[1] = forwardOptions;
   cResult[2] = message;
   cResult[3] = fn;
   tmp4 = fn;
-  const obj = message(forwardOptions[3]);
 }) : ((message) => {
   message = message.message;
   const failedDestinations = message.failedDestinations;
   const forwardOptions = message.forwardOptions;
   const items = [failedDestinations, message, forwardOptions];
-  const callback = noop.useCallback(() => {
-    ForwardModalUtils.openForwardModal({ message, source: "retry-modal", initialSelectedDestinations: failedDestinations, forwardOptions });
+  const callback = react.useCallback(() => {
+    const obj = ForwardModalUtils;
+    const obj2 = { message, source: "retry-modal", initialSelectedDestinations: failedDestinations, forwardOptions };
+    obj.openForwardModal(obj2);
   }, items);
-  const obj = { title: null, content: null, failedDestinations: null, onRetry: null };
+  failedDestinations(forwardOptions[6]);
   const intl = message(forwardOptions[5]).intl;
-  obj.title = intl.string(message(forwardOptions[5]).t["/OPIaM"]);
   const intl2 = message(forwardOptions[5]).intl;
-  obj.content = intl2.formatToPlainString(message(forwardOptions[5]).t.cn9vFb, { count: failedDestinations.length });
-  obj.failedDestinations = failedDestinations;
-  obj.onRetry = callback;
-  return jsx(failedDestinations(forwardOptions[6]), { title: null, content: null, failedDestinations: null, onRetry: null });
+  let obj2 = { count: failedDestinations.length };
+  return <tmp2 title={intl.string(message(forwardOptions[5]).t["/OPIaM"])} content={intl2.formatToPlainString(message(forwardOptions[5]).t.cn9vFb, obj2)} failedDestinations={failedDestinations} onRetry={callback} />;
 });
+const result = size.fileFinishedImporting("modules/forwarding/native/ForwardFailedAlertModal.tsx");
+
+export default tmp2;

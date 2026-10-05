@@ -3,9 +3,8 @@
 // Module 6978 (SkippedClientHeartbeatUtil)
 import sampleWithUserId from "sampleWithUserId" /* 6979 */;
 import UserStore from "UserStore" /* 1377 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/analytics_sessions/SkippedClientHeartbeatUtil.tsx");
 
 export const shouldLogClientHeartbeatSkipped = function shouldLogClientHeartbeatSkipped() {
@@ -14,7 +13,8 @@ export const shouldLogClientHeartbeatSkipped = function shouldLogClientHeartbeat
   if (tmp) {
     let isStaffResult = currentUser.isStaff();
     if (!isStaffResult) {
-      isStaffResult = sampleWithUserId.sampleWithUserId(currentUser.id, 0.02);
+      const obj2 = sampleWithUserId;
+      isStaffResult = obj2.sampleWithUserId(currentUser.id, 0.02);
     }
     tmp = isStaffResult;
   }

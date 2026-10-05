@@ -26,7 +26,9 @@ import conjureVoiceDefault from "conjureVoice" /* 14351 */;
 import activitiesDefault from "activities" /* 14352 */;
 import questsDefault from "quests" /* 14353 */;
 import voiceChannelChatDefault from "voiceChannelChat" /* 14354 */;
+import size from "module_2" /* 2 */;
 
+const obj = {};
 const application = Object.assign(applicationDefault);
 const certifiedDevices = Object.assign(certifiedDevicesDefault);
 const channels = Object.assign(channelsDefault);
@@ -52,7 +54,6 @@ const conjureVoice = Object.assign(conjureVoiceDefault);
 const activities = Object.assign(activitiesDefault);
 const quests = Object.assign(questsDefault);
 const voiceChannelChat = Object.assign(voiceChannelChatDefault);
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/commands/crossPlatformRPCCommands.tsx");
 
-export const crossPlatformCommands = {};
+export const crossPlatformCommands = obj;

@@ -2,13 +2,13 @@
 
 // Module 4866 (DeviceUtils)
 import Storage3 from "Storage" /* 510 */;
-import NativeDeviceModule from "NativeDeviceModule" /* 1353 */;
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import react_native from "react-native" /* 1353 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const constants = NativeDeviceModule.getConstants();
+const constants = react_native.getConstants();
 let closure_4 = null;
 const mediaPerformanceClass = "mediaPerformanceClass";
-const size = fn(2);
 let result = size.fileFinishedImporting("utils/native/DeviceUtils.tsx");
 
 export const isIpadOS = function isIpadOS() {
@@ -21,7 +21,8 @@ export const getSystemVersion = function getSystemVersion() {
   return closure_3.systemVersion;
 };
 export const getSystemVersionMajor = function getSystemVersionMajor() {
-  const match = closure_3.systemVersion.match(/\d+/);
+  const str = closure_3.systemVersion;
+  const match = str.match(/\d+/);
   if (null == match) {
     return 0;
   } else {
@@ -36,7 +37,8 @@ export const getSystemVersionMajor = function getSystemVersionMajor() {
   }
 };
 export const getSystemVersionMinor = function getSystemVersionMinor() {
-  const match = closure_3.systemVersion.match(/\d+/g);
+  const str = closure_3.systemVersion;
+  const match = str.match(/\d+/g);
   if (null != match) {
     if (match.length >= 2) {
       const _Number = Number;
@@ -55,26 +57,31 @@ export const getDevice = function getDevice() {
   return closure_3.device;
 };
 export const getDeviceInfo = function getDeviceInfo() {
+  let text;
   const device = closure_3.device;
+  const obj = PlatformUtils;
   if (obj.isAndroid()) {
-    let text = `${device + " (" + tmp.deviceModel})`;
+    text = `${device + " (" + tmp.deviceModel})`;
   } else {
     text = device;
   }
   return text;
 };
 export const getDeviceMediaPerformanceClass = function getDeviceMediaPerformanceClass() {
+  let mediaPerformanceClass2;
   let tmp3 = null;
+  const obj = PlatformUtils;
   if (obj.isAndroid()) {
     let tmp5 = null == mediaPerformanceClass2;
     if (tmp5) {
       const Storage = Storage3.Storage;
-      value = Storage.get(mediaPerformanceClass);
+      const value = Storage.get(mediaPerformanceClass);
       mediaPerformanceClass2 = value;
       tmp5 = null == value;
     }
     if (tmp5) {
-      mediaPerformanceClass2 = NativeDeviceModule.getMediaPerformanceClass();
+      const obj2 = react_native;
+      mediaPerformanceClass2 = obj2.getMediaPerformanceClass();
       const Storage2 = Storage3.Storage;
       const result = Storage2.set(mediaPerformanceClass, mediaPerformanceClass2);
     }

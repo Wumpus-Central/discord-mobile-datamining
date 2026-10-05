@@ -2,43 +2,52 @@
 
 // Module 8130 (useAgeVerificationMethodsV2)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react_mod from "react" /* 19 */;
 import AgeVerificationStore from "AgeVerificationStore" /* 8131 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
-const size = fn(2);
+let c5, c6;
+
+let react = react_mod;
 let result = size.fileFinishedImporting("modules/age_assurance/hooks/useAgeVerificationMethodsV2.tsx");
 
 export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2() {
-  [tmp2, closure_0] = noop.useState(() => {
-    let methodsV2 = callback.methodsV2;
-    if (methodsV2 == null) {
-      methodsV2 = [];
-    }
-    return methodsV2;
-  });
-  const tmp = _slicedToArray(noop.useState(() => {
+  let closure_3;
+  let closure_4;
+  let closure_5;
+  let first;
+  let first1;
+  let items1;
+  let tmp2;
+  let tmp4;
+  let tmp6;
+  const f96423 = () => callback.methodsV2OutageBannerMessage;
+  const tmp = _slicedToArray(react.useState(() => {
     let methodsV2 = callback.methodsV2;
     if (methodsV2 == null) {
       methodsV2 = [];
     }
     return methodsV2;
   }), 2);
-  [tmp4, importDefault] = noop.useState(() => callback.methodsV2FooterMessage);
-  const tmp3 = _slicedToArray(noop.useState(() => callback.methodsV2FooterMessage), 2);
-  [tmp6, dependencyMap] = noop.useState(() => callback.methodsV2OutageBannerMessage);
-  const tmp7 = _slicedToArray(noop.useState(() => null == callback.methodsV2), 2);
-  asyncGeneratorStep = tmp7[1];
-  const tmp8 = _slicedToArray(noop.useState(false), 2);
-  _slicedToArray = tmp8[1];
-  noop = noop.useRef(true);
-  closure_0 = asyncGeneratorStep(async (arg0) => {
+  [tmp2, require] = tmp;
+  const tmp3 = _slicedToArray(react.useState(() => callback.methodsV2FooterMessage), 2);
+  [tmp4, importDefault] = tmp3;
+  [tmp6, dependencyMap] = react.useState(f96423);
+  _slicedToArray(react.useState(f96423), 2);
+  [first, _asyncToGenerator] = react.useState(() => null == callback.methodsV2);
+  [first1, _slicedToArray] = react.useState(false);
+  react = react.useRef(true);
+  const useCallback = react.useCallback;
+  let closure_0 = _asyncToGenerator(async (arg0) => {
+    let closure_2;
+    let v0;
+    closure_0 = arg0;
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp8 === 3) {
+    } else if (tmp3 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -49,6 +58,7 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
       }
     } else {
       try {
+        let current;
         c6 = 2;
         if (0 === c5) {
           if (arg0 === 1) {
@@ -59,63 +69,63 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            closure_129_0 = undefined;
-            const methodsV2 = callback.methodsV2;
+            closure_0 = undefined;
+            current = methodsV2;
+            methodsV2 = methodsV2.methodsV2;
             if (!closure_0) {
               if (null != methodsV2) {
                 closure_0(methodsV2);
-                tmp6(callback.methodsV2FooterMessage);
-                tmp4(callback.methodsV2OutageBannerMessage);
-                tmp75(false);
+                current(current.methodsV2FooterMessage);
+                tmp(current.methodsV2OutageBannerMessage);
+                current = tmp66(false);
                 v0(false);
                 c6 = 3;
                 const obj5 = { value: undefined, done: true };
                 return obj5;
               }
             }
-            tmp75(true);
+            tmp66(true);
             v0(false);
             v0 = 2;
-            const result = closure_0(8092).isCurrentUserSuspended();
-            const obj7 = closure_0(8113);
+            const obj6 = closure_0(dependencyMap[4]);
+            const result = obj6.isCurrentUserSuspended();
+            current = closure_0(dependencyMap[5]);
             if (result) {
+              current = current.fetchAgeVerificationMethodsV2SuspendedUser();
               c5 = 4;
               c6 = 1;
-              const obj8 = { value: obj7.fetchAgeVerificationMethodsV2SuspendedUser(), done: false };
-              return obj8;
+              const obj7 = { value: current, done: false };
+              return obj7;
             } else {
               c5 = 3;
               c6 = 1;
-              const obj9 = { value: obj7.fetchAgeVerificationMethodsV2(), done: false };
-              return obj9;
+              const obj8 = { value: current.fetchAgeVerificationMethodsV2(), done: false };
+              return obj8;
             }
-            const obj6 = closure_0(8092);
           }
-        } else if (1 === tmp9) {
+        } else if (1 === c5) {
           v0 = 0;
-          if (c5.current) {
-            tmp75(false);
-          }
-          throw tmp75;
+          current = c5.current && tmp66(false);
+          throw tmp66;
         } else {
-          if (2 === tmp9) {
+          if (2 === c5) {
             v0 = 1;
             if (c5.current) {
               v0(true);
             }
           } else {
-            if (3 === tmp9) {
+            if (3 === c5) {
               if (arg0 === 1) {
                 c6 = 3;
                 throw value;
               } else if (arg0 === 2) {
                 v0 = 0;
                 if (c5.current) {
-                  tmp75(false);
+                  tmp66(false);
                 }
                 c6 = 3;
-                const obj10 = { value, done: true };
-                return obj10;
+                const obj9 = { value, done: true };
+                return obj9;
               }
             } else if (arg0 === 1) {
               c6 = 3;
@@ -123,63 +133,64 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
             } else if (arg0 === 2) {
               v0 = 0;
               if (c5.current) {
-                tmp75(false);
+                tmp66(false);
               }
               c6 = 3;
               const obj = { value, done: true };
               return obj;
             }
-            closure_129_0 = value;
-            const obj11 = { type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS", methods: closure_129_0.methods, footerMessage: closure_129_0.footerMessage, outageBannerMessage: closure_129_0.outageBannerMessage };
-            DispatcherDefault.dispatch(obj11);
+            closure_0 = value;
+            const obj10 = { type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS", methods: closure_0.methods, footerMessage: closure_0.footerMessage, outageBannerMessage: closure_0.outageBannerMessage };
+            const obj2 = DispatcherDefault;
+            current = obj2.dispatch(obj10);
             if (c5.current) {
-              closure_0(closure_129_0.methods);
-              tmp6(closure_129_0.footerMessage);
-              tmp4(closure_129_0.outageBannerMessage);
+              closure_0(closure_0.methods);
+              current(closure_0.footerMessage);
+              current = tmp;
+              tmp(closure_0.outageBannerMessage);
             }
             v0 = 1;
           }
           v0 = 0;
           if (c5.current) {
-            tmp75(false);
+            tmp66(false);
           }
           c6 = 3;
           return { value: "IconComponent", done: null };
         }
-      } catch (tmp75) {
-        if (tmp5 === v0) {
-          c6 = tmp3;
-          throw tmp75;
-        } else if (tmp2 === tmp77) {
-          c5 = tmp2;
+      } catch (tmp66) {
+        if (0 === v0) {
+          c6 = 3;
+          throw tmp66;
+        } else if (1 === tmp68) {
+          c5 = 1;
         } else {
-          c5 = tmp;
+          c5 = 2;
         }
       }
     }
   });
-  const callback = noop.useCallback(function() {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
+  const callback = useCallback(function() {
+    return closure_0(...arguments);
   }, []);
   const items = [callback];
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(() => {
     closure_5.current = true;
     callback(false);
     return () => {
       closure_1_5.current = false;
     };
   }, items);
-  let obj = { loading: tmp7[0], error: tmp8[0], methods: tmp2, footerMessage: tmp4, outageBannerMessage: tmp6, refetch: null };
-  const items1 = [callback];
-  obj.refetch = noop.useCallback(() => {
-    callback(true);
-  }, items1);
+  let obj = {
+    loading: first,
+    error: first1,
+    methods: tmp2,
+    footerMessage: tmp4,
+    outageBannerMessage: tmp6,
+    refetch: react.useCallback(() => {
+      callback(true);
+    }, items1)
+  };
+  items1 = [callback];
   return obj;
 };

@@ -1,47 +1,45 @@
 // === Module 7044: ChannelListVoiceCategoryStore ===
 
 // Module 7044 (ChannelListVoiceCategoryStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
+import size from "module_2" /* 2 */;
 
-function handleChange(expand) {
-  if (expand.expand) {
-    tmp4[tmp3] = true;
+function handleChange(guildId) {
+  guildId = guildId.guildId;
+  if (guildId.expand) {
+    obj[guildId] = true;
   } else {
-    delete tmp[tmp2];
+    delete obj[guildId];
   }
 }
 let obj = {};
-const PersistedStore = initializeDefault.PersistedStore;
+const PersistedStore = get_initializedDefault.PersistedStore;
 class ChannelListVoiceCategoryStore extends PersistedStore {
+  initialize(arg0) {
+    if (arg0 == null) {
+      obj = {};
+    }
+  }
+  isVoiceCategoryExpanded(id) {
+    let flag = null != id && obj[id];
+    if (flag == null) {
+      flag = false;
+    }
+    return flag;
+  }
+  isVoiceCategoryCollapsed(id) {
+    return !this.isVoiceCategoryExpanded(id);
+  }
+  getState() {
+    return obj;
+  }
 }
 const prototype = ChannelListVoiceCategoryStore.prototype;
-prototype["initialize"] = function initialize(arg0) {
-  if (arg0 == null) {
-    obj = {};
-  }
-};
-prototype["isVoiceCategoryExpanded"] = function isVoiceCategoryExpanded(id) {
-  let flag = null != id;
-  if (flag) {
-    flag = obj[id];
-  }
-  if (flag == null) {
-    flag = false;
-  }
-  return flag;
-};
-prototype["isVoiceCategoryCollapsed"] = function isVoiceCategoryCollapsed(id) {
-  return !this.isVoiceCategoryExpanded(id);
-};
-prototype["getState"] = function getState() {
-  return obj;
-};
 ChannelListVoiceCategoryStore.displayName = "ChannelListVoiceCategoryStore";
 ChannelListVoiceCategoryStore.persistKey = "ChannelListVoiceCategoryStore";
 obj = { VOICE_CATEGORY_COLLAPSE: handleChange, VOICE_CATEGORY_EXPAND: handleChange };
 const channelListVoiceCategoryStore = new ChannelListVoiceCategoryStore(DispatcherDefault, obj);
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/ChannelListVoiceCategoryStore.tsx");
 
 export default channelListVoiceCategoryStore;

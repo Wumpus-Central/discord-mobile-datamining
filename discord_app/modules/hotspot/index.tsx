@@ -1,19 +1,18 @@
 // === Module 6712: HotspotStore ===
 
 // Module 6712 (HotspotStore)
+import HotspotActionCreators from "HotspotActionCreators" /* 6716 */;
 import HotspotStore from "hotspot/HotspotStore" /* 6713 */;
+import size from "module_2" /* 2 */;
+import Constants from "Constants" /* 6715 */;
 
-const require = globalThis.__r;
-
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/hotspot/index.tsx");
-const Constants = fn(6715);
-for (const key10022 in tmp4) {
-  arg5[key10022] = Constants[key10022];
+for (const key10022 in Constants) {
+  exports[key10022] = Constants[key10022];
   continue;
 }
-for (const key10026 in require("HotspotActionCreators")) {
-  arg5[key10026] = require("HotspotActionCreators")[key10026];
+for (const key10026 in HotspotActionCreators) {
+  exports[key10026] = HotspotActionCreators[key10026];
   continue;
 }
 

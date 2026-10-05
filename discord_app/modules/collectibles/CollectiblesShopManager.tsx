@@ -6,8 +6,8 @@ import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreato
 import StorefrontCollectionStore from "StorefrontCollectionStore" /* 8537 */;
 import StorefrontProductStore from "StorefrontProductStore" /* 7890 */;
 import Dispatcher from "Dispatcher" /* 584 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
 function chunk(arr) {
   let length;
   let sum;
@@ -27,28 +27,28 @@ function flushProducts() {
   c6 = null;
   const items = [...set];
   set.clear();
+  const tmp2 = chunk(items);
   for (const item10016 of tmp2) {
     let obj = StorefrontProductActionCreators;
     let obj2 = { skuIds: item10016 };
     let result = obj.maybeFetchProductsBySkuIds(obj2);
     continue;
   }
-  const tmp2 = chunk(items);
 }
 function flushCollections() {
   c7 = null;
   const items = [...set1];
   set1.clear();
   c8 = false;
+  const tmp2 = c9;
   c9 = false;
+  const tmp4 = chunk(items);
   for (const item10019 of tmp4) {
     let obj = StorefrontCollectionActionCreators;
     let obj2 = { collectionIds: item10019, includeUnpublishedCollections: tmp, includeUnpublishedProducts: tmp, includePricing: tmp2 };
     let result = obj.maybeFetchCollectionsWithProducts(obj2);
     continue;
   }
-  const tmp2 = c9;
-  const tmp4 = chunk(items);
 }
 const set = new Set();
 const set1 = new Set();
@@ -58,6 +58,7 @@ let c8 = false;
 let c9 = false;
 let obj = {
   requestProducts(items) {
+    let timeout;
     const iter = items[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
@@ -71,16 +72,14 @@ let obj = {
       }
       continue;
     }
-    let tmp9 = set.size > 0;
-    if (tmp9) {
-      tmp9 = null == timeout;
-    }
+    const tmp9 = set.size > 0 && null == timeout;
     if (tmp9) {
       const _setTimeout = setTimeout;
       timeout = setTimeout(flushProducts, 32);
     }
   },
   requestCollections(items, arg1) {
+    let timeout;
     let obj = arg1;
     if (arg1 === undefined) {
       obj = {};
@@ -117,10 +116,7 @@ let obj = {
     if (flag2) {
       c9 = true;
     }
-    let tmp12 = set1.size > 0;
-    if (tmp12) {
-      tmp12 = null == timeout;
-    }
+    const tmp12 = set1.size > 0 && null == timeout;
     if (tmp12) {
       const _setTimeout = setTimeout;
       timeout = setTimeout(flushCollections, 32);
@@ -144,7 +140,6 @@ let obj = {
   }
 };
 const subscription = Dispatcher.subscribe("LOGOUT", obj.reset);
-const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/CollectiblesShopManager.tsx");
 
 export const CollectiblesShopManager = obj;

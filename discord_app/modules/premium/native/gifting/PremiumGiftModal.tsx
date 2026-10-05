@@ -1,6 +1,7 @@
 // === Module 10393: PremiumGiftModal ===
 
 // Module 10393 (PremiumGiftModal)
+import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef2589 from "module_2589" /* 2589 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
@@ -8,41 +9,64 @@ import useInitialValueDefault from "useInitialValue" /* 5984 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6657 */;
 import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10394 */;
 import PremiumGiftPlanSelectDefault from "PremiumGiftPlanSelect" /* 10395 */;
+import UnsupportedFeatureModalDefault from "UnsupportedFeatureModal" /* 10554 */;
 import GiftBadgePostPurchaseDefault from "GiftBadgePostPurchase" /* 10764 */;
 import GiftingSKUSelectScreenDefault from "GiftingSKUSelectScreen" /* 10776 */;
 import PremiumGiftCustomizationDefault from "PremiumGiftCustomization" /* 10779 */;
 import PremiumGiftSuccessDefault from "PremiumGiftSuccess" /* 10808 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import PremiumGiftAnalyticsDefault from "PremiumGiftAnalytics" /* 11018 */;
+import _slicedToArray_mod from "_slicedToArray" /* 32 */;
+import react_mod from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const jsx = fn(21).jsx;
+const require = globalThis.__r;
+let _require, importDefault;
+
+let CUSTOMIZATION;
+let GIFTING_BADGE;
+let PLAN_SELECT;
+let REWARD_SELECT;
+let SUCCESS;
+let obj4;
+let _slicedToArray = _slicedToArray_mod;
+let react = react_mod;
+const jsx = Fragment.jsx;
 const PremiumGiftScreens = { PLAN_SELECT: "PremiumGiftPlanSelect", REWARD_SELECT: "GiftingSKUSelect", CUSTOMIZATION: "PremiumGiftCustomization", SUCCESS: "PremiumGiftSuccess", GIFTING_BADGE: "GiftingBadgePostPurchase" };
-let obj2 = { [PLAN_SELECT]: fn(10394).PaymentFlowStep.SKU_SELECT, [REWARD_SELECT]: fn(10394).PaymentFlowStep.REWARD_SKU_SELECT, [CUSTOMIZATION]: fn(10394).PaymentFlowStep.PLAN_SELECT, [SUCCESS]: fn(10394).PaymentFlowStep.CONFIRM, [GIFTING_BADGE]: fn(10394).PaymentFlowStep.CONFIRM };
+let obj2 = { [PLAN_SELECT]: PremiumAnalyticsUtils.PaymentFlowStep.SKU_SELECT, [REWARD_SELECT]: PremiumAnalyticsUtils.PaymentFlowStep.REWARD_SKU_SELECT, [CUSTOMIZATION]: PremiumAnalyticsUtils.PaymentFlowStep.PLAN_SELECT, [SUCCESS]: PremiumAnalyticsUtils.PaymentFlowStep.CONFIRM, [GIFTING_BADGE]: PremiumAnalyticsUtils.PaymentFlowStep.CONFIRM };
 ({ PLAN_SELECT, REWARD_SELECT, CUSTOMIZATION, SUCCESS, GIFTING_BADGE } = PremiumGiftScreens);
-const createStyles = fn(4890);
-let obj4 = { header: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" } };
-let closure_9 = createStyles.createStyles(obj4);
-let ReactCompilerGating = fn(558);
+let obj3 = { header: obj4 };
+obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" };
+let closure_9 = createStyles.createStyles(obj3);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, pop, arg2) => {
+  let closure_0;
+  let error;
+  let first;
+  let isLoadingWishlist;
+  let userProfile;
+  let wishlist;
+  let wishlistId;
   _require = arg2;
-  const cResult = require("c").c(40);
+  const tmp = _require;
+  let obj = require("react");
+  const cResult = obj.c(40);
   const tmp4 = closure_9();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [UserStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== arg2) {
     class S {
       constructor() {
-        user = null;
+        let user = null;
         if (null != closure_0) {
-          tmp3 = closure_5;
-          user = closure_5.getUser(tmp);
+          user = UserStore.getUser(tmp);
         }
         return user;
       }
@@ -52,27 +76,25 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, pop, arg
   } else {
     class S {
       constructor() {
-        user = null;
+        let user = null;
         if (null != closure_0) {
-          tmp3 = closure_5;
-          user = closure_5.getUser(tmp);
+          user = UserStore.getUser(tmp);
         }
         return user;
       }
     }
   }
-  const obj = require("c");
-  const stateFromStores = require("initialize").useStateFromStores(first, S);
-  const tmpResult = require("initialize");
-  const fetchWishlistAndProfileInfoForUser = require("useWishlistHooks").useFetchWishlistAndProfileInfoForUser(arg2);
+  const tmpResult = tmp(504);
+  const stateFromStores = tmpResult.useStateFromStores(first, S);
+  const tmpResult4 = tmp(8430);
+  const fetchWishlistAndProfileInfoForUser = tmpResult4.useFetchWishlistAndProfileInfoForUser(arg2);
   ({ wishlist, userProfile, wishlistId, error } = fetchWishlistAndProfileInfoForUser);
   if (cResult[3] !== stateFromStores) {
     class S {
       constructor() {
-        user = null;
+        let user = null;
         if (null != closure_0) {
-          tmp3 = closure_5;
-          user = closure_5.getUser(tmp);
+          user = UserStore.getUser(tmp);
         }
         return user;
       }
@@ -83,101 +105,104 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, pop, arg
   } else {
     class S {
       constructor() {
-        user = null;
+        let user = null;
         if (null != closure_0) {
-          tmp3 = closure_5;
-          user = closure_5.getUser(tmp);
+          user = UserStore.getUser(tmp);
         }
         return user;
       }
     }
   }
-  const tmpResult4 = require("useWishlistHooks");
-  let header = require("useWishlistHooks").useShouldShowWishlistInDMGifting(tmp11);
-  let tmp12 = null != arg2 && !header && null == error;
-  if (tmp12) {
+  const tmpResult5 = tmp(8430);
+  const shouldShowWishlistInDMGifting = tmpResult5.useShouldShowWishlistInDMGifting(tmp11);
+  let tmp13 = null != arg2 && !shouldShowWishlistInDMGifting && null == error;
+  if (tmp13) {
     class S {
       constructor() {
-        user = null;
+        let user = null;
         if (null != closure_0) {
-          tmp3 = closure_5;
-          user = closure_5.getUser(tmp);
+          user = UserStore.getUser(tmp);
         }
         return user;
       }
     }
-    if (!tmp14) {
+    if (!tmp15) {
       class S {
         constructor() {
-          user = null;
+          let user = null;
           if (null != closure_0) {
-            tmp3 = closure_5;
-            user = closure_5.getUser(tmp);
+            user = UserStore.getUser(tmp);
           }
           return user;
         }
       }
     }
-    tmp12 = tmp14;
+    tmp13 = tmp15;
   }
-  importDefault = tmp12;
-  if (cResult[5] === tmp12) {
+  importDefault = tmp13;
+  if (cResult[5] === tmp13) {
     class S {
       constructor() {
-        user = null;
+        let user = null;
         if (null != closure_0) {
-          tmp3 = closure_5;
-          user = closure_5.getUser(tmp);
+          user = UserStore.getUser(tmp);
         }
         return user;
       }
     }
   }
-  if (header) {
+  if (shouldShowWishlistInDMGifting) {
     class S {
       constructor() {
-        user = null;
+        let user = null;
         if (null != closure_0) {
-          tmp3 = closure_5;
-          user = closure_5.getUser(tmp);
+          user = UserStore.getUser(tmp);
         }
         return user;
       }
     }
     const intl = tmp(1126).intl;
-    tmp16[0] = intl.string(tmp(1126).t["JCFN/y"]);
-    tmp16[1] = tmp(6010).getHeaderCloseButton(pop);
-    tmp16[2] = tmp4.header;
-    tmp16[3] = function render() {
-      return jsx(isLoadingWishlist(10395), { shouldUseDMWishlistGiftingDesign: true, isLoadingWishlist: false });
-    };
+    tmp17[0] = intl.string(tmp(1126).t["JCFN/y"]);
     const tmpResult6 = tmp(6010);
+    tmp17[1] = tmpResult6.getHeaderCloseButton(pop);
+    tmp17[2] = tmp4.header;
+    tmp17[3] = function render() {
+      return jsx(PremiumGiftPlanSelectDefault, { shouldUseDMWishlistGiftingDesign: true, isLoadingWishlist: false });
+    };
   } else {
     class S {
       constructor() {
-        user = null;
+        let user = null;
         if (null != closure_0) {
-          tmp3 = closure_5;
-          user = closure_5.getUser(tmp);
+          user = UserStore.getUser(tmp);
         }
         return user;
       }
     }
-    tmp16[2] = function render() {
-      return jsx(PremiumGiftPlanSelectDefault, { shouldUseDMWishlistGiftingDesign: false, isLoadingWishlist });
+    tmp17[2] = function render() {
+      return jsx(PremiumGiftPlanSelectDefault, { shouldUseDMWishlistGiftingDesign: false, isLoadingWishlist: importDefault });
     };
   }
-  cResult[5] = tmp12;
+  cResult[5] = tmp13;
   cResult[6] = pop;
-  cResult[7] = header;
-  header = tmp4.header;
-  cResult[8] = header;
-  cResult[9] = tmp16;
-  const tmpResult5 = require("useWishlistHooks");
+  cResult[7] = shouldShowWishlistInDMGifting;
+  cResult[8] = tmp4.header;
+  cResult[9] = tmp17;
 }) : ((arg0, pop, arg2) => {
+  let closure_0;
+  let headerCloseButton;
+  let headerCloseButton1;
+  let intl;
+  let intl2;
+  let obj5;
+  let shouldShowWishlistInDMGifting;
+  let tmp2Result;
+  let tmp2Result11;
+  let tmp2Result12;
   _require = arg2;
   const tmp = closure_9();
-  const obj = require("initialize");
+  const tmp2 = _require;
+  let obj = require("get initialized");
   let items = [shouldShowWishlistInDMGifting];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let user = null;
@@ -186,81 +211,86 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, pop, arg
     }
     return user;
   });
-  const fetchWishlistAndProfileInfoForUser = require("useWishlistHooks").useFetchWishlistAndProfileInfoForUser(arg2);
-  ({ wishlist: importDefault, userProfile: dependencyMap, wishlistId: _slicedToArray, error: noop } = fetchWishlistAndProfileInfoForUser);
   obj2 = require("useWishlistHooks");
-  shouldShowWishlistInDMGifting = require("useWishlistHooks").useShouldShowWishlistInDMGifting({ isGift: true, giftRecipient: stateFromStores, isSocialLayerStorefrontEnabled: false });
+  const fetchWishlistAndProfileInfoForUser = obj2.useFetchWishlistAndProfileInfoForUser(arg2);
+  ({ wishlist: importDefault, userProfile: dependencyMap, wishlistId: _slicedToArray, error: react } = fetchWishlistAndProfileInfoForUser);
+  const obj3 = require("useWishlistHooks");
+  shouldShowWishlistInDMGifting = obj3.useShouldShowWishlistInDMGifting({ isGift: true, giftRecipient: stateFromStores, isSocialLayerStorefrontEnabled: false });
+  let tmp7 = obj;
+  const PLAN_SELECT = obj.PLAN_SELECT;
   if (shouldShowWishlistInDMGifting) {
-    const obj4 = { title: null, headerLeft: null, headerStyle: null, render: null };
-    const intl = tmp2(1126).intl;
-    obj4.title = intl.string(tmp2(1126).t["JCFN/y"]);
-    obj4.headerLeft = tmp2(6010).getHeaderCloseButton(pop);
-    obj4.headerStyle = tmp.header;
-    obj4.render = function render() {
-      return jsx(PremiumGiftPlanSelectDefault, { shouldUseDMWishlistGiftingDesign: true, isLoadingWishlist: false });
+    const obj4 = {
+      title: intl.string(tmp2(1126).t["JCFN/y"]),
+      headerLeft: tmp2Result.getHeaderCloseButton(pop),
+      headerStyle: tmp.header,
+      render() {
+          return jsx(PremiumGiftPlanSelectDefault, { shouldUseDMWishlistGiftingDesign: true, isLoadingWishlist: false });
+        }
     };
-    let obj5 = obj4;
-    const tmp2Result = tmp2(6010);
+    intl = tmp2(1126).intl;
+    obj5 = obj4;
+    tmp2Result = tmp2(6010);
   } else {
     obj5 = {
       title: "",
       headerShown: false,
       render() {
           let isLoadingWishlist = null != closure_0;
+          PremiumGiftPlanSelectDefault;
           if (isLoadingWishlist) {
             isLoadingWishlist = !shouldShowWishlistInDMGifting;
           }
           if (isLoadingWishlist) {
-            isLoadingWishlist = null == noop;
+            isLoadingWishlist = null == react;
           }
           if (isLoadingWishlist) {
             let tmp7 = null == dependencyMap;
             if (!tmp7) {
-              let tmp9 = null != _slicedToArray;
-              if (tmp9) {
-                tmp9 = null == closure_1_1;
-              }
-              tmp7 = tmp9;
+              tmp7 = null != _slicedToArray && null == importDefault;
+              const tmp9 = null != _slicedToArray && null == importDefault;
             }
             isLoadingWishlist = tmp7;
           }
-          return jsx(PremiumGiftPlanSelectDefault, { shouldUseDMWishlistGiftingDesign: false, isLoadingWishlist });
+          return <tmp2 shouldUseDMWishlistGiftingDesign={false} isLoadingWishlist={isLoadingWishlist} />;
         }
     };
   }
   const obj6 = {};
-  obj6[obj.PLAN_SELECT] = obj5;
+  obj6[PLAN_SELECT] = obj5;
+  const REWARD_SELECT = tmp7.REWARD_SELECT;
   const obj7 = {
     title: "",
     headerTitle() {
 
     },
-    headerLeft: null,
-    headerStyle: null,
-    render: null
+    headerLeft: headerCloseButton,
+    headerStyle: tmp.header,
+    render(arg0) {
+      let allRewards;
+      let claimableRewards;
+      let defaultHighlightedReward;
+      let onSelect;
+      ({ defaultHighlightedReward, allRewards, claimableRewards, onSelect } = arg0);
+      return jsx(GiftingSKUSelectScreenDefault, { defaultHighlightedReward, allRewards, claimableRewards, onSelect });
+    }
   };
-  if (arg0 === obj.REWARD_SELECT) {
-    let headerCloseButton = tmp2(6010).getHeaderCloseButton(pop);
+  if (arg0 === tmp7.REWARD_SELECT) {
     const tmp2Result7 = tmp2(6010);
+    headerCloseButton = tmp2Result7.getHeaderCloseButton(pop);
   } else {
-    headerCloseButton = tmp2(6010).getHeaderBackButton();
     const tmp2Result8 = tmp2(6010);
+    headerCloseButton = tmp2Result8.getHeaderBackButton();
   }
-  obj7.headerLeft = headerCloseButton;
-  obj7.headerStyle = tmp.header;
-  obj7.render = function render(arg0) {
-    ({ defaultHighlightedReward, allRewards, claimableRewards, onSelect } = arg0);
-    return jsx(GiftingSKUSelectScreenDefault, { defaultHighlightedReward, allRewards, claimableRewards, onSelect });
-  };
-  obj6[obj.REWARD_SELECT] = obj7;
-  if (arg0 === obj.CUSTOMIZATION) {
-    let headerCloseButton1 = tmp2(6010).getHeaderCloseButton(pop);
+  obj6[REWARD_SELECT] = obj7;
+  const CUSTOMIZATION = tmp7.CUSTOMIZATION;
+  if (arg0 === tmp7.CUSTOMIZATION) {
     const tmp2Result9 = tmp2(6010);
+    headerCloseButton1 = tmp2Result9.getHeaderCloseButton(pop);
   } else {
-    headerCloseButton1 = tmp2(6010).getHeaderBackButton();
     const tmp2Result10 = tmp2(6010);
+    headerCloseButton1 = tmp2Result10.getHeaderBackButton();
   }
-  obj6[obj.CUSTOMIZATION] = {
+  obj6[CUSTOMIZATION] = {
     title: "",
     headerLeft: headerCloseButton1,
     headerStyle: tmp.header,
@@ -268,303 +298,309 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, pop, arg
       return jsx(PremiumGiftCustomizationDefault, {});
     }
   };
-  const obj8 = { title: "", headerLeft: null, headerStyle: null, render: null };
-  const obj3 = require("useWishlistHooks");
-  obj8.headerLeft = require("NavigatorHeader").getHeaderCloseButton(pop);
-  obj8.headerStyle = tmp.header;
-  obj8.render = function render() {
-    return jsx(PremiumGiftSuccessDefault, {});
+  const SUCCESS = tmp7.SUCCESS;
+  const obj8 = {
+    title: "",
+    headerLeft: tmp2Result11.getHeaderCloseButton(pop),
+    headerStyle: tmp.header,
+    render() {
+      return jsx(PremiumGiftSuccessDefault, {});
+    }
   };
-  obj6[obj.SUCCESS] = obj8;
-  const obj9 = { title: null, headerLeft: null, headerTransparent: true, headerStyle: null, render: null };
-  const intl2 = tmp2(1126).intl;
-  obj9.title = intl2.string(_modDef2589.roVAey);
-  const tmp2Result11 = require("NavigatorHeader");
-  obj9.headerLeft = require("NavigatorHeader").getHeaderCloseButton(pop);
-  obj9.headerStyle = { backgroundColor: "transparent", shadowColor: "transparent" };
-  obj9.render = function render(currentProgress) {
-    return jsx(GiftBadgePostPurchaseDefault, {
-      currentProgress: currentProgress.currentProgress,
-      onSendGift() {
-        obj2 = { analyticsLocations: null };
-        const items = [closure_1_1(6681).GIFTING_BADGE_POST_PURCHASE];
-        obj2.analyticsLocations = items;
-        closure_1_0(10392).openGiftModal(obj2);
-      }
-    });
+  obj6[SUCCESS] = obj8;
+  tmp2Result11 = tmp2(6010);
+  const GIFTING_BADGE = tmp7.GIFTING_BADGE;
+  const obj9 = {
+    title: intl2.string(_modDef2589.roVAey),
+    headerLeft: tmp2Result12.getHeaderCloseButton(pop),
+    headerTransparent: true,
+    headerStyle: { backgroundColor: "transparent", shadowColor: "transparent" },
+    render(currentProgress) {
+      return jsx(GiftBadgePostPurchaseDefault, {
+        currentProgress: currentProgress.currentProgress,
+        onSendGift() {
+          let items;
+          const obj = { analyticsLocations: items };
+          const openGiftModal = closure_1_0(closure_1_2[19]).openGiftModal;
+          items = [];
+          closure_1_0(closure_1_2[19]);
+          items[0] = closure_1_1(closure_1_2[20]).GIFTING_BADGE_POST_PURCHASE;
+          openGiftModal(obj);
+        }
+      });
+    }
   };
-  obj6[obj.GIFTING_BADGE] = obj9;
+  intl2 = tmp2(1126).intl;
+  obj6[GIFTING_BADGE] = obj9;
+  tmp2Result12 = tmp2(6010);
   return obj6;
 });
-ReactCompilerGating = fn(558);
-let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftModal.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = onDismiss(576).c(26);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let analyticsLocation;
+  let analyticsLocations;
+  let closure_1;
+  let first;
+  let initialRoute;
+  let onDismiss;
+  let order;
+  let planInterval;
+  let premiumType;
+  let recipientUserId;
+  let tmp19;
+  let tmp20;
+  let obj = onDismiss(576);
+  const cResult = obj.c(26);
   ({ recipientUserId, premiumType, planInterval, analyticsLocation, analyticsLocations, initialRoute, order, onDismiss } = arg0);
   const analyticsLocations2 = useAnalyticsLocationsDefault(analyticsLocations).analyticsLocations;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function u() {
-      return onDismiss(dependencyMap[22]).v4();
+      const obj = onDismiss(dependencyMap[22]);
+      return obj.v4();
     };
     cResult[0] = fn;
-    let first = fn;
+    first = fn;
   } else {
     first = cResult[0];
   }
   const tmp6 = useInitialValueDefault(first);
   if (cResult[1] === tmp6) {
     if (cResult[2] === analyticsLocation) {
+      let tmp7;
+      let tmp21;
       if (cResult[3] === analyticsLocations) {
-        let tmp7 = cResult[4];
+        tmp7 = cResult[4];
       }
-      if (initialRoute != null) {
-        if (cResult[5] !== onDismiss) {
-          class P {
-            constructor() {
-              arr = closure_1(closure_2[24]);
-              arr1 = arr.pop();
-              if (onDismiss != null) {
-                tmp2 = onDismiss();
-              }
-              return;
-            }
-          }
-          cResult[5] = onDismiss;
-          cResult[6] = P;
+      if (initialRoute == null) {
+        let PLAN_SELECT;
+        if (null != premiumType) {
+          PLAN_SELECT = obj.CUSTOMIZATION;
         } else {
-          class P {
-            constructor() {
-              arr = closure_1(closure_2[24]);
-              arr1 = arr.pop();
-              if (onDismiss != null) {
-                tmp2 = onDismiss();
-              }
-              return;
+          PLAN_SELECT = obj.PLAN_SELECT;
+        }
+        initialRoute = PLAN_SELECT;
+      }
+      if (cResult[5] !== onDismiss) {
+        class P {
+          constructor() {
+            const arr = ModalActionCreatorsDefault;
+            arr.pop();
+            if (onDismiss != null) {
+              onDismiss();
             }
           }
         }
-        const tmp14 = closure_10(initialRoute, P, recipientUserId);
-        [tmp19, tmp20] = noop.useState(obj2[initialRoute]);
-        importDefault = tmp20;
-        const tmp18 = _slicedToArray(noop.useState(obj2[initialRoute]), 2);
-        if (tmpResult.isPremiumGiftingSupported()) {
-          class P {
-            constructor() {
-              arr = closure_1(closure_2[24]);
-              arr1 = arr.pop();
-              if (onDismiss != null) {
-                tmp2 = onDismiss();
-              }
-              return;
-            }
-          }
-          if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-            class P {
-              constructor() {
-                arr = closure_1(closure_2[24]);
-                arr1 = arr.pop();
-                if (onDismiss != null) {
-                  tmp2 = onDismiss();
-                }
-                return;
-              }
-            }
-            cResult[8] = tmp25;
-          } else {
-            class P {
-              constructor() {
-                arr = closure_1(closure_2[24]);
-                arr1 = arr.pop();
-                if (onDismiss != null) {
-                  tmp2 = onDismiss();
-                }
-                return;
-              }
-            }
-          }
-          if (cResult[9] === initialRoute) {
-            class P {
-              constructor() {
-                arr = closure_1(closure_2[24]);
-                arr1 = arr.pop();
-                if (onDismiss != null) {
-                  tmp2 = onDismiss();
-                }
-                return;
-              }
-            }
-            if (cResult[12] === tmp19) {
-              class P {
-                constructor() {
-                  arr = closure_1(closure_2[24]);
-                  arr1 = arr.pop();
-                  if (onDismiss != null) {
-                    tmp2 = onDismiss();
-                  }
-                  return;
-                }
-              }
-              if (cResult[15] === tmp7) {
-                class P {
-                  constructor() {
-                    arr = closure_1(closure_2[24]);
-                    arr1 = arr.pop();
-                    if (onDismiss != null) {
-                      tmp2 = onDismiss();
-                    }
-                    return;
-                  }
-                }
-              }
-              obj2 = { basePurchaseAnalytics: tmp7, recipientUserId, onClose: P, setCurrentAnalyticsStep: tmp20, premiumType, planInterval, initialOrder: order, children: tmp29 };
-              const tmp34 = jsx(onDismiss(10430).NativeGiftContextProvider, { basePurchaseAnalytics: tmp7, recipientUserId, onClose: P, setCurrentAnalyticsStep: tmp20, premiumType, planInterval, initialOrder: order, children: tmp29 });
-              cResult[15] = tmp7;
-              cResult[16] = P;
-              cResult[17] = order;
-              cResult[18] = planInterval;
-              cResult[19] = premiumType;
-              cResult[20] = recipientUserId;
-              cResult[21] = tmp29;
-              cResult[22] = tmp34;
-            }
-            const obj3 = { currentStep: tmp19, children: tmp26 };
-            const tmp31 = jsx(tmp4(11018), { currentStep: tmp19, children: tmp26 });
-            cResult[12] = tmp19;
-            cResult[13] = tmp26;
-            cResult[14] = tmp31;
-          }
-          const obj4 = { initialRouteName: initialRoute, screens: tmp14, onStateChange: tmp25 };
-          const tmp28 = jsx(onDismiss(6496).Navigator, { initialRouteName: initialRoute, screens: tmp14, onStateChange: tmp25 });
-          cResult[9] = initialRoute;
-          cResult[10] = tmp14;
-          cResult[11] = tmp28;
-        } else {
-          class P {
-            constructor() {
-              arr = closure_1(closure_2[24]);
-              arr1 = arr.pop();
-              if (onDismiss != null) {
-                tmp2 = onDismiss();
-              }
-              return;
-            }
-          }
-          if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-            class P {
-              constructor() {
-                arr = closure_1(closure_2[24]);
-                arr1 = arr.pop();
-                if (onDismiss != null) {
-                  tmp2 = onDismiss();
-                }
-                return;
-              }
-            }
-            const obj5 = { title: null };
-            const intl = onDismiss(1126).intl;
-            obj5.title = intl.string(onDismiss(1126).t["JCFN/y"]);
-            const tmp23 = jsx(tmp4(10554), { title: null });
-            cResult[7] = tmp23;
-            const tmp21 = tmp23;
-            const tmp4Result = tmp4(10554);
-          } else {
-            class P {
-              constructor() {
-                arr = closure_1(closure_2[24]);
-                arr1 = arr.pop();
-                if (onDismiss != null) {
-                  tmp2 = onDismiss();
-                }
-                return;
-              }
-            }
-          }
-          return tmp21;
-        }
-        tmpResult = onDismiss(4541);
+        cResult[5] = onDismiss;
+        cResult[6] = P;
       } else {
         class P {
           constructor() {
-            arr = closure_1(closure_2[24]);
-            arr1 = arr.pop();
+            const arr = ModalActionCreatorsDefault;
+            arr.pop();
             if (onDismiss != null) {
-              tmp2 = onDismiss();
+              onDismiss();
             }
-            return;
           }
         }
       }
+      const tmp14 = closure_10(initialRoute, P, recipientUserId);
+      [tmp19, tmp20] = react.useState(obj2[initialRoute]);
+      importDefault = tmp20;
+      _slicedToArray(react.useState(obj2[initialRoute]), 2);
+      const tmpResult = onDismiss(4541);
+      if (tmpResult.isPremiumGiftingSupported()) {
+        class P {
+          constructor() {
+            const arr = ModalActionCreatorsDefault;
+            arr.pop();
+            if (onDismiss != null) {
+              onDismiss();
+            }
+          }
+        }
+        if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+          class P {
+            constructor() {
+              const arr = ModalActionCreatorsDefault;
+              arr.pop();
+              if (onDismiss != null) {
+                onDismiss();
+              }
+            }
+          }
+          cResult[8] = tmp25;
+        } else {
+          class P {
+            constructor() {
+              const arr = ModalActionCreatorsDefault;
+              arr.pop();
+              if (onDismiss != null) {
+                onDismiss();
+              }
+            }
+          }
+        }
+        if (cResult[9] === initialRoute) {
+          class P {
+            constructor() {
+              const arr = ModalActionCreatorsDefault;
+              arr.pop();
+              if (onDismiss != null) {
+                onDismiss();
+              }
+            }
+          }
+          if (cResult[12] === tmp19) {
+            class P {
+              constructor() {
+                const arr = ModalActionCreatorsDefault;
+                arr.pop();
+                if (onDismiss != null) {
+                  onDismiss();
+                }
+              }
+            }
+            if (cResult[15] === tmp7) {
+              class P {
+                constructor() {
+                  const arr = ModalActionCreatorsDefault;
+                  arr.pop();
+                  if (onDismiss != null) {
+                    onDismiss();
+                  }
+                }
+              }
+            }
+            cResult[15] = tmp7;
+            cResult[16] = P;
+            cResult[17] = order;
+            cResult[18] = planInterval;
+            cResult[19] = premiumType;
+            cResult[20] = recipientUserId;
+            cResult[21] = tmp29;
+            cResult[22] = jsx(onDismiss(10430).NativeGiftContextProvider, { basePurchaseAnalytics: tmp7, recipientUserId, onClose: P, setCurrentAnalyticsStep: tmp20, premiumType, planInterval, initialOrder: order, children: tmp29 });
+            const tmp34 = jsx(onDismiss(10430).NativeGiftContextProvider, { basePurchaseAnalytics: tmp7, recipientUserId, onClose: P, setCurrentAnalyticsStep: tmp20, premiumType, planInterval, initialOrder: order, children: tmp29 });
+          }
+          cResult[12] = tmp19;
+          cResult[13] = tmp26;
+          cResult[14] = jsx(PremiumGiftAnalyticsDefault, { currentStep: tmp19, children: tmp26 });
+          const tmp31 = jsx(PremiumGiftAnalyticsDefault, { currentStep: tmp19, children: tmp26 });
+        }
+        cResult[9] = initialRoute;
+        cResult[10] = tmp14;
+        cResult[11] = jsx(onDismiss(6496).Navigator, { initialRouteName: initialRoute, screens: tmp14, onStateChange: tmp25 });
+        const tmp28 = jsx(onDismiss(6496).Navigator, { initialRouteName: initialRoute, screens: tmp14, onStateChange: tmp25 });
+      } else {
+        class P {
+          constructor() {
+            const arr = ModalActionCreatorsDefault;
+            arr.pop();
+            if (onDismiss != null) {
+              onDismiss();
+            }
+          }
+        }
+        if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+          class P {
+            constructor() {
+              const arr = ModalActionCreatorsDefault;
+              arr.pop();
+              if (onDismiss != null) {
+                onDismiss();
+              }
+            }
+          }
+          UnsupportedFeatureModalDefault;
+          const intl = onDismiss(1126).intl;
+          const tmp23 = <tmp4Result title={intl.string(onDismiss(1126).t["JCFN/y"])} />;
+          cResult[7] = tmp23;
+          tmp21 = tmp23;
+        } else {
+          class P {
+            constructor() {
+              const arr = ModalActionCreatorsDefault;
+              arr.pop();
+              if (onDismiss != null) {
+                onDismiss();
+              }
+            }
+          }
+        }
+      }
+      return tmp21;
     }
   }
-  const obj = onDismiss(576);
-  const basePurchaseFlowAnalyticsFields = onDismiss(10394).getBasePurchaseFlowAnalyticsFields({ isGift: true, analyticsLoadId: tmp6, analyticsLocation, analyticsLocations });
+  const tmpResult2 = onDismiss(10394);
+  const basePurchaseFlowAnalyticsFields = tmpResult2.getBasePurchaseFlowAnalyticsFields({ isGift: true, analyticsLoadId: tmp6, analyticsLocation, analyticsLocations });
   cResult[1] = tmp6;
   cResult[2] = analyticsLocation;
   cResult[3] = analyticsLocations;
   cResult[4] = basePurchaseFlowAnalyticsFields;
   tmp7 = basePurchaseFlowAnalyticsFields;
-  const tmpResult2 = onDismiss(10394);
 }) : ((analyticsLocations) => {
+  let analyticsLoadId;
+  let analyticsLocation;
+  let closure_4;
+  let initialRoute;
+  let onDismiss;
+  let order;
+  let planInterval;
+  let premiumType;
+  let recipientUserId;
+  let tmp13Result;
   ({ recipientUserId, premiumType, analyticsLocation } = analyticsLocations);
   analyticsLocations = analyticsLocations.analyticsLocations;
   ({ initialRoute, onDismiss } = analyticsLocations);
-  closure_4 = undefined;
+  react = undefined;
   ({ planInterval, order } = analyticsLocations);
-  const tmp3 = analyticsLocations(onDismiss[23])(() => analyticsLocation(onDismiss[22]).v4());
+  const analyticsLocations2 = analyticsLocations(onDismiss[21])(analyticsLocations).analyticsLocations;
+  const tmp3 = analyticsLocations(onDismiss[23])(() => {
+    const obj = analyticsLocation(onDismiss[22]);
+    return obj.v4();
+  });
   _slicedToArray = tmp3;
+  let obj = react;
   const items = [tmp3, analyticsLocation, analyticsLocations];
-  if (initialRoute != null) {
-    const items1 = [onDismiss];
-    const callback = obj.useCallback(() => {
-      ModalActionCreatorsDefault.pop();
-      if (onDismiss != null) {
-        onDismiss();
-      }
-    }, items1);
-    const tmp13 = _slicedToArray(obj.useState(obj2[initialRoute]), 2);
-    closure_4 = tmp14;
-    obj2 = analyticsLocation(onDismiss[25]);
-    if (obj2.isPremiumGiftingSupported()) {
-      const obj3 = { value: analyticsLocations(onDismiss[21])(analyticsLocations).analyticsLocations, children: null };
-      const obj4 = { basePurchaseAnalytics: tmp4, recipientUserId, onClose: callback, setCurrentAnalyticsStep: tmp14, premiumType, planInterval, initialOrder: order, children: null };
-      const obj5 = { currentStep: tmp13[0], children: null };
-      const obj6 = {
-        initialRouteName: initialRoute,
-        screens: tmp10,
-        onStateChange(arg0) {
-              if (null != arg0) {
-                closure_4(obj2[arg0.routes[arg0.index].name]);
-              }
-            }
-      };
-      obj5.children = jsx(analyticsLocation(onDismiss[27]).Navigator, {
-        initialRouteName: initialRoute,
-        screens: tmp10,
-        onStateChange(arg0) {
-              if (null != arg0) {
-                closure_4(obj2[arg0.routes[arg0.index].name]);
-              }
-            }
-      });
-      obj4.children = jsx(tmp(onDismiss[28]), { currentStep: tmp13[0], children: null });
-      obj3.children = jsx(analyticsLocation(onDismiss[29]).NativeGiftContextProvider, { basePurchaseAnalytics: tmp4, recipientUserId, onClose: callback, setCurrentAnalyticsStep: tmp14, premiumType, planInterval, initialOrder: order, children: null });
-      let tmp16Result = jsx(analyticsLocation(onDismiss[21]).AnalyticsLocationProvider, { value: analyticsLocations(onDismiss[21])(analyticsLocations).analyticsLocations, children: null });
-      const tmpResult = tmp(onDismiss[28]);
+  const memo = react.useMemo(() => {
+    const obj = PremiumAnalyticsUtils;
+    obj2 = { isGift: true, analyticsLoadId, analyticsLocation, analyticsLocations };
+    return obj.getBasePurchaseFlowAnalyticsFields(obj2);
+  }, items);
+  if (initialRoute == null) {
+    let PLAN_SELECT;
+    if (null != premiumType) {
+      PLAN_SELECT = obj.CUSTOMIZATION;
     } else {
-      const obj7 = { title: null };
-      const intl = analyticsLocation(onDismiss[11]).intl;
-      obj7.title = intl.string(analyticsLocation(onDismiss[11]).t["JCFN/y"]);
-      tmp16Result = jsx(tmp(onDismiss[26]), { title: null });
-      const tmpResult2 = tmp(onDismiss[26]);
+      PLAN_SELECT = obj.PLAN_SELECT;
     }
-    return tmp16Result;
-  } else if (null != premiumType) {
-    let PLAN_SELECT = obj.CUSTOMIZATION;
-  } else {
-    PLAN_SELECT = obj.PLAN_SELECT;
+    initialRoute = PLAN_SELECT;
   }
+  const items1 = [onDismiss];
+  const callback = obj.useCallback(() => {
+    const arr = ModalActionCreatorsDefault;
+    arr.pop();
+    if (onDismiss != null) {
+      onDismiss();
+    }
+  }, items1);
+  const tmp8 = closure_10(initialRoute, callback, recipientUserId);
+  const tmp9 = _slicedToArray(obj.useState(obj2[initialRoute]), 2);
+  react = tmp11;
+  const first = tmp9[0];
+  obj2 = analyticsLocation(onDismiss[25]);
+  if (obj2.isPremiumGiftingSupported()) {
+    const AnalyticsLocationProvider = analyticsLocation(onDismiss[21]).AnalyticsLocationProvider;
+    const NativeGiftContextProvider = analyticsLocation(onDismiss[29]).NativeGiftContextProvider;
+    analyticsLocations(onDismiss[28]);
+    tmp13Result = <AnalyticsLocationProvider value={analyticsLocations2}>{null}</AnalyticsLocationProvider>;
+  } else {
+    analyticsLocations(onDismiss[26]);
+    const intl = analyticsLocation(onDismiss[11]).intl;
+    tmp13Result = <tmpResult2 title={intl.string(analyticsLocation(onDismiss[11]).t["JCFN/y"])} />;
+  }
+  return tmp13Result;
 });
+const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftModal.tsx");
+
+export default tmp2;
 export { PremiumGiftScreens };

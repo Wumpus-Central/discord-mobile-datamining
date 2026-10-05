@@ -1,48 +1,54 @@
 // === Module 12509: NotificationSettingsMessageNotificationChannelActionSheet ===
 
 // Module 12509 (NotificationSettingsMessageNotificationChannelActionSheet)
+import Fragment from "Fragment" /* 21 */;
+import Constants from "Constants" /* 1085 */;
+import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
+import ReadStateConstants from "ReadStateConstants" /* 5072 */;
 import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6609 */;
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6614 */;
 import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 9852 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5071 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-require = fn;
-const UserNotificationSettings = fn(1085).UserNotificationSettings;
-const UnreadSetting = fn(5072).UnreadSetting;
-let closure_6 = fn(1095).ChannelNotificationSettingsFlags;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageNotificationChannelActionSheet.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+const UserNotificationSettings = Constants.UserNotificationSettings;
+const UnreadSetting = ReadStateConstants.UnreadSetting;
+let closure_6 = UserSettingsConstants.ChannelNotificationSettingsFlags;
+const jsx = Fragment.jsx;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   _require = channel;
-  const cResult = require("c").c(11);
-  let obj = require("c");
-  const channelPresetSettings = require("notficationSettingsChannelFlagUtils").useChannelPresetSettings(channel.channel);
+  let tmp = _require;
+  let obj = require("react");
+  const cResult = obj.c(11);
+  let obj2 = require("notficationSettingsChannelFlagUtils");
+  const channelPresetSettings = obj2.useChannelPresetSettings(channel.channel);
   const unread = channelPresetSettings.unread;
   const notification = channelPresetSettings.notification;
   if (cResult[0] === notification) {
+    let tmp5;
     if (cResult[1] === unread) {
-      let tmp5 = cResult[2];
+      tmp5 = cResult[2];
     }
     if (cResult[3] === channel.channel.guild_id) {
       if (cResult[4] === channel.channel.id) {
+        let tmp8;
         if (cResult[5] === unread) {
-          let tmp8 = cResult[6];
+          tmp8 = cResult[6];
         }
         if (cResult[7] === notification) {
           if (cResult[8] === tmp5) {
+            let tmp9;
             if (cResult[9] === tmp8) {
-              let tmp9 = cResult[10];
+              tmp9 = cResult[10];
             }
             return tmp9;
           }
         }
-        let obj3 = { context: "channel", value: notification, allMessagesSubLabel: tmp5, onChange: tmp8 };
         const tmp12 = jsx(unread(12508), { context: "channel", value: notification, allMessagesSubLabel: tmp5, onChange: tmp8 });
         cResult[7] = notification;
         cResult[8] = tmp5;
@@ -52,18 +58,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       }
     }
     const fn = function h(message_notifications) {
+      let NotificationLabel;
       const obj = { message_notifications };
-      let tmp = message_notifications === UserNotificationSettings.ALL_MESSAGES;
+      const tmp = message_notifications === UserNotificationSettings.ALL_MESSAGES && unread !== UnreadSetting.ALL_MESSAGES;
       if (tmp) {
-        tmp = unread !== UnreadSetting.ALL_MESSAGES;
+        const obj2 = notificationSettingsFlagUtils;
+        obj.flags = obj2.withChannelUnreadFlags(UserGuildSettingsStore.getChannelIdFlags(channel.channel.guild_id, channel.channel.id), constants.UNREADS_ALL_MESSAGES);
       }
-      if (tmp) {
-        obj.flags = notificationSettingsFlagUtils.withChannelUnreadFlags(UserGuildSettingsStore.getChannelIdFlags(channel.channel.guild_id, channel.channel.id), constants.UNREADS_ALL_MESSAGES);
-      }
-      const obj4 = { guildId: channel.channel.guild_id, channelId: channel.channel.id, settings: obj, label: null };
-      const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
-      obj4.label = NotificationLabel.notifications(message_notifications);
-      const result = NotificationSettingsModalActionCreatorsDefault.updateChannelOverrideSettings(obj4);
+      const obj3 = { guildId: channel.channel.guild_id, channelId: channel.channel.id, settings: obj, label: NotificationLabel.notifications(message_notifications) };
+      const updateChannelOverrideSettings = NotificationSettingsModalActionCreatorsDefault.updateChannelOverrideSettings;
+      NotificationSettingsModalActionCreatorsDefault;
+      NotificationLabel = NotificationSettingsUtils.NotificationLabel;
+      const result = updateChannelOverrideSettings(obj3);
     };
     cResult[3] = channel.channel.guild_id;
     cResult[4] = channel.channel.id;
@@ -82,35 +88,36 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[1] = unread;
   cResult[2] = stringResult;
   tmp5 = stringResult;
-  let obj2 = require("notficationSettingsChannelFlagUtils");
 }) : ((channel) => {
   _require = channel;
-  const channelPresetSettings = require("notficationSettingsChannelFlagUtils").useChannelPresetSettings(channel.channel);
+  let tmp = _require;
+  let obj = require("notficationSettingsChannelFlagUtils");
+  const channelPresetSettings = obj.useChannelPresetSettings(channel.channel);
   const unread = channelPresetSettings.unread;
   const notification = channelPresetSettings.notification;
-  let obj2 = { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null };
   let stringResult;
-  let obj = require("notficationSettingsChannelFlagUtils");
+  unread(12508);
   if (notification !== UserNotificationSettings.ALL_MESSAGES) {
     if (unread !== UnreadSetting.ALL_MESSAGES) {
       const intl = tmp(1126).intl;
       stringResult = intl.string(tmp(1126).t.eP8yWU);
     }
   }
-  obj2.allMessagesSubLabel = stringResult;
-  obj2.onChange = function onChange(message_notifications) {
+  return <tmp5 context="channel" value={notification} allMessagesSubLabel={stringResult} onChange={function onChange(message_notifications) {
+    let NotificationLabel;
     const obj = { message_notifications };
-    let tmp = message_notifications === UserNotificationSettings.ALL_MESSAGES;
+    const tmp = message_notifications === UserNotificationSettings.ALL_MESSAGES && unread !== UnreadSetting.ALL_MESSAGES;
     if (tmp) {
-      tmp = unread !== UnreadSetting.ALL_MESSAGES;
+      const obj2 = notificationSettingsFlagUtils;
+      obj.flags = obj2.withChannelUnreadFlags(UserGuildSettingsStore.getChannelIdFlags(channel.channel.guild_id, channel.channel.id), constants.UNREADS_ALL_MESSAGES);
     }
-    if (tmp) {
-      obj.flags = notificationSettingsFlagUtils.withChannelUnreadFlags(UserGuildSettingsStore.getChannelIdFlags(channel.channel.guild_id, channel.channel.id), constants.UNREADS_ALL_MESSAGES);
-    }
-    const obj4 = { guildId: channel.channel.guild_id, channelId: channel.channel.id, settings: obj, label: null };
-    const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
-    obj4.label = NotificationLabel.notifications(message_notifications);
-    const result = NotificationSettingsModalActionCreatorsDefault.updateChannelOverrideSettings(obj4);
-  };
-  return jsx(unread(12508), { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null });
+    const obj3 = { guildId: channel.channel.guild_id, channelId: channel.channel.id, settings: obj, label: NotificationLabel.notifications(message_notifications) };
+    const updateChannelOverrideSettings = NotificationSettingsModalActionCreatorsDefault.updateChannelOverrideSettings;
+    NotificationSettingsModalActionCreatorsDefault;
+    NotificationLabel = NotificationSettingsUtils.NotificationLabel;
+    const result = updateChannelOverrideSettings(obj3);
+  }} />;
 });
+let result = size.fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageNotificationChannelActionSheet.tsx");
+
+export default tmp3;

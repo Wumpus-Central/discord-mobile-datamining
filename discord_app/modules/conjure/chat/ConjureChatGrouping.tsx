@@ -6,6 +6,9 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/conjure/chat/ConjureChatGrouping.tsx");
 
 export const groupChatRows = function groupChatRows(arg0) {
+  let actor;
+  let authorId;
+  let boundary;
   const items = [];
   actor = null;
   let flag = false;
@@ -32,7 +35,7 @@ export const groupChatRows = function groupChatRows(arg0) {
         tmp5 = flag2;
       }
       let tmp13 = tmp5;
-      if (tmp5) {
+      if (tmp13) {
         ({ actor, authorId } = tmp2);
         flag = true;
         flag2 = true === tmp2.separate;

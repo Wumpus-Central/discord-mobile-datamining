@@ -1,48 +1,50 @@
 // === Module 15063: UntouchableAlert ===
 
 // Module 15063 (UntouchableAlert)
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import native from "native" /* 4589 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5968 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import createStyles from "createStyles" /* 4890 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+const View = react_native.View;
+const jsx = Fragment.jsx;
 let closure_4 = createStyles.createLegacyClassComponentStyles({ container: { flex: 1, alignItems: "center", justifyContent: "center" } });
-const PureComponent = noop.PureComponent;
+const PureComponent = react.PureComponent;
 class UntouchableAlert extends PureComponent {
+  componentDidMount() {
+    const self = this;
+    if (!this.props.loading) {
+      self.closeAlert();
+    }
+  }
+  componentDidUpdate(loading) {
+    const self = this;
+    loading = this.props.loading;
+    const tmp = loading.loading === loading || loading;
+    if (!tmp) {
+      self.closeAlert();
+    }
+  }
+  closeAlert() {
+    const self = this;
+    setImmediate(() => {
+      const props = self.props;
+      return props.onClose();
+    });
+  }
+  render() {
+    let tmp2 = null;
+    if (this.props.loading) {
+      tmp2 = <View style={tmp.container}>{jsx(ActivityIndicator_ActivityIndicator.ActivityIndicator, {})}</View>;
+    }
+    return tmp2;
+  }
 }
 const prototype = UntouchableAlert.prototype;
-prototype["componentDidMount"] = function componentDidMount() {
-  const self = this;
-  if (!this.props.loading) {
-    self.closeAlert();
-  }
-};
-prototype["componentDidUpdate"] = function componentDidUpdate(loading) {
-  const self = this;
-  loading = this.props.loading;
-  if (!tmp) {
-    self.closeAlert();
-  }
-};
-prototype["closeAlert"] = function closeAlert() {
-  const self = this;
-  setImmediate(() => {
-    const props = self.props;
-    return props.onClose();
-  });
-};
-prototype["render"] = function render() {
-  let tmp2 = null;
-  if (this.props.loading) {
-    const obj = { style: tmp.container, children: jsx(ActivityIndicator_ActivityIndicator.ActivityIndicator, {}) };
-    tmp2 = <View style={tmp.container}>{jsx(ActivityIndicator_ActivityIndicator.ActivityIndicator, {})}</View>;
-  }
-  return tmp2;
-};
-UntouchableAlert.contextType = fn(4589).ThemeContext;
-const size = fn(2);
+UntouchableAlert.contextType = native.ThemeContext;
 const result = size.fileFinishedImporting("components_native/common/UntouchableAlert.tsx");
 
 export default UntouchableAlert;

@@ -2,27 +2,49 @@
 
 // Module 18063 (OverviewScreen)
 import SafetyFlowsUtils from "SafetyFlowsUtils" /* 18065 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4890);
+let navigation;
+
+let closure_4;
+let hasOwnProperty;
+({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
 let closure_6 = createStyles.createStyles({ content: { margin: "auto", overflow: "visible", justifyContent: "center", textAlign: "center", alignItems: "center" }, title: { textAlign: "center", textTransform: "uppercase", lineHeight: 50 } });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/safety_flows/native/OverviewScreen.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = task(576).c(25);
-  const tmp4 = closure_6();
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let Stack2;
+  let content;
+  let intl2;
+  let intl3;
+  let items;
+  let items1;
+  let items2;
+  let items3;
+  let obj13;
+  let task;
+  let title;
+  let tmp = task;
   let obj = task(576);
-  task = task(18064).useSafetyFlowTask().task;
+  const cResult = obj.c(25);
+  const tmp4 = closure_6();
   const obj2 = task(18064);
-  const navigation = task(1490).useNavigation();
+  task = obj2.useSafetyFlowTask().task;
+  const obj3 = task(1490);
+  navigation = obj3.useNavigation();
   if (cResult[0] === navigation) {
+    let tmp6;
+    let tmp8;
+    let tmp11;
+    let tmp14;
+    let tmp21;
+    let tmp24;
+    let tmp27;
+    let tmp31;
     if (cResult[1] === task.task_type) {
-      let tmp6 = cResult[2];
+      tmp6 = cResult[2];
     }
     const _Symbol = Symbol;
     ({ content, title } = tmp4);
@@ -30,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       const intl = tmp(1126).intl;
       const stringResult = intl.string(navigation(2787).RRamMH);
       cResult[3] = stringResult;
-      let tmp8 = stringResult;
+      tmp8 = stringResult;
     } else {
       tmp8 = cResult[3];
     }
@@ -39,35 +61,37 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       const tmp13 = closure_4(tmp(4886).Text, obj4);
       cResult[4] = tmp4.title;
       cResult[5] = tmp13;
-      let tmp11 = tmp13;
+      tmp11 = tmp13;
     } else {
       tmp11 = cResult[5];
     }
     const _Symbol2 = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj5 = { variant: "text-md/medium", color: "text-strong", children: null };
-      const intl2 = tmp(1126).intl;
-      obj5.children = intl2.string(navigation(2787).I2Ctk1);
-      const tmp17 = closure_4(tmp(4886).Text, obj5);
+      const obj5 = { variant: "text-md/medium", color: "text-strong", children: intl2.string(navigation(2787).I2Ctk1) };
+      const Text = tmp(4886).Text;
+      intl2 = tmp(1126).intl;
+      const tmp17 = closure_4(Text, obj5);
       cResult[6] = tmp17;
-      let tmp14 = tmp17;
+      tmp14 = tmp17;
     } else {
       tmp14 = cResult[6];
     }
     const flow_context = task.flow_context;
     let tasks;
+    const tmp18 = cResult[7];
     if (flow_context != null) {
       tasks = flow_context.tasks;
     }
-    if (cResult[7] !== tasks) {
+    if (tmp18 !== tasks) {
       const flow_context2 = task.flow_context;
       let mapped;
       if (flow_context2 != null) {
         const tasks1 = flow_context2.tasks;
         if (tasks1 != null) {
           mapped = tasks1.map((task_type, index) => {
-            const obj = { tip: task(18059).TASK_TYPE_TO_TITLE[task_type.task_type], index: index + 1 };
-            return closure_1_4(navigation(8262), obj, task_type.task_type);
+            const obj = { tip: task(dependencyMap[12]).TASK_TYPE_TO_TITLE[task_type.task_type], index: index + 1 };
+            const tmp = navigation(dependencyMap[11]);
+            return closure_1_4(tmp, obj, task_type.task_type);
           });
         }
       }
@@ -78,113 +102,112 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
       cResult[7] = tasks2;
       cResult[8] = mapped;
-      let tmp20 = mapped;
+      tmp21 = mapped;
     } else {
-      tmp20 = cResult[8];
+      tmp21 = cResult[8];
     }
-    if (cResult[9] !== tmp20) {
-      const obj6 = { hasIcons: true, children: tmp20 };
-      const tmp25 = closure_4(tmp(6074).TableRowGroup, obj6);
-      cResult[9] = tmp20;
-      cResult[10] = tmp25;
-      let tmp23 = tmp25;
+    if (cResult[9] !== tmp21) {
+      const obj6 = { hasIcons: true, children: tmp21 };
+      const tmp26 = closure_4(tmp(6074).TableRowGroup, obj6);
+      cResult[9] = tmp21;
+      cResult[10] = tmp26;
+      tmp24 = tmp26;
     } else {
-      tmp23 = cResult[10];
+      tmp24 = cResult[10];
     }
     const _Symbol3 = Symbol;
     if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj7 = { variant: "text-xs/medium", color: "text-muted", children: null };
-      const intl3 = tmp(1126).intl;
-      obj7.children = intl3.string(navigation(2787)["0TnUrG"]);
-      const tmp29 = closure_4(tmp(4886).Text, obj7);
-      cResult[11] = tmp29;
-      let tmp26 = tmp29;
+      const obj7 = { variant: "text-xs/medium", color: "text-muted", children: intl3.string(navigation(2787)["0TnUrG"]) };
+      const Text2 = tmp(4886).Text;
+      intl3 = tmp(1126).intl;
+      const tmp30 = closure_4(Text2, obj7);
+      cResult[11] = tmp30;
+      tmp27 = tmp30;
     } else {
-      tmp26 = cResult[11];
+      tmp27 = cResult[11];
     }
-    if (cResult[12] !== tmp23) {
-      const obj8 = { spacing: navigation(587).space.PX_8, children: null };
-      const items = [tmp23, tmp26];
-      obj8.children = items;
-      const tmp33 = closure_5(tmp(5593).Stack, obj8);
-      cResult[12] = tmp23;
-      cResult[13] = tmp33;
-      let tmp30 = tmp33;
+    if (cResult[12] !== tmp24) {
+      const obj8 = { spacing: navigation(587).space.PX_8, children: items };
+      const Stack = tmp(5593).Stack;
+      items = [tmp24, tmp27];
+      const tmp34 = closure_5(Stack, obj8);
+      cResult[12] = tmp24;
+      cResult[13] = tmp34;
+      tmp31 = tmp34;
     } else {
-      tmp30 = cResult[13];
+      tmp31 = cResult[13];
     }
     if (cResult[14] === tmp4.content) {
       if (cResult[15] === tmp11) {
-        if (cResult[16] === tmp30) {
-          let tmp34 = cResult[17];
+        let tmp35;
+        let tmp40;
+        let tmp44;
+        let tmp47;
+        if (cResult[16] === tmp31) {
+          tmp35 = cResult[17];
         }
         const _Symbol4 = Symbol;
         if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp42 = closure_4(navigation(18066), {});
-          cResult[18] = tmp42;
-          let tmp39 = tmp42;
+          const tmp43 = closure_4(navigation(18066), {});
+          cResult[18] = tmp43;
+          tmp40 = tmp43;
         } else {
-          tmp39 = cResult[18];
+          tmp40 = cResult[18];
         }
         const _Symbol5 = Symbol;
         if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
           const intl4 = tmp(1126).intl;
           const stringResult1 = intl4.string(navigation(2787).Ks6opt);
           cResult[19] = stringResult1;
-          let tmp43 = stringResult1;
+          tmp44 = stringResult1;
         } else {
-          tmp43 = cResult[19];
+          tmp44 = cResult[19];
         }
         if (cResult[20] !== tmp6) {
-          const obj9 = { children: null };
-          const items1 = [tmp39, ];
-          const obj10 = { variant: "primary", text: tmp43, onPress: tmp6 };
+          const obj9 = { children: items1 };
+          items1 = [tmp40, ];
+          const ModalFooter = tmp(11536).ModalFooter;
+          const obj10 = { variant: "primary", text: tmp44, onPress: tmp6 };
           items1[1] = closure_4(tmp(10729).ModalActionButton, obj10);
-          obj9.children = items1;
-          const tmp49 = closure_5(tmp(11536).ModalFooter, obj9);
+          const tmp50 = closure_5(ModalFooter, obj9);
           cResult[20] = tmp6;
-          cResult[21] = tmp49;
-          let tmp46 = tmp49;
+          cResult[21] = tmp50;
+          tmp47 = tmp50;
         } else {
-          tmp46 = cResult[21];
+          tmp47 = cResult[21];
         }
-        if (cResult[22] === tmp34) {
-          if (cResult[23] === tmp46) {
-            let tmp50 = cResult[24];
+        if (cResult[22] === tmp35) {
+          let tmp51;
+          if (cResult[23] === tmp47) {
+            tmp51 = cResult[24];
           }
-          return tmp50;
+          return tmp51;
         }
-        const obj11 = { children: null };
-        const items2 = [tmp34, tmp46];
-        obj11.children = items2;
-        const tmp52 = closure_5(tmp(8095).ModalScreen, obj11);
-        cResult[22] = tmp34;
-        cResult[23] = tmp46;
-        cResult[24] = tmp52;
-        tmp50 = tmp52;
+        const obj11 = { children: items2 };
+        items2 = [tmp35, tmp47];
+        const tmp53 = closure_5(tmp(8095).ModalScreen, obj11);
+        cResult[22] = tmp35;
+        cResult[23] = tmp47;
+        cResult[24] = tmp53;
+        tmp51 = tmp53;
       }
     }
-    const obj12 = { children: null };
-    const obj13 = { spacing: navigation(587).space.PX_16, style: content, children: null };
-    const items3 = [tmp11, tmp14, tmp30];
-    obj13.children = items3;
-    obj12.children = closure_5(tmp(5593).Stack, obj13);
-    const tmp38 = closure_4(tmp(8096).ModalContent, obj12);
+    const obj12 = { children: closure_5(Stack2, obj13) };
+    const ModalContent = tmp(8096).ModalContent;
+    obj13 = { spacing: navigation(587).space.PX_16, style: content, children: items3 };
+    Stack2 = tmp(5593).Stack;
+    items3 = [tmp11, tmp14, tmp31];
+    const tmp39 = closure_4(ModalContent, obj12);
     cResult[14] = tmp4.content;
     cResult[15] = tmp11;
-    cResult[16] = tmp30;
-    cResult[17] = tmp38;
-    tmp34 = tmp38;
+    cResult[16] = tmp31;
+    cResult[17] = tmp39;
+    tmp35 = tmp39;
   }
   const fn = function t() {
-    const screensForTaskType = SafetyFlowsUtils.getScreensForTaskType(task.task_type);
-    let tmp = null != screensForTaskType;
-    if (tmp) {
-      tmp = screensForTaskType.length > 0;
-    }
-    if (tmp) {
-      tmp = null != screensForTaskType[0];
-    }
+    const obj = SafetyFlowsUtils;
+    const screensForTaskType = obj.getScreensForTaskType(task.task_type);
+    const tmp = null != screensForTaskType && screensForTaskType.length > 0 && null != screensForTaskType[0];
     if (tmp) {
       navigation.push(screensForTaskType[0]);
     }
@@ -193,68 +216,76 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[1] = task.task_type;
   cResult[2] = fn;
   tmp6 = fn;
-  const obj3 = task(1490);
 }) : (() => {
+  let intl;
+  let intl2;
+  let intl3;
+  let intl4;
+  let items1;
+  let items2;
+  let items3;
+  let items4;
+  let task;
   let tmp = closure_6();
-  task = task(18064).useSafetyFlowTask().task;
   let obj = task(18064);
-  const navigation = task(1490).useNavigation();
+  task = obj.useSafetyFlowTask().task;
+  const obj2 = task(1490);
+  navigation = obj2.useNavigation();
   const items = [task, navigation];
-  const callback = noop.useCallback(() => {
-    const screensForTaskType = SafetyFlowsUtils.getScreensForTaskType(task.task_type);
-    let tmp = null != screensForTaskType;
-    if (tmp) {
-      tmp = screensForTaskType.length > 0;
-    }
-    if (tmp) {
-      tmp = null != screensForTaskType[0];
-    }
+  const callback = react.useCallback(() => {
+    const obj = SafetyFlowsUtils;
+    const screensForTaskType = obj.getScreensForTaskType(task.task_type);
+    const tmp = null != screensForTaskType && screensForTaskType.length > 0 && null != screensForTaskType[0];
     if (tmp) {
       navigation.push(screensForTaskType[0]);
     }
   }, items);
-  const obj3 = { spacing: navigation(587).space.PX_16, style: tmp.content, children: null };
-  const obj4 = { variant: "display-lg", style: tmp.title, children: null };
-  const intl = task(1126).intl;
-  obj4.children = intl.string(navigation(2787).RRamMH);
-  const items1 = [closure_4(task(4886).Text, obj4), , ];
-  const obj5 = { variant: "text-md/medium", color: "text-strong", children: null };
-  const intl2 = task(1126).intl;
-  obj5.children = intl2.string(navigation(2787).I2Ctk1);
-  items1[1] = closure_4(task(4886).Text, obj5);
-  const obj6 = { spacing: navigation(587).space.PX_8, children: null };
+  const ModalScreen = task(8095).ModalScreen;
+  const ModalContent = task(8096).ModalContent;
+  const obj3 = { spacing: navigation(587).space.PX_16, style: tmp.content, children: items1 };
+  const Stack = task(5593).Stack;
+  const obj4 = { variant: "display-lg", style: tmp.title, children: intl.string(navigation(2787).RRamMH) };
+  const Text = task(4886).Text;
+  intl = task(1126).intl;
+  items1 = [closure_4(Text, obj4), , ];
+  const obj5 = { variant: "text-md/medium", color: "text-strong", children: intl2.string(navigation(2787).I2Ctk1) };
+  const Text2 = task(4886).Text;
+  intl2 = task(1126).intl;
+  items1[1] = closure_4(Text2, obj5);
+  const obj6 = { spacing: navigation(587).space.PX_8, children: items2 };
+  const Stack2 = task(5593).Stack;
   const flow_context = task.flow_context;
   let mapped;
+  const TableRowGroup = task(6074).TableRowGroup;
   if (flow_context != null) {
     const tasks = flow_context.tasks;
     if (tasks != null) {
       mapped = tasks.map((task_type, index) => {
-        const obj = { tip: task(18059).TASK_TYPE_TO_TITLE[task_type.task_type], index: index + 1 };
-        return closure_1_4(navigation(8262), obj, task_type.task_type);
+        const obj = { tip: task(dependencyMap[12]).TASK_TYPE_TO_TITLE[task_type.task_type], index: index + 1 };
+        const tmp = navigation(dependencyMap[11]);
+        return closure_1_4(tmp, obj, task_type.task_type);
       });
     }
   }
-  const obj7 = { children: null };
-  const obj8 = { children: null };
-  const items2 = [closure_4(task(6074).TableRowGroup, { hasIcons: true, children: mapped }), ];
-  const obj9 = { variant: "text-xs/medium", color: "text-muted", children: null };
-  const intl3 = tmp2(1126).intl;
-  obj9.children = intl3.string(navigation(2787)["0TnUrG"]);
-  items2[1] = closure_4(task(4886).Text, obj9);
-  obj6.children = items2;
-  items1[2] = closure_5(task(5593).Stack, obj6);
-  obj3.children = items1;
-  obj8.children = closure_5(task(5593).Stack, obj3);
-  const items3 = [closure_4(task(8096).ModalContent, obj8), ];
-  const obj10 = { children: null };
-  const items4 = [closure_4(navigation(18066), {}), ];
-  const obj11 = { variant: "primary", text: null, onPress: null };
-  const intl4 = tmp2(1126).intl;
-  obj11.text = intl4.string(navigation(2787).Ks6opt);
-  obj11.onPress = callback;
-  items4[1] = closure_4(task(10729).ModalActionButton, obj11);
-  obj10.children = items4;
-  items3[1] = closure_5(task(11536).ModalFooter, obj10);
-  obj7.children = items3;
-  return closure_5(task(8095).ModalScreen, obj7);
+  const obj7 = { children: items3 };
+  const obj8 = { children: closure_5(Stack, obj3) };
+  items2 = [closure_4(TableRowGroup, { hasIcons: true, children: mapped }), ];
+  const obj9 = { variant: "text-xs/medium", color: "text-muted", children: intl3.string(navigation(2787)["0TnUrG"]) };
+  const Text3 = tmp2(4886).Text;
+  intl3 = tmp2(1126).intl;
+  items2[1] = closure_4(Text3, obj9);
+  items1[2] = closure_5(Stack2, obj6);
+  items3 = [closure_4(ModalContent, obj8), ];
+  const obj10 = { children: items4 };
+  const ModalFooter = tmp2(11536).ModalFooter;
+  items4 = [closure_4(navigation(18066), {}), ];
+  const obj11 = { variant: "primary", text: intl4.string(navigation(2787).Ks6opt), onPress: callback };
+  const ModalActionButton = tmp2(10729).ModalActionButton;
+  intl4 = tmp2(1126).intl;
+  items4[1] = closure_4(ModalActionButton, obj11);
+  items3[1] = closure_5(ModalFooter, obj10);
+  return closure_5(ModalScreen, obj7);
 });
+const result = size.fileFinishedImporting("modules/safety_flows/native/OverviewScreen.tsx");
+
+export default tmp3;

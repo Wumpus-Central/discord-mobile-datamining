@@ -1,33 +1,39 @@
 // === Module 16007: HappeningNowAvatarStack ===
 
 // Module 16007 (HappeningNowAvatarStack)
+import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
 import spring from "spring" /* 5597 */;
 import ClipView from "ClipView" /* 8469 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2116 */;
+import ChannelAnimationConstants from "ChannelAnimationConstants" /* 12852 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import LocaleStore_mod from "LocaleStore" /* 2116 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 const ClipViewDefault = ClipView;
+let dependencyMap, set;
 
-require = fn;
-const View = fn(17).View;
-const CHANNEL_SPRING_CONFIG = fn(12852).CHANNEL_SPRING_CONFIG;
-const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+let c9;
+let metroImportAll;
+let View = react_native.View;
+let LocaleStore = LocaleStore_mod;
+const CHANNEL_SPRING_CONFIG = ChannelAnimationConstants.CHANNEL_SPRING_CONFIG;
+({ jsx: metroImportAll, jsxs: c9 } = Fragment);
 let SPRING_CONFIG = { damping: 17, stiffness: 320, mass: 0.5 };
-const createStyles = fn(4890);
 let closure_11 = createStyles.createStyles((arg0, marginLeft) => {
-  const obj = { avatarStack: { flexDirection: "row" }, stageAvatarStack: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 24, paddingLeft: 4, paddingRight: 4, paddingVertical: 4 }, avatarBubbles: { display: "flex", flexDirection: "row" }, avatars: { display: "flex", flexDirection: "row" }, shiftedAvatar: { marginLeft: -marginLeft }, userCounter: null, ellipsisWrapper: null, ellipsisBorder: null };
-  const obj2 = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 24, paddingLeft: 4, paddingRight: 4, paddingVertical: 4 };
-  obj.userCounter = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, flexDirection: "row", alignItems: "center", justifyContent: "center", marginLeft: -marginLeft, height: native.AVATAR_SIZE_MAP[arg0], minWidth: native.AVATAR_SIZE_MAP[arg0], borderRadius: 10, paddingHorizontal: 4, paddingTop: 1 };
-  obj.ellipsisWrapper = { display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "flex-end", overflow: "hidden", marginLeft: -4 - marginLeft };
-  const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, flexDirection: "row", alignItems: "center", justifyContent: "center", marginLeft: -marginLeft, height: native.AVATAR_SIZE_MAP[arg0], minWidth: native.AVATAR_SIZE_MAP[arg0], borderRadius: 10, paddingHorizontal: 4, paddingTop: 1 };
-  const obj4 = { display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "flex-end", overflow: "hidden", marginLeft: -4 - marginLeft };
-  obj.ellipsisBorder = { borderColor: nativeDefault.colors.CARD_SECONDARY_BG };
+  let obj4;
+  const obj = { avatarStack: { flexDirection: "row" }, stageAvatarStack: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 24, paddingLeft: 4, paddingRight: 4, paddingVertical: 4 }, avatarBubbles: { display: "flex", flexDirection: "row" }, avatars: { display: "flex", flexDirection: "row" }, shiftedAvatar: { marginLeft: -marginLeft }, userCounter: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, flexDirection: "row", alignItems: "center", justifyContent: "center", marginLeft: -marginLeft, height: native.AVATAR_SIZE_MAP[arg0], minWidth: native.AVATAR_SIZE_MAP[arg0], borderRadius: 10, paddingHorizontal: 4, paddingTop: 1 }, ellipsisWrapper: obj4, ellipsisBorder: { borderColor: nativeDefault.colors.CARD_SECONDARY_BG } };
+  ({ flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 24, paddingLeft: 4, paddingRight: 4, paddingVertical: 4 });
+  obj4 = { display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "flex-end", overflow: "hidden", marginLeft: -4 - marginLeft };
+  ({ backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, flexDirection: "row", alignItems: "center", justifyContent: "center", marginLeft: -marginLeft, height: native.AVATAR_SIZE_MAP[arg0], minWidth: native.AVATAR_SIZE_MAP[arg0], borderRadius: 10, paddingHorizontal: 4, paddingTop: 1 });
+  ({ borderColor: nativeDefault.colors.CARD_SECONDARY_BG });
   return obj;
 });
 const __initData = { code: "function HappeningNowAvatarStackTsx1(){const{interpolate,typingValue,ELLIPSIS_WIDTH}=this.__closure;return{opacity:interpolate(typingValue.get(),[0,1],[0,1]),width:interpolate(typingValue.get(),[0,1],[0,ELLIPSIS_WIDTH])};}" };
@@ -36,15 +42,30 @@ let closure_14 = { code: "function HappeningNowAvatarStackTsx3(){const{isStage,e
 const __initData2 = { code: "function HappeningNowAvatarStackTsx4(){const{interpolate,typingValue,ELLIPSIS_WIDTH}=this.__closure;return{opacity:interpolate(typingValue.get(),[0,1],[0,1]),width:interpolate(typingValue.get(),[0,1],[0,ELLIPSIS_WIDTH])};}" };
 let closure_16 = { code: "function HappeningNowAvatarStackTsx5(finished){const{runOnJS,setRenderComponents,isTyping}=this.__closure;if(!finished)return;runOnJS(setRenderComponents)(isTyping);}" };
 const __initData3 = { code: "function HappeningNowAvatarStackTsx6(){const{isStage,extraUsers,avatars,AVATAR_SIZE_MAP,avatarSize,avatarOverlap,withSpring,SPRING_CONFIG}=this.__closure;const hasExtraBubble=!isStage&&extraUsers>0;const numBubbles=avatars.length+(hasExtraBubble?1:0);const width=numBubbles>0?numBubbles*AVATAR_SIZE_MAP[avatarSize]-(numBubbles-1)*avatarOverlap:0;return{width:withSpring(width,SPRING_CONFIG),marginRight:numBubbles===0?0:4};}" };
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowAvatarStack.tsx");
-
-export const HappeningNowAvatarStack = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = guildId(576).c(64);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let avatarBorderWidth;
+  let avatarOverlap;
+  let avatarSize;
+  let closure_6;
+  let guildId;
+  let isStage;
+  let isTyping;
+  let setRenderComponents;
+  let style;
+  let tmp11;
+  let tmp12;
+  let tmp6;
+  let tmp8;
+  let userCount;
+  let userLimit;
+  let users;
+  let tmp = guildId;
+  let obj = guildId(576);
+  const cResult = obj.c(64);
   ({ users, guildId } = arg0);
   ({ isTyping, userLimit, userCount, isStage } = arg0);
   ({ avatarSize, avatarBorderWidth, avatarOverlap, style } = arg0);
+  const tmp4 = undefined !== isTyping && isTyping;
   dependencyMap = tmp4;
   let num = 3;
   if (undefined !== userLimit) {
@@ -63,26 +84,29 @@ export const HappeningNowAvatarStack = ReactCompilerGating.isReactCompilerEnable
   }
   const tmp5 = closure_11(avatarSize, num3);
   LocaleStore = tmp5;
-  if (cResult[0] !== (undefined !== isTyping && isTyping)) {
+  if (cResult[0] !== tmp4) {
     let fn = function f() {
-      return closure_2;
+      return isTyping;
     };
     cResult[0] = tmp4;
+    let num5 = 1;
     cResult[1] = fn;
-    let tmp6 = fn;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[1];
   }
-  let obj = guildId(576);
   let obj2 = num2;
   [tmp8, CHANNEL_SPRING_CONFIG] = avatarSize(num2.useState(tmp6), 2);
-  const tmp7 = avatarSize(num2.useState(tmp6), 2);
   let num6 = 0;
-  if (undefined !== isTyping && isTyping) {
+  const tmp7 = avatarSize(num2.useState(tmp6), 2);
+  const useSharedValue = tmp(4612).useSharedValue;
+  tmp(4612);
+  if (tmp4) {
     num6 = 1;
   }
-  const sharedValue = guildId(4612).useSharedValue(num6);
+  const sharedValue = useSharedValue(num6);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+    let tmp13 = LocaleStore;
     let items = [LocaleStore];
     class M {
       constructor() {
@@ -91,36 +115,38 @@ export const HappeningNowAvatarStack = ReactCompilerGating.isReactCompilerEnable
     }
     cResult[2] = items;
     cResult[3] = M;
-    let tmp11 = M;
-    let tmp10 = items;
+    tmp12 = M;
+    tmp11 = items;
   } else {
-    tmp10 = cResult[2];
-    tmp11 = cResult[3];
+    tmp11 = cResult[2];
+    tmp12 = cResult[3];
   }
-  const tmpResult = guildId(4612);
-  const stateFromStores = guildId(573).useStateFromStores(tmp10, tmp11);
-  const tmpResult3 = guildId(573);
+  const tmpResult3 = tmp(573);
+  const stateFromStores = tmpResult3.useStateFromStores(tmp11, tmp12);
+  const tmpResult4 = tmp(4612);
   class J {
     constructor() {
-      obj = { opacity: null, width: null };
-      obj2 = closure_0(closure_2[11]);
-      obj.opacity = obj2.interpolate(closure_8.get(), [0, 1], [0, 1]);
-      obj3 = closure_0(closure_2[11]);
-      obj.width = obj3.interpolate(closure_8.get(), [0, 1], [0, 28]);
+      let obj2;
+      let obj3;
+      const obj = { opacity: obj2.interpolate(sharedValue.get(), [0, 1], [0, 1]), width: obj3.interpolate(sharedValue.get(), [0, 1], [0, 28]) };
+      obj2 = ReanimatedRexport;
+      obj3 = ReanimatedRexport;
       return obj;
     }
   }
-  const tmpResult4 = guildId(4612);
-  J.__closure = { interpolate: guildId(4612).interpolate, typingValue: sharedValue, ELLIPSIS_WIDTH: 28 };
+  let obj3 = { interpolate: tmp(4612).interpolate, typingValue: sharedValue, ELLIPSIS_WIDTH: 28 };
+  J.__closure = obj3;
   J.__workletHash = 14140918847743;
   J.__initData = __initData;
   const animatedStyle = tmpResult4.useAnimatedStyle(J);
-  if (cResult[4] === (undefined !== isTyping && isTyping)) {
+  if (cResult[4] === tmp4) {
+    let tmp16;
+    let tmp17;
     if (cResult[5] === sharedValue) {
-      let tmp15 = cResult[6];
-      let tmp16 = cResult[7];
+      tmp16 = cResult[6];
+      tmp17 = cResult[7];
     }
-    const effect = obj2.useEffect(tmp16, tmp15);
+    const effect = obj2.useEffect(tmp17, tmp16);
     if (!tmp8) {
       tmp8 = tmp4;
     }
@@ -135,31 +161,29 @@ export const HappeningNowAvatarStack = ReactCompilerGating.isReactCompilerEnable
       length = users.length;
     }
     let diff = length - substr.length;
-    let tmp23 = !isStage;
-    if (!isStage) {
-      tmp23 = diff > 0;
-    }
-    closure_11 = tmp23;
+    let closure_9 = diff;
+    closure_11 = !isStage && diff > 0;
     const mapped = substr.map((user, index) => {
+      let items;
+      let tmp2Result;
       diff = substr.length - 1;
-      const tmp6 = closure_2_8(native.Avatar, { user, guildId, size: avatarSize });
+      const obj = { user, guildId, size: avatarSize };
+      const tmp6 = metroImportAll(native.Avatar, obj);
       let shiftedAvatar;
       if (0 !== index) {
         shiftedAvatar = closure_6.shiftedAvatar;
       }
-      const obj2 = { style: shiftedAvatar, children: null };
+      const obj2 = { style: shiftedAvatar, children: tmp2Result };
       if (index !== diff) {
-        const obj3 = { cutouts: null, children: null };
+        const obj3 = { cutouts: items, children: tmp6 };
         const point = { shape: ClipView.CutoutShape.Circle, x: native.AVATAR_SIZE_MAP[avatarSize] - num3 - num2, y: -num2, size: native.AVATAR_SIZE_MAP[avatarSize] + 2 * num2 };
-        const items = [point];
-        obj3.cutouts = items;
-        obj3.children = tmp6;
-        let tmp2Result = closure_2_8(ClipViewDefault, obj3);
+        items = [point];
+        const tmp13 = ClipViewDefault;
+        tmp2Result = metroImportAll(tmp13, obj3);
       } else {
         tmp2Result = tmp6;
       }
-      obj2.children = tmp2Result;
-      return closure_2_8(View, obj2, user.id);
+      return metroImportAll(View, obj2, user.id);
     });
     cResult[8] = num2;
     cResult[9] = num3;
@@ -176,30 +200,54 @@ export const HappeningNowAvatarStack = ReactCompilerGating.isReactCompilerEnable
   }
   const fn2 = function j() {
     let num = 0;
+    set = sharedValue.set;
+    const withSpring = spring.withSpring;
+    spring;
     if (isTyping) {
       num = 1;
     }
     const fn = function t(arg0) {
-      if (arg0) {
-        guildId(dependencyMap[11]).runOnJS(setRenderComponents)(isTyping);
-        const obj = guildId(dependencyMap[11]);
+      const tmp = arg0;
+      if (tmp) {
+        const obj = guildId(closure_2[11]);
+        obj.runOnJS(setRenderComponents)(closure_1_2);
       }
     };
-    let obj = spring;
-    fn.__closure = { runOnJS: ReanimatedRexport.runOnJS, setRenderComponents, isTyping };
+    let obj = { runOnJS: ReanimatedRexport.runOnJS, setRenderComponents: CHANNEL_SPRING_CONFIG, isTyping };
+    fn.__closure = obj;
     fn.__workletHash = 4812035752027;
     fn.__initData = __initData;
-    const result = sharedValue.set(obj.withSpring(num, CHANNEL_SPRING_CONFIG, "respect-motion-settings", fn));
-    const obj2 = { runOnJS: ReanimatedRexport.runOnJS, setRenderComponents, isTyping };
+    const result = set(withSpring(num, CHANNEL_SPRING_CONFIG, "respect-motion-settings", fn));
   };
-  const items1 = [undefined !== isTyping && isTyping, sharedValue];
-  cResult[4] = undefined !== isTyping && isTyping;
+  const items1 = [tmp4, sharedValue];
+  cResult[4] = tmp4;
   cResult[5] = sharedValue;
   cResult[6] = items1;
   cResult[7] = fn2;
-  tmp16 = fn2;
-  tmp15 = items1;
+  tmp17 = fn2;
+  tmp16 = items1;
 }) : ((userLimit) => {
+  let Text;
+  let c10;
+  let c7;
+  let guildId;
+  let isStage;
+  let isTyping;
+  let items10;
+  let items3;
+  let items6;
+  let items7;
+  let items8;
+  let obj10;
+  let obj12;
+  let require;
+  let setRenderComponents;
+  let tmp19Result2;
+  let tmp21;
+  let tmp5;
+  let tmp6Result7;
+  let userCount;
+  let users;
   ({ users, guildId: require, isTyping } = userLimit);
   if (isTyping === undefined) {
     isTyping = false;
@@ -228,52 +276,57 @@ export const HappeningNowAvatarStack = ReactCompilerGating.isReactCompilerEnable
   SPRING_CONFIG = undefined;
   let mapped;
   const tmp3 = mapped(XSMALL_20, num3);
-  closure_6 = tmp3;
-  [tmp5, c7] = XSMALL_20(num2.useState(() => isTyping), 2);
+  let closure_6 = tmp3;
   let obj = num2;
   const tmp4 = XSMALL_20(num2.useState(() => isTyping), 2);
+  [tmp5, c7] = tmp4;
   let num4 = 0;
+  const useSharedValue = require("ReanimatedRexport").useSharedValue;
+  require("ReanimatedRexport");
   if (isTyping) {
     num4 = 1;
   }
-  sharedValue = require("ReanimatedRexport").useSharedValue(num4);
-  let obj2 = require("ReanimatedRexport");
+  sharedValue = useSharedValue(num4);
   let items = [closure_6];
-  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => closure_6.locale);
   const tmp6Result = require("useStateFromStores");
+  const stateFromStores = tmp6Result.useStateFromStores(items, () => closure_6.locale);
+  const tmp6Result5 = require("ReanimatedRexport");
   class C {
     constructor() {
-      obj = { opacity: null, width: null };
-      obj2 = closure_0(closure_2[11]);
-      obj.opacity = obj2.interpolate(closure_8.get(), [0, 1], [0, 1]);
-      obj3 = closure_0(closure_2[11]);
-      obj.width = obj3.interpolate(closure_8.get(), [0, 1], [0, 28]);
+      let obj2;
+      let obj3;
+      const obj = { opacity: obj2.interpolate(sharedValue.get(), [0, 1], [0, 1]), width: obj3.interpolate(sharedValue.get(), [0, 1], [0, 28]) };
+      obj2 = ReanimatedRexport;
+      obj3 = ReanimatedRexport;
       return obj;
     }
   }
-  const tmp6Result5 = require("ReanimatedRexport");
-  C.__closure = { interpolate: require("ReanimatedRexport").interpolate, typingValue: sharedValue, ELLIPSIS_WIDTH: 28 };
+  let obj2 = { interpolate: require("ReanimatedRexport").interpolate, typingValue: sharedValue, ELLIPSIS_WIDTH: 28 };
+  C.__closure = obj2;
   C.__workletHash = 16391129142042;
   C.__initData = __initData2;
   const items1 = [isTyping, sharedValue];
   const animatedStyle = tmp6Result5.useAnimatedStyle(C);
   const effect = obj.useEffect(() => {
     let num = 0;
+    set = sharedValue.set;
+    const withSpring = spring.withSpring;
+    spring;
     if (isTyping) {
       num = 1;
     }
     const fn = function t(arg0) {
-      if (arg0) {
-        guildId(isStage[11]).runOnJS(setRenderComponents)(isTyping);
-        const obj = guildId(isStage[11]);
+      const tmp = arg0;
+      if (tmp) {
+        const obj = require("ReanimatedRexport");
+        obj.runOnJS(setRenderComponents)(isTyping);
       }
     };
-    let obj = spring;
-    fn.__closure = { runOnJS: ReanimatedRexport.runOnJS, setRenderComponents, isTyping };
+    let obj = { runOnJS: ReanimatedRexport.runOnJS, setRenderComponents, isTyping };
+    fn.__closure = obj;
     fn.__workletHash = 12044980828058;
     fn.__initData = __initData;
-    const result = sharedValue.set(obj.withSpring(num, CHANNEL_SPRING_CONFIG, "respect-motion-settings", fn));
-    const obj2 = { runOnJS: ReanimatedRexport.runOnJS, setRenderComponents, isTyping };
+    const result = set(withSpring(num, CHANNEL_SPRING_CONFIG, "respect-motion-settings", fn));
   }, items1);
   substr = users.slice(0, num);
   if (userCount == null) {
@@ -282,116 +335,112 @@ export const HappeningNowAvatarStack = ReactCompilerGating.isReactCompilerEnable
   let diff = userCount - substr.length;
   SPRING_CONFIG = diff;
   mapped = substr.map((user, index) => {
+    let items;
+    let tmp2Result;
     const diff = substr.length - 1;
-    const tmp6 = closure_2_8(native.Avatar, { user, guildId, size: XSMALL_20 });
+    const obj = { user, guildId: require, size: XSMALL_20 };
+    const tmp6 = metroImportAll(native.Avatar, obj);
     let shiftedAvatar;
     if (0 !== index) {
       shiftedAvatar = closure_6.shiftedAvatar;
     }
-    const obj2 = { style: shiftedAvatar, children: null };
+    const obj2 = { style: shiftedAvatar, children: tmp2Result };
     if (index !== diff) {
-      const obj3 = { cutouts: null, children: null };
+      const obj3 = { cutouts: items, children: tmp6 };
       const point = { shape: ClipView.CutoutShape.Circle, x: native.AVATAR_SIZE_MAP[XSMALL_20] - num3 - num2, y: -num2, size: native.AVATAR_SIZE_MAP[XSMALL_20] + 2 * num2 };
-      const items = [point];
-      obj3.cutouts = items;
-      obj3.children = tmp6;
-      let tmp2Result = closure_2_8(ClipViewDefault, obj3);
+      items = [point];
+      const tmp14 = ClipViewDefault;
+      tmp2Result = metroImportAll(tmp14, obj3);
     } else {
       tmp2Result = tmp6;
       if (!isStage) {
         tmp2Result = tmp6;
       }
     }
-    obj2.children = tmp2Result;
-    return closure_2_8(View, obj2, user.id);
+    return metroImportAll(View, obj2, user.id);
   });
-  let obj3 = { interpolate: require("ReanimatedRexport").interpolate, typingValue: sharedValue, ELLIPSIS_WIDTH: 28 };
+  const tmp6Result6 = require("ReanimatedRexport");
   class H {
     constructor() {
-      num = 0;
+      let num4;
+      let obj2;
+      let num = 0;
+      const length = mapped.length;
       if (!isStage) {
-        tmp = closure_10;
         num = 0;
-        if (closure_10 > 0) {
+        if (c10 > 0) {
           num = 1;
         }
       }
-      sum = closure_11.length + num;
+      const sum = length + num;
       num2 = 0;
       if (sum > 0) {
-        tmp3 = closure_0;
-        tmp4 = closure_2;
-        tmp5 = XSMALL_20;
-        tmp6 = c5;
-        num3 = 1;
-        num2 = sum * closure_0(closure_2[8]).AVATAR_SIZE_MAP[XSMALL_20] - (sum - 1) * c5;
+        num2 = sum * native.AVATAR_SIZE_MAP[XSMALL_20] - (sum - 1) * num3;
       }
-      obj = { width: null, marginRight: null };
-      obj2 = closure_0(closure_2[13]);
-      obj.width = obj2.withSpring(num2, closure_10);
+      const obj = { width: obj2.withSpring(num2, SPRING_CONFIG), marginRight: num4 };
       num4 = 4;
+      obj2 = spring;
       if (0 === sum) {
         num4 = 0;
       }
-      obj.marginRight = num4;
       return obj;
     }
   }
-  const tmp6Result6 = require("ReanimatedRexport");
-  H.__closure = { isStage, extraUsers: diff, avatars: mapped, AVATAR_SIZE_MAP: require("native").AVATAR_SIZE_MAP, avatarSize: XSMALL_20, avatarOverlap: num3, withSpring: require("spring").withSpring, SPRING_CONFIG };
+  let obj3 = { isStage, extraUsers: diff, avatars: mapped, AVATAR_SIZE_MAP: require("native").AVATAR_SIZE_MAP, avatarSize: XSMALL_20, avatarOverlap: num3, withSpring: require("spring").withSpring, SPRING_CONFIG };
+  H.__closure = obj3;
   H.__workletHash = 9687356498740;
   H.__initData = __initData3;
   const animatedStyle1 = tmp6Result6.useAnimatedStyle(H);
-  const obj5 = { style: null, children: null };
+  const obj4 = { style: null, children: null };
   if (isStage) {
     const items2 = [tmp3.stageAvatarStack, style];
-    obj5.style = items2;
-    const obj6 = { style: null, children: null };
-    const items3 = [tmp3.avatars, animatedStyle1];
-    obj6.style = items3;
-    obj6.children = mapped;
-    const items4 = [sharedValue(isTyping(isStage[11]).View, obj6), ];
-    const obj7 = { color: "text-default", variant: "text-xs/semibold", children: require("NumberUtils").humanizeValue(userCount, stateFromStores) };
-    items4[1] = sharedValue(require("Text/Text").Text, obj7);
-    obj5.children = items4;
-    let tmp20 = obj5;
-    const tmp6Result7 = require("NumberUtils");
+    obj4.style = items2;
+    const obj5 = { style: items3, children: mapped };
+    items3 = [tmp3.avatars, animatedStyle1];
+    const items4 = [sharedValue(isTyping(isStage[11]).View, obj5), ];
+    const obj6 = { color: "text-default", variant: "text-xs/semibold", children: tmp6Result7.humanizeValue(userCount, stateFromStores) };
+    const Text2 = require("Text/Text").Text;
+    tmp6Result7 = require("NumberUtils");
+    items4[1] = sharedValue(Text2, obj6);
+    obj4.children = items4;
+    tmp21 = obj4;
   } else {
     const items5 = [tmp3.avatarStack, style];
-    obj5.style = items5;
-    const obj8 = { style: null, children: null };
-    const items6 = [tmp3.avatarBubbles, animatedStyle1];
-    obj8.style = items6;
-    const obj9 = { style: tmp3.avatars, children: mapped };
-    const items7 = [sharedValue(tmp16, obj9), ];
-    let tmp18Result = null;
+    obj4.style = items5;
+    const obj7 = { style: items6, children: items7 };
+    items6 = [tmp3.avatarBubbles, animatedStyle1];
+    const obj8 = { style: tmp3.avatars, children: mapped };
+    View = isTyping(isStage[11]).View;
+    items7 = [sharedValue(num3, obj8), ];
+    let tmp19Result = null;
+    const tmp18 = isTyping;
     if (diff > 0) {
-      const obj10 = { style: tmp3.userCounter, children: null };
-      const obj11 = { color: "text-default", variant: "text-xxs/semibold", allowFontScaling: false, children: null };
-      const items8 = ["+", require("NumberUtils").humanizeValue(diff, stateFromStores)];
-      obj11.children = items8;
-      obj10.children = tmp15(require("Text/Text").Text, obj11);
-      tmp18Result = tmp18(tmp16, obj10);
+      const obj9 = { style: tmp3.userCounter, children: substr(Text, obj10) };
+      obj10 = { color: "text-default", variant: "text-xxs/semibold", allowFontScaling: false, children: items8 };
+      Text = require("Text/Text").Text;
+      items8 = ["+"];
       const tmp6Result8 = require("NumberUtils");
+      items8[1] = tmp6Result8.humanizeValue(diff, stateFromStores);
+      tmp19Result = tmp19(tmp17, obj9);
     }
-    items7[1] = tmp18Result;
-    obj8.children = items7;
-    const items9 = [tmp15(isTyping(isStage[11]).View, obj8), ];
-    if (!tmp18Result2) {
-      tmp18Result2 = isTyping;
+    items7[1] = tmp19Result;
+    const items9 = [substr(View, obj7), ];
+    if (!tmp19Result2) {
+      tmp19Result2 = isTyping;
     }
-    if (tmp18Result2) {
-      const obj12 = { style: null, children: null };
-      const items10 = [tmp3.ellipsisWrapper, animatedStyle];
-      obj12.style = items10;
-      const obj13 = { style: tmp3.ellipsisBorder };
-      obj12.children = tmp18(require("typing_indicators/TypingIndicator").TypingIndicator, obj13);
-      tmp18Result2 = tmp18(tmp17(isStage[11]).View, obj12);
+    if (tmp19Result2) {
+      const obj11 = { style: items10, children: sharedValue(require("typing_indicators/TypingIndicator").TypingIndicator, obj12) };
+      items10 = [tmp3.ellipsisWrapper, animatedStyle];
+      const View2 = tmp18(isStage[11]).View;
+      obj12 = { style: tmp3.ellipsisBorder };
+      tmp19Result2 = tmp19(View2, obj11);
     }
-    items9[1] = tmp18Result2;
-    obj5.children = items9;
-    tmp20 = obj5;
-    tmp17 = isTyping;
+    items9[1] = tmp19Result2;
+    obj4.children = items9;
+    tmp21 = obj4;
   }
-  return substr(num3, tmp20);
+  return substr(num3, tmp21);
 });
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowAvatarStack.tsx");
+
+export const HappeningNowAvatarStack = tmp3;

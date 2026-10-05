@@ -1,65 +1,83 @@
 // === Module 5987: TermsFieldList ===
 
 // Module 5987 (TermsFieldList)
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
+import intl2 from "intl" /* 1126 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 4877 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import TableRowDivider from "TableRowDivider" /* 5988 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import Fragment_mod from "Fragment" /* 21 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { termsContainer: { padding: 16, flexDirection: "column", justifyContent: "space-between", backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT }, firstItem: null, lastItem: null, termsRow: null, termsRowContent: null, termsRowNumber: null, title: null };
-let obj3 = { padding: 16, flexDirection: "column", justifyContent: "space-between", backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT };
-obj2.firstItem = { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
-let obj4 = { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
-obj2.lastItem = { borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm, marginBottom: 12 };
-obj2.termsRow = { flexDirection: "row" };
-obj2.termsRowContent = { flex: 1, lineHeight: 20 };
-obj2.termsRowNumber = { paddingRight: 8, width: 20, height: 20 };
-obj2.title = { marginBottom: 16 };
-let closure_8 = createStyles.createStyles(obj2);
-let ReactCompilerGating = fn(558);
+let dependencyMap, rules;
+
+let hasOwnProperty;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let obj3;
+let obj4;
+const View = react_native.View;
+let Fragment = Fragment_mod;
+({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: metroImportDefault } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { termsContainer: obj2, firstItem: obj3, lastItem: obj4, termsRow: { flexDirection: "row" }, termsRowContent: { flex: 1, lineHeight: 20 }, termsRowNumber: { paddingRight: 8, width: 20, height: 20 }, title: { marginBottom: 16 } };
+obj2 = { padding: 16, flexDirection: "column", justifyContent: "space-between", backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT };
+createStyles = createStyles.createStyles;
+obj3 = { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
+obj4 = { borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm, marginBottom: 12 };
+let closure_8 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(17);
+  let items;
+  let rowCount;
+  let rowNumber;
+  let rule;
+  let rulesChannelId;
+  const obj = react2;
+  const cResult = obj.c(17);
   ({ rowNumber, rowCount, rule, rulesChannelId } = arg0);
   const tmp4 = closure_8();
   if (cResult[0] === rowCount) {
+    let tmp7;
     if (cResult[1] === rowNumber) {
-      let tmp7 = cResult[2];
+      tmp7 = cResult[2];
     }
     const _HermesInternal = HermesInternal;
     const combined = "" + rowNumber + ".";
     if (cResult[3] === tmp4.termsRowNumber) {
       if (cResult[4] === tmp7) {
+        let tmp11;
         if (cResult[5] === combined) {
-          let tmp11 = cResult[6];
+          tmp11 = cResult[6];
         }
         if (cResult[7] === rule) {
+          let tmp15;
           if (cResult[8] === rulesChannelId) {
-            let tmp15 = cResult[9];
+            tmp15 = cResult[9];
           }
           if (cResult[10] === tmp4.termsRowContent) {
+            let tmp18;
             if (cResult[11] === tmp15) {
-              let tmp18 = cResult[12];
+              tmp18 = cResult[12];
             }
             if (cResult[13] === tmp4.termsRow) {
               if (cResult[14] === tmp11) {
+                let tmp21;
                 if (cResult[15] === tmp18) {
-                  let tmp21 = cResult[16];
+                  tmp21 = cResult[16];
                 }
                 return tmp21;
               }
             }
-            const obj2 = { style: tmp5, children: null };
-            const items = [tmp11, tmp18];
-            obj2.children = items;
-            const tmp24 = timestampProducer(View, obj2);
+            const obj2 = { style: tmp5, children: items };
+            items = [tmp11, tmp18];
+            const tmp24 = metroRequire(View, obj2);
             cResult[13] = tmp4.termsRow;
             cResult[14] = tmp11;
             cResult[15] = tmp18;
@@ -74,7 +92,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           tmp18 = tmp20;
         }
         const obj5 = { channelId: rulesChannelId };
-        const result = MarkupUtilsDefault.parseGuildVerificationFormRule(rule, true, obj5);
+        const obj3 = MarkupUtilsDefault;
+        const result = obj3.parseGuildVerificationFormRule(rule, true, obj5);
         cResult[7] = rule;
         cResult[8] = rulesChannelId;
         cResult[9] = result;
@@ -89,171 +108,193 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[6] = tmp13;
     tmp11 = tmp13;
   }
-  const intl = util.intl;
-  const formatToPlainStringResult = intl.formatToPlainString(util.t.XpgzeO, { number: rowNumber, total: rowCount });
+  const intl = intl2.intl;
+  const formatToPlainStringResult = intl.formatToPlainString(intl2.t.XpgzeO, { number: rowNumber, total: rowCount });
   cResult[0] = rowCount;
   cResult[1] = rowNumber;
   cResult[2] = formatToPlainStringResult;
   tmp7 = formatToPlainStringResult;
 }) : ((rowNumber) => {
+  let intl;
+  let items;
+  let obj4;
+  let rowCount;
+  let rule;
+  let rulesChannelId;
   rowNumber = rowNumber.rowNumber;
   ({ rowCount, rule, rulesChannelId } = rowNumber);
   const tmp = closure_8();
-  const obj = { style: tmp.termsRow, children: null };
-  const obj2 = { style: tmp.termsRowNumber, variant: "text-sm/medium", color: "text-muted", accessibilityLabel: null, children: null };
-  const intl = util.intl;
-  obj2.accessibilityLabel = intl.formatToPlainString(util.t.XpgzeO, { number: rowNumber, total: rowCount });
-  obj2.children = "" + rowNumber + ".";
-  const items = [hasOwnProperty(Text_Text.Text, obj2), ];
-  const obj3 = { style: tmp.termsRowContent, variant: "text-md/medium", children: MarkupUtilsDefault.parseGuildVerificationFormRule(rule, true, { channelId: rulesChannelId }) };
-  items[1] = hasOwnProperty(Text_Text.Text, obj3);
-  obj.children = items;
-  return timestampProducer(View, obj);
+  const obj = { style: tmp.termsRow, children: items };
+  const obj2 = { style: tmp.termsRowNumber, variant: "text-sm/medium", color: "text-muted", accessibilityLabel: intl.formatToPlainString(intl2.t.XpgzeO, { number: rowNumber, total: rowCount }), children: "" + rowNumber + "." };
+  const Text = Text_Text.Text;
+  intl = intl2.intl;
+  items = [hasOwnProperty(Text, obj2), ];
+  const obj3 = { style: tmp.termsRowContent, variant: "text-md/medium", children: obj4.parseGuildVerificationFormRule(rule, true, { channelId: rulesChannelId }) };
+  const Text2 = Text_Text.Text;
+  obj4 = MarkupUtilsDefault;
+  items[1] = hasOwnProperty(Text2, obj3);
+  return metroRequire(View, obj);
 });
-ReactCompilerGating = fn(558);
-let obj5 = { borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm, marginBottom: 12 };
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/TermsFieldList.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((rules) => {
-  const cResult = rules(termsContainer[6]).c(20);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((rules) => {
+  let first;
+  let items;
+  let termsContainer;
+  let tmp10;
+  let tmp7;
+  let obj = rules(576);
+  const cResult = obj.c(20);
   rules = rules.rules;
-  lastItem = rules.rulesChannelId;
-  termsContainer = closure_8();
+  const rulesChannelId = rules.rulesChannelId;
+  const tmp4 = closure_8();
+  dependencyMap = tmp4;
+  const title = tmp4.title;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(tmp2[7]).intl;
-    const stringResult = intl.string(tmp(tmp2[7]).t.prJqwT);
+    const intl = tmp(1126).intl;
+    const stringResult = intl.string(rules(1126).t.prJqwT);
     cResult[0] = stringResult;
-    let first = stringResult;
+    first = stringResult;
   } else {
     first = cResult[0];
   }
-  if (cResult[1] !== termsContainer.title) {
-    const obj2 = { style: termsContainer.title, accessibilityRole: "header", variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: first };
-    const tmp8 = closure_5(tmp(tmp2[8]).Text, obj2);
-    cResult[1] = termsContainer.title;
-    cResult[2] = tmp8;
-    let tmp6 = tmp8;
+  if (cResult[1] !== tmp4.title) {
+    let obj2 = { style: title, accessibilityRole: "header", variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: first };
+    const tmp9 = closure_5(rules(4886).Text, obj2);
+    cResult[1] = tmp4.title;
+    cResult[2] = tmp9;
+    tmp7 = tmp9;
   } else {
-    tmp6 = cResult[2];
+    tmp7 = cResult[2];
   }
   if (cResult[3] === rules) {
-    if (cResult[4] === lastItem) {
-      if (cResult[5] === termsContainer.firstItem) {
-        if (cResult[6] === termsContainer.lastItem) {
-          if (cResult[7] === termsContainer.termsContainer) {
-            if (cResult[15] !== cResult[8]) {
-              const obj3 = { accessibilityRole: "list", children: tmp9 };
-              const tmp16 = closure_5(View, obj3);
-              cResult[15] = tmp9;
-              cResult[16] = tmp16;
-              let tmp13 = tmp16;
-            } else {
-              tmp13 = cResult[16];
-            }
-            if (cResult[17] === tmp6) {
-              if (cResult[18] === tmp13) {
-                let tmp17 = cResult[19];
-              }
-              return tmp17;
-            }
-            const obj4 = { children: null };
-            let items = [tmp6, tmp13];
-            obj4.children = items;
-            const tmp20 = closure_6(closure_7, obj4);
-            cResult[17] = tmp6;
-            cResult[18] = tmp13;
-            cResult[19] = tmp20;
-            tmp17 = tmp20;
+    if (cResult[4] === rulesChannelId) {
+      if (cResult[5] === tmp4.firstItem) {
+        if (cResult[6] === tmp4.lastItem) {
+          let tmp13;
+          if (cResult[7] === tmp4.termsContainer) {
+            tmp10 = cResult[8];
           }
+          if (cResult[15] !== tmp10) {
+            const obj3 = { accessibilityRole: "list", children: tmp10 };
+            const tmp16 = closure_5(View, obj3);
+            cResult[15] = tmp10;
+            cResult[16] = tmp16;
+            tmp13 = tmp16;
+          } else {
+            tmp13 = cResult[16];
+          }
+          if (cResult[17] === tmp7) {
+            let tmp17;
+            if (cResult[18] === tmp13) {
+              tmp17 = cResult[19];
+            }
+            return tmp17;
+          }
+          const obj4 = { children: items };
+          items = [tmp7, tmp13];
+          const tmp20 = closure_6(closure_7, obj4);
+          cResult[17] = tmp7;
+          cResult[18] = tmp13;
+          cResult[19] = tmp20;
+          tmp17 = tmp20;
         }
       }
     }
   }
   if (cResult[9] === rules.length) {
-    if (cResult[10] === lastItem) {
-      if (cResult[11] === termsContainer.firstItem) {
-        if (cResult[12] === termsContainer.lastItem) {
-          if (cResult[13] === termsContainer.termsContainer) {
-            let tmp10 = cResult[14];
+    if (cResult[10] === rulesChannelId) {
+      if (cResult[11] === tmp4.firstItem) {
+        if (cResult[12] === tmp4.lastItem) {
+          let tmp11;
+          if (cResult[13] === tmp4.termsContainer) {
+            tmp11 = cResult[14];
           }
-          const mapped = rules.map(tmp10);
+          const mapped = rules.map(tmp11);
           cResult[3] = rules;
-          cResult[4] = lastItem;
-          ({ firstItem: tmp3[5], lastItem } = termsContainer);
-          cResult[6] = lastItem;
-          termsContainer = termsContainer.termsContainer;
-          cResult[7] = termsContainer;
+          cResult[4] = rulesChannelId;
+          cResult[5] = tmp4.firstItem;
+          cResult[6] = tmp4.lastItem;
+          cResult[7] = tmp4.termsContainer;
           cResult[8] = mapped;
+          tmp10 = mapped;
         }
       }
     }
   }
   const fn = function f(rule, arg1) {
+    let obj2;
     const items = [termsContainer.termsContainer, , ];
     let firstItem = null;
+    const Fragment = react.Fragment;
     if (0 === arg1) {
       firstItem = termsContainer.firstItem;
     }
     items[1] = firstItem;
-    lastItem = null;
+    let lastItem = null;
     if (arg1 === rules.length - 1) {
       lastItem = termsContainer.lastItem;
     }
-    const obj = { style: items, children: hasOwnProperty(closure_9, { rule, rowNumber: arg1 + 1, rowCount: rules.length, rulesChannelId: lastItem }) };
     items[2] = lastItem;
+    const obj = { style: items, children: hasOwnProperty(closure_9, obj2) };
+    obj2 = { rule, rowNumber: arg1 + 1, rowCount: rules.length, rulesChannelId };
     const children = [hasOwnProperty(View, obj), ];
     let tmp2Result = null;
     if (arg1 !== rules.length - 1) {
       tmp2Result = hasOwnProperty(TableRowDivider.TableRowDivider, {});
     }
     children[1] = tmp2Result;
-    return timestampProducer(noop.Fragment, { children }, "term-" + rule + "-" + arg1);
+    return metroRequire(Fragment, { children }, "term-" + rule + "-" + arg1);
   };
   cResult[9] = rules.length;
-  cResult[10] = lastItem;
-  cResult[11] = termsContainer.firstItem;
-  cResult[12] = termsContainer.lastItem;
-  cResult[13] = termsContainer.termsContainer;
+  cResult[10] = rulesChannelId;
+  cResult[11] = tmp4.firstItem;
+  cResult[12] = tmp4.lastItem;
+  cResult[13] = tmp4.termsContainer;
   cResult[14] = fn;
-  tmp10 = fn;
-  let obj = rules(termsContainer[6]);
+  tmp11 = fn;
 }) : ((rules) => {
+  let intl;
+  let items;
+  let termsContainer;
   rules = rules.rules;
   const rulesChannelId = rules.rulesChannelId;
   const tmp = closure_8();
   dependencyMap = tmp;
-  let obj = { children: null };
-  const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = rules(1126).intl;
-  obj2.children = intl.string(rules(1126).t.prJqwT);
-  let items = [
-    closure_5(rules(4886).Text, obj2),
-    closure_5(View, {
-      accessibilityRole: "list",
-      children: rules.map((rule, index) => {
-        const items = [termsContainer.termsContainer, , ];
-        let firstItem = null;
-        if (0 === index) {
-          firstItem = termsContainer.firstItem;
-        }
-        items[1] = firstItem;
-        let lastItem = null;
-        if (index === rules.length - 1) {
-          lastItem = termsContainer.lastItem;
-        }
-        const obj = { style: items, children: hasOwnProperty(closure_9, { rule, rowNumber: index + 1, rowCount: rules.length, rulesChannelId }) };
-        items[2] = lastItem;
-        const children = [hasOwnProperty(View, obj), ];
-        let tmp2Result = null;
-        if (index !== rules.length - 1) {
-          tmp2Result = hasOwnProperty(TableRowDivider.TableRowDivider, {});
-        }
-        children[1] = tmp2Result;
-        return timestampProducer(noop.Fragment, { children }, "term-" + rule + "-" + index);
-      })
+  let obj = { children: items };
+  let obj2 = { style: tmp.title, accessibilityRole: "header", variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: intl.string(rules(1126).t.prJqwT) };
+  const Text = rules(4886).Text;
+  intl = rules(1126).intl;
+  items = [closure_5(Text, obj2), ];
+  const obj3 = {
+    accessibilityRole: "list",
+    children: rules.map((rule, index) => {
+      let obj2;
+      const items = [termsContainer.termsContainer, , ];
+      let firstItem = null;
+      const Fragment = react.Fragment;
+      if (0 === index) {
+        firstItem = termsContainer.firstItem;
+      }
+      items[1] = firstItem;
+      let lastItem = null;
+      if (index === rules.length - 1) {
+        lastItem = termsContainer.lastItem;
+      }
+      items[2] = lastItem;
+      const obj = { style: items, children: hasOwnProperty(closure_9, obj2) };
+      obj2 = { rule, rowNumber: index + 1, rowCount: rules.length, rulesChannelId };
+      const children = [hasOwnProperty(View, obj), ];
+      let tmp2Result = null;
+      if (index !== rules.length - 1) {
+        tmp2Result = hasOwnProperty(TableRowDivider.TableRowDivider, {});
+      }
+      children[1] = tmp2Result;
+      return metroRequire(Fragment, { children }, "term-" + rule + "-" + index);
     })
-  ];
-  obj.children = items;
+  };
+  items[1] = closure_5(View, obj3);
   return closure_6(closure_7, obj);
 });
+let result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/TermsFieldList.tsx");
+
+export default tmp4;

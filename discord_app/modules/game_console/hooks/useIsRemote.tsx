@@ -1,21 +1,23 @@
 // === Module 6774: useIsRemote ===
 
 // Module 6774 (useIsRemote)
-import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
+import get_initialized from "get initialized" /* 504 */;
+import react from "react" /* 576 */;
 import GameConsoleStore from "GameConsoleStore" /* 4907 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/game_console/hooks/useIsRemote.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(2);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let remoteSessionId;
+  let tmp4;
+  let tmp5;
+  const obj = react;
+  const cResult = obj.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GameConsoleStore];
     const fn = function n() {
-      return null != remoteSessionId.getRemoteSessionId() || null != remoteSessionId.getAwaitingRemoteSessionInfo();
+      const tmp = null != remoteSessionId.getRemoteSessionId() || null != remoteSessionId.getAwaitingRemoteSessionInfo();
+      return tmp;
     };
     cResult[0] = items;
     cResult[1] = fn;
@@ -24,8 +26,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  return initialize.useStateFromStores(tmp4, tmp5);
+  const tmpResult = get_initialized;
+  return tmpResult.useStateFromStores(tmp4, tmp5);
 }) : (() => {
+  let remoteSessionId;
   const items = [GameConsoleStore];
-  return initialize.useStateFromStores(items, () => null != remoteSessionId.getRemoteSessionId() || null != remoteSessionId.getAwaitingRemoteSessionInfo());
+  const obj = get_initialized;
+  return obj.useStateFromStores(items, () => {
+    const tmp = null != remoteSessionId.getRemoteSessionId() || null != remoteSessionId.getAwaitingRemoteSessionInfo();
+    return tmp;
+  });
 });
+const result = size.fileFinishedImporting("modules/game_console/hooks/useIsRemote.tsx");
+
+export default tmp2;

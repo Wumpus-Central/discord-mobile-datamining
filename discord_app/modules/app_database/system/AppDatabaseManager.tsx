@@ -5,144 +5,147 @@ import LoggerDefault from "Logger" /* 3 */;
 import Dispatcher from "Dispatcher" /* 584 */;
 import DatabaseManagerDefault from "DatabaseManager" /* 2095 */;
 import actions2 from "actions" /* 7130 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
 const DispatcherDefault = Dispatcher;
+let _require, arr, dependencyMap, map;
 
-require = fn;
-const hasOwnProperty = new LoggerDefault("AppDatabaseManager");
+const tmp2 = new LoggerDefault("AppDatabaseManager");
+const hasOwnProperty = tmp2;
 const set = new Set(["MESSAGE_CREATE"]);
-let AppDatabaseManager;
 class AppDatabaseManager {
-  constructor(arg0, arg1, arg2) {
-    obj = Object.create(new.target.prototype);
-    closure_0 = obj;
-    tmp2 = closure_3(AppDatabaseManager.computeEntries(global, importDefault), 2);
-    obj.name = global;
-    [tmp.actions, tmp.entries] = tmp2;
+  constructor(MobileAppDatabaseManager, arg1, items) {
+    const obj = Object.create(new.target.prototype);
+    obj.name = MobileAppDatabaseManager;
+    [tmp.actions, tmp.entries] = AppDatabaseManager.computeEntries(MobileAppDatabaseManager, items);
     obj.lastDatabase = null;
-    registerResult = AppDatabaseManager.register(`${global}_CLEAR_CACHES`, ["CLEAR_CACHES"], [], () => {
-      for (const item10006 of tmp) {
+    _slicedToArray(AppDatabaseManager.computeEntries(MobileAppDatabaseManager, items), 2);
+    AppDatabaseManager.register(`${MobileAppDatabaseManager}_CLEAR_CACHES`, ["CLEAR_CACHES"], [], () => {
+      const entries = obj.entries;
+      for (const item10006 of entries) {
         let resetResult = item10006.reset();
         continue;
       }
     });
-    actions = obj.actions;
+    const actions = obj.actions;
     items = [...actions.keys()];
-    handleAction = obj.handleAction;
-    registerResult1 = AppDatabaseManager.register(global, items, fn, handleAction.bind(obj));
-    verboseResult = closure_5.verbose("" + global + " created with " + importDefault.length + " modules, " + obj.actions.size + " distinct actions.");
+    const handleAction = obj.handleAction;
+    AppDatabaseManager.register(MobileAppDatabaseManager, items, arg1, handleAction.bind(obj));
+    closure_5.verbose("" + MobileAppDatabaseManager + " created with " + items.length + " modules, " + obj.actions.size + " distinct actions.");
     return obj;
+  }
+  handleAction(type) {
+    this.validateInDev(type.type);
+    const id = AuthenticationStore.getId();
+    const obj = DatabaseManagerDefault;
+    const databaseResult = obj.database(id);
+    this.resetModules(type, databaseResult);
+    this.executeModules(type, databaseResult);
+    return false;
+  }
+  resetModules(type, databaseResult) {
+    const self = this;
+    if (databaseResult !== this.lastDatabase) {
+      const _HermesInternal = HermesInternal;
+      closure_5.verbose("database has changed (was: " + self.lastDatabase + ", now: " + databaseResult + ", action: " + type.type + "). resetting modules.");
+      const entries = self.entries;
+      for (const item10004 of entries) {
+        let resetResult = item10004.reset();
+        continue;
+      }
+      self.lastDatabase = databaseResult;
+    }
+  }
+  executeModules(type, databaseResult) {
+    let stateResult;
+    _require = type;
+    let closure_1 = databaseResult;
+    type = type.type;
+    const actions = this.actions;
+    const value = actions.get(type);
+    dependencyMap = value;
+    if (databaseResult != null) {
+      stateResult = databaseResult.state();
+    }
+    if (null != value) {
+      if (0 !== value.length) {
+        if (null != databaseResult) {
+          if (stateResult === require("module_2079").DatabaseState.Open) {
+            const transaction = databaseResult.transaction;
+            let combined = null;
+            if (!set.has(type.type)) {
+              const _HermesInternal2 = HermesInternal;
+              combined = "Dispatch " + type.type;
+            }
+            transaction((arg0) => {
+              let closure_0 = arg0;
+              return value.forEach((execute) => execute.execute(type, type));
+            }, combined);
+            if ("WRITE_CACHES" === type.type) {
+              const promisesToWaitOn = type.promisesToWaitOn;
+              promisesToWaitOn.push(tmp14);
+            }
+          }
+        }
+        const _HermesInternal = HermesInternal;
+        closure_5.verbose("no usable database; skipping action (type: " + type + ", database: " + databaseResult + ", state: " + stateResult + ")");
+      }
+    }
+  }
+  static handleException(arg0, type, error) {
+    closure_5.info("disabling database \u00B7 error encountered during dispatch", error, error.stack);
+    const obj2 = { type: "RESET_SOCKET", args: { error, action: "AppDatabaseManager(" + type.type + ")" } };
+    const obj = DispatcherDefault;
+    ({ error, action: "AppDatabaseManager(" + type.type + ")" });
+    obj.dispatch(obj2);
+  }
+  static computeEntries(MobileAppDatabaseManager, arr) {
+    let closure_0 = MobileAppDatabaseManager;
+    map = new Map();
+    const mapped = arr.map((item) => {
+      const entry = new actions2.Entry(MobileAppDatabaseManager, item);
+      return entry;
+    });
+    const result = map.set("LOGOUT", []);
+    const result1 = map.set("LOGIN_RESET", []);
+    for (const item10025 of mapped) {
+      let actions = item10025.actions;
+      for (const item10032 of actions) {
+        if (!map.has(item10032)) {
+          let result2 = map.set(item10032, []);
+        }
+        let value = map.get(item10032);
+        arr = value.push(tmp4);
+        continue;
+      }
+      continue;
+    }
+    const items = [map, mapped];
+    return items;
+  }
+  static register(arg0, arr, arg2, arg3) {
+    let closure_0 = arg3;
+    const register = DispatcherDefault.register;
+    DispatcherDefault;
+    const fromEntriesResult = Object.fromEntries(arr.map((item) => {
+      const items = [item, closure_0];
+      return items;
+    }));
+    const registerResult = register(arg0, fromEntriesResult, () => {
+
+    }, Dispatcher.DispatchBand.Database);
+    const obj = DispatcherDefault;
+    obj.addDependencies(registerResult, arg2);
+    return registerResult;
+  }
+  validateInDev() {
+
   }
 }
 const prototype = AppDatabaseManager.prototype;
-prototype["handleAction"] = function handleAction(type) {
-  this.validateInDev(type.type);
-  const id = AuthenticationStore.getId();
-  const databaseResult = DatabaseManagerDefault.database(id);
-  this.resetModules(type, databaseResult);
-  this.executeModules(type, databaseResult);
-  return false;
-};
-prototype["resetModules"] = function resetModules(type, databaseResult) {
-  const self = this;
-  if (databaseResult !== this.lastDatabase) {
-    const _HermesInternal = HermesInternal;
-    closure_5.verbose("database has changed (was: " + self.lastDatabase + ", now: " + databaseResult + ", action: " + type.type + "). resetting modules.");
-    const entries = self.entries;
-    for (const item10004 of entries) {
-      let resetResult = item10004.reset();
-      continue;
-    }
-    self.lastDatabase = databaseResult;
-  }
-};
-prototype["executeModules"] = function executeModules(type, databaseResult) {
-  _require = type;
-  closure_1 = databaseResult;
-  type = type.type;
-  const actions = this.actions;
-  value = actions.get(type);
-  dependencyMap = value;
-  if (databaseResult != null) {
-    const stateResult = databaseResult.state();
-  }
-  if (null != value) {
-    if (0 !== value.length) {
-      if (null != databaseResult) {
-        if (stateResult === require("module_2079").DatabaseState.Open) {
-          let combined = null;
-          if (!set.has(type.type)) {
-            const _HermesInternal2 = HermesInternal;
-            combined = "Dispatch " + type.type;
-          }
-          databaseResult.transaction((arg0) => {
-            closure_0 = arg0;
-            return value.forEach((execute) => execute.execute(closure_0, closure_0));
-          }, combined);
-          if ("WRITE_CACHES" === type.type) {
-            const promisesToWaitOn = type.promisesToWaitOn;
-            promisesToWaitOn.push(tmp14);
-          }
-        }
-      }
-      const _HermesInternal = HermesInternal;
-      closure_5.verbose("no usable database; skipping action (type: " + type + ", database: " + databaseResult + ", state: " + stateResult + ")");
-    }
-  }
-};
-AppDatabaseManager["handleException"] = function handleException(arg0, type, error) {
-  closure_5.info("disabling database \u00B7 error encountered during dispatch", error, error.stack);
-  const obj2 = { type: "RESET_SOCKET", args: null };
-  const obj = DispatcherDefault;
-  obj2.args = { error, action: "AppDatabaseManager(" + type.type + ")" };
-  obj.dispatch(obj2);
-};
-AppDatabaseManager["computeEntries"] = function computeEntries(MobileAppDatabaseManager, arr) {
-  closure_0 = MobileAppDatabaseManager;
-  const map = new Map();
-  const mapped = arr.map((item) => {
-    const entry = new actions2.Entry(closure_0, item);
-    return entry;
-  });
-  const result = map.set("LOGOUT", []);
-  const result1 = map.set("LOGIN_RESET", []);
-  for (const item10025 of mapped) {
-    let actions = item10025.actions;
-    for (const item10032 of actions) {
-      if (!map.has(item10032)) {
-        let result2 = map.set(item10032, []);
-      }
-      value = map.get(item10032);
-      arr = value.push(tmp4);
-      continue;
-    }
-    continue;
-  }
-  const items = [map, mapped];
-  return items;
-};
-AppDatabaseManager["register"] = function register(arg0, arr, arg2, arg3) {
-  closure_0 = arg3;
-  const obj = DispatcherDefault;
-  const registerResult = obj.register(arg0, Object.fromEntries(arr.map((item) => {
-    const items = [item, closure_0];
-    return items;
-  })), () => {
-
-  }, Dispatcher.DispatchBand.Database);
-  const fromEntriesResult = Object.fromEntries(arr.map((item) => {
-    const items = [item, closure_0];
-    return items;
-  }));
-  DispatcherDefault.addDependencies(registerResult, arg2);
-  return registerResult;
-};
-prototype["validateInDev"] = function validateInDev() {
-
-};
-const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_database/system/AppDatabaseManager.tsx");
 
 export { AppDatabaseManager };

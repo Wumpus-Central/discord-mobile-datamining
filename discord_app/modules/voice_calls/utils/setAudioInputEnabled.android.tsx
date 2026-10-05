@@ -1,11 +1,12 @@
-// === Module 17462: setAudioInputEnabled ===
+// === Module 17462: react-native ===
 
-// Module 17462 (setAudioInputEnabled)
-import NativeMediaEngineModuleDefault from "NativeMediaEngineModule" /* 2004 */;
+// Module 17462 (react-native)
+import react_nativeDefault from "react-native" /* 2004 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/voice_calls/utils/setAudioInputEnabled.android.tsx");
 
 export default function setAudioInputEnabled(arg0) {
-  NativeMediaEngineModuleDefault.setAudioInputEnabled(arg0);
+  const obj = react_nativeDefault;
+  obj.setAudioInputEnabled(arg0);
 };

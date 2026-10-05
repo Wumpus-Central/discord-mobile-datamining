@@ -8,7 +8,7 @@ const RPC_SCOPE_CONFIG = Constants.RPC_SCOPE_CONFIG;
 const result = size.fileFinishedImporting("modules/rpc/helpers/validateScope.tsx");
 
 export default function validateScope(arr, str) {
-  closure_0 = arr;
+  let closure_0 = arr;
   if (null == str) {
     return true;
   } else if (typeof str === "string") {

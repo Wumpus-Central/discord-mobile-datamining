@@ -1,67 +1,71 @@
 // === Module 11312: isStaffToNonStaffForward ===
 
 // Module 11312 (isStaffToNonStaffForward)
+import Constants from "Constants" /* 1085 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import UserStore from "UserStore" /* 1377 */;
+import size from "module_2" /* 2 */;
 
-const GuildFeatures = fn(1085).GuildFeatures;
-const size = fn(2);
+let user;
+
+const GuildFeatures = Constants.GuildFeatures;
 const result = size.fileFinishedImporting("modules/forwarding/isStaffToNonStaffForward.tsx");
 
 export default function isStaffToNonStaffForward(channel_id, arr) {
+  const f107339 = (item) => {
+    user = user.getUser(item);
+    const tmp = null != user && user.isStaff();
+    return tmp;
+  };
+  const f107340 = (item) => {
+    channel = channel.getChannel(item);
+    let tmp = null != channel;
+    if (tmp) {
+      let tmp3 = !channel.isPrivate();
+      channel.isPrivate();
+      if (tmp3) {
+        let everyResult;
+        if (channel.isPrivate()) {
+          const recipients = channel.recipients;
+          everyResult = recipients.every(f107339);
+        } else {
+          guild = guild.getGuild(channel.guild_id);
+          everyResult = null != guild;
+          if (everyResult) {
+            const features = guild.features;
+            everyResult = features.has(constants.INTERNAL_EMPLOYEE_ONLY);
+          }
+        }
+        tmp3 = !everyResult;
+      }
+      tmp = tmp3;
+    }
+    return tmp;
+  };
   const currentUser = UserStore.getCurrentUser();
   let isStaffResult;
   if (currentUser != null) {
     isStaffResult = currentUser.isStaff();
   }
   if (isStaffResult) {
-    const channel = ChannelStore.getChannel(channel_id.channel_id);
+    let channel = ChannelStore.getChannel(channel_id.channel_id);
     let tmp4 = null != channel;
     if (tmp4) {
+      let everyResult;
       if (channel.isPrivate()) {
         let recipients = channel.recipients;
-        let everyResult = recipients.every((item) => {
-          user = user.getUser(item);
-          return null != user && user.isStaff();
-        });
+        everyResult = recipients.every(f107339);
       } else {
-        guild = GuildStore.getGuild(channel.guild_id);
+        let guild = GuildStore.getGuild(channel.guild_id);
         everyResult = null != guild;
         if (everyResult) {
           let features = guild.features;
           everyResult = features.has(GuildFeatures.INTERNAL_EMPLOYEE_ONLY);
         }
       }
-      let someResult = everyResult;
-      if (someResult) {
-        someResult = arr.some((item) => {
-          let every = channel.getChannel(item);
-          let tmp = null != every;
-          if (tmp) {
-            const isPrivateResult = every.isPrivate();
-            if (isPrivateResult) {
-              tmp = !isPrivateResult;
-            } else if (every.isPrivate()) {
-              const recipients = every.recipients;
-              every = recipients.every;
-              let everyResult = every((item) => {
-                user = user.getUser(item);
-                return null != user && user.isStaff();
-              });
-            } else {
-              guild = guild.getGuild(every.guild_id);
-              everyResult = null != guild;
-              if (everyResult) {
-                const features = guild.features;
-                everyResult = features.has(constants.INTERNAL_EMPLOYEE_ONLY);
-              }
-            }
-          }
-          return tmp;
-        });
-      }
-      tmp4 = someResult;
+      tmp4 = everyResult && arr.some(f107340);
+      const someResult = everyResult && arr.some(f107340);
     }
     return tmp4;
   } else {

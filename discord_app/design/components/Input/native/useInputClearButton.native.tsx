@@ -1,44 +1,85 @@
 // === Module 6102: useInputClearButton ===
 
 // Module 6102 (useInputClearButton)
-import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
+import intl2 from "intl" /* 1126 */;
 import CircleXIcon from "CircleXIcon" /* 4797 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const Pressable = fn(17).Pressable;
-const jsx = fn(21).jsx;
-fn(558);
-const ReactCompilerGating = fn(558);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((clearable, hasValue) => {
-  const cResult = c.c(6);
+let clearable;
+
+const Pressable = react_native.Pressable;
+const jsx = Fragment.jsx;
+let ReactCompilerGating = ReactCompilerGating_mod;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+  const obj = react2;
+  const cResult = obj.c(3);
+  const tmp2 = closure_4(arg0, arg1);
+  let tmp3 = null;
+  if (null != tmp2) {
+    if (cResult[0] === tmp2.content) {
+      let tmp4;
+      if (cResult[1] === tmp2.pressableProps) {
+        tmp4 = cResult[2];
+      }
+      tmp3 = tmp4;
+    }
+    const merged = Object.assign(tmp2.pressableProps);
+    const tmp9 = <Pressable>{tmp2.content}</Pressable>;
+    cResult[0] = tmp2.content;
+    cResult[1] = tmp2.pressableProps;
+    cResult[2] = tmp9;
+    tmp4 = tmp9;
+  }
+  return tmp3;
+}) : ((arg0, arg1) => {
+  const tmp = closure_4(arg0, arg1);
+  let tmp2 = null;
+  if (null != tmp) {
+    const merged = Object.assign(tmp.pressableProps);
+    tmp2 = <Pressable>{tmp.content}</Pressable>;
+  }
+  return tmp2;
+});
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((clearable, hasValue) => {
+  const obj = react2;
+  const cResult = obj.c(6);
   clearable = clearable.clearable;
   if (undefined !== clearable) {
     if (clearable) {
       if (hasValue.hasValue) {
+        let first;
+        let tmp9;
+        let tmp11;
+        let tmp12;
         const _Symbol = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const tmp8 = jsx(CircleXIcon.CircleXIcon, { size: "xs" });
           cResult[0] = tmp8;
-          let first = tmp8;
+          first = tmp8;
         } else {
           first = cResult[0];
         }
         const _Symbol2 = Symbol;
+        const clear = hasValue.clear;
         if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = util.intl;
-          const stringResult = intl.string(util.t.VkKicb);
+          const intl = intl2.intl;
+          const stringResult = intl.string(intl2.t.VkKicb);
           cResult[1] = stringResult;
-          let tmp9 = stringResult;
+          tmp9 = stringResult;
         } else {
           tmp9 = cResult[1];
         }
         if (cResult[2] !== hasValue.clear) {
-          const obj2 = { onPress: hasValue.clear, accessibilityLabel: tmp9, accessibilityRole: "button", hitSlop: 4 };
+          const obj2 = { onPress: clear, accessibilityLabel: tmp9, accessibilityRole: "button", hitSlop: 4 };
           cResult[2] = hasValue.clear;
           cResult[3] = obj2;
-          let tmp11 = obj2;
+          tmp11 = obj2;
         } else {
           tmp11 = cResult[3];
         }
@@ -46,7 +87,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((clearable, hasValu
           const obj3 = { content: first, pressableProps: tmp11 };
           cResult[4] = tmp11;
           cResult[5] = obj3;
-          let tmp12 = obj3;
+          tmp12 = obj3;
         } else {
           tmp12 = cResult[5];
         }
@@ -55,49 +96,22 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((clearable, hasValu
     }
   }
 }) : ((clearable, hasValue) => {
+  let intl;
+  let obj2;
   clearable = clearable.clearable;
   if (undefined !== clearable) {
     if (clearable) {
       if (hasValue.hasValue) {
-        const obj = { content: jsx(CircleXIcon.CircleXIcon, { size: "xs" }), pressableProps: null };
-        const obj2 = { onPress: hasValue.clear, accessibilityLabel: null, accessibilityRole: "button", hitSlop: 4 };
-        const intl = util.intl;
-        obj2.accessibilityLabel = intl.string(util.t.VkKicb);
-        obj.pressableProps = obj2;
+        const obj = { content: jsx(CircleXIcon.CircleXIcon, { size: "xs" }), pressableProps: obj2 };
+        obj2 = { onPress: hasValue.clear, accessibilityLabel: intl.string(intl2.t.VkKicb), accessibilityRole: "button", hitSlop: 4 };
+        intl = intl2.intl;
         return obj;
       }
     }
   }
 });
 let closure_4 = tmp4;
-const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Input/native/useInputClearButton.native.tsx");
 
-export const useInputClearButton = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
-  const cResult = c.c(3);
-  pressableProps = closure_4(arg0, arg1);
-  if (null == pressableProps) {
-    return null;
-  } else {
-    if (cResult[0] === pressableProps.content) {
-    }
-    const obj2 = {};
-    const merged = Object.assign(pressableProps.pressableProps);
-    obj2.children = pressableProps.content;
-    const tmp7 = <Pressable />;
-    ({ content: tmp[0], pressableProps } = pressableProps);
-    cResult[1] = pressableProps;
-    cResult[2] = tmp7;
-  }
-}) : ((arg0, arg1) => {
-  const tmp = closure_4(arg0, arg1);
-  let tmp2 = null;
-  if (null != tmp) {
-    const obj = {};
-    const merged = Object.assign(tmp.pressableProps);
-    obj.children = tmp.content;
-    tmp2 = <Pressable />;
-  }
-  return tmp2;
-});
+export const useInputClearButton = tmp3;
 export const useInputClearButtonConfig = tmp4;

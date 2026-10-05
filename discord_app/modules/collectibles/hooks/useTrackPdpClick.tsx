@@ -1,47 +1,52 @@
 // === Module 12965: useTrackPdpClick ===
 
 // Module 12965 (useTrackPdpClick)
+import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7065 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/collectibles/hooks/useTrackPdpClick.tsx");
+let skuId, tmp3, trackResult;
 
-export const useTrackPdpClick = ReactCompilerGating.isReactCompilerEnabled() ? ((skuId) => {
-  const cResult = skuId(analyticsLocations[3]).c(9);
+const AnalyticEvents = Constants.AnalyticEvents;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((skuId) => {
+  let analyticsLocations;
+  let tmp5;
+  let tmp = skuId;
+  let obj = skuId(analyticsLocations[3]);
+  const cResult = obj.c(9);
   skuId = skuId.skuId;
   const productSkuIds = skuId.productSkuIds;
   analyticsLocations = skuId.analyticsLocations;
-  let obj = skuId(analyticsLocations[3]);
-  let collectiblesAnalyticsContext = skuId(analyticsLocations[4]).useCollectiblesAnalyticsContext();
+  let obj2 = skuId(analyticsLocations[4]);
+  let collectiblesAnalyticsContext = obj2.useCollectiblesAnalyticsContext();
   if (collectiblesAnalyticsContext == null) {
     collectiblesAnalyticsContext = {};
   }
   const cardId = collectiblesAnalyticsContext.cardId;
   const sessionId = collectiblesAnalyticsContext.sessionId;
-  let obj2 = skuId(analyticsLocations[4]);
-  const currentUserIfAvailable = skuId(analyticsLocations[5]).useCurrentUserIfAvailable();
+  const tmpResult = tmp(analyticsLocations[5]);
+  const currentUserIfAvailable = tmpResult.useCurrentUserIfAvailable();
   if (cResult[0] !== currentUserIfAvailable) {
-    const shopDiscountSource = tmp(tmp2[6]).getShopDiscountSource(currentUserIfAvailable);
+    const tmpResult2 = tmp(analyticsLocations[6]);
+    const shopDiscountSource = tmpResult2.getShopDiscountSource(currentUserIfAvailable);
     cResult[0] = currentUserIfAvailable;
     cResult[1] = shopDiscountSource;
-    let tmp5 = shopDiscountSource;
-    const tmpResult2 = tmp(tmp2[6]);
+    tmp5 = shopDiscountSource;
   } else {
     tmp5 = cResult[1];
   }
-  closure_5 = tmp5;
+  let closure_5 = tmp5;
   if (cResult[2] === analyticsLocations) {
     if (cResult[3] === cardId) {
       if (cResult[4] === tmp5) {
         if (cResult[5] === productSkuIds) {
           if (cResult[6] === sessionId) {
+            let tmp7;
             if (cResult[7] === skuId) {
-              let tmp7 = cResult[8];
+              tmp7 = cResult[8];
             }
             return tmp7;
           }
@@ -53,14 +58,16 @@ export const useTrackPdpClick = ReactCompilerGating.isReactCompilerEnabled() ? (
     constructor(arg0, arg1) {
       tmp = arg1;
       tmp2 = closure_2;
-      obj = closure_1(closure_2[7]);
+      tmp3 = closure_1(closure_2[7]);
+      track = tmp3.track;
+      SHOP_PRODUCT_DETAIL_PAGE_CLICKED = AnalyticEvents.SHOP_PRODUCT_DETAIL_PAGE_CLICKED;
       if (arg1 == null) {
         tmp = skuId;
       }
-      obj1 = { sku_id: tmp, cta: skuId, shop_session_id: sessionId, card_id: cardId, product_sku_ids: productSkuIds, location_stack: analyticsLocations, discount_source: null };
-      obj3 = closure_0(tmp2[6]);
-      obj1.discount_source = obj3.getAnalyticsShopDiscountSource(closure_5);
-      trackResult = obj.track(AnalyticEvents.SHOP_PRODUCT_DETAIL_PAGE_CLICKED, obj1);
+      obj = { sku_id: tmp, cta: skuId, shop_session_id: sessionId, card_id: cardId, product_sku_ids: productSkuIds, location_stack: analyticsLocations, discount_source: null };
+      obj2 = closure_0(tmp2[6]);
+      obj.discount_source = obj2.getAnalyticsShopDiscountSource(closure_5);
+      trackResult = track(SHOP_PRODUCT_DETAIL_PAGE_CLICKED, obj);
       return;
     }
   }
@@ -79,25 +86,33 @@ export const useTrackPdpClick = ReactCompilerGating.isReactCompilerEnabled() ? (
   let cardId;
   let sessionId;
   let shopDiscountSource;
-  let collectiblesAnalyticsContext = skuId(analyticsLocations[4]).useCollectiblesAnalyticsContext();
+  let tmp = skuId;
+  let obj = skuId(analyticsLocations[4]);
+  let collectiblesAnalyticsContext = obj.useCollectiblesAnalyticsContext();
   if (collectiblesAnalyticsContext == null) {
     collectiblesAnalyticsContext = {};
   }
   cardId = collectiblesAnalyticsContext.cardId;
   sessionId = collectiblesAnalyticsContext.sessionId;
-  let obj = skuId(analyticsLocations[4]);
-  const currentUserIfAvailable = skuId(analyticsLocations[5]).useCurrentUserIfAvailable();
-  const tmpResult = skuId(analyticsLocations[5]);
-  shopDiscountSource = skuId(analyticsLocations[6]).getShopDiscountSource(currentUserIfAvailable);
+  const tmpResult = tmp(analyticsLocations[5]);
+  const currentUserIfAvailable = tmpResult.useCurrentUserIfAvailable();
+  const tmpResult2 = tmp(analyticsLocations[6]);
+  shopDiscountSource = tmpResult2.getShopDiscountSource(currentUserIfAvailable);
   const items = [skuId, analyticsLocations, cardId, productSkuIds, sessionId, shopDiscountSource];
   return cardId.useCallback((cta, arg1) => {
+    let obj2;
     let tmp = arg1;
+    const track = AnalyticsUtilsDefault.track;
+    const SHOP_PRODUCT_DETAIL_PAGE_CLICKED = AnalyticEvents.SHOP_PRODUCT_DETAIL_PAGE_CLICKED;
+    AnalyticsUtilsDefault;
     if (arg1 == null) {
       tmp = skuId;
     }
-    const obj2 = { sku_id: tmp, cta, shop_session_id: sessionId, card_id: cardId, product_sku_ids: productSkuIds, location_stack: analyticsLocations, discount_source: null };
-    const obj = AnalyticsUtilsDefault;
-    obj2.discount_source = CollectiblesUtils.getAnalyticsShopDiscountSource(shopDiscountSource);
-    obj.track(AnalyticEvents.SHOP_PRODUCT_DETAIL_PAGE_CLICKED, obj2);
+    const obj = { sku_id: tmp, cta, shop_session_id: sessionId, card_id: cardId, product_sku_ids: productSkuIds, location_stack: analyticsLocations, discount_source: obj2.getAnalyticsShopDiscountSource(shopDiscountSource) };
+    obj2 = CollectiblesUtils;
+    track(SHOP_PRODUCT_DETAIL_PAGE_CLICKED, obj);
   }, items);
 });
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useTrackPdpClick.tsx");
+
+export const useTrackPdpClick = tmp2;

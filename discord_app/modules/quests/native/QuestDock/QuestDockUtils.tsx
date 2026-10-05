@@ -1,13 +1,13 @@
 // === Module 14895: QuestDockUtils ===
 
 // Module 14895 (QuestDockUtils)
-import _mod17 from "module_17" /* 17 */;
+import react_native from "react-native" /* 17 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import spring from "spring" /* 5597 */;
 import QuestDockConstants from "QuestDockConstants" /* 14896 */;
-import size from "module_2" /* 2 */;
+import size_mod from "module_2" /* 2 */;
 
-const PixelRatio = _mod17.PixelRatio;
+const PixelRatio = react_native.PixelRatio;
 const QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED = QuestDockConstants.QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED;
 const QUEST_DOCK_COLLAPSED_MAX_WIDTH = QuestDockConstants.QUEST_DOCK_COLLAPSED_MAX_WIDTH;
 const QUEST_DOCK_COLLAPSED_HEIGHT = QuestDockConstants.QUEST_DOCK_COLLAPSED_HEIGHT;
@@ -15,13 +15,14 @@ const QUEST_DOCK_MODE_CHANGE_PHYSICS = QuestDockConstants.QUEST_DOCK_MODE_CHANGE
 const value = PixelRatio.get();
 const metroRequire = value;
 function roundToNearestPixel(arg0) {
-  return Math.round(arg0 * value) / value;
+  return Math.round(arg0 * metroRequire) / metroRequire;
 }
 roundToNearestPixel.__closure = { PIXEL_DENSITY: value };
 roundToNearestPixel.__workletHash = 9602449563120;
 roundToNearestPixel.__initData = { code: "function roundToNearestPixel_QuestDockUtilsTsx1(position){const{PIXEL_DENSITY}=this.__closure;return Math.round(position*PIXEL_DENSITY)/PIXEL_DENSITY;}" };
 function getQuestDockExpandedHeightLimits(height, top, expandedHeight) {
-  return { minHeight: QUEST_DOCK_COLLAPSED_HEIGHT, maxHeight: Math.min(expandedHeight, height - top) };
+  const obj = { minHeight: QUEST_DOCK_COLLAPSED_HEIGHT, maxHeight: Math.min(expandedHeight, height - top) };
+  return obj;
 }
 getQuestDockExpandedHeightLimits.__closure = { QUEST_DOCK_COLLAPSED_HEIGHT };
 getQuestDockExpandedHeightLimits.__workletHash = 880847803554;
@@ -39,25 +40,31 @@ function getQuestDockExpandedWidth(width, left, right) {
 getQuestDockExpandedWidth.__closure = { QUEST_DOCK_COLLAPSED_MAX_WIDTH };
 getQuestDockExpandedWidth.__workletHash = 6480418564130;
 getQuestDockExpandedWidth.__initData = { code: "function getQuestDockExpandedWidth_QuestDockUtilsTsx4(windowWidth,safeAreaLeft,safeAreaRight){const{QUEST_DOCK_COLLAPSED_MAX_WIDTH}=this.__closure;return Math.min(windowWidth-safeAreaLeft-safeAreaRight,QUEST_DOCK_COLLAPSED_MAX_WIDTH);}" };
-function getQuestDockClosedWidth(width, left, right) {
-  return Math.min(width - left - right, QUEST_DOCK_COLLAPSED_MAX_WIDTH);
+function getQuestDockClosedWidth(width2, left, right) {
+  return Math.min(width2 - left - right, QUEST_DOCK_COLLAPSED_MAX_WIDTH);
 }
 getQuestDockClosedWidth.__closure = { QUEST_DOCK_COLLAPSED_MAX_WIDTH };
 getQuestDockClosedWidth.__workletHash = 14159592925974;
 getQuestDockClosedWidth.__initData = { code: "function getQuestDockClosedWidth_QuestDockUtilsTsx5(windowWidth,safeAreaLeft,safeAreaRight){const{QUEST_DOCK_COLLAPSED_MAX_WIDTH}=this.__closure;return Math.min(windowWidth-safeAreaLeft-safeAreaRight,QUEST_DOCK_COLLAPSED_MAX_WIDTH);}" };
 let closure_7 = 3 * DurationsDefault.Millis.HOUR;
 function dimensionsLayoutTransition(originX) {
-  const obj = { initialValues: { originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight }, animations: null };
-  const size = { originX: spring.withSpring(originX.targetOriginX, QUEST_DOCK_MODE_CHANGE_PHYSICS), originY: null, height: null, width: null };
-  size.originY = spring.withSpring(originX.targetOriginY, QUEST_DOCK_MODE_CHANGE_PHYSICS);
-  size.height = spring.withSpring(originX.targetHeight, QUEST_DOCK_MODE_CHANGE_PHYSICS);
-  size.width = spring.withSpring(originX.targetWidth, QUEST_DOCK_MODE_CHANGE_PHYSICS);
-  obj.animations = size;
+  let obj3;
+  let obj4;
+  let obj5;
+  let obj6;
+  const obj = { initialValues: { originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight }, animations: size };
+  size = { originX: obj3.withSpring(originX.targetOriginX, QUEST_DOCK_MODE_CHANGE_PHYSICS), originY: obj4.withSpring(originX.targetOriginY, QUEST_DOCK_MODE_CHANGE_PHYSICS), height: obj5.withSpring(originX.targetHeight, QUEST_DOCK_MODE_CHANGE_PHYSICS), width: obj6.withSpring(originX.targetWidth, QUEST_DOCK_MODE_CHANGE_PHYSICS) };
+  obj3 = spring;
+  obj4 = spring;
+  obj5 = spring;
+  obj6 = spring;
   return obj;
 }
-dimensionsLayoutTransition.__closure = { withSpring: spring.withSpring, QUEST_DOCK_MODE_CHANGE_PHYSICS };
+let obj = { withSpring: spring.withSpring, QUEST_DOCK_MODE_CHANGE_PHYSICS };
+dimensionsLayoutTransition.__closure = obj;
 dimensionsLayoutTransition.__workletHash = 4497154070776;
 dimensionsLayoutTransition.__initData = { code: "function dimensionsLayoutTransition_QuestDockUtilsTsx6(values){const{withSpring,QUEST_DOCK_MODE_CHANGE_PHYSICS}=this.__closure;return{initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{originX:withSpring(values.targetOriginX,QUEST_DOCK_MODE_CHANGE_PHYSICS),originY:withSpring(values.targetOriginY,QUEST_DOCK_MODE_CHANGE_PHYSICS),height:withSpring(values.targetHeight,QUEST_DOCK_MODE_CHANGE_PHYSICS),width:withSpring(values.targetWidth,QUEST_DOCK_MODE_CHANGE_PHYSICS)}};}" };
+let size = size_mod;
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockUtils.tsx");
 
 export { roundToNearestPixel };

@@ -1,26 +1,38 @@
 // === Module 7732: useDiscountOffer ===
 
 // Module 7732 (useDiscountOffer)
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import PremiumConstants from "PremiumConstants" /* 1379 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react_mod from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import UserOfferStore from "UserOfferStore" /* 6959 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, startResult, tmp4;
 
-const require = fn;
-const CHURN_DISCOUNT_IDS = fn(1379).CHURN_DISCOUNT_IDS;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/hooks/useDiscountOffer.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+let react = react_mod;
+const CHURN_DISCOUNT_IDS = PremiumConstants.CHURN_DISCOUNT_IDS;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+  let closure_0;
+  let closure_3;
+  let currentUser;
+  let first;
+  let first1;
+  let stateFromStores;
+  let tmp11;
+  let tmp12;
+  let tmp6;
+  let tmp7;
   _require = arg0;
-  const cResult = require("c").c(11);
+  let obj = require("react");
+  const cResult = obj.c(11);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserOfferStore];
+    let num = 0;
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -30,12 +42,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     };
     cResult[1] = arg0;
     cResult[2] = fn;
-    let tmp6 = fn;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
-  const obj = require("c");
-  stateFromStores = require("initialize").useStateFromStores(first, tmp6);
+  const tmpResult = require("get initialized");
+  stateFromStores = tmpResult.useStateFromStores(first, tmp6);
   if (cResult[3] !== stateFromStores) {
     let flag;
     if (stateFromStores != null) {
@@ -46,39 +58,43 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     }
     cResult[3] = stateFromStores;
     cResult[4] = flag;
-    let tmp7 = flag;
+    tmp7 = flag;
   } else {
     tmp7 = cResult[4];
   }
-  const tmp9 = first1(noop.useState(tmp7), 2);
+  const tmp9 = first1(react.useState(tmp7), 2);
   first1 = tmp9[0];
-  noop = tmp9[1];
+  const obj4 = react;
+  react = tmp9[1];
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [UserStore];
     const fn2 = function x() {
-      return closure_0(stateFromStores[8]).isPremium(currentUser.getCurrentUser());
+      const obj = closure_0(stateFromStores[8]);
+      return obj.isPremium(currentUser.getCurrentUser());
     };
     cResult[5] = items1;
     cResult[6] = fn2;
-    let tmp12 = fn2;
-    let tmp11 = items1;
+    tmp12 = fn2;
+    tmp11 = items1;
   } else {
     tmp11 = cResult[5];
     tmp12 = cResult[6];
   }
-  const obj4 = noop;
-  const tmpResult = require("initialize");
-  const stateFromStores1 = require("initialize").useStateFromStores(tmp11, tmp12);
+  const tmpResult2 = require("get initialized");
+  const stateFromStores1 = tmpResult2.useStateFromStores(tmp11, tmp12);
   if (cResult[7] === first1) {
+    let tmp16;
+    let tmp17;
     if (cResult[8] === stateFromStores) {
-      let tmp16 = cResult[9];
-      let tmp17 = cResult[10];
+      tmp16 = cResult[9];
+      tmp17 = cResult[10];
     }
     const effect = obj4.useEffect(tmp16, tmp17);
     let tmp19 = null;
     if (!first1) {
       if (stateFromStores1) {
-        if (!arg1) {
+        const tmp20 = arg1;
+        if (!tmp20) {
           tmp19 = null;
         }
       }
@@ -96,10 +112,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
       if (hasAcknowledgedResult) {
         tmp2 = closure_0;
         tmp3 = closure_1;
-        tmp4 = new.target;
-        tmp5 = new.target;
+        self = this;
+        self2 = this;
         timeout = new closure_0(closure_1[9]).Timeout();
-        tmp6 = timeout;
+        tmp4 = timeout;
         closure_0 = timeout;
         hasAcknowledgedResult1 = undefined;
         if (obj != null) {
@@ -109,31 +125,31 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
           num = 0;
           if (null != obj.expiresAt) {
             expiresAt = obj.expiresAt;
-            tmp9 = globalThis;
+            tmp7 = globalThis;
             _Date = Date;
             time = expiresAt.getTime();
             num = time - Date.now();
           }
           startResult = timeout.start(num, () => {
-            if (!closure_2_2) {
-              if (closure_2_1.hasExpired()) {
-                closure_2_3(true);
+            if (!first1) {
+              if (stateFromStores.hasExpired()) {
+                closure_3(true);
               }
             }
             let hasAcknowledgedResult;
-            if (closure_2_1 != null) {
-              hasAcknowledgedResult = closure_2_1.hasAcknowledged();
+            if (stateFromStores != null) {
+              hasAcknowledgedResult = stateFromStores.hasAcknowledged();
             }
             if (hasAcknowledgedResult) {
               let num = 0;
-              if (null != closure_2_1.expiresAt) {
-                let expiresAt = closure_2_1.expiresAt;
-                let _Date = Date;
-                let time = expiresAt.getTime();
+              if (null != stateFromStores.expiresAt) {
+                const expiresAt = stateFromStores.expiresAt;
+                const _Date = Date;
+                const time = expiresAt.getTime();
                 num = time - Date.now();
               }
-              if (closure_1_0 != null) {
-                closure_1_0.start(num, () => { ... });
+              if (timeout != null) {
+                timeout.start(num, f151302);
               }
             }
           });
@@ -151,33 +167,69 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   cResult[10] = items2;
   tmp17 = items2;
   tmp16 = E;
-  const tmpResult2 = require("initialize");
 }) : ((arg0, arg1) => {
+  let closure_0;
+  let closure_3;
+  let currentUser;
+  let first;
+  let stateFromStores;
   _require = arg0;
+  let obj = require("get initialized");
   const items = [UserOfferStore];
-  stateFromStores = require("initialize").useStateFromStores(items, () => UserOfferStore.getUserDiscountOffer(closure_0));
+  const tmp2 = stateFromStores;
+  stateFromStores = obj.useStateFromStores(items, () => UserOfferStore.getUserDiscountOffer(closure_0));
   let flag;
+  const useState = react.useState;
+  const obj3 = react;
+  const tmp = _require;
   if (stateFromStores != null) {
     flag = stateFromStores.hasExpired();
   }
   if (flag == null) {
     flag = false;
   }
-  const tmp3 = first(noop.useState(flag), 2);
+  const tmp3 = first(useState(flag), 2);
   first = tmp3[0];
-  noop = tmp3[1];
-  const obj = require("initialize");
-  const obj3 = noop;
+  react = tmp3[1];
   const items1 = [UserStore];
-  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => closure_0(stateFromStores[8]).isPremium(currentUser.getCurrentUser()));
+  const tmpResult = tmp(tmp2[7]);
+  const stateFromStores1 = tmpResult.useStateFromStores(items1, () => {
+    const obj = closure_0(stateFromStores[8]);
+    return obj.isPremium(currentUser.getCurrentUser());
+  });
   const items2 = [first, stateFromStores];
   const hasItem = CHURN_DISCOUNT_IDS.includes(arg0);
-  const effect = obj3.useEffect(() => {
+  const effect = obj3.useEffect(function() {
+    const f151303 = () => {
+      if (!first) {
+        if (stateFromStores.hasExpired()) {
+          closure_3(true);
+        }
+      }
+      let hasAcknowledgedResult;
+      if (stateFromStores != null) {
+        hasAcknowledgedResult = stateFromStores.hasAcknowledged();
+      }
+      if (hasAcknowledgedResult) {
+        let num = 0;
+        if (null != stateFromStores.expiresAt) {
+          const expiresAt = stateFromStores.expiresAt;
+          const _Date = Date;
+          const time = expiresAt.getTime();
+          num = time - Date.now();
+        }
+        if (timeout != null) {
+          timeout.start(num, f151303);
+        }
+      }
+    };
     let hasAcknowledgedResult;
     if (stateFromStores != null) {
       hasAcknowledgedResult = stateFromStores.hasAcknowledged();
     }
     if (hasAcknowledgedResult) {
+      const self = this;
+      const self2 = this;
       const timeout = new closure_0(stateFromStores[9]).Timeout();
       let hasAcknowledgedResult1;
       if (stateFromStores != null) {
@@ -186,78 +238,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
       if (hasAcknowledgedResult1) {
         let num = 0;
         if (null != stateFromStores.expiresAt) {
-          const expiresAt = stateFromStores.expiresAt;
-          const _Date = Date;
-          const time = expiresAt.getTime();
+          let expiresAt = stateFromStores.expiresAt;
+          let _Date = Date;
+          let time = expiresAt.getTime();
           num = time - Date.now();
         }
-        timeout.start(num, () => {
-          if (!closure_2_2) {
-            if (closure_2_1.hasExpired()) {
-              closure_2_3(true);
-            }
-          }
-          let hasAcknowledgedResult;
-          if (closure_2_1 != null) {
-            hasAcknowledgedResult = closure_2_1.hasAcknowledged();
-          }
-          if (hasAcknowledgedResult) {
-            let num = 0;
-            if (null != closure_2_1.expiresAt) {
-              let expiresAt = closure_2_1.expiresAt;
-              let _Date = Date;
-              let time = expiresAt.getTime();
-              num = time - Date.now();
-            }
-            if (closure_1_0 != null) {
-              closure_1_0.start(num, () => {
-                if (!closure_2_2) {
-                  if (closure_2_1.hasExpired()) {
-                    closure_2_3(true);
-                  }
-                }
-                let hasAcknowledgedResult;
-                if (closure_2_1 != null) {
-                  hasAcknowledgedResult = closure_2_1.hasAcknowledged();
-                }
-                if (hasAcknowledgedResult) {
-                  let num = 0;
-                  if (null != closure_2_1.expiresAt) {
-                    let expiresAt = closure_2_1.expiresAt;
-                    let _Date = Date;
-                    let time = expiresAt.getTime();
-                    num = time - Date.now();
-                  }
-                  if (closure_1_0 != null) {
-                    closure_1_0.start(num, () => {
-                      if (!closure_2_2) {
-                        if (closure_2_1.hasExpired()) {
-                          closure_2_3(true);
-                        }
-                      }
-                      let hasAcknowledgedResult;
-                      if (closure_2_1 != null) {
-                        hasAcknowledgedResult = closure_2_1.hasAcknowledged();
-                      }
-                      if (hasAcknowledgedResult) {
-                        let num = 0;
-                        if (null != closure_2_1.expiresAt) {
-                          let expiresAt = closure_2_1.expiresAt;
-                          let _Date = Date;
-                          let time = expiresAt.getTime();
-                          num = time - Date.now();
-                        }
-                        if (closure_1_0 != null) {
-                          closure_1_0.start(num, () => { ... });
-                        }
-                      }
-                    });
-                  }
-                }
-              });
-            }
-          }
-        });
+        timeout.start(num, f151303);
       }
       return () => timeout.stop();
     }
@@ -265,7 +251,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   let tmp8 = null;
   if (!first) {
     if (stateFromStores1) {
-      if (!arg1) {
+      const tmp9 = arg1;
+      if (!tmp9) {
         tmp8 = null;
       }
     }
@@ -273,3 +260,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   }
   return tmp8;
 });
+const result = size.fileFinishedImporting("modules/premium/hooks/useDiscountOffer.tsx");
+
+export default tmp2;

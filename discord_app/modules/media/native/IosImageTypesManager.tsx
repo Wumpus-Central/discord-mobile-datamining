@@ -2,119 +2,123 @@
 
 // Module 7293 (IosImageTypesManager)
 import LoggerDefault from "Logger" /* 3 */;
-import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1432 */;
-import _slicedToArray from "module_32" /* 32 */;
+import react_nativeDefault from "react-native" /* 1432 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import LifecycleManager from "LifecycleManager" /* 1989 */;
+import size from "module_2" /* 2 */;
 
-const logger = new LoggerDefault("IosImageTypesManager");
+let set, set2;
+
+const tmp2 = new LoggerDefault("IosImageTypesManager");
+const _false = tmp2;
 let closure_4 = null;
-class IosImageTypesManager extends tmp3 {
-}
-const prototype = IosImageTypesManager.prototype;
-prototype["_initialize"] = function _initialize() {
-  const result = this.initializeSupportedImageTypes();
-};
-prototype["_terminate"] = function _terminate() {
+const set3 = null;
+const set4 = null;
+const set5 = null;
+class IosImageTypesManager extends LifecycleManager {
+  _initialize() {
+    const result = this.initializeSupportedImageTypes();
+  }
+  _terminate() {
 
-};
-prototype["initializeSupportedImageTypes"] = function initializeSupportedImageTypes() {
-  if (null === closure_4) {
-    try {
-      const supportedImageTypes = NativeMediaManagerModuleDefault.getSupportedImageTypes();
-      closure_4 = supportedImageTypes;
-      const _Set = Set;
-      const set = new Set();
-      const _Set2 = Set;
-      const set1 = new Set();
-      const _Set3 = Set;
-      const set2 = new Set();
-      const _Object = Object;
-      const entries = Object.entries(supportedImageTypes);
-      const tmp15 = entries[Symbol.iterator]();
-      while (tmp15 !== undefined) {
-        let tmp20 = _slicedToArray(tmp17, 2);
-        [r10042, tmp21] = tmp20;
-        let extension = tmp21.extension;
-        let tmp22 = extension;
-        let mimeType = tmp21.mimeType;
-        let tmp23 = null != extension;
-        if (tmp23) {
-          tmp23 = "" !== tmp22;
+  }
+  initializeSupportedImageTypes() {
+    let tmp15;
+    if (null === closure_4) {
+      try {
+        const obj = react_nativeDefault;
+        const supportedImageTypes = obj.getSupportedImageTypes();
+        closure_4 = supportedImageTypes;
+        const _Set = Set;
+        const self = this;
+        const self2 = this;
+        set = new Set();
+        const _Set2 = Set;
+        const self3 = this;
+        const self4 = this;
+        const set1 = new Set();
+        const _Set3 = Set;
+        const self5 = this;
+        const self6 = this;
+        set2 = new Set();
+        const _Object = Object;
+        const entries = Object.entries(supportedImageTypes);
+        const obj3 = set;
+        const obj4 = set1;
+        const tmp9 = entries[Symbol.iterator]();
+        while (tmp9 !== undefined) {
+          let tmp14 = _slicedToArray(tmp11, 2);
+          [r10042, tmp15] = tmp14;
+          let extension = tmp15.extension;
+          let tmp16 = extension;
+          let mimeType = tmp15.mimeType;
+          let tmp17 = null != extension;
+          if (tmp17) {
+            tmp17 = "" !== tmp16;
+          }
+          if (tmp17) {
+            let addResult = obj3.add(tmp16);
+          }
+          let tmp23 = null != mimeType;
+          if (tmp23) {
+            tmp23 = "" !== mimeType;
+          }
+          if (tmp23) {
+            let addResult1 = obj4.add(mimeType);
+          }
+          continue;
         }
-        if (tmp23) {
-          let addResult = obj3.add(tmp22);
-        }
-        let tmp29 = null != mimeType;
-        if (tmp29) {
-          tmp29 = "" !== mimeType;
-        }
-        if (tmp29) {
-          let addResult1 = obj4.add(mimeType);
-        }
-        continue;
+        set.add("jpg");
+        set2.add("gif");
+        set2.add("webp");
+      } catch (tmp31) {
+        logger.warn("Failed to get iOS supported image types:", tmp31);
+        closure_4 = {};
+        const _Set4 = Set;
+        const self7 = this;
+        const self8 = this;
+        new Set();
+        const _Set5 = Set;
+        const self9 = this;
+        const self10 = this;
+        new Set();
+        const _Set6 = Set;
+        const self11 = this;
+        const self12 = this;
+        new Set();
       }
-      set.add("jpg");
-      set2.add("gif");
-      set2.add("webp");
-      set3 = set;
-      set4 = set1;
-      set5 = set2;
-      obj3 = set;
-      obj4 = set1;
-    } catch (tmp37) {
-      logger.warn("Failed to get iOS supported image types:", tmp37);
-      closure_4 = {};
-      const _Set4 = Set;
-      set3 = new Set();
-      const _Set5 = Set;
-      set4 = new Set();
-      const _Set6 = Set;
-      set5 = new Set();
     }
   }
-};
-prototype["getSupportedImageTypes"] = function getSupportedImageTypes() {
-  return closure_4;
-};
-prototype["isImageTypeSupported"] = function isImageTypeSupported(arg0) {
-  let tmp2 = null !== closure_4;
-  if (tmp2) {
-    tmp2 = arg0 in tmp;
+  getSupportedImageTypes() {
+    return closure_4;
   }
-  return tmp2;
-};
-prototype["getSupportedExtensions"] = function getSupportedExtensions() {
-  return set3;
-};
-prototype["getSupportedMimeTypes"] = function getSupportedMimeTypes() {
-  return set4;
-};
-prototype["getAnimatedExtensions"] = function getAnimatedExtensions() {
-  return set5;
-};
-prototype["isExtensionSupported"] = function isExtensionSupported(arg0) {
-  let hasItem = null !== set3;
-  if (hasItem) {
-    hasItem = set3.has(arg0);
+  isImageTypeSupported(arg0) {
+    return null !== closure_4 && arg0 in tmp;
   }
-  return hasItem;
-};
-prototype["isMimeTypeSupported"] = function isMimeTypeSupported(arg0) {
-  let hasItem = null !== set4;
-  if (hasItem) {
-    hasItem = set4.has(arg0);
+  getSupportedExtensions() {
+    return set3;
   }
-  return hasItem;
-};
-prototype["isExtensionAnimated"] = function isExtensionAnimated(formatted) {
-  let hasItem = null !== set5;
-  if (hasItem) {
-    hasItem = set5.has(formatted);
+  getSupportedMimeTypes() {
+    return set4;
   }
-  return hasItem;
-};
+  getAnimatedExtensions() {
+    return set5;
+  }
+  isExtensionSupported(arg0) {
+    const hasItem = null !== set3 && set3.has(arg0);
+    return hasItem;
+  }
+  isMimeTypeSupported(arg0) {
+    const hasItem = null !== set4 && set4.has(arg0);
+    return hasItem;
+  }
+  isExtensionAnimated(formatted) {
+    const hasItem = null !== set5 && set5.has(formatted);
+    return hasItem;
+  }
+}
+const prototype = IosImageTypesManager.prototype;
 const iosImageTypesManager = new IosImageTypesManager();
-const size = fn(2);
 let result = size.fileFinishedImporting("modules/media/native/IosImageTypesManager.tsx");
 
 export default iosImageTypesManager;

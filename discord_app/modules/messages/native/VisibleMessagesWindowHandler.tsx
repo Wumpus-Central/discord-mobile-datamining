@@ -22,6 +22,9 @@ export default function VisibleMessagesWindowHandler() {
     obj.data = null;
   };
   data.handleScrollPosition = function handleScrollPosition(arg0) {
+    let firstVisibleMessageRowIndex;
+    let lastVisibleMessageRowIndex;
+    let rows;
     ({ rows, firstVisibleMessageRowIndex, lastVisibleMessageRowIndex } = arg0);
     if (null != data.callback) {
       let tmp2 = null;
@@ -135,10 +138,9 @@ export default function VisibleMessagesWindowHandler() {
           }
         }
       }
-      data = { topVisibleMessage: tmp2, middleVisibleMessage: tmp18, bottomVisibleMessage: tmp9 };
-      data.data = data;
+      data = { topVisibleMessage: tmp2, middleVisibleMessage: tmp18, bottomVisibleMessage: tmp9, data };
       data.callback(data.data);
     }
   };
   return data;
-}.prototype;
+};

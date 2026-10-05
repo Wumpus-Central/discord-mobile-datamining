@@ -2,53 +2,56 @@
 
 // Module 7038 (CollapsedVoiceChannelStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
+import size from "module_2" /* 2 */;
 
 function handleConnectionOpen() {
+  let channel;
   obj = SnowflakeUtilsDefault;
   const keys = obj.keys(obj);
   const item = keys.forEach((item) => {
+    const tmp = item;
     if (null == channel.getChannel(item)) {
-      delete tmp[tmp2];
+      delete obj[tmp];
     }
   });
 }
 let obj = {};
-const PersistedStore = initializeDefault.PersistedStore;
+const PersistedStore = get_initializedDefault.PersistedStore;
 class CollapsedVoiceChannelStore extends PersistedStore {
+  initialize(arg0) {
+    this.waitFor(ChannelStore);
+  }
+  getState() {
+    return obj;
+  }
+  getCollapsed() {
+    return obj;
+  }
+  isCollapsed(arg0) {
+    return obj[arg0] || false;
+  }
 }
 const prototype = CollapsedVoiceChannelStore.prototype;
-prototype["initialize"] = function initialize(arg0) {
-  this.waitFor(ChannelStore);
-};
-prototype["getState"] = function getState() {
-  return obj;
-};
-prototype["getCollapsed"] = function getCollapsed() {
-  return obj;
-};
-prototype["isCollapsed"] = function isCollapsed(arg0) {
-  return obj[arg0] || false;
-};
 CollapsedVoiceChannelStore.displayName = "CollapsedVoiceChannelStore";
 CollapsedVoiceChannelStore.persistKey = "collapsedChannels";
-const collapsedVoiceChannelStore = new CollapsedVoiceChannelStore(DispatcherDefault, {
+const obj2 = {
   CONNECTION_OPEN: handleConnectionOpen,
   OVERLAY_INITIALIZE: handleConnectionOpen,
   CHANNEL_COLLAPSE: function handleChannelCollapse(channelId) {
     channelId = channelId.channelId;
     if (obj[channelId]) {
-      delete tmp[tmp2];
+      delete obj[channelId];
     } else {
-      tmp3[channelId] = true;
+      obj[channelId] = true;
     }
     obj = {};
     const merged = Object.assign(obj);
   }
-});
-const size = fn(2);
+};
+const collapsedVoiceChannelStore = new CollapsedVoiceChannelStore(DispatcherDefault, obj2);
 const result = size.fileFinishedImporting("stores/CollapsedVoiceChannelStore.tsx");
 
 export default collapsedVoiceChannelStore;

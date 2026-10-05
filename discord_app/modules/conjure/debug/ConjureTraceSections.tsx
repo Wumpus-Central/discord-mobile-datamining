@@ -3,6 +3,8 @@
 // Module 16767 (ConjureTraceSections)
 import size from "module_2" /* 2 */;
 
+let set;
+
 let closure_0 = ["arguments", "result", "usage", "diagnostics"];
 const result = size.fileFinishedImporting("modules/conjure/debug/ConjureTraceSections.tsx");
 
@@ -19,15 +21,9 @@ export const traceDetailSections = function traceDetailSections(findTraceEntryRe
   if (flag === undefined) {
     flag = false;
   }
-  const set = new Set();
+  set = new Set();
   if ("tool" === findTraceEntryResult.kind) {
-    let tmp5 = null != findTraceEntryResult.fields;
-    if (tmp5) {
-      tmp5 = findTraceEntryResult.fields.length > 0;
-    }
-    if (!tmp5) {
-      tmp5 = null != findTraceEntryResult.detailId;
-    }
+    const tmp5 = null != findTraceEntryResult.fields && findTraceEntryResult.fields.length > 0 || null != findTraceEntryResult.detailId;
     if (tmp5) {
       set.add("arguments");
     }
@@ -35,10 +31,10 @@ export const traceDetailSections = function traceDetailSections(findTraceEntryRe
       set.add("result");
     }
   } else {
+    const tmp2 = null != findTraceEntryResult.promptTokens || null != findTraceEntryResult.inputTokens || null != findTraceEntryResult.outputTokens || null != findTraceEntryResult.cacheReadTokens || null != findTraceEntryResult.costUsd || null != findTraceEntryResult.stopReason;
     if (tmp2) {
       set.add("usage");
     }
-    tmp2 = null != findTraceEntryResult.promptTokens || null != findTraceEntryResult.inputTokens || null != findTraceEntryResult.outputTokens || null != findTraceEntryResult.cacheReadTokens || null != findTraceEntryResult.costUsd || null != findTraceEntryResult.stopReason;
   }
   if (!flag) {
     flag = num > 0;

@@ -2,21 +2,24 @@
 
 // Module 11032 (useCanSetThumbnail)
 import ChannelStore from "ChannelStore" /* 2051 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/media_channel/useCanSetThumbnail.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, isImage) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, isImage) => {
+  let closure_0;
+  let first;
+  let tmp6;
   _require = arg0;
-  const cResult = require("c").c(6);
+  const obj = require("react");
+  const cResult = obj.c(6);
+  const tmp = _require;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -26,21 +29,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, isImage) =
     };
     cResult[1] = arg0;
     cResult[2] = fn;
-    let tmp6 = fn;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
-  const obj = require("c");
-  const stateFromStores = require("useStateFromStores").useStateFromStores(first, tmp6);
+  const tmpResult = tmp(573);
+  const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
   if (cResult[3] === stateFromStores) {
+    let tmp10;
     isImage = undefined;
+    const tmp7 = cResult[4];
     if (isImage != null) {
       isImage = isImage.isImage;
     }
-    if (cResult[4] === isImage) {
-      let tmp9 = cResult[5];
+    if (tmp7 === isImage) {
+      tmp10 = cResult[5];
     }
-    return tmp9;
+    return tmp10;
   }
   let isMediaChannelResult;
   if (stateFromStores != null) {
@@ -60,12 +65,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, isImage) =
   }
   cResult[4] = isImage2;
   cResult[5] = isMediaChannelResult;
-  tmp9 = isMediaChannelResult;
-  const tmpResult = require("useStateFromStores");
+  tmp10 = isMediaChannelResult;
 }) : ((arg0, isImage) => {
+  let closure_0;
   _require = arg0;
   const items = [ChannelStore];
-  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => ChannelStore.getChannel(closure_0));
+  const obj = require("useStateFromStores");
+  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(closure_0));
   let isMediaChannelResult;
   if (stateFromStores != null) {
     isMediaChannelResult = stateFromStores.isMediaChannel();
@@ -79,3 +85,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, isImage) =
   }
   return isMediaChannelResult;
 });
+const result = size.fileFinishedImporting("modules/media_channel/useCanSetThumbnail.tsx");
+
+export default tmp2;

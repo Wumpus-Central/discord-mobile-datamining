@@ -3,10 +3,13 @@
 // Module 7535 (ExperimentUtils)
 import _modDef12 from "module_12" /* 12 */;
 import ExperimentManager from "ExperimentManager" /* 4781 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import ExperimentStore from "ExperimentStore" /* 4776 */;
+import ExperimentConstants from "ExperimentConstants" /* 4777 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+let hasOwnProperty;
+let metroRequire;
 function getFirstEligibleUserExperiment(arg0) {
   const iter = arg0[Symbol.iterator]();
   const nextResult = iter.next();
@@ -21,12 +24,8 @@ function getFirstEligibleUserExperiment(arg0) {
   }
   return null;
 }
-const ExperimentConstants = fn(4777);
 ({ ExperimentTypes: hasOwnProperty, ExperimentBuckets: metroRequire } = ExperimentConstants);
-const size = fn(2);
-let result = size.fileFinishedImporting("utils/ExperimentUtils.tsx");
-
-export default {
+let obj = {
   getFirstEligibleUserExperiment,
   isInExperimentBucket(id, arg1) {
     return ExperimentStore.getUserExperimentBucket(id) === arg1;
@@ -58,9 +57,10 @@ export default {
             return false;
           } else if (type.revision !== type2.revision) {
             return false;
-          } else if (type.type === constants.USER) {
+          } else if (type.type === hasOwnProperty.USER) {
             if (type2.type === tmp.USER) {
-              return _modDef12.isEqual(type.context, type2.context);
+              const obj = _modDef12;
+              return obj.isEqual(type.context, type2.context);
             }
           }
         }
@@ -72,15 +72,17 @@ export default {
     const tmp = getFirstEligibleUserExperiment(arg0);
     if (null != tmp) {
       const tmp3 = _slicedToArray(tmp, 2);
-      const result = ExperimentManager.trackExposureToExperiment(tmp3[0], tmp4);
+      const first = tmp3[0];
+      const obj = ExperimentManager;
+      const result = obj.trackExposureToExperiment(first, tmp5);
       return tmp3[1];
     }
   },
   getExperimentBucketName(bucket) {
     let str = "Control";
-    if (bucket !== constants2.CONTROL) {
+    if (bucket !== metroRequire.CONTROL) {
       let str2 = "Not Eligible";
-      if (bucket !== constants2.NOT_ELIGIBLE) {
+      if (bucket !== metroRequire.NOT_ELIGIBLE) {
         const _HermesInternal = HermesInternal;
         str2 = "Treatment " + bucket;
       }
@@ -89,29 +91,33 @@ export default {
     return str;
   },
   getRecentExperimentBuckets(arg0, arg1) {
-    closure_0 = arg1;
+    let closure_0 = arg1;
     const entries = Object.entries(arg0);
     return entries.reduce((acc, item) => {
-      [tmp, tmp2] = item;
-      let tmp3 = (function isRecentExperiment(str, arg1) {
+      let tmp;
+      let tmp2;
+      function isRecentExperiment(str, arg1) {
+        let tmp4;
+        let tmp5;
         try {
           [tmp4, tmp5] = closure_1_3("-".split("-"), 2);
+          closure_1_3("-".split("-"), 2);
           if (null == tmp5) {
             return false;
           } else {
             const _Date = Date;
             const _HermesInternal = HermesInternal;
+            const self = this;
+            const self2 = this;
             const date = new Date("" + tmp4 + "-" + tmp5.slice(0, 2) + "-01");
             return date > arg1;
           }
-          const tmp3 = closure_1_3("-".split("-"), 2);
         } catch (err) {
           return false;
         }
-      })(tmp, closure_0);
-      if (tmp3) {
-        tmp3 = tmp2 > constants2.CONTROL;
       }
+      [tmp, tmp2] = item;
+      const tmp3 = isRecentExperiment(tmp, closure_0) && tmp2 > metroRequire.CONTROL;
       if (tmp3) {
         acc[tmp] = tmp2;
       }
@@ -119,3 +125,6 @@ export default {
     }, {});
   }
 };
+let result = size.fileFinishedImporting("utils/ExperimentUtils.tsx");
+
+export default obj;

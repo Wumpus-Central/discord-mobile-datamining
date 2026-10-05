@@ -1,10 +1,10 @@
-// === Module 10083: KeyboardUtils ===
+// === Module 10083: react-native ===
 
-// Module 10083 (KeyboardUtils)
-import _mod17 from "module_17" /* 17 */;
+// Module 10083 (react-native)
+import react_native from "react-native" /* 17 */;
 import size from "module_2" /* 2 */;
 
-const Keyboard = _mod17.Keyboard;
+const Keyboard = react_native.Keyboard;
 const result = size.fileFinishedImporting("utils/native/KeyboardUtils.tsx");
 
 export const dismissKeyboard = function dismissKeyboard() {

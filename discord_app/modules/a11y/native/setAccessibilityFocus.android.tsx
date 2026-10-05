@@ -1,25 +1,29 @@
-// === Module 5779: setAccessibilityFocus ===
+// === Module 5779: react-native ===
 
-// Module 5779 (setAccessibilityFocus)
-import get_ActivityIndicator from "module_17" /* 17 */;
+// Module 5779 (react-native)
+import react_native from "react-native" /* 17 */;
 import size from "module_2" /* 2 */;
 
-({ AccessibilityInfo: closure_0, findNodeHandle: closure_1 } = get_ActivityIndicator);
+let _window;
+let map;
+({ AccessibilityInfo: _window, findNodeHandle: map } = react_native);
 let result = size.fileFinishedImporting("modules/a11y/native/setAccessibilityFocus.android.tsx");
 
 export const setAccessibilityFocus = function setAccessibilityFocus(arg0) {
+  let delay;
+  let ref;
   ({ ref, delay } = arg0);
   if (delay === undefined) {
     delay = 0;
   }
-  closure_0 = undefined;
+  let closure_0;
   if (null != ref) {
     const tmp2 = closure_1(ref.current);
     closure_0 = tmp2;
     if (null != tmp2) {
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => {
-        const result = accessibilityFocus.setAccessibilityFocus(closure_0);
+        const result = _window.setAccessibilityFocus(closure_0);
       }, delay);
     }
   }

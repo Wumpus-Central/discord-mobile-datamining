@@ -1,50 +1,55 @@
 // === Module 12303: PortalKeyboardInlineComponent ===
 
 // Module 12303 (PortalKeyboardInlineComponent)
-import noop from "module_19" /* 19 */;
+import react_mod from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
-get_ActivityIndicator = fn(17);
-({ NativeModules: closure_4, findNodeHandle: hasOwnProperty } = get_ActivityIndicator);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/keyboard/native/PortalKeyboardInlineComponent.ios.tsx");
+let dependencyMap;
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = messagesRef(576).c(21);
+let closure_4;
+let hasOwnProperty;
+let react = react_mod;
+({ NativeModules: closure_4, findNodeHandle: hasOwnProperty } = react_native);
+const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let channelId;
+  let closure_2;
+  let closure_3;
+  let first;
+  let messagesRef;
+  let obj = messagesRef(576);
+  const cResult = obj.c(21);
   ({ channelId, messagesRef } = arg0);
-  const id = noop.useId();
+  let obj2 = react;
+  const id = react.useId();
   const tmp6 = id(4747)();
   dependencyMap = tmp6;
   id(1884)();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let obj3 = { includeCustomKeyboard: false };
     cResult[0] = obj3;
-    let first = obj3;
+    first = obj3;
   } else {
     first = cResult[0];
   }
   const tmp9 = id(6110)(first);
-  noop = tmp9;
-  let obj = messagesRef(576);
-  let obj2 = noop;
-  const keyboardContextForType = messagesRef(4747).useKeyboardContextForType(messagesRef(1616).KeyboardTypes.SYSTEM);
+  react = tmp9;
+  let tmpResult = messagesRef(4747);
+  const keyboardContextForType = tmpResult.useKeyboardContextForType(messagesRef(1616).KeyboardTypes.SYSTEM);
   if (cResult[1] !== id) {
     class K {
       constructor() {
         return () => {
-          const PortalKeyboardUIStore = messagesRef(dependencyMap[9]).PortalKeyboardUIStore;
+          const PortalKeyboardUIStore = messagesRef(closure_2[9]).PortalKeyboardUIStore;
           field = PortalKeyboardUIStore.getField("keyboard");
-          let tmp4 = null != field;
+          const tmp4 = null != field && field.handlerId === id;
           if (tmp4) {
-            tmp4 = field.handlerId === id;
-          }
-          if (tmp4) {
-            messagesRef(dependencyMap[10]).dismissKeyboard();
-            const tmpResult = messagesRef(dependencyMap[10]);
-            messagesRef(dependencyMap[9]).closePortalKeyboard();
-            const tmpResult2 = messagesRef(dependencyMap[9]);
+            const tmpResult = messagesRef(closure_2[10]);
+            tmpResult.dismissKeyboard();
+            const tmpResult2 = messagesRef(closure_2[9]);
+            tmpResult2.closePortalKeyboard();
           }
         };
       }
@@ -55,17 +60,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     class K {
       constructor() {
         return () => {
-          const PortalKeyboardUIStore = messagesRef(dependencyMap[9]).PortalKeyboardUIStore;
+          const PortalKeyboardUIStore = messagesRef(closure_2[9]).PortalKeyboardUIStore;
           field = PortalKeyboardUIStore.getField("keyboard");
-          let tmp4 = null != field;
+          const tmp4 = null != field && field.handlerId === id;
           if (tmp4) {
-            tmp4 = field.handlerId === id;
-          }
-          if (tmp4) {
-            messagesRef(dependencyMap[10]).dismissKeyboard();
-            const tmpResult = messagesRef(dependencyMap[10]);
-            messagesRef(dependencyMap[9]).closePortalKeyboard();
-            const tmpResult2 = messagesRef(dependencyMap[9]);
+            const tmpResult = messagesRef(closure_2[10]);
+            tmpResult.dismissKeyboard();
+            const tmpResult2 = messagesRef(closure_2[9]);
+            tmpResult2.closePortalKeyboard();
           }
         };
       }
@@ -76,33 +78,31 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   let field = PortalKeyboardUIStore.useField("keyboard");
   const PortalKeyboardUIStore2 = messagesRef(4748).PortalKeyboardUIStore;
   const field1 = PortalKeyboardUIStore2.useField("state");
-  obj2.useRef(false);
+  const ref = obj2.useRef(false);
   if (cResult[3] === id) {
     class K {
       constructor() {
         return () => {
-          const PortalKeyboardUIStore = messagesRef(dependencyMap[9]).PortalKeyboardUIStore;
+          const PortalKeyboardUIStore = messagesRef(closure_2[9]).PortalKeyboardUIStore;
           field = PortalKeyboardUIStore.getField("keyboard");
-          let tmp4 = null != field;
+          const tmp4 = null != field && field.handlerId === id;
           if (tmp4) {
-            tmp4 = field.handlerId === id;
-          }
-          if (tmp4) {
-            messagesRef(dependencyMap[10]).dismissKeyboard();
-            const tmpResult = messagesRef(dependencyMap[10]);
-            messagesRef(dependencyMap[9]).closePortalKeyboard();
-            const tmpResult2 = messagesRef(dependencyMap[9]);
+            const tmpResult = messagesRef(closure_2[10]);
+            tmpResult.dismissKeyboard();
+            const tmpResult2 = messagesRef(closure_2[9]);
+            tmpResult2.closePortalKeyboard();
           }
         };
       }
     }
   }
   const fn = function v() {
+    let closure_0;
     const current = ref.current;
     if (null != field) {
       if (null == field.handlerId) {
         if (null != field) {
-          if (field1 === messagesRef(4751).PortalKeyboardState.REQUEST_OPEN) {
+          if (field1 === messagesRef(closure_2[12]).PortalKeyboardState.REQUEST_OPEN) {
             const current4 = messagesRef.current;
             let chatRef;
             if (current4 != null) {
@@ -111,25 +111,26 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
             if (null != chatRef) {
               const tmp38 = field(chatRef.current);
               if (null != tmp38) {
-                const result = messagesRef(4748).handlePortalKeyboardOpen(id);
+                const obj2 = messagesRef(closure_2[9]);
+                const result = obj2.handlePortalKeyboardOpen(id);
                 ref.current = true;
-                const obj2 = messagesRef(4748);
                 const DCDChatManager3 = keyboardContextForType.DCDChatManager;
-                const result1 = DCDChatManager3.customKeyboardWillShow(tmp38, messagesRef(9776).getKeyboardActionSheetHeight().minimum, 0.25, 7);
-                const obj3 = messagesRef(9776);
+                const obj3 = messagesRef(closure_2[13]);
+                const result1 = DCDChatManager3.customKeyboardWillShow(tmp38, obj3.getKeyboardActionSheetHeight().minimum, 0.25, 7);
               }
             }
           }
         }
-        if (dependencyMap === messagesRef(1616).KeyboardTypes.SYSTEM) {
+        if (closure_2 === messagesRef(closure_2[8]).KeyboardTypes.SYSTEM) {
           if (keyboardContextForType.keyboardWillOpen) {
-            if (field1 !== messagesRef(4751).PortalKeyboardState.REQUEST_CLOSE) {
+            if (field1 !== messagesRef(closure_2[12]).PortalKeyboardState.REQUEST_CLOSE) {
               const _setTimeout = setTimeout;
-              messagesRef = setTimeout(messagesRef(4748).closePortalKeyboardRequest, 250);
+              messagesRef = setTimeout(messagesRef(closure_2[9]).closePortalKeyboardRequest, 250);
               return () => clearTimeout(closure_0);
             }
           }
-          messagesRef(4748).closePortalKeyboard();
+          const obj = messagesRef(closure_2[9]);
+          obj.closePortalKeyboard();
           const current3 = messagesRef.current;
           let chatRef1;
           if (current3 != null) {
@@ -143,17 +144,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
               const result2 = DCDChatManager.customKeyboardWillHide(tmp21, 0.25, 7);
             }
           }
-          const obj = messagesRef(4748);
         }
       }
     } else {
       let tmp4 = closure_3;
-      if (!closure_3) {
-        let tmp3 = !current;
-        if (!current) {
-          tmp3 = !tmp28;
-        }
-        tmp4 = tmp3;
+      if (!tmp4) {
+        tmp4 = !current && !tmp28;
       }
       if (!tmp4) {
         const current2 = messagesRef.current;
@@ -180,43 +176,44 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[8] = keyboardContextForType;
   cResult[9] = tmp9;
   cResult[10] = fn;
-  let tmpResult = messagesRef(4747);
 }) : ((messagesRef) => {
+  let closure_2;
+  let closure_3;
   messagesRef = messagesRef.messagesRef;
-  noop = undefined;
-  const id = noop.useId();
+  react = undefined;
+  const channelId = messagesRef.channelId;
+  const id = react.useId();
   const tmp2 = id(4747)();
   dependencyMap = tmp2;
+  const tmp3 = id(1884)();
   let tmp4 = id(6110)({ includeCustomKeyboard: false });
-  noop = tmp4;
-  let tmp3 = id(1884)();
-  const keyboardContextForType = messagesRef(4747).useKeyboardContextForType(messagesRef(1616).KeyboardTypes.SYSTEM);
+  react = tmp4;
+  let obj = messagesRef(4747);
+  const keyboardContextForType = obj.useKeyboardContextForType(messagesRef(1616).KeyboardTypes.SYSTEM);
   id(5590)(() => () => {
-    const PortalKeyboardUIStore = messagesRef(dependencyMap[9]).PortalKeyboardUIStore;
+    const PortalKeyboardUIStore = messagesRef(closure_2[9]).PortalKeyboardUIStore;
     field = PortalKeyboardUIStore.getField("keyboard");
-    let tmp4 = null != field;
+    const tmp4 = null != field && field.handlerId === id;
     if (tmp4) {
-      tmp4 = field.handlerId === id;
-    }
-    if (tmp4) {
-      messagesRef(dependencyMap[10]).dismissKeyboard();
-      const tmpResult = messagesRef(dependencyMap[10]);
-      messagesRef(dependencyMap[9]).closePortalKeyboard();
-      const tmpResult2 = messagesRef(dependencyMap[9]);
+      const tmpResult = messagesRef(closure_2[10]);
+      tmpResult.dismissKeyboard();
+      const tmpResult2 = messagesRef(closure_2[9]);
+      tmpResult2.closePortalKeyboard();
     }
   });
   let PortalKeyboardUIStore = messagesRef(4748).PortalKeyboardUIStore;
   let field = PortalKeyboardUIStore.useField("keyboard");
   const PortalKeyboardUIStore2 = messagesRef(4748).PortalKeyboardUIStore;
   const field1 = PortalKeyboardUIStore2.useField("state");
-  noop.useRef(false);
-  const items = [messagesRef.channelId, id, field, field1, tmp2, messagesRef, keyboardContextForType, tmp3, tmp4];
-  const layoutEffect = noop.useLayoutEffect(() => {
+  const ref = react.useRef(false);
+  const items = [channelId, id, field, field1, tmp2, messagesRef, keyboardContextForType, tmp3, tmp4];
+  const layoutEffect = react.useLayoutEffect(() => {
+    let closure_0;
     const current = ref.current;
     if (null != field) {
       if (null == field.handlerId) {
         if (null != field) {
-          if (field1 === messagesRef(4751).PortalKeyboardState.REQUEST_OPEN) {
+          if (field1 === messagesRef(closure_2[12]).PortalKeyboardState.REQUEST_OPEN) {
             const current4 = messagesRef.current;
             let chatRef;
             if (current4 != null) {
@@ -225,25 +222,26 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
             if (null != chatRef) {
               const tmp38 = field(chatRef.current);
               if (null != tmp38) {
-                const result = messagesRef(4748).handlePortalKeyboardOpen(id);
+                const obj2 = messagesRef(closure_2[9]);
+                const result = obj2.handlePortalKeyboardOpen(id);
                 ref.current = true;
-                const obj2 = messagesRef(4748);
                 const DCDChatManager3 = keyboardContextForType.DCDChatManager;
-                const result1 = DCDChatManager3.customKeyboardWillShow(tmp38, messagesRef(9776).getKeyboardActionSheetHeight().minimum, 0.25, 7);
-                const obj3 = messagesRef(9776);
+                const obj3 = messagesRef(closure_2[13]);
+                const result1 = DCDChatManager3.customKeyboardWillShow(tmp38, obj3.getKeyboardActionSheetHeight().minimum, 0.25, 7);
               }
             }
           }
         }
-        if (dependencyMap === messagesRef(1616).KeyboardTypes.SYSTEM) {
+        if (closure_2 === messagesRef(closure_2[8]).KeyboardTypes.SYSTEM) {
           if (keyboardContextForType.keyboardWillOpen) {
-            if (field1 !== messagesRef(4751).PortalKeyboardState.REQUEST_CLOSE) {
+            if (field1 !== messagesRef(closure_2[12]).PortalKeyboardState.REQUEST_CLOSE) {
               const _setTimeout = setTimeout;
-              messagesRef = setTimeout(messagesRef(4748).closePortalKeyboardRequest, 250);
+              messagesRef = setTimeout(messagesRef(closure_2[9]).closePortalKeyboardRequest, 250);
               return () => clearTimeout(closure_0);
             }
           }
-          messagesRef(4748).closePortalKeyboard();
+          const obj = messagesRef(closure_2[9]);
+          obj.closePortalKeyboard();
           const current3 = messagesRef.current;
           let chatRef1;
           if (current3 != null) {
@@ -257,17 +255,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
               const result2 = DCDChatManager.customKeyboardWillHide(tmp21, 0.25, 7);
             }
           }
-          const obj = messagesRef(4748);
         }
       }
     } else {
       let tmp4 = closure_3;
-      if (!closure_3) {
-        let tmp3 = !current;
-        if (!current) {
-          tmp3 = !tmp28;
-        }
-        tmp4 = tmp3;
+      if (!tmp4) {
+        tmp4 = !current && !tmp28;
       }
       if (!tmp4) {
         const current2 = messagesRef.current;
@@ -288,3 +281,6 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   }, items);
   return null;
 }));
+let result = size.fileFinishedImporting("modules/keyboard/native/PortalKeyboardInlineComponent.ios.tsx");
+
+export default memoResult;

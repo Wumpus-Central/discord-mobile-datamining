@@ -1,14 +1,18 @@
 // === Module 1336: V8APIError ===
 
 // Module 1336 (V8APIError)
-import _slicedToArray from "module_32" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import size from "module_2" /* 2 */;
 
 function convertStringArrayToSkemaErrorItems(arr) {
   return arr.map((message) => ({ code: "UNKNOWN", message }));
 }
-function convertOldFormError(captcha_key) {
+function convertOldFormError(body) {
+  let tmp6;
+  let tmp8;
   const obj = {};
-  const entries = Object.entries(captcha_key);
+  const entries = Object.entries(body);
+  const tmp2 = entries[Symbol.iterator]();
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);
     [tmp6, tmp8] = tmp5;
@@ -24,66 +28,56 @@ function convertOldFormError(captcha_key) {
 }
 const __root_errors = "__root_errors";
 class APIError extends Error {
-  constructor(arg0, arg1) {
-    str = importDefault;
-    if (importDefault === undefined) {
+  constructor(message, code) {
+    let _Array2;
+    let captchaFields;
+    let errors;
+    let first;
+    let obj;
+    let retryAfter;
+    let status;
+    let str = arg2;
+    if (arg2 === undefined) {
       str = "An unexpected error occurred.";
     }
-    if (typeof global === "string") {
-      tmp4 = fn;
-      obj1 = { message: null, code: null };
-      obj1.message = global;
-      obj1.code = fn;
-      obj = obj1;
+    if (typeof message === "string") {
+      obj = { message, code };
+      const obj2 = { message, code };
+    } else if (null == message.body) {
+      obj = { status: message.status };
+      const obj3 = { status: message.status };
     } else {
-      tmp6 = null;
-      if (null == global.body) {
-        obj6 = { status: null };
-        obj6.status = global.status;
-        obj = obj6;
-      } else {
-        captcha_key = global.body;
-        if (null != global.body.message) {
-          tmp7 = globalThis;
-          _Array2 = Array;
-          if (!Array.isArray(global.body.message)) {
-            if (null != global.body.code) {
-              _Array = Array;
-            }
-            obj = { message: null, code: null, retryAfter: null, errors: null, status: null };
-            ({ message: obj.message, code: obj.code, retry_after: obj.retryAfter, errors: obj.errors } = captcha_key);
-            obj.status = global.status;
+      const body = message.body;
+      if (null != message.body.message) {
+        _Array2 = Array;
+        if (!Array.isArray(message.body.message)) {
+          if (null != message.body.code) {
+            const _Array = Array;
           }
+          obj = { message: null, code: null, retryAfter: null, errors: null, status: message.status };
+          ({ message: obj.message, code: obj.code, retry_after: obj.retryAfter, errors: obj.errors } = body);
         }
-        if (null == captcha_key) {
-          obj7 = { status: null, code: 50035, errors: null };
-          obj7.status = global.status;
-          tmp = convertOldFormError;
-          num = 0;
-          obj7.errors = convertOldFormError(captcha_key);
-          tmp3 = obj7;
-        } else {
-          str2 = "captcha_key";
-        }
-        obj8 = { code: -1, captchaFields: null, status: null, message: null };
-        obj8.captchaFields = captcha_key;
-        obj8.status = global.status;
-        num2 = 0;
-        first = undefined;
-        if (captcha_key.captcha_key.length > 0) {
-          captcha_key = captcha_key.captcha_key;
-          first = captcha_key[0];
-        }
-        obj8.message = first;
-        obj7 = obj8;
       }
+      if (null != body) {
+        let obj5;
+        if ("captcha_key" in body) {
+          const obj4 = { code: -1, captchaFields: body, status: message.status, message: first };
+          first = undefined;
+          if (body.captcha_key.length > 0) {
+            first = body.captcha_key[0];
+          }
+          obj5 = obj4;
+        }
+        obj = obj5;
+      }
+      obj5 = { status: message.status, code: 50035, errors: convertOldFormError(body) };
     }
     ({ message, code, captchaFields } = obj);
     ({ retryAfter, errors, status } = obj);
     if (message == null) {
       message = str;
     }
-    _Array21 = new _Array2(message);
+    const _Array21 = new _Array2(message);
     if (code == null) {
       code = -1;
     }
@@ -95,124 +89,123 @@ class APIError extends Error {
       captchaFields = {};
     }
     _Array21.captchaFields = captchaFields;
-    _Array21.cause = global;
+    _Array21.cause = message;
     return _Array21;
   }
-}
-const prototype = APIError.prototype;
-prototype["hasFieldErrors"] = function hasFieldErrors() {
-  let tmp2 = null != this.errors;
-  if (tmp2) {
-    const _Object = Object;
-    tmp2 = Object.keys(tmp.errors).length > 0;
+  hasFieldErrors() {
+    let tmp2 = null != this.errors;
+    if (tmp2) {
+      const _Object = Object;
+      tmp2 = Object.keys(tmp.errors).length > 0;
+    }
+    return tmp2;
   }
-  return tmp2;
-};
-prototype["getFieldErrors"] = function getFieldErrors(ASSET) {
-  let arr = ASSET;
-  if (typeof ASSET === "string") {
-    const items = [ASSET];
-    arr = items;
-  }
-  const errors = this.errors;
-  let tmp = errors;
-  if (arr.length > 0) {
-    tmp = errors;
-    if (null != errors) {
-      const spliceResult = arr.splice(1);
-      tmp = tmp4;
-      while (spliceResult.length > 0) {
-        arr = spliceResult;
+  getFieldErrors(ASSET) {
+    let arr = ASSET;
+    if (typeof ASSET === "string") {
+      const items = [ASSET];
+      arr = items;
+    }
+    const errors = this.errors;
+    let tmp = errors;
+    if (arr.length > 0) {
+      tmp = errors;
+      if (null != errors) {
+        const spliceResult = arr.splice(1);
         tmp = tmp4;
-        if (null == tmp4) {
-          break;
+        while (spliceResult.length > 0) {
+          arr = spliceResult;
+          tmp = tmp4;
+          if (null == tmp4) {
+            break;
+          }
         }
       }
     }
-  }
-  let _errors;
-  if (tmp != null) {
-    _errors = tmp._errors;
-  }
-  return _errors;
-};
-prototype["getAllFieldErrors"] = function getAllFieldErrors() {
-  return this.getAllFieldErrorsUnder(this.errors);
-};
-prototype["getAllFieldErrorsUnder"] = function getAllFieldErrorsUnder(errors) {
-  const self = this;
-  const obj = {};
-  let _errors;
-  if (errors != null) {
-    _errors = errors._errors;
-  }
-  let tmp2 = null != _errors;
-  if (tmp2) {
-    tmp2 = _errors.length > 0;
-  }
-  if (tmp2) {
-    obj[self] = _errors;
-  }
-  if (undefined !== errors) {
-    let _Object = Object;
-    let entries = Object.entries(errors);
-    let item = entries.forEach((item) => {
-      [tmp, tmp2] = item;
-      if ("_errors" !== tmp) {
-        const _Object = Object;
-        const entries = Object.entries(self.getAllFieldErrorsUnder(tmp2));
-        item = entries.forEach((item) => {
-          [tmp, tmp2] = item;
-          if (tmp === __root_errors) {
-            obj[closure_1_0] = tmp2;
-          } else {
-            const _HermesInternal = HermesInternal;
-            obj["" + closure_1_0 + "." + tmp] = tmp2;
-          }
-        });
-      }
-    });
-  }
-  return obj;
-};
-prototype["getFirstFieldErrorMessage"] = function getFirstFieldErrorMessage(name) {
-  const fieldErrors = this.getFieldErrors(name);
-  let message = null;
-  if (null != fieldErrors) {
-    message = null;
-    if (fieldErrors.length >= 1) {
-      message = fieldErrors[0].message;
+    let _errors;
+    if (tmp != null) {
+      _errors = tmp._errors;
     }
+    return _errors;
   }
-  return message;
-};
-prototype["getAnyErrorMessage"] = function getAnyErrorMessage() {
-  const anyErrorMessageAndField = this.getAnyErrorMessageAndField();
-  let error;
-  if (anyErrorMessageAndField != null) {
-    error = anyErrorMessageAndField.error;
+  getAllFieldErrors() {
+    return this.getAllFieldErrorsUnder(this.errors);
   }
-  if (error == null) {
-    error = this.message;
-  }
-  return error;
-};
-prototype["getAnyErrorMessageAndField"] = function getAnyErrorMessageAndField() {
-  let errors = this.errors;
-  let tmp = null;
-  if (null != errors) {
-    while (null == errors._errors) {
+  getAllFieldErrorsUnder(errors) {
+    const self = this;
+    const obj = {};
+    let _errors;
+    if (errors != null) {
+      _errors = errors._errors;
+    }
+    const tmp2 = null != _errors && _errors.length > 0;
+    if (tmp2) {
+      obj[self] = _errors;
+    }
+    if (undefined !== errors) {
       let _Object = Object;
-      let first = Object.keys(errors)[0];
-      errors = errors[first];
-      tmp = first;
+      let entries = Object.entries(errors);
+      let item = entries.forEach((item) => {
+        let tmp;
+        let tmp2;
+        [tmp, tmp2] = item;
+        if ("_errors" !== tmp) {
+          const _Object = Object;
+          const entries = Object.entries(self.getAllFieldErrorsUnder(tmp2));
+          item = entries.forEach((item) => {
+            let tmp;
+            let tmp2;
+            [tmp, tmp2] = item;
+            if (tmp === __root_errors) {
+              obj[closure_1_0] = tmp2;
+            } else {
+              const _HermesInternal = HermesInternal;
+              obj["" + closure_1_0 + "." + tmp] = tmp2;
+            }
+          });
+        }
+      });
     }
-    const obj = { fieldName: tmp, error: errors._errors[0].message };
     return obj;
   }
-  return null;
-};
-const size = fn(2);
+  getFirstFieldErrorMessage(name) {
+    const fieldErrors = this.getFieldErrors(name);
+    let message = null;
+    if (null != fieldErrors) {
+      message = null;
+      if (fieldErrors.length >= 1) {
+        message = fieldErrors[0].message;
+      }
+    }
+    return message;
+  }
+  getAnyErrorMessage() {
+    const anyErrorMessageAndField = this.getAnyErrorMessageAndField();
+    let error;
+    if (anyErrorMessageAndField != null) {
+      error = anyErrorMessageAndField.error;
+    }
+    if (error == null) {
+      error = this.message;
+    }
+    return error;
+  }
+  getAnyErrorMessageAndField() {
+    let errors = this.errors;
+    let tmp = null;
+    if (null != errors) {
+      while (null == errors._errors) {
+        let _Object = Object;
+        let first = Object.keys(errors)[0];
+        errors = errors[first];
+        tmp = first;
+      }
+      return { fieldName: tmp, error: errors._errors[0].message };
+    }
+    return null;
+  }
+}
+const prototype = APIError.prototype;
 const result = size.fileFinishedImporting("../discord_common/js/packages/http-utils/V8APIError.tsx");
 
 export const INVALID_FORM_BODY_ERROR_CODE = 50035;

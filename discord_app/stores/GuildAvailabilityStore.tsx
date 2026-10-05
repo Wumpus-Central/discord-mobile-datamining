@@ -2,9 +2,10 @@
 
 // Module 5618 (GuildAvailabilityStore)
 import LoggerDefault from "Logger" /* 3 */;
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GuildStore from "GuildStore" /* 2074 */;
+import size from "module_2" /* 2 */;
 
 function handleConnectionOpen(unavailableGuilds) {
   new Set(unavailableGuilds.unavailableGuilds);
@@ -23,21 +24,19 @@ function handleGuild(guild) {
   }
 }
 const logger = new LoggerDefault("GuildAvailabilityStore");
+new LoggerDefault("GuildAvailabilityStore");
 const set = new Set();
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class GuildAvailabilityStore extends Store {
+  initialize() {
+    this.waitFor(GuildStore);
+  }
+  isUnavailable(guildId) {
+    const hasItem = null != guildId && set.has(guildId);
+    return hasItem;
+  }
 }
 const prototype = GuildAvailabilityStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(GuildStore);
-};
-prototype["isUnavailable"] = function isUnavailable(guildId) {
-  let hasItem = null != guildId;
-  if (hasItem) {
-    hasItem = set.has(guildId);
-  }
-  return hasItem;
-};
 Object.defineProperty(prototype, "totalGuilds", {
   get: function totalGuilds() {
     return GuildStore.getGuildCount() + set.size;
@@ -57,22 +56,22 @@ Object.defineProperty(prototype, "unavailableGuilds", {
   set: undefined
 });
 GuildAvailabilityStore.displayName = "GuildAvailabilityStore";
-const guildAvailabilityStore = new GuildAvailabilityStore(DispatcherDefault, {
+const obj = {
   CONNECTION_OPEN: handleConnectionOpen,
   OVERLAY_INITIALIZE: handleConnectionOpen,
   GUILD_UNAVAILABLE: function handleGuildUnavailable(guildId) {
     if (set.has(guildId.guildId)) {
       return false;
     } else {
-      guild = GuildStore.getGuild(guildId.guildId);
+      const guild = GuildStore.getGuild(guildId.guildId);
       let str = "???";
+      const tmp4 = null != guild && null != guild.name;
       if (tmp4) {
         str = guild.name;
       }
       const _HermesInternal = HermesInternal;
       logger.warn("Guild has gone unavailable: " + guildId.guildId + " (" + str + ")");
       set.add(guildId.guildId);
-      tmp4 = null != guild && null != guild.name;
     }
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
@@ -89,8 +88,8 @@ const guildAvailabilityStore = new GuildAvailabilityStore(DispatcherDefault, {
       return false;
     }
   }
-});
-const size = fn(2);
+};
+const guildAvailabilityStore = new GuildAvailabilityStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("stores/GuildAvailabilityStore.tsx");
 
 export default guildAvailabilityStore;

@@ -2,27 +2,28 @@
 
 // Module 9586 (StageChannelParticipantUtils)
 import DurationsDefault from "Durations" /* 1102 */;
-import util from "util" /* 1126 */;
+import intl6 from "intl" /* 1126 */;
 import UserUtils from "UserUtils" /* 4722 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
 const DAY = DurationsDefault.Millis.DAY;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelParticipantUtils.tsx");
 
 export const participantMemberInfo = function participantMemberInfo(participant) {
+  const obj = UserUtils;
   if (obj.isNewUser(participant.user)) {
-    const intl5 = util.intl;
-    return intl5.string(util.t.VaCdhQ);
+    const intl5 = intl6.intl;
+    return intl5.string(intl6.t.VaCdhQ);
   } else {
+    let stringResult;
     const member = participant.member;
     let joinedAt;
     if (member != null) {
       joinedAt = member.joinedAt;
     }
     if (null == joinedAt) {
-      const intl4 = util.intl;
-      let stringResult = intl4.string(util.t.CQmzib);
+      const intl4 = intl6.intl;
+      stringResult = intl4.string(intl6.t.CQmzib);
     } else {
       if (null != participant.member) {
         if (participant.member.roles.length > 0) {
@@ -32,25 +33,26 @@ export const participantMemberInfo = function participantMemberInfo(participant)
             name = role.name;
           }
           if (name == null) {
-            const intl3 = util.intl;
-            name = intl3.string(util.t["97/NdO"]);
+            const intl3 = intl6.intl;
+            name = intl3.string(intl6.t["97/NdO"]);
           }
           stringResult = name;
         }
       }
       const _Date = Date;
-      const date = new Date();
+      const self = this;
+      const self2 = this;
       const _Date2 = Date;
+      const date = new Date();
       const time = date.getTime();
       if (time - Date.parse(joinedAt) < DAY) {
-        const intl2 = util.intl;
-        stringResult = intl2.string(util.t.IKE48n);
+        const intl2 = intl6.intl;
+        stringResult = intl2.string(intl6.t.IKE48n);
       } else {
-        const intl = util.intl;
-        stringResult = intl.string(util.t.u0gUWt);
+        const intl = intl6.intl;
+        stringResult = intl.string(intl6.t.u0gUWt);
       }
     }
     return stringResult;
   }
-  obj = UserUtils;
 };

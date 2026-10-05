@@ -1,7 +1,7 @@
 // === Module 561: FluxApi ===
 
 // Module 561 (FluxApi)
-import shim_mod from "js_shim/shim" /* 562 */;
+import shim_mod from "shim" /* 562 */;
 import size from "module_2" /* 2 */;
 
 let shim = shim_mod;

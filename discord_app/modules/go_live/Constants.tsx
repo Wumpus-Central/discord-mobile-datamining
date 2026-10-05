@@ -4,6 +4,8 @@
 import Notifications from "Notifications" /* 4933 */;
 import size from "module_2" /* 2 */;
 
+const StreamNotificationsGuildMaxSize = Notifications.Notifications.StreamNotificationsGuildMaxSize;
+const set = new Set(["chrome.exe", "opera.exe", "firefox.exe", "brave.exe", "msedge.exe"]);
 const result = size.fileFinishedImporting("modules/go_live/Constants.tsx");
 
 export const StreamIssueReportReasons = { BLACK_SCREEN: "BLACK_SCREEN", BLURRY: "BLURRY", LAGGING: "LAGGING", OUT_OF_SYNC: "OUT_OF_SYNC", AUDIO_MISSING: "AUDIO_MISSING", AUDIO_POOR: "AUDIO_POOR", GAME_ISSUE: "GAME_ISSUE", STREAM_STOPPED: "STREAM_STOPPED", NO_ISSUE: "NO_ISSUE", OTHER: "OTHER", VIBES_OFF: "VIBES_OFF" };
@@ -19,6 +21,6 @@ export const WINDOWS_GRAPHICS_CAPTURE_NEW_APIS_BUILD = 26100;
 export const WINDOWS_GRAPHICS_CAPTURE_SEMVER = ">=10.0.22000";
 export const WINDOWS_GRAPHICS_CAPTURE_BUILD = 22000;
 export const StreamTypes = { GUILD: "guild", CALL: "call" };
-export const STREAM_NOTIFY_GUILD_MAX_SIZE = Notifications.Notifications.StreamNotificationsGuildMaxSize;
+export const STREAM_NOTIFY_GUILD_MAX_SIZE = StreamNotificationsGuildMaxSize;
 export const GO_LIVE_NOTIFY_FRIENDS_MIN_MEMBER_COUNT = 30;
-export const BROWSER_EXECUTABLES = new Set(["chrome.exe", "opera.exe", "firefox.exe", "brave.exe", "msedge.exe"]);
+export const BROWSER_EXECUTABLES = set;

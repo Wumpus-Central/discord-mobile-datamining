@@ -3,52 +3,62 @@
 // Module 14830 (useBountyVideoProgressPersistence)
 import BountyActionCreators from "BountyActionCreators" /* 10949 */;
 import useBountiesModalTiming from "useBountiesModalTiming" /* 14827 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
-import BountyStore from "BountyStore" /* 7186 */;
+import _slicedToArray_mod from "_slicedToArray" /* 32 */;
+import react_mod from "react" /* 19 */;
+import BountyStore_mod from "BountyStore" /* 7186 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountyVideoProgressPersistence.tsx");
+let bountyId;
 
-export const useBountyVideoProgressPersistence = ReactCompilerGating.isReactCompilerEnabled() ? ((bountyId) => {
-  const cResult = bountyId(endMode[4]).c(11);
+let _slicedToArray = _slicedToArray_mod;
+let react = react_mod;
+let BountyStore = BountyStore_mod;
+let ref = { timestampSec: 0, maxTimestampSec: 0, duration: 0 };
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((bountyId) => {
+  let endMode;
+  let ref2;
+  let ref3;
+  let ref4;
+  let obj = bountyId(endMode[4]);
+  const cResult = obj.c(11);
   bountyId = bountyId.bountyId;
   endMode = bountyId.endMode;
   if (cResult[0] === bountyId) {
+    let tmp2;
+    let tmp6;
     if (cResult[1] === endMode) {
-      let tmp2 = cResult[2];
+      tmp2 = cResult[2];
     }
-    const first = _slicedToArray(noop.useState(tmp2), 1)[0];
-    _slicedToArray = noop.useRef(0);
-    noop = noop.useRef(first.timestampSec);
-    BountyStore = noop.useRef(first.maxTimestampSec);
-    noop.useRef(first.duration);
+    const first = _slicedToArray(react.useState(tmp2), 1)[0];
+    _slicedToArray = react.useRef(0);
+    react = react.useRef(first.timestampSec);
+    BountyStore = react.useRef(first.maxTimestampSec);
+    ref = react.useRef(first.duration);
     if (cResult[3] !== bountyId) {
       const fn2 = function p(current, current2, current3) {
-        closure_3.current = current3;
-        closure_4.current = current;
-        closure_5.current = current2;
+        ref2.current = current3;
+        ref3.current = current;
+        ref4.current = current2;
         if (current3 >= ref.current) {
           tmp.current = current3 + 1;
           const obj2 = { timestampSec: current3, maxTimestampSec: current, duration: current2 };
-          const result = BountyActionCreators.setBountyVideoProgress(bountyId, obj2);
+          const obj = BountyActionCreators;
+          const result = obj.setBountyVideoProgress(bountyId, obj2);
         }
       };
       cResult[3] = bountyId;
       cResult[4] = fn2;
-      let tmp6 = fn2;
+      tmp6 = fn2;
     } else {
       tmp6 = cResult[4];
     }
     if (cResult[5] !== bountyId) {
       class R {
         constructor() {
-          obj = closure_0(closure_1[6]);
-          obj1 = { timestampSec: closure_3.current, maxTimestampSec: closure_4.current, duration: closure_5.current };
-          result = obj.setBountyVideoProgress(bountyId, obj1);
-          return;
+          const obj = BountyActionCreators;
+          const obj2 = { timestampSec: ref2.current, maxTimestampSec: ref3.current, duration: ref4.current };
+          const result = obj.setBountyVideoProgress(bountyId, obj2);
         }
       }
       cResult[5] = bountyId;
@@ -56,20 +66,18 @@ export const useBountyVideoProgressPersistence = ReactCompilerGating.isReactComp
     } else {
       class R {
         constructor() {
-          obj = closure_0(closure_1[6]);
-          obj1 = { timestampSec: closure_3.current, maxTimestampSec: closure_4.current, duration: closure_5.current };
-          result = obj.setBountyVideoProgress(bountyId, obj1);
-          return;
+          const obj = BountyActionCreators;
+          const obj2 = { timestampSec: ref2.current, maxTimestampSec: ref3.current, duration: ref4.current };
+          const result = obj.setBountyVideoProgress(bountyId, obj2);
         }
       }
     }
     if (cResult[7] === R) {
       class R {
         constructor() {
-          obj = closure_0(closure_1[6]);
-          obj1 = { timestampSec: closure_3.current, maxTimestampSec: closure_4.current, duration: closure_5.current };
-          result = obj.setBountyVideoProgress(bountyId, obj1);
-          return;
+          const obj = BountyActionCreators;
+          const obj2 = { timestampSec: ref2.current, maxTimestampSec: ref3.current, duration: ref4.current };
+          const result = obj.setBountyVideoProgress(bountyId, obj2);
         }
       }
     }
@@ -84,58 +92,60 @@ export const useBountyVideoProgressPersistence = ReactCompilerGating.isReactComp
     if (null != bountyVideoProgress) {
       if (endMode === useBountiesModalTiming.BountyVideoEndMode.LOOP) {
         const duration = bountyVideoProgress.duration;
-        let tmp6 = duration > 0;
-        if (tmp6) {
-          tmp6 = tmp5 >= duration - 1;
-        }
         return bountyVideoProgress;
       }
     }
-    bountyVideoProgress = closure_5;
+    bountyVideoProgress = ref;
   };
   cResult[0] = bountyId;
   cResult[1] = endMode;
   cResult[2] = fn;
   tmp2 = fn;
-  let obj = bountyId(endMode[4]);
 }) : ((bountyId) => {
+  let items;
+  let items1;
+  let ref2;
   bountyId = bountyId.bountyId;
   const endMode = bountyId.endMode;
   _slicedToArray = undefined;
-  noop = undefined;
-  const first = _slicedToArray(noop.useState(() => {
+  react = undefined;
+  const first = _slicedToArray(react.useState(() => {
     let bountyVideoProgress = BountyStore.getBountyVideoProgress(bountyId);
     if (null != bountyVideoProgress) {
       if (endMode === useBountiesModalTiming.BountyVideoEndMode.LOOP) {
         const duration = bountyVideoProgress.duration;
-        let tmp6 = duration > 0;
-        if (tmp6) {
-          tmp6 = tmp5 >= duration - 1;
-        }
         return bountyVideoProgress;
       }
     }
-    bountyVideoProgress = closure_5;
+    bountyVideoProgress = ref;
   }), 1)[0];
-  _slicedToArray = noop.useRef(0);
-  noop = noop.useRef(first.timestampSec);
-  noop.useRef(first.maxTimestampSec);
-  noop.useRef(first.duration);
-  let obj = { initialProgress: first, handleProgress: null, flushProgress: null };
-  const items = [bountyId];
-  obj.handleProgress = noop.useCallback((current, current2, current3) => {
-    closure_3.current = current3;
-    closure_4.current = current;
-    closure_5.current = current2;
-    if (current3 >= ref.current) {
-      tmp.current = current3 + 1;
-      const obj2 = { timestampSec: current3, maxTimestampSec: current, duration: current2 };
-      const result = BountyActionCreators.setBountyVideoProgress(bountyId, obj2);
-    }
-  }, items);
-  const items1 = [bountyId];
-  obj.flushProgress = noop.useCallback(() => {
-    const result = BountyActionCreators.setBountyVideoProgress(bountyId, { timestampSec: ref2.current, maxTimestampSec: ref3.current, duration: ref4.current });
-  }, items1);
+  _slicedToArray = react.useRef(0);
+  react = react.useRef(first.timestampSec);
+  const ref3 = react.useRef(first.maxTimestampSec);
+  const ref4 = react.useRef(first.duration);
+  let obj = {
+    initialProgress: first,
+    handleProgress: react.useCallback((current, current2, current3) => {
+      ref2.current = current3;
+      ref3.current = current;
+      ref4.current = current2;
+      if (current3 >= ref.current) {
+        tmp.current = current3 + 1;
+        const obj2 = { timestampSec: current3, maxTimestampSec: current, duration: current2 };
+        const obj = BountyActionCreators;
+        const result = obj.setBountyVideoProgress(bountyId, obj2);
+      }
+    }, items),
+    flushProgress: react.useCallback(() => {
+      const obj = BountyActionCreators;
+      const obj2 = { timestampSec: ref2.current, maxTimestampSec: ref3.current, duration: ref4.current };
+      const result = obj.setBountyVideoProgress(bountyId, obj2);
+    }, items1)
+  };
+  items = [bountyId];
+  items1 = [bountyId];
   return obj;
 });
+let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountyVideoProgressPersistence.tsx");
+
+export const useBountyVideoProgressPersistence = tmp2;

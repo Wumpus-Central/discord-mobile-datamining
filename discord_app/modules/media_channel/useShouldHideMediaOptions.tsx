@@ -1,23 +1,28 @@
 // === Module 11285: useShouldHideMediaOptions ===
 
 // Module 11285 (useShouldHideMediaOptions)
+import ChannelConstants from "ChannelConstants" /* 2058 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const ChannelFlags = fn(2058).ChannelFlags;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/media_channel/useShouldHideMediaOptions.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const ChannelFlags = ChannelConstants.ChannelFlags;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let closure_0;
+  let first;
+  let tmp6;
+  let tmp7;
   _require = arg0;
-  const cResult = require("c").c(5);
+  const obj = require("react");
+  const cResult = obj.c(5);
+  const tmp = _require;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -33,22 +38,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         channel1 = null;
         if (channel.isForumPost()) {
           let parent_id1;
+          const getChannel = ChannelStore.getChannel;
           if (channel != null) {
             parent_id1 = channel.parent_id;
           }
-          channel1 = ChannelStore.getChannel(parent_id1);
+          channel1 = getChannel(parent_id1);
         }
       }
       return channel1;
     };
     cResult[1] = arg0;
     cResult[2] = fn;
-    let tmp6 = fn;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
-  const obj = require("c");
-  const stateFromStores = require("useStateFromStores").useStateFromStores(first, tmp6);
+  const tmpResult = tmp(573);
+  const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
   if (cResult[3] !== stateFromStores) {
     let hasFlagResult;
     if (stateFromStores != null) {
@@ -56,15 +62,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     cResult[3] = stateFromStores;
     cResult[4] = hasFlagResult;
-    let tmp7 = hasFlagResult;
+    tmp7 = hasFlagResult;
   } else {
     tmp7 = cResult[4];
   }
   return true === tmp7;
 }) : ((arg0) => {
+  let closure_0;
   _require = arg0;
   const items = [ChannelStore];
-  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
+  const obj = require("useStateFromStores");
+  const stateFromStores = obj.useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(closure_0);
     let parent_id;
     if (channel != null) {
@@ -75,10 +83,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       channel1 = null;
       if (channel.isForumPost()) {
         let parent_id1;
+        const getChannel = ChannelStore.getChannel;
         if (channel != null) {
           parent_id1 = channel.parent_id;
         }
-        channel1 = ChannelStore.getChannel(parent_id1);
+        channel1 = getChannel(parent_id1);
       }
     }
     return channel1;
@@ -89,3 +98,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   return true === hasFlagResult;
 });
+const result = size.fileFinishedImporting("modules/media_channel/useShouldHideMediaOptions.tsx");
+
+export default tmp2;

@@ -1,31 +1,34 @@
 // === Module 15506: BackButton ===
 
 // Module 15506 (BackButton)
-import jsxProd from "jsxProd" /* 21 */;
+import Fragment from "Fragment" /* 21 */;
 import MfaStepsTypes from "MfaStepsTypes" /* 15500 */;
 import buttonDefault from "button" /* 15503 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-const jsx = jsxProd.jsx;
-const result = size.fileFinishedImporting("modules/mfa/native/components/BackButton.tsx");
+let importDefault, navigation, props;
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((props) => {
-  const cResult = props(576).c(4);
-  props = props.props;
+const jsx = Fragment.jsx;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((props) => {
+  let first;
   const obj = props(576);
-  const navigation = props(1490).useNavigation();
+  const cResult = obj.c(4);
+  props = props.props;
+  const obj2 = props(1490);
+  navigation = obj2.useNavigation();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1126).intl;
-    const stringResult = intl.string(tmp(1126).t.Tot4EC);
+    const stringResult = intl.string(props(1126).t.Tot4EC);
     cResult[0] = stringResult;
-    let first = stringResult;
+    first = stringResult;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === navigation) {
+    let tmp7;
     if (cResult[2] === props) {
-      let tmp7 = cResult[3];
+      tmp7 = cResult[3];
     }
     return tmp7;
   }
@@ -40,23 +43,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((props) => {
   cResult[2] = props;
   cResult[3] = tmp8;
   tmp7 = tmp8;
-  const obj2 = props(1490);
-  const obj3 = {
-    variant: "secondary",
-    text: first,
-    onPress() {
-      navigation.push(MfaStepsTypes.MfaScreens.SELECT, props);
-    }
-  };
 }) : ((props) => {
+  let closure_1;
   props = props.props;
-  importDefault = props(1490).useNavigation();
-  const obj2 = { variant: "secondary", text: null, onPress: null };
   const obj = props(1490);
+  importDefault = obj.useNavigation();
+  buttonDefault;
   const intl = props(1126).intl;
-  obj2.text = intl.string(props(1126).t.Tot4EC);
-  obj2.onPress = function onPress() {
+  return <tmp variant="secondary" text={intl.string(props(1126).t.Tot4EC)} onPress={function onPress() {
     closure_1.push(MfaStepsTypes.MfaScreens.SELECT, props);
-  };
-  return jsx(buttonDefault, { variant: "secondary", text: null, onPress: null });
+  }} />;
 });
+const result = size.fileFinishedImporting("modules/mfa/native/components/BackButton.tsx");
+
+export default tmp2;

@@ -5,16 +5,15 @@ import Constants from "Constants" /* 1085 */;
 import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 5789 */;
 import size from "module_2" /* 2 */;
 
+let CHANNEL_SENTINEL;
+let COMMAND_SENTINEL;
+let EMOJI_SENTINEL;
+let MENTION_SENTINEL;
+let REACTION_START_SENTINEL;
 function isAutocompleteSeparatingBoundary(c22, selectionStart) {
-  let isMatch = 0 === selectionStart;
+  let isMatch = 0 === selectionStart || WHITESPACE_RE.test(c22[selectionStart - 1]);
   if (!isMatch) {
-    isMatch = WHITESPACE_RE.test(c22[selectionStart - 1]);
-  }
-  if (!isMatch) {
-    let hasItem = null != tmp3;
-    if (hasItem) {
-      hasItem = set.has(tmp3);
-    }
+    const hasItem = null != tmp3 && set.has(tmp3);
     isMatch = hasItem;
   }
   return isMatch;
@@ -25,8 +24,8 @@ function getAutocompleteToken(c22) {
     while (true) {
       if (isAutocompleteSeparatingBoundary(c22, num)) {
         for (const item10013 of closure_1) {
-          if (arg0.startsWith(item10013, num)) {
-            let substr = arg0.slice(num);
+          if (c22.startsWith(item10013, num)) {
+            let substr = c22.slice(num);
             obj.return();
             return substr;
           }
@@ -52,5 +51,6 @@ export { getAutocompleteToken };
 export const boundAutocompleteWord = function boundAutocompleteWord(c22, arr) {
   arr = getAutocompleteToken(c22);
   const diff = c22.length - arr.length;
-  return { word: arr, fullWord: arr.slice(diff), didTrimPrefix: diff > 0 };
+  const obj = { word: arr, fullWord: arr.slice(diff), didTrimPrefix: diff > 0 };
+  return obj;
 };

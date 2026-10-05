@@ -1,17 +1,17 @@
 // === Module 6648: Sheet/BottomSheetHandle ===
 
 // Module 6648 (Sheet/BottomSheetHandle)
-import c from "c" /* 576 */;
-import noop from "module_19" /* 19 */;
+import react2 from "react" /* 576 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("design/components/Sheet/native/BottomSheetHandle.tsx");
-
-export const useBottomSheetImperativeHandle = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
-  closure_0 = arg1;
-  const cResult = c.c(3);
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+  let tmp2;
+  let tmp3;
+  let closure_0 = arg1;
+  const obj = react2;
+  const cResult = obj.c(3);
   if (cResult[0] !== arg1) {
     const fn = function c() {
       return {
@@ -56,17 +56,17 @@ export const useBottomSheetImperativeHandle = ReactCompilerGating.isReactCompile
     cResult[0] = arg1;
     cResult[1] = fn;
     cResult[2] = items;
-    let tmp3 = items;
-    let tmp2 = fn;
+    tmp3 = items;
+    tmp2 = fn;
   } else {
     tmp2 = cResult[1];
     tmp3 = cResult[2];
   }
-  const imperativeHandle = noop.useImperativeHandle(arg0, tmp2, tmp3);
+  const imperativeHandle = react.useImperativeHandle(arg0, tmp2, tmp3);
 }) : ((arg0, arg1) => {
-  closure_0 = arg1;
+  let closure_0 = arg1;
   const items = [arg1];
-  const imperativeHandle = noop.useImperativeHandle(arg0, () => ({
+  const imperativeHandle = react.useImperativeHandle(arg0, () => ({
     expandActionSheet() {
       const current = closure_1_0.current;
       if (current != null) {
@@ -104,3 +104,6 @@ export const useBottomSheetImperativeHandle = ReactCompilerGating.isReactCompile
     }
   }), items);
 });
+const result = size.fileFinishedImporting("design/components/Sheet/native/BottomSheetHandle.tsx");
+
+export const useBottomSheetImperativeHandle = tmp2;

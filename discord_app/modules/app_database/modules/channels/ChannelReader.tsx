@@ -3,124 +3,188 @@
 // Module 2099 (ChannelReader)
 import LoggerDefault from "Logger" /* 3 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 2078 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import size from "module_2" /* 2 */;
 
-const logger = new LoggerDefault("ChannelReader");
-const size = fn(2);
+let c2, c3, c5, c6, closure_3, set, set2;
+
+const _false = new LoggerDefault("ChannelReader");
+new LoggerDefault("ChannelReader");
 const result = size.fileFinishedImporting("modules/app_database/modules/channels/ChannelReader.tsx");
-const prototype = function ChannelReader() {
-  return Object.create(new.target.prototype);
-}.prototype;
-prototype["getSync"] = function getSync(databaseResult, arg1) {
-  const nowResult = performance.now();
-  const manySyncUnsafe = DatabaseDaosDefault.channels(databaseResult).getManySyncUnsafe(arg1);
-  const diff = performance.now() - nowResult;
-  logger.log("synchronously loaded in " + diff + "ms (guild: " + arg1 + ", channels: " + manySyncUnsafe.length + ")");
-  const items = [manySyncUnsafe, diff];
-  return items;
-};
-prototype["getAsync"] = function getAsync(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  return (async () => {
-    const _performance2 = performance;
-    closure_128_0 = performance.now();
-    tmp2(tmp5[2]);
-    await tmp2(tmp5[2]).channels(tmp2).getMany(tmp5);
-    closure_128_1 = value;
-    const _performance = performance;
-    closure_128_2 = performance.now() - closure_128_0;
-    const _HermesInternal = HermesInternal;
-    c3.verbose("loaded in " + closure_128_2 + "ms (guild: " + closure_129_1 + ", channels: " + closure_128_1.length + ")");
-    return closure_128_1;
-  })();
-};
-prototype["getGuildIds"] = function getGuildIds() {
-  return (async () => {
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+class ChannelReader {
+  static getSync(databaseResult, guild_id) {
+    const nowResult = performance.now();
+    const obj = DatabaseDaosDefault;
+    const channelsResult = obj.channels(databaseResult);
+    const manySyncUnsafe = channelsResult.getManySyncUnsafe(guild_id);
+    const diff = performance.now() - nowResult;
+    logger.log("synchronously loaded in " + diff + "ms (guild: " + guild_id + ", channels: " + manySyncUnsafe.length + ")");
+    const items = [manySyncUnsafe, diff];
+    return items;
+  }
+  static getAsync(arg0, arg1) {
+    let closure_0 = arg0;
+    let closure_1 = arg1;
+    return (async () => {
+      let channelsResult;
+      let value;
+      if (c3 === 2) {
+        c3 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "IconComponent", done: null };
+        }
       } else {
-        return { value: "IconComponent", done: null };
+        try {
+          let closure_2;
+          let tmp;
+          c3 = 2;
+          if (0 === c2) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              value = undefined;
+              closure_2 = undefined;
+              const _performance2 = performance;
+              tmp = performance.now();
+              const obj6 = tmp(value[2]);
+              c2 = 1;
+              c3 = 1;
+              const obj4 = { value: channelsResult.getMany(value), done: false };
+              channelsResult = obj6.channels(tmp);
+              return obj4;
+            }
+          } else if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            const _performance = performance;
+            closure_2 = performance.now() - tmp;
+            const _HermesInternal = HermesInternal;
+            c3.verbose("loaded in " + closure_2 + "ms (guild: " + closure_129_1 + ", channels: " + value.length + ")");
+            c3 = 3;
+            const obj = { value, done: true };
+            return obj;
+          }
+        } catch (tmp5) {
+          c3 = 3;
+          throw tmp5;
+        }
       }
-    } else {
-      try {
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
+    })();
+  }
+  static getGuildIds() {
+    return (async function() {
+      if (c6 === 2) {
+        c6 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        let c4;
+        try {
+          let closure_1;
+          let closure_0;
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              let closure_2 = tmp;
+              closure_1 = tmp4;
+              closure_0 = undefined;
+              c4 = 1;
+              const obj8 = DatabaseDaosDefault;
+              const channelsResult = obj8.channels();
+              if (null == channelsResult) {
+                const _Set3 = Set;
+                const self5 = this;
+                const self6 = this;
+                set = new Set();
+                c4 = 0;
+                c6 = 3;
+                const obj4 = { value: set, done: true };
+                return obj4;
+              } else {
+                c5 = 2;
+                c6 = 1;
+                const obj5 = { value: channelsResult.getGuildIds(), done: false };
+                return obj5;
+              }
+            }
+          } else if (1 === c5) {
+            c4 = 0;
+            closure_1 = closure_3;
+            closure_130_3.warn("couldn't get guild ids", closure_1);
+            const _Set2 = Set;
+            const self3 = this;
+            const self4 = this;
+            const set1 = new Set();
+            c6 = 3;
+            const obj6 = { value: set1, done: true };
+            return obj6;
+          } else if (arg0 === 1) {
             c6 = 3;
             throw value;
           } else if (arg0 === 2) {
+            c4 = 0;
             c6 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj7 = { value, done: true };
+            return obj7;
           } else {
-            closure_2 = tmp3;
-            closure_1 = tmp7;
-            closure_129_0 = undefined;
-            c4 = 1;
-            const channelsResult = DatabaseDaosDefault.channels();
-            if (null == channelsResult) {
-              const _Set3 = Set;
-              const set = new Set();
-              c4 = 0;
-              c6 = 3;
-              const obj4 = { value: set, done: true };
-              return obj4;
-            } else {
-              c5 = 2;
-              c6 = 1;
-              const obj5 = { value: channelsResult.getGuildIds(), done: false };
-              return obj5;
+            closure_0 = value;
+            if (value == null) {
+              closure_0 = [];
             }
+            closure_0 = closure_0.filter((item) => null !== item && typeof item === "string");
+            const _Set = Set;
+            const self = this;
+            const self2 = this;
+            set2 = new Set(closure_0);
+            c4 = 0;
+            c6 = 3;
+            const obj = { value: set2, done: true };
+            return obj;
           }
-        } else if (1 === tmp7) {
-          c4 = 0;
-          closure_129_1 = closure_3;
-          closure_130_3.warn("couldn't get guild ids", closure_129_1);
-          const _Set2 = Set;
-          const set1 = new Set();
-          c6 = 3;
-          const obj6 = { value: set1, done: true };
-          return obj6;
-        } else if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 0;
-          c6 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
-        } else {
-          closure_0 = value;
-          if (value == null) {
-            closure_0 = [];
+        } catch (tmp21) {
+          closure_3 = tmp21;
+          if (0 === c4) {
+            c6 = 3;
+            throw tmp21;
+          } else {
+            c5 = 1;
           }
-          closure_129_0 = closure_0.filter((item) => null !== item && typeof item === "string");
-          const _Set = Set;
-          const set2 = new Set(closure_129_0);
-          c4 = 0;
-          c6 = 3;
-          const obj = { value: set2, done: true };
-          return obj;
-        }
-      } catch (tmp30) {
-        closure_3 = tmp30;
-        if (tmp4 === c4) {
-          c6 = tmp2;
-          throw tmp30;
-        } else {
-          c5 = tmp;
         }
       }
-    }
-  })();
-};
+    })();
+  }
+}
 
-export default prototype;
+export default ChannelReader;

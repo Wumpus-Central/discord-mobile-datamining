@@ -2,28 +2,48 @@
 
 // Module 10526 (useWishlistRecommendations)
 import _mod12 from "module_12" /* 12 */;
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
+import WishlistRecommendationRecord2 from "WishlistRecommendationRecord" /* 6728 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7858 */;
 import WishlistFetchSource from "WishlistFetchSource" /* 8437 */;
 import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 8438 */;
+import useGetOrFetchStorefrontPrices from "useGetOrFetchStorefrontPrices" /* 8439 */;
 import useWishlistApplicationIds from "useWishlistApplicationIds" /* 10528 */;
 import useWishlistSkuFilter from "useWishlistSkuFilter" /* 10529 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
 import UserProfileStore from "UserProfileStore" /* 7111 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import WishlistRecommendationsStore from "WishlistRecommendationsStore" /* 10527 */;
-import WishlistRecommendationRecord from "WishlistRecommendationRecord" /* 6728 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const constants = fn(6728).WishlistRecommendationReason;
+const require = globalThis.__r;
+const WishlistRecommendationRecord = WishlistRecommendationRecord2;
+let _require, dependencyMap, firstWishlistId;
+
+let obj2;
+const constants = WishlistRecommendationRecord2.WishlistRecommendationReason;
 let closure_9 = 30 * DurationsDefault.Millis.MINUTE;
-let combinedSkusToUserAndReason = { state: "success", data: new WishlistRecommendationRecord({ skus: [], skus_to_user_and_reason: {}, applications: [] }), fetchedAt: 0 };
-let ReactCompilerGating = fn(558);
+let combinedSkusToUserAndReason = { state: "success", data: new WishlistRecommendationRecord(obj2), fetchedAt: 0 };
+obj2 = { skus: [], skus_to_user_and_reason: {}, applications: [] };
+new WishlistRecommendationRecord(obj2);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = applicationIdsFilter(576).c(30);
+  let applicationIdsFilter;
+  let closure_2;
+  let errors;
+  let id;
+  let isFetching;
+  let source;
+  let tmp4;
+  let tmp5;
+  let userIdsAndWishlistIds;
+  let wishlists;
+  let obj = applicationIdsFilter(576);
+  const cResult = obj.c(30);
   ({ userIdsAndWishlistIds, source, applicationIdsFilter } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [AuthenticationStore];
@@ -37,102 +57,113 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  let obj = applicationIdsFilter(576);
-  const stateFromStores = applicationIdsFilter(504).useStateFromStores(tmp4, tmp5);
+  const tmpResult = applicationIdsFilter(504);
+  const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
   if (cResult[2] === source) {
+    let tmp8;
     if (cResult[3] === userIdsAndWishlistIds) {
-      let tmp8 = cResult[4];
+      tmp8 = cResult[4];
     }
-    const fetchWishlists = applicationIdsFilter(8430).useFetchWishlists(tmp8);
+    const tmpResult2 = applicationIdsFilter(8430);
+    const fetchWishlists = tmpResult2.useFetchWishlists(tmp8);
     ({ wishlists, isFetching, errors } = fetchWishlists);
     if (cResult[5] === applicationIdsFilter) {
+      let tmp10;
       if (cResult[6] === wishlists) {
-        let tmp10 = cResult[7];
+        tmp10 = cResult[7];
       }
       dependencyMap = tmp10;
       if (cResult[8] === applicationIdsFilter) {
+        let tmp29;
+        let tmp38;
         if (cResult[9] === wishlists) {
-          dependencyMap2 = tmp29;
-          if (cResult[15] === stateFromStores) {
-            if (cResult[16] === tmp29) {
-              if (cResult[17] === tmp10) {
-                if (cResult[24] === cResult[18]) {
-                  if (cResult[25] === errors) {
-                    if (cResult[26] === tmp29) {
-                      if (cResult[27] === tmp10) {
-                        if (cResult[28] === isFetching) {
-                          let tmp44 = cResult[29];
-                        }
-                        return tmp44;
-                      }
+          tmp29 = cResult[10];
+        }
+        let closure_3 = tmp29;
+        if (cResult[15] === stateFromStores) {
+          if (cResult[16] === tmp29) {
+            if (cResult[17] === tmp10) {
+              tmp38 = cResult[18];
+            }
+            if (cResult[24] === tmp38) {
+              if (cResult[25] === errors) {
+                if (cResult[26] === tmp29) {
+                  if (cResult[27] === tmp10) {
+                    let tmp42;
+                    if (cResult[28] === isFetching) {
+                      tmp42 = cResult[29];
                     }
+                    return tmp42;
                   }
                 }
-                let obj2 = { sortedWishlistSkus: cResult[18], wishlistSkuIdToSku: tmp29, wishlistSkusToUserAndReasonMap: tmp10, wishlistsAreFetching: isFetching, wishlistErrors: errors };
-                cResult[24] = cResult[18];
-                cResult[25] = errors;
-                cResult[26] = tmp29;
-                cResult[27] = tmp10;
-                cResult[28] = isFetching;
-                cResult[29] = obj2;
-                tmp44 = obj2;
               }
             }
+            let obj2 = { sortedWishlistSkus: tmp38, wishlistSkuIdToSku: tmp29, wishlistSkusToUserAndReasonMap: tmp10, wishlistsAreFetching: isFetching, wishlistErrors: errors };
+            cResult[24] = tmp38;
+            cResult[25] = errors;
+            cResult[26] = tmp29;
+            cResult[27] = tmp10;
+            cResult[28] = isFetching;
+            cResult[29] = obj2;
+            tmp42 = obj2;
           }
-          if (cResult[19] === stateFromStores) {
-            if (cResult[20] === tmp10) {
-              let tmp40 = cResult[21];
-            }
-            const _Object2 = Object;
-            const keys = Object.keys(tmp29);
-            const sorted = keys.sort(tmp40);
-            if (cResult[22] !== tmp29) {
-              class M {
-                constructor(arg0) {
-                  return closure_3[arg0];
-                }
-              }
-              cResult[22] = tmp29;
-              cResult[23] = M;
-            } else {
-              class M {
-                constructor(arg0) {
-                  return closure_3[arg0];
-                }
-              }
-            }
-            const mapped = sorted.map(M);
-            cResult[15] = stateFromStores;
-            cResult[16] = tmp29;
-            cResult[17] = tmp10;
-            cResult[18] = mapped;
-          }
-          const fn2 = function y(arg0, arg1) {
-            let obj = dependencyMap[arg1];
-            if (obj == null) {
-              obj = {};
-            }
-            let obj2 = dependencyMap[arg0];
-            if (obj2 == null) {
-              obj2 = {};
-            }
-            const diff = Object.keys(obj).length - Object.keys(obj2).length;
-            if (0 !== diff) {
-              return diff;
-            } else {
-              const _Boolean = Boolean;
-              const _Boolean2 = Boolean;
-              const _Number = Number;
-              const _Number2 = Number;
-              const BooleanResult = Boolean(obj[stateFromStores]);
-              return Number(Boolean(obj2[stateFromStores])) - Number(BooleanResult);
-            }
-          };
-          cResult[19] = stateFromStores;
-          cResult[20] = tmp10;
-          cResult[21] = fn2;
-          tmp40 = fn2;
         }
+        if (cResult[19] === stateFromStores) {
+          let tmp39;
+          if (cResult[20] === tmp10) {
+            tmp39 = cResult[21];
+          }
+          const _Object2 = Object;
+          const keys = Object.keys(tmp29);
+          const sorted = keys.sort(tmp39);
+          if (cResult[22] !== tmp29) {
+            class M {
+              constructor(arg0) {
+                return closure_3[arg0];
+              }
+            }
+            cResult[22] = tmp29;
+            cResult[23] = M;
+          } else {
+            class M {
+              constructor(arg0) {
+                return closure_3[arg0];
+              }
+            }
+          }
+          const mapped = sorted.map(M);
+          cResult[15] = stateFromStores;
+          cResult[16] = tmp29;
+          cResult[17] = tmp10;
+          cResult[18] = mapped;
+          tmp38 = mapped;
+        }
+        const fn2 = function y(arg0, arg1) {
+          let obj = closure_2[arg1];
+          if (obj == null) {
+            obj = {};
+          }
+          let obj2 = closure_2[arg0];
+          if (obj2 == null) {
+            obj2 = {};
+          }
+          const diff = Object.keys(obj).length - Object.keys(obj2).length;
+          if (0 !== diff) {
+            return diff;
+          } else {
+            const _Boolean = Boolean;
+            const _Boolean2 = Boolean;
+            const _Number = Number;
+            const _Number2 = Number;
+            const BooleanResult = Boolean(obj[stateFromStores]);
+            const NumberResult = Number(Boolean(obj2[stateFromStores]));
+            return NumberResult - Number(BooleanResult);
+          }
+        };
+        cResult[19] = stateFromStores;
+        cResult[20] = tmp10;
+        cResult[21] = fn2;
+        tmp39 = fn2;
       }
       const _Symbol = Symbol;
       if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
@@ -181,17 +212,18 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
       const _Object = Object;
       const found = wishlists.filter(applicationIdsFilter(1375).isNotNullish);
-      const found1 = found.flatMap(tmp31).filter(tmp33);
-      const fromEntriesResult = Object.fromEntries(found1.map(T));
+      const flatMapResult = found.flatMap(tmp31);
+      const found1 = flatMapResult.filter(tmp33);
+      const fromEntriesResult = fromEntries(found1.map(T));
       cResult[8] = applicationIdsFilter;
       cResult[9] = wishlists;
       cResult[10] = fromEntriesResult;
-      const flatMapResult = found.flatMap(tmp31);
+      tmp29 = fromEntriesResult;
     }
     const found2 = wishlists.filter(applicationIdsFilter(1375).isNotNullish);
     const obj3 = {};
     const iter = found2[Symbol.iterator]();
-    const tmpResult2 = applicationIdsFilter(8430);
+    const nextResult = iter.next();
     while (iter !== undefined) {
       class M {
         constructor(arg0) {
@@ -214,6 +246,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           isOwned = tmp21.isOwned;
         }
         if (!isOwned) {
+          let tmp22;
           class M {
             constructor(arg0) {
               return closure_3[arg0];
@@ -225,29 +258,25 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 return closure_3[arg0];
               }
             }
-            let tmp22 = !applicationIdsFilter.includes(tmp21.sku.applicationId);
+            tmp22 = !applicationIdsFilter.includes(tmp21.sku.applicationId);
           }
           isOwned = tmp22;
         }
-        if (isOwned) {
+        if (!isOwned) {
+          let tmp23;
           class M {
             constructor(arg0) {
               return closure_3[arg0];
             }
           }
-        } else {
-          class M {
-            constructor(arg0) {
-              return closure_3[arg0];
-            }
-          }
+          let skuId = tmp21.skuId;
           if (null != obj3[tmp21.skuId]) {
             class M {
               constructor(arg0) {
                 return closure_3[arg0];
               }
             }
-            let tmp23 = obj3[tmp21.skuId];
+            tmp23 = obj3[tmp21.skuId];
           } else {
             class M {
               constructor(arg0) {
@@ -258,8 +287,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           let obj4 = {};
           let merged = Object.assign(tmp23);
           obj4[tmp17.userId] = constants.WISHLIST;
-          obj3[tmp21.skuId] = obj4;
+          obj3[skuId] = obj4;
         }
+        continue;
       }
       continue;
     }
@@ -267,23 +297,28 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[6] = wishlists;
     cResult[7] = obj3;
     tmp10 = obj3;
-    const nextResult = iter.next();
   }
   const obj5 = { wishlistIdsAndUsers: userIdsAndWishlistIds, source };
   cResult[2] = source;
   cResult[3] = userIdsAndWishlistIds;
   cResult[4] = obj5;
   tmp8 = obj5;
-  const tmpResult = applicationIdsFilter(504);
 }) : ((applicationIdsFilter) => {
+  let errors;
+  let id;
+  let isFetching;
+  let items3;
+  let source;
+  let userIdsAndWishlistIds;
   applicationIdsFilter = applicationIdsFilter.applicationIdsFilter;
   let wishlists;
   let memo1;
   ({ userIdsAndWishlistIds, source } = applicationIdsFilter);
-  let items = [AuthenticationStore];
-  const stateFromStores = applicationIdsFilter(wishlists[9]).useStateFromStores(items, () => id.getId());
   let obj = applicationIdsFilter(wishlists[9]);
-  const fetchWishlists = applicationIdsFilter(wishlists[10]).useFetchWishlists({ wishlistIdsAndUsers: userIdsAndWishlistIds, source });
+  let items = [AuthenticationStore];
+  const stateFromStores = obj.useStateFromStores(items, () => id.getId());
+  let obj2 = applicationIdsFilter(wishlists[10]);
+  const fetchWishlists = obj2.useFetchWishlists({ wishlistIdsAndUsers: userIdsAndWishlistIds, source });
   wishlists = fetchWishlists.wishlists;
   const items1 = [wishlists, applicationIdsFilter];
   ({ isFetching, errors } = fetchWishlists);
@@ -295,30 +330,25 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     while (iter !== undefined) {
       let items = nextResult.items;
       for (const item10023 of items) {
-        let isOwned = null == item10023.sku;
+        let isOwned = null == item10023.sku || item10023.isOwned;
         if (!isOwned) {
-          isOwned = item10023.isOwned;
-        }
-        if (!isOwned) {
-          let tmp8 = null != applicationIdsFilter;
-          if (tmp8) {
-            tmp8 = !applicationIdsFilter.includes(item10023.sku.applicationId);
-          }
+          let tmp8 = null != applicationIdsFilter && !applicationIdsFilter.includes(item10023.sku.applicationId);
           isOwned = tmp8;
         }
-        if (isOwned) {
-          continue;
-        } else {
+        if (!isOwned) {
+          let obj3;
+          let skuId = item10023.skuId;
           if (null != obj[item10023.skuId]) {
-            let obj3 = obj[item10023.skuId];
+            obj3 = obj[item10023.skuId];
           } else {
             obj3 = {};
           }
           let obj4 = {};
           let merged = Object.assign(obj3);
           obj4[tmp3.userId] = constants.WISHLIST;
-          obj[item10023.skuId] = obj4;
+          obj[skuId] = obj4;
         }
+        continue;
       }
       continue;
     }
@@ -327,75 +357,90 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const items2 = [wishlists, applicationIdsFilter];
   memo1 = memo1.useMemo(() => {
     const found = wishlists.filter(GlobalUtils.isNotNullish);
-    const found1 = found.flatMap((items) => items.items).filter((sku) => {
+    const flatMapResult = found.flatMap((items) => items.items);
+    const found1 = flatMapResult.filter((sku) => {
       let tmp = null != sku && null != sku.sku && !sku.isOwned;
       if (tmp) {
         tmp = null == applicationIdsFilter || applicationIdsFilter.includes(sku.sku.applicationId);
-        const tmp2 = null == applicationIdsFilter || applicationIdsFilter.includes(sku.sku.applicationId);
+        null == applicationIdsFilter || applicationIdsFilter.includes(sku.sku.applicationId);
       }
       return tmp;
     });
-    return Object.fromEntries(found1.map((item) => {
+    return fromEntries(found1.map((item) => {
       const items = [, ];
       ({ skuId: arr[0], sku: arr[1] } = item);
       return items;
     }));
   }, items2);
-  let obj3 = { sortedWishlistSkus: null, wishlistSkuIdToSku: memo1, wishlistSkusToUserAndReasonMap: memo, wishlistsAreFetching: isFetching, wishlistErrors: errors };
-  const items3 = [stateFromStores, memo1, memo];
-  obj3.sortedWishlistSkus = memo1.useMemo(() => {
-    const keys = Object.keys(memo1);
-    const sorted = keys.sort((arg0, arg1) => {
-      let obj = memo[arg1];
-      if (obj == null) {
-        obj = {};
-      }
-      let obj2 = memo[arg0];
-      if (obj2 == null) {
-        obj2 = {};
-      }
-      const diff = Object.keys(obj).length - Object.keys(obj2).length;
-      if (0 !== diff) {
-        return diff;
-      } else {
-        const _Boolean = Boolean;
-        const _Boolean2 = Boolean;
-        const _Number = Number;
-        const _Number2 = Number;
-        const BooleanResult = Boolean(obj[stateFromStores]);
-        return Number(Boolean(obj2[stateFromStores])) - Number(BooleanResult);
-      }
-    });
-    return sorted.map((item) => memo1[item]);
-  }, items3);
+  let obj3 = {
+    sortedWishlistSkus: memo1.useMemo(() => {
+      const keys = Object.keys(memo1);
+      const sorted = keys.sort((arg0, arg1) => {
+        let obj = memo[arg1];
+        if (obj == null) {
+          obj = {};
+        }
+        let obj2 = memo[arg0];
+        if (obj2 == null) {
+          obj2 = {};
+        }
+        const diff = Object.keys(obj).length - Object.keys(obj2).length;
+        if (0 !== diff) {
+          return diff;
+        } else {
+          const _Boolean = Boolean;
+          const _Boolean2 = Boolean;
+          const _Number = Number;
+          const _Number2 = Number;
+          const BooleanResult = Boolean(obj[stateFromStores]);
+          const NumberResult = Number(Boolean(obj2[stateFromStores]));
+          return NumberResult - Number(BooleanResult);
+        }
+      });
+      return sorted.map((item) => memo1[item]);
+    }, items3),
+    wishlistSkuIdToSku: memo1,
+    wishlistSkusToUserAndReasonMap: memo,
+    wishlistsAreFetching: isFetching,
+    wishlistErrors: errors
+  };
+  items3 = [stateFromStores, memo1, memo];
   return obj3;
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((userIds) => {
+  let applicationIds;
+  let first;
   let obj = userIds(applicationIds[8]);
   const cResult = obj.c(9);
+  const tmp = userIds;
   userIds = userIds.userIds;
   const numItems = userIds.numItems;
+  const tmp2 = applicationIds;
   applicationIds = userIds.applicationIds;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [WishlistRecommendationsStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === applicationIds) {
+    let tmp6;
     if (cResult[2] === userIds) {
-      let tmp6 = cResult[3];
+      tmp6 = cResult[3];
     }
-    let stateFromStores = tmp(tmp2[9]).useStateFromStores(first, tmp6);
+    const tmpResult = tmp(tmp2[9]);
+    let stateFromStores = tmpResult.useStateFromStores(first, tmp6);
     if (cResult[4] === applicationIds) {
       if (cResult[5] === numItems) {
+        let tmp8;
+        let tmp9;
         if (cResult[6] === userIds) {
-          let tmp8 = cResult[7];
-          let tmp9 = cResult[8];
+          tmp8 = cResult[7];
+          tmp9 = cResult[8];
         }
-        const effect = noop.useEffect(tmp8, tmp9);
+        const effect = react.useEffect(tmp8, tmp9);
         if (0 === userIds.length) {
           stateFromStores = obj;
         }
@@ -416,7 +461,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((userIds) => {
               }
             }
           }
-          const wishlistRecommendations = WishlistActionCreatorsDefault.fetchWishlistRecommendations(applicationIds, userIds, numItems);
+          const obj = WishlistActionCreatorsDefault;
+          const wishlistRecommendations = obj.fetchWishlistRecommendations(applicationIds, userIds, numItems);
         }
       }
     };
@@ -428,7 +474,6 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((userIds) => {
     cResult[8] = items1;
     tmp9 = items1;
     tmp8 = fn2;
-    const tmpResult = tmp(tmp2[9]);
   }
   const fn = function o() {
     return WishlistRecommendationsStore.getRecommendations(userIds, applicationIds);
@@ -437,8 +482,6 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((userIds) => {
   cResult[2] = userIds;
   cResult[3] = fn;
   tmp6 = fn;
-  tmp = userIds;
-  tmp2 = applicationIds;
 }) : ((userIds) => {
   userIds = userIds.userIds;
   const numItems = userIds.numItems;
@@ -447,7 +490,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((userIds) => {
   const items = [WishlistRecommendationsStore];
   let stateFromStores = obj.useStateFromStores(items, () => WishlistRecommendationsStore.getRecommendations(userIds, applicationIds));
   const items1 = [userIds, applicationIds, numItems];
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(() => {
     if (0 !== userIds.length) {
       if (0 !== applicationIds.length) {
         const recommendations = WishlistRecommendationsStore.getRecommendations(userIds, applicationIds);
@@ -461,7 +504,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((userIds) => {
             }
           }
         }
-        const wishlistRecommendations = WishlistActionCreatorsDefault.fetchWishlistRecommendations(applicationIds, userIds, numItems);
+        const obj = WishlistActionCreatorsDefault;
+        const wishlistRecommendations = obj.fetchWishlistRecommendations(applicationIds, userIds, numItems);
       }
     }
   }, items1);
@@ -470,111 +514,243 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((userIds) => {
   }
   return stateFromStores;
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(43);
+  let applicationIds;
+  let combinedSkus;
+  let filterByApplicationIds;
+  let filteredRecommendations;
+  let numItems;
+  let skusToUserAndReasonRecommendations;
+  let sortedWishlistSkus;
+  let source;
+  let tmp38;
+  let tmp39;
+  let tmp51;
+  let tmp6;
+  let userIdsAndWishlistIds;
+  let wishlistErrors;
+  let wishlistSkuIdToSku;
+  let wishlistSkusToUserAndReasonMap;
+  const obj = react2;
+  const cResult = obj.c(43);
   ({ userIdsAndWishlistIds, numItems, applicationIds, source, filterByApplicationIds } = arg0);
   if (undefined === source) {
     source = WishlistFetchSource.WishlistFetchSource.USER_PROFILE;
   }
+  const tmp5 = undefined !== filterByApplicationIds && filterByApplicationIds;
   if (cResult[0] !== userIdsAndWishlistIds) {
+    let tmp8;
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
       const fn = function o(userId) {
         return userId.userId;
       };
       cResult[2] = fn;
-      let tmp7 = fn;
+      tmp8 = fn;
     } else {
-      tmp7 = cResult[2];
+      tmp8 = cResult[2];
     }
-    const mapped = userIdsAndWishlistIds.map(tmp7);
+    const mapped = userIdsAndWishlistIds.map(tmp8);
     cResult[0] = userIdsAndWishlistIds;
     cResult[1] = mapped;
+    tmp6 = mapped;
   } else {
-    if (cResult[3] === applicationIds) {
-      if (cResult[4] === numItems) {
-        if (cResult[5] === tmp5) {
-          let tmp10 = cResult[6];
-        }
-        const tmp12 = closure_12(tmp10);
-        let tmp13;
-        if (tmp4) {
-          tmp13 = applicationIds;
-        }
-        if (cResult[7] === source) {
-          if (cResult[8] === tmp13) {
-            if (cResult[9] === userIdsAndWishlistIds) {
-              let tmp14 = cResult[10];
-            }
-            const tmp16 = closure_11(tmp14);
-            ({ sortedWishlistSkus, wishlistSkuIdToSku } = tmp16);
-            ({ wishlistSkusToUserAndReasonMap, wishlistErrors } = tmp16);
-            const wishlistsAreFetching = tmp16.wishlistsAreFetching;
-            if (null != tmp12) {
-              if ("success" === tmp12.state) {
-                if (cResult[12] === tmp12.data.skus) {
-                  if (cResult[13] === wishlistSkuIdToSku) {
-                    if (cResult[17] === tmp12.data.skusToUserAndReason) {
-                    }
-                    const obj2 = { filteredRecommendations: cResult[14], skusToUserAndReasonRecommendations: tmp12.data.skusToUserAndReason };
-                    cResult[17] = tmp12.data.skusToUserAndReason;
-                    cResult[18] = cResult[14];
-                    cResult[19] = obj2;
+    tmp6 = cResult[1];
+  }
+  if (cResult[3] === applicationIds) {
+    if (cResult[4] === numItems) {
+      let tmp10;
+      if (cResult[5] === tmp6) {
+        tmp10 = cResult[6];
+      }
+      const tmp12 = closure_12(tmp10);
+      let tmp13;
+      if (tmp5) {
+        tmp13 = applicationIds;
+      }
+      if (cResult[7] === source) {
+        if (cResult[8] === tmp13) {
+          let tmp14;
+          let tmp20;
+          if (cResult[9] === userIdsAndWishlistIds) {
+            tmp14 = cResult[10];
+          }
+          const tmp16 = closure_11(tmp14);
+          ({ sortedWishlistSkus, wishlistSkuIdToSku } = tmp16);
+          ({ wishlistSkusToUserAndReasonMap, wishlistErrors } = tmp16);
+          if (null != tmp12) {
+            if ("success" === tmp12.state) {
+              if (cResult[12] === tmp12.data.skus) {
+                let tmp22;
+                if (cResult[13] === wishlistSkuIdToSku) {
+                  tmp22 = cResult[14];
+                }
+                if (cResult[17] === tmp12.data.skusToUserAndReason) {
+                  let tmp25;
+                  if (cResult[18] === tmp22) {
+                    tmp25 = cResult[19];
+                  }
+                  tmp20 = tmp25;
+                }
+                const obj2 = { filteredRecommendations: tmp22, skusToUserAndReasonRecommendations: tmp12.data.skusToUserAndReason };
+                cResult[17] = tmp12.data.skusToUserAndReason;
+                cResult[18] = tmp22;
+                cResult[19] = obj2;
+                tmp25 = obj2;
+              }
+              if (cResult[15] !== wishlistSkuIdToSku) {
+                class M {
+                  constructor(id) {
+                    return !(id.id in wishlistSkuIdToSku);
                   }
                 }
-                if (cResult[15] !== wishlistSkuIdToSku) {
-                  class M {
-                    constructor(arg0) {
-                      return !(arg0.id in wishlistSkuIdToSku);
-                    }
-                  }
-                  cResult[15] = wishlistSkuIdToSku;
-                  cResult[16] = M;
-                } else {
-                  class M {
-                    constructor(arg0) {
-                      return !(arg0.id in wishlistSkuIdToSku);
-                    }
+                cResult[15] = wishlistSkuIdToSku;
+                cResult[16] = M;
+              } else {
+                class M {
+                  constructor(id) {
+                    return !(id.id in wishlistSkuIdToSku);
                   }
                 }
-                const skus = tmp12.data.skus;
-                const found = skus.filter(M);
-                cResult[12] = tmp12.data.skus;
-                cResult[13] = wishlistSkuIdToSku;
-                cResult[14] = found;
               }
-            }
-            const _Symbol2 = Symbol;
-            if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-              class M {
-                constructor(arg0) {
-                  return !(arg0.id in wishlistSkuIdToSku);
-                }
-              }
-              tmp20[0] = [];
-              tmp20[1] = {};
-              cResult[11] = tmp20;
-            } else {
-              class M {
-                constructor(arg0) {
-                  return !(arg0.id in wishlistSkuIdToSku);
-                }
-              }
+              const skus = tmp12.data.skus;
+              const found = skus.filter(M);
+              cResult[12] = tmp12.data.skus;
+              cResult[13] = wishlistSkuIdToSku;
+              cResult[14] = found;
+              tmp22 = found;
             }
             ({ filteredRecommendations, skusToUserAndReasonRecommendations } = tmp20);
             if (cResult[20] === skusToUserAndReasonRecommendations) {
               class M {
-                constructor(arg0) {
-                  return !(arg0.id in wishlistSkuIdToSku);
+                constructor(id) {
+                  return !(id.id in wishlistSkuIdToSku);
                 }
               }
+              if (cResult[25] === filteredRecommendations) {
+                class M {
+                  constructor(id) {
+                    return !(id.id in wishlistSkuIdToSku);
+                  }
+                }
+                if (cResult[28] === tmp26) {
+                  class M {
+                    constructor(id) {
+                      return !(id.id in wishlistSkuIdToSku);
+                    }
+                  }
+                  ({ combinedSkus, combinedSkusToUserAndReason } = tmp51);
+                  if (!tmp17) {
+                    class M {
+                      constructor(id) {
+                        return !(id.id in wishlistSkuIdToSku);
+                      }
+                    }
+                    if (null != tmp12) {
+                      class M {
+                        constructor(id) {
+                          return !(id.id in wishlistSkuIdToSku);
+                        }
+                      }
+                    }
+                  }
+                  if (cResult[31] === combinedSkus) {
+                    class M {
+                      constructor(id) {
+                        return !(id.id in wishlistSkuIdToSku);
+                      }
+                    }
+                    if (cResult[36] !== tmp52) {
+                      class M {
+                        constructor(id) {
+                          return !(id.id in wishlistSkuIdToSku);
+                        }
+                      }
+                      tmp65[0] = tmp52;
+                      cResult[36] = tmp52;
+                      cResult[37] = tmp65;
+                    } else {
+                      class M {
+                        constructor(id) {
+                          return !(id.id in wishlistSkuIdToSku);
+                        }
+                      }
+                    }
+                    const obj8 = useGetOrFetchStorefrontPrices;
+                    const getOrFetchStorefrontPricesForSkuIds = obj8.useGetOrFetchStorefrontPricesForSkuIds(tmp65);
+                    if (cResult[38] === combinedSkus) {
+                      class M {
+                        constructor(id) {
+                          return !(id.id in wishlistSkuIdToSku);
+                        }
+                      }
+                    }
+                    const obj3 = { recommendations: filteredRecommendations, wishlistAndRecommendations: combinedSkus, skusToUserAndReason: combinedSkusToUserAndReason, status: "loading" };
+                    cResult[38] = combinedSkus;
+                    cResult[39] = combinedSkusToUserAndReason;
+                    cResult[40] = filteredRecommendations;
+                    cResult[41] = "loading";
+                    cResult[42] = obj3;
+                  }
+                  const _Symbol3 = Symbol;
+                  if (cResult[34] === Symbol.for("react.memo_cache_sentinel")) {
+                    class Q {
+                      constructor(id) {
+                        return id.id;
+                      }
+                    }
+                    cResult[34] = Q;
+                  } else {
+                    class Q {
+                      constructor(id) {
+                        return id.id;
+                      }
+                    }
+                  }
+                  const _Symbol4 = Symbol;
+                  if (cResult[35] === Symbol.for("react.memo_cache_sentinel")) {
+                    class V {
+                      constructor(id) {
+                        return id.id;
+                      }
+                    }
+                    cResult[35] = V;
+                  } else {
+                    class V {
+                      constructor(id) {
+                        return id.id;
+                      }
+                    }
+                  }
+                  const uniq = _mod12.uniq;
+                  const items = [];
+                  _mod12;
+                  const arraySpreadResult = HermesBuiltin.arraySpread(items, filteredRecommendations.map(Q), 0);
+                  HermesBuiltin.arraySpread(items, combinedSkus.map(V), arraySpreadResult);
+                  cResult[31] = combinedSkus;
+                  cResult[32] = filteredRecommendations;
+                  cResult[33] = uniq(items);
+                  const uniqResult = uniq(items);
+                }
+                const obj4 = { combinedSkus: tmp45, combinedSkusToUserAndReason: tmp26 };
+                cResult[28] = tmp26;
+                cResult[29] = tmp45;
+                cResult[30] = obj4;
+                tmp51 = obj4;
+              }
+              const items1 = [];
+              HermesBuiltin.arraySpread(items1, filteredRecommendations, HermesBuiltin.arraySpread(items1, sortedWishlistSkus, 0));
+              cResult[25] = filteredRecommendations;
+              cResult[26] = sortedWishlistSkus;
+              cResult[27] = items1;
             }
+            const obj5 = {};
             const merged = Object.assign(skusToUserAndReasonRecommendations);
             if (cResult[23] !== wishlistSkusToUserAndReasonMap) {
-              class M {
-                constructor(arg0) {
-                  return !(arg0.id in wishlistSkuIdToSku);
+              class V {
+                constructor(id) {
+                  return id.id;
                 }
               }
               const _Object = Object;
@@ -582,39 +758,77 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               cResult[23] = wishlistSkusToUserAndReasonMap;
               cResult[24] = entries;
             } else {
-              class M {
-                constructor(arg0) {
-                  return !(arg0.id in wishlistSkuIdToSku);
+              class V {
+                constructor(id) {
+                  return id.id;
                 }
               }
             }
-            tmp30[Symbol.iterator]();
-            const obj3 = {};
+            const tmp33 = tmp30[Symbol.iterator]();
+            while (tmp33 !== undefined) {
+              class V {
+                constructor(id) {
+                  return id.id;
+                }
+              }
+              let tmp37 = _slicedToArray(tmp35, 2);
+              [tmp38, tmp39] = tmp37;
+              let obj6 = {};
+              let merged1 = Object.assign(obj5[tmp38]);
+              let merged2 = Object.assign(tmp39);
+              obj5[tmp38] = obj6;
+              continue;
+            }
+            cResult[20] = skusToUserAndReasonRecommendations;
+            cResult[21] = wishlistSkusToUserAndReasonMap;
+            cResult[22] = obj5;
+          }
+          const _Symbol2 = Symbol;
+          if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+            class V {
+              constructor(id) {
+                return id.id;
+              }
+            }
+            tmp21[0] = [];
+            tmp21[1] = {};
+            cResult[11] = tmp21;
+            tmp20 = tmp21;
+          } else {
+            class V {
+              constructor(id) {
+                return id.id;
+              }
+            }
           }
         }
-        const obj4 = { userIdsAndWishlistIds, source, applicationIdsFilter: tmp13 };
-        cResult[7] = source;
-        cResult[8] = tmp13;
-        cResult[9] = userIdsAndWishlistIds;
-        cResult[10] = obj4;
-        tmp14 = obj4;
       }
+      const obj7 = { userIdsAndWishlistIds, source, applicationIdsFilter: tmp13 };
+      cResult[7] = source;
+      cResult[8] = tmp13;
+      cResult[9] = userIdsAndWishlistIds;
+      cResult[10] = obj7;
+      tmp14 = obj7;
     }
-    const obj5 = { userIds: cResult[1], numItems, applicationIds };
-    cResult[3] = applicationIds;
-    cResult[4] = numItems;
-    cResult[5] = cResult[1];
-    cResult[6] = obj5;
-    tmp10 = obj5;
   }
-  tmp4 = undefined !== filterByApplicationIds && filterByApplicationIds;
-}) : ((numItems) => {
-  const userIdsAndWishlistIds = numItems.userIdsAndWishlistIds;
-  ({ applicationIds, source } = numItems);
+  const obj9 = { userIds: tmp6, numItems, applicationIds };
+  cResult[3] = applicationIds;
+  cResult[4] = numItems;
+  cResult[5] = tmp6;
+  cResult[6] = obj9;
+  tmp10 = obj9;
+}) : ((userIdsAndWishlistIds) => {
+  let applicationIds;
+  let sortedWishlistSkus;
+  let source;
+  let tmp5;
+  userIdsAndWishlistIds = userIdsAndWishlistIds.userIdsAndWishlistIds;
+  ({ applicationIds, source } = userIdsAndWishlistIds);
+  const numItems = userIdsAndWishlistIds.numItems;
   if (source === undefined) {
     source = userIdsAndWishlistIds(sortedWishlistSkus[13]).WishlistFetchSource.USER_PROFILE;
   }
-  let flag = numItems.filterByApplicationIds;
+  let flag = userIdsAndWishlistIds.filterByApplicationIds;
   if (flag === undefined) {
     flag = false;
   }
@@ -626,15 +840,16 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let recommendations;
   let skusToUserAndReasonRecommendations;
   let wishlistAndRecommendations;
+  let obj = wishlistSkusToUserAndReasonMap;
   let items = [userIdsAndWishlistIds];
-  const tmp3 = closure_12({ userIds: wishlistSkusToUserAndReasonMap.useMemo(() => userIdsAndWishlistIds.map((userId) => userId.userId), items), numItems: numItems.numItems, applicationIds });
-  closure_1 = tmp3;
-  let obj3 = { userIdsAndWishlistIds, source, applicationIdsFilter: null };
-  let tmp5;
+  let obj2 = { userIds: wishlistSkusToUserAndReasonMap.useMemo(() => userIdsAndWishlistIds.map((userId) => userId.userId), items), numItems, applicationIds };
+  let tmp3 = closure_12(obj2);
+  let closure_1 = tmp3;
+  let obj3 = { userIdsAndWishlistIds, source, applicationIdsFilter: tmp5 };
+  tmp5 = undefined;
   if (flag) {
     tmp5 = applicationIds;
   }
-  obj3.applicationIdsFilter = tmp5;
   const tmp4Result = closure_11(obj3);
   sortedWishlistSkus = tmp4Result.sortedWishlistSkus;
   wishlistSkuIdToSku = tmp4Result.wishlistSkuIdToSku;
@@ -643,12 +858,12 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   wishlistErrors = tmp4Result.wishlistErrors;
   const items1 = [tmp3, wishlistSkuIdToSku];
   const memo = obj.useMemo(() => {
+    let skus;
     if (null != closure_1) {
+      let obj;
       if ("success" === closure_1.state) {
-        let obj = { filteredRecommendations: null, skusToUserAndReasonRecommendations: null };
-        const skus = closure_1.data.skus;
-        obj.filteredRecommendations = skus.filter((id) => !(id.id in wishlistSkuIdToSku));
-        obj.skusToUserAndReasonRecommendations = closure_1.data.skusToUserAndReason;
+        obj = { filteredRecommendations: skus.filter((id) => !(id.id in wishlistSkuIdToSku)), skusToUserAndReasonRecommendations: closure_1.data.skusToUserAndReason };
+        skus = closure_1.data.skus;
       }
       return obj;
     }
@@ -657,10 +872,14 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   recommendations = memo.filteredRecommendations;
   skusToUserAndReasonRecommendations = memo.skusToUserAndReasonRecommendations;
   const items2 = [sortedWishlistSkus, recommendations, wishlistSkusToUserAndReasonMap, skusToUserAndReasonRecommendations];
-  const skusToUserAndReason = obj.useMemo(() => {
+  const memo1 = obj.useMemo(() => {
+    let items;
+    let tmp7;
+    let tmp8;
     combinedSkusToUserAndReason = {};
     const merged = Object.assign(skusToUserAndReasonRecommendations);
     const entries = Object.entries(wishlistSkusToUserAndReasonMap);
+    const tmp3 = entries[Symbol.iterator]();
     while (tmp3 !== undefined) {
       let tmp6 = _slicedToArray(tmp4, 2);
       [tmp7, tmp8] = tmp6;
@@ -670,13 +889,13 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       combinedSkusToUserAndReason[tmp7] = obj2;
       continue;
     }
-    const obj3 = { combinedSkus: null, combinedSkusToUserAndReason };
-    const items = [...recommendations];
-    obj3.combinedSkus = items;
+    const obj3 = { combinedSkus: items, combinedSkusToUserAndReason };
+    items = [...recommendations];
     return obj3;
   }, items2);
-  wishlistAndRecommendations = skusToUserAndReason.combinedSkus;
+  wishlistAndRecommendations = memo1.combinedSkus;
   const items3 = [wishlistsAreFetching, tmp3, wishlistErrors];
+  const skusToUserAndReason = memo1.combinedSkusToUserAndReason;
   const items4 = [recommendations, wishlistAndRecommendations];
   const status = obj.useMemo(() => {
     let str = "loading";
@@ -684,8 +903,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       str = "loading";
       if (null != closure_1) {
         if (null == closure_1) {
+          let str2;
           if (wishlistErrors.filter(GlobalUtils.isNotNullish).length > 0) {
-            let str2 = "error";
+            str2 = "error";
           } else {
             str2 = "success";
           }
@@ -699,57 +919,67 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }, items3);
   const memo3 = obj.useMemo(() => {
     const items = [...recommendations.map((id) => id.id), ...wishlistAndRecommendations.map((id) => id.id)];
-    return _mod12.uniq(items);
+    const obj = _mod12;
+    return obj.uniq(items);
   }, items4);
-  let obj2 = { userIds: wishlistSkusToUserAndReasonMap.useMemo(() => userIdsAndWishlistIds.map((userId) => userId.userId), items), numItems: numItems.numItems, applicationIds };
-  const getOrFetchStorefrontPricesForSkuIds = userIdsAndWishlistIds(sortedWishlistSkus[15]).useGetOrFetchStorefrontPricesForSkuIds({ skuIds: memo3 });
-  return { recommendations, wishlistAndRecommendations, skusToUserAndReason: skusToUserAndReason.combinedSkusToUserAndReason, status };
+  const obj4 = userIdsAndWishlistIds(sortedWishlistSkus[15]);
+  const getOrFetchStorefrontPricesForSkuIds = obj4.useGetOrFetchStorefrontPricesForSkuIds({ skuIds: memo3 });
+  return { recommendations, wishlistAndRecommendations, skusToUserAndReason, status };
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+  let tmp4;
+  let tmp5;
+  let tmp7;
+  let tmp9;
   _require = userId;
-  const cResult = require("c").c(12);
+  let obj = require("react");
+  const cResult = obj.c(12);
+  const tmp = _require;
   if (cResult[0] !== userId) {
     const fn = function o() {
-      maybeFetchUserProfileDefault(closure_0);
+      maybeFetchUserProfileDefault(userId);
     };
     const items = [userId];
     cResult[0] = userId;
     cResult[1] = fn;
     cResult[2] = items;
-    let tmp5 = items;
-    let tmp4 = fn;
+    tmp5 = items;
+    tmp4 = fn;
   } else {
     tmp4 = cResult[1];
     tmp5 = cResult[2];
   }
-  const effect = noop.useEffect(tmp4, tmp5);
+  const effect = react.useEffect(tmp4, tmp5);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [UserProfileStore];
     cResult[3] = items1;
-    let tmp7 = items1;
+    tmp7 = items1;
   } else {
     tmp7 = cResult[3];
   }
   if (cResult[4] !== userId) {
     const fn2 = function l() {
-      return { defaultWishlistId: UserProfileStore.getFirstWishlistId(closure_0) };
+      const obj = { defaultWishlistId: UserProfileStore.getFirstWishlistId(userId) };
+      return obj;
     };
     cResult[4] = userId;
     cResult[5] = fn2;
-    let tmp9 = fn2;
+    tmp9 = fn2;
   } else {
     tmp9 = cResult[5];
   }
-  const obj = require("c");
-  const defaultWishlistId = require("initialize").useStateFromStoresObject(tmp7, tmp9).defaultWishlistId;
+  const tmpResult = tmp(504);
+  const defaultWishlistId = tmpResult.useStateFromStoresObject(tmp7, tmp9).defaultWishlistId;
   if (cResult[6] === defaultWishlistId) {
+    let tmp10;
     if (cResult[7] === userId) {
-      let tmp10 = cResult[8];
+      tmp10 = cResult[8];
     }
     if (cResult[9] === defaultWishlistId) {
+      let tmp11;
       if (cResult[10] === tmp10) {
-        let tmp11 = cResult[11];
+        tmp11 = cResult[11];
       }
       return tmp11;
     }
@@ -759,36 +989,52 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     cResult[11] = obj2;
     tmp11 = obj2;
   }
-  const items2 = [{ userId, wishlistId: defaultWishlistId }];
+  const items2 = [];
+  const obj3 = { userId, wishlistId: defaultWishlistId };
+  items2[0] = obj3;
   cResult[6] = defaultWishlistId;
   cResult[7] = userId;
   cResult[8] = items2;
   tmp10 = items2;
-  const obj3 = { userId, wishlistId: defaultWishlistId };
-  const tmpResult = require("initialize");
 }) : ((userId) => {
+  let items2;
   _require = userId;
   let items = [userId];
-  const effect = noop.useEffect(() => {
-    maybeFetchUserProfileDefault(closure_0);
+  const effect = react.useEffect(() => {
+    maybeFetchUserProfileDefault(userId);
   }, items);
+  let obj = require("get initialized");
   const items1 = [UserProfileStore];
-  const defaultWishlistId = require("initialize").useStateFromStoresObject(items1, () => ({ defaultWishlistId: UserProfileStore.getFirstWishlistId(closure_0) })).defaultWishlistId;
-  const obj2 = { userIdsAndWishlistIds: null, defaultWishlistId };
-  const items2 = [userId, defaultWishlistId];
-  obj2.userIdsAndWishlistIds = noop.useMemo(() => {
-    const items = [{ userId, wishlistId: defaultWishlistId }];
-    return items;
-  }, items2);
+  const defaultWishlistId = obj.useStateFromStoresObject(items1, () => {
+    const obj = { defaultWishlistId: UserProfileStore.getFirstWishlistId(userId) };
+    return obj;
+  }).defaultWishlistId;
+  const obj2 = {
+    userIdsAndWishlistIds: react.useMemo(() => {
+      const items = [];
+      const obj = { userId, wishlistId: defaultWishlistId };
+      items[0] = obj;
+      return items;
+    }, items2),
+    defaultWishlistId
+  };
+  items2 = [userId, defaultWishlistId];
   return obj2;
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
+  let tmp12;
+  let tmp4;
+  let tmp5;
+  let tmp7;
+  let tmp9;
   _require = arr;
-  const cResult = require("c").c(11);
+  const obj = require("react");
+  const cResult = obj.c(11);
+  const tmp = _require;
   if (cResult[0] !== arr) {
     const fn = function o() {
-      const item = closure_0.forEach((item) => {
+      const item = arr.forEach((item) => {
         stateFromStoresArray(closure_1_2[16])(item);
       });
     };
@@ -796,23 +1042,23 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
     cResult[0] = arr;
     cResult[1] = fn;
     cResult[2] = items;
-    let tmp5 = items;
-    let tmp4 = fn;
+    tmp5 = items;
+    tmp4 = fn;
   } else {
     tmp4 = cResult[1];
     tmp5 = cResult[2];
   }
-  const effect = noop.useEffect(tmp4, tmp5);
+  const effect = react.useEffect(tmp4, tmp5);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [UserProfileStore];
     cResult[3] = items1;
-    let tmp7 = items1;
+    tmp7 = items1;
   } else {
     tmp7 = cResult[3];
   }
   if (cResult[4] !== arr) {
     const fn2 = function l() {
-      return closure_0.map((item) => {
+      return arr.map((item) => {
         firstWishlistId = firstWishlistId.getFirstWishlistId(item);
         if (firstWishlistId == null) {
           firstWishlistId = null;
@@ -822,16 +1068,18 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
     };
     cResult[4] = arr;
     cResult[5] = fn2;
-    let tmp9 = fn2;
+    tmp9 = fn2;
   } else {
     tmp9 = cResult[5];
   }
-  const obj = require("c");
-  const stateFromStoresArray = require("initialize").useStateFromStoresArray(tmp7, tmp9);
+  const tmpResult = tmp(504);
+  const stateFromStoresArray = tmpResult.useStateFromStoresArray(tmp7, tmp9);
   if (cResult[6] === arr) {
+    let tmp11;
     if (cResult[7] === stateFromStoresArray) {
-      return cResult[8];
+      tmp11 = cResult[8];
     }
+    return tmp11;
   }
   if (cResult[9] !== stateFromStoresArray) {
     const fn3 = function h(userId, arg1) {
@@ -839,25 +1087,27 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
     };
     cResult[9] = stateFromStoresArray;
     cResult[10] = fn3;
-    let tmp11 = fn3;
+    tmp12 = fn3;
   } else {
-    tmp11 = cResult[10];
+    tmp12 = cResult[10];
   }
-  const mapped = arr.map(tmp11);
+  const mapped = arr.map(tmp12);
   cResult[6] = arr;
   cResult[7] = stateFromStoresArray;
   cResult[8] = mapped;
-  const tmpResult = require("initialize");
+  tmp11 = mapped;
 }) : ((arg0) => {
+  let closure_0;
   _require = arg0;
   const items = [arg0];
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(() => {
     const item = closure_0.forEach((item) => {
       stateFromStoresArray(closure_1_2[16])(item);
     });
   }, items);
   const items1 = [UserProfileStore];
-  const stateFromStoresArray = require("initialize").useStateFromStoresArray(items1, () => closure_0.map((item) => {
+  const obj = require("get initialized");
+  const stateFromStoresArray = obj.useStateFromStoresArray(items1, () => closure_0.map((item) => {
     firstWishlistId = firstWishlistId.getFirstWishlistId(item);
     if (firstWishlistId == null) {
       firstWishlistId = null;
@@ -865,42 +1115,56 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
     return firstWishlistId;
   }));
   const items2 = [arg0, stateFromStoresArray];
-  return noop.useMemo(() => closure_0.map((userId, index) => ({ userId, wishlistId: stateFromStoresArray[index] })), items2);
+  return react.useMemo(() => closure_0.map((userId, index) => ({ userId, wishlistId: stateFromStoresArray[index] })), items2);
 });
-fn(558);
-const importDefaultResult1 = new WishlistRecommendationRecord({ skus: [], skus_to_user_and_reason: {}, applications: [] });
-let obj2 = { skus: [], skus_to_user_and_reason: {}, applications: [] };
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(16);
+  let defaultWishlistId;
+  let numItems;
+  let skusToUserAndReason;
+  let slicedWishlistAndRecommendations;
+  let source;
+  let status;
+  let totalUnownedWishlistItemCount;
+  let userId;
+  let userIdsAndWishlistIds;
+  let wishlistAndRecommendations;
+  const obj = react2;
+  const cResult = obj.c(16);
   ({ userId, numItems, source } = arg0);
   if (undefined === source) {
     source = WishlistFetchSource.WishlistFetchSource.USER_PROFILE;
   }
   ({ userIdsAndWishlistIds, defaultWishlistId } = closure_14(userId));
-  const tmp4 = closure_14(userId);
-  const wishlistApplicationIds = useWishlistApplicationIds.useWishlistApplicationIds(userId);
+  closure_14(userId);
+  const tmpResult = useWishlistApplicationIds;
+  const wishlistApplicationIds = tmpResult.useWishlistApplicationIds(userId);
   if (cResult[0] === wishlistApplicationIds) {
     if (cResult[1] === numItems) {
       if (cResult[2] === source) {
+        let tmp6;
         if (cResult[3] === userIdsAndWishlistIds) {
-          let tmp6 = cResult[4];
+          tmp6 = cResult[4];
         }
         ({ wishlistAndRecommendations, skusToUserAndReason, status } = closure_13(tmp6));
+        closure_13(tmp6);
         if (cResult[5] === numItems) {
           if (cResult[6] === skusToUserAndReason) {
             if (cResult[7] === userId) {
+              let tmp9;
               if (cResult[8] === wishlistAndRecommendations) {
-                let tmp9 = cResult[9];
+                tmp9 = cResult[9];
               }
-              const wishlistSkuFilter = useWishlistSkuFilter.useWishlistSkuFilter(tmp9);
+              const tmpResult2 = useWishlistSkuFilter;
+              const wishlistSkuFilter = tmpResult2.useWishlistSkuFilter(tmp9);
               ({ totalUnownedWishlistItemCount, slicedWishlistAndRecommendations } = wishlistSkuFilter);
               if (cResult[10] === defaultWishlistId) {
                 if (cResult[11] === skusToUserAndReason) {
                   if (cResult[12] === slicedWishlistAndRecommendations) {
                     if (cResult[13] === status) {
+                      let tmp11;
                       if (cResult[14] === totalUnownedWishlistItemCount) {
-                        let tmp11 = cResult[15];
+                        tmp11 = cResult[15];
                       }
                       return tmp11;
                     }
@@ -915,7 +1179,6 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               cResult[14] = totalUnownedWishlistItemCount;
               cResult[15] = obj2;
               tmp11 = obj2;
-              const tmpResult2 = useWishlistSkuFilter;
             }
           }
         }
@@ -926,7 +1189,6 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         cResult[8] = wishlistAndRecommendations;
         cResult[9] = obj3;
         tmp9 = obj3;
-        const tmp8 = closure_13(tmp6);
       }
     }
   }
@@ -937,23 +1199,41 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = userIdsAndWishlistIds;
   cResult[4] = obj4;
   tmp6 = obj4;
-  const tmpResult = useWishlistApplicationIds;
 }) : ((arg0) => {
+  let defaultWishlistId;
+  let numItems;
+  let skusToUserAndReason;
+  let source;
+  let status;
+  let userId;
+  let userIdsAndWishlistIds;
+  let wishlistAndRecommendations;
   ({ userId, numItems, source } = arg0);
   if (source === undefined) {
     source = WishlistFetchSource.WishlistFetchSource.USER_PROFILE;
   }
   ({ userIdsAndWishlistIds, defaultWishlistId } = closure_14(userId));
-  const tmp3 = closure_14(userId);
-  const obj2 = { userIdsAndWishlistIds, applicationIds: useWishlistApplicationIds.useWishlistApplicationIds(userId), numItems, source };
-  ({ skusToUserAndReason, wishlistAndRecommendations, status } = closure_13({ userIdsAndWishlistIds, applicationIds: useWishlistApplicationIds.useWishlistApplicationIds(userId), numItems, source }));
-  const tmp4 = closure_13({ userIdsAndWishlistIds, applicationIds: useWishlistApplicationIds.useWishlistApplicationIds(userId), numItems, source });
-  const wishlistSkuFilter = useWishlistSkuFilter.useWishlistSkuFilter({ wishlistAndRecommendations, skusToUserAndReason, userId, numItems });
+  closure_14(userId);
+  const obj = useWishlistApplicationIds;
+  const obj2 = { userIdsAndWishlistIds, applicationIds: obj.useWishlistApplicationIds(userId), numItems, source };
+  ({ skusToUserAndReason, wishlistAndRecommendations, status } = closure_13(obj2));
+  closure_13(obj2);
+  const obj3 = useWishlistSkuFilter;
+  const wishlistSkuFilter = obj3.useWishlistSkuFilter({ wishlistAndRecommendations, skusToUserAndReason, userId, numItems });
   return { wishlistAndRecommendations: wishlistSkuFilter.slicedWishlistAndRecommendations, skusToUserAndReason, status, defaultWishlistId, totalUnownedWishlistItemCount: wishlistSkuFilter.totalUnownedWishlistItemCount };
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(14);
+  let applicationIds;
+  let numItems;
+  let skusToUserAndReason;
+  let source;
+  let status;
+  let tmp4;
+  let userIds;
+  let wishlistAndRecommendations;
+  const obj = react2;
+  const cResult = obj.c(14);
   ({ applicationIds, userIds, numItems, source } = arg0);
   if (undefined === source) {
     source = WishlistFetchSource.WishlistFetchSource.USER_PROFILE;
@@ -965,7 +1245,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     cResult[0] = userIds;
     cResult[1] = substr;
-    let tmp4 = substr;
+    tmp4 = substr;
   } else {
     tmp4 = cResult[1];
   }
@@ -973,18 +1253,22 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (cResult[2] === applicationIds) {
     if (cResult[3] === numItems) {
       if (cResult[4] === source) {
+        let tmp8;
         if (cResult[5] === tmp7) {
-          let tmp8 = cResult[6];
+          tmp8 = cResult[6];
         }
         ({ wishlistAndRecommendations, skusToUserAndReason, status } = closure_13(tmp8));
+        closure_13(tmp8);
         if (cResult[7] === numItems) {
+          let tmp11;
           if (cResult[8] === wishlistAndRecommendations) {
-            let tmp11 = cResult[9];
+            tmp11 = cResult[9];
           }
           if (cResult[10] === skusToUserAndReason) {
             if (cResult[11] === tmp11) {
+              let tmp13;
               if (cResult[12] === status) {
-                let tmp13 = cResult[13];
+                tmp13 = cResult[13];
               }
               return tmp13;
             }
@@ -1001,7 +1285,6 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         cResult[8] = wishlistAndRecommendations;
         cResult[9] = substr1;
         tmp11 = substr1;
-        const tmp10 = closure_13(tmp8);
       }
     }
   }
@@ -1012,62 +1295,74 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = tmp7;
   cResult[6] = obj3;
   tmp8 = obj3;
-}) : ((applicationIds) => {
-  const userIds = applicationIds.userIds;
-  const numItems = applicationIds.numItems;
-  let USER_PROFILE = applicationIds.source;
+}) : ((userIds) => {
+  let items1;
+  let skusToUserAndReason;
+  let status;
+  userIds = userIds.userIds;
+  const numItems = userIds.numItems;
+  let USER_PROFILE = userIds.source;
+  const applicationIds = userIds.applicationIds;
   if (USER_PROFILE === undefined) {
     USER_PROFILE = WishlistFetchSource.WishlistFetchSource.USER_PROFILE;
   }
   const items = [userIds];
-  const tmp3 = closure_13({
-    userIdsAndWishlistIds: closure_15(noop.useMemo(() => {
+  const obj = {
+    userIdsAndWishlistIds: closure_15(react.useMemo(() => {
       let substr;
       if (userIds != null) {
         substr = userIds.slice(0, 5);
       }
       return substr;
     }, items)),
-    applicationIds: applicationIds.applicationIds,
+    applicationIds,
     numItems,
     source: USER_PROFILE,
     filterByApplicationIds: true
-  });
+  };
+  const tmp3 = closure_13(obj);
   const wishlistAndRecommendations = tmp3.wishlistAndRecommendations;
-  const obj2 = { recommendations: null, skusToUserAndReason, status };
-  const items1 = [wishlistAndRecommendations, numItems];
+  const obj2 = { recommendations: react.useMemo(() => wishlistAndRecommendations.slice(0, numItems), items1), skusToUserAndReason, status };
+  items1 = [wishlistAndRecommendations, numItems];
   ({ skusToUserAndReason, status } = tmp3);
-  obj2.recommendations = noop.useMemo(() => wishlistAndRecommendations.slice(0, numItems), items1);
   return obj2;
 });
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistRecommendations.tsx");
-
-export const useWishlistRecommendationsForSingleUser = tmp4;
-export const useRecommendationsForApplicationIds = tmp5;
-export const useRecommendationsForSingleUser = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(12);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let numItems;
+  let recommendations;
+  let skusToUserAndReason;
+  let source;
+  let status;
+  let userId;
+  const obj = react2;
+  const cResult = obj.c(12);
   ({ userId, numItems, source } = arg0);
   if (undefined === source) {
     source = WishlistFetchSource.WishlistFetchSource.USER_PROFILE;
   }
   const userIdsAndWishlistIds = closure_14(userId).userIdsAndWishlistIds;
-  const wishlistApplicationIds = useWishlistApplicationIds.useWishlistApplicationIds(userId);
+  const tmpResult = useWishlistApplicationIds;
+  const wishlistApplicationIds = tmpResult.useWishlistApplicationIds(userId);
   if (cResult[0] === wishlistApplicationIds) {
     if (cResult[1] === numItems) {
       if (cResult[2] === source) {
+        let tmp5;
         if (cResult[3] === userIdsAndWishlistIds) {
-          let tmp5 = cResult[4];
+          tmp5 = cResult[4];
         }
         ({ recommendations, skusToUserAndReason, status } = closure_13(tmp5));
+        closure_13(tmp5);
         if (cResult[5] === numItems) {
+          let tmp8;
           if (cResult[6] === recommendations) {
-            let tmp8 = cResult[7];
+            tmp8 = cResult[7];
           }
           if (cResult[8] === skusToUserAndReason) {
             if (cResult[9] === tmp8) {
+              let tmp10;
               if (cResult[10] === status) {
-                let tmp10 = cResult[11];
+                tmp10 = cResult[11];
               }
               return tmp10;
             }
@@ -1084,7 +1379,6 @@ export const useRecommendationsForSingleUser = ReactCompilerGating.isReactCompil
         cResult[6] = recommendations;
         cResult[7] = substr;
         tmp8 = substr;
-        const tmp7 = closure_13(tmp5);
       }
     }
   }
@@ -1095,18 +1389,29 @@ export const useRecommendationsForSingleUser = ReactCompilerGating.isReactCompil
   cResult[3] = userIdsAndWishlistIds;
   cResult[4] = obj3;
   tmp5 = obj3;
-  const tmpResult = useWishlistApplicationIds;
 }) : ((source) => {
+  let items;
+  let numItems;
+  let skusToUserAndReason;
+  let status;
+  let userId;
   ({ userId, numItems } = source);
   let USER_PROFILE = source.source;
   if (USER_PROFILE === undefined) {
     USER_PROFILE = WishlistFetchSource.WishlistFetchSource.USER_PROFILE;
   }
-  const tmp3 = closure_13({ userIdsAndWishlistIds: closure_14(userId).userIdsAndWishlistIds, applicationIds: useWishlistApplicationIds.useWishlistApplicationIds(userId), numItems, source: USER_PROFILE });
+  const userIdsAndWishlistIds = closure_14(userId).userIdsAndWishlistIds;
+  const obj = useWishlistApplicationIds;
+  const obj2 = { userIdsAndWishlistIds, applicationIds: obj.useWishlistApplicationIds(userId), numItems, source: USER_PROFILE };
+  const tmp3 = closure_13(obj2);
   const recommendations = tmp3.recommendations;
-  const obj3 = { recommendations: null, skusToUserAndReason, status };
-  const items = [recommendations, numItems];
+  const obj3 = { recommendations: react.useMemo(() => recommendations.slice(0, numItems), items), skusToUserAndReason, status };
+  items = [recommendations, numItems];
   ({ skusToUserAndReason, status } = tmp3);
-  obj3.recommendations = noop.useMemo(() => recommendations.slice(0, numItems), items);
   return obj3;
 });
+const result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistRecommendations.tsx");
+
+export const useWishlistRecommendationsForSingleUser = tmp4;
+export const useRecommendationsForApplicationIds = tmp5;
+export const useRecommendationsForSingleUser = tmp6;

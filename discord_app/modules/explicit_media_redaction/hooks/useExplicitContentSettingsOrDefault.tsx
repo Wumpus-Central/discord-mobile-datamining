@@ -2,16 +2,23 @@
 
 // Module 14633 (useExplicitContentSettingsOrDefault)
 import useStateFromStores from "useStateFromStores" /* 573 */;
-import c from "c" /* 576 */;
+import react from "react" /* 576 */;
 import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 6801 */;
 import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 6804 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-fn(558);
-const ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(12);
+  let settings;
+  let tmp12;
+  let tmp15;
+  let tmp4;
+  let tmp5;
+  let tmp9;
+  let obj = react;
+  const cResult = obj.c(12);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserSettingsProtoStore];
     const fn = function o() {
@@ -21,7 +28,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         prop = textAndImages.explicitContentSettings;
       }
       if (prop == null) {
-        prop = SensitiveMediaExplicitRedactionSettingsUtils.getExplicitContentSettingOrDefault();
+        const obj = SensitiveMediaExplicitRedactionSettingsUtils;
+        prop = obj.getExplicitContentSettingOrDefault();
       }
       return prop;
     };
@@ -32,18 +40,19 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const stateFromStoresObject = useStateFromStores.useStateFromStoresObject(tmp4, tmp5);
+  const tmpResult = useStateFromStores;
+  const stateFromStoresObject = tmpResult.useStateFromStoresObject(tmp4, tmp5);
   let prop;
   if (stateFromStoresObject != null) {
     prop = stateFromStoresObject.explicitContentGuilds;
   }
   if (cResult[2] !== prop) {
     const obj2 = { setting: prop };
-    const explicitContentSettingWithDefaults = SensitiveMediaExplicitRedactionSettingsUtils.resolveExplicitContentSettingWithDefaults(obj2);
+    const tmpResult4 = SensitiveMediaExplicitRedactionSettingsUtils;
+    const explicitContentSettingWithDefaults = tmpResult4.resolveExplicitContentSettingWithDefaults(obj2);
     cResult[2] = prop;
     cResult[3] = explicitContentSettingWithDefaults;
-    let tmp9 = explicitContentSettingWithDefaults;
-    const tmpResult4 = SensitiveMediaExplicitRedactionSettingsUtils;
+    tmp9 = explicitContentSettingWithDefaults;
   } else {
     tmp9 = cResult[3];
   }
@@ -53,11 +62,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   if (cResult[4] !== prop1) {
     const obj3 = { setting: prop1, isDm: true };
-    const explicitContentSettingWithDefaults1 = SensitiveMediaExplicitRedactionSettingsUtils.resolveExplicitContentSettingWithDefaults(obj3);
+    const tmpResult5 = SensitiveMediaExplicitRedactionSettingsUtils;
+    const explicitContentSettingWithDefaults1 = tmpResult5.resolveExplicitContentSettingWithDefaults(obj3);
     cResult[4] = prop1;
     cResult[5] = explicitContentSettingWithDefaults1;
-    let tmp12 = explicitContentSettingWithDefaults1;
-    const tmpResult5 = SensitiveMediaExplicitRedactionSettingsUtils;
+    tmp12 = explicitContentSettingWithDefaults1;
   } else {
     tmp12 = cResult[5];
   }
@@ -67,18 +76,19 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   if (cResult[6] !== prop2) {
     const obj4 = { setting: prop2, isDm: true, isFriend: true };
-    const explicitContentSettingWithDefaults2 = SensitiveMediaExplicitRedactionSettingsUtils.resolveExplicitContentSettingWithDefaults(obj4);
+    const tmpResult6 = SensitiveMediaExplicitRedactionSettingsUtils;
+    const explicitContentSettingWithDefaults2 = tmpResult6.resolveExplicitContentSettingWithDefaults(obj4);
     cResult[6] = prop2;
     cResult[7] = explicitContentSettingWithDefaults2;
-    let tmp15 = explicitContentSettingWithDefaults2;
-    const tmpResult6 = SensitiveMediaExplicitRedactionSettingsUtils;
+    tmp15 = explicitContentSettingWithDefaults2;
   } else {
     tmp15 = cResult[7];
   }
   if (cResult[8] === tmp9) {
     if (cResult[9] === tmp12) {
+      let tmp17;
       if (cResult[10] === tmp15) {
-        let tmp17 = cResult[11];
+        tmp17 = cResult[11];
       }
       return tmp17;
     }
@@ -89,44 +99,57 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[10] = tmp15;
   cResult[11] = obj5;
   tmp17 = obj5;
-  const tmpResult = useStateFromStores;
 }) : (() => {
+  let prop1;
+  let prop2;
+  let resolveExplicitContentSettingWithDefaults2;
+  let resolveExplicitContentSettingWithDefaults3;
+  let settings;
+  let obj = useStateFromStores;
   const items = [UserSettingsProtoStore];
-  const stateFromStoresObject = useStateFromStores.useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     const textAndImages = settings.settings.textAndImages;
     let prop;
     if (textAndImages != null) {
       prop = textAndImages.explicitContentSettings;
     }
     if (prop == null) {
-      prop = SensitiveMediaExplicitRedactionSettingsUtils.getExplicitContentSettingOrDefault();
+      const obj = SensitiveMediaExplicitRedactionSettingsUtils;
+      prop = obj.getExplicitContentSettingOrDefault();
     }
     return prop;
   });
   let prop;
+  const resolveExplicitContentSettingWithDefaults = SensitiveMediaExplicitRedactionSettingsUtils.resolveExplicitContentSettingWithDefaults;
+  SensitiveMediaExplicitRedactionSettingsUtils;
   if (stateFromStoresObject != null) {
     prop = stateFromStoresObject.explicitContentGuilds;
   }
-  const obj3 = { explicitContentGuilds: SensitiveMediaExplicitRedactionSettingsUtils.resolveExplicitContentSettingWithDefaults({ setting: prop }), explicitContentNonFriendDm: null, explicitContentFriendDm: null };
-  let prop1;
+  const obj2 = { explicitContentGuilds: resolveExplicitContentSettingWithDefaults({ setting: prop }), explicitContentNonFriendDm: resolveExplicitContentSettingWithDefaults2({ setting: prop1, isDm: true }), explicitContentFriendDm: resolveExplicitContentSettingWithDefaults3({ setting: prop2, isDm: true, isFriend: true }) };
+  prop1 = undefined;
+  resolveExplicitContentSettingWithDefaults2 = SensitiveMediaExplicitRedactionSettingsUtils.resolveExplicitContentSettingWithDefaults;
+  SensitiveMediaExplicitRedactionSettingsUtils;
   if (stateFromStoresObject != null) {
     prop1 = stateFromStoresObject.explicitContentNonFriendDm;
   }
-  obj3.explicitContentNonFriendDm = SensitiveMediaExplicitRedactionSettingsUtils.resolveExplicitContentSettingWithDefaults({ setting: prop1, isDm: true });
-  const tmpResult = SensitiveMediaExplicitRedactionSettingsUtils;
-  let prop2;
+  prop2 = undefined;
+  resolveExplicitContentSettingWithDefaults3 = SensitiveMediaExplicitRedactionSettingsUtils.resolveExplicitContentSettingWithDefaults;
+  SensitiveMediaExplicitRedactionSettingsUtils;
   if (stateFromStoresObject != null) {
     prop2 = stateFromStoresObject.explicitContentFriendDm;
   }
-  obj3.explicitContentFriendDm = SensitiveMediaExplicitRedactionSettingsUtils.resolveExplicitContentSettingWithDefaults({ setting: prop2, isDm: true, isFriend: true });
-  return obj3;
+  return obj2;
 });
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/explicit_media_redaction/hooks/useExplicitContentSettingsOrDefault.tsx");
-
-export const useExplicitContentSettingOrDefault = tmp2;
-export const useGoreContentSettingOrDefault = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(12);
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let settings;
+  let tmp12;
+  let tmp15;
+  let tmp4;
+  let tmp5;
+  let tmp9;
+  let obj = react;
+  const cResult = obj.c(12);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserSettingsProtoStore];
     const fn = function o() {
@@ -136,7 +159,8 @@ export const useGoreContentSettingOrDefault = ReactCompilerGating.isReactCompile
         goreContentSettings = textAndImages.goreContentSettings;
       }
       if (goreContentSettings == null) {
-        goreContentSettings = SensitiveMediaGoreRedactionSettingsUtils.getGoreContentSettingOrDefault();
+        const obj = SensitiveMediaGoreRedactionSettingsUtils;
+        goreContentSettings = obj.getGoreContentSettingOrDefault();
       }
       return goreContentSettings;
     };
@@ -147,18 +171,19 @@ export const useGoreContentSettingOrDefault = ReactCompilerGating.isReactCompile
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const stateFromStoresObject = useStateFromStores.useStateFromStoresObject(tmp4, tmp5);
+  const tmpResult = useStateFromStores;
+  const stateFromStoresObject = tmpResult.useStateFromStoresObject(tmp4, tmp5);
   let goreContentGuilds;
   if (stateFromStoresObject != null) {
     goreContentGuilds = stateFromStoresObject.goreContentGuilds;
   }
   if (cResult[2] !== goreContentGuilds) {
     const obj2 = { setting: goreContentGuilds };
-    const goreSettingWithDefaults = SensitiveMediaGoreRedactionSettingsUtils.resolveGoreSettingWithDefaults(obj2);
+    const tmpResult4 = SensitiveMediaGoreRedactionSettingsUtils;
+    const goreSettingWithDefaults = tmpResult4.resolveGoreSettingWithDefaults(obj2);
     cResult[2] = goreContentGuilds;
     cResult[3] = goreSettingWithDefaults;
-    let tmp9 = goreSettingWithDefaults;
-    const tmpResult4 = SensitiveMediaGoreRedactionSettingsUtils;
+    tmp9 = goreSettingWithDefaults;
   } else {
     tmp9 = cResult[3];
   }
@@ -168,11 +193,11 @@ export const useGoreContentSettingOrDefault = ReactCompilerGating.isReactCompile
   }
   if (cResult[4] !== prop) {
     const obj3 = { setting: prop, isDm: true };
-    const goreSettingWithDefaults1 = SensitiveMediaGoreRedactionSettingsUtils.resolveGoreSettingWithDefaults(obj3);
+    const tmpResult5 = SensitiveMediaGoreRedactionSettingsUtils;
+    const goreSettingWithDefaults1 = tmpResult5.resolveGoreSettingWithDefaults(obj3);
     cResult[4] = prop;
     cResult[5] = goreSettingWithDefaults1;
-    let tmp12 = goreSettingWithDefaults1;
-    const tmpResult5 = SensitiveMediaGoreRedactionSettingsUtils;
+    tmp12 = goreSettingWithDefaults1;
   } else {
     tmp12 = cResult[5];
   }
@@ -182,18 +207,19 @@ export const useGoreContentSettingOrDefault = ReactCompilerGating.isReactCompile
   }
   if (cResult[6] !== goreContentFriendDm) {
     const obj4 = { setting: goreContentFriendDm, isDm: true, isFriend: true };
-    const goreSettingWithDefaults2 = SensitiveMediaGoreRedactionSettingsUtils.resolveGoreSettingWithDefaults(obj4);
+    const tmpResult6 = SensitiveMediaGoreRedactionSettingsUtils;
+    const goreSettingWithDefaults2 = tmpResult6.resolveGoreSettingWithDefaults(obj4);
     cResult[6] = goreContentFriendDm;
     cResult[7] = goreSettingWithDefaults2;
-    let tmp15 = goreSettingWithDefaults2;
-    const tmpResult6 = SensitiveMediaGoreRedactionSettingsUtils;
+    tmp15 = goreSettingWithDefaults2;
   } else {
     tmp15 = cResult[7];
   }
   if (cResult[8] === tmp9) {
     if (cResult[9] === tmp12) {
+      let tmp17;
       if (cResult[10] === tmp15) {
-        let tmp17 = cResult[11];
+        tmp17 = cResult[11];
       }
       return tmp17;
     }
@@ -204,35 +230,48 @@ export const useGoreContentSettingOrDefault = ReactCompilerGating.isReactCompile
   cResult[10] = tmp15;
   cResult[11] = obj5;
   tmp17 = obj5;
-  const tmpResult = useStateFromStores;
 }) : (() => {
+  let goreContentFriendDm;
+  let prop;
+  let resolveGoreSettingWithDefaults2;
+  let resolveGoreSettingWithDefaults3;
+  let settings;
+  let obj = useStateFromStores;
   const items = [UserSettingsProtoStore];
-  const stateFromStoresObject = useStateFromStores.useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     const textAndImages = settings.settings.textAndImages;
     let goreContentSettings;
     if (textAndImages != null) {
       goreContentSettings = textAndImages.goreContentSettings;
     }
     if (goreContentSettings == null) {
-      goreContentSettings = SensitiveMediaGoreRedactionSettingsUtils.getGoreContentSettingOrDefault();
+      const obj = SensitiveMediaGoreRedactionSettingsUtils;
+      goreContentSettings = obj.getGoreContentSettingOrDefault();
     }
     return goreContentSettings;
   });
   let goreContentGuilds;
+  const resolveGoreSettingWithDefaults = SensitiveMediaGoreRedactionSettingsUtils.resolveGoreSettingWithDefaults;
+  SensitiveMediaGoreRedactionSettingsUtils;
   if (stateFromStoresObject != null) {
     goreContentGuilds = stateFromStoresObject.goreContentGuilds;
   }
-  const obj3 = { goreContentGuilds: SensitiveMediaGoreRedactionSettingsUtils.resolveGoreSettingWithDefaults({ setting: goreContentGuilds }), goreContentNonFriendDm: null, goreContentFriendDm: null };
-  let prop;
+  const obj2 = { goreContentGuilds: resolveGoreSettingWithDefaults({ setting: goreContentGuilds }), goreContentNonFriendDm: resolveGoreSettingWithDefaults2({ setting: prop, isDm: true }), goreContentFriendDm: resolveGoreSettingWithDefaults3({ setting: goreContentFriendDm, isDm: true, isFriend: true }) };
+  prop = undefined;
+  resolveGoreSettingWithDefaults2 = SensitiveMediaGoreRedactionSettingsUtils.resolveGoreSettingWithDefaults;
+  SensitiveMediaGoreRedactionSettingsUtils;
   if (stateFromStoresObject != null) {
     prop = stateFromStoresObject.goreContentNonFriendDm;
   }
-  obj3.goreContentNonFriendDm = SensitiveMediaGoreRedactionSettingsUtils.resolveGoreSettingWithDefaults({ setting: prop, isDm: true });
-  const tmpResult = SensitiveMediaGoreRedactionSettingsUtils;
-  let goreContentFriendDm;
+  goreContentFriendDm = undefined;
+  resolveGoreSettingWithDefaults3 = SensitiveMediaGoreRedactionSettingsUtils.resolveGoreSettingWithDefaults;
+  SensitiveMediaGoreRedactionSettingsUtils;
   if (stateFromStoresObject != null) {
     goreContentFriendDm = stateFromStoresObject.goreContentFriendDm;
   }
-  obj3.goreContentFriendDm = SensitiveMediaGoreRedactionSettingsUtils.resolveGoreSettingWithDefaults({ setting: goreContentFriendDm, isDm: true, isFriend: true });
-  return obj3;
+  return obj2;
 });
+const result = size.fileFinishedImporting("modules/explicit_media_redaction/hooks/useExplicitContentSettingsOrDefault.tsx");
+
+export const useExplicitContentSettingOrDefault = tmp2;
+export const useGoreContentSettingOrDefault = tmp3;

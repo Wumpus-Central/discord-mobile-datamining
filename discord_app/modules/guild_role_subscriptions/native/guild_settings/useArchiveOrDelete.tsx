@@ -1,147 +1,162 @@
 // === Module 17932: useArchiveOrDelete ===
 
 // Module 17932 (useArchiveOrDelete)
-import util from "util" /* 1126 */;
+import intl13 from "intl" /* 1126 */;
 import ToastUtilsAll from "ToastUtils" /* 4567 */;
 import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15045 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import _slicedToArray_mod from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, c1, c2, closure_12, dependencyMap, importAll;
 
-require = fn;
-const noop = fn(19);
-({ useEffect: metroRequire, useRef: closure_7 } = noop);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/useArchiveOrDelete.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, guildId, arg3) => {
+let metroImportDefault;
+let metroRequire;
+let _slicedToArray = _slicedToArray_mod;
+({ useEffect: metroRequire, useRef: metroImportDefault } = react);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, guildId, arg3) => {
+  let archiveSubscriptionListing;
+  let closure_0;
+  let closure_3;
+  let deleteSubscriptionListing;
+  let error;
+  let obj7;
+  let obj9;
+  let stringResult2;
+  let stringResult3;
+  let submitting;
+  let submitting2;
+  let tmp14;
+  let tmp15;
+  let tmp16;
+  let tmp21;
   _require = arg0;
-  closure_1 = arg1;
+  let closure_1 = arg1;
   importAll = guildId;
   dependencyMap = arg3;
-  let stringResult3 = dependencyMap;
-  const cResult = require("c").c(41);
-  let obj = require("c");
-  const subscriptionListing = require("GuildRoleSubscriptionsHooks").useSubscriptionListing(guildId);
+  const tmp = _require;
+  let tmp2 = dependencyMap;
+  let obj = require("react");
+  const cResult = obj.c(41);
   let obj2 = require("GuildRoleSubscriptionsHooks");
-  const removeEditStateId = GuildRoleSubscriptionListingEditStateUtilsAll.useEditStateIds(arg1, arg0).removeEditStateId;
-  const deleteSubscriptionListing1 = require("GuildRoleSubscriptionsHooks").useDeleteSubscriptionListing();
-  ({ submitting, error, deleteSubscriptionListing } = deleteSubscriptionListing1);
+  const subscriptionListing = obj2.useSubscriptionListing(guildId);
+  let obj3 = GuildRoleSubscriptionListingEditStateUtilsAll;
+  const removeEditStateId = obj3.useEditStateIds(arg1, arg0).removeEditStateId;
   let obj4 = require("GuildRoleSubscriptionsHooks");
-  const archiveSubscriptionListing1 = require("GuildRoleSubscriptionsHooks").useArchiveSubscriptionListing();
-  ({ submitting: submitting2, archiveSubscriptionListing } = archiveSubscriptionListing1);
-  removeEditStateId(null);
+  const deleteSubscriptionListing1 = obj4.useDeleteSubscriptionListing();
+  ({ submitting, error, deleteSubscriptionListing } = deleteSubscriptionListing1);
   let obj5 = require("GuildRoleSubscriptionsHooks");
-  const first = stringResult3(GuildRoleSubscriptionListingEditStateUtilsAll.useName(guildId), 1)[0];
+  const archiveSubscriptionListing1 = obj5.useArchiveSubscriptionListing();
+  ({ submitting: submitting2, archiveSubscriptionListing } = archiveSubscriptionListing1);
+  const error2 = archiveSubscriptionListing1.error;
+  const ref = removeEditStateId(null);
+  let obj6 = GuildRoleSubscriptionListingEditStateUtilsAll;
+  const first = stringResult3(obj6.useName(guildId), 1)[0];
   let archived;
   if (subscriptionListing != null) {
     archived = subscriptionListing.archived;
   }
-  closure_11 = tmp9;
+  let closure_11 = tmp9;
   closure_12 = tmp10;
   if (error == null) {
-    error = archiveSubscriptionListing1.error;
+    error = error2;
   }
   if (cResult[0] === true === archived) {
-    if (cResult[1] === tmp10) {
+    if (cResult[1] === undefined === subscriptionListing) {
+      let stringResult1;
       if (cResult[2] === first) {
-        let stringResult2 = tmp11;
-        stringResult3 = tmp12;
-        let stringResult1 = tmp13;
-        if (cResult[18] === cResult[3]) {
-          if (cResult[19] === tmp12) {
-            if (cResult[20] === tmp13) {
-              if (cResult[21] === archiveSubscriptionListing) {
-                if (cResult[22] === deleteSubscriptionListing) {
-                  if (cResult[23] === guildId) {
-                    if (cResult[24] === arg1) {
-                      if (cResult[25] === arg0) {
-                        if (cResult[26] === tmp9) {
-                          if (cResult[27] === tmp10) {
-                            if (cResult[28] === arg3) {
-                              if (cResult[29] === removeEditStateId) {
-                                let tmp31 = cResult[30];
-                              }
-                              if (cResult[31] !== error) {
-                                class F {
-                                  constructor() {
-                                    tmp2 = undefined;
-                                    tmp = closure_10;
-                                    if (closure_10.current !== error) {
-                                      tmp2 = error;
-                                    }
-                                    if (null != tmp2) {
-                                      tmp.current = tmp2;
-                                      tmp3 = closure_2;
-                                      tmp4 = closure_3;
-                                      obj = closure_2(closure_3[11]);
-                                      tmp5 = closure_0;
-                                      intl = closure_0(closure_3[7]).intl;
-                                      presentFailedToastResult = obj.presentFailedToast(intl.string(closure_0(closure_3[7]).t.R0RpRX));
-                                    }
-                                    return;
-                                  }
-                                }
-                                const items = [error];
-                                cResult[31] = error;
-                                cResult[32] = F;
-                                cResult[33] = items;
-                                let tmp34 = items;
-                              } else {
-                                class F {
-                                  constructor() {
-                                    tmp2 = undefined;
-                                    tmp = closure_10;
-                                    if (closure_10.current !== error) {
-                                      tmp2 = error;
-                                    }
-                                    if (null != tmp2) {
-                                      tmp.current = tmp2;
-                                      tmp3 = closure_2;
-                                      tmp4 = closure_3;
-                                      obj = closure_2(closure_3[11]);
-                                      tmp5 = closure_0;
-                                      intl = closure_0(closure_3[7]).intl;
-                                      presentFailedToastResult = obj.presentFailedToast(intl.string(closure_0(closure_3[7]).t.R0RpRX));
-                                    }
-                                    return;
-                                  }
-                                }
-                                tmp34 = cResult[33];
-                              }
-                              stringResult1(F, tmp34);
-                              if (cResult[34] === submitting2) {
-                                class F {
-                                  constructor() {
-                                    tmp2 = undefined;
-                                    tmp = closure_10;
-                                    if (closure_10.current !== error) {
-                                      tmp2 = error;
-                                    }
-                                    if (null != tmp2) {
-                                      tmp.current = tmp2;
-                                      tmp3 = closure_2;
-                                      tmp4 = closure_3;
-                                      obj = closure_2(closure_3[11]);
-                                      tmp5 = closure_0;
-                                      intl = closure_0(closure_3[7]).intl;
-                                      presentFailedToastResult = obj.presentFailedToast(intl.string(closure_0(closure_3[7]).t.R0RpRX));
-                                    }
-                                    return;
-                                  }
-                                }
-                              }
-                              let obj8 = { headerText: tmp14, buttonText: tmp15, descriptionText: tmp16, handleArchiveOrDelete: tmp31, deleting: submitting, archiving: submitting2 };
-                              cResult[34] = submitting2;
-                              cResult[35] = tmp15;
-                              cResult[36] = submitting;
-                              cResult[37] = tmp16;
-                              cResult[38] = tmp31;
-                              cResult[39] = tmp14;
-                              cResult[40] = obj8;
+        stringResult2 = cResult[3];
+        stringResult3 = cResult[4];
+        stringResult1 = cResult[5];
+        tmp14 = cResult[6];
+        tmp15 = cResult[7];
+        tmp16 = cResult[8];
+      }
+      if (cResult[18] === tmp11) {
+        if (cResult[19] === tmp12) {
+          if (cResult[20] === tmp13) {
+            if (cResult[21] === archiveSubscriptionListing) {
+              if (cResult[22] === deleteSubscriptionListing) {
+                if (cResult[23] === guildId) {
+                  if (cResult[24] === arg1) {
+                    if (cResult[25] === arg0) {
+                      if (cResult[26] === true === archived) {
+                        if (cResult[27] === undefined === subscriptionListing) {
+                          if (cResult[28] === arg3) {
+                            let tmp33;
+                            let tmp36;
+                            if (cResult[29] === removeEditStateId) {
+                              tmp33 = cResult[30];
                             }
+                            if (cResult[31] !== error) {
+                              class F {
+                                constructor() {
+                                  let tmp2;
+                                  if (ref.current !== error) {
+                                    tmp2 = error;
+                                  }
+                                  if (null != tmp2) {
+                                    ref.current = tmp2;
+                                    const presentFailedToast = ToastUtilsAll.presentFailedToast;
+                                    ToastUtilsAll;
+                                    const intl = intl13.intl;
+                                    presentFailedToast(intl.string(intl13.t.R0RpRX));
+                                  }
+                                }
+                              }
+                              const items = [error];
+                              cResult[31] = error;
+                              cResult[32] = F;
+                              cResult[33] = items;
+                              tmp36 = items;
+                            } else {
+                              class F {
+                                constructor() {
+                                  let tmp2;
+                                  if (ref.current !== error) {
+                                    tmp2 = error;
+                                  }
+                                  if (null != tmp2) {
+                                    ref.current = tmp2;
+                                    const presentFailedToast = ToastUtilsAll.presentFailedToast;
+                                    ToastUtilsAll;
+                                    const intl = intl13.intl;
+                                    presentFailedToast(intl.string(intl13.t.R0RpRX));
+                                  }
+                                }
+                              }
+                              tmp36 = cResult[33];
+                            }
+                            stringResult1(F, tmp36);
+                            if (cResult[34] === submitting2) {
+                              class F {
+                                constructor() {
+                                  let tmp2;
+                                  if (ref.current !== error) {
+                                    tmp2 = error;
+                                  }
+                                  if (null != tmp2) {
+                                    ref.current = tmp2;
+                                    const presentFailedToast = ToastUtilsAll.presentFailedToast;
+                                    ToastUtilsAll;
+                                    const intl = intl13.intl;
+                                    presentFailedToast(intl.string(intl13.t.R0RpRX));
+                                  }
+                                }
+                              }
+                            }
+                            let obj8 = { headerText: tmp14, buttonText: tmp15, descriptionText: tmp16, handleArchiveOrDelete: tmp33, deleting: submitting, archiving: submitting2 };
+                            cResult[34] = submitting2;
+                            cResult[35] = tmp15;
+                            cResult[36] = submitting;
+                            cResult[37] = tmp16;
+                            cResult[38] = tmp33;
+                            cResult[39] = tmp14;
+                            cResult[40] = obj8;
+                            let tmp39 = obj8;
                           }
                         }
                       }
@@ -152,208 +167,197 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, guil
             }
           }
         }
-        _require = stringResult2(function*() {
-          if (c2 === 2) {
-            c2 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp4 === 3) {
-            if (arg0 === 1) {
-              throw value;
-            } else if (arg0 === 2) {
-              const obj2 = { value, done: true };
-              return obj2;
-            } else {
-              return { value: "IconComponent", done: null };
-            }
+      }
+      _require = stringResult2(function*() {
+        if (c2 === 2) {
+          c2 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp3 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
-            try {
-              c2 = 2;
-              if (0 === c1) {
+            return { value: "IconComponent", done: null };
+          }
+        } else {
+          try {
+            c2 = 2;
+            if (0 === c1) {
+              if (arg0 === 1) {
+                c2 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c2 = 3;
+                const obj3 = { value, done: true };
+                return obj3;
+              } else {
+                const obj4 = { title, body, confirmText, confirmColor: tmp(closure_2_3[9]).ButtonColors.RED };
+                const _confirm = closure_2_1(closure_2_3[8]).confirm;
+                const tmp39 = closure_2_1(closure_2_3[8]);
+                c1 = 1;
+                c2 = 1;
+                const obj5 = { value: _confirm(obj4), done: false };
+                return obj5;
+              }
+            } else {
+              if (1 === c1) {
                 if (arg0 === 1) {
                   c2 = 3;
                   throw value;
                 } else if (arg0 === 2) {
                   c2 = 3;
-                  const obj3 = { value, done: true };
-                  return obj3;
-                } else {
-                  const obj4 = { title, body, confirmText, confirmColor: tmp2(navigation[9]).ButtonColors.RED };
-                  c1 = 1;
-                  c2 = 1;
-                  const obj5 = { value: v2(navigation[8]).confirm(obj4), done: false };
-                  return obj5;
-                }
-              } else {
-                if (1 === tmp5) {
-                  if (arg0 === 1) {
-                    c2 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c2 = 3;
-                    const obj6 = { value, done: true };
-                    return obj6;
-                  } else if (value) {
-                    if (closure_1_12) {
-                      removeEditStateId(c2);
-                      if (null != navigation) {
-                        navigation.goBack();
-                      }
-                    } else {
-                      v2(navigation[10])(null != c1, "group listing id cannot be null");
-                      if (closure_1_11) {
-                        c1 = 3;
-                        c2 = 1;
-                        const obj7 = { value: deleteSubscriptionListing(tmp2, tmp14, c2), done: false };
-                        return obj7;
-                      } else {
-                        c1 = 2;
-                        c2 = 1;
-                        const obj8 = { value: archiveSubscriptionListing(tmp2, tmp14, c2), done: false };
-                        return obj8;
-                      }
-                    }
-                  }
-                } else {
-                  if (2 === tmp5) {
-                    if (arg0 === 1) {
-                      c2 = 3;
-                      throw value;
-                    } else if (arg0 === 2) {
-                      c2 = 3;
-                      const obj10 = { value, done: true };
-                      return obj10;
-                    }
-                  } else if (arg0 === 1) {
-                    c2 = 3;
-                    throw value;
-                  } else if (arg0 !== 2) {
+                  const obj6 = { value, done: true };
+                  return obj6;
+                } else if (value) {
+                  if (closure_1_12) {
+                    removeEditStateId(c2);
                     if (null != navigation) {
                       navigation.goBack();
                     }
+                  } else {
+                    closure_2_1(closure_2_3[10])(null != c1, "group listing id cannot be null");
+                    if (closure_1_11) {
+                      c1 = 3;
+                      c2 = 1;
+                      const obj7 = { value: deleteSubscriptionListing(tmp, c1, c2), done: false };
+                      return obj7;
+                    } else {
+                      c1 = 2;
+                      c2 = 1;
+                      const obj8 = { value: archiveSubscriptionListing(tmp, c1, c2), done: false };
+                      return obj8;
+                    }
                   }
-                  c2 = 3;
-                  const obj = { value, done: true };
-                  return obj;
                 }
+              } else if (2 === c1) {
+                if (arg0 === 1) {
+                  c2 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c2 = 3;
+                  const obj9 = { value, done: true };
+                  return obj9;
+                }
+              } else if (arg0 === 1) {
                 c2 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c2 = 3;
+                const obj = { value, done: true };
+                return obj;
+              } else if (null != navigation) {
+                navigation.goBack();
               }
-            } catch (tmp31) {
-              c2 = tmp;
-              throw tmp31;
+              c2 = 3;
+              return { value: "IconComponent", done: null };
             }
+          } catch (tmp30) {
+            c2 = 3;
+            throw tmp30;
           }
-        });
-        function handleArchiveOrDelete() {
-          const self = this;
-          const apply = closure_0.apply;
-          if (typeof apply === "unknown") {
-            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-          } else {
-            applyArgumentsResult = apply(self, arguments);
-          }
-          return applyArgumentsResult;
         }
-        cResult[18] = cResult[3];
-        cResult[19] = cResult[4];
-        cResult[20] = cResult[5];
-        cResult[21] = archiveSubscriptionListing;
-        cResult[22] = deleteSubscriptionListing;
-        cResult[23] = guildId;
-        cResult[24] = arg1;
-        cResult[25] = arg0;
-        cResult[26] = tmp9;
-        cResult[27] = tmp10;
-        cResult[28] = arg3;
-        cResult[29] = removeEditStateId;
-        cResult[30] = handleArchiveOrDelete;
-        tmp31 = handleArchiveOrDelete;
+      });
+      function handleArchiveOrDelete() {
+        return closure_0(...arguments);
       }
+      cResult[18] = tmp11;
+      cResult[19] = tmp12;
+      cResult[20] = tmp13;
+      cResult[21] = archiveSubscriptionListing;
+      cResult[22] = deleteSubscriptionListing;
+      cResult[23] = guildId;
+      cResult[24] = arg1;
+      cResult[25] = arg0;
+      cResult[26] = true === archived;
+      cResult[27] = undefined === subscriptionListing;
+      cResult[28] = arg3;
+      cResult[29] = removeEditStateId;
+      cResult[30] = handleArchiveOrDelete;
+      tmp33 = handleArchiveOrDelete;
     }
   }
   if (true !== archived) {
     class F {
       constructor() {
-        tmp2 = undefined;
-        tmp = closure_10;
-        if (closure_10.current !== error) {
+        let tmp2;
+        if (ref.current !== error) {
           tmp2 = error;
         }
         if (null != tmp2) {
-          tmp.current = tmp2;
-          tmp3 = closure_2;
-          tmp4 = closure_3;
-          obj = closure_2(closure_3[11]);
-          tmp5 = closure_0;
-          intl = closure_0(closure_3[7]).intl;
-          presentFailedToastResult = obj.presentFailedToast(intl.string(closure_0(closure_3[7]).t.R0RpRX));
+          ref.current = tmp2;
+          const presentFailedToast = ToastUtilsAll.presentFailedToast;
+          ToastUtilsAll;
+          const intl = intl13.intl;
+          presentFailedToast(intl.string(intl13.t.R0RpRX));
         }
-        return;
       }
     }
+    cResult[0] = true === archived;
+    cResult[1] = undefined === subscriptionListing;
+    cResult[2] = first;
+    cResult[3] = tmp21;
+    cResult[4] = tmp22;
+    cResult[5] = tmp20;
+    cResult[6] = tmp17;
+    cResult[7] = tmp18;
+    cResult[8] = tmp29;
+    tmp16 = tmp29;
+    tmp15 = tmp18;
+    tmp14 = tmp17;
   }
   if (cResult[9] !== first) {
     class F {
       constructor() {
-        tmp2 = undefined;
-        tmp = closure_10;
-        if (closure_10.current !== error) {
+        let tmp2;
+        if (ref.current !== error) {
           tmp2 = error;
         }
         if (null != tmp2) {
-          tmp.current = tmp2;
-          tmp3 = closure_2;
-          tmp4 = closure_3;
-          obj = closure_2(closure_3[11]);
-          tmp5 = closure_0;
-          intl = closure_0(closure_3[7]).intl;
-          presentFailedToastResult = obj.presentFailedToast(intl.string(closure_0(closure_3[7]).t.R0RpRX));
+          ref.current = tmp2;
+          const presentFailedToast = ToastUtilsAll.presentFailedToast;
+          ToastUtilsAll;
+          const intl = intl13.intl;
+          presentFailedToast(intl.string(intl13.t.R0RpRX));
         }
-        return;
       }
     }
-    let obj10 = { tierName: first };
+    const obj10 = { tierName: first };
     const formatToPlainStringResult = obj7.formatToPlainString(tmp(1126).t.x2qwWL, obj10);
     cResult[9] = first;
     cResult[10] = formatToPlainStringResult;
   } else {
     class F {
       constructor() {
-        tmp2 = undefined;
-        tmp = closure_10;
-        if (closure_10.current !== error) {
+        let tmp2;
+        if (ref.current !== error) {
           tmp2 = error;
         }
         if (null != tmp2) {
-          tmp.current = tmp2;
-          tmp3 = closure_2;
-          tmp4 = closure_3;
-          obj = closure_2(closure_3[11]);
-          tmp5 = closure_0;
-          intl = closure_0(closure_3[7]).intl;
-          presentFailedToastResult = obj.presentFailedToast(intl.string(closure_0(closure_3[7]).t.R0RpRX));
+          ref.current = tmp2;
+          const presentFailedToast = ToastUtilsAll.presentFailedToast;
+          ToastUtilsAll;
+          const intl = intl13.intl;
+          presentFailedToast(intl.string(intl13.t.R0RpRX));
         }
-        return;
       }
     }
   }
   if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
     class F {
       constructor() {
-        tmp2 = undefined;
-        tmp = closure_10;
-        if (closure_10.current !== error) {
+        let tmp2;
+        if (ref.current !== error) {
           tmp2 = error;
         }
         if (null != tmp2) {
-          tmp.current = tmp2;
-          tmp3 = closure_2;
-          tmp4 = closure_3;
-          obj = closure_2(closure_3[11]);
-          tmp5 = closure_0;
-          intl = closure_0(closure_3[7]).intl;
-          presentFailedToastResult = obj.presentFailedToast(intl.string(closure_0(closure_3[7]).t.R0RpRX));
+          ref.current = tmp2;
+          const presentFailedToast = ToastUtilsAll.presentFailedToast;
+          ToastUtilsAll;
+          const intl = intl13.intl;
+          presentFailedToast(intl.string(intl13.t.R0RpRX));
         }
-        return;
       }
     }
     const stringResult = obj9.string(tmp(1126).t.GMtG6p);
@@ -361,277 +365,302 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, guil
   } else {
     class F {
       constructor() {
-        tmp2 = undefined;
-        tmp = closure_10;
-        if (closure_10.current !== error) {
-          tmp2 = error;
-        }
-        if (null != tmp2) {
-          tmp.current = tmp2;
-          tmp3 = closure_2;
-          tmp4 = closure_3;
-          obj = closure_2(closure_3[11]);
-          tmp5 = closure_0;
-          intl = closure_0(closure_3[7]).intl;
-          presentFailedToastResult = obj.presentFailedToast(intl.string(closure_0(closure_3[7]).t.R0RpRX));
-        }
-        return;
-      }
-    }
-  }
-  if (cResult[12] === undefined === subscriptionListing) {
-    class F {
-      constructor() {
-        tmp2 = undefined;
-        tmp = closure_10;
-        if (closure_10.current !== error) {
-          tmp2 = error;
-        }
-        if (null != tmp2) {
-          tmp.current = tmp2;
-          tmp3 = closure_2;
-          tmp4 = closure_3;
-          obj = closure_2(closure_3[11]);
-          tmp5 = closure_0;
-          intl = closure_0(closure_3[7]).intl;
-          presentFailedToastResult = obj.presentFailedToast(intl.string(closure_0(closure_3[7]).t.R0RpRX));
-        }
-        return;
-      }
-    }
-    const intl2 = tmp(1126).intl;
-    stringResult1 = intl2.string(tmp(1126).t["4H6RLl"]);
-    const intl3 = tmp(1126).intl;
-    stringResult2 = intl3.string(tmp(1126).t.uG6b1w);
-    const intl4 = tmp(1126).intl;
-    stringResult3 = intl4.string(tmp(1126).t.JoCdPC);
-  }
-  let intl = tmp(1126).intl;
-  if (undefined === subscriptionListing) {
-    class F {
-      constructor() {
-        tmp2 = undefined;
-        tmp = closure_10;
-        if (closure_10.current !== error) {
-          tmp2 = error;
-        }
-        if (null != tmp2) {
-          tmp.current = tmp2;
-          tmp3 = closure_2;
-          tmp4 = closure_3;
-          obj = closure_2(closure_3[11]);
-          tmp5 = closure_0;
-          intl = closure_0(closure_3[7]).intl;
-          presentFailedToastResult = obj.presentFailedToast(intl.string(closure_0(closure_3[7]).t.R0RpRX));
-        }
-        return;
-      }
-    }
-    const stringResult4 = intl.string(tmp(1126).t);
-  } else {
-    class F {
-      constructor() {
-        tmp2 = undefined;
-        tmp = closure_10;
-        if (closure_10.current !== error) {
-          tmp2 = error;
-        }
-        if (null != tmp2) {
-          tmp.current = tmp2;
-          tmp3 = closure_2;
-          tmp4 = closure_3;
-          obj = closure_2(closure_3[11]);
-          tmp5 = closure_0;
-          intl = closure_0(closure_3[7]).intl;
-          presentFailedToastResult = obj.presentFailedToast(intl.string(closure_0(closure_3[7]).t.R0RpRX));
-        }
-        return;
-      }
-    }
-  }
-  cResult[12] = undefined === subscriptionListing;
-  cResult[13] = stringResult4;
-}) : ((arg0, arg1, guildId, arg3) => {
-  _require = arg0;
-  closure_1 = arg1;
-  importAll = guildId;
-  dependencyMap = arg3;
-  closure_14 = async function _handleArchiveOrDelete2() {
-    if (c2 === 2) {
-      c2 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c2 = 2;
-        if (0 === v2) {
-          if (arg0 === 1) {
-            c2 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            const obj4 = { title, body, confirmText, confirmColor: tmp2(1188).ButtonColors.RED };
-            v2 = 1;
-            c2 = 1;
-            const obj5 = { value: v2(5708).confirm(obj4), done: false };
-            return obj5;
-          }
-        } else {
-          if (1 === tmp5) {
-            if (arg0 === 1) {
-              c2 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c2 = 3;
-              const obj6 = { value, done: true };
-              return obj6;
-            } else if (value) {
-              if (closure_128_12) {
-                closure_128_7(closure_128_2);
-                if (null != closure_128_3) {
-                  closure_128_3.goBack();
-                }
-              } else {
-                v2(38)(null != closure_128_1, "group listing id cannot be null");
-                if (closure_128_11) {
-                  v2 = 3;
-                  c2 = 1;
-                  const obj7 = { value: closure_128_8(closure_128_0, closure_128_1, closure_128_2), done: false };
-                  return obj7;
-                } else {
-                  v2 = 2;
-                  c2 = 1;
-                  const obj8 = { value: closure_128_9(closure_128_0, closure_128_1, closure_128_2), done: false };
-                  return obj8;
-                }
-              }
-            }
-          } else {
-            if (2 === tmp5) {
-              if (arg0 === 1) {
-                c2 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c2 = 3;
-                const obj10 = { value, done: true };
-                return obj10;
-              }
-            } else if (arg0 === 1) {
-              c2 = 3;
-              throw value;
-            } else if (arg0 !== 2) {
-              if (null != closure_128_3) {
-                closure_128_3.goBack();
-              }
-            }
-            c2 = 3;
-            const obj = { value, done: true };
-            return obj;
-          }
-          c2 = 3;
-        }
-      } catch (tmp31) {
-        c2 = tmp;
-        throw tmp31;
-      }
-    }
-  };
-  let stringResult3 = dependencyMap;
-  const subscriptionListing = require("GuildRoleSubscriptionsHooks").useSubscriptionListing(guildId);
-  let obj = require("GuildRoleSubscriptionsHooks");
-  const removeEditStateId = GuildRoleSubscriptionListingEditStateUtilsAll.useEditStateIds(arg1, arg0).removeEditStateId;
-  const deleteSubscriptionListing = require("GuildRoleSubscriptionsHooks").useDeleteSubscriptionListing();
-  ({ error, deleteSubscriptionListing: closure_8, submitting } = deleteSubscriptionListing);
-  let obj3 = require("GuildRoleSubscriptionsHooks");
-  const archiveSubscriptionListing = require("GuildRoleSubscriptionsHooks").useArchiveSubscriptionListing();
-  closure_9 = archiveSubscriptionListing.archiveSubscriptionListing;
-  ({ submitting: submitting2, error: error2 } = archiveSubscriptionListing);
-  removeEditStateId(null);
-  let obj4 = require("GuildRoleSubscriptionsHooks");
-  const first = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useName(guildId), 1)[0];
-  let archived;
-  if (subscriptionListing != null) {
-    archived = subscriptionListing.archived;
-  }
-  closure_11 = tmp8;
-  closure_12 = tmp9;
-  if (error == null) {
-    error = error2;
-  }
-  if (true !== archived) {
-    if (!tmp9) {
-      let intl = tmp(1126).intl;
-      let obj6 = { tierName: first };
-      const intl2 = tmp(1126).intl;
-      const formatToPlainStringResult = intl.formatToPlainString(tmp(1126).t.OuuIOY, obj6);
-      const intl3 = tmp(1126).intl;
-      const stringResult = intl2.string(tmp(1126).t.RL0wjm);
-      const intl4 = tmp(1126).intl;
-      closure_4 = intl4.string(tmp(1126).t.N5AIuE);
-      const intl5 = tmp(1126).intl;
-      _slicedToArray = intl5.string(tmp(1126).t.TEKiiP);
-      const intl6 = tmp(1126).intl;
-      stringResult3 = intl6.string(tmp(1126).t["170XOL"]);
-      const items = [error];
-      stringResult3(() => {
         let tmp2;
         if (ref.current !== error) {
           tmp2 = error;
         }
         if (null != tmp2) {
           ref.current = tmp2;
-          const intl = util.intl;
-          ToastUtilsAll.presentFailedToast(intl.string(util.t.R0RpRX));
+          const presentFailedToast = ToastUtilsAll.presentFailedToast;
+          ToastUtilsAll;
+          const intl = intl13.intl;
+          presentFailedToast(intl.string(intl13.t.R0RpRX));
         }
-      }, items);
-      let obj7 = {
-        headerText: formatToPlainStringResult,
-        buttonText: stringResult,
-        descriptionText: intl3.string(tmp(1126).t["5/Jeg2"]),
-        handleArchiveOrDelete() {
-              const self = this;
-              const apply = closure_14.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            },
-        deleting: submitting,
-        archiving: submitting2
-      };
-      return obj7;
+      }
     }
   }
-  const intl7 = tmp(1126).intl;
-  intl7.formatToPlainString(require("util").t.x2qwWL, { tierName: first });
-  const intl8 = tmp(1126).intl;
-  intl8.string(require("util").t.GMtG6p);
-  let intl9 = tmp(1126).intl;
-  let intl10 = intl9.string;
-  let string = tmp(1126).t;
-  if (undefined === subscriptionListing) {
-    intl10(string.DHWKJS);
+  if (cResult[12] !== (undefined === subscriptionListing)) {
+    class F {
+      constructor() {
+        let tmp2;
+        if (ref.current !== error) {
+          tmp2 = error;
+        }
+        if (null != tmp2) {
+          ref.current = tmp2;
+          const presentFailedToast = ToastUtilsAll.presentFailedToast;
+          ToastUtilsAll;
+          const intl = intl13.intl;
+          presentFailedToast(intl.string(intl13.t.R0RpRX));
+        }
+      }
+    }
+    const string = tmp28.string;
+    const t = tmp(1126).t;
+    if (undefined === subscriptionListing) {
+      class F {
+        constructor() {
+          let tmp2;
+          if (ref.current !== error) {
+            tmp2 = error;
+          }
+          if (null != tmp2) {
+            ref.current = tmp2;
+            const presentFailedToast = ToastUtilsAll.presentFailedToast;
+            ToastUtilsAll;
+            const intl = intl13.intl;
+            presentFailedToast(intl.string(intl13.t.R0RpRX));
+          }
+        }
+      }
+    } else {
+      class F {
+        constructor() {
+          let tmp2;
+          if (ref.current !== error) {
+            tmp2 = error;
+          }
+          if (null != tmp2) {
+            ref.current = tmp2;
+            const presentFailedToast = ToastUtilsAll.presentFailedToast;
+            ToastUtilsAll;
+            const intl = intl13.intl;
+            presentFailedToast(intl.string(intl13.t.R0RpRX));
+          }
+        }
+      }
+    }
+    cResult[12] = undefined === subscriptionListing;
+    cResult[13] = tmp29;
   } else {
-    intl10(string.Y4KjUN);
+    class F {
+      constructor() {
+        let tmp2;
+        if (ref.current !== error) {
+          tmp2 = error;
+        }
+        if (null != tmp2) {
+          ref.current = tmp2;
+          const presentFailedToast = ToastUtilsAll.presentFailedToast;
+          ToastUtilsAll;
+          const intl = intl13.intl;
+          presentFailedToast(intl.string(intl13.t.R0RpRX));
+        }
+      }
+    }
   }
+  let intl = tmp(1126).intl;
+  stringResult1 = intl.string(tmp(1126).t["4H6RLl"]);
+  const intl2 = tmp(1126).intl;
+  stringResult2 = intl2.string(tmp(1126).t.uG6b1w);
+  const intl3 = tmp(1126).intl;
+  stringResult3 = intl3.string(tmp(1126).t.JoCdPC);
+  tmp21 = stringResult2;
+}) : ((arg0, arg1, guildId, arg3) => {
+  let closure_0;
+  let closure_3;
+  let closure_5;
+  let closure_8;
+  let error;
+  let error2;
+  let stringResult3;
+  let submitting;
+  let submitting2;
+  _require = arg0;
+  let closure_1 = arg1;
+  importAll = guildId;
+  dependencyMap = arg3;
+  let obj = function _handleArchiveOrDelete2() {
+    let body;
+    let confirmText;
+    let title;
+    obj = _asyncToGenerator(async () => {
+      let v2;
+      if (c2 === 2) {
+        c2 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          c2 = 2;
+          if (0 === v2) {
+            if (arg0 === 1) {
+              c2 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c2 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              const obj4 = { title, body, confirmText, confirmColor: tmp(closure_1_3[9]).ButtonColors.RED };
+              const _confirm = v2(closure_1_3[8]).confirm;
+              const tmp39 = v2(closure_1_3[8]);
+              v2 = 1;
+              c2 = 1;
+              const obj5 = { value: _confirm(obj4), done: false };
+              return obj5;
+            }
+          } else {
+            if (1 === v2) {
+              if (arg0 === 1) {
+                c2 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c2 = 3;
+                const obj6 = { value, done: true };
+                return obj6;
+              } else if (value) {
+                if (closure_128_12) {
+                  closure_128_7(closure_128_2);
+                  if (null != closure_128_3) {
+                    closure_128_3.goBack();
+                  }
+                } else {
+                  v2(closure_1_3[10])(null != closure_128_1, "group listing id cannot be null");
+                  if (closure_128_11) {
+                    v2 = 3;
+                    c2 = 1;
+                    const obj7 = { value: closure_128_8(closure_128_0, closure_128_1, closure_128_2), done: false };
+                    return obj7;
+                  } else {
+                    v2 = 2;
+                    c2 = 1;
+                    const obj8 = { value: closure_128_9(closure_128_0, closure_128_1, closure_128_2), done: false };
+                    return obj8;
+                  }
+                }
+              }
+            } else if (2 === v2) {
+              if (arg0 === 1) {
+                c2 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c2 = 3;
+                const obj9 = { value, done: true };
+                return obj9;
+              }
+            } else if (arg0 === 1) {
+              c2 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c2 = 3;
+              obj = { value, done: true };
+              return obj;
+            } else if (null != closure_128_3) {
+              closure_128_3.goBack();
+            }
+            c2 = 3;
+            return { value: "IconComponent", done: null };
+          }
+        } catch (tmp30) {
+          c2 = 3;
+          throw tmp30;
+        }
+      }
+    });
+    return obj(...arguments);
+  };
+  const tmp = _require;
+  let tmp2 = dependencyMap;
+  obj = require("GuildRoleSubscriptionsHooks");
+  const subscriptionListing = obj.useSubscriptionListing(guildId);
+  let obj2 = GuildRoleSubscriptionListingEditStateUtilsAll;
+  const removeEditStateId = obj2.useEditStateIds(arg1, arg0).removeEditStateId;
+  let obj3 = require("GuildRoleSubscriptionsHooks");
+  const deleteSubscriptionListing = obj3.useDeleteSubscriptionListing();
+  ({ error, deleteSubscriptionListing: closure_8, submitting } = deleteSubscriptionListing);
+  let obj4 = require("GuildRoleSubscriptionsHooks");
+  let archiveSubscriptionListing = obj4.useArchiveSubscriptionListing();
+  archiveSubscriptionListing = archiveSubscriptionListing.archiveSubscriptionListing;
+  ({ submitting: submitting2, error: error2 } = archiveSubscriptionListing);
+  const ref = removeEditStateId(null);
+  let obj5 = GuildRoleSubscriptionListingEditStateUtilsAll;
+  const first = _slicedToArray(obj5.useName(guildId), 1)[0];
+  let archived;
+  if (subscriptionListing != null) {
+    archived = subscriptionListing.archived;
+  }
+  let closure_11 = tmp8;
+  closure_12 = tmp9;
+  if (error == null) {
+    error = error2;
+  }
+  if (true !== archived) {
+    let formatToPlainStringResult;
+    let stringResult;
+    let stringResult1;
+    let closure_6;
+    if (undefined !== subscriptionListing) {
+      let intl = tmp(1126).intl;
+      let obj6 = { tierName: first };
+      formatToPlainStringResult = intl.formatToPlainString(tmp(1126).t.OuuIOY, obj6);
+      const intl2 = tmp(1126).intl;
+      stringResult = intl2.string(tmp(1126).t.RL0wjm);
+      const intl3 = tmp(1126).intl;
+      stringResult1 = intl3.string(tmp(1126).t["5/Jeg2"]);
+      const intl4 = tmp(1126).intl;
+      let closure_4 = intl4.string(tmp(1126).t.N5AIuE);
+      const intl5 = tmp(1126).intl;
+      _slicedToArray = intl5.string(tmp(1126).t.TEKiiP);
+      const intl6 = tmp(1126).intl;
+      closure_6 = intl6.string(tmp(1126).t["170XOL"]);
+    }
+    const items = [error];
+    closure_6(() => {
+      let tmp2;
+      if (ref.current !== error) {
+        tmp2 = error;
+      }
+      if (null != tmp2) {
+        ref.current = tmp2;
+        const presentFailedToast = ToastUtilsAll.presentFailedToast;
+        ToastUtilsAll;
+        const intl = intl13.intl;
+        presentFailedToast(intl.string(intl13.t.R0RpRX));
+      }
+    }, items);
+    let obj7 = {
+      headerText: formatToPlainStringResult,
+      buttonText: stringResult,
+      descriptionText: stringResult1,
+      handleArchiveOrDelete() {
+          return obj(...arguments);
+        },
+      deleting: submitting,
+      archiving: submitting2
+    };
+    return obj7;
+  }
+  const intl7 = tmp(1126).intl;
+  const formatToPlainStringResult1 = intl7.formatToPlainString(tmp(1126).t.x2qwWL, { tierName: first });
+  const intl8 = tmp(1126).intl;
+  const stringResult2 = intl8.string(tmp(1126).t.GMtG6p);
+  const intl9 = tmp(1126).intl;
+  const string = intl9.string;
+  const t = tmp(1126).t;
+  if (undefined === subscriptionListing) {
+    stringResult3 = string(t.DHWKJS);
+  } else {
+    stringResult3 = string(t.Y4KjUN);
+  }
+  const intl10 = tmp(1126).intl;
+  closure_4 = intl10.string(tmp(1126).t["4H6RLl"]);
   const intl11 = tmp(1126).intl;
-  closure_4 = intl11.string(tmp(1126).t["4H6RLl"]);
-  intl9 = tmp(1126).intl;
-  _slicedToArray = intl9.string(tmp(1126).t.uG6b1w);
-  intl10 = tmp(1126).intl;
-  string = intl10.string;
-  stringResult3 = string(tmp(1126).t.JoCdPC);
+  _slicedToArray = intl11.string(tmp(1126).t.uG6b1w);
+  const intl12 = tmp(1126).intl;
+  closure_6 = intl12.string(tmp(1126).t.JoCdPC);
+  stringResult1 = stringResult3;
+  stringResult = stringResult2;
+  formatToPlainStringResult = formatToPlainStringResult1;
 });
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/useArchiveOrDelete.tsx");
+
+export default tmp3;

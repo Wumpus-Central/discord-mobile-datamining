@@ -2,21 +2,27 @@
 
 // Module 16617 (conjureFeedback)
 import Storage3 from "Storage" /* 510 */;
-import util from "util" /* 1126 */;
+import Constants2 from "Constants" /* 1085 */;
+import intl7 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import _modDef3723 from "module_3723" /* 3723 */;
 import FeedbackUtils from "FeedbackUtils" /* 11252 */;
-import ConjureChatStore from "ConjureChatStore" /* 12905 */;
+import ConjureChatStore2 from "ConjureChatStore" /* 12905 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 8699 */;
+import Constants from "Constants" /* 11249 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const turnSettled = fn(12905).turnSettled;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const Constants = fn(11249);
-({ FeedbackCategory: closure_7, FeedbackOptionVariant: closure_8, FeedbackType: closure_9, ConjureFeedbackOption: c10 } = Constants);
+const ConjureChatStore = ConjureChatStore2;
+
+let c10;
+let c9;
+let metroImportAll;
+let metroImportDefault;
+const turnSettled = ConjureChatStore2.turnSettled;
+const AnalyticEvents = Constants2.AnalyticEvents;
+({ FeedbackCategory: metroImportDefault, FeedbackOptionVariant: metroImportAll, FeedbackType: c9, ConjureFeedbackOption: c10 } = Constants);
 const shownVibegrationsFeedbackProjectIds = "shownVibegrationsFeedbackProjectIds";
 const set = new Set();
-const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/feedback/conjureFeedback.tsx");
 
 export const MINIMUM_SETTLED_TURNS_FOR_FEEDBACK = 3;
@@ -43,71 +49,73 @@ export const markFeedbackShownForProject = function markFeedbackShownForProject(
   if (!items1.includes(projectId)) {
     const Storage2 = Storage3.Storage;
     const items = [];
-    items[HermesBuiltin.arraySpread(items1, 0)] = projectId;
+    items[HermesBuiltin.arraySpread(items, items1, 0)] = projectId;
     const result = Storage2.set(shownVibegrationsFeedbackProjectIds, items);
   }
 };
 export const countSettledTurns = function countSettledTurns(arg0) {
   const messages = ConjureChatStore.getMessages(arg0);
   return messages.filter((role) => {
-    let tmp = "assistant" === role.role;
-    if (tmp) {
-      tmp = "side_reply" !== role.kind;
-    }
-    if (tmp) {
-      tmp = turnSettled(role);
-    }
+    const tmp = "assistant" === role.role && "side_reply" !== role.kind && turnSettled(role);
     return tmp;
   }).length;
 };
 export const conjureFeedbackSection = function conjureFeedbackSection() {
-  const obj = { value: constants.CONJURE, label: "", problemsHeader: null, problemOptions: null, freeformConfig: null };
-  const intl = util.intl;
-  obj.problemsHeader = intl.string(_modDef3723.QhB3in);
-  const obj2 = { value: constants4.NOT_WHAT_I_WANTED, variant: constants2.UNSPECIFIED, label: null };
-  const intl2 = util.intl;
-  obj2.label = intl2.string(_modDef3723.kwO25M);
-  const items = [obj2, , , ];
-  const obj3 = { value: constants4.TOO_SLOW, variant: constants2.UNSPECIFIED, label: null };
-  const intl3 = util.intl;
-  obj3.label = intl3.string(_modDef3723["8cyhK6"]);
+  let intl;
+  let intl2;
+  let intl3;
+  let intl4;
+  let intl5;
+  let intl6;
+  let items;
+  let obj6;
+  const obj = { value: metroImportDefault.CONJURE, label: "", problemsHeader: intl.string(_modDef3723.QhB3in), problemOptions: items, freeformConfig: obj6 };
+  intl = intl7.intl;
+  const obj2 = { value: constants4.NOT_WHAT_I_WANTED, variant: metroImportAll.UNSPECIFIED, label: intl2.string(_modDef3723.kwO25M) };
+  intl2 = intl7.intl;
+  items = [obj2, , , ];
+  const obj3 = { value: constants4.TOO_SLOW, variant: metroImportAll.UNSPECIFIED, label: intl3.string(_modDef3723["8cyhK6"]) };
+  intl3 = intl7.intl;
   items[1] = obj3;
-  const obj4 = { value: constants4.APP_DIDNT_WORK, variant: constants2.UNSPECIFIED, label: null };
-  const intl4 = util.intl;
-  obj4.label = intl4.string(_modDef3723.g2rAXL);
+  const obj4 = { value: constants4.APP_DIDNT_WORK, variant: metroImportAll.UNSPECIFIED, label: intl4.string(_modDef3723.g2rAXL) };
+  intl4 = intl7.intl;
   items[2] = obj4;
-  const obj5 = { value: constants4.DIDNT_KNOW_WHAT_TO_ASK_FOR, variant: constants2.UNSPECIFIED, label: null };
-  const intl5 = util.intl;
-  obj5.label = intl5.string(_modDef3723.X73n1w);
+  const obj5 = { value: constants4.DIDNT_KNOW_WHAT_TO_ASK_FOR, variant: metroImportAll.UNSPECIFIED, label: intl5.string(_modDef3723.X73n1w) };
+  intl5 = intl7.intl;
   items[3] = obj5;
-  obj.problemOptions = items;
-  const obj6 = { value: constants4.FREEFORM, label: null };
-  const intl6 = util.intl;
-  obj6.label = intl6.string(_modDef3723.zgU5P0);
-  obj.freeformConfig = obj6;
+  obj6 = { value: constants4.FREEFORM, label: intl6.string(_modDef3723.zgU5P0) };
+  intl6 = intl7.intl;
   return obj;
 };
 export const trackConjureFeedbackOpened = function trackConjureFeedbackOpened() {
-  AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type: "vibegrations", source: "Feedback Modal" });
+  const obj = AnalyticsUtilsDefault;
+  obj.track(AnalyticEvents.OPEN_MODAL, { type: "vibegrations", source: "Feedback Modal" });
 };
-export const submitConjureFeedback = function submitConjureFeedback(projectId, promptCount, dontShowAgain, VibegrationsFeedbackSheet) {
-  ({ rating, reason } = dontShowAgain);
-  if (true === dontShowAgain.dontShowAgain) {
+export const submitConjureFeedback = function submitConjureFeedback(projectId, promptCount, feedback, VibegrationsFeedbackSheet) {
+  let application_id;
+  let rating;
+  let reason;
+  let value;
+  ({ rating, reason } = feedback);
+  feedback = feedback.feedback;
+  if (true === feedback.dontShowAgain) {
     const obj2 = { feedbackType: constants3.VIBEGRATIONS, location: VibegrationsFeedbackSheet };
-    FeedbackUtils.processOptOut(obj2);
+    const obj = FeedbackUtils;
+    obj.processOptOut(obj2);
   }
   if (null != rating) {
-    const obj4 = { project_id: projectId, application_id: null, rating: null, reason: null, feedback: null, prompt_count: null, location: "Vibegrations Prompt" };
+    const obj3 = { project_id: projectId, application_id, rating, reason: value, feedback, prompt_count: promptCount, location: "Vibegrations Prompt" };
+    const track = AnalyticsUtilsDefault.track;
+    const VIBEGRATIONS_FEEDBACK = AnalyticEvents.VIBEGRATIONS_FEEDBACK;
+    AnalyticsUtilsDefault;
     const project = ConjureProjectStore.getProject(projectId);
-    let application_id;
+    application_id = undefined;
     if (project != null) {
       application_id = project.application_id;
     }
     if (application_id == null) {
       application_id = null;
     }
-    obj4.application_id = application_id;
-    obj4.rating = rating;
     value = undefined;
     if (reason != null) {
       value = reason.value;
@@ -115,9 +123,6 @@ export const submitConjureFeedback = function submitConjureFeedback(projectId, p
     if (value == null) {
       value = null;
     }
-    obj4.reason = value;
-    obj4.feedback = dontShowAgain.feedback;
-    obj4.prompt_count = promptCount;
-    AnalyticsUtilsDefault.track(AnalyticEvents.VIBEGRATIONS_FEEDBACK, obj4);
+    track(VIBEGRATIONS_FEEDBACK, obj3);
   }
 };

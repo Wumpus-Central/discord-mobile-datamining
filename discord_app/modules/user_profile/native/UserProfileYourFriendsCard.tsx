@@ -2,41 +2,55 @@
 
 // Module 16980 (UserProfileYourFriendsCard)
 import _modDef12 from "module_12" /* 12 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import Constants from "Constants" /* 1085 */;
 import native from "native" /* 1188 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
 import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7143 */;
 import RelationshipStore from "RelationshipStore" /* 4519 */;
 import UserStore from "UserStore" /* 1377 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, dependencyMap, navigateToFriends, userAffinities;
 
-require = fn;
-const View = fn(17).View;
-const RelationshipTypes = fn(1085).RelationshipTypes;
-const jsx = fn(21).jsx;
-let closure_11 = Object.freeze({ direction: fn(1188).CutoutDirection.RIGHT, inset: -4 });
-const createStyles = fn(4890);
+const View = react_native.View;
+const RelationshipTypes = Constants.RelationshipTypes;
+const jsx = Fragment.jsx;
+let obj = { direction: native.CutoutDirection.RIGHT, inset: -4 };
+let closure_11 = Object.freeze(obj);
 let closure_12 = createStyles.createStyles({ facepile: { flexDirection: "row", alignItems: "center" }, avatars: { flexDirection: "row" } });
-const ReactCompilerGating = fn(558);
-let obj = { direction: fn(1188).CutoutDirection.RIGHT, inset: -4 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileYourFriendsCard.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = require("c").c(27);
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let closure_0;
+  let first;
+  let friendIDs;
+  let gameRelationshipsByType;
+  let stateFromStoresArray;
+  let stateFromStoresArray1;
+  let tmp11;
+  let tmp12;
+  let tmp17;
+  let tmp7;
+  let tmp8;
+  let obj = require("react");
+  const cResult = obj.c(27);
   closure_12();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
+  let obj2 = gameRelationshipsByType;
   const tmp6 = stateFromStoresArray1(gameRelationshipsByType.useState(first), 2);
   _require = tmp6[0];
-  closure_1 = tmp6[1];
+  let closure_1 = tmp6[1];
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [UserAffinitiesV2Store];
     const fn = function _() {
@@ -45,15 +59,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     };
     cResult[1] = items1;
     cResult[2] = fn;
-    let tmp8 = fn;
-    let tmp7 = items1;
+    tmp8 = fn;
+    tmp7 = items1;
   } else {
     tmp7 = cResult[1];
     tmp8 = cResult[2];
   }
-  let obj = require("c");
-  let obj2 = gameRelationshipsByType;
-  stateFromStoresArray = require("initialize").useStateFromStoresArray(tmp7, tmp8);
+  const tmpResult = require("get initialized");
+  stateFromStoresArray = tmpResult.useStateFromStoresArray(tmp7, tmp8);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [RelationshipStore];
     const fn2 = function x() {
@@ -61,34 +74,32 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     };
     cResult[3] = items2;
     cResult[4] = fn2;
-    let tmp12 = fn2;
-    let tmp11 = items2;
+    tmp12 = fn2;
+    tmp11 = items2;
   } else {
     tmp11 = cResult[3];
     tmp12 = cResult[4];
   }
-  let tmpResult = require("initialize");
-  stateFromStoresArray1 = require("initialize").useStateFromStoresArray(tmp11, tmp12);
-  const tmpResult3 = require("initialize");
-  gameRelationshipsByType = require("GameRelationshipStoreHooks").useGameRelationshipsByType(RelationshipTypes.FRIEND);
+  const tmpResult3 = require("get initialized");
+  stateFromStoresArray1 = tmpResult3.useStateFromStoresArray(tmp11, tmp12);
+  const tmpResult4 = require("GameRelationshipStoreHooks");
+  gameRelationshipsByType = tmpResult4.useGameRelationshipsByType(RelationshipTypes.FRIEND);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     class R {
       constructor() {
-        obj = closure_0(closure_2[14]);
-        userAffinitiesV2 = obj.fetchUserAffinitiesV2();
-        return;
+        const obj = closure_0(stateFromStoresArray[14]);
+        const userAffinitiesV2 = obj.fetchUserAffinitiesV2();
       }
     }
     const items3 = [];
     cResult[5] = R;
     cResult[6] = items3;
-    let tmp17 = items3;
+    tmp17 = items3;
   } else {
     class R {
       constructor() {
-        obj = closure_0(closure_2[14]);
-        userAffinitiesV2 = obj.fetchUserAffinitiesV2();
-        return;
+        const obj = closure_0(stateFromStoresArray[14]);
+        const userAffinitiesV2 = obj.fetchUserAffinitiesV2();
       }
     }
     tmp17 = cResult[6];
@@ -97,34 +108,34 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (cResult[7] === stateFromStoresArray1) {
     class R {
       constructor() {
-        obj = closure_0(closure_2[14]);
-        userAffinitiesV2 = obj.fetchUserAffinitiesV2();
-        return;
+        const obj = closure_0(stateFromStoresArray[14]);
+        const userAffinitiesV2 = obj.fetchUserAffinitiesV2();
       }
     }
   }
   const fn3 = function w() {
-    const found = _modDef12.chain(stateFromStoresArray).filter((item) => stateFromStoresArray1.includes(item));
-    const chainResult = _modDef12.chain(stateFromStoresArray);
-    const mapped = found.take(5).map(UserStore.getUser);
+    const obj = _modDef12;
+    const chainResult = obj.chain(stateFromStoresArray);
+    const found = chainResult.filter((item) => stateFromStoresArray1.includes(item));
     const takeResult = found.take(5);
-    const valueResult = mapped.filter(GlobalUtils.isNotNullish).value();
+    const mapped = takeResult.map(UserStore.getUser);
+    const iter = mapped.filter(GlobalUtils.isNotNullish);
+    const valueResult = iter.value();
     if (valueResult.length >= 5) {
       closure_1(valueResult);
     } else {
-      const tmpResult = _modDef12;
-      const mapped1 = _modDef12.chain(gameRelationshipsByType).map((id) => id.id);
-      const chainResult1 = _modDef12.chain(gameRelationshipsByType);
+      const tmp2Result = _modDef12;
+      const chainResult1 = tmp2Result.chain(gameRelationshipsByType);
+      const mapped1 = chainResult1.map((id) => id.id);
       const uniqResult = mapped1.uniq();
-      const mapped2 = mapped1.uniq().take(5 - valueResult.length).map(UserStore.getUser);
-      const takeResult1 = mapped1.uniq().take(5 - valueResult.length);
-      const valueResult2 = mapped2.filter(GlobalUtils.isNotNullish).value();
-      const items = [];
-      HermesBuiltin.arraySpread(valueResult2, HermesBuiltin.arraySpread(valueResult, 0));
-      closure_1(items);
+      const takeResult1 = uniqResult.take(5 - valueResult.length);
+      const mapped2 = takeResult1.map(UserStore.getUser);
       const iter2 = mapped2.filter(GlobalUtils.isNotNullish);
+      const items = [];
+      const valueResult2 = iter2.value();
+      HermesBuiltin.arraySpread(items, valueResult2, HermesBuiltin.arraySpread(items, valueResult, 0));
+      closure_1(items);
     }
-    const iter = mapped.filter(GlobalUtils.isNotNullish);
   };
   const items4 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   cResult[7] = stateFromStoresArray1;
@@ -132,99 +143,89 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[9] = stateFromStoresArray;
   cResult[10] = fn3;
   cResult[11] = items4;
-  const tmpResult4 = require("GameRelationshipStoreHooks");
 }) : ((navigateToFriends) => {
+  let closure_0;
+  let closure_2;
+  let friendIDs;
+  let intl;
   let stateFromStoresArray;
   let stateFromStoresArray1;
+  navigateToFriends = navigateToFriends.navigateToFriends;
   const tmp = closure_12();
   _require = tmp;
   const tmp2 = stateFromStoresArray(stateFromStoresArray1.useState([]), 2);
   const first = tmp2[0];
   dependencyMap = tmp2[1];
+  let obj = require("get initialized");
   let items = [UserAffinitiesV2Store];
-  stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
+  stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
     userAffinities = userAffinities.getUserAffinities();
     return userAffinities.map((otherUserId) => otherUserId.otherUserId);
   });
-  let obj = require("initialize");
+  let obj2 = require("get initialized");
   const items1 = [RelationshipStore];
-  stateFromStoresArray1 = require("initialize").useStateFromStoresArray(items1, () => friendIDs.getFriendIDs());
-  let obj2 = require("initialize");
-  const gameRelationshipsByType = require("GameRelationshipStoreHooks").useGameRelationshipsByType(RelationshipTypes.FRIEND);
+  stateFromStoresArray1 = obj2.useStateFromStoresArray(items1, () => friendIDs.getFriendIDs());
+  let obj3 = require("GameRelationshipStoreHooks");
+  const gameRelationshipsByType = obj3.useGameRelationshipsByType(RelationshipTypes.FRIEND);
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = closure_0(9509).fetchUserAffinitiesV2();
+    const obj = closure_0(closure_2[14]);
+    const userAffinitiesV2 = obj.fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {
-    const found = _modDef12.chain(stateFromStoresArray).filter((item) => stateFromStoresArray1.includes(item));
-    const chainResult = _modDef12.chain(stateFromStoresArray);
-    const mapped = found.take(5).map(UserStore.getUser);
+    const obj = _modDef12;
+    const chainResult = obj.chain(stateFromStoresArray);
+    const found = chainResult.filter((item) => stateFromStoresArray1.includes(item));
     const takeResult = found.take(5);
-    const valueResult = mapped.filter(GlobalUtils.isNotNullish).value();
-    if (valueResult.length >= 5) {
-      dependencyMap(valueResult);
-    } else {
-      const tmpResult = _modDef12;
-      const mapped1 = _modDef12.chain(gameRelationshipsByType).map((id) => id.id);
-      const chainResult1 = _modDef12.chain(gameRelationshipsByType);
-      const uniqResult = mapped1.uniq();
-      const mapped2 = mapped1.uniq().take(5 - valueResult.length).map(UserStore.getUser);
-      const takeResult1 = mapped1.uniq().take(5 - valueResult.length);
-      const valueResult2 = mapped2.filter(GlobalUtils.isNotNullish).value();
-      const items = [];
-      HermesBuiltin.arraySpread(valueResult2, HermesBuiltin.arraySpread(valueResult, 0));
-      dependencyMap(items);
-      const iter2 = mapped2.filter(GlobalUtils.isNotNullish);
-    }
+    const mapped = takeResult.map(UserStore.getUser);
     const iter = mapped.filter(GlobalUtils.isNotNullish);
+    const valueResult = iter.value();
+    if (valueResult.length >= 5) {
+      closure_2(valueResult);
+    } else {
+      const tmp2Result = _modDef12;
+      const chainResult1 = tmp2Result.chain(gameRelationshipsByType);
+      const mapped1 = chainResult1.map((id) => id.id);
+      const uniqResult = mapped1.uniq();
+      const takeResult1 = uniqResult.take(5 - valueResult.length);
+      const mapped2 = takeResult1.map(UserStore.getUser);
+      const iter2 = mapped2.filter(GlobalUtils.isNotNullish);
+      const items = [];
+      const valueResult2 = iter2.value();
+      HermesBuiltin.arraySpread(items, valueResult2, HermesBuiltin.arraySpread(items, valueResult, 0));
+      closure_2(items);
+    }
   }, items2);
   const items3 = [first, , ];
   ({ avatars: arr4[1], facepile: arr4[2] } = tmp);
   const memo = stateFromStoresArray1.useMemo(() => {
-    let obj = {
-      style: closure_0.facepile,
-      accessibilityElementsHidden: true,
-      importantForAccessibility: "no-hide-descendants",
-      children: <View style={closure_0.avatars}>{first.map((user, index) => {
-        const obj = { style: null, children: null };
-        const obj2 = { transform: null };
-        const items = [{ translateX: 4 * (first.length - 1 - index) }];
-        obj2.transform = items;
-        obj.style = obj2;
-        const obj4 = { user, guildId: "r", size: closure_0(1188).AvatarSizes.XSMALL, cutout: 956302470 };
+    let obj2 = {
+      style: closure_0.avatars,
+      children: first.map((user, index) => {
+        let items;
         let tmp3;
+        const obj2 = { transform: items };
+        items = [];
+        const obj3 = { translateX: 4 * (first.length - 1 - index) };
+        items[0] = obj3;
+        ({ user, guildId: "r", size: closure_0(closure_2[8]).AvatarSizes.XSMALL, cutout: tmp3 });
+        const CutoutableAvatarImage = closure_0(closure_2[8]).CutoutableAvatarImage;
+        tmp3 = undefined;
         if (index < first.length - 1) {
           tmp3 = closure_2_11;
         }
-        obj4.cutout = tmp3;
-        obj.children = jsx(closure_0(1188).CutoutableAvatarImage, { user, guildId: "r", size: closure_0(1188).AvatarSizes.XSMALL, cutout: 956302470 });
-        return <gameRelationshipsByType key={user.id} style={null}>{null}</gameRelationshipsByType>;
-      })}</View>
+        return <gameRelationshipsByType key={user.id} style={obj2}>{null}</gameRelationshipsByType>;
+      })
     };
-    return <View style={closure_0.facepile} accessibilityElementsHidden importantForAccessibility="no-hide-descendants"><View style={closure_0.avatars}>{first.map((user, index) => {
-      const obj = { style: null, children: null };
-      const obj2 = { transform: null };
-      const items = [{ translateX: 4 * (first.length - 1 - index) }];
-      obj2.transform = items;
-      obj.style = obj2;
-      const obj4 = { user, guildId: "r", size: closure_0(1188).AvatarSizes.XSMALL, cutout: 956302470 };
-      let tmp3;
-      if (index < first.length - 1) {
-        tmp3 = closure_2_11;
-      }
-      obj4.cutout = tmp3;
-      obj.children = jsx(closure_0(1188).CutoutableAvatarImage, { user, guildId: "r", size: closure_0(1188).AvatarSizes.XSMALL, cutout: 956302470 });
-      return <gameRelationshipsByType key={user.id} style={null}>{null}</gameRelationshipsByType>;
-    })}</View></View>;
+    return <View style={closure_0.facepile} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">{null}</View>;
   }, items3);
-  let obj4 = { label: null, accessibilityLabel: null, onPress: null, trailing: null, arrow: true, start: true, end: true };
-  const obj5 = { variant: "text-sm/semibold", color: "text-default", children: null };
-  const intl = require("util").intl;
-  obj5.children = intl.string(require("util").t.TdEu5X);
-  obj4.label = jsx(require("Text/Text").Text, { variant: "text-sm/semibold", color: "text-default", children: null });
-  const intl2 = require("util").intl;
-  obj4.accessibilityLabel = intl2.string(require("util").t.TdEu5X);
-  obj4.onPress = navigateToFriends.navigateToFriends;
-  obj4.trailing = memo;
-  return jsx(require("TableRow").TableRow, { label: null, accessibilityLabel: null, onPress: null, trailing: null, arrow: true, start: true, end: true });
+  const TableRow = require("TableRow").TableRow;
+  ({ variant: "text-sm/semibold", color: "text-default", children: intl.string(require("intl").t.TdEu5X) });
+  const Text = require("Text/Text").Text;
+  intl = require("intl").intl;
+  const intl2 = require("intl").intl;
+  return <TableRow label={null} accessibilityLabel={intl2.string(require("intl").t.TdEu5X)} onPress={navigateToFriends} trailing={memo} arrow start end />;
 });
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileYourFriendsCard.tsx");
+
+export default tmp2;

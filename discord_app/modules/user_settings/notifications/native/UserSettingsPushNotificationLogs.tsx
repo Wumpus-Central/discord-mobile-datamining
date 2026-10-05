@@ -1,38 +1,62 @@
 // === Module 15395: UserSettingsPushNotificationLogs ===
 
 // Module 15395 (UserSettingsPushNotificationLogs)
+import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
+import Constants from "Constants" /* 1085 */;
 import Text_Text from "Text/Text" /* 4886 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import InputTypes from "InputTypes" /* 6106 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import _slicedToArray_mod from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size_mod from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, list: null, searchWrap: null, shareButton: null, log: null, code: null };
-let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-obj2.list = { paddingHorizontal: nativeDefault.space.PX_16 };
-let obj4 = { paddingHorizontal: nativeDefault.space.PX_16 };
-obj2.searchWrap = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
-let size = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, marginLeft: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, height: fn(6106).InputHeights.MD, width: fn(6106).InputHeights.MD, justifyContent: "center", alignItems: "center" };
-obj2.shareButton = size;
-let obj5 = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
-obj2.log = { paddingBottom: nativeDefault.space.PX_16 };
-obj2.code = { fontFamily: fn(1085).Fonts.CODE_BOLD };
-let closure_9 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj6 = { paddingBottom: nativeDefault.space.PX_16 };
-size = fn(2);
-let result = size.fileFinishedImporting("modules/user_settings/notifications/native/UserSettingsPushNotificationLogs.tsx");
+let _require, c2, c3, dependencyMap, num, tmp5;
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = first1(576).c(34);
+let metroImportAll;
+let metroImportDefault;
+let obj2;
+let obj3;
+let obj4;
+let obj5;
+let size;
+let _slicedToArray = _slicedToArray_mod;
+const View = react_native.View;
+const Fonts = Constants.Fonts;
+({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { wrap: obj2, list: obj3, searchWrap: obj4, shareButton: size, log: obj5, code: { fontFamily: Fonts.CODE_BOLD } };
+obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+createStyles = createStyles.createStyles;
+obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
+obj4 = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
+size = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, marginLeft: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, height: InputTypes.InputHeights.MD, width: InputTypes.InputHeights.MD, justifyContent: "center", alignItems: "center" };
+obj5 = { paddingBottom: nativeDefault.space.PX_16 };
+let closure_9 = createStyles(obj);
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let closure_2;
+  let closure_4;
+  let first;
+  let first1;
+  let items3;
+  let items4;
+  let obj4;
+  let searchWrap;
+  let tmp12;
+  let tmp15;
+  let tmp8;
+  let tmp9;
+  let wrap;
+  let tmp = first1;
+  let tmp2 = dependencyMap;
+  let obj = first1(576);
+  const cResult = obj.c(34);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function l() {
-      const Storage = first1(510).Storage;
+      const Storage = first1(closure_2[11]).Storage;
       let str = Storage.get("push-notification-logs-query", "");
       if (str == null) {
         str = "";
@@ -40,93 +64,39 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       return str;
     };
     cResult[0] = fn;
-    let first = fn;
+    first = fn;
   } else {
     first = cResult[0];
   }
-  const tmp6 = _slicedToArray(noop.useState(first), 2);
-  first1 = tmp6[0];
+  [first1, tmp8] = react.useState(first);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [];
     cResult[1] = items;
-    let tmp8 = items;
+    tmp9 = items;
   } else {
-    tmp8 = cResult[1];
+    tmp9 = cResult[1];
   }
-  [first2, dependencyMap] = noop.useState(tmp8);
+  const tmp5Result = _slicedToArray(react.useState(tmp9), 2);
+  const first2 = tmp5Result[0];
+  dependencyMap = tmp5Result[1];
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     let items1 = [];
     cResult[2] = items1;
-    let tmp11 = items1;
+    tmp12 = items1;
   } else {
-    tmp11 = cResult[2];
+    tmp12 = cResult[2];
   }
-  let obj = first1(576);
-  [r10046, asyncGeneratorStep] = noop.useState(tmp11);
+  [r10046, _asyncToGenerator] = _slicedToArray(react.useState(tmp12), 2);
+  _slicedToArray(react.useState(tmp12), 2);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     class P {
       constructor() {
-        closure_0 = async function _load() {
-          if (c3 === 2) {
-            c3 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp4 === 3) {
-            if (arg0 === 1) {
-              throw value;
-            } else if (arg0 === 2) {
-              const obj2 = { value, done: true };
-              return obj2;
-            } else {
-              return { value: "IconComponent", done: null };
-            }
-          } else {
-            try {
-              c3 = 2;
-              if (0 === v1) {
-                if (arg0 === 1) {
-                  c3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 3;
-                  const obj3 = { value, done: true };
-                  return obj3;
-                } else {
-                  closure_1 = tmp5;
-                  closure_0 = tmp2;
-                  closure_128_0 = undefined;
-                  v1 = 1;
-                  c3 = 1;
-                  const obj4 = { value: first2(dependencyMap[12])(), done: false };
-                  return obj4;
-                }
-              } else if (arg0 === 1) {
-                c3 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                const obj = { value, done: true };
-                return obj;
-              } else {
-                closure_128_0 = value;
-                v1(closure_128_0);
-                c3 = 3;
-                return { value: "IconComponent", done: null };
-              }
-            } catch (tmp13) {
-              c3 = tmp;
-              throw tmp13;
-            }
-          }
+        closure_0 = function _load() {
+          obj = _asyncToGenerator(function() { /* body not rendered: F153171 */ });
+          return obj(...arguments);
         };
         tmp = !(function load() {
-          const self = this;
-          const apply = closure_0.apply;
-          if (typeof apply === "unknown") {
-            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-          } else {
-            applyArgumentsResult = apply(self, arguments);
-          }
-          return applyArgumentsResult;
+          return obj(...arguments);
         })();
         return;
       }
@@ -134,367 +104,97 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     let items2 = [];
     cResult[3] = P;
     cResult[4] = items2;
-    let tmp14 = items2;
+    tmp15 = items2;
   } else {
     class P {
       constructor() {
-        closure_0 = async function _load() {
-          if (c3 === 2) {
-            c3 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp4 === 3) {
-            if (arg0 === 1) {
-              throw value;
-            } else if (arg0 === 2) {
-              const obj2 = { value, done: true };
-              return obj2;
-            } else {
-              return { value: "IconComponent", done: null };
-            }
-          } else {
-            try {
-              c3 = 2;
-              if (0 === v1) {
-                if (arg0 === 1) {
-                  c3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 3;
-                  const obj3 = { value, done: true };
-                  return obj3;
-                } else {
-                  closure_1 = tmp5;
-                  closure_0 = tmp2;
-                  closure_128_0 = undefined;
-                  v1 = 1;
-                  c3 = 1;
-                  const obj4 = { value: first2(dependencyMap[12])(), done: false };
-                  return obj4;
-                }
-              } else if (arg0 === 1) {
-                c3 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                const obj = { value, done: true };
-                return obj;
-              } else {
-                closure_128_0 = value;
-                v1(closure_128_0);
-                c3 = 3;
-                return { value: "IconComponent", done: null };
-              }
-            } catch (tmp13) {
-              c3 = tmp;
-              throw tmp13;
-            }
-          }
+        closure_0 = function _load() {
+          obj = _asyncToGenerator(function() { /* body not rendered: F153171 */ });
+          return obj(...arguments);
         };
         tmp = !(function load() {
-          const self = this;
-          const apply = closure_0.apply;
-          if (typeof apply === "unknown") {
-            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-          } else {
-            applyArgumentsResult = apply(self, arguments);
-          }
-          return applyArgumentsResult;
+          return obj(...arguments);
         })();
         return;
       }
     }
-    tmp14 = cResult[4];
+    tmp15 = cResult[4];
   }
-  const effect = noop.useEffect(P, tmp14);
+  const effect = react.useEffect(P, tmp15);
   if (cResult[5] === first2) {
+    let tmp25;
+    let tmp24;
+    let tmp23;
     class P {
       constructor() {
-        closure_0 = async function _load() {
-          if (c3 === 2) {
-            c3 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp4 === 3) {
-            if (arg0 === 1) {
-              throw value;
-            } else if (arg0 === 2) {
-              const obj2 = { value, done: true };
-              return obj2;
-            } else {
-              return { value: "IconComponent", done: null };
-            }
-          } else {
-            try {
-              c3 = 2;
-              if (0 === v1) {
-                if (arg0 === 1) {
-                  c3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 3;
-                  const obj3 = { value, done: true };
-                  return obj3;
-                } else {
-                  closure_1 = tmp5;
-                  closure_0 = tmp2;
-                  closure_128_0 = undefined;
-                  v1 = 1;
-                  c3 = 1;
-                  const obj4 = { value: first2(dependencyMap[12])(), done: false };
-                  return obj4;
-                }
-              } else if (arg0 === 1) {
-                c3 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                const obj = { value, done: true };
-                return obj;
-              } else {
-                closure_128_0 = value;
-                v1(closure_128_0);
-                c3 = 3;
-                return { value: "IconComponent", done: null };
-              }
-            } catch (tmp13) {
-              c3 = tmp;
-              throw tmp13;
-            }
-          }
+        closure_0 = function _load() {
+          obj = _asyncToGenerator(function() { /* body not rendered: F153171 */ });
+          return obj(...arguments);
         };
         tmp = !(function load() {
-          const self = this;
-          const apply = closure_0.apply;
-          if (typeof apply === "unknown") {
-            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-          } else {
-            applyArgumentsResult = apply(self, arguments);
-          }
-          return applyArgumentsResult;
+          return obj(...arguments);
         })();
         return;
       }
     }
-    const effect1 = noop.useEffect(C, items4);
-    const tmp18 = closure_9();
-    _slicedToArray = tmp18;
+    const effect1 = react.useEffect(C, items4);
+    const tmp19 = closure_9();
+    _slicedToArray = tmp19;
     const bottom = first2(1618)().bottom;
-    ({ wrap, searchWrap } = tmp18);
+    ({ wrap, searchWrap } = tmp19);
     if (cResult[9] !== first1) {
       class P {
         constructor() {
-          closure_0 = async function _load() {
-            if (c3 === 2) {
-              c3 = 3;
-              throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp4 === 3) {
-              if (arg0 === 1) {
-                throw value;
-              } else if (arg0 === 2) {
-                const obj2 = { value, done: true };
-                return obj2;
-              } else {
-                return { value: "IconComponent", done: null };
-              }
-            } else {
-              try {
-                c3 = 2;
-                if (0 === v1) {
-                  if (arg0 === 1) {
-                    c3 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c3 = 3;
-                    const obj3 = { value, done: true };
-                    return obj3;
-                  } else {
-                    closure_1 = tmp5;
-                    closure_0 = tmp2;
-                    closure_128_0 = undefined;
-                    v1 = 1;
-                    c3 = 1;
-                    const obj4 = { value: first2(dependencyMap[12])(), done: false };
-                    return obj4;
-                  }
-                } else if (arg0 === 1) {
-                  c3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 3;
-                  const obj = { value, done: true };
-                  return obj;
-                } else {
-                  closure_128_0 = value;
-                  v1(closure_128_0);
-                  c3 = 3;
-                  return { value: "IconComponent", done: null };
-                }
-              } catch (tmp13) {
-                c3 = tmp;
-                throw tmp13;
-              }
-            }
+          closure_0 = function _load() {
+            obj = _asyncToGenerator(function() { /* body not rendered: F153171 */ });
+            return obj(...arguments);
           };
           tmp = !(function load() {
-            const self = this;
-            const apply = closure_0.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
+            return obj(...arguments);
           })();
           return;
         }
       }
-      let obj3 = { size: "md", placeholder: "Filter (regex)", onChange: tmp6[1], defaultValue: first1 };
-      const tmp21 = closure_7(tmp(6547).SearchField, obj3);
+      let obj3 = { size: "md", placeholder: "Filter (regex)", onChange: tmp8, defaultValue: first1 };
       cResult[9] = first1;
-      cResult[10] = tmp21;
+      cResult[10] = closure_7(tmp(6547).SearchField, obj3);
+      const tmp22 = closure_7(tmp(6547).SearchField, obj3);
     } else {
       class P {
         constructor() {
-          closure_0 = async function _load() {
-            if (c3 === 2) {
-              c3 = 3;
-              throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp4 === 3) {
-              if (arg0 === 1) {
-                throw value;
-              } else if (arg0 === 2) {
-                const obj2 = { value, done: true };
-                return obj2;
-              } else {
-                return { value: "IconComponent", done: null };
-              }
-            } else {
-              try {
-                c3 = 2;
-                if (0 === v1) {
-                  if (arg0 === 1) {
-                    c3 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c3 = 3;
-                    const obj3 = { value, done: true };
-                    return obj3;
-                  } else {
-                    closure_1 = tmp5;
-                    closure_0 = tmp2;
-                    closure_128_0 = undefined;
-                    v1 = 1;
-                    c3 = 1;
-                    const obj4 = { value: first2(dependencyMap[12])(), done: false };
-                    return obj4;
-                  }
-                } else if (arg0 === 1) {
-                  c3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 3;
-                  const obj = { value, done: true };
-                  return obj;
-                } else {
-                  closure_128_0 = value;
-                  v1(closure_128_0);
-                  c3 = 3;
-                  return { value: "IconComponent", done: null };
-                }
-              } catch (tmp13) {
-                c3 = tmp;
-                throw tmp13;
-              }
-            }
+          closure_0 = function _load() {
+            obj = _asyncToGenerator(function() { /* body not rendered: F153171 */ });
+            return obj(...arguments);
           };
           tmp = !(function load() {
-            const self = this;
-            const apply = closure_0.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
+            return obj(...arguments);
           })();
           return;
         }
       }
     }
     const _Symbol = Symbol;
+    const shareButton = tmp19.shareButton;
     if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
       class P {
         constructor() {
-          closure_0 = async function _load() {
-            if (c3 === 2) {
-              c3 = 3;
-              throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp4 === 3) {
-              if (arg0 === 1) {
-                throw value;
-              } else if (arg0 === 2) {
-                const obj2 = { value, done: true };
-                return obj2;
-              } else {
-                return { value: "IconComponent", done: null };
-              }
-            } else {
-              try {
-                c3 = 2;
-                if (0 === v1) {
-                  if (arg0 === 1) {
-                    c3 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c3 = 3;
-                    const obj3 = { value, done: true };
-                    return obj3;
-                  } else {
-                    closure_1 = tmp5;
-                    closure_0 = tmp2;
-                    closure_128_0 = undefined;
-                    v1 = 1;
-                    c3 = 1;
-                    const obj4 = { value: first2(dependencyMap[12])(), done: false };
-                    return obj4;
-                  }
-                } else if (arg0 === 1) {
-                  c3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 3;
-                  const obj = { value, done: true };
-                  return obj;
-                } else {
-                  closure_128_0 = value;
-                  v1(closure_128_0);
-                  c3 = 3;
-                  return { value: "IconComponent", done: null };
-                }
-              } catch (tmp13) {
-                c3 = tmp;
-                throw tmp13;
-              }
-            }
+          closure_0 = function _load() {
+            obj = _asyncToGenerator(function() { /* body not rendered: F153171 */ });
+            return obj(...arguments);
           };
           tmp = !(function load() {
-            const self = this;
-            const apply = closure_0.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
+            return obj(...arguments);
           })();
           return;
         }
       }
       const stringResult = obj4.string(tmp(1126).t.leICvh);
-      closure_129_0 = asyncGeneratorStep(async () => {
+      _require = _asyncToGenerator(async () => {
+        let closure_1;
         if (c3 === 2) {
           c3 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp4 === 3) {
+        } else if (tmp3 === 3) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
@@ -505,8 +205,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           }
         } else {
           try {
+            let tmp;
             c3 = 2;
-            if (0 === dependencyMap) {
+            if (0 === c2) {
               if (arg0 === 1) {
                 c3 = 3;
                 throw value;
@@ -515,10 +216,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                closure_128_0 = undefined;
-                dependencyMap = 1;
+                tmp = undefined;
+                c2 = 1;
                 c3 = 1;
-                const obj4 = { value: tmp5(12531)(), done: false };
+                const obj4 = { value: tmp4(c2[12])(), done: false };
                 return obj4;
               }
             } else if (arg0 === 1) {
@@ -529,324 +230,98 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               const obj5 = { value, done: true };
               return obj5;
             } else {
-              closure_128_0 = value;
-              const obj6 = { message: tmp5(12532)(closure_128_0, false) };
-              tmp2(8038).showShareActionSheet(obj6, "push-notification-logs");
+              tmp = value;
+              const obj = { message: tmp4(c2[17])(tmp, false) };
+              const showShareActionSheet = tmp(c2[16]).showShareActionSheet;
+              const tmp9 = tmp(c2[16]);
+              showShareActionSheet(obj, "push-notification-logs");
               c3 = 3;
               return { value: "IconComponent", done: null };
             }
           } catch (tmp16) {
-            c3 = tmp;
+            c3 = 3;
             throw tmp16;
           }
         }
       });
       function t12() {
-        const self = this;
-        const apply = first1.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
+        return closure_0(...arguments);
       }
-      const tmp28 = closure_7(tmp(12715).ShareIcon, {});
+      const tmp29 = closure_7(tmp(12715).ShareIcon, {});
       cResult[11] = stringResult;
       cResult[12] = t12;
-      cResult[13] = tmp28;
-      let tmp24 = tmp28;
-      let tmp23 = t12;
-      const tmp22 = stringResult;
+      cResult[13] = tmp29;
+      tmp25 = tmp29;
+      tmp24 = t12;
+      tmp23 = stringResult;
     } else {
       class P {
         constructor() {
-          closure_0 = async function _load() {
-            if (c3 === 2) {
-              c3 = 3;
-              throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp4 === 3) {
-              if (arg0 === 1) {
-                throw value;
-              } else if (arg0 === 2) {
-                const obj2 = { value, done: true };
-                return obj2;
-              } else {
-                return { value: "IconComponent", done: null };
-              }
-            } else {
-              try {
-                c3 = 2;
-                if (0 === v1) {
-                  if (arg0 === 1) {
-                    c3 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c3 = 3;
-                    const obj3 = { value, done: true };
-                    return obj3;
-                  } else {
-                    closure_1 = tmp5;
-                    closure_0 = tmp2;
-                    closure_128_0 = undefined;
-                    v1 = 1;
-                    c3 = 1;
-                    const obj4 = { value: first2(dependencyMap[12])(), done: false };
-                    return obj4;
-                  }
-                } else if (arg0 === 1) {
-                  c3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 3;
-                  const obj = { value, done: true };
-                  return obj;
-                } else {
-                  closure_128_0 = value;
-                  v1(closure_128_0);
-                  c3 = 3;
-                  return { value: "IconComponent", done: null };
-                }
-              } catch (tmp13) {
-                c3 = tmp;
-                throw tmp13;
-              }
-            }
+          closure_0 = function _load() {
+            obj = _asyncToGenerator(function() { /* body not rendered: F153171 */ });
+            return obj(...arguments);
           };
           tmp = !(function load() {
-            const self = this;
-            const apply = closure_0.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
+            return obj(...arguments);
           })();
           return;
         }
       }
-      tmp23 = cResult[12];
-      tmp24 = cResult[13];
+      tmp24 = cResult[12];
+      tmp25 = cResult[13];
     }
-    if (cResult[14] !== tmp18.shareButton) {
+    if (cResult[14] !== tmp19.shareButton) {
       class P {
         constructor() {
-          closure_0 = async function _load() {
-            if (c3 === 2) {
-              c3 = 3;
-              throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp4 === 3) {
-              if (arg0 === 1) {
-                throw value;
-              } else if (arg0 === 2) {
-                const obj2 = { value, done: true };
-                return obj2;
-              } else {
-                return { value: "IconComponent", done: null };
-              }
-            } else {
-              try {
-                c3 = 2;
-                if (0 === v1) {
-                  if (arg0 === 1) {
-                    c3 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c3 = 3;
-                    const obj3 = { value, done: true };
-                    return obj3;
-                  } else {
-                    closure_1 = tmp5;
-                    closure_0 = tmp2;
-                    closure_128_0 = undefined;
-                    v1 = 1;
-                    c3 = 1;
-                    const obj4 = { value: first2(dependencyMap[12])(), done: false };
-                    return obj4;
-                  }
-                } else if (arg0 === 1) {
-                  c3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 3;
-                  const obj = { value, done: true };
-                  return obj;
-                } else {
-                  closure_128_0 = value;
-                  v1(closure_128_0);
-                  c3 = 3;
-                  return { value: "IconComponent", done: null };
-                }
-              } catch (tmp13) {
-                c3 = tmp;
-                throw tmp13;
-              }
-            }
+          closure_0 = function _load() {
+            obj = _asyncToGenerator(function() { /* body not rendered: F153171 */ });
+            return obj(...arguments);
           };
           tmp = !(function load() {
-            const self = this;
-            const apply = closure_0.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
+            return obj(...arguments);
           })();
           return;
         }
       }
-      let obj5 = { style: tmp18.shareButton, accessibilityLabel: tmp22, onPress: tmp23, children: tmp24 };
-      const tmp30 = closure_7(tmp(5909).PressableOpacity, obj5);
-      cResult[14] = tmp18.shareButton;
-      cResult[15] = tmp30;
+      let obj5 = { style: shareButton, accessibilityLabel: tmp23, onPress: tmp24, children: tmp25 };
+      cResult[14] = tmp19.shareButton;
+      cResult[15] = closure_7(tmp(5909).PressableOpacity, obj5);
+      const tmp31 = closure_7(tmp(5909).PressableOpacity, obj5);
     } else {
       class P {
         constructor() {
-          closure_0 = async function _load() {
-            if (c3 === 2) {
-              c3 = 3;
-              throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp4 === 3) {
-              if (arg0 === 1) {
-                throw value;
-              } else if (arg0 === 2) {
-                const obj2 = { value, done: true };
-                return obj2;
-              } else {
-                return { value: "IconComponent", done: null };
-              }
-            } else {
-              try {
-                c3 = 2;
-                if (0 === v1) {
-                  if (arg0 === 1) {
-                    c3 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c3 = 3;
-                    const obj3 = { value, done: true };
-                    return obj3;
-                  } else {
-                    closure_1 = tmp5;
-                    closure_0 = tmp2;
-                    closure_128_0 = undefined;
-                    v1 = 1;
-                    c3 = 1;
-                    const obj4 = { value: first2(dependencyMap[12])(), done: false };
-                    return obj4;
-                  }
-                } else if (arg0 === 1) {
-                  c3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 3;
-                  const obj = { value, done: true };
-                  return obj;
-                } else {
-                  closure_128_0 = value;
-                  v1(closure_128_0);
-                  c3 = 3;
-                  return { value: "IconComponent", done: null };
-                }
-              } catch (tmp13) {
-                c3 = tmp;
-                throw tmp13;
-              }
-            }
+          closure_0 = function _load() {
+            obj = _asyncToGenerator(function() { /* body not rendered: F153171 */ });
+            return obj(...arguments);
           };
           tmp = !(function load() {
-            const self = this;
-            const apply = closure_0.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
+            return obj(...arguments);
           })();
           return;
         }
       }
     }
-    if (cResult[16] === tmp18.searchWrap) {
+    if (cResult[16] === tmp19.searchWrap) {
       class P {
         constructor() {
-          closure_0 = async function _load() {
-            if (c3 === 2) {
-              c3 = 3;
-              throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp4 === 3) {
-              if (arg0 === 1) {
-                throw value;
-              } else if (arg0 === 2) {
-                const obj2 = { value, done: true };
-                return obj2;
-              } else {
-                return { value: "IconComponent", done: null };
-              }
-            } else {
-              try {
-                c3 = 2;
-                if (0 === v1) {
-                  if (arg0 === 1) {
-                    c3 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c3 = 3;
-                    const obj3 = { value, done: true };
-                    return obj3;
-                  } else {
-                    closure_1 = tmp5;
-                    closure_0 = tmp2;
-                    closure_128_0 = undefined;
-                    v1 = 1;
-                    c3 = 1;
-                    const obj4 = { value: first2(dependencyMap[12])(), done: false };
-                    return obj4;
-                  }
-                } else if (arg0 === 1) {
-                  c3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 3;
-                  const obj = { value, done: true };
-                  return obj;
-                } else {
-                  closure_128_0 = value;
-                  v1(closure_128_0);
-                  c3 = 3;
-                  return { value: "IconComponent", done: null };
-                }
-              } catch (tmp13) {
-                c3 = tmp;
-                throw tmp13;
-              }
-            }
+          closure_0 = function _load() {
+            obj = _asyncToGenerator(function() { /* body not rendered: F153171 */ });
+            return obj(...arguments);
           };
           tmp = !(function load() {
-            const self = this;
-            const apply = closure_0.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
+            return obj(...arguments);
           })();
           return;
         }
       }
     }
-    let obj6 = { style: searchWrap, children: null };
-    const items3 = [tmp20, tmp29];
-    obj6.children = items3;
-    const tmp34 = closure_8(View, obj6);
-    cResult[16] = tmp18.searchWrap;
-    cResult[17] = tmp29;
-    cResult[18] = tmp20;
-    cResult[19] = tmp34;
+    const obj6 = { style: searchWrap, children: items3 };
+    items3 = [tmp21, tmp30];
+    cResult[16] = tmp19.searchWrap;
+    cResult[17] = tmp30;
+    cResult[18] = tmp21;
+    cResult[19] = closure_8(View, obj6);
+    const tmp35 = closure_8(View, obj6);
   }
   class C {
     constructor() {
@@ -854,12 +329,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         tmp8 = globalThis;
         _setTimeout = setTimeout;
         num = 300;
-        closure_0 = setTimeout(() => {
+        closure_0 = setTimeout(function() {
           try {
             const _RegExp = RegExp;
+            const self = this;
+            let str = "i";
+            const self2 = this;
             const regExp = new RegExp(closure_0, "i");
-            closure_1_3(first2.filter(() => { ... }));
+            closure_1_3(first2.filter(() => { /* body not rendered: F153172 */ }));
             const Storage = first1(closure_2[11]).Storage;
+            let str2 = "push-notification-logs-query";
             const result = Storage.set("push-notification-logs-query", closure_0);
           } catch (err) {
           }
@@ -883,95 +362,109 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[6] = first1;
   cResult[7] = C;
   cResult[8] = items4;
-  const tmp5Result2 = _slicedToArray(noop.useState(tmp11), 2);
 }) : (function UserSettingsPushNotificationLogs() {
-  const tmp = _slicedToArray(noop.useState(() => {
-    const Storage = first(510).Storage;
+  let closure_2;
+  let closure_4;
+  let defaultValue;
+  let first1;
+  let intl;
+  let items1;
+  let items2;
+  let obj5;
+  let tmp3;
+  let tmp7;
+  [defaultValue, tmp3] = react.useState(() => {
+    const Storage = first(closure_2[11]).Storage;
     let str = Storage.get("push-notification-logs-query", "");
     if (str == null) {
       str = "";
     }
     return str;
-  }), 2);
-  const defaultValue = tmp[0];
-  [first1, dependencyMap] = noop.useState([]);
-  [tmp6, asyncGeneratorStep] = noop.useState([]);
-  const effect = noop.useEffect(() => {
-    closure_0 = async function _load2() {
-      if (c3 === 2) {
-        c3 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
+  });
+  [first1, dependencyMap] = react.useState([]);
+  [tmp7, _asyncToGenerator] = _slicedToArray(react.useState([]), 2);
+  const tmp6 = _slicedToArray(react.useState([]), 2);
+  const effect = react.useEffect(() => {
+    function load() {
+      return obj(...arguments);
+    }
+    let obj = function _load2() {
+      obj = _asyncToGenerator(async () => {
+        let v1;
+        if (c3 === 2) {
+          c3 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp3 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            return { value: "IconComponent", done: null };
+          }
         } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === v1) {
-            if (arg0 === 1) {
+          try {
+            let closure_0;
+            c3 = 2;
+            if (0 === v1) {
+              if (arg0 === 1) {
+                c3 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c3 = 3;
+                const obj3 = { value, done: true };
+                return obj3;
+              } else {
+                let closure_1 = tmp4;
+                closure_0 = undefined;
+                v1 = 1;
+                c3 = 1;
+                const obj4 = { value: first1(closure_2_2[12])(), done: false };
+                return obj4;
+              }
+            } else if (arg0 === 1) {
               c3 = 3;
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
+              obj = { value, done: true };
+              return obj;
             } else {
-              closure_1 = tmp5;
-              closure_0 = tmp2;
-              closure_128_0 = undefined;
-              v1 = 1;
-              c3 = 1;
-              const obj4 = { value: first1(dependencyMap[12])(), done: false };
-              return obj4;
+              closure_0 = value;
+              v1(closure_0);
+              c3 = 3;
+              return { value: "IconComponent", done: null };
             }
-          } else if (arg0 === 1) {
+          } catch (tmp12) {
             c3 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj = { value, done: true };
-            return obj;
-          } else {
-            closure_128_0 = value;
-            v1(closure_128_0);
-            c3 = 3;
-            return { value: "IconComponent", done: null };
+            throw tmp12;
           }
-        } catch (tmp13) {
-          c3 = tmp;
-          throw tmp13;
         }
-      }
+      });
+      return obj(...arguments);
     };
-    !(function load() {
-      const self = this;
-      const apply = closure_0.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
-    })();
+    const tmp = !load();
   }, []);
   let items = [first1, defaultValue];
-  const effect1 = noop.useEffect(() => {
+  const effect1 = react.useEffect(() => {
+    let closure_0;
+    let timeout;
     if ("" !== timeout) {
       const _setTimeout = setTimeout;
-      timeout = setTimeout(() => {
+      timeout = setTimeout(function() {
         try {
           const _RegExp = RegExp;
+          const self = this;
+          let str = "i";
+          const self2 = this;
           const regExp = new RegExp(closure_0, "i");
           closure_1_3(first1.filter((type) => {
-            let tmp2 = null != type.type.match(regExp);
+            const str = type.type;
+            let tmp2 = null != str.match(regExp);
             if (!tmp2) {
-              tmp2 = null != type.title.match(regExp);
+              const str2 = type.title;
+              tmp2 = null != str2.match(regExp);
             }
             if (!tmp2) {
               let match;
@@ -983,6 +476,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             return tmp2;
           }));
           const Storage = first(closure_2[11]).Storage;
+          let str2 = "push-notification-logs-query";
           const result = Storage.set("push-notification-logs-query", closure_0);
         } catch (err) {
         }
@@ -990,99 +484,117 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       return () => clearTimeout(closure_0);
     } else {
       closure_3(first1);
-      let Storage = first(510).Storage;
+      let Storage = first(closure_2[11]).Storage;
+      let str = "push-notification-logs-query";
       let result = Storage.set("push-notification-logs-query", tmp);
     }
   }, items);
-  const tmp9 = closure_9();
-  _slicedToArray = tmp9;
-  let obj = { style: tmp9.wrap, children: null };
-  let obj2 = { style: tmp9.searchWrap, children: null };
-  let items1 = [closure_7(defaultValue(6547).SearchField, { size: "md", placeholder: "Filter (regex)", onChange: tmp[1], defaultValue }), ];
-  let obj3 = { style: tmp9.shareButton, accessibilityLabel: null, onPress: null, children: null };
-  const intl = defaultValue(1126).intl;
-  obj3.accessibilityLabel = intl.string(defaultValue(1126).t.leICvh);
-  obj3.onPress = asyncGeneratorStep(async () => {
-    if (c3 === 2) {
-      c3 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+  const tmp10 = closure_9();
+  _slicedToArray = tmp10;
+  let obj = { style: tmp10.wrap, children: items2 };
+  let obj2 = { style: tmp10.searchWrap, children: items1 };
+  const bottom = first1(1618)().bottom;
+  items1 = [closure_7(defaultValue(6547).SearchField, { size: "md", placeholder: "Filter (regex)", onChange: tmp3, defaultValue }), ];
+  let obj3 = {
+    style: tmp10.shareButton,
+    accessibilityLabel: intl.string(defaultValue(1126).t.leICvh),
+    onPress: _asyncToGenerator(async () => {
+      let closure_0;
+      let closure_1;
+      if (c3 === 2) {
+        c3 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "IconComponent", done: null };
+        }
       } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === dependencyMap) {
-          if (arg0 === 1) {
+        try {
+          let tmp;
+          c3 = 2;
+          if (0 === c2) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              tmp = undefined;
+              c2 = 1;
+              c3 = 1;
+              const obj4 = { value: tmp4(c2[12])(), done: false };
+              return obj4;
+            }
+          } else if (arg0 === 1) {
             c3 = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
-            closure_128_0 = undefined;
-            dependencyMap = 1;
-            c3 = 1;
-            const obj4 = { value: tmp5(12531)(), done: false };
-            return obj4;
+            tmp = value;
+            const obj = { message: tmp4(c2[17])(tmp, false) };
+            const showShareActionSheet = tmp(c2[16]).showShareActionSheet;
+            const tmp9 = tmp(c2[16]);
+            showShareActionSheet(obj, "push-notification-logs");
+            c3 = 3;
+            return { value: "IconComponent", done: null };
           }
-        } else if (arg0 === 1) {
+        } catch (tmp16) {
           c3 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
-        } else {
-          closure_128_0 = value;
-          const obj6 = { message: tmp5(12532)(closure_128_0, false) };
-          tmp2(8038).showShareActionSheet(obj6, "push-notification-logs");
-          c3 = 3;
-          return { value: "IconComponent", done: null };
+          throw tmp16;
         }
-      } catch (tmp16) {
-        c3 = tmp;
-        throw tmp16;
       }
-    }
-  });
-  obj3.children = closure_7(defaultValue(12715).ShareIcon, {});
-  items1[1] = closure_7(defaultValue(5909).PressableOpacity, obj3);
-  obj2.children = items1;
-  let items2 = [closure_8(View, obj2), ];
-  let obj4 = { contentContainerStyle: null, data: null, renderItem: null };
-  let obj5 = {};
-  const merged = Object.assign(tmp9.list);
-  obj5.paddingBottom = first1(1618)().bottom + first1(587).space.PX_16;
-  obj4.contentContainerStyle = obj5;
-  obj4.data = tmp6;
-  obj4.renderItem = function renderItem(item) {
-    item = item.item;
-    let str = "";
-    if (item.silent) {
-      str = "~silent~ ";
-    }
-    const obj = { style: closure_4.log, children: null };
-    const obj2 = { style: closure_4.code, variant: "text-xs/normal", children: new Date(item.receivedTimestamp).toISOString() };
-    const items = [React5(Text_Text.Text, obj2), ];
-    const obj3 = { style: closure_4.code, variant: "text-sm/normal", children: null };
-    const obj4 = { style: closure_4.code, variant: "text-sm/normal", color: "text-brand", children: null };
-    const items1 = [str, "[", item.type, "]", " "];
-    obj4.children = items1;
-    const items2 = [closure_2_8(Text_Text.Text, obj4), item.title, " - ", item.content];
-    obj3.children = items2;
-    items[1] = closure_2_8(Text_Text.Text, obj3);
-    obj.children = items;
-    return closure_2_8(View, obj, item.index);
+    }),
+    children: closure_7(defaultValue(12715).ShareIcon, {})
   };
-  items2[1] = closure_7(defaultValue(8371).FlashList, obj4);
-  obj.children = items2;
+  const PressableOpacity = defaultValue(5909).PressableOpacity;
+  intl = defaultValue(1126).intl;
+  items1[1] = closure_7(PressableOpacity, obj3);
+  items2 = [closure_8(View, obj2), ];
+  let obj4 = {
+    contentContainerStyle: obj5,
+    data: tmp7,
+    renderItem(item) {
+      let date;
+      let items;
+      let items1;
+      let items2;
+      item = item.item;
+      let str = "";
+      const index = item.index;
+      if (item.silent) {
+        str = "~silent~ ";
+      }
+      const obj = { style: closure_4.log, children: items };
+      const obj2 = { style: closure_4.code, variant: "text-xs/normal", children: date.toISOString() };
+      const Text = Text_Text.Text;
+      date = new Date(item.receivedTimestamp);
+      items = [metroImportDefault(Text, obj2), ];
+      const obj3 = { style: closure_4.code, variant: "text-sm/normal", children: items2 };
+      const Text2 = Text_Text.Text;
+      const obj4 = { style: closure_4.code, variant: "text-sm/normal", color: "text-brand", children: items1 };
+      items1 = [str, "[", item.type, "]", " "];
+      items2 = [metroImportAll(Text_Text.Text, obj4), item.title, " - ", item.content];
+      items[1] = metroImportAll(Text2, obj3);
+      return metroImportAll(View, obj, index);
+    }
+  };
+  obj5 = { paddingBottom: bottom + first1(587).space.PX_16 };
+  const FlashList = defaultValue(8371).FlashList;
+  const merged = Object.assign(tmp10.list);
+  items2[1] = closure_7(FlashList, obj4);
   return closure_8(View, obj);
 });
+size = size_mod;
+let result = size.fileFinishedImporting("modules/user_settings/notifications/native/UserSettingsPushNotificationLogs.tsx");
+
+export default tmp4;

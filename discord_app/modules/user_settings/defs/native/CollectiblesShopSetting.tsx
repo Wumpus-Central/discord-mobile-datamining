@@ -2,7 +2,7 @@
 
 // Module 15701 (CollectiblesShopSetting)
 import Constants from "Constants" /* 1085 */;
-import util from "util" /* 1126 */;
+import intl2 from "intl" /* 1126 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6681 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7052 */;
 import ShopIcon from "ShopIcon" /* 11762 */;
@@ -11,30 +11,34 @@ import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-const route = SettingBuilders.createRoute({
+const UserSettingsSections = Constants.UserSettingsSections;
+let obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t.pWG4ze);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.pWG4ze);
   },
   parent: null,
   IconComponent: ShopIcon.ShopIcon,
   screen: {
-    route: Constants.UserSettingsSections.COLLECTIBLES_SHOP,
+    route: UserSettingsSections.COLLECTIBLES_SHOP,
     getComponent() {
       return require("CollectiblesShopScreen").default;
     }
   },
   usePreNavigationAction() {
     return () => {
-      const obj2 = { analyticsLocations: null, analyticsSource: null };
-      const items = [AnalyticsLocationDefault.USER_SETTINGS];
-      obj2.analyticsLocations = items;
-      obj2.analyticsSource = AnalyticsLocationDefault.USER_SETTINGS;
-      const result = CollectiblesActionCreators.openCollectiblesShopMobile(obj2);
+      let items;
+      const obj = { analyticsLocations: items, analyticsSource: AnalyticsLocationDefault.USER_SETTINGS };
+      const openCollectiblesShopMobile = CollectiblesActionCreators.openCollectiblesShopMobile;
+      items = [];
+      CollectiblesActionCreators;
+      items[0] = AnalyticsLocationDefault.USER_SETTINGS;
+      const result = openCollectiblesShopMobile(obj);
       return false;
     };
   }
-});
+};
+const route = SettingBuilders.createRoute(obj);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/CollectiblesShopSetting.tsx");
 
 export default route;

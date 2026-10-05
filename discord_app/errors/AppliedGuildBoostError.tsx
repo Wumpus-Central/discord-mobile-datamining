@@ -2,26 +2,29 @@
 
 // Module 5318 (AppliedGuildBoostError)
 import DurationsDefault from "Durations" /* 1102 */;
-import util from "util" /* 1126 */;
+import intl from "intl" /* 1126 */;
 import DateUtils from "DateUtils" /* 4552 */;
 import V6OrEarlierAPIError from "errors/V6OrEarlierAPIError" /* 4551 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-class AppliedGuildBoostError extends tmp2 {
-  constructor(arg0, arg1) {
-    tmp1 = new tmp(global, fn, new.target, tmp);
-    if (429 === tmp1.status) {
-      tmp1.message = tmp1._getMessageFromRateLimit(global);
+class AppliedGuildBoostError extends V6OrEarlierAPIError {
+  constructor(body, arg1) {
+    const tmp2 = new tmp(body, arg1, new.target, tmp);
+    if (429 === tmp2.status) {
+      tmp2.message = tmp2._getMessageFromRateLimit(body);
     }
-    return tmp1;
+    return tmp2;
+  }
+  _getMessageFromRateLimit(body) {
+    const retry_after = body.body.retry_after;
+    const obj = DateUtils;
+    const diffAsUnitsResult = obj.diffAsUnits(0, retry_after * DurationsDefault.Millis.SECOND);
+    const obj2 = DateUtils;
+    const time = { days: intl.t["iXc/Ib"], hours: intl.t.WW9P57, minutes: intl.t.I7rYev };
+    return obj2.unitsAsStrings(diffAsUnitsResult, time);
   }
 }
-AppliedGuildBoostError.prototype["_getMessageFromRateLimit"] = function _getMessageFromRateLimit(body) {
-  const diffAsUnitsResult = DateUtils.diffAsUnits(0, body.body.retry_after * DurationsDefault.Millis.SECOND);
-  const time = { days: util.t["iXc/Ib"], hours: util.t.WW9P57, minutes: util.t.I7rYev };
-  return DateUtils.unitsAsStrings(diffAsUnitsResult, time);
-};
-const size = fn(2);
+const prototype = AppliedGuildBoostError.prototype;
 const result = size.fileFinishedImporting("errors/AppliedGuildBoostError.tsx");
 
 export default AppliedGuildBoostError;

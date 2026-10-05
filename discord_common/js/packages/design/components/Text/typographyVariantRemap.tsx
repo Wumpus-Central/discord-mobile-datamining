@@ -2,10 +2,9 @@
 
 // Module 4897 (typographyVariantRemap)
 import TypographyVariantRemap from "TypographyVariantRemap" /* 4898 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Text/typographyVariantRemap.tsx");
 
 export const remapTypographyVariant = function remapTypographyVariant(cResult, arg1, arg2) {
@@ -14,7 +13,7 @@ export const remapTypographyVariant = function remapTypographyVariant(cResult, a
     let tmp3 = _slicedToArray(tmp, 2);
     let tmp4 = tmp3[1];
     if (cResult.includes(tmp3[0])) {
-      value = undefined;
+      let value;
       if (arg2) {
         let heading = tmp4.heading;
         value = heading.get(arg1);

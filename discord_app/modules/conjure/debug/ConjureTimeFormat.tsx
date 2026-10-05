@@ -20,22 +20,25 @@ export const formatClockTime = function formatClockTime(startedAt) {
       return null;
     } else {
       const _Date = Date;
+      const self = this;
+      const self2 = this;
       const date = new Date(parsed);
       const _String = String;
-      const padStartResult = String(date.getHours()).padStart(2, "0");
-      const _String2 = String;
       const StringResult = String(date.getHours());
-      const StringResult1 = String(date.getMinutes());
+      const _String2 = String;
+      const padStartResult = StringResult.padStart(2, "0");
       const _String3 = String;
-      const padStartResult1 = String(date.getMinutes()).padStart(2, "0");
+      const StringResult1 = String(date.getMinutes());
       const _HermesInternal = HermesInternal;
-      const combined = "" + padStartResult + ":" + padStartResult1 + ":" + String(date.getSeconds()).padStart(2, "0");
+      const padStartResult1 = StringResult1.padStart(2, "0");
+      const StringResult2 = String(date.getSeconds());
+      const combined = "" + padStartResult + ":" + padStartResult1 + ":" + StringResult2.padStart(2, "0");
       let combined1 = combined;
       if ("millis" === str) {
         const _String4 = String;
         const _HermesInternal2 = HermesInternal;
-        combined1 = "" + combined + "." + String(date.getMilliseconds()).padStart(3, "0");
         const StringResult3 = String(date.getMilliseconds());
+        combined1 = "" + combined + "." + StringResult3.padStart(3, "0");
       }
       return combined1;
     }

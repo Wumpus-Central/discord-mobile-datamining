@@ -1,114 +1,129 @@
 // === Module 12004: SuggestedSearchStore ===
 
 // Module 12004 (SuggestedSearchStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import privDefault from "priv" /* 1444 */;
+import LRUCacheDefault from "LRUCache" /* 1444 */;
 import SmartSearchUtils from "SmartSearchUtils" /* 11997 */;
 import SmartSearchConstants from "SmartSearchConstants" /* 11988 */;
 import size from "module_2" /* 2 */;
 
+let MAX_CACHED_SUGGESTED_SEARCH_CHANNELS;
+let MAX_CACHED_SUGGESTED_SEARCH_GUILDS;
 function handleReset() {
   closure_3.reset();
   closure_4.reset();
 }
 let items = [];
 ({ MAX_CACHED_SUGGESTED_SEARCH_CHANNELS, MAX_CACHED_SUGGESTED_SEARCH_GUILDS } = SmartSearchConstants);
-let closure_3 = new privDefault({ max: MAX_CACHED_SUGGESTED_SEARCH_GUILDS });
 let obj = { max: MAX_CACHED_SUGGESTED_SEARCH_GUILDS };
+const _false = new LRUCacheDefault(obj);
 let obj2 = { max: MAX_CACHED_SUGGESTED_SEARCH_CHANNELS };
-const tmp3 = new privDefault({ max: MAX_CACHED_SUGGESTED_SEARCH_GUILDS });
-let closure_4 = new privDefault({ max: MAX_CACHED_SUGGESTED_SEARCH_CHANNELS });
-const Store = initializeDefault.Store;
+new LRUCacheDefault(obj);
+const React3 = new LRUCacheDefault(obj2);
+new LRUCacheDefault(obj2);
+const Store = get_initializedDefault.Store;
 class SuggestedSearchStore extends Store {
+  getNextSuggestions(guildId, channelIds, arg2) {
+    let peekResult1;
+    let suggestedSearches;
+    if (0 === channelIds.length) {
+      let peekResult = closure_3.peek(guildId);
+      if (peekResult == null) {
+        peekResult = null;
+      }
+      peekResult1 = peekResult;
+    } else {
+      const peek = closure_4.peek;
+      const obj = SmartSearchUtils;
+      peekResult1 = peek(obj.getChannelFilterKey(channelIds));
+      if (peekResult1 == null) {
+        peekResult1 = null;
+      }
+    }
+    if (null == peekResult1) {
+      suggestedSearches = items;
+    } else if (0 === peekResult1.suggestedSearches.length) {
+      suggestedSearches = items;
+    } else if (peekResult1.suggestedSearches.length < arg2) {
+      suggestedSearches = peekResult1.suggestedSearches;
+    } else {
+      const suggestedSearches1 = peekResult1.suggestedSearches;
+      const substr = suggestedSearches1.slice(peekResult1.currentIndex, peekResult1.currentIndex + arg2);
+      const result = (peekResult1.currentIndex + arg2) % peekResult1.suggestedSearches.length;
+      suggestedSearches = substr;
+      if (result < arg2) {
+        const push = substr.push;
+        const suggestedSearches2 = peekResult1.suggestedSearches;
+        items = [];
+        HermesBuiltin.arraySpread(items, suggestedSearches2.slice(0, result), 0);
+        HermesBuiltin.apply(push, items, substr);
+        suggestedSearches = substr;
+      }
+    }
+    return suggestedSearches;
+  }
+  hasSuggestions(guildId, channelIds) {
+    return this.getNextSuggestions(guildId, channelIds, 1).length > 0;
+  }
+  isLoadingSuggestedSearches(guildId, channelIds) {
+    let peekResult1;
+    if (0 === channelIds.length) {
+      let peekResult = closure_3.peek(guildId);
+      if (peekResult == null) {
+        peekResult = null;
+      }
+      peekResult1 = peekResult;
+    } else {
+      const peek = closure_4.peek;
+      const obj = SmartSearchUtils;
+      peekResult1 = peek(obj.getChannelFilterKey(channelIds));
+      if (peekResult1 == null) {
+        peekResult1 = null;
+      }
+    }
+    let flag;
+    if (peekResult1 != null) {
+      flag = peekResult1.isLoading;
+    }
+    if (flag == null) {
+      flag = false;
+    }
+    return flag;
+  }
+  willExhaustSuggestedSearches(guildId, channelIds, windowSize) {
+    let peekResult1;
+    if (0 === channelIds.length) {
+      let peekResult = closure_3.peek(guildId);
+      if (peekResult == null) {
+        peekResult = null;
+      }
+      peekResult1 = peekResult;
+    } else {
+      const peek = closure_4.peek;
+      const obj = SmartSearchUtils;
+      peekResult1 = peek(obj.getChannelFilterKey(channelIds));
+      if (peekResult1 == null) {
+        peekResult1 = null;
+      }
+    }
+    let tmp10 = null != peekResult1 && 0 !== peekResult1.suggestedSearches.length;
+    if (tmp10) {
+      tmp10 = peekResult1.suggestedSearches.length >= windowSize && peekResult1.currentIndex + windowSize >= peekResult1.suggestedSearches.length;
+    }
+    return tmp10;
+  }
 }
 const prototype = SuggestedSearchStore.prototype;
-prototype["getNextSuggestions"] = function getNextSuggestions(guildId, channelIds, arg2) {
-  if (0 === channelIds.length) {
-    let peekResult = closure_3.peek(guildId);
-    if (peekResult == null) {
-      peekResult = null;
-    }
-    let peekResult1 = peekResult;
-  } else {
-    peekResult1 = closure_4.peek(SmartSearchUtils.getChannelFilterKey(channelIds));
-    if (peekResult1 == null) {
-      peekResult1 = null;
-    }
-  }
-  if (null == peekResult1) {
-    let suggestedSearches = items;
-  } else if (0 === peekResult1.suggestedSearches.length) {
-    suggestedSearches = items;
-  } else if (peekResult1.suggestedSearches.length < arg2) {
-    suggestedSearches = peekResult1.suggestedSearches;
-  } else {
-    const suggestedSearches1 = peekResult1.suggestedSearches;
-    const substr = suggestedSearches1.slice(peekResult1.currentIndex, peekResult1.currentIndex + arg2);
-    const result = (peekResult1.currentIndex + arg2) % peekResult1.suggestedSearches.length;
-    suggestedSearches = substr;
-    if (result < arg2) {
-      const push = substr.push;
-      const suggestedSearches2 = peekResult1.suggestedSearches;
-      items = [];
-      HermesBuiltin.arraySpread(suggestedSearches2.slice(0, result), 0);
-      HermesBuiltin.apply(items, substr);
-      suggestedSearches = substr;
-    }
-  }
-  return suggestedSearches;
-};
-prototype["hasSuggestions"] = function hasSuggestions(guildId, channelIds) {
-  return this.getNextSuggestions(guildId, channelIds, 1).length > 0;
-};
-prototype["isLoadingSuggestedSearches"] = function isLoadingSuggestedSearches(guildId, channelIds) {
-  if (0 === channelIds.length) {
-    let peekResult = closure_3.peek(guildId);
-    if (peekResult == null) {
-      peekResult = null;
-    }
-    let peekResult1 = peekResult;
-  } else {
-    peekResult1 = closure_4.peek(SmartSearchUtils.getChannelFilterKey(channelIds));
-    if (peekResult1 == null) {
-      peekResult1 = null;
-    }
-  }
-  let flag;
-  if (peekResult1 != null) {
-    flag = peekResult1.isLoading;
-  }
-  if (flag == null) {
-    flag = false;
-  }
-  return flag;
-};
-prototype["willExhaustSuggestedSearches"] = function willExhaustSuggestedSearches(guildId, channelIds, windowSize) {
-  if (0 === channelIds.length) {
-    let peekResult = closure_3.peek(guildId);
-    if (peekResult == null) {
-      peekResult = null;
-    }
-    let peekResult1 = peekResult;
-  } else {
-    peekResult1 = closure_4.peek(SmartSearchUtils.getChannelFilterKey(channelIds));
-    if (peekResult1 == null) {
-      peekResult1 = null;
-    }
-  }
-  let tmp10 = null != peekResult1 && 0 !== peekResult1.suggestedSearches.length;
-  if (tmp10) {
-    tmp10 = peekResult1.suggestedSearches.length >= windowSize && peekResult1.currentIndex + windowSize >= peekResult1.suggestedSearches.length;
-    const tmp12 = peekResult1.suggestedSearches.length >= windowSize && peekResult1.currentIndex + windowSize >= peekResult1.suggestedSearches.length;
-  }
-  return tmp10;
-};
 SuggestedSearchStore.displayName = "SuggestedSearchStore";
-const suggestedSearchStore = new SuggestedSearchStore(DispatcherDefault, {
+let obj3 = {
   SUGGESTED_SEARCHES_FETCH_START: function handleFetchStart(arg0) {
+    let channelIds;
+    let guildId;
+    let value2;
     ({ guildId, channelIds } = arg0);
     if (0 === channelIds.length) {
-      value = closure_3.get(guildId);
+      let value = closure_3.get(guildId);
       if (null == value) {
         const obj3 = { guildId, currentIndex: 0, suggestedSearches: items, isLoading: false };
         const result = closure_3.set(guildId, obj3);
@@ -116,7 +131,8 @@ const suggestedSearchStore = new SuggestedSearchStore(DispatcherDefault, {
       }
       value2 = value;
     } else {
-      const channelFilterKey = SmartSearchUtils.getChannelFilterKey(channelIds);
+      const obj2 = SmartSearchUtils;
+      const channelFilterKey = obj2.getChannelFilterKey(channelIds);
       value2 = closure_4.get(channelFilterKey);
       if (null == value2) {
         const obj5 = { guildId, currentIndex: 0, suggestedSearches: items, isLoading: false };
@@ -127,10 +143,15 @@ const suggestedSearchStore = new SuggestedSearchStore(DispatcherDefault, {
     value2.isLoading = true;
   },
   SUGGESTED_SEARCHES_FETCH_SUCCESS: function handleFetchSuccess(response) {
+    let channelIds;
+    let guildId;
+    let refillWindowSize;
+    let value2;
     ({ guildId, channelIds, refillWindowSize } = response);
     let suggestedSearches;
+    response = response.response;
     if (0 === channelIds.length) {
-      value = closure_3.get(guildId);
+      let value = closure_3.get(guildId);
       if (null == value) {
         const obj3 = { guildId, currentIndex: 0, suggestedSearches: items, isLoading: false };
         const result = closure_3.set(guildId, obj3);
@@ -138,7 +159,8 @@ const suggestedSearchStore = new SuggestedSearchStore(DispatcherDefault, {
       }
       value2 = value;
     } else {
-      const channelFilterKey = SmartSearchUtils.getChannelFilterKey(channelIds);
+      const obj2 = SmartSearchUtils;
+      const channelFilterKey = obj2.getChannelFilterKey(channelIds);
       value2 = closure_4.get(channelFilterKey);
       if (null == value2) {
         const obj5 = { guildId, currentIndex: 0, suggestedSearches: items, isLoading: false };
@@ -147,7 +169,7 @@ const suggestedSearchStore = new SuggestedSearchStore(DispatcherDefault, {
       }
     }
     value2.isLoading = false;
-    const suggestions = response.response.suggestions;
+    const suggestions = response.suggestions;
     const mapped = suggestions.map((suggestionId) => ({ suggestionId: suggestionId.suggestion_id, suggestedSearchText: suggestionId.suggested_search_text }));
     if (null != refillWindowSize) {
       if (0 !== value2.suggestedSearches.length) {
@@ -164,15 +186,18 @@ const suggestedSearchStore = new SuggestedSearchStore(DispatcherDefault, {
             const push = substr.push;
             const suggestedSearches2 = value2.suggestedSearches;
             items = [];
-            HermesBuiltin.arraySpread(suggestedSearches2.slice(0, result2), 0);
-            HermesBuiltin.apply(items, substr);
+            HermesBuiltin.arraySpread(items, suggestedSearches2.slice(0, result2), 0);
+            HermesBuiltin.apply(push, items, substr);
             suggestedSearches = substr;
           }
         }
-        const found = mapped.filter((item) => !suggestedSearches.some((suggestionId) => suggestionId.suggestionId === item.suggestionId));
+        const found = mapped.filter((item) => {
+          let closure_0 = item;
+          return !suggestedSearches.some((suggestionId) => suggestionId.suggestionId === suggestionId.suggestionId);
+        });
         if (0 !== found.length) {
           const items1 = [];
-          HermesBuiltin.arraySpread(found, HermesBuiltin.arraySpread(suggestedSearches, 0));
+          HermesBuiltin.arraySpread(items1, found, HermesBuiltin.arraySpread(items1, suggestedSearches, 0));
           value2.suggestedSearches = items1;
           value2.currentIndex = 0;
         } else {
@@ -184,15 +209,20 @@ const suggestedSearchStore = new SuggestedSearchStore(DispatcherDefault, {
     value2.suggestedSearches = mapped;
   },
   SUGGESTED_SEARCHES_FETCH_FAILURE: function handleFetchFailure(arg0) {
+    let channelIds;
+    let peekResult1;
+    let refillWindowSize;
     ({ channelIds, refillWindowSize } = arg0);
     if (0 === channelIds.length) {
       let peekResult = closure_3.peek(tmp);
       if (peekResult == null) {
         peekResult = null;
       }
-      let peekResult1 = peekResult;
+      peekResult1 = peekResult;
     } else {
-      peekResult1 = closure_4.peek(SmartSearchUtils.getChannelFilterKey(channelIds));
+      const peek = closure_4.peek;
+      const obj = SmartSearchUtils;
+      peekResult1 = peek(obj.getChannelFilterKey(channelIds));
       if (peekResult1 == null) {
         peekResult1 = null;
       }
@@ -201,29 +231,33 @@ const suggestedSearchStore = new SuggestedSearchStore(DispatcherDefault, {
       return false;
     } else {
       peekResult1.isLoading = false;
+      const tmp10 = null != refillWindowSize && peekResult1.suggestedSearches.length > 0;
       if (tmp10) {
         peekResult1.currentIndex = (peekResult1.currentIndex + refillWindowSize) % peekResult1.suggestedSearches.length;
       }
-      tmp10 = null != refillWindowSize && peekResult1.suggestedSearches.length > 0;
     }
   },
   SUGGESTED_SEARCH_ADVANCE: function handleAdvance(channelIds) {
+    let peekResult1;
     channelIds = channelIds.channelIds;
+    const windowSize = channelIds.windowSize;
     if (0 === channelIds.length) {
       let peekResult = closure_3.peek(tmp);
       if (peekResult == null) {
         peekResult = null;
       }
-      let peekResult1 = peekResult;
+      peekResult1 = peekResult;
     } else {
-      peekResult1 = closure_4.peek(SmartSearchUtils.getChannelFilterKey(channelIds));
+      const peek = closure_4.peek;
+      const obj = SmartSearchUtils;
+      peekResult1 = peek(obj.getChannelFilterKey(channelIds));
       if (peekResult1 == null) {
         peekResult1 = null;
       }
     }
     if (null != peekResult1) {
       if (0 !== peekResult1.suggestedSearches.length) {
-        peekResult1.currentIndex = (peekResult1.currentIndex + channelIds.windowSize) % peekResult1.suggestedSearches.length;
+        peekResult1.currentIndex = (peekResult1.currentIndex + windowSize) % peekResult1.suggestedSearches.length;
       }
     }
     return false;
@@ -251,7 +285,8 @@ const suggestedSearchStore = new SuggestedSearchStore(DispatcherDefault, {
     channel = channel.channel;
     const keys = closure_4.keys();
     const found = keys.filter((item) => {
-      const channelIdsForFilterKey = SmartSearchUtils.getChannelIdsForFilterKey(item);
+      const obj = SmartSearchUtils;
+      const channelIdsForFilterKey = obj.getChannelIdsForFilterKey(item);
       return channelIdsForFilterKey.includes(channel.id);
     });
     if (0 === found.length) {
@@ -262,7 +297,8 @@ const suggestedSearchStore = new SuggestedSearchStore(DispatcherDefault, {
   },
   CONNECTION_OPEN: handleReset,
   LOGOUT: handleReset
-});
+};
+const suggestedSearchStore = new SuggestedSearchStore(DispatcherDefault, obj3);
 let result = size.fileFinishedImporting("modules/intelligence_layer/search/SuggestedSearchStore.tsx");
 
 export default suggestedSearchStore;

@@ -1,114 +1,87 @@
 // === Module 13128: ForLaterCardActionButtons ===
 
 // Module 13128 (ForLaterCardActionButtons)
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import asyncRequire from "asyncRequire" /* 1987 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import SavedMessageHelpers from "SavedMessageHelpers" /* 11334 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import createStyles from "createStyles" /* 4890 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+const View = react_native.View;
+const jsx = Fragment.jsx;
 let closure_6 = createStyles.createStyles({ actionGroup: { flexDirection: "row", gap: 8 } });
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/native/ForLaterCardActionButtons.tsx");
 
 export default function ForLaterCardActionButtons(savedMessage) {
+  let PencilIcon;
+  let SvXS1Z;
+  let intl;
   savedMessage = savedMessage.savedMessage;
   const jumpToMessage = savedMessage.jumpToMessage;
+  const throttledNow = savedMessage.throttledNow;
   const items = [savedMessage];
-  let obj = { label: null, IconComponent: null, action: null };
-  const callback = noop.useCallback(() => ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11340, dependencyMap.paths), "MessageReminderDurationActionSheet", {
-    createReminder(dueAt) {
-      const obj2 = {};
-      const merged = Object.assign(closure_1_0.saveData);
-      obj2.dueAt = dueAt;
-      obj2.source = savedMessage(11339).SavedMessageSources.FOR_LATER_LIST;
-      return savedMessage(11334).addOrUpdateSavedMessage(obj2);
-    },
-    removeReminder() {
-      return savedMessage(11334).removeSavedMessage({ channelId: closure_1_0.saveData.channelId, messageId: closure_1_0.saveData.messageId, displayToast: true, isReminder: true });
-    },
-    channelId: savedMessage.saveData.channelId,
-    messageId: savedMessage.saveData.messageId
-  }), items);
-  let intl = savedMessage(1126).intl;
-  obj.label = intl.string(savedMessage(1126).t["+TSRGD"]);
-  obj.IconComponent = savedMessage(11368).ChatArrowRightIcon;
-  obj.action = function action() {
-    return jumpToMessage();
+  const tmp = closure_6();
+  let obj = {
+    label: intl.string(savedMessage(1126).t["+TSRGD"]),
+    IconComponent: savedMessage(11368).ChatArrowRightIcon,
+    action() {
+      return jumpToMessage();
+    }
   };
+  const callback = react.useCallback(() => {
+    let obj = ActionSheetActionCreatorsDefault;
+    let obj2 = {
+      createReminder(dueAt) {
+        const obj = { dueAt, source: savedMessage(dependencyMap[8]).SavedMessageSources.FOR_LATER_LIST };
+        const addOrUpdateSavedMessage = savedMessage(dependencyMap[7]).addOrUpdateSavedMessage;
+        savedMessage(dependencyMap[7]);
+        const merged = Object.assign(closure_1_0.saveData);
+        return addOrUpdateSavedMessage(obj);
+      },
+      removeReminder() {
+        const obj = savedMessage(dependencyMap[7]);
+        const obj2 = { channelId: closure_1_0.saveData.channelId, messageId: closure_1_0.saveData.messageId, displayToast: true, isReminder: true };
+        return obj.removeSavedMessage(obj2);
+      },
+      channelId: savedMessage.saveData.channelId,
+      messageId: savedMessage.saveData.messageId
+    };
+    return obj.openLazy(asyncRequire(11340, dependencyMap.paths), "MessageReminderDurationActionSheet", obj2);
+  }, items);
+  intl = savedMessage(1126).intl;
   const items1 = [obj, ];
   const intl2 = savedMessage(1126).intl;
+  const string = intl2.string;
   if (null != savedMessage.saveData.dueAt) {
-    let SvXS1Z = tmp3(1126).t["a6gcZ/"];
+    SvXS1Z = tmp3(1126).t["a6gcZ/"];
   } else {
     SvXS1Z = tmp3(1126).t.SvXS1Z;
   }
-  const tmp = closure_6();
-  items1[1] = {
-    label: intl2.string(SvXS1Z),
-    IconComponent: savedMessage(6017).XSmallIcon,
+  let obj2 = {
+    label: string(SvXS1Z),
+    IconComponent: tmp3(6017).XSmallIcon,
     action() {
-      return SavedMessageHelpers.removeSavedMessage(savedMessage.saveData);
+      const obj = SavedMessageHelpers;
+      return obj.removeSavedMessage(savedMessage.saveData);
     },
     variant: "destructive"
   };
-  if (null == savedMessage.saveData.dueAt) {
-    const obj3 = { style: tmp.actionGroup, children: null };
-    const obj4 = {
-      items: items1,
-      keyboardShouldPersistTaps: "handled",
-      triggerOnTap: true,
-      children(ref) {
-          const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-          const obj = { ref: ref.ref };
-          const merged1 = Object.assign(merged);
-          obj.variant = "secondary";
-          const intl = savedMessage(1126).intl;
-          obj.accessibilityLabel = intl.string(savedMessage(1126).t.e1heBD);
-          obj.size = "sm";
-          obj.icon = jumpToMessage(7578);
-          return jsx(savedMessage(7575).IconButton, { ref: ref.ref });
-        }
-    };
-    obj3.children = jsx(tmp3(7579).ContextMenu, {
-      items: items1,
-      keyboardShouldPersistTaps: "handled",
-      triggerOnTap: true,
-      children(ref) {
-          const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-          const obj = { ref: ref.ref };
-          const merged1 = Object.assign(merged);
-          obj.variant = "secondary";
-          const intl = savedMessage(1126).intl;
-          obj.accessibilityLabel = intl.string(savedMessage(1126).t.e1heBD);
-          obj.size = "sm";
-          obj.icon = jumpToMessage(7578);
-          return jsx(savedMessage(7575).IconButton, { ref: ref.ref });
-        }
-    });
-    return <View style={tmp.actionGroup}>{null}</View>;
-  } else {
+  items1[1] = obj2;
+  if (null != savedMessage.saveData.dueAt) {
+    const unshift = items1.unshift;
     const intl3 = tmp3(1126).intl;
+    const string2 = intl3.string;
     const t = tmp3(1126).t;
-    let obj5 = { label: intl3.string(savedMessage.throttledNow > savedMessage.saveData.dueAt ? t.GtBCnz : t.vrbqs1), IconComponent: null, action: null };
-    if (savedMessage.throttledNow > savedMessage.saveData.dueAt) {
-      let PencilIcon = tmp3(13129).BellZIcon;
+    const obj3 = { label: string2(throttledNow > savedMessage.saveData.dueAt ? t.GtBCnz : t.vrbqs1), IconComponent: PencilIcon, action: callback };
+    if (throttledNow > savedMessage.saveData.dueAt) {
+      PencilIcon = tmp3(13129).BellZIcon;
     } else {
       PencilIcon = tmp3(10058).PencilIcon;
     }
-    obj5.IconComponent = PencilIcon;
-    obj5.action = callback;
-    obj5 = items1.unshift(obj5);
+    unshift(obj3);
   }
-  let obj2 = {
-    label: intl2.string(SvXS1Z),
-    IconComponent: savedMessage(6017).XSmallIcon,
-    action() {
-      return SavedMessageHelpers.removeSavedMessage(savedMessage.saveData);
-    },
-    variant: "destructive"
-  };
+  return <View style={tmp.actionGroup}>{null}</View>;
 };

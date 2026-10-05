@@ -2,7 +2,7 @@
 
 // Module 1125 (ThreadConstants)
 import Constants from "Constants" /* 1085 */;
-import util from "util" /* 1126 */;
+import intl4 from "intl" /* 1126 */;
 import size from "module_2" /* 2 */;
 
 const AbortCodes = Constants.AbortCodes;
@@ -12,6 +12,7 @@ let items = [, , , ];
 const items1 = [, ];
 ({ AUTOMOD_MESSAGE_BLOCKED: arr2[0], AUTOMOD_TITLE_BLOCKED: arr2[1] } = AbortCodes);
 const set = new Set(items);
+const set1 = new Set(items1);
 const result = size.fileFinishedImporting("modules/threads/ThreadConstants.tsx");
 
 export const DEFAULT_AUTO_ARCHIVE_DURATION = 4320;
@@ -22,20 +23,21 @@ export const MAX_THREAD_UNREAD_MESSAGE_COUNT = 25;
 export { ThreadMemberFlags };
 export const OpenThreadAnalyticsLocations = { EMBED: "Embed", BROWSER: "Thread Browser", POPOUT: "Active Threads Popout", CHANNEL_LIST: "Channel List", GUILD_ACTIVE_THREADS_MODAL: "Guild Active Threads Modal", INBOX: "Inbox", FORUM: "Forum", VOICE_AUTO_OPEN: "Voice Auto Open" };
 export const getThreadNotificationOptions = function getThreadNotificationOptions() {
-  obj = { setting: obj.ALL_MESSAGES, label: null };
-  const intl = util.intl;
-  obj.label = intl.string(util.t["n/bTaY"]);
+  let intl;
+  let intl2;
+  let intl3;
+  let obj;
+  obj = { setting: obj.ALL_MESSAGES, label: intl.string(intl4.t["n/bTaY"]) };
+  intl = intl4.intl;
   const items = [obj, , ];
-  const obj2 = { setting: obj.ONLY_MENTIONS, label: null };
-  const intl2 = util.intl;
-  obj2.label = intl2.format(util.t.L2hmYy, {});
+  const obj2 = { setting: obj.ONLY_MENTIONS, label: intl2.format(intl4.t.L2hmYy, {}) };
+  intl2 = intl4.intl;
   items[1] = obj2;
-  const obj3 = { setting: obj.NO_MESSAGES, label: null };
-  const intl3 = util.intl;
-  obj3.label = intl3.string(util.t.CtVGyQ);
+  const obj3 = { setting: obj.NO_MESSAGES, label: intl3.string(intl4.t.CtVGyQ) };
+  intl3 = intl4.intl;
   items[2] = obj3;
   return items;
 };
 export const ThreadSortOrderReadableForAnalytics = { LATEST_ACTIVITY: "Last Message", CREATION_DATE: "Creation" };
 export const FORUM_POST_CREATION_UPLOAD_ERRORS = set;
-export const FORUM_POST_CREATION_AUTOMOD_ERRORS = new Set(items1);
+export const FORUM_POST_CREATION_AUTOMOD_ERRORS = set1;

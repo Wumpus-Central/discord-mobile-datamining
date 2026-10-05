@@ -2,12 +2,14 @@
 
 // Module 11707 (useFormattedTimestamp)
 import DurationsDefault from "Durations" /* 1102 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, format;
 
-const require = fn;
 let items = [2 * DurationsDefault.Seconds.MINUTE, DurationsDefault.Seconds.SECOND];
 const items1 = [items, , , ];
 const items2 = [5 * DurationsDefault.Seconds.MINUTE, DurationsDefault.Seconds.MINUTE];
@@ -17,46 +19,49 @@ items1[2] = items3;
 const items4 = [21 * DurationsDefault.Seconds.HOUR, 5 * DurationsDefault.Seconds.MINUTE];
 items1[3] = items4;
 let closure_6 = 2 * DurationsDefault.Seconds.HOUR;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/markup/useFormattedTimestamp.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let parsed = arg0;
-  _require = arg0;
-  let R = _require;
-  let RResult = dependencyMap;
-  const cResult = require("c").c(7);
-  let obj = require("c");
-  const forceUpdate = require("areHookInputsEqual").useForceUpdate();
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((format) => {
+  _require = format;
+  const tmp = _require;
+  let obj = require("react");
+  const cResult = obj.c(7);
+  const obj2 = require("module_6949");
+  const forceUpdate = obj2.useForceUpdate();
   if (cResult[0] === forceUpdate) {
-    if (cResult[1] === parsed.format) {
-      if (cResult[2] === parsed.parsed) {
-        let tmp4 = cResult[3];
-        let tmp5 = cResult[4];
+    if (cResult[1] === format.format) {
+      let tmp5;
+      let tmp6;
+      let formatted;
+      if (cResult[2] === format.parsed) {
+        tmp5 = cResult[3];
+        tmp6 = cResult[4];
       }
-      const effect = noop.useEffect(tmp4, tmp5);
-      if ("R" === parsed.format) {
-        if (cResult[5] !== parsed.parsed) {
-          const TIMESTAMP_FORMATS = R(5807).TIMESTAMP_FORMATS;
-          R = TIMESTAMP_FORMATS.R;
-          RResult = R(parsed.parsed);
-          parsed = parsed.parsed;
-          cResult[5] = parsed;
+      const effect = react.useEffect(tmp5, tmp6);
+      if ("R" === format.format) {
+        let tmp9;
+        if (cResult[5] !== format.parsed) {
+          const TIMESTAMP_FORMATS = tmp(5807).TIMESTAMP_FORMATS;
+          const RResult = TIMESTAMP_FORMATS.R(format.parsed);
+          cResult[5] = format.parsed;
           cResult[6] = RResult;
+          tmp9 = RResult;
+        } else {
+          tmp9 = cResult[6];
         }
+        formatted = tmp9;
       } else {
-        return parsed.formatted;
+        formatted = format.formatted;
       }
+      return formatted;
     }
   }
   const fn = function c() {
+    let closure_0;
     if ("R" === format.format) {
       let result = 1000 * closure_1_6;
       const _Math = Math;
       const parsed = tmp.parsed;
-      const absolute = Math.abs(parsed.diff(forceUpdate(closure_1_2[6])()));
-      const obj = dependencyMap[Symbol.iterator]();
+      const absolute = Math.abs(parsed.diff(forceUpdate(dependencyMap[6])()));
+      const obj = items1[Symbol.iterator]();
       while (obj !== undefined) {
         let tmp14 = _slicedToArray(tmp11, 2);
         if (absolute < 1000 * tmp14[0]) {
@@ -73,27 +78,30 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   };
   const items = [forceUpdate, , ];
-  ({ format: arr[1], parsed: arr[2] } = parsed);
+  ({ format: arr[1], parsed: arr[2] } = format);
   cResult[0] = forceUpdate;
-  cResult[1] = parsed.format;
-  cResult[2] = parsed.parsed;
+  cResult[1] = format.format;
+  cResult[2] = format.parsed;
   cResult[3] = fn;
   cResult[4] = items;
-  tmp5 = items;
-  tmp4 = fn;
-  const obj2 = require("areHookInputsEqual");
+  tmp6 = items;
+  tmp5 = fn;
 }) : ((format) => {
+  let formatted;
   _require = format;
-  const forceUpdate = require("areHookInputsEqual").useForceUpdate();
+  const tmp = _require;
+  let obj = require("module_6949");
+  const forceUpdate = obj.useForceUpdate();
   const items = [forceUpdate, , ];
   ({ format: arr[1], parsed: arr[2] } = format);
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(() => {
+    let closure_0;
     if ("R" === format.format) {
       let result = 1000 * closure_1_6;
       const _Math = Math;
       const parsed = tmp.parsed;
-      const absolute = Math.abs(parsed.diff(forceUpdate(closure_1_2[6])()));
-      const obj = dependencyMap[Symbol.iterator]();
+      const absolute = Math.abs(parsed.diff(forceUpdate(dependencyMap[6])()));
+      const obj = items1[Symbol.iterator]();
       while (obj !== undefined) {
         let tmp14 = _slicedToArray(tmp11, 2);
         if (absolute < 1000 * tmp14[0]) {
@@ -110,10 +118,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }, items);
   if ("R" === format.format) {
-    const TIMESTAMP_FORMATS = require("TimestampUtils").TIMESTAMP_FORMATS;
-    let formatted = TIMESTAMP_FORMATS.R(format.parsed);
+    const TIMESTAMP_FORMATS = tmp(5807).TIMESTAMP_FORMATS;
+    formatted = TIMESTAMP_FORMATS.R(format.parsed);
   } else {
     formatted = format.formatted;
   }
   return formatted;
 });
+let result = size.fileFinishedImporting("modules/markup/useFormattedTimestamp.tsx");
+
+export default tmp2;

@@ -3,121 +3,201 @@
 // Module 1252 (AnalyticsUtils)
 import LogAggregatorAll from "LogAggregator" /* 7 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import util from "util" /* 1126 */;
+import intl from "intl" /* 1126 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import v1 from "v1" /* 1266 */;
+import AccessibilityConstants from "AccessibilityConstants" /* 1359 */;
+import ApplicationConstants from "ApplicationConstants" /* 1360 */;
+import utils_GlobalUtils from "utils/GlobalUtils" /* 1361 */;
 import CommonSentryInitUtils from "CommonSentryInitUtils" /* 1362 */;
 import ProcessUtilsDefault from "ProcessUtils" /* 1363 */;
 import utils_AnalyticsSchemaAll from "utils/AnalyticsSchema" /* 1365 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ImpressionStore from "ImpressionStore" /* 1253 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1357 */;
+import Constants from "Constants" /* 1085 */;
+import shim from "shim" /* 562 */;
 import AnalyticsUtils_mod from "discord_common/AnalyticsUtils" /* 1260 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+let AnalyticEvents;
+let c10;
+let metroImportAll;
+let metroImportDefault;
+let obj10;
+let obj11;
+let obj12;
+let obj13;
+let obj14;
+let obj15;
+let obj16;
+let obj17;
+let obj18;
+let obj19;
+let obj2;
+let obj20;
+let obj21;
+let obj22;
+let obj23;
+let obj24;
+let obj25;
+let obj26;
+let obj27;
+let obj28;
+let obj29;
+let obj3;
+let obj30;
+let obj31;
+let obj32;
+let obj33;
+let obj34;
+let obj35;
+let obj36;
+let obj37;
+let obj38;
+let obj39;
+let obj4;
+let obj40;
+let obj41;
+let obj42;
+let obj43;
+let obj44;
+let obj45;
+let obj46;
+let obj47;
+let obj48;
+let obj49;
+let obj5;
+let obj50;
+let obj51;
+let obj52;
+let obj53;
+let obj54;
+let obj55;
+let obj56;
+let obj57;
+let obj58;
+let obj59;
+let obj6;
+let obj7;
+let obj8;
+let obj9;
+let unpackModuleId;
 function expandEventProperties(arg0) {
+  let utmCampaign;
+  let utmContent;
+  let utmMedium;
   let obj = arg0;
   if (arg0 == null) {
     obj = {};
   }
-  if (null == obj.location) {
-    if (null == obj.source) {
-      tmp.client_performance_cpu = ProcessUtilsDefault.getCurrentCPUUsagePercent();
-      tmp.client_performance_memory = ProcessUtilsDefault.getCurrentMemoryUsageKB();
-      tmp.cpu_core_count = ProcessUtilsDefault.getCPUCoreCount();
-      tmp.accessibility_features = global();
-      tmp.rendered_locale = util.intl.currentLocale;
-      const _Math = Math;
-      const _performance = performance;
-      tmp.uptime_app = Math.floor((performance.now() - closure_18) / c15);
-      const processUptime = ProcessUtilsDefault.getProcessUptime();
-      if (null != processUptime) {
-        const _Math2 = Math;
-        tmp.uptime_process_renderer = Math.floor(processUptime);
-      }
-      let utmSource = tmp.utm_source;
-      ({ utmMedium, utmCampaign, utmContent } = global);
-      if (utmSource == null) {
-        utmSource = global.utmSource;
-      }
-      tmp.utm_source = utmSource;
-      let utm_medium = tmp.utm_medium;
-      if (utm_medium == null) {
-        utm_medium = utmMedium;
-      }
-      tmp.utm_medium = utm_medium;
-      let utm_campaign = tmp.utm_campaign;
-      if (utm_campaign == null) {
-        utm_campaign = utmCampaign;
-      }
-      tmp.utm_campaign = utm_campaign;
-      let utm_content = tmp.utm_content;
-      if (utm_content == null) {
-        utm_content = utmContent;
-      }
-      tmp.utm_content = utm_content;
-      tmp.launch_signature = launchSignature;
-      const item = closure_20.forEach((fn) => fn(obj11));
-      return tmp;
-    } else {
-      const source = obj.source;
-      const obj2 = {};
-      const merged = Object.assign(_objectWithoutProperties(obj, closure_5));
-      if (typeof source === "string") {
-        const obj4 = { source };
-        let obj10 = obj4;
-      } else {
-        obj10 = { source_page: null, source_section: null, source_object: null, source_object_type: null, source_promotion_id: null };
-        ({ page: obj5.source_page, section: obj5.source_section, object: obj5.source_object, objectType: obj5.source_object_type, promotionId: obj5.source_promotion_id } = source);
-      }
-      const merged1 = Object.assign(obj10);
-    }
-  } else {
+  let obj11 = obj;
+  let tmp = obj;
+  if (null != obj.location) {
+    let obj10;
     const _location = obj.location;
-    const obj11 = {};
-    const merged2 = Object.assign(_objectWithoutProperties(obj, closure_4));
+    const obj2 = {};
+    const merged = Object.assign(_objectWithoutProperties(obj, closure_4));
     if (typeof _location === "string") {
-      const obj17 = { location: _location };
-      let obj18 = obj17;
+      obj10 = { location: _location };
+      const obj4 = { location: _location };
     } else {
-      obj18 = { location: null, location_page: null, location_section: null, location_object: null, location_object_type: null };
+      obj10 = { location: null, location_page: null, location_section: null, location_object: null, location_object_type: null };
       ({ page: obj3.location, page: obj3.location_page, section: obj3.location_section, object: obj3.location_object, objectType: obj3.location_object_type } = _location);
     }
-    const merged3 = Object.assign(obj18);
+    const merged1 = Object.assign(obj10);
+    obj11 = obj2;
+    tmp = obj2;
   }
+  let tmp5 = tmp;
+  if (null != tmp.source) {
+    let obj18;
+    const source = tmp.source;
+    obj11 = {};
+    const merged2 = Object.assign(_objectWithoutProperties(tmp, closure_5));
+    if (typeof source === "string") {
+      obj18 = { source };
+      const obj17 = { source };
+    } else {
+      obj18 = { source_page: null, source_section: null, source_object: null, source_object_type: null, source_promotion_id: null };
+      ({ page: obj5.source_page, section: obj5.source_section, object: obj5.source_object, objectType: obj5.source_object_type, promotionId: obj5.source_promotion_id } = source);
+    }
+    const merged3 = Object.assign(obj18);
+    tmp5 = obj11;
+  }
+  const obj6 = ProcessUtilsDefault;
+  tmp5.client_performance_cpu = obj6.getCurrentCPUUsagePercent();
+  const obj7 = ProcessUtilsDefault;
+  tmp5.client_performance_memory = obj7.getCurrentMemoryUsageKB();
+  const obj8 = ProcessUtilsDefault;
+  tmp5.cpu_core_count = obj8.getCPUCoreCount();
+  tmp5.accessibility_features = getAccessibilityFeatures();
+  tmp5.rendered_locale = intl.intl.currentLocale;
+  tmp5.uptime_app = Math.floor((performance.now() - closure_18) / c15);
+  const obj9 = ProcessUtilsDefault;
+  const processUptime = obj9.getProcessUptime();
+  if (null != processUptime) {
+    const _Math = Math;
+    tmp5.uptime_process_renderer = Math.floor(processUptime);
+  }
+  utmSource = tmp5.utm_source;
+  ({ utmMedium, utmCampaign, utmContent } = utmSource);
+  if (utmSource == null) {
+    utmSource = utmSource.utmSource;
+  }
+  tmp5.utm_source = utmSource;
+  let utm_medium = tmp5.utm_medium;
+  if (utm_medium == null) {
+    utm_medium = utmMedium;
+  }
+  tmp5.utm_medium = utm_medium;
+  let utm_campaign = tmp5.utm_campaign;
+  if (utm_campaign == null) {
+    utm_campaign = utmCampaign;
+  }
+  tmp5.utm_campaign = utm_campaign;
+  let utm_content = tmp5.utm_content;
+  if (utm_content == null) {
+    utm_content = utmContent;
+  }
+  tmp5.utm_content = utm_content;
+  tmp5.launch_signature = launchSignature;
+  const item = closure_20.forEach((fn) => fn(obj11));
+  return tmp5;
 }
 let closure_4 = ["location"];
 let closure_5 = ["source"];
-const ImpressionStore = fn(1253);
-({ setDebugTrackedData: closure_7, getLocation: closure_8 } = ImpressionStore);
-const Constants = fn(1085);
-({ AnalyticEvents, AnalyticsObjectTypes: c10, AnalyticsSections: closure_11 } = Constants);
-const AccessibilityFeatureFlags = fn(1359).AccessibilityFeatureFlags;
-const ApplicationTypes = fn(1360).ApplicationTypes;
-let global = {};
+({ setDebugTrackedData: metroImportDefault, getLocation: metroImportAll } = ImpressionStore);
+({ AnalyticEvents, AnalyticsObjectTypes: c10, AnalyticsSections: unpackModuleId } = Constants);
+const AccessibilityFeatureFlags = AccessibilityConstants.AccessibilityFeatureFlags;
+const ApplicationTypes = ApplicationConstants.ApplicationTypes;
+let utmSource = {};
 let c15 = 1000;
 let c16 = 60000;
 let c17 = 900000;
-const context = noop.createContext({ location: {} });
+const context = react.createContext({ location: {} });
 let closure_18 = performance.now();
-const shim = fn(562);
 let launchSignature = null;
 if (shim.isLibdiscoreInitialized()) {
-  let obj3 = fn(562);
-  launchSignature = obj3.generateLaunchSignature(fn(1361).getGlobalObject());
-  let obj4 = fn(1361);
+  const _module3 = shim;
+  const generateLaunchSignature = _module3.generateLaunchSignature;
+  const _module4 = utils_GlobalUtils;
+  launchSignature = generateLaunchSignature(_module4.getGlobalObject());
 }
 function addBreadcrumb(message) {
   const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = CommonSentryInitUtils.IGNORE_ANALYTICS_BREADCRUMB_EVENTS;
   if (!IGNORE_ANALYTICS_BREADCRUMB_EVENTS.includes(message)) {
     const obj2 = { category: "analytics", message };
-    SentryUtilsDefault.addBreadcrumb(obj2);
+    const obj = SentryUtilsDefault;
+    obj.addBreadcrumb(obj2);
   }
 }
 function expandLocation(location) {
+  let obj3;
   if (typeof location === "string") {
+    obj3 = { location };
     const obj = { location };
-    let obj3 = obj;
   } else {
     obj3 = { location: null, location_page: null, location_section: null, location_object: null, location_object_type: null };
     ({ page: obj2.location, page: obj2.location_page, section: obj2.location_section, object: obj2.location_object, objectType: obj2.location_object_type } = location);
@@ -130,6 +210,7 @@ function debugLogEvent(name, result) {
     flag = false;
   }
   const report = LogAggregatorAll.report;
+  LogAggregatorAll;
   if (flag) {
     report("Analytics", name, result);
   } else {
@@ -140,117 +221,139 @@ let AnalyticsUtils = AnalyticsUtils_mod;
 const result = AnalyticsUtils.extendSuperProperties({ launch_signature: launchSignature });
 let closure_20 = [];
 let obj = {
-  [AnalyticEvents.APP_OPENED]: obj5,
-  [AnalyticEvents.APP_BACKGROUND]: obj6,
+  [AnalyticEvents.APP_OPENED]: obj2,
+  [AnalyticEvents.APP_BACKGROUND]: obj3,
   [AnalyticEvents.ACK_MESSAGES]: (location_object_type) => {
+    function throttleKeys(arg0) {
+      const items = [, , ];
+      ({ guild_id: arr[0], channel_id: arr[1], location_section: arr[2] } = arg0);
+      return items;
+    }
     let tmp;
     if (location_object_type.location_object_type !== constants.ACK_MANUAL) {
-      const obj = {
-        throttlePeriod: throttlePeriod2,
-        throttleKeys(arg0) {
-            const items = [, , ];
-            ({ guild_id: arr[0], channel_id: arr[1], location_section: arr[2] } = arg0);
-            return items;
-          }
-      };
-      tmp = obj;
+      tmp = { throttlePeriod: throttlePeriod2, throttleKeys };
+      const obj = { throttlePeriod: throttlePeriod2, throttleKeys };
     }
     return tmp;
   },
-  [AnalyticEvents.GUILD_VIEWED]: obj7,
-  [AnalyticEvents.FRIENDS_LIST_VIEWED]: obj8,
-  [AnalyticEvents.NOW_PLAYING_CARD_HOVERED]: obj9,
-  [AnalyticEvents.START_SPEAKING]: obj10,
-  [AnalyticEvents.START_LISTENING]: obj11,
-  [AnalyticEvents.ACTIVITY_UPDATED]: obj12,
-  [AnalyticEvents.CHANNEL_OPENED]: obj13,
-  [AnalyticEvents.TEXT_IN_VOICE_OPENED]: obj14,
-  [AnalyticEvents.NOTIFICATION_VIEWED]: obj15,
-  [AnalyticEvents.MEMBER_LIST_VIEWED]: obj16,
-  [AnalyticEvents.DM_LIST_VIEWED]: obj17,
-  [AnalyticEvents.NAV_DRAWER_OPENED]: obj18,
-  [AnalyticEvents.KEYBOARD_SHORTCUT_USED]: obj19,
-  [AnalyticEvents.QUICKSWITCHER_OPENED]: obj20,
-  [AnalyticEvents.CHAT_INPUT_COMPONENT_VIEWED]: obj21,
-  [AnalyticEvents.ROLE_PAGE_VIEWED]: obj22,
-  [AnalyticEvents.VIDEO_INPUT_INITIALIZED]: obj23,
-  [AnalyticEvents.AUDIO_INPUT_INITIALIZED]: obj24,
-  [AnalyticEvents.HUB_ONBOARDING_CAROUSEL_SCROLLED]: obj25,
-  [AnalyticEvents.HUB_STUDENT_PROMPT_CLICKED]: obj26,
-  [AnalyticEvents.RPC_SERVER_ERROR_CAUGHT]: obj27,
-  [AnalyticEvents.RPC_COMMAND_SENT]: obj28,
-  [AnalyticEvents.RPC_SUBSCRIPTION_REQUESTED]: obj29,
-  [AnalyticEvents.ACTIVITY_HANDSHAKE]: obj30,
-  [AnalyticEvents.CHANNEL_BANNER_VIEWED]: obj31,
-  [fn(1260).ImpressionNames.GUILD_HANGOUT_WINDOW]: obj32,
-  [fn(1260).ImpressionNames.GUILD_HANGOUT_WINDOW_ENTRY_POINT]: obj33,
-  [AnalyticEvents.PREMIUM_UPSELL_VIEWED]: obj34,
-  [AnalyticEvents.FORUM_CHANNEL_SEARCHED]: obj35,
-  [AnalyticEvents.FORUM_CHANNEL_SCROLLED]: obj36,
-  [AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED]: obj37,
-  [AnalyticEvents.MEDIA_VIEWER_SESSION_COMPLETED]: obj38,
-  [AnalyticEvents.SUMMARIES_UNREAD_BAR_VIEWED]: obj39,
-  [AnalyticEvents.ACTIVITY_CARDS_VIEWED]: obj40,
-  [AnalyticEvents.GUILD_TOOLTIP_SHOWN]: obj41,
-  [AnalyticEvents.ACK_COMMUNITY_MESSAGES]: obj42,
-  [AnalyticEvents.REDESIGN_NAV_BAR_CLICKED]: obj43,
-  [AnalyticEvents.CHANNEL_LIST_END_REACHED]: obj44,
-  [AnalyticEvents.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED]: obj45,
-  [AnalyticEvents.LIVE_ACTIVITY_SETTINGS_UPDATED]: obj46,
-  [AnalyticEvents.MEDIA_INPUT_VOLUME_CHANGED]: obj47,
-  [AnalyticEvents.MEDIA_OUTPUT_VOLUME_CHANGED]: obj48,
-  [AnalyticEvents.APP_DMS_QUICK_LAUNCHER_IMPRESSION]: obj49,
-  [AnalyticEvents.USER_VOICE_ACTIVITY_VIEWED]: obj50,
-  [AnalyticEvents.PARTY_VOICE_ACTIVITY_VIEWED]: obj51,
-  [AnalyticEvents.MEMBER_LIST_SWIPE_PEEK]: obj52,
-  [AnalyticEvents.REDACTABLE_MESSAGE_LOADED]: obj53,
+  [AnalyticEvents.GUILD_VIEWED]: obj4,
+  [AnalyticEvents.FRIENDS_LIST_VIEWED]: obj5,
+  [AnalyticEvents.NOW_PLAYING_CARD_HOVERED]: obj6,
+  [AnalyticEvents.START_SPEAKING]: obj7,
+  [AnalyticEvents.START_LISTENING]: obj8,
+  [AnalyticEvents.ACTIVITY_UPDATED]: obj9,
+  [AnalyticEvents.CHANNEL_OPENED]: obj10,
+  [AnalyticEvents.TEXT_IN_VOICE_OPENED]: obj11,
+  [AnalyticEvents.NOTIFICATION_VIEWED]: obj12,
+  [AnalyticEvents.MEMBER_LIST_VIEWED]: obj13,
+  [AnalyticEvents.DM_LIST_VIEWED]: obj14,
+  [AnalyticEvents.NAV_DRAWER_OPENED]: obj15,
+  [AnalyticEvents.KEYBOARD_SHORTCUT_USED]: obj16,
+  [AnalyticEvents.QUICKSWITCHER_OPENED]: obj17,
+  [AnalyticEvents.CHAT_INPUT_COMPONENT_VIEWED]: obj18,
+  [AnalyticEvents.ROLE_PAGE_VIEWED]: obj19,
+  [AnalyticEvents.VIDEO_INPUT_INITIALIZED]: obj20,
+  [AnalyticEvents.AUDIO_INPUT_INITIALIZED]: obj21,
+  [AnalyticEvents.HUB_ONBOARDING_CAROUSEL_SCROLLED]: obj22,
+  [AnalyticEvents.HUB_STUDENT_PROMPT_CLICKED]: obj23,
+  [AnalyticEvents.RPC_SERVER_ERROR_CAUGHT]: obj24,
+  [AnalyticEvents.RPC_COMMAND_SENT]: obj25,
+  [AnalyticEvents.RPC_SUBSCRIPTION_REQUESTED]: obj26,
+  [AnalyticEvents.ACTIVITY_HANDSHAKE]: obj27,
+  [AnalyticEvents.CHANNEL_BANNER_VIEWED]: obj28,
+  [AnalyticsUtils.ImpressionNames.GUILD_HANGOUT_WINDOW]: obj29,
+  [AnalyticsUtils.ImpressionNames.GUILD_HANGOUT_WINDOW_ENTRY_POINT]: obj30,
+  [AnalyticEvents.PREMIUM_UPSELL_VIEWED]: obj31,
+  [AnalyticEvents.FORUM_CHANNEL_SEARCHED]: obj32,
+  [AnalyticEvents.FORUM_CHANNEL_SCROLLED]: obj33,
+  [AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED]: obj34,
+  [AnalyticEvents.MEDIA_VIEWER_SESSION_COMPLETED]: obj35,
+  [AnalyticEvents.SUMMARIES_UNREAD_BAR_VIEWED]: obj36,
+  [AnalyticEvents.ACTIVITY_CARDS_VIEWED]: obj37,
+  [AnalyticEvents.GUILD_TOOLTIP_SHOWN]: obj38,
+  [AnalyticEvents.ACK_COMMUNITY_MESSAGES]: obj39,
+  [AnalyticEvents.REDESIGN_NAV_BAR_CLICKED]: obj40,
+  [AnalyticEvents.CHANNEL_LIST_END_REACHED]: obj41,
+  [AnalyticEvents.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED]: obj42,
+  [AnalyticEvents.LIVE_ACTIVITY_SETTINGS_UPDATED]: obj43,
+  [AnalyticEvents.MEDIA_INPUT_VOLUME_CHANGED]: obj44,
+  [AnalyticEvents.MEDIA_OUTPUT_VOLUME_CHANGED]: obj45,
+  [AnalyticEvents.APP_DMS_QUICK_LAUNCHER_IMPRESSION]: obj46,
+  [AnalyticEvents.USER_VOICE_ACTIVITY_VIEWED]: obj47,
+  [AnalyticEvents.PARTY_VOICE_ACTIVITY_VIEWED]: obj48,
+  [AnalyticEvents.MEMBER_LIST_SWIPE_PEEK]: obj49,
+  [AnalyticEvents.REDACTABLE_MESSAGE_LOADED]: obj50,
   [AnalyticEvents.OPEN_MODAL]: (type) => {
+    function throttleKeys(type) {
+      const items = [type.type];
+      return items;
+    }
     let tmp;
-    if (type.type === constants2.MEDIA_VIEWER) {
-      const obj = {
-        throttlePeriod,
-        throttleKeys(type) {
-            const items = [type.type];
-            return items;
-          }
-      };
-      tmp = obj;
+    if (type.type === unpackModuleId.MEDIA_VIEWER) {
+      tmp = { throttlePeriod, throttleKeys };
+      const obj = { throttlePeriod, throttleKeys };
     }
     return tmp;
   },
-  [AnalyticEvents.MODERATOR_QUEUE_ACTION]: obj54,
-  [AnalyticEvents.NOTIFICATION_PERMISSION_STATUS]: obj55,
-  [AnalyticEvents.SEARCH_BAR_VIEWED]: obj56,
-  [AnalyticEvents.AD_IDENTIFIER_FETCHED]: obj57,
-  [AnalyticEvents.ACTIVITY_PANEL_SDK_LINK_VIEWED]: obj58,
-  [AnalyticEvents.LIBDISCORE_SLOW_TIMERS]: obj59,
-  [AnalyticEvents.VIDEO_STREAM_ZOOM_CHANGED]: obj60,
-  [AnalyticEvents.CACHE_STATS_RECORDED]: obj61,
-  [AnalyticEvents.TYPING_INDICATOR_STYLE_SEEN]: obj62
+  [AnalyticEvents.MODERATOR_QUEUE_ACTION]: obj51,
+  [AnalyticEvents.NOTIFICATION_PERMISSION_STATUS]: obj52,
+  [AnalyticEvents.SEARCH_BAR_VIEWED]: obj53,
+  [AnalyticEvents.AD_IDENTIFIER_FETCHED]: obj54,
+  [AnalyticEvents.ACTIVITY_PANEL_SDK_LINK_VIEWED]: obj55,
+  [AnalyticEvents.LIBDISCORE_SLOW_TIMERS]: obj56,
+  [AnalyticEvents.VIDEO_STREAM_ZOOM_CHANGED]: obj57,
+  [AnalyticEvents.CACHE_STATS_RECORDED]: obj58,
+  [AnalyticEvents.TYPING_INDICATOR_STYLE_SEEN]: obj59
 };
-global = function getAccessibilityFeatures() {
-  return AccessibilityFeatureFlags.NONE;
+obj2 = {
+  throttlePeriod: 300000,
+  throttleKeys() {
+    return [];
+  }
 };
-AnalyticsUtils = fn(1260);
-let closure_22 = AnalyticsUtils.trackMaker({ addBreadcrumb, analyticEventConfigs: obj, dispatcher: DispatcherDefault, TRACK_ACTION_NAME: "TRACK" });
-let c24 = false;
-const dependencyMap = {};
-AnalyticsUtils = fn(1260);
-obj10 = {
+obj3 = {
+  throttlePeriod: 120000,
+  throttleKeys() {
+    return [];
+  }
+};
+obj4 = {
+  throttlePeriod: 900000,
+  throttleKeys(arg0) {
+    const items = [, ];
+    ({ guild_id: arr[0], is_pending: arr[1] } = arg0);
+    return items;
+  }
+};
+obj5 = {
+  throttlePeriod: 900000,
+  throttleKeys(tab_opened) {
+    const items = [tab_opened.tab_opened];
+    return items;
+  }
+};
+obj6 = {
+  throttlePeriod: 900000,
+  throttleKeys(tab_opened) {
+    const items = [tab_opened.tab_opened];
+    return items;
+  }
+};
+obj7 = {
   throttlePeriod: 900000,
   throttleKeys(server) {
     const items = [server.server];
     return items;
   }
 };
-obj11 = {
+obj8 = {
   throttlePeriod: 900000,
   throttleKeys(server) {
     const items = [server.server];
     return items;
   }
 };
-obj12 = {
+obj9 = {
   throttlePeriod: 60000,
   throttleKeys(application_id) {
     const items = [application_id.application_id];
@@ -258,13 +361,14 @@ obj12 = {
   },
   deduplicate: true
 };
-obj13 = {
+obj10 = {
   throttlePeriod: 900000,
   throttleKeys(channel_static_route) {
+    let items1;
     if (null != channel_static_route.channel_static_route) {
       const items = [, , ];
       ({ guild_id: arr2[0], channel_static_route: arr2[1], channel_view: arr2[2] } = channel_static_route);
-      let items1 = items;
+      items1 = items;
     } else {
       items1 = [, ];
       ({ channel_id: arr[0], channel_view: arr[1] } = channel_static_route);
@@ -272,8 +376,45 @@ obj13 = {
     return items1;
   }
 };
-obj14 = {
+obj11 = {
   throttlePeriod: 86400000,
+  throttleKeys(channel_id) {
+    const items = [channel_id.channel_id];
+    return items;
+  }
+};
+obj17 = {
+  throttlePeriod: 10000,
+  throttleKeys() {
+    return [];
+  }
+};
+obj18 = {
+  throttlePeriod: 900000,
+  throttleKeys(type) {
+    const items = [type.type];
+    return items;
+  }
+};
+function getAccessibilityFeatures() {
+  return AccessibilityFeatureFlags.NONE;
+}
+obj12 = {
+  throttlePeriod: 900000,
+  throttleKeys(notif_type) {
+    const items = [notif_type.notif_type];
+    return items;
+  }
+};
+obj13 = {
+  throttlePeriod: 900000,
+  throttleKeys(channel_id) {
+    const items = [channel_id.channel_id];
+    return items;
+  }
+};
+obj14 = {
+  throttlePeriod: 900000,
   throttleKeys(channel_id) {
     const items = [channel_id.channel_id];
     return items;
@@ -281,57 +422,24 @@ obj14 = {
 };
 obj15 = {
   throttlePeriod: 900000,
-  throttleKeys(notif_type) {
-    const items = [notif_type.notif_type];
-    return items;
-  }
-};
-obj16 = {
-  throttlePeriod: 900000,
-  throttleKeys(channel_id) {
-    const items = [channel_id.channel_id];
-    return items;
-  }
-};
-obj17 = {
-  throttlePeriod: 900000,
-  throttleKeys(channel_id) {
-    const items = [channel_id.channel_id];
-    return items;
-  }
-};
-obj18 = {
-  throttlePeriod: 900000,
   throttleKeys() {
     return [];
   }
 };
-obj19 = {
+obj16 = {
   throttlePeriod: 120000,
   throttleKeys(arg0) {
+    let source_class_list;
     const items = [, ];
     ({ shortcut_name: arr[0], location_object: arr[1], source_class_list } = arg0);
     if (source_class_list == null) {
       source_class_list = [];
     }
-    HermesBuiltin.arraySpread(source_class_list, 2);
+    HermesBuiltin.arraySpread(items, source_class_list, 2);
     return items;
   }
 };
-obj20 = {
-  throttlePeriod: 10000,
-  throttleKeys() {
-    return [];
-  }
-};
-obj21 = {
-  throttlePeriod: 900000,
-  throttleKeys(type) {
-    const items = [type.type];
-    return items;
-  }
-};
-obj22 = {
+obj19 = {
   throttlePeriod: 120000,
   throttleKeys(arg0) {
     const items = [, ];
@@ -339,37 +447,37 @@ obj22 = {
     return items;
   }
 };
-obj23 = {
+obj20 = {
   throttlePeriod: 300000,
+  throttleKeys() {
+    return [];
+  }
+};
+obj21 = {
+  throttlePeriod: 300000,
+  throttleKeys() {
+    return [];
+  }
+};
+obj22 = {
+  throttlePeriod: 900000,
+  throttleKeys() {
+    return [];
+  }
+};
+obj23 = {
+  throttlePeriod: 900000,
   throttleKeys() {
     return [];
   }
 };
 obj24 = {
-  throttlePeriod: 300000,
-  throttleKeys() {
-    return [];
-  }
-};
-obj25 = {
-  throttlePeriod: 900000,
-  throttleKeys() {
-    return [];
-  }
-};
-obj26 = {
-  throttlePeriod: 900000,
-  throttleKeys() {
-    return [];
-  }
-};
-obj27 = {
   throttlePeriod: 86400000,
   throttleKeys() {
     return [];
   }
 };
-obj28 = {
+obj25 = {
   throttlePeriod: 86400000,
   throttleKeys(arg0) {
     const items = [, ];
@@ -378,7 +486,7 @@ obj28 = {
   },
   throttlePercent: 0.001
 };
-obj29 = {
+obj26 = {
   throttlePeriod: 86400000,
   throttleKeys(arg0) {
     const items = [, ];
@@ -387,14 +495,14 @@ obj29 = {
   },
   throttlePercent: 0.001
 };
-obj30 = {
+obj27 = {
   throttlePeriod: 86400000,
   throttleKeys(application_id) {
     const items = [application_id.application_id];
     return items;
   }
 };
-obj31 = {
+obj28 = {
   throttlePeriod: 86400000,
   throttleKeys(arg0) {
     const items = [, ];
@@ -402,7 +510,7 @@ obj31 = {
     return items;
   }
 };
-obj32 = {
+obj29 = {
   throttlePeriod: 86400000,
   throttleKeys(arg0) {
     const items = [, ];
@@ -410,7 +518,7 @@ obj32 = {
     return items;
   }
 };
-obj33 = {
+obj30 = {
   throttlePeriod: 86400000,
   throttleKeys(arg0) {
     const items = [, ];
@@ -418,14 +526,14 @@ obj33 = {
     return items;
   }
 };
-obj34 = {
+obj31 = {
   throttlePeriod: 60000,
   throttleKeys(type) {
     const items = [type.type];
     return items;
   }
 };
-obj35 = {
+obj32 = {
   throttlePeriod: 60000,
   throttleKeys(arg0) {
     const items = [, ];
@@ -433,7 +541,7 @@ obj35 = {
     return items;
   }
 };
-obj36 = {
+obj33 = {
   throttlePeriod: 900000,
   throttleKeys(arg0) {
     const items = [, ];
@@ -441,21 +549,43 @@ obj36 = {
     return items;
   }
 };
-obj37 = {
+obj34 = {
   throttlePeriod: 60000,
   throttleKeys(user_id) {
     const items = [user_id.user_id];
     return items;
   }
 };
-obj38 = {
+obj35 = {
   throttlePeriod: 60000,
   throttleKeys() {
     return [];
   }
 };
-obj39 = {
+obj36 = {
   throttlePeriod: 300000,
+  throttleKeys(channel_id) {
+    const items = [channel_id.channel_id];
+    return items;
+  }
+};
+obj37 = {
+  throttlePeriod: 900000,
+  throttleKeys(arg0) {
+    const items = [, ];
+    ({ context: arr[0], guild_id: arr[1] } = arg0);
+    return items;
+  }
+};
+obj38 = {
+  throttlePeriod: 900000,
+  throttleKeys(guild_id) {
+    const items = [guild_id.guild_id];
+    return items;
+  }
+};
+obj39 = {
+  throttlePeriod: 900000,
   throttleKeys(channel_id) {
     const items = [channel_id.channel_id];
     return items;
@@ -463,9 +593,8 @@ obj39 = {
 };
 obj40 = {
   throttlePeriod: 900000,
-  throttleKeys(arg0) {
-    const items = [, ];
-    ({ context: arr[0], guild_id: arr[1] } = arg0);
+  throttleKeys(tab) {
+    const items = [tab.tab];
     return items;
   }
 };
@@ -477,27 +606,6 @@ obj41 = {
   }
 };
 obj42 = {
-  throttlePeriod: 900000,
-  throttleKeys(channel_id) {
-    const items = [channel_id.channel_id];
-    return items;
-  }
-};
-obj43 = {
-  throttlePeriod: 900000,
-  throttleKeys(tab) {
-    const items = [tab.tab];
-    return items;
-  }
-};
-obj44 = {
-  throttlePeriod: 900000,
-  throttleKeys(guild_id) {
-    const items = [guild_id.guild_id];
-    return items;
-  }
-};
-obj45 = {
   throttlePeriod: 60000,
   throttleKeys(arg0) {
     const items = [, ];
@@ -505,40 +613,34 @@ obj45 = {
     return items;
   }
 };
-obj46 = {
+obj43 = {
   throttlePeriod: 3600000,
   throttleKeys() {
     return [];
   }
 };
-obj47 = {
+obj44 = {
   throttlePeriod: 300000,
   throttleKeys(location_stack) {
     const items = [location_stack.location_stack];
     return items;
   }
 };
-obj48 = {
+obj45 = {
   throttlePeriod: 300000,
   throttleKeys(location_stack) {
     const items = [location_stack.location_stack];
     return items;
   }
 };
-obj49 = {
+obj46 = {
   throttlePeriod: 900000,
   throttleKeys(channel_id) {
     const items = [channel_id.channel_id];
     return items;
   }
 };
-obj5 = {
-  throttlePeriod: 300000,
-  throttleKeys() {
-    return [];
-  }
-};
-obj50 = {
+obj47 = {
   throttlePeriod: 300000,
   throttleKeys(arg0) {
     const items = [, ];
@@ -547,7 +649,7 @@ obj50 = {
   },
   deduplicate: true
 };
-obj51 = {
+obj48 = {
   throttlePeriod: 300000,
   throttleKeys(voice_channel_id) {
     const items = [voice_channel_id.voice_channel_id];
@@ -555,14 +657,14 @@ obj51 = {
   },
   deduplicate: true
 };
-obj52 = {
+obj49 = {
   throttlePeriod: 1000,
   throttleKeys(channel_id) {
     const items = [channel_id.channel_id];
     return items;
   }
 };
-obj53 = {
+obj50 = {
   throttlePeriod: 900000,
   throttleKeys(arg0) {
     const items = [, ];
@@ -570,14 +672,14 @@ obj53 = {
     return items;
   }
 };
-obj54 = {
+obj51 = {
   throttlePeriod: 10000,
   throttleKeys(guild_id) {
     const items = [guild_id.guild_id];
     return items;
   }
 };
-obj55 = {
+obj52 = {
   throttlePeriod: 43200000,
   throttleKeys(arg0) {
     const items = [, , , ];
@@ -585,127 +687,108 @@ obj55 = {
     return items;
   }
 };
-obj56 = {
+obj53 = {
   throttlePeriod: 3600000,
   throttleKeys(search_type) {
     const items = [search_type.search_type];
     return items;
   }
 };
-obj57 = {
+obj54 = {
   throttlePeriod: 86400000,
   throttleKeys() {
     return [];
   }
 };
-obj58 = {
+obj55 = {
   throttlePeriod: 86400000,
   throttleKeys(application_id) {
     const items = [application_id.application_id];
     return items;
   }
 };
-obj59 = {
+obj56 = {
   throttlePeriod: 3600000,
   throttleKeys() {
     return [];
   }
 };
-obj6 = {
-  throttlePeriod: 120000,
-  throttleKeys() {
-    return [];
-  }
-};
-obj60 = {
+obj57 = {
   throttlePeriod: 1000,
   throttleKeys() {
     return [];
   }
 };
-obj61 = {
+obj58 = {
   throttlePeriod: 900000,
   throttleKeys() {
     return [];
   }
 };
-obj62 = {
+obj59 = {
   throttlePeriod: 86400000,
   throttleKeys() {
     return [];
   }
 };
-const obj63 = { addBreadcrumb, analyticEventConfigs: obj, dispatcher: DispatcherDefault, TRACK_ACTION_NAME: "TRACK" };
-obj7 = {
-  throttlePeriod: 900000,
-  throttleKeys(arg0) {
-    const items = [, ];
-    ({ guild_id: arr[0], is_pending: arr[1] } = arg0);
-    return items;
-  }
-};
-obj8 = {
-  throttlePeriod: 900000,
-  throttleKeys(tab_opened) {
-    const items = [tab_opened.tab_opened];
-    return items;
-  }
-};
-obj9 = {
-  throttlePeriod: 900000,
-  throttleKeys(tab_opened) {
-    const items = [tab_opened.tab_opened];
-    return items;
-  }
-};
-let closure_26 = AnalyticsUtils.trackMaker({ addBreadcrumb, analyticEventConfigs: obj, dispatcher: DispatcherDefault, TRACK_ACTION_NAME: "TRACK" });
-const obj66 = {};
-AnalyticsUtils = Object.assign(AnalyticsUtils);
-obj66.getCampaignParams = fn(1260).getCampaignParams;
-obj66.setSystemAccessibilityFeatures = function setSystemAccessibilityFeatures(getActiveFeatures) {
-  global = getActiveFeatures;
-};
-obj66.expandEventProperties = expandEventProperties;
-obj66.track = function track(arg0, arg1) {
-  let obj = arg2;
-  if (arg2 === undefined) {
-    obj = {};
-  }
-  const StringResult = String(arg0);
-  if (c24) {
-    if (null != arg1) {
-      const _Array = Array;
-      if (Array.isArray(dependencyMap[arg0])) {
-        dependencyMap[arg0].push(arg1);
-      } else {
-        const items = [arg1];
-        dependencyMap[arg0] = items;
+AnalyticsUtils = AnalyticsUtils_mod;
+const obj60 = { addBreadcrumb, analyticEventConfigs: obj, dispatcher: DispatcherDefault, TRACK_ACTION_NAME: "TRACK" };
+let closure_22 = AnalyticsUtils.trackMaker(obj60);
+let c24 = false;
+let closure_25 = {};
+AnalyticsUtils = AnalyticsUtils_mod;
+const obj61 = { addBreadcrumb, analyticEventConfigs: obj, dispatcher: DispatcherDefault, TRACK_ACTION_NAME: "TRACK" };
+let closure_26 = AnalyticsUtils.trackMaker(obj61);
+const obj62 = {
+  getCampaignParams: AnalyticsUtils.getCampaignParams,
+  setSystemAccessibilityFeatures(getActiveFeatures) {
+    getAccessibilityFeatures = getActiveFeatures;
+  },
+  expandEventProperties,
+  track(arg0, arg1) {
+    let obj = arg2;
+    if (arg2 === undefined) {
+      obj = {};
+    }
+    const StringResult = String(arg0);
+    if (c24) {
+      if (null != arg1) {
+        const _Array = Array;
+        if (Array.isArray(closure_25[arg0])) {
+          const arr2 = closure_25[arg0];
+          arr2.push(arg1);
+        } else {
+          const items = [arg1];
+          closure_25[arg0] = items;
+        }
       }
     }
-  }
-  if (null != obj.throttlePercent) {
-    const _Math = Math;
-    if (Math.random() > obj.throttlePercent) {
-      return Promise.resolve();
+    if (null != obj.throttlePercent) {
+      const _Math = Math;
+      if (Math.random() > obj.throttlePercent) {
+        return Promise.resolve();
+      }
     }
+    const tmp5 = expandEventProperties(arg1);
+    let flag = obj.logEventProperties;
+    if (flag === undefined) {
+      flag = false;
+    }
+    const report = LogAggregatorAll.report;
+    LogAggregatorAll;
+    if (flag) {
+      report("Analytics", StringResult, tmp5);
+    } else {
+      report("Analytics", StringResult);
+    }
+    const obj2 = { flush: obj.flush, fingerprint: obj.fingerprint };
+    return closure_22(arg0, tmp5, obj2);
   }
-  const tmp5 = expandEventProperties(arg1);
-  let flag = obj.logEventProperties;
-  if (flag === undefined) {
-    flag = false;
-  }
-  const report = LogAggregatorAll.report;
-  if (flag) {
-    report("Analytics", StringResult, tmp5);
-  } else {
-    report("Analytics", StringResult);
-  }
-  return closure_22(arg0, tmp5, { flush: obj.flush, fingerprint: obj.fingerprint });
 };
-const size = fn(2);
+AnalyticsUtils = Object.assign(AnalyticsUtils);
 const result1 = size.fileFinishedImporting("utils/AnalyticsUtils.tsx");
 
-export default obj66;
+export default obj62;
 export const AnalyticsContext = context;
 export { launchSignature };
 export const addExtraAnalyticsDecorator = function addExtraAnalyticsDecorator(arg0) {
@@ -714,7 +797,7 @@ export const addExtraAnalyticsDecorator = function addExtraAnalyticsDecorator(ar
 export const AnalyticEventConfigs = obj;
 export { expandLocation };
 export function setUTMContext(arg0) {
-  global = arg0;
+  let closure_14 = arg0;
   return arg0;
 }
 export { expandEventProperties };
@@ -731,23 +814,25 @@ export function getAnalyticsEventsRecording() {
 export const clearAnalyticsEventsRecording = function clearAnalyticsEventsRecording() {
   const keys = Object.keys(closure_25);
   const item = keys.forEach((item) => {
-    delete tmp2[tmp];
+    delete closure_1_25[item];
   });
 };
 export const isGameApplicationType = function isGameApplicationType(arg0) {
   return arg0 === ApplicationTypes.GAME || arg0 === ApplicationTypes.DEPRECATED_GAME;
 };
 export const trackNetworkAction = function trackNetworkAction(event, arg1) {
+  const obj = { location: metroImportAll() };
   const merged = Object.assign(arg1);
-  const obj = { location: closure_1_8() };
   const obj2 = { type: "action" };
+  const tmp2 = expandEventProperties(obj);
   const merged1 = Object.assign(arg1);
-  React5(event, obj2);
-  const tmp2 = expandEventProperties({ location: closure_1_8() });
-  LogAggregatorAll.report("Analytics", event);
+  metroImportDefault(event, obj2);
+  const obj3 = LogAggregatorAll;
+  obj3.report("Analytics", event);
   closure_26(event, tmp2);
 };
 export const getNewAnalyticsLoadId = function getNewAnalyticsLoadId() {
-  return v1.v4();
+  const obj = v1;
+  return obj.v4();
 };
 export const AnalyticsSchema = utils_AnalyticsSchemaAll;

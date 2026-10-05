@@ -1,298 +1,332 @@
 // === Module 6784: SearchMessageStore ===
 
 // Module 6784 (SearchMessageStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
+import Constants from "Constants" /* 1085 */;
 import ReactionUtils from "ReactionUtils" /* 4521 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 5112 */;
 import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5312 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import RelationshipStore from "RelationshipStore" /* 4519 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-function handleReaction(optimistic) {
-  let colors = optimistic;
-  ({ messageId, emoji } = optimistic);
-  ({ type, userId, channelId } = optimistic);
-  if (obj.shouldApplyReaction(optimistic)) {
+let set;
+
+function handleReaction(reactionType) {
+  let channelId;
+  let emoji;
+  let messageId;
+  let type;
+  let userId;
+  ({ messageId, emoji } = reactionType);
+  ({ type, userId, channelId } = reactionType);
+  const obj = ReactionUtils;
+  if (obj.shouldApplyReaction(reactionType)) {
+    let type2;
     const id = AuthenticationStore.getId();
     const basicChannel = ChannelStore.getBasicChannel(channelId);
     if (basicChannel != null) {
-      let addReaction = basicChannel.type;
+      type2 = basicChannel.type;
     }
-    let DM = ChannelTypes.DM;
-    value = map1.get(messageId);
-    if (null == value) {
-      return false;
-    } else {
-      const reactionType = colors.reactionType;
+    const DM = ChannelTypes.DM;
+    const value = map1.get(messageId);
+    let flag2 = false;
+    if (null != value) {
+      let addReactionResult;
+      reactionType = reactionType.reactionType;
       if ("MESSAGE_REACTION_ADD" === type) {
-        addReaction = value.addReaction;
-        const obj2 = { colors: null, reactionType: null, isDMChannel: null };
-        colors = colors.colors;
-        obj2.colors = colors;
-        obj2.reactionType = reactionType;
-        obj2.isDMChannel = addReaction === DM;
-        let addReactionResult = addReaction(emoji, tmp8, obj2);
-        const tmp10 = addReaction === DM;
+        const obj2 = { colors: reactionType.colors, reactionType, isDMChannel: type2 === DM };
+        addReactionResult = value.addReaction(emoji, tmp8, obj2);
       } else {
         addReactionResult = value.removeReaction(emoji, tmp8, reactionType);
       }
-      DM = map1;
       const result = map1.set(messageId, addReactionResult);
+      flag2 = true;
     }
+    return flag2;
   } else {
     return false;
   }
-  obj = ReactionUtils;
 }
-const ChannelTypes = fn(1085).ChannelTypes;
+const ChannelTypes = Constants.ChannelTypes;
 class SearchState {
   constructor() {
-    merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
-    set = new Set();
-    merged[8] = set;
+    const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
+    merged[8] = new Set();
+    new Set();
     return merged;
+  }
+  handleSearchStart() {
+    this.isFetching = true;
+    this.isIndexing = false;
+    this.analyticsId = null;
+    this.error = null;
+  }
+  handleSearchIndexing() {
+    this.isInitialFetchComplete = true;
+    this.isIndexing = true;
+    this.isHistoricalIndexing = true;
+    this.isFetching = false;
+    this.error = null;
+  }
+  handleSearchFailure(arg0) {
+    this.isFetching = false;
+    this.isIndexing = false;
+    this.isInitialFetchComplete = true;
+    this.isHistoricalIndexing = false;
+    const aPIError = new V6OrEarlierAPIError.APIError(arg0);
+    this.error = aPIError;
+    this.analyticsId = null;
+    this.documentsIndexed = 0;
+  }
+  handleSearchSuccess(analyticsId, arr) {
+    const self = this;
+    let items;
+    let items1;
+    this.analyticsId = analyticsId.analyticsId;
+    this.isFetching = false;
+    this.isIndexing = false;
+    this.isInitialFetchComplete = true;
+    this.isHistoricalIndexing = analyticsId.doingHistoricalIndex;
+    this.error = null;
+    ({ documentsIndexed: this.documentsIndexed, cursor: this.cursor } = analyticsId);
+    let messages = this.messages;
+    const totalResults = analyticsId.totalResults;
+    if (messages == null) {
+      messages = [];
+    }
+    items = [...messages];
+    items1 = [];
+    const item = arr.forEach((id) => {
+      const messageIds = self.messageIds;
+      const hasItem = messageIds.has(id.id) || RelationshipStore.isBlockedOrIgnoredForMessage(id);
+      if (!hasItem) {
+        const messageIds2 = self.messageIds;
+        messageIds2.add(id.id);
+        items.push(id);
+        items1.push(id);
+      }
+    });
+    self.messages = items;
+    self.totalResults = totalResults;
+    return items1;
   }
 }
 const prototype = SearchState.prototype;
-prototype["handleSearchStart"] = function handleSearchStart() {
-  this.isFetching = true;
-  this.isIndexing = false;
-  this.analyticsId = null;
-  this.error = null;
-};
-prototype["handleSearchIndexing"] = function handleSearchIndexing() {
-  this.isInitialFetchComplete = true;
-  this.isIndexing = true;
-  this.isHistoricalIndexing = true;
-  this.isFetching = false;
-  this.error = null;
-};
-prototype["handleSearchFailure"] = function handleSearchFailure(arg0) {
-  this.isFetching = false;
-  this.isIndexing = false;
-  this.isInitialFetchComplete = true;
-  this.isHistoricalIndexing = false;
-  const aPIError = new V6OrEarlierAPIError.APIError(arg0);
-  this.error = aPIError;
-  this.analyticsId = null;
-  this.documentsIndexed = 0;
-};
-prototype["handleSearchSuccess"] = function handleSearchSuccess(analyticsId, arr) {
-  const self = this;
-  let items;
-  let items1;
-  this.analyticsId = analyticsId.analyticsId;
-  this.isFetching = false;
-  this.isIndexing = false;
-  this.isInitialFetchComplete = true;
-  this.isHistoricalIndexing = analyticsId.doingHistoricalIndex;
-  this.error = null;
-  ({ documentsIndexed: this.documentsIndexed, cursor: this.cursor } = analyticsId);
-  let messages = this.messages;
-  if (messages == null) {
-    messages = [];
-  }
-  items = [...messages];
-  items1 = [];
-  const item = arr.forEach((id) => {
-    const messageIds = self.messageIds;
-    let hasItem = messageIds.has(id.id);
-    if (!hasItem) {
-      hasItem = RelationshipStore.isBlockedOrIgnoredForMessage(id);
-    }
-    if (!hasItem) {
-      const messageIds2 = self.messageIds;
-      messageIds2.add(id.id);
-      items.push(id);
-      items1.push(id);
-    }
-  });
-  self.messages = items;
-  self.totalResults = analyticsId.totalResults;
-  return items1;
-};
 let map = new Map();
 let map1 = new Map();
 let map2 = new Map();
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class SearchMessageStore extends Store {
+  initialize() {
+    this.waitFor(AuthenticationStore, ChannelStore, RelationshipStore);
+  }
+  getMessage(arg0) {
+    return map1.get(arg0);
+  }
+  getTotalCount(searchTabFetchId) {
+    let value = map.get(searchTabFetchId);
+    if (value == null) {
+      const self = this;
+      if (typeof SearchState === "function") {
+        const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
+        const _Set = Set;
+        const self2 = this;
+        const self3 = this;
+        merged[8] = new Set();
+        value = merged;
+        set = new Set();
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    }
+    return value.totalResults;
+  }
+  getIsInitialFetchComplete(arg0) {
+    let value = map.get(arg0);
+    if (value == null) {
+      const self = this;
+      if (typeof SearchState === "function") {
+        const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
+        const _Set = Set;
+        const self2 = this;
+        const self3 = this;
+        merged[8] = new Set();
+        value = merged;
+        set = new Set();
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    }
+    return value.isInitialFetchComplete;
+  }
+  getIsIndexing(searchTabFetchId) {
+    let value = map.get(searchTabFetchId);
+    if (value == null) {
+      const self = this;
+      if (typeof SearchState === "function") {
+        const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
+        const _Set = Set;
+        const self2 = this;
+        const self3 = this;
+        merged[8] = new Set();
+        value = merged;
+        set = new Set();
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    }
+    return value.isIndexing;
+  }
+  getIsHistoricalIndexing(searchTabFetchId) {
+    let value = map.get(searchTabFetchId);
+    if (value == null) {
+      const self = this;
+      if (typeof SearchState === "function") {
+        const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
+        const _Set = Set;
+        const self2 = this;
+        const self3 = this;
+        merged[8] = new Set();
+        value = merged;
+        set = new Set();
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    }
+    return value.isHistoricalIndexing;
+  }
+  getDocumentsIndexed(searchTabFetchId) {
+    let value = map.get(searchTabFetchId);
+    if (value == null) {
+      const self = this;
+      if (typeof SearchState === "function") {
+        const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
+        const _Set = Set;
+        const self2 = this;
+        const self3 = this;
+        merged[8] = new Set();
+        value = merged;
+        set = new Set();
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    }
+    return value.documentsIndexed;
+  }
+  getIsFetching(arg0) {
+    let value = map.get(arg0);
+    if (value == null) {
+      const self = this;
+      if (typeof SearchState === "function") {
+        const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
+        const _Set = Set;
+        const self2 = this;
+        const self3 = this;
+        merged[8] = new Set();
+        value = merged;
+        set = new Set();
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    }
+    return value.isFetching;
+  }
+  getError(arg0) {
+    let value = map.get(arg0);
+    if (value == null) {
+      const self = this;
+      if (typeof SearchState === "function") {
+        const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
+        const _Set = Set;
+        const self2 = this;
+        const self3 = this;
+        merged[8] = new Set();
+        value = merged;
+        set = new Set();
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    }
+    return value.error;
+  }
+  getMessages(arg0) {
+    let value = map.get(arg0);
+    if (value == null) {
+      const self = this;
+      if (typeof SearchState === "function") {
+        const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
+        const _Set = Set;
+        const self2 = this;
+        const self3 = this;
+        merged[8] = new Set();
+        value = merged;
+        set = new Set();
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    }
+    return value.messages;
+  }
+  getCursor(searchTabFetchId) {
+    let value = map.get(searchTabFetchId);
+    if (value == null) {
+      const self = this;
+      if (typeof SearchState === "function") {
+        const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
+        const _Set = Set;
+        const self2 = this;
+        const self3 = this;
+        merged[8] = new Set();
+        value = merged;
+        set = new Set();
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    }
+    return value.cursor;
+  }
+  getAnalyticsId(arg0) {
+    let value = map.get(arg0);
+    if (value == null) {
+      const self = this;
+      if (typeof SearchState === "function") {
+        const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
+        const _Set = Set;
+        const self2 = this;
+        const self3 = this;
+        merged[8] = new Set();
+        value = merged;
+        set = new Set();
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    }
+    return value.analyticsId;
+  }
+  hasSearchState(searchContextId) {
+    return map.has(searchContextId);
+  }
 }
 const prototype2 = SearchMessageStore.prototype;
-prototype2["initialize"] = function initialize() {
-  this.waitFor(AuthenticationStore, ChannelStore, RelationshipStore);
-};
-prototype2["getMessage"] = function getMessage(arg0) {
-  return map1.get(arg0);
-};
-prototype2["getTotalCount"] = function getTotalCount(searchTabFetchId) {
-  value = map.get(searchTabFetchId);
-  if (value == null) {
-    if (typeof SearchState === "function") {
-      const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
-      const _Set = Set;
-      const set = new Set();
-      merged[8] = set;
-      value = merged;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  }
-  return value.totalResults;
-};
-prototype2["getIsInitialFetchComplete"] = function getIsInitialFetchComplete(arg0) {
-  value = map.get(arg0);
-  if (value == null) {
-    if (typeof SearchState === "function") {
-      const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
-      const _Set = Set;
-      const set = new Set();
-      merged[8] = set;
-      value = merged;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  }
-  return value.isInitialFetchComplete;
-};
-prototype2["getIsIndexing"] = function getIsIndexing(searchTabFetchId) {
-  value = map.get(searchTabFetchId);
-  if (value == null) {
-    if (typeof SearchState === "function") {
-      const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
-      const _Set = Set;
-      const set = new Set();
-      merged[8] = set;
-      value = merged;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  }
-  return value.isIndexing;
-};
-prototype2["getIsHistoricalIndexing"] = function getIsHistoricalIndexing(searchTabFetchId) {
-  value = map.get(searchTabFetchId);
-  if (value == null) {
-    if (typeof SearchState === "function") {
-      const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
-      const _Set = Set;
-      const set = new Set();
-      merged[8] = set;
-      value = merged;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  }
-  return value.isHistoricalIndexing;
-};
-prototype2["getDocumentsIndexed"] = function getDocumentsIndexed(searchTabFetchId) {
-  value = map.get(searchTabFetchId);
-  if (value == null) {
-    if (typeof SearchState === "function") {
-      const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
-      const _Set = Set;
-      const set = new Set();
-      merged[8] = set;
-      value = merged;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  }
-  return value.documentsIndexed;
-};
-prototype2["getIsFetching"] = function getIsFetching(arg0) {
-  value = map.get(arg0);
-  if (value == null) {
-    if (typeof SearchState === "function") {
-      const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
-      const _Set = Set;
-      const set = new Set();
-      merged[8] = set;
-      value = merged;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  }
-  return value.isFetching;
-};
-prototype2["getError"] = function getError(arg0) {
-  value = map.get(arg0);
-  if (value == null) {
-    if (typeof SearchState === "function") {
-      const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
-      const _Set = Set;
-      const set = new Set();
-      merged[8] = set;
-      value = merged;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  }
-  return value.error;
-};
-prototype2["getMessages"] = function getMessages(arg0) {
-  value = map.get(arg0);
-  if (value == null) {
-    if (typeof SearchState === "function") {
-      const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
-      const _Set = Set;
-      const set = new Set();
-      merged[8] = set;
-      value = merged;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  }
-  return value.messages;
-};
-prototype2["getCursor"] = function getCursor(searchTabFetchId) {
-  value = map.get(searchTabFetchId);
-  if (value == null) {
-    if (typeof SearchState === "function") {
-      const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
-      const _Set = Set;
-      const set = new Set();
-      merged[8] = set;
-      value = merged;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  }
-  return value.cursor;
-};
-prototype2["getAnalyticsId"] = function getAnalyticsId(arg0) {
-  value = map.get(arg0);
-  if (value == null) {
-    if (typeof SearchState === "function") {
-      const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
-      const _Set = Set;
-      const set = new Set();
-      merged[8] = set;
-      value = merged;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  }
-  return value.analyticsId;
-};
-prototype2["hasSearchState"] = function hasSearchState(searchContextId) {
-  return map.has(searchContextId);
-};
 SearchMessageStore.displayName = "SearchMessageStore";
-const searchMessageStore = new SearchMessageStore(DispatcherDefault, {
+let obj = {
   SEARCH_MESSAGES_START: function handleSearchMessagesStart(ids) {
     ids = ids.ids;
-    const item = ids.forEach((item) => {
-      value = map.get(item);
+    const item = ids.forEach(function(item) {
+      let value = map.get(item);
       if (value == null) {
+        const self = this;
         if (typeof SearchState === "function") {
           const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
           const _Set = Set;
-          const set = new Set();
-          merged[8] = set;
+          const self2 = this;
+          const self3 = this;
+          merged[8] = new Set();
           value = merged;
+          set = new Set();
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -303,26 +337,32 @@ const searchMessageStore = new SearchMessageStore(DispatcherDefault, {
   },
   SEARCH_MESSAGES_SUCCESS: function handleSearchMessagesSuccess(data) {
     data = data.data;
-    let item = data.forEach((id) => {
+    let item = data.forEach(function(id) {
       id = id.id;
-      value = map.get(id);
+      let value = map.get(id);
       if (value == null) {
+        const self = this;
         if (typeof SearchState === "function") {
           const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
           const _Set = Set;
-          const set = new Set();
-          merged[8] = set;
+          const self2 = this;
+          const self3 = this;
+          merged[8] = new Set();
           value = merged;
+          set = new Set();
         } else {
           throw new TypeError("Trying to call a non-function");
         }
       }
       let result = map.set(id, value);
       const messages = id.messages;
-      const item = value.handleSearchSuccess(id, messages.map((item) => {
+      const handleSearchSuccessResult = value.handleSearchSuccess(id, messages.map((item) => {
+        let tmp;
         [tmp] = item;
-        return closure_1_0(closure_1_1[5]).createMessageRecord(tmp);
-      })).forEach((id) => {
+        const obj = closure_1_0(closure_1_1[5]);
+        return obj.createMessageRecord(tmp);
+      }));
+      const item = handleSearchSuccessResult.forEach((id) => {
         const result = closure_1_8.set(id.id, id);
         let num = closure_1_9.get(id.id);
         if (num == null) {
@@ -334,15 +374,18 @@ const searchMessageStore = new SearchMessageStore(DispatcherDefault, {
   },
   SEARCH_MESSAGES_INDEXING: function handleSearchMessagesIndexing(ids) {
     ids = ids.ids;
-    const item = ids.forEach((item) => {
-      value = map.get(item);
+    const item = ids.forEach(function(item) {
+      let value = map.get(item);
       if (value == null) {
+        const self = this;
         if (typeof SearchState === "function") {
           const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
           const _Set = Set;
-          const set = new Set();
-          merged[8] = set;
+          const self2 = this;
+          const self3 = this;
+          merged[8] = new Set();
           value = merged;
+          set = new Set();
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -353,15 +396,18 @@ const searchMessageStore = new SearchMessageStore(DispatcherDefault, {
   },
   SEARCH_MESSAGES_FAILURE: function handleSearchMessagesFailure(ids) {
     ids = ids.ids;
-    const item = ids.forEach((item) => {
-      value = map.get(item);
+    const item = ids.forEach(function(item) {
+      let value = map.get(item);
       if (value == null) {
+        const self = this;
         if (typeof SearchState === "function") {
           const merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });
           const _Set = Set;
-          const set = new Set();
-          merged[8] = set;
+          const self2 = this;
+          const self3 = this;
+          merged[8] = new Set();
           value = merged;
+          set = new Set();
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -371,7 +417,7 @@ const searchMessageStore = new SearchMessageStore(DispatcherDefault, {
     });
   },
   SEARCH_MESSAGES_CLEAR: function handleSearchMessagesClear(id) {
-    value = map.get(id.id);
+    const value = map.get(id.id);
     if (null == value) {
       return false;
     } else {
@@ -401,22 +447,24 @@ const searchMessageStore = new SearchMessageStore(DispatcherDefault, {
     if (null == id) {
       return false;
     } else {
-      value = map1.get(id);
+      const value = map1.get(id);
       if (null == value) {
         return false;
       } else {
-        const result = map1.set(id, MessageRecordUtils.updateMessageRecord(value, message.message));
+        const obj = MessageRecordUtils;
+        const result = map1.set(id, obj.updateMessageRecord(value, message.message));
       }
     }
   },
   MESSAGE_REACTION_ADD: handleReaction,
   MESSAGE_REACTION_ADD_MANY: function handleReactionBatch(messageId) {
     messageId = messageId.messageId;
+    const reactions = messageId.reactions;
     const id = AuthenticationStore.getId();
-    value = map1.get(messageId);
+    const value = map1.get(messageId);
     let flag = false;
     if (null != value) {
-      const result = map1.set(messageId, value.addReactionBatch(messageId.reactions, id));
+      const result = map1.set(messageId, value.addReactionBatch(reactions, id));
       flag = true;
     }
     return flag;
@@ -424,7 +472,7 @@ const searchMessageStore = new SearchMessageStore(DispatcherDefault, {
   MESSAGE_REACTION_REMOVE: handleReaction,
   MESSAGE_REACTION_REMOVE_ALL: function handleRemoveAllReactions(messageId) {
     messageId = messageId.messageId;
-    value = map1.get(messageId);
+    const value = map1.get(messageId);
     let flag = false;
     if (null != value) {
       const result = map1.set(messageId, value.set("reactions", []));
@@ -434,10 +482,11 @@ const searchMessageStore = new SearchMessageStore(DispatcherDefault, {
   },
   MESSAGE_REACTION_REMOVE_EMOJI: function handleRemoveEmojiReactions(messageId) {
     messageId = messageId.messageId;
-    value = map1.get(messageId);
+    const emoji = messageId.emoji;
+    const value = map1.get(messageId);
     let flag = false;
     if (null != value) {
-      const result = map1.set(messageId, value.removeReactionsForEmoji(messageId.emoji));
+      const result = map1.set(messageId, value.removeReactionsForEmoji(emoji));
       flag = true;
     }
     return flag;
@@ -447,8 +496,8 @@ const searchMessageStore = new SearchMessageStore(DispatcherDefault, {
     map1 = new Map();
     map2 = new Map();
   }
-});
-const size = fn(2);
+};
+const searchMessageStore = new SearchMessageStore(DispatcherDefault, obj);
 let result = size.fileFinishedImporting("modules/search/SearchMessageStore.tsx");
 
 export default searchMessageStore;

@@ -2,15 +2,16 @@
 
 // Module 12951 (useFriendRequestActions)
 import PeopleUtilsDefault from "PeopleUtils" /* 10604 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/people/hooks/useFriendRequestActions.tsx");
+let userId;
 
-export const useFriendRequestActions = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
-  const cResult = userId(isGameRelationship[2]).c(16);
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+  let isGameRelationship;
+  let obj = userId(isGameRelationship[2]);
+  const cResult = obj.c(16);
   userId = userId.userId;
   const applicationId = userId.applicationId;
   isGameRelationship = userId.isGameRelationship;
@@ -21,8 +22,9 @@ export const useFriendRequestActions = ReactCompilerGating.isReactCompilerEnable
   if (cResult[0] === applicationId) {
     if (cResult[1] === isGameRelationship) {
       if (cResult[2] === _location) {
+        let tmp2;
         if (cResult[3] === userId) {
-          let tmp2 = cResult[4];
+          tmp2 = cResult[4];
         }
         if (cResult[5] === applicationId) {
           if (cResult[6] === isGameRelationship) {
@@ -30,30 +32,28 @@ export const useFriendRequestActions = ReactCompilerGating.isReactCompilerEnable
               if (cResult[8] === onCancel) {
                 if (cResult[9] === onConfirm) {
                   if (cResult[10] === onFinally) {
+                    let tmp3;
                     if (cResult[11] === userId) {
-                      let tmp3 = cResult[12];
+                      tmp3 = cResult[12];
                     }
                     if (cResult[13] === tmp3) {
+                      let tmp4;
                       if (cResult[14] === tmp2) {
-                        let tmp4 = cResult[15];
+                        tmp4 = cResult[15];
                       }
                       return tmp4;
                     }
                     class I {
                       constructor() {
-                        obj = closure_1(closure_2[3]);
-                        obj1 = { userId, applicationId: null, location: null, onConfirm: null, onCancel: null, onFinally: null };
-                        tmp = null;
+                        let tmp2;
+                        const obj = { userId, applicationId: tmp2, location: _location, onConfirm, onCancel, onFinally };
+                        tmp2 = null;
+                        const maybeConfirmFriendRequestAccept = PeopleUtilsDefault.maybeConfirmFriendRequestAccept;
+                        PeopleUtilsDefault;
                         if (isGameRelationship) {
-                          tmp = applicationId;
+                          tmp2 = applicationId;
                         }
-                        obj1.applicationId = tmp;
-                        obj1.location = location;
-                        obj1.onConfirm = onConfirm;
-                        obj1.onCancel = onCancel;
-                        obj1.onFinally = onFinally;
-                        result = obj.maybeConfirmFriendRequestAccept(obj1);
-                        return;
+                        const result = maybeConfirmFriendRequestAccept(obj);
                       }
                     }
                     tmp5[0] = tmp3;
@@ -70,19 +70,15 @@ export const useFriendRequestActions = ReactCompilerGating.isReactCompilerEnable
         }
         class I {
           constructor() {
-            obj = closure_1(closure_2[3]);
-            obj1 = { userId, applicationId: null, location: null, onConfirm: null, onCancel: null, onFinally: null };
-            tmp = null;
+            let tmp2;
+            const obj = { userId, applicationId: tmp2, location: _location, onConfirm, onCancel, onFinally };
+            tmp2 = null;
+            const maybeConfirmFriendRequestAccept = PeopleUtilsDefault.maybeConfirmFriendRequestAccept;
+            PeopleUtilsDefault;
             if (isGameRelationship) {
-              tmp = applicationId;
+              tmp2 = applicationId;
             }
-            obj1.applicationId = tmp;
-            obj1.location = location;
-            obj1.onConfirm = onConfirm;
-            obj1.onCancel = onCancel;
-            obj1.onFinally = onFinally;
-            result = obj.maybeConfirmFriendRequestAccept(obj1);
-            return;
+            const result = maybeConfirmFriendRequestAccept(obj);
           }
         }
         cResult[5] = applicationId;
@@ -98,14 +94,15 @@ export const useFriendRequestActions = ReactCompilerGating.isReactCompilerEnable
     }
   }
   const fn = function o() {
-    const obj2 = { userId, applicationId: null, location: null };
-    let tmp = null;
+    let tmp2;
+    const obj = { userId, applicationId: tmp2, location: _location };
+    tmp2 = null;
+    const cancelFriendRequest = PeopleUtilsDefault.cancelFriendRequest;
+    PeopleUtilsDefault;
     if (isGameRelationship) {
-      tmp = applicationId;
+      tmp2 = applicationId;
     }
-    obj2.applicationId = tmp;
-    obj2.location = _location;
-    PeopleUtilsDefault.cancelFriendRequest(obj2);
+    cancelFriendRequest(obj);
   };
   cResult[0] = applicationId;
   cResult[1] = isGameRelationship;
@@ -114,6 +111,8 @@ export const useFriendRequestActions = ReactCompilerGating.isReactCompilerEnable
   cResult[4] = fn;
   tmp2 = fn;
 }) : ((userId) => {
+  let callback;
+  let items1;
   userId = userId.userId;
   const applicationId = userId.applicationId;
   const isGameRelationship = userId.isGameRelationship;
@@ -122,31 +121,34 @@ export const useFriendRequestActions = ReactCompilerGating.isReactCompilerEnable
   const onCancel = userId.onCancel;
   const onFinally = userId.onFinally;
   const items = [applicationId, isGameRelationship, _location, userId];
-  const obj = { acceptFriendRequest: null, cancelFriendRequest: null };
-  const items1 = [applicationId, isGameRelationship, _location, onCancel, onConfirm, onFinally, userId];
-  const callback = _location.useCallback(() => {
-    const obj2 = { userId, applicationId: null, location: null };
-    let tmp = null;
+  let obj = {
+    acceptFriendRequest: _location.useCallback(() => {
+      let tmp2;
+      const obj = { userId, applicationId: tmp2, location: _location, onConfirm, onCancel, onFinally };
+      tmp2 = null;
+      const maybeConfirmFriendRequestAccept = PeopleUtilsDefault.maybeConfirmFriendRequestAccept;
+      PeopleUtilsDefault;
+      if (isGameRelationship) {
+        tmp2 = applicationId;
+      }
+      const result = maybeConfirmFriendRequestAccept(obj);
+    }, items1),
+    cancelFriendRequest: callback
+  };
+  items1 = [applicationId, isGameRelationship, _location, onCancel, onConfirm, onFinally, userId];
+  callback = _location.useCallback(() => {
+    let tmp2;
+    const obj = { userId, applicationId: tmp2, location: _location };
+    tmp2 = null;
+    const cancelFriendRequest = PeopleUtilsDefault.cancelFriendRequest;
+    PeopleUtilsDefault;
     if (isGameRelationship) {
-      tmp = applicationId;
+      tmp2 = applicationId;
     }
-    obj2.applicationId = tmp;
-    obj2.location = _location;
-    PeopleUtilsDefault.cancelFriendRequest(obj2);
+    cancelFriendRequest(obj);
   }, items);
-  obj.acceptFriendRequest = _location.useCallback(() => {
-    const obj2 = { userId, applicationId: null, location: null, onConfirm: null, onCancel: null, onFinally: null };
-    let tmp = null;
-    if (isGameRelationship) {
-      tmp = applicationId;
-    }
-    obj2.applicationId = tmp;
-    obj2.location = _location;
-    obj2.onConfirm = onConfirm;
-    obj2.onCancel = onCancel;
-    obj2.onFinally = onFinally;
-    const result = PeopleUtilsDefault.maybeConfirmFriendRequestAccept(obj2);
-  }, items1);
-  obj.cancelFriendRequest = callback;
   return obj;
 });
+let result = size.fileFinishedImporting("modules/people/hooks/useFriendRequestActions.tsx");
+
+export const useFriendRequestActions = tmp2;

@@ -7,58 +7,65 @@ import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, application_id;
 
-const result = size.fileFinishedImporting("modules/conjure/app_channel/native/useConjureAppChannelRefreshButton.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((application_id) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((application_id) => {
   _require = application_id;
-  let RetryIcon = dependencyMap;
-  const cResult = require("c").c(5);
-  const obj = require("c");
-  const isConjureChannelCandidate = require("ConjureUtils").useIsConjureChannelCandidate(application_id, "ChannelActions");
+  let tmp = _require;
+  const obj = require("react");
+  const cResult = obj.c(5);
+  const obj2 = require("ConjureUtils");
+  const isConjureChannelCandidate = obj2.useIsConjureChannelCandidate(application_id, "ChannelActions");
   require("AppChannelChat");
-  let tmp6 = null;
+  let tmp7 = null;
   if (isConjureChannelCandidate) {
-    tmp6 = null;
-    if (!tmp5) {
+    tmp7 = null;
+    if (!tmp6) {
+      let tmp8;
+      let tmp10;
+      let tmp13;
       if (cResult[0] !== application_id.application_id) {
         const fn = function l() {
           application_id = application_id.application_id;
+          const tmp = restartConjureAppFramesDefault;
           if (application_id == null) {
             application_id = null;
           }
-          return restartConjureAppFramesDefault(application_id);
+          return tmp(application_id);
         };
         cResult[0] = application_id.application_id;
         cResult[1] = fn;
-        let tmp7 = fn;
+        tmp8 = fn;
       } else {
-        tmp7 = cResult[1];
+        tmp8 = cResult[1];
       }
       const _Symbol = Symbol;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
         const stringResult = intl.string(_modDef3723["p4B/7M"]);
         cResult[2] = stringResult;
-        let tmp9 = stringResult;
+        tmp10 = stringResult;
       } else {
-        tmp9 = cResult[2];
+        tmp10 = cResult[2];
       }
-      if (cResult[3] !== tmp7) {
-        const obj3 = { source: null, IconComponent: null, onPress: null, accessibilityLabel: null };
-        RetryIcon = tmp(11364).RetryIcon;
-        obj3.IconComponent = RetryIcon;
-        obj3.onPress = tmp7;
-        obj3.accessibilityLabel = tmp9;
-        cResult[3] = tmp7;
+      if (cResult[3] !== tmp8) {
+        const obj3 = { source: null, IconComponent: tmp(11364).RetryIcon, onPress: tmp8, accessibilityLabel: tmp10 };
+        cResult[3] = tmp8;
         cResult[4] = obj3;
+        tmp13 = obj3;
+      } else {
+        tmp13 = cResult[4];
       }
+      tmp7 = tmp13;
     }
   }
-  return tmp6;
+  return tmp7;
 }) : ((arg0) => {
+  let intl;
   _require = arg0;
-  const isConjureChannelCandidate = require("ConjureUtils").useIsConjureChannelCandidate(arg0, "ChannelActions");
+  let tmp = _require;
+  const obj = require("ConjureUtils");
+  const isConjureChannelCandidate = obj.useIsConjureChannelCandidate(arg0, "ChannelActions");
   require("AppChannelChat");
   let tmp6 = null;
   if (isConjureChannelCandidate) {
@@ -69,17 +76,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((application_id) 
         IconComponent: tmp(11364).RetryIcon,
         onPress() {
               application_id = application_id.application_id;
+              const tmp = restartConjureAppFramesDefault;
               if (application_id == null) {
                 application_id = null;
               }
-              return restartConjureAppFramesDefault(application_id);
+              return tmp(application_id);
             },
-        accessibilityLabel: null
+        accessibilityLabel: intl.string(_modDef3723["p4B/7M"])
       };
-      const intl = tmp(1126).intl;
-      obj2.accessibilityLabel = intl.string(_modDef3723["p4B/7M"]);
+      intl = tmp(1126).intl;
       tmp6 = obj2;
     }
   }
   return tmp6;
 });
+const result = size.fileFinishedImporting("modules/conjure/app_channel/native/useConjureAppChannelRefreshButton.tsx");
+
+export default tmp2;

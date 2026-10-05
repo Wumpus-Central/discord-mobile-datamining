@@ -1,35 +1,44 @@
 // === Module 15873: AccountSwitcherListItem ===
 
 // Module 15873 (AccountSwitcherListItem)
-import c from "c" /* 576 */;
+import get_initialized from "get initialized" /* 504 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
+import intl4 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4594 */;
+import react_native from "react-native" /* 4594 */;
 import UserUtilsDefault from "UserUtils" /* 4722 */;
+import CircleCheckIcon2 from "CircleCheckIcon" /* 4792 */;
+import CircleInformationIcon2 from "CircleInformationIcon" /* 4812 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import Pressables from "Pressables" /* 5909 */;
-import noop from "module_19" /* 19 */;
+import MultiAccountStore from "MultiAccountStore" /* 12056 */;
+import react from "react" /* 19 */;
+import react_native2 from "react-native" /* 17 */;
 import UserRecord from "UserRecord" /* 1391 */;
 import StreamerModeStore from "StreamerModeStore" /* 4723 */;
 import UserStore from "UserStore" /* 1377 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const initialize = CircleCheckIcon(504);
-const CircleCheckIcon2 = CircleCheckIcon(4792);
-const CircleInformationIcon = CircleCheckIcon(4812);
-require = fn;
-get_ActivityIndicator = fn(17);
-({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-const MultiAccountTokenStatus = fn(12056).MultiAccountTokenStatus;
-const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4890);
+let c10;
+let c3;
+let c9;
+let closure_4;
+({ Pressable: c3, View: closure_4 } = react_native2);
+const MultiAccountTokenStatus = MultiAccountStore.MultiAccountTokenStatus;
+({ jsx: c9, jsxs: c10 } = Fragment);
 let closure_11 = createStyles.createStyles({ accountListTag: { marginLeft: 12, flex: 1 }, tagContainer: { display: "flex", flexDirection: "row" }, accountSwitcherListItem: { display: "flex", flexDirection: "row", justifyContent: "flex-start", alignItems: "center", paddingVertical: 8, paddingHorizontal: 16 }, username: { flexShrink: 1 }, accountInfo: { flex: 1, minWidth: "30%", display: "flex", flexDirection: "row", alignItems: "center" } });
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
-  let CircleCheckIcon = require;
-  let TEXT_BRAND = dependencyMap;
-  const cResult = c.c(4);
+  let currentUser;
+  let tmp13;
+  let tmp4;
+  let tmp5;
+  const obj = react2;
+  const cResult = obj.c(4);
   user = user.user;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -38,65 +47,102 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
     };
     cResult[0] = items;
     cResult[1] = fn;
-    tmp2 = items;
-    tmp3 = fn;
+    tmp4 = items;
+    tmp5 = fn;
   } else {
-    [tmp2, tmp3] = cResult;
+    [tmp4, tmp5] = cResult;
   }
-  const stateFromStores = initialize.useStateFromStores(tmp2, tmp3);
-  let id;
+  const tmpResult = get_initialized;
+  const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
+  let id1;
+  const id = user.id;
   if (stateFromStores != null) {
-    id = stateFromStores.id;
+    id1 = stateFromStores.id;
   }
-  if (user.id === id) {
+  if (id === id1) {
+    let tmp14;
     const _Symbol2 = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      CircleCheckIcon = CircleCheckIcon2.CircleCheckIcon;
-      const obj2 = { color: null };
-      TEXT_BRAND = nativeDefault.colors.TEXT_BRAND;
-      obj2.color = TEXT_BRAND;
-      const tmp15 = options(CircleCheckIcon, obj2);
-      cResult[2] = tmp15;
+      const obj2 = { color: nativeDefault.colors.TEXT_BRAND };
+      const CircleCheckIcon = CircleCheckIcon2.CircleCheckIcon;
+      const tmp17 = React4(CircleCheckIcon, obj2);
+      cResult[2] = tmp17;
+      tmp14 = tmp17;
+    } else {
+      tmp14 = cResult[2];
     }
-  } else if (user.tokenStatus !== MultiAccountTokenStatus.INVALID) {
-    return null;
+    tmp13 = tmp14;
   } else {
-    const _Symbol = Symbol;
-    if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj3 = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-      const tmp10 = options(CircleInformationIcon.CircleInformationIcon, obj3);
-      cResult[3] = tmp10;
+    tmp13 = null;
+    if (user.tokenStatus === MultiAccountTokenStatus.INVALID) {
+      let tmp9;
+      const _Symbol = Symbol;
+      if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj3 = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
+        const CircleInformationIcon = CircleInformationIcon2.CircleInformationIcon;
+        const tmp12 = React4(CircleInformationIcon, obj3);
+        cResult[3] = tmp12;
+        tmp9 = tmp12;
+      } else {
+        tmp9 = cResult[3];
+      }
+      tmp13 = tmp9;
     }
   }
-  const CircleCheckIconResult = initialize;
+  return tmp13;
 }) : ((user) => {
+  let currentUser;
+  let tmp6;
   user = user.user;
   const items = [UserStore];
-  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let id;
+  const obj = get_initialized;
+  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
+  let id1;
+  const id = user.id;
   if (stateFromStores != null) {
-    id = stateFromStores.id;
+    id1 = stateFromStores.id;
   }
-  if (user.id === id) {
+  if (id === id1) {
     const obj2 = { color: nativeDefault.colors.TEXT_BRAND };
-    let tmp6 = options(CircleCheckIcon2.CircleCheckIcon, obj2);
+    const CircleCheckIcon = CircleCheckIcon2.CircleCheckIcon;
+    tmp6 = React4(CircleCheckIcon, obj2);
   } else {
     tmp6 = null;
     if (user.tokenStatus === MultiAccountTokenStatus.INVALID) {
       const obj3 = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-      tmp6 = options(CircleInformationIcon.CircleInformationIcon, obj3);
+      const CircleInformationIcon = CircleInformationIcon2.CircleInformationIcon;
+      tmp6 = React4(CircleInformationIcon, obj3);
     }
   }
   return tmp6;
 });
 let closure_12 = tmp5;
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/multi_account/native/AccountSwitcherListItem.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(51);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
+  let accessibilityRole;
+  let accessibilityState;
+  let accountInfo;
+  let accountSwitcherListItem;
+  let currentUser;
+  let delayLongPress;
+  let items3;
+  let items4;
+  let items5;
+  let leading;
+  let obj4;
+  let onPressUser;
+  let showActiveAccountLabel;
+  let sortHandlers;
+  let tmp10;
+  let tmp11;
+  let tmp6;
+  let tmp7;
+  let trailing;
+  let user;
+  const obj = react2;
+  const cResult = obj.c(51);
   ({ user, onPressUser, showActiveAccountLabel, sortHandlers, delayLongPress, leading, trailing } = arg0);
+  const tmp4 = undefined !== showActiveAccountLabel && showActiveAccountLabel;
   const tmp5 = closure_11();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [StreamerModeStore];
@@ -110,179 +156,178 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     [tmp6, tmp7] = cResult;
   }
-  const tmp4 = undefined !== showActiveAccountLabel && showActiveAccountLabel;
-  const stateFromStores = initialize.useStateFromStores(tmp6, tmp7);
+  const tmpResult = get_initialized;
+  const stateFromStores = tmpResult.useStateFromStores(tmp6, tmp7);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [UserStore];
     class U {
       constructor() {
-        return closure_1_7.getCurrentUser();
+        return currentUser.getCurrentUser();
       }
     }
     cResult[2] = items1;
     cResult[3] = U;
-    let tmp11 = U;
-    let tmp10 = items1;
+    tmp11 = U;
+    tmp10 = items1;
   } else {
     tmp10 = cResult[2];
     tmp11 = cResult[3];
   }
-  const tmpResult = initialize;
-  const stateFromStores1 = initialize.useStateFromStores(tmp10, tmp11);
-  let id;
+  const tmpResult2 = get_initialized;
+  const stateFromStores1 = tmpResult2.useStateFromStores(tmp10, tmp11);
+  let id1;
+  const id = user.id;
   if (stateFromStores1 != null) {
-    id = stateFromStores1.id;
+    id1 = stateFromStores1.id;
   }
   if (cResult[4] !== user) {
+    const self = this;
+    const self2 = this;
     class U {
       constructor() {
-        return closure_1_7.getCurrentUser();
+        return currentUser.getCurrentUser();
       }
     }
-    const tmp19 = new UserRecord(user);
+    const tmp16 = new UserRecord(user);
     cResult[4] = user;
-    cResult[5] = tmp19;
-    let tmp15 = tmp19;
+    cResult[5] = tmp16;
+    obj4 = tmp16;
   } else {
-    tmp15 = cResult[5];
+    obj4 = cResult[5];
   }
-  if (user.id === id) {
+  if (id === id1) {
+    let PressableOpacity;
+    let tmp26;
+    let tmp28;
+    let tmp30;
     if (tmp4) {
       const _Symbol = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { variant: "text-sm/semibold", color: "text-brand", children: null };
+        const obj2 = { variant: "text-sm/semibold", color: "text-brand", children: obj8.string(intl4.t.seV8yt) };
+        const Text2 = Text_Text.Text;
         class U {
           constructor() {
-            return closure_1_7.getCurrentUser();
+            return currentUser.getCurrentUser();
           }
         }
-        obj2.children = obj7.string(util.t.seV8yt);
-        const tmp28 = options(Text_Text.Text, obj2);
-        cResult[6] = tmp28;
+        cResult[6] = React4(Text2, obj2);
+        const tmp25 = React4(Text2, obj2);
       }
       class U {
         constructor() {
-          return closure_1_7.getCurrentUser();
+          return currentUser.getCurrentUser();
         }
       }
     }
-  }
-  if (user.tokenStatus === MultiAccountTokenStatus.INVALID) {
-    const _Symbol2 = Symbol;
-    if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj3 = { variant: "text-sm/semibold", color: "text-feedback-critical", children: null };
+    if (null == onPressUser) {
+      PressableOpacity = _false;
+    } else {
+      PressableOpacity = Pressables.PressableOpacity;
+    }
+    if (cResult[8] !== (id === id1)) {
+      const obj3 = { selected: id === id1 };
       class U {
         constructor() {
-          return closure_1_7.getCurrentUser();
+          return currentUser.getCurrentUser();
         }
       }
-      obj3.children = obj5.string(util.t.tYX2ps);
-      const tmp25 = options(Text_Text.Text, obj3);
-      cResult[7] = tmp25;
+      cResult[9] = obj3;
+      tmp26 = obj3;
+    } else {
+      tmp26 = cResult[9];
     }
     class U {
       constructor() {
-        return closure_1_7.getCurrentUser();
+        return currentUser.getCurrentUser();
       }
     }
-  }
-  if (null == onPressUser) {
-    let PressableOpacity = React3;
-  } else {
-    PressableOpacity = Pressables.PressableOpacity;
-  }
-  if (cResult[8] !== (user.id === id)) {
-    const obj4 = { selected: tmp21 };
-    class U {
-      constructor() {
-        return closure_1_7.getCurrentUser();
+    const radioA11yNative = obj10.useRadioA11yNative(tmp26);
+    ({ accessibilityRole, accessibilityState } = radioA11yNative);
+    const id2 = user.id;
+    if (cResult[10] !== (id === id1)) {
+      let stringResult;
+      if (id !== id1) {
+        const intl = intl4.intl;
+        stringResult = intl.string(intl4.t.wY4y0R);
       }
-    }
-    cResult[9] = obj4;
-    let tmp29 = obj4;
-  } else {
-    tmp29 = cResult[9];
-  }
-  const tmpResult3 = initialize;
-  const radioA11yNative = useA11yRolesNative.useRadioA11yNative(tmp29);
-  ({ accessibilityRole, accessibilityState } = radioA11yNative);
-  if (cResult[10] !== (user.id === id)) {
-    let stringResult;
-    if (!tmp21) {
-      const intl = util.intl;
-      stringResult = intl.string(util.t.wY4y0R);
-    }
-    class U {
-      constructor() {
-        return closure_1_7.getCurrentUser();
-      }
-    }
-    cResult[11] = stringResult;
-    let tmp31 = stringResult;
-  } else {
-    tmp31 = cResult[11];
-  }
-  ({ accountSwitcherListItem, accountInfo } = tmp5);
-  if (cResult[12] !== tmp15) {
-    { user: null, guildId: "r" }.user = tmp15;
-    class U {
-      constructor() {
-        return closure_1_7.getCurrentUser();
-      }
-    }
-    cResult[12] = tmp15;
-    cResult[13] = tmp35;
-    let tmp33 = tmp35;
-    const obj6 = { user: null, guildId: "r" };
-  } else {
-    tmp33 = cResult[13];
-  }
-  if (cResult[14] === stateFromStores) {
-    if (cResult[15] === tmp15) {
-      let tmp39 = cResult[16];
-    }
-    if (cResult[17] === tmp5.username) {
-      if (cResult[18] === tmp39) {
-        let tmp41 = cResult[19];
-      }
-      if (cResult[20] === stateFromStores) {
-        if (cResult[21] === tmp15) {
-          let tmp45 = cResult[22];
+      class U {
+        constructor() {
+          return currentUser.getCurrentUser();
         }
-        if (cResult[23] === tmp5.tagContainer) {
-          if (cResult[24] === tmp41) {
-            if (cResult[25] === tmp45) {
-              let tmp48 = cResult[26];
-            }
-            if (cResult[27] === tmp22) {
-              if (cResult[28] === tmp5.accountListTag) {
-                if (cResult[29] === tmp48) {
-                  let tmp51 = cResult[30];
-                }
-                if (cResult[31] === tmp5.accountInfo) {
-                  if (cResult[32] === tmp33) {
-                    if (cResult[33] === tmp51) {
-                      let tmp54 = cResult[34];
-                    }
-                    if (cResult[35] === trailing) {
-                      if (cResult[36] === user) {
-                        let tmp57 = cResult[37];
+      }
+      cResult[11] = stringResult;
+      tmp28 = stringResult;
+    } else {
+      tmp28 = cResult[11];
+    }
+    ({ accountSwitcherListItem, accountInfo } = tmp5);
+    if (cResult[12] !== obj4) {
+      class U {
+        constructor() {
+          return currentUser.getCurrentUser();
+        }
+      }
+      cResult[12] = obj4;
+      cResult[13] = tmp32;
+      tmp30 = tmp32;
+    } else {
+      tmp30 = cResult[13];
+    }
+    if (cResult[14] === stateFromStores) {
+      let tmp36;
+      if (cResult[15] === obj4) {
+        tmp36 = cResult[16];
+      }
+      if (cResult[17] === tmp5.username) {
+        let tmp40;
+        if (cResult[18] === tmp36) {
+          tmp40 = cResult[19];
+        }
+        if (cResult[20] === stateFromStores) {
+          let tmp44;
+          if (cResult[21] === obj4) {
+            tmp44 = cResult[22];
+          }
+          if (cResult[23] === tmp5.tagContainer) {
+            if (cResult[24] === tmp40) {
+              let tmp46;
+              if (cResult[25] === tmp44) {
+                tmp46 = cResult[26];
+              }
+              if (cResult[27] === tmp19) {
+                if (cResult[28] === tmp5.accountListTag) {
+                  let tmp49;
+                  if (cResult[29] === tmp46) {
+                    tmp49 = cResult[30];
+                  }
+                  if (cResult[31] === tmp5.accountInfo) {
+                    if (cResult[32] === tmp30) {
+                      let tmp52;
+                      if (cResult[33] === tmp49) {
+                        tmp52 = cResult[34];
                       }
-                      if (cResult[38] === PressableOpacity) {
-                        if (cResult[39] === accessibilityRole) {
-                          if (cResult[40] === accessibilityState) {
-                            if (cResult[41] === delayLongPress) {
-                              if (cResult[42] === leading) {
-                                if (cResult[43] === onPressUser) {
-                                  if (cResult[44] === sortHandlers) {
-                                    if (cResult[45] === tmp5.accountSwitcherListItem) {
-                                      if (cResult[46] === tmp54) {
-                                        if (cResult[47] === tmp57) {
-                                          if (cResult[48] === tmp31) {
-                                            if (cResult[49] === user.id) {
-                                              let tmp59 = cResult[50];
+                      if (cResult[35] === trailing) {
+                        let tmp55;
+                        if (cResult[36] === user) {
+                          tmp55 = cResult[37];
+                        }
+                        if (cResult[38] === PressableOpacity) {
+                          if (cResult[39] === accessibilityRole) {
+                            if (cResult[40] === accessibilityState) {
+                              if (cResult[41] === delayLongPress) {
+                                if (cResult[42] === leading) {
+                                  if (cResult[43] === onPressUser) {
+                                    if (cResult[44] === sortHandlers) {
+                                      if (cResult[45] === tmp5.accountSwitcherListItem) {
+                                        if (cResult[46] === tmp52) {
+                                          if (cResult[47] === tmp55) {
+                                            if (cResult[48] === tmp28) {
+                                              let tmp57;
+                                              if (cResult[49] === user.id) {
+                                                tmp57 = cResult[50];
+                                              }
+                                              return tmp57;
                                             }
-                                            return tmp59;
                                           }
                                         }
                                       }
@@ -293,141 +338,166 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                             }
                           }
                         }
+                        class U {
+                          constructor() {
+                            return currentUser.getCurrentUser();
+                          }
+                        }
+                        tmp59[0] = accessibilityRole;
+                        tmp59[1] = accessibilityState;
+                        tmp59[2] = tmp28;
+                        tmp59[3] = accountSwitcherListItem;
+                        tmp59[4] = delayLongPress;
+                        tmp59[5] = onPressUser;
+                        const merged = Object.assign(sortHandlers);
+                        const items2 = [leading, tmp52, tmp55];
+                        tmp59.children = items2;
+                        const tmp63 = authStore(PressableOpacity, tmp59, id2);
+                        cResult[38] = PressableOpacity;
+                        cResult[39] = accessibilityRole;
+                        cResult[40] = accessibilityState;
+                        cResult[41] = delayLongPress;
+                        cResult[42] = leading;
+                        cResult[43] = onPressUser;
+                        cResult[44] = sortHandlers;
+                        cResult[45] = tmp5.accountSwitcherListItem;
+                        cResult[46] = tmp52;
+                        cResult[47] = tmp55;
+                        cResult[48] = tmp28;
+                        cResult[49] = user.id;
+                        cResult[50] = tmp63;
+                        tmp57 = tmp63;
                       }
                       class U {
                         constructor() {
-                          return closure_1_7.getCurrentUser();
+                          return currentUser.getCurrentUser();
                         }
                       }
-                      tmp61[0] = accessibilityRole;
-                      tmp61[1] = accessibilityState;
-                      tmp61[2] = tmp31;
-                      tmp61[3] = accountSwitcherListItem;
-                      tmp61[4] = delayLongPress;
-                      tmp61[5] = onPressUser;
-                      const merged = Object.assign(sortHandlers);
-                      const items2 = [leading, tmp54, tmp57];
-                      tmp61.children = items2;
-                      const tmp65 = v65535(PressableOpacity, tmp61, user.id);
-                      cResult[38] = PressableOpacity;
-                      cResult[39] = accessibilityRole;
-                      cResult[40] = accessibilityState;
-                      cResult[41] = delayLongPress;
-                      cResult[42] = leading;
-                      cResult[43] = onPressUser;
-                      cResult[44] = sortHandlers;
-                      cResult[45] = tmp5.accountSwitcherListItem;
-                      cResult[46] = tmp54;
-                      cResult[47] = tmp57;
-                      cResult[48] = tmp31;
-                      cResult[49] = user.id;
-                      cResult[50] = tmp65;
-                      tmp59 = tmp65;
+                      cResult[35] = trailing;
+                      cResult[36] = user;
+                      cResult[37] = trailing;
+                      tmp55 = trailing;
                     }
-                    class U {
-                      constructor() {
-                        return closure_1_7.getCurrentUser();
-                      }
+                  }
+                  class U {
+                    constructor() {
+                      return currentUser.getCurrentUser();
                     }
-                    cResult[35] = trailing;
-                    cResult[36] = user;
-                    cResult[37] = trailing;
-                    tmp57 = trailing;
                   }
+                  const obj7 = { style: accountInfo, children: items3 };
+                  items3 = [tmp30, tmp49];
+                  const tmp54 = authStore(React3, obj7);
+                  cResult[31] = tmp5.accountInfo;
+                  cResult[32] = tmp30;
+                  cResult[33] = tmp49;
+                  cResult[34] = tmp54;
+                  tmp52 = tmp54;
                 }
-                class U {
-                  constructor() {
-                    return closure_1_7.getCurrentUser();
-                  }
+              }
+              class U {
+                constructor() {
+                  return currentUser.getCurrentUser();
                 }
-                const obj8 = { style: accountInfo, children: null };
-                const items3 = [tmp33, tmp51];
-                obj8.children = items3;
-                const tmp56 = v65535(React4, obj8);
-                cResult[31] = tmp5.accountInfo;
-                cResult[32] = tmp33;
-                cResult[33] = tmp51;
-                cResult[34] = tmp56;
-                tmp54 = tmp56;
               }
+              const obj9 = { style: tmp33, children: items4 };
+              items4 = [tmp46, tmp19];
+              const tmp51 = authStore(React3, obj9);
+              cResult[27] = tmp19;
+              cResult[28] = tmp5.accountListTag;
+              cResult[29] = tmp46;
+              cResult[30] = tmp51;
+              tmp49 = tmp51;
             }
-            class U {
-              constructor() {
-                return closure_1_7.getCurrentUser();
-              }
-            }
-            const obj9 = { style: tmp36, children: null };
-            const items4 = [tmp48, tmp22];
-            obj9.children = items4;
-            const tmp53 = v65535(React4, obj9);
-            cResult[27] = tmp22;
-            cResult[28] = tmp5.accountListTag;
-            cResult[29] = tmp48;
-            cResult[30] = tmp53;
-            tmp51 = tmp53;
           }
+          class U {
+            constructor() {
+              return currentUser.getCurrentUser();
+            }
+          }
+          const obj11 = { style: tmp34, children: items5 };
+          items5 = [tmp40, tmp44];
+          const tmp48 = authStore(React3, obj11);
+          cResult[23] = tmp5.tagContainer;
+          cResult[24] = tmp40;
+          cResult[25] = tmp44;
+          cResult[26] = tmp48;
+          tmp46 = tmp48;
         }
+        const tmp45 = !stateFromStores && !obj4.hasUniqueUsername();
         class U {
           constructor() {
-            return closure_1_7.getCurrentUser();
+            return currentUser.getCurrentUser();
           }
         }
-        const obj10 = { style: tmp37, children: null };
-        const items5 = [tmp41, tmp45];
-        obj10.children = items5;
-        const tmp50 = v65535(React4, obj10);
-        cResult[23] = tmp5.tagContainer;
-        cResult[24] = tmp41;
-        cResult[25] = tmp45;
-        cResult[26] = tmp50;
-        tmp48 = tmp50;
+        cResult[20] = stateFromStores;
+        cResult[21] = obj4;
+        cResult[22] = tmp45;
+        tmp44 = tmp45;
       }
-      let tmp46 = !stateFromStores;
       class U {
         constructor() {
-          return closure_1_7.getCurrentUser();
+          return currentUser.getCurrentUser();
         }
       }
-      if (tmp46) {
-        const obj12 = { variant: "text-md/normal", color: "text-muted", children: null };
-        const _HermesInternal = HermesInternal;
-        class U {
-          constructor() {
-            return closure_1_7.getCurrentUser();
-          }
+      tmp42[2] = tmp35;
+      tmp42[4] = tmp36;
+      const tmp43 = React4(Text_Text.Text, tmp42);
+      cResult[17] = tmp5.username;
+      cResult[18] = tmp36;
+      cResult[19] = tmp43;
+      tmp40 = tmp43;
+    }
+    let str = "always";
+    const getUserTag = UserUtilsDefault.getUserTag;
+    UserUtilsDefault;
+    if (stateFromStores) {
+      str = "never";
+    }
+    const obj12 = { mode: "username", identifiable: str };
+    const userTag = getUserTag(obj4, obj12);
+    cResult[14] = stateFromStores;
+    cResult[15] = obj4;
+    cResult[16] = userTag;
+    tmp36 = userTag;
+  }
+  if (user.tokenStatus === MultiAccountTokenStatus.INVALID) {
+    const _Symbol2 = Symbol;
+    if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+      const obj13 = { variant: "text-sm/semibold", color: "text-feedback-critical", children: obj6.string(intl4.t.tYX2ps) };
+      const Text = Text_Text.Text;
+      class U {
+        constructor() {
+          return currentUser.getCurrentUser();
         }
-        obj12.children = "#" + tmp15.discriminator;
-        tmp46 = options(Text_Text.Text, obj12);
       }
-      cResult[20] = stateFromStores;
-      cResult[21] = tmp15;
-      cResult[22] = tmp46;
-      tmp45 = tmp46;
+      cResult[7] = React4(Text, obj13);
+      const tmp22 = React4(Text, obj13);
     }
     class U {
       constructor() {
-        return closure_1_7.getCurrentUser();
+        return currentUser.getCurrentUser();
       }
     }
-    tmp43[2] = tmp38;
-    tmp43[4] = tmp39;
-    const tmp44 = options(Text_Text.Text, tmp43);
-    cResult[17] = tmp5.username;
-    cResult[18] = tmp39;
-    cResult[19] = tmp44;
-    tmp41 = tmp44;
   }
-  const tmpResult4 = useA11yRolesNative;
-  let str = "always";
-  if (stateFromStores) {
-    str = "never";
-  }
-  const userTag = UserUtilsDefault.getUserTag(tmp15, { mode: "username", identifiable: str });
-  cResult[14] = stateFromStores;
-  cResult[15] = tmp15;
-  cResult[16] = userTag;
-  tmp39 = userTag;
 }) : ((arg0) => {
+  let currentUser;
+  let delayLongPress;
+  let getUserTag;
+  let intl;
+  let intl3;
+  let items2;
+  let items3;
+  let items4;
+  let items5;
+  let leading;
+  let obj13;
+  let onPressUser;
+  let showActiveAccountLabel;
+  let sortHandlers;
+  let stringResult;
+  let tmp8;
+  let trailing;
+  let user;
   ({ user, onPressUser, showActiveAccountLabel } = arg0);
   if (showActiveAccountLabel === undefined) {
     showActiveAccountLabel = false;
@@ -436,86 +506,84 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   ({ delayLongPress, leading } = arg0);
   const tmp = closure_11();
   const items = [StreamerModeStore];
-  const stateFromStores = initialize.useStateFromStores(items, () => StreamerModeStore.hidePersonalInformation);
+  const obj = get_initialized;
+  const stateFromStores = obj.useStateFromStores(items, () => StreamerModeStore.hidePersonalInformation);
   const items1 = [UserStore];
-  const stateFromStores1 = initialize.useStateFromStores(items1, () => currentUser.getCurrentUser());
-  let id;
+  const obj2 = get_initialized;
+  const stateFromStores1 = obj2.useStateFromStores(items1, () => currentUser.getCurrentUser());
+  let id1;
+  const id = user.id;
   if (stateFromStores1 != null) {
-    id = stateFromStores1.id;
+    id1 = stateFromStores1.id;
   }
   const obj3 = new UserRecord(user);
-  if (user.id === id) {
+  if (id === id1) {
+    let PressableOpacity;
     if (showActiveAccountLabel) {
-      const obj4 = { variant: "text-sm/semibold", color: "text-brand", children: null };
-      const intl = util.intl;
-      obj4.children = intl.string(util.t.seV8yt);
-      let tmp8 = options(Text_Text.Text, obj4);
+      const obj4 = { variant: "text-sm/semibold", color: "text-brand", children: intl.string(intl4.t.seV8yt) };
+      const Text = Text_Text.Text;
+      intl = intl4.intl;
+      tmp8 = React4(Text, obj4);
     }
     if (null == onPressUser) {
-      let PressableOpacity = React3;
+      PressableOpacity = _false;
     } else {
       PressableOpacity = Pressables.PressableOpacity;
     }
-    const obj5 = { selected: tmp7 };
-    const radioA11yNative = useA11yRolesNative.useRadioA11yNative(obj5);
-    const obj6 = { accessibilityRole: null, accessibilityState: null, accessibilityHint: null, style: null, delayLongPress: null, onPress: null };
+    const obj5 = { selected: id === id1 };
+    const tmp2Result = react_native;
+    const radioA11yNative = tmp2Result.useRadioA11yNative(obj5);
+    const obj6 = { accessibilityRole: null, accessibilityState: null, accessibilityHint: stringResult, style: tmp.accountSwitcherListItem, delayLongPress, onPress: onPressUser, children: items2 };
     ({ accessibilityRole: obj7.accessibilityRole, accessibilityState: obj7.accessibilityState } = radioA11yNative);
-    let stringResult;
-    if (!tmp7) {
-      const intl2 = util.intl;
-      stringResult = intl2.string(util.t.wY4y0R);
+    stringResult = undefined;
+    if (id !== id1) {
+      const intl2 = intl4.intl;
+      stringResult = intl2.string(intl4.t.wY4y0R);
     }
-    obj6.accessibilityHint = stringResult;
-    obj6.style = tmp.accountSwitcherListItem;
-    obj6.delayLongPress = delayLongPress;
-    obj6.onPress = onPressUser;
     const merged = Object.assign(sortHandlers);
-    const items2 = [leading, , ];
-    const obj8 = { style: tmp.accountInfo, children: null };
+    items2 = [leading, , ];
+    const obj8 = { style: tmp.accountInfo, children: items3 };
     const obj9 = { user: obj3, guildId: "r" };
-    const items3 = [options(native.Avatar, obj9), ];
-    const obj10 = { style: tmp.accountListTag, children: null };
-    const obj11 = { style: tmp.tagContainer, children: null };
-    const obj12 = { variant: "text-md/semibold", color: "text-default", style: tmp.username, lineClamp: 1, children: null };
-    const tmp2Result = useA11yRolesNative;
+    items3 = [React4(native.Avatar, obj9), ];
+    const obj10 = { style: tmp.accountListTag, children: items5 };
+    const obj11 = { style: tmp.tagContainer, children: items4 };
+    const obj12 = { variant: "text-md/semibold", color: "text-default", style: tmp.username, lineClamp: 1, children: getUserTag(obj3, obj13) };
+    const Text2 = Text_Text.Text;
     let str = "always";
+    getUserTag = UserUtilsDefault.getUserTag;
+    UserUtilsDefault;
     if (stateFromStores) {
       str = "never";
     }
-    const obj14 = { mode: "username", identifiable: str };
-    obj12.children = UserUtilsDefault.getUserTag(obj3, obj14);
-    const items4 = [options(Text_Text.Text, obj12), ];
-    let tmp18Result = !stateFromStores;
-    if (!stateFromStores) {
-      tmp18Result = !obj3.hasUniqueUsername();
-    }
+    obj13 = { mode: "username", identifiable: str };
+    items4 = [React4(Text2, obj12), ];
+    let tmp18Result = !stateFromStores && !obj3.hasUniqueUsername();
     if (tmp18Result) {
-      const obj15 = { variant: "text-md/normal", color: "text-muted", children: null };
       const _HermesInternal = HermesInternal;
-      obj15.children = "#" + obj3.discriminator;
-      tmp18Result = options(Text_Text.Text, obj15);
+      const obj14 = { variant: "text-md/normal", color: "text-muted", children: "#" + obj3.discriminator };
+      const Text3 = Text_Text.Text;
+      tmp18Result = React4(Text3, obj14);
     }
     items4[1] = tmp18Result;
-    obj11.children = items4;
-    const items5 = [v65535(React4, obj11), tmp8];
-    obj10.children = items5;
-    items3[1] = v65535(React4, obj10);
-    obj8.children = items3;
-    items2[1] = v65535(React4, obj8);
+    items5 = [authStore(React3, obj11), tmp8];
+    items3[1] = authStore(React3, obj10);
+    items2[1] = authStore(React3, obj8);
     if (undefined === trailing) {
-      const obj16 = { user };
-      trailing = options(closure_12, obj16);
+      const obj15 = { user };
+      trailing = React4(closure_12, obj15);
     }
     items2[2] = trailing;
-    obj6.children = items2;
-    return v65535(PressableOpacity, obj6, user.id);
+    return authStore(PressableOpacity, obj6, user.id);
   }
   tmp8 = null;
   if (user.tokenStatus === MultiAccountTokenStatus.INVALID) {
-    const obj17 = { variant: "text-sm/semibold", color: "text-feedback-critical", children: null };
-    const intl3 = util.intl;
-    obj17.children = intl3.string(util.t.tYX2ps);
-    tmp8 = options(Text_Text.Text, obj17);
+    const obj16 = { variant: "text-sm/semibold", color: "text-feedback-critical", children: intl3.string(intl4.t.tYX2ps) };
+    const Text4 = Text_Text.Text;
+    intl3 = intl4.intl;
+    tmp8 = React4(Text4, obj16);
   }
 });
+const result = size.fileFinishedImporting("modules/multi_account/native/AccountSwitcherListItem.tsx");
+
+export default tmp6;
 export const AccountStatusIcon = tmp5;

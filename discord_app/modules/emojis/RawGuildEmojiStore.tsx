@@ -1,21 +1,25 @@
 // === Module 5640: RawGuildEmojiStore ===
 
 // Module 5640 (RawGuildEmojiStore)
+import libdiscoreExperiments from "libdiscoreExperiments" /* 559 */;
+import js_shim_PlainRecord from "js_shim/PlainRecord" /* 2068 */;
+import LibdiscoreStore2 from "LibdiscoreStore" /* 2075 */;
 import EmojiTypes from "EmojiTypes" /* 4526 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+let set;
+
 function fromServer(guildId, arg1) {
   const obj = {};
   const iter = arg1[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let obj3 = {};
+    let obj3 = { guildId, type: EmojiTypes.EmojiTypes.GUILD };
     obj3[TypeTag] = "RawGuildEmoji";
-    obj3.guildId = guildId;
     ({ id: obj2.id, animated: obj2.animated, name: obj2.name, require_colons: obj2.require_colons, available: obj2.available, roles: obj2.roles, managed: obj2.managed, version: obj2.version } = nextResult);
-    obj3.type = EmojiTypes.EmojiTypes.GUILD;
-    obj[nextResult.id] = obj3;
+    let id = nextResult.id;
+    obj[id] = obj3;
     continue;
   }
   return obj;
@@ -32,14 +36,14 @@ function syncEmojis(id, emojis, setPartition) {
       const merged = Object.assign(nullablePartition);
       const deletes = emojis.deletes;
       for (const item10016 of deletes) {
-        delete tmp[tmp2];
+        delete obj[item10016];
         continue;
       }
       const writes = emojis.writes;
-      const tmp9 = writes[Symbol.iterator]();
-      while (tmp9 !== undefined) {
+      const tmp7 = writes[Symbol.iterator]();
+      while (tmp7 !== undefined) {
         let _Object = Object;
-        let items = [tmp12];
+        let items = [tmp10];
         let merged1 = Object.assign(obj, fromServer(id, items));
         continue;
       }
@@ -47,26 +51,25 @@ function syncEmojis(id, emojis, setPartition) {
     }
   }
 }
-const TypeTag = fn(2068).TypeTag;
-const LibdiscoreStore = fn(2075).LibdiscoreStore;
+const TypeTag = js_shim_PlainRecord.TypeTag;
+const LibdiscoreStore = LibdiscoreStore2.LibdiscoreStore;
 class RawGuildEmojiStore extends LibdiscoreStore {
   constructor() {
-    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
     applyArgumentsResult.database = applyArgumentsResult.addKKVDatabase("guild_emojis");
     return applyArgumentsResult;
   }
+  stateWrapper() {
+    return this.database;
+  }
+  getGuildEmojis(guildId) {
+    const database = this.database;
+    return database.getNullablePartition(guildId);
+  }
 }
 const prototype = RawGuildEmojiStore.prototype;
-prototype["stateWrapper"] = function stateWrapper() {
-  return this.database;
-};
-prototype["getGuildEmojis"] = function getGuildEmojis(guildId) {
-  const database = this.database;
-  return database.getNullablePartition(guildId);
-};
 RawGuildEmojiStore.displayName = "RawGuildEmojiStore";
-const LibdiscoreBatchStoreRefactorExperiment = fn(559).LibdiscoreBatchStoreRefactorExperiment;
-const rawGuildEmojiStore = new RawGuildEmojiStore({
+let obj = {
   LOGOUT(arg0, clear) {
     return clear.clear();
   },
@@ -77,8 +80,10 @@ const rawGuildEmojiStore = new RawGuildEmojiStore({
     return clear.clear();
   },
   CONNECTION_OPEN(arg0, getPartitionKeys) {
+    let guilds;
+    let unavailableGuilds;
     ({ guilds, unavailableGuilds } = arg0);
-    const set = new Set(guilds.map((id) => id.id));
+    set = new Set(guilds.map((id) => id.id));
     for (const item10017 of unavailableGuilds) {
       let addResult = set.add(item10017);
       continue;
@@ -86,7 +91,7 @@ const rawGuildEmojiStore = new RawGuildEmojiStore({
     const partitionKeys = getPartitionKeys.getPartitionKeys();
     for (const item10028 of partitionKeys) {
       if (!set.has(item10028)) {
-        let removePartitionResult = arg1.removePartition(item10028);
+        let removePartitionResult = getPartitionKeys.removePartition(item10028);
       }
       continue;
     }
@@ -98,22 +103,23 @@ const rawGuildEmojiStore = new RawGuildEmojiStore({
     }
   },
   OVERLAY_INITIALIZE(emojis, clear) {
-    const partition = clear;
     clear.clear();
     const entries = Object.entries(emojis.emojis);
     const item = entries.forEach((item) => {
+      let tmp;
+      let tmp2;
       [tmp, tmp2] = item;
-      partition.setPartition(tmp, fromServer(tmp, tmp2));
+      clear.setPartition(tmp, fromServer(tmp, tmp2));
     });
   },
   CACHED_EMOJIS_LOADED(arg0, setPartition) {
+    const tmp = arg0.emojis[Symbol.iterator]();
     while (tmp !== undefined) {
       let tmp4 = _slicedToArray(tmp2, 2);
       let first = tmp4[0];
       let setPartitionResult = setPartition.setPartition(first, fromServer(first, tmp4[1]));
       continue;
     }
-    tmp = arg0.emojis[Symbol.iterator]();
   },
   GUILD_CREATE(guild, setPartition) {
     syncEmojis(guild.guild.id, guild.guild.emojis, setPartition);
@@ -127,8 +133,9 @@ const rawGuildEmojiStore = new RawGuildEmojiStore({
   GUILD_DELETE(guild, removePartition) {
     removePartition.removePartition(guild.guild.id);
   }
-}, LibdiscoreBatchStoreRefactorExperiment.getCachedBridgedStoreMode());
-const size = fn(2);
+};
+const LibdiscoreBatchStoreRefactorExperiment = libdiscoreExperiments.LibdiscoreBatchStoreRefactorExperiment;
+const rawGuildEmojiStore = new RawGuildEmojiStore(obj, LibdiscoreBatchStoreRefactorExperiment.getCachedBridgedStoreMode());
 const result = size.fileFinishedImporting("modules/emojis/RawGuildEmojiStore.tsx");
 
 export default rawGuildEmojiStore;

@@ -2,21 +2,22 @@
 
 // Module 6622 (useGuildRoleMemberCounts)
 import GuildRoleMemberActionCreatorsAll from "GuildRoleMemberActionCreators" /* 6624 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 6623 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
 let closure_5 = {};
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useGuildRoleMemberCounts.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+  let closure_0;
   _require = arg0;
-  const cResult = require("c").c(7);
+  let obj = require("react");
+  const cResult = obj.c(7);
   let num = 0;
+  const tmp = _require;
   if (undefined !== arg1) {
     num = arg1;
   }
@@ -34,21 +35,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     cResult[1] = arg0;
     cResult[2] = fn;
   }
-  require("initialize");
+  tmp(504);
   if (cResult[3] === arg0) {
+    let tmp9;
+    let tmp10;
     if (cResult[4] === num) {
-      let tmp9 = cResult[5];
-      let tmp10 = cResult[6];
+      tmp9 = cResult[5];
+      tmp10 = cResult[6];
     }
-    const effect = noop.useEffect(tmp9, tmp10);
+    const effect = react.useEffect(tmp9, tmp10);
     return tmp8;
   }
   const fn2 = function v() {
     if (null != closure_0) {
-      let tmp4 = null != tmp3;
-      if (tmp4) {
-        tmp4 = num > 0;
-      }
+      let tmp4 = null != tmp3 && num > 0;
       if (tmp4) {
         const _Date = Date;
         tmp4 = Date.now() - tmp3 < num;
@@ -56,7 +56,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
       if (!tmp4) {
         const _Date2 = Date;
         closure_5[closure_0] = Date.now();
-        const memberCounts = GuildRoleMemberActionCreatorsAll.fetchMemberCounts(closure_0);
+        const obj = GuildRoleMemberActionCreatorsAll;
+        const memberCounts = obj.fetchMemberCounts(closure_0);
       }
     }
   };
@@ -67,22 +68,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   cResult[6] = items1;
   tmp10 = items1;
   tmp9 = fn2;
-  let obj = require("c");
 }) : ((arg0) => {
+  let closure_0;
   _require = arg0;
   let num = arg1;
   if (arg1 === undefined) {
     num = 0;
   }
+  let obj = require("get initialized");
   const items = [GuildRoleMemberCountStore];
   const items1 = [arg0, num];
-  const stateFromStores = require("initialize").useStateFromStores(items, () => GuildRoleMemberCountStore.getRoleMemberCount(closure_0));
-  const effect = noop.useEffect(() => {
+  const stateFromStores = obj.useStateFromStores(items, () => GuildRoleMemberCountStore.getRoleMemberCount(closure_0));
+  const effect = react.useEffect(() => {
     if (null != closure_0) {
-      let tmp4 = null != tmp3;
-      if (tmp4) {
-        tmp4 = num > 0;
-      }
+      let tmp4 = null != tmp3 && num > 0;
       if (tmp4) {
         const _Date = Date;
         tmp4 = Date.now() - tmp3 < num;
@@ -90,9 +89,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
       if (!tmp4) {
         const _Date2 = Date;
         closure_5[closure_0] = Date.now();
-        const memberCounts = GuildRoleMemberActionCreatorsAll.fetchMemberCounts(closure_0);
+        const obj = GuildRoleMemberActionCreatorsAll;
+        const memberCounts = obj.fetchMemberCounts(closure_0);
       }
     }
   }, items1);
   return stateFromStores;
 });
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useGuildRoleMemberCounts.tsx");
+
+export default tmp2;

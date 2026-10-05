@@ -3,37 +3,56 @@
 // Module 4930 (PresenceStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _modDef1342 from "module_1342" /* 1342 */;
 import hasRichActivityDefault from "hasRichActivity" /* 4931 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1377 */;
+import Constants from "Constants" /* 1085 */;
+import size from "module_2" /* 2 */;
 
+let map, set;
+
+let closure_4;
+let hasOwnProperty;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+const f89725 = (party) => {
+  party = party.party;
+  let id;
+  const application_id = party.application_id;
+  if (party != null) {
+    id = party.id;
+  }
+  const items = ["" + application_id + ":" + id, party];
+  return items;
+};
 function sortActivity(type, type2) {
   type = type2.type;
   let num = 4;
   let num2 = 4;
-  if (constants2.CUSTOM_STATUS !== type) {
+  if (hasOwnProperty.CUSTOM_STATUS !== type) {
     num2 = 3;
-    if (constants2.COMPETING !== type) {
+    if (hasOwnProperty.COMPETING !== type) {
       num2 = 2;
-      if (constants2.STREAMING !== type) {
+      if (hasOwnProperty.STREAMING !== type) {
         num2 = 0;
-        if (constants2.PLAYING === type) {
+        if (hasOwnProperty.PLAYING === type) {
           num2 = 1;
         }
       }
     }
   }
   type2 = type.type;
-  if (constants2.CUSTOM_STATUS !== type2) {
+  if (hasOwnProperty.CUSTOM_STATUS !== type2) {
     num = 3;
-    if (constants2.COMPETING !== type2) {
+    if (hasOwnProperty.COMPETING !== type2) {
       num = 2;
-      if (constants2.STREAMING !== type2) {
+      if (hasOwnProperty.STREAMING !== type2) {
         num = 0;
-        if (constants2.PLAYING === type2) {
+        if (hasOwnProperty.PLAYING === type2) {
           num = 1;
         }
       }
@@ -73,11 +92,11 @@ function filterPlayingActivities(arg0) {
     const iter = arg0[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let tmp4 = nextResult;
-      if (nextResult.type === constants2.PLAYING) {
-        let arr = items1.push(tmp4);
+      let tmp5 = nextResult;
+      if (nextResult.type === hasOwnProperty.PLAYING) {
+        let arr = items1.push(tmp5);
       } else {
-        let arr2 = items.push(tmp4);
+        let arr2 = items.push(tmp5);
       }
       continue;
     }
@@ -85,27 +104,28 @@ function filterPlayingActivities(arg0) {
       return arg0;
     } else {
       const items2 = [];
-      HermesBuiltin.arraySpread(items1, 0);
+      HermesBuiltin.arraySpread(items2, items1, 0);
       const items3 = [];
-      items3[HermesBuiltin.arraySpread(items, 0)] = items2.sort(sortActivity)[0];
+      items3[HermesBuiltin.arraySpread(items3, items, 0)] = items2.sort(sortActivity)[0];
       return items3.sort(sortActivity);
     }
   }
 }
 function flattenPresence(id) {
-  delete tmp[tmp2];
-  delete tmp[tmp2];
-  delete tmp[tmp2];
-  delete tmp[tmp2];
-  delete tmp[tmp2];
+  delete statuses[id];
+  delete closure_12[id];
+  delete filteredActivities[id];
+  delete hiddenActivities[id];
+  delete clientStatuses[id];
   if (null != presencesForGuilds[id]) {
     const _Object3 = Object;
     const values = Object.values(presencesForGuilds[id]);
     const reduced = values.reduce((processedAtTimestamp, processedAtTimestamp2) => {
+      let tmp;
       processedAtTimestamp = processedAtTimestamp2.processedAtTimestamp;
       processedAtTimestamp2 = processedAtTimestamp.processedAtTimestamp;
       if (processedAtTimestamp > processedAtTimestamp2) {
-        let tmp = processedAtTimestamp2;
+        tmp = processedAtTimestamp2;
       } else {
         tmp = processedAtTimestamp;
         if (processedAtTimestamp === processedAtTimestamp2) {
@@ -115,25 +135,20 @@ function flattenPresence(id) {
       return tmp;
     }, values[0]);
     if (reduced.status === constants.OFFLINE) {
+      if (null != reduced.hiddenActivities) {
+        let num = 0;
+      }
+      const obj = _modDef12;
       if (obj.every(presencesForGuilds[id], (status) => {
         let tmp = status.status === constants.OFFLINE;
         if (tmp) {
-          let tmp3 = null == status.hiddenActivities;
-          if (!tmp3) {
-            tmp3 = 0 === status.hiddenActivities.length;
-          }
-          tmp = tmp3;
+          tmp = null == status.hiddenActivities || 0 === status.hiddenActivities.length;
+          const tmp3 = null == status.hiddenActivities || 0 === status.hiddenActivities.length;
         }
         return tmp;
       })) {
-        delete tmp3[tmp2];
-      } else if (values.some((hiddenActivities) => {
-        let tmp = null != hiddenActivities.hiddenActivities;
-        if (tmp) {
-          tmp = hiddenActivities.hiddenActivities.length > 0;
-        }
-        return tmp;
-      })) {
+        delete presencesForGuilds[id];
+      } else if (values.some((hiddenActivities) => null != hiddenActivities.hiddenActivities && hiddenActivities.hiddenActivities.length > 0)) {
         const _Object = Object;
         const values3 = Object.values(values);
         const flatMapResult = values3.flatMap((hiddenActivities) => {
@@ -143,32 +158,26 @@ function flattenPresence(id) {
           }
           return hiddenActivities;
         });
-        let tmp8 = flatMapResult;
+        let num2 = 0;
+        let tmp7 = flatMapResult;
         if (0 !== flatMapResult.length) {
           const items = [];
-          HermesBuiltin.arraySpread(flatMapResult, 0);
+          HermesBuiltin.arraySpread(items, flatMapResult, 0);
           const reversed = items.reverse();
           const _Map = Map;
-          const map = new Map(reversed.map((party) => {
-            party = party.party;
-            let id;
-            if (party != null) {
-              id = party.id;
-            }
-            const items = ["" + party.application_id + ":" + id, party];
-            return items;
-          }));
+          const self = this;
+          const self2 = this;
           const items1 = [];
-          HermesBuiltin.arraySpread(map.values(), 0);
-          tmp8 = items1;
+          map = new Map(reversed.map(f89725));
+          HermesBuiltin.arraySpread(items1, map.values(), 0);
+          tmp7 = items1;
         }
-        closure_14[id] = tmp8;
+        hiddenActivities[id] = tmp7;
       }
-      obj = _modDef12;
     }
     ({ status: closure_11[id], activities } = reduced);
     closure_12[id] = activities;
-    closure_13[id] = filterPlayingActivities(activities);
+    filteredActivities[id] = filterPlayingActivities(activities);
     const _Object2 = Object;
     const values4 = Object.values(values);
     const flatMapResult1 = values4.flatMap((hiddenActivities) => {
@@ -178,194 +187,177 @@ function flattenPresence(id) {
       }
       return hiddenActivities;
     });
-    let tmp23 = flatMapResult1;
+    let tmp19 = flatMapResult1;
     if (0 !== flatMapResult1.length) {
       const items2 = [];
-      HermesBuiltin.arraySpread(flatMapResult1, 0);
+      HermesBuiltin.arraySpread(items2, flatMapResult1, 0);
       const reversed1 = items2.reverse();
       const _Map2 = Map;
-      const map1 = new Map(reversed1.map((party) => {
-        party = party.party;
-        let id;
-        if (party != null) {
-          id = party.id;
-        }
-        const items = ["" + party.application_id + ":" + id, party];
-        return items;
-      }));
+      const self3 = this;
+      const self4 = this;
       const items3 = [];
-      HermesBuiltin.arraySpread(map1.values(), 0);
-      tmp23 = items3;
+      map1 = new Map(reversed1.map(f89725));
+      HermesBuiltin.arraySpread(items3, map1.values(), 0);
+      tmp19 = items3;
     }
-    closure_14[id] = tmp23;
+    hiddenActivities[id] = tmp19;
     if (null != reduced.clientStatus) {
-      closure_15[id] = reduced.clientStatus;
+      clientStatuses[id] = reduced.clientStatus;
     }
   }
 }
 function flattenPresenceInConnectionOpen(arg0) {
   if (null != presencesForGuilds[arg0]) {
     const _Object = Object;
-    const maxByResult = _modDef12.maxBy(Object.values(tmp), (processedAtTimestamp) => processedAtTimestamp.processedAtTimestamp);
+    const obj = _modDef12;
+    const maxByResult = obj.maxBy(Object.values(presencesForGuilds[arg0]), (processedAtTimestamp) => processedAtTimestamp.processedAtTimestamp);
     let tmp3 = maxByResult.status !== constants.OFFLINE;
     if (!tmp3) {
-      let tmp2 = null != maxByResult.hiddenActivities;
-      if (tmp2) {
-        tmp2 = maxByResult.hiddenActivities.length > 0;
-      }
-      tmp3 = tmp2;
+      tmp3 = null != maxByResult.hiddenActivities && maxByResult.hiddenActivities.length > 0;
+      const tmp2 = null != maxByResult.hiddenActivities && maxByResult.hiddenActivities.length > 0;
     }
     if (tmp3) {
       ({ status: closure_11[arg0], activities } = maxByResult);
       closure_12[arg0] = activities;
-      closure_13[arg0] = filterPlayingActivities(activities);
+      filteredActivities[arg0] = filterPlayingActivities(activities);
       hiddenActivities = maxByResult.hiddenActivities;
       if (hiddenActivities == null) {
         hiddenActivities = [];
       }
       closure_14[arg0] = hiddenActivities;
       if (null != maxByResult.clientStatus) {
-        closure_15[arg0] = maxByResult.clientStatus;
+        clientStatuses[arg0] = maxByResult.clientStatus;
       }
     }
   }
 }
 function updatePresence(arg0) {
+  let clientStatus;
+  let processedAtTimestamp;
+  let status;
+  let userId;
   ({ guildId, userId, status, clientStatus, activities, hiddenActivities, processedAtTimestamp } = arg0);
   if (userId === AuthenticationStore.getId()) {
     return false;
   } else {
-    let tmp5 = status === constants.OFFLINE;
-    if (tmp5) {
-      let tmp4 = null == hiddenActivities;
-      if (!tmp4) {
-        tmp4 = 0 === hiddenActivities.length;
-      }
-      tmp5 = tmp4;
+    let tmp4 = status === constants.OFFLINE;
+    if (tmp4) {
+      tmp4 = null == hiddenActivities || 0 === hiddenActivities.length;
+      const tmp3 = null == hiddenActivities || 0 === hiddenActivities.length;
     }
-    let tmp7 = presencesForGuilds[userId];
-    if (null == tmp7) {
-      if (tmp5) {
+    let tmp6 = presencesForGuilds[userId];
+    if (null == tmp6) {
+      if (tmp4) {
         return false;
       } else {
         const obj = {};
         presencesForGuilds[userId] = obj;
-        tmp7 = obj;
+        tmp6 = obj;
       }
     }
-    if (tmp5) {
+    if (tmp4) {
       const obj2 = { status, clientStatus, activities: hiddenActivities, hiddenActivities, processedAtTimestamp };
-      tmp7[guildId] = obj2;
+      tmp6[guildId] = obj2;
     } else {
       let sorted = activities;
       if (activities.length > 1) {
         const items = [];
-        HermesBuiltin.arraySpread(activities, 0);
+        HermesBuiltin.arraySpread(items, activities, 0);
         sorted = items.sort(sortActivity);
       }
       if (hiddenActivities == null) {
         hiddenActivities = [];
       }
-      let tmp15 = hiddenActivities;
+      let tmp14 = hiddenActivities;
       if (0 !== hiddenActivities.length) {
         const items1 = [];
-        HermesBuiltin.arraySpread(hiddenActivities, 0);
+        HermesBuiltin.arraySpread(items1, hiddenActivities, 0);
         const reversed = items1.reverse();
         const _Map = Map;
-        const map = new Map(reversed.map((party) => {
-          party = party.party;
-          let id;
-          if (party != null) {
-            id = party.id;
-          }
-          const items = ["" + party.application_id + ":" + id, party];
-          return items;
-        }));
+        const self = this;
+        const self2 = this;
         const items2 = [];
-        HermesBuiltin.arraySpread(map.values(), 0);
-        tmp15 = items2;
+        map = new Map(reversed.map(f89725));
+        HermesBuiltin.arraySpread(items2, map.values(), 0);
+        tmp14 = items2;
       }
       let activities2 = sorted;
-      if (null != tmp7[guildId]) {
+      if (null != tmp6[guildId]) {
         activities2 = sorted;
-        if (_modDef1342(tmp25.activities, sorted)) {
-          activities2 = tmp25.activities;
+        if (_modDef1342(tmp6[guildId].activities, sorted)) {
+          activities2 = tmp22.activities;
         }
       }
-      const obj3 = { status, clientStatus, activities: activities2, hiddenActivities: tmp15, processedAtTimestamp };
-      tmp7[guildId] = obj3;
+      const obj3 = { status, clientStatus, activities: activities2, hiddenActivities: tmp14, processedAtTimestamp };
+      tmp6[guildId] = obj3;
     }
-    delete tmp2[tmp];
+    delete activityMetadata[userId];
     flattenPresence(userId);
     return true;
   }
 }
 function updatePresenceInConnectionOpen(arg0) {
+  let clientStatus;
+  let processedAtTimestamp;
+  let status;
+  let userId;
   ({ guildId, userId, status, clientStatus, activities, hiddenActivities, processedAtTimestamp } = arg0);
   if (userId !== AuthenticationStore.getId()) {
-    let tmp3 = status === constants.OFFLINE;
-    if (tmp3) {
-      let tmp2 = null == hiddenActivities;
-      if (!tmp2) {
-        tmp2 = 0 === hiddenActivities.length;
-      }
-      tmp3 = tmp2;
+    let tmp4 = status === constants.OFFLINE;
+    if (tmp4) {
+      tmp4 = null == hiddenActivities || 0 === hiddenActivities.length;
+      const tmp3 = null == hiddenActivities || 0 === hiddenActivities.length;
     }
-    let tmp5 = presencesForGuilds[userId];
-    if (null == tmp5) {
-      if (!tmp3) {
+    let tmp6 = presencesForGuilds[userId];
+    if (null == tmp6) {
+      if (!tmp4) {
         const obj = {};
         presencesForGuilds[userId] = obj;
-        tmp5 = obj;
+        tmp6 = obj;
       }
     }
-    if (tmp3) {
+    if (tmp4) {
       const obj2 = { status, clientStatus, activities: hiddenActivities, hiddenActivities, processedAtTimestamp };
-      tmp5[guildId] = obj2;
+      tmp6[guildId] = obj2;
     } else {
       let sorted = activities;
       if (activities.length > 1) {
         let items = [];
-        HermesBuiltin.arraySpread(activities, 0);
+        HermesBuiltin.arraySpread(items, activities, 0);
         sorted = items.sort(sortActivity);
       }
       if (hiddenActivities == null) {
         hiddenActivities = [];
       }
-      let tmp13 = hiddenActivities;
+      let tmp14 = hiddenActivities;
       if (0 !== hiddenActivities.length) {
         const items1 = [];
-        HermesBuiltin.arraySpread(hiddenActivities, 0);
+        HermesBuiltin.arraySpread(items1, hiddenActivities, 0);
         const reversed = items1.reverse();
         const _Map = Map;
-        const map = new Map(reversed.map((party) => {
-          party = party.party;
-          let id;
-          if (party != null) {
-            id = party.id;
-          }
-          const items = ["" + party.application_id + ":" + id, party];
-          return items;
-        }));
+        const self = this;
+        const self2 = this;
         const items2 = [];
-        HermesBuiltin.arraySpread(map.values(), 0);
-        tmp13 = items2;
+        map = new Map(reversed.map(f89725));
+        HermesBuiltin.arraySpread(items2, map.values(), 0);
+        tmp14 = items2;
       }
-      const obj3 = { status, clientStatus, activities: sorted, hiddenActivities: tmp13, processedAtTimestamp };
-      tmp5[guildId] = obj3;
+      const obj3 = { status, clientStatus, activities: sorted, hiddenActivities: tmp14, processedAtTimestamp };
+      tmp6[guildId] = obj3;
     }
   }
 }
-function clearPresence(id, id) {
+function clearPresence(id, id2) {
+  const tmp = id;
   if (id === AuthenticationStore.getId()) {
     return false;
   } else {
     if (null != presencesForGuilds[id]) {
-      if (null != tmp5[id]) {
-        delete tmp3[tmp2];
+      if (null != presencesForGuilds[id][id]) {
+        delete presencesForGuilds[id][id];
         const _Object = Object;
-        if (0 === Object.keys(tmp5).length) {
-          delete tmp2[tmp];
+        if (0 === Object.keys(presencesForGuilds[id]).length) {
+          delete presencesForGuilds[tmp];
         }
         flattenPresence(id);
       }
@@ -374,264 +366,257 @@ function clearPresence(id, id) {
   }
 }
 function clearPresences(id) {
-  const keys = SnowflakeUtilsDefault.keys(closure_10);
+  const obj = SnowflakeUtilsDefault;
+  const keys = obj.keys(presencesForGuilds);
+  const tmp2 = keys[Symbol.iterator]();
   while (tmp2 !== undefined) {
     let tmp5 = clearPresence(id, tmp3);
     continue;
   }
-  tmp2 = keys[Symbol.iterator]();
 }
-const Constants = fn(1085);
-({ StatusTypes: closure_4, ActivityTypes: hasOwnProperty, ClientTypes: metroRequire, ME: closure_7, UserFlags: closure_8 } = Constants);
+({ StatusTypes: closure_4, ActivityTypes: hasOwnProperty, ClientTypes: metroRequire, ME: metroImportDefault, UserFlags: metroImportAll } = Constants);
 let closure_9 = Object.freeze([]);
 const presencesForGuilds = {};
 const statuses = {};
 let activities = {};
-const filteredActivities = {};
+let map1 = {};
 let hiddenActivities = {};
 const clientStatuses = {};
 const activityMetadata = {};
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class PresenceStore extends Store {
-}
-const prototype = PresenceStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(AuthenticationStore, UserStore);
-};
-prototype["setCurrentUserOnConnectionOpen"] = function setCurrentUserOnConnectionOpen(IDLE, valueResult) {
-  closure_11[AuthenticationStore.getId()] = IDLE;
-  const id = AuthenticationStore.getId();
-  const items = [...valueResult];
-  const sorted = items.sort(sortActivity);
-  closure_12[id] = sorted;
-  closure_13[id] = filterPlayingActivities(sorted);
-};
-prototype["getStatus"] = function getStatus(arg0) {
-  let tmp = arg1;
-  if (arg1 === undefined) {
-    tmp = null;
+  initialize() {
+    this.waitFor(AuthenticationStore, UserStore);
   }
-  let UNKNOWN = arg2;
-  if (arg2 === undefined) {
-    UNKNOWN = constants.OFFLINE;
+  setCurrentUserOnConnectionOpen(IDLE, valueResult) {
+    statuses[AuthenticationStore.getId()] = IDLE;
+    const id = AuthenticationStore.getId();
+    const items = [...valueResult];
+    const sorted = items.sort(sortActivity);
+    activities[id] = sorted;
+    filteredActivities[id] = filterPlayingActivities(sorted);
   }
-  const user = UserStore.getUser(arg0);
-  let hasFlagResult = null != user;
-  if (hasFlagResult) {
-    hasFlagResult = user.hasFlag(constants4.BOT_HTTP_INTERACTIONS);
-  }
-  if (hasFlagResult) {
-    UNKNOWN = constants.UNKNOWN;
-  }
-  if (null == tmp) {
-    let tmp11 = statuses[arg0];
-    if (tmp11 == null) {
-      tmp11 = UNKNOWN;
+  getStatus(arg0) {
+    let tmp = arg1;
+    if (arg1 === undefined) {
+      tmp = null;
     }
-    return tmp11;
-  } else {
-    let tmp8 = null;
-    if (null != presencesForGuilds[arg0]) {
-      tmp8 = tmp7[tmp];
+    let UNKNOWN = arg2;
+    if (arg2 === undefined) {
+      UNKNOWN = constants.OFFLINE;
     }
-    let status;
-    if (tmp8 != null) {
-      status = tmp8.status;
+    const user = UserStore.getUser(arg0);
+    const hasFlagResult = null != user && user.hasFlag(metroImportAll.BOT_HTTP_INTERACTIONS);
+    if (hasFlagResult) {
+      UNKNOWN = constants.UNKNOWN;
     }
-    if (status == null) {
-      status = UNKNOWN;
-    }
-    return status;
-  }
-};
-prototype["getActivities"] = function getActivities(arg0) {
-  let tmp = arg1;
-  if (arg1 === undefined) {
-    tmp = null;
-  }
-  if (null == tmp) {
-    let tmp8 = filteredActivities[arg0];
-    if (tmp8 == null) {
-      tmp8 = closure_9;
-    }
-    return tmp8;
-  } else {
-    let tmp4 = null;
-    if (null != presencesForGuilds[arg0]) {
-      tmp4 = tmp3[tmp];
-    }
-    if (null != tmp4) {
-      if (null != tmp4.activities) {
-        let tmp6 = filterPlayingActivities(tmp4.activities);
+    if (null == tmp) {
+      let tmp11 = statuses[arg0];
+      if (tmp11 == null) {
+        tmp11 = UNKNOWN;
       }
-      return tmp6;
+      return tmp11;
+    } else {
+      let tmp8 = null;
+      if (null != presencesForGuilds[arg0]) {
+        tmp8 = tmp7[tmp];
+      }
+      let status;
+      if (tmp8 != null) {
+        status = tmp8.status;
+      }
+      if (status == null) {
+        status = UNKNOWN;
+      }
+      return status;
     }
-    tmp6 = closure_9;
   }
-};
-prototype["getUnfilteredActivities"] = function getUnfilteredActivities(arg0) {
-  let tmp = arg1;
-  if (arg1 === undefined) {
-    tmp = null;
-  }
-  if (null == tmp) {
-    let tmp6 = activities[arg0];
-    if (tmp6 == null) {
+  getActivities(arg0) {
+    let tmp = arg1;
+    if (arg1 === undefined) {
+      tmp = null;
+    }
+    if (null == tmp) {
+      let tmp8 = filteredActivities[arg0];
+      if (tmp8 == null) {
+        tmp8 = closure_9;
+      }
+      return tmp8;
+    } else {
+      let tmp4 = null;
+      if (null != presencesForGuilds[arg0]) {
+        tmp4 = tmp3[tmp];
+      }
+      if (null != tmp4) {
+        let tmp6;
+        if (null != tmp4.activities) {
+          tmp6 = filterPlayingActivities(tmp4.activities);
+        }
+        return tmp6;
+      }
       tmp6 = closure_9;
     }
-    return tmp6;
-  } else {
-    let tmp4 = null;
-    if (null != presencesForGuilds[arg0]) {
-      tmp4 = tmp3[tmp];
+  }
+  getUnfilteredActivities(arg0) {
+    let tmp = arg1;
+    if (arg1 === undefined) {
+      tmp = null;
     }
-    if (null != tmp4) {
-      if (null != tmp4.activities) {
-        activities = tmp4.activities;
+    if (null == tmp) {
+      let tmp6 = activities[arg0];
+      if (tmp6 == null) {
+        tmp6 = closure_9;
       }
-      return activities;
-    }
-    activities = closure_9;
-  }
-};
-prototype["getHiddenActivities"] = function getHiddenActivities(arg0) {
-  let tmp = arg1;
-  if (arg1 === undefined) {
-    tmp = null;
-  }
-  if (null == tmp) {
-    let tmp7 = hiddenActivities[arg0];
-    if (tmp7 == null) {
-      tmp7 = closure_9;
-    }
-    hiddenActivities = tmp7;
-  } else {
-    let tmp4 = null;
-    if (null != presencesForGuilds[arg0]) {
-      tmp4 = tmp3[tmp];
-    }
-    hiddenActivities = undefined;
-    if (tmp4 != null) {
-      hiddenActivities = tmp4.hiddenActivities;
-    }
-    if (hiddenActivities == null) {
-      hiddenActivities = closure_9;
+      return tmp6;
+    } else {
+      let tmp4 = null;
+      if (null != presencesForGuilds[arg0]) {
+        tmp4 = tmp3[tmp];
+      }
+      if (null != tmp4) {
+        if (null != tmp4.activities) {
+          activities = tmp4.activities;
+        }
+        return activities;
+      }
+      activities = closure_9;
     }
   }
-  return hiddenActivities;
-};
-prototype["getPrimaryActivity"] = function getPrimaryActivity(arg0) {
-  let tmp = arg1;
-  if (arg1 === undefined) {
-    tmp = null;
+  getHiddenActivities(arg0) {
+    let tmp = arg1;
+    if (arg1 === undefined) {
+      tmp = null;
+    }
+    if (null == tmp) {
+      let tmp7 = hiddenActivities[arg0];
+      if (tmp7 == null) {
+        tmp7 = closure_9;
+      }
+      hiddenActivities = tmp7;
+    } else {
+      let tmp4 = null;
+      if (null != presencesForGuilds[arg0]) {
+        tmp4 = tmp3[tmp];
+      }
+      hiddenActivities = undefined;
+      if (tmp4 != null) {
+        hiddenActivities = tmp4.hiddenActivities;
+      }
+      if (hiddenActivities == null) {
+        hiddenActivities = closure_9;
+      }
+    }
+    return hiddenActivities;
   }
-  activities = this.getActivities(arg0, tmp);
-  return activities.filter((type) => type.type !== constants.HANG_STATUS)[0];
-};
-prototype["getAllApplicationActivities"] = function getAllApplicationActivities(arg0) {
-  const items = [];
-  const keys = SnowflakeUtilsDefault.keys(filteredActivities);
-  for (const item10015 of keys) {
-    let tmp4 = filteredActivities[item10015];
-    for (const item10023 of tmp4) {
-      if (item10023.application_id === arg0) {
-        let obj2 = { userId: tmp2, activity: tmp7 };
-        let arr = items.push(obj2);
+  getPrimaryActivity(arg0) {
+    let tmp = arg1;
+    if (arg1 === undefined) {
+      tmp = null;
+    }
+    activities = this.getActivities(arg0, tmp);
+    return activities.filter((type) => type.type !== constants.HANG_STATUS)[0];
+  }
+  getAllApplicationActivities(arg0) {
+    const items = [];
+    const obj = SnowflakeUtilsDefault;
+    const keys = obj.keys(filteredActivities);
+    for (const item10015 of keys) {
+      let tmp4 = filteredActivities[item10015];
+      for (const item10023 of tmp4) {
+        if (item10023.application_id === arg0) {
+          let obj2 = { userId: tmp2, activity: tmp7 };
+          let arr = items.push(obj2);
+        }
+        continue;
       }
       continue;
     }
-    continue;
+    return items;
   }
-  return items;
-};
-prototype["getApplicationActivity"] = function getApplicationActivity(arg0, arg1) {
-  closure_0 = arg1;
-  let tmp = arg2;
-  if (arg2 === undefined) {
-    tmp = null;
+  getApplicationActivity(arg0, arg1) {
+    let closure_0 = arg1;
+    let tmp = arg2;
+    if (arg2 === undefined) {
+      tmp = null;
+    }
+    return this.findActivity(arg0, (application_id) => application_id.application_id === closure_0, tmp, true);
   }
-  return this.findActivity(arg0, (application_id) => application_id.application_id === closure_0, tmp, true);
-};
-prototype["findActivity"] = function findActivity(arg0, cResult) {
-  let tmp = arg2;
-  if (arg2 === undefined) {
-    tmp = null;
+  findActivity(arg0, cResult) {
+    let tmp = arg2;
+    if (arg2 === undefined) {
+      tmp = null;
+    }
+    let flag = arg3;
+    if (arg3 === undefined) {
+      flag = false;
+    }
+    if (flag == null) {
+      flag = false;
+    }
+    const self = this;
+    activities = this.getActivities(arg0, tmp);
+    let combined = activities;
+    if (flag) {
+      combined = activities.concat(self.getHiddenActivities(arg0, tmp));
+    }
+    return combined.find(cResult);
   }
-  let flag = arg3;
-  if (arg3 === undefined) {
-    flag = false;
+  getActivityMetadata(arg0) {
+    return activityMetadata[arg0];
   }
-  if (flag == null) {
-    flag = false;
+  getUserIds() {
+    const obj = SnowflakeUtilsDefault;
+    return obj.keys(activities);
   }
-  const self = this;
-  activities = this.getActivities(arg0, tmp);
-  let combined = activities;
-  if (flag) {
-    combined = activities.concat(self.getHiddenActivities(arg0, tmp));
+  isMobileOnline(id) {
+    return null != tmp && tmp[metroRequire.MOBILE] === constants.ONLINE && tmp[metroRequire.DESKTOP] !== constants.ONLINE && tmp[metroRequire.VR] !== constants.ONLINE;
   }
-  return combined.find(cResult);
-};
-prototype["getActivityMetadata"] = function getActivityMetadata(arg0) {
-  return activityMetadata[arg0];
-};
-prototype["getUserIds"] = function getUserIds() {
-  return SnowflakeUtilsDefault.keys(closure_12);
-};
-prototype["isMobileOnline"] = function isMobileOnline(id) {
-  let tmp2 = null != tmp;
-  if (tmp2) {
-    tmp2 = tmp[constants3.MOBILE] === constants.ONLINE;
+  isVROnline(id) {
+    return null != tmp && tmp[metroRequire.VR] === constants.ONLINE;
   }
-  if (tmp2) {
-    tmp2 = tmp[constants3.DESKTOP] !== constants.ONLINE;
+  getClientStatus(arg0) {
+    return clientStatuses[arg0];
   }
-  if (tmp2) {
-    tmp2 = tmp[constants3.VR] !== constants.ONLINE;
+  getState() {
+    return { presencesForGuilds, statuses, activities, filteredActivities, hiddenActivities, activityMetadata, clientStatuses };
   }
-  return tmp2;
-};
-prototype["isVROnline"] = function isVROnline(id) {
-  let tmp2 = null != tmp;
-  if (tmp2) {
-    tmp2 = tmp[constants3.VR] === constants.ONLINE;
-  }
-  return tmp2;
-};
-prototype["getClientStatus"] = function getClientStatus(arg0) {
-  return clientStatuses[arg0];
-};
-prototype["getState"] = function getState() {
-  return { presencesForGuilds, statuses, activities, filteredActivities, hiddenActivities, activityMetadata, clientStatuses };
-};
+}
+const prototype = PresenceStore.prototype;
 PresenceStore.displayName = "PresenceStore";
-const presenceStore = new PresenceStore(DispatcherDefault, {
+let obj = {
   CONNECTION_OPEN: function handleConnectionOpen() {
     return true;
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function handleConnectionOpenSupplemental(arg0) {
+    let guilds;
+    let obj;
+    let obj2;
+    let obj3;
+    let obj4;
+    let presences;
     ({ guilds, presences } = arg0);
     const id = AuthenticationStore.getId();
-    closure_10 = {};
-    closure_16 = {};
+    let closure_10 = {};
+    let closure_16 = {};
     obj = { [id]: obj[id] };
+    let closure_15 = { [id]: {} };
     obj2 = { [id]: obj2[id] };
     obj3 = { [id]: obj3[id] };
     obj4 = { [id]: obj4[id] };
-    closure_15 = { [id]: {} };
-    const set = new Set();
+    set = new Set();
     let item = guilds.forEach((presences) => {
       presences = presences.presences;
       const item = presences.forEach((status) => {
         const user = status.user;
-        updatePresenceInConnectionOpen({ guildId: presences.id, userId: user.id, status: status.status, clientStatus: status.clientStatus, activities: status.activities, hiddenActivities: status.hiddenActivities, processedAtTimestamp: status.processedAtTimestamp });
+        obj = { guildId: presences.id, userId: user.id, status: status.status, clientStatus: status.clientStatus, activities: status.activities, hiddenActivities: status.hiddenActivities, processedAtTimestamp: status.processedAtTimestamp };
+        updatePresenceInConnectionOpen(obj);
         set.add(user.id);
       });
     });
     const item1 = presences.forEach((user) => {
       user = user.user;
       if (null != user) {
-        obj = { guildId, userId: user.id, status: tmp, clientStatus: tmp2, activities: tmp3, hiddenActivities: tmp4, processedAtTimestamp: tmp5 };
+        obj = { guildId: metroImportDefault, userId: user.id, status: tmp, clientStatus: tmp2, activities: tmp3, hiddenActivities: tmp4, processedAtTimestamp: tmp5 };
         updatePresenceInConnectionOpen(obj);
         set.add(user.id);
       }
@@ -640,30 +625,36 @@ const presenceStore = new PresenceStore(DispatcherDefault, {
     const item2 = set.forEach(flattenPresenceInConnectionOpen);
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(presences) {
+    let closure_10;
+    let closure_11;
+    let closure_14;
+    let closure_16;
     ({ presencesForGuilds: closure_10, statuses: closure_11, activities: closure_12, hiddenActivities: closure_14, activityMetadata: closure_16 } = presences.presences);
   },
   GUILD_CREATE: function handleGuildCreate(guild) {
     guild = guild.guild;
     const presences = guild.presences;
     const item = presences.forEach((user) => {
-      updatePresence({ guildId: guild.id, userId: user.user.id, status: user.status, clientStatus: user.clientStatus, activities: user.activities, hiddenActivities: user.hiddenActivities, processedAtTimestamp: user.processedAtTimestamp });
+      const obj = { guildId: guild.id, userId: user.user.id, status: user.status, clientStatus: user.clientStatus, activities: user.activities, hiddenActivities: user.hiddenActivities, processedAtTimestamp: user.processedAtTimestamp };
+      updatePresence(obj);
     });
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     clearPresences(guild.guild.id);
   },
-  GUILD_MEMBER_REMOVE: function handleGuildMemberRemove(user) {
-    const id = user.user.id;
+  GUILD_MEMBER_REMOVE: function handleGuildMemberRemove(guildId) {
+    guildId = guildId.guildId;
+    const id = guildId.user.id;
     let flag = false;
     if (id !== AuthenticationStore.getId()) {
       flag = false;
       if (null != presencesForGuilds[id]) {
         flag = false;
-        if (null != tmp5[user.guildId]) {
-          delete tmp3[tmp2];
+        if (null != presencesForGuilds[id][guildId]) {
+          delete presencesForGuilds[id][guildId];
           const _Object = Object;
-          if (0 === Object.keys(tmp5).length) {
-            delete tmp2[tmp];
+          if (0 === Object.keys(presencesForGuilds[id]).length) {
+            delete presencesForGuilds[id];
           }
           flattenPresence(id);
         }
@@ -674,18 +665,23 @@ const presenceStore = new PresenceStore(DispatcherDefault, {
   PRESENCE_UPDATES: function handlePresenceUpdates(updates) {
     updates = updates.updates;
     const mapped = updates.map((guildId) => {
+      let clientStatus;
+      let processedAtTimestamp;
+      let status;
+      let user;
       guildId = guildId.guildId;
       ({ user, status, clientStatus, activities, hiddenActivities, processedAtTimestamp } = guildId);
       if (guildId == null) {
         guildId = closure_1_7;
       }
-      return updatePresence({ guildId, userId: user.id, status, clientStatus, activities, hiddenActivities, processedAtTimestamp });
+      const obj = { guildId, userId: user.id, status, clientStatus, activities, hiddenActivities, processedAtTimestamp };
+      return updatePresence(obj);
     });
     return mapped.some((item) => item);
   },
   PRESENCES_REPLACE: function handlePresenceReplace(presences) {
     presences = presences.presences;
-    clearPresences(guildId);
+    const tmp = clearPresences(metroImportDefault);
     const item = presences.forEach((user) => {
       user = user.user;
       if (null != user) {
@@ -695,24 +691,26 @@ const presenceStore = new PresenceStore(DispatcherDefault, {
     });
   },
   ACTIVITY_METADATA_UPDATE: function handleActivityMetadataUpdate(userId) {
-    closure_16[userId.userId] = userId.metadata;
+    activityMetadata[userId.userId] = userId.metadata;
     return false;
   },
   THREAD_MEMBER_LIST_UPDATE: function handleThreadMemberListUpdate(arg0) {
+    let members;
     ({ guildId: importDefault, members } = arg0);
     const item = members.forEach((presence) => {
       if (null != presence.presence) {
-        const obj = { guildId, userId: presence.user_id, status: presence.presence.status, clientStatus: presence.presence.clientStatus, activities: presence.presence.activities, hiddenActivities: presence.presence.hiddenActivities, processedAtTimestamp: presence.presence.processedAtTimestamp };
+        const obj = { guildId: importDefault, userId: presence.user_id, status: presence.presence.status, clientStatus: presence.presence.clientStatus, activities: presence.presence.activities, hiddenActivities: presence.presence.hiddenActivities, processedAtTimestamp: presence.presence.processedAtTimestamp };
         updatePresence(obj);
       }
     });
   },
   THREAD_MEMBERS_UPDATE: function handleThreadMembersUpdate(arg0) {
+    let addedMembers;
     ({ guildId: importDefault, addedMembers } = arg0);
     if (addedMembers != null) {
       const item = addedMembers.forEach((presence) => {
         if (null != presence.presence) {
-          const obj = { guildId, userId: presence.userId, status: presence.presence.status, clientStatus: presence.presence.clientStatus, activities: presence.presence.activities, hiddenActivities: presence.presence.hiddenActivities, processedAtTimestamp: presence.presence.processedAtTimestamp };
+          const obj = { guildId: importDefault, userId: presence.userId, status: presence.presence.status, clientStatus: presence.presence.clientStatus, activities: presence.presence.activities, hiddenActivities: presence.presence.hiddenActivities, processedAtTimestamp: presence.presence.processedAtTimestamp };
           updatePresence(obj);
         }
       });
@@ -731,13 +729,13 @@ const presenceStore = new PresenceStore(DispatcherDefault, {
     const items = [...status.activities];
     const sorted = items.sort(sortActivity);
     activities[id] = sorted;
-    closure_13[id] = filterPlayingActivities(sorted);
+    filteredActivities[id] = filterPlayingActivities(sorted);
     const items1 = [...status.hiddenActivities];
     hiddenActivities[id] = items1.sort(sortActivity);
-    delete tmp[tmp2];
+    delete activityMetadata[tmp];
   }
-});
-const size = fn(2);
+};
+const presenceStore = new PresenceStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("stores/PresenceStore.tsx");
 
 export default presenceStore;

@@ -8,22 +8,23 @@ const result = size.fileFinishedImporting("../discord_common/js/packages/http-ut
 
 export const convertSkemaError = function convertSkemaError(errors) {
   const obj = {};
-  for (const key10007 in arg0) {
-    let tmp3 = arg0[key10007];
+  for (const key10007 in errors) {
+    let tmp3 = errors[key10007];
     if (null == tmp3) {
       continue;
     } else {
       if (key10007 === _errors) {
-        let arr = arg0[key10007];
+        let arr = errors[key10007];
         obj._misc = arr.map((message) => message.message);
       }
       let _Array = Array;
       if (Array.isArray(tmp3)) {
         continue;
       } else {
+        let mapped;
         let arr2 = tmp3[_errors];
         if (null != arr2) {
-          let mapped = arr2.map((message) => message.message);
+          mapped = arr2.map((message) => message.message);
         } else {
           let _Object = Object;
           mapped = [Object.keys(tmp3)[0]];

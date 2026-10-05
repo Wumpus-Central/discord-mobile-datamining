@@ -1,25 +1,34 @@
 // === Module 12941: useTrackUserProfileWishlistView ===
 
 // Module 12941 (useTrackUserProfileWishlistView)
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import WishlistStore from "WishlistStore" /* 8431 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-({ useEffect: c2, useRef: c3 } = noop);
-const result = size.fileFinishedImporting("modules/user_profile/hooks/native/useTrackUserProfileWishlistView.tsx");
+let wishlistId;
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((wishlistId) => {
-  const cResult = wishlistId(onAction[3]).c(10);
+let c2;
+let c3;
+({ useEffect: c2, useRef: c3 } = react);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((wishlistId) => {
+  let first;
+  let onAction;
+  let stateFromStores;
+  let tmp7;
+  let obj = wishlistId(onAction[3]);
+  const cResult = obj.c(10);
+  const tmp = wishlistId;
   wishlistId = wishlistId.wishlistId;
+  const tmp2 = onAction;
   onAction = wishlistId.onAction;
   const productLines = wishlistId.productLines;
   const isVisible = wishlistId.isVisible;
-  closure_3 = tmp4;
+  let closure_3 = tmp4;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [stateFromStores];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -29,20 +38,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((wishlistId) => {
     };
     cResult[1] = wishlistId;
     cResult[2] = fn;
-    let tmp7 = fn;
+    tmp7 = fn;
   } else {
     tmp7 = cResult[2];
   }
-  let obj = wishlistId(onAction[3]);
-  stateFromStores = wishlistId(onAction[4]).useStateFromStores(first, tmp7);
-  closure_3(false);
+  const tmpResult = tmp(tmp2[4]);
+  stateFromStores = tmpResult.useStateFromStores(first, tmp7);
+  const ref = closure_3(false);
   if (cResult[3] === stateFromStores) {
-    if (cResult[4] === tmp4) {
+    if (cResult[4] === (undefined === isVisible || isVisible)) {
       if (cResult[5] === onAction) {
         if (cResult[6] === productLines) {
+          let tmp9;
+          let tmp10;
           if (cResult[7] === wishlistId) {
-            let tmp9 = cResult[8];
-            let tmp10 = cResult[9];
+            tmp9 = cResult[8];
+            tmp10 = cResult[9];
           }
           productLines(tmp9, tmp10);
         }
@@ -51,10 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((wishlistId) => {
   }
   const fn2 = function _() {
     if (closure_3) {
-      let current = stateFromStores;
-      if (!stateFromStores) {
-        current = ref.current;
-      }
+      const current = stateFromStores || ref.current;
       if (!current) {
         const obj = { action: "VIEW_WISHLIST", wishlistId, productLines };
         onAction(obj);
@@ -83,16 +91,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((wishlistId) => {
     flag = true;
   }
   let stateFromStores;
+  let obj = wishlistId(onAction[4]);
   const items = [stateFromStores];
-  stateFromStores = wishlistId(onAction[4]).useStateFromStores(items, () => WishlistStore.isFetching(wishlistId));
-  flag(false);
+  stateFromStores = obj.useStateFromStores(items, () => WishlistStore.isFetching(wishlistId));
+  const ref = flag(false);
   const items1 = [flag, stateFromStores, onAction, wishlistId, productLines];
   productLines(() => {
-    if (flag) {
-      let current = stateFromStores;
-      if (!stateFromStores) {
-        current = ref.current;
-      }
+    const tmp = flag;
+    if (tmp) {
+      const current = stateFromStores || ref.current;
       if (!current) {
         const obj = { action: "VIEW_WISHLIST", wishlistId, productLines };
         onAction(obj);
@@ -103,3 +110,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((wishlistId) => {
     }
   }, items1);
 });
+const result = size.fileFinishedImporting("modules/user_profile/hooks/native/useTrackUserProfileWishlistView.tsx");
+
+export default tmp3;

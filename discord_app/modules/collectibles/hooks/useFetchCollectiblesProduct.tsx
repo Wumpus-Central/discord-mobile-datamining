@@ -1,34 +1,48 @@
 // === Module 10778: useFetchCollectiblesProduct ===
 
 // Module 10778 (useFetchCollectiblesProduct)
+import react from "react" /* 19 */;
+import Constants from "Constants" /* 1085 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7052 */;
-import _slicedToArray from "module_32" /* 32 */;
-import SKUStore from "SKUStore" /* 5695 */;
+import _slicedToArray_mod from "_slicedToArray" /* 32 */;
+import SKUStore_mod from "SKUStore" /* 5695 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7053 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, dependencyMap;
 
-require = fn;
-const useEffect = fn(19).useEffect;
-let SKUProductLines = fn(1085).SKUProductLines;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProduct.tsx");
-
-export const useFetchCollectiblesProduct = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, includeBundles) => {
+let _slicedToArray = _slicedToArray_mod;
+const useEffect = react.useEffect;
+let SKUStore = SKUStore_mod;
+let SKUProductLines = Constants.SKUProductLines;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, includeBundles) => {
+  let closure_0;
+  let closure_2;
+  let closure_6;
+  let first;
+  let stateFromStores1;
+  let tmp10;
+  let tmp12;
+  let tmp16;
+  let tmp6;
   _require = arg0;
   dependencyMap = includeBundles;
-  const cResult = require("c").c(28);
+  const tmp = _require;
+  let tmp2 = dependencyMap;
+  let obj = require("react");
+  const cResult = obj.c(28);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [SKUStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
     const fn = function f() {
-      value = null;
+      let value = null;
       if (null != closure_0) {
         value = SKUStore.get(tmp);
       }
@@ -36,21 +50,17 @@ export const useFetchCollectiblesProduct = ReactCompilerGating.isReactCompilerEn
     };
     cResult[1] = arg0;
     cResult[2] = fn;
-    let tmp6 = fn;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
-  let obj = require("c");
-  const stateFromStores = require("useStateFromStores").useStateFromStores(first, tmp6);
-  let tmp8 = null != stateFromStores;
-  if (tmp8) {
-    tmp8 = stateFromStores.productLine !== SKUProductLines.COLLECTIBLES;
-  }
+  const tmpResult = tmp(573);
+  const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
   _slicedToArray = tmp8;
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [stateFromStores1];
     cResult[3] = items1;
-    let tmp10 = items1;
+    tmp10 = items1;
   } else {
     tmp10 = cResult[3];
   }
@@ -61,25 +71,25 @@ export const useFetchCollectiblesProduct = ReactCompilerGating.isReactCompilerEn
     };
     cResult[4] = arg0;
     cResult[5] = fn2;
-    let tmp12 = fn2;
+    tmp12 = fn2;
   } else {
     tmp12 = cResult[5];
   }
-  const tmpResult = require("useStateFromStores");
-  const tmp13 = _slicedToArray(require("useStateFromStores").useStateFromStoresArray(tmp10, tmp12), 2);
+  const tmpResult3 = tmp(573);
+  const tmp13 = _slicedToArray(tmpResult3.useStateFromStoresArray(tmp10, tmp12), 2);
   const first1 = tmp13[0];
   SKUStore = tmp15;
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [stateFromStores1];
     cResult[6] = items2;
-    let tmp16 = items2;
+    tmp16 = items2;
   } else {
     tmp16 = cResult[6];
   }
   if (cResult[7] !== arg0) {
     class L {
       constructor() {
-        return closure_5.isProductFetchBackedOff(closure_0);
+        return CollectiblesCategoryStore.isProductFetchBackedOff(closure_0);
       }
     }
     cResult[7] = arg0;
@@ -87,23 +97,23 @@ export const useFetchCollectiblesProduct = ReactCompilerGating.isReactCompilerEn
   } else {
     class L {
       constructor() {
-        return closure_5.isProductFetchBackedOff(closure_0);
+        return CollectiblesCategoryStore.isProductFetchBackedOff(closure_0);
       }
     }
   }
-  const tmpResult3 = require("useStateFromStores");
-  stateFromStores1 = require("useStateFromStores").useStateFromStores(tmp16, L);
+  const tmpResult4 = tmp(573);
+  stateFromStores1 = tmpResult4.useStateFromStores(tmp16, L);
   let tmp20 = true === includeBundles;
   if (tmp20) {
     class L {
       constructor() {
-        return closure_5.isProductFetchBackedOff(closure_0);
+        return CollectiblesCategoryStore.isProductFetchBackedOff(closure_0);
       }
     }
     if (first1 != null) {
       class L {
         constructor() {
-          return closure_5.isProductFetchBackedOff(closure_0);
+          return CollectiblesCategoryStore.isProductFetchBackedOff(closure_0);
         }
       }
     }
@@ -112,108 +122,101 @@ export const useFetchCollectiblesProduct = ReactCompilerGating.isReactCompilerEn
   if (tmp20) {
     class L {
       constructor() {
-        return closure_5.isProductFetchBackedOff(closure_0);
+        return CollectiblesCategoryStore.isProductFetchBackedOff(closure_0);
       }
     }
     tmp20 = 0 === first1.items.length;
   }
   SKUProductLines = tmp20;
+  const tmp22 = cResult[9];
   if (tmp13[1] != null) {
     class L {
       constructor() {
-        return closure_5.isProductFetchBackedOff(closure_0);
+        return CollectiblesCategoryStore.isProductFetchBackedOff(closure_0);
       }
     }
   }
-  if (cResult[9] === undefined) {
+  if (tmp22 === undefined) {
     class L {
       constructor() {
-        return closure_5.isProductFetchBackedOff(closure_0);
+        return CollectiblesCategoryStore.isProductFetchBackedOff(closure_0);
       }
     }
   }
   if (tmp13[1] != null) {
     class L {
       constructor() {
-        return closure_5.isProductFetchBackedOff(closure_0);
+        return CollectiblesCategoryStore.isProductFetchBackedOff(closure_0);
       }
     }
   }
   class E {
     constructor() {
-      tmp2 = null == closure_0;
-      tmp = closure_0;
+      let tmp2 = null == closure_0;
       if (!tmp2) {
-        tmp3 = closure_3;
-        tmp4 = null != closure_3;
-        if (tmp4) {
-          tmp5 = closure_6;
-          tmp4 = !closure_6;
-        }
-        tmp2 = tmp4;
+        tmp2 = null != first1 && !closure_6;
+        const tmp4 = null != first1 && !closure_6;
       }
       if (!tmp2) {
         tmp2 = closure_2;
       }
       if (!tmp2) {
         state = undefined;
-        if (closure_4 != null) {
-          state = closure_4.state;
+        if (state != null) {
+          state = state.state;
         }
-        str = "fetching";
         tmp2 = "fetching" === state;
       }
       if (!tmp2) {
-        tmp2 = closure_5;
+        tmp2 = stateFromStores1;
       }
       if (!tmp2) {
-        tmp7 = closure_0;
-        tmp8 = closure_1;
-        obj = closure_0(closure_1[9]);
-        obj1 = { includeBundles: null };
-        tmp9 = closure_1;
-        obj1.includeBundles = closure_1;
-        collectiblesProduct = obj.fetchCollectiblesProduct(tmp, obj1);
+        const obj2 = { includeBundles };
+        const obj = CollectiblesActionCreators;
+        const collectiblesProduct = obj.fetchCollectiblesProduct(closure_0, obj2);
       }
-      return;
     }
   }
   cResult[9] = undefined;
   cResult[10] = includeBundles;
   cResult[11] = stateFromStores1;
-  cResult[12] = tmp8;
+  cResult[12] = null != stateFromStores && stateFromStores.productLine !== SKUProductLines.COLLECTIBLES;
   cResult[13] = tmp20;
   cResult[14] = first1;
   cResult[15] = arg0;
   cResult[16] = E;
-  const tmpResult4 = require("useStateFromStores");
 }) : ((arg0, includeBundles) => {
+  let closure_0;
+  let closure_2;
+  let closure_6;
+  let state;
+  let stateFromStores1;
   _require = arg0;
   dependencyMap = includeBundles;
+  const tmp = _require;
+  let tmp2 = dependencyMap;
+  let obj = require("useStateFromStores");
   let items = [state];
-  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
-    value = null;
+  const stateFromStores = obj.useStateFromStores(items, () => {
+    let value = null;
     if (null != closure_0) {
       value = SKUStore.get(tmp);
     }
     return value;
   });
-  let tmp4 = null != stateFromStores;
-  if (tmp4) {
-    tmp4 = stateFromStores.productLine !== SKUProductLines.COLLECTIBLES;
-  }
+  let tmp4 = null != stateFromStores && stateFromStores.productLine !== SKUProductLines.COLLECTIBLES;
   _slicedToArray = tmp4;
-  let obj = require("useStateFromStores");
   const items1 = [stateFromStores1];
-  const tmp6 = _slicedToArray(require("useStateFromStores").useStateFromStoresArray(items1, () => {
+  const tmpResult = tmp(573);
+  const tmp6 = _slicedToArray(tmpResult.useStateFromStoresArray(items1, () => {
     const items = [CollectiblesCategoryStore.getProduct(closure_0), CollectiblesCategoryStore.getProductFetch(closure_0)];
     return items;
   }), 2);
   const product = tmp6[0];
   state = tmp8;
-  const tmpResult = require("useStateFromStores");
   const items2 = [stateFromStores1];
-  stateFromStores1 = require("useStateFromStores").useStateFromStores(items2, () => CollectiblesCategoryStore.isProductFetchBackedOff(closure_0));
+  const tmpResult2 = tmp(573);
+  stateFromStores1 = tmpResult2.useStateFromStores(items2, () => CollectiblesCategoryStore.isProductFetchBackedOff(closure_0));
   let tmp10 = true === includeBundles;
   if (tmp10) {
     let type;
@@ -230,11 +233,8 @@ export const useFetchCollectiblesProduct = ReactCompilerGating.isReactCompilerEn
   product(() => {
     let tmp2 = null == closure_0;
     if (!tmp2) {
-      let tmp4 = null != first;
-      if (tmp4) {
-        tmp4 = !closure_6;
-      }
-      tmp2 = tmp4;
+      tmp2 = null != first && !closure_6;
+      const tmp4 = null != first && !closure_6;
     }
     if (!tmp2) {
       tmp2 = closure_2;
@@ -251,14 +251,17 @@ export const useFetchCollectiblesProduct = ReactCompilerGating.isReactCompilerEn
     }
     if (!tmp2) {
       const obj2 = { includeBundles };
-      const collectiblesProduct = CollectiblesActionCreators.fetchCollectiblesProduct(closure_0, obj2);
+      const obj = CollectiblesActionCreators;
+      const collectiblesProduct = obj.fetchCollectiblesProduct(closure_0, obj2);
     }
   }, items3);
-  let obj2 = { product, isFetching: null };
+  let obj2 = { product, isFetching: "fetching" === state };
   state = undefined;
   if (tmp6[1] != null) {
     state = tmp8.state;
   }
-  obj2.isFetching = "fetching" === state;
   return obj2;
 });
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProduct.tsx");
+
+export const useFetchCollectiblesProduct = tmp2;

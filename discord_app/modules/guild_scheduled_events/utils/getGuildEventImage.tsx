@@ -12,16 +12,19 @@ export default function getGuildEventImageURL(image, size) {
   if (null == image.image) {
     return null;
   } else {
+    let combined;
     let result = size;
     if (null == size) {
       const _window = window;
-      result = window.screen.width * ImageLoaderUtils.getDevicePixelRatio();
+      const obj = ImageLoaderUtils;
+      result = width * obj.getDevicePixelRatio();
     }
     const _window2 = window;
-    const bestMediaProxySize = ImageLoaderUtils.getBestMediaProxySize(result);
+    const obj2 = ImageLoaderUtils;
+    const bestMediaProxySize = obj2.getBestMediaProxySize(result);
     if (null != CDN_HOST) {
       const _HermesInternal = HermesInternal;
-      let combined = "https://" + CDN_HOST + "/guild-events/" + image.id + "/" + image.image;
+      combined = "https://" + CDN_HOST + "/guild-events/" + image.id + "/" + image.image;
     } else {
       const _location = location;
       const _window3 = window;

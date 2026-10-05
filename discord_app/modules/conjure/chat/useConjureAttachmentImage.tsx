@@ -1,43 +1,54 @@
 // === Module 16662: useConjureAttachmentImage ===
 
 // Module 16662 (useConjureAttachmentImage)
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 12904 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, dependencyMap;
 
-const require = fn;
-const ConjureConnectionStore = fn(12904);
+let closure_4;
+let hasOwnProperty;
 ({ getAttachmentUrl: closure_4, isAttachmentAvailable: hasOwnProperty } = ConjureConnectionStore);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/chat/useConjureAttachmentImage.tsx");
-
-export const useConjureAttachmentImage = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+  let closure_0;
+  let closure_1;
+  let closure_5;
+  let first;
+  let tmp3;
+  let tmp5;
   _require = arg0;
   dependencyMap = arg1;
-  const cResult = require("c").c(13);
-  const obj = require("c");
-  [tmp3, _slicedToArray] = noop.useState(null);
-  const tmp2 = _slicedToArray(noop.useState(null), 2);
-  [tmp5, noop] = noop.useState(false);
-  [first, closure_5] = noop.useState(0);
+  const obj = require("react");
+  const cResult = obj.c(13);
+  const tmp2 = _slicedToArray(react.useState(null), 2);
+  [tmp3, _slicedToArray] = tmp2;
+  const tmp4 = _slicedToArray(react.useState(false), 2);
+  [tmp5, react] = tmp4;
+  [first, closure_5] = react.useState(0);
   if (cResult[0] === arg1) {
     if (cResult[1] === first) {
+      let tmp8;
+      let tmp9;
       if (cResult[2] === arg0) {
-        let tmp8 = cResult[3];
-        let tmp9 = cResult[4];
+        tmp8 = cResult[3];
+        tmp9 = cResult[4];
       }
-      const effect = noop.useEffect(tmp8, tmp9);
+      const effect = react.useEffect(tmp8, tmp9);
       if (cResult[5] === arg1) {
         if (cResult[6] === first) {
+          let tmp11;
           if (cResult[7] === arg0) {
-            let tmp11 = cResult[8];
+            tmp11 = cResult[8];
           }
           if (cResult[9] === tmp5) {
             if (cResult[10] === tmp11) {
+              let tmp12;
               if (cResult[11] === tmp3) {
-                let tmp12 = cResult[12];
+                tmp12 = cResult[12];
               }
               return tmp12;
             }
@@ -51,9 +62,11 @@ export const useConjureAttachmentImage = ReactCompilerGating.isReactCompilerEnab
         }
       }
       const fn2 = function f() {
-        _slicedToArray(null);
-        hasOwnProperty(closure_0, closure_1).then((result) => {
-          if (result) {
+        let tmp = _slicedToArray(null);
+        const promise = hasOwnProperty(closure_0, closure_1);
+        promise.then((result) => {
+          const tmp = result;
+          if (tmp) {
             if (0 === first) {
               closure_1_5(1);
             }
@@ -69,8 +82,9 @@ export const useConjureAttachmentImage = ReactCompilerGating.isReactCompilerEnab
     }
   }
   const fn = function o() {
-    c0 = false;
-    first(c0, closure_1).then((result) => {
+    let c0 = false;
+    const promise = first(c0, closure_1);
+    promise.then((result) => {
       if (!c0) {
         _slicedToArray(result);
       }
@@ -79,7 +93,7 @@ export const useConjureAttachmentImage = ReactCompilerGating.isReactCompilerEnab
         if (0 === first) {
           closure_5(1);
         } else {
-          noop(true);
+          react(true);
         }
       }
     });
@@ -95,25 +109,30 @@ export const useConjureAttachmentImage = ReactCompilerGating.isReactCompilerEnab
   cResult[4] = items;
   tmp9 = items;
   tmp8 = fn;
-  const tmp4 = _slicedToArray(noop.useState(false), 2);
 }) : ((arg0, arg1) => {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  const tmp = _slicedToArray(noop.useState(null), 2);
-  _slicedToArray = tmp[1];
-  const tmp2 = _slicedToArray(noop.useState(false), 2);
-  noop = tmp2[1];
-  [first, closure_5] = noop.useState(0);
-  const items = [arg0, arg1, first];
-  const effect = noop.useEffect(() => {
-    c0 = false;
-    first(c0, closure_1).then((result) => {
+  let closure_2;
+  let closure_3;
+  let closure_5;
+  let first;
+  let first1;
+  let first2;
+  let items1;
+  let closure_0 = arg0;
+  let closure_1 = arg1;
+  [first, _slicedToArray] = react.useState(null);
+  [first1, react] = react.useState(false);
+  [first2, closure_5] = react.useState(0);
+  const items = [arg0, arg1, first2];
+  const effect = react.useEffect(() => {
+    let c0 = false;
+    const promise = first2(c0, closure_1);
+    promise.then((result) => {
       if (!c0) {
         closure_2(result);
       }
     }, () => {
       if (!c0) {
-        if (0 === first) {
+        if (0 === first2) {
           closure_5(1);
         } else {
           closure_3(true);
@@ -124,18 +143,26 @@ export const useConjureAttachmentImage = ReactCompilerGating.isReactCompilerEnab
       c0 = true;
     };
   }, items);
-  const obj = { src: tmp[0], gone: tmp2[0], handleError: null };
-  const items1 = [arg0, arg1, first];
-  obj.handleError = noop.useCallback(() => {
-    closure_2(null);
-    hasOwnProperty(closure_0, closure_1).then((result) => {
-      if (result) {
-        if (0 === first) {
-          closure_1_5(1);
+  const obj = {
+    src: first,
+    gone: first1,
+    handleError: react.useCallback(() => {
+      let tmp = closure_2(null);
+      const promise = hasOwnProperty(closure_0, closure_1);
+      promise.then((result) => {
+        const tmp = result;
+        if (tmp) {
+          if (0 === first2) {
+            closure_1_5(1);
+          }
         }
-      }
-      closure_1_3(true);
-    }, () => closure_1_3(true));
-  }, items1);
+        closure_1_3(true);
+      }, () => closure_1_3(true));
+    }, items1)
+  };
+  items1 = [arg0, arg1, first2];
   return obj;
 });
+const result = size.fileFinishedImporting("modules/conjure/chat/useConjureAttachmentImage.tsx");
+
+export const useConjureAttachmentImage = tmp3;

@@ -1,7 +1,7 @@
 // === Module 5124: CheckpointUtils ===
 
 // Module 5124 (CheckpointUtils)
-import util from "util" /* 1126 */;
+import intl4 from "intl" /* 1126 */;
 import TimeUtils from "TimeUtils" /* 4919 */;
 import getTimestampString from "getTimestampString" /* 5125 */;
 import _modDef5126 from "module_5126" /* 5126 */;
@@ -20,21 +20,26 @@ const items = [TimeUtils.TimeUnits.HOURS, TimeUtils.TimeUnits.MINUTES];
 const result = size.fileFinishedImporting("modules/checkpoint/2025/CheckpointUtils.tsx");
 
 export const getVoiceDurationString = function getVoiceDurationString(rounded) {
-  const timeAndUnit = TimeUtils.getTimeAndUnit(rounded, items);
+  let time;
+  let unit;
+  const obj = TimeUtils;
+  const timeAndUnit = obj.getTimeAndUnit(rounded, items);
   ({ time, unit } = timeAndUnit);
-  const time2 = getTimestampString.getAbbreviatedFormatter();
+  const obj2 = getTimestampString;
+  const time2 = obj2.getAbbreviatedFormatter();
   if (null == time) {
-    const intl3 = util.intl;
+    const intl3 = intl4.intl;
     return intl3.formatToPlainString(time2.minutes, { minutes: 0 });
   } else {
+    let formatToPlainStringResult;
     const _Math = Math;
     rounded = Math.round(time);
     if (unit === TimeUtils.TimeUnits.HOURS) {
-      const intl2 = util.intl;
+      const intl2 = intl4.intl;
       const obj3 = { hours: rounded };
-      let formatToPlainStringResult = intl2.formatToPlainString(time2.hours, obj3);
+      formatToPlainStringResult = intl2.formatToPlainString(time2.hours, obj3);
     } else {
-      const intl = util.intl;
+      const intl = intl4.intl;
       const obj4 = { minutes: rounded };
       formatToPlainStringResult = intl.formatToPlainString(time2.minutes, obj4);
     }

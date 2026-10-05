@@ -1,25 +1,39 @@
 // === Module 16400: ICYMICustomScoresOverviewScreen ===
 
 // Module 16400 (ICYMICustomScoresOverviewScreen)
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
-import noop from "module_19" /* 19 */;
+import react_mod from "react" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import SortedGuildStore from "SortedGuildStore" /* 5616 */;
 import ICYMIStore from "ICYMIStore" /* 8011 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
-const ScrollView = fn(17).ScrollView;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_12 } };
-let closure_9 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_12 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/icymi/native/custom_scores/ICYMICustomScoresOverviewScreen.tsx");
+let closure_0, navigation, obj1, obj5, tmp;
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((navigation) => {
-  const cResult = navigation(stateFromStores2[9]).c(28);
+let obj2;
+let react = react_mod;
+const ScrollView = react_native.ScrollView;
+const jsx = Fragment.jsx;
+let obj = { container: obj2 };
+obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_12 };
+let closure_9 = createStyles.createStyles(obj);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((navigation) => {
+  let customGuildScores;
+  let flattenedGuildIds;
+  let guilds;
+  let stateFromStores2;
+  let tmp11;
+  let tmp12;
+  let tmp4;
+  let tmp5;
+  let tmp8;
+  let tmp9;
+  let obj = navigation(stateFromStores2[9]);
+  const cResult = obj.c(28);
   navigation = navigation.navigation;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildStore];
@@ -33,8 +47,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((navigation) => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  let obj = navigation(stateFromStores2[9]);
-  const stateFromStores = navigation(stateFromStores2[10]).useStateFromStores(tmp4, tmp5);
+  let tmpResult = tmp(tmp2[10]);
+  const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [SortedGuildStore];
     const fn2 = function p() {
@@ -42,209 +56,225 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((navigation) => {
     };
     cResult[2] = items1;
     cResult[3] = fn2;
-    let tmp9 = fn2;
-    let tmp8 = items1;
+    tmp9 = fn2;
+    tmp8 = items1;
   } else {
     tmp8 = cResult[2];
     tmp9 = cResult[3];
   }
-  let tmpResult = navigation(stateFromStores2[10]);
-  const stateFromStores1 = navigation(stateFromStores2[10]).useStateFromStores(tmp8, tmp9);
+  const tmpResult3 = navigation(stateFromStores2[10]);
+  const stateFromStores1 = tmpResult3.useStateFromStores(tmp8, tmp9);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [ICYMIStore];
     class T {
       constructor() {
-        return closure_1_7.getCustomGuildScores();
+        return customGuildScores.getCustomGuildScores();
       }
     }
     cResult[4] = items2;
     cResult[5] = T;
-    let tmp12 = T;
-    let tmp11 = items2;
+    tmp12 = T;
+    tmp11 = items2;
   } else {
     tmp11 = cResult[4];
     tmp12 = cResult[5];
   }
-  const tmpResult3 = navigation(stateFromStores2[10]);
-  stateFromStores2 = navigation(stateFromStores2[10]).useStateFromStores(tmp11, tmp12);
+  const tmpResult4 = navigation(stateFromStores2[10]);
+  stateFromStores2 = tmpResult4.useStateFromStores(tmp11, tmp12);
   if (cResult[6] === stateFromStores1) {
+    let arr5;
+    let tmp20;
+    let tmp21;
+    let tmp22;
     if (cResult[7] === stateFromStores) {
-      const tmp18 = closure_9();
+      arr5 = cResult[8];
+    }
+    const tmp18 = closure_9();
+    class T {
+      constructor() {
+        return customGuildScores.getCustomGuildScores();
+      }
+    }
+    const bottom = stateFromStores(tmp2[11])().bottom;
+    if (cResult[11] !== navigation) {
+      const fn3 = function y(guildId) {
+        const obj = { guildId };
+        return navigation.navigate("guild", obj);
+      };
+      cResult[11] = navigation;
       class T {
         constructor() {
-          return closure_1_7.getCustomGuildScores();
+          return customGuildScores.getCustomGuildScores();
         }
       }
-      const bottom = stateFromStores(tmp2[11])().bottom;
-      if (cResult[11] !== navigation) {
-        const fn3 = function y(guildId) {
-          return navigation.navigate("guild", { guildId });
-        };
-        cResult[11] = navigation;
-        class T {
-          constructor() {
-            return closure_1_7.getCustomGuildScores();
-          }
-        }
-        cResult[12] = fn3;
-        let tmp20 = fn3;
-      } else {
-        tmp20 = cResult[12];
-      }
-      closure_3 = tmp20;
-      if (cResult[13] !== bottom) {
-        const rect = { bottom, top: tmp19(tmp2[7]).space.PX_12 };
-        class T {
-          constructor() {
-            return closure_1_7.getCustomGuildScores();
-          }
-        }
-        cResult[13] = bottom;
-        cResult[14] = rect;
-        let tmp21 = rect;
-      } else {
-        tmp21 = cResult[14];
-      }
-      if (cResult[15] === stateFromStores2) {
-        if (cResult[16] === arr5) {
-          if (cResult[17] === tmp20) {
-            if (cResult[22] !== cResult[18]) {
-              { hasIcons: true, children: null }.children = tmp22;
-              class T {
-                constructor() {
-                  return closure_1_7.getCustomGuildScores();
-                }
-              }
-              cResult[22] = tmp22;
-              cResult[23] = tmp28;
-              let tmp26 = tmp28;
-              const obj2 = { hasIcons: true, children: null };
-            } else {
-              tmp26 = cResult[23];
-            }
-            if (cResult[24] === tmp18.container) {
-              if (cResult[25] === tmp21) {
-                if (cResult[26] === tmp26) {
-                  let tmp29 = cResult[27];
-                }
-                return tmp29;
-              }
-            }
-            class T {
-              constructor() {
-                return closure_1_7.getCustomGuildScores();
-              }
-            }
-            let obj3 = { showsVerticalScrollIndicator: false, style: tmp18.container, contentInset: tmp21, children: tmp26 };
-            const tmp31 = <ScrollView showsVerticalScrollIndicator={false} style={tmp18.container} contentInset={tmp21}>{tmp26}</ScrollView>;
-            class O {
-              constructor(arg0) {
-                closure_0 = navigation;
-                tmp = closure_1_8;
-                tmp2 = navigation;
-                tmp3 = closure_2;
-                obj = {
-                  onPress() {
-                                  return closure_3(guild.id);
-                                },
-                  icon: null,
-                  label: navigation.name,
-                  trailing: null,
-                  arrow: true
-                };
-                obj1 = { guild: navigation };
-                obj.icon = closure_1_8(closure_1(closure_2[13]), obj1);
-                tmpResult = undefined;
-                if (null != closure_2[navigation.id]) {
-                  tmp2Result = tmp2(tmp3[14]);
-                  numberToCustomScoreResult = tmp2Result.numberToCustomScore(tmp4[navigation.id]);
-                  if (numberToCustomScoreResult === tmp2(tmp3[14]).ICYMICustomScore.MUTED) {
-                    obj5 = { text: null };
-                    intl = tmp2(tmp3[15]).intl;
-                    obj5.text = intl.string(tmp2(tmp3[15]).t.lhPHmz);
-                    tmpResult = tmp(tmp2(tmp3[12]).TableRow.TrailingText, obj5);
-                  }
-                }
-                obj.trailing = tmpResult;
-                return tmp(navigation(closure_2[12]).TableRow, obj, navigation.id);
-              }
-            }
-            cResult[25] = tmp21;
-            cResult[26] = tmp26;
-            cResult[27] = tmp31;
-            tmp29 = tmp31;
-          }
-        }
-      }
-      if (cResult[19] === stateFromStores2) {
-        if (cResult[20] === tmp20) {
-          let tmp23 = cResult[21];
-        }
-        const mapped = arr5.map(tmp23);
-        class T {
-          constructor() {
-            return closure_1_7.getCustomGuildScores();
-          }
-        }
-        cResult[16] = arr5;
-        cResult[17] = tmp20;
-        cResult[18] = mapped;
-      }
-      class O {
-        constructor(arg0) {
-          closure_0 = navigation;
-          tmp = closure_1_8;
-          tmp2 = navigation;
-          tmp3 = closure_2;
-          obj = {
-            onPress() {
-                      return closure_3(guild.id);
-                    },
-            icon: null,
-            label: navigation.name,
-            trailing: null,
-            arrow: true
-          };
-          obj1 = { guild: navigation };
-          obj.icon = closure_1_8(closure_1(closure_2[13]), obj1);
-          tmpResult = undefined;
-          if (null != closure_2[navigation.id]) {
-            tmp2Result = tmp2(tmp3[14]);
-            numberToCustomScoreResult = tmp2Result.numberToCustomScore(tmp4[navigation.id]);
-            if (numberToCustomScoreResult === tmp2(tmp3[14]).ICYMICustomScore.MUTED) {
-              obj5 = { text: null };
-              intl = tmp2(tmp3[15]).intl;
-              obj5.text = intl.string(tmp2(tmp3[15]).t.lhPHmz);
-              tmpResult = tmp(tmp2(tmp3[12]).TableRow.TrailingText, obj5);
-            }
-          }
-          obj.trailing = tmpResult;
-          return tmp(navigation(closure_2[12]).TableRow, obj, navigation.id);
-        }
-      }
-      cResult[19] = stateFromStores2;
-      cResult[20] = tmp20;
-      cResult[21] = O;
-      tmp23 = O;
+      cResult[12] = fn3;
+      tmp20 = fn3;
+    } else {
+      tmp20 = cResult[12];
     }
+    let closure_3 = tmp20;
+    const container = tmp18.container;
+    if (cResult[13] !== bottom) {
+      const rect = { bottom, top: tmp19(stateFromStores2[7]).space.PX_12 };
+      class T {
+        constructor() {
+          return customGuildScores.getCustomGuildScores();
+        }
+      }
+      cResult[13] = bottom;
+      cResult[14] = rect;
+      tmp21 = rect;
+    } else {
+      tmp21 = cResult[14];
+    }
+    if (cResult[15] === stateFromStores2) {
+      if (cResult[16] === arr5) {
+        let tmp25;
+        if (cResult[17] === tmp20) {
+          tmp22 = cResult[18];
+        }
+        if (cResult[22] !== tmp22) {
+          const obj2 = { hasIcons: true, children: tmp22 };
+          class T {
+            constructor() {
+              return customGuildScores.getCustomGuildScores();
+            }
+          }
+          cResult[22] = tmp22;
+          cResult[23] = tmp27;
+          tmp25 = tmp27;
+        } else {
+          tmp25 = cResult[23];
+        }
+        if (cResult[24] === tmp18.container) {
+          if (cResult[25] === tmp21) {
+            let tmp28;
+            if (cResult[26] === tmp25) {
+              tmp28 = cResult[27];
+            }
+            return tmp28;
+          }
+        }
+        class T {
+          constructor() {
+            return customGuildScores.getCustomGuildScores();
+          }
+        }
+        const tmp30 = <ScrollView showsVerticalScrollIndicator={false} style={container} contentInset={tmp21}>{tmp25}</ScrollView>;
+        class O {
+          constructor(arg0) {
+            closure_0 = navigation;
+            tmp = closure_1_8;
+            tmp2 = navigation;
+            tmp3 = closure_2;
+            obj = {
+              onPress() {
+                          return closure_3(guild.id);
+                        },
+              icon: null,
+              label: null,
+              trailing: null,
+              arrow: true
+            };
+            TableRow = navigation(closure_2[12]).TableRow;
+            obj1 = { guild: navigation };
+            obj.icon = closure_1_8(closure_1(closure_2[13]), obj1);
+            obj.label = navigation.name;
+            tmpResult = undefined;
+            if (null != closure_2[navigation.id]) {
+              tmp2Result = tmp2(tmp3[14]);
+              numberToCustomScoreResult = tmp2Result.numberToCustomScore(tmp4[navigation.id]);
+              if (numberToCustomScoreResult === tmp2(tmp3[14]).ICYMICustomScore.MUTED) {
+                obj5 = { text: null };
+                TrailingText = tmp2(tmp3[12]).TableRow.TrailingText;
+                intl = tmp2(tmp3[15]).intl;
+                obj5.text = intl.string(tmp2(tmp3[15]).t.lhPHmz);
+                tmpResult = tmp(TrailingText, obj5);
+              }
+            }
+            obj.trailing = tmpResult;
+            return tmp(TableRow, obj, navigation.id);
+          }
+        }
+        cResult[25] = tmp21;
+        cResult[26] = tmp25;
+        cResult[27] = tmp30;
+        tmp28 = tmp30;
+      }
+    }
+    if (cResult[19] === stateFromStores2) {
+      let tmp23;
+      if (cResult[20] === tmp20) {
+        tmp23 = cResult[21];
+      }
+      const mapped = arr5.map(tmp23);
+      class T {
+        constructor() {
+          return customGuildScores.getCustomGuildScores();
+        }
+      }
+      cResult[16] = arr5;
+      cResult[17] = tmp20;
+      cResult[18] = mapped;
+      tmp22 = mapped;
+    }
+    class O {
+      constructor(arg0) {
+        closure_0 = navigation;
+        tmp = closure_1_8;
+        tmp2 = navigation;
+        tmp3 = closure_2;
+        obj = {
+          onPress() {
+                  return closure_3(guild.id);
+                },
+          icon: null,
+          label: null,
+          trailing: null,
+          arrow: true
+        };
+        TableRow = navigation(closure_2[12]).TableRow;
+        obj1 = { guild: navigation };
+        obj.icon = closure_1_8(closure_1(closure_2[13]), obj1);
+        obj.label = navigation.name;
+        tmpResult = undefined;
+        if (null != closure_2[navigation.id]) {
+          tmp2Result = tmp2(tmp3[14]);
+          numberToCustomScoreResult = tmp2Result.numberToCustomScore(tmp4[navigation.id]);
+          if (numberToCustomScoreResult === tmp2(tmp3[14]).ICYMICustomScore.MUTED) {
+            obj5 = { text: null };
+            TrailingText = tmp2(tmp3[12]).TableRow.TrailingText;
+            intl = tmp2(tmp3[15]).intl;
+            obj5.text = intl.string(tmp2(tmp3[15]).t.lhPHmz);
+            tmpResult = tmp(TrailingText, obj5);
+          }
+        }
+        obj.trailing = tmpResult;
+        return tmp(TableRow, obj, navigation.id);
+      }
+    }
+    cResult[19] = stateFromStores2;
+    cResult[20] = tmp20;
+    cResult[21] = O;
+    tmp23 = O;
   }
   if (cResult[9] !== stateFromStores) {
     class F {
       constructor(arg0) {
-        return closure_1[navigation];
+        return stateFromStores[arg0];
       }
     }
     cResult[9] = stateFromStores;
     class T {
       constructor() {
-        return closure_1_7.getCustomGuildScores();
+        return customGuildScores.getCustomGuildScores();
       }
     }
     cResult[10] = F;
   } else {
     class F {
       constructor(arg0) {
-        return closure_1[navigation];
+        return stateFromStores[arg0];
       }
     }
   }
@@ -252,61 +282,55 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((navigation) => {
   cResult[6] = stateFromStores1;
   cResult[7] = stateFromStores;
   cResult[8] = mapped1;
-  const tmpResult4 = navigation(stateFromStores2[10]);
+  arr5 = mapped1;
 }) : ((navigation) => {
+  let closure_3;
+  let customGuildScores;
+  let flattenedGuildIds;
+  let guilds;
   navigation = navigation.navigation;
   let stateFromStores1;
-  const items = [GuildStore];
-  const stateFromStores = navigation(stateFromStores1[10]).useStateFromStores(items, () => guilds.getGuilds());
   let obj = navigation(stateFromStores1[10]);
-  const items1 = [SortedGuildStore];
-  stateFromStores1 = navigation(stateFromStores1[10]).useStateFromStores(items1, () => flattenedGuildIds.getFlattenedGuildIds());
+  const items = [GuildStore];
+  const stateFromStores = obj.useStateFromStores(items, () => guilds.getGuilds());
   const obj2 = navigation(stateFromStores1[10]);
+  const items1 = [SortedGuildStore];
+  stateFromStores1 = obj2.useStateFromStores(items1, () => flattenedGuildIds.getFlattenedGuildIds());
   const items2 = [ICYMIStore];
-  noop = navigation(stateFromStores1[10]).useStateFromStores(items2, () => customGuildScores.getCustomGuildScores());
+  const obj3 = navigation(stateFromStores1[10]);
+  react = obj3.useStateFromStores(items2, () => customGuildScores.getCustomGuildScores());
   const items3 = [stateFromStores1, stateFromStores];
-  const memo = noop.useMemo(() => stateFromStores1.map((item) => stateFromStores[item]), items3);
-  let obj3 = navigation(stateFromStores1[10]);
+  const memo = react.useMemo(() => stateFromStores1.map((item) => stateFromStores[item]), items3);
   const items4 = [navigation];
-  closure_4 = noop.useCallback((guildId) => navigation.navigate("guild", { guildId }), items4);
-  const obj4 = { showsVerticalScrollIndicator: false, style: closure_9().container, contentInset: null, children: null };
-  const rect = { bottom: stateFromStores(stateFromStores1[11])().bottom, top: stateFromStores(stateFromStores1[7]).space.PX_12 };
-  obj4.contentInset = rect;
   const tmp3 = closure_9();
-  obj4.children = jsx(navigation(stateFromStores1[16]).TableRowGroup, {
+  const bottom = stateFromStores(stateFromStores1[11])().bottom;
+  let closure_4 = react.useCallback((guildId) => {
+    const obj = { guildId };
+    return navigation.navigate("guild", obj);
+  }, items4);
+  const rect = { bottom, top: stateFromStores(stateFromStores1[7]).space.PX_12 };
+  ({
     hasIcons: true,
     children: memo.map((guild) => {
-      const obj = {
-        onPress() {
-          return closure_4(guild.id);
-        },
-        icon: jsx(stateFromStores(stateFromStores1[13]), { guild }),
-        label: guild.name,
-        trailing: null,
-        arrow: true
-      };
+      const TableRow = navigation(stateFromStores1[12]).TableRow;
       let tmpResult;
       if (null != closure_3[guild.id]) {
         const tmp2Result = navigation(stateFromStores1[14]);
+        const numberToCustomScoreResult = tmp2Result.numberToCustomScore(tmp4[guild.id]);
         if (numberToCustomScoreResult === navigation(stateFromStores1[14]).ICYMICustomScore.MUTED) {
-          const obj3 = { text: null };
+          const TrailingText = navigation(stateFromStores1[12]).TableRow.TrailingText;
           const intl = navigation(stateFromStores1[15]).intl;
-          obj3.text = intl.string(navigation(stateFromStores1[15]).t.lhPHmz);
-          tmpResult = jsx(navigation(stateFromStores1[12]).TableRow.TrailingText, { text: null });
+          tmpResult = <TrailingText text={intl.string(navigation(stateFromStores1[15]).t.lhPHmz)} />;
         }
-        numberToCustomScoreResult = navigation(stateFromStores1[14]).numberToCustomScore(tmp4[guild.id]);
       }
-      obj.trailing = tmpResult;
-      return jsx(navigation(stateFromStores1[12]).TableRow, {
-        onPress() {
-          return closure_4(guild.id);
-        },
-        icon: jsx(stateFromStores(stateFromStores1[13]), { guild }),
-        label: guild.name,
-        trailing: null,
-        arrow: true
-      }, guild.id);
+      return <TableRow key={guild.id} onPress={function onPress() {
+        return closure_4(guild.id);
+      }} icon={null} label={guild.name} trailing={tmpResult} arrow />;
     })
   });
-  return <closure_4 showsVerticalScrollIndicator={false} style={closure_9().container} contentInset={null}>{null}</closure_4>;
+  const TableRowGroup = navigation(stateFromStores1[16]).TableRowGroup;
+  return <closure_4 showsVerticalScrollIndicator={false} style={tmp3.container} contentInset={rect}>{null}</closure_4>;
 });
+const result = size.fileFinishedImporting("modules/icymi/native/custom_scores/ICYMICustomScoresOverviewScreen.tsx");
+
+export default tmp2;

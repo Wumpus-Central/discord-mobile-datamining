@@ -1,43 +1,48 @@
 // === Module 10630: ActionButton ===
 
 // Module 10630 (ActionButton)
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
 import ButtonHooks from "ButtonHooks" /* 5601 */;
-import IconButton from "IconButton" /* 7575 */;
-import noop from "module_19" /* 19 */;
+import IconButton2 from "IconButton" /* 7575 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("components_native/common/ActionButton.tsx");
+let IconComponent;
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((IconComponent) => {
-  const cResult = c.c(11);
+const View = react_native.View;
+const jsx = Fragment.jsx;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((IconComponent) => {
+  const obj = react2;
+  const cResult = obj.c(11);
   IconComponent = IconComponent.IconComponent;
   let str = "tertiary";
   if ("positive" === IconComponent.type) {
     str = "active";
   }
-  const color = ButtonHooks.useButtonTextColorStyles(str).color;
+  const tmpResult = ButtonHooks;
+  const color = tmpResult.useButtonTextColorStyles(str).color;
   if (cResult[0] === IconComponent) {
+    let tmp4;
     if (cResult[1] === color) {
-      let tmp4 = cResult[2];
+      tmp4 = cResult[2];
     }
     if (cResult[3] === IconComponent.accessibilityLabel) {
       if (cResult[4] === IconComponent.onPress) {
         if (cResult[5] === tmp4) {
+          let tmp6;
           if (cResult[6] === str) {
-            let tmp6 = cResult[7];
+            tmp6 = cResult[7];
           }
           if (cResult[8] === IconComponent.styles) {
+            let tmp9;
             if (cResult[9] === tmp6) {
-              let tmp9 = cResult[10];
+              tmp9 = cResult[10];
             }
             return tmp9;
           }
-          const obj2 = { style: IconComponent.styles, children: tmp6 };
           const tmp12 = <View style={IconComponent.styles}>{tmp6}</View>;
           cResult[8] = IconComponent.styles;
           cResult[9] = tmp6;
@@ -46,10 +51,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((IconComponent) =
         }
       }
     }
-    const obj4 = { icon: tmp4, onPress: null, accessibilityLabel: null, variant: null, size: "sm" };
     ({ onPress: obj3.onPress, accessibilityLabel: obj3.accessibilityLabel } = IconComponent);
-    obj4.variant = str;
-    const tmp8 = jsx(IconButton.IconButton, { icon: tmp4, onPress: null, accessibilityLabel: null, variant: null, size: "sm" });
+    const tmp8 = jsx(IconButton2.IconButton, { icon: tmp4, onPress: null, accessibilityLabel: null, variant: str, size: "sm" });
     cResult[3] = IconComponent.accessibilityLabel;
     cResult[4] = IconComponent.onPress;
     cResult[5] = tmp4;
@@ -62,14 +65,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((IconComponent) =
   cResult[1] = color;
   cResult[2] = tmp5;
   tmp4 = tmp5;
-  const tmpResult = ButtonHooks;
-}) : ((style) => {
+}) : ((IconComponent) => {
   let str = "tertiary";
-  if ("positive" === style.type) {
+  IconComponent = IconComponent.IconComponent;
+  if ("positive" === IconComponent.type) {
     str = "active";
   }
-  const obj2 = { style: style.styles, children: null };
-  ({ onPress: obj3.onPress, accessibilityLabel: obj3.accessibilityLabel } = style);
-  obj2.children = jsx(IconButton.IconButton, { icon: <style.IconComponent color={ButtonHooks.useButtonTextColorStyles(str).color} size="sm" />, onPress: null, accessibilityLabel: null, variant: str, size: "sm" });
-  return <View style={style.styles}>{null}</View>;
+  const obj = ButtonHooks;
+  const color = obj.useButtonTextColorStyles(str).color;
+  const IconButton = IconButton2.IconButton;
+  ({ onPress: obj3.onPress, accessibilityLabel: obj3.accessibilityLabel } = IconComponent);
+  return <View style={IconComponent.styles}>{null}</View>;
 });
+const result = size.fileFinishedImporting("components_native/common/ActionButton.tsx");
+
+export default tmp3;

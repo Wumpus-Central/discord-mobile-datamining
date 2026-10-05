@@ -1,38 +1,39 @@
 // === Module 5982: form_fields/FormSeparator ===
 
 // Module 5982 (form_fields/FormSeparator)
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj2 = { separator: { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, marginVertical: 12 } };
-let closure_4 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-const obj3 = { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, marginVertical: 12 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/FormSeparator.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
-  const cResult = c.c(6);
+let obj2;
+const View = react_native.View;
+const jsx = Fragment.jsx;
+let obj = { separator: obj2 };
+obj2 = { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, marginVertical: 12 };
+let closure_4 = createStyles.createStyles(obj);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+  const obj = react2;
+  const cResult = obj.c(6);
   const tmp2 = closure_4();
   if (cResult[0] === style.style) {
+    let tmp3;
     if (cResult[1] === tmp2.separator) {
-      let tmp3 = cResult[2];
+      tmp3 = cResult[2];
     }
     if (cResult[3] === style) {
+      let tmp4;
       if (cResult[4] === tmp3) {
-        let tmp4 = cResult[5];
+        tmp4 = cResult[5];
       }
       return tmp4;
     }
-    const obj2 = {};
     const merged = Object.assign(style);
-    obj2.style = tmp3;
-    const tmp10 = <View />;
+    const tmp10 = <View style={tmp3} />;
     cResult[3] = style;
     cResult[4] = tmp3;
     cResult[5] = tmp10;
@@ -44,9 +45,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
   cResult[2] = items;
   tmp3 = items;
 }) : ((style) => {
-  const obj = {};
+  const tmp = closure_4();
   const merged = Object.assign(style);
-  const items = [closure_4().separator, style.style];
-  obj.style = items;
-  return <View />;
+  const items = [tmp.separator, style.style];
+  return <View style={items} />;
 });
+const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/FormSeparator.tsx");
+
+export default tmp3;

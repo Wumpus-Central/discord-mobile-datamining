@@ -4,35 +4,39 @@
 import MemberSafetySupplementalUtils from "MemberSafetySupplementalUtils" /* 7011 */;
 import size from "module_2" /* 2 */;
 
-const dependencyMap = {};
+let joinSourceType;
+
+let closure_2 = {};
 const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyStoreSupplemental.tsx");
 
 export const hasMemberSupplemental = function hasMemberSupplemental(arg0, arg1) {
-  let tmp2 = null != dependencyMap[arg0];
-  if (tmp2) {
-    tmp2 = null != tmp[arg0][arg1];
-  }
-  return tmp2;
+  return null != closure_2[arg0] && null != tmp[arg0][arg1];
 };
 export const getMemberSupplementalByGuildId = function getMemberSupplementalByGuildId(guildId) {
-  if (null == dependencyMap[guildId]) {
-    dependencyMap[guildId] = {};
+  if (null == closure_2[guildId]) {
+    closure_2[guildId] = {};
   }
-  return dependencyMap[guildId];
+  return closure_2[guildId];
 };
 export const syncMemberSupplemental = function syncMemberSupplemental(guildId, memberSupplementals) {
   if (0 === memberSupplementals.length) {
     return false;
   } else {
-    if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = {};
+    if (null == closure_2[guildId]) {
+      closure_2[guildId] = {};
     }
-    closure_0 = dependencyMap[guildId];
+    let closure_0 = closure_2[guildId];
     const item = memberSupplementals.forEach((joinSourceType) => {
+      let integrationType;
+      let inviterId;
+      let joinSourceChannelId;
+      let prop;
+      let sourceInviteCode;
+      let userId;
       joinSourceType = joinSourceType.joinSourceType;
       if (joinSourceType == null) {
         let joinSourceType1;
-        if (tmp2 != null) {
+        if (closure_0[joinSourceType.userId] != null) {
           joinSourceType1 = tmp2.joinSourceType;
         }
         joinSourceType = joinSourceType1;
@@ -40,21 +44,15 @@ export const syncMemberSupplemental = function syncMemberSupplemental(guildId, m
       if (joinSourceType == null) {
         joinSourceType = null;
       }
-      let tmp5 = null != joinSourceType;
-      if (tmp5) {
-        tmp5 = joinSourceType !== MemberSafetySupplementalUtils.JoinSourceType.UNSPECIFIED;
-      }
-      if (!tmp5) {
-        tmp5 = null == joinSourceType.sourceInviteCode;
-      }
+      const tmp5 = null != joinSourceType && joinSourceType !== MemberSafetySupplementalUtils.JoinSourceType.UNSPECIFIED || null == joinSourceType.sourceInviteCode;
       if (!tmp5) {
         joinSourceType = MemberSafetySupplementalUtils.JoinSourceType.INVITE;
       }
-      const obj = { userId: joinSourceType.userId, sourceInviteCode: null, joinSourceType: null, inviterId: null, integrationType: null, joinSourceApplicationId: null, joinSourceChannelId: null };
+      const obj = { userId: joinSourceType.userId, sourceInviteCode, joinSourceType, inviterId, integrationType, joinSourceApplicationId: prop, joinSourceChannelId };
       ({ sourceInviteCode, userId } = joinSourceType);
       if (sourceInviteCode == null) {
         let sourceInviteCode1;
-        if (tmp2 != null) {
+        if (closure_0[joinSourceType.userId] != null) {
           sourceInviteCode1 = tmp2.sourceInviteCode;
         }
         sourceInviteCode = sourceInviteCode1;
@@ -62,12 +60,10 @@ export const syncMemberSupplemental = function syncMemberSupplemental(guildId, m
       if (sourceInviteCode == null) {
         sourceInviteCode = null;
       }
-      obj.sourceInviteCode = sourceInviteCode;
-      obj.joinSourceType = joinSourceType;
-      let inviterId = joinSourceType.inviterId;
+      inviterId = joinSourceType.inviterId;
       if (inviterId == null) {
         let inviterId1;
-        if (tmp2 != null) {
+        if (closure_0[joinSourceType.userId] != null) {
           inviterId1 = tmp2.inviterId;
         }
         inviterId = inviterId1;
@@ -75,11 +71,10 @@ export const syncMemberSupplemental = function syncMemberSupplemental(guildId, m
       if (inviterId == null) {
         inviterId = null;
       }
-      obj.inviterId = inviterId;
-      let integrationType = joinSourceType.integrationType;
+      integrationType = joinSourceType.integrationType;
       if (integrationType == null) {
         let integrationType1;
-        if (tmp2 != null) {
+        if (closure_0[joinSourceType.userId] != null) {
           integrationType1 = tmp2.integrationType;
         }
         integrationType = integrationType1;
@@ -87,11 +82,10 @@ export const syncMemberSupplemental = function syncMemberSupplemental(guildId, m
       if (integrationType == null) {
         integrationType = null;
       }
-      obj.integrationType = integrationType;
-      let prop = joinSourceType.joinSourceApplicationId;
+      prop = joinSourceType.joinSourceApplicationId;
       if (prop == null) {
         let prop1;
-        if (tmp2 != null) {
+        if (closure_0[joinSourceType.userId] != null) {
           prop1 = tmp2.joinSourceApplicationId;
         }
         prop = prop1;
@@ -99,11 +93,10 @@ export const syncMemberSupplemental = function syncMemberSupplemental(guildId, m
       if (prop == null) {
         prop = null;
       }
-      obj.joinSourceApplicationId = prop;
-      let joinSourceChannelId = joinSourceType.joinSourceChannelId;
+      joinSourceChannelId = joinSourceType.joinSourceChannelId;
       if (joinSourceChannelId == null) {
         let joinSourceChannelId1;
-        if (tmp2 != null) {
+        if (closure_0[joinSourceType.userId] != null) {
           joinSourceChannelId1 = tmp2.joinSourceChannelId;
         }
         joinSourceChannelId = joinSourceChannelId1;
@@ -111,7 +104,6 @@ export const syncMemberSupplemental = function syncMemberSupplemental(guildId, m
       if (joinSourceChannelId == null) {
         joinSourceChannelId = null;
       }
-      obj.joinSourceChannelId = joinSourceChannelId;
       closure_0[userId] = obj;
     });
     return true;

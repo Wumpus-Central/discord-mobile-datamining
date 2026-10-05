@@ -2,18 +2,24 @@
 
 // Module 15158 (DisplayNameStylesEffectOrder)
 import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperiment" /* 9390 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import DisplayNameStylesConstants from "DisplayNameStylesConstants" /* 1395 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const DisplayNameStylesConstants = fn(1395);
 const EFFECT_ORDER = DisplayNameStylesConstants.EFFECT_ORDER;
-let items = [...tmp2.FLYWHEEL_EFFECTS];
-const ReactCompilerGating = fn(558);
-const size = fn(2);
+const FLYWHEEL_EFFECTS = DisplayNameStylesConstants.FLYWHEEL_EFFECTS;
+let items = [...FLYWHEEL_EFFECTS];
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const obj = DisplayNameStylesFlywheelExperiment;
+  return obj.useIsDisplayNameStylesFlywheelSettersEnabled("effect-order") ? items : EFFECT_ORDER;
+}) : (() => {
+  let isDisplayNameStylesFlywheelSettersEnabled;
+  const obj = isDisplayNameStylesFlywheelSettersEnabled(9390);
+  isDisplayNameStylesFlywheelSettersEnabled = obj.useIsDisplayNameStylesFlywheelSettersEnabled("effect-order");
+  items = [isDisplayNameStylesFlywheelSettersEnabled];
+  return react.useMemo(() => isDisplayNameStylesFlywheelSettersEnabled ? items : EFFECT_ORDER, items);
+});
 const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesEffectOrder.tsx");
 
-export const useVisibleEffectOrder = ReactCompilerGating.isReactCompilerEnabled() ? (() => DisplayNameStylesFlywheelExperiment.useIsDisplayNameStylesFlywheelSettersEnabled("effect-order") ? items : EFFECT_ORDER) : (() => {
-  isDisplayNameStylesFlywheelSettersEnabled = isDisplayNameStylesFlywheelSettersEnabled(9390).useIsDisplayNameStylesFlywheelSettersEnabled("effect-order");
-  items = [isDisplayNameStylesFlywheelSettersEnabled];
-  return noop.useMemo(() => isDisplayNameStylesFlywheelSettersEnabled ? items : EFFECT_ORDER, items);
-});
+export const useVisibleEffectOrder = tmp3;

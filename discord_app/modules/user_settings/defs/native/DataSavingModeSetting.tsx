@@ -1,18 +1,24 @@
 // === Module 15287: DataSavingModeSetting ===
 
 // Module 15287 (DataSavingModeSetting)
-import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
+import get_initialized from "get initialized" /* 504 */;
+import react from "react" /* 576 */;
+import intl2 from "intl" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;
+import SettingsConstants from "SettingsConstants" /* 7634 */;
 import UserSettingsText from "UserSettingsText" /* 15285 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import SettingBuilders from "SettingBuilders" /* 11129 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11129);
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(2);
+  let dataSavingMode;
+  let tmp4;
+  let tmp5;
+  const obj = react;
+  const cResult = obj.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UnsyncedUserSettingsStore];
     const fn = function o() {
@@ -25,46 +31,31 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  return initialize.useStateFromStores(tmp4, tmp5);
+  const tmpResult = get_initialized;
+  return tmpResult.useStateFromStores(tmp4, tmp5);
 }) : (() => {
+  let dataSavingMode;
   const items = [UnsyncedUserSettingsStore];
-  return initialize.useStateFromStores(items, () => dataSavingMode.dataSavingMode);
+  const obj = get_initialized;
+  return obj.useStateFromStores(items, () => dataSavingMode.dataSavingMode);
 });
-const toggle = SettingBuilders.createToggle({
+let obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t.ix8XIj);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.ix8XIj);
   },
-  parent: fn(7634).MobileUserSettings.CHAT,
-  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-    const cResult = c.c(2);
-    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const items = [UnsyncedUserSettingsStore];
-      const fn = function o() {
-        return dataSavingMode.dataSavingMode;
-      };
-      cResult[0] = items;
-      cResult[1] = fn;
-      tmp4 = items;
-      tmp5 = fn;
-    } else {
-      [tmp4, tmp5] = cResult;
-    }
-    return initialize.useStateFromStores(tmp4, tmp5);
-  }) : (() => {
-    const items = [UnsyncedUserSettingsStore];
-    return initialize.useStateFromStores(items, () => dataSavingMode.dataSavingMode);
-  }),
+  parent: MobileUserSettings.CHAT,
+  useValue: tmp2,
   onValueChange: function onDataSavingModeSettingValueChange(dataSavingMode) {
-    const obj2 = { videoUploadQuality: UnsyncedUserSettingsStore.videoUploadQuality, viewImageDescriptions: null, lowQualityImageMode: null, dataSavingMode: null };
-    const ViewImageDescriptions = UserSettings.ViewImageDescriptions;
-    obj2.viewImageDescriptions = ViewImageDescriptions.getSetting();
-    obj2.lowQualityImageMode = UnsyncedUserSettingsStore.lowQualityImageMode;
-    obj2.dataSavingMode = dataSavingMode;
-    UserSettingsText.setDataSavingMode(obj2);
+    let ViewImageDescriptions;
+    const obj = { videoUploadQuality: UnsyncedUserSettingsStore.videoUploadQuality, viewImageDescriptions: ViewImageDescriptions.getSetting(), lowQualityImageMode: UnsyncedUserSettingsStore.lowQualityImageMode, dataSavingMode };
+    const setDataSavingMode = UserSettingsText.setDataSavingMode;
+    UserSettingsText;
+    ViewImageDescriptions = UserSettings.ViewImageDescriptions;
+    setDataSavingMode(obj);
   }
-});
-const size = fn(2);
+};
+const toggle = SettingBuilders.createToggle(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/DataSavingModeSetting.tsx");
 
 export default toggle;

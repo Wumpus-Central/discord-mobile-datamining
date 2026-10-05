@@ -4,13 +4,16 @@
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
-({ ChannelTypes: closure_0, MessageEmbedTypes } = Constants);
+let MessageEmbedTypes;
+let _window;
+({ ChannelTypes: _window, MessageEmbedTypes } = Constants);
 const ICYMIItemTypes = { MESSAGE: 0, [0]: "MESSAGE", ACTIVITY: 2, [2]: "ACTIVITY", CUSTOM_STATUS: 3, [3]: "CUSTOM_STATUS", GUILD_EVENT: 5, [5]: "GUILD_EVENT", RECOMMENDED_GUILDS: 6, [6]: "RECOMMENDED_GUILDS" };
 const items = [, ];
 ({ MESSAGE: arr[0], CUSTOM_STATUS: arr[1] } = ICYMIItemTypes);
 const items1 = [, ];
 ({ IMAGE: arr2[0], GIFV: arr2[1] } = MessageEmbedTypes);
 const set = new Set(items);
+const set1 = new Set(items1);
 const result = size.fileFinishedImporting("modules/icymi/ICYMITypes.tsx");
 
 export const ICYMI_PAGE_SIZE = 15;
@@ -22,7 +25,7 @@ export const typeToString = function typeToString(type) {
   type = type.type;
   if (obj.MESSAGE === type) {
     let str5 = "announcement";
-    if (type.data.channel_type !== constants.GUILD_ANNOUNCEMENT) {
+    if (type.data.channel_type !== _window.GUILD_ANNOUNCEMENT) {
       const message_context = type.data.message_context;
       let prop;
       if (message_context != null) {
@@ -46,6 +49,6 @@ export const typeToString = function typeToString(type) {
   }
 };
 export const SUPPORTED_ITEM_TYPES = set;
-export const GRAVITY_VALID_EMBED_TYPES = new Set(items1);
+export const GRAVITY_VALID_EMBED_TYPES = set1;
 export const GravityICYMIDoubleTapBehavior = { DEFAULT: 0, [0]: "DEFAULT", BOOKMARKS: 2, [2]: "BOOKMARKS" };
 export const ContentType = { POPULAR_MESSAGE: "POPULAR_MESSAGE", IMAGE: "IMAGE", VIDEO: "VIDEO", LINK: "LINK", THREAD: "THREAD", CHANGED_STATUS: "CHANGED_STATUS", INTERESTING: "INTERESTING", ANNOUNCEMENT: "ANNOUNCEMENT", FORUM_POST: "FORUM_POST", FILE: "FILE" };

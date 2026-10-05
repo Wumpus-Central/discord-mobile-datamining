@@ -1,30 +1,38 @@
 // === Module 16291: GuildsBarItemUnavailableGuilds ===
 
 // Module 16291 (GuildsBarItemUnavailableGuilds)
+import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
+import intl3 from "intl" /* 1126 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5707 */;
-import _modDef16282 from "module_16282" /* 16282 */;
-import noop from "module_19" /* 19 */;
+import AssetRegistryDefault from "AssetRegistry" /* 16282 */;
+import react from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
 import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5618 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size_mod from "module_2" /* 2 */;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: c3, Pressable: closure_4 } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj = { unavailableGuilds: { marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING, justifyContent: "center", alignItems: "center" }, unavailableGuildsIcon: null };
-let size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
-obj.unavailableGuildsIcon = size;
-let closure_7 = createStyles.createStyles(obj);
-const ReactCompilerGating = fn(558);
-let obj3 = { marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING, justifyContent: "center", alignItems: "center" };
-size = fn(2);
-const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarItemUnavailableGuilds.tsx");
-
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = stateFromStores(576).c(13);
-  let unavailableGuilds = closure_7();
+let c3;
+let closure_4;
+let obj2;
+let size;
+({ Image: c3, Pressable: closure_4 } = react_native);
+const jsx = Fragment.jsx;
+let createStyles = createStyles_mod;
+let obj = { unavailableGuilds: obj2, unavailableGuildsIcon: size };
+obj2 = { marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING, justifyContent: "center", alignItems: "center" };
+createStyles = createStyles.createStyles;
+size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
+let closure_7 = createStyles(obj);
+const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let stateFromStores;
+  let tmp5;
+  let tmp6;
+  const tmp = stateFromStores;
+  let obj = stateFromStores(576);
+  const cResult = obj.c(13);
+  const tmp4 = closure_7();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildAvailabilityStore];
     const fn = function t() {
@@ -32,38 +40,38 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     };
     cResult[0] = items;
     cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
+    tmp5 = items;
+    tmp6 = fn;
   } else {
-    [tmp4, tmp5] = cResult;
+    [tmp5, tmp6] = cResult;
   }
-  const obj = stateFromStores(576);
-  stateFromStores = stateFromStores(504).useStateFromStores(tmp4, tmp5);
-  if (stateFromStores <= 0) {
-    return null;
-  } else {
+  const tmpResult = tmp(504);
+  stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
+  if (stateFromStores > 0) {
+    let tmp9;
     if (cResult[2] !== stateFromStores) {
       let intl = tmp(1126).intl;
       let obj2 = { count: stateFromStores };
       const formatToPlainStringResult = intl.formatToPlainString(tmp(1126).t["MEpX+2"], obj2);
       cResult[2] = stateFromStores;
       cResult[3] = formatToPlainStringResult;
-      let tmp8 = formatToPlainStringResult;
+      tmp9 = formatToPlainStringResult;
     } else {
-      tmp8 = cResult[3];
+      tmp9 = cResult[3];
     }
     if (cResult[4] !== stateFromStores) {
       class I {
         constructor() {
-          obj = closure_1(closure_2[6]);
-          obj1 = { title: null, body: null };
-          intl = closure_0(closure_2[7]).intl;
-          obj1.title = intl.string(closure_0(closure_2[7]).t.R0RpRX);
-          intl2 = closure_0(closure_2[7]).intl;
-          obj4 = { count: closure_0 };
-          obj1.body = intl2.format(closure_0(closure_2[7]).t["TnH05/"], obj4);
-          showResult = obj.show(obj1);
-          return;
+          let intl;
+          let intl2;
+          let obj2;
+          const obj = { title: intl.string(intl3.t.R0RpRX), body: intl2.format(intl3.t["TnH05/"], obj2) };
+          const show = AlertActionCreatorsDefault.show;
+          AlertActionCreatorsDefault;
+          intl = intl3.intl;
+          intl2 = intl3.intl;
+          obj2 = { count: stateFromStores };
+          show(obj);
         }
       }
       cResult[4] = stateFromStores;
@@ -71,98 +79,104 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     } else {
       class I {
         constructor() {
-          obj = closure_1(closure_2[6]);
-          obj1 = { title: null, body: null };
-          intl = closure_0(closure_2[7]).intl;
-          obj1.title = intl.string(closure_0(closure_2[7]).t.R0RpRX);
-          intl2 = closure_0(closure_2[7]).intl;
-          obj4 = { count: closure_0 };
-          obj1.body = intl2.format(closure_0(closure_2[7]).t["TnH05/"], obj4);
-          showResult = obj.show(obj1);
-          return;
+          let intl;
+          let intl2;
+          let obj2;
+          const obj = { title: intl.string(intl3.t.R0RpRX), body: intl2.format(intl3.t["TnH05/"], obj2) };
+          const show = AlertActionCreatorsDefault.show;
+          AlertActionCreatorsDefault;
+          intl = intl3.intl;
+          intl2 = intl3.intl;
+          obj2 = { count: stateFromStores };
+          show(obj);
         }
       }
     }
-    if (cResult[6] !== unavailableGuilds.unavailableGuildsIcon) {
+    if (cResult[6] !== tmp4.unavailableGuildsIcon) {
       class I {
         constructor() {
-          obj = closure_1(closure_2[6]);
-          obj1 = { title: null, body: null };
-          intl = closure_0(closure_2[7]).intl;
-          obj1.title = intl.string(closure_0(closure_2[7]).t.R0RpRX);
-          intl2 = closure_0(closure_2[7]).intl;
-          obj4 = { count: closure_0 };
-          obj1.body = intl2.format(closure_0(closure_2[7]).t["TnH05/"], obj4);
-          showResult = obj.show(obj1);
-          return;
+          let intl;
+          let intl2;
+          let obj2;
+          const obj = { title: intl.string(intl3.t.R0RpRX), body: intl2.format(intl3.t["TnH05/"], obj2) };
+          const show = AlertActionCreatorsDefault.show;
+          AlertActionCreatorsDefault;
+          intl = intl3.intl;
+          intl2 = intl3.intl;
+          obj2 = { count: stateFromStores };
+          show(obj);
         }
       }
-      const obj3 = { style: unavailableGuilds.unavailableGuildsIcon, source: _modDef16282 };
-      const tmp14 = <closure_3 style={unavailableGuilds.unavailableGuildsIcon} source={_modDef16282} />;
-      cResult[6] = unavailableGuilds.unavailableGuildsIcon;
-      cResult[7] = tmp14;
+      const tmp15 = <closure_3 style={tmp4.unavailableGuildsIcon} source={AssetRegistryDefault} />;
+      cResult[6] = tmp4.unavailableGuildsIcon;
+      cResult[7] = tmp15;
     } else {
       class I {
         constructor() {
-          obj = closure_1(closure_2[6]);
-          obj1 = { title: null, body: null };
-          intl = closure_0(closure_2[7]).intl;
-          obj1.title = intl.string(closure_0(closure_2[7]).t.R0RpRX);
-          intl2 = closure_0(closure_2[7]).intl;
-          obj4 = { count: closure_0 };
-          obj1.body = intl2.format(closure_0(closure_2[7]).t["TnH05/"], obj4);
-          showResult = obj.show(obj1);
-          return;
+          let intl;
+          let intl2;
+          let obj2;
+          const obj = { title: intl.string(intl3.t.R0RpRX), body: intl2.format(intl3.t["TnH05/"], obj2) };
+          const show = AlertActionCreatorsDefault.show;
+          AlertActionCreatorsDefault;
+          intl = intl3.intl;
+          intl2 = intl3.intl;
+          obj2 = { count: stateFromStores };
+          show(obj);
         }
       }
     }
-    if (cResult[8] === unavailableGuilds.unavailableGuilds) {
+    if (cResult[8] === tmp4.unavailableGuilds) {
       class I {
         constructor() {
-          obj = closure_1(closure_2[6]);
-          obj1 = { title: null, body: null };
-          intl = closure_0(closure_2[7]).intl;
-          obj1.title = intl.string(closure_0(closure_2[7]).t.R0RpRX);
-          intl2 = closure_0(closure_2[7]).intl;
-          obj4 = { count: closure_0 };
-          obj1.body = intl2.format(closure_0(closure_2[7]).t["TnH05/"], obj4);
-          showResult = obj.show(obj1);
-          return;
+          let intl;
+          let intl2;
+          let obj2;
+          const obj = { title: intl.string(intl3.t.R0RpRX), body: intl2.format(intl3.t["TnH05/"], obj2) };
+          const show = AlertActionCreatorsDefault.show;
+          AlertActionCreatorsDefault;
+          intl = intl3.intl;
+          intl2 = intl3.intl;
+          obj2 = { count: stateFromStores };
+          show(obj);
         }
       }
     }
-    const obj4 = { accessibilityRole: "button", accessibilityLabel: tmp8, onPress: I, style: unavailableGuilds.unavailableGuilds, children: tmp11 };
-    const tmp18 = <closure_4 accessibilityRole="button" accessibilityLabel={tmp8} onPress={I} style={unavailableGuilds.unavailableGuilds}>{tmp11}</closure_4>;
-    unavailableGuilds = unavailableGuilds.unavailableGuilds;
-    cResult[8] = unavailableGuilds;
-    cResult[9] = tmp8;
+    const tmp19 = <closure_4 accessibilityRole="button" accessibilityLabel={tmp9} onPress={I} style={tmp4.unavailableGuilds}>{tmp12}</closure_4>;
+    cResult[8] = tmp4.unavailableGuilds;
+    cResult[9] = tmp9;
     cResult[10] = I;
-    cResult[11] = tmp11;
-    cResult[12] = tmp18;
+    cResult[11] = tmp12;
+    cResult[12] = tmp19;
   }
-  const tmpResult = stateFromStores(504);
+  return null;
 }) : (() => {
+  let stateFromStores;
   const tmp = closure_7();
+  let obj = stateFromStores(504);
   const items = [GuildAvailabilityStore];
-  stateFromStores = stateFromStores(504).useStateFromStores(items, () => GuildAvailabilityStore.totalUnavailableGuilds);
+  stateFromStores = obj.useStateFromStores(items, () => GuildAvailabilityStore.totalUnavailableGuilds);
   let tmp5 = null;
   if (stateFromStores > 0) {
-    let obj2 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
     let intl = tmp2(1126).intl;
     const obj3 = { count: stateFromStores };
-    obj2.accessibilityLabel = intl.formatToPlainString(tmp2(1126).t["MEpX+2"], obj3);
-    obj2.onPress = function onPress() {
-      const obj2 = { title: null, body: null };
-      const intl = util.intl;
-      obj2.title = intl.string(util.t.R0RpRX);
-      const intl2 = util.intl;
-      obj2.body = intl2.format(util.t["TnH05/"], { count: stateFromStores });
-      AlertActionCreatorsDefault.show(obj2);
-    };
-    obj2.style = tmp.unavailableGuilds;
-    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef16282 };
-    obj2.children = <closure_3 style={tmp.unavailableGuildsIcon} source={_modDef16282} />;
-    tmp5 = <closure_4 accessibilityRole="button" accessibilityLabel={null} onPress={null} style={null}>{null}</closure_4>;
+    ({ style: tmp.unavailableGuildsIcon, source: AssetRegistryDefault });
+    tmp5 = <closure_4 accessibilityRole="button" accessibilityLabel={intl.formatToPlainString(stateFromStores(1126).t["MEpX+2"], obj3)} onPress={function onPress() {
+      let intl;
+      let intl2;
+      let obj2;
+      const obj = { title: intl.string(intl3.t.R0RpRX), body: intl2.format(intl3.t["TnH05/"], obj2) };
+      const show = AlertActionCreatorsDefault.show;
+      AlertActionCreatorsDefault;
+      intl = intl3.intl;
+      intl2 = intl3.intl;
+      obj2 = { count: stateFromStores };
+      show(obj);
+    }} style={tmp.unavailableGuilds}>{null}</closure_4>;
   }
   return tmp5;
 }));
+size = size_mod;
+const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarItemUnavailableGuilds.tsx");
+
+export default memoResult;

@@ -1,142 +1,66 @@
 // === Module 16728: ConjureSecretRequestState ===
 
 // Module 16728 (ConjureSecretRequestState)
-import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
+import react2 from "react" /* 576 */;
+import intl3 from "intl" /* 1126 */;
 import _modDef3723 from "module_3723" /* 3723 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import ConjureChatStore from "ConjureChatStore" /* 12905 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+let map, set, set2;
+
 function isSecretsSavedMessage(content) {
-  const trimmed = content.content.trim();
-  const intl = util.intl;
+  const str = content.content;
+  const trimmed = str.trim();
+  const intl = intl3.intl;
   let tmp5 = trimmed === intl.string(_modDef3723.UGqnoV);
   if (!tmp5) {
-    const intl2 = util.intl;
+    const intl2 = intl3.intl;
     tmp5 = trimmed === intl2.string(_modDef3723.sMQt5O);
   }
   return tmp5;
 }
-const turnSettled = fn(12905).turnSettled;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/conjure/secrets/ConjureSecretRequestState.tsx");
-
-export const secretRequestStatuses = function secretRequestStatuses(memo, stateFromStores12) {
-  let set1 = null;
-  if (null != stateFromStores12) {
-    const _Set = Set;
-    const found = stateFromStores12.filter((set) => set.set);
-    set1 = new Set(found.map((name) => name.name));
-  }
-  const map = new Map();
-  new Set();
-  let diff = memo.length - 1;
-  let flag = false;
-  let flag2 = false;
-  if (0 <= diff) {
-    while (true) {
-      let tmp7 = memo[diff];
-      let render_id = flag;
-      let tmp10 = flag;
-      let tmp11 = flag2;
-      if (null != tmp7) {
-        if ("user" !== tmp7.role) {
-          let secretRequest = tmp7.secretRequest;
-          let fields;
-          if (secretRequest != null) {
-            fields = secretRequest.fields;
-          }
-          if (fields == null) {
-            fields = [];
-          }
-          tmp10 = render_id;
-          tmp11 = flag2;
-          if (0 !== fields.length) {
-            let set = turnSettled(tmp7);
-            tmp10 = render_id;
-            tmp11 = flag2;
-            if (set) {
-              if (render_id) {
-                if (null == set1) {
-                  let result = map.set(tmp7.render_id, "pending");
-                  let tmp19 = fields[Symbol.iterator]();
-                }
-                let str = "inactive";
-                if (fields.some((name) => set2.has(name.name))) {
-                  str = "superseded";
-                }
-                let result1 = set(render_id, str);
-              }
-              if (render_id) {
-                if (null != set1) {
-                  if (fields.every((name) => set1.has(name.name))) {
-                    let result2 = map.set(tmp7.render_id, "received");
-                  }
-                }
-              }
-              set = map.set;
-              render_id = tmp7.render_id;
-              if (!flag2) {
-                let result3 = set(render_id, "open");
-              }
-            }
-          }
-        } else {
-          let tmp12 = render_id;
-          if (!render_id) {
-            tmp12 = isSecretsSavedMessage(tmp7);
-          }
-          tmp10 = tmp12;
-          tmp11 = flag2;
-        }
-      }
-      while (true) {
-        diff = diff - 1;
-        flag = tmp10;
-        flag2 = tmp11;
-        if (0 <= diff) {
-          break;
-        } else {
-          break label0;
-        }
-      }
-    }
-  }
-  return map;
-};
-export const useSecretRequestStatusChanged = ReactCompilerGating.isReactCompilerEnabled() ? ((cardId, arg1) => {
-  closure_1 = arg1;
-  const cResult = c.c(3);
+const turnSettled = ConjureChatStore.turnSettled;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((cardId, arg1) => {
+  let flag;
+  let tmp6;
+  let tmp7;
+  let tmp9;
+  let closure_0 = cardId;
+  let closure_1 = arg1;
+  let obj = react2;
+  const cResult = obj.c(3);
   if (cResult[0] === cardId) {
+    let tmp2;
     if (cResult[1] === arg1) {
-      let tmp2 = cResult[2];
+      tmp2 = cResult[2];
     }
-    [tmp6, tmp7] = noop.useState(tmp2);
+    [tmp6, tmp7] = react.useState(tmp2);
+    _slicedToArray(react.useState(tmp2), 2);
     if (tmp6.cardId === cardId) {
       if (null == tmp6.status) {
         return flag;
       }
       flag = null != tmp6.status && arg1 !== tmp6.status;
     }
-    const obj2 = { cardId, status: null };
-    let tmp9 = null;
+    const obj2 = { cardId, status: tmp9 };
+    tmp9 = null;
     if ("pending" !== arg1) {
       tmp9 = arg1;
     }
-    obj2.status = tmp9;
     tmp7(obj2);
     flag = false;
-    const tmp5 = _slicedToArray(noop.useState(tmp2), 2);
   }
   const fn = function l() {
-    const obj = { cardId, status: null };
-    let tmp = null;
+    let tmp;
+    const obj = { cardId, status: tmp };
+    tmp = null;
     if ("pending" !== closure_1) {
       tmp = closure_1;
     }
-    obj.status = tmp;
     return obj;
   };
   cResult[0] = cardId;
@@ -144,28 +68,116 @@ export const useSecretRequestStatusChanged = ReactCompilerGating.isReactCompiler
   cResult[2] = fn;
   tmp2 = fn;
 }) : ((cardId, arg1) => {
-  closure_1 = arg1;
-  [tmp2, tmp3] = noop.useState(() => {
-    const obj = { cardId, status: null };
-    let tmp = null;
+  let flag;
+  let tmp2;
+  let tmp3;
+  let tmp5;
+  let closure_0 = cardId;
+  let closure_1 = arg1;
+  let tmp = _slicedToArray(react.useState(() => {
+    let tmp;
+    const obj = { cardId, status: tmp };
+    tmp = null;
     if ("pending" !== closure_1) {
       tmp = closure_1;
     }
-    obj.status = tmp;
     return obj;
-  });
+  }), 2);
+  [tmp2, tmp3] = tmp;
   if (tmp2.cardId === cardId) {
     if (null == tmp2.status) {
       return flag;
     }
     flag = null != tmp2.status && arg1 !== tmp2.status;
   }
-  let obj = { cardId, status: null };
-  let tmp5 = null;
+  let obj = { cardId, status: tmp5 };
+  tmp5 = null;
   if ("pending" !== arg1) {
     tmp5 = arg1;
   }
-  obj.status = tmp5;
   tmp3(obj);
   flag = false;
 });
+let result = size.fileFinishedImporting("modules/conjure/secrets/ConjureSecretRequestState.tsx");
+
+export const secretRequestStatuses = function secretRequestStatuses(memo, stateFromStores12) {
+  let set1 = null;
+  if (null != stateFromStores12) {
+    const _Set = Set;
+    const found = stateFromStores12.filter((set) => set.set);
+    const self = this;
+    const self2 = this;
+    set1 = new Set(found.map((name) => name.name));
+  }
+  map = new Map();
+  set2 = new Set();
+  let diff = memo.length - 1;
+  let flag = false;
+  let flag2 = false;
+  if (0 <= diff) {
+    do {
+      let tmp4 = memo[diff];
+      let flag3 = flag;
+      let flag4 = flag2;
+      if (null != tmp4) {
+        if ("user" !== tmp4.role) {
+          let secretRequest = tmp4.secretRequest;
+          let fields;
+          if (secretRequest != null) {
+            fields = secretRequest.fields;
+          }
+          if (fields == null) {
+            fields = [];
+          }
+          flag3 = flag;
+          flag4 = flag2;
+          if (0 !== fields.length) {
+            flag3 = flag;
+            flag4 = flag2;
+            if (turnSettled(tmp4)) {
+              if (flag) {
+                if (null == set1) {
+                  let result = map.set(tmp4.render_id, "pending");
+                  let tmp15 = fields[Symbol.iterator]();
+                  flag3 = false;
+                  flag4 = true;
+                  while (tmp15 !== undefined) {
+                    let addResult = set2.add(tmp17.name);
+                    continue;
+                  }
+                }
+              }
+              if (flag) {
+                if (null != set1) {
+                  if (fields.every((name) => set1.has(name.name))) {
+                    let result1 = map.set(tmp4.render_id, "received");
+                  }
+                }
+              }
+              set = map.set;
+              let render_id = tmp4.render_id;
+              if (flag2) {
+                let str = "inactive";
+                if (fields.some((name) => set2.has(name.name))) {
+                  str = "superseded";
+                }
+                let result2 = set(render_id, str);
+              } else {
+                let result3 = set(render_id, "open");
+              }
+            }
+          }
+        } else {
+          let tmp8 = flag || isSecretsSavedMessage(tmp4);
+          flag3 = tmp8;
+          flag4 = flag2;
+        }
+      }
+      diff = diff - 1;
+      flag = flag3;
+      flag2 = flag4;
+    } while (0 <= diff);
+  }
+  return map;
+};
+export const useSecretRequestStatusChanged = tmp2;

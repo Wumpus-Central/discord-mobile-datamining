@@ -11,7 +11,8 @@ const result = size.fileFinishedImporting("../discord_common/js/shared/utils/Pla
 export { PlatformTypes };
 export const isPlatformEmbedded = true;
 export const isWindows = function isWindows() {
-  return /^win/.test(android);
+  const obj = /^win/;
+  return obj.test(android);
 };
 export function isMac() {
   return false;
@@ -20,7 +21,9 @@ export function isLinux() {
   return false;
 }
 export const isDesktop = function isDesktop() {
-  return /^win/.test(android) || false;
+  const obj = /^win/;
+  const tmp = obj.test(android) || false;
+  return tmp;
 };
 export function isWeb() {
   return false;
@@ -29,9 +32,9 @@ export const isAndroidChrome = function isAndroidChrome() {
   let tmp = null != navigator.userAgent;
   if (tmp) {
     const _navigator = navigator;
-    tmp = null != navigator.userAgent.toLowerCase().match("(android ).+chrome/[.0-9]* mobile");
     const str = navigator.userAgent;
-    const str2 = navigator.userAgent.toLowerCase();
+    const str2 = str.toLowerCase();
+    tmp = null != str2.match("(android ).+chrome/[.0-9]* mobile");
   }
   return tmp;
 };
@@ -70,7 +73,8 @@ export const platformPrefersDeepLink = function platformPrefersDeepLink() {
   return null != match;
 };
 export const platformSupportsActivityJoin = function platformSupportsActivityJoin() {
-  let tmp = /^win/.test(android) || false;
+  const obj = /^win/;
+  let tmp = obj.test(android) || false;
   if (!tmp) {
     const _navigator = navigator;
     let match;
@@ -103,8 +107,8 @@ export const getOS = function getOS() {
   return "android";
 };
 export const getNewUpdaterPlatformName = function getNewUpdaterPlatformName() {
+  const obj = /^win/;
   if (obj.test(android)) {
     return "win";
   }
-  obj = /^win/;
 };

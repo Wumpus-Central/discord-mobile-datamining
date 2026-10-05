@@ -1,24 +1,28 @@
 // === Module 10481: GiftingBadgeIcon ===
 
 // Module 10481 (GiftingBadgeIcon)
-import c from "c" /* 576 */;
-import noop from "module_19" /* 19 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size_mod from "module_2" /* 2 */;
 
-require = fn;
-const Image = fn(17).Image;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-let size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/gifting/native/views/GiftingBadgeIcon.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(10);
+const Image = react_native.Image;
+const jsx = Fragment.jsx;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let icon;
+  let style;
+  let tmp2;
+  let tmp3;
+  const obj = react2;
+  const cResult = obj.c(10);
   ({ icon, size, style } = arg0);
   if (cResult[0] !== icon) {
     const obj2 = { uri: icon };
     cResult[0] = icon;
     cResult[1] = obj2;
-    let tmp2 = obj2;
+    tmp2 = obj2;
   } else {
     tmp2 = cResult[1];
   }
@@ -26,21 +30,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const size1 = { width: size, height: size };
     cResult[2] = size;
     cResult[3] = size1;
-    let tmp3 = size1;
+    tmp3 = size1;
   } else {
     tmp3 = cResult[3];
   }
   if (cResult[4] === style) {
+    let tmp4;
     if (cResult[5] === tmp3) {
-      let tmp4 = cResult[6];
+      tmp4 = cResult[6];
     }
     if (cResult[7] === tmp2) {
+      let tmp5;
       if (cResult[8] === tmp4) {
-        let tmp5 = cResult[9];
+        tmp5 = cResult[9];
       }
       return tmp5;
     }
-    const obj3 = { source: tmp2, resizeMode: "contain", style: tmp4 };
     const tmp8 = <Image source={tmp2} resizeMode="contain" style={tmp4} />;
     cResult[7] = tmp2;
     cResult[8] = tmp4;
@@ -53,9 +58,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = items;
   tmp4 = items;
 }) : ((uri) => {
-  const size = uri.size;
-  const obj = { source: { uri: uri.icon }, resizeMode: "contain", style: null };
+  size = uri.size;
   const items = [{ width: size, height: size }, uri.style];
-  obj.style = items;
-  return <Image source={{ uri: uri.icon }} resizeMode="contain" style={null} />;
+  return <Image source={{ uri: uri.icon }} resizeMode="contain" style={items} />;
 });
+let size = size_mod;
+const result = size.fileFinishedImporting("modules/premium/gifting/native/views/GiftingBadgeIcon.tsx");
+
+export default tmp3;

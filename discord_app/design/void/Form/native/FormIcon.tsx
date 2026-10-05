@@ -1,112 +1,127 @@
 // === Module 6643: FormIcon ===
 
 // Module 6643 (FormIcon)
-import c from "c" /* 576 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
+import native from "native" /* 1188 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const native = ThemedIcon(1188);
-require = fn;
 let closure_2 = ["style", "color", "themedColor"];
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+const jsx = Fragment.jsx;
 let closure_5 = createStyles.createStyles({ icon: { opacity: 0.6 } });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("design/void/Form/native/FormIcon.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let ThemedIcon = require;
-  let tmp = dependencyMap;
-  const cResult = c.c(19);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let color;
+  let style;
+  let themedColor;
+  let tmp13;
+  let tmp4;
+  let tmp5;
+  let tmp6;
+  let tmp7;
+  const obj = react2;
+  const cResult = obj.c(19);
   if (cResult[0] !== arg0) {
     ({ style, color, themedColor } = arg0);
-    const tmp9 = _objectWithoutProperties(arg0, closure_2);
+    const tmp10 = _objectWithoutProperties(arg0, closure_2);
     cResult[0] = arg0;
     cResult[1] = color;
-    cResult[2] = tmp9;
+    cResult[2] = tmp10;
     cResult[3] = style;
     cResult[4] = themedColor;
-    let tmp6 = themedColor;
-    let tmp5 = style;
-    let tmp4 = tmp9;
-    let tmp3 = color;
+    tmp7 = themedColor;
+    tmp6 = style;
+    tmp5 = tmp10;
+    tmp4 = color;
   } else {
-    tmp3 = cResult[1];
-    tmp4 = cResult[2];
-    tmp5 = cResult[3];
-    tmp6 = cResult[4];
+    tmp4 = cResult[1];
+    tmp5 = cResult[2];
+    tmp6 = cResult[3];
+    tmp7 = cResult[4];
   }
-  const tmp10 = closure_5();
-  if (null != tmp6) {
-    if (cResult[5] === tmp5) {
-      if (cResult[6] === tmp10.icon) {
-        let tmp18 = cResult[7];
+  const tmp11 = closure_5();
+  if (null != tmp7) {
+    if (cResult[5] === tmp6) {
+      let tmp19;
+      if (cResult[6] === tmp11.icon) {
+        tmp19 = cResult[7];
       }
-      if (cResult[8] === tmp4) {
-        if (cResult[9] === tmp18) {
-        }
-      }
-      ThemedIcon = native.ThemedIcon;
-      const obj2 = { style: tmp18, themedColor: tmp6 };
-      const merged = Object.assign(tmp4);
-      tmp = <ThemedIcon style={tmp18} themedColor={tmp6} />;
-      cResult[8] = tmp4;
-      cResult[9] = tmp18;
-      cResult[10] = tmp6;
-      cResult[11] = tmp;
-    }
-    const items = [tmp10.icon, tmp5];
-    cResult[5] = tmp5;
-    cResult[6] = tmp10.icon;
-    cResult[7] = items;
-    tmp18 = items;
-  } else {
-    if (cResult[12] === tmp5) {
-      if (cResult[13] === tmp10.icon) {
-        let tmp11 = cResult[14];
-      }
-      if (cResult[15] === tmp3) {
-        if (cResult[16] === tmp4) {
-          if (cResult[17] === tmp11) {
-            let tmp12 = cResult[18];
+      if (cResult[8] === tmp5) {
+        if (cResult[9] === tmp19) {
+          let tmp20;
+          if (cResult[10] === tmp7) {
+            tmp20 = cResult[11];
           }
-          return tmp12;
+          tmp13 = tmp20;
         }
       }
-      const obj3 = { style: tmp11, color: tmp3 };
-      const merged1 = Object.assign(tmp4);
-      const tmp17 = jsx(native.Icon, { style: tmp11, color: tmp3 });
-      cResult[15] = tmp3;
-      cResult[16] = tmp4;
-      cResult[17] = tmp11;
-      cResult[18] = tmp17;
-      tmp12 = tmp17;
+      const ThemedIcon = native.ThemedIcon;
+      const merged = Object.assign(tmp5);
+      const tmp25 = <ThemedIcon style={tmp19} themedColor={tmp7} />;
+      cResult[8] = tmp5;
+      cResult[9] = tmp19;
+      cResult[10] = tmp7;
+      cResult[11] = tmp25;
+      tmp20 = tmp25;
     }
-    const items1 = [tmp10.icon, tmp5];
-    cResult[12] = tmp5;
-    cResult[13] = tmp10.icon;
+    const items = [tmp11.icon, tmp6];
+    cResult[5] = tmp6;
+    cResult[6] = tmp11.icon;
+    cResult[7] = items;
+    tmp19 = items;
+  } else {
+    if (cResult[12] === tmp6) {
+      let tmp12;
+      if (cResult[13] === tmp11.icon) {
+        tmp12 = cResult[14];
+      }
+      if (cResult[15] === tmp4) {
+        if (cResult[16] === tmp5) {
+          if (cResult[17] === tmp12) {
+            tmp13 = cResult[18];
+          }
+        }
+      }
+      const Icon = native.Icon;
+      const merged1 = Object.assign(tmp5);
+      const tmp18 = <Icon style={tmp12} color={tmp4} />;
+      cResult[15] = tmp4;
+      cResult[16] = tmp5;
+      cResult[17] = tmp12;
+      cResult[18] = tmp18;
+      tmp13 = tmp18;
+    }
+    const items1 = [tmp11.icon, tmp6];
+    cResult[12] = tmp6;
+    cResult[13] = tmp11.icon;
     cResult[14] = items1;
-    tmp11 = items1;
+    tmp12 = items1;
   }
+  return tmp13;
 }) : ((color) => {
+  let style;
+  let themedColor;
+  let tmp9;
   ({ style, themedColor } = color);
+  color = color.color;
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0, themedColor: 0 }));
   const tmp2 = closure_5();
   if (null != themedColor) {
-    const obj2 = { style: null, themedColor: null };
     const items = [tmp2.icon, style];
-    obj2.style = items;
-    obj2.themedColor = themedColor;
+    const ThemedIcon = native.ThemedIcon;
     const merged1 = Object.assign(merged);
-    let tmp9 = jsx(native.ThemedIcon, { style: null, themedColor: null });
+    tmp9 = <ThemedIcon style={items} themedColor={themedColor} />;
   } else {
-    const obj = { style: null, color: null };
     const items1 = [tmp2.icon, style];
-    obj.style = items1;
-    obj.color = color.color;
+    const Icon = native.Icon;
     const merged2 = Object.assign(merged);
-    tmp9 = jsx(native.Icon, { style: null, color: null });
+    tmp9 = <Icon style={items1} color={color} />;
   }
   return tmp9;
 });
+const result = size.fileFinishedImporting("design/void/Form/native/FormIcon.tsx");
+
+export default tmp3;

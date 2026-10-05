@@ -1,30 +1,30 @@
 // === Module 17283: useActivityShelfItemData ===
 
 // Module 17283 (useActivityShelfItemData)
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
 import useActivityShelfItemsDefault from "useActivityShelfItems" /* 11653 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/activities/useActivityShelfItemData.tsx");
-
-export const useActivityShelfItemData = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, arg1) => {
-  closure_0 = arg1;
-  const cResult = c.c(5);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, arg1) => {
+  let tmp3;
+  let closure_0 = arg1;
+  const obj = react2;
+  const cResult = obj.c(5);
   if (cResult[0] !== guildId) {
     const obj2 = { guildId };
     cResult[0] = guildId;
     cResult[1] = obj2;
-    let tmp3 = obj2;
+    tmp3 = obj2;
   } else {
     tmp3 = cResult[1];
   }
   const arr = useActivityShelfItemsDefault(tmp3);
   if (cResult[2] === arg1) {
+    let tmp4;
     if (cResult[3] === arr) {
-      let tmp4 = cResult[4];
+      tmp4 = cResult[4];
     }
     return tmp4;
   }
@@ -37,11 +37,12 @@ export const useActivityShelfItemData = ReactCompilerGating.isReactCompilerEnabl
   cResult[4] = found;
   tmp4 = found;
 }) : ((guildId, arg1) => {
-  closure_0 = arg1;
-  const tmp = useActivityShelfItemsDefault({ guildId });
-  closure_1 = tmp;
+  let closure_0 = arg1;
+  const obj = { guildId };
+  const tmp = useActivityShelfItemsDefault(obj);
+  let closure_1 = tmp;
   const items = [tmp, arg1];
-  return noop.useMemo(() => {
+  return react.useMemo(() => {
     let found = closure_1.find((application) => application.application.id === closure_1_0);
     if (found == null) {
       found = null;
@@ -49,3 +50,6 @@ export const useActivityShelfItemData = ReactCompilerGating.isReactCompilerEnabl
     return found;
   }, items);
 });
+const result = size.fileFinishedImporting("modules/activities/useActivityShelfItemData.tsx");
+
+export const useActivityShelfItemData = tmp2;

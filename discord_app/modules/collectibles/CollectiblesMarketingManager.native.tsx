@@ -6,28 +6,32 @@ import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7052 */;
 import CollectiblesMarketingReleaseType2 from "CollectiblesMarketingReleaseType" /* 7100 */;
 import DevSettingsStore from "DevSettingsStore" /* 4889 */;
 import LifecycleManager from "LifecycleManager" /* 1989 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-class CollectiblesMarketingManager extends tmp2 {
+class CollectiblesMarketingManager extends LifecycleManager {
   constructor() {
-    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
     applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
-      value = DevSettingsStore.get("shop_include_unpublished");
+      const value = DevSettingsStore.get("shop_include_unpublished");
+      const fetchCollectiblesMarketings = CollectiblesActionCreators.fetchCollectiblesMarketings;
+      CollectiblesActionCreators;
       const CollectiblesMarketingReleaseType = CollectiblesMarketingReleaseType2.CollectiblesMarketingReleaseType;
-      const collectiblesMarketings = CollectiblesActionCreators.fetchCollectiblesMarketings({ release: value ? CollectiblesMarketingReleaseType.BETA : CollectiblesMarketingReleaseType.PROD });
+      const obj = { release: value ? CollectiblesMarketingReleaseType.BETA : CollectiblesMarketingReleaseType.PROD };
+      const collectiblesMarketings = fetchCollectiblesMarketings(obj);
     };
     return applyArgumentsResult;
   }
+  _initialize() {
+    const obj = DispatcherDefault;
+    const subscription = obj.subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+  }
+  _terminate() {
+    const obj = DispatcherDefault;
+    obj.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+  }
 }
 const prototype = CollectiblesMarketingManager.prototype;
-prototype["_initialize"] = function _initialize() {
-  const subscription = DispatcherDefault.subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
-};
-prototype["_terminate"] = function _terminate() {
-  DispatcherDefault.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
-};
 const collectiblesMarketingManager = new CollectiblesMarketingManager();
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/CollectiblesMarketingManager.native.tsx");
 
 export default collectiblesMarketingManager;

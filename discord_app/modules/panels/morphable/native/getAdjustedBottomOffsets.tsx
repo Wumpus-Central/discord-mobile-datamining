@@ -7,6 +7,8 @@ import size from "module_2" /* 2 */;
 let PlatformUtils = PlatformUtils_mod;
 PlatformUtils = PlatformUtils.isAndroid();
 const fn = function t(arg0) {
+  let keyboardHeight;
+  let screenBottomOffset;
   ({ screenBottomOffset, keyboardHeight } = arg0);
   let bottomOffset = screenBottomOffset;
   if (keyboardHeight > 0) {

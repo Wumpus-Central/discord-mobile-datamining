@@ -1,82 +1,87 @@
 // === Module 12770: MediaModalOverlayAltText ===
 
 // Module 12770 (MediaModalOverlayAltText)
+import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
 import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11151 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+const jsx = Fragment.jsx;
 let closure_4 = createStyles.createStyles((arg0) => {
   const obj = { container: { backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE, marginVertical: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_8, marginRight: nativeDefault.space.PX_8 + arg0, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, alignSelf: "flex-end" } };
+  ({ backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE, marginVertical: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_8, marginRight: nativeDefault.space.PX_8 + arg0, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, alignSelf: "flex-end" });
   return obj;
 });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayAltText.tsx");
-
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((description) => {
-  let PressableOpacity = str;
-  let tmp = dependencyMap;
-  const cResult = str(576).c(7);
+const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((description) => {
+  let str;
+  let tmp = str;
+  const obj = str(576);
+  const cResult = obj.c(7);
   str = description.description;
-  let container = closure_4(useSafeAreaInsetsDefault().right);
+  const tmp4 = closure_4(useSafeAreaInsetsDefault().right);
   if (str == null) {
     str = "";
   }
-  const ViewImageDescriptions = PressableOpacity(2028).ViewImageDescriptions;
-  let tmp3 = null;
+  const ViewImageDescriptions = tmp(2028).ViewImageDescriptions;
+  let tmp5 = null;
   if (ViewImageDescriptions.useSetting()) {
-    tmp3 = null;
+    tmp5 = null;
     if (0 !== str.length) {
+      let tmp6;
+      let tmp8;
+      let tmp9;
       if (cResult[0] !== str) {
         const fn = function l() {
-          if (str == null) {
-            str = "";
-          }
-          openMediaModalOverlayAltTextSheetDefault({ description: str });
+          const tmp = openMediaModalOverlayAltTextSheetDefault;
+          tmp({ description: str });
         };
         cResult[0] = str;
         cResult[1] = fn;
-        let tmp4 = fn;
+        tmp6 = fn;
       } else {
-        tmp4 = cResult[1];
+        tmp6 = cResult[1];
       }
       const _Symbol = Symbol;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const rect = { top: 6, bottom: 6, left: 6, right: 6 };
         cResult[2] = rect;
-        let tmp6 = rect;
+        tmp8 = rect;
       } else {
-        tmp6 = cResult[2];
+        tmp8 = cResult[2];
       }
       const _Symbol2 = Symbol;
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
-        const intl = PressableOpacity(1126).intl;
-        obj2.children = intl.string(PressableOpacity(1126).t.Q5VqrN);
-        const tmp9 = jsx(PressableOpacity(4886).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
-        cResult[3] = tmp9;
-        let tmp7 = tmp9;
+        const Text = tmp(4886).Text;
+        const intl = tmp(1126).intl;
+        const tmp11 = <Text variant="text-xs/semibold" color="text-overlay-light">{intl.string(tmp(1126).t.Q5VqrN)}</Text>;
+        cResult[3] = tmp11;
+        tmp9 = tmp11;
       } else {
-        tmp7 = cResult[3];
+        tmp9 = cResult[3];
       }
-      if (cResult[4] === container.container) {
+      if (cResult[4] === tmp4.container) {
+        let tmp12;
+        if (cResult[5] === tmp6) {
+          tmp12 = cResult[6];
+        }
+        tmp5 = tmp12;
       }
-      PressableOpacity = PressableOpacity(5909).PressableOpacity;
-      const obj3 = { style: container.container, onPress: tmp4, hitSlop: tmp6, children: tmp7 };
-      tmp = <PressableOpacity style={container.container} onPress={tmp4} hitSlop={tmp6}>{tmp7}</PressableOpacity>;
-      container = container.container;
-      cResult[4] = container;
-      cResult[5] = tmp4;
-      cResult[6] = tmp;
+      const tmp14 = jsx(tmp(5909).PressableOpacity, { style: tmp4.container, onPress: tmp6, hitSlop: tmp8, children: tmp9 });
+      cResult[4] = tmp4.container;
+      cResult[5] = tmp6;
+      cResult[6] = tmp14;
+      tmp12 = tmp14;
     }
   }
-  return tmp3;
+  return tmp5;
 }) : ((description) => {
+  let intl;
   let str;
+  const tmp2 = closure_4(useSafeAreaInsetsDefault().right);
   if (str == null) {
     str = "";
   }
@@ -85,33 +90,18 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((descri
   if (ViewImageDescriptions.useSetting()) {
     tmp4 = null;
     if (0 !== str.length) {
-      const obj = {
-        style: tmp2.container,
-        onPress() {
-              if (str == null) {
-                str = "";
-              }
-              openMediaModalOverlayAltTextSheetDefault({ description: str });
-            },
-        hitSlop: { top: 6, bottom: 6, left: 6, right: 6 },
-        children: null
-      };
-      const obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
-      const intl = tmp3(1126).intl;
-      obj2.children = intl.string(tmp3(1126).t.Q5VqrN);
-      obj.children = jsx(tmp3(4886).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
-      tmp4 = jsx(tmp3(5909).PressableOpacity, {
-        style: tmp2.container,
-        onPress() {
-              if (str == null) {
-                str = "";
-              }
-              openMediaModalOverlayAltTextSheetDefault({ description: str });
-            },
-        hitSlop: { top: 6, bottom: 6, left: 6, right: 6 },
-        children: null
-      });
+      const PressableOpacity = tmp3(5909).PressableOpacity;
+      ({ variant: "text-xs/semibold", color: "text-overlay-light", children: intl.string(str(1126).t.Q5VqrN) });
+      const Text = tmp3(4886).Text;
+      intl = tmp3(1126).intl;
+      tmp4 = <PressableOpacity style={tmp2.container} onPress={function onPress() {
+        const tmp = openMediaModalOverlayAltTextSheetDefault;
+        tmp({ description: str });
+      }} hitSlop={{ top: 6, bottom: 6, left: 6, right: 6 }}>{null}</PressableOpacity>;
     }
   }
   return tmp4;
 }));
+const result = size.fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayAltText.tsx");
+
+export default memoResult;

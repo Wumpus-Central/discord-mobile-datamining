@@ -3,14 +3,14 @@
 // Module 16486 (NavigationTTIRegionDebugState)
 import size from "module_2" /* 2 */;
 
-const set = new Set();
+let set = new Set();
 const map = new Map();
-let global = null;
+let c2 = null;
 let result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/debug/NavigationTTIRegionDebugState.tsx");
 
 export const recordNavigationTTIRegionDebugMeasurement = function recordNavigationTTIRegionDebugMeasurement(traceId, spanComponent, activeTraceElapsedMs) {
-  if (traceId !== global) {
-    global = traceId;
+  if (traceId !== c2) {
+    c2 = traceId;
     map.clear();
   }
   const result = map.set(spanComponent, activeTraceElapsedMs);
@@ -21,8 +21,8 @@ export const recordNavigationTTIRegionDebugMeasurement = function recordNavigati
 };
 export const getNavigationTTIRegionDebugMeasurement = function getNavigationTTIRegionDebugMeasurement(activeTraceId, regionId) {
   let tmp = null;
-  if (activeTraceId === global) {
-    value = map.get(regionId);
+  if (activeTraceId === c2) {
+    let value = map.get(regionId);
     if (value == null) {
       value = null;
     }
@@ -31,6 +31,8 @@ export const getNavigationTTIRegionDebugMeasurement = function getNavigationTTIR
   return tmp;
 };
 export const subscribeNavigationTTIRegionDebugMeasurements = function subscribeNavigationTTIRegionDebugMeasurements(arg0) {
-  arg0.add(arg0);
+  let closure_0;
+  set = arg0;
+  set.add(arg0);
   return () => set.delete(closure_0);
 };

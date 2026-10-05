@@ -1,93 +1,104 @@
-// === Module 13273: premium/Header ===
+// === Module 13273: Header ===
 
-// Module 13273 (premium/Header)
-import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
+// Module 13273 (Header)
+import react_native from "react-native" /* 17 */;
+import react2 from "react" /* 576 */;
+import intl3 from "intl" /* 1126 */;
 import shared from "shared" /* 4729 */;
 import useThemeDefault from "useTheme" /* 4791 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import FastImageDefault from "FastImage" /* 5974 */;
-import _modDef13274 from "module_13274" /* 13274 */;
-import _modDef13275 from "module_13275" /* 13275 */;
-import noop from "module_19" /* 19 */;
+import AssetRegistryDefault from "AssetRegistry" /* 13274 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 13275 */;
+import react from "react" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4890);
+let style;
+
+let closure_4;
+let hasOwnProperty;
+const View = react_native.View;
+({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
 let closure_6 = createStyles.createStyles({ container: { flexDirection: "column", alignItems: "center" }, headerText: { marginTop: 16, marginBottom: 24 } });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/premium/native/Header.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
-  const cResult = c.c(13);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+  let items;
+  const obj = react2;
+  const cResult = obj.c(13);
   style = style.style;
   const tmp4 = closure_6();
   if (cResult[0] === style) {
+    let tmp7;
+    let tmp9;
+    let tmp5Result;
+    let tmp12;
+    let tmp15;
+    let tmp17;
     if (cResult[1] === tmp4.container) {
-      let tmp7 = cResult[2];
+      tmp7 = cResult[2];
     }
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl = util.intl;
-      const stringResult = intl.string(util.t.lpNrPu);
+      const intl = intl3.intl;
+      const stringResult = intl.string(intl3.t.lpNrPu);
       cResult[3] = stringResult;
-      let tmp9 = stringResult;
+      tmp9 = stringResult;
     } else {
       tmp9 = cResult[3];
     }
+    const tmpResult = shared;
     if (tmpResult.isThemeDark(tmp6)) {
-      let tmp5Result = _modDef13274;
+      tmp5Result = AssetRegistryDefault;
     } else {
-      tmp5Result = _modDef13275;
+      tmp5Result = AssetRegistryDefault2;
     }
     if (cResult[4] !== tmp5Result) {
       const obj2 = { accessible: true, accessibilityLabel: tmp9, accessibilityRole: "header", source: tmp5Result };
-      const tmp14 = React4(FastImageDefault, obj2);
+      const tmp14 = React3(FastImageDefault, obj2);
       cResult[4] = tmp5Result;
       cResult[5] = tmp14;
-      let tmp12 = tmp14;
+      tmp12 = tmp14;
     } else {
       tmp12 = cResult[5];
     }
     const _Symbol2 = Symbol;
+    const headerText = tmp4.headerText;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl2 = util.intl;
-      const stringResult1 = intl2.string(util.t.SD5MJW);
+      const intl2 = intl3.intl;
+      const stringResult1 = intl2.string(intl3.t.SD5MJW);
       cResult[6] = stringResult1;
-      let tmp15 = stringResult1;
+      tmp15 = stringResult1;
     } else {
       tmp15 = cResult[6];
     }
     if (cResult[7] !== tmp4.headerText) {
-      const obj3 = { style: tmp4.headerText, variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp15 };
-      const tmp19 = React4(Text_Text.Text, obj3);
+      const obj3 = { style: headerText, variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp15 };
+      const tmp19 = React3(Text_Text.Text, obj3);
       cResult[7] = tmp4.headerText;
       cResult[8] = tmp19;
-      let tmp17 = tmp19;
+      tmp17 = tmp19;
     } else {
       tmp17 = cResult[8];
     }
     if (cResult[9] === tmp7) {
       if (cResult[10] === tmp12) {
+        let tmp20;
         if (cResult[11] === tmp17) {
-          let tmp20 = cResult[12];
+          tmp20 = cResult[12];
         }
         return tmp20;
       }
     }
-    const obj4 = { style: tmp7, children: null };
-    const items = [tmp12, tmp17];
-    obj4.children = items;
+    const obj4 = { style: tmp7, children: items };
+    items = [tmp12, tmp17];
     const tmp23 = hasOwnProperty(View, obj4);
     cResult[9] = tmp7;
     cResult[10] = tmp12;
     cResult[11] = tmp17;
     cResult[12] = tmp23;
     tmp20 = tmp23;
-    tmpResult = shared;
   }
   const items1 = [tmp4.container, style];
   cResult[0] = style;
@@ -95,26 +106,32 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
   cResult[2] = items1;
   tmp7 = items1;
 }) : ((style) => {
+  let intl;
+  let intl2;
+  let items;
+  let items1;
+  let tmp2Result;
+  style = style.style;
   const tmp = closure_6();
-  const obj = { style: null, children: null };
-  const items = [tmp.container, style.style];
-  obj.style = items;
-  const obj2 = { accessible: true, accessibilityLabel: null, accessibilityRole: "header", source: null };
+  const obj = { style: items, children: items1 };
+  items = [tmp.container, style];
+  const obj2 = { accessible: true, accessibilityLabel: intl.string(intl3.t.lpNrPu), accessibilityRole: "header", source: tmp2Result };
   const tmp4 = useThemeDefault();
-  const intl = util.intl;
-  obj2.accessibilityLabel = intl.string(util.t.lpNrPu);
   const tmp8 = FastImageDefault;
+  intl = intl3.intl;
+  const obj3 = shared;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef13274;
+    tmp2Result = AssetRegistryDefault;
   } else {
-    tmp2Result = _modDef13275;
+    tmp2Result = AssetRegistryDefault2;
   }
-  obj2.source = tmp2Result;
-  const items1 = [React4(tmp8, obj2), ];
-  const obj4 = { style: tmp.headerText, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
-  const intl2 = util.intl;
-  obj4.children = intl2.string(util.t.SD5MJW);
-  items1[1] = React4(Text_Text.Text, obj4);
-  obj.children = items1;
+  items1 = [React3(tmp8, obj2), ];
+  const obj4 = { style: tmp.headerText, variant: "text-md/medium", color: "mobile-text-heading-primary", children: intl2.string(intl3.t.SD5MJW) };
+  const Text = Text_Text.Text;
+  intl2 = intl3.intl;
+  items1[1] = React3(Text, obj4);
   return hasOwnProperty(View, obj);
 });
+const result = size.fileFinishedImporting("modules/user_settings/premium/native/Header.tsx");
+
+export default tmp4;

@@ -9,4 +9,7 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result1 = size.fileFinishedImporting("modules/explicit_media_redaction/hooks/useSensitiveMediaSettingDisabled.tsx");
 
-export const useSensitiveMediaSettingDisabled = () => useParentalControlSettings.useIsParentallyControlled();
+export const useSensitiveMediaSettingDisabled = () => {
+  const obj = useParentalControlSettings;
+  return obj.useIsParentallyControlled();
+};

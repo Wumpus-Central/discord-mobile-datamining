@@ -6,83 +6,88 @@ import ForumActionCreatorsDefault from "ForumActionCreators" /* 7541 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import size from "module_2" /* 2 */;
 
-class ThreadManager extends tmp2 {
+class ThreadManager extends AutomaticLifecycleManager {
   constructor() {
-    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
     applyArgumentsResult.actions = { CHANNEL_DELETE: applyArgumentsResult.handleChannelDelete, MESSAGE_CREATE: applyArgumentsResult.handleMessageCreate, GUILD_DELETE: applyArgumentsResult.handleGuildDelete };
     return applyArgumentsResult;
   }
+  handleChannelDelete(channel) {
+    channel = channel.channel;
+    let allThreadsForParent;
+    if (null != channel.guild_id) {
+      allThreadsForParent = ChannelStore.getAllThreadsForParent(channel.id);
+      if (allThreadsForParent.length > 0) {
+        const Emitter = allThreadsForParent(504).Emitter;
+        Emitter.batched(() => {
+          for (const item10005 of allThreadsForParent) {
+            let obj = DispatcherDefault;
+            let obj2 = { type: "THREAD_DELETE", channel: item10005 };
+            let dispatchResult = obj.dispatch(obj2);
+            continue;
+          }
+        });
+      }
+    }
+  }
+  handleMessageCreate(message) {
+    message = message.message;
+    const channel = ChannelStore.getChannel(message.channelId);
+    const author = message.author;
+    let id;
+    if (author != null) {
+      id = author.id;
+    }
+    if (id === AuthenticationStore.getId()) {
+      let isActiveThreadResult;
+      if (channel != null) {
+        isActiveThreadResult = channel.isActiveThread();
+      }
+      if (isActiveThreadResult) {
+        const threadMetadata = channel.threadMetadata;
+        let num;
+        const _Date = Date;
+        if (threadMetadata != null) {
+          num = threadMetadata.archiveTimestamp;
+        }
+        if (num == null) {
+          num = 0;
+        }
+        const self = this;
+        const self2 = this;
+        const _Date1 = new _Date(num);
+        const _Date2 = Date;
+        const time = _Date1.getTime();
+        if (Date.now() - time < 5000) {
+          const obj3 = ForumActionCreatorsDefault;
+          obj3.resort(channel.parent_id);
+        }
+      }
+    }
+  }
+  handleGuildDelete(guild) {
+    guild = guild.guild;
+    let allThreadsForGuild;
+    if (!guild.unavailable) {
+      allThreadsForGuild = ChannelStore.getAllThreadsForGuild(guild.id);
+      if (0 !== allThreadsForGuild.length) {
+        const Emitter = allThreadsForGuild(504).Emitter;
+        Emitter.batched(() => {
+          for (const item10005 of allThreadsForGuild) {
+            let obj = DispatcherDefault;
+            let obj2 = { type: "THREAD_DELETE", channel: item10005 };
+            let dispatchResult = obj.dispatch(obj2);
+            continue;
+          }
+        });
+      }
+    }
+  }
 }
 const prototype = ThreadManager.prototype;
-prototype["handleChannelDelete"] = function handleChannelDelete(channel) {
-  channel = channel.channel;
-  let allThreadsForParent;
-  if (null != channel.guild_id) {
-    allThreadsForParent = ChannelStore.getAllThreadsForParent(channel.id);
-    if (allThreadsForParent.length > 0) {
-      const Emitter = allThreadsForParent(504).Emitter;
-      Emitter.batched(() => {
-        for (const item10005 of allThreadsForParent) {
-          let obj = DispatcherDefault;
-          let obj2 = { type: "THREAD_DELETE", channel: item10005 };
-          let dispatchResult = obj.dispatch(obj2);
-          continue;
-        }
-      });
-    }
-  }
-};
-prototype["handleMessageCreate"] = function handleMessageCreate(channelId) {
-  const channel = ChannelStore.getChannel(channelId.channelId);
-  const author = channelId.message.author;
-  let id;
-  if (author != null) {
-    id = author.id;
-  }
-  if (id === AuthenticationStore.getId()) {
-    let isActiveThreadResult;
-    if (channel != null) {
-      isActiveThreadResult = channel.isActiveThread();
-    }
-    if (isActiveThreadResult) {
-      const threadMetadata = channel.threadMetadata;
-      let num;
-      if (threadMetadata != null) {
-        num = threadMetadata.archiveTimestamp;
-      }
-      if (num == null) {
-        num = 0;
-      }
-      const date = new Date(num);
-      const _Date = Date;
-      const time = date.getTime();
-      if (Date.now() - time < 5000) {
-        ForumActionCreatorsDefault.resort(channel.parent_id);
-      }
-    }
-  }
-};
-prototype["handleGuildDelete"] = function handleGuildDelete(guild) {
-  guild = guild.guild;
-  let allThreadsForGuild;
-  if (!guild.unavailable) {
-    allThreadsForGuild = ChannelStore.getAllThreadsForGuild(guild.id);
-    if (0 !== allThreadsForGuild.length) {
-      const Emitter = allThreadsForGuild(504).Emitter;
-      Emitter.batched(() => {
-        for (const item10005 of allThreadsForGuild) {
-          let obj = DispatcherDefault;
-          let obj2 = { type: "THREAD_DELETE", channel: item10005 };
-          let dispatchResult = obj.dispatch(obj2);
-          continue;
-        }
-      });
-    }
-  }
-};
 const threadManager = new ThreadManager();
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/threads/ThreadManager.tsx");
 
 export default threadManager;

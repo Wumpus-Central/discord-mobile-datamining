@@ -1,53 +1,62 @@
 // === Module 11824: useAndroidOrientationSheetResync ===
 
 // Module 11824 (useAndroidOrientationSheetResync)
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/keyboard/native/useAndroidOrientationSheetResync.tsx");
+let animatedIndex;
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((animatedIndex) => {
-  const cResult = animatedIndex(bottomSheetRef[2]).c(8);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((animatedIndex) => {
+  let _NumberResult;
+  let bottomSheetRef;
+  let obj = animatedIndex(bottomSheetRef[2]);
+  const cResult = obj.c(8);
   animatedIndex = animatedIndex.animatedIndex;
   bottomSheetRef = animatedIndex.bottomSheetRef;
   const containerHeight = animatedIndex.containerHeight;
   const isYeeted = animatedIndex.isYeeted;
   const snapPoints = animatedIndex.snapPoints;
-  containerHeight.useRef(false);
+  const forceMaxHeight = animatedIndex.forceMaxHeight;
+  const ref = containerHeight.useRef(false);
   let num = 0;
-  if (animatedIndex.forceMaxHeight) {
+  const obj2 = containerHeight;
+  if (forceMaxHeight) {
     num = 1;
   }
   let _Number = Number;
   if (Array.isArray(snapPoints)) {
     let first = snapPoints[num];
+    const tmp4 = null;
     if (first == null) {
       first = snapPoints[0];
     }
-    let _NumberResult = _Number(first);
+    _NumberResult = _Number(first);
   } else {
     _NumberResult = _Number(snapPoints);
   }
-  closure_6 = _NumberResult;
+  let closure_6 = _NumberResult;
   if (cResult[0] === animatedIndex) {
     if (cResult[1] === bottomSheetRef) {
       if (cResult[2] === containerHeight) {
         if (cResult[3] === isYeeted) {
           if (cResult[4] === num) {
+            let tmp5;
+            let tmp6;
             if (cResult[5] === _NumberResult) {
-              let tmp5 = cResult[6];
-              let tmp6 = cResult[7];
+              tmp5 = cResult[6];
+              tmp6 = cResult[7];
             }
-            const layoutEffect = containerHeight.useLayoutEffect(tmp5, tmp6);
+            const layoutEffect = obj2.useLayoutEffect(tmp5, tmp6);
           }
         }
       }
     }
   }
   const fn = function u() {
+    let closure_1;
     if (!isYeeted) {
+      const obj = animatedIndex(bottomSheetRef[3]);
       if (obj.isAndroid()) {
         if (ref.current) {
           const _Number = Number;
@@ -57,11 +66,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((animatedIndex) =
             const _Number3 = Number;
             if (Number.isFinite(closure_6)) {
               const _Math = Math;
+              num = 0;
               const bound = Math.max(0, NumberResult - closure_6);
               let result = bound.set(num);
               let current = bottomSheetRef.current;
+              const tmp11 = num;
               if (current != null) {
-                current.setToIndex(tmp10, bound);
+                current.setToIndex(tmp11, bound);
               }
               const _requestAnimationFrame = requestAnimationFrame;
               bottomSheetRef = requestAnimationFrame(function apply() {
@@ -75,10 +86,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((animatedIndex) =
             }
           }
         } else {
-          tmp3.current = true;
+          tmp4.current = true;
         }
       }
-      obj = animatedIndex(bottomSheetRef[3]);
     }
   };
   const items = [animatedIndex, bottomSheetRef, containerHeight, isYeeted, num, _NumberResult];
@@ -93,15 +103,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((animatedIndex) =
   tmp6 = items;
   tmp5 = fn;
 }) : ((animatedIndex) => {
+  let _NumberResult;
   animatedIndex = animatedIndex.animatedIndex;
   let bottomSheetRef = animatedIndex.bottomSheetRef;
   const containerHeight = animatedIndex.containerHeight;
   const isYeeted = animatedIndex.isYeeted;
   const snapPoints = animatedIndex.snapPoints;
-  c6 = undefined;
-  containerHeight.useRef(false);
+  let c6;
+  let obj = containerHeight;
+  const forceMaxHeight = animatedIndex.forceMaxHeight;
+  const ref = containerHeight.useRef(false);
   let num = 0;
-  if (animatedIndex.forceMaxHeight) {
+  if (forceMaxHeight) {
     num = 1;
   }
   let _Number = Number;
@@ -110,14 +123,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((animatedIndex) =
     if (first == null) {
       first = snapPoints[0];
     }
-    let _NumberResult = _Number(first);
+    _NumberResult = _Number(first);
   } else {
     _NumberResult = _Number(snapPoints);
   }
   c6 = _NumberResult;
   const items = [animatedIndex, bottomSheetRef, containerHeight, isYeeted, num, _NumberResult];
-  const layoutEffect = containerHeight.useLayoutEffect(() => {
+  const layoutEffect = obj.useLayoutEffect(() => {
+    let closure_1;
     if (!isYeeted) {
+      const obj = animatedIndex(bottomSheetRef[3]);
       if (obj.isAndroid()) {
         if (ref.current) {
           const _Number = Number;
@@ -127,11 +142,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((animatedIndex) =
             const _Number3 = Number;
             if (Number.isFinite(c6)) {
               const _Math = Math;
+              num = 0;
               const bound = Math.max(0, NumberResult - c6);
               let result = bound.set(num);
               let current = bottomSheetRef.current;
+              const tmp11 = num;
               if (current != null) {
-                current.setToIndex(tmp10, bound);
+                current.setToIndex(tmp11, bound);
               }
               const _requestAnimationFrame = requestAnimationFrame;
               bottomSheetRef = requestAnimationFrame(function apply() {
@@ -145,10 +162,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((animatedIndex) =
             }
           }
         } else {
-          tmp3.current = true;
+          tmp4.current = true;
         }
       }
-      obj = animatedIndex(bottomSheetRef[3]);
     }
   }, items);
 });
+let result = size.fileFinishedImporting("modules/keyboard/native/useAndroidOrientationSheetResync.tsx");
+
+export default tmp2;

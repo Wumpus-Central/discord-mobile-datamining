@@ -2,81 +2,116 @@
 
 // Module 12347 (ContactSyncSuggestions)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
+import Constants from "Constants" /* 1085 */;
+import intl4 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
 import UserUtils from "UserUtils" /* 4722 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import useFontScale from "useFontScale" /* 5602 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 5990 */;
+import TableCheckboxRow2 from "TableCheckboxRow" /* 5990 */;
+import NavigatorConstants from "NavigatorConstants" /* 6068 */;
 import Form from "Form" /* 8895 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import FriendsScreenConstants from "FriendsScreenConstants" /* 12348 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react_mod from "react" /* 19 */;
+import Fragment_mod from "Fragment" /* 21 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const SuggestedFriendSource = fn(12348).SuggestedFriendSource;
-const jsxProd = fn(21);
-({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: fn(6068).NAV_BAR_HEIGHT + 32, justifyContent: "center" }, header: null, title: null, subtitle: null, list: null, divider: null, linearGradient: null, redesignButton: null, sectionHeader: null };
-let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: fn(6068).NAV_BAR_HEIGHT + 32, justifyContent: "center" };
-obj2.header = { alignItems: "center", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 };
-obj2.title = { marginBottom: 8, textAlign: "center" };
-obj2.subtitle = { lineHeight: 18, textAlign: "center" };
-let obj4 = { alignItems: "center", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 };
-obj2.list = { flex: 1, marginTop: nativeDefault.space.PX_12 };
-let obj5 = { flex: 1, marginTop: nativeDefault.space.PX_12 };
-obj2.divider = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-obj2.linearGradient = { position: "absolute", width: "100%", bottom: 0, minHeight: 136 };
-let obj6 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-obj2.redesignButton = { position: "absolute", width: "100%", bottom: 0, padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
-let obj7 = { position: "absolute", width: "100%", bottom: 0, padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
-obj2.sectionHeader = { marginBottom: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
-let closure_11 = createStyles.createStyles(obj2);
-let ReactCompilerGating = fn(558);
+let dependencyMap, friendSuggestions, label, onSelect;
+
+let c10;
+let c9;
+let metroImportAll;
+let obj2;
+let obj3;
+let obj4;
+let obj5;
+let obj6;
+let obj7;
+let react = react_mod;
+const View = react_native.View;
+const AnalyticEvents = Constants.AnalyticEvents;
+const SuggestedFriendSource = FriendsScreenConstants.SuggestedFriendSource;
+let Fragment = Fragment_mod;
+({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { container: obj2, header: obj3, title: { marginBottom: 8, textAlign: "center" }, subtitle: { lineHeight: 18, textAlign: "center" }, list: obj4, divider: obj5, linearGradient: { position: "absolute", width: "100%", bottom: 0, minHeight: 136 }, redesignButton: obj6, sectionHeader: obj7 };
+obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: NavigatorConstants.NAV_BAR_HEIGHT + 32, justifyContent: "center" };
+createStyles = createStyles.createStyles;
+obj3 = { alignItems: "center", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 };
+obj4 = { flex: 1, marginTop: nativeDefault.space.PX_12 };
+obj5 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+obj6 = { position: "absolute", width: "100%", bottom: 0, padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
+obj7 = { marginBottom: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
+let closure_11 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const fontScale = useFontScale.useFontScale();
+  const obj = useFontScale;
+  const fontScale = obj.useFontScale();
   const sum = nativeDefault.space.PX_16 + nativeDefault.space.PX_32 + 40;
   return sum + Math.max(18 * Math.min(fontScale, 2) - 18, 0);
 }) : (() => {
-  const fontScale = useFontScale.useFontScale();
+  const obj = useFontScale;
+  const fontScale = obj.useFontScale();
   const sum = nativeDefault.space.PX_16 + nativeDefault.space.PX_32 + 40;
   return sum + Math.max(18 * Math.min(fontScale, 2) - 18, 0);
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((label) => {
-  const cResult = c.c(5);
+  let tmp5;
+  const obj = react2;
+  const cResult = obj.c(5);
   label = label.label;
   const tmp4 = closure_11();
   if (cResult[0] !== label) {
     const obj2 = { color: "text-muted", variant: "text-sm/semibold", children: label };
-    const tmp7 = closure_1_8(Text_Text.Text, obj2);
+    const tmp7 = metroImportAll(Text_Text.Text, obj2);
     cResult[0] = label;
     cResult[1] = tmp7;
-    let tmp5 = tmp7;
+    tmp5 = tmp7;
   } else {
     tmp5 = cResult[1];
   }
   if (cResult[2] === tmp4.sectionHeader) {
+    let tmp8;
     if (cResult[3] === tmp5) {
-      let tmp8 = cResult[4];
+      tmp8 = cResult[4];
     }
     return tmp8;
   }
-  const tmp9 = closure_1_8(View, { style: tmp4.sectionHeader, children: tmp5 });
+  const obj3 = { style: tmp4.sectionHeader, children: tmp5 };
+  const tmp9 = metroImportAll(View, obj3);
   cResult[2] = tmp4.sectionHeader;
   cResult[3] = tmp5;
   cResult[4] = tmp9;
   tmp8 = tmp9;
-  const obj3 = { style: tmp4.sectionHeader, children: tmp5 };
-}) : ((children) => closure_1_8(View, { style: closure_11().sectionHeader, children: closure_1_8(Text_Text.Text, { color: "text-muted", variant: "text-sm/semibold", children: children.label }) }));
-ReactCompilerGating = fn(558);
+}) : ((label) => {
+  label = label.label;
+  const obj = { style: closure_11().sectionHeader, children: metroImportAll(Text_Text.Text, { color: "text-muted", variant: "text-sm/semibold", children: label }) };
+  return metroImportAll(View, obj);
+});
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(24);
+  let end;
+  let intl;
+  let items;
+  let obj6;
+  let selected;
+  let start;
+  let suggestion;
+  let tmp12;
+  let tmp15;
+  let tmp18;
+  let tmp6;
+  let tmp9;
+  const obj = react2;
+  const cResult = obj.c(24);
   ({ start, end, suggestion } = arg0);
   ({ selected, onSelect } = arg0);
   const first = suggestion.reasons[0];
@@ -85,11 +120,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     name = first.name;
   }
   if (cResult[0] !== suggestion.suggested_user) {
-    const userTag = UserUtils.getUserTag(suggestion.suggested_user);
+    const tmpResult = UserUtils;
+    const userTag = tmpResult.getUserTag(suggestion.suggested_user);
     cResult[0] = suggestion.suggested_user;
     cResult[1] = userTag;
-    let tmp6 = userTag;
-    const tmpResult = UserUtils;
+    tmp6 = userTag;
   } else {
     tmp6 = cResult[1];
   }
@@ -101,53 +136,57 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   if (cResult[2] !== suggestion.suggested_user) {
-    const userAvatarSource = AvatarUtilsDefault.getUserAvatarSource(suggestion.suggested_user);
+    const obj3 = AvatarUtilsDefault;
+    const userAvatarSource = obj3.getUserAvatarSource(suggestion.suggested_user);
     cResult[2] = suggestion.suggested_user;
     cResult[3] = userAvatarSource;
-    let tmp9 = userAvatarSource;
+    tmp9 = userAvatarSource;
   } else {
     tmp9 = cResult[3];
   }
   if (cResult[4] !== tmp9) {
     const obj2 = { source: tmp9, size: native.AvatarSizes.REFRESH_MEDIUM_32 };
-    const tmp14 = closure_1_8(native.Avatar, obj2);
+    const Avatar = native.Avatar;
+    const tmp14 = metroImportAll(Avatar, obj2);
     cResult[4] = tmp9;
     cResult[5] = tmp14;
-    let tmp12 = tmp14;
+    tmp12 = tmp14;
   } else {
     tmp12 = cResult[5];
   }
   if (cResult[6] !== tmp6) {
     const obj4 = { variant: "text-xs/medium", color: "text-muted", children: tmp6 };
-    const tmp17 = closure_1_8(Text_Text.Text, obj4);
+    const tmp17 = metroImportAll(Text_Text.Text, obj4);
     cResult[6] = tmp6;
     cResult[7] = tmp17;
-    let tmp15 = tmp17;
+    tmp15 = tmp17;
   } else {
     tmp15 = cResult[7];
   }
   if (cResult[8] !== suggestion.mutual_friends_count) {
     let tmp19 = null != suggestion.mutual_friends_count;
     if (tmp19) {
-      const obj5 = { variant: "text-xs/medium", color: "text-muted", children: null };
-      const intl = util.intl;
-      const obj6 = { count: suggestion.mutual_friends_count };
-      obj5.children = intl.format(util.t.z7y34b, obj6);
-      tmp19 = closure_1_8(Text_Text.Text, obj5);
+      const obj5 = { variant: "text-xs/medium", color: "text-muted", children: intl.format(intl4.t.z7y34b, obj6) };
+      const Text = Text_Text.Text;
+      intl = intl4.intl;
+      obj6 = { count: suggestion.mutual_friends_count };
+      tmp19 = metroImportAll(Text, obj5);
     }
     cResult[8] = suggestion.mutual_friends_count;
     cResult[9] = tmp19;
-    let tmp18 = tmp19;
+    tmp18 = tmp19;
   } else {
     tmp18 = cResult[9];
   }
   if (cResult[10] === tmp15) {
+    let tmp21;
     if (cResult[11] === tmp18) {
-      let tmp21 = cResult[12];
+      tmp21 = cResult[12];
     }
     if (cResult[13] === onSelect) {
+      let tmp23;
       if (cResult[14] === suggestion.suggested_user.id) {
-        let tmp23 = cResult[15];
+        tmp23 = cResult[15];
       }
       if (cResult[16] === end) {
         if (cResult[17] === selected) {
@@ -155,8 +194,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             if (cResult[19] === start) {
               if (cResult[20] === tmp12) {
                 if (cResult[21] === tmp21) {
+                  let tmp24;
                   if (cResult[22] === tmp23) {
-                    let tmp24 = cResult[23];
+                    tmp24 = cResult[23];
                   }
                   return tmp24;
                 }
@@ -171,7 +211,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
       }
       const obj7 = { start, end, icon: tmp12, checked: selected, label: tmp8, subLabel: tmp21, onPress: tmp23 };
-      const tmp25 = closure_1_8(TableCheckboxRow.TableCheckboxRow, obj7);
+      const tmp25 = metroImportAll(TableCheckboxRow2.TableCheckboxRow, obj7);
       cResult[16] = end;
       cResult[17] = selected;
       cResult[18] = tmp8;
@@ -192,15 +232,22 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[15] = A;
     tmp23 = A;
   }
-  const obj8 = { children: null };
-  const items = [tmp15, tmp18];
-  obj8.children = items;
-  const tmp22 = v65535(options, obj8);
+  const obj8 = { children: items };
+  items = [tmp15, tmp18];
+  const tmp22 = authStore(React4, obj8);
   cResult[10] = tmp15;
   cResult[11] = tmp18;
   cResult[12] = tmp22;
   tmp21 = tmp22;
 }) : ((suggestion) => {
+  let Avatar;
+  let end;
+  let intl;
+  let items;
+  let obj4;
+  let obj6;
+  let selected;
+  let start;
   suggestion = suggestion.suggestion;
   onSelect = suggestion.onSelect;
   const first = suggestion.reasons[0];
@@ -209,7 +256,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (first != null) {
     name = first.name;
   }
-  const userTag = UserUtils.getUserTag(suggestion.suggested_user);
+  const obj = UserUtils;
+  const userTag = obj.getUserTag(suggestion.suggested_user);
   let tmp6 = userTag;
   if (null != name) {
     tmp6 = userTag;
@@ -217,39 +265,52 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       tmp6 = name;
     }
   }
-  const userAvatarSource = AvatarUtilsDefault.getUserAvatarSource(suggestion.suggested_user);
-  const obj3 = { start, end, icon: null, checked: null, label: null, subLabel: null, onPress: null };
-  obj3.icon = closure_1_8(native.Avatar, { source: userAvatarSource, size: native.AvatarSizes.REFRESH_MEDIUM_32 });
-  obj3.checked = selected;
-  obj3.label = tmp6;
-  const items = [closure_1_8(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: userTag }), ];
+  const obj2 = AvatarUtilsDefault;
+  const userAvatarSource = obj2.getUserAvatarSource(suggestion.suggested_user);
+  const obj3 = {
+    start,
+    end,
+    icon: metroImportAll(Avatar, obj4),
+    checked: selected,
+    label: tmp6,
+    subLabel: authStore(React4, { children: items }),
+    onPress() {
+      return onSelect(suggestion.suggested_user.id);
+    }
+  };
+  const TableCheckboxRow = TableCheckboxRow2.TableCheckboxRow;
+  obj4 = { source: userAvatarSource, size: native.AvatarSizes.REFRESH_MEDIUM_32 };
+  Avatar = native.Avatar;
+  items = [metroImportAll(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: userTag }), ];
   let tmp8Result = null != suggestion.mutual_friends_count;
   if (tmp8Result) {
-    const obj5 = { variant: "text-xs/medium", color: "text-muted", children: null };
-    const intl = util.intl;
-    const obj6 = { count: suggestion.mutual_friends_count };
-    obj5.children = intl.format(util.t.z7y34b, obj6);
-    tmp8Result = closure_1_8(Text_Text.Text, obj5);
+    const obj5 = { variant: "text-xs/medium", color: "text-muted", children: intl.format(intl4.t.z7y34b, obj6) };
+    const Text = Text_Text.Text;
+    intl = intl4.intl;
+    obj6 = { count: suggestion.mutual_friends_count };
+    tmp8Result = metroImportAll(Text, obj5);
   }
   items[1] = tmp8Result;
-  obj3.subLabel = v65535(options, { children: items });
-  obj3.onPress = function onPress() {
-    return onSelect(suggestion.suggested_user.id);
-  };
-  return closure_1_8(TableCheckboxRow.TableCheckboxRow, obj3);
+  return metroImportAll(TableCheckboxRow, obj3);
 });
-ReactCompilerGating = fn(558);
-let obj8 = { marginBottom: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncSuggestions.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((friendSuggestions) => {
-  const cResult = friendSuggestions(576).c(51);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((friendSuggestions) => {
+  let closure_2;
+  let closure_4;
+  let first;
+  let obj5;
+  let tmp10;
+  let tmp12;
+  let tmp5;
+  const f111486 = (item) => first[item];
+  let obj = friendSuggestions(576);
+  const cResult = obj.c(51);
   friendSuggestions = friendSuggestions.friendSuggestions;
   const onSubmit = friendSuggestions.onSubmit;
   const tmp4 = closure_11();
   dependencyMap = tmp4;
   if (cResult[0] !== friendSuggestions) {
+    let tmp7;
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
       const fn = function y(arg0, suggested_user) {
@@ -257,233 +318,162 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((friendSuggestion
         return arg0;
       };
       cResult[2] = fn;
-      let tmp6 = fn;
+      tmp7 = fn;
     } else {
-      tmp6 = cResult[2];
+      tmp7 = cResult[2];
     }
-    const reduced = friendSuggestions.reduce(tmp6, {});
+    const reduced = friendSuggestions.reduce(tmp7, {});
     cResult[0] = friendSuggestions;
     cResult[1] = reduced;
+    tmp5 = reduced;
   } else {
-    const token = tmp(4580).useToken(onSubmit(587).colors.BACKGROUND_BASE_LOW);
-    if (cResult[3] !== token) {
-      const hexOpacityToRgbaResult = tmp(4727).hexOpacityToRgba(token, 0);
-      cResult[3] = token;
-      cResult[4] = hexOpacityToRgbaResult;
-      let tmp11 = hexOpacityToRgbaResult;
-      const tmpResult3 = tmp(4727);
+    tmp5 = cResult[1];
+  }
+  const tmpResult = friendSuggestions(4580);
+  const token = tmpResult.useToken(onSubmit(587).colors.BACKGROUND_BASE_LOW);
+  if (cResult[3] !== token) {
+    const tmpResult3 = friendSuggestions(4727);
+    const hexOpacityToRgbaResult = tmpResult3.hexOpacityToRgba(token, 0);
+    cResult[3] = token;
+    cResult[4] = hexOpacityToRgbaResult;
+    tmp10 = hexOpacityToRgbaResult;
+  } else {
+    tmp10 = cResult[4];
+  }
+  if (cResult[5] !== token) {
+    const tmpResult4 = friendSuggestions(4727);
+    const hexOpacityToRgbaResult1 = tmpResult4.hexOpacityToRgba(token, 100);
+    cResult[5] = token;
+    cResult[6] = hexOpacityToRgbaResult1;
+    tmp12 = hexOpacityToRgbaResult1;
+  } else {
+    tmp12 = cResult[6];
+  }
+  if (cResult[7] === tmp10) {
+    const tmp17 = first(react.useState(tmp5), 2);
+    first = tmp17[0];
+    react = tmp17[1];
+    closure_12();
+    if (cResult[10] !== first) {
+      class F {
+        constructor(arg0) {
+          const obj = {};
+          const merged = Object.assign(first);
+          obj[arg0] = !first[arg0];
+          closure_4(obj);
+        }
+      }
+      cResult[10] = first;
+      cResult[11] = F;
     } else {
-      tmp11 = cResult[4];
+      class F {
+        constructor(arg0) {
+          const obj = {};
+          const merged = Object.assign(first);
+          obj[arg0] = !first[arg0];
+          closure_4(obj);
+        }
+      }
     }
-    if (cResult[5] !== token) {
-      const hexOpacityToRgbaResult1 = tmp(4727).hexOpacityToRgba(token, 100);
-      cResult[5] = token;
-      cResult[6] = hexOpacityToRgbaResult1;
-      let tmp13 = hexOpacityToRgbaResult1;
-      const tmpResult4 = tmp(4727);
-    } else {
-      tmp13 = cResult[6];
-    }
-    if (cResult[7] === tmp11) {
-      const tmp18 = first(noop.useState(cResult[1]), 2);
-      first = tmp18[0];
-      noop = tmp18[1];
-      closure_12();
-      if (cResult[10] !== first) {
+    F = tmp21;
+    if (cResult[12] === onSubmit) {
+      class F {
+        constructor(arg0) {
+          const obj = {};
+          const merged = Object.assign(first);
+          obj[arg0] = !first[arg0];
+          closure_4(obj);
+        }
+      }
+      if (cResult[15] !== first) {
         class F {
           constructor(arg0) {
-            obj = {};
-            merged = Object.assign(closure_3);
-            obj[friendSuggestions] = !closure_3[friendSuggestions];
-            tmp2 = closure_4(obj);
-            return;
+            const obj = {};
+            const merged = Object.assign(first);
+            obj[arg0] = !first[arg0];
+            closure_4(obj);
           }
         }
-        cResult[10] = first;
-        cResult[11] = F;
+        let keys = obj5.keys(first);
+        cResult[15] = first;
+        cResult[16] = keys.some(f111486);
+        const someResult = keys.some(f111486);
       } else {
         class F {
           constructor(arg0) {
-            obj = {};
-            merged = Object.assign(closure_3);
-            obj[friendSuggestions] = !closure_3[friendSuggestions];
-            tmp2 = closure_4(obj);
-            return;
+            const obj = {};
+            const merged = Object.assign(first);
+            obj[arg0] = !first[arg0];
+            closure_4(obj);
           }
         }
       }
-      onSelect = F;
-      if (cResult[12] === onSubmit) {
+      if (cResult[17] === friendSuggestions) {
         class F {
           constructor(arg0) {
-            obj = {};
-            merged = Object.assign(closure_3);
-            obj[friendSuggestions] = !closure_3[friendSuggestions];
-            tmp2 = closure_4(obj);
-            return;
+            const obj = {};
+            const merged = Object.assign(first);
+            obj[arg0] = !first[arg0];
+            closure_4(obj);
           }
         }
-        if (cResult[15] !== first) {
+        if (cResult[20] === friendSuggestions.length) {
           class F {
             constructor(arg0) {
-              obj = {};
-              merged = Object.assign(closure_3);
-              obj[friendSuggestions] = !closure_3[friendSuggestions];
-              tmp2 = closure_4(obj);
-              return;
-            }
-          }
-          let keys = obj5.keys(first);
-          const someResult = keys.some((item) => first[item]);
-          cResult[15] = first;
-          cResult[16] = someResult;
-        } else {
-          class F {
-            constructor(arg0) {
-              obj = {};
-              merged = Object.assign(closure_3);
-              obj[friendSuggestions] = !closure_3[friendSuggestions];
-              tmp2 = closure_4(obj);
-              return;
+              const obj = {};
+              const merged = Object.assign(first);
+              obj[arg0] = !first[arg0];
+              closure_4(obj);
             }
           }
         }
-        if (cResult[17] === friendSuggestions) {
-          class F {
-            constructor(arg0) {
-              obj = {};
-              merged = Object.assign(closure_3);
-              obj[friendSuggestions] = !closure_3[friendSuggestions];
-              tmp2 = closure_4(obj);
-              return;
-            }
-          }
-          if (cResult[20] === friendSuggestions.length) {
-            class F {
-              constructor(arg0) {
-                obj = {};
-                merged = Object.assign(closure_3);
-                obj[friendSuggestions] = !closure_3[friendSuggestions];
-                tmp2 = closure_4(obj);
-                return;
+        class L {
+          constructor(arg0) {
+            let index;
+            let intl;
+            let intl2;
+            let intl3;
+            let item;
+            let items1;
+            ({ item, index } = arg0);
+            if ("header" === item.type) {
+              const obj2 = { children: items1 };
+              const obj3 = { style: closure_2.header, children: items };
+              const obj4 = { style: closure_2.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: intl.string(intl4.t["7Fjv54"]) };
+              const Text = Text_Text.Text;
+              intl = intl4.intl;
+              items = [metroImportAll(Text, obj4), ];
+              const obj5 = { style: closure_2.subtitle, variant: "text-sm/medium", color: "text-default", children: intl2.string(intl4.t.ait1x0) };
+              const Text2 = Text_Text.Text;
+              intl2 = intl4.intl;
+              items[1] = metroImportAll(Text2, obj5);
+              items1 = [authStore(View, obj3), ];
+              const obj6 = { label: intl3.string(intl4.t["1uAmCw"]) };
+              intl3 = intl4.intl;
+              items1[1] = metroImportAll(closure_13, obj6);
+              return authStore(React4, obj2);
+            } else {
+              const friendSuggestion = item.props.friendSuggestion;
+              const id = friendSuggestion.suggested_user.id;
+              const Fragment = react.Fragment;
+              const obj7 = { start: 1 === index, end: index === friendSuggestions.length, suggestion: friendSuggestion, selected: item.props.selected, onSelect: F };
+              const items2 = [metroImportAll(closure_14, obj7), ];
+              let tmp5 = null;
+              if (index < friendSuggestions.length) {
+                const obj = { iconPush: true, style: closure_2.divider };
+                tmp5 = metroImportAll(Form.FormDivider, obj);
               }
+              const obj8 = { children: items2 };
+              items2[1] = tmp5;
+              return authStore(Fragment, obj8, id);
             }
           }
-          class L {
-            constructor(arg0) {
-              ({ item, index } = friendSuggestions);
-              if ("header" === item.type) {
-                tmp6 = jsxs;
-                tmp7 = Fragment;
-                obj1 = { children: null };
-                tmp8 = jsxs;
-                tmp9 = View;
-                obj9 = { style: null, children: null };
-                tmp10 = closure_2;
-                obj9.style = closure_2.header;
-                tmp11 = jsx;
-                tmp12 = closure_0;
-                tmp13 = closure_2;
-                obj10 = { style: null, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-                obj10.style = closure_2.title;
-                tmp14 = closure_0;
-                tmp15 = closure_2;
-                intl = closure_0(closure_2[16]).intl;
-                tmp16 = closure_0;
-                tmp17 = closure_2;
-                obj10.children = intl.string(closure_0(closure_2[16]).t["7Fjv54"]);
-                items = [, ];
-                items[0] = jsx(closure_0(closure_2[12]).Text, obj10);
-                tmp18 = jsx;
-                tmp19 = closure_0;
-                tmp20 = closure_2;
-                obj11 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
-                obj11.style = closure_2.subtitle;
-                tmp21 = closure_0;
-                tmp22 = closure_2;
-                intl2 = closure_0(closure_2[16]).intl;
-                tmp23 = closure_0;
-                tmp24 = closure_2;
-                obj11.children = intl2.string(closure_0(closure_2[16]).t.ait1x0);
-                items[1] = jsx(closure_0(closure_2[12]).Text, obj11);
-                obj9.children = items;
-                items1 = [, ];
-                items1[0] = jsxs(View, obj9);
-                tmp25 = jsx;
-                tmp26 = f60937;
-                obj12 = { label: null };
-                tmp27 = closure_0;
-                tmp28 = closure_2;
-                intl3 = closure_0(closure_2[16]).intl;
-                tmp29 = closure_0;
-                tmp30 = closure_2;
-                obj12.label = intl3.string(closure_0(closure_2[16]).t["1uAmCw"]);
-                items1[1] = jsx(f60937, obj12);
-                obj1.children = items1;
-                return jsxs(Fragment, obj1);
-              } else {
-                friendSuggestion = item.props.friendSuggestion;
-                tmp32 = closure_4;
-                tmp33 = jsx;
-                tmp34 = f60939;
-                obj13 = { start: null, end: null, suggestion: null, selected: null, onSelect: null };
-                num = 1;
-                obj13.start = 1 === index;
-                tmp35 = friendSuggestions;
-                obj13.end = index === friendSuggestions.length;
-                obj13.suggestion = friendSuggestion;
-                obj13.selected = item.props.selected;
-                tmp36 = closure_5;
-                obj13.onSelect = closure_5;
-                tmp31 = jsxs;
-                items2 = [, ];
-                items2[0] = jsx(f60939, obj13);
-                tmp5 = null;
-                if (index < friendSuggestions.length) {
-                  tmp = jsx;
-                  tmp2 = closure_0;
-                  tmp3 = closure_2;
-                  obj = { iconPush: true, style: null };
-                  tmp4 = closure_2;
-                  obj.style = closure_2.divider;
-                  tmp5 = jsx(closure_0(closure_2[22]).FormDivider, obj);
-                }
-                obj14 = { children: null };
-                items2[1] = tmp5;
-                obj14.children = items2;
-                return tmp31(closure_4.Fragment, obj14, friendSuggestion.suggested_user.id);
-              }
-            }
-          }
-          cResult[20] = friendSuggestions.length;
-          cResult[21] = tmp4.divider;
-          cResult[22] = tmp4.header;
-          cResult[23] = tmp4.subtitle;
-          cResult[24] = tmp4.title;
-          class N {
-            constructor() {
-              obj = closure_1(closure_2[20]);
-              keys = obj.keys(closure_3);
-              found = keys.filter((item) => first[item]);
-              tmp = onSubmit(found);
-              item = found.forEach((suggested_user_id) => {
-                onSubmit(closure_1_2[21]).track(constants.FRIEND_SUGGESTION_ADDED, { suggested_user_id, suggestion_source: constants2.USER_SUGGESTIONS, location: "Contact Sync Suggestions" });
-              });
-              return;
-            }
-          }
-          cResult[25] = F;
-          cResult[26] = L;
         }
-        let items = [];
-        items.push({ type: "header" });
-        let item = friendSuggestions.forEach((friendSuggestion) => {
-          const element = { type: "suggestedFriend", props: { friendSuggestion, selected: first[friendSuggestion.suggested_user.id] } };
-          items.push(element);
-        });
-        cResult[17] = friendSuggestions;
-        cResult[18] = first;
-        cResult[19] = items;
+        cResult[20] = friendSuggestions.length;
+        cResult[21] = tmp4.divider;
+        cResult[22] = tmp4.header;
+        cResult[23] = tmp4.subtitle;
+        cResult[24] = tmp4.title;
         class N {
           constructor() {
             obj = closure_1(closure_2[20]);
@@ -491,12 +481,27 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((friendSuggestion
             found = keys.filter((item) => first[item]);
             tmp = onSubmit(found);
             item = found.forEach((suggested_user_id) => {
-              onSubmit(closure_1_2[21]).track(constants.FRIEND_SUGGESTION_ADDED, { suggested_user_id, suggestion_source: constants2.USER_SUGGESTIONS, location: "Contact Sync Suggestions" });
+              const obj = onSubmit(closure_1_2[21]);
+              const obj2 = { suggested_user_id, suggestion_source: constants2.USER_SUGGESTIONS, location: "Contact Sync Suggestions" };
+              obj.track(constants.FRIEND_SUGGESTION_ADDED, obj2);
             });
             return;
           }
         }
+        cResult[25] = tmp21;
+        cResult[26] = L;
       }
+      let items = [];
+      items.push({ type: "header" });
+      let item = friendSuggestions.forEach((friendSuggestion) => {
+        let obj;
+        const element = { type: "suggestedFriend", props: obj };
+        obj = { friendSuggestion, selected: first[friendSuggestion.suggested_user.id] };
+        items.push(element);
+      });
+      cResult[17] = friendSuggestions;
+      cResult[18] = first;
+      cResult[19] = items;
       class N {
         constructor() {
           obj = closure_1(closure_2[20]);
@@ -504,132 +509,165 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((friendSuggestion
           found = keys.filter((item) => first[item]);
           tmp = onSubmit(found);
           item = found.forEach((suggested_user_id) => {
-            onSubmit(closure_1_2[21]).track(constants.FRIEND_SUGGESTION_ADDED, { suggested_user_id, suggestion_source: constants2.USER_SUGGESTIONS, location: "Contact Sync Suggestions" });
+            const obj = onSubmit(closure_1_2[21]);
+            const obj2 = { suggested_user_id, suggestion_source: constants2.USER_SUGGESTIONS, location: "Contact Sync Suggestions" };
+            obj.track(constants.FRIEND_SUGGESTION_ADDED, obj2);
           });
           return;
         }
       }
-      cResult[12] = onSubmit;
-      cResult[13] = first;
-      cResult[14] = N;
     }
-    let items1 = [tmp11, tmp13];
-    cResult[7] = tmp11;
-    cResult[8] = tmp13;
-    cResult[9] = items1;
-    const tmpResult = tmp(4580);
+    class N {
+      constructor() {
+        obj = closure_1(closure_2[20]);
+        keys = obj.keys(closure_3);
+        found = keys.filter((item) => first[item]);
+        tmp = onSubmit(found);
+        item = found.forEach((suggested_user_id) => {
+          const obj = onSubmit(closure_1_2[21]);
+          const obj2 = { suggested_user_id, suggestion_source: constants2.USER_SUGGESTIONS, location: "Contact Sync Suggestions" };
+          obj.track(constants.FRIEND_SUGGESTION_ADDED, obj2);
+        });
+        return;
+      }
+    }
+    cResult[12] = onSubmit;
+    cResult[13] = first;
+    cResult[14] = N;
   }
-  let obj = friendSuggestions(576);
+  let items1 = [tmp10, tmp12];
+  cResult[7] = tmp10;
+  cResult[8] = tmp12;
+  cResult[9] = items1;
 }) : ((friendSuggestions) => {
+  let Button;
+  let closure_2;
+  let closure_4;
+  let intl;
+  let items4;
+  let items5;
+  let obj10;
+  let obj7;
   friendSuggestions = friendSuggestions.friendSuggestions;
   const onSubmit = friendSuggestions.onSubmit;
   let first;
-  noop = undefined;
+  react = undefined;
   const tmp = closure_11();
   dependencyMap = tmp;
   const reduced = friendSuggestions.reduce((acc, suggested_user) => {
     acc[suggested_user.suggested_user.id] = true;
     return acc;
   }, {});
-  const token = friendSuggestions(4580).useToken(onSubmit(587).colors.BACKGROUND_BASE_LOW);
   let obj = friendSuggestions(4580);
-  let items = [friendSuggestions(4727).hexOpacityToRgba(token, 0), ];
+  const token = obj.useToken(onSubmit(587).colors.BACKGROUND_BASE_LOW);
   let obj2 = friendSuggestions(4727);
-  items[1] = friendSuggestions(4727).hexOpacityToRgba(token, 100);
-  const tmp4 = first(noop.useState(reduced), 2);
-  first = tmp4[0];
-  noop = tmp4[1];
-  let items1 = [first];
+  let items = [obj2.hexOpacityToRgba(token, 0), ];
   let obj3 = friendSuggestions(4727);
-  onSelect = noop.useCallback((arg0) => {
+  items[1] = obj3.hexOpacityToRgba(token, 100);
+  const tmp4 = first(react.useState(reduced), 2);
+  first = tmp4[0];
+  react = tmp4[1];
+  let items1 = [first];
+  const tmp6 = closure_12();
+  onSelect = react.useCallback((arg0) => {
     const obj = {};
     const merged = Object.assign(first);
     obj[arg0] = !first[arg0];
     closure_4(obj);
   }, items1);
-  const tmp6 = closure_12();
-  let keys = onSubmit(11).keys(first);
-  let items2 = [friendSuggestions, first];
   let obj4 = onSubmit(11);
+  let keys = obj4.keys(first);
+  let items2 = [friendSuggestions, first];
   const items3 = [friendSuggestions.length, , , , , ];
   ({ divider: arr5[1], header: arr5[2], subtitle: arr5[3], title: arr5[4] } = tmp);
   items3[5] = onSelect;
-  const memo = noop.useMemo(() => {
+  const someResult = keys.some((item) => first[item]);
+  const memo = react.useMemo(() => {
     const items = [];
     items.push({ type: "header" });
     const item = items.forEach((friendSuggestion) => {
-      const element = { type: "suggestedFriend", props: { friendSuggestion, selected: first[friendSuggestion.suggested_user.id] } };
+      let obj;
+      const element = { type: "suggestedFriend", props: obj };
+      obj = { friendSuggestion, selected: first[friendSuggestion.suggested_user.id] };
       items.push(element);
     });
     return items;
   }, items2);
-  let obj5 = { style: null, children: null };
-  const items4 = [, ];
+  let obj5 = { style: items4, children: items5 };
+  items4 = [, ];
   ({ container: arr6[0], list: arr6[1] } = tmp);
-  obj5.style = items4;
-  const callback1 = noop.useCallback((arg0) => {
+  const callback1 = react.useCallback((arg0) => {
+    let index;
+    let intl;
+    let intl2;
+    let intl3;
+    let item;
+    let items;
+    let items1;
     ({ item, index } = arg0);
     if ("header" === item.type) {
-      const obj2 = { children: null };
-      const obj3 = { style: closure_2.header, children: null };
-      const obj4 = { style: closure_2.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-      const intl = util.intl;
-      obj4.children = intl.string(util.t["7Fjv54"]);
-      const items = [closure_2_8(Text_Text.Text, obj4), ];
-      const obj5 = { style: closure_2.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
-      const intl2 = util.intl;
-      obj5.children = intl2.string(util.t.ait1x0);
-      items[1] = closure_2_8(Text_Text.Text, obj5);
-      obj3.children = items;
-      const items1 = [v65535(View, obj3), ];
-      const obj6 = { label: null };
-      const intl3 = util.intl;
-      obj6.label = intl3.string(util.t["1uAmCw"]);
-      items1[1] = closure_2_8(closure_13, obj6);
-      obj2.children = items1;
-      return v65535(options, obj2);
+      const obj2 = { children: items1 };
+      const obj3 = { style: closure_2.header, children: items };
+      const obj4 = { style: closure_2.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: intl.string(intl4.t["7Fjv54"]) };
+      const Text = Text_Text.Text;
+      intl = intl4.intl;
+      items = [metroImportAll(Text, obj4), ];
+      const obj5 = { style: closure_2.subtitle, variant: "text-sm/medium", color: "text-default", children: intl2.string(intl4.t.ait1x0) };
+      const Text2 = Text_Text.Text;
+      intl2 = intl4.intl;
+      items[1] = metroImportAll(Text2, obj5);
+      items1 = [authStore(View, obj3), ];
+      const obj6 = { label: intl3.string(intl4.t["1uAmCw"]) };
+      intl3 = intl4.intl;
+      items1[1] = metroImportAll(closure_13, obj6);
+      return authStore(React4, obj2);
     } else {
       const friendSuggestion = item.props.friendSuggestion;
+      const id = friendSuggestion.suggested_user.id;
+      const Fragment = react.Fragment;
       const obj7 = { start: 1 === index, end: index === friendSuggestions.length, suggestion: friendSuggestion, selected: item.props.selected, onSelect };
-      const items2 = [closure_2_8(closure_14, obj7), ];
+      const items2 = [metroImportAll(closure_14, obj7), ];
       let tmp5 = null;
       if (index < friendSuggestions.length) {
         const obj = { iconPush: true, style: closure_2.divider };
-        tmp5 = closure_2_8(Form.FormDivider, obj);
+        tmp5 = metroImportAll(Form.FormDivider, obj);
       }
-      const obj8 = { children: null };
+      const obj8 = { children: items2 };
       items2[1] = tmp5;
-      obj8.children = items2;
-      return v65535(noop.Fragment, obj8, friendSuggestion.suggested_user.id);
+      return authStore(Fragment, obj8, id);
     }
   }, items3);
-  let obj6 = { contentContainerStyle: null, data: null, renderItem: null };
-  const someResult = keys.some((item) => first[item]);
-  obj6.contentContainerStyle = { paddingHorizontal: onSubmit(587).space.PX_16, paddingBottom: tmp6 };
-  obj6.data = memo;
-  obj6.renderItem = callback1;
-  const items5 = [closure_8(friendSuggestions(8371).FlashList, obj6), , ];
-  let obj8 = { style: tmp.linearGradient, start: null, end: null, pointerEvents: "none", colors: null };
-  let obj7 = { paddingHorizontal: onSubmit(587).space.PX_16, paddingBottom: tmp6 };
-  obj8.start = friendSuggestions(1105).VerticalGradient.START;
-  obj8.end = friendSuggestions(1105).VerticalGradient.END;
-  obj8.colors = items;
-  items5[1] = closure_8(onSubmit(5605), obj8);
-  const obj9 = { style: tmp.redesignButton, children: null };
-  const obj10 = { variant: "primary", size: "lg", text: null, onPress: null, disabled: null };
-  let intl = friendSuggestions(1126).intl;
-  obj10.text = intl.string(friendSuggestions(1126).t["J5/69j"]);
-  obj10.onPress = function onPress() {
-    const keys = SnowflakeUtilsDefault.keys(first);
-    const found = keys.filter((item) => first[item]);
-    onSubmit(found);
-    const item = found.forEach((suggested_user_id) => {
-      onSubmit(closure_1_2[21]).track(constants.FRIEND_SUGGESTION_ADDED, { suggested_user_id, suggestion_source: constants2.USER_SUGGESTIONS, location: "Contact Sync Suggestions" });
-    });
+  let obj6 = { contentContainerStyle: obj7, data: memo, renderItem: callback1 };
+  obj7 = { paddingHorizontal: onSubmit(587).space.PX_16, paddingBottom: tmp6 };
+  const FlashList = friendSuggestions(8371).FlashList;
+  items5 = [closure_8(FlashList, obj6), , ];
+  let obj8 = { style: tmp.linearGradient, start: friendSuggestions(1105).VerticalGradient.START, end: friendSuggestions(1105).VerticalGradient.END, pointerEvents: "none", colors: items };
+  const tmp11 = onSubmit(5605);
+  items5[1] = closure_8(tmp11, obj8);
+  const obj9 = { style: tmp.redesignButton, children: closure_8(Button, obj10) };
+  obj10 = {
+    variant: "primary",
+    size: "lg",
+    text: intl.string(friendSuggestions(1126).t["J5/69j"]),
+    onPress() {
+      let constants2;
+      let obj = SnowflakeUtilsDefault;
+      const keys = obj.keys(first);
+      const found = keys.filter((item) => first[item]);
+      onSubmit(found);
+      const item = found.forEach((suggested_user_id) => {
+        const obj = onSubmit(closure_1_2[21]);
+        const obj2 = { suggested_user_id, suggestion_source: constants2.USER_SUGGESTIONS, location: "Contact Sync Suggestions" };
+        obj.track(constants.FRIEND_SUGGESTION_ADDED, obj2);
+      });
+    },
+    disabled: !someResult
   };
-  obj10.disabled = !someResult;
-  obj9.children = closure_8(friendSuggestions(5594).Button, obj10);
+  Button = friendSuggestions(5594).Button;
+  intl = friendSuggestions(1126).intl;
   items5[2] = closure_8(onSelect, obj9);
-  obj5.children = items5;
   return closure_10(onSelect, obj5);
 });
+const result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncSuggestions.tsx");
+
+export default tmp4;

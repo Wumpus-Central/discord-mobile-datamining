@@ -2,68 +2,78 @@
 
 // Module 7888 (useNameplate)
 import utils from "utils" /* 1977 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/collectibles/nameplates/hooks/useNameplate.tsx");
+let user;
 
-export const useNameplate = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
-  let nameplate3 = user;
-  let nameplate = guildId;
-  const cResult = user(guildId[3]).c(7);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+  let first;
+  let guildId;
+  const tmp = user;
+  const obj = user(guildId[3]);
+  const cResult = obj.c(7);
   user = user.user;
   guildId = user.guildId;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildMemberStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === guildId) {
+    let tmp6;
     if (cResult[2] === user) {
-      let tmp5 = cResult[3];
+      tmp6 = cResult[3];
     }
-    let collectibles = nameplate3(nameplate[4]).useStateFromStores(first, tmp5);
-    let tmp6 = null;
+    const tmpResult = tmp(guildId[4]);
+    const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
+    let tmp9;
     if (null != user) {
       let nameplate1;
-      if (collectibles != tmp6) {
-        const collectibles2 = collectibles.collectibles;
-        if (collectibles2 != tmp6) {
-          nameplate1 = collectibles2.nameplate;
+      const tmp10 = cResult[4];
+      if (stateFromStores != null) {
+        const collectibles = stateFromStores.collectibles;
+        if (collectibles != null) {
+          nameplate1 = collectibles.nameplate;
         }
       }
-      if (cResult[4] === nameplate1) {
+      if (tmp10 === nameplate1) {
+        let tmp12;
+        if (cResult[5] === user) {
+          tmp12 = cResult[6];
+        }
+        tmp9 = tmp12;
       }
       let nameplate2;
-      if (collectibles != tmp6) {
-        const collectibles3 = collectibles.collectibles;
-        if (collectibles3 != tmp6) {
-          nameplate2 = collectibles3.nameplate;
+      const getNameplateData = tmp(guildId[5]).getNameplateData;
+      tmp(guildId[5]);
+      if (stateFromStores != null) {
+        const collectibles2 = stateFromStores.collectibles;
+        if (collectibles2 != null) {
+          nameplate2 = collectibles2.nameplate;
         }
       }
-      nameplate = nameplate3(nameplate[5]).getNameplateData(nameplate2);
-      if (nameplate == tmp6) {
+      let nameplate = getNameplateData(nameplate2);
+      if (nameplate == null) {
         nameplate = user.nameplate;
       }
-      nameplate3 = undefined;
-      if (collectibles != tmp6) {
-        collectibles = collectibles.collectibles;
-        tmp6 = collectibles == tmp6;
-        if (!tmp6) {
-          nameplate3 = collectibles.nameplate;
+      let nameplate3;
+      if (stateFromStores != null) {
+        const collectibles3 = stateFromStores.collectibles;
+        if (collectibles3 != null) {
+          nameplate3 = collectibles3.nameplate;
         }
       }
       cResult[4] = nameplate3;
       cResult[5] = user;
       cResult[6] = nameplate;
-      const nameplate3Result1 = nameplate3(nameplate[5]);
+      tmp12 = nameplate;
     }
-    const nameplate3Result = nameplate3(nameplate[4]);
+    return tmp9;
   }
   const fn = function u() {
     let member = null;
@@ -78,13 +88,13 @@ export const useNameplate = ReactCompilerGating.isReactCompilerEnabled() ? ((use
   cResult[1] = guildId;
   cResult[2] = user;
   cResult[3] = fn;
-  tmp5 = fn;
-  const obj = user(guildId[3]);
+  tmp6 = fn;
 }) : ((user) => {
   user = user.user;
   const guildId = user.guildId;
   const items = [GuildMemberStore];
-  const stateFromStores = user(guildId[4]).useStateFromStores(items, () => {
+  const obj = user(guildId[4]);
+  const stateFromStores = obj.useStateFromStores(items, () => {
     let member = null;
     if (null != guildId) {
       member = null;
@@ -98,13 +108,15 @@ export const useNameplate = ReactCompilerGating.isReactCompilerEnabled() ? ((use
   return stateFromStores.useMemo(() => {
     if (null != user) {
       let nameplate1;
+      const getNameplateData = utils.getNameplateData;
+      utils;
       if (stateFromStores != null) {
         const collectibles = stateFromStores.collectibles;
         if (collectibles != null) {
           nameplate1 = collectibles.nameplate;
         }
       }
-      let nameplate = utils.getNameplateData(nameplate1);
+      let nameplate = getNameplateData(nameplate1);
       if (nameplate == null) {
         nameplate = tmp.nameplate;
       }
@@ -112,3 +124,6 @@ export const useNameplate = ReactCompilerGating.isReactCompilerEnabled() ? ((use
     }
   }, items1);
 });
+const result = size.fileFinishedImporting("modules/collectibles/nameplates/hooks/useNameplate.tsx");
+
+export const useNameplate = tmp2;

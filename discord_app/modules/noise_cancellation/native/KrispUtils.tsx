@@ -7,15 +7,17 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/noise_cancellation/native/KrispUtils.tsx");
 
 export const getKrispModel = function getKrispModel() {
-  return new Promise((fn) => {
-    closure_0 = fn;
-    const voiceEngine = inject.getVoiceEngine();
+  const promise = new Promise((fn) => {
+    let closure_0 = fn;
+    const obj = inject;
+    const voiceEngine = obj.getVoiceEngine();
     if (null != voiceEngine.getNcModelFilename) {
       const ncModelFilename = voiceEngine.getNcModelFilename((arg0) => closure_0(arg0));
     } else {
       fn(null);
     }
   });
+  return promise;
 };
 export function setKrispSuppressionLevel() {
 

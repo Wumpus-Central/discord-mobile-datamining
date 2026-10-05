@@ -1,30 +1,35 @@
 // === Module 8916: openForumExplicitMediaWarning ===
 
 // Module 8916 (openForumExplicitMediaWarning)
-import jsxProd from "jsxProd" /* 21 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import Fragment from "Fragment" /* 21 */;
+import asyncRequire from "asyncRequire" /* 1987 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
 import size from "module_2" /* 2 */;
 
-const jsx = jsxProd.jsx;
+let importDefault;
+
+const jsx = Fragment.jsx;
 const result = size.fileFinishedImporting("modules/forums/openForumExplicitMediaWarning.native.tsx");
 
 export default function openForumExplicitMediaWarning(arg0, arg1) {
-  closure_0 = arg0;
+  let closure_1;
+  let closure_0 = arg0;
   importDefault = arg1;
-  actions_AlertActionCreatorsDefault.openLazy({
+  const obj = actions_AlertActionCreatorsDefault;
+  const obj2 = {
     importer() {
-      return asyncRequireImpl(8917, dependencyMap.paths).then((result) => {
+      let channelId;
+      let messageId;
+      const promise = asyncRequire(8917, dependencyMap.paths);
+      return promise.then((result) => {
         closure_0 = result.default;
         return (arg0) => {
-          const obj = {};
           const merged = Object.assign(arg0);
-          obj.channelId = channelId;
-          obj.messageId = messageId;
-          return <closure_0 />;
+          return <closure_0 channelId={channelId} messageId={messageId} />;
         };
       });
     },
     isDismissable: false
-  });
+  };
+  obj.openLazy(obj2);
 };

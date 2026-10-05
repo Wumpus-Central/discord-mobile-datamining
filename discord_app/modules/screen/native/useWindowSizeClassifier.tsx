@@ -1,7 +1,7 @@
 // === Module 4740: useWindowSizeClassifier ===
 
 // Module 4740 (useWindowSizeClassifier)
-import c from "c" /* 576 */;
+import react from "react" /* 576 */;
 import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4741 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -9,15 +9,15 @@ import size from "module_2" /* 2 */;
 const useBaseAppContainerDimensionsDefault = useBaseAppContainerDimensions;
 
 const WindowSizeClassifier = { SMALL: 0, [0]: "SMALL", NORMAL: 1, [1]: "NORMAL", LARGE: 2, [2]: "LARGE", XLARGE: 3, [3]: "XLARGE" };
-const result = size.fileFinishedImporting("modules/screen/native/useWindowSizeClassifier.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const obj = c;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let tmp2;
+  const obj = react;
   const cResult = obj.c(2);
   const width = useBaseAppContainerDimensionsDefault().width;
   if (cResult[0] !== width) {
+    let XLARGE;
     if (width <= 360) {
-      let XLARGE = obj.SMALL;
+      XLARGE = obj.SMALL;
     } else if (width <= 600) {
       XLARGE = obj.NORMAL;
     } else if (width <= 840) {
@@ -27,13 +27,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     cResult[0] = width;
     cResult[1] = XLARGE;
+    tmp2 = XLARGE;
   } else {
-    return cResult[1];
+    tmp2 = cResult[1];
   }
+  return tmp2;
 }) : (() => {
+  let XLARGE;
   const width = useBaseAppContainerDimensionsDefault().width;
   if (width <= 360) {
-    let XLARGE = obj.SMALL;
+    XLARGE = obj.SMALL;
   } else if (width <= 600) {
     XLARGE = obj.NORMAL;
   } else if (width <= 840) {
@@ -43,15 +46,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   return XLARGE;
 });
+const result = size.fileFinishedImporting("modules/screen/native/useWindowSizeClassifier.tsx");
+
+export default tmp2;
 export const WINDOW_SIZE_THRESHOLD_SMALL = 360;
 export const WINDOW_SIZE_THRESHOLD_LARGE = 600;
 export const WINDOW_SIZE_THRESHOLD_XLARGE = 840;
 export { WindowSizeClassifier };
 export const getWindowSizeClassifier = function getWindowSizeClassifier() {
+  let XLARGE;
   const obj = useBaseAppContainerDimensions;
   const width = obj.getBaseAppContainerDimensions().width;
   if (width <= 360) {
-    let XLARGE = obj.SMALL;
+    XLARGE = obj.SMALL;
   } else if (width <= 600) {
     XLARGE = obj.NORMAL;
   } else if (width <= 840) {

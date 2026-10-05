@@ -1,12 +1,14 @@
 // === Module 12854: getReactNativeSVGImageSource ===
 
 // Module 12854 (getReactNativeSVGImageSource)
+import PlatformUtils from "PlatformUtils" /* 1369 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/svg/native/getReactNativeSVGImageSource.tsx");
 
 export default function getReactNativeSVGImageSource(arg0) {
   let first = arg0;
+  const obj = PlatformUtils;
   if (obj.isAndroid()) {
     const _Array = Array;
     first = arg0;

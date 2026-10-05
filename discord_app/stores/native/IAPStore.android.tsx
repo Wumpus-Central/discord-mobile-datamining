@@ -1,7 +1,7 @@
 // === Module 6739: IAPStore ===
 
 // Module 6739 (IAPStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants2 from "Constants" /* 1096 */;
 import BillingUtils from "BillingUtils" /* 4543 */;
@@ -9,33 +9,37 @@ import PriceUtils from "PriceUtils" /* 6736 */;
 import Constants from "Constants" /* 6740 */;
 import size from "module_2" /* 2 */;
 
+let offerIds;
+
 function updateProduct(currencyCode) {
-  const formatted = currencyCode.currencyCode.toLowerCase();
+  const str = currencyCode.currencyCode;
+  const formatted = str.toLowerCase();
   const result = currencyCode.price / 100;
   if ("BG" === countryCode) {
+    let formatDualPriceForBGResult;
     if (formatted === CurrencyCodes.EUR) {
-      let formatDualPriceForBGResult = PriceUtils.formatDualPriceForBG(result, { convertToMajorUnits: false });
+      const obj2 = PriceUtils;
+      formatDualPriceForBGResult = obj2.formatDualPriceForBG(result, { convertToMajorUnits: false });
     }
-    const obj3 = {};
+    const obj3 = { price: currencyCode.price, currencyCode: formatted, priceString: formatDualPriceForBGResult };
     const merged = Object.assign(currencyCode);
-    obj3.price = currencyCode.price;
-    obj3.currencyCode = formatted;
-    obj3.priceString = formatDualPriceForBGResult;
     return obj3;
   }
-  formatDualPriceForBGResult = PriceUtils.formatSingleCurrencyPrice(result, formatted, { convertToMajorUnits: false });
+  const obj = PriceUtils;
+  formatDualPriceForBGResult = obj.formatSingleCurrencyPrice(result, formatted, { convertToMajorUnits: false });
 }
 function skusLoaded(arg0) {
+  let skus;
+  let skusType;
   ({ skus, skusType } = arg0);
   let item = skus.forEach((identifier) => {
     const result = map.set(identifier.identifier, identifier);
   });
   const arr = Array.from(map.values());
-  let found;
+  found = undefined;
   if (arr != null) {
     found = arr.filter((item) => null != item);
   }
-  mapped = found;
   if (found != null) {
     const item1 = found.forEach((offerIds) => {
       offerIds = undefined;
@@ -48,31 +52,33 @@ function skusLoaded(arg0) {
     });
   }
   try {
-    mapped = undefined;
-    if (mapped != null) {
+    let mapped;
+    const arr2 = found;
+    if (found != null) {
       mapped = arr2.map(updateProduct);
     }
-    if (mapped != null) {
-      const item2 = arr3.forEach((identifier) => {
-        const result = map.set(identifier.identifier, identifier);
-      });
-    }
-    if (GPlaySkusType.IN_APP === skusType) {
-      c12 = false;
-    } else if (tmp12.SUBSCRIPTION === skusType) {
-      c13 = false;
-    }
-    arr2 = mapped;
-    arr3 = mapped;
-  } catch (tmp7) {
-    let result = BillingUtils.captureBillingException(tmp7);
+    found = mapped;
+  } catch (tmp6) {
+    const obj = BillingUtils;
+    let result = obj.captureBillingException(tmp6);
+  }
+  const arr3 = found;
+  if (found != null) {
+    const item2 = arr3.forEach((identifier) => {
+      const result = map.set(identifier.identifier, identifier);
+    });
+  }
+  if (GPlaySkusType.IN_APP === skusType) {
+    c12 = false;
+  } else if (tmp11.SUBSCRIPTION === skusType) {
+    c13 = false;
   }
 }
 const GPlayConnectionState = Constants.GPlayConnectionState;
 const GPlaySkusType = Constants.GPlaySkusType;
 const CurrencyCodes = Constants2.CurrencyCodes;
-let connectionState = GPlayConnectionState.DISCONNECTED;
-let mapped = null;
+let DISCONNECTED = GPlayConnectionState.DISCONNECTED;
+let found = null;
 const map = new Map();
 const set = new Set();
 const set1 = new Set();
@@ -81,62 +87,54 @@ let isDowngrading = false;
 let c12 = false;
 let c13 = false;
 let countryCode = null;
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class IAPStore extends Store {
+  getProducts() {
+    return found;
+  }
+  getOfferIds() {
+    return set;
+  }
+  getProduct(arg0) {
+    let value = map.get(arg0);
+    if (value == null) {
+      value = null;
+    }
+    return value;
+  }
+  isBusy() {
+    return set1.size > 0 || isDowngrading;
+  }
+  isInCheckout() {
+    return false;
+  }
+  isPurchasingProduct(GENERIC_CONSUMABLE) {
+    return set1.has(GENERIC_CONSUMABLE);
+  }
+  isReady() {
+    return DISCONNECTED === GPlayConnectionState.CONNECTED;
+  }
+  hasConnectionError() {
+    return DISCONNECTED === GPlayConnectionState.ERROR;
+  }
+  getPendingDowngrade() {
+    return pendingDowngrade;
+  }
+  isFetchingGoogleSkus() {
+    return c13 || c12;
+  }
+  isFetchingProducts() {
+    return c13 || c12;
+  }
+  getUserCountry() {
+    return countryCode;
+  }
 }
 const prototype = IAPStore.prototype;
-prototype["getProducts"] = function getProducts() {
-  return mapped;
-};
-prototype["getOfferIds"] = function getOfferIds() {
-  return set;
-};
-prototype["getProduct"] = function getProduct(arg0) {
-  value = map.get(arg0);
-  if (value == null) {
-    value = null;
-  }
-  return value;
-};
-prototype["isBusy"] = function isBusy() {
-  return set1.size > 0 || isDowngrading;
-};
-prototype["isInCheckout"] = function isInCheckout() {
-  return false;
-};
-prototype["isPurchasingProduct"] = function isPurchasingProduct(GENERIC_CONSUMABLE) {
-  return set1.has(GENERIC_CONSUMABLE);
-};
-prototype["isReady"] = function isReady() {
-  return connectionState === GPlayConnectionState.CONNECTED;
-};
-prototype["hasConnectionError"] = function hasConnectionError() {
-  return connectionState === GPlayConnectionState.ERROR;
-};
-prototype["getPendingDowngrade"] = function getPendingDowngrade() {
-  return pendingDowngrade;
-};
-prototype["isFetchingGoogleSkus"] = function isFetchingGoogleSkus() {
-  let tmp = c13;
-  if (!c13) {
-    tmp = c12;
-  }
-  return tmp;
-};
-prototype["isFetchingProducts"] = function isFetchingProducts() {
-  let tmp = c13;
-  if (!c13) {
-    tmp = c12;
-  }
-  return tmp;
-};
-prototype["getUserCountry"] = function getUserCountry() {
-  return countryCode;
-};
 IAPStore.displayName = "IAPStore";
-const iAPStore = new IAPStore(DispatcherDefault, {
+let obj = {
   GPLAY_UPDATE_CONNECTION_STATE: function updateConnectionState(connectionState) {
-    connectionState = connectionState.connectionState;
+    DISCONNECTED = connectionState.connectionState;
   },
   GPLAY_FETCH_SUBSCRIPTION_SKUS_START: function handleFetchSubscriptionSkusStart() {
     c13 = true;
@@ -162,6 +160,8 @@ const iAPStore = new IAPStore(DispatcherDefault, {
     } else {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
+      const self = this;
+      const self2 = this;
       const error = new Error("Tried verifying product without initialization: " + productId);
       throw error;
     }
@@ -175,7 +175,8 @@ const iAPStore = new IAPStore(DispatcherDefault, {
   GPLAY_SET_USER_COUNTRY: function handleSetUserCountry(countryCode) {
     countryCode = countryCode.countryCode;
   }
-});
+};
+const iAPStore = new IAPStore(DispatcherDefault, obj);
 let result = size.fileFinishedImporting("stores/native/IAPStore.android.tsx");
 
 export default iAPStore;

@@ -1,55 +1,65 @@
 // === Module 13136: ForLaterNitroUpsellBar ===
 
 // Module 13136 (ForLaterNitroUpsellBar)
-import util from "util" /* 1126 */;
+import Fragment from "Fragment" /* 21 */;
+import intl2 from "intl" /* 1126 */;
+import PremiumConstants from "PremiumConstants" /* 1379 */;
 import PremiumUtils from "PremiumUtils" /* 4528 */;
 import openForLaterLimitUpsellDefault from "openForLaterLimitUpsell" /* 11336 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import SavedMessagesConstants from "SavedMessagesConstants" /* 7482 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+let hasOwnProperty;
+let metroRequire;
 function formatUpsellText(isReminder, isAtLimit) {
-  const premiumTypeDisplayName = PremiumUtils.getPremiumTypeDisplayName(PremiumTypes.TIER_2);
-  const intl = util.intl;
+  let formatToPlainStringResult;
+  const obj = PremiumUtils;
+  const premiumTypeDisplayName = obj.getPremiumTypeDisplayName(PremiumTypes.TIER_2);
+  const intl = intl2.intl;
   const formatToPlainString = intl.formatToPlainString;
-  const t = util.t;
-  if (isAtLimit) {
-    const obj2 = { nitroTierName: premiumTypeDisplayName, premiumMax: isReminder ? timestampProducer : hasOwnProperty };
-    formatToPlainString(isReminder ? t["E+mhMh"] : t["5VsCaT"], obj2);
+  const t = intl2.t;
+  const tmp2 = isAtLimit;
+  if (tmp2) {
+    const obj2 = { nitroTierName: premiumTypeDisplayName, premiumMax: isReminder ? metroRequire : hasOwnProperty };
+    formatToPlainStringResult = formatToPlainString(isReminder ? t["E+mhMh"] : t["5VsCaT"], obj2);
   } else {
     const obj3 = { nitroTierName: premiumTypeDisplayName };
-    return formatToPlainString(isReminder ? t["W+ZaoS"] : t["0hoV2D"], obj3);
+    formatToPlainStringResult = formatToPlainString(isReminder ? t["W+ZaoS"] : t["0hoV2D"], obj3);
   }
+  return formatToPlainStringResult;
 }
-const PremiumTypes = fn(1379).PremiumTypes;
-const SavedMessagesConstants = fn(7482);
+const PremiumTypes = PremiumConstants.PremiumTypes;
 ({ SAVED_BOOKMARKS_MAX: hasOwnProperty, SAVED_REMINDERS_MAX: metroRequire } = SavedMessagesConstants);
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/saved_messages/native/ForLaterNitroUpsellBar.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((isReminder) => {
-  const cResult = isReminder(576).c(10);
+const jsx = Fragment.jsx;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((isReminder) => {
+  let analyticsLocations;
+  const obj = isReminder(576);
+  const cResult = obj.c(10);
   isReminder = isReminder.isReminder;
   const isAtLimit = isReminder.isAtLimit;
+  const tmp3 = analyticsLocations;
   analyticsLocations = analyticsLocations(6657)().analyticsLocations;
   if (cResult[0] === analyticsLocations) {
+    let tmp4;
     if (cResult[1] === isReminder) {
-      let tmp4 = cResult[2];
+      tmp4 = cResult[2];
     }
     if (cResult[3] === isAtLimit) {
+      let tmp5;
       if (cResult[4] === isReminder) {
-        let tmp5 = cResult[5];
+        tmp5 = cResult[5];
       }
       if (cResult[6] === isAtLimit) {
         if (cResult[7] === tmp4) {
+          let tmp8;
           if (cResult[8] === tmp5) {
-            let tmp8 = cResult[9];
+            tmp8 = cResult[9];
           }
           return tmp8;
         }
       }
-      const obj2 = { text: tmp5, isAtLimit, onPress: tmp4 };
       const tmp10 = jsx(tmp3(11850), { text: tmp5, isAtLimit, onPress: tmp4 });
       cResult[6] = isAtLimit;
       cResult[7] = tmp4;
@@ -70,15 +80,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isReminder) => {
   cResult[1] = isReminder;
   cResult[2] = fn;
   tmp4 = fn;
-  const obj = isReminder(576);
-  tmp3 = analyticsLocations;
 }) : ((isReminder) => {
   isReminder = isReminder.isReminder;
   const isAtLimit = isReminder.isAtLimit;
   let analyticsLocations;
   analyticsLocations = analyticsLocations(6657)().analyticsLocations;
   const items = [isReminder, analyticsLocations];
-  const callback = noop.useCallback(() => openForLaterLimitUpsellDefault(isReminder, analyticsLocations), items);
-  const obj = { text: formatUpsellText(isReminder, isAtLimit), isAtLimit, onPress: callback };
-  return jsx(analyticsLocations(11850), { text: formatUpsellText(isReminder, isAtLimit), isAtLimit, onPress: callback });
+  const callback = react.useCallback(() => openForLaterLimitUpsellDefault(isReminder, analyticsLocations), items);
+  analyticsLocations(11850);
+  return <tmp2 text={formatUpsellText(isReminder, isAtLimit)} isAtLimit={isAtLimit} onPress={callback} />;
 });
+const result = size.fileFinishedImporting("modules/saved_messages/native/ForLaterNitroUpsellBar.tsx");
+
+export default tmp3;

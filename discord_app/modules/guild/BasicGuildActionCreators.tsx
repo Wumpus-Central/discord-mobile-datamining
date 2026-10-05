@@ -2,117 +2,118 @@
 
 // Module 18020 (BasicGuildActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
+import Constants from "Constants" /* 1085 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import BasicGuildStore from "BasicGuildStore" /* 7614 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-let closure_8 = async function _fetchBasicGuild() {
-  c5 = 0;
-  c6 = 0;
-  c4 = 0;
-  return (async (arg0) => {
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp7 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+let closure_1, closure_2, closure_3;
+
+let obj = function _fetchBasicGuild() {
+  let guild;
+  let guildOrStatus;
+  obj = _asyncToGenerator(async (guildId) => {
+    let c5 = 0;
+    let c6 = 0;
+    let c4 = 0;
+    return (async (arg0) => {
+      if (c6 === 2) {
+        c6 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          return { value, done: true };
+        } else {
+          return { value: "IconComponent", done: null };
+        }
       } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_2 = tmp4;
-            closure_1 = tmp8;
-            closure_129_0 = guildId;
-            let body;
-            if (null == guild.getGuild(guildId)) {
-              if (null == guildOrStatus.getGuildOrStatus(guildId)) {
-                if (!set.has(guildId)) {
-                  const obj5 = { type: "BASIC_GUILD_FETCH", guildId };
-                  DispatcherDefault.dispatch(obj5);
-                  set.add(guildId);
-                  c4 = 2;
-                  const HTTP = HTTPUtils.HTTP;
-                  const obj7 = { url: Endpoints.GUILD_BASIC(guildId), rejectWithError: true };
-                  c5 = 3;
-                  c6 = 1;
-                  const obj8 = { value: HTTP.get(obj7), done: false };
-                  return obj8;
+        try {
+          let body;
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              return { value, done: true };
+            } else {
+              closure_2 = tmp;
+              closure_1 = tmp4;
+              body = undefined;
+              if (null == guild.getGuild(guildId)) {
+                if (null == guildOrStatus.getGuildOrStatus(guildId)) {
+                  if (!set.has(guildId)) {
+                    const obj5 = { type: "BASIC_GUILD_FETCH", guildId };
+                    const obj6 = DispatcherDefault;
+                    obj6.dispatch(obj5);
+                    set.add(guildId);
+                    c4 = 2;
+                    const HTTP = HTTPUtils.HTTP;
+                    const get = HTTP.get;
+                    c5 = 3;
+                    c6 = 1;
+                    const obj7 = { url: Endpoints.GUILD_BASIC(guildId), rejectWithError: true };
+                    const obj8 = { value: get(obj7), done: false };
+                    return obj8;
+                  }
                 }
               }
             }
-            c6 = 3;
-          }
-        } else if (1 !== tmp8) {
-          if (2 === tmp8) {
-            c4 = 1;
-            const obj9 = { type: "BASIC_GUILD_FETCH_FAILURE", guildId: closure_129_0 };
-            closure_130_1(closure_130_2[4]).dispatch(obj9);
-            const obj4 = closure_130_1(closure_130_2[4]);
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
+          } else if (1 === c5) {
             c4 = 0;
-            closure_130_7.delete(closure_129_0);
-            c6 = 3;
-            const obj10 = { value, done: true };
-            return obj10;
+            closure_130_7.delete(guildId);
+            throw closure_3;
           } else {
-            body = value.body;
-            const obj11 = { type: "BASIC_GUILD_FETCH_SUCCESS", guildId: closure_129_0, guildInfo: body };
-            closure_130_1(closure_130_2[4]).dispatch(obj11);
-            c4 = 1;
-            const obj = closure_130_1(closure_130_2[4]);
+            if (2 === c5) {
+              c4 = 1;
+              const obj9 = { type: "BASIC_GUILD_FETCH_FAILURE", guildId };
+              const obj4 = closure_130_1(closure_130_2[4]);
+              obj4.dispatch(obj9);
+            } else if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 0;
+              closure_130_7.delete(guildId);
+              c6 = 3;
+              return { value, done: true };
+            } else {
+              body = value.body;
+              const obj11 = { type: "BASIC_GUILD_FETCH_SUCCESS", guildId, guildInfo: body };
+              obj = closure_130_1(closure_130_2[4]);
+              obj.dispatch(obj11);
+              c4 = 1;
+            }
+            c4 = 0;
+            closure_130_7.delete(guildId);
           }
-          c4 = 0;
-          closure_130_7.delete(closure_129_0);
-        }
-        c4 = 0;
-        closure_130_7.delete(closure_129_0);
-        throw closure_3;
-      } catch (tmp48) {
-        closure_3 = tmp48;
-        if (tmp5 === c4) {
-          c6 = tmp3;
-          throw tmp48;
-        } else if (tmp2 === tmp50) {
-          c5 = tmp2;
-        } else {
-          c5 = tmp;
+          c6 = 3;
+          return { value: "IconComponent", done: null };
+        } catch (tmp44) {
+          closure_3 = tmp44;
+          if (0 === c4) {
+            c6 = 3;
+            throw tmp44;
+          } else if (1 === tmp46) {
+            c5 = 1;
+          } else {
+            c5 = 2;
+          }
         }
       }
-    }
-  })();
+    })();
+  });
+  return obj(...arguments);
 };
-const Endpoints = fn(1085).Endpoints;
+const Endpoints = Constants.Endpoints;
 const set = new Set();
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/BasicGuildActionCreators.tsx");
 
 export const fetchBasicGuild = function fetchBasicGuild() {
-  const self = this;
-  const apply = closure_8.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };

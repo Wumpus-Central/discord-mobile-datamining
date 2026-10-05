@@ -2,72 +2,83 @@
 
 // Module 4781 (ExperimentManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ExperimentStore from "ExperimentStore" /* 4776 */;
+import ExperimentStore2 from "ExperimentStore" /* 4776 */;
+import ExperimentConstants from "ExperimentConstants" /* 4777 */;
+import size from "module_2" /* 2 */;
 
-const registerExperiment = fn(4776).registerExperiment;
-const ExperimentConstants = fn(4777);
+const ExperimentStore = ExperimentStore2;
+
+let ExposureTypes;
+let closure_4;
+const registerExperiment = ExperimentStore2.registerExperiment;
 ({ ExperimentTypes: closure_4, ExposureTypes } = ExperimentConstants);
 const ExperimentSystem = { LEGACY: "legacy", APEX: "apex" };
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/ExperimentManager.tsx");
 
 export const trackExposureToExperiment = function trackExposureToExperiment(id, descriptor, location) {
-  const obj = { experimentId: id, descriptor, location: null, location_stack: null, fingerprint: null, excluded: null, exposureType: null };
   let _location;
+  let analyticsLocations;
+  let excluded;
+  let exposureType;
+  let fingerprint;
+  const obj = { experimentId: id, descriptor, location: _location, location_stack: analyticsLocations, fingerprint, excluded, exposureType };
+  _location = undefined;
+  const trackExposure = ExperimentStore.trackExposure;
   if (location != null) {
     _location = location.location;
   }
-  obj.location = _location;
-  let analyticsLocations;
+  analyticsLocations = undefined;
   if (location != null) {
     analyticsLocations = location.analyticsLocations;
   }
-  obj.location_stack = analyticsLocations;
-  let fingerprint;
+  fingerprint = undefined;
   if (location != null) {
     fingerprint = location.fingerprint;
   }
-  obj.fingerprint = fingerprint;
-  let excluded;
+  excluded = undefined;
   if (location != null) {
     excluded = location.excluded;
   }
-  obj.excluded = excluded;
-  let exposureType;
+  exposureType = undefined;
   if (location != null) {
     exposureType = location.exposureType;
   }
-  obj.exposureType = exposureType;
-  ExperimentStore.trackExposure(obj);
+  trackExposure(obj);
 };
 export const registerUserExperiment = function registerUserExperiment(id) {
   id = id.id;
-  registerExperiment({ experimentId: id, experimentType: constants.USER, title: id.title, description: id.description, buckets: id.buckets, commonTriggerPoint: id.commonTriggerPoint });
+  const obj = { experimentId: id, experimentType: constants.USER, title: id.title, description: id.description, buckets: id.buckets, commonTriggerPoint: id.commonTriggerPoint };
+  registerExperiment(obj);
   return { id };
 };
 export const registerGuildExperiment = function registerGuildExperiment(id) {
   id = id.id;
-  registerExperiment({ experimentId: id, experimentType: constants.GUILD, title: id.title, description: id.description, buckets: id.buckets, commonTriggerPoint: id.commonTriggerPoint });
+  const obj = { experimentId: id, experimentType: constants.GUILD, title: id.title, description: id.description, buckets: id.buckets, commonTriggerPoint: id.commonTriggerPoint };
+  registerExperiment(obj);
   return { id };
 };
 export { ExperimentSystem };
 export const overrideBucket = function overrideBucket(system, map, id) {
+  let obj;
+  let tmp11;
   if (obj.LEGACY === system) {
-    const obj2 = { type: "EXPERIMENT_OVERRIDE_BUCKET", experimentId: map, experimentBucket: null };
-    let tmp10 = null;
+    const obj2 = { type: "EXPERIMENT_OVERRIDE_BUCKET", experimentId: map, experimentBucket: tmp11 };
+    tmp11 = null;
+    const dispatch = DispatcherDefault.dispatch;
+    DispatcherDefault;
     if (null != id) {
-      tmp10 = id;
+      tmp11 = id;
     }
-    obj2.experimentBucket = tmp10;
-    DispatcherDefault.dispatch(obj2);
+    dispatch(obj2);
   } else if (tmp.APEX === system) {
     if (null == id) {
       const obj4 = { type: "APEX_EXPERIMENT_OVERRIDE_DELETE", experimentName: map };
-      DispatcherDefault.dispatch(obj4);
+      const obj3 = DispatcherDefault;
+      obj3.dispatch(obj4);
     } else {
       obj = DispatcherDefault;
-      const obj6 = { type: "APEX_EXPERIMENT_OVERRIDE_CREATE", experimentName: map, variantId: id };
-      obj.dispatch(obj6);
+      const obj5 = { type: "APEX_EXPERIMENT_OVERRIDE_CREATE", experimentName: map, variantId: id };
+      obj.dispatch(obj5);
     }
   }
 };

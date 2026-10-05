@@ -2,35 +2,35 @@
 
 // Module 9144 (useDispatchOpenActivity)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/activities/useDispatchOpenActivity.tsx");
+let connectedEmbeddedActivity;
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((connectedEmbeddedActivity) => {
-  const cResult = connectedEmbeddedActivity(576).c(4);
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((connectedEmbeddedActivity) => {
+  let obj = connectedEmbeddedActivity(576);
+  const cResult = obj.c(4);
   connectedEmbeddedActivity = connectedEmbeddedActivity.connectedEmbeddedActivity;
   let applicationId;
   if (connectedEmbeddedActivity != null) {
     applicationId = connectedEmbeddedActivity.applicationId;
   }
   if (cResult[0] === applicationId) {
+    let tmp3;
+    let tmp4;
     if (cResult[1] === connectedEmbeddedActivity) {
-      let tmp3 = cResult[2];
-      let tmp4 = cResult[3];
+      tmp3 = cResult[2];
+      tmp4 = cResult[3];
     }
-    const effect = noop.useEffect(tmp3, tmp4);
+    const effect = react.useEffect(tmp3, tmp4);
   }
   const fn = function n() {
-    let tmp2 = null != connectedEmbeddedActivity;
-    if (tmp2) {
-      tmp2 = null != applicationId;
-    }
+    const tmp2 = null != connectedEmbeddedActivity && null != applicationId;
     if (tmp2) {
       const obj2 = { type: "EMBEDDED_ACTIVITY_OPEN", location: connectedEmbeddedActivity.location, applicationId };
-      DispatcherDefault.dispatch(obj2);
+      const obj = DispatcherDefault;
+      obj.dispatch(obj2);
     }
   };
   const items = [applicationId, connectedEmbeddedActivity];
@@ -40,7 +40,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((connectedEmbedde
   cResult[3] = items;
   tmp4 = items;
   tmp3 = fn;
-  let obj = connectedEmbeddedActivity(576);
 }) : ((connectedEmbeddedActivity) => {
   connectedEmbeddedActivity = connectedEmbeddedActivity.connectedEmbeddedActivity;
   let applicationId;
@@ -48,14 +47,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((connectedEmbedde
     applicationId = connectedEmbeddedActivity.applicationId;
   }
   const items = [applicationId, connectedEmbeddedActivity];
-  const effect = noop.useEffect(() => {
-    let tmp2 = null != connectedEmbeddedActivity;
-    if (tmp2) {
-      tmp2 = null != applicationId;
-    }
+  const effect = react.useEffect(() => {
+    const tmp2 = null != connectedEmbeddedActivity && null != applicationId;
     if (tmp2) {
       const obj2 = { type: "EMBEDDED_ACTIVITY_OPEN", location: connectedEmbeddedActivity.location, applicationId };
-      DispatcherDefault.dispatch(obj2);
+      const obj = DispatcherDefault;
+      obj.dispatch(obj2);
     }
   }, items);
 });
+const result = size.fileFinishedImporting("modules/activities/useDispatchOpenActivity.tsx");
+
+export default tmp2;

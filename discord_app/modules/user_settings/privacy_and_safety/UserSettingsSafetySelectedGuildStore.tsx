@@ -7,14 +7,16 @@ import size from "module_2" /* 2 */;
 let closure_0 = { selectedGuildId: "0" };
 const useUserSafetySettingsSelectedGuildStore = module_570.create((arg0) => {
   closure_0 = arg0;
-  const obj = {};
+  let obj = {
+    setSelectedGuildId(selectedGuildId) {
+      const obj = { selectedGuildId };
+      closure_0(obj);
+    },
+    reset() {
+      closure_0(closure_0);
+    }
+  };
   const merged = Object.assign(closure_0);
-  obj.setSelectedGuildId = function setSelectedGuildId(selectedGuildId) {
-    closure_0({ selectedGuildId });
-  };
-  obj.reset = function reset() {
-    closure_0(closure_0);
-  };
   return obj;
 });
 const result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/UserSettingsSafetySelectedGuildStore.tsx");

@@ -1,76 +1,81 @@
 // === Module 16999: InstantInviteSelfMeasurer ===
 
 // Module 16999 (InstantInviteSelfMeasurer)
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
 import InstantInvite from "InstantInvite" /* 10669 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const InstantInviteDefault = InstantInvite;
+let type;
 
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+const View = react_native.View;
+const jsx = Fragment.jsx;
 let closure_6 = createStyles.createStyles({ container: { position: "absolute", opacity: 0 } });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteSelfMeasurer.tsx");
-
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
-  let data = dependencyMap;
-  const cResult = c.c(13);
+const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
+  let containerStyle;
+  let item;
+  let onMeasured;
+  const obj = react2;
+  const cResult = obj.c(13);
   ({ containerStyle, item, onMeasured } = type);
   type = type.type;
   let str = "height";
   if (undefined !== type) {
     str = type;
   }
-  const tmp3 = closure_6();
+  const tmp4 = closure_6();
   if (cResult[0] === onMeasured) {
+    let tmp5;
     if (cResult[1] === str) {
-      let tmp4 = cResult[2];
+      tmp5 = cResult[2];
     }
     if (cResult[3] === containerStyle) {
-      if (cResult[4] === tmp3.container) {
-        let tmp5 = cResult[5];
+      let tmp6;
+      let tmp9;
+      if (cResult[4] === tmp4.container) {
+        tmp6 = cResult[5];
       }
       if (cResult[6] === item.data) {
+        let tmp7;
         if (cResult[7] === item.type) {
-          if (cResult[9] === tmp4) {
-            if (cResult[10] === tmp5) {
-              if (cResult[11] === tmp6) {
-                let tmp12 = cResult[12];
-              }
-              return tmp12;
-            }
-          }
-          const obj2 = { style: tmp5, onLayout: tmp4, pointerEvents: "none", importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, accessible: false, children: cResult[8] };
-          const tmp15 = <View style={tmp5} onLayout={tmp4} pointerEvents="none" importantForAccessibility="no-hide-descendants" accessibilityElementsHidden accessible={false}>{cResult[8]}</View>;
-          cResult[9] = tmp4;
-          cResult[10] = tmp5;
-          cResult[11] = cResult[8];
-          cResult[12] = tmp15;
-          tmp12 = tmp15;
+          tmp7 = cResult[8];
         }
+        if (cResult[9] === tmp5) {
+          if (cResult[10] === tmp6) {
+            let tmp12;
+            if (cResult[11] === tmp7) {
+              tmp12 = cResult[12];
+            }
+            return tmp12;
+          }
+        }
+        const tmp15 = <View style={tmp6} onLayout={tmp5} pointerEvents="none" importantForAccessibility="no-hide-descendants" accessibilityElementsHidden accessible={false}>{tmp7}</View>;
+        cResult[9] = tmp5;
+        cResult[10] = tmp6;
+        cResult[11] = tmp7;
+        cResult[12] = tmp15;
+        tmp12 = tmp15;
       }
       if ("invite" === item.type) {
-        const obj3 = { invite: item.data };
-        let tmp8 = jsx(InstantInviteDefault, { invite: item.data });
+        tmp9 = jsx(InstantInviteDefault, { invite: item.data });
       } else {
-        const obj4 = { channel: item.data };
-        tmp8 = jsx(InstantInvite.LinkedChannelInvite, { channel: item.data });
+        tmp9 = jsx(InstantInvite.LinkedChannelInvite, { channel: item.data });
       }
-      data = item.data;
-      cResult[6] = data;
-      item = item.type;
-      cResult[7] = item;
-      cResult[8] = tmp8;
+      cResult[6] = item.data;
+      cResult[7] = item.type;
+      cResult[8] = tmp9;
+      tmp7 = tmp9;
     }
-    const items = [containerStyle, tmp3.container];
+    const items = [containerStyle, tmp4.container];
     cResult[3] = containerStyle;
-    cResult[4] = tmp3.container;
+    cResult[4] = tmp4.container;
     cResult[5] = items;
-    tmp5 = items;
+    tmp6 = items;
   }
   const fn = function c(nativeEvent) {
     const layout = nativeEvent.nativeEvent.layout;
@@ -79,38 +84,30 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((type) 
   cResult[0] = onMeasured;
   cResult[1] = str;
   cResult[2] = fn;
-  tmp4 = fn;
+  tmp5 = fn;
 }) : ((type) => {
+  let item;
+  let onMeasured;
+  let tmp2Result;
   ({ item, onMeasured } = type);
   let str = type.type;
+  const containerStyle = type.containerStyle;
   if (str === undefined) {
     str = "height";
   }
   const items = [onMeasured, str];
-  const obj = {
-    style: null,
-    onLayout: noop.useCallback((nativeEvent) => {
-      const layout = nativeEvent.nativeEvent.layout;
-      onMeasured("height" === str ? layout.height : layout.width);
-    }, items),
-    pointerEvents: "none",
-    importantForAccessibility: "no-hide-descendants",
-    accessibilityElementsHidden: true,
-    accessible: false,
-    children: null
-  };
-  const items1 = [type.containerStyle, closure_6().container];
-  obj.style = items1;
+  const items1 = [containerStyle, closure_6().container];
+  const tmp = closure_6();
   if ("invite" === item.type) {
-    const obj2 = { invite: item.data };
-    let tmp2Result = jsx(InstantInviteDefault, { invite: item.data });
+    tmp2Result = jsx(InstantInviteDefault, { invite: item.data });
   } else {
-    const obj3 = { channel: item.data };
     tmp2Result = jsx(InstantInvite.LinkedChannelInvite, { channel: item.data });
   }
-  obj.children = tmp2Result;
-  return <View style={null} onLayout={noop.useCallback((nativeEvent) => {
+  return <View style={items1} onLayout={react.useCallback((nativeEvent) => {
     const layout = nativeEvent.nativeEvent.layout;
     onMeasured("height" === str ? layout.height : layout.width);
-  }, items)} pointerEvents="none" importantForAccessibility="no-hide-descendants" accessibilityElementsHidden accessible={false}>{null}</View>;
+  }, items)} pointerEvents="none" importantForAccessibility="no-hide-descendants" accessibilityElementsHidden accessible={false}>{tmp2Result}</View>;
 }));
+const result = size.fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteSelfMeasurer.tsx");
+
+export default memoResult;

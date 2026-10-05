@@ -2,9 +2,9 @@
 
 // Module 7103 (ChannelConversationsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import privDefault from "priv" /* 1444 */;
+import LRUCacheDefault from "LRUCache" /* 1444 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 5112 */;
 import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 7106 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -13,13 +13,28 @@ import RelationshipStore from "RelationshipStore" /* 4519 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import UserStore from "UserStore" /* 1377 */;
 import ConversationVisibilityStore from "ConversationVisibilityStore" /* 7104 */;
+import ConversationConstants from "ConversationConstants" /* 7105 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+let length, set;
+
+let MAX_CHANNELS_WITH_CONVERSATIONS;
+let c10;
+let c9;
+let unpackModuleId;
+function upsertReference(id) {
+  const messageMetadataByMessageId = _undefined.messageMetadataByMessageId;
+  if (!messageMetadataByMessageId.has(id.id)) {
+    const messageMetadataByMessageId2 = _undefined.messageMetadataByMessageId;
+    const obj = { conversationId: null, moderationLabel: null, message: id };
+    const result = messageMetadataByMessageId2.set(id.id, obj);
+  }
+}
 function removePendingListFetch(channelId, requestKey) {
-  value = map.get(channelId);
-  const tmp = null == value || !value.has(requestKey);
-  let flag = !tmp;
-  if (!tmp) {
+  const value = map.get(channelId);
+  let flag = !(null == value || !value.has(requestKey));
+  null == value || !value.has(requestKey);
+  if (flag) {
     value.delete(requestKey);
     flag = true;
     if (0 === value.size) {
@@ -85,14 +100,14 @@ function buildModerationLabel(arr) {
   }
   return str5;
 }
-function processHydratedMessages(arg0, arg1, messages, fullyHydrated) {
-  closure_0 = arg1;
+function processHydratedMessages(channelId, id, messages, fullyHydrated) {
+  let closure_0 = id;
   const items = [];
-  const peekResult = navigation.peek(arg0);
-  c1 = peekResult;
+  const peekResult = navigation.peek(channelId);
+  let c1 = peekResult;
   if (null != peekResult) {
     const conversationMetadataById = peekResult.conversationMetadataById;
-    value = conversationMetadataById.get(arg1);
+    const value = conversationMetadataById.get(id);
     if (null != value) {
       const obj2 = {
         meta: value,
@@ -101,7 +116,7 @@ function processHydratedMessages(arg0, arg1, messages, fullyHydrated) {
         messageReferences: items,
         upsertMessage(id) {
               const messageMetadataByMessageId = _undefined.messageMetadataByMessageId;
-              value = messageMetadataByMessageId.get(id.id);
+              const value = messageMetadataByMessageId.get(id.id);
               if (null != value) {
                 value.conversationId = conversationId;
                 value.message = id;
@@ -111,16 +126,10 @@ function processHydratedMessages(arg0, arg1, messages, fullyHydrated) {
                 const result = messageMetadataByMessageId2.set(id.id, obj);
               }
             },
-        upsertReference(id) {
-              const messageMetadataByMessageId = _undefined.messageMetadataByMessageId;
-              if (!messageMetadataByMessageId.has(id.id)) {
-                const messageMetadataByMessageId2 = _undefined.messageMetadataByMessageId;
-                const obj = { conversationId: null, moderationLabel: null, message: id };
-                const result = messageMetadataByMessageId2.set(id.id, obj);
-              }
-            }
+        upsertReference
       };
-      const result = ConversationMessageCacheUtils.applyHydratedMessages(obj2);
+      const obj = ConversationMessageCacheUtils;
+      const result = obj.applyHydratedMessages(obj2);
     }
   }
 }
@@ -130,29 +139,32 @@ function handleReaction(messageId) {
   let flag = false;
   if (null != peekResult) {
     const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
-    value = messageMetadataByMessageId.get(messageId);
-    let message;
+    const value = messageMetadataByMessageId.get(messageId);
+    let message1;
     if (value != null) {
-      message = value.message;
+      message1 = value.message;
     }
     flag = false;
-    if (null != message) {
-      const applyReactionResult = ConversationMessageCacheUtils.applyReaction(messageId, value.message);
+    if (null != message1) {
+      const message = value.message;
+      const obj = ConversationMessageCacheUtils;
+      const applyReactionResult = obj.applyReaction(messageId, message);
       let flag2 = null != applyReactionResult;
       if (flag2) {
         value.message = applyReactionResult;
-        let tmp7 = null;
+        let tmp8 = null;
+        const replaceHydratedMessage = ConversationMessageCacheUtils.replaceHydratedMessage;
+        ConversationMessageCacheUtils;
         if (null != value.conversationId) {
           const conversationMetadataById = peekResult.conversationMetadataById;
-          value2 = conversationMetadataById.get(value.conversationId);
+          let value2 = conversationMetadataById.get(value.conversationId);
           if (value2 == null) {
             value2 = null;
           }
-          tmp7 = value2;
+          tmp8 = value2;
         }
-        const result = ConversationMessageCacheUtils.replaceHydratedMessage(tmp7, messageId, applyReactionResult);
+        const result = replaceHydratedMessage(tmp8, messageId, applyReactionResult);
         flag2 = true;
-        const tmp4Result = ConversationMessageCacheUtils;
       }
       flag = flag2;
     }
@@ -160,26 +172,28 @@ function handleReaction(messageId) {
   return flag;
 }
 function handleRelationshipUpdate() {
-  c0 = false;
+  let c0 = false;
   let item = navigation.forEach((messageMetadataByMessageId) => {
     const prop = messageMetadataByMessageId.messageMetadataByMessageId;
     const item = prop.forEach((message, index) => {
       if (null != message.message) {
-        const result = ConversationMessageCacheUtils.applyRelationshipFlags(message.message);
+        const obj = ConversationMessageCacheUtils;
+        const result = obj.applyRelationshipFlags(message.message);
         if (null != result) {
           c0 = true;
           message.message = result;
-          let tmp = null;
+          let tmp2 = null;
+          const replaceHydratedMessage = ConversationMessageCacheUtils.replaceHydratedMessage;
+          ConversationMessageCacheUtils;
           if (null != message.conversationId) {
             const conversationMetadataById = messageMetadataByMessageId.conversationMetadataById;
-            value = conversationMetadataById.get(message.conversationId);
+            let value = conversationMetadataById.get(message.conversationId);
             if (value == null) {
               value = null;
             }
-            tmp = value;
+            tmp2 = value;
           }
-          const result1 = ConversationMessageCacheUtils.replaceHydratedMessage(tmp, index, result);
-          const tmp5Result = ConversationMessageCacheUtils;
+          const result1 = replaceHydratedMessage(tmp2, index, result);
         }
       }
     });
@@ -192,13 +206,13 @@ function removeMessage(arg0, id) {
     return false;
   } else {
     const messageMetadataByMessageId2 = peekResult.messageMetadataByMessageId;
-    value = messageMetadataByMessageId2.get(id);
+    const value = messageMetadataByMessageId2.get(id);
     let tmp4 = null;
     if (null != value) {
       let tmp2 = null;
       if (null != value.conversationId) {
         const conversationMetadataById = peekResult.conversationMetadataById;
-        value2 = conversationMetadataById.get(value.conversationId);
+        let value2 = conversationMetadataById.get(value.conversationId);
         if (value2 == null) {
           value2 = null;
         }
@@ -206,7 +220,8 @@ function removeMessage(arg0, id) {
       }
       tmp4 = tmp2;
     }
-    const result = ConversationMessageCacheUtils.removeHydratedMessage(tmp4, id);
+    const obj = ConversationMessageCacheUtils;
+    const result = obj.removeHydratedMessage(tmp4, id);
     const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
     return messageMetadataByMessageId.delete(id);
   }
@@ -219,236 +234,233 @@ function evictChannel(arg0) {
   }
   return hasItem;
 }
-const ConversationConstants = fn(7105);
-({ CONVERSATION_COLORS: closure_9, CONVERSATION_FEEDBACK_RATINGS_CACHE_MAX: c10, MAX_CONVERSATIONS_PER_CHANNEL: closure_11, MAX_CHANNELS_WITH_CONVERSATIONS } = ConversationConstants);
-const navigation = new privDefault({
+({ CONVERSATION_COLORS: c9, CONVERSATION_FEEDBACK_RATINGS_CACHE_MAX: c10, MAX_CONVERSATIONS_PER_CHANNEL: unpackModuleId, MAX_CHANNELS_WITH_CONVERSATIONS } = ConversationConstants);
+let obj = {
   max: MAX_CHANNELS_WITH_CONVERSATIONS,
   dispose: function cleanupChannelSideState(arg0) {
     return map.delete(arg0);
   }
-});
+};
+let tmp3 = new LRUCacheDefault(obj);
+const navigation = tmp3;
 let map = new Map();
 let map1 = new Map();
 let closure_16 = 0;
 let closure_17 = 0;
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class ChannelConversationsStore extends Store {
-}
-const prototype = ChannelConversationsStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(AuthenticationStore, ChannelStore, ConversationVisibilityStore, RelationshipStore, SelectedChannelStore, UserStore);
-};
-prototype["hasChannelData"] = function hasChannelData(id) {
-  return navigation.has(id);
-};
-prototype["getChannelConversations"] = function getChannelConversations(id) {
-  const peekResult = navigation.peek(id);
-  let conversations = null;
-  if (null != peekResult) {
-    conversations = peekResult.conversations;
+  initialize() {
+    this.waitFor(AuthenticationStore, ChannelStore, ConversationVisibilityStore, RelationshipStore, SelectedChannelStore, UserStore);
   }
-  return conversations;
-};
-prototype["getConversationForMessage"] = function getConversationForMessage(arg0, arg1) {
-  const peekResult = navigation.peek(arg0);
-  let conversationId;
-  if (peekResult != null) {
-    const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
-    value = messageMetadataByMessageId.get(arg1);
-    if (value != null) {
-      conversationId = value.conversationId;
+  hasChannelData(id) {
+    return navigation.has(id);
+  }
+  getChannelConversations(channelId) {
+    const peekResult = navigation.peek(channelId);
+    let conversations = null;
+    if (null != peekResult) {
+      conversations = peekResult.conversations;
     }
+    return conversations;
   }
-  if (conversationId == null) {
-    conversationId = null;
-  }
-  return conversationId;
-};
-prototype["getMessageMetadata"] = function getMessageMetadata(arg0, arg1) {
-  const peekResult = navigation.peek(arg0);
-  value = undefined;
-  if (peekResult != null) {
-    const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
-    value = messageMetadataByMessageId.get(arg1);
-  }
-  if (value == null) {
-    value = null;
-  }
-  return value;
-};
-prototype["getMessage"] = function getMessage(arg0, arg1) {
-  const messageMetadata = this.getMessageMetadata(arg0, arg1);
-  let message;
-  if (messageMetadata != null) {
-    message = messageMetadata.message;
-  }
-  if (message == null) {
-    message = null;
-  }
-  return message;
-};
-prototype["getConversationMetadata"] = function getConversationMetadata(channelId, conversationId) {
-  const peekResult = navigation.peek(channelId);
-  value = undefined;
-  if (peekResult != null) {
-    const conversationMetadataById = peekResult.conversationMetadataById;
-    value = conversationMetadataById.get(conversationId);
-  }
-  if (value == null) {
-    value = null;
-  }
-  return value;
-};
-prototype["getEdgeMarker"] = function getEdgeMarker(id, after) {
-  const peekResult = navigation.peek(id);
-  if (null == peekResult) {
-    return null;
-  }
-};
-prototype["isPendingFetch"] = function isPendingFetch(id) {
-  return map.has(id);
-};
-prototype["isListFetchPending"] = function isListFetchPending(arg0, arg1) {
-  value = map.get(arg0);
-  let flag;
-  if (value != null) {
-    flag = value.has(arg1);
-  }
-  if (flag == null) {
-    flag = false;
-  }
-  return flag;
-};
-prototype["getSelectedConversationId"] = function getSelectedConversationId(arg0) {
-  const peekResult = navigation.peek(arg0);
-  let prop;
-  if (peekResult != null) {
-    prop = peekResult.selectedConversationId;
-  }
-  if (prop == null) {
-    prop = null;
-  }
-  return prop;
-};
-prototype["consumeFocusRequest"] = function consumeFocusRequest() {
-  let flag = closure_16 !== closure_17;
-  if (flag) {
-    closure_17 = closure_16;
-    flag = true;
-  }
-  return flag;
-};
-prototype["getSelectedConversation"] = function getSelectedConversation(arg0) {
-  const peekResult = navigation.peek(arg0);
-  let prop;
-  if (peekResult != null) {
-    prop = peekResult.selectedConversationId;
-  }
-  let tmp3 = null;
-  if (null != prop) {
-    let conversation;
+  getConversationForMessage(arg0, arg1) {
+    const peekResult = navigation.peek(arg0);
+    let conversationId;
     if (peekResult != null) {
-      const conversationMetadataById = peekResult.conversationMetadataById;
-      value = conversationMetadataById.get(prop);
+      const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
+      const value = messageMetadataByMessageId.get(arg1);
       if (value != null) {
-        conversation = value.conversation;
+        conversationId = value.conversationId;
       }
     }
-    if (conversation == null) {
-      conversation = null;
+    if (conversationId == null) {
+      conversationId = null;
     }
-    tmp3 = conversation;
+    return conversationId;
   }
-  return tmp3;
-};
-prototype["getConversationColor"] = function getConversationColor(arg0, arg1) {
-  const peekResult = navigation.peek(arg0);
-  let tmp2 = null;
-  if (null != peekResult) {
-    const conversationMetadataById = peekResult.conversationMetadataById;
-    value = conversationMetadataById.get(arg1);
-    let color;
+  getMessageMetadata(arg0, arg1) {
+    const peekResult = navigation.peek(arg0);
+    let value;
+    if (peekResult != null) {
+      const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
+      value = messageMetadataByMessageId.get(arg1);
+    }
+    if (value == null) {
+      value = null;
+    }
+    return value;
+  }
+  getMessage(arg0, arg1) {
+    const messageMetadata = this.getMessageMetadata(arg0, arg1);
+    let message;
+    if (messageMetadata != null) {
+      message = messageMetadata.message;
+    }
+    if (message == null) {
+      message = null;
+    }
+    return message;
+  }
+  getConversationMetadata(channelId, conversationId) {
+    const peekResult = navigation.peek(channelId);
+    let value;
+    if (peekResult != null) {
+      const conversationMetadataById = peekResult.conversationMetadataById;
+      value = conversationMetadataById.get(conversationId);
+    }
+    if (value == null) {
+      value = null;
+    }
+    return value;
+  }
+  getEdgeMarker(channelId, after) {
+    const peekResult = navigation.peek(channelId);
+    let tmp2 = null;
+    if (null != peekResult) {
+      tmp2 = "before" === after ? peekResult.reachedOldest : peekResult.reachedNewest;
+    }
+    return tmp2;
+  }
+  isPendingFetch(channelId) {
+    return map.has(channelId);
+  }
+  isListFetchPending(c0, requestKey) {
+    const value = map.get(c0);
+    let flag;
     if (value != null) {
-      color = value.color;
+      flag = value.has(requestKey);
     }
-    if (color == null) {
-      color = null;
+    if (flag == null) {
+      flag = false;
     }
-    tmp2 = color;
+    return flag;
   }
-  return tmp2;
-};
-prototype["isFullyHydrated"] = function isFullyHydrated(arg0, arg1) {
-  const peekResult = navigation.peek(arg0);
-  let fullyHydrated;
-  if (peekResult != null) {
-    const conversationMetadataById = peekResult.conversationMetadataById;
-    value = conversationMetadataById.get(arg1);
-    if (value != null) {
-      fullyHydrated = value.fullyHydrated;
+  getSelectedConversationId(arg0) {
+    const peekResult = navigation.peek(arg0);
+    let prop;
+    if (peekResult != null) {
+      prop = peekResult.selectedConversationId;
     }
-  }
-  return true === fullyHydrated;
-};
-prototype["getHydratedMessages"] = function getHydratedMessages(arg0, arg1) {
-  const peekResult = navigation.peek(arg0);
-  let hydratedMessages;
-  if (peekResult != null) {
-    const conversationMetadataById = peekResult.conversationMetadataById;
-    value = conversationMetadataById.get(arg1);
-    if (value != null) {
-      hydratedMessages = value.hydratedMessages;
+    if (prop == null) {
+      prop = null;
     }
+    return prop;
   }
-  if (hydratedMessages == null) {
-    hydratedMessages = null;
-  }
-  return hydratedMessages;
-};
-prototype["getHydratedMessageById"] = function getHydratedMessageById(arg0, arg1) {
-  const peekResult = navigation.peek(arg0);
-  let message;
-  if (peekResult != null) {
-    const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
-    value = messageMetadataByMessageId.get(arg1);
-    if (value != null) {
-      message = value.message;
+  consumeFocusRequest() {
+    let flag = closure_16 !== closure_17;
+    if (flag) {
+      closure_17 = closure_16;
+      flag = true;
     }
+    return flag;
   }
-  if (message == null) {
-    message = null;
-  }
-  return message;
-};
-prototype["isConversationFetchPending"] = function isConversationFetchPending(arg0, arg1) {
-  value = map1.get(arg0);
-  let tmp = null != value;
-  if (tmp) {
-    tmp = 0 !== value.size;
-  }
-  if (tmp) {
-    let hasItem = true !== arg1;
-    if (!hasItem) {
-      hasItem = value.has("full");
+  getSelectedConversation(arg0) {
+    const peekResult = navigation.peek(arg0);
+    let prop;
+    if (peekResult != null) {
+      prop = peekResult.selectedConversationId;
     }
-    tmp = hasItem;
+    let tmp3 = null;
+    if (null != prop) {
+      let conversation;
+      if (peekResult != null) {
+        const conversationMetadataById = peekResult.conversationMetadataById;
+        const value = conversationMetadataById.get(prop);
+        if (value != null) {
+          conversation = value.conversation;
+        }
+      }
+      if (conversation == null) {
+        conversation = null;
+      }
+      tmp3 = conversation;
+    }
+    return tmp3;
   }
-  return tmp;
-};
-prototype["getConversationFeedbackRating"] = function getConversationFeedbackRating(arg0, arg1) {
-  const peekResult = navigation.peek(arg0);
-  value = undefined;
-  if (peekResult != null) {
-    const recentFeedbackRatingsByConversationId = peekResult.recentFeedbackRatingsByConversationId;
-    value = recentFeedbackRatingsByConversationId.get(arg1);
+  getConversationColor(arg0, arg1) {
+    const peekResult = navigation.peek(arg0);
+    let tmp2 = null;
+    if (null != peekResult) {
+      const conversationMetadataById = peekResult.conversationMetadataById;
+      const value = conversationMetadataById.get(arg1);
+      let color;
+      if (value != null) {
+        color = value.color;
+      }
+      if (color == null) {
+        color = null;
+      }
+      tmp2 = color;
+    }
+    return tmp2;
   }
-  if (value == null) {
-    value = null;
+  isFullyHydrated(arg0, arg1) {
+    const peekResult = navigation.peek(arg0);
+    let fullyHydrated;
+    if (peekResult != null) {
+      const conversationMetadataById = peekResult.conversationMetadataById;
+      const value = conversationMetadataById.get(arg1);
+      if (value != null) {
+        fullyHydrated = value.fullyHydrated;
+      }
+    }
+    return true === fullyHydrated;
   }
-  return value;
-};
+  getHydratedMessages(arg0, arg1) {
+    const peekResult = navigation.peek(arg0);
+    let hydratedMessages;
+    if (peekResult != null) {
+      const conversationMetadataById = peekResult.conversationMetadataById;
+      const value = conversationMetadataById.get(arg1);
+      if (value != null) {
+        hydratedMessages = value.hydratedMessages;
+      }
+    }
+    if (hydratedMessages == null) {
+      hydratedMessages = null;
+    }
+    return hydratedMessages;
+  }
+  getHydratedMessageById(arg0, arg1) {
+    const peekResult = navigation.peek(arg0);
+    let message;
+    if (peekResult != null) {
+      const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
+      const value = messageMetadataByMessageId.get(arg1);
+      if (value != null) {
+        message = value.message;
+      }
+    }
+    if (message == null) {
+      message = null;
+    }
+    return message;
+  }
+  isConversationFetchPending(arg0, arg1) {
+    const value = map1.get(arg0);
+    let tmp = null != value && 0 !== value.size;
+    if (tmp) {
+      const hasItem = true !== arg1 || value.has("full");
+      tmp = hasItem;
+    }
+    return tmp;
+  }
+  getConversationFeedbackRating(arg0, arg1) {
+    const peekResult = navigation.peek(arg0);
+    let value;
+    if (peekResult != null) {
+      const recentFeedbackRatingsByConversationId = peekResult.recentFeedbackRatingsByConversationId;
+      value = recentFeedbackRatingsByConversationId.get(arg1);
+    }
+    if (value == null) {
+      value = null;
+    }
+    return value;
+  }
+}
+const prototype = ChannelConversationsStore.prototype;
 ChannelConversationsStore.displayName = "ChannelConversationsStore";
-const channelConversationsStore = new ChannelConversationsStore(DispatcherDefault, {
+let obj2 = {
   CONVERSATION_MESSAGES_FETCH_START: function handleConversationMessagesFetchStart(conversationId) {
     conversationId = conversationId.conversationId;
     if (true === conversationId.isStandalone) {
@@ -458,18 +470,24 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
       if (tmp) {
         str = "full";
       }
-      value = map1.get(conversationId);
+      const value = map1.get(conversationId);
       if (null != value) {
         value.add(str);
       } else {
         const _Set = Set;
         const items = [str];
-        const set = new Set(items);
-        const result = map1.set(conversationId, set);
+        const self = this;
+        const self2 = this;
+        set = map1.set;
+        const set1 = new Set(items);
+        const result = set(conversationId, set1);
       }
     }
   },
   CONVERSATION_MESSAGES_FETCH_SUCCESS: function handleConversationMessagesFetchSuccess(isStandalone) {
+    let conversationId;
+    let fullyHydrated;
+    let messageReferences;
     ({ conversationId, messageReferences, fullyHydrated } = isStandalone);
     if (true === isStandalone.isStandalone) {
       return false;
@@ -478,7 +496,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
       if (fullyHydrated) {
         str = "full";
       }
-      value = map1.get(conversationId);
+      let value = map1.get(conversationId);
       if (null != value) {
         value.delete(str);
         if (0 === value.size) {
@@ -489,10 +507,10 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
         messageReferences = [];
       }
       const peekResult = navigation.peek(tmp);
-      c1 = peekResult;
+      let c1 = peekResult;
       if (null != peekResult) {
         const conversationMetadataById = peekResult.conversationMetadataById;
-        value2 = conversationMetadataById.get(conversationId);
+        const value2 = conversationMetadataById.get(conversationId);
         if (null != value2) {
           const obj2 = {
             meta: value2,
@@ -501,7 +519,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
             messageReferences,
             upsertMessage(id) {
                     const messageMetadataByMessageId = _undefined.messageMetadataByMessageId;
-                    value = messageMetadataByMessageId.get(id.id);
+                    const value = messageMetadataByMessageId.get(id.id);
                     if (null != value) {
                       value.conversationId = conversationId;
                       value.message = id;
@@ -511,16 +529,10 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
                       const result = messageMetadataByMessageId2.set(id.id, obj);
                     }
                   },
-            upsertReference(id) {
-                    const messageMetadataByMessageId = _undefined.messageMetadataByMessageId;
-                    if (!messageMetadataByMessageId.has(id.id)) {
-                      const messageMetadataByMessageId2 = _undefined.messageMetadataByMessageId;
-                      const obj = { conversationId: null, moderationLabel: null, message: id };
-                      const result = messageMetadataByMessageId2.set(id.id, obj);
-                    }
-                  }
+            upsertReference
           };
-          let result = ConversationMessageCacheUtils.applyHydratedMessages(obj2);
+          const obj3 = ConversationMessageCacheUtils;
+          let result = obj3.applyHydratedMessages(obj2);
         }
       }
     }
@@ -534,7 +546,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
       if (tmp) {
         str = "full";
       }
-      value = map1.get(conversationId);
+      const value = map1.get(conversationId);
       if (null != value) {
         value.delete(str);
         if (0 === value.size) {
@@ -544,29 +556,294 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
     }
   },
   CHANNEL_CONVERSATIONS_FETCH_START: function handleFetchStart(isJump) {
+    let channelId;
+    let requestKey;
     ({ channelId, requestKey } = isJump);
     if (isJump.isJump) {
       map.delete(channelId);
     }
-    value = map.get(channelId);
+    let value = map.get(channelId);
     if (null == value) {
       const _Set = Set;
-      const set = new Set();
+      const self = this;
+      const self2 = this;
+      set = new Set();
       const result = map.set(channelId, set);
       value = set;
     }
     value.add(requestKey);
   },
   CHANNEL_CONVERSATIONS_FETCH_SUCCESS: function handleFetchSuccess(requestKey) {
+    let anchor;
+    let channelId;
+    let direction;
+    let fullyHydrated;
+    let isJump;
+    let max;
+    let rawConversations;
+    function mergeConversations(conversations, found) {
+      map = new Map();
+      const iter = conversations[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        let result = map.set(nextResult.id, nextResult);
+        continue;
+      }
+      const iter2 = found[Symbol.iterator]();
+      const nextResult1 = iter2.next();
+      while (iter2 !== undefined) {
+        let result1 = map.set(nextResult1.id, nextResult1);
+        continue;
+      }
+      const arr = Array.from(map.values());
+      const sorted = arr.sort((startMessageId, startMessageId2) => {
+        const obj = closure_1_1(closure_1_2[8]);
+        return obj.compare(startMessageId.startMessageId, startMessageId2.startMessageId);
+      });
+      return arr;
+    }
+    function clampAnchorWindowStart(arr5, anchor) {
+      let closure_0 = anchor;
+      if (null == anchor) {
+        return 0;
+      } else {
+        length = arr5.findIndex((startMessageId) => {
+          const obj = SnowflakeUtilsDefault;
+          return obj.compare(startMessageId.startMessageId, anchor) >= 0;
+        });
+        if (-1 === length) {
+          length = arr5.length;
+        }
+        const _Math = Math;
+        const _Math2 = Math;
+        const _Math3 = Math;
+        return Math.max(0, Math.min(length - Math.floor(closure_11 / 2), arr5.length - closure_11));
+      }
+    }
+    function buildChannelData(channelId, substr, peekResult) {
+      let reachedNewest;
+      let reachedOldest;
+      let guildId;
+      if (peekResult != null) {
+        guildId = peekResult.guildId;
+      }
+      if (guildId == null) {
+        const first = substr[0];
+        let guildId1;
+        if (first != null) {
+          guildId1 = first.guildId;
+        }
+        guildId = guildId1;
+      }
+      if (guildId == null) {
+        channel = channel.getChannel(channelId);
+        let guild_id;
+        if (channel != null) {
+          guild_id = channel.guild_id;
+        }
+        guildId = guild_id;
+      }
+      if (guildId == null) {
+        guildId = null;
+      }
+      map = new Map();
+      map1 = new Map();
+      let num;
+      if (peekResult != null) {
+        num = peekResult.colorIndex;
+      }
+      if (num == null) {
+        num = 0;
+      }
+      let sum = num;
+      const iter = substr[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        let tmp10 = nextResult;
+        let value;
+        if (peekResult != null) {
+          let conversationMetadataById = peekResult.conversationMetadataById;
+          value = conversationMetadataById.get(tmp10.id);
+        }
+        let tmp13 = value;
+        let color;
+        if (value != null) {
+          color = value.color;
+        }
+        if (color == null) {
+          let tmp17 = +sum;
+          sum = tmp17 + 1;
+          color = length[tmp17 % length.length];
+        }
+        let hydratedMessages;
+        let tmp18 = color;
+        if (tmp13 != null) {
+          hydratedMessages = tmp13.hydratedMessages;
+        }
+        if (hydratedMessages == null) {
+          hydratedMessages = null;
+        }
+        let tmp22 = null != hydratedMessages;
+        let tmp21 = hydratedMessages;
+        if (tmp22) {
+          let fullyHydrated;
+          if (tmp13 != null) {
+            fullyHydrated = tmp13.fullyHydrated;
+          }
+          tmp22 = fullyHydrated;
+        }
+        let obj = { conversation: tmp10, color: tmp18, hydratedMessages: tmp21, fullyHydrated: tmp22 };
+        let result = map.set(tmp10.id, obj);
+        let map2 = null;
+        if (null != tmp10.moderation) {
+          let _Map = Map;
+          let self3 = this;
+          let self4 = this;
+          map2 = new Map();
+          let flaggedMessageDetails = tmp10.moderation.flaggedMessageDetails;
+          for (const item10083 of flaggedMessageDetails) {
+            let value5 = map2.get(item10083.messageId);
+            let arr = value5;
+            if (null != value5) {
+              let arr2 = arr.push(item10083);
+            } else {
+              let items = [item10083];
+              let result1 = map2.set(item10083.messageId, items);
+            }
+            continue;
+          }
+        }
+        let messageIds = tmp10.messageIds;
+        for (const item10107 of messageIds) {
+          let value6;
+          if (peekResult != null) {
+            let messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
+            value6 = messageMetadataByMessageId.get(item10107);
+          }
+          let tmp46 = value6;
+          let tmp54Result = null;
+          let moderationLabel;
+          if (value6 != null) {
+            moderationLabel = value6.moderationLabel;
+          }
+          let hasItem = null == moderationLabel;
+          if (hasItem) {
+            hasItem = null != tmp10.moderation;
+          }
+          if (hasItem) {
+            let flaggedMessageIds = tmp10.moderation.flaggedMessageIds;
+            hasItem = flaggedMessageIds.includes(item10107);
+          }
+          if (hasItem) {
+            hasItem = null != map2;
+          }
+          if (hasItem) {
+            let value7 = map2.get(item10107) ?? [];
+            tmp54Result = buildModerationLabel(value7);
+          }
+          let obj2 = { conversationId: tmp10.id, moderationLabel: moderationLabel1, message: message1 };
+          let moderationLabel1;
+          set = map1.set;
+          if (tmp46 != null) {
+            moderationLabel1 = tmp46.moderationLabel;
+          }
+          if (moderationLabel1 == null) {
+            moderationLabel1 = tmp54Result;
+          }
+          let message1;
+          if (tmp46 != null) {
+            message1 = tmp46.message;
+          }
+          if (message1 == null) {
+            message1 = null;
+          }
+          let result2 = set(item10107, obj2);
+          let message_id;
+          if (tmp46 != null) {
+            let message = tmp46.message;
+            if (message != null) {
+              let messageReference = message.messageReference;
+              if (messageReference != null) {
+                message_id = messageReference.message_id;
+              }
+            }
+          }
+          let tmp66 = message_id;
+          if (null != message_id) {
+            let value8;
+            if (peekResult != null) {
+              let messageMetadataByMessageId2 = peekResult.messageMetadataByMessageId;
+              value8 = messageMetadataByMessageId2.get(tmp66);
+            }
+            let message2;
+            let tmp69 = value8;
+            if (value8 != null) {
+              message2 = value8.message;
+            }
+            let hasItem1 = null == message2;
+            if (!hasItem1) {
+              hasItem1 = map1.has(tmp66);
+            }
+            if (!hasItem1) {
+              let result3 = map1.set(tmp66, tmp69);
+            }
+          }
+          continue;
+        }
+        continue;
+      }
+      let prop;
+      if (peekResult != null) {
+        prop = peekResult.recentFeedbackRatingsByConversationId;
+      }
+      if (prop == null) {
+        const self = this;
+        const self2 = this;
+        const obj3 = { max };
+        prop = new LRUCacheDefault(obj3);
+      }
+      let prop1;
+      if (peekResult != null) {
+        prop1 = peekResult.selectedConversationId;
+      }
+      if (prop1 == null) {
+        prop1 = null;
+      }
+      let tmp82 = null;
+      if (null != prop1) {
+        tmp82 = null;
+        if (substr.some((id) => id.id === prop1)) {
+          tmp82 = prop1;
+        }
+      }
+      const obj4 = { guildId, conversations: substr, conversationMetadataById: map, messageMetadataByMessageId: map1, recentFeedbackRatingsByConversationId: prop, reachedOldest, reachedNewest, selectedConversationId: tmp82, colorIndex: sum };
+      reachedOldest = undefined;
+      if (peekResult != null) {
+        reachedOldest = peekResult.reachedOldest;
+      }
+      if (reachedOldest == null) {
+        reachedOldest = null;
+      }
+      reachedNewest = undefined;
+      if (peekResult != null) {
+        reachedNewest = peekResult.reachedNewest;
+      }
+      if (reachedNewest == null) {
+        reachedNewest = null;
+      }
+      return obj4;
+    }
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated } = requestKey);
-    let set;
+    set = undefined;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
+      let conversations;
       const mapped = rawConversations.map(set(7107).mapConversation);
       const found = mapped.filter(set(1375).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {
+        let items1;
         let prop;
-        if (!tmp5) {
+        if (peekResult != null) {
           prop = peekResult.selectedConversationId;
         }
         let tmp7 = null;
@@ -574,7 +851,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
           let conversation;
           if (peekResult != null) {
             let conversationMetadataById = peekResult.conversationMetadataById;
-            value = conversationMetadataById.get(prop);
+            let value = conversationMetadataById.get(prop);
             if (value != null) {
               conversation = value.conversation;
             }
@@ -583,366 +860,129 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
         }
         if (null != tmp7) {
           let items = [tmp7];
-          let items1 = items;
+          items1 = items;
         } else {
           items1 = [];
         }
+        conversations = items1;
       } else {
-        let conversations;
-        if (!tmp5) {
+        conversations = undefined;
+        if (peekResult != null) {
           conversations = peekResult.conversations;
         }
         if (conversations == null) {
           conversations = [];
         }
-        let timestamp1 = null;
-        if (!isJump) {
-          let reachedOldest;
-          if (peekResult != null) {
-            reachedOldest = peekResult.reachedOldest;
-          }
-          if (reachedOldest == null) {
-            reachedOldest = null;
-          }
-          timestamp1 = reachedOldest;
+      }
+      let timestamp = null;
+      if (!isJump) {
+        let reachedOldest;
+        if (peekResult != null) {
+          reachedOldest = peekResult.reachedOldest;
         }
-        let tmp13 = null;
-        if (!isJump) {
-          let reachedNewest;
-          if (peekResult != null) {
-            reachedNewest = peekResult.reachedNewest;
-          }
-          if (reachedNewest == null) {
-            reachedNewest = null;
-          }
-          tmp13 = reachedNewest;
+        if (reachedOldest == null) {
+          reachedOldest = null;
         }
-        let tmp15 = globalThis;
-        const _Set = Set;
-        set = new Set(conversations.map((id) => id.id));
-        let timestamp = tmp13;
-        if (tmp20) {
-          let tmp27 = tmp26;
-          if ("before" === direction) {
-            tmp27 = null == anchor;
-          }
-          if (tmp27) {
-            const _Date3 = Date;
-            timestamp = Date.now();
-          }
-          const arr5 = (function mergeConversations(conversations, found) {
-            map = new Map();
-            const iter = conversations[Symbol.iterator]();
-            const nextResult = iter.next();
-            while (iter !== undefined) {
-              let result = map.set(nextResult.id, nextResult);
-              continue;
-            }
-            const iter2 = found[Symbol.iterator]();
-            const nextResult1 = iter2.next();
-            while (iter2 !== undefined) {
-              let result1 = map.set(nextResult1.id, nextResult1);
-              continue;
-            }
-            const arr = Array.from(map.values());
-            const sorted = arr.sort((startMessageId, startMessageId2) => closure_1_1(dependencyMap[8]).compare(startMessageId.startMessageId, startMessageId2.startMessageId));
-            return arr;
-          })(conversations, found);
-          let tmp29 = timestamp;
-          let tmp30 = timestamp1;
-          let substr = arr5;
-          if (arr5.length > closure_11) {
-            if ("after" === direction) {
-              substr = arr5.slice(arr5.length - closure_11);
-              tmp29 = timestamp;
-              tmp30 = null;
-            } else if (tmp26) {
-              substr = arr5.slice(0, closure_11);
-              tmp29 = null;
-              tmp30 = timestamp1;
-            } else {
-              let tmp32 = (function clampAnchorWindowStart(arr5, anchor) {
-                closure_0 = anchor;
-                if (null == anchor) {
-                  return 0;
-                } else {
-                  length = arr5.findIndex((startMessageId) => SnowflakeUtilsDefault.compare(startMessageId.startMessageId, closure_0) >= 0);
-                  if (-1 === length) {
-                    length = arr5.length;
-                  }
-                  const _Math = Math;
-                  const _Math2 = Math;
-                  const _Math3 = Math;
-                  return Math.max(0, Math.min(length - Math.floor(closure_11 / 2), arr5.length - closure_11));
-                }
-              })(arr5, anchor);
-              let tmp33 = timestamp1;
-              if (tmp32 > 0) {
-                tmp33 = null;
-              }
-              let tmp34 = timestamp;
-              if (tmp32 + closure_11 < arr5.length) {
-                tmp34 = null;
-              }
-              substr = arr5.slice(tmp32, tmp32 + closure_11);
-              tmp29 = tmp34;
-              tmp30 = tmp33;
-            }
-          }
-          const tmp35 = (function buildChannelData(channelId, substr, peekResult) {
-            let guildId;
-            if (peekResult != null) {
-              guildId = peekResult.guildId;
-            }
-            if (guildId == null) {
-              const first = substr[0];
-              let guildId1;
-              if (first != null) {
-                guildId1 = first.guildId;
-              }
-              guildId = guildId1;
-            }
-            if (guildId == null) {
-              channel = channel.getChannel(channelId);
-              let guild_id;
-              if (channel != null) {
-                guild_id = channel.guild_id;
-              }
-              guildId = guild_id;
-            }
-            if (guildId == null) {
-              guildId = null;
-            }
-            map = new Map();
-            map1 = new Map();
-            let num;
-            if (peekResult != null) {
-              num = peekResult.colorIndex;
-            }
-            if (num == null) {
-              num = 0;
-            }
-            let sum = num;
-            const iter = substr[Symbol.iterator]();
-            const nextResult = iter.next();
-            while (iter !== undefined) {
-              let tmp10 = nextResult;
-              value = undefined;
-              if (peekResult != null) {
-                let conversationMetadataById = peekResult.conversationMetadataById;
-                value = conversationMetadataById.get(tmp10.id);
-              }
-              let tmp13 = value;
-              let color;
-              if (value != null) {
-                color = value.color;
-              }
-              if (color == null) {
-                let tmp17 = +sum;
-                sum = tmp17 + 1;
-                color = length[tmp17 % length.length];
-              }
-              let hydratedMessages;
-              let tmp18 = color;
-              if (tmp13 != null) {
-                hydratedMessages = tmp13.hydratedMessages;
-              }
-              if (hydratedMessages == null) {
-                hydratedMessages = null;
-              }
-              let tmp22 = null != hydratedMessages;
-              let tmp21 = hydratedMessages;
-              if (tmp22) {
-                let fullyHydrated;
-                if (tmp13 != null) {
-                  fullyHydrated = tmp13.fullyHydrated;
-                }
-                tmp22 = fullyHydrated;
-              }
-              let obj = { conversation: tmp10, color: null, hydratedMessages: null, fullyHydrated: null };
-              obj.color = tmp18;
-              obj.hydratedMessages = tmp21;
-              obj.fullyHydrated = tmp22;
-              let result = map.set(tmp10.id, obj);
-              let map2 = null;
-              if (null != tmp10.moderation) {
-                let _Map = Map;
-                let tmp87 = new.target;
-                let tmp88 = new.target;
-                map2 = new Map();
-                let flaggedMessageDetails = tmp10.moderation.flaggedMessageDetails;
-                for (const item10083 of flaggedMessageDetails) {
-                  let value5 = map2.get(item10083.messageId);
-                  let arr = value5;
-                  if (null != value5) {
-                    let arr2 = arr.push(item10083);
-                  } else {
-                    let items = [item10083];
-                    let result1 = map2.set(item10083.messageId, items);
-                  }
-                  continue;
-                }
-              }
-              let messageIds = tmp10.messageIds;
-              for (const item10107 of messageIds) {
-                let value6;
-                if (arg2 != null) {
-                  let messageMetadataByMessageId = arg2.messageMetadataByMessageId;
-                  value6 = messageMetadataByMessageId.get(item10107);
-                }
-                let tmp46 = value6;
-                let tmp54Result = null;
-                let moderationLabel;
-                if (value6 != null) {
-                  moderationLabel = value6.moderationLabel;
-                }
-                let hasItem = null == moderationLabel;
-                if (hasItem) {
-                  hasItem = null != tmp10.moderation;
-                }
-                if (hasItem) {
-                  let flaggedMessageIds = tmp10.moderation.flaggedMessageIds;
-                  hasItem = flaggedMessageIds.includes(item10107);
-                }
-                if (hasItem) {
-                  hasItem = null != map2;
-                }
-                if (hasItem) {
-                  let value7 = map2.get(item10107);
-                  if (value7 == null) {
-                    value7 = [];
-                  }
-                  tmp54Result = buildModerationLabel(value7);
-                }
-                let obj2 = { conversationId: null, moderationLabel: null, message: null };
-                obj2.conversationId = tmp10.id;
-                let moderationLabel1;
-                if (tmp46 != null) {
-                  moderationLabel1 = tmp46.moderationLabel;
-                }
-                if (moderationLabel1 == null) {
-                  moderationLabel1 = tmp54Result;
-                }
-                obj2.moderationLabel = moderationLabel1;
-                let message1;
-                if (tmp46 != null) {
-                  message1 = tmp46.message;
-                }
-                if (message1 == null) {
-                  message1 = null;
-                }
-                obj2.message = message1;
-                let result2 = map1.set(item10107, obj2);
-                let message_id;
-                if (tmp46 != null) {
-                  let message = tmp46.message;
-                  if (message != null) {
-                    let messageReference = message.messageReference;
-                    if (messageReference != null) {
-                      message_id = messageReference.message_id;
-                    }
-                  }
-                }
-                let tmp66 = message_id;
-                if (null != message_id) {
-                  let value8;
-                  if (arg2 != null) {
-                    let messageMetadataByMessageId2 = arg2.messageMetadataByMessageId;
-                    value8 = messageMetadataByMessageId2.get(tmp66);
-                  }
-                  let message2;
-                  let tmp69 = value8;
-                  if (value8 != null) {
-                    message2 = value8.message;
-                  }
-                  let hasItem1 = null == message2;
-                  if (!hasItem1) {
-                    hasItem1 = map1.has(tmp66);
-                  }
-                  if (!hasItem1) {
-                    let result3 = map1.set(tmp66, tmp69);
-                  }
-                }
-                continue;
-              }
-              continue;
-            }
-            let prop;
-            if (peekResult != null) {
-              prop = peekResult.recentFeedbackRatingsByConversationId;
-            }
-            if (prop == null) {
-              const obj3 = { max };
-              prop = new privDefault(obj3);
-            }
-            let prop1;
-            if (peekResult != null) {
-              prop1 = peekResult.selectedConversationId;
-            }
-            if (prop1 == null) {
-              prop1 = null;
-            }
-            let tmp84 = null;
-            if (null != prop1) {
-              tmp84 = null;
-              if (substr.some((id) => id.id === prop1)) {
-                tmp84 = prop1;
-              }
-            }
-            const obj4 = { guildId, conversations: substr, conversationMetadataById: map, messageMetadataByMessageId: map1, recentFeedbackRatingsByConversationId: prop, reachedOldest: null, reachedNewest: null, selectedConversationId: null, colorIndex: null };
-            let reachedOldest;
-            if (peekResult != null) {
-              reachedOldest = peekResult.reachedOldest;
-            }
-            if (reachedOldest == null) {
-              reachedOldest = null;
-            }
-            obj4.reachedOldest = reachedOldest;
-            let reachedNewest;
-            if (peekResult != null) {
-              reachedNewest = peekResult.reachedNewest;
-            }
-            if (reachedNewest == null) {
-              reachedNewest = null;
-            }
-            obj4.reachedNewest = reachedNewest;
-            obj4.selectedConversationId = tmp84;
-            obj4.colorIndex = sum;
-            return obj4;
-          })(channelId, substr, peekResult);
-          tmp35.reachedOldest = tmp30;
-          tmp35.reachedNewest = tmp29;
-          if (null != peekResult) {
-            const _Object = tmp15.Object;
-            _Object.assign(peekResult, tmp35);
-          } else {
-            let result = navigation.set(channelId, tmp35);
-          }
-          tmp15 = rawConversations;
-          rawConversations[Symbol.iterator]();
-        } else if ("before" === direction) {
+        timestamp = reachedOldest;
+      }
+      let tmp12 = null;
+      if (!isJump) {
+        let reachedNewest;
+        if (peekResult != null) {
+          reachedNewest = peekResult.reachedNewest;
+        }
+        if (reachedNewest == null) {
+          reachedNewest = null;
+        }
+        tmp12 = reachedNewest;
+      }
+      const _Set = Set;
+      let self = this;
+      let self2 = this;
+      set = new Set(conversations.map((id) => id.id));
+      let tmp16 = set;
+      let tmp17 = found.some((id) => !set.has(id.id)) || null == anchor;
+      let timestamp2 = tmp12;
+      let tmp19 = timestamp;
+      if (!tmp17) {
+        let timestamp1;
+        if ("before" === direction) {
           const _Date2 = Date;
-          timestamp1 = Date.now();
-          let timestamp2 = tmp13;
+          timestamp = Date.now();
+          timestamp1 = tmp12;
         } else {
-          timestamp2 = tmp13;
+          timestamp1 = tmp12;
           if ("after" === direction) {
             const _Date = Date;
-            timestamp2 = Date.now();
+            timestamp1 = Date.now();
           }
         }
-        tmp20 = found.some((id) => !set.has(id.id)) || null == anchor;
+        timestamp2 = timestamp1;
+        tmp19 = timestamp;
       }
+      let tmp21 = "before" === direction;
+      let tmp22 = tmp21 && null == anchor;
+      if (tmp22) {
+        const _Date3 = Date;
+        timestamp2 = Date.now();
+      }
+      const arr5 = mergeConversations(conversations, found);
+      let tmp24 = timestamp2;
+      let tmp25 = tmp19;
+      let substr = arr5;
+      if (arr5.length > closure_11) {
+        if ("after" === direction) {
+          substr = arr5.slice(arr5.length - closure_11);
+          tmp24 = timestamp2;
+          tmp25 = null;
+        } else if (tmp21) {
+          substr = arr5.slice(0, closure_11);
+          tmp24 = null;
+          tmp25 = tmp19;
+        } else {
+          let tmp27 = clampAnchorWindowStart(arr5, anchor);
+          let tmp28 = tmp19;
+          if (tmp27 > 0) {
+            tmp28 = null;
+          }
+          let tmp29 = timestamp2;
+          if (tmp27 + closure_11 < arr5.length) {
+            tmp29 = null;
+          }
+          substr = arr5.slice(tmp27, tmp27 + closure_11);
+          tmp24 = tmp29;
+          tmp25 = tmp28;
+        }
+      }
+      let tmp30 = buildChannelData(channelId, substr, peekResult);
+      tmp30.reachedOldest = tmp25;
+      tmp30.reachedNewest = tmp24;
+      if (null != peekResult) {
+        const _Object = Object;
+        const merged = Object.assign(peekResult, tmp30);
+      } else {
+        let result = navigation.set(channelId, tmp30);
+      }
+      for (const item10105 of rawConversations) {
+        if (null != item10105.messages) {
+          let num = 0;
+          let tmp40 = processHydratedMessages(channelId, item10105.id, item10105.messages, fullyHydrated);
+        }
+        continue;
+      }
+      return true;
     } else {
       return false;
     }
   },
   CHANNEL_CONVERSATIONS_FETCH_FAILURE: function handleFetchFailure(arg0) {
+    let channelId;
+    let requestKey;
     ({ channelId, requestKey } = arg0);
-    value = map.get(channelId);
-    const tmp = null == value || !value.has(requestKey);
-    let flag = !tmp;
-    if (!tmp) {
+    const value = map.get(channelId);
+    let flag = !(null == value || !value.has(requestKey));
+    null == value || !value.has(requestKey);
+    if (flag) {
       value.delete(requestKey);
       flag = true;
       if (0 === value.size) {
@@ -954,12 +994,9 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
   },
   CHANNEL_SELECT: function handleChannelSelect(channelId) {
     channelId = channelId.channelId;
-    let hasItem = null != channelId;
+    const hasItem = null != channelId && navigation.has(channelId);
     if (hasItem) {
-      hasItem = navigation.has(channelId);
-    }
-    if (hasItem) {
-      value = navigation.get(channelId);
+      const value = navigation.get(channelId);
     }
     let flag = false;
     const keys = navigation.keys();
@@ -1062,7 +1099,6 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
       let flag = null != selectedConversationId;
       if (flag) {
         flag = null == conversationId || selectedConversationId === conversationId;
-        const tmp2 = null == conversationId || selectedConversationId === conversationId;
       }
       if (flag) {
         peekResult.selectedConversationId = null;
@@ -1072,6 +1108,8 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
     }
   },
   SET_CONVERSATION_FEEDBACK_RATING: function handleSetConversationFeedbackRating(channelId) {
+    let conversationId;
+    let rating;
     ({ conversationId, rating } = channelId);
     const peekResult = navigation.peek(channelId.channelId);
     let flag = null != peekResult;
@@ -1083,6 +1121,8 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
     return flag;
   },
   MESSAGE_UPDATE: function handleMessageUpdate(message) {
+    let channel_id;
+    let id;
     message = message.message;
     ({ channel_id, id } = message);
     let tmp = null != channel_id && null != id;
@@ -1091,29 +1131,32 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
       let flag = false;
       if (null != peekResult) {
         const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
-        value = messageMetadataByMessageId.get(id);
+        const value = messageMetadataByMessageId.get(id);
         let message1;
         if (value != null) {
           message1 = value.message;
         }
         flag = false;
         if (null != message1) {
-          const updateMessageRecordResult = MessageRecordUtils.updateMessageRecord(value.message, message);
+          const message2 = value.message;
+          const obj = MessageRecordUtils;
+          const updateMessageRecordResult = obj.updateMessageRecord(message2, message);
           let flag2 = null != updateMessageRecordResult;
           if (flag2) {
             value.message = updateMessageRecordResult;
-            let tmp9 = null;
+            let tmp10 = null;
+            const replaceHydratedMessage = ConversationMessageCacheUtils.replaceHydratedMessage;
+            ConversationMessageCacheUtils;
             if (null != value.conversationId) {
               const conversationMetadataById = peekResult.conversationMetadataById;
-              value2 = conversationMetadataById.get(value.conversationId);
+              let value2 = conversationMetadataById.get(value.conversationId);
               if (value2 == null) {
                 value2 = null;
               }
-              tmp9 = value2;
+              tmp10 = value2;
             }
-            const result = ConversationMessageCacheUtils.replaceHydratedMessage(tmp9, id, updateMessageRecordResult);
+            const result = replaceHydratedMessage(tmp10, id, updateMessageRecordResult);
             flag2 = true;
-            const tmp6Result = ConversationMessageCacheUtils;
           }
           flag = flag2;
         }
@@ -1126,11 +1169,12 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
   MESSAGE_REACTION_REMOVE: handleReaction,
   MESSAGE_REACTION_ADD_MANY: function handleReactionBatch(messageId) {
     messageId = messageId.messageId;
+    const reactions = messageId.reactions;
     const peekResult = navigation.peek(messageId.channelId);
     let flag = false;
     if (null != peekResult) {
       const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
-      value = messageMetadataByMessageId.get(messageId);
+      const value = messageMetadataByMessageId.get(messageId);
       let message1;
       if (value != null) {
         message1 = value.message;
@@ -1138,20 +1182,22 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
       flag = false;
       if (null != message1) {
         const message = value.message;
-        const addReactionBatchResult = message.addReactionBatch(messageId.reactions, AuthenticationStore.getId());
+        const addReactionBatchResult = message.addReactionBatch(reactions, AuthenticationStore.getId());
         let flag2 = null != addReactionBatchResult;
         if (flag2) {
           value.message = addReactionBatchResult;
-          let tmp8 = null;
+          let tmp9 = null;
+          const replaceHydratedMessage = ConversationMessageCacheUtils.replaceHydratedMessage;
+          ConversationMessageCacheUtils;
           if (null != value.conversationId) {
             const conversationMetadataById = peekResult.conversationMetadataById;
-            value2 = conversationMetadataById.get(value.conversationId);
+            let value2 = conversationMetadataById.get(value.conversationId);
             if (value2 == null) {
               value2 = null;
             }
-            tmp8 = value2;
+            tmp9 = value2;
           }
-          const result = ConversationMessageCacheUtils.replaceHydratedMessage(tmp8, messageId, addReactionBatchResult);
+          const result = replaceHydratedMessage(tmp9, messageId, addReactionBatchResult);
           flag2 = true;
         }
         flag = flag2;
@@ -1165,7 +1211,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
     let flag = false;
     if (null != peekResult) {
       const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
-      value = messageMetadataByMessageId.get(messageId);
+      const value = messageMetadataByMessageId.get(messageId);
       let message1;
       if (value != null) {
         message1 = value.message;
@@ -1177,16 +1223,18 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
         let flag2 = null != result;
         if (flag2) {
           value.message = result;
-          let tmp7 = null;
+          let tmp8 = null;
+          const replaceHydratedMessage = ConversationMessageCacheUtils.replaceHydratedMessage;
+          ConversationMessageCacheUtils;
           if (null != value.conversationId) {
             const conversationMetadataById = peekResult.conversationMetadataById;
-            value2 = conversationMetadataById.get(value.conversationId);
+            let value2 = conversationMetadataById.get(value.conversationId);
             if (value2 == null) {
               value2 = null;
             }
-            tmp7 = value2;
+            tmp8 = value2;
           }
-          const result1 = ConversationMessageCacheUtils.replaceHydratedMessage(tmp7, messageId, result);
+          const result1 = replaceHydratedMessage(tmp8, messageId, result);
           flag2 = true;
         }
         flag = flag2;
@@ -1196,11 +1244,12 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
   },
   MESSAGE_REACTION_REMOVE_EMOJI: function handleRemoveEmojiReactions(messageId) {
     messageId = messageId.messageId;
+    const emoji = messageId.emoji;
     const peekResult = navigation.peek(messageId.channelId);
     let flag = false;
     if (null != peekResult) {
       const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
-      value = messageMetadataByMessageId.get(messageId);
+      const value = messageMetadataByMessageId.get(messageId);
       let message1;
       if (value != null) {
         message1 = value.message;
@@ -1208,20 +1257,22 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
       flag = false;
       if (null != message1) {
         const message = value.message;
-        const result = message.removeReactionsForEmoji(messageId.emoji);
+        const result = message.removeReactionsForEmoji(emoji);
         let flag2 = null != result;
         if (flag2) {
           value.message = result;
-          let tmp7 = null;
+          let tmp8 = null;
+          const replaceHydratedMessage = ConversationMessageCacheUtils.replaceHydratedMessage;
+          ConversationMessageCacheUtils;
           if (null != value.conversationId) {
             const conversationMetadataById = peekResult.conversationMetadataById;
-            value2 = conversationMetadataById.get(value.conversationId);
+            let value2 = conversationMetadataById.get(value.conversationId);
             if (value2 == null) {
               value2 = null;
             }
-            tmp7 = value2;
+            tmp8 = value2;
           }
-          const result1 = ConversationMessageCacheUtils.replaceHydratedMessage(tmp7, messageId, result);
+          const result1 = replaceHydratedMessage(tmp8, messageId, result);
           flag2 = true;
         }
         flag = flag2;
@@ -1235,13 +1286,13 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
     let flag = false;
     if (null != peekResult) {
       const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
-      value = messageMetadataByMessageId.get(id);
+      const value = messageMetadataByMessageId.get(id);
       let tmp3 = null;
       if (null != value) {
         let tmp4 = null;
         if (null != value.conversationId) {
           const conversationMetadataById = peekResult.conversationMetadataById;
-          value2 = conversationMetadataById.get(value.conversationId);
+          let value2 = conversationMetadataById.get(value.conversationId);
           if (value2 == null) {
             value2 = null;
           }
@@ -1249,16 +1300,19 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
         }
         tmp3 = tmp4;
       }
-      const result = ConversationMessageCacheUtils.removeHydratedMessage(tmp3, id);
+      const obj = ConversationMessageCacheUtils;
+      const result = obj.removeHydratedMessage(tmp3, id);
       const messageMetadataByMessageId2 = peekResult.messageMetadataByMessageId;
       flag = messageMetadataByMessageId2.delete(id);
     }
     return flag;
   },
-  MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(arg0) {
+  MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(channelId) {
     let flag = false;
-    while (tmp2 !== undefined) {
-      if (removeMessage(tmp, tmp3)) {
+    channelId = channelId.channelId;
+    const tmp = channelId.ids[Symbol.iterator]();
+    while (tmp !== undefined) {
+      if (removeMessage(channelId, tmp2)) {
         flag = true;
       }
       continue;
@@ -1273,8 +1327,8 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
     map.clear();
     map1.clear();
   }
-});
-const size = fn(2);
+};
+const channelConversationsStore = new ChannelConversationsStore(DispatcherDefault, obj2);
 let result = size.fileFinishedImporting("modules/conversations/ChannelConversationsStore.tsx");
 
 export default channelConversationsStore;

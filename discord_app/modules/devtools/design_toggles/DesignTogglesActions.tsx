@@ -3,8 +3,8 @@
 // Module 15588 (DesignTogglesActions)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DesignTogglesStore from "DesignTogglesStore" /* 6013 */;
+import size from "module_2" /* 2 */;
 
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/design_toggles/DesignTogglesActions.tsx");
 
 export const toggle = function toggle(toggle, flag) {
@@ -12,8 +12,9 @@ export const toggle = function toggle(toggle, flag) {
   if (typeof flag !== "boolean") {
     tmp = !DesignTogglesStore.get(toggle);
   }
-  DispatcherDefault.dispatch({ type: "DEV_TOOLS_DESIGN_TOGGLE_SET", toggle, value: tmp });
+  const obj = DispatcherDefault;
   const obj2 = { type: "DEV_TOOLS_DESIGN_TOGGLE_SET", toggle, value: tmp };
+  obj.dispatch(obj2);
 };
 export const clearAll = function clearAll() {
   for (const key10005 in DesignTogglesStore.all()) {

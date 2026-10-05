@@ -1,76 +1,87 @@
 // === Module 15924: MainTabs ===
 
 // Module 15924 (MainTabs)
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import react2 from "react" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
 import native from "native" /* 4589 */;
 import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4732 */;
 import ThemedGradientDefault from "ThemedGradient" /* 5911 */;
 import useActiveTheme from "useActiveTheme" /* 7509 */;
 import MainTabsNavigatorPanelDefault from "MainTabsNavigatorPanel" /* 15925 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4890);
+let closure_4;
+let hasOwnProperty;
+const View = react_native.View;
+({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
 let closure_6 = createStyles.createStyles({ container: { flex: 1 } });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/MainTabs.tsx");
-
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(15);
+const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let items;
+  let left;
+  let right;
+  const obj = react2;
+  const cResult = obj.c(15);
   const tmp5 = useColorThemeBackgroundDefault();
-  const isCustomThemeActive = useActiveTheme.useIsCustomThemeActive();
+  const obj2 = useActiveTheme;
+  const isCustomThemeActive = obj2.useIsCustomThemeActive();
   const tmp7 = closure_6();
   ({ left, right } = useSafeAreaInsetsDefault());
+  useSafeAreaInsetsDefault();
   if (cResult[0] === left) {
+    let tmp9;
     if (cResult[1] === right) {
-      let tmp9 = cResult[2];
+      tmp9 = cResult[2];
     }
     if (cResult[3] === tmp7.container) {
+      let tmp10;
+      let tmp11;
+      let tmp15;
       if (cResult[4] === tmp9) {
-        let tmp10 = cResult[5];
+        tmp10 = cResult[5];
       }
       if (cResult[6] !== isCustomThemeActive) {
         const obj3 = { absolute: true, mix: isCustomThemeActive };
-        const tmp13 = React4(ThemedGradientDefault, obj3);
+        const tmp13 = React3(ThemedGradientDefault, obj3);
         cResult[6] = isCustomThemeActive;
         cResult[7] = tmp13;
-        let tmp11 = tmp13;
+        tmp11 = tmp13;
       } else {
         tmp11 = cResult[7];
       }
       const _Symbol = Symbol;
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp17 = React4(MainTabsNavigatorPanelDefault, {});
+        const tmp17 = React3(MainTabsNavigatorPanelDefault, {});
         cResult[8] = tmp17;
-        let tmp15 = tmp17;
+        tmp15 = tmp17;
       } else {
         tmp15 = cResult[8];
       }
       if (cResult[9] === tmp5) {
+        let tmp18;
         if (cResult[10] === tmp11) {
-          let tmp18 = cResult[11];
+          tmp18 = cResult[11];
         }
         if (cResult[12] === tmp10) {
+          let tmp21;
           if (cResult[13] === tmp18) {
-            let tmp21 = cResult[14];
+            tmp21 = cResult[14];
           }
           return tmp21;
         }
         const obj4 = { style: tmp10, children: tmp18 };
-        const tmp24 = React4(View, obj4);
+        const tmp24 = React3(View, obj4);
         cResult[12] = tmp10;
         cResult[13] = tmp18;
         cResult[14] = tmp24;
         tmp21 = tmp24;
       }
-      const obj5 = { gradient: tmp5, children: null };
-      const items = [tmp11, tmp15];
-      obj5.children = items;
+      const obj5 = { gradient: tmp5, children: items };
+      items = [tmp11, tmp15];
       const tmp20 = hasOwnProperty(native.ThemeContextProvider, obj5);
       cResult[9] = tmp5;
       cResult[10] = tmp11;
@@ -88,17 +99,23 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[1] = right;
   cResult[2] = obj6;
   tmp9 = obj6;
-  const tmp8 = useSafeAreaInsetsDefault();
 }) : (() => {
+  let ThemeContextProvider;
+  let items;
+  let items1;
+  let obj3;
   const tmp = useColorThemeBackgroundDefault();
-  const isCustomThemeActive = useActiveTheme.useIsCustomThemeActive();
+  const obj = useActiveTheme;
+  const isCustomThemeActive = obj.useIsCustomThemeActive();
+  const tmp3 = closure_6();
   const rect = useSafeAreaInsetsDefault();
-  const obj2 = { style: null, children: null };
-  const items = [closure_6().container, { marginLeft: rect.left, marginRight: rect.right }];
-  obj2.style = items;
-  const obj3 = { gradient: tmp, children: null };
-  const items1 = [React4(ThemedGradientDefault, { absolute: true, mix: isCustomThemeActive }), React4(MainTabsNavigatorPanelDefault, {})];
-  obj3.children = items1;
-  obj2.children = hasOwnProperty(native.ThemeContextProvider, obj3);
-  return React4(View, obj2);
+  const obj2 = { style: items, children: hasOwnProperty(ThemeContextProvider, obj3) };
+  items = [tmp3.container, { marginLeft: rect.left, marginRight: rect.right }];
+  obj3 = { gradient: tmp, children: items1 };
+  ThemeContextProvider = native.ThemeContextProvider;
+  items1 = [React3(ThemedGradientDefault, { absolute: true, mix: isCustomThemeActive }), React3(MainTabsNavigatorPanelDefault, {})];
+  return React3(View, obj2);
 }));
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/MainTabs.tsx");
+
+export default memoResult;

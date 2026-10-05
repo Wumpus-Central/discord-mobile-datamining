@@ -1,65 +1,88 @@
 // === Module 14496: SettingsAccountHeader ===
 
 // Module 14496 (SettingsAccountHeader)
-import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import get_initialized from "get initialized" /* 504 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
+import Constants from "Constants" /* 1085 */;
+import intl from "intl" /* 1126 */;
 import components_Button_Button from "components/Button/Button" /* 5594 */;
-import TableRow from "TableRow" /* 5993 */;
+import TableRow2 from "TableRow" /* 5993 */;
 import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6007 */;
 import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 6494 */;
 import openUserSettings from "openUserSettings" /* 6885 */;
+import Constants2 from "Constants" /* 8075 */;
 import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14497 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4519 */;
 import UserStore from "UserStore" /* 1377 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const AnalyticsSections = fn(1085).AnalyticsSections;
-const SafetySettingsNoticeType = fn(8075).SafetySettingsNoticeType;
-const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4890);
-let obj = { header: { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 } };
+let c10;
+let c9;
+let obj2;
+const View = react_native.View;
+const AnalyticsSections = Constants.AnalyticsSections;
+const SafetySettingsNoticeType = Constants2.SafetySettingsNoticeType;
+({ jsx: c9, jsxs: c10 } = Fragment);
+let obj = { header: obj2 };
+obj2 = { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 };
 let closure_11 = createStyles.createStyles(obj);
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(1);
+  let first;
+  let obj = react2;
+  const cResult = obj.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = {
-      label: util.t.zqv4nV,
+    let obj2 = {
+      label: intl.t.zqv4nV,
       labelHook() {
-          openUserSettings.openUserSettings({ screen: constants.SETTINGS_CONTENT_AND_SOCIAL });
+          const obj = openUserSettings;
+          const obj2 = { screen: constants.SETTINGS_CONTENT_AND_SOCIAL };
+          obj.openUserSettings(obj2);
         },
       noticeType: SafetySettingsNoticeType.RESTRICTED_ACCOUNTS_SETTING_NOTICE
     };
-    const tmp9 = options(SafetySettingsNoticeDefault, obj2);
+    const tmp7 = SafetySettingsNoticeDefault;
+    const tmp9 = React4(tmp7, obj2);
     cResult[0] = tmp9;
-    let first = tmp9;
+    first = tmp9;
   } else {
     first = cResult[0];
   }
   return first;
 }) : (() => {
-  const obj = {
-    label: util.t.zqv4nV,
+  let obj = {
+    label: intl.t.zqv4nV,
     labelHook() {
-      openUserSettings.openUserSettings({ screen: constants.SETTINGS_CONTENT_AND_SOCIAL });
+      const obj = openUserSettings;
+      const obj2 = { screen: constants.SETTINGS_CONTENT_AND_SOCIAL };
+      obj.openUserSettings(obj2);
     },
     noticeType: SafetySettingsNoticeType.RESTRICTED_ACCOUNTS_SETTING_NOTICE
   };
-  return options(SafetySettingsNoticeDefault, obj);
+  const tmp = SafetySettingsNoticeDefault;
+  return React4(tmp, obj);
 });
-ReactCompilerGating = fn(558);
-let obj3 = { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/account/native/SettingsAccountHeader.tsx");
-
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(15);
-  let header = closure_11();
+const memo = react.memo;
+ReactCompilerGating = ReactCompilerGating_mod;
+const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let blockedOrIgnoredIDs;
+  let currentUser;
+  let items2;
+  let obj3;
+  let tmp11;
+  let tmp12;
+  let tmp5;
+  let tmp6;
+  let tmp9;
+  let obj = react2;
+  const cResult = obj.c(15);
+  const tmp4 = closure_11();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
     const fn = function o() {
@@ -67,20 +90,21 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     };
     cResult[0] = items;
     cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
+    tmp5 = items;
+    tmp6 = fn;
   } else {
-    [tmp4, tmp5] = cResult;
+    [tmp5, tmp6] = cResult;
   }
-  const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
+  const tmpResult = get_initialized;
+  const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
   if (cResult[2] !== stateFromStores) {
-    const bannerText = UserSettingsAccountUnverifiedHeader.getBannerText(stateFromStores);
+    const tmpResult3 = UserSettingsAccountUnverifiedHeader;
+    const bannerText = tmpResult3.getBannerText(stateFromStores);
     cResult[2] = stateFromStores;
     cResult[3] = bannerText;
-    let tmp8 = bannerText;
-    const tmpResult3 = UserSettingsAccountUnverifiedHeader;
+    tmp9 = bannerText;
   } else {
-    tmp8 = cResult[3];
+    tmp9 = cResult[3];
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [RelationshipStore];
@@ -89,165 +113,135 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     };
     cResult[4] = items1;
     cResult[5] = fn2;
-    let tmp11 = fn2;
-    let tmp10 = items1;
+    tmp12 = fn2;
+    tmp11 = items1;
   } else {
-    tmp10 = cResult[4];
-    tmp11 = cResult[5];
+    tmp11 = cResult[4];
+    tmp12 = cResult[5];
   }
-  const tmpResult = initialize;
-  const stateFromStores1 = initialize.useStateFromStores(tmp10, tmp11);
+  const tmpResult4 = get_initialized;
+  const stateFromStores1 = tmpResult4.useStateFromStores(tmp11, tmp12);
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     class N {
       constructor() {
-        obj = closure_1_1(closure_1_2[16]);
-        openResult = obj.open();
-        return;
+        const obj = EmailVerificationModalActionCreatorsDefault;
+        obj.open();
       }
     }
     cResult[6] = N;
   } else {
     class N {
       constructor() {
-        obj = closure_1_1(closure_1_2[16]);
-        openResult = obj.open();
-        return;
+        const obj = EmailVerificationModalActionCreatorsDefault;
+        obj.open();
       }
     }
   }
-  if (null == tmp8) {
+  if (null != tmp9) {
     class N {
       constructor() {
-        obj = closure_1_1(closure_1_2[16]);
-        openResult = obj.open();
-        return;
+        const obj = EmailVerificationModalActionCreatorsDefault;
+        obj.open();
       }
     }
-    if (!stateFromStores1) {
+    if (cResult[9] !== tmp9) {
+      let tmp19;
       class N {
         constructor() {
-          obj = closure_1_1(closure_1_2[16]);
-          openResult = obj.open();
-          return;
+          const obj = EmailVerificationModalActionCreatorsDefault;
+          obj.open();
+        }
+      }
+      if (null != tmp9) {
+        class N {
+          constructor() {
+            const obj = EmailVerificationModalActionCreatorsDefault;
+            obj.open();
+          }
+        }
+        ({ title: obj5.label, title: obj5.accessibilityLabel } = tmp9);
+        const obj2 = { onPress: N, variant: "danger", label: null, accessibilityLabel: null, trailing: React4(components_Button_Button.Button, obj3), start: true, end: true };
+        const TableRow = TableRow2.TableRow;
+        obj3 = { text: null, accessibilityLabel: null, onPress: N };
+        ({ button: obj6.text, button: obj6.accessibilityLabel } = tmp9);
+        tmp19 = React4(TableRow, obj2);
+      }
+      cResult[9] = tmp9;
+      cResult[10] = tmp19;
+    } else {
+      class N {
+        constructor() {
+          const obj = EmailVerificationModalActionCreatorsDefault;
+          obj.open();
         }
       }
     }
-  }
-  if (cResult[7] !== stateFromStores1) {
-    class N {
-      constructor() {
-        obj = closure_1_1(closure_1_2[16]);
-        openResult = obj.open();
-        return;
-      }
-    }
-    if (stateFromStores1) {
+    if (cResult[11] === tmp4.header) {
       class N {
         constructor() {
-          obj = closure_1_1(closure_1_2[16]);
-          openResult = obj.open();
-          return;
+          const obj = EmailVerificationModalActionCreatorsDefault;
+          obj.open();
         }
       }
-      const tmp16 = options(closure_12, {});
     }
-    cResult[7] = stateFromStores1;
-    cResult[8] = tmp16;
+    const obj4 = { style: tmp4.header, children: items2 };
+    items2 = [tmp17, tmp18];
+    cResult[11] = tmp4.header;
+    cResult[12] = tmp17;
+    cResult[13] = tmp18;
+    cResult[14] = authStore(View, obj4);
+    const tmp23 = authStore(View, obj4);
   } else {
     class N {
       constructor() {
-        obj = closure_1_1(closure_1_2[16]);
-        openResult = obj.open();
-        return;
+        const obj = EmailVerificationModalActionCreatorsDefault;
+        obj.open();
       }
     }
   }
-  if (cResult[9] !== tmp8) {
-    class N {
-      constructor() {
-        obj = closure_1_1(closure_1_2[16]);
-        openResult = obj.open();
-        return;
-      }
-    }
-    if (null != tmp8) {
-      class N {
-        constructor() {
-          obj = closure_1_1(closure_1_2[16]);
-          openResult = obj.open();
-          return;
-        }
-      }
-      const obj2 = { onPress: N, variant: "danger", label: null, accessibilityLabel: null, trailing: null, start: true, end: true };
-      ({ title: obj5.label, title: obj5.accessibilityLabel } = tmp8);
-      const obj3 = { text: null, accessibilityLabel: null, onPress: null };
-      ({ button: obj6.text, button: obj6.accessibilityLabel } = tmp8);
-      obj3.onPress = N;
-      obj2.trailing = options(components_Button_Button.Button, obj3);
-      const tmp19 = options(TableRow.TableRow, obj2);
-    }
-    cResult[9] = tmp8;
-    cResult[10] = tmp19;
-  } else {
-    class N {
-      constructor() {
-        obj = closure_1_1(closure_1_2[16]);
-        openResult = obj.open();
-        return;
-      }
-    }
-  }
-  if (cResult[11] === header.header) {
-    class N {
-      constructor() {
-        obj = closure_1_1(closure_1_2[16]);
-        openResult = obj.open();
-        return;
-      }
-    }
-  }
-  const obj4 = { style: header.header, children: null };
-  const items2 = [tmp15, tmp18];
-  obj4.children = items2;
-  const tmpResult4 = initialize;
-  header = header.header;
-  cResult[11] = header;
-  cResult[12] = tmp15;
-  cResult[13] = tmp18;
-  cResult[14] = v65535(View, obj4);
-  const tmp20 = v65535(View, obj4);
+  return tmp16;
 }) : (() => {
+  let blockedOrIgnoredIDs;
+  let currentUser;
+  let items2;
+  let obj10;
+  let tmp9Result;
   const tmp = closure_11();
+  let obj = get_initialized;
   const items = [UserStore];
-  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const bannerText = UserSettingsAccountUnverifiedHeader.getBannerText(stateFromStores);
+  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj2 = UserSettingsAccountUnverifiedHeader;
+  const bannerText = obj2.getBannerText(stateFromStores);
   const items1 = [RelationshipStore];
-  const stateFromStores1 = initialize.useStateFromStores(items1, () => blockedOrIgnoredIDs.getBlockedOrIgnoredIDs().size > 0);
-  const callback = noop.useCallback(() => {
-    EmailVerificationModalActionCreatorsDefault.open();
+  const obj3 = get_initialized;
+  const stateFromStores1 = obj3.useStateFromStores(items1, () => blockedOrIgnoredIDs.getBlockedOrIgnoredIDs().size > 0);
+  const callback = react.useCallback(() => {
+    const obj = EmailVerificationModalActionCreatorsDefault;
+    obj.open();
   }, []);
   if (null != bannerText) {
-    const obj4 = { style: tmp.header, children: null };
     let tmp11 = null;
+    const obj4 = { style: tmp.header, children: items2 };
     if (stateFromStores1) {
-      tmp11 = options(closure_12, {});
+      tmp11 = React4(closure_12, {});
     }
-    const items2 = [tmp11, ];
+    items2 = [tmp11, ];
     let tmp14 = null;
     if (null != bannerText) {
-      const obj9 = { onPress: callback, variant: "danger", label: null, accessibilityLabel: null, trailing: null, start: true, end: true };
       ({ title: obj5.label, title: obj5.accessibilityLabel } = bannerText);
-      const obj10 = { text: null, accessibilityLabel: null, onPress: null };
+      const obj9 = { onPress: callback, variant: "danger", label: null, accessibilityLabel: null, trailing: React4(components_Button_Button.Button, obj10), start: true, end: true };
+      const TableRow = TableRow2.TableRow;
+      obj10 = { text: null, accessibilityLabel: null, onPress: callback };
       ({ button: obj6.text, button: obj6.accessibilityLabel } = bannerText);
-      obj10.onPress = callback;
-      obj9.trailing = options(components_Button_Button.Button, obj10);
-      tmp14 = options(TableRow.TableRow, obj9);
+      tmp14 = React4(TableRow, obj9);
     }
     items2[1] = tmp14;
-    obj4.children = items2;
-    let tmp9Result = v65535(View, obj4);
+    tmp9Result = authStore(View, obj4);
   } else {
     tmp9Result = null;
   }
   return tmp9Result;
 }));
+const result = size.fileFinishedImporting("modules/user_settings/account/native/SettingsAccountHeader.tsx");
+
+export default memoResult;

@@ -1,25 +1,38 @@
 // === Module 14514: AccountUsernameSetting ===
 
 // Module 14514 (AccountUsernameSetting)
-import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
+import Fragment from "Fragment" /* 21 */;
+import get_initialized from "get initialized" /* 504 */;
+import react2 from "react" /* 576 */;
+import Constants from "Constants" /* 1085 */;
+import intl2 from "intl" /* 1126 */;
 import UserUtilsDefault from "UserUtils" /* 4722 */;
+import Text_Text from "Text/Text" /* 4886 */;
+import SettingsConstants from "SettingsConstants" /* 7634 */;
 import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 11483 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import SettingBuilders from "SettingBuilders" /* 11129 */;
+import size from "module_2" /* 2 */;
 
-const Text_Text = Text(4886);
-require = fn;
-const jsx = fn(21).jsx;
-fn(558);
-const ReactCompilerGating = fn(558);
+const require = globalThis.__r;
+
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+const UserSettingsSections = Constants.UserSettingsSections;
+const jsx = Fragment.jsx;
+let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(2);
+  let currentUser;
+  let tmp4;
+  let tmp5;
+  let obj = react2;
+  const cResult = obj.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
     const fn = function o() {
-      return UserUtilsDefault.getUserTag(currentUser.getCurrentUser(), { decoration: "never" });
+      const obj = UserUtilsDefault;
+      return obj.getUserTag(currentUser.getCurrentUser(), { decoration: "never" });
     };
     cResult[0] = items;
     cResult[1] = fn;
@@ -28,17 +41,23 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  return initialize.useStateFromStores(tmp4, tmp5);
+  const tmpResult = get_initialized;
+  return tmpResult.useStateFromStores(tmp4, tmp5);
 }) : (() => {
+  let currentUser;
+  let obj = get_initialized;
   const items = [UserStore];
-  return initialize.useStateFromStores(items, () => UserUtilsDefault.getUserTag(currentUser.getCurrentUser(), { decoration: "never" }));
+  return obj.useStateFromStores(items, () => {
+    const obj = UserUtilsDefault;
+    return obj.getUserTag(currentUser.getCurrentUser(), { decoration: "never" });
+  });
 });
-const SettingBuilders = fn(11129);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let Text = require;
-  let tmp = dependencyMap;
-  const cResult = c.c(2);
-  const guildAutomodProfileQuarantineErrors = AutomodQuarantineUtils.useGuildAutomodProfileQuarantineErrors();
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const obj = react2;
+  const cResult = obj.c(2);
+  const obj2 = AutomodQuarantineUtils;
+  const guildAutomodProfileQuarantineErrors = obj2.useGuildAutomodProfileQuarantineErrors();
   let first;
   if (guildAutomodProfileQuarantineErrors != null) {
     const nick = guildAutomodProfileQuarantineErrors.nick;
@@ -46,17 +65,23 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       first = nick[0];
     }
   }
-  if (null == first) {
-    return null;
-  } else if (cResult[0] !== first) {
-    Text = Text_Text.Text;
-    const obj3 = { variant: "text-xs/medium", color: "text-feedback-warning", children: first };
-    tmp = <Text variant="text-xs/medium" color="text-feedback-warning">{first}</Text>;
-    cResult[0] = first;
-    cResult[1] = tmp;
+  let tmp6 = null;
+  if (null != first) {
+    let tmp7;
+    if (cResult[0] !== first) {
+      const tmp9 = jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-feedback-warning", children: first });
+      cResult[0] = first;
+      cResult[1] = tmp9;
+      tmp7 = tmp9;
+    } else {
+      tmp7 = cResult[1];
+    }
+    tmp6 = tmp7;
   }
+  return tmp6;
 }) : (() => {
-  const guildAutomodProfileQuarantineErrors = AutomodQuarantineUtils.useGuildAutomodProfileQuarantineErrors();
+  const obj = AutomodQuarantineUtils;
+  const guildAutomodProfileQuarantineErrors = obj.useGuildAutomodProfileQuarantineErrors();
   let first;
   if (guildAutomodProfileQuarantineErrors != null) {
     const nick = guildAutomodProfileQuarantineErrors.nick;
@@ -66,63 +91,26 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   let tmp5 = null;
   if (null != first) {
-    const obj2 = { variant: "text-xs/medium", color: "text-feedback-warning", children: first };
     tmp5 = jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-feedback-warning", children: first });
   }
   return tmp5;
 });
-const route = SettingBuilders.createRoute({
+let obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t.IEpCBQ);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.IEpCBQ);
   },
-  parent: fn(7634).MobileUserSettings.ACCOUNT,
+  parent: MobileUserSettings.ACCOUNT,
   useTrailing: tmp3,
-  useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-    let Text = require;
-    let tmp = dependencyMap;
-    const cResult = c.c(2);
-    const guildAutomodProfileQuarantineErrors = AutomodQuarantineUtils.useGuildAutomodProfileQuarantineErrors();
-    let first;
-    if (guildAutomodProfileQuarantineErrors != null) {
-      const nick = guildAutomodProfileQuarantineErrors.nick;
-      if (nick != null) {
-        first = nick[0];
-      }
-    }
-    if (null == first) {
-      return null;
-    } else if (cResult[0] !== first) {
-      Text = Text_Text.Text;
-      const obj3 = { variant: "text-xs/medium", color: "text-feedback-warning", children: first };
-      tmp = <Text variant="text-xs/medium" color="text-feedback-warning">{first}</Text>;
-      cResult[0] = first;
-      cResult[1] = tmp;
-    }
-  }) : (() => {
-    const guildAutomodProfileQuarantineErrors = AutomodQuarantineUtils.useGuildAutomodProfileQuarantineErrors();
-    let first;
-    if (guildAutomodProfileQuarantineErrors != null) {
-      const nick = guildAutomodProfileQuarantineErrors.nick;
-      if (nick != null) {
-        first = nick[0];
-      }
-    }
-    let tmp5 = null;
-    if (null != first) {
-      const obj2 = { variant: "text-xs/medium", color: "text-feedback-warning", children: first };
-      tmp5 = jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-feedback-warning", children: first });
-    }
-    return tmp5;
-  }),
+  useDescription: tmp4,
   screen: {
-    route: fn(1085).UserSettingsSections.ACCOUNT_CHANGE_USERNAME,
+    route: UserSettingsSections.ACCOUNT_CHANGE_USERNAME,
     getComponent() {
       return require("UserSettingsChangeUsername").default;
     }
   }
-});
-const size = fn(2);
+};
+const route = SettingBuilders.createRoute(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountUsernameSetting.tsx");
 
 export default route;

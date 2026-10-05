@@ -2,117 +2,154 @@
 
 // Module 7048 (FamilyCenterStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 2066 */;
+import CountryCodeUtils from "CountryCodeUtils" /* 5105 */;
 import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7050 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1084 */;
 import UserStore from "UserStore" /* 1377 */;
+import FamilyCenterConstants from "FamilyCenterConstants" /* 7049 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
+let closure_14, closure_29, closure_30, closure_32, map, map1, set2, set3, set4, set5;
+
+let FAMILY_CENTER_SUB_ROUTES;
+let REQUESTS;
+let metroRequire;
+let tmp;
+let tmp2;
+const f94036 = (acc, user_id) => {
+  const obj = {};
+  const merged = Object.assign(acc);
+  obj[user_id.user_id] = user_id;
+  return obj;
+};
+const f94038 = (acc, id) => {
+  let num;
+  const obj = {};
+  const merged = Object.assign(acc);
+  id = id.id;
+  const obj2 = { approximateMemberCount: num };
+  const obj3 = GuildRecordUtils;
+  const merged1 = Object.assign(obj3.dangerouslyConstructGuildRecordFromUntypedObject(id));
+  num = id.approximate_member_count;
+  if (num == null) {
+    num = 0;
+  }
+  obj[id] = obj2;
+  return obj;
+};
+const f94039 = (acc, invoice_items) => {
+  let sku_id;
+  let subscription_plan_id;
+  if (null != invoice_items.invoice_items) {
+    if (invoice_items.invoice_items.length > 0) {
+      ({ sku_id, subscription_plan_id } = invoice_items.invoice_items[0]);
+      const tmp = null == sku_id && null == subscription_plan_id;
+      if (!tmp) {
+        const obj = { sku_id, subscription_plan_id, total: null, currency: null };
+        ({ total: obj.total, currency: obj.currency } = invoice_items);
+        acc[invoice_items.id] = obj;
+      }
+    }
+  }
+  return acc;
+};
+const f94040 = (acc, entitlement_id) => {
+  acc[entitlement_id.entitlement_id] = entitlement_id;
+  return acc;
+};
 function freshTeenActivityWithMap() {
-  const map = new Map();
-  const result = map.set(TeenActionDisplayType.USER_ADD, new Map());
-  const map1 = new Map();
-  const result1 = map.set(TeenActionDisplayType.GUILD_ADD, new Map());
+  map = new Map();
+  const USER_ADD = TeenActionDisplayType.USER_ADD;
+  set = map.set;
+  map1 = new Map();
+  const result = set(USER_ADD, map1);
+  const GUILD_ADD = TeenActionDisplayType.GUILD_ADD;
+  set2 = map.set;
   const map2 = new Map();
-  const result2 = map.set(TeenActionDisplayType.USER_INTERACTION, new Map());
+  set2(GUILD_ADD, map2);
+  const USER_INTERACTION = TeenActionDisplayType.USER_INTERACTION;
+  set3 = map.set;
   const map3 = new Map();
-  const result3 = map.set(TeenActionDisplayType.GUILD_INTERACTION, new Map());
+  set3(USER_INTERACTION, map3);
+  const GUILD_INTERACTION = TeenActionDisplayType.GUILD_INTERACTION;
+  set4 = map.set;
   const map4 = new Map();
-  const result4 = map.set(TeenActionDisplayType.USER_CALLED, new Map());
+  set4(GUILD_INTERACTION, map4);
+  const USER_CALLED = TeenActionDisplayType.USER_CALLED;
+  set5 = map.set;
   const map5 = new Map();
-  const result5 = map.set(TeenActionDisplayType.TOTAL_VOICE_MINUTES, new Map());
+  set5(USER_CALLED, map5);
+  const TOTAL_VOICE_MINUTES = TeenActionDisplayType.TOTAL_VOICE_MINUTES;
+  const set6 = map.set;
   const map6 = new Map();
-  const result6 = map.set(TeenActionDisplayType.PURCHASES, new Map());
+  set6(TOTAL_VOICE_MINUTES, map6);
+  const PURCHASES = TeenActionDisplayType.PURCHASES;
+  const set7 = map.set;
   const map7 = new Map();
-  const result7 = map.set(TeenActionDisplayType.GIFTS, new Map());
+  set7(PURCHASES, map7);
+  const GIFTS = TeenActionDisplayType.GIFTS;
+  const set8 = map.set;
+  const map8 = new Map();
+  set8(GIFTS, map8);
   return map;
 }
 function handleFetchStart() {
   c20 = true;
 }
 function handleInitialLoad(arg0) {
+  let actions;
+  let familyCenterTeenActivity;
+  let gifts;
+  let guilds;
+  let invoices;
+  let linkedUsers;
+  let totals;
   ({ linkedUsers, familyCenterTeenActivity, ageGroup } = arg0);
   ({ actions, guilds, totals, spendingLimit, monthlyPurchases, invoices, gifts, teenId: c10, rangeStartId: c11 } = familyCenterTeenActivity);
   ({ topUserActivities, topGuildActivities, totalSpendAmount, totalSpendCurrency } = familyCenterTeenActivity);
   const tmp = freshTeenActivityWithMap();
-  closure_0 = tmp;
+  let closure_0 = tmp;
   const item = actions.forEach((display_type) => {
-    value = closure_0.get(display_type.display_type);
+    const value = closure_0.get(display_type.display_type);
+    const tmp = undefined === value || value.has(display_type.event_id);
     if (!tmp) {
       const result = value.set(display_type.event_id, display_type);
     }
   });
   closure_14 = tmp;
   if (undefined !== totals) {
-    snapshot = totals;
+    closure_15 = totals;
   }
-  closure_32 = guilds.reduce((acc, approximate_member_count) => {
-    const obj = {};
-    const merged = Object.assign(acc);
-    const obj2 = {};
-    const merged1 = Object.assign(closure_0(dependencyMap[5]).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count));
-    let num = approximate_member_count.approximate_member_count;
-    if (num == null) {
-      num = 0;
-    }
-    obj2.approximateMemberCount = num;
-    obj[approximate_member_count.id] = obj2;
-    return obj;
-  }, closure_32);
+  closure_32 = guilds.reduce(f94038, closure_32);
   if (linkedUsers === undefined) {
     linkedUsers = [];
   }
   if (linkedUsers.length > 0) {
-    reduced = linkedUsers.reduce((acc, user_id) => {
-      const obj = {};
-      const merged = Object.assign(acc);
-      obj[user_id.user_id] = user_id;
-      return obj;
-    }, {});
+    reduced = linkedUsers.reduce(f94036, {});
   } else {
     reduced = {};
   }
   c13 = true;
   if (null != invoices) {
-    closure_29 = invoices.reduce((acc, invoice_items) => {
-      if (null != invoice_items.invoice_items) {
-        if (invoice_items.invoice_items.length > 0) {
-          ({ sku_id, subscription_plan_id } = invoice_items.invoice_items[0]);
-          if (!tmp) {
-            const obj = { sku_id, subscription_plan_id, total: null, currency: null };
-            ({ total: obj.total, currency: obj.currency } = invoice_items);
-            acc[invoice_items.id] = obj;
-          }
-          tmp = null == sku_id && null == subscription_plan_id;
-        }
-      }
-      return acc;
-    }, {});
+    closure_29 = invoices.reduce(f94039, {});
   }
   if (null != gifts) {
-    closure_30 = gifts.reduce((acc, entitlement_id) => {
-      acc[entitlement_id.entitlement_id] = entitlement_id;
-      return acc;
-    }, {});
+    closure_30 = gifts.reduce(f94040, {});
   }
-  closure_23 = topUserActivities;
-  closure_24 = topGuildActivities;
-  c25 = totalSpendAmount;
-  c26 = totalSpendCurrency;
   if (spendingLimit == null) {
     spendingLimit = null;
   }
-  c27 = spendingLimit;
   if (monthlyPurchases == null) {
     monthlyPurchases = null;
   }
-  c28 = monthlyPurchases;
   if (ageGroup == null) {
     ageGroup = null;
   }
-  c31 = ageGroup;
   c20 = false;
-  c21 = SnowflakeUtilsDefault.fromTimestamp(Date.now());
+  const obj2 = SnowflakeUtilsDefault;
+  c21 = obj2.fromTimestamp(Date.now());
   c19 = true;
 }
 function handleLinkedUserFetch(linkedUsers) {
@@ -121,12 +158,7 @@ function handleLinkedUserFetch(linkedUsers) {
     linkedUsers = [];
   }
   if (linkedUsers.length > 0) {
-    reduced = linkedUsers.reduce((acc, user_id) => {
-      const obj = {};
-      const merged = Object.assign(acc);
-      obj[user_id.user_id] = user_id;
-      return obj;
-    }, {});
+    reduced = linkedUsers.reduce(f94036, {});
   } else {
     reduced = {};
   }
@@ -138,18 +170,18 @@ function handleRequestLinkSuccess(linkedUsers) {
     linkedUsers = [];
   }
   if (linkedUsers.length > 0) {
-    reduced = linkedUsers.reduce((acc, user_id) => {
-      const obj = {};
-      const merged = Object.assign(acc);
-      obj[user_id.user_id] = user_id;
-      return obj;
-    }, {});
+    reduced = linkedUsers.reduce(f94036, {});
   } else {
     reduced = {};
   }
   c13 = true;
 }
 function handleTeenActivityFetch(familyCenterTeenActivity) {
+  let actions;
+  let gifts;
+  let guilds;
+  let invoices;
+  let totals;
   familyCenterTeenActivity = familyCenterTeenActivity.familyCenterTeenActivity;
   if (undefined === familyCenterTeenActivity) {
     return false;
@@ -157,91 +189,51 @@ function handleTeenActivityFetch(familyCenterTeenActivity) {
     ({ actions, totals, guilds, invoices, gifts, spendingLimit, monthlyPurchases, teenId: c10, rangeStartId: c11 } = familyCenterTeenActivity);
     ({ topUserActivities, topGuildActivities, totalSpendAmount, totalSpendCurrency } = familyCenterTeenActivity);
     const tmp7 = freshTeenActivityWithMap();
-    closure_0 = tmp7;
+    let closure_0 = tmp7;
     const item = actions.forEach((display_type) => {
-      value = closure_0.get(display_type.display_type);
+      const value = closure_0.get(display_type.display_type);
+      const tmp = undefined === value || value.has(display_type.event_id);
       if (!tmp) {
         const result = value.set(display_type.event_id, display_type);
       }
     });
     closure_14 = tmp7;
     if (undefined !== totals) {
-      snapshot = totals;
+      closure_15 = totals;
     }
-    closure_32 = guilds.reduce((acc, approximate_member_count) => {
-      const obj = {};
-      const merged = Object.assign(acc);
-      const obj2 = {};
-      const merged1 = Object.assign(closure_0(dependencyMap[5]).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count));
-      let num = approximate_member_count.approximate_member_count;
-      if (num == null) {
-        num = 0;
-      }
-      obj2.approximateMemberCount = num;
-      obj[approximate_member_count.id] = obj2;
-      return obj;
-    }, closure_32);
+    let tmp = closure_32;
+    closure_32 = guilds.reduce(f94038, closure_32);
     if (null != invoices) {
-      closure_29 = invoices.reduce((acc, invoice_items) => {
-        if (null != invoice_items.invoice_items) {
-          if (invoice_items.invoice_items.length > 0) {
-            ({ sku_id, subscription_plan_id } = invoice_items.invoice_items[0]);
-            if (!tmp) {
-              const obj = { sku_id, subscription_plan_id, total: null, currency: null };
-              ({ total: obj.total, currency: obj.currency } = invoice_items);
-              acc[invoice_items.id] = obj;
-            }
-            tmp = null == sku_id && null == subscription_plan_id;
-          }
-        }
-        return acc;
-      }, {});
+      closure_29 = invoices.reduce(f94039, {});
     }
     if (null != gifts) {
-      closure_30 = gifts.reduce((acc, entitlement_id) => {
-        acc[entitlement_id.entitlement_id] = entitlement_id;
-        return acc;
-      }, {});
+      closure_30 = gifts.reduce(f94040, {});
     }
-    closure_23 = topUserActivities;
-    closure_24 = topGuildActivities;
     c20 = false;
+    let obj = SnowflakeUtilsDefault;
     const _Date = Date;
-    c21 = SnowflakeUtilsDefault.fromTimestamp(Date.now());
-    c25 = totalSpendAmount;
-    c26 = totalSpendCurrency;
+    c21 = obj.fromTimestamp(Date.now());
     if (spendingLimit == null) {
       spendingLimit = null;
     }
-    c27 = spendingLimit;
     if (monthlyPurchases == null) {
       monthlyPurchases = null;
     }
-    c28 = monthlyPurchases;
   }
 }
 function handleTeenActivityMoreFetch(familyCenterTeenActivity) {
+  let actions;
+  let guilds;
   ({ actions, guilds } = familyCenterTeenActivity.familyCenterTeenActivity);
-  closure_0 = closure_14;
+  let closure_0 = closure_14;
   const item = actions.forEach((display_type) => {
-    value = closure_0.get(display_type.display_type);
+    const value = closure_0.get(display_type.display_type);
+    const tmp = undefined === value || value.has(display_type.event_id);
     if (!tmp) {
       const result = value.set(display_type.event_id, display_type);
     }
   });
-  closure_32 = guilds.reduce((acc, approximate_member_count) => {
-    const obj = {};
-    const merged = Object.assign(acc);
-    const obj2 = {};
-    const merged1 = Object.assign(closure_0(dependencyMap[5]).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count));
-    let num = approximate_member_count.approximate_member_count;
-    if (num == null) {
-      num = 0;
-    }
-    obj2.approximateMemberCount = num;
-    obj[approximate_member_count.id] = obj2;
-    return obj;
-  }, closure_32);
+  closure_32 = guilds.reduce(f94038, closure_32);
 }
 function handleUserLinkStatusUpdate(linkedUsers) {
   linkedUsers = linkedUsers.linkedUsers;
@@ -249,12 +241,7 @@ function handleUserLinkStatusUpdate(linkedUsers) {
     linkedUsers = [];
   }
   if (linkedUsers.length > 0) {
-    reduced = linkedUsers.reduce((acc, user_id) => {
-      const obj = {};
-      const merged = Object.assign(acc);
-      obj[user_id.user_id] = user_id;
-      return obj;
-    }, {});
+    reduced = linkedUsers.reduce(f94036, {});
   } else {
     reduced = {};
   }
@@ -266,12 +253,7 @@ function handleUserLinkRemove(linkedUsers) {
     linkedUsers = [];
   }
   if (linkedUsers.length > 0) {
-    reduced = linkedUsers.reduce((acc, user_id) => {
-      const obj = {};
-      const merged = Object.assign(acc);
-      obj[user_id.user_id] = user_id;
-      return obj;
-    }, {});
+    reduced = linkedUsers.reduce(f94036, {});
   } else {
     reduced = {};
   }
@@ -294,7 +276,8 @@ function handleCurrentUserUpdate(user) {
     if (linked_users.some((item) => undefined === closure_0[item.user_id])) {
       const _Object = Object;
       if (user.linked_users.length > Object.keys(reduced).length) {
-        const linkedUsers = FamilyCenterActionCreatorsDefault.fetchLinkedUsers();
+        const obj2 = FamilyCenterActionCreatorsDefault;
+        const linkedUsers = obj2.fetchLinkedUsers();
       }
     }
     let linked_users1 = user.linked_users;
@@ -302,12 +285,7 @@ function handleCurrentUserUpdate(user) {
       linked_users1 = [];
     }
     if (linked_users1.length > 0) {
-      reduced = linked_users1.reduce((acc, user_id) => {
-        const obj = {};
-        const merged = Object.assign(acc);
-        obj[user_id.user_id] = user_id;
-        return obj;
-      }, {});
+      reduced = linked_users1.reduce(f94036, {});
     } else {
       reduced = {};
     }
@@ -323,12 +301,7 @@ function handleConnectionOpen(linkedUsers) {
       linkedUsers = [];
     }
     if (linkedUsers.length > 0) {
-      reduced = linkedUsers.reduce((acc, user_id) => {
-        const obj = {};
-        const merged = Object.assign(acc);
-        obj[user_id.user_id] = user_id;
-        return obj;
-      }, {});
+      reduced = linkedUsers.reduce(f94036, {});
     } else {
       reduced = {};
     }
@@ -352,7 +325,7 @@ function reset() {
   c16 = null;
   c17 = null;
   closure_14 = freshTeenActivityWithMap();
-  snapshot = { [closure_1_9.USER_ADD]: 0, [closure_1_9.GUILD_ADD]: 0, [closure_1_9.USER_INTERACTION]: 0, [closure_1_9.GUILD_INTERACTION]: 0, [closure_1_9.USER_CALLED]: 0, [closure_1_9.TOTAL_VOICE_MINUTES]: 0, [closure_1_9.PURCHASES]: 0, [closure_1_9.GIFTS]: 0 };
+  closure_15 = { [closure_1_9.USER_ADD]: 0, [closure_1_9.GUILD_ADD]: 0, [closure_1_9.USER_INTERACTION]: 0, [closure_1_9.GUILD_INTERACTION]: 0, [closure_1_9.USER_CALLED]: 0, [closure_1_9.TOTAL_VOICE_MINUTES]: 0, [closure_1_9.PURCHASES]: 0, [closure_1_9.GIFTS]: 0 };
   closure_32 = {};
   c20 = false;
   c21 = null;
@@ -380,19 +353,18 @@ function reset() {
     }
   }
   c13 = false;
-  closure_23 = [];
-  closure_24 = [];
-  c25 = null;
-  c26 = null;
-  c27 = null;
-  c28 = null;
+  topUserActivities = [];
+  topGuildActivities = [];
+  totalSpendAmount = null;
+  totalSpendCurrency = null;
+  spendingLimit = null;
+  monthlyPurchases = null;
   closure_29 = {};
   closure_30 = {};
-  c31 = null;
+  ageGroup = null;
   c19 = false;
 }
-const getCountryCodeByAlpha2 = fn(5105).getCountryCodeByAlpha2;
-const FamilyCenterConstants = fn(7049);
+const getCountryCodeByAlpha2 = CountryCodeUtils.getCountryCodeByAlpha2;
 ({ FAMILY_CENTER_REFETCH_COOLDOWN: metroRequire, FAMILY_CENTER_SUB_ROUTES } = FamilyCenterConstants);
 const FamilyCenterSubPages = FamilyCenterConstants.FamilyCenterSubPages;
 const TeenActionDisplayType = FamilyCenterConstants.TeenActionDisplayType;
@@ -400,9 +372,9 @@ let c10 = null;
 let c11 = null;
 let reduced = {};
 let c13 = false;
-let closure_14 = freshTeenActivityWithMap();
-const PURCHASES = TeenActionDisplayType.PURCHASES;
-let snapshot = { [TeenActionDisplayType.USER_ADD]: 0, [TeenActionDisplayType.GUILD_ADD]: 0, [TeenActionDisplayType.USER_INTERACTION]: 0, [TeenActionDisplayType.GUILD_INTERACTION]: 0, [TeenActionDisplayType.USER_CALLED]: 0, [TeenActionDisplayType.TOTAL_VOICE_MINUTES]: 0, [PURCHASES]: 0, [TeenActionDisplayType.GIFTS]: 0 };
+const authStore2 = freshTeenActivityWithMap();
+let PURCHASES = TeenActionDisplayType.PURCHASES;
+let closure_15 = { [TeenActionDisplayType.USER_ADD]: 0, [TeenActionDisplayType.GUILD_ADD]: 0, [TeenActionDisplayType.USER_INTERACTION]: 0, [TeenActionDisplayType.GUILD_INTERACTION]: 0, [TeenActionDisplayType.USER_CALLED]: 0, [TeenActionDisplayType.TOTAL_VOICE_MINUTES]: 0, [PURCHASES]: 0, [TeenActionDisplayType.GIFTS]: 0 };
 let c16 = null;
 let c17 = null;
 let pathname;
@@ -414,7 +386,7 @@ if (window != null) {
 }
 let _location2 = FAMILY_CENTER_SUB_ROUTES.FAMILY_CENTER_MY_FAMILY;
 if (pathname === _location2) {
-  let REQUESTS = FamilyCenterSubPages.REQUESTS;
+  REQUESTS = FamilyCenterSubPages.REQUESTS;
 } else {
   _location2 = window;
   let pathname1;
@@ -431,26 +403,24 @@ let c19 = false;
 let c20 = false;
 let c21 = null;
 let c22 = null;
-let closure_23 = [];
-let closure_24 = [];
-let c25 = null;
-let c26 = null;
-let c27 = null;
-let c28 = null;
-let closure_29 = {};
-let closure_30 = {};
-let c31 = null;
-let closure_32 = {};
-let FamilyCenterStore;
-class FamilyCenterStore extends tmp4 {
+let topUserActivities = [];
+let topGuildActivities = [];
+let totalSpendAmount = null;
+let totalSpendCurrency = null;
+let spendingLimit = null;
+let monthlyPurchases = null;
+let set = {};
+const __initData = {};
+let ageGroup = null;
+const __initData2 = {};
+class FamilyCenterStore extends MobileCacheSnapshotStore {
   constructor() {
-    closure_0 = undefined;
-    obj = {
+    const obj = {
       CONNECTION_OPEN: handleConnectionOpen,
       CURRENT_USER_UPDATE: handleCurrentUserUpdate,
       CACHE_LOADED_LAZY() {
-            return closure_0.loadCache();
-          },
+        return closure_0.loadCache();
+      },
       FAMILY_CENTER_INITIAL_LOAD: handleInitialLoad,
       FAMILY_CENTER_FETCH_START: handleFetchStart,
       FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: handleLinkedUserFetch,
@@ -464,274 +434,256 @@ class FamilyCenterStore extends tmp4 {
       SET_LOCATION_METADATA: handleSetLocationMetadata,
       LOGOUT: reset
     };
-    tmp1 = new tmp(obj, handleSetLocationMetadata, new.target, tmp);
-    closure_0 = tmp1;
-    return tmp1;
+    const tmp2 = new tmp(obj, handleSetLocationMetadata, new.target, tmp);
+    let closure_0 = tmp2;
+    return tmp2;
+  }
+  initialize() {
+    this.waitFor(UserStore);
+  }
+  loadCache() {
+    const snapshot = this.readSnapshot(FamilyCenterStore.LATEST_SNAPSHOT_VERSION);
+    if (null != snapshot) {
+      let linkedUsers = snapshot.linkedUsers;
+      if (linkedUsers === undefined) {
+        linkedUsers = [];
+      }
+      let num = 0;
+      if (linkedUsers.length > 0) {
+        reduced = linkedUsers.reduce(f94036, {});
+      } else {
+        reduced = {};
+      }
+      c13 = true;
+      const guilds = snapshot.guilds;
+      let tmp2 = closure_32;
+      closure_32 = guilds.reduce(f94038, closure_32);
+      const teenActivity = snapshot.teenActivity;
+      let tmp4 = freshTeenActivityWithMap();
+      let closure_0 = tmp4;
+      const item = teenActivity.forEach((display_type) => {
+        const value = closure_0.get(display_type.display_type);
+        const tmp = undefined === value || value.has(display_type.event_id);
+        if (!tmp) {
+          const result = value.set(display_type.event_id, display_type);
+        }
+      });
+      closure_14 = tmp4;
+      const teenActivityTotals = snapshot.teenActivityTotals;
+      let obj = {};
+      obj[TeenActionDisplayType.USER_ADD] = 0;
+      obj[TeenActionDisplayType.GUILD_ADD] = 0;
+      obj[TeenActionDisplayType.USER_INTERACTION] = 0;
+      obj[TeenActionDisplayType.GUILD_INTERACTION] = 0;
+      obj[TeenActionDisplayType.USER_CALLED] = 0;
+      obj[TeenActionDisplayType.TOTAL_VOICE_MINUTES] = 0;
+      obj[TeenActionDisplayType.PURCHASES] = 0;
+      obj[TeenActionDisplayType.GIFTS] = 0;
+      closure_15 = teenActivityTotals.reduce((acc, item) => {
+        function displayTypeFromString(arg0) {
+          const values = Object.values(closure_1_9);
+          for (const item10011 of values) {
+            if (item10011.toString() === arg0) {
+              obj.return();
+              return item10011;
+            }
+          }
+        }
+        const tmp = _slicedToArray(item.split(":"), 2);
+        const tmp2 = tmp[1];
+        const tmp3 = displayTypeFromString(tmp[0]);
+        let tmp4 = acc;
+        if (undefined !== tmp3) {
+          const obj = {};
+          const merged = Object.assign(acc);
+          const _parseInt = parseInt;
+          obj[tmp3] = parseInt(tmp2, 10);
+          tmp4 = obj;
+        }
+        return tmp4;
+      }, obj);
+    }
+  }
+  takeSnapshot() {
+    let entries;
+    let items;
+    let obj2;
+    const obj = { version: FamilyCenterStore.LATEST_SNAPSHOT_VERSION, data: obj2 };
+    obj2 = {
+      linkedUsers: Object.values(reduced),
+      teenActivityTotals: entries.map((item) => {
+        let tmp;
+        let tmp2;
+        [tmp, tmp2] = item;
+        return "" + tmp + ":" + tmp2;
+      }),
+      teenActivity: items,
+      guilds: Object.values(closure_32)
+    };
+    entries = Object.entries(closure_15);
+    items = [];
+    const item = closure_14.forEach((arr) => {
+      items = [...from(arr.values())];
+      items.push.apply(items);
+    });
+    return obj;
+  }
+  getSelectedTeenId() {
+    return c10;
+  }
+  getLinkedUsers() {
+    return reduced;
+  }
+  getLinkTimestamp(arg0) {
+    let tmp2 = null;
+    if (null != reduced[arg0]) {
+      let created_at = tmp.updated_at;
+      if (created_at == null) {
+        created_at = tmp.created_at;
+      }
+      tmp2 = created_at;
+    }
+    return tmp2;
+  }
+  getRangeStartTimestamp() {
+    let extractTimestampResult = null;
+    if (null != c11) {
+      const obj = SnowflakeUtilsDefault;
+      extractTimestampResult = obj.extractTimestamp(c11);
+    }
+    return extractTimestampResult;
+  }
+  getActionsForDisplayType(arg0) {
+    let items;
+    const value = closure_14.get(arg0);
+    if (null != value) {
+      const _Array = Array;
+      items = Array.from(value.values());
+    } else {
+      items = [];
+    }
+    return items;
+  }
+  getTotalForDisplayType(item) {
+    return closure_15[item];
+  }
+  getLinkCode() {
+    return c16;
+  }
+  getLinkCodeExpiresAt() {
+    return c17;
+  }
+  getGuild(arg0) {
+    return closure_32[arg0];
+  }
+  getSelectedTab() {
+    return ACTIVITY;
+  }
+  getStartId() {
+    return c11;
+  }
+  getIsInitialized() {
+    return c19;
+  }
+  getAreLinkedUsersProcessed() {
+    return c13;
+  }
+  getUserCountry() {
+    return c22;
+  }
+  isLoading() {
+    return c20;
+  }
+  getTopUserActivities() {
+    return topUserActivities;
+  }
+  getTopGuildActivities() {
+    return topGuildActivities;
+  }
+  getTotalSpendAmount() {
+    return totalSpendAmount;
+  }
+  getTotalSpendCurrency() {
+    return totalSpendCurrency;
+  }
+  getTotalGiftValue() {
+    let currency = null;
+    let num = 0;
+    let flag = false;
+    const values = Object.values(closure_30);
+    for (const item10014 of values) {
+      if (null != item10014.price) {
+        if (null != currency) {
+          if (item10014.price.currency !== currency) {
+            obj.return();
+            return null;
+          }
+        }
+        currency = item10014.price.currency;
+        num = num + item10014.price.amount;
+        flag = true;
+      }
+      continue;
+    }
+    let tmp10 = null;
+    if (flag) {
+      tmp10 = null;
+      if (null != currency) {
+        tmp10 = { amount: num, currency };
+        const obj2 = { amount: num, currency };
+      }
+    }
+    return tmp10;
+  }
+  getSpendingLimit() {
+    return spendingLimit;
+  }
+  getMonthlyPurchases() {
+    return monthlyPurchases;
+  }
+  getPurchaseInfo(entity_id) {
+    return closure_29[entity_id];
+  }
+  getGiftInfo(entity_id) {
+    return closure_30[entity_id];
+  }
+  getAgeGroup() {
+    return ageGroup;
+  }
+  canRefetch() {
+    let tmp = null === c21;
+    if (!tmp) {
+      const obj = SnowflakeUtilsDefault;
+      tmp = obj.age(c21) > metroRequire;
+    }
+    return tmp;
+  }
+  isCurrentUserInRestrictedHours() {
+    const currentUser = UserStore.getCurrentUser();
+    let flag;
+    if (currentUser != null) {
+      const restrictedSchedule = currentUser.restrictedSchedule;
+      if (restrictedSchedule != null) {
+        flag = restrictedSchedule.isInRestrictedHours();
+      }
+    }
+    if (flag == null) {
+      flag = false;
+    }
+    return flag;
   }
 }
 const prototype = FamilyCenterStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(UserStore);
-};
-prototype["loadCache"] = function loadCache() {
-  snapshot = this.readSnapshot(FamilyCenterStore.LATEST_SNAPSHOT_VERSION);
-  if (null != snapshot) {
-    let linkedUsers = snapshot.linkedUsers;
-    if (linkedUsers === undefined) {
-      linkedUsers = [];
-    }
-    if (linkedUsers.length > 0) {
-      reduced = linkedUsers.reduce((acc, user_id) => {
-        const obj = {};
-        const merged = Object.assign(acc);
-        obj[user_id.user_id] = user_id;
-        return obj;
-      }, {});
-    } else {
-      reduced = {};
-    }
-    c13 = true;
-    const guilds = snapshot.guilds;
-    closure_32 = guilds.reduce((acc, approximate_member_count) => {
-      const obj = {};
-      const merged = Object.assign(acc);
-      const obj2 = {};
-      const merged1 = Object.assign(closure_0(dependencyMap[5]).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count));
-      let num = approximate_member_count.approximate_member_count;
-      if (num == null) {
-        num = 0;
-      }
-      obj2.approximateMemberCount = num;
-      obj[approximate_member_count.id] = obj2;
-      return obj;
-    }, closure_32);
-    const teenActivity = snapshot.teenActivity;
-    const tmp4 = freshTeenActivityWithMap();
-    closure_0 = tmp4;
-    const item = teenActivity.forEach((display_type) => {
-      value = closure_0.get(display_type.display_type);
-      if (!tmp) {
-        const result = value.set(display_type.event_id, display_type);
-      }
-    });
-    closure_14 = tmp4;
-    const teenActivityTotals = snapshot.teenActivityTotals;
-    let obj = {};
-    obj[TeenActionDisplayType.USER_ADD] = 0;
-    obj[TeenActionDisplayType.GUILD_ADD] = 0;
-    obj[TeenActionDisplayType.USER_INTERACTION] = 0;
-    obj[TeenActionDisplayType.GUILD_INTERACTION] = 0;
-    obj[TeenActionDisplayType.USER_CALLED] = 0;
-    obj[TeenActionDisplayType.TOTAL_VOICE_MINUTES] = 0;
-    obj[TeenActionDisplayType.PURCHASES] = 0;
-    obj[TeenActionDisplayType.GIFTS] = 0;
-    snapshot = teenActivityTotals.reduce((acc, item) => {
-      const tmp = _slicedToArray(item.split(":"), 2);
-      const tmp2 = (function displayTypeFromString(arg0) {
-        const values = Object.values(closure_1_9);
-        for (const item10011 of values) {
-          if (item10011.toString() === arg0) {
-            obj.return();
-            return item10011;
-          }
-        }
-      })(tmp[0]);
-      let tmp3 = acc;
-      if (undefined !== tmp2) {
-        const obj = {};
-        const merged = Object.assign(acc);
-        const _parseInt = parseInt;
-        obj[tmp2] = parseInt(tmp[1], 10);
-        tmp3 = obj;
-      }
-      return tmp3;
-    }, obj);
-  }
-};
-prototype["takeSnapshot"] = function takeSnapshot() {
-  const obj = { version: FamilyCenterStore.LATEST_SNAPSHOT_VERSION, data: null };
-  const obj2 = { linkedUsers: Object.values(reduced), teenActivityTotals: null, teenActivity: null, guilds: null };
-  const entries = Object.entries(snapshot);
-  obj2.teenActivityTotals = entries.map((item) => {
-    [tmp, tmp2] = item;
-    return "" + tmp + ":" + tmp2;
-  });
-  let items = [];
-  const item = closure_14.forEach((arr) => {
-    items = [...Array.from(arr.values())];
-    items.push.apply(items);
-  });
-  obj2.teenActivity = items;
-  obj2.guilds = Object.values(closure_32);
-  obj.data = obj2;
-  return obj;
-};
-prototype["getSelectedTeenId"] = function getSelectedTeenId() {
-  return c10;
-};
-prototype["getLinkedUsers"] = function getLinkedUsers() {
-  return reduced;
-};
-prototype["getLinkTimestamp"] = function getLinkTimestamp(arg0) {
-  let tmp2 = null;
-  if (null != reduced[arg0]) {
-    let created_at = tmp.updated_at;
-    if (created_at == null) {
-      created_at = tmp.created_at;
-    }
-    tmp2 = created_at;
-  }
-  return tmp2;
-};
-prototype["getRangeStartTimestamp"] = function getRangeStartTimestamp() {
-  let extractTimestampResult = null;
-  if (null != c11) {
-    extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(c11);
-  }
-  return extractTimestampResult;
-};
-prototype["getActionsForDisplayType"] = function getActionsForDisplayType(arg0) {
-  value = closure_14.get(arg0);
-  if (null != value) {
-    const _Array = Array;
-    let items = Array.from(value.values());
-  } else {
-    items = [];
-  }
-  return items;
-};
-prototype["getTotalForDisplayType"] = function getTotalForDisplayType(item) {
-  return snapshot[item];
-};
-prototype["getLinkCode"] = function getLinkCode() {
-  return c16;
-};
-prototype["getLinkCodeExpiresAt"] = function getLinkCodeExpiresAt() {
-  return c17;
-};
-prototype["getGuild"] = function getGuild(arg0) {
-  return closure_32[arg0];
-};
-prototype["getSelectedTab"] = function getSelectedTab() {
-  return ACTIVITY;
-};
-prototype["getStartId"] = function getStartId() {
-  return c11;
-};
-prototype["getIsInitialized"] = function getIsInitialized() {
-  return c19;
-};
-prototype["getAreLinkedUsersProcessed"] = function getAreLinkedUsersProcessed() {
-  return c13;
-};
-prototype["getUserCountry"] = function getUserCountry() {
-  return c22;
-};
-prototype["isLoading"] = function isLoading() {
-  return c20;
-};
-prototype["getTopUserActivities"] = function getTopUserActivities() {
-  return closure_23;
-};
-prototype["getTopGuildActivities"] = function getTopGuildActivities() {
-  return closure_24;
-};
-prototype["getTotalSpendAmount"] = function getTotalSpendAmount() {
-  return c25;
-};
-prototype["getTotalSpendCurrency"] = function getTotalSpendCurrency() {
-  return c26;
-};
-prototype["getTotalGiftValue"] = function getTotalGiftValue() {
-  let currency = null;
-  let num = 0;
-  let flag = false;
-  const values = Object.values(closure_30);
-  for (const item10014 of values) {
-    if (null != item10014.price) {
-      if (null != currency) {
-        if (item10014.price.currency !== currency) {
-          obj.return();
-          return null;
-        }
-      }
-      currency = item10014.price.currency;
-      num = num + item10014.price.amount;
-      flag = true;
-    }
-    continue;
-  }
-  let tmp10 = null;
-  if (flag) {
-    tmp10 = null;
-    if (null != currency) {
-      const obj2 = { amount: num, currency };
-      tmp10 = obj2;
-    }
-  }
-  return tmp10;
-};
-prototype["getSpendingLimit"] = function getSpendingLimit() {
-  return c27;
-};
-prototype["getMonthlyPurchases"] = function getMonthlyPurchases() {
-  return c28;
-};
-prototype["getPurchaseInfo"] = function getPurchaseInfo(entity_id) {
-  return closure_29[entity_id];
-};
-prototype["getGiftInfo"] = function getGiftInfo(entity_id) {
-  return closure_30[entity_id];
-};
-prototype["getAgeGroup"] = function getAgeGroup() {
-  return c31;
-};
-prototype["canRefetch"] = function canRefetch() {
-  let tmp = null === c21;
-  if (!tmp) {
-    tmp = SnowflakeUtilsDefault.age(c21) > timestampProducer;
-  }
-  return tmp;
-};
-prototype["isCurrentUserInRestrictedHours"] = function isCurrentUserInRestrictedHours() {
-  const currentUser = UserStore.getCurrentUser();
-  let flag;
-  if (currentUser != null) {
-    const restrictedSchedule = currentUser.restrictedSchedule;
-    if (restrictedSchedule != null) {
-      flag = restrictedSchedule.isInRestrictedHours();
-    }
-  }
-  if (flag == null) {
-    flag = false;
-  }
-  return flag;
-};
 FamilyCenterStore.displayName = "FamilyCenterStore";
 FamilyCenterStore.LATEST_SNAPSHOT_VERSION = 3;
-let closure_129_0;
-let obj = { CONNECTION_OPEN: handleConnectionOpen, CURRENT_USER_UPDATE: handleCurrentUserUpdate, CACHE_LOADED_LAZY: null, FAMILY_CENTER_INITIAL_LOAD: null, FAMILY_CENTER_FETCH_START: null, FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: null, FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: null, FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: null, FAMILY_CENTER_REQUEST_LINK_SUCCESS: null, FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS: null, FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS: null, FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: null, FAMILY_CENTER_HANDLE_TAB_SELECT: null, SET_LOCATION_METADATA: null, LOGOUT: null };
+let prototype1;
+let obj = { CONNECTION_OPEN: handleConnectionOpen, CURRENT_USER_UPDATE: handleCurrentUserUpdate, CACHE_LOADED_LAZY, FAMILY_CENTER_INITIAL_LOAD: handleInitialLoad, FAMILY_CENTER_FETCH_START: handleFetchStart, FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: handleLinkedUserFetch, FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: handleTeenActivityFetch, FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: handleTeenActivityMoreFetch, FAMILY_CENTER_REQUEST_LINK_SUCCESS: handleRequestLinkSuccess, FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS: handleUserLinkStatusUpdate, FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS: handleUserLinkRemove, FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: handleLinkCodeFetch, FAMILY_CENTER_HANDLE_TAB_SELECT: handleTabSelect, SET_LOCATION_METADATA: handleSetLocationMetadata, LOGOUT: reset };
 class CACHE_LOADED_LAZY {
   constructor() {
     return closure_0.loadCache();
   }
 }
-obj.CACHE_LOADED_LAZY = CACHE_LOADED_LAZY;
-obj.FAMILY_CENTER_INITIAL_LOAD = handleInitialLoad;
-obj.FAMILY_CENTER_FETCH_START = handleFetchStart;
-obj.FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS = handleLinkedUserFetch;
-obj.FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS = handleTeenActivityFetch;
-obj.FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS = handleTeenActivityMoreFetch;
-obj.FAMILY_CENTER_REQUEST_LINK_SUCCESS = handleRequestLinkSuccess;
-obj.FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS = handleUserLinkStatusUpdate;
-obj.FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS = handleUserLinkRemove;
-obj.FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS = handleLinkCodeFetch;
-obj.FAMILY_CENTER_HANDLE_TAB_SELECT = handleTabSelect;
-obj.SET_LOCATION_METADATA = handleSetLocationMetadata;
-obj.LOGOUT = reset;
-const prototype1 = new prototype(obj, tmp2, tmp, PURCHASES, pathname, _location2, handleConnectionOpen, CACHE_LOADED_LAZY, handleInitialLoad, handleFetchStart, handleLinkedUserFetch, handleTeenActivityFetch);
-closure_129_0 = prototype1;
-const size = fn(2);
+prototype1 = new prototype(obj, tmp2, tmp, PURCHASES, pathname, _location2, handleConnectionOpen, CACHE_LOADED_LAZY, handleInitialLoad, handleFetchStart, handleLinkedUserFetch, handleTeenActivityFetch);
 let result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterStore.tsx");
 
 export default prototype1;

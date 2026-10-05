@@ -1,27 +1,49 @@
 // === Module 16187: ChannelListFastList ===
 
 // Module 16187 (ChannelListFastList)
-import c from "c" /* 576 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
 import FastListDefault from "FastList" /* 6569 */;
-import useForwardedRefDefault from "useForwardedRef" /* 16188 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import reactDefault from "react" /* 16188 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/channel_list_v2/native/ChannelListFastList.tsx");
-
-export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
-  const cResult = c.c(26);
+const jsx = Fragment.jsx;
+const memoResult = react.memo(react.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+  let endReachedThreshold;
+  let footerSize;
+  let getItemSize;
+  let getRecyclerKey;
+  let getSectionFooterSize;
+  let getSectionHeaderSize;
+  let headerSize;
+  let initialScrollItem;
+  let initialScrollSection;
+  let insetEnd;
+  let listViewportHeight;
+  let onEndReached;
+  let onScroll;
+  let onScrollWorklet;
+  let renderAccessory;
+  let renderHeader;
+  let renderItem;
+  let renderSectionFooter;
+  let renderSectionHeader;
+  let scrollIndicatorInsetBottom;
+  let sections;
+  let tmp5;
+  let waitFor;
+  const obj = react2;
+  const cResult = obj.c(26);
   ({ endReachedThreshold, footerSize, getItemSize, getRecyclerKey, getSectionFooterSize, getSectionHeaderSize, headerSize, initialScrollItem, initialScrollSection, insetEnd, listViewportHeight, onEndReached, onScroll, onScrollWorklet, renderAccessory, renderHeader, renderItem, renderSectionFooter, renderSectionHeader, scrollIndicatorInsetBottom, sections, waitFor } = arg0);
-  const tmp4 = _slicedToArray(useForwardedRefDefault(arg1), 2)[1];
+  const tmp4 = _slicedToArray(reactDefault(arg1), 2)[1];
   if (cResult[0] !== scrollIndicatorInsetBottom) {
     const obj2 = { bottom: scrollIndicatorInsetBottom };
     cResult[0] = scrollIndicatorInsetBottom;
     cResult[1] = obj2;
-    let tmp5 = obj2;
+    tmp5 = obj2;
   } else {
     tmp5 = cResult[1];
   }
@@ -47,8 +69,9 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
                                         if (cResult[21] === tmp5) {
                                           if (cResult[22] === sections) {
                                             if (cResult[23] === tmp4) {
+                                              let tmp6;
                                               if (cResult[24] === waitFor) {
-                                                let tmp6 = cResult[25];
+                                                tmp6 = cResult[25];
                                               }
                                               return tmp6;
                                             }
@@ -100,9 +123,34 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
   cResult[25] = tmp7;
   tmp6 = tmp7;
 }) : ((scrollIndicatorInsetBottom, arg1) => {
+  let endReachedThreshold;
+  let footerSize;
+  let getItemSize;
+  let getRecyclerKey;
+  let getSectionFooterSize;
+  let getSectionHeaderSize;
+  let headerSize;
+  let initialScrollItem;
+  let initialScrollSection;
+  let insetEnd;
+  let listViewportHeight;
+  let onEndReached;
+  let onScroll;
+  let onScrollWorklet;
+  let renderAccessory;
+  let renderHeader;
+  let renderItem;
+  let renderSectionFooter;
+  let renderSectionHeader;
+  let sections;
+  let waitFor;
   scrollIndicatorInsetBottom = scrollIndicatorInsetBottom.scrollIndicatorInsetBottom;
   ({ endReachedThreshold, footerSize, getItemSize, getRecyclerKey, getSectionFooterSize, getSectionHeaderSize, headerSize, initialScrollItem, initialScrollSection, insetEnd, listViewportHeight, onEndReached, onScroll, onScrollWorklet, renderAccessory, renderHeader, renderItem, renderSectionFooter, renderSectionHeader, sections, waitFor } = scrollIndicatorInsetBottom);
   const items = [scrollIndicatorInsetBottom];
-  const scrollIndicatorInsets = noop.useMemo(() => ({ bottom: scrollIndicatorInsetBottom }), items);
-  return jsx(FastListDefault, { insetEnd, scrollIndicatorInsets, waitFor, ref: _slicedToArray(useForwardedRefDefault(arg1), 2)[1], chunkBase, stickyHeaderFooter: true, renderHeader, headerSize, footerSize, endReachedThreshold, onEndReached, renderAccessory, disableContentWrappers: true, sections, stickySectionsVariant: "disabled", renderSection, sectionSize, renderItem, itemSize, renderSectionFooter, sectionFooterSize, optimizeListItemRender: true, getRecyclerKey, initialScrollSection, initialScrollItem, initialScrollOrientation: "center", onScroll, onScrollWorklet });
+  const ref = _slicedToArray(reactDefault(arg1), 2)[1];
+  const scrollIndicatorInsets = react.useMemo(() => ({ bottom: scrollIndicatorInsetBottom }), items);
+  return jsx(FastListDefault, { insetEnd, scrollIndicatorInsets, waitFor, ref, chunkBase, stickyHeaderFooter: true, renderHeader, headerSize, footerSize, endReachedThreshold, onEndReached, renderAccessory, disableContentWrappers: true, sections, stickySectionsVariant: "disabled", renderSection, sectionSize, renderItem, itemSize, renderSectionFooter, sectionFooterSize, optimizeListItemRender: true, getRecyclerKey, initialScrollSection, initialScrollItem, initialScrollOrientation: "center", onScroll, onScrollWorklet });
 })));
+const result = size.fileFinishedImporting("modules/channel_list_v2/native/ChannelListFastList.tsx");
+
+export default memoResult;

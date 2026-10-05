@@ -1,6 +1,6 @@
-// === Module 4787: Client ===
+// === Module 4787: flow/Client ===
 
-// Module 4787 (Client)
+// Module 4787 (flow/Client)
 import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
 import size from "module_2" /* 2 */;
 

@@ -1,10 +1,10 @@
-// === Module 18119: AppCrashedFatalReport ===
+// === Module 18119: react-native ===
 
-// Module 18119 (AppCrashedFatalReport)
-import _mod17 from "module_17" /* 17 */;
+// Module 18119 (react-native)
+import react_native from "react-native" /* 17 */;
 import size from "module_2" /* 2 */;
 
-const CrashReportingManager = _mod17.NativeModules.CrashReportingManager;
+const CrashReportingManager = react_native.NativeModules.CrashReportingManager;
 const result = size.fileFinishedImporting("modules/debug/native/AppCrashedFatalReport.android.tsx");
 
 export const init = function init() {

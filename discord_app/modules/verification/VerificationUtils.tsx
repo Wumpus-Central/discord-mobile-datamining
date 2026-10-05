@@ -2,10 +2,14 @@
 
 // Module 6081 (VerificationUtils)
 import _modDef12 from "module_12" /* 12 */;
-import util from "util" /* 1126 */;
+import intl6 from "intl" /* 1126 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
+let EMAIL;
+let PHONE;
+let REVERIFY_EMAIL;
+let REVERIFY_PHONE;
 const UserRequiredActions = Constants.UserRequiredActions;
 const VerificationTypes = Constants.VerificationTypes;
 ({ EMAIL, PHONE, REVERIFY_EMAIL, REVERIFY_PHONE } = VerificationTypes);
@@ -19,14 +23,11 @@ const items6 = [EMAIL, REVERIFY_PHONE];
 const items7 = [REVERIFY_EMAIL, REVERIFY_PHONE];
 const items8 = [VerificationTypes.CAPTCHA];
 let closure_5 = { [UserRequiredActions.REQUIRE_VERIFIED_EMAIL]: items, [UserRequiredActions.REQUIRE_VERIFIED_PHONE]: items1, [UserRequiredActions.REQUIRE_REVERIFIED_EMAIL]: items2, [UserRequiredActions.REQUIRE_REVERIFIED_PHONE]: items3, [UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE]: items4, [UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE]: items5, [UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE]: items6, [UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE]: items7, [UserRequiredActions.REQUIRE_CAPTCHA]: items8, [UserRequiredActions.AGREEMENTS]: [], [UserRequiredActions.REQUIRE_SAFETY_FLOWS]: [] };
-let result = size.fileFinishedImporting("modules/verification/VerificationUtils.tsx");
-
-export default {
+let obj = {
   isPhoneReverification(currentUser, action) {
     let tmp = undefined !== currentUser && currentUser.isPhoneVerified();
     if (tmp) {
       tmp = action === UserRequiredActions.REQUIRE_REVERIFIED_PHONE || action === UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || action === UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE;
-      const tmp4 = action === UserRequiredActions.REQUIRE_REVERIFIED_PHONE || action === UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || action === UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE;
     }
     return tmp;
   },
@@ -48,23 +49,27 @@ export default {
   },
   getButtonTitle(item) {
     if (VerificationTypes.EMAIL === item) {
-      const intl5 = util.intl;
-      return intl5.string(util.t["1MPz27"]);
+      const intl5 = intl6.intl;
+      return intl5.string(intl6.t["1MPz27"]);
     } else if (VerificationTypes.PHONE === item) {
-      const intl4 = util.intl;
-      return intl4.string(util.t.mjJeco);
+      const intl4 = intl6.intl;
+      return intl4.string(intl6.t.mjJeco);
     } else if (VerificationTypes.REVERIFY_EMAIL === item) {
-      const intl3 = util.intl;
-      return intl3.string(util.t.nmdPFX);
+      const intl3 = intl6.intl;
+      return intl3.string(intl6.t.nmdPFX);
     } else if (VerificationTypes.REVERIFY_PHONE === item) {
-      const intl2 = util.intl;
-      return intl2.string(util.t.of2125);
+      const intl2 = intl6.intl;
+      return intl2.string(intl6.t.of2125);
     } else {
-      const intl = util.intl;
-      return intl.string(util.t["oF6+Ww"]);
+      const intl = intl6.intl;
+      return intl.string(intl6.t["oF6+Ww"]);
     }
   },
   areVerificationTypesEqual(arg0, arg1) {
-    return _modDef12.isEqual(arg0, arg1);
+    const obj = _modDef12;
+    return obj.isEqual(arg0, arg1);
   }
 };
+let result = size.fileFinishedImporting("modules/verification/VerificationUtils.tsx");
+
+export default obj;

@@ -2,15 +2,17 @@
 
 // Module 13545 (SharedSpacesWarningStore)
 import module_570 from "module_570" /* 570 */;
-import "module_4750";
-import module_4750 from "module_4750" /* 4750 */;
+import combine_mod from "combine" /* 4750 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-let obj = { name: "shared-spaces-warning-storage", storage: null };
-obj.storage = module_4750.createJSONStorage(() => require("LocalStorageWrapper"));
-let obj2 = module_570.create(module_4750.persist(() => ({ channelDismissTimestamps: {}, userDismissTimestamps: {}, globalDismissTimestamp: null, queuedWarning: false }), obj));
+const create = module_570.create;
+let combine = combine_mod;
+let obj = { name: "shared-spaces-warning-storage", storage: combine.createJSONStorage(() => require("LocalStorageWrapper")) };
+const persist = combine.persist;
+combine = combine_mod;
+let obj2 = create(persist(() => ({ channelDismissTimestamps: {}, userDismissTimestamps: {}, globalDismissTimestamp: null, queuedWarning: false }), obj));
 const result = size.fileFinishedImporting("modules/shared_space_warnings/SharedSpacesWarningStore.tsx");
 
 export const useSharedSpacesWarningStore = obj2;
@@ -33,39 +35,36 @@ export const dequeueBlockWarning = function dequeueBlockWarning() {
   obj2.setState({ queuedWarning: false });
 };
 export const setDismissalTimeForChannel = function setDismissalTimeForChannel(arg0) {
-  closure_0 = arg0;
+  let closure_0 = arg0;
   obj2.setState((channelDismissTimestamps) => {
-    const obj = { channelDismissTimestamps: null };
+    const obj = { channelDismissTimestamps: obj2 };
     obj2 = {};
     const merged = Object.assign(channelDismissTimestamps.channelDismissTimestamps);
     obj2[closure_0] = Date.now();
-    obj.channelDismissTimestamps = obj2;
     return obj;
   });
 };
 export const setDismissalTimeForUser = function setDismissalTimeForUser(blockedUserId) {
-  closure_0 = blockedUserId;
+  let closure_0 = blockedUserId;
   obj2.setState((userDismissTimestamps) => {
-    const obj = { userDismissTimestamps: null, globalDismissTimestamp: null };
+    const obj = { userDismissTimestamps: obj2, globalDismissTimestamp: Date.now() };
     obj2 = {};
     const merged = Object.assign(userDismissTimestamps.userDismissTimestamps);
     obj2[closure_0] = Date.now();
-    obj.userDismissTimestamps = obj2;
-    obj.globalDismissTimestamp = Date.now();
     return obj;
   });
 };
 export const setDismissalTimeForUsers = function setDismissalTimeForUsers(arg0) {
-  closure_0 = Array.from(arg0).reduce((acc, item) => {
+  const arr = Array.from(arg0);
+  let closure_0 = arr.reduce((acc, item) => {
     acc[item] = Date.now();
     return acc;
   }, {});
   obj2.setState((userDismissTimestamps) => {
-    const obj = { userDismissTimestamps: null, globalDismissTimestamp: null };
+    const obj = { userDismissTimestamps: obj2, globalDismissTimestamp: Date.now() };
+    obj2 = {};
     const merged = Object.assign(userDismissTimestamps.userDismissTimestamps);
     const merged1 = Object.assign(closure_0);
-    obj.userDismissTimestamps = {};
-    obj.globalDismissTimestamp = Date.now();
     return obj;
   });
 };

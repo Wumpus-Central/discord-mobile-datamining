@@ -5,16 +5,15 @@ import Host2 from "Host" /* 2087 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Stats.tsx");
-const prototype = function Stats() {
-  return Object.create(new.target.prototype);
-}.prototype;
-prototype["malformedValueCount"] = function malformedValueCount() {
-  const Host = Host2.Host;
-  return Host.malformedValueCount();
-};
-prototype["malformedEntryCount"] = function malformedEntryCount() {
-  const Host = Host2.Host;
-  return Host.malformedEntryCount();
-};
+class Stats {
+  static malformedValueCount() {
+    const Host = Host2.Host;
+    return Host.malformedValueCount();
+  }
+  static malformedEntryCount() {
+    const Host = Host2.Host;
+    return Host.malformedEntryCount();
+  }
+}
 
-export const Stats = prototype;
+export { Stats };

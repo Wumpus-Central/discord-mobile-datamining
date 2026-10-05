@@ -4,10 +4,10 @@
 import ApexExperiment from "ApexExperiment" /* 1440 */;
 import size from "module_2" /* 2 */;
 
-const obj = { name: "2026-08-game-community-add-server-entry", kind: "user", defaultConfig: { enabled: false, cardAction: "join" }, variations: null };
-const obj2 = { 1: null, 2: { enabled: true, cardAction: "join" } };
+let obj2;
+const obj = { name: "2026-08-game-community-add-server-entry", kind: "user", defaultConfig: { enabled: false, cardAction: "join" }, variations: obj2 };
+obj2 = { 1: null, 2: { enabled: true, cardAction: "join" } };
 obj2[2] = { enabled: true, cardAction: "preview" };
-obj.variations = obj2;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/game_community_upsell/native/GameCommunityUpsellExperiment.tsx");
 

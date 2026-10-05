@@ -1,36 +1,53 @@
 // === Module 6706: UserProfileCard ===
 
 // Module 6706 (UserProfileCard)
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import Pressables from "Pressables" /* 5909 */;
 import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6708 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import Constants from "Constants" /* 6707 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+let CARD_ROWS_COLUMN_GAP;
+let CARD_ROWS_ICON_SIZE;
+let c9;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let obj3;
 let closure_2 = ["title", "titleLeadingIcon", "titleIcon", "titleStyle", "trailingAction", "children", "style"];
-const View = fn(17).View;
-const Constants = fn(6707);
+const View = react_native.View;
 ({ CARD_ROWS_COLUMN_GAP, CARD_ROWS_ICON_SIZE, CARD_ROWS_ICON_SIZE_VARIANT: metroRequire } = Constants);
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { title: { marginBottom: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, titleContent: null, text: null, row: null, rowLabel: null, rowLabelText: null, rowSublabel: null };
-let obj3 = { marginBottom: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-obj2.titleContent = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-obj2.text = { flexShrink: 1 };
-obj2.row = { flexDirection: "column", paddingVertical: 20 };
-obj2.rowLabel = { flexDirection: "row", alignItems: "center", columnGap: CARD_ROWS_COLUMN_GAP };
-obj2.rowLabelText = { flex: 1, lineHeight: CARD_ROWS_ICON_SIZE };
-obj2.rowSublabel = { marginHorizontal: CARD_ROWS_ICON_SIZE + CARD_ROWS_COLUMN_GAP };
-let closure_10 = createStyles.createStyles(obj2);
-fn(558);
-let obj4 = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(28);
+({ jsx: metroImportDefault, jsxs: metroImportAll, Fragment: c9 } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { title: obj2, titleContent: obj3, text: { flexShrink: 1 }, row: { flexDirection: "column", paddingVertical: 20 }, rowLabel: { flexDirection: "row", alignItems: "center", columnGap: CARD_ROWS_COLUMN_GAP }, rowLabelText: { flex: 1, lineHeight: CARD_ROWS_ICON_SIZE }, rowSublabel: { marginHorizontal: CARD_ROWS_ICON_SIZE + CARD_ROWS_COLUMN_GAP } };
+obj2 = { marginBottom: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+createStyles = createStyles.createStyles;
+obj3 = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+let closure_10 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let arrow;
+  let disabled;
+  let hint;
+  let icon;
+  let isDestructive;
+  let items;
+  let items1;
+  let label;
+  let labelColor;
+  let onPress;
+  let sublabel;
+  const obj = react2;
+  const cResult = obj.c(28);
   ({ label, sublabel, icon, hint, disabled, isDestructive, onPress, labelColor, arrow } = arg0);
   const tmp5 = closure_10();
   let str;
@@ -42,29 +59,30 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     str2 = "text-feedback-critical";
   }
   if (cResult[0] === icon) {
+    let tmp6;
     if (cResult[1] === str) {
-      let tmp6 = cResult[2];
+      tmp6 = cResult[2];
     }
     if (labelColor == null) {
       labelColor = str2;
     }
     if (cResult[3] === label) {
       if (cResult[4] === tmp5.rowLabelText) {
+        let tmp9;
         if (cResult[5] === labelColor) {
-          let tmp9 = cResult[6];
+          tmp9 = cResult[6];
         }
         if (cResult[7] === hint) {
+          let tmp12;
+          let tmp16;
           if (cResult[8] === str) {
-            let tmp12 = cResult[9];
+            tmp12 = cResult[9];
           }
-          if (cResult[10] !== tmp4) {
-            let tmp17 = tmp4;
-            if (tmp4) {
-              tmp17 = React5(ChevronSmallRightIcon.ChevronSmallRightIcon, { size: "sm" });
-            }
-            cResult[10] = tmp4;
+          if (cResult[10] !== (undefined !== arrow && arrow)) {
+            const tmp17 = tmp4 && metroImportDefault(ChevronSmallRightIcon.ChevronSmallRightIcon, { size: "sm" });
+            cResult[10] = undefined !== arrow && arrow;
             cResult[11] = tmp17;
-            let tmp16 = tmp17;
+            tmp16 = tmp17;
           } else {
             tmp16 = cResult[11];
           }
@@ -72,20 +90,23 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             if (cResult[13] === tmp6) {
               if (cResult[14] === tmp9) {
                 if (cResult[15] === tmp12) {
+                  let tmp19;
                   if (cResult[16] === tmp16) {
-                    let tmp19 = cResult[17];
+                    tmp19 = cResult[17];
                   }
                   if (cResult[18] === tmp5.rowSublabel) {
+                    let tmp23;
                     if (cResult[19] === sublabel) {
-                      let tmp23 = cResult[20];
+                      tmp23 = cResult[20];
                     }
                     if (cResult[21] === disabled) {
                       if (cResult[22] === label) {
                         if (cResult[23] === onPress) {
                           if (cResult[24] === tmp5.row) {
                             if (cResult[25] === tmp19) {
+                              let tmp27;
                               if (cResult[26] === tmp23) {
-                                let tmp27 = cResult[27];
+                                tmp27 = cResult[27];
                               }
                               return tmp27;
                             }
@@ -93,10 +114,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                         }
                       }
                     }
-                    const obj2 = { style: tmp5.row, accessibilityRole: "button", accessibilityLabel: label, disabled, onPress, children: null };
-                    const items = [tmp19, tmp23];
-                    obj2.children = items;
-                    const tmp29 = closure_1_8(Pressables.PressableOpacity, obj2);
+                    const obj2 = { style: tmp5.row, accessibilityRole: "button", accessibilityLabel: label, disabled, onPress, children: items };
+                    items = [tmp19, tmp23];
+                    const tmp29 = metroImportAll(Pressables.PressableOpacity, obj2);
                     cResult[21] = disabled;
                     cResult[22] = label;
                     cResult[23] = onPress;
@@ -109,7 +129,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                   let tmp24 = null != sublabel;
                   if (tmp24) {
                     const obj3 = { style: tmp5.rowSublabel, children: sublabel };
-                    tmp24 = React5(View, obj3);
+                    tmp24 = metroImportDefault(View, obj3);
                   }
                   cResult[18] = tmp5.rowSublabel;
                   cResult[19] = sublabel;
@@ -119,10 +139,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               }
             }
           }
-          const obj4 = { style: tmp5.rowLabel, children: null };
-          const items1 = [tmp6, tmp9, tmp12, tmp16];
-          obj4.children = items1;
-          const tmp22 = closure_1_8(View, obj4);
+          const obj4 = { style: tmp5.rowLabel, children: items1 };
+          items1 = [tmp6, tmp9, tmp12, tmp16];
+          const tmp22 = metroImportAll(View, obj4);
           cResult[12] = tmp5.rowLabel;
           cResult[13] = tmp6;
           cResult[14] = tmp9;
@@ -133,8 +152,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
         let tmp13 = null != hint;
         if (tmp13) {
-          const obj5 = { size, color: str };
-          tmp13 = React5(hint, obj5);
+          const obj5 = { size: metroRequire, color: str };
+          tmp13 = metroImportDefault(hint, obj5);
         }
         cResult[7] = hint;
         cResult[8] = str;
@@ -143,20 +162,32 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     const obj6 = { variant: "text-md/semibold", color: labelColor, style: tmp5.rowLabelText, children: label };
-    const tmp11 = React5(Text_Text.Text, obj6);
+    const tmp11 = metroImportDefault(Text_Text.Text, obj6);
     cResult[3] = label;
     cResult[4] = tmp5.rowLabelText;
     cResult[5] = labelColor;
     cResult[6] = tmp11;
     tmp9 = tmp11;
   }
-  const tmp7 = React5(icon, { size, color: str });
+  const obj7 = { size: metroRequire, color: str };
+  const tmp7 = metroImportDefault(icon, obj7);
   cResult[0] = icon;
   cResult[1] = str;
   cResult[2] = tmp7;
   tmp6 = tmp7;
-  const obj7 = { size, color: str };
 }) : ((arg0) => {
+  let arrow;
+  let disabled;
+  let hint;
+  let icon;
+  let isDestructive;
+  let items;
+  let items1;
+  let label;
+  let labelColor;
+  let onPress;
+  let sublabel;
+  let tmp6Result3;
   ({ label, sublabel, hint, isDestructive, labelColor, arrow } = arg0);
   ({ icon, disabled, onPress } = arg0);
   if (tmp6Result3 === undefined) {
@@ -171,76 +202,108 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (isDestructive) {
     str2 = "text-feedback-critical";
   }
-  const obj = { style: tmp.row, accessibilityRole: "button", accessibilityLabel: label, disabled, onPress, children: null };
-  const obj2 = { style: tmp.rowLabel, children: null };
-  const items = [React5(icon, { size, color: str }), , , ];
+  const obj = { style: tmp.row, accessibilityRole: "button", accessibilityLabel: label, disabled, onPress, children: items1 };
+  const obj2 = { style: tmp.rowLabel, children: items };
+  const obj3 = { size: metroRequire, color: str };
+  const PressableOpacity = Pressables.PressableOpacity;
+  items = [metroImportDefault(icon, obj3), , , ];
+  const Text = Text_Text.Text;
   if (labelColor == null) {
     labelColor = str2;
   }
-  items[1] = React5(Text_Text.Text, { variant: "text-md/semibold", color: labelColor, style: tmp.rowLabelText, children: label });
+  const obj4 = { variant: "text-md/semibold", color: labelColor, style: tmp.rowLabelText, children: label };
+  items[1] = metroImportDefault(Text, obj4);
   let tmp6Result = null != hint;
   if (tmp6Result) {
-    const obj5 = { size, color: str };
-    tmp6Result = React5(hint, obj5);
+    const obj5 = { size: metroRequire, color: str };
+    tmp6Result = metroImportDefault(hint, obj5);
   }
   items[2] = tmp6Result;
   if (tmp6Result3) {
-    tmp6Result3 = React5(ChevronSmallRightIcon.ChevronSmallRightIcon, { size: "sm" });
+    tmp6Result3 = metroImportDefault(ChevronSmallRightIcon.ChevronSmallRightIcon, { size: "sm" });
   }
   items[3] = tmp6Result3;
-  obj2.children = items;
-  const items1 = [closure_1_8(View, obj2), ];
+  items1 = [metroImportAll(View, obj2), ];
   let tmp6Result4 = null != sublabel;
   if (tmp6Result4) {
     const obj6 = { style: tmp.rowSublabel, children: sublabel };
-    tmp6Result4 = React5(View, obj6);
+    tmp6Result4 = metroImportDefault(View, obj6);
   }
   items1[1] = tmp6Result4;
-  obj.children = items1;
-  return closure_1_8(Pressables.PressableOpacity, obj);
+  return metroImportAll(PressableOpacity, obj);
 });
-ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
-  const cResult = c.c(5);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+  let tmp2;
+  let tmp7;
+  let obj = react2;
+  const cResult = obj.c(5);
   children = children.children;
   if (cResult[0] !== children) {
+    let tmp4;
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
       const fn = function o(children, arg1) {
-        return closure_1_7(React.Fragment, { children }, arg1);
+        const obj = { children };
+        return closure_1_7(React.Fragment, obj, arg1);
       };
       cResult[2] = fn;
-      let tmp4 = fn;
+      tmp4 = fn;
     } else {
       tmp4 = cResult[2];
     }
-    const Children = noop.Children;
+    const Children = react.Children;
     const mapped = Children.map(children, tmp4);
     cResult[0] = children;
     cResult[1] = mapped;
+    tmp2 = mapped;
   } else {
-    if (cResult[3] !== cResult[1]) {
-      const obj2 = { children: tmp2 };
-      const tmp11 = React5(options, obj2);
-      cResult[3] = tmp2;
-      cResult[4] = tmp11;
-      let tmp8 = tmp11;
-    } else {
-      tmp8 = cResult[4];
-    }
-    return tmp8;
+    tmp2 = cResult[1];
   }
+  if (cResult[3] !== tmp2) {
+    const obj2 = { children: tmp2 };
+    const tmp10 = metroImportDefault(React4, obj2);
+    cResult[3] = tmp2;
+    cResult[4] = tmp10;
+    tmp7 = tmp10;
+  } else {
+    tmp7 = cResult[4];
+  }
+  return tmp7;
 }) : ((children) => {
-  const obj = { children: null };
-  const Children = noop.Children;
-  obj.children = Children.map(children.children, (children, arg1) => closure_1_7(React.Fragment, { children }, arg1));
-  return React5(options, obj);
+  let Children;
+  let obj = {
+    children: Children.map(children.children, (children, arg1) => {
+      const obj = { children };
+      return closure_1_7(React.Fragment, obj, arg1);
+    })
+  };
+  Children = react.Children;
+  return metroImportDefault(React4, obj);
 });
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileCard.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(21);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let children;
+  let items;
+  let items1;
+  let items2;
+  let items3;
+  let style;
+  let title;
+  let titleIcon;
+  let titleLeadingIcon;
+  let titleStyle;
+  let tmp10;
+  let tmp11;
+  let tmp4;
+  let tmp5;
+  let tmp6;
+  let tmp7;
+  let tmp8;
+  let tmp9;
+  let trailingAction;
+  const obj = react2;
+  const cResult = obj.c(21);
   if (cResult[0] !== arg0) {
     ({ title, titleLeadingIcon, titleIcon, titleStyle, trailingAction, children, style } = arg0);
     const tmp14 = _objectWithoutProperties(arg0, closure_2);
@@ -253,14 +316,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[6] = titleLeadingIcon;
     cResult[7] = titleStyle;
     cResult[8] = trailingAction;
-    let tmp11 = trailingAction;
-    let tmp10 = titleStyle;
-    let tmp9 = titleLeadingIcon;
-    let tmp8 = titleIcon;
-    let tmp7 = title;
-    let tmp6 = style;
-    let tmp5 = tmp14;
-    let tmp4 = children;
+    tmp11 = trailingAction;
+    tmp10 = titleStyle;
+    tmp9 = titleLeadingIcon;
+    tmp8 = titleIcon;
+    tmp7 = title;
+    tmp6 = style;
+    tmp5 = tmp14;
+    tmp4 = children;
   } else {
     tmp4 = cResult[1];
     tmp5 = cResult[2];
@@ -277,24 +340,25 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       if (cResult[11] === tmp8) {
         if (cResult[12] === tmp9) {
           if (cResult[13] === tmp10) {
+            let tmp16;
             if (cResult[14] === tmp11) {
-              let tmp16 = cResult[15];
+              tmp16 = cResult[15];
             }
             if (cResult[16] === tmp4) {
               if (cResult[17] === tmp5) {
                 if (cResult[18] === tmp6) {
+                  let tmp22;
                   if (cResult[19] === tmp16) {
-                    let tmp22 = cResult[20];
+                    tmp22 = cResult[20];
                   }
                   return tmp22;
                 }
               }
             }
-            const obj2 = { style: tmp6 };
+            const obj2 = { style: tmp6, children: items };
             const merged = Object.assign(tmp5);
-            const items = [tmp16, tmp4];
-            obj2.children = items;
-            const tmp28 = closure_1_8(View, obj2);
+            items = [tmp16, tmp4];
+            const tmp28 = metroImportAll(View, obj2);
             cResult[16] = tmp4;
             cResult[17] = tmp5;
             cResult[18] = tmp6;
@@ -308,22 +372,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   let tmp18Result2 = null != tmp7 || null != tmp11;
   if (tmp18Result2) {
-    const obj3 = { style: null, children: null };
-    const items1 = [tmp15.title, tmp10];
-    obj3.style = items1;
+    const obj3 = { style: items1, children: items3 };
+    items1 = [tmp15.title, tmp10];
     let tmp18Result = null != tmp7;
     if (tmp18Result) {
-      const obj4 = { style: tmp15.titleContent, children: null };
-      const items2 = [tmp9, , ];
+      const obj4 = { style: tmp15.titleContent, children: items2 };
+      items2 = [tmp9, , ];
       const obj5 = { style: tmp15.text, accessibilityRole: "header", variant: "text-sm/medium", color: "text-strong", lineClamp: 1, children: tmp7 };
-      items2[1] = React5(Text_Text.Text, obj5);
+      items2[1] = metroImportDefault(Text_Text.Text, obj5);
       items2[2] = tmp8;
-      obj4.children = items2;
-      tmp18Result = closure_1_8(View, obj4);
+      tmp18Result = metroImportAll(View, obj4);
     }
-    const items3 = [tmp18Result, tmp11];
-    obj3.children = items3;
-    tmp18Result2 = closure_1_8(View, obj3);
+    items3 = [tmp18Result, tmp11];
+    tmp18Result2 = metroImportAll(View, obj3);
   }
   cResult[9] = tmp15;
   cResult[10] = tmp7;
@@ -334,34 +395,44 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[15] = tmp18Result2;
   tmp16 = tmp18Result2;
 }) : ((arg0) => {
+  let children;
+  let items;
+  let items1;
+  let items2;
+  let items3;
+  let style;
+  let title;
+  let titleIcon;
+  let titleLeadingIcon;
+  let titleStyle;
+  let trailingAction;
   ({ title, trailingAction } = arg0);
   ({ titleLeadingIcon, titleIcon, titleStyle, children, style } = arg0);
   const merged = Object.assign(arg0, Object.assign({ title: 0, titleLeadingIcon: 0, titleIcon: 0, titleStyle: 0, trailingAction: 0, children: 0, style: 0 }));
   const tmp2 = closure_10();
-  const obj = { style };
+  const obj = { style, children: items3 };
   const merged1 = Object.assign(merged);
   let tmp3Result2 = null != title || null != trailingAction;
   if (tmp3Result2) {
-    const obj2 = { style: null, children: null };
-    const items = [tmp2.title, titleStyle];
-    obj2.style = items;
+    const obj2 = { style: items, children: items2 };
+    items = [tmp2.title, titleStyle];
     let tmp3Result = null != title;
     if (tmp3Result) {
-      const obj3 = { style: tmp2.titleContent, children: null };
-      const items1 = [titleLeadingIcon, , ];
+      const obj3 = { style: tmp2.titleContent, children: items1 };
+      items1 = [titleLeadingIcon, , ];
       const obj4 = { style: tmp2.text, accessibilityRole: "header", variant: "text-sm/medium", color: "text-strong", lineClamp: 1, children: title };
-      items1[1] = React5(Text_Text.Text, obj4);
+      items1[1] = metroImportDefault(Text_Text.Text, obj4);
       items1[2] = titleIcon;
-      obj3.children = items1;
-      tmp3Result = closure_1_8(View, obj3);
+      tmp3Result = metroImportAll(View, obj3);
     }
-    const items2 = [tmp3Result, trailingAction];
-    obj2.children = items2;
-    tmp3Result2 = closure_1_8(View, obj2);
+    items2 = [tmp3Result, trailingAction];
+    tmp3Result2 = metroImportAll(View, obj2);
   }
-  const items3 = [tmp3Result2, children];
-  obj.children = items3;
-  return closure_1_8(View, obj);
+  items3 = [tmp3Result2, children];
+  return metroImportAll(View, obj);
 });
-export const UserProfileFormRow = tmp4;
-export const UserProfileCardRows = tmp5;
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileCard.tsx");
+
+export default tmp7;
+export const UserProfileFormRow = tmp5;
+export const UserProfileCardRows = tmp6;

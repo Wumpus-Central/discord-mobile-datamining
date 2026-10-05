@@ -7,12 +7,12 @@ import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/SystemResponsiveness.tsx");
 class SystemResponsiveness {
-  constructor(arg0) {
-    obj = Object.create(new.target.prototype);
-    closure_0 = obj;
+  constructor(connection) {
+    const obj = Object.create(new.target.prototype);
     obj.sampleStats = function sampleStats(rtp) {
       if (null != rtp) {
-        const item = _modDef12.forEach(rtp.rtp.outbound, (type) => {
+        const arr = _modDef12;
+        const item = arr.forEach(rtp.rtp.outbound, (type) => {
           if ("audio" === type.type) {
             let prop = type.pttQueueLatencyMicrosSamples;
             if (prop == null) {
@@ -28,25 +28,25 @@ class SystemResponsiveness {
         });
       }
     };
-    obj.connection = global;
-    histogram = new closure_0(closure_2[0]).Histogram();
+    obj.connection = connection;
+    const histogram = new obj(7233).Histogram();
     obj.pttQueueLatencyHistogram = histogram;
     return obj;
   }
+  start() {
+    const connection = this.connection;
+    connection.on(BaseConnectionEvent.BaseConnectionEvent.Stats, this.sampleStats);
+  }
+  stop() {
+    const connection = this.connection;
+    connection.off(BaseConnectionEvent.BaseConnectionEvent.Stats, this.sampleStats);
+  }
+  getPttQueueLatencyStats() {
+    const pttQueueLatencyHistogram = this.pttQueueLatencyHistogram;
+    const report = pttQueueLatencyHistogram.getReport([50, 95]);
+    return { ptt_queue_latency_max: report.max, ptt_queue_latency_mean: report.mean, ptt_queue_latency_p50: report.percentiles[50], ptt_queue_latency_p95: report.percentiles[95], ptt_queue_latency_samples: report.samples };
+  }
 }
 const prototype = SystemResponsiveness.prototype;
-prototype["start"] = function start() {
-  const connection = this.connection;
-  connection.on(BaseConnectionEvent.BaseConnectionEvent.Stats, this.sampleStats);
-};
-prototype["stop"] = function stop() {
-  const connection = this.connection;
-  connection.off(BaseConnectionEvent.BaseConnectionEvent.Stats, this.sampleStats);
-};
-prototype["getPttQueueLatencyStats"] = function getPttQueueLatencyStats() {
-  const pttQueueLatencyHistogram = this.pttQueueLatencyHistogram;
-  const report = pttQueueLatencyHistogram.getReport([50, 95]);
-  return { ptt_queue_latency_max: report.max, ptt_queue_latency_mean: report.mean, ptt_queue_latency_p50: report.percentiles[50], ptt_queue_latency_p95: report.percentiles[95], ptt_queue_latency_samples: report.samples };
-};
 
 export default SystemResponsiveness;

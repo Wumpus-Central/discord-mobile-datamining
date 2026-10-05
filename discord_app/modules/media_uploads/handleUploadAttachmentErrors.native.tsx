@@ -1,7 +1,7 @@
 // === Module 8814: handleUploadAttachmentErrors ===
 
 // Module 8814 (handleUploadAttachmentErrors)
-import util from "util" /* 1126 */;
+import intl7 from "intl" /* 1126 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5707 */;
 import FileUtils from "FileUtils" /* 7270 */;
 import UploadLimits from "UploadLimits" /* 7295 */;
@@ -10,59 +10,71 @@ import getAttachmentUploadAbortAlert from "getAttachmentUploadAbortAlert" /* 891
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
+let c3;
+let closure_4;
 ({ AbortCodes: c3, MAX_UPLOAD_COUNT: closure_4 } = Constants);
 const result = size.fileFinishedImporting("modules/media_uploads/handleUploadAttachmentErrors.native.tsx");
 
 export const handleUploadMessageAttachmentsErrors = function handleUploadMessageAttachmentsErrors(arg0) {
+  let code;
+  let guildId;
+  let intl;
+  let intl2;
+  let intl3;
+  let intl4;
+  let intl5;
+  let intl6;
+  let obj5;
+  let obj9;
+  let reason;
+  let type;
   ({ guildId, code, reason } = arg0);
   if (undefined === code) {
     return false;
   } else if (code === constants.ENTITY_TOO_LARGE) {
-    const maxFileSizeResult = FileUtils.maxFileSize(guildId);
-    const obj4 = { file: tmp, maxSize: null, baseMaxSize: null, guildId: null, analyticsLocations: null, errorReason: null, appEntryKey: null };
-    const tmp27 = showUploadFileSizeErrorDefault;
-    obj4.maxSize = UploadLimits.getEffectiveUploadLimit(maxFileSizeResult);
-    obj4.baseMaxSize = maxFileSizeResult;
-    obj4.guildId = guildId;
-    obj4.analyticsLocations = tmp2;
-    let type;
+    const obj7 = FileUtils;
+    const maxFileSizeResult = obj7.maxFileSize(guildId);
+    const obj3 = { file: tmp, maxSize: obj9.getEffectiveUploadLimit(maxFileSizeResult), baseMaxSize: maxFileSizeResult, guildId, analyticsLocations: tmp2, errorReason: type, appEntryKey: tmp3 };
+    const tmp30 = showUploadFileSizeErrorDefault;
+    type = undefined;
+    obj9 = UploadLimits;
     if (reason != null) {
       type = reason.type;
     }
-    obj4.errorReason = type;
-    obj4.appEntryKey = tmp3;
-    tmp27(obj4);
+    tmp30(obj3);
     return true;
   } else if (code === constants.TOO_MANY_ATTACHMENTS) {
-    const obj6 = { title: null, body: null };
-    const intl5 = util.intl;
-    obj6.title = intl5.string(util.t.wOr6hB);
-    const intl6 = util.intl;
-    const obj8 = { limit };
-    obj6.body = intl6.formatToPlainString(util.t["qqyp/e"], obj8);
-    AlertActionCreatorsDefault.show(obj6);
+    const obj4 = { title: intl5.string(intl7.t.wOr6hB), body: intl6.formatToPlainString(intl7.t["qqyp/e"], obj5) };
+    const show3 = AlertActionCreatorsDefault.show;
+    AlertActionCreatorsDefault;
+    intl5 = intl7.intl;
+    intl6 = intl7.intl;
+    obj5 = { limit };
+    show3(obj4);
     return true;
   } else if (code === constants.ENTITY_EMPTY) {
-    const obj9 = { title: null, body: null };
-    const intl3 = util.intl;
-    obj9.title = intl3.string(util.t.B3vFdU);
-    const intl4 = util.intl;
-    obj9.body = intl4.string(util.t["9ZpT2C"]);
-    AlertActionCreatorsDefault.show(obj9);
+    const obj6 = { title: intl3.string(intl7.t.B3vFdU), body: intl4.string(intl7.t["9ZpT2C"]) };
+    const show2 = AlertActionCreatorsDefault.show;
+    AlertActionCreatorsDefault;
+    intl3 = intl7.intl;
+    intl4 = intl7.intl;
+    show2(obj6);
     return true;
   } else if (code === constants.INVALID_FILE_ASSET) {
-    const obj11 = { title: null, body: null };
-    const intl = util.intl;
-    obj11.title = intl.string(util.t.B3vFdU);
-    const intl2 = util.intl;
-    obj11.body = intl2.string(util.t.zMEjJg);
-    AlertActionCreatorsDefault.show(obj11);
+    const obj8 = { title: intl.string(intl7.t.B3vFdU), body: intl2.string(intl7.t.zMEjJg) };
+    const show = AlertActionCreatorsDefault.show;
+    AlertActionCreatorsDefault;
+    intl = intl7.intl;
+    intl2 = intl7.intl;
+    show(obj8);
     return true;
   } else {
-    const attachmentUploadAbortAlertContent = getAttachmentUploadAbortAlert.getAttachmentUploadAbortAlertContent(code);
+    const obj = getAttachmentUploadAbortAlert;
+    const attachmentUploadAbortAlertContent = obj.getAttachmentUploadAbortAlertContent(code);
     let flag = null != attachmentUploadAbortAlertContent;
     if (flag) {
-      AlertActionCreatorsDefault.show(attachmentUploadAbortAlertContent);
+      const obj2 = AlertActionCreatorsDefault;
+      obj2.show(attachmentUploadAbortAlertContent);
       flag = true;
     }
     return flag;

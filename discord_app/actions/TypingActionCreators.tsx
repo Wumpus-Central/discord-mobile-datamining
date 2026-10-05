@@ -4,13 +4,18 @@
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 
-const result = size.fileFinishedImporting("actions/TypingActionCreators.tsx");
-
-export default {
+let obj = {
   startTyping(id) {
-    DispatcherDefault.dispatch({ type: "TYPING_START_LOCAL", channelId: id });
+    const obj = DispatcherDefault;
+    const obj2 = { type: "TYPING_START_LOCAL", channelId: id };
+    obj.dispatch(obj2);
   },
   stopTyping(id) {
-    DispatcherDefault.dispatch({ type: "TYPING_STOP_LOCAL", channelId: id });
+    const obj = DispatcherDefault;
+    const obj2 = { type: "TYPING_STOP_LOCAL", channelId: id };
+    obj.dispatch(obj2);
   }
 };
+const result = size.fileFinishedImporting("actions/TypingActionCreators.tsx");
+
+export default obj;

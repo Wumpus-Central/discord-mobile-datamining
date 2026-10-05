@@ -2,7 +2,7 @@
 
 // Module 1488 (KeyboardUIStore)
 import Storage5 from "Storage" /* 510 */;
-import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
+import shallowEqualDefault from "shallowEqual" /* 568 */;
 import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1229 */;
 import AppEntryKeyContext from "AppEntryKeyContext" /* 1487 */;
 import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1489 */;
@@ -10,7 +10,7 @@ import MediaKeyboardConstants from "MediaKeyboardConstants" /* 1614 */;
 import KeyboardTypes from "KeyboardTypes" /* 1616 */;
 import ChatInputFocused from "ChatInputFocused" /* 1617 */;
 import useSafeAreaInsets from "useSafeAreaInsets" /* 1618 */;
-import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1630 */;
+import react_nativeDefault from "react-native" /* 1630 */;
 import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1632 */;
 import KeyboardStateDebuggingDefault from "KeyboardStateDebugging" /* 1880 */;
 import PlatformUtils_mod from "PlatformUtils" /* 1369 */;
@@ -19,8 +19,11 @@ import SafeAreaStore from "SafeAreaStore" /* 1619 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, byAppEntry, height, importDefault;
 
 function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
+  let num2;
+  let num3;
   let tmp = arg0;
   keyboardDuration = keyboardDuration.keyboardDuration;
   if (keyboardDuration == null) {
@@ -30,8 +33,10 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
   if (keyboardHeight == null) {
     keyboardHeight = tmp.keyboardHeight;
   }
+  const obj = PlatformUtils;
   if (obj.isAndroid()) {
-    let num2 = NativeSafeAreaInsetsModuleDefault.getImeInsets(false, DEFAULT_APP_ENTRY_KEY);
+    const obj2 = react_nativeDefault;
+    num2 = obj2.getImeInsets(false, DEFAULT_APP_ENTRY_KEY);
   } else {
     num2 = 0;
     if (0 !== keyboardHeight) {
@@ -42,14 +47,15 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
   if (keyboardHeight2 == null) {
     keyboardHeight2 = tmp.keyboardHeight;
   }
-  obj = PlatformUtils;
+  const tmp2Result = PlatformUtils;
   if (tmp2Result.isAndroid()) {
-    let num3 = NativeSafeAreaInsetsModuleDefault.getImeInsets(true, DEFAULT_APP_ENTRY_KEY);
+    const obj5 = react_nativeDefault;
+    num3 = obj5.getImeInsets(true, DEFAULT_APP_ENTRY_KEY);
   } else {
     num3 = 0;
     if (0 !== keyboardHeight2) {
-      num3 = keyboardHeight2 - useSafeAreaInsets.getSafeAreaInsets(DEFAULT_APP_ENTRY_KEY).bottom;
       const tmp2Result7 = useSafeAreaInsets;
+      num3 = keyboardHeight2 - tmp2Result7.getSafeAreaInsets(DEFAULT_APP_ENTRY_KEY).bottom;
     }
   }
   const keyboardType = keyboardDuration.keyboardType;
@@ -60,6 +66,7 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
   if (type == null) {
     type = tmp.keyboardType;
   }
+  const tmp7 = type !== tmp.keyboardType ? tmp.keyboardType : tmp.keyboardTypePrevious;
   const Storage = Storage5.Storage;
   let num4 = Storage.get(customKeyboardHeight, 253);
   if (num4 == null) {
@@ -67,6 +74,8 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
   }
   if (type === KeyboardTypes.KeyboardTypes.SYSTEM) {
     if (0 !== num2) {
+      let tmp12;
+      const tmp2Result8 = ChatInputFocused;
       if (tmp2Result8.getIsAnyChatInputFocused()) {
         const _Math = Math;
         const bound = Math.max(num2, 200);
@@ -74,7 +83,7 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
           const Storage2 = Storage5.Storage;
           const result = Storage2.set(customKeyboardHeight, bound);
         }
-        let tmp12 = bound;
+        tmp12 = bound;
       }
       const Storage3 = Storage5.Storage;
       let num7 = Storage3.get(customKeyboardHeight, 253);
@@ -83,6 +92,8 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
       }
       if (type === KeyboardTypes.KeyboardTypes.SYSTEM) {
         if (0 !== num2) {
+          let diff;
+          const tmp2Result9 = ChatInputFocused;
           if (tmp2Result9.getIsAnyChatInputFocused()) {
             const _Math2 = Math;
             const bound1 = Math.max(num2, 200);
@@ -90,8 +101,8 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
               const Storage4 = Storage5.Storage;
               const result1 = Storage4.set(customKeyboardHeight, bound1);
             }
-            let diff = bound1 - useSafeAreaInsets.getSafeAreaInsets(DEFAULT_APP_ENTRY_KEY).bottom;
             const tmp2Result10 = useSafeAreaInsets;
+            diff = bound1 - tmp2Result10.getSafeAreaInsets(DEFAULT_APP_ENTRY_KEY).bottom;
           }
           const keyboardType2 = keyboardDuration.keyboardType;
           let context;
@@ -102,11 +113,15 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
             context = tmp17;
           }
           if (typeof tmp.keyboardContexts[type] === "object") {
+            let tmp19;
+            let systemKeyboardOpen;
+            let tmp21;
             if (typeof context === "object") {
-              let tmp19 = !discord_common_shallowEqualDefault(tmp17, context);
+              tmp19 = !shallowEqualDefault(tmp17, context);
             }
+            const tmp2Result11 = PlatformUtils;
             if (tmp2Result11.isAndroid()) {
-              let systemKeyboardOpen = num2 > 0;
+              systemKeyboardOpen = num2 > 0;
             } else {
               systemKeyboardOpen = keyboardDuration.systemKeyboardOpen;
               if (systemKeyboardOpen == null) {
@@ -117,13 +132,13 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
               if (null != keyboardDuration.systemKeyboardOpen) {
                 const obj3 = {};
                 const merged = Object.assign(tmp.keyboardContexts);
-                const obj4 = {};
+                const obj4 = { keyboardWillOpen: false };
+                const SYSTEM = KeyboardTypes.KeyboardTypes.SYSTEM;
                 const merged1 = Object.assign(tmp.keyboardContexts[KeyboardTypes.KeyboardTypes.SYSTEM]);
-                obj4.keyboardWillOpen = false;
-                obj3[KeyboardTypes.KeyboardTypes.SYSTEM] = obj4;
-                let tmp21 = obj3;
+                obj3[SYSTEM] = obj4;
+                tmp21 = obj3;
               }
-              const tmp30 = discord_common_shallowEqualDefault(tmp.keyboardContexts, tmp21);
+              const tmp30 = shallowEqualDefault(tmp.keyboardContexts, tmp21);
               if (tmp.keyboardDuration === keyboardDuration) {
                 if (tmp30) {
                   if (tmp.keyboardHeight === num2) {
@@ -137,8 +152,8 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
                   }
                 }
               }
+              tmp = { keyboardContexts: tmp21, keyboardDuration, keyboardHeight: num2, keyboardHeightExcludingSafeAreaInsets: num3, systemKeyboardOpen, keyboardType: type, keyboardTypePrevious: tmp7, customKeyboardHeight: tmp12, customKeyboardHeightExcludingSafeAreaInsets: diff };
               const obj6 = { keyboardContexts: tmp21, keyboardDuration, keyboardHeight: num2, keyboardHeightExcludingSafeAreaInsets: num3, systemKeyboardOpen, keyboardType: type, keyboardTypePrevious: tmp7, customKeyboardHeight: tmp12, customKeyboardHeightExcludingSafeAreaInsets: diff };
-              tmp = obj6;
             }
             keyboardContexts = tmp.keyboardContexts;
             if (tmp19) {
@@ -149,58 +164,56 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
             } else {
               tmp21 = keyboardContexts;
             }
-            tmp2Result11 = PlatformUtils;
           }
           tmp19 = tmp17 !== context;
-          tmp2Result9 = ChatInputFocused;
         }
       }
-      tmp2Result8 = ChatInputFocused;
-      diff = num7 - useSafeAreaInsets.getSafeAreaInsets(DEFAULT_APP_ENTRY_KEY).bottom;
       const tmp2Result12 = useSafeAreaInsets;
+      diff = num7 - tmp2Result12.getSafeAreaInsets(DEFAULT_APP_ENTRY_KEY).bottom;
     }
   }
   tmp12 = num4;
-  tmp2Result = PlatformUtils;
-  tmp7 = type !== tmp.keyboardType ? tmp.keyboardType : tmp.keyboardTypePrevious;
 }
 function createInitialEntryState(main) {
+  let num2;
+  let num3;
+  let num4;
+  let obj2;
+  let obj3;
+  let obj4;
+  let tmpResult;
   const SYSTEM = KeyboardTypes.KeyboardTypes.SYSTEM;
   const Storage = Storage5.Storage;
   let num = Storage.get(customKeyboardHeight, 253);
   if (num == null) {
     num = 253;
   }
-  const obj = { customKeyboardHeight: null, customKeyboardHeightExcludingSafeAreaInsets: null, keyboardContexts: null, keyboardDuration: 0, keyboardHeight: null, keyboardHeightExcludingSafeAreaInsets: null, systemKeyboardOpen: false, keyboardType: null, keyboardTypePrevious: null };
+  const obj = { customKeyboardHeight: num, customKeyboardHeightExcludingSafeAreaInsets: num2 - tmpResult.getSafeAreaInsets(main).bottom, keyboardContexts: { [KeyboardTypes.KeyboardTypes.SYSTEM]: { keyboardWillOpen: false }, [KeyboardTypes.KeyboardTypes.EXPRESSION]: obj2, [KeyboardTypes.KeyboardTypes.MEDIA]: obj3, [KeyboardTypes.KeyboardTypes.APP_LAUNCHER]: obj4 }, keyboardDuration: 0, keyboardHeight: num3, keyboardHeightExcludingSafeAreaInsets: num4, systemKeyboardOpen: false, keyboardType: KeyboardTypes.KeyboardTypes.SYSTEM, keyboardTypePrevious: KeyboardTypes.KeyboardTypes.SYSTEM };
   const SYSTEM2 = KeyboardTypes.KeyboardTypes.SYSTEM;
-  obj.customKeyboardHeight = num;
   const SYSTEM3 = KeyboardTypes.KeyboardTypes.SYSTEM;
   const Storage2 = Storage5.Storage;
-  let num2 = Storage2.get(customKeyboardHeight, 253);
+  num2 = Storage2.get(customKeyboardHeight, 253);
   if (num2 == null) {
     num2 = 253;
   }
   const SYSTEM4 = KeyboardTypes.KeyboardTypes.SYSTEM;
-  obj.customKeyboardHeightExcludingSafeAreaInsets = num2 - useSafeAreaInsets.getSafeAreaInsets(main).bottom;
-  obj.keyboardContexts = { [KeyboardTypes.KeyboardTypes.SYSTEM]: { keyboardWillOpen: false }, [KeyboardTypes.KeyboardTypes.EXPRESSION]: { type: ExpressionPickerViewType.EMOJI }, [KeyboardTypes.KeyboardTypes.MEDIA]: { target: MediaKeyboardTarget.CHAT }, [KeyboardTypes.KeyboardTypes.APP_LAUNCHER]: { initialRouteName: AppLauncherRouteName.HOME } };
-  const obj2 = { type: ExpressionPickerViewType.EMOJI };
-  const obj3 = { target: MediaKeyboardTarget.CHAT };
-  const obj4 = { initialRouteName: AppLauncherRouteName.HOME };
-  const tmpResult = useSafeAreaInsets;
-  let num3 = 0;
+  num3 = 0;
+  obj2 = { type: ExpressionPickerViewType.EMOJI };
+  obj3 = { target: MediaKeyboardTarget.CHAT };
+  obj4 = { initialRouteName: AppLauncherRouteName.HOME };
+  tmpResult = useSafeAreaInsets;
+  const tmpResult3 = PlatformUtils;
   if (tmpResult3.isAndroid()) {
-    num3 = NativeSafeAreaInsetsModuleDefault.getImeInsets(false, main);
+    const obj7 = react_nativeDefault;
+    num3 = obj7.getImeInsets(false, main);
   }
-  obj.keyboardHeight = num3;
-  tmpResult3 = PlatformUtils;
+  const tmpResult4 = PlatformUtils;
   if (tmpResult4.isAndroid()) {
-    let num4 = NativeSafeAreaInsetsModuleDefault.getImeInsets(true, main);
+    const obj9 = react_nativeDefault;
+    num4 = obj9.getImeInsets(true, main);
   } else {
     num4 = 0;
   }
-  obj.keyboardHeightExcludingSafeAreaInsets = num4;
-  obj.keyboardType = KeyboardTypes.KeyboardTypes.SYSTEM;
-  obj.keyboardTypePrevious = KeyboardTypes.KeyboardTypes.SYSTEM;
   return obj;
 }
 const AppLauncherRouteName = AppLauncherNativeConstants.AppLauncherRouteName;
@@ -214,77 +227,151 @@ let str = "keyboardWillShow";
 if (PlatformUtils.isAndroid()) {
   str = "keyboardDidShow";
 }
-let PlatformUtils = PlatformUtils_mod;
+PlatformUtils = PlatformUtils_mod;
 let str2 = "keyboardWillHide";
 if (PlatformUtils.isAndroid()) {
   str2 = "keyboardDidHide";
 }
 let keyboardContexts = module_570.create(() => {
   const obj = { byAppEntry: { main: createInitialEntryState("main"), share: createInitialEntryState("share") } };
+  ({ main: createInitialEntryState("main"), share: createInitialEntryState("share") });
   return obj;
 });
 const KeyboardEvents = KeyboardChatScrollView.KeyboardEvents;
 KeyboardEvents.addListener(str, (height) => {
+  let c1;
+  let closure_0;
   height = height.height;
-  const result = KeyboardStateDebuggingDefault.reactNativeKeyboardDidShow(height, "KeyboardUIStore");
-  _require = { keyboardHeight: height, keyboardDuration: height.duration, systemKeyboardOpen: true };
+  const duration = height.duration;
+  const obj = KeyboardStateDebuggingDefault;
+  const result = obj.reactNativeKeyboardDidShow(height, "KeyboardUIStore");
+  _require = { keyboardHeight: height, keyboardDuration: duration, systemKeyboardOpen: true };
   importDefault = undefined;
-  require("ReactBatchUpdates").batchUpdates(() => obj.setState((arg0) => {
-    let tmp = DEFAULT_APP_ENTRY_KEY;
+  const obj2 = require("react-native");
+  obj2.batchUpdates(() => state.setState((byAppEntry) => {
+    let APP_ENTRY_KEYS;
     if (null != DEFAULT_APP_ENTRY_KEY) {
       const items = [tmp];
-      let APP_ENTRY_KEYS = items;
+      APP_ENTRY_KEYS = items;
     } else {
-      APP_ENTRY_KEYS = closure_0(dependencyMap[11]).APP_ENTRY_KEYS;
+      APP_ENTRY_KEYS = closure_0(closure_2_2[11]).APP_ENTRY_KEYS;
     }
-    tmp = APP_ENTRY_KEYS[Symbol.iterator]();
+    let tmp4 = byAppEntry;
+    byAppEntry = byAppEntry.byAppEntry;
+    const iter = APP_ENTRY_KEYS[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let tmp8 = byAppEntry[nextResult];
+      let tmp6 = nextResult;
+      let tmp11 = closure_2_9(tmp8, closure_1_0, nextResult);
+      if (tmp8 !== tmp11) {
+        let obj = {};
+        let merged = Object.assign(byAppEntry);
+        obj[tmp6] = tmp12;
+        byAppEntry = obj;
+      }
+      continue;
+    }
+    if (byAppEntry !== tmp4.byAppEntry) {
+      tmp4 = { byAppEntry };
+      const obj2 = { byAppEntry };
+    }
+    return tmp4;
   }));
-  const obj2 = require("ReactBatchUpdates");
-  require("KeyboardManagerUtils").onKeyboardChanged(true);
+  const obj3 = require("KeyboardManagerUtils");
+  obj3.onKeyboardChanged(true);
   const item = set1.forEach((fn) => fn(false));
 });
 const KeyboardEvents2 = KeyboardChatScrollView.KeyboardEvents;
 KeyboardEvents2.addListener(str2, () => {
-  const result = KeyboardStateDebuggingDefault.reactNativeKeyboardDidHide("KeyboardUIStore");
+  let c1;
+  let closure_0;
+  const obj = KeyboardStateDebuggingDefault;
+  const result = obj.reactNativeKeyboardDidHide("KeyboardUIStore");
   _require = { keyboardHeight: 0, systemKeyboardOpen: false };
   importDefault = undefined;
-  require("ReactBatchUpdates").batchUpdates(() => obj.setState((arg0) => {
-    let tmp = DEFAULT_APP_ENTRY_KEY;
+  const obj2 = require("react-native");
+  obj2.batchUpdates(() => state.setState((byAppEntry) => {
+    let APP_ENTRY_KEYS;
     if (null != DEFAULT_APP_ENTRY_KEY) {
       const items = [tmp];
-      let APP_ENTRY_KEYS = items;
+      APP_ENTRY_KEYS = items;
     } else {
-      APP_ENTRY_KEYS = closure_0(dependencyMap[11]).APP_ENTRY_KEYS;
+      APP_ENTRY_KEYS = closure_0(closure_2_2[11]).APP_ENTRY_KEYS;
     }
-    tmp = APP_ENTRY_KEYS[Symbol.iterator]();
+    let tmp4 = byAppEntry;
+    byAppEntry = byAppEntry.byAppEntry;
+    const iter = APP_ENTRY_KEYS[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let tmp8 = byAppEntry[nextResult];
+      let tmp6 = nextResult;
+      let tmp11 = closure_2_9(tmp8, closure_1_0, nextResult);
+      if (tmp8 !== tmp11) {
+        let obj = {};
+        let merged = Object.assign(byAppEntry);
+        obj[tmp6] = tmp12;
+        byAppEntry = obj;
+      }
+      continue;
+    }
+    if (byAppEntry !== tmp4.byAppEntry) {
+      tmp4 = { byAppEntry };
+      const obj2 = { byAppEntry };
+    }
+    return tmp4;
   }));
-  const obj2 = require("ReactBatchUpdates");
-  require("KeyboardManagerUtils").onKeyboardChanged(false);
+  const obj3 = require("KeyboardManagerUtils");
+  obj3.onKeyboardChanged(false);
   const item = set1.forEach((fn) => fn(false));
 });
 const subscription = SafeAreaStore.subscribe(() => {
+  let closure_0;
   _require = {};
-  require("ReactBatchUpdates").batchUpdates(() => obj.setState((arg0) => {
-    let tmp = DEFAULT_APP_ENTRY_KEY;
+  const obj = require("react-native");
+  obj.batchUpdates(() => state.setState((byAppEntry) => {
+    let APP_ENTRY_KEYS;
     if (null != DEFAULT_APP_ENTRY_KEY) {
       const items = [tmp];
-      let APP_ENTRY_KEYS = items;
+      APP_ENTRY_KEYS = items;
     } else {
-      APP_ENTRY_KEYS = closure_0(dependencyMap[11]).APP_ENTRY_KEYS;
+      APP_ENTRY_KEYS = closure_0(closure_2_2[11]).APP_ENTRY_KEYS;
     }
-    tmp = APP_ENTRY_KEYS[Symbol.iterator]();
+    let tmp4 = byAppEntry;
+    byAppEntry = byAppEntry.byAppEntry;
+    const iter = APP_ENTRY_KEYS[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let tmp8 = byAppEntry[nextResult];
+      let tmp6 = nextResult;
+      let tmp11 = closure_2_9(tmp8, closure_1_0, nextResult);
+      if (tmp8 !== tmp11) {
+        let obj = {};
+        let merged = Object.assign(byAppEntry);
+        obj[tmp6] = tmp12;
+        byAppEntry = obj;
+      }
+      continue;
+    }
+    if (byAppEntry !== tmp4.byAppEntry) {
+      tmp4 = { byAppEntry };
+      const obj2 = { byAppEntry };
+    }
+    return tmp4;
   }));
 });
 let result = size.fileFinishedImporting("modules/keyboard/native/KeyboardUIStore.native.tsx");
 
 export default keyboardContexts;
 export const setKeyboardType = function setKeyboardType(keyboardParams) {
+  let state;
   _require = keyboardParams;
   let DEFAULT_APP_ENTRY_KEY = arg1;
   if (arg1 === undefined) {
+    const tmp = _require;
     DEFAULT_APP_ENTRY_KEY = require("AppEntryKeyContext").DEFAULT_APP_ENTRY_KEY;
   }
-  const item = set.forEach((fn) => fn(closure_0, DEFAULT_APP_ENTRY_KEY));
+  const item = set.forEach((fn) => fn(keyboardParams, DEFAULT_APP_ENTRY_KEY));
   const item1 = set1.forEach((fn) => {
     let tmp2 = keyboardParams.type === KeyboardTypes.KeyboardTypes.SYSTEM;
     if (tmp2) {
@@ -297,49 +384,67 @@ export const setKeyboardType = function setKeyboardType(keyboardParams) {
     }
     return fn(tmp2, DEFAULT_APP_ENTRY_KEY);
   });
-  closure_129_0 = { keyboardType: keyboardParams };
-  closure_129_1 = DEFAULT_APP_ENTRY_KEY;
-  require("ReactBatchUpdates").batchUpdates(() => obj.setState((arg0) => {
-    let tmp = DEFAULT_APP_ENTRY_KEY;
+  _require = { keyboardType: keyboardParams };
+  let obj = require("react-native");
+  obj.batchUpdates(() => state.setState((byAppEntry) => {
+    let APP_ENTRY_KEYS;
     if (null != DEFAULT_APP_ENTRY_KEY) {
       const items = [tmp];
-      let APP_ENTRY_KEYS = items;
+      APP_ENTRY_KEYS = items;
     } else {
-      APP_ENTRY_KEYS = closure_0(dependencyMap[11]).APP_ENTRY_KEYS;
+      APP_ENTRY_KEYS = closure_0(closure_2_2[11]).APP_ENTRY_KEYS;
     }
-    tmp = APP_ENTRY_KEYS[Symbol.iterator]();
+    let tmp4 = byAppEntry;
+    byAppEntry = byAppEntry.byAppEntry;
+    const iter = APP_ENTRY_KEYS[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let tmp8 = byAppEntry[nextResult];
+      let tmp6 = nextResult;
+      let tmp11 = closure_2_9(tmp8, closure_1_0, nextResult);
+      if (tmp8 !== tmp11) {
+        let obj = {};
+        let merged = Object.assign(byAppEntry);
+        obj[tmp6] = tmp12;
+        byAppEntry = obj;
+      }
+      continue;
+    }
+    if (byAppEntry !== tmp4.byAppEntry) {
+      tmp4 = { byAppEntry };
+      const obj2 = { byAppEntry };
+    }
+    return tmp4;
   }));
-  const obj = require("ReactBatchUpdates");
 };
 export const setKeyboardContext = function setKeyboardContext(EXPRESSION, arg1) {
-  closure_0 = EXPRESSION;
-  closure_1 = arg1;
+  let closure_0 = EXPRESSION;
+  let closure_1 = arg1;
   let DEFAULT_APP_ENTRY_KEY = arg2;
   if (arg2 === undefined) {
     DEFAULT_APP_ENTRY_KEY = AppEntryKeyContext.DEFAULT_APP_ENTRY_KEY;
   }
   obj.setState((byAppEntry) => {
+    let obj3;
     keyboardContexts = {};
     const merged = Object.assign(tmp.keyboardContexts);
     keyboardContexts[closure_0] = closure_1;
-    const obj2 = { byAppEntry: null };
-    const obj3 = {};
+    const obj2 = { byAppEntry: obj3 };
+    obj3 = {};
     const merged1 = Object.assign(byAppEntry.byAppEntry);
-    const obj4 = {};
+    const obj4 = { keyboardContexts };
     const merged2 = Object.assign(tmp);
-    obj4.keyboardContexts = keyboardContexts;
     obj3[DEFAULT_APP_ENTRY_KEY] = obj4;
-    obj2.byAppEntry = obj3;
     return obj2;
   });
 };
 export const addKeyboardWillOpenChangedListener = function addKeyboardWillOpenChangedListener(arg0) {
-  closure_0 = arg0;
+  let closure_0 = arg0;
   set1.add(arg0);
   return () => set1.delete(closure_0);
 };
 export const addKeyboardTypeChangedListener = function addKeyboardTypeChangedListener(arg0) {
-  closure_0 = arg0;
+  let closure_0 = arg0;
   set.add(arg0);
   return () => set.delete(closure_0);
 };

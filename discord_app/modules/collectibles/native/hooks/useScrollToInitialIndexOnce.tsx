@@ -1,17 +1,18 @@
 // === Module 15712: useScrollToInitialIndexOnce ===
 
 // Module 15712 (useScrollToInitialIndexOnce)
-import c from "c" /* 576 */;
-import noop from "module_19" /* 19 */;
+import react2 from "react" /* 576 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/collectibles/native/hooks/useScrollToInitialIndexOnce.tsx");
+let initialScrollIndex;
 
-export const INITIAL_SCROLL_DELAY_MS = 100;
-export const useScrollToInitialIndexOnce = ReactCompilerGating.isReactCompilerEnabled() ? ((initialScrollIndex) => {
-  const cResult = c.c(7);
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((initialScrollIndex) => {
+  let afterMs;
+  let resetKey;
+  let obj = react2;
+  const cResult = obj.c(7);
   initialScrollIndex = initialScrollIndex.initialScrollIndex;
   const shouldScroll = initialScrollIndex.shouldScroll;
   const flashListRef = initialScrollIndex.flashListRef;
@@ -20,30 +21,30 @@ export const useScrollToInitialIndexOnce = ReactCompilerGating.isReactCompilerEn
   if (undefined !== afterMs) {
     num = afterMs;
   }
-  noop.useRef(false);
-  noop.useRef(resetKey);
+  let closure_5 = react.useRef(false);
+  let closure_6 = react.useRef(resetKey);
   if (cResult[0] === num) {
     if (cResult[1] === flashListRef) {
       if (cResult[2] === initialScrollIndex) {
         if (cResult[3] === resetKey) {
+          let tmp2;
+          let tmp3;
           if (cResult[4] === shouldScroll) {
-            let tmp2 = cResult[5];
-            let tmp3 = cResult[6];
+            tmp2 = cResult[5];
+            tmp3 = cResult[6];
           }
-          const effect = noop.useEffect(tmp2, tmp3);
+          const effect = react.useEffect(tmp2, tmp3);
         }
       }
     }
   }
   const fn = function l() {
+    let index;
     if (ref2.current !== resetKey) {
       ref2.current = resetKey;
       ref.current = false;
     }
-    let tmp2 = null != initialScrollIndex && shouldScroll;
-    if (tmp2) {
-      tmp2 = !ref.current;
-    }
+    const tmp2 = null != initialScrollIndex && shouldScroll && !ref.current;
     if (tmp2) {
       ref.current = true;
       const _setTimeout = setTimeout;
@@ -75,18 +76,16 @@ export const useScrollToInitialIndexOnce = ReactCompilerGating.isReactCompilerEn
     num = 100;
   }
   const resetKey = initialScrollIndex.resetKey;
-  noop.useRef(false);
-  noop.useRef(resetKey);
+  let closure_5 = react.useRef(false);
+  let closure_6 = react.useRef(resetKey);
   const items = [shouldScroll, initialScrollIndex, num, flashListRef, resetKey];
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(() => {
+    let index;
     if (ref2.current !== resetKey) {
       ref2.current = resetKey;
       ref.current = false;
     }
-    let tmp2 = null != initialScrollIndex && shouldScroll;
-    if (tmp2) {
-      tmp2 = !ref.current;
-    }
+    const tmp2 = null != initialScrollIndex && shouldScroll && !ref.current;
     if (tmp2) {
       ref.current = true;
       const _setTimeout = setTimeout;
@@ -100,3 +99,7 @@ export const useScrollToInitialIndexOnce = ReactCompilerGating.isReactCompilerEn
     }
   }, items);
 });
+const result = size.fileFinishedImporting("modules/collectibles/native/hooks/useScrollToInitialIndexOnce.tsx");
+
+export const INITIAL_SCROLL_DELAY_MS = 100;
+export const useScrollToInitialIndexOnce = tmp2;

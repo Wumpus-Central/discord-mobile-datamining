@@ -1,10 +1,11 @@
 // === Module 9325: isVideoBackgroundSupported ===
 
 // Module 9325 (isVideoBackgroundSupported)
+import Constants from "Constants" /* 4915 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
+import size from "module_2" /* 2 */;
 
-const Features = fn(4915).Features;
-const size = fn(2);
+const Features = Constants.Features;
 const result = size.fileFinishedImporting("modules/video_backgrounds/isVideoBackgroundSupported.tsx");
 
 export default function isVideoBackgroundSupported() {

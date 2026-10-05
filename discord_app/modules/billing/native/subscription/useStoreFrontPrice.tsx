@@ -1,22 +1,22 @@
 // === Module 8874: useStoreFrontPrice ===
 
 // Module 8874 (useStoreFrontPrice)
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
+import Constants from "Constants" /* 1085 */;
 import PremiumUtils from "PremiumUtils" /* 4528 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const constants = fn(1085).PriceSetAssignmentPurchaseTypes;
+const constants = Constants.PriceSetAssignmentPurchaseTypes;
 const PriceStates = { PRICE_AVAILABLE: "PRICE_AVAILABLE", SUBSCRIPTION_PLAN_UNAVAILABLE: "SUBSCRIPTION_PLAN_UNAVAILABLE", STOREFRONT_UNAVAILABLE: "STOREFRONT_UNAVAILABLE", MISMATCHING_COUNTRIES: "MISMATCHING_COUNTRIES", COUNTRY_PRICE_UNAVAILABLE: "COUNTRY_PRICE_UNAVAILABLE" };
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/billing/native/subscription/useStoreFrontPrice.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((prices, currency) => {
-  const obj = c;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((prices, currency) => {
+  let PRICE_AVAILABLE;
+  let tmp6;
+  const obj = react2;
   const cResult = obj.c(6);
   if (null == prices) {
-    let PRICE_AVAILABLE = obj.SUBSCRIPTION_PLAN_UNAVAILABLE;
+    PRICE_AVAILABLE = obj.SUBSCRIPTION_PLAN_UNAVAILABLE;
   } else if (null == currency) {
     PRICE_AVAILABLE = obj.STOREFRONT_UNAVAILABLE;
   } else {
@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((prices, currency
       PremiumUtils;
       if (cResult[0] === currency.currency) {
         if (cResult[1] === prices.id) {
-          let tmp6 = cResult[2];
+          tmp6 = cResult[2];
         }
         if (tmp18.countryCode !== currency.country) {
           PRICE_AVAILABLE = obj.MISMATCHING_COUNTRIES;
@@ -42,17 +42,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((prices, currency
         }
       }
       const obj2 = { purchaseType: constants.MOBILE, currency: currency.currency };
-      const experimentalGetPriceResult = PremiumUtils.experimentalGetPrice(prices.id, obj2);
+      const tmpResult2 = PremiumUtils;
+      const experimentalGetPriceResult = tmpResult2.experimentalGetPrice(prices.id, obj2);
       cResult[0] = currency.currency;
       cResult[1] = prices.id;
       cResult[2] = experimentalGetPriceResult;
       tmp6 = experimentalGetPriceResult;
-      const tmpResult2 = PremiumUtils;
     }
   }
   if (cResult[3] === tmp6) {
+    let tmp14;
     if (cResult[4] === PRICE_AVAILABLE) {
-      let tmp14 = cResult[5];
+      tmp14 = cResult[5];
     }
     return tmp14;
   }
@@ -63,11 +64,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((prices, currency
   tmp14 = obj3;
 }) : ((arg0, arg1) => {
   const user = arg0;
-  closure_1 = arg1;
+  let closure_1 = arg1;
   const items = [arg0, arg1];
-  return noop.useMemo(() => {
+  return react.useMemo(() => {
+    let obj;
+    let price;
+    let priceState;
     if (null == user) {
-      let priceState = obj.SUBSCRIPTION_PLAN_UNAVAILABLE;
+      priceState = obj.SUBSCRIPTION_PLAN_UNAVAILABLE;
     } else if (null == closure_1) {
       priceState = obj.STOREFRONT_UNAVAILABLE;
     } else {
@@ -82,7 +86,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((prices, currency
         obj = PremiumUtils;
         const countryPrices = obj.getCountryPrices(user.id, constants.MOBILE);
         const obj3 = { purchaseType: constants.MOBILE, currency: closure_1.currency };
-        const experimentalGetPriceResult = PremiumUtils.experimentalGetPrice(user.id, obj3);
+        const obj2 = PremiumUtils;
+        const experimentalGetPriceResult = obj2.experimentalGetPrice(user.id, obj3);
         if (countryPrices.countryCode !== closure_1.country) {
           priceState = obj.MISMATCHING_COUNTRIES;
         } else if (null == experimentalGetPriceResult) {
@@ -90,10 +95,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((prices, currency
         } else {
           priceState = obj.PRICE_AVAILABLE;
         }
-        const price = experimentalGetPriceResult;
+        price = experimentalGetPriceResult;
       }
     }
     return { price, priceState };
   }, items);
 });
+const result = size.fileFinishedImporting("modules/billing/native/subscription/useStoreFrontPrice.tsx");
+
+export default tmp2;
 export { PriceStates };

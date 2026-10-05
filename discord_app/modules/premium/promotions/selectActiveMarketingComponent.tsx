@@ -3,6 +3,8 @@
 // Module 10429 (selectActiveMarketingComponent)
 import size from "module_2" /* 2 */;
 
+let isTimed;
+
 function comparePriorityDescending(effectiveStartDate, effectiveStartDate2) {
   effectiveStartDate = effectiveStartDate.effectiveStartDate;
   let num;
@@ -61,22 +63,26 @@ function comparePriorityDescending(effectiveStartDate, effectiveStartDate2) {
 const result = size.fileFinishedImporting("modules/premium/promotions/selectActiveMarketingComponent.tsx");
 
 export default function selectActiveMarketingComponent(arr, date, arg2) {
+  let closure_0 = date;
+  let fn = arg2;
   if (arg2 === undefined) {
-    const fn = function f() {
+    fn = function f() {
       return true;
     };
   }
   const found = arr.filter((isTimed) => {
+    let effectiveEndDate;
+    let effectiveStartDate;
     ({ effectiveStartDate, effectiveEndDate } = isTimed);
     let tmp = null != effectiveStartDate;
     if (tmp) {
-      const time = date.getTime();
+      const time = closure_0.getTime();
       tmp = time < effectiveStartDate.getTime();
     }
     if (!tmp) {
       let tmp3 = null != effectiveEndDate;
       if (tmp3) {
-        const time1 = date.getTime();
+        const time1 = closure_0.getTime();
         tmp3 = time1 > effectiveEndDate.getTime();
       }
       tmp = tmp3;
@@ -92,15 +98,16 @@ export default function selectActiveMarketingComponent(arr, date, arg2) {
     }
     return tmp5;
   });
-  let tmp = null;
+  let tmp2 = null;
   if (0 !== found.length) {
     const items = [];
-    HermesBuiltin.arraySpread(found, 0);
+    let tmp3 = items;
+    HermesBuiltin.arraySpread(items, found, 0);
     let first = items.sort(comparePriorityDescending)[0];
     if (first == null) {
       first = null;
     }
-    tmp = first;
+    tmp2 = first;
   }
-  return tmp;
+  return tmp2;
 };

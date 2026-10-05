@@ -1,46 +1,65 @@
 // === Module 8951: BotPermissions ===
 
 // Module 8951 (BotPermissions)
+import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import Stack_Stack from "Stack/Stack" /* 5593 */;
 import XSmallIcon from "XSmallIcon" /* 6017 */;
 import permissions from "permissions" /* 8730 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react_mod from "react" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size_mod from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let deniedPermissions;
 
-require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { disabledPermissionIcon: null };
-let size = { width: 24, height: 24, flexGrow: 0, flexShrink: 0, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-obj2.disabledPermissionIcon = size;
-let closure_8 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-size = fn(2);
-const result = size.fileFinishedImporting("modules/oauth2/native/BotPermissions.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((deniedPermissions) => {
-  const cResult = permissions(onPermissionsChange[7]).c(39);
+let metroImportDefault;
+let metroRequire;
+let size;
+let react = react_mod;
+const View = react_native.View;
+({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
+let obj = { disabledPermissionIcon: size };
+size = { width: 24, height: 24, flexGrow: 0, flexShrink: 0, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
+let closure_8 = createStyles.createStyles(obj);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((deniedPermissions) => {
+  let application;
+  let closure_4;
+  let intl2;
+  let items;
+  let items1;
+  let items2;
+  let obj8;
+  let onPermissionsChange;
+  let permissions;
+  let obj = permissions(onPermissionsChange[7]);
+  const cResult = obj.c(39);
   ({ application, permissions } = deniedPermissions);
   deniedPermissions = deniedPermissions.deniedPermissions;
   onPermissionsChange = deniedPermissions.onPermissionsChange;
-  guild = deniedPermissions.guild;
+  const guild = deniedPermissions.guild;
   const tmp4 = closure_8();
-  noop = tmp4;
-  const tmp5 = guild(noop.useState(deniedPermissions(onPermissionsChange[8]).NONE), 2);
+  react = tmp4;
+  let obj2 = react;
+  const tmp5 = guild(react.useState(deniedPermissions(onPermissionsChange[8]).NONE), 2);
   const first = tmp5[0];
-  closure_6 = tmp5[1];
+  let closure_6 = tmp5[1];
   if (cResult[0] === guild.permissions) {
     if (cResult[1] === onPermissionsChange) {
+      let tmp7;
+      let tmp8;
+      let tmp11;
+      let tmp12;
+      let arr2;
+      let tmp10;
       if (cResult[2] === permissions) {
-        let tmp7 = cResult[3];
-        let tmp8 = cResult[4];
+        tmp7 = cResult[3];
+        tmp8 = cResult[4];
       }
       const effect = obj2.useEffect(tmp7, tmp8);
       if (cResult[5] === deniedPermissions) {
@@ -48,97 +67,104 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((deniedPermission
           if (cResult[7] === onPermissionsChange) {
             if (cResult[8] === permissions) {
               if (cResult[9] === tmp4) {
-                if (cResult[23] === application.name) {
-                  if (cResult[24] === guild.name) {
-                    let tmp19 = cResult[25];
-                  }
-                  if (cResult[26] !== tmp19) {
-                    const obj3 = { variant: "text-sm/medium", color: "text-subtle", children: tmp19 };
-                    const tmp23 = closure_6(permissions(tmp2[14]).Text, obj3);
-                    cResult[26] = tmp19;
-                    cResult[27] = tmp23;
-                    let tmp21 = tmp23;
-                  } else {
-                    tmp21 = cResult[27];
-                  }
-                  if (cResult[28] !== tmp10) {
-                    const obj4 = { spacing: 12, children: tmp10 };
-                    const tmp26 = closure_6(permissions(tmp2[12]).Stack, obj4);
-                    cResult[28] = tmp10;
-                    cResult[29] = tmp26;
-                    let tmp24 = tmp26;
-                  } else {
-                    tmp24 = cResult[29];
-                  }
-                  if (cResult[30] === tmp21) {
-                    if (cResult[31] === tmp24) {
-                      let tmp27 = cResult[32];
-                    }
-                    if (cResult[33] === application.name) {
-                      if (cResult[34] === arr2) {
-                        let tmp30 = cResult[35];
-                      }
-                      if (cResult[36] === tmp27) {
-                        if (cResult[37] === tmp30) {
-                          let tmp34 = cResult[38];
-                        }
-                        return tmp34;
-                      }
-                      const obj5 = { spacing: 16, children: null };
-                      let items = [tmp27, tmp30];
-                      obj5.children = items;
-                      const tmp36 = closure_7(permissions(tmp2[12]).Stack, obj5);
-                      cResult[36] = tmp27;
-                      cResult[37] = tmp30;
-                      cResult[38] = tmp36;
-                      tmp34 = tmp36;
-                    }
-                    let tmp31 = null;
-                    if (arr2.length > 0) {
-                      const obj6 = { children: null };
-                      const obj7 = { variant: "text-sm/medium", color: "text-subtle", children: null };
-                      const intl2 = permissions(tmp2[15]).intl;
-                      const obj8 = { applicationName: application.name };
-                      obj7.children = intl2.format(permissions(tmp2[15]).t.fsOkF4, obj8);
-                      const items1 = [closure_6(permissions(tmp2[14]).Text, obj7), ];
-                      const obj9 = { spacing: 12, children: arr2 };
-                      items1[1] = closure_6(permissions(tmp2[12]).Stack, obj9);
-                      obj6.children = items1;
-                      tmp31 = closure_7(permissions(tmp2[12]).Stack, obj6);
-                    }
-                    cResult[33] = application.name;
-                    cResult[34] = arr2;
-                    cResult[35] = tmp31;
-                    tmp30 = tmp31;
-                  }
-                  const obj10 = { children: null };
-                  const items2 = [tmp21, tmp24];
-                  obj10.children = items2;
-                  const tmp29 = closure_7(permissions(tmp2[12]).Stack, obj10);
-                  cResult[30] = tmp21;
-                  cResult[31] = tmp24;
-                  cResult[32] = tmp29;
-                  tmp27 = tmp29;
-                }
-                const intl = permissions(tmp2[15]).intl;
-                const obj11 = { applicationName: application.name, guildName: guild.name };
-                const formatResult = intl.format(permissions(tmp2[15]).t.sOaT2j, obj11);
-                cResult[23] = application.name;
-                cResult[24] = guild.name;
-                cResult[25] = formatResult;
-                tmp19 = formatResult;
+                tmp10 = cResult[10];
+                arr2 = cResult[11];
               }
+              if (cResult[23] === application.name) {
+                let tmp18;
+                let tmp20;
+                let tmp23;
+                if (cResult[24] === guild.name) {
+                  tmp18 = cResult[25];
+                }
+                if (cResult[26] !== tmp18) {
+                  let obj3 = { variant: "text-sm/medium", color: "text-subtle", children: tmp18 };
+                  const tmp22 = closure_6(permissions(onPermissionsChange[14]).Text, obj3);
+                  cResult[26] = tmp18;
+                  cResult[27] = tmp22;
+                  tmp20 = tmp22;
+                } else {
+                  tmp20 = cResult[27];
+                }
+                if (cResult[28] !== tmp10) {
+                  const obj4 = { spacing: 12, children: tmp10 };
+                  const tmp25 = closure_6(permissions(onPermissionsChange[12]).Stack, obj4);
+                  cResult[28] = tmp10;
+                  cResult[29] = tmp25;
+                  tmp23 = tmp25;
+                } else {
+                  tmp23 = cResult[29];
+                }
+                if (cResult[30] === tmp20) {
+                  let tmp26;
+                  if (cResult[31] === tmp23) {
+                    tmp26 = cResult[32];
+                  }
+                  if (cResult[33] === application.name) {
+                    let tmp29;
+                    if (cResult[34] === arr2) {
+                      tmp29 = cResult[35];
+                    }
+                    if (cResult[36] === tmp26) {
+                      let tmp33;
+                      if (cResult[37] === tmp29) {
+                        tmp33 = cResult[38];
+                      }
+                      return tmp33;
+                    }
+                    const obj5 = { spacing: 16, children: items };
+                    items = [tmp26, tmp29];
+                    const tmp35 = closure_7(permissions(onPermissionsChange[12]).Stack, obj5);
+                    cResult[36] = tmp26;
+                    cResult[37] = tmp29;
+                    cResult[38] = tmp35;
+                    tmp33 = tmp35;
+                  }
+                  let tmp30 = null;
+                  if (arr2.length > 0) {
+                    const obj6 = { children: items1 };
+                    let Stack = permissions(tmp2[12]).Stack;
+                    const obj7 = { variant: "text-sm/medium", color: "text-subtle", children: intl2.format(permissions(onPermissionsChange[15]).t.fsOkF4, obj8) };
+                    const Text = permissions(tmp2[14]).Text;
+                    intl2 = permissions(tmp2[15]).intl;
+                    obj8 = { applicationName: application.name };
+                    items1 = [closure_6(Text, obj7), ];
+                    const obj9 = { spacing: 12, children: arr2 };
+                    items1[1] = closure_6(permissions(onPermissionsChange[12]).Stack, obj9);
+                    tmp30 = closure_7(Stack, obj6);
+                  }
+                  cResult[33] = application.name;
+                  cResult[34] = arr2;
+                  cResult[35] = tmp30;
+                  tmp29 = tmp30;
+                }
+                const obj10 = { children: items2 };
+                items2 = [tmp20, tmp23];
+                const tmp28 = closure_7(permissions(onPermissionsChange[12]).Stack, obj10);
+                cResult[30] = tmp20;
+                cResult[31] = tmp23;
+                cResult[32] = tmp28;
+                tmp26 = tmp28;
+              }
+              const intl = permissions(tmp2[15]).intl;
+              const obj11 = { applicationName: application.name, guildName: guild.name };
+              const formatResult = intl.format(permissions(onPermissionsChange[15]).t.sOaT2j, obj11);
+              cResult[23] = application.name;
+              cResult[24] = guild.name;
+              cResult[25] = formatResult;
+              tmp18 = formatResult;
             }
           }
         }
       }
       if (cResult[12] !== permissions) {
         const fn2 = function j(VIEW_CHANNEL) {
-          return BigFlagUtilsAll.has(permissions, VIEW_CHANNEL);
+          const obj = BigFlagUtilsAll;
+          return obj.has(permissions, VIEW_CHANNEL);
         };
         cResult[12] = permissions;
         cResult[13] = fn2;
-        let tmp11 = fn2;
+        tmp11 = fn2;
       } else {
         tmp11 = cResult[13];
       }
@@ -146,46 +172,54 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((deniedPermission
       const found = OrderedPermissions.filter(tmp11);
       if (cResult[14] !== first) {
         const fn3 = function _(VIEW_CHANNEL) {
-          return !BigFlagUtilsAll.has(first, VIEW_CHANNEL);
+          const obj = BigFlagUtilsAll;
+          return !obj.has(first, VIEW_CHANNEL);
         };
         cResult[14] = first;
         cResult[15] = fn3;
-        let tmp12 = fn3;
+        tmp12 = fn3;
       } else {
         tmp12 = cResult[15];
       }
       if (cResult[16] === deniedPermissions) {
+        let tmp13;
+        let tmp15;
+        let tmp16;
         if (cResult[17] === onPermissionsChange) {
-          let tmp13 = cResult[18];
+          tmp13 = cResult[18];
         }
         const found1 = found.filter(tmp12);
         const mapped = found1.map(tmp13);
         if (cResult[19] !== first) {
           const fn5 = function y(VIEW_CHANNEL) {
-            return BigFlagUtilsAll.has(first, VIEW_CHANNEL);
+            const obj = BigFlagUtilsAll;
+            return obj.has(first, VIEW_CHANNEL);
           };
           cResult[19] = first;
           cResult[20] = fn5;
-          let found2 = fn5;
+          tmp15 = fn5;
         } else {
-          found2 = cResult[20];
+          tmp15 = cResult[20];
         }
         if (cResult[21] !== tmp4) {
           const fn6 = function z(item) {
-            const permissionName = permissions.getPermissionName(item);
-            const obj2 = { direction: "horizontal", align: "center", children: null };
-            const items = [timestampProducer(View, { style: closure_4.disabledPermissionIcon, children: timestampProducer(XSmallIcon.XSmallIcon, { size: "sm", color: "white" }) }), timestampProducer(Text_Text.Text, { variant: "text-md/medium", children: permissionName })];
-            obj2.children = items;
-            return React5(Stack_Stack.Stack, obj2, String(item));
+            let items;
+            const obj = permissions;
+            const permissionName = obj.getPermissionName(item);
+            const obj2 = { direction: "horizontal", align: "center", children: items };
+            const obj3 = { style: closure_4.disabledPermissionIcon, children: metroRequire(XSmallIcon.XSmallIcon, { size: "sm", color: "white" }) };
+            const Stack = Stack_Stack.Stack;
+            items = [metroRequire(View, obj3), metroRequire(Text_Text.Text, { variant: "text-md/medium", children: permissionName })];
+            return metroImportDefault(Stack, obj2, String(item));
           };
           cResult[21] = tmp4;
           cResult[22] = fn6;
-          let tmp15 = fn6;
+          tmp16 = fn6;
         } else {
-          tmp15 = cResult[22];
+          tmp16 = cResult[22];
         }
-        found2 = found.filter(found2);
-        const mapped1 = found2.map(tmp15);
+        const found2 = found.filter(tmp15);
+        const mapped1 = found2.map(tmp16);
         cResult[5] = deniedPermissions;
         cResult[6] = first;
         cResult[7] = onPermissionsChange;
@@ -193,20 +227,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((deniedPermission
         cResult[9] = tmp4;
         cResult[10] = mapped;
         cResult[11] = mapped1;
+        arr2 = mapped1;
+        tmp10 = mapped;
       }
       const fn4 = function w(item) {
-        closure_0 = item;
-        const permissionName = permissions(onPermissionsChange[10]).getPermissionName(item);
+        let closure_0 = item;
         const obj = permissions(onPermissionsChange[10]);
+        const permissionName = obj.getPermissionName(item);
         const obj2 = deniedPermissions(onPermissionsChange[9]);
-        const tmp2 = !deniedPermissions(onPermissionsChange[9]).has(deniedPermissions, item);
-        return closure_6(permissions(onPermissionsChange[11]).Checkbox, {
-          checked: !deniedPermissions(onPermissionsChange[9]).has(deniedPermissions, item),
+        const obj3 = {
+          checked: !obj2.has(deniedPermissions, item),
           onToggle(arg0) {
-            return onPermissionsChange(arg0, closure_0);
+            return onPermissionsChange(arg0, item);
           },
           label: permissionName
-        }, String(item));
+        };
+        return closure_6(permissions(onPermissionsChange[11]).Checkbox, obj3, String(item));
       };
       cResult[16] = deniedPermissions;
       cResult[17] = onPermissionsChange;
@@ -216,8 +252,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((deniedPermission
   }
   const fn = function u() {
     onPermissionsChange(true, permissions);
-    closure_6(BigFlagUtilsAll.invert(guild.permissions));
-    onPermissionsChange(false, BigFlagUtilsAll.invert(guild.permissions));
+    const obj = BigFlagUtilsAll;
+    closure_6(obj.invert(guild.permissions));
+    const obj2 = BigFlagUtilsAll;
+    onPermissionsChange(false, obj2.invert(guild.permissions));
   };
   const items3 = [guild.permissions, onPermissionsChange, permissions];
   cResult[0] = guild.permissions;
@@ -227,67 +265,99 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((deniedPermission
   cResult[4] = items3;
   tmp8 = items3;
   tmp7 = fn;
-  let obj = permissions(onPermissionsChange[7]);
-  obj2 = noop;
 }) : ((guild) => {
+  let _undefined;
+  let application;
+  let c5;
+  let c6;
+  let closure_4;
+  let intl;
+  let intl2;
+  let items1;
+  let items3;
+  let obj3;
+  let obj6;
+  let onPermissionsChange;
+  let permissions;
   ({ application, permissions } = guild);
   ({ deniedPermissions: importAll, onPermissionsChange } = guild);
   guild = guild.guild;
   c5 = undefined;
   c6 = undefined;
-  noop = closure_8();
-  [c5, c6] = guild(noop.useState(require("PermissionUtils").NONE), 2);
+  react = closure_8();
+  [c5, c6] = guild(react.useState(require("PermissionUtils").NONE), 2);
   let items = [guild.permissions, onPermissionsChange, permissions];
-  const effect = noop.useEffect(() => {
+  const tmp2 = guild(react.useState(require("PermissionUtils").NONE), 2);
+  const effect = react.useEffect(() => {
     onPermissionsChange(true, permissions);
-    _undefined(BigFlagUtilsAll.invert(guild.permissions));
-    onPermissionsChange(false, BigFlagUtilsAll.invert(guild.permissions));
+    const obj = BigFlagUtilsAll;
+    _undefined(obj.invert(guild.permissions));
+    const obj2 = BigFlagUtilsAll;
+    onPermissionsChange(false, obj2.invert(guild.permissions));
   }, items);
   const OrderedPermissions = permissions(onPermissionsChange[10]).OrderedPermissions;
-  const found = OrderedPermissions.filter((item) => BigFlagUtilsAll.has(permissions, item));
-  const found1 = found.filter((item) => !BigFlagUtilsAll.has(c5, item));
+  const found = OrderedPermissions.filter((item) => {
+    const obj = BigFlagUtilsAll;
+    return obj.has(permissions, item);
+  });
+  const found1 = found.filter((item) => {
+    const obj = BigFlagUtilsAll;
+    return !obj.has(c5, item);
+  });
   const mapped = found1.map((item) => {
-    closure_0 = item;
-    const permissionName = permissions(onPermissionsChange[10]).getPermissionName(item);
+    let closure_0 = item;
     const obj = permissions(onPermissionsChange[10]);
+    const permissionName = obj.getPermissionName(item);
     const obj2 = require("BigFlagUtils");
-    const tmp2 = !require("BigFlagUtils").has(closure_1, item);
-    return _undefined(permissions(onPermissionsChange[11]).Checkbox, {
-      checked: !require("BigFlagUtils").has(closure_1, item),
+    const obj3 = {
+      checked: !obj2.has(importAll, item),
       onToggle(arg0) {
-        return onPermissionsChange(arg0, closure_0);
+        return onPermissionsChange(arg0, item);
       },
       label: permissionName
-    }, String(item));
+    };
+    return _undefined(permissions(onPermissionsChange[11]).Checkbox, obj3, String(item));
   });
-  const found2 = found.filter((item) => BigFlagUtilsAll.has(c5, item));
+  const found2 = found.filter((item) => {
+    const obj = BigFlagUtilsAll;
+    return obj.has(c5, item);
+  });
   const mapped1 = found2.map((item) => {
-    const permissionName = permissions.getPermissionName(item);
-    const obj2 = { direction: "horizontal", align: "center", children: null };
-    const items = [timestampProducer(View, { style: closure_4.disabledPermissionIcon, children: timestampProducer(XSmallIcon.XSmallIcon, { size: "sm", color: "white" }) }), timestampProducer(Text_Text.Text, { variant: "text-md/medium", children: permissionName })];
-    obj2.children = items;
-    return React5(Stack_Stack.Stack, obj2, String(item));
+    let items;
+    const obj = permissions;
+    const permissionName = obj.getPermissionName(item);
+    const obj2 = { direction: "horizontal", align: "center", children: items };
+    const obj3 = { style: closure_4.disabledPermissionIcon, children: metroRequire(XSmallIcon.XSmallIcon, { size: "sm", color: "white" }) };
+    const Stack = Stack_Stack.Stack;
+    items = [metroRequire(View, obj3), metroRequire(Text_Text.Text, { variant: "text-md/medium", children: permissionName })];
+    return metroImportDefault(Stack, obj2, String(item));
   });
-  let obj = { children: null };
-  let obj2 = { variant: "text-sm/medium", color: "text-subtle", children: null };
-  const intl = permissions(onPermissionsChange[15]).intl;
-  obj2.children = intl.format(permissions(onPermissionsChange[15]).t.sOaT2j, { applicationName: application.name, guildName: guild.name });
-  const items1 = [c6(permissions(onPermissionsChange[14]).Text, obj2), c6(permissions(onPermissionsChange[12]).Stack, { spacing: 12, children: mapped })];
-  obj.children = items1;
-  const children = [closure_7(permissions(onPermissionsChange[12]).Stack, obj), ];
+  let Stack = permissions(onPermissionsChange[12]).Stack;
+  let obj = { children: items1 };
+  const Stack2 = permissions(onPermissionsChange[12]).Stack;
+  let obj2 = { variant: "text-sm/medium", color: "text-subtle", children: intl.format(permissions(onPermissionsChange[15]).t.sOaT2j, obj3) };
+  const Text = permissions(onPermissionsChange[14]).Text;
+  intl = permissions(onPermissionsChange[15]).intl;
+  obj3 = { applicationName: application.name, guildName: guild.name };
+  items1 = [c6(Text, obj2), c6(permissions(onPermissionsChange[12]).Stack, { spacing: 12, children: mapped })];
+  const children = [closure_7(Stack2, obj), ];
   let tmp6Result = null;
   if (mapped1.length > 0) {
-    const obj4 = { children: null };
-    const obj5 = { variant: "text-sm/medium", color: "text-subtle", children: null };
-    const intl2 = permissions(onPermissionsChange[15]).intl;
-    const obj6 = { applicationName: application.name };
-    obj5.children = intl2.format(permissions(onPermissionsChange[15]).t.fsOkF4, obj6);
-    const items3 = [tmp7(permissions(onPermissionsChange[14]).Text, obj5), ];
+    const obj4 = { children: items3 };
+    const Stack3 = permissions(onPermissionsChange[12]).Stack;
+    const obj5 = { variant: "text-sm/medium", color: "text-subtle", children: intl2.format(permissions(onPermissionsChange[15]).t.fsOkF4, obj6) };
+    const Text2 = permissions(onPermissionsChange[14]).Text;
+    intl2 = permissions(onPermissionsChange[15]).intl;
+    obj6 = { applicationName: application.name };
+    items3 = [c6(Text2, obj5), ];
     const obj7 = { spacing: 12, children: mapped1 };
-    items3[1] = tmp7(permissions(onPermissionsChange[12]).Stack, obj7);
-    obj4.children = items3;
-    tmp6Result = closure_7(permissions(onPermissionsChange[12]).Stack, obj4);
+    items3[1] = c6(permissions(onPermissionsChange[12]).Stack, obj7);
+    tmp6Result = closure_7(Stack3, obj4);
   }
   children[1] = tmp6Result;
-  return closure_7(permissions(onPermissionsChange[12]).Stack, { spacing: 16, children });
+  return closure_7(Stack, { spacing: 16, children });
 });
+size = size_mod;
+const result = size.fileFinishedImporting("modules/oauth2/native/BotPermissions.tsx");
+
+export default tmp3;

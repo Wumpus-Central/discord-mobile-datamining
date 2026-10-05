@@ -1,18 +1,27 @@
 // === Module 9149: useEmbeddedActivityBackground ===
 
 // Module 9149 (useEmbeddedActivityBackground)
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _slicedToArray_mod from "_slicedToArray" /* 32 */;
+import react_mod from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
+let applicationId;
+
+let _slicedToArray = _slicedToArray_mod;
+let react = react_mod;
 let closure_4 = ["embedded_cover", "embedded_background"];
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/activities/utils/useEmbeddedActivityBackground.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) => {
-  const cResult = applicationId(names[3]).c(13);
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) => {
+  let closure_3;
+  let format;
+  let names;
+  let ref;
+  let tmp5;
+  const tmp = applicationId;
+  let obj = applicationId(names[3]);
+  const cResult = obj.c(13);
   applicationId = applicationId.applicationId;
+  const tmp2 = names;
   ({ size, names, format } = applicationId);
   if (undefined === names) {
     names = ref;
@@ -21,17 +30,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) =
   if (undefined !== format) {
     str = format;
   }
-  let obj = applicationId(names[3]);
-  const tmp = applicationId;
-  const tmp2 = names;
-  [tmp5, _slicedToArray] = noop.useState(null);
-  const tmp4 = _slicedToArray(noop.useState(null), 2);
-  noop = _slicedToArray(noop.useState(true), 2)[1];
+  const tmp4 = _slicedToArray(react.useState(null), 2);
+  [tmp5, _slicedToArray] = tmp4;
+  [, react] = react.useState(true);
   if (cResult[0] === applicationId) {
     if (cResult[1] === tmp5) {
       if (cResult[2] === str) {
+        let tmp8;
+        let tmp10;
+        let tmp13;
+        let tmp12;
         if (cResult[3] === size) {
-          let tmp8 = cResult[4];
+          tmp8 = cResult[4];
         }
         let str2 = "loading";
         if (!tmp7) {
@@ -41,13 +51,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) =
           }
           str2 = str3;
         }
+        ref = obj2.useRef(names);
         if (cResult[5] !== names) {
           const fn = function k() {
-            closure_4.current = names;
+            ref.current = names;
           };
           cResult[5] = names;
           cResult[6] = fn;
-          let tmp10 = fn;
+          tmp10 = fn;
         } else {
           tmp10 = cResult[6];
         }
@@ -56,8 +67,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) =
           const fn2 = function y() {
             const current = ref.current;
             if (null != current) {
-              const assets = applicationId(names[4]).getAssets(tmp);
+              let obj = applicationId(names[4]);
+              const assets = obj.getAssets(tmp);
               assets.then((result) => {
+                let tmp6;
                 closure_3(false);
                 const entries = Object.entries(result);
                 const obj = entries[Symbol.iterator]();
@@ -67,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) =
                   if (null != tmp6) {
                     if ("" !== tmp6.id) {
                       if (current.includes(tmp6.name)) {
-                        let tmp12 = closure_2_2(tmp6.id);
+                        let tmp12 = _slicedToArray(tmp6.id);
                         obj.return();
                       }
                     }
@@ -75,23 +88,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) =
                   continue;
                 }
               });
-              let obj = applicationId(names[4]);
             }
           };
           const items = [applicationId];
           cResult[7] = applicationId;
           cResult[8] = fn2;
           cResult[9] = items;
-          let tmp13 = items;
-          let tmp12 = fn2;
+          tmp13 = items;
+          tmp12 = fn2;
         } else {
           tmp12 = cResult[8];
           tmp13 = cResult[9];
         }
         const effect1 = obj2.useEffect(tmp12, tmp13);
         if (cResult[10] === tmp8) {
+          let tmp15;
           if (cResult[11] === str2) {
-            let tmp15 = cResult[12];
+            tmp15 = cResult[12];
           }
           return tmp15;
         }
@@ -100,12 +113,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) =
         cResult[11] = str2;
         cResult[12] = obj3;
         tmp15 = obj3;
-        ref = obj2.useRef(names);
       }
     }
   }
-  const tmp6 = _slicedToArray(noop.useState(true), 2);
-  const assetImage = tmp(tmp2[4]).getAssetImage(applicationId, tmp5, size, str);
+  const tmpResult = tmp(tmp2[4]);
+  const assetImage = tmpResult.getAssetImage(applicationId, tmp5, size, str);
   cResult[0] = applicationId;
   cResult[1] = tmp5;
   cResult[2] = str;
@@ -113,6 +125,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) =
   cResult[4] = assetImage;
   tmp8 = assetImage;
 }) : ((applicationId) => {
+  let c2;
+  let closure_3;
+  let first;
+  let names;
+  let ref;
+  let tmp2;
   applicationId = applicationId.applicationId;
   ({ size, names } = applicationId);
   if (names === undefined) {
@@ -123,15 +141,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) =
     str = "png";
   }
   _slicedToArray = undefined;
-  noop = undefined;
+  react = undefined;
   ref = undefined;
-  [tmp2, c2] = noop.useState(null);
-  const tmp3 = _slicedToArray(noop.useState(true), 2);
-  noop = tmp3[1];
-  const tmp = _slicedToArray(noop.useState(null), 2);
-  const url = applicationId(names[4]).getAssetImage(applicationId, tmp2, size, str);
-  state = "loading";
-  if (!tmp3[0]) {
+  let obj = react;
+  const tmp = _slicedToArray(react.useState(null), 2);
+  [tmp2, c2] = tmp;
+  [first, react] = react.useState(true);
+  const obj2 = applicationId(names[4]);
+  const url = obj2.getAssetImage(applicationId, tmp2, size, str);
+  let state = "loading";
+  if (!first) {
     let str3 = "not-found";
     if (null != url) {
       str3 = "fetched";
@@ -140,14 +159,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) =
   }
   ref = obj.useRef(names);
   const effect = obj.useEffect(() => {
-    closure_4.current = names;
+    ref.current = names;
   });
   const items = [applicationId];
   const effect1 = obj.useEffect(() => {
     const current = ref.current;
     if (null != current) {
-      const assets = applicationId(names[4]).getAssets(tmp);
+      let obj = applicationId(names[4]);
+      const assets = obj.getAssets(tmp);
       assets.then((result) => {
+        let tmp6;
         closure_3(false);
         const entries = Object.entries(result);
         const obj = entries[Symbol.iterator]();
@@ -165,8 +186,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((applicationId) =
           continue;
         }
       });
-      let obj = applicationId(names[4]);
     }
   }, items);
   return { url, state };
 });
+const result = size.fileFinishedImporting("modules/activities/utils/useEmbeddedActivityBackground.tsx");
+
+export default tmp2;

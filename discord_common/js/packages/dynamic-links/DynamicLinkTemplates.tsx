@@ -19,5 +19,5 @@ export const getChannelDynamicLinkTemplate = function getChannelDynamicLinkTempl
   if (!arg0) {
     str = "@me";
   }
-  return "" + location.protocol + "//" + window.GLOBAL_ENV.WEBAPP_ENDPOINT + "/channels/" + str;
+  return "" + protocol + "//" + WEBAPP_ENDPOINT + "/channels/" + str;
 };

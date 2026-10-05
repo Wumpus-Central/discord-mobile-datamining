@@ -7,26 +7,27 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/user_settings/GuildThemeSourcePreferenceUtils.tsx");
 
 export const resolveDefaultGuildThemePreference = function resolveDefaultGuildThemePreference(arg0) {
+  let GUILD;
   if (arg0 === preloaded_user_settings.GuildThemeSourcePreference.PERSONAL) {
-    let GUILD = preloaded_user_settings.GuildThemeSourcePreference.PERSONAL;
+    GUILD = preloaded_user_settings.GuildThemeSourcePreference.PERSONAL;
   } else {
     GUILD = preloaded_user_settings.GuildThemeSourcePreference.GUILD;
   }
   return GUILD;
 };
-export const resolveGuildThemeSourcePreference = function resolveGuildThemeSourcePreference(guildThemeSourcePreferenceOverride, defaultGuildThemePreference) {
-  let GuildThemeSourcePreference = dependencyMap;
-  let tmp2 = guildThemeSourcePreferenceOverride;
-  if (guildThemeSourcePreferenceOverride !== preloaded_user_settings.GuildThemeSourcePreference.GUILD) {
-    tmp2 = guildThemeSourcePreferenceOverride;
-    if (guildThemeSourcePreferenceOverride !== preloaded_user_settings.GuildThemeSourcePreference.PERSONAL) {
-      if (defaultGuildThemePreference === preloaded_user_settings.GuildThemeSourcePreference.PERSONAL) {
-        GuildThemeSourcePreference = preloaded_user_settings.GuildThemeSourcePreference;
-        let GUILD = GuildThemeSourcePreference.PERSONAL;
+export const resolveGuildThemeSourcePreference = function resolveGuildThemeSourcePreference(arg0, arg1) {
+  let tmp3 = arg0;
+  if (arg0 !== preloaded_user_settings.GuildThemeSourcePreference.GUILD) {
+    tmp3 = arg0;
+    if (arg0 !== preloaded_user_settings.GuildThemeSourcePreference.PERSONAL) {
+      let GUILD;
+      if (arg1 === preloaded_user_settings.GuildThemeSourcePreference.PERSONAL) {
+        GUILD = preloaded_user_settings.GuildThemeSourcePreference.PERSONAL;
       } else {
         GUILD = preloaded_user_settings.GuildThemeSourcePreference.GUILD;
       }
+      tmp3 = GUILD;
     }
   }
-  return tmp2;
+  return tmp3;
 };

@@ -2,15 +2,15 @@
 
 // Module 16918 (GuildThemeAnalyticsUtils)
 import GuildStore from "GuildStore" /* 2074 */;
+import size from "module_2" /* 2 */;
 
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_themes/GuildThemeAnalyticsUtils.tsx");
 
 export const collectGuildThemeAnalyticsMetadata = function collectGuildThemeAnalyticsMetadata(selectedGuildId) {
   if (null == selectedGuildId) {
     return null;
   } else {
-    guild = GuildStore.getGuild(selectedGuildId);
+    const guild = GuildStore.getGuild(selectedGuildId);
     if (null == guild) {
       return null;
     } else {

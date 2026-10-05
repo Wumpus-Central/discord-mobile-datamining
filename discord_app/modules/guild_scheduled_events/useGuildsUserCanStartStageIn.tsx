@@ -1,17 +1,22 @@
 // === Module 9188: useGuildsUserCanStartStageIn ===
 
 // Module 9188 (useGuildsUserCanStartStageIn)
-import GuildChannelStore from "GuildChannelStore" /* 4507 */;
+import GuildChannelStore2 from "GuildChannelStore" /* 4507 */;
 import PermissionStore from "PermissionStore" /* 4509 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4507).GUILD_VOCAL_CHANNELS_KEY;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_scheduled_events/useGuildsUserCanStartStageIn.tsx");
+const GuildChannelStore = GuildChannelStore2;
+let id;
 
-export const useChannelsUserCanStartStageIn = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
-  const cResult = id(576).c(4);
+const GUILD_VOCAL_CHANNELS_KEY = GuildChannelStore2.GUILD_VOCAL_CHANNELS_KEY;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+  let first;
+  let tmp8;
+  let tmp9;
+  const obj = id(576);
+  const cResult = obj.c(4);
+  const tmp = id;
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -22,21 +27,19 @@ export const useChannelsUserCanStartStageIn = ReactCompilerGating.isReactCompile
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildChannelStore, PermissionStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== id) {
     const fn = function c() {
-      return GuildChannelStore.getChannels(id)[GUILD_VOCAL_CHANNELS_KEY].reduce((arr, channel) => {
+      let arr = GuildChannelStore.getChannels(id)[GUILD_VOCAL_CHANNELS_KEY];
+      return arr.reduce((arr, channel) => {
         channel = channel.channel;
         if (channel.isGuildStageVoice()) {
           const channel2 = channel.channel;
           if (closure_1_4 !== undefined) {
-            let canResult = channel2.isGuildStageVoice();
-            if (canResult) {
-              canResult = closure_1_4.can(id(closure_1_1[2]).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel2);
-            }
+            const canResult = channel2.isGuildStageVoice() && closure_1_4.can(id(closure_1_1[2]).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel2);
             if (canResult) {
               arr = arr.push(channel);
             }
@@ -49,14 +52,14 @@ export const useChannelsUserCanStartStageIn = ReactCompilerGating.isReactCompile
     cResult[1] = id;
     cResult[2] = fn;
     cResult[3] = items1;
-    let tmp9 = items1;
-    let tmp8 = fn;
+    tmp9 = items1;
+    tmp8 = fn;
   } else {
     tmp8 = cResult[2];
     tmp9 = cResult[3];
   }
-  const obj = id(576);
-  return id(504).useStateFromStoresArray(first, tmp8, tmp9);
+  const tmpResult = tmp(504);
+  return tmpResult.useStateFromStoresArray(first, tmp8, tmp9);
 }) : ((id) => {
   id = undefined;
   if (id != null) {
@@ -67,20 +70,24 @@ export const useChannelsUserCanStartStageIn = ReactCompilerGating.isReactCompile
   }
   const items = [GuildChannelStore, PermissionStore];
   const items1 = [id];
-  return id(504).useStateFromStoresArray(items, () => GuildChannelStore.getChannels(id)[GUILD_VOCAL_CHANNELS_KEY].reduce((arr, channel) => {
-    channel = channel.channel;
-    if (channel.isGuildStageVoice()) {
-      const channel2 = channel.channel;
-      if (closure_1_4 !== undefined) {
-        let canResult = channel2.isGuildStageVoice();
-        if (canResult) {
-          canResult = closure_1_4.can(id(closure_1_1[2]).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel2);
-        }
-        if (canResult) {
-          arr = arr.push(channel);
+  const obj = id(504);
+  return obj.useStateFromStoresArray(items, () => {
+    let arr = GuildChannelStore.getChannels(id)[GUILD_VOCAL_CHANNELS_KEY];
+    return arr.reduce((arr, channel) => {
+      channel = channel.channel;
+      if (channel.isGuildStageVoice()) {
+        const channel2 = channel.channel;
+        if (closure_1_4 !== undefined) {
+          const canResult = channel2.isGuildStageVoice() && closure_1_4.can(id(closure_1_1[2]).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel2);
+          if (canResult) {
+            arr = arr.push(channel);
+          }
         }
       }
-    }
-    return arr;
-  }, []), items1);
+      return arr;
+    }, []);
+  }, items1);
 });
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/useGuildsUserCanStartStageIn.tsx");
+
+export const useChannelsUserCanStartStageIn = tmp2;

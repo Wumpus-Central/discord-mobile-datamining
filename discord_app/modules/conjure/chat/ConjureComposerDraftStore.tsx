@@ -1,13 +1,13 @@
 // === Module 16736: ConjureComposerDraftStore ===
 
 // Module 16736 (ConjureComposerDraftStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import _slicedToArray from "module_32" /* 32 */;
-import apply from "module_12" /* 12 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import module_12 from "module_12" /* 12 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
 function readStoredDrafts() {
   const Storage = Storage2.Storage;
   let obj = Storage.get(VibegrationsComposerDrafts);
@@ -18,45 +18,48 @@ function readStoredDrafts() {
 }
 const VibegrationsComposerDrafts = "VibegrationsComposerDrafts";
 const map = new Map();
-let closure_6 = apply.throttle(() => {
+let closure_6 = module_12.throttle(() => {
+  let tmp7;
+  let tmp8;
   if (0 !== map.size) {
-    const tmp22 = readStoredDrafts();
-    const tmp24 = map[Symbol.iterator]();
-    while (tmp24 !== undefined) {
-      let tmp8 = _slicedToArray(tmp5, 2);
-      [tmp9, tmp10] = tmp8;
-      if ("" === tmp10) {
-        delete tmp[tmp2];
+    const tmp19 = readStoredDrafts();
+    const tmp21 = map[Symbol.iterator]();
+    while (tmp21 !== undefined) {
+      let tmp6 = _slicedToArray(tmp3, 2);
+      [tmp7, tmp8] = tmp6;
+      if ("" === tmp8) {
+        delete tmp19[tmp7];
       } else {
-        tmp22[tmp9] = tmp11;
+        tmp19[tmp7] = tmp9;
       }
       continue;
     }
     map.clear();
     const Storage = Storage2.Storage;
-    const result = Storage.set(VibegrationsComposerDrafts, tmp22);
+    const result = Storage.set(VibegrationsComposerDrafts, tmp19);
   }
 }, 1000);
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class ConjureComposerDraftStore extends Store {
-}
-ConjureComposerDraftStore.prototype["getDraft"] = function getDraft(arg0) {
-  value = map.get(arg0);
-  if (null == value) {
-    const Storage = Storage2.Storage;
-    value2 = Storage.get(VibegrationsComposerDrafts);
-    if (value2 == null) {
-      value2 = {};
+  getDraft(arg0) {
+    let value = map.get(arg0);
+    if (null == value) {
+      const Storage = Storage2.Storage;
+      let value2 = Storage.get(VibegrationsComposerDrafts);
+      if (value2 == null) {
+        value2 = {};
+      }
+      let str = value2[arg0];
+      if (str == null) {
+        str = "";
+      }
+      value = str;
     }
-    let str = value2[arg0];
-    if (str == null) {
-      str = "";
-    }
-    value = str;
+    return value;
   }
-  return value;
-};
-const conjureComposerDraftStore = new ConjureComposerDraftStore(DispatcherDefault, {
+}
+const prototype = ConjureComposerDraftStore.prototype;
+let obj = {
   LOGOUT: function handleLogout() {
     map.clear();
     closure_6.cancel();
@@ -73,8 +76,8 @@ const conjureComposerDraftStore = new ConjureComposerDraftStore(DispatcherDefaul
     }
     return false;
   }
-});
-const size = fn(2);
+};
+const conjureComposerDraftStore = new ConjureComposerDraftStore(DispatcherDefault, obj);
 let result = size.fileFinishedImporting("modules/conjure/chat/ConjureComposerDraftStore.tsx");
 
 export default conjureComposerDraftStore;

@@ -2,32 +2,39 @@
 
 // Module 11379 (UploadActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import DraftStore from "DraftStore" /* 7031 */;
+import DraftStore2 from "DraftStore" /* 7031 */;
 import UploadStore from "UploadStore" /* 7466 */;
+import size from "module_2" /* 2 */;
 
-const DraftType = fn(7031).DraftType;
-const size = fn(2);
-const result = size.fileFinishedImporting("actions/native/UploadActionCreators.tsx");
+const DraftStore = DraftStore2;
 
-export default {
+const DraftType = DraftStore2.DraftType;
+let obj = {
   restoreFailedUpload(messageId, file) {
-    DispatcherDefault.dispatch({ type: "UPLOAD_RESTORE_FAILED_UPLOAD", messageId, file });
+    const obj = DispatcherDefault;
+    const obj2 = { type: "UPLOAD_RESTORE_FAILED_UPLOAD", messageId, file };
+    obj.dispatch(obj2);
   },
   cancel(channelId, file) {
-    DispatcherDefault.dispatch({ type: "UPLOAD_CANCEL_REQUEST", channelId, file });
+    const obj = DispatcherDefault;
+    const obj2 = { type: "UPLOAD_CANCEL_REQUEST", channelId, file };
+    obj.dispatch(obj2);
     const messageForFile = UploadStore.getMessageForFile(file.id);
     if (null != messageForFile) {
       if ("" === DraftStore.getDraft(messageForFile.channel_id, DraftType.ChannelMessage)) {
-        const obj3 = { type: "DRAFT_SAVE", channelId: null, draft: null, draftType: null };
+        const obj3 = { type: "DRAFT_SAVE", channelId: null, draft: null, draftType: DraftType.ChannelMessage };
         ({ channel_id: obj4.channelId, content: obj4.draft } = messageForFile);
-        obj3.draftType = DraftType.ChannelMessage;
-        DispatcherDefault.dispatch(obj3);
         const tmpResult = DispatcherDefault;
+        tmpResult.dispatch(obj3);
       }
     }
-    const obj2 = { type: "UPLOAD_CANCEL_REQUEST", channelId, file };
   },
   cancelUploadItem(found, itemId) {
-    DispatcherDefault.dispatch({ type: "UPLOAD_ITEM_CANCEL_REQUEST", file: found, itemId });
+    const obj = DispatcherDefault;
+    const obj2 = { type: "UPLOAD_ITEM_CANCEL_REQUEST", file: found, itemId };
+    obj.dispatch(obj2);
   }
 };
+const result = size.fileFinishedImporting("actions/native/UploadActionCreators.tsx");
+
+export default obj;

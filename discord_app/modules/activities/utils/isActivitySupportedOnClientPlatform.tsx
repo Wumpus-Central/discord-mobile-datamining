@@ -8,13 +8,15 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/activities/utils/isActivitySupportedOnClientPlatform.tsx");
 
 export default function isActivitySupportedOnClientPlatform(arr) {
+  let IOS;
+  const obj = PlatformUtils;
   if (obj.isIOS()) {
-    let IOS = Server.EmbeddedActivitySupportedPlatforms.IOS;
+    IOS = Server.EmbeddedActivitySupportedPlatforms.IOS;
   } else {
     const tmpResult = PlatformUtils;
+    const isAndroidResult = tmpResult.isAndroid();
     const EmbeddedActivitySupportedPlatforms = Server.EmbeddedActivitySupportedPlatforms;
-    IOS = PlatformUtils.isAndroid() ? EmbeddedActivitySupportedPlatforms.ANDROID : EmbeddedActivitySupportedPlatforms.WEB;
-    const isAndroidResult = PlatformUtils.isAndroid();
+    IOS = isAndroidResult ? EmbeddedActivitySupportedPlatforms.ANDROID : EmbeddedActivitySupportedPlatforms.WEB;
   }
   let flag;
   if (arr != null) {

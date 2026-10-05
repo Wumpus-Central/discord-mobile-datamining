@@ -35,23 +35,14 @@ export const hasAttachmentsEmbedsComponentsOrSnapshots = function hasAttachments
         if (obj != null) {
           someResult = obj.some((message) => {
             message = message.message;
-            let tmp = null != message.attachments;
-            if (tmp) {
-              tmp = message.attachments.length > 0;
+            let tmp = null != message.attachments && message.attachments.length > 0;
+            if (!tmp) {
+              tmp = null != message.embeds && message.embeds.length > 0;
+              const tmp2 = null != message.embeds && message.embeds.length > 0;
             }
             if (!tmp) {
-              let tmp2 = null != message.embeds;
-              if (tmp2) {
-                tmp2 = message.embeds.length > 0;
-              }
-              tmp = tmp2;
-            }
-            if (!tmp) {
-              let tmp3 = null != message.components;
-              if (tmp3) {
-                tmp3 = message.components.length > 0;
-              }
-              tmp = tmp3;
+              tmp = null != message.components && message.components.length > 0;
+              const tmp3 = null != message.components && message.components.length > 0;
             }
             return tmp;
           });

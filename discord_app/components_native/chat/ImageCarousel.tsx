@@ -1,137 +1,175 @@
 // === Module 10360: ImageCarousel ===
 
 // Module 10360 (ImageCarousel)
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
+import intl5 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import useWindowDimensions from "useWindowDimensions" /* 1484 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4612 */;
 import timing from "timing" /* 4891 */;
 import spring from "spring" /* 5597 */;
 import Pressables from "Pressables" /* 5909 */;
-import _modDef6427 from "module_6427" /* 6427 */;
+import AssetRegistryDefault from "AssetRegistry" /* 6427 */;
+import DraftStore from "DraftStore" /* 7031 */;
 import Upload from "Upload" /* 7269 */;
 import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 8812 */;
 import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10362 */;
 import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10364 */;
 import AttachmentPreviewDefault from "AttachmentPreview" /* 11043 */;
-import noop from "module_19" /* 19 */;
+import react_mod from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 7267 */;
+import ImageCarouselConstants from "ImageCarouselConstants" /* 10361 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size_mod from "module_2" /* 2 */;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ View: closure_4, StyleSheet, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const DraftType = fn(7031).DraftType;
-const ImageCarouselConstants = fn(10361);
+const require = globalThis.__r;
+let _require, dependencyMap;
+
+let StyleSheet;
+let closure_12;
+let closure_4;
+let hasOwnProperty;
+let obj2;
+let obj3;
+let obj4;
+let obj5;
+let obj6;
+let obj7;
+let obj8;
+let rect;
+let rect1;
+let size;
+let unpackModuleId;
+let react = react_mod;
+({ View: closure_4, StyleSheet, ScrollView: hasOwnProperty } = react_native);
+const DraftType = DraftStore.DraftType;
 const IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN = ImageCarouselConstants.IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN;
 const IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
-let closure_10 = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_HEIGHT;
-const jsxProd = fn(21);
-({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4890);
-let obj = { container: { width: "100%" }, pressableContainer: { marginHorizontal: 4 }, tileContainer: { position: "relative", minWidth: 60, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden", borderRadius: nativeDefault.radii.md - 1 }, decorationsContainer: null, highlightedTileContainer: null, closeButton: null, scrollview: null, closeContainer: null, closeButtonIcon: null, altTagText: null, iconContainer: null, spoilerOverlay: null, footerRightContainer: null };
-let obj4 = {};
+const IMAGE_CAROUSEL_TILE_HEIGHT = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_HEIGHT;
+({ jsx: unpackModuleId, jsxs: closure_12 } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { container: { width: "100%" }, pressableContainer: { marginHorizontal: 4 }, tileContainer: obj2, decorationsContainer: obj3, highlightedTileContainer: obj4, closeButton: rect, scrollview: { paddingTop: IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING }, closeContainer: size, closeButtonIcon: obj5, altTagText: obj6, iconContainer: obj7, spoilerOverlay: obj8, footerRightContainer: rect1 };
+obj2 = { position: "relative", minWidth: 60, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden", borderRadius: nativeDefault.radii.md - 1 };
+createStyles = createStyles.createStyles;
+obj3 = { flex: 1, flexDirection: "row", justifyContent: "space-between", alignItems: "flex-end", padding: 4 };
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-obj4.flex = 1;
-obj4.flexDirection = "row";
-obj4.justifyContent = "space-between";
-obj4.alignItems = "flex-end";
-obj4.padding = 4;
-obj.decorationsContainer = obj4;
-let obj3 = { position: "relative", minWidth: 60, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden", borderRadius: nativeDefault.radii.md - 1 };
-obj.highlightedTileContainer = { borderColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, borderStyle: "solid", borderWidth: 2, borderRadius: 10 };
-let rect = { position: "absolute", top: -1 * IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN, right: 2 };
-obj.closeButton = rect;
-obj.scrollview = { paddingTop: IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING };
-let size = { height: 20, width: 20, borderRadius: 20, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM_LIGHTBOX };
-obj.closeContainer = size;
-let obj5 = { borderColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, borderStyle: "solid", borderWidth: 2, borderRadius: 10 };
-obj.closeButtonIcon = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-let obj6 = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-obj.altTagText = { paddingHorizontal: nativeDefault.space.PX_4, lineHeight: 20, backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM_LIGHTBOX, borderRadius: nativeDefault.radii.xs, textTransform: "uppercase" };
-let obj7 = { paddingHorizontal: nativeDefault.space.PX_4, lineHeight: 20, backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM_LIGHTBOX, borderRadius: nativeDefault.radii.xs, textTransform: "uppercase" };
-obj.iconContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM_LIGHTBOX, borderRadius: nativeDefault.radii.sm, padding: nativeDefault.space.PX_4 };
+obj4 = { borderColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, borderStyle: "solid", borderWidth: 2, borderRadius: 10 };
+rect = { position: "absolute", top: -1 * IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN, right: 2 };
+size = { height: 20, width: 20, borderRadius: 20, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM_LIGHTBOX };
+obj5 = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+obj6 = { paddingHorizontal: nativeDefault.space.PX_4, lineHeight: 20, backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM_LIGHTBOX, borderRadius: nativeDefault.radii.xs, textTransform: "uppercase" };
+obj7 = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM_LIGHTBOX, borderRadius: nativeDefault.radii.sm, padding: nativeDefault.space.PX_4 };
+obj8 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
-obj.spoilerOverlay = {};
-const rect1 = { position: "absolute", bottom: 4, right: 4, alignItems: "center", justifyContent: "center", alignContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 4, borderRadius: 20, opacity: 0.85 };
-obj.footerRightContainer = rect1;
-let closure_13 = createStyles.createStyles(obj);
+rect1 = { position: "absolute", bottom: 4, right: 4, alignItems: "center", justifyContent: "center", alignContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 4, borderRadius: 20, opacity: 0.85 };
+let closure_13 = createStyles(obj);
 const __initData = { code: "function ImageCarouselTsx1(){const{withTiming,animatedStylePropValue,STANDARD_EASING,withSpring}=this.__closure;return{opacity:withTiming(animatedStylePropValue.get(),{duration:300,easing:STANDARD_EASING},\"respect-motion-settings\"),transform:[{scale:withSpring(animatedStylePropValue.get(),{stiffness:80,damping:6,mass:0.3},\"respect-motion-settings\")}]};}" };
 const __initData2 = { code: "function ImageCarouselTsx2(){const{withTiming,animatedStylePropValue,STANDARD_EASING,withSpring}=this.__closure;return{opacity:withTiming(animatedStylePropValue.get(),{duration:300,easing:STANDARD_EASING},'respect-motion-settings'),transform:[{scale:withSpring(animatedStylePropValue.get(),{stiffness:80,damping:6,mass:0.3},'respect-motion-settings')}]};}" };
-let ReactCompilerGating = fn(558);
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = sharedValue(576).c(5);
+let ReactCompilerGating = ReactCompilerGating_mod;
+let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let sharedValue;
+  let tmp5;
+  const tmp = sharedValue;
   let obj = sharedValue(576);
-  sharedValue = sharedValue(4612).useSharedValue(0);
+  const cResult = obj.c(5);
+  let obj2 = sharedValue(4612);
+  sharedValue = obj2.useSharedValue(0);
   if (cResult[0] !== sharedValue) {
     const fn = function o() {
       const result = sharedValue.set(1);
     };
     cResult[0] = sharedValue;
     cResult[1] = fn;
-    let tmp5 = fn;
+    tmp5 = fn;
   } else {
     tmp5 = cResult[1];
   }
   if (cResult[2] === sharedValue) {
+    let tmp6;
     if (cResult[3] === arg0) {
-      let tmp6 = cResult[4];
+      tmp6 = cResult[4];
     }
-    const effect = noop.useEffect(tmp5, tmp6);
+    const effect = react.useEffect(tmp5, tmp6);
     const fn2 = function s() {
-      const obj = { opacity: null, transform: null };
-      const obj3 = { duration: 300, easing: null };
+      let items;
+      let obj2;
+      let obj4;
+      let value;
+      let withTiming;
+      const obj = { opacity: withTiming(value, obj2, "respect-motion-settings"), transform: items };
+      withTiming = timing.withTiming;
+      obj2 = { duration: 300, easing: native.STANDARD_EASING };
+      timing;
       value = sharedValue.get();
-      obj3.easing = native.STANDARD_EASING;
-      obj.opacity = timing.withTiming(value, obj3, "respect-motion-settings");
-      const obj4 = { scale: null };
-      obj4.scale = spring.withSpring(sharedValue.get(), { stiffness: 80, damping: 6, mass: 0.3 }, "respect-motion-settings");
-      const items = [obj4];
-      obj.transform = items;
+      const obj3 = { scale: obj4.withSpring(sharedValue.get(), { stiffness: 80, damping: 6, mass: 0.3 }, "respect-motion-settings") };
+      items = [obj3];
+      obj4 = spring;
       return obj;
     };
     let obj3 = { withTiming: tmp(4891).withTiming, animatedStylePropValue: sharedValue, STANDARD_EASING: tmp(1188).STANDARD_EASING, withSpring: tmp(5597).withSpring };
+    const useAnimatedStyle = tmp(4612).useAnimatedStyle;
+    tmp(4612);
     fn2.__closure = obj3;
     fn2.__workletHash = 14689938623095;
     fn2.__initData = __initData;
-    return tmp(4612).useAnimatedStyle(fn2);
+    return useAnimatedStyle(fn2);
   }
   let items = [sharedValue, arg0];
   cResult[2] = sharedValue;
   cResult[3] = arg0;
   cResult[4] = items;
   tmp6 = items;
-  let obj2 = sharedValue(4612);
 }) : ((arg0) => {
-  sharedValue = sharedValue(4612).useSharedValue(0);
+  let sharedValue;
+  let obj = sharedValue(4612);
+  sharedValue = obj.useSharedValue(0);
   let items = [sharedValue, arg0];
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(() => {
     const result = sharedValue.set(1);
   }, items);
-  let obj = sharedValue(4612);
+  let obj2 = sharedValue(4612);
   const fn = function o() {
-    const obj = { opacity: null, transform: null };
-    const obj3 = { duration: 300, easing: null };
+    let items;
+    let obj2;
+    let obj4;
+    let value;
+    let withTiming;
+    const obj = { opacity: withTiming(value, obj2, "respect-motion-settings"), transform: items };
+    withTiming = timing.withTiming;
+    obj2 = { duration: 300, easing: native.STANDARD_EASING };
+    timing;
     value = sharedValue.get();
-    obj3.easing = native.STANDARD_EASING;
-    obj.opacity = timing.withTiming(value, obj3, "respect-motion-settings");
-    const obj4 = { scale: null };
-    obj4.scale = spring.withSpring(sharedValue.get(), { stiffness: 80, damping: 6, mass: 0.3 }, "respect-motion-settings");
-    const items = [obj4];
-    obj.transform = items;
+    const obj3 = { scale: obj4.withSpring(sharedValue.get(), { stiffness: 80, damping: 6, mass: 0.3 }, "respect-motion-settings") };
+    items = [obj3];
+    obj4 = spring;
     return obj;
   };
-  let obj2 = sharedValue(4612);
-  fn.__closure = { withTiming: sharedValue(4891).withTiming, animatedStylePropValue: sharedValue, STANDARD_EASING: sharedValue(1188).STANDARD_EASING, withSpring: sharedValue(5597).withSpring };
+  let obj3 = { withTiming: sharedValue(4891).withTiming, animatedStylePropValue: sharedValue, STANDARD_EASING: sharedValue(1188).STANDARD_EASING, withSpring: sharedValue(5597).withSpring };
+  fn.__closure = obj3;
   fn.__workletHash = 1893609222612;
   fn.__initData = __initData2;
   return obj2.useAnimatedStyle(fn);
 });
-let closure_16 = tmp7;
-ReactCompilerGating = fn(558);
+let closure_16 = tmp9;
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((onEdit) => {
-  const cResult = onEdit(channelId[9]).c(54);
+  let channelId;
+  let description;
+  let first;
+  let highlightThumbnails;
+  let id;
+  let isImage;
+  let isThumbnail;
+  let isVideo;
+  let item;
+  let upload;
+  let tmp = onEdit;
+  let obj = onEdit(channelId[9]);
+  const cResult = obj.c(54);
   onEdit = onEdit.onEdit;
   const onRemove = onEdit.onRemove;
   channelId = onEdit.channelId;
@@ -140,28 +178,34 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((onEdit) => {
   const tmp5 = closure_13();
   ({ description, id } = upload);
   ({ item, isVideo, isImage, isThumbnail } = upload);
-  const obj = onEdit(channelId[9]);
-  onRemove(channelId[14])(item.platform === onEdit(channelId[15]).UploadPlatform.REACT_NATIVE, "Upload must be a React Native upload item.");
+  const tmp7 = onRemove(channelId[14]);
+  tmp7(item.platform === tmp(channelId[15]).UploadPlatform.REACT_NATIVE, "Upload must be a React Native upload item.");
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UploadAttachmentStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === channelId) {
+    let tmp11;
     if (cResult[2] === id) {
-      let tmp11 = cResult[3];
+      tmp11 = cResult[3];
     }
-    const stateFromStores = tmp(tmp2[16]).useStateFromStores(first, tmp11);
+    let tmpResult = tmp(tmp2[16]);
+    const stateFromStores = tmpResult.useStateFromStores(first, tmp11);
     if (cResult[4] === id) {
+      let tmp13;
       if (cResult[5] === onRemove) {
-        let tmp13 = cResult[6];
+        tmp13 = cResult[6];
       }
       if (cResult[7] === channelId) {
         if (cResult[8] === id) {
           if (cResult[9] === onEdit) {
             if (cResult[10] === onRemove) {
+              let tmp16;
+              let tmp19;
+              let tmp21;
               let uri = item.id;
               class O {
                 constructor() {
@@ -186,19 +230,21 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((onEdit) => {
               }
               class P {
                 constructor() {
-                  tmpResult = undefined;
+                  let tmpResult;
                   if (onRemove != null) {
-                    tmp3 = id;
                     tmpResult = tmp(id);
                   }
                   return tmpResult;
                 }
               }
+              const filename = item.filename;
               if (tmp4) {
+                let flag = true;
                 tmp4 = true === isThumbnail;
               }
               if (cResult[13] !== item.filename) {
                 const intl = tmp(tmp2[18]).intl;
+                const formatToPlainString = intl.formatToPlainString;
                 class O {
                   constructor() {
                     obj = {
@@ -217,21 +263,21 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((onEdit) => {
                     return;
                   }
                 }
+                const MJHFt9 = tmp(tmp2[18]).t.MJHFt9;
                 class P {
                   constructor() {
-                    tmpResult = undefined;
+                    let tmpResult;
                     if (onRemove != null) {
-                      tmp3 = id;
                       tmpResult = tmp(id);
                     }
                     return tmpResult;
                   }
                 }
                 const obj2 = { name: tmp17 };
-                const formatToPlainStringResult = intl.formatToPlainString(tmp(tmp2[18]).t.MJHFt9, obj2);
+                const formatToPlainStringResult = formatToPlainString(MJHFt9, obj2);
                 cResult[13] = item.filename;
                 cResult[14] = formatToPlainStringResult;
-                let tmp16 = formatToPlainStringResult;
+                tmp16 = formatToPlainStringResult;
               } else {
                 tmp16 = cResult[14];
               }
@@ -258,20 +304,20 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((onEdit) => {
                 }
                 class P {
                   constructor() {
-                    tmpResult = undefined;
+                    let tmpResult;
                     if (onRemove != null) {
-                      tmp3 = id;
                       tmpResult = tmp(id);
                     }
                     return tmpResult;
                   }
                 }
-                let tmp19 = tmp20;
+                tmp19 = tmp20;
               } else {
                 tmp19 = cResult[15];
               }
               if (cResult[16] !== item.filename) {
                 const intl2 = tmp(tmp2[18]).intl;
+                const formatToPlainString2 = intl2.formatToPlainString;
                 class O {
                   constructor() {
                     obj = {
@@ -290,53 +336,63 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((onEdit) => {
                     return;
                   }
                 }
+                const FxKgb3 = tmp(tmp2[18]).t.FxKgb3;
                 class P {
                   constructor() {
-                    tmpResult = undefined;
+                    let tmpResult;
                     if (onRemove != null) {
-                      tmp3 = id;
                       tmpResult = tmp(id);
                     }
                     return tmpResult;
                   }
                 }
                 const obj3 = { name: tmp22 };
-                const formatToPlainStringResult1 = intl2.formatToPlainString(tmp(tmp2[18]).t.FxKgb3, obj3);
+                const formatToPlainString2Result = formatToPlainString2(FxKgb3, obj3);
                 cResult[16] = item.filename;
-                cResult[17] = formatToPlainStringResult1;
-                let tmp21 = formatToPlainStringResult1;
+                cResult[17] = formatToPlainString2Result;
+                tmp21 = formatToPlainString2Result;
               } else {
                 tmp21 = cResult[17];
               }
               if (cResult[18] === isThumbnail) {
+                let tmp25;
+                let tmp32;
                 if (cResult[19] === tmp5.footerRightContainer) {
-                  let tmp25 = cResult[20];
+                  tmp25 = cResult[20];
                 }
                 if (cResult[21] === stateFromStores) {
+                  let tmp31;
                   if (cResult[22] === tmp5.spoilerOverlay) {
-                    let tmp31 = cResult[23];
+                    tmp31 = cResult[23];
                   }
                   if (cResult[24] === description) {
+                    let tmp34;
+                    let tmp37;
                     if (cResult[25] === tmp5.altTagText) {
-                      let tmp34 = cResult[26];
+                      tmp34 = cResult[26];
                     }
                     if (cResult[27] === isVideo) {
+                      let tmp36;
                       if (cResult[28] === tmp5.iconContainer) {
-                        let tmp36 = cResult[29];
+                        tmp36 = cResult[29];
                       }
                       if (cResult[30] === tmp34) {
+                        let tmp41;
+                        let tmp46;
                         if (cResult[31] === tmp36) {
-                          let tmp41 = cResult[32];
+                          tmp41 = cResult[32];
                         }
                         if (cResult[33] === stateFromStores) {
+                          let tmp45;
                           if (cResult[34] === tmp5.iconContainer) {
-                            let tmp45 = cResult[35];
+                            tmp45 = cResult[35];
                           }
                           if (cResult[36] === tmp5.decorationsContainer) {
                             if (cResult[37] === tmp31) {
                               if (cResult[38] === tmp41) {
+                                let tmp50;
                                 if (cResult[39] === tmp45) {
-                                  let tmp50 = cResult[40];
+                                  tmp50 = cResult[40];
                                 }
                                 if (cResult[41] === tmp13) {
                                   if (cResult[42] === isImage) {
@@ -349,8 +405,9 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((onEdit) => {
                                                 if (cResult[49] === tmp25) {
                                                   if (cResult[50] === tmp50) {
                                                     if (cResult[51] === uri) {
+                                                      let tmp54;
                                                       if (cResult[52] === tmp4) {
-                                                        let tmp54 = cResult[53];
+                                                        tmp54 = cResult[53];
                                                       }
                                                       return tmp54;
                                                     }
@@ -384,9 +441,8 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((onEdit) => {
                                 }
                                 class P {
                                   constructor() {
-                                    tmpResult = undefined;
+                                    let tmpResult;
                                     if (onRemove != null) {
-                                      tmp3 = id;
                                       tmpResult = tmp(id);
                                     }
                                     return tmpResult;
@@ -394,7 +450,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((onEdit) => {
                                 }
                                 tmp56[0] = uri;
                                 tmp56[1] = tmp15;
-                                tmp56[2] = item.filename;
+                                tmp56[2] = filename;
                                 tmp56[3] = isImage;
                                 tmp56[4] = isVideo;
                                 tmp56[5] = tmp4;
@@ -443,9 +499,8 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((onEdit) => {
                           }
                           class P {
                             constructor() {
-                              tmpResult = undefined;
+                              let tmpResult;
                               if (onRemove != null) {
-                                tmp3 = id;
                                 tmpResult = tmp(id);
                               }
                               return tmpResult;
@@ -502,21 +557,19 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((onEdit) => {
                           tmp49[0] = tmp5.iconContainer;
                           class P {
                             constructor() {
-                              tmpResult = undefined;
+                              let tmpResult;
                               if (onRemove != null) {
-                                tmp3 = id;
                                 tmpResult = tmp(id);
                               }
                               return tmpResult;
                             }
                           }
-                          const tmp46 = closure_11(id, tmp49);
+                          tmp46 = closure_11(id, tmp49);
                         }
                         class P {
                           constructor() {
-                            tmpResult = undefined;
+                            let tmpResult;
                             if (onRemove != null) {
-                              tmp3 = id;
                               tmpResult = tmp(id);
                             }
                             return tmpResult;
@@ -547,9 +600,8 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((onEdit) => {
                       }
                       class P {
                         constructor() {
-                          tmpResult = undefined;
+                          let tmpResult;
                           if (onRemove != null) {
-                            tmp3 = id;
                             tmpResult = tmp(id);
                           }
                           return tmpResult;
@@ -603,21 +655,19 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((onEdit) => {
                       tmp40[0] = tmp5.iconContainer;
                       class P {
                         constructor() {
-                          tmpResult = undefined;
+                          let tmpResult;
                           if (onRemove != null) {
-                            tmp3 = id;
                             tmpResult = tmp(id);
                           }
                           return tmpResult;
                         }
                       }
-                      const tmp37 = closure_11(id, tmp40);
+                      tmp37 = closure_11(id, tmp40);
                     }
                     class P {
                       constructor() {
-                        tmpResult = undefined;
+                        let tmpResult;
                         if (onRemove != null) {
-                          tmp3 = id;
                           tmpResult = tmp(id);
                         }
                         return tmpResult;
@@ -667,9 +717,8 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((onEdit) => {
                     }
                     class P {
                       constructor() {
-                        tmpResult = undefined;
+                        let tmpResult;
                         if (onRemove != null) {
-                          tmp3 = id;
                           tmpResult = tmp(id);
                         }
                         return tmpResult;
@@ -678,9 +727,8 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((onEdit) => {
                   }
                   class P {
                     constructor() {
-                      tmpResult = undefined;
+                      let tmpResult;
                       if (onRemove != null) {
-                        tmp3 = id;
                         tmpResult = tmp(id);
                       }
                       return tmpResult;
@@ -710,6 +758,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((onEdit) => {
                   }
                 }
                 if (stateFromStores) {
+                  const obj4 = { style: null };
                   class O {
                     constructor() {
                       obj = {
@@ -728,14 +777,12 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((onEdit) => {
                       return;
                     }
                   }
-                  const tmp32 = closure_11(tmp6(tmp2[20]), { style: null });
-                  const obj4 = { style: null };
+                  tmp32 = closure_11(onRemove(channelId[20]), obj4);
                 }
                 class P {
                   constructor() {
-                    tmpResult = undefined;
+                    let tmpResult;
                     if (onRemove != null) {
-                      tmp3 = id;
                       tmpResult = tmp(id);
                     }
                     return tmpResult;
@@ -769,17 +816,17 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((onEdit) => {
                 tmp29[0] = tmp5.footerRightContainer;
                 class P {
                   constructor() {
-                    tmpResult = undefined;
+                    let tmpResult;
                     if (onRemove != null) {
-                      tmp3 = id;
                       tmpResult = tmp(id);
                     }
                     return tmpResult;
                   }
                 }
-                tmp30[0] = tmp6(tmp2[19]);
-                tmp30[1] = tmp(tmp2[12]).Icon.Sizes.SMALL_14;
-                tmp29[1] = closure_11(tmp(tmp2[12]).Icon, tmp30);
+                const Icon = tmp(tmp2[12]).Icon;
+                tmp30[0] = onRemove(channelId[19]);
+                tmp30[1] = tmp(channelId[12]).Icon.Sizes.SMALL_14;
+                tmp29[1] = closure_11(Icon, tmp30);
                 tmp26 = closure_11(id, tmp29);
               }
               cResult[18] = isThumbnail;
@@ -810,9 +857,8 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((onEdit) => {
       }
       class P {
         constructor() {
-          tmpResult = undefined;
+          let tmpResult;
           if (onRemove != null) {
-            tmp3 = id;
             tmpResult = tmp(id);
           }
           return tmpResult;
@@ -826,9 +872,8 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((onEdit) => {
     }
     class P {
       constructor() {
-        tmpResult = undefined;
+        let tmpResult;
         if (onRemove != null) {
-          tmp3 = id;
           tmpResult = tmp(id);
         }
         return tmpResult;
@@ -838,7 +883,6 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((onEdit) => {
     cResult[5] = onRemove;
     cResult[6] = P;
     tmp13 = P;
-    let tmpResult = tmp(tmp2[16]);
   }
   const fn = function l() {
     upload = UploadAttachmentStore.getUpload(channelId, id, DraftType.ChannelMessage);
@@ -855,8 +899,26 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((onEdit) => {
   cResult[2] = id;
   cResult[3] = fn;
   tmp11 = fn;
-  const tmp7 = onRemove(channelId[14]);
 }) : ((onEdit) => {
+  let FxKgb3;
+  let Icon;
+  let MJHFt9;
+  let description;
+  let formatToPlainString;
+  let formatToPlainString2;
+  let id;
+  let intl2;
+  let intl4;
+  let isImage;
+  let isThumbnail;
+  let isVideo;
+  let item;
+  let items3;
+  let items4;
+  let obj4;
+  let str;
+  let str2;
+  let tmp12;
   onEdit = onEdit.onEdit;
   const onRemove = onEdit.onRemove;
   const channelId = onEdit.channelId;
@@ -866,13 +928,14 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((onEdit) => {
   }
   let upload = onEdit.upload;
   id = undefined;
-  const tmp = closure_13();
+  let tmp = closure_13();
   ({ description, id } = upload);
   ({ item, isVideo, isImage, isThumbnail } = upload);
-  onRemove(channelId[14])(item.platform === onEdit(channelId[15]).UploadPlatform.REACT_NATIVE, "Upload must be a React Native upload item.");
   const tmp4 = onRemove(channelId[14]);
+  tmp4(item.platform === onEdit(channelId[15]).UploadPlatform.REACT_NATIVE, "Upload must be a React Native upload item.");
+  let obj = onEdit(channelId[16]);
   const items = [UploadAttachmentStore];
-  const stateFromStores = onEdit(channelId[16]).useStateFromStores(items, () => {
+  const stateFromStores = obj.useStateFromStores(items, () => {
     upload = UploadAttachmentStore.getUpload(channelId, id, DraftType.ChannelMessage);
     let flag;
     if (upload != null) {
@@ -894,7 +957,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((onEdit) => {
   }, items1);
   let uri = item.id;
   const callback1 = upload.useCallback(() => {
-    showUploadPreviewActionSheetDefault({
+    const obj = {
       channelId,
       onRemove,
       onEdit(arg0) {
@@ -905,50 +968,49 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((onEdit) => {
         return tmpResult;
       },
       upload
-    });
+    };
+    const tmp = showUploadPreviewActionSheetDefault(obj);
   }, items2);
   if (uri == null) {
     uri = item.uri;
   }
-  const obj2 = { itemKey: uri, uri: item.uri, fileName: item.filename, isImage, isVideo, isHighlighted: null, accessibilityLabel: null, accessibilityHint: null, removeAccessibilityLabel: null, onPress: null, onRemove: null, children: null };
+  const obj2 = { itemKey: uri, uri: item.uri, fileName: item.filename, isImage, isVideo, isHighlighted: flag, accessibilityLabel: formatToPlainString(MJHFt9, { name: str }), accessibilityHint: intl2.string(onEdit(channelId[18]).t.QtJ1c5), removeAccessibilityLabel: formatToPlainString2(FxKgb3, { name: str2 }), onPress: tmp12, onRemove: callback, children: items3 };
   if (flag) {
     flag = true === isThumbnail;
   }
-  obj2.isHighlighted = flag;
   const intl = tmp5(tmp3[18]).intl;
-  let str = item.filename;
+  formatToPlainString = intl.formatToPlainString;
+  str = item.filename;
+  MJHFt9 = tmp5(tmp3[18]).t.MJHFt9;
   if (str == null) {
     str = "";
   }
-  obj2.accessibilityLabel = intl.formatToPlainString(onEdit(channelId[18]).t.MJHFt9, { name: str });
-  const intl2 = tmp5(tmp3[18]).intl;
-  obj2.accessibilityHint = intl2.string(onEdit(channelId[18]).t.QtJ1c5);
+  intl2 = tmp5(tmp3[18]).intl;
   const intl3 = tmp5(tmp3[18]).intl;
-  let str2 = item.filename;
+  formatToPlainString2 = intl3.formatToPlainString;
+  str2 = item.filename;
+  FxKgb3 = tmp5(tmp3[18]).t.FxKgb3;
   if (str2 == null) {
     str2 = "";
   }
-  obj2.removeAccessibilityLabel = intl3.formatToPlainString(onEdit(channelId[18]).t.FxKgb3, { name: str2 });
   if (isImage) {
-    const tmp12 = callback1;
+    tmp12 = callback1;
   }
-  obj2.onPress = tmp12;
-  obj2.onRemove = callback;
   let tmp13 = null;
   if (isThumbnail) {
-    const obj3 = { style: tmp.footerRightContainer, children: null };
-    const obj4 = { source: tmp2(tmp3[19]), size: tmp5(tmp3[12]).Icon.Sizes.SMALL_14 };
-    obj3.children = closure_11(tmp5(tmp3[12]).Icon, obj4);
+    const obj3 = { style: tmp.footerRightContainer, children: closure_11(Icon, obj4) };
+    obj4 = { source: onRemove(channelId[19]), size: onEdit(channelId[12]).Icon.Sizes.SMALL_14 };
+    Icon = tmp5(tmp3[12]).Icon;
     tmp13 = closure_11(id, obj3);
   }
-  const items3 = [tmp13, ];
-  const obj5 = { style: tmp.decorationsContainer, children: null };
+  items3 = [tmp13, ];
   let tmp17 = null;
+  const obj5 = { style: tmp.decorationsContainer, children: items4 };
   if (stateFromStores) {
     const obj6 = { style: tmp.spoilerOverlay };
     tmp17 = closure_11(tmp2(tmp3[20]), obj6);
   }
-  const items4 = [tmp17, , ];
+  items4 = [tmp17, , ];
   let tmp19 = null;
   if (null != description) {
     let length;
@@ -957,45 +1019,61 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((onEdit) => {
     }
     tmp19 = null;
     if (length > 0) {
-      const obj7 = { variant: "text-xs/medium", color: "text-overlay-light", allowFontScaling: false, style: tmp.altTagText, children: null };
-      const intl4 = tmp5(tmp3[18]).intl;
-      obj7.children = intl4.string(tmp5(tmp3[18]).t.QEW81z);
-      tmp19 = closure_11(tmp5(tmp3[21]).Text, obj7);
+      const obj7 = { variant: "text-xs/medium", color: "text-overlay-light", allowFontScaling: false, style: tmp.altTagText, children: intl4.string(onEdit(channelId[18]).t.QEW81z) };
+      const Text = tmp5(tmp3[21]).Text;
+      intl4 = tmp5(tmp3[18]).intl;
+      tmp19 = closure_11(Text, obj7);
     }
   }
   const items5 = [tmp19, ];
   let tmp22 = null;
   if (isVideo) {
-    const obj8 = { style: tmp.iconContainer, children: closure_11(tmp5(tmp3[22]).PlayIcon, { size: "xxs", color: "white" }) };
+    const obj8 = { style: tmp.iconContainer, children: closure_11(onEdit(channelId[22]).PlayIcon, { size: "xxs", color: "white" }) };
     tmp22 = closure_11(tmp16, obj8);
   }
   items5[1] = tmp22;
   items4[1] = closure_12(id, { children: items5 });
   let tmp24 = null;
   if (stateFromStores) {
-    const obj9 = { style: tmp.iconContainer, children: closure_11(tmp5(tmp3[23]).EyeIcon, { size: "xxs", color: "white" }) };
+    const obj9 = { style: tmp.iconContainer, children: closure_11(onEdit(channelId[23]).EyeIcon, { size: "xxs", color: "white" }) };
     tmp24 = closure_11(tmp16, obj9);
   }
   items4[2] = tmp24;
-  obj5.children = items4;
   items3[1] = closure_12(id, obj5);
-  obj2.children = items3;
   return closure_12(closure_18, obj2);
 });
-ReactCompilerGating = fn(558);
-let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
-  const cResult = c.c(50);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+  let accessibilityHint;
+  let accessibilityLabel;
+  let diff;
+  let fileName;
+  let intl;
+  let isHighlighted;
+  let isImage;
+  let isVideo;
+  let items1;
+  let items3;
+  let onPress;
+  let onRemove;
+  let removeAccessibilityLabel;
+  let tmp10;
+  let tmp12;
+  let uri;
+  const obj = react2;
+  const cResult = obj.c(50);
   ({ uri, fileName, isImage, isVideo, isHighlighted, accessibilityLabel, accessibilityHint, removeAccessibilityLabel, onPress, onRemove } = children);
   children = children.children;
   let highlightedTileContainer = undefined !== isHighlighted;
+  const itemKey = children.itemKey;
   if (highlightedTileContainer) {
     highlightedTileContainer = isHighlighted;
   }
   const tmp4 = closure_13();
   if (highlightedTileContainer) {
-    let diff = closure_10 - 4;
+    diff = IMAGE_CAROUSEL_TILE_HEIGHT - 4;
   } else {
-    diff = closure_10;
+    diff = IMAGE_CAROUSEL_TILE_HEIGHT;
   }
   if (cResult[0] !== onRemove) {
     const fn = function n(nativeEvent) {
@@ -1005,18 +1083,17 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
     };
     cResult[0] = onRemove;
     cResult[1] = fn;
-    let tmp10 = fn;
+    tmp10 = fn;
   } else {
     tmp10 = cResult[1];
   }
-  const tmp11 = closure_16(children.itemKey);
+  const tmp11 = closure_16(itemKey);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { name: "remove", label: null };
-    const intl = util.intl;
-    obj2.label = intl.string(util.t.kFwAsa);
+    const obj2 = { name: "remove", label: intl.string(intl5.t.kFwAsa) };
+    intl = intl5.intl;
     const items = [obj2];
     cResult[2] = items;
-    let tmp12 = items;
+    tmp12 = items;
   } else {
     tmp12 = cResult[2];
   }
@@ -1024,82 +1101,94 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
     highlightedTileContainer = tmp4.highlightedTileContainer;
   }
   if (cResult[3] === tmp4.pressableContainer) {
+    let tmp14;
     if (cResult[4] === highlightedTileContainer) {
-      let tmp14 = cResult[5];
+      tmp14 = cResult[5];
     }
     if (cResult[6] === diff) {
+      let tmp15;
       if (cResult[7] === tmp9) {
-        let tmp15 = cResult[8];
+        tmp15 = cResult[8];
       }
       if (cResult[9] === tmp4.tileContainer) {
         if (cResult[10] === tmp15) {
+          let tmp16;
           if (cResult[11] === tmp11) {
-            let tmp16 = cResult[12];
+            tmp16 = cResult[12];
           }
           if (cResult[13] === fileName) {
             if (cResult[14] === diff) {
               if (cResult[15] === isImage) {
                 if (cResult[16] === isVideo) {
-                  if (cResult[17] === num2) {
+                  if (cResult[17] === 192) {
                     if (cResult[18] === uri) {
+                      let tmp17;
                       if (cResult[19] === tmp9) {
-                        let tmp17 = cResult[20];
+                        tmp17 = cResult[20];
                       }
                       if (cResult[21] === children) {
                         if (cResult[22] === tmp16) {
+                          let tmp22;
                           if (cResult[23] === tmp17) {
-                            let tmp22 = cResult[24];
+                            tmp22 = cResult[24];
                           }
                           if (cResult[25] === accessibilityHint) {
                             if (cResult[26] === accessibilityLabel) {
                               if (cResult[27] === tmp10) {
                                 if (cResult[28] === onPress) {
                                   if (cResult[29] === tmp22) {
-                                    if (cResult[30] === tmp13) {
+                                    if (cResult[30] === null == onPress) {
+                                      let tmp26;
+                                      let tmp29;
                                       if (cResult[31] === tmp14) {
-                                        let tmp26 = cResult[32];
+                                        tmp26 = cResult[32];
                                       }
                                       const _Symbol = Symbol;
                                       if (cResult[33] === Symbol.for("react.memo_cache_sentinel")) {
                                         const rect = { top: 4, bottom: 4, left: 4, right: 4 };
                                         cResult[33] = rect;
-                                        let tmp29 = rect;
+                                        tmp29 = rect;
                                       } else {
                                         tmp29 = cResult[33];
                                       }
                                       if (cResult[34] === tmp4.closeContainer) {
+                                        let tmp30;
+                                        let tmp31;
                                         if (cResult[35] === tmp11) {
-                                          let tmp30 = cResult[36];
+                                          tmp30 = cResult[36];
                                         }
                                         if (cResult[37] !== tmp4.closeButtonIcon) {
-                                          const obj3 = { source: _modDef6427, size: native.Icon.Sizes.MEDIUM, color: nativeDefault.unsafe_rawColors.PRIMARY_500, style: tmp4.closeButtonIcon };
-                                          const tmp34 = closure_1_11(native.Icon, obj3);
+                                          const obj3 = { source: AssetRegistryDefault, size: native.Icon.Sizes.MEDIUM, color: nativeDefault.unsafe_rawColors.PRIMARY_500, style: tmp4.closeButtonIcon };
+                                          const Icon = native.Icon;
+                                          const tmp34 = unpackModuleId(Icon, obj3);
                                           cResult[37] = tmp4.closeButtonIcon;
                                           cResult[38] = tmp34;
-                                          let tmp31 = tmp34;
+                                          tmp31 = tmp34;
                                         } else {
                                           tmp31 = cResult[38];
                                         }
                                         if (cResult[39] === tmp30) {
+                                          let tmp35;
                                           if (cResult[40] === tmp31) {
-                                            let tmp35 = cResult[41];
+                                            tmp35 = cResult[41];
                                           }
                                           if (cResult[42] === onRemove) {
                                             if (cResult[43] === removeAccessibilityLabel) {
                                               if (cResult[44] === tmp4.closeButton) {
+                                                let tmp39;
                                                 if (cResult[45] === tmp35) {
-                                                  let tmp39 = cResult[46];
+                                                  tmp39 = cResult[46];
                                                 }
                                                 if (cResult[47] === tmp26) {
+                                                  let tmp42;
                                                   if (cResult[48] === tmp39) {
-                                                    let tmp42 = cResult[49];
+                                                    tmp42 = cResult[49];
                                                   }
                                                   return tmp42;
                                                 }
-                                                const obj4 = { children: null };
-                                                const items1 = [tmp26, tmp39];
-                                                obj4.children = items1;
-                                                const tmp45 = __initData(React4, obj4);
+                                                const obj4 = { children: items1 };
+                                                items1 = [tmp26, tmp39];
+                                                const tmp45 = closure_12(React3, obj4);
                                                 cResult[47] = tmp26;
                                                 cResult[48] = tmp39;
                                                 cResult[49] = tmp45;
@@ -1108,7 +1197,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
                                             }
                                           }
                                           const obj5 = { accessibilityRole: "button", accessibilityLabel: removeAccessibilityLabel, style: tmp4.closeButton, onPress: onRemove, hitSlop: tmp29, children: tmp35 };
-                                          const tmp41 = closure_1_11(Pressables.PressableOpacity, obj5);
+                                          const tmp41 = unpackModuleId(Pressables.PressableOpacity, obj5);
                                           cResult[42] = onRemove;
                                           cResult[43] = removeAccessibilityLabel;
                                           cResult[44] = tmp4.closeButton;
@@ -1117,7 +1206,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
                                           tmp39 = tmp41;
                                         }
                                         const obj6 = { style: tmp30, children: tmp31 };
-                                        const tmp38 = closure_1_11(ReanimatedRexportDefault.View, obj6);
+                                        const tmp38 = unpackModuleId(ReanimatedRexportDefault.View, obj6);
                                         cResult[39] = tmp30;
                                         cResult[40] = tmp31;
                                         cResult[41] = tmp38;
@@ -1134,23 +1223,22 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
                               }
                             }
                           }
-                          const obj7 = { accessibilityRole: "button", accessibilityLabel, accessibilityHint, accessibilityActions: tmp12, onAccessibilityAction: tmp10, disabled: tmp13, onPress, style: tmp14, children: tmp22 };
-                          const tmp28 = closure_1_11(Pressables.PressableOpacity, obj7);
+                          const obj7 = { accessibilityRole: "button", accessibilityLabel, accessibilityHint, accessibilityActions: tmp12, onAccessibilityAction: tmp10, disabled: null == onPress, onPress, style: tmp14, children: tmp22 };
+                          const tmp28 = unpackModuleId(Pressables.PressableOpacity, obj7);
                           cResult[25] = accessibilityHint;
                           cResult[26] = accessibilityLabel;
                           cResult[27] = tmp10;
                           cResult[28] = onPress;
                           cResult[29] = tmp22;
-                          cResult[30] = tmp13;
+                          cResult[30] = null == onPress;
                           cResult[31] = tmp14;
                           cResult[32] = tmp28;
                           tmp26 = tmp28;
                         }
                       }
-                      const obj8 = { style: tmp16, children: null };
-                      const items3 = [tmp17, children];
-                      obj8.children = items3;
-                      const tmp25 = __initData(ReanimatedRexportDefault.View, obj8);
+                      const obj8 = { style: tmp16, children: items3 };
+                      items3 = [tmp17, children];
+                      const tmp25 = closure_12(ReanimatedRexportDefault.View, obj8);
                       cResult[21] = children;
                       cResult[22] = tmp16;
                       cResult[23] = tmp17;
@@ -1162,13 +1250,14 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
               }
             }
           }
-          const size = { uri, isImage, isVideo, width: tmp9, height: diff, maxFileWidth: num2, fileName, borderRadius: nativeDefault.radii.md };
-          const tmp21 = closure_1_11(AttachmentPreviewDefault, size);
+          size = { uri, isImage, isVideo, width: tmp9, height: diff, maxFileWidth: 192, fileName, borderRadius: nativeDefault.radii.md };
+          const tmp20 = AttachmentPreviewDefault;
+          const tmp21 = unpackModuleId(tmp20, size);
           cResult[13] = fileName;
           cResult[14] = diff;
           cResult[15] = isImage;
           cResult[16] = isVideo;
-          cResult[17] = num2;
+          cResult[17] = 192;
           cResult[18] = uri;
           cResult[19] = tmp9;
           cResult[20] = tmp21;
@@ -1194,6 +1283,32 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   cResult[5] = items5;
   tmp14 = items5;
 }) : ((arg0) => {
+  let Icon;
+  let View;
+  let View2;
+  let accessibilityHint;
+  let accessibilityLabel;
+  let children;
+  let diff;
+  let fileName;
+  let intl;
+  let isHighlighted;
+  let isImage;
+  let isVideo;
+  let itemKey;
+  let items2;
+  let items3;
+  let items4;
+  let items5;
+  let items6;
+  let obj4;
+  let obj6;
+  let obj7;
+  let onPress;
+  let onRemove;
+  let removeAccessibilityLabel;
+  let tmp4;
+  let uri;
   ({ isImage, isVideo, isHighlighted } = arg0);
   ({ itemKey, uri, fileName } = arg0);
   if (isHighlighted === undefined) {
@@ -1202,146 +1317,285 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   ({ onPress, onRemove } = arg0);
   ({ accessibilityLabel, accessibilityHint, removeAccessibilityLabel, children } = arg0);
   const tmp = closure_13();
-  let tmp2 = isImage;
-  if (!isImage) {
-    tmp2 = isVideo;
-  }
+  const tmp2 = isImage || isVideo;
   if (isHighlighted) {
-    let diff = closure_10 - 4;
-    let tmp4 = closure_10;
+    diff = IMAGE_CAROUSEL_TILE_HEIGHT - 4;
+    tmp4 = IMAGE_CAROUSEL_TILE_HEIGHT;
   } else {
-    tmp4 = closure_10;
-    diff = closure_10;
+    tmp4 = IMAGE_CAROUSEL_TILE_HEIGHT;
+    diff = IMAGE_CAROUSEL_TILE_HEIGHT;
   }
   let tmp6;
   if (tmp2) {
     tmp6 = tmp4;
   }
   const items = [onRemove];
-  const callback = noop.useCallback((nativeEvent) => {
+  const callback = react.useCallback((nativeEvent) => {
     if ("remove" === nativeEvent.nativeEvent.actionName) {
       onRemove();
     }
   }, items);
   const tmp8 = closure_16(itemKey);
-  const obj = { name: "remove", label: null };
-  const intl = util.intl;
-  obj.label = intl.string(util.t.kFwAsa);
+  const obj = { name: "remove", label: intl.string(intl5.t.kFwAsa) };
+  intl = intl5.intl;
   const items1 = [obj];
-  const obj2 = { accessibilityRole: "button", accessibilityLabel, accessibilityHint, accessibilityActions: items1, onAccessibilityAction: callback, disabled: null == onPress, onPress, style: null, children: null };
-  const items2 = [tmp.pressableContainer, ];
+  const obj2 = { accessibilityRole: "button", accessibilityLabel, accessibilityHint, accessibilityActions: items1, onAccessibilityAction: callback, disabled: null == onPress, onPress, style: items2, children: closure_12(View, obj4) };
+  items2 = [tmp.pressableContainer, ];
+  const PressableOpacity = Pressables.PressableOpacity;
   if (isHighlighted) {
     isHighlighted = tmp.highlightedTileContainer;
   }
-  const obj3 = { children: null };
+  const obj3 = { children: items5 };
   items2[1] = isHighlighted;
-  obj2.style = items2;
-  const obj4 = { style: null, children: null };
-  const items3 = [tmp.tileContainer, { width: tmp6, height: diff }, tmp8];
-  obj4.style = items3;
-  const size = { uri, isImage, isVideo, width: tmp6, height: diff, maxFileWidth: num2, fileName, borderRadius: nativeDefault.radii.md };
-  const items4 = [closure_1_11(AttachmentPreviewDefault, size), children];
-  obj4.children = items4;
-  obj2.children = __initData(ReanimatedRexportDefault.View, obj4);
-  const items5 = [closure_1_11(Pressables.PressableOpacity, obj2), ];
-  const obj5 = { accessibilityRole: "button", accessibilityLabel: removeAccessibilityLabel, style: tmp.closeButton, onPress: onRemove, hitSlop: { top: 4, bottom: 4, left: 4, right: 4 }, children: null };
-  const obj6 = { style: null, children: null };
-  const items6 = [tmp.closeContainer, tmp8];
-  obj6.style = items6;
-  obj6.children = closure_1_11(native.Icon, { source: _modDef6427, size: native.Icon.Sizes.MEDIUM, color: nativeDefault.unsafe_rawColors.PRIMARY_500, style: tmp.closeButtonIcon });
-  obj5.children = closure_1_11(ReanimatedRexportDefault.View, obj6);
-  items5[1] = closure_1_11(Pressables.PressableOpacity, obj5);
-  obj3.children = items5;
-  return __initData(React4, obj3);
+  obj4 = { style: items3, children: items4 };
+  items3 = [tmp.tileContainer, { width: tmp6, height: diff }, tmp8];
+  View = ReanimatedRexportDefault.View;
+  size = { uri, isImage, isVideo, width: tmp6, height: diff, maxFileWidth: num2, fileName, borderRadius: nativeDefault.radii.md };
+  const tmp14 = AttachmentPreviewDefault;
+  items4 = [unpackModuleId(tmp14, size), children];
+  items5 = [unpackModuleId(PressableOpacity, obj2), ];
+  const obj5 = { accessibilityRole: "button", accessibilityLabel: removeAccessibilityLabel, style: tmp.closeButton, onPress: onRemove, hitSlop: { top: 4, bottom: 4, left: 4, right: 4 }, children: unpackModuleId(View2, obj6) };
+  const PressableOpacity2 = Pressables.PressableOpacity;
+  obj6 = { style: items6, children: unpackModuleId(Icon, obj7) };
+  items6 = [tmp.closeContainer, tmp8];
+  View2 = ReanimatedRexportDefault.View;
+  obj7 = { source: AssetRegistryDefault, size: native.Icon.Sizes.MEDIUM, color: nativeDefault.unsafe_rawColors.PRIMARY_500, style: tmp.closeButtonIcon };
+  Icon = native.Icon;
+  items5[1] = unpackModuleId(PressableOpacity2, obj5);
+  return closure_12(React3, obj3);
 });
-let closure_18 = tmp8;
-ReactCompilerGating = fn(558);
+let closure_18 = tmp10;
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = require("c").c(5);
+  let first;
+  let ref;
+  let tmp5;
+  let obj = require("react");
+  const cResult = obj.c(5);
   let tmp2 = closure_13();
-  _require = noop.useRef(0);
-  noop.useRef(0);
-  ref = noop.useRef(null);
+  _require = react.useRef(0);
+  const ref2 = react.useRef(0);
+  ref = react.useRef(null);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function o(current) {
+      current = ref.current;
+      const current2 = ref2.current;
+      const obj = useWindowDimensions;
+      const tmp2 = current > current || current2 + obj.getWindowDimensions().width > current;
       if (tmp2) {
-        current = ref.current;
-        if (current != null) {
-          current.scrollToEnd();
+        const current3 = ref.current;
+        if (current3 != null) {
+          current3.scrollToEnd();
         }
       }
       ref.current = current;
-      tmp2 = current > ref.current || ref2.current + useWindowDimensions.getWindowDimensions().width > current;
     };
     cResult[0] = fn;
-    let first = fn;
+    first = fn;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function y(nativeEvent) {
-      closure_1.current = nativeEvent.nativeEvent.contentOffset.x;
+      ref2.current = nativeEvent.nativeEvent.contentOffset.x;
     };
     cResult[1] = fn2;
-    let tmp5 = fn2;
+    tmp5 = fn2;
   } else {
     tmp5 = cResult[1];
   }
   if (cResult[2] === arg0) {
+    let tmp6;
     if (cResult[3] === tmp2.scrollview) {
-      let tmp6 = cResult[4];
+      tmp6 = cResult[4];
     }
     return tmp6;
   }
-  const obj2 = {};
+  const obj2 = { ref, onContentSizeChange: first, onScroll: tmp5, scrollEventThrottle: 16, contentContainerStyle: tmp2.scrollview };
   const merged = Object.assign(arg0);
-  obj2.ref = ref;
-  obj2.onContentSizeChange = first;
-  obj2.onScroll = tmp5;
-  obj2.scrollEventThrottle = 16;
-  obj2.contentContainerStyle = tmp2.scrollview;
   const tmp8 = closure_11(closure_5, obj2);
   cResult[2] = arg0;
   cResult[3] = tmp2.scrollview;
   cResult[4] = tmp8;
   tmp6 = tmp8;
 }) : ((arg0) => {
-  noop.useRef(0);
-  noop.useRef(0);
-  const ref = noop.useRef(null);
-  const callback = noop.useCallback((current) => {
+  let callback1;
+  const tmp = closure_13();
+  react.useRef(0);
+  const ref2 = react.useRef(0);
+  const ref = react.useRef(null);
+  const callback = react.useCallback((current) => {
+    current = ref.current;
+    const current2 = ref2.current;
+    const obj = useWindowDimensions;
+    const tmp2 = current > current || current2 + obj.getWindowDimensions().width > current;
     if (tmp2) {
-      current = ref.current;
-      if (current != null) {
-        current.scrollToEnd();
+      const current3 = ref.current;
+      if (current3 != null) {
+        current3.scrollToEnd();
       }
     }
     ref.current = current;
-    tmp2 = current > ref.current || ref2.current + useWindowDimensions.getWindowDimensions().width > current;
   }, []);
-  let obj = {};
-  const callback1 = noop.useCallback((nativeEvent) => {
-    closure_1.current = nativeEvent.nativeEvent.contentOffset.x;
+  let obj = { ref, onContentSizeChange: callback, onScroll: callback1, scrollEventThrottle: 16, contentContainerStyle: tmp.scrollview };
+  callback1 = react.useCallback((nativeEvent) => {
+    ref2.current = nativeEvent.nativeEvent.contentOffset.x;
   }, []);
   const merged = Object.assign(arg0);
-  obj.ref = ref;
-  obj.onContentSizeChange = callback;
-  obj.onScroll = callback1;
-  obj.scrollEventThrottle = 16;
-  obj.contentContainerStyle = closure_13().scrollview;
   return closure_11(closure_5, obj);
 });
-fn(558);
-let obj8 = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM_LIGHTBOX, borderRadius: nativeDefault.radii.sm, padding: nativeDefault.space.PX_4 };
-let obj9 = {};
-ReactCompilerGating = fn(558);
-let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(14);
+const memo = react.memo;
+ReactCompilerGating = ReactCompilerGating_mod;
+const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let attachments;
+  let channelId;
+  let headerElement;
+  let highlightThumbnails;
+  let items;
+  let onRemove;
+  let tmp4;
+  let obj = channelId(576);
+  const cResult = obj.c(15);
+  ({ attachments, channelId } = arg0);
+  ({ headerElement, highlightThumbnails } = arg0);
+  highlightThumbnails = tmp2;
+  let tmp3 = null != attachments && attachments.length > 0;
+  if (cResult[0] !== channelId) {
+    const fn = function n(arg0) {
+      const obj = UploadAttachmentActionCreatorsDefault;
+      obj.remove(channelId, arg0, DraftType.ChannelMessage);
+    };
+    cResult[0] = channelId;
+    cResult[1] = fn;
+    tmp4 = fn;
+  } else {
+    tmp4 = cResult[1];
+  }
+  dependencyMap = tmp4;
+  if (cResult[2] === channelId) {
+    let tmp5;
+    if (cResult[3] === tmp4) {
+      tmp5 = cResult[4];
+    }
+    const onEdit = tmp5;
+    if (!tmp3) {
+      tmp3 = null != headerElement;
+    }
+    if (cResult[5] === attachments) {
+      if (cResult[6] === channelId) {
+        if (cResult[7] === (undefined !== highlightThumbnails && highlightThumbnails)) {
+          if (cResult[8] === tmp5) {
+            let tmp6;
+            if (cResult[9] === tmp4) {
+              tmp6 = cResult[10];
+            }
+            if (cResult[11] === headerElement) {
+              if (cResult[12] === tmp3) {
+                let tmp9;
+                if (cResult[13] === tmp6) {
+                  tmp9 = cResult[14];
+                }
+                return tmp9;
+              }
+            }
+            const obj2 = { visible: tmp3, children: items };
+            items = [headerElement, tmp6];
+            const tmp12 = closure_12(closure_20, obj2);
+            cResult[11] = headerElement;
+            cResult[12] = tmp3;
+            cResult[13] = tmp6;
+            cResult[14] = tmp12;
+            tmp9 = tmp12;
+          }
+        }
+      }
+    }
+    let mapped = null;
+    if (null != attachments) {
+      const _Object = Object;
+      const values = Object.values(attachments);
+      mapped = values.map((upload) => {
+        const obj = { channelId, highlightThumbnails, onEdit, onRemove, upload };
+        return unpackModuleId(closure_17, obj, upload.uniqueId);
+      });
+    }
+    cResult[5] = attachments;
+    cResult[6] = channelId;
+    cResult[7] = undefined !== highlightThumbnails && highlightThumbnails;
+    cResult[8] = tmp5;
+    cResult[9] = tmp4;
+    cResult[10] = mapped;
+    tmp6 = mapped;
+  }
+  const fn2 = function p(arg0, arg1) {
+    if (onRemove != null) {
+      tmp(arg0);
+    }
+    const items = [arg1];
+    const obj = MediaKeyboardUtils;
+    obj.addImagesFromPicker(channelId, items, Upload.UploadOrigin.IMAGE_EDITOR);
+  };
+  cResult[2] = channelId;
+  cResult[3] = tmp4;
+  cResult[4] = fn2;
+  tmp5 = fn2;
+}) : ((arg0) => {
+  let attachments;
+  let channelId;
+  let headerElement;
+  let highlightThumbnails;
+  let items2;
+  let onEdit;
+  ({ attachments, channelId } = arg0);
+  ({ headerElement, highlightThumbnails } = arg0);
+  if (highlightThumbnails === undefined) {
+    highlightThumbnails = false;
+  }
+  react = undefined;
+  let tmp = null != attachments && attachments.length > 0;
+  let items = [channelId];
+  const onRemove = react.useCallback((arg0) => {
+    const obj = UploadAttachmentActionCreatorsDefault;
+    obj.remove(channelId, arg0, DraftType.ChannelMessage);
+  }, items);
+  const items1 = [channelId, onRemove];
+  react = react.useCallback((arg0, arg1) => {
+    if (callback != null) {
+      tmp(arg0);
+    }
+    const items = [arg1];
+    const obj = MediaKeyboardUtils;
+    obj.addImagesFromPicker(channelId, items, Upload.UploadOrigin.IMAGE_EDITOR);
+  }, items1);
+  if (!tmp) {
+    tmp = null != headerElement;
+  }
+  let obj = { visible: tmp, children: items2 };
+  items2 = [headerElement, ];
+  let mapped = null;
+  if (null != attachments) {
+    const _Object = Object;
+    const values = Object.values(attachments);
+    mapped = values.map((upload) => {
+      const obj = { channelId, highlightThumbnails, onEdit, onRemove, upload };
+      return unpackModuleId(closure_17, obj, upload.uniqueId);
+    });
+  }
+  items2[1] = mapped;
+  return closure_12(closure_20, obj);
+}));
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let children;
+  let style;
+  let visible;
+  const obj = react2;
+  const cResult = obj.c(14);
   ({ visible, style, children } = arg0);
   const tmp4 = closure_13();
   let num = 0;
   if (visible) {
-    num = closure_10 + IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
+    num = IMAGE_CAROUSEL_TILE_HEIGHT + IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
   }
   let num2 = 0;
   if (visible) {
@@ -1353,40 +1607,45 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   if (cResult[0] === num) {
     if (cResult[1] === num2) {
+      let tmp10;
       if (cResult[2] === num4) {
-        let tmp10 = cResult[3];
+        tmp10 = cResult[3];
       }
       if (cResult[4] === style) {
         if (cResult[5] === tmp4.container) {
+          let tmp11;
+          let tmp13;
+          let tmp15;
           if (cResult[6] === tmp10) {
-            let tmp11 = cResult[7];
+            tmp11 = cResult[7];
           }
           const _Symbol = Symbol;
           if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl = util.intl;
-            const stringResult = intl.string(util.t.RhtzFe);
+            const intl = intl5.intl;
+            const stringResult = intl.string(intl5.t.RhtzFe);
             cResult[8] = stringResult;
-            let tmp13 = stringResult;
+            tmp13 = stringResult;
           } else {
             tmp13 = cResult[8];
           }
           if (cResult[9] !== children) {
             const obj2 = { horizontal: true, keyboardShouldPersistTaps: "always", showsHorizontalScrollIndicator: false, accessibilityRole: "list", accessibilityLabel: tmp13, children };
-            const tmp18 = closure_1_11(closure_19, obj2);
+            const tmp18 = unpackModuleId(closure_19, obj2);
             cResult[9] = children;
             cResult[10] = tmp18;
-            let tmp15 = tmp18;
+            tmp15 = tmp18;
           } else {
             tmp15 = cResult[10];
           }
           if (cResult[11] === tmp11) {
+            let tmp19;
             if (cResult[12] === tmp15) {
-              let tmp19 = cResult[13];
+              tmp19 = cResult[13];
             }
             return tmp19;
           }
           const obj3 = { style: tmp11, children: tmp15 };
-          const tmp22 = closure_1_11(React4, obj3);
+          const tmp22 = unpackModuleId(React3, obj3);
           cResult[11] = tmp11;
           cResult[12] = tmp15;
           cResult[13] = tmp22;
@@ -1408,159 +1667,40 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = obj4;
   tmp10 = obj4;
 }) : ((visible) => {
+  let children;
+  let intl;
+  let num2;
+  let num4;
+  let obj3;
+  let style;
   visible = visible.visible;
   ({ style, children } = visible);
   const items = [closure_13().container, , ];
   let num = 0;
   if (visible) {
-    num = closure_10 + IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
+    num = IMAGE_CAROUSEL_TILE_HEIGHT + IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
   }
-  const obj = { height: num, marginTop: null, marginBottom: null };
-  let num2 = 0;
+  const obj = { height: num, marginTop: num2, marginBottom: num4 };
+  num2 = 0;
   if (visible) {
     num2 = -1 * (IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING - IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN);
   }
-  obj.marginTop = num2;
-  let num4 = 0;
+  num4 = 0;
   if (visible) {
     num4 = 2 * IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN;
   }
-  const obj2 = { style: items, children: null };
-  obj.marginBottom = num4;
   items[1] = obj;
   items[2] = style;
-  const obj3 = { horizontal: true, keyboardShouldPersistTaps: "always", showsHorizontalScrollIndicator: false, accessibilityRole: "list", accessibilityLabel: null, children: null };
-  const intl = util.intl;
-  obj3.accessibilityLabel = intl.string(util.t.RhtzFe);
-  obj3.children = children;
-  obj2.children = closure_1_11(closure_19, obj3);
-  return closure_1_11(React4, obj2);
+  const obj2 = { style: items, children: unpackModuleId(closure_19, obj3) };
+  obj3 = { horizontal: true, keyboardShouldPersistTaps: "always", showsHorizontalScrollIndicator: false, accessibilityRole: "list", accessibilityLabel: intl.string(intl5.t.RhtzFe), children };
+  intl = intl5.intl;
+  return unpackModuleId(React3, obj2);
 });
-let closure_20 = tmp10;
-size = fn(2);
+let closure_20 = tmp12;
+size = size_mod;
 let result = size.fileFinishedImporting("components_native/chat/ImageCarousel.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = channelId(576).c(15);
-  ({ attachments, channelId } = arg0);
-  ({ headerElement, highlightThumbnails } = arg0);
-  highlightThumbnails = tmp2;
-  let tmp3 = null != attachments;
-  if (tmp3) {
-    tmp3 = attachments.length > 0;
-  }
-  if (cResult[0] !== channelId) {
-    const fn = function n(arg0) {
-      UploadAttachmentActionCreatorsDefault.remove(channelId, arg0, DraftType.ChannelMessage);
-    };
-    cResult[0] = channelId;
-    cResult[1] = fn;
-    let tmp4 = fn;
-  } else {
-    tmp4 = cResult[1];
-  }
-  dependencyMap = tmp4;
-  if (cResult[2] === channelId) {
-    if (cResult[3] === tmp4) {
-      let tmp5 = cResult[4];
-    }
-    const onEdit = tmp5;
-    if (!tmp3) {
-      tmp3 = null != headerElement;
-    }
-    if (cResult[5] === attachments) {
-      if (cResult[6] === channelId) {
-        if (cResult[7] === tmp2) {
-          if (cResult[8] === tmp5) {
-            if (cResult[9] === tmp4) {
-              let tmp6 = cResult[10];
-            }
-            if (cResult[11] === headerElement) {
-              if (cResult[12] === tmp3) {
-                if (cResult[13] === tmp6) {
-                  let tmp9 = cResult[14];
-                }
-                return tmp9;
-              }
-            }
-            const obj2 = { visible: tmp3, children: null };
-            let items = [headerElement, tmp6];
-            obj2.children = items;
-            const tmp12 = closure_12(closure_20, obj2);
-            cResult[11] = headerElement;
-            cResult[12] = tmp3;
-            cResult[13] = tmp6;
-            cResult[14] = tmp12;
-            tmp9 = tmp12;
-          }
-        }
-      }
-    }
-    let mapped = null;
-    if (null != attachments) {
-      const _Object = Object;
-      const values = Object.values(attachments);
-      mapped = values.map((upload) => closure_2_11(closure_17, { channelId, highlightThumbnails, onEdit, onRemove, upload }, upload.uniqueId));
-    }
-    cResult[5] = attachments;
-    cResult[6] = channelId;
-    cResult[7] = tmp2;
-    cResult[8] = tmp5;
-    cResult[9] = tmp4;
-    cResult[10] = mapped;
-    tmp6 = mapped;
-  }
-  const fn2 = function p(arg0, arg1) {
-    if (closure_2 != null) {
-      tmp(arg0);
-    }
-    const items = [arg1];
-    MediaKeyboardUtils.addImagesFromPicker(channelId, items, Upload.UploadOrigin.IMAGE_EDITOR);
-  };
-  cResult[2] = channelId;
-  cResult[3] = tmp4;
-  cResult[4] = fn2;
-  tmp5 = fn2;
-  const obj = channelId(576);
-}) : ((arg0) => {
-  ({ attachments, channelId } = arg0);
-  ({ headerElement, highlightThumbnails } = arg0);
-  if (highlightThumbnails === undefined) {
-    highlightThumbnails = false;
-  }
-  let onRemove;
-  noop = undefined;
-  let tmp = null != attachments;
-  if (tmp) {
-    tmp = attachments.length > 0;
-  }
-  let items = [channelId];
-  onRemove = noop.useCallback((arg0) => {
-    UploadAttachmentActionCreatorsDefault.remove(channelId, arg0, DraftType.ChannelMessage);
-  }, items);
-  const items1 = [channelId, onRemove];
-  noop = noop.useCallback((arg0, arg1) => {
-    if (callback != null) {
-      tmp(arg0);
-    }
-    const items = [arg1];
-    MediaKeyboardUtils.addImagesFromPicker(channelId, items, Upload.UploadOrigin.IMAGE_EDITOR);
-  }, items1);
-  if (!tmp) {
-    tmp = null != headerElement;
-  }
-  const obj = { visible: tmp, children: null };
-  const items2 = [headerElement, ];
-  let mapped = null;
-  if (null != attachments) {
-    const _Object = Object;
-    const values = Object.values(attachments);
-    mapped = values.map((upload) => closure_2_11(closure_17, { channelId, highlightThumbnails, onEdit, onRemove, upload }, upload.uniqueId));
-  }
-  items2[1] = mapped;
-  obj.children = items2;
-  return closure_12(closure_20, obj);
-}));
-export const useTileEntranceAnimatedStyle = tmp7;
-export const ImageCarouselTile = tmp8;
-export const ImageCarouselRow = tmp10;
+export default memoResult;
+export const useTileEntranceAnimatedStyle = tmp9;
+export const ImageCarouselTile = tmp10;
+export const ImageCarouselRow = tmp12;

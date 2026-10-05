@@ -1,37 +1,38 @@
 // === Module 12947: WishlistAnalyticsContext ===
 
 // Module 12947 (WishlistAnalyticsContext)
-import c from "c" /* 576 */;
-import noop from "module_19" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const jsx = fn(21).jsx;
-let context = noop.createContext(null);
-let ReactCompilerGating = fn(558);
+const jsx = Fragment.jsx;
+let context = react.createContext(null);
+let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
-const useWishlistAnalyticsContext = () => noop.useContext(context);
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result1 = size.fileFinishedImporting("modules/wishlists/WishlistAnalyticsContext.tsx");
-
-export const WishlistAnalyticsContext = context;
-export { useWishlistAnalyticsContext };
-export const WishlistAnalyticsProvider = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(6);
+const useWishlistAnalyticsContext = () => react.useContext(context);
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let children;
+  let newValue;
+  const obj = react2;
+  const cResult = obj.c(6);
   ({ newValue, children } = arg0);
   if (typeof fn === "function") {
-    context = noop.useContext(context);
+    context = react.useContext(context);
     if (cResult[0] === newValue) {
+      let tmp5;
       if (cResult[1] === context) {
-        let tmp5 = cResult[2];
+        tmp5 = cResult[2];
       }
       if (cResult[3] === children) {
+        let tmp12;
         if (cResult[4] === tmp5) {
-          let tmp12 = cResult[5];
+          tmp12 = cResult[5];
         }
         return tmp12;
       }
-      const obj2 = { value: tmp5, children };
       const tmp14 = <tmp3.Provider value={tmp5}>{children}</tmp3.Provider>;
       cResult[3] = children;
       cResult[4] = tmp5;
@@ -52,11 +53,15 @@ export const WishlistAnalyticsProvider = ReactCompilerGating.isReactCompilerEnab
   newValue = newValue.newValue;
   if (typeof fn === "function") {
     const obj = {};
-    const merged = Object.assign(noop.useContext(context));
+    const merged = Object.assign(react.useContext(context));
     const merged1 = Object.assign(newValue);
-    const obj2 = { value: obj, children: tmp };
     return <context.Provider value={obj}>{tmp}</context.Provider>;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
 });
+const result1 = size.fileFinishedImporting("modules/wishlists/WishlistAnalyticsContext.tsx");
+
+export const WishlistAnalyticsContext = context;
+export { useWishlistAnalyticsContext };
+export const WishlistAnalyticsProvider = tmp4;

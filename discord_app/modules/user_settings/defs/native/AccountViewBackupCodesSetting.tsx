@@ -1,186 +1,136 @@
 // === Module 14581: AccountViewBackupCodesSetting ===
 
 // Module 14581 (AccountViewBackupCodesSetting)
-import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
+import react2 from "react" /* 576 */;
+import intl5 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
+import SettingsConstants from "SettingsConstants" /* 7634 */;
+import SettingsAccountUtils from "SettingsAccountUtils" /* 14494 */;
 import MFAActionCreatorsDefault from "MFAActionCreators" /* 14575 */;
 import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 14582 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import Constants from "Constants" /* 1085 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import SettingBuilders from "SettingBuilders" /* 11129 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+const require = globalThis.__r;
+
+let UserSettingsSections;
+let closure_4;
 function onConfirmBackups(onSuccess) {
-  const obj = {
+  let intl;
+  let intl2;
+  let intl3;
+  let intl4;
+  let obj = {
     onSubmit(verificationKey) {
-      return MFAActionCreatorsDefault.confirmViewBackupCodes(verificationKey, false);
+      const obj = MFAActionCreatorsDefault;
+      return obj.confirmViewBackupCodes(verificationKey, false);
     },
-    title: null,
-    helpText: null,
-    inputLabel: null,
+    title: intl.string(intl5.t["mGppp/"]),
+    helpText: intl2.string(intl5.t["37S9yU"]),
+    inputLabel: intl3.string(intl5.t.TjGb4Q),
     closeOnSuccess: true,
-    onSuccess: null,
+    onSuccess,
     secureTextEntry: false,
-    actionText: null,
-    confirmColor: null,
+    actionText: intl4.string(intl5.t.geKm7t),
+    confirmColor: native.ButtonColors.BRAND,
     useKeyboardAwareWrapper: true
   };
-  const intl = util.intl;
-  obj.title = intl.string(util.t["mGppp/"]);
-  const intl2 = util.intl;
-  obj.helpText = intl2.string(util.t["37S9yU"]);
-  const intl3 = util.intl;
-  obj.inputLabel = intl3.string(util.t.TjGb4Q);
-  obj.onSuccess = onSuccess;
-  const intl4 = util.intl;
-  obj.actionText = intl4.string(util.t.geKm7t);
-  obj.confirmColor = native.ButtonColors.BRAND;
+  intl = intl5.intl;
+  intl2 = intl5.intl;
+  intl3 = intl5.intl;
+  intl4 = intl5.intl;
   showUserSettingsInputAlertDefault(obj);
 }
-const Constants = fn(1085);
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
 ({ NOOP_NULL: closure_4, UserSettingsSections } = Constants);
-const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11129);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(1);
+  let first;
+  let onSuccess;
+  let obj = react2;
+  const cResult = obj.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t(arg0) {
-      closure_0 = arg0;
-      const obj = {
+      let intl;
+      let intl2;
+      let intl3;
+      let closure_0 = arg0;
+      let obj = {
         onSubmit(password) {
-          const result = MFAActionCreatorsDefault.sendMFABackupCodesVerificationKeyEmail(password);
+          const obj = MFAActionCreatorsDefault;
+          const result = obj.sendMFABackupCodesVerificationKeyEmail(password);
           return result.then(() => {
             closure_2_5(closure_1_0);
           });
         },
         onSuccess,
-        title: null,
-        inputLabel: null,
+        title: intl.string(closure_0(closure_2[4]).t.PsQmzU),
+        inputLabel: intl2.string(closure_0(closure_2[4]).t["CIGa+7"]),
         closeOnSuccess: false,
-        actionText: null,
-        confirmColor: null,
+        actionText: intl3.string(closure_0(closure_2[4]).t.PDTjLN),
+        confirmColor: closure_0(closure_2[5]).ButtonColors.BRAND,
         useKeyboardAwareWrapper: true
       };
-      const intl = closure_0(1126).intl;
-      obj.title = intl.string(closure_0(1126).t.PsQmzU);
-      const intl2 = closure_0(1126).intl;
-      obj.inputLabel = intl2.string(closure_0(1126).t["CIGa+7"]);
-      const intl3 = closure_0(1126).intl;
-      obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
-      obj.confirmColor = closure_0(1188).ButtonColors.BRAND;
-      closure_1(14582)(obj);
+      intl = closure_0(closure_2[4]).intl;
+      intl2 = closure_0(closure_2[4]).intl;
+      intl3 = closure_0(closure_2[4]).intl;
+      closure_1(closure_2[6])(obj);
       return false;
     };
     cResult[0] = fn;
-    let first = fn;
+    first = fn;
   } else {
     first = cResult[0];
   }
   return first;
-}) : (() => noop.useCallback((arg0) => {
-  closure_0 = arg0;
-  const obj = {
-    onSubmit(password) {
-      const result = MFAActionCreatorsDefault.sendMFABackupCodesVerificationKeyEmail(password);
-      return result.then(() => {
-        closure_2_5(closure_1_0);
-      });
-    },
-    onSuccess,
-    title: null,
-    inputLabel: null,
-    closeOnSuccess: false,
-    actionText: null,
-    confirmColor: null,
-    useKeyboardAwareWrapper: true
-  };
-  const intl = closure_0(1126).intl;
-  obj.title = intl.string(closure_0(1126).t.PsQmzU);
-  const intl2 = closure_0(1126).intl;
-  obj.inputLabel = intl2.string(closure_0(1126).t["CIGa+7"]);
-  const intl3 = closure_0(1126).intl;
-  obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
-  obj.confirmColor = closure_0(1188).ButtonColors.BRAND;
-  closure_1(14582)(obj);
-  return false;
-}, []));
-const route = SettingBuilders.createRoute({
-  useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t.xZEzbu);
-  },
-  parent: fn(7634).MobileUserSettings.ACCOUNT,
-  usePredicate: fn(14494).useIs2FAEnabled,
-  usePreNavigationAction: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-    const cResult = c.c(1);
-    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const fn = function t(arg0) {
-        closure_0 = arg0;
-        const obj = {
-          onSubmit(password) {
-            const result = MFAActionCreatorsDefault.sendMFABackupCodesVerificationKeyEmail(password);
-            return result.then(() => {
-              closure_2_5(closure_1_0);
-            });
-          },
-          onSuccess,
-          title: null,
-          inputLabel: null,
-          closeOnSuccess: false,
-          actionText: null,
-          confirmColor: null,
-          useKeyboardAwareWrapper: true
-        };
-        const intl = closure_0(1126).intl;
-        obj.title = intl.string(closure_0(1126).t.PsQmzU);
-        const intl2 = closure_0(1126).intl;
-        obj.inputLabel = intl2.string(closure_0(1126).t["CIGa+7"]);
-        const intl3 = closure_0(1126).intl;
-        obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
-        obj.confirmColor = closure_0(1188).ButtonColors.BRAND;
-        closure_1(14582)(obj);
-        return false;
-      };
-      cResult[0] = fn;
-      let first = fn;
-    } else {
-      first = cResult[0];
-    }
-    return first;
-  }) : (() => noop.useCallback((arg0) => {
-    closure_0 = arg0;
-    const obj = {
+}) : (() => {
+  let onSuccess;
+  return react.useCallback((arg0) => {
+    let intl;
+    let intl2;
+    let intl3;
+    let closure_0 = arg0;
+    let obj = {
       onSubmit(password) {
-        const result = MFAActionCreatorsDefault.sendMFABackupCodesVerificationKeyEmail(password);
+        const obj = MFAActionCreatorsDefault;
+        const result = obj.sendMFABackupCodesVerificationKeyEmail(password);
         return result.then(() => {
           closure_2_5(closure_1_0);
         });
       },
       onSuccess,
-      title: null,
-      inputLabel: null,
+      title: intl.string(closure_0(closure_2[4]).t.PsQmzU),
+      inputLabel: intl2.string(closure_0(closure_2[4]).t["CIGa+7"]),
       closeOnSuccess: false,
-      actionText: null,
-      confirmColor: null,
+      actionText: intl3.string(closure_0(closure_2[4]).t.PDTjLN),
+      confirmColor: closure_0(closure_2[5]).ButtonColors.BRAND,
       useKeyboardAwareWrapper: true
     };
-    const intl = closure_0(1126).intl;
-    obj.title = intl.string(closure_0(1126).t.PsQmzU);
-    const intl2 = closure_0(1126).intl;
-    obj.inputLabel = intl2.string(closure_0(1126).t["CIGa+7"]);
-    const intl3 = closure_0(1126).intl;
-    obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
-    obj.confirmColor = closure_0(1188).ButtonColors.BRAND;
-    closure_1(14582)(obj);
+    intl = closure_0(closure_2[4]).intl;
+    intl2 = closure_0(closure_2[4]).intl;
+    intl3 = closure_0(closure_2[4]).intl;
+    closure_1(closure_2[6])(obj);
     return false;
-  }, [])),
+  }, []);
+});
+let obj = {
+  useTitle() {
+    const intl = intl5.intl;
+    return intl.string(intl5.t.xZEzbu);
+  },
+  parent: MobileUserSettings.ACCOUNT,
+  usePredicate: SettingsAccountUtils.useIs2FAEnabled,
+  usePreNavigationAction: tmp3,
   screen: {
     route: UserSettingsSections.ACCOUNT_CONFIRM_VIEW_BACKUP_CODES,
     getComponent() {
       return require("UserSettingsAccountBackupCodes").default;
     }
   }
-});
-const size = fn(2);
+};
+const route = SettingBuilders.createRoute(obj);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountViewBackupCodesSetting.tsx");
 
 export default route;

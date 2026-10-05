@@ -1,54 +1,71 @@
 // === Module 15166: useColorPresetsWithA11yLabels ===
 
 // Module 15166 (useColorPresetsWithA11yLabels)
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
-import util from "util" /* 1126 */;
+import intl2 from "intl" /* 1126 */;
+import DisplayNameStylesConstants from "DisplayNameStylesConstants" /* 1395 */;
 import _modDef2883 from "module_2883" /* 2883 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const getColorPresetsForEffect = fn(1395).getColorPresetsForEffect;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/display_name_styles/hooks/useColorPresetsWithA11yLabels.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((selectedEffectId) => {
-  const cResult = c.c(3);
+const getColorPresetsForEffect = DisplayNameStylesConstants.getColorPresetsForEffect;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((selectedEffectId) => {
+  let tmp2;
+  let obj = react2;
+  const cResult = obj.c(3);
   if (cResult[0] !== selectedEffectId) {
+    let tmp4;
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
       const fn = function s(colors, arg1) {
-        const obj = { colors, a11yLabel: null };
-        const intl = util.intl;
-        const obj2 = { number: arg1 + 1, hexList: null };
-        const mapped = colors.map(utils_ColorUtils.int2hex);
-        obj2.hexList = mapped.join(", ");
-        obj.a11yLabel = intl.formatToPlainString(_modDef2883.FHfTsV, obj2);
+        let FHfTsV;
+        let formatToPlainString;
+        let mapped;
+        let obj2;
+        const obj = { colors, a11yLabel: formatToPlainString(FHfTsV, obj2) };
+        const intl = intl2.intl;
+        formatToPlainString = intl.formatToPlainString;
+        obj2 = { number: arg1 + 1, hexList: mapped.join(", ") };
+        FHfTsV = _modDef2883.FHfTsV;
+        mapped = colors.map(utils_ColorUtils.int2hex);
         return obj;
       };
       cResult[2] = fn;
-      let tmp3 = fn;
+      tmp4 = fn;
     } else {
-      tmp3 = cResult[2];
+      tmp4 = cResult[2];
     }
-    let mapped = getColorPresetsForEffect(selectedEffectId).map(tmp3);
+    const arr = getColorPresetsForEffect(selectedEffectId);
+    let mapped = arr.map(tmp4);
     cResult[0] = selectedEffectId;
     cResult[1] = mapped;
-    const arr = getColorPresetsForEffect(selectedEffectId);
+    tmp2 = mapped;
   } else {
-    return cResult[1];
+    tmp2 = cResult[1];
   }
+  return tmp2;
 }) : ((arg0) => {
-  closure_0 = arg0;
+  let closure_0 = arg0;
   const items = [arg0];
-  return noop.useMemo(() => getColorPresetsForEffect(closure_0).map((colors, index) => {
-    const obj = { colors, a11yLabel: null };
-    const intl = closure_1_0(1126).intl;
-    const obj2 = { number: index + 1, hexList: null };
-    const mapped = colors.map(closure_1_0(1103).int2hex);
-    obj2.hexList = mapped.join(", ");
-    obj.a11yLabel = intl.formatToPlainString(closure_1_1(2883).FHfTsV, obj2);
-    return obj;
-  }), items);
+  return react.useMemo(() => {
+    const arr = getColorPresetsForEffect(closure_0);
+    return arr.map((colors, index) => {
+      let FHfTsV;
+      let formatToPlainString;
+      let mapped;
+      let obj2;
+      const obj = { colors, a11yLabel: formatToPlainString(FHfTsV, obj2) };
+      const intl = closure_1_0(closure_1_2[4]).intl;
+      formatToPlainString = intl.formatToPlainString;
+      obj2 = { number: index + 1, hexList: mapped.join(", ") };
+      FHfTsV = closure_1_1(closure_1_2[5]).FHfTsV;
+      mapped = colors.map(closure_1_0(closure_1_2[6]).int2hex);
+      return obj;
+    });
+  }, items);
 });
+const result = size.fileFinishedImporting("modules/display_name_styles/hooks/useColorPresetsWithA11yLabels.tsx");
+
+export default tmp2;

@@ -1,22 +1,29 @@
 // === Module 9648: NitroUpsellButton ===
 
 // Module 9648 (NitroUpsellButton)
-import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
+import Fragment from "Fragment" /* 21 */;
+import get_initialized from "get initialized" /* 504 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import components_Button_Button from "components/Button/Button" /* 5594 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8313 */;
-import noop from "module_19" /* 19 */;
+import NitroWheelIcon2 from "NitroWheelIcon" /* 8313 */;
+import react from "react" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/components/native/NitroUpsellButton.tsx");
-
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(9);
+const jsx = Fragment.jsx;
+const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let loading;
+  let onPress;
+  let shiny;
+  let text;
+  let tmp5;
+  let tmp6;
+  let tmp9;
+  let useReducedMotion;
+  const obj = react2;
+  const cResult = obj.c(9);
   ({ loading, onPress, text, shiny, size } = arg0);
   let tmp4 = undefined === shiny || shiny;
   let str = "lg";
@@ -35,12 +42,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   } else {
     [tmp5, tmp6] = cResult;
   }
-  const stateFromStores = initialize.useStateFromStores(tmp5, tmp6);
+  const tmpResult = get_initialized;
+  const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { color: nativeDefault.colors.WHITE, size: "sm" };
-    const tmp12 = jsx(NitroWheelIcon.NitroWheelIcon, { color: nativeDefault.colors.WHITE, size: "sm" });
+    const NitroWheelIcon = NitroWheelIcon2.NitroWheelIcon;
+    const tmp12 = <NitroWheelIcon color={nativeDefault.colors.WHITE} size="sm" />;
     cResult[2] = tmp12;
-    let tmp9 = tmp12;
+    tmp9 = tmp12;
   } else {
     tmp9 = cResult[2];
   }
@@ -51,8 +59,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     if (cResult[4] === onPress) {
       if (cResult[5] === str) {
         if (cResult[6] === tmp4) {
+          let tmp13;
           if (cResult[7] === text) {
-            let tmp13 = cResult[8];
+            tmp13 = cResult[8];
           }
           return tmp13;
         }
@@ -67,8 +76,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   cResult[7] = text;
   cResult[8] = tmp14;
   tmp13 = tmp14;
-  const tmpResult = initialize;
 }) : ((shiny) => {
+  let loading;
+  let onPress;
+  let text;
+  let useReducedMotion;
   let flag = shiny.shiny;
   ({ loading, onPress, text } = shiny);
   if (flag === undefined) {
@@ -79,12 +91,16 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     str = "lg";
   }
   const items = [AccessibilityStore];
-  const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const obj2 = { text, size: str, loading, onPress, icon: null, variant: "experimental_premium-primary", shiny: null };
-  obj2.icon = jsx(NitroWheelIcon.NitroWheelIcon, { color: nativeDefault.colors.WHITE, size: "sm" });
+  const obj = get_initialized;
+  const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const Button = components_Button_Button.Button;
+  ({ color: nativeDefault.colors.WHITE, size: "sm" });
+  const NitroWheelIcon = NitroWheelIcon2.NitroWheelIcon;
   if (flag) {
     flag = !stateFromStores;
   }
-  obj2.shiny = flag;
-  return jsx(components_Button_Button.Button, { text, size: str, loading, onPress, icon: null, variant: "experimental_premium-primary", shiny: null });
+  return <Button text={text} size={str} loading={loading} onPress={onPress} icon={null} variant="experimental_premium-primary" shiny={flag} />;
 }));
+const result = size.fileFinishedImporting("modules/premium/components/native/NitroUpsellButton.tsx");
+
+export default memoResult;

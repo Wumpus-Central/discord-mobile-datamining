@@ -1,6 +1,7 @@
 // === Module 9312: applyBackgroundOption ===
 
 // Module 9312 (applyBackgroundOption)
+import Constants from "Constants" /* 1085 */;
 import AvatarUtils from "AvatarUtils" /* 1402 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4945 */;
 import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 9314 */;
@@ -8,281 +9,266 @@ import LastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption" /* 931
 import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 9318 */;
 import getFilterImageDefault from "getFilterImage" /* 9323 */;
 import isVideoBackgroundEnabledDefault from "isVideoBackgroundEnabled" /* 9324 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import UserStore from "UserStore" /* 1377 */;
 import VideoBackgroundStore from "VideoBackgroundStore" /* 9313 */;
+import VideoBackgroundConstants from "VideoBackgroundConstants" /* 6484 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-let closure_9 = async function _getFilterBlob() {
-  const _fetch = fetch;
-  await fetch(closure_0);
-  closure_130_0 = value;
-  await closure_130_0.blob();
-  closure_130_1 = value;
-  const _Uint8ClampedArray = Uint8ClampedArray;
-  await closure_130_1.arrayBuffer();
-  return new Uint8ClampedArray(value);
+let closure_5, closure_6;
+
+let metroImportDefault;
+let metroRequire;
+let obj = function _getFilterBlob() {
+  obj = _asyncToGenerator(async function(arg0) {
+    let c3;
+    let c4;
+    let closure_2;
+    let closure_0 = arg0;
+    const _fetch = fetch;
+    await fetch(closure_0);
+    closure_0 = value;
+    await closure_0.blob();
+    const _Uint8ClampedArray = Uint8ClampedArray;
+    await _Uint8ClampedArray.arrayBuffer();
+    const self = this;
+    const self2 = this;
+    const tmp6 = new Uint8ClampedArray(value);
+    return tmp6;
+  });
+  return obj(...arguments);
 };
 function applyBackgroundMediaFilterSettings(arg0, target, graph, image, blob) {
-  const result = VideoBackgroundActionCreators.applyMediaFilterSettings({ [arg0]: { graph, target, image, blob } });
+  obj = VideoBackgroundActionCreators;
+  const obj2 = { graph, target, image, blob };
+  const result = obj.applyMediaFilterSettings({ [arg0]: obj2 });
 }
 function applyBackgroundOption() {
-  const self = this;
-  const apply = closure_12.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 }
-let closure_12 = async function _applyBackgroundOption(arg0, arg1, arg2) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  let asset = arg2;
-  c8 = 0;
-  c9 = 0;
-  c7 = 0;
-  return (async (arg0, value, arg2) => {
-    if (c9 === 2) {
-      c9 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
+obj = function _applyBackgroundOption() {
+  let styles;
+  obj = _asyncToGenerator(async (arg0, arg1, arg2) => {
+    let closure_0 = arg0;
+    let closure_1 = arg1;
+    let asset = arg2;
+    let c8 = 0;
+    let c9 = 0;
+    let c7 = 0;
+    return (async (arg0, value, arg2) => {
+      let tmp5;
+      let tmp6;
+      function getFilterBlob() {
+        return closure_1_9(...arguments);
       }
-    } else {
-      try {
-        c9 = 2;
-        if (0 === c8) {
-          if (arg0 === 1) {
-            c9 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c9 = 3;
-            const obj7 = { value, done: true };
-            return obj7;
-          } else {
-            closure_5 = tmp3;
-            closure_4 = closure_133_10;
-            closure_132_0 = closure_0;
-            closure_132_1 = closure_1;
-            closure_132_2 = undefined;
-            closure_132_4 = undefined;
-            closure_132_5 = undefined;
-            closure_132_3 = false;
-            if (null == asset) {
-              applyBackgroundMediaFilterSettings(closure_0, closure_1, BaseConnectionEvent.FilterSettingsGraph.NONE);
+      if (c9 === 2) {
+        c9 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          return { value, done: true };
+        } else {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          c9 = 2;
+          if (0 === c8) {
+            if (arg0 === 1) {
               c9 = 3;
-              return { value: "IconComponent", done: null };
-            } else if (asset === closure_2_7) {
-              applyBackgroundMediaFilterSettings(closure_0, closure_1, BaseConnectionEvent.FilterSettingsGraph.BACKGROUND_BLUR);
+              throw value;
+            } else if (arg0 === 2) {
               c9 = 3;
-              return { value: "IconComponent", done: null };
+              return { value, done: true };
             } else {
-              if (typeof asset !== "string") {
-                if (typeof asset !== "number") {
-                  asset = asset.asset;
-                  let isAnimatedIconHashResult = AvatarUtils.isAnimatedIconHash(asset);
-                  if (!isAnimatedIconHashResult) {
-                    isAnimatedIconHashResult = AvatarUtils.isVideoAssetHash(asset);
-                  }
-                  closure_132_3 = isAnimatedIconHashResult;
-                  const obj8 = { userId: null, assetId: null, assetHash: null, size: null };
-                  ({ user_id: obj6.userId, id: obj6.assetId } = asset);
-                  obj8.assetHash = asset;
-                  obj8.size = styles.width;
-                  let videoFilterAssetURL = AvatarUtils.getVideoFilterAssetURL(obj8);
-                  closure_132_2 = videoFilterAssetURL;
-                }
-                if (null != videoFilterAssetURL) {
-                  c7 = 1;
-                  if (isAnimatedIconHashResult) {
-                    closure_132_4 = tmp9;
-                    if (closure_132_3) {
-                      c8 = 3;
-                      c9 = 1;
-                      const obj9 = {
-                        value: (function getFilterBlob() {
-                                            const self = this;
-                                            const apply = closure_1_9.apply;
-                                            if (typeof apply === "unknown") {
-                                              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                                            } else {
-                                              applyArgumentsResult = apply(self, arguments);
-                                            }
-                                            return applyArgumentsResult;
-                                          })(closure_132_2),
-                        done: false
-                      };
-                      return obj9;
-                    } else {
-                      closure_132_5 = tmp8;
-                      closure_133_10(closure_132_0, closure_132_1, closure_133_0(closure_133_2[6]).FilterSettingsGraph.BACKGROUND_REPLACEMENT, closure_132_4, closure_132_5);
-                      c7 = 0;
+              closure_5 = tmp;
+              closure_4 = closure_133_10;
+              let source;
+              let c4;
+              let c5;
+              let closure_3 = false;
+              if (null == asset) {
+                applyBackgroundMediaFilterSettings(closure_0, closure_1, BaseConnectionEvent.FilterSettingsGraph.NONE);
+                c9 = 3;
+                return { value: "IconComponent", done: null };
+              } else if (asset === closure_2_7) {
+                applyBackgroundMediaFilterSettings(closure_0, closure_1, BaseConnectionEvent.FilterSettingsGraph.BACKGROUND_BLUR);
+                c9 = 3;
+                return { value: "IconComponent", done: null };
+              } else {
+                if (typeof asset !== "string") {
+                  let isAnimatedIconHashResult;
+                  let videoFilterAssetURL;
+                  if (typeof asset !== "number") {
+                    asset = asset.asset;
+                    const obj11 = AvatarUtils;
+                    isAnimatedIconHashResult = obj11.isAnimatedIconHash(asset);
+                    if (!isAnimatedIconHashResult) {
+                      const obj4 = AvatarUtils;
+                      isAnimatedIconHashResult = obj4.isVideoAssetHash(asset);
                     }
-                  } else {
-                    c8 = 2;
-                    c9 = 1;
-                    const obj10 = { value: getFilterImageDefault(videoFilterAssetURL), done: false };
-                    return obj10;
+                    closure_3 = isAnimatedIconHashResult;
+                    const obj8 = { userId: null, assetId: null, assetHash: asset, size: styles.width };
+                    ({ user_id: obj6.userId, id: obj6.assetId } = asset);
+                    const obj5 = AvatarUtils;
+                    videoFilterAssetURL = obj5.getVideoFilterAssetURL(obj8);
+                    source = videoFilterAssetURL;
+                  }
+                  if (null != videoFilterAssetURL) {
+                    c7 = 1;
+                    if (isAnimatedIconHashResult) {
+                      c4 = tmp6;
+                      if (closure_3) {
+                        c8 = 3;
+                        c9 = 1;
+                        const obj9 = { value: getFilterBlob(source), done: false };
+                        return obj9;
+                      } else {
+                        c5 = tmp5;
+                        closure_133_10(closure_0, closure_1, closure_133_0(closure_133_2[6]).FilterSettingsGraph.BACKGROUND_REPLACEMENT, c4, c5);
+                        c7 = 0;
+                      }
+                    } else {
+                      c8 = 2;
+                      c9 = 1;
+                      const obj10 = { value: getFilterImageDefault(videoFilterAssetURL), done: false };
+                      return obj10;
+                    }
                   }
                 }
+                const tmp21 = getDefaultBackgroundDataDefault()[asset];
+                const isVideo = tmp21.isVideo;
+                c3 = isVideo;
+                if (isVideo == null) {
+                  c3 = false;
+                }
+                closure_3 = c3;
+                source = tmp21.source;
+                isAnimatedIconHashResult = c3;
+                videoFilterAssetURL = source;
               }
-              const tmp24 = getDefaultBackgroundDataDefault()[asset];
-              const isVideo = tmp24.isVideo;
-              c3 = isVideo;
-              if (isVideo == null) {
-                c3 = false;
-              }
-              closure_132_3 = c3;
-              const source = tmp24.source;
-              closure_132_2 = source;
-              isAnimatedIconHashResult = c3;
-              videoFilterAssetURL = source;
             }
-          }
-        } else if (1 === tmp7) {
-          c7 = 0;
-          const result = closure_133_0(closure_133_2[5]).errorApplyingMediaFilterSettings();
-          const obj3 = closure_133_0(closure_133_2[5]);
-        } else if (2 === tmp7) {
-          if (arg0 === 1) {
+          } else if (1 === c8) {
+            c7 = 0;
+            const obj3 = closure_133_0(closure_133_2[5]);
+            const result = obj3.errorApplyingMediaFilterSettings();
+          } else if (2 === c8) {
+            if (arg0 === 1) {
+              c9 = 3;
+              throw value;
+            } else {
+              tmp6 = value;
+              if (arg0 === 2) {
+                c7 = 0;
+                c9 = 3;
+                return { value, done: true };
+              }
+            }
+          } else if (arg0 === 1) {
             c9 = 3;
             throw value;
           } else {
+            tmp5 = value;
             if (arg0 === 2) {
               c7 = 0;
               c9 = 3;
-              const obj17 = { value, done: true };
-              return obj17;
+              return { value, done: true };
             }
-            tmp9 = value;
           }
-        } else if (arg0 === 1) {
           c9 = 3;
-          throw value;
-        } else {
-          if (arg0 === 2) {
-            c7 = 0;
+          return { value: "IconComponent", done: null };
+        } catch (tmp47) {
+          closure_6 = tmp47;
+          if (0 === c7) {
             c9 = 3;
-            const obj = { value, done: true };
-            return obj;
+            throw tmp47;
+          } else {
+            c8 = 1;
           }
-          tmp8 = value;
-        }
-        c9 = 3;
-      } catch (tmp50) {
-        closure_6 = tmp50;
-        if (tmp4 === c7) {
-          c9 = tmp2;
-          throw tmp50;
-        } else {
-          c8 = tmp;
         }
       }
-    }
-  })();
+    })();
+  });
+  return obj(...arguments);
 };
 function applyBackgroundOptionLive() {
-  const self = this;
-  const apply = closure_14.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 }
-let closure_14 = async function _applyBackgroundOptionLive(arg0, arg1) {
-  closure_0 = arg0;
-  let track = arg1;
-  c4 = 0;
-  c5 = 0;
-  let iter = (async (arg0, value) => {
-    await closure_131_11(closure_131_0(closure_131_2[6]).FilterSettingsKey.CAMERA_BACKGROUND_LIVE, { type: closure_131_0(closure_131_2[6]).FilterTargetType.INPUT_DEVICE }, closure_130_0);
-    if (closure_130_1) {
-      const result = closure_131_0(closure_131_2[10]).trackBackgroundOptionUpdated(closure_130_0, _location, "Enabled");
-      closure_131_0(closure_131_2[10]);
-    }
-    await "IconComponent";
-    closure_2 = tmp2;
-    closure_130_0 = closure_0;
-    let flag = track.track;
-    if (flag === undefined) {
-      flag = true;
-    }
-    closure_130_1 = flag;
-    _location = track.location;
-    return "Set";
-  })();
-  iter.next();
-  return iter;
+obj = function _applyBackgroundOptionLive() {
+  obj = _asyncToGenerator(async (arg0, arg1) => {
+    let closure_2;
+    let closure_3;
+    let closure_0 = arg0;
+    const track = arg1;
+    let c4 = 0;
+    let c5 = 0;
+    const iter = (async (arg0, value) => {
+      let location;
+      const obj5 = { type: closure_131_0(closure_131_2[6]).FilterTargetType.INPUT_DEVICE };
+      const CAMERA_BACKGROUND_LIVE = closure_131_0(closure_131_2[6]).FilterSettingsKey.CAMERA_BACKGROUND_LIVE;
+      await closure_131_11(CAMERA_BACKGROUND_LIVE, obj5, closure_0);
+      const tmp6 = flag;
+      if (tmp6) {
+        obj = closure_131_0(closure_131_2[10]);
+        const result = obj.trackBackgroundOptionUpdated(closure_0, location, "Enabled");
+      }
+      await "IconComponent";
+      location = track.location;
+      return "Set";
+    })();
+    iter.next();
+    return iter;
+  });
+  return obj(...arguments);
 };
-let closure_15 = async function _applyBackgroundOptionPreview(arg0, arg1, arg2) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  let track = arg2;
-  c5 = 0;
-  c6 = 0;
-  let iter = (async (arg0, value, arg2) => {
-    const result = closure_132_0(closure_132_2[5]).startApplyMediaFilterSettings();
-    await closure_132_11(closure_132_0(closure_132_2[6]).FilterSettingsKey.CAMERA_BACKGROUND_PREVIEW, { type: closure_132_0(closure_132_2[6]).FilterTargetType.STREAM, streamId: closure_131_1 }, closure_131_0);
-    if (closure_131_2) {
-      const result1 = closure_132_0(closure_132_2[10]).trackBackgroundOptionUpdated(closure_131_0, _location, "Preview");
-      closure_132_0(closure_132_2[10]);
-    }
-    await "IconComponent";
-    closure_3 = tmp2;
-    closure_131_0 = closure_0;
-    closure_131_1 = closure_1;
-    let flag = track.track;
-    if (flag === undefined) {
-      flag = true;
-    }
-    closure_131_2 = flag;
-    _location = track.location;
-    return "Set";
-  })();
-  iter.next();
-  return iter;
+obj = function _applyBackgroundOptionPreview() {
+  obj = _asyncToGenerator(async (arg0, streamId, arg2) => {
+    let closure_3;
+    let closure_4;
+    let closure_0 = arg0;
+    const track = arg2;
+    let c5 = 0;
+    let c6 = 0;
+    const iter = (async (arg0, value, arg2) => {
+      let location;
+      const obj7 = closure_132_0(closure_132_2[5]);
+      const result = obj7.startApplyMediaFilterSettings();
+      const obj5 = { type: closure_132_0(closure_132_2[6]).FilterTargetType.STREAM, streamId };
+      const CAMERA_BACKGROUND_PREVIEW = closure_132_0(closure_132_2[6]).FilterSettingsKey.CAMERA_BACKGROUND_PREVIEW;
+      await closure_132_11(CAMERA_BACKGROUND_PREVIEW, obj5, closure_0);
+      const tmp6 = flag;
+      if (tmp6) {
+        obj = closure_132_0(closure_132_2[10]);
+        const result1 = obj.trackBackgroundOptionUpdated(closure_0, location, "Preview");
+      }
+      await "IconComponent";
+      location = track.location;
+      return "Set";
+    })();
+    iter.next();
+    return iter;
+  });
+  return obj(...arguments);
 };
-const VideoBackgroundConstants = fn(6484);
-({ BACKGROUND_REPLACEMENT_SIZE: metroRequire, BLUR_BACKGROUND_OPTION: closure_7 } = VideoBackgroundConstants);
-const NOOP = fn(1085).NOOP;
-const size = fn(2);
+({ BACKGROUND_REPLACEMENT_SIZE: metroRequire, BLUR_BACKGROUND_OPTION: metroImportDefault } = VideoBackgroundConstants);
+const NOOP = Constants.NOOP;
 let result = size.fileFinishedImporting("modules/video_backgrounds/applyBackgroundOption.tsx");
 
 export { applyBackgroundOptionLive };
 export const applyBackgroundOptionPreview = function applyBackgroundOptionPreview() {
-  const self = this;
-  const apply = closure_15.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const applyInitialVideoBackgroundOption = function applyInitialVideoBackgroundOption() {
   const currentUser = UserStore.getCurrentUser();
   if (null != currentUser) {
-    const lastUsedVideoBackgroundOption = LastUsedVideoBackgroundOption.getLastUsedVideoBackgroundOption(currentUser);
-    let tmp6 = isVideoBackgroundEnabledDefault("applyBackgroundOption");
+    obj = LastUsedVideoBackgroundOption;
+    const lastUsedVideoBackgroundOption = obj.getLastUsedVideoBackgroundOption(currentUser);
+    const tmp6 = isVideoBackgroundEnabledDefault("applyBackgroundOption") && !VideoBackgroundStore.hasBeenApplied && null != lastUsedVideoBackgroundOption;
     if (tmp6) {
-      tmp6 = !VideoBackgroundStore.hasBeenApplied;
-    }
-    if (tmp6) {
-      tmp6 = null != lastUsedVideoBackgroundOption;
-    }
-    if (tmp6) {
-      applyBackgroundOptionLive(lastUsedVideoBackgroundOption, { track: false }).catch(NOOP);
       const promise = applyBackgroundOptionLive(lastUsedVideoBackgroundOption, { track: false });
+      promise.catch(NOOP);
     }
   }
 };

@@ -1,11 +1,12 @@
-// === Module 7283: openPrivacySettings ===
+// === Module 7283: react-native ===
 
-// Module 7283 (openPrivacySettings)
-import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 6431 */;
+// Module 7283 (react-native)
+import react_nativeDefault from "react-native" /* 6431 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/native_permissions/mobile/openPrivacySettings.native.tsx");
 
 export default function openPrivacySettings() {
-  NativeDeviceSettingsModuleDefault.openPrivacySettings();
+  const obj = react_nativeDefault;
+  obj.openPrivacySettings();
 };

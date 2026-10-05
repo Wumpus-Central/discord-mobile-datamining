@@ -1,25 +1,32 @@
 // === Module 15540: CheckpointKnickKnacks ===
 
 // Module 15540 (CheckpointKnickKnacks)
-import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import get_initialized from "get initialized" /* 504 */;
+import react2 from "react" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import _mod4604 from "module_4604" /* 4604 */;
-import noop from "module_19" /* 19 */;
+import CheckpointConstants from "CheckpointConstants" /* 5115 */;
+import react from "react" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(5115).CHECKPOINT_PRIMARY;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+let style;
+
+const View = react_native.View;
+const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
+const jsx = Fragment.jsx;
 let closure_7 = createStyles.createStyles({ rive: { width: 143, height: 32 } });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointKnickKnacks.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
-  const cResult = c.c(12);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+  let tmp4;
+  let tmp5;
+  let tmp9;
+  let useReducedMotion;
+  const obj = react2;
+  const cResult = obj.c(12);
   style = style.style;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
@@ -33,65 +40,72 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
+  const tmpResult = get_initialized;
+  const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
   const tmp8 = closure_7();
   if (cResult[2] !== stateFromStores) {
     const obj2 = { iconColor: CHECKPOINT_PRIMARY, reducedMotion: stateFromStores };
     cResult[2] = stateFromStores;
     cResult[3] = obj2;
-    let tmp9 = obj2;
+    tmp9 = obj2;
   } else {
     tmp9 = cResult[3];
   }
-  const tmpResult = initialize;
-  if (tmpResult2.isAndroid()) {
-    return null;
-  } else {
+  let tmp11 = null;
+  const tmpResult2 = PlatformUtils;
+  if (!tmpResult2.isAndroid()) {
     if (cResult[4] === style) {
+      let tmp12;
+      let tmp13;
       if (cResult[5] === tmp8.rive) {
-        let tmp11 = cResult[6];
+        tmp12 = cResult[6];
       }
       if (cResult[7] !== tmp9) {
-        const obj3 = { artboard: "Entry", dataBinding: tmp9 };
-        const tmp14 = jsx(_mod4604.CheckpointKnickKnacksRive, { artboard: "Entry", dataBinding: tmp9 });
+        const tmp15 = jsx(_mod4604.CheckpointKnickKnacksRive, { artboard: "Entry", dataBinding: tmp9 });
         cResult[7] = tmp9;
-        cResult[8] = tmp14;
-        let tmp12 = tmp14;
+        cResult[8] = tmp15;
+        tmp13 = tmp15;
       } else {
-        tmp12 = cResult[8];
+        tmp13 = cResult[8];
       }
-      if (cResult[9] === tmp11) {
+      if (cResult[9] === tmp12) {
+        let tmp16;
+        if (cResult[10] === tmp13) {
+          tmp16 = cResult[11];
+        }
+        tmp11 = tmp16;
       }
-      const obj4 = { style: tmp11, children: tmp12 };
-      const tmp18 = <View style={tmp11}>{tmp12}</View>;
-      cResult[9] = tmp11;
-      cResult[10] = tmp12;
-      cResult[11] = tmp18;
+      const tmp19 = <View style={tmp12}>{tmp13}</View>;
+      cResult[9] = tmp12;
+      cResult[10] = tmp13;
+      cResult[11] = tmp19;
+      tmp16 = tmp19;
     }
     const items1 = [tmp8.rive, style];
     cResult[4] = style;
     cResult[5] = tmp8.rive;
     cResult[6] = items1;
-    tmp11 = items1;
+    tmp12 = items1;
   }
-  tmpResult2 = PlatformUtils;
+  return tmp11;
 }) : ((style) => {
+  let useReducedMotion;
   let stateFromStores;
+  style = style.style;
   const items = [AccessibilityStore];
-  stateFromStores = stateFromStores(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const items1 = [stateFromStores];
   const obj = stateFromStores(504);
-  const tmp = stateFromStores;
-  const memo = noop.useMemo(() => ({ iconColor: CHECKPOINT_PRIMARY, reducedMotion: stateFromStores }), items1);
+  stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const items1 = [stateFromStores];
   const tmp4 = closure_7();
+  const memo = react.useMemo(() => ({ iconColor: CHECKPOINT_PRIMARY, reducedMotion: stateFromStores }), items1);
   let tmp6 = null;
+  const obj2 = stateFromStores(1369);
   if (!obj2.isAndroid()) {
-    const obj3 = { style: null, children: null };
-    const items2 = [tmp4.rive, style.style];
-    obj3.style = items2;
-    const obj4 = { artboard: "Entry", dataBinding: memo };
-    obj3.children = jsx(tmp(4604).CheckpointKnickKnacksRive, { artboard: "Entry", dataBinding: memo });
-    tmp6 = <View style={null}>{null}</View>;
+    const items2 = [tmp4.rive, style];
+    tmp6 = <View style={items2}>{null}</View>;
   }
   return tmp6;
 });
+const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointKnickKnacks.tsx");
+
+export default tmp2;

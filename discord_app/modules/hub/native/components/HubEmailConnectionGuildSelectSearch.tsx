@@ -1,9 +1,9 @@
 // === Module 12410: HubEmailConnectionGuildSelectSearch ===
 
 // Module 12410 (HubEmailConnectionGuildSelectSearch)
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
+import intl2 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import useNavigation from "useNavigation" /* 1490 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
@@ -11,118 +11,162 @@ import Text_Text from "Text/Text" /* 4886 */;
 import fuzzysearchDefault from "fuzzysearch" /* 5702 */;
 import NavigatorHeader from "NavigatorHeader" /* 6010 */;
 import SearchBarNavDefault from "SearchBarNav" /* 6879 */;
-import HubActionCreatorsDefault from "HubActionCreators" /* 12399 */;
-import _modDef12411 from "module_12411" /* 12411 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import HubConstants from "HubConstants" /* 12385 */;
+import AssetRegistryDefault from "AssetRegistry" /* 12411 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import _slicedToArray_mod from "_slicedToArray" /* 32 */;
+import react_mod from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let c4, closure_2, dependencyMap;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ View: metroRequire, Image: closure_7, FlatList: closure_8 } = get_ActivityIndicator);
-const HubEmailConnectionSteps = fn(12385).HubEmailConnectionSteps;
-const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { scrollContainer: { flex: 1, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, fauxHeader: { paddingHorizontal: 0 }, emptyWrapper: { flex: 1, alignItems: "center", justifyContent: "center", marginTop: 64, paddingHorizontal: 16 }, emptyStateImage: { marginBottom: 24 }, emptyStateTitle: { marginBottom: 4, textAlign: "center" }, error: null };
-let obj3 = { flex: 1, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj2.error = { color: nativeDefault.unsafe_rawColors.RED_400, alignSelf: "center", fontSize: 14, marginBottom: 8 };
-let closure_13 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
+let c10;
+let closure_12;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let obj3;
+let unpackModuleId;
+let _slicedToArray = _slicedToArray_mod;
+let react = react_mod;
+({ View: metroRequire, Image: metroImportDefault, FlatList: metroImportAll } = react_native);
+const HubEmailConnectionSteps = HubConstants.HubEmailConnectionSteps;
+({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { scrollContainer: obj2, fauxHeader: { paddingHorizontal: 0 }, emptyWrapper: { flex: 1, alignItems: "center", justifyContent: "center", marginTop: 64, paddingHorizontal: 16 }, emptyStateImage: { marginBottom: 24 }, emptyStateTitle: { marginBottom: 4, textAlign: "center" }, error: obj3 };
+obj2 = { flex: 1, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+createStyles = createStyles.createStyles;
+obj3 = { color: nativeDefault.unsafe_rawColors.RED_400, alignSelf: "center", fontSize: 14, marginBottom: 8 };
+let closure_13 = createStyles(obj);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(9);
+  let items;
+  let tmp10;
+  let tmp12;
+  let tmp5;
+  const obj = react2;
+  const cResult = obj.c(9);
   const tmp4 = closure_13();
+  const emptyWrapper = tmp4.emptyWrapper;
   if (cResult[0] !== tmp4.emptyStateImage) {
-    const obj2 = { style: tmp4.emptyStateImage, source: _modDef12411 };
-    const tmp9 = v65535(React5, obj2);
+    const obj2 = { style: tmp4.emptyStateImage, source: AssetRegistryDefault };
+    const tmp9 = authStore(metroImportDefault, obj2);
     cResult[0] = tmp4.emptyStateImage;
     cResult[1] = tmp9;
-    let tmp5 = tmp9;
+    tmp5 = tmp9;
   } else {
     tmp5 = cResult[1];
   }
+  const emptyStateTitle = tmp4.emptyStateTitle;
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = util.intl;
-    const stringResult = intl.string(util.t["6HXiuE"]);
+    const intl = intl2.intl;
+    const stringResult = intl.string(intl2.t["6HXiuE"]);
     cResult[2] = stringResult;
-    let tmp10 = stringResult;
+    tmp10 = stringResult;
   } else {
     tmp10 = cResult[2];
   }
   if (cResult[3] !== tmp4.emptyStateTitle) {
-    const obj3 = { style: tmp4.emptyStateTitle, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: tmp10 };
-    const tmp14 = v65535(Text_Text.Text, obj3);
+    const obj3 = { style: emptyStateTitle, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: tmp10 };
+    const tmp14 = authStore(Text_Text.Text, obj3);
     cResult[3] = tmp4.emptyStateTitle;
     cResult[4] = tmp14;
-    let tmp12 = tmp14;
+    tmp12 = tmp14;
   } else {
     tmp12 = cResult[4];
   }
   if (cResult[5] === tmp4.emptyWrapper) {
     if (cResult[6] === tmp5) {
+      let tmp15;
       if (cResult[7] === tmp12) {
-        let tmp15 = cResult[8];
+        tmp15 = cResult[8];
       }
       return tmp15;
     }
   }
-  const obj4 = { style: tmp4.emptyWrapper, children: null };
-  const items = [tmp5, tmp12];
-  obj4.children = items;
-  const tmp16 = closure_1_11(timestampProducer, obj4);
+  const obj4 = { style: emptyWrapper, children: items };
+  items = [tmp5, tmp12];
+  const tmp16 = unpackModuleId(metroRequire, obj4);
   cResult[5] = tmp4.emptyWrapper;
   cResult[6] = tmp5;
   cResult[7] = tmp12;
   cResult[8] = tmp16;
   tmp15 = tmp16;
 }) : (() => {
+  let intl;
+  let items;
   const tmp = closure_13();
-  const obj = { style: tmp.emptyWrapper, children: null };
-  const items = [v65535(React5, { style: tmp.emptyStateImage, source: _modDef12411 }), ];
-  const obj3 = { style: tmp.emptyStateTitle, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = util.intl;
-  obj3.children = intl.string(util.t["6HXiuE"]);
-  items[1] = v65535(Text_Text.Text, obj3);
-  obj.children = items;
-  return closure_1_11(timestampProducer, obj);
+  const obj = { style: tmp.emptyWrapper, children: items };
+  items = [, ];
+  const obj2 = { style: tmp.emptyStateImage, source: AssetRegistryDefault };
+  items[0] = authStore(metroImportDefault, obj2);
+  const obj3 = { style: tmp.emptyStateTitle, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: intl.string(intl2.t["6HXiuE"]) };
+  const Text = Text_Text.Text;
+  intl = intl2.intl;
+  items[1] = authStore(Text, obj3);
+  return unpackModuleId(metroRequire, obj);
 });
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/native/components/HubEmailConnectionGuildSelectSearch.tsx");
 
 export default function HubEmailConnectionGuildSelectSearch(arg0) {
+  let c5;
+  let c6;
+  let c7;
+  let closure_4;
+  let error;
+  let guildsInfo;
+  let intl;
+  let items;
+  let loading;
+  let obj2;
+  let obj5;
+  let obj7;
+  let tmp5;
+  let tmp9Result;
   ({ guildsInfo, email: require, onClose: importDefault } = arg0);
   _slicedToArray = undefined;
-  noop = undefined;
+  react = undefined;
   c6 = undefined;
   c7 = undefined;
-  const tmp = closure_13();
+  let tmp = closure_13();
   dependencyMap = tmp;
-  closure_3 = useNavigation.useNavigation();
-  [_slicedToArray, obj5.onChange] = noop.useState("");
-  [obj2, c5] = _slicedToArray(noop.useState(null), 2);
-  const tmp5 = _slicedToArray(noop.useState(null), 2);
-  [c6, c7] = _slicedToArray(noop.useState(false), 2);
+  const tmp3 = dependencyMap;
+  let obj = useNavigation;
+  let closure_3 = obj.useNavigation();
+  [_slicedToArray, tmp5] = react.useState("");
+  [obj2, c5] = _slicedToArray(react.useState(null), 2);
+  const tmp6 = _slicedToArray(react.useState(null), 2);
+  [c6, c7] = react.useState(false);
+  _slicedToArray(react.useState(false), 2);
   const found = guildsInfo.filter((name) => {
+    const str = name.name;
+    const tmp = fuzzysearchDefault;
     const formatted = closure_4.toLowerCase();
-    return fuzzysearchDefault(formatted, name.name.toLowerCase());
+    return tmp(formatted, str.toLowerCase());
   });
   let anyErrorMessage;
+  const bottom = useSafeAreaInsetsDefault().bottom;
   if (obj2 != null) {
     anyErrorMessage = obj2.getAnyErrorMessage();
   }
-  const obj3 = { children: null };
-  let obj4 = { style: tmp.fauxHeader, children: null };
-  let obj5 = { placeholder: null, onChange: null, onClose: null };
-  const tmp6 = _slicedToArray(noop.useState(false), 2);
-  const intl = util.intl;
-  obj5.placeholder = intl.string(util.t.nL2wKD);
-  obj5.onClose = function onClose() {
-    closure_3.pop();
+  let obj3 = { children: items };
+  let obj4 = { style: tmp.fauxHeader, children: closure_10(tmp9Result, obj5) };
+  const FauxHeader = NavigatorHeader.FauxHeader;
+  obj5 = {
+    placeholder: intl.string(intl2.t.nL2wKD),
+    onChange: tmp5,
+    onClose() {
+      closure_3.pop();
+    }
   };
-  obj4.children = closure_10(SearchBarNavDefault, obj5);
-  const items = [closure_10(NavigatorHeader.FauxHeader, obj4), ];
+  tmp9Result = SearchBarNavDefault;
+  intl = intl2.intl;
+  items = [closure_10(FauxHeader, obj4), ];
   let obj6 = {
     keyboardShouldPersistTaps: "always",
     data: found,
@@ -132,20 +176,21 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
         tmp2 = null;
         if ("" !== anyErrorMessage) {
           const obj = { style: error.error, children: anyErrorMessage };
-          tmp2 = v65535(native.LegacyText, obj);
+          tmp2 = authStore(native.LegacyText, obj);
         }
       }
       return tmp2;
     },
     renderItem(item) {
       item = item.item;
-      const id = item.id;
-      return closure_1_10(require("HubEmailConnectionGuildSelect").HubEmailConnectionGuildSelectRow, {
+      let obj = {
         signup: closure_3(function*() {
+          let obj3;
+          let v3;
           if (v3 === 2) {
             v3 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp7 === 3) {
+          } else if (tmp3 === 3) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
@@ -155,7 +200,10 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
               return { value: "IconComponent", done: null };
             }
           } else {
+            let c3;
             try {
+              let onClose;
+              let email;
               v3 = 2;
               if (0 === c4) {
                 if (arg0 === 1) {
@@ -166,33 +214,39 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  const onClose = tmp4;
-                  const email = tmp8;
+                  onClose = tmp;
+                  email = tmp4;
                   v3(null);
                   closure_1_7(true);
                   c3 = 2;
                   c4 = 3;
                   v3 = 1;
-                  const obj5 = { value: HubActionCreatorsDefault.sendVerificationEmail(email, true, id), done: false };
+                  const obj5 = { value: obj3.sendVerificationEmail(email, true, id), done: false };
+                  obj3 = require("HubActionCreators");
                   return obj5;
                 }
-              } else if (1 === tmp8) {
+              } else if (1 === c4) {
                 c3 = 0;
                 closure_1_7(false);
                 throw closure_2;
               } else {
-                if (2 === tmp8) {
+                if (2 === c4) {
                   c3 = 1;
-                  closure_128_0 = closure_2;
-                  const aPIError = new id(5312).APIError(closure_128_0);
+                  email = closure_2;
+                  const self = this;
+                  const self2 = this;
+                  const aPIError = new id(error[17]).APIError(email);
                   v3(aPIError);
-                  c3 = 0;
-                  closure_1_7(false);
-                  v3 = 3;
                 } else if (arg0 === 1) {
                   v3 = 3;
                   throw value;
-                } else if (arg0 !== 2) {
+                } else if (arg0 === 2) {
+                  c3 = 0;
+                  closure_1_7(false);
+                  v3 = 3;
+                  const obj6 = { value, done: true };
+                  return obj6;
+                } else {
                   const obj = { email, onClose, guildId: closure_129_0 };
                   c3.push(constants.VERIFY_PIN, obj);
                   c3 = 1;
@@ -200,25 +254,27 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
                 c3 = 0;
                 closure_1_7(false);
                 v3 = 3;
-                const obj6 = { value, done: true };
-                return obj6;
+                return { value: "IconComponent", done: null };
               }
-            } catch (tmp48) {
-              closure_2 = tmp48;
-              if (tmp5 === c3) {
-                v3 = tmp3;
-                throw tmp48;
-              } else if (tmp2 === tmp50) {
-                c4 = tmp2;
+            } catch (tmp42) {
+              closure_2 = tmp42;
+              if (0 === c3) {
+                v3 = 3;
+                throw tmp42;
+              } else if (1 === tmp44) {
+                c4 = 1;
               } else {
-                c4 = tmp;
+                c4 = 2;
               }
             }
           }
         }),
         guildInfo: item,
         loading
-      });
+      };
+      const id = item.id;
+      const HubEmailConnectionGuildSelectRow = require("HubEmailConnectionGuildSelect").HubEmailConnectionGuildSelectRow;
+      return closure_1_10(HubEmailConnectionGuildSelectRow, obj);
     },
     keyExtractor(id) {
       return id.id;
@@ -230,11 +286,9 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
       return closure_1_10(c6, { style: { height: 8 } });
     },
     style: tmp.scrollContainer,
-    contentContainerStyle: null
+    contentContainerStyle: obj7
   };
-  const tmp8Result = SearchBarNavDefault;
-  obj6.contentContainerStyle = { paddingBottom: useSafeAreaInsetsDefault().bottom + 16, paddingTop: 16 };
+  obj7 = { paddingBottom: bottom + 16, paddingTop: 16 };
   items[1] = closure_10(anyErrorMessage, obj6);
-  obj3.children = items;
   return closure_11(closure_12, obj3);
 };

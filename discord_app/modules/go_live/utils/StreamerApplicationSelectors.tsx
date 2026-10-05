@@ -1,33 +1,99 @@
 // === Module 7228: StreamerApplicationSelectors ===
 
 // Module 7228 (StreamerApplicationSelectors)
-import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
+import shallowEqualDefault from "shallowEqual" /* 568 */;
+import Constants from "Constants" /* 1085 */;
 import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7229 */;
 import PresenceStore from "PresenceStore" /* 4930 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
 function _findPlayingActivity(type) {
-  let tmp = type.type === ActivityTypes.PLAYING;
-  if (tmp) {
-    tmp = !isEmbeddedActivityDefault(type);
-  }
+  const tmp = type.type === ActivityTypes.PLAYING && !isEmbeddedActivityDefault(type);
   return tmp;
 }
 function streamApplicationEqualityCheck(arg0, arg1) {
   let tmp = arg0 === arg1;
   if (!tmp) {
-    let tmp3 = null != arg0 && null != arg1;
-    if (tmp3) {
-      tmp3 = discord_common_shallowEqualDefault(arg0, arg1);
-    }
-    tmp = tmp3;
+    tmp = null != arg0 && null != arg1 && shallowEqualDefault(arg0, arg1);
+    const tmp3 = null != arg0 && null != arg1 && shallowEqualDefault(arg0, arg1);
   }
   return tmp;
 }
-const ActivityTypes = fn(1085).ActivityTypes;
-const ReactCompilerGating = fn(558);
+const ActivityTypes = Constants.ActivityTypes;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let first;
+  let ownerId;
+  let tmp6;
+  let tmp7;
+  _require = arg0;
+  const obj = require("react");
+  const cResult = obj.c(4);
+  const tmp = _require;
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [PresenceStore];
+    cResult[0] = items;
+    first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== arg0) {
+    const fn = function l() {
+      let tmp2 = null;
+      if (null != ownerId) {
+        let findActivityResult = null;
+        if (null != ownerId) {
+          findActivityResult = PresenceStore.findActivity(ownerId.ownerId, _findPlayingActivity);
+        }
+        let tmp5 = null;
+        if (null != findActivityResult) {
+          const obj3 = { id: null, name: null };
+          ({ application_id: obj2.id, name: obj2.name } = findActivityResult);
+          tmp5 = obj3;
+        }
+        tmp2 = tmp5;
+      }
+      return tmp2;
+    };
+    const items1 = [arg0];
+    cResult[1] = arg0;
+    cResult[2] = fn;
+    cResult[3] = items1;
+    tmp7 = items1;
+    tmp6 = fn;
+  } else {
+    tmp6 = cResult[2];
+    tmp7 = cResult[3];
+  }
+  const tmpResult = tmp(504);
+  return tmpResult.useStateFromStores(first, tmp6, tmp7, streamApplicationEqualityCheck);
+}) : ((arg0) => {
+  let ownerId;
+  _require = arg0;
+  const items = [PresenceStore];
+  const items1 = [arg0];
+  const obj = require("get initialized");
+  return obj.useStateFromStores(items, () => {
+    let tmp2 = null;
+    if (null != ownerId) {
+      let findActivityResult = null;
+      if (null != ownerId) {
+        findActivityResult = PresenceStore.findActivity(ownerId.ownerId, _findPlayingActivity);
+      }
+      let tmp5 = null;
+      if (null != findActivityResult) {
+        const obj3 = { id: null, name: null };
+        ({ application_id: obj2.id, name: obj2.name } = findActivityResult);
+        tmp5 = obj3;
+      }
+      tmp2 = tmp5;
+    }
+    return tmp2;
+  }, items1, streamApplicationEqualityCheck);
+});
 function getStreamerActivityByUserId(id, PresenceStore) {
   return PresenceStore.findActivity(id, _findPlayingActivity);
 }
@@ -55,71 +121,9 @@ function getStreamerApplication(stream, PresenceStore) {
     return tmp4;
   }
 }
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/go_live/utils/StreamerApplicationSelectors.tsx");
 
 export { getStreamerActivityByUserId };
 export { getStreamerActivity };
 export { getStreamerApplication };
-export const useGetStreamApplication = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  _require = arg0;
-  const cResult = require("c").c(4);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [PresenceStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== arg0) {
-    const fn = function l() {
-      let tmp2 = null;
-      if (null != ownerId) {
-        let findActivityResult = null;
-        if (null != ownerId) {
-          findActivityResult = PresenceStore.findActivity(ownerId.ownerId, _findPlayingActivity);
-        }
-        let tmp5 = null;
-        if (null != findActivityResult) {
-          ({ application_id: obj2.id, name: obj2.name } = findActivityResult);
-          tmp5 = { id: null, name: null };
-          const obj3 = { id: null, name: null };
-        }
-        tmp2 = tmp5;
-      }
-      return tmp2;
-    };
-    const items1 = [arg0];
-    cResult[1] = arg0;
-    cResult[2] = fn;
-    cResult[3] = items1;
-    let tmp7 = items1;
-    let tmp6 = fn;
-  } else {
-    tmp6 = cResult[2];
-    tmp7 = cResult[3];
-  }
-  const obj = require("c");
-  return require("initialize").useStateFromStores(first, tmp6, tmp7, streamApplicationEqualityCheck);
-}) : ((arg0) => {
-  _require = arg0;
-  const items = [PresenceStore];
-  const items1 = [arg0];
-  return require("initialize").useStateFromStores(items, () => {
-    let tmp2 = null;
-    if (null != ownerId) {
-      let findActivityResult = null;
-      if (null != ownerId) {
-        findActivityResult = PresenceStore.findActivity(ownerId.ownerId, _findPlayingActivity);
-      }
-      let tmp5 = null;
-      if (null != findActivityResult) {
-        ({ application_id: obj2.id, name: obj2.name } = findActivityResult);
-        tmp5 = { id: null, name: null };
-        const obj3 = { id: null, name: null };
-      }
-      tmp2 = tmp5;
-    }
-    return tmp2;
-  }, items1, streamApplicationEqualityCheck);
-});
+export const useGetStreamApplication = tmp2;

@@ -1,46 +1,53 @@
 // === Module 7569: ConversationNavigatorHeader ===
 
 // Module 7569 (ConversationNavigatorHeader)
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
+import intl2 from "intl" /* 1126 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1370 */;
 import useToken from "useToken" /* 4580 */;
 import useChannelNameDefault from "useChannelName" /* 5043 */;
 import HeaderShared from "HeaderShared" /* 7498 */;
 import ConversationNavigatorMoreMenuDefault from "ConversationNavigatorMoreMenu" /* 7570 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, channelId;
 
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+const View = react_native.View;
+const jsx = Fragment.jsx;
 let closure_6 = createStyles.createStyles((arg0) => {
-  const container = { flex: 1, paddingVertical: nativeDefault.space.PX_16, paddingRight: null, alignItems: "center", justifyContent: "center" };
-  let num = 0;
+  let num;
+  const container = { flex: 1, paddingVertical: nativeDefault.space.PX_16, paddingRight: num, alignItems: "center", justifyContent: "center" };
+  num = 0;
   if (!arg0) {
     num = nativeDefault.space.PX_64;
   }
-  container.paddingRight = num;
   return { container };
 });
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
-  const cResult = channelId(576).c(10);
+  let first;
+  let hasRightAction;
+  let title;
+  let tmp10;
+  let tmp9;
+  const obj = channelId(576);
+  const cResult = obj.c(10);
   channelId = channelId.channelId;
   ({ title, hasRightAction } = channelId);
-  let tmp5 = undefined !== hasRightAction;
-  if (tmp5) {
-    tmp5 = hasRightAction;
-  }
+  const tmp5 = undefined !== hasRightAction && hasRightAction;
   const tmp4Result = closure_6(tmp5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -52,26 +59,27 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     cResult[1] = channelId;
     cResult[2] = fn;
     cResult[3] = items1;
-    let tmp10 = items1;
-    let tmp9 = fn;
+    tmp10 = items1;
+    tmp9 = fn;
   } else {
     tmp9 = cResult[2];
     tmp10 = cResult[3];
   }
-  const obj = channelId(576);
-  const stateFromStores = channelId(504).useStateFromStores(first, tmp9, tmp10);
+  const tmpResult = channelId(504);
+  const stateFromStores = tmpResult.useStateFromStores(first, tmp9, tmp10);
   const tmp12 = useChannelNameDefault(stateFromStores, true);
   if (cResult[4] === tmp12) {
+    let tmp13;
     if (cResult[5] === title) {
-      let tmp13 = cResult[6];
+      tmp13 = cResult[6];
     }
     if (cResult[7] === tmp4Result.container) {
+      let tmp15;
       if (cResult[8] === tmp13) {
-        let tmp15 = cResult[9];
+        tmp15 = cResult[9];
       }
       return tmp15;
     }
-    const obj2 = { style: tmp4Result.container, children: tmp13 };
     const tmp18 = <View style={tmp4Result.container}>{tmp13}</View>;
     cResult[7] = tmp4Result.container;
     cResult[8] = tmp13;
@@ -83,137 +91,133 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   cResult[5] = title;
   cResult[6] = tmp14;
   tmp13 = tmp14;
-  const tmpResult = channelId(504);
 }) : ((channelId) => {
   channelId = channelId.channelId;
   let flag = channelId.hasRightAction;
+  const title = channelId.title;
   if (flag === undefined) {
     flag = false;
   }
-  const tmp = closure_6(flag);
   const items = [ChannelStore];
   const items1 = [channelId];
-  const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
+  const tmp = closure_6(flag);
   const obj = channelId(504);
-  const obj2 = { style: tmp.container, children: null };
-  const obj3 = { title: channelId.title, subtitle: useChannelNameDefault(stateFromStores, true), variant: "heading-lg/semibold", subtitleColor: "text-muted" };
-  obj2.children = jsx(channelId(7498).GenericHeaderTitle, { title: channelId.title, subtitle: useChannelNameDefault(stateFromStores, true), variant: "heading-lg/semibold", subtitleColor: "text-muted" });
+  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
+  const tmp3 = useChannelNameDefault(stateFromStores, true);
+  const GenericHeaderTitle = channelId(7498).GenericHeaderTitle;
   return <View style={tmp.container}>{null}</View>;
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((shouldHandleSafeArea) => {
-  const cResult = c.c(4);
-  const token = useToken.useToken(nativeDefault.colors.BORDER_SUBTLE);
-  const token1 = useToken.useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
+  const obj = react2;
+  const cResult = obj.c(4);
+  const obj2 = useToken;
+  const token = obj2.useToken(nativeDefault.colors.BORDER_SUBTLE);
+  const obj3 = useToken;
+  const token1 = obj3.useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
   if (cResult[0] === token1) {
     if (cResult[1] === token) {
+      let tmp6;
       if (cResult[2] === shouldHandleSafeArea) {
-        let tmp6 = cResult[3];
+        tmp6 = cResult[3];
       }
       return tmp6;
     }
   }
-  const obj4 = {};
+  const obj4 = { shouldHandleSafeArea, style: { borderColor: token, backgroundColor: token1 } };
+  const renderHeader = HeaderShared.renderHeader;
+  HeaderShared;
   const merged = Object.assign(shouldHandleSafeArea);
   shouldHandleSafeArea = shouldHandleSafeArea.shouldHandleSafeArea;
   if (shouldHandleSafeArea == null) {
-    shouldHandleSafeArea = utils_PlatformUtils.isAndroid();
     const tmpResult2 = utils_PlatformUtils;
+    shouldHandleSafeArea = tmpResult2.isAndroid();
   }
-  obj4.shouldHandleSafeArea = shouldHandleSafeArea;
-  obj4.style = { borderColor: token, backgroundColor: token1 };
-  const renderHeaderResult = HeaderShared.renderHeader(obj4);
+  const renderHeaderResult = renderHeader(obj4);
   cResult[0] = token1;
   cResult[1] = token;
   cResult[2] = shouldHandleSafeArea;
   cResult[3] = renderHeaderResult;
   tmp6 = renderHeaderResult;
-  const tmpResult = HeaderShared;
 }) : ((shouldHandleSafeArea) => {
-  const token = useToken.useToken(nativeDefault.colors.BORDER_SUBTLE);
-  const token1 = useToken.useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
-  const obj4 = {};
+  const obj = useToken;
+  const token = obj.useToken(nativeDefault.colors.BORDER_SUBTLE);
+  const obj2 = useToken;
+  const token1 = obj2.useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
+  const obj3 = { shouldHandleSafeArea, style: { borderColor: token, backgroundColor: token1 } };
+  const renderHeader = HeaderShared.renderHeader;
+  HeaderShared;
   const merged = Object.assign(shouldHandleSafeArea);
   shouldHandleSafeArea = shouldHandleSafeArea.shouldHandleSafeArea;
   if (shouldHandleSafeArea == null) {
-    shouldHandleSafeArea = utils_PlatformUtils.isAndroid();
     const tmpResult = utils_PlatformUtils;
+    shouldHandleSafeArea = tmpResult.isAndroid();
   }
-  obj4.shouldHandleSafeArea = shouldHandleSafeArea;
-  obj4.style = { borderColor: token, backgroundColor: token1 };
-  return HeaderShared.renderHeader(obj4);
+  return renderHeader(obj3);
 });
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/conversations/components/native/ConversationNavigatorHeader.tsx");
 
 export const conversationNavigatorListHeaderOptions = function conversationNavigatorListHeaderOptions(route, navigation, backgroundColor) {
+  let getRenderBackImage;
   _require = route;
-  let obj = {
+  const obj = {
     headerShown: true,
     header(arg0) {
-      const obj = {};
       const merged = Object.assign(arg0);
       let shouldHandleSafeArea;
       if (backgroundColor != null) {
         shouldHandleSafeArea = backgroundColor.shouldHandleSafeArea;
       }
-      obj.shouldHandleSafeArea = shouldHandleSafeArea;
-      return <closure_8 />;
+      return <closure_8 shouldHandleSafeArea={shouldHandleSafeArea} />;
     },
-    headerLeft: null,
-    headerTitle: null
+    headerLeft: getRenderBackImage(navigation, { badgeCutoutColor: backgroundColor }),
+    headerTitle() {
+      const intl = intl2.intl;
+      return <closure_7 channelId={route.params.channelId} title={intl.string(intl2.t.T3WBRp)} />;
+    }
   };
   backgroundColor = undefined;
+  getRenderBackImage = require("HeaderShared").getRenderBackImage;
+  require("HeaderShared");
   if (backgroundColor != null) {
     backgroundColor = backgroundColor.backgroundColor;
   }
-  obj.headerLeft = require("HeaderShared").getRenderBackImage(navigation, { badgeCutoutColor: backgroundColor });
-  obj.headerTitle = function headerTitle() {
-    const obj = { channelId: navigation.params.channelId, title: null };
-    const intl = util.intl;
-    obj.title = intl.string(util.t.T3WBRp);
-    return <closure_7 channelId={navigation.params.channelId} title={null} />;
-  };
   return obj;
 };
 export const conversationNavigatorFocusHeaderOptions = function conversationNavigatorFocusHeaderOptions(route, navigation, backgroundColor) {
+  let getRenderBackImage;
   _require = route;
-  let obj = {
+  const obj = {
     headerShown: true,
     header(arg0) {
-      const obj = {};
       const merged = Object.assign(arg0);
       let shouldHandleSafeArea;
       if (backgroundColor != null) {
         shouldHandleSafeArea = backgroundColor.shouldHandleSafeArea;
       }
-      obj.shouldHandleSafeArea = shouldHandleSafeArea;
-      return <closure_8 />;
+      return <closure_8 shouldHandleSafeArea={shouldHandleSafeArea} />;
     },
-    headerLeft: null,
-    headerTitle: null,
-    headerRight: null
+    headerLeft: getRenderBackImage(navigation, { badgeCutoutColor: backgroundColor }),
+    headerTitle() {
+      let tmp2 = null;
+      if (null != route.params) {
+        tmp2 = <closure_7 channelId={route.params.channelId} title={route.params.title} hasRightAction />;
+      }
+      return tmp2;
+    },
+    headerRight() {
+      let tmp2 = null;
+      if (null != route.params) {
+        tmp2 = jsx(ConversationNavigatorMoreMenuDefault, { channelId: route.params.channelId, conversationId: route.params.conversationId });
+      }
+      return tmp2;
+    }
   };
   backgroundColor = undefined;
+  getRenderBackImage = require("HeaderShared").getRenderBackImage;
+  require("HeaderShared");
   if (backgroundColor != null) {
     backgroundColor = backgroundColor.backgroundColor;
   }
-  obj.headerLeft = require("HeaderShared").getRenderBackImage(navigation, { badgeCutoutColor: backgroundColor });
-  obj.headerTitle = function headerTitle() {
-    let tmp2 = null;
-    if (null != closure_0.params) {
-      const obj = { channelId: closure_0.params.channelId, title: closure_0.params.title, hasRightAction: true };
-      tmp2 = <closure_7 channelId={closure_0.params.channelId} title={closure_0.params.title} hasRightAction />;
-    }
-    return tmp2;
-  };
-  obj.headerRight = function headerRight() {
-    let tmp2 = null;
-    if (null != closure_0.params) {
-      const obj = { channelId: closure_0.params.channelId, conversationId: closure_0.params.conversationId };
-      tmp2 = jsx(ConversationNavigatorMoreMenuDefault, { channelId: closure_0.params.channelId, conversationId: closure_0.params.conversationId });
-    }
-    return tmp2;
-  };
   return obj;
 };

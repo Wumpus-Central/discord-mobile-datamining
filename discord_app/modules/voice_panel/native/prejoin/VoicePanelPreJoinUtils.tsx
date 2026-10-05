@@ -1,7 +1,7 @@
 // === Module 17305: VoicePanelPreJoinUtils ===
 
 // Module 17305 (VoicePanelPreJoinUtils)
-import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
+import shallowEqualDefault from "shallowEqual" /* 568 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/voice_panel/native/prejoin/VoicePanelPreJoinUtils.tsx");
@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/prejoin/Vo
 export const areVoicePanelPreJoinContentPropsEqual = function areVoicePanelPreJoinContentPropsEqual(streamingMembers, arg1) {
   if (null != streamingMembers) {
     if (null != arg1) {
-      if (discord_common_shallowEqualDefault(streamingMembers, arg1, ["streamingMembers"])) {
+      if (shallowEqualDefault(streamingMembers, arg1, ["streamingMembers"])) {
         let num = 0;
         streamingMembers = streamingMembers.streamingMembers;
         for (const item10013 of streamingMembers) {

@@ -1,34 +1,39 @@
 // === Module 8884: useDiscountedPremiumProductInfo ===
 
 // Module 8884 (useDiscountedPremiumProductInfo)
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
+import Constants from "Constants" /* 1096 */;
 import PriceUtils from "PriceUtils" /* 6736 */;
 import ProductIds from "ProductIds" /* 6742 */;
 import useDiscountedPremiumPlan from "useDiscountedPremiumPlan" /* 8885 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-require = fn;
-const CurrencyCodes = fn(1096).CurrencyCodes;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/premium/native/hooks/useDiscountedPremiumProductInfo.android.tsx");
-
-export const useDiscountedPremiumProductInfo = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
-  const cResult = c.c(12);
-  const discountedPremiumPlan = useDiscountedPremiumPlan.useDiscountedPremiumPlan(arg0, arg1);
+const CurrencyCodes = Constants.CurrencyCodes;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+  let discountedPlan;
+  let discountedProduct;
+  const obj = react2;
+  const cResult = obj.c(12);
+  const obj2 = useDiscountedPremiumPlan;
+  const discountedPremiumPlan = obj2.useDiscountedPremiumPlan(arg0, arg1);
   ({ discountedPlan, discountedProduct } = discountedPremiumPlan);
   if (cResult[0] === arg0) {
+    let tmp5;
     if (cResult[1] === discountedProduct) {
-      let tmp5 = cResult[2];
+      tmp5 = cResult[2];
     }
     if (cResult[8] === discountedPlan) {
       if (cResult[9] === tmp5) {
+        let tmp14;
         if (cResult[10] === discountedProduct) {
-          let tmp15 = cResult[11];
+          tmp14 = cResult[11];
         }
-        return tmp15;
+        return tmp14;
       }
     }
     const obj3 = { discountedPlan, discountedProduct, discountedPriceString: tmp5 };
@@ -36,49 +41,55 @@ export const useDiscountedPremiumProductInfo = ReactCompilerGating.isReactCompil
     cResult[9] = tmp5;
     cResult[10] = discountedProduct;
     cResult[11] = obj3;
-    tmp15 = obj3;
+    tmp14 = obj3;
   }
   let formatPriceResult = null;
   if (null != arg0) {
     formatPriceResult = null;
     if (null != discountedProduct) {
       const tmp7 = ProductIds.DiscountIdToProductOfferId[arg0.discountId];
-      let subscriptionOffers1;
+      let tmp8;
       if (tmp7 != null) {
-        subscriptionOffers1 = tmp7[discountedProduct.identifier];
+        tmp8 = tmp7[discountedProduct.identifier];
       }
+      let closure_0 = tmp8;
       formatPriceResult = null;
-      if (null != subscriptionOffers1) {
+      if (null != tmp8) {
+        let USD;
+        const str = discountedProduct.currencyCode;
         if (str.toUpperCase() in CurrencyCodes) {
-          let USD = discountedProduct.currencyCode.toLowerCase();
+          const str2 = discountedProduct.currencyCode;
+          USD = str2.toLowerCase();
         } else {
           USD = tmp9.USD;
         }
         formatPriceResult = null;
         if (null != discountedProduct.subscriptionOffers) {
-          if (cResult[3] === subscriptionOffers1) {
+          if (cResult[3] === tmp8) {
+            let tmp10;
             if (cResult[4] === discountedProduct.subscriptionOffers) {
+              tmp10 = cResult[5];
+            }
+            formatPriceResult = null;
+            if (null != tmp10) {
               formatPriceResult = null;
-              if (null != cResult[5]) {
+              if (null != tmp10.pricingPhases) {
                 formatPriceResult = null;
-                if (null != tmp10.pricingPhases) {
-                  formatPriceResult = null;
-                  if (tmp10.pricingPhases.length > 0) {
-                    const result = tmp10.pricingPhases[0].price / 100;
-                    formatPriceResult = PriceUtils.formatPrice(result, USD, { convertToMajorUnits: false });
-                    const tmpResult = PriceUtils;
-                  }
+                if (tmp10.pricingPhases.length > 0) {
+                  const result = tmp10.pricingPhases[0].price / 100;
+                  const tmpResult = PriceUtils;
+                  formatPriceResult = tmpResult.formatPrice(result, USD, { convertToMajorUnits: false });
                 }
               }
             }
           }
-          if (cResult[6] !== subscriptionOffers1) {
+          if (cResult[6] !== tmp8) {
             class I {
               constructor(arg0) {
                 return arg0.offerId === closure_0;
               }
             }
-            cResult[6] = subscriptionOffers1;
+            cResult[6] = tmp8;
             cResult[7] = I;
           } else {
             class I {
@@ -89,12 +100,11 @@ export const useDiscountedPremiumProductInfo = ReactCompilerGating.isReactCompil
           }
           const subscriptionOffers = discountedProduct.subscriptionOffers;
           const found = subscriptionOffers.find(I);
-          cResult[3] = subscriptionOffers1;
-          subscriptionOffers1 = discountedProduct.subscriptionOffers;
-          cResult[4] = subscriptionOffers1;
+          cResult[3] = tmp8;
+          cResult[4] = discountedProduct.subscriptionOffers;
           cResult[5] = found;
+          tmp10 = found;
         }
-        str = discountedProduct.currencyCode;
       }
     }
   }
@@ -103,15 +113,16 @@ export const useDiscountedPremiumProductInfo = ReactCompilerGating.isReactCompil
   cResult[2] = formatPriceResult;
   tmp5 = formatPriceResult;
 }) : ((arg0, arg1) => {
+  let discountedProduct;
   _require = arg0;
-  const discountedPremiumPlan = require("useDiscountedPremiumPlan").useDiscountedPremiumPlan(arg0, arg1);
+  const obj = require("useDiscountedPremiumPlan");
+  const discountedPremiumPlan = obj.useDiscountedPremiumPlan(arg0, arg1);
   discountedProduct = discountedPremiumPlan.discountedProduct;
   const items = [arg0, discountedProduct];
-  const obj = require("useDiscountedPremiumPlan");
-  return {
+  const obj2 = {
     discountedPlan: discountedPremiumPlan.discountedPlan,
     discountedProduct,
-    discountedPriceString: noop.useMemo(() => {
+    discountedPriceString: react.useMemo(() => {
       if (null != closure_0) {
         if (null != discountedProduct) {
           const tmp8 = ProductIds.DiscountIdToProductOfferId[tmp.discountId];
@@ -123,8 +134,11 @@ export const useDiscountedPremiumProductInfo = ReactCompilerGating.isReactCompil
           if (null == tmp2) {
             return null;
           } else {
+            let USD;
+            const str2 = discountedProduct.currencyCode;
             if (str2.toUpperCase() in CurrencyCodes) {
-              let USD = discountedProduct.currencyCode.toLowerCase();
+              const str = discountedProduct.currencyCode;
+              USD = str.toLowerCase();
             } else {
               USD = tmp9.USD;
             }
@@ -135,7 +149,8 @@ export const useDiscountedPremiumProductInfo = ReactCompilerGating.isReactCompil
                 if (null != found.pricingPhases) {
                   if (found.pricingPhases.length > 0) {
                     const result = found.pricingPhases[0].price / 100;
-                    return PriceUtils.formatPrice(result, USD, { convertToMajorUnits: false });
+                    const tmp6Result = PriceUtils;
+                    return tmp6Result.formatPrice(result, USD, { convertToMajorUnits: false });
                   }
                 }
               }
@@ -147,4 +162,8 @@ export const useDiscountedPremiumProductInfo = ReactCompilerGating.isReactCompil
       return null;
     }, items)
   };
+  return obj2;
 });
+let result = size.fileFinishedImporting("modules/premium/native/hooks/useDiscountedPremiumProductInfo.android.tsx");
+
+export const useDiscountedPremiumProductInfo = tmp2;

@@ -1,43 +1,55 @@
 // === Module 11896: JumpToPresentButton ===
 
 // Module 11896 (JumpToPresentButton)
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import useToken from "useToken" /* 4580 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import useChatBottomManagerUIStore_mod from "useChatBottomManagerUIStore" /* 9064 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5436 */;
 import MessageStore from "MessageStore" /* 5110 */;
+import createStyles from "createStyles" /* 4890 */;
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-let useChatBottomManagerUIStore = fn(9064);
-({ useChatInputContainerHeight: closure_4, useSmallSuggestionBarHeight: hasOwnProperty } = useChatBottomManagerUIStore);
+let channelId, dependencyMap;
+
+let closure_4;
+let hasOwnProperty;
+let obj2;
+const View = react_native.View;
 let useChatBottomManagerUIStore = useChatBottomManagerUIStore_mod;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj2 = { container: { borderRadius: nativeDefault.radii.round, position: "absolute", right: nativeDefault.modules.mobile.JUMP_TO_PRESENT_RIGHT_SPACING }, containerIOS: { bottom: "100%", pointerEvents: "box-none" } };
-let closure_10 = createStyles.createStyles(obj2);
-const PlatformUtils = fn(1369);
+({ useChatInputContainerHeight: closure_4, useSmallSuggestionBarHeight: hasOwnProperty } = useChatBottomManagerUIStore);
+useChatBottomManagerUIStore = useChatBottomManagerUIStore_mod;
+const jsx = Fragment.jsx;
+let obj = { container: obj2, containerIOS: { bottom: "100%", pointerEvents: "box-none" } };
+obj2 = { borderRadius: nativeDefault.radii.round, position: "absolute", right: nativeDefault.modules.mobile.JUMP_TO_PRESENT_RIGHT_SPACING };
+let closure_10 = createStyles.createStyles(obj);
 let closure_11 = PlatformUtils.isIOS() ? ((View) => {
-  const obj = { marginBottom: null };
-  const token = useToken.useToken(nativeDefault.modules.mobile.JUMP_TO_PRESENT_BOTTOM_SPACING);
-  obj.marginBottom = token + hasOwnProperty(View);
+  let token;
+  const obj = { marginBottom: token + hasOwnProperty(View) };
+  const obj2 = useToken;
+  token = obj2.useToken(nativeDefault.modules.mobile.JUMP_TO_PRESENT_BOTTOM_SPACING);
   return obj;
 }) : ((View) => {
-  const obj2 = { bottom: null };
-  const token = useToken.useToken(nativeDefault.modules.mobile.JUMP_TO_PRESENT_BOTTOM_SPACING);
-  const sum = React4(View) + token;
-  obj2.bottom = sum + hasOwnProperty(View);
+  let sum;
+  const obj2 = { bottom: sum + hasOwnProperty(View) };
+  const obj = useToken;
+  const token = obj.useToken(nativeDefault.modules.mobile.JUMP_TO_PRESENT_BOTTOM_SPACING);
+  sum = React3(View) + token;
   return obj2;
 });
-const ReactCompilerGating = fn(558);
-let obj3 = { borderRadius: nativeDefault.radii.round, position: "absolute", right: nativeDefault.modules.mobile.JUMP_TO_PRESENT_RIGHT_SPACING };
-const size = fn(2);
-const result = size.fileFinishedImporting("components_native/chat/JumpToPresentButton.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
-  let tmp2 = stateFromStores;
-  const cResult = channelId(stateFromStores[11]).c(25);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+  let connected;
+  let stateFromStores;
+  let tmp6;
+  let tmp7;
+  let tmp8;
+  let tmp = channelId;
+  const obj = channelId(stateFromStores[11]);
+  const cResult = obj.c(25);
   channelId = channelId.channelId;
   const screenIndex = channelId.screenIndex;
   const onJumpToPresent = channelId.onJumpToPresent;
@@ -58,22 +70,26 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   } else {
     [tmp6, tmp7, tmp8] = cResult;
   }
-  const obj = channelId(stateFromStores[11]);
-  stateFromStores = channelId(tmp2[12]).useStateFromStores(tmp6, tmp7, tmp8);
+  const tmpResult = tmp(stateFromStores[12]);
+  stateFromStores = tmpResult.useStateFromStores(tmp6, tmp7, tmp8);
   if (cResult[3] === channelId) {
     if (cResult[4] === stateFromStores) {
+      let tmp11;
+      let tmp16;
+      let tmp18;
       if (cResult[5] === screenIndex) {
-        let tmp11 = cResult[6];
+        tmp11 = cResult[6];
       }
       const tmp13 = useChatBottomManagerUIStore(tmp11);
-      const isVoicePanelMounted = tmp(tmp2[13]).useIsVoicePanelMounted(channelId);
-      const tmpResult5 = tmp(tmp2[13]);
+      const tmpResult5 = tmp(stateFromStores[13]);
+      const isVoicePanelMounted = tmpResult5.useIsVoicePanelMounted(channelId);
       const _Symbol = Symbol;
-      const isVoicePanelOpen = tmp(tmp2[13]).useIsVoicePanelOpen(channelId);
+      const tmpResult6 = tmp(stateFromStores[13]);
+      const isVoicePanelOpen = tmpResult6.useIsVoicePanelOpen(channelId);
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [MessageStore];
         cResult[7] = items2;
-        let tmp16 = items2;
+        tmp16 = items2;
       } else {
         tmp16 = cResult[7];
       }
@@ -83,78 +99,83 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
         };
         cResult[8] = channelId;
         cResult[9] = fn3;
-        let tmp18 = fn3;
+        tmp18 = fn3;
       } else {
         tmp18 = cResult[9];
       }
-      const tmpResult6 = tmp(tmp2[13]);
-      const stateFromStores1 = tmp(tmp2[12]).useStateFromStores(tmp16, tmp18);
+      const tmpResult7 = tmp(stateFromStores[12]);
+      const stateFromStores1 = tmpResult7.useStateFromStores(tmp16, tmp18);
       if (!tmp13) {
         return null;
       }
       if (cResult[10] === tmp5) {
+        let tmp21;
+        let tmp23;
         if (cResult[11] === tmp4.containerIOS) {
-          let tmp21 = cResult[12];
+          tmp21 = cResult[12];
         }
         if (cResult[13] !== stateFromStores1) {
+          let stringResult;
           const intl = tmp(tmp2[14]).intl;
           const string = intl.string;
-          let dpjpOp = tmp(tmp2[14]).t;
+          const t = tmp(tmp2[14]).t;
           if (stateFromStores1) {
-            dpjpOp = dpjpOp.dpjpOp;
-            let stringResult = string(dpjpOp);
+            stringResult = string(t.dpjpOp);
           } else {
-            stringResult = string(dpjpOp.gpoQsB);
+            stringResult = string(t.gpoQsB);
           }
           cResult[13] = stateFromStores1;
           cResult[14] = stringResult;
+          tmp23 = stringResult;
         } else {
-          if (cResult[15] === tmp21) {
-            if (cResult[16] === tmp4.container) {
-              let tmp26 = cResult[17];
-            }
-            if (cResult[18] === tmp23) {
-              if (cResult[19] === onJumpToPresent) {
-                if (cResult[20] === tmp13) {
-                  if (cResult[22] === cResult[21]) {
-                    if (cResult[23] === tmp26) {
-                      let tmp33 = cResult[24];
-                    }
-                    return tmp33;
-                  }
-                  const obj2 = { style: tmp26, children: cResult[21] };
-                  const tmp36 = <View style={tmp26}>{cResult[21]}</View>;
-                  cResult[22] = cResult[21];
-                  cResult[23] = tmp26;
-                  cResult[24] = tmp36;
-                  tmp33 = tmp36;
-                }
-              }
-            }
-            if (tmp13) {
-              const obj3 = { accessibilityLabel: tmp23, icon: null, onPress: null };
-              tmp2 = screenIndex(tmp2[16]);
-              obj3.icon = tmp2;
-              obj3.onPress = onJumpToPresent;
-              let tmp28Result = jsx(screenIndex(tmp2[15]), { accessibilityLabel: tmp23, icon: null, onPress: null });
-              const tmp31 = screenIndex(tmp2[15]);
-            } else {
-              tmp28Result = jsx(tmp(tmp2[17]).MemoedVoicePanelDismissChatButton, {});
-            }
-            cResult[18] = tmp23;
-            cResult[19] = onJumpToPresent;
-            cResult[20] = tmp13;
-            cResult[21] = tmp28Result;
-          }
-          const items3 = [tmp4.container, tmp21];
-          cResult[15] = tmp21;
-          cResult[16] = tmp4.container;
-          cResult[17] = items3;
-          tmp26 = items3;
+          tmp23 = cResult[14];
         }
+        if (cResult[15] === tmp21) {
+          let tmp25;
+          let tmp27Result;
+          if (cResult[16] === tmp4.container) {
+            tmp25 = cResult[17];
+          }
+          if (cResult[18] === tmp23) {
+            if (cResult[19] === onJumpToPresent) {
+              let tmp26;
+              if (cResult[20] === tmp13) {
+                tmp26 = cResult[21];
+              }
+              if (cResult[22] === tmp26) {
+                let tmp31;
+                if (cResult[23] === tmp25) {
+                  tmp31 = cResult[24];
+                }
+                return tmp31;
+              }
+              const tmp34 = <View style={tmp25}>{tmp26}</View>;
+              cResult[22] = tmp26;
+              cResult[23] = tmp25;
+              cResult[24] = tmp34;
+              tmp31 = tmp34;
+            }
+          }
+          if (tmp13) {
+            screenIndex(stateFromStores[15]);
+            tmp27Result = <tmp30 accessibilityLabel={tmp23} icon={screenIndex(tmp2[16])} onPress={onJumpToPresent} />;
+          } else {
+            tmp27Result = jsx(tmp(tmp2[17]).MemoedVoicePanelDismissChatButton, {});
+          }
+          cResult[18] = tmp23;
+          cResult[19] = onJumpToPresent;
+          cResult[20] = tmp13;
+          cResult[21] = tmp27Result;
+          tmp26 = tmp27Result;
+        }
+        const items3 = [tmp4.container, tmp21];
+        cResult[15] = tmp21;
+        cResult[16] = tmp4.container;
+        cResult[17] = items3;
+        tmp25 = items3;
       }
-      const tmpResult7 = tmp(tmp2[12]);
       let tmp22 = tmp5;
+      const tmpResult8 = tmp(stateFromStores[8]);
       if (tmpResult8.isIOS()) {
         const items4 = [tmp4.containerIOS, tmp5];
         tmp22 = items4;
@@ -163,16 +184,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
       cResult[11] = tmp4.containerIOS;
       cResult[12] = tmp22;
       tmp21 = tmp22;
-      tmpResult8 = tmp(tmp2[8]);
     }
   }
   const fn2 = function v(showingAutoComplete) {
     let tmp = stateFromStores;
     if (tmp) {
       showingAutoComplete = showingAutoComplete.showingAutoComplete;
-      value = showingAutoComplete.get(screenIndex);
+      const value = showingAutoComplete.get(screenIndex);
       let tmp5 = !value;
-      if (!value) {
+      if (tmp5) {
         const showJumpToPresentButtonChannelId = showingAutoComplete.showJumpToPresentButtonChannelId;
         tmp5 = showJumpToPresentButtonChannelId.get(screenIndex) === channelId;
       }
@@ -185,21 +205,26 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   cResult[5] = screenIndex;
   cResult[6] = fn2;
   tmp11 = fn2;
-  const tmpResult = channelId(tmp2[12]);
 }) : ((channelId) => {
+  let closure_2;
+  let connected;
+  let stringResult;
+  let tmp12Result;
   channelId = channelId.channelId;
   const screenIndex = channelId.screenIndex;
+  const onJumpToPresent = channelId.onJumpToPresent;
   let tmp = closure_10();
   const tmp2 = closure_11(screenIndex);
   const items = [GatewayConnectionStore];
-  dependencyMap = channelId(504).useStateFromStores(items, () => connected.isConnected(), []);
+  const obj = channelId(504);
+  dependencyMap = obj.useStateFromStores(items, () => connected.isConnected(), []);
   let tmp5 = useChatBottomManagerUIStore((showingAutoComplete) => {
     let tmp = closure_2;
     if (tmp) {
       showingAutoComplete = showingAutoComplete.showingAutoComplete;
-      value = showingAutoComplete.get(screenIndex);
+      const value = showingAutoComplete.get(screenIndex);
       let tmp5 = !value;
-      if (!value) {
+      if (tmp5) {
         const showJumpToPresentButtonChannelId = showingAutoComplete.showJumpToPresentButtonChannelId;
         tmp5 = showJumpToPresentButtonChannelId.get(screenIndex) === channelId;
       }
@@ -207,18 +232,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     }
     return tmp;
   });
-  const obj = channelId(504);
-  const isVoicePanelMounted = channelId(9609).useIsVoicePanelMounted(channelId);
   const obj2 = channelId(9609);
-  const isVoicePanelOpen = channelId(9609).useIsVoicePanelOpen(channelId);
+  const isVoicePanelMounted = obj2.useIsVoicePanelMounted(channelId);
   const obj3 = channelId(9609);
+  const isVoicePanelOpen = obj3.useIsVoicePanelOpen(channelId);
   const items1 = [MessageStore];
-  const stateFromStores = channelId(504).useStateFromStores(items1, () => null != MessageStore.getMessages(channelId).jumpReturnTargetId);
+  const obj4 = channelId(504);
+  const stateFromStores = obj4.useStateFromStores(items1, () => null != MessageStore.getMessages(channelId).jumpReturnTargetId);
   if (!tmp5) {
     return null;
   }
-  const obj4 = channelId(504);
   let tmp10 = tmp2;
+  const tmp3Result = channelId(1369);
   if (tmp3Result.isIOS()) {
     const items2 = [tmp.containerIOS, tmp2];
     tmp10 = items2;
@@ -227,20 +252,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   const string = intl.string;
   const t = tmp3(1126).t;
   if (stateFromStores) {
-    let stringResult = string(t.dpjpOp);
+    stringResult = string(t.dpjpOp);
   } else {
     stringResult = string(t.gpoQsB);
   }
-  const obj5 = { style: null, children: null };
   const items3 = [tmp.container, tmp10];
-  obj5.style = items3;
   if (tmp5) {
-    const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(11898), onPress: channelId.onJumpToPresent };
-    let tmp12Result = jsx(screenIndex(11897), { accessibilityLabel: stringResult, icon: screenIndex(11898), onPress: channelId.onJumpToPresent });
-    const tmp16 = screenIndex(11897);
+    screenIndex(11897);
+    tmp12Result = <tmp16 accessibilityLabel={stringResult} icon={screenIndex(11898)} onPress={onJumpToPresent} />;
   } else {
     tmp12Result = jsx(tmp3(11899).MemoedVoicePanelDismissChatButton, {});
   }
-  obj5.children = tmp12Result;
-  return <View style={null}>{null}</View>;
+  return <View style={items3}>{tmp12Result}</View>;
 });
+const result = size.fileFinishedImporting("components_native/chat/JumpToPresentButton.tsx");
+
+export default tmp4;

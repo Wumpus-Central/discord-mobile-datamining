@@ -4,131 +4,73 @@
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 7208 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8015 */;
 import RPCErrorDefault from "RPCError" /* 9026 */;
 import RPCHelpers from "RPCHelpers" /* 9031 */;
 import QuestMatchingUtils from "QuestMatchingUtils" /* 9041 */;
 import QuestStore from "QuestStore" /* 7187 */;
+import Constants from "Constants" /* 1085 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const Constants = fn(1085);
+let RPCCommands;
+let closure_4;
+let hasOwnProperty;
 ({ RPCCommands, RPCErrors: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
 let obj = {};
-obj[RPCCommands.GET_QUEST_ENROLLMENT_STATUS] = {
-  scope: fn(8015).OAuth2Scopes.IDENTIFY,
-  handler(socket) {
-    socket = socket.socket;
-    const quest_id = socket.args.quest_id;
-    const result = RPCHelpers.validatePostMessageTransport(socket.transport);
-    const quest = QuestStore.getQuest(quest_id);
-    const validateApplicationResult = RPCHelpers.validateApplication(socket.application);
-    const activityApplicationId = QuestTaskUtils.getActivityApplicationId(quest);
-    if (null != quest) {
-      if (null != activityApplicationId) {
-        if (activityApplicationId === validateApplicationResult) {
-          const obj4 = { quest_id, is_enrolled: null, enrolled_at: null };
-          const userStatus = quest.userStatus;
-          let enrolledAt;
-          if (userStatus != null) {
-            enrolledAt = userStatus.enrolledAt;
-          }
-          obj4.is_enrolled = null != enrolledAt;
-          const userStatus2 = quest.userStatus;
-          let enrolledAt1;
-          if (userStatus2 != null) {
-            enrolledAt1 = userStatus2.enrolledAt;
-          }
-          if (enrolledAt1 == null) {
-            enrolledAt1 = null;
-          }
-          obj4.enrolled_at = enrolledAt1;
-          return obj4;
-        }
-      }
-    }
-    const obj5 = { errorCode: constants.INVALID_COMMAND };
-    throw new RPCErrorDefault(obj5, "Quest not found: " + quest_id);
-  }
-};
 let obj2 = {
-  scope: fn(8015).OAuth2Scopes.IDENTIFY,
+  scope: OAuth2Scopes.OAuth2Scopes.IDENTIFY,
   handler(socket) {
+    let enrolledAt;
+    let enrolledAt1;
     socket = socket.socket;
     const quest_id = socket.args.quest_id;
-    const result = RPCHelpers.validatePostMessageTransport(socket.transport);
+    const obj = RPCHelpers;
+    const result = obj.validatePostMessageTransport(socket.transport);
+    const obj2 = RPCHelpers;
+    const validateApplicationResult = obj2.validateApplication(socket.application);
     const quest = QuestStore.getQuest(quest_id);
-    const validateApplicationResult = RPCHelpers.validateApplication(socket.application);
-    const activityApplicationId = QuestTaskUtils.getActivityApplicationId(quest);
+    const obj3 = QuestTaskUtils;
+    const activityApplicationId = obj3.getActivityApplicationId(quest);
     if (null != quest) {
       if (null != activityApplicationId) {
         if (activityApplicationId === validateApplicationResult) {
-          const obj4 = { quest_id, is_enrolled: null, enrolled_at: null };
           const userStatus = quest.userStatus;
-          let enrolledAt;
+          const obj4 = { quest_id, is_enrolled: null != enrolledAt, enrolled_at: enrolledAt1 };
+          enrolledAt = undefined;
           if (userStatus != null) {
             enrolledAt = userStatus.enrolledAt;
           }
-          obj4.is_enrolled = null != enrolledAt;
           const userStatus2 = quest.userStatus;
-          let enrolledAt1;
+          enrolledAt1 = undefined;
           if (userStatus2 != null) {
             enrolledAt1 = userStatus2.enrolledAt;
           }
           if (enrolledAt1 == null) {
             enrolledAt1 = null;
           }
-          obj4.enrolled_at = enrolledAt1;
           return obj4;
         }
       }
     }
     const obj5 = { errorCode: constants.INVALID_COMMAND };
-    throw new RPCErrorDefault(obj5, "Quest not found: " + quest_id);
+    const tmp8 = RPCErrorDefault;
+    const tmp82 = new tmp8(obj5, "Quest not found: " + quest_id);
+    throw tmp82;
   }
 };
-obj[RPCCommands.QUEST_START_TIMER] = {
-  scope: fn(8015).OAuth2Scopes.IDENTIFY,
-  handler(socket) {
-    socket = socket.socket;
-    const quest_id = socket.args.quest_id;
-    const result = RPCHelpers.validatePostMessageTransport(socket.transport);
-    const validateApplicationResult = RPCHelpers.validateApplication(socket.application);
-    const quest = QuestStore.getQuest(quest_id);
-    const playActivityApplicationId = QuestTaskUtils.getPlayActivityApplicationId(quest);
-    if (null != quest) {
-      if (null != playActivityApplicationId) {
-        if (playActivityApplicationId === validateApplicationResult) {
-          const userStatus = quest.userStatus;
-          let enrolledAt;
-          if (userStatus != null) {
-            enrolledAt = userStatus.enrolledAt;
-          }
-          if (null == enrolledAt) {
-            const obj5 = { errorCode: constants.INVALID_COMMAND };
-            const tmp16 = new RPCErrorDefault(obj5, "User is not enrolled in quest");
-            throw tmp16;
-          } else {
-            const obj7 = { application_id: validateApplicationResult, quest_id };
-            AnalyticsUtilsDefault.track(constants2.RPC_QUEST_START_TIMER_CALLED, obj7);
-            const obj8 = { type: "QUEST_APPLICATION_START_TIMER", questId: quest_id, applicationId: validateApplicationResult };
-            DispatcherDefault.dispatch(obj8);
-            return { success: true };
-          }
-        }
-      }
-    }
-    const obj9 = { errorCode: constants.INVALID_COMMAND };
-    throw new RPCErrorDefault(obj9, "Quest not found: " + quest_id);
-  }
-};
+obj[RPCCommands.GET_QUEST_ENROLLMENT_STATUS] = obj2;
 let obj3 = {
-  scope: fn(8015).OAuth2Scopes.IDENTIFY,
+  scope: OAuth2Scopes.OAuth2Scopes.IDENTIFY,
   handler(socket) {
     socket = socket.socket;
     const quest_id = socket.args.quest_id;
-    const result = RPCHelpers.validatePostMessageTransport(socket.transport);
-    const validateApplicationResult = RPCHelpers.validateApplication(socket.application);
+    const obj = RPCHelpers;
+    const result = obj.validatePostMessageTransport(socket.transport);
+    const obj2 = RPCHelpers;
+    const validateApplicationResult = obj2.validateApplication(socket.application);
     const quest = QuestStore.getQuest(quest_id);
-    const playActivityApplicationId = QuestTaskUtils.getPlayActivityApplicationId(quest);
+    const obj3 = QuestTaskUtils;
+    const playActivityApplicationId = obj3.getPlayActivityApplicationId(quest);
     if (null != quest) {
       if (null != playActivityApplicationId) {
         if (playActivityApplicationId === validateApplicationResult) {
@@ -138,74 +80,90 @@ let obj3 = {
             enrolledAt = userStatus.enrolledAt;
           }
           if (null == enrolledAt) {
+            const self = this;
+            const self2 = this;
             const obj5 = { errorCode: constants.INVALID_COMMAND };
-            const tmp16 = new RPCErrorDefault(obj5, "User is not enrolled in quest");
-            throw tmp16;
+            const tmp14 = new RPCErrorDefault(obj5, "User is not enrolled in quest");
+            throw tmp14;
           } else {
             const obj7 = { application_id: validateApplicationResult, quest_id };
-            AnalyticsUtilsDefault.track(constants2.RPC_QUEST_START_TIMER_CALLED, obj7);
+            const obj4 = AnalyticsUtilsDefault;
+            obj4.track(hasOwnProperty.RPC_QUEST_START_TIMER_CALLED, obj7);
             const obj8 = { type: "QUEST_APPLICATION_START_TIMER", questId: quest_id, applicationId: validateApplicationResult };
-            DispatcherDefault.dispatch(obj8);
+            const obj6 = DispatcherDefault;
+            obj6.dispatch(obj8);
             return { success: true };
           }
         }
       }
     }
     const obj9 = { errorCode: constants.INVALID_COMMAND };
-    throw new RPCErrorDefault(obj9, "Quest not found: " + quest_id);
+    const tmp16 = RPCErrorDefault;
+    const tmp162 = new tmp16(obj9, "Quest not found: " + quest_id);
+    throw tmp162;
   }
 };
-obj[RPCCommands.GET_QUEST] = {
-  scope: fn(8015).OAuth2Scopes.IDENTIFY,
+obj[RPCCommands.QUEST_START_TIMER] = obj3;
+let obj4 = {
+  scope: OAuth2Scopes.OAuth2Scopes.IDENTIFY,
   handler(socket) {
     socket = socket.socket;
-    const result = RPCHelpers.validatePostMessageTransport(socket.transport);
-    const validateApplicationResult = RPCHelpers.validateApplication(socket.application);
-    const eligibleQuestsForApplicationId = QuestMatchingUtils.getEligibleQuestsForApplicationId(QuestStore.quests, validateApplicationResult, true);
+    let obj = RPCHelpers;
+    const result = obj.validatePostMessageTransport(socket.transport);
+    const obj2 = RPCHelpers;
+    const validateApplicationResult = obj2.validateApplication(socket.application);
+    const obj3 = QuestMatchingUtils;
+    const eligibleQuestsForApplicationId = obj3.getEligibleQuestsForApplicationId(QuestStore.quests, validateApplicationResult, true);
     if (0 === eligibleQuestsForApplicationId.length) {
+      let self = this;
+      let self2 = this;
       const obj4 = { errorCode: constants.INVALID_COMMAND };
-      const tmp9 = new RPCErrorDefault(obj4, "No eligible quests found");
-      throw tmp9;
+      const tmp7 = new RPCErrorDefault(obj4, "No eligible quests found");
+      throw tmp7;
     } else {
       const mapped = eligibleQuestsForApplicationId.map((id) => {
-        const obj = { quest_id: id.id, enrolled_at: null, completed_at: null, external_cta_url: null };
-        const userStatus = id.userStatus;
+        let completedAt;
         let enrolledAt;
+        const userStatus = id.userStatus;
+        const obj = { quest_id: id.id, enrolled_at: enrolledAt, completed_at: completedAt, external_cta_url: id.config.ctaConfig.link };
+        enrolledAt = undefined;
         if (userStatus != null) {
           enrolledAt = userStatus.enrolledAt;
         }
         if (enrolledAt == null) {
           enrolledAt = null;
         }
-        obj.enrolled_at = enrolledAt;
         const userStatus2 = id.userStatus;
-        let completedAt;
+        completedAt = undefined;
         if (userStatus2 != null) {
           completedAt = userStatus2.completedAt;
         }
         if (completedAt == null) {
           completedAt = null;
         }
-        obj.completed_at = completedAt;
-        obj.external_cta_url = id.config.ctaConfig.link;
         return obj;
       });
-      return mapped.sort((enrolled_at, enrolled_at2) => {
+      return mapped.sort(function(enrolled_at, enrolled_at2) {
+        let num;
         if (null != enrolled_at.enrolled_at) {
           let num2 = 1;
           if (null != enrolled_at.enrolled_at) {
             let num3 = -1;
             if (null != enrolled_at2.enrolled_at) {
               const _Date = Date;
-              const date = new Date(enrolled_at.enrolled_at);
+              const self = this;
+              const self2 = this;
               const _Date2 = Date;
+              const self3 = this;
+              const self4 = this;
+              const date = new Date(enrolled_at.enrolled_at);
               const time = date.getTime();
               const date1 = new Date(enrolled_at2.enrolled_at);
               num3 = time - date1.getTime();
             }
             num2 = num3;
           }
-          let num = num2;
+          num = num2;
         } else {
           num = 0;
         }
@@ -214,7 +172,7 @@ obj[RPCCommands.GET_QUEST] = {
     }
   }
 };
-const size = fn(2);
+obj[RPCCommands.GET_QUEST] = obj4;
 let result = size.fileFinishedImporting("modules/rpc/server/commands/quests.tsx");
 
 export default obj;

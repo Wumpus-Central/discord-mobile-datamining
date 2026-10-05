@@ -3,26 +3,26 @@
 // Module 13894 (SentryTelemetry)
 import TelemetryRingNative2 from "TelemetryRingNative" /* 1994 */;
 import BaseTelemetryChannel from "BaseTelemetryChannel" /* 1993 */;
+import size from "module_2" /* 2 */;
 
 const TelemetryRingNative = TelemetryRingNative2;
 
-require = fn;
 let closure_3 = { type: "BYTES", limit: 1048576 };
-class SentryTelemetryImpl extends tmp3 {
+class SentryTelemetryImpl extends BaseTelemetryChannel {
   constructor() {
-    tmp2 = closure_1(closure_2[1]);
-    items = [];
-    items[0] = closure_0(closure_2[1]).TelemetryChannel.SENTRY;
-    tmp1 = new tmp(tmp2, items, closure_1, new.target);
-    return tmp1;
+    const items = [];
+    const tmp2 = TelemetryRingNative;
+    items[0] = TelemetryRingNative2.TelemetryChannel.SENTRY;
+    const tmp3 = new tmp(tmp2, items, importDefault, new.target);
+    return tmp3;
+  }
+  snapshotForBreadcrumbs() {
+    return this.snapshot(-1, closure_3);
   }
 }
 const prototype = SentryTelemetryImpl.prototype;
-prototype["snapshotForBreadcrumbs"] = function snapshotForBreadcrumbs() {
-  return this.snapshot(-1, closure_3);
-};
-let items = [fn(1994).TelemetryChannel.SENTRY];
-const size = fn(2);
+let items = [TelemetryRingNative2.TelemetryChannel.SENTRY];
+const tmp5 = new "snapshotForBreadcrumbs"(TelemetryRingNative, items, tmp, prototype, SentryTelemetryImpl, "snapshotForBreadcrumbs", TelemetryRingNative);
 const result = size.fileFinishedImporting("modules/telemetry_ring/native/channels/SentryTelemetry.tsx");
 
-export default new "snapshotForBreadcrumbs"(TelemetryRingNative, items, tmp, prototype, SentryTelemetryImpl, "snapshotForBreadcrumbs", TelemetryRingNative);
+export default tmp5;

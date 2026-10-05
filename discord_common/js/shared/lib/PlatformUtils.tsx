@@ -1,18 +1,21 @@
 // === Module 5321: shared/PlatformUtils ===
 
 // Module 5321 (shared/PlatformUtils)
-import format_mod from "format" /* 1351 */;
+import module_1351_mod from "module_1351" /* 1351 */;
+import size from "module_2" /* 2 */;
 
-const set1 = new Set(["Android", "iOS", "Windows Phone"]);
+let module_1351;
+const set = new Set(["iPad", "Kindle", "Kindle Fire", "Nook", "PlayBook"]);
 let platform;
+const set1 = new Set(["Android", "iOS", "Windows Phone"]);
 if (window != null) {
   const _navigator = window.navigator;
   if (_navigator != null) {
     platform = _navigator.platform;
   }
 }
-let tmp3 = "MacIntel" === platform;
-if (tmp3) {
+let tmp5 = "MacIntel" === platform;
+if (tmp5) {
   let standalone;
   if (window != null) {
     const _navigator2 = window.navigator;
@@ -20,9 +23,9 @@ if (tmp3) {
       standalone = _navigator2.standalone;
     }
   }
-  tmp3 = undefined !== standalone;
+  tmp5 = undefined !== standalone;
 }
-if (tmp3) {
+if (tmp5) {
   let maxTouchPoints;
   if (window != null) {
     const _navigator3 = window.navigator;
@@ -30,16 +33,18 @@ if (tmp3) {
       maxTouchPoints = _navigator3.maxTouchPoints;
     }
   }
-  tmp3 = maxTouchPoints > 1;
+  tmp5 = maxTouchPoints > 1;
 }
-let str = format.product;
+const has = set.has;
+let str = module_1351.product;
 if (str == null) {
   str = "";
 }
-const tmp6 = new Set(["iPad", "Kindle", "Kindle Fire", "Nook", "PlayBook"]).has(str) || tmp3;
-let hasItem = !tmp6;
-if (!tmp6) {
-  const importDefaultResult = format;
+const tmp8 = has(str) || tmp5;
+let has2Result = !tmp8;
+if (has2Result) {
+  const has2 = set1.has;
+  const importDefaultResult = module_1351;
   let str2;
   if (importDefaultResult != null) {
     const os = importDefaultResult.os;
@@ -50,28 +55,28 @@ if (!tmp6) {
   if (str2 == null) {
     str2 = "";
   }
-  hasItem = set1.has(str2);
+  has2Result = has2(str2);
 }
-let format = format_mod;
+module_1351 = module_1351_mod;
 let family;
-if (format != null) {
-  const os2 = format.os;
+if (module_1351 != null) {
+  const os2 = module_1351.os;
   if (os2 != null) {
     family = os2.family;
   }
 }
-let format = format_mod;
+module_1351 = module_1351_mod;
 let family1;
-if (format != null) {
-  const os3 = format.os;
+if (module_1351 != null) {
+  const os3 = module_1351.os;
   if (os3 != null) {
     family1 = os3.family;
   }
 }
-const size = fn(2);
+const tmp16 = "iOS" === family;
 const result = size.fileFinishedImporting("../discord_common/js/shared/lib/PlatformUtils.tsx");
 
-export const isTablet = tmp6;
-export const isMobile = hasItem;
-export const isIOSWeb = "iOS" === family;
+export const isTablet = tmp8;
+export const isMobile = has2Result;
+export const isIOSWeb = tmp16;
 export const isAndroidWeb = "Android" === family1;

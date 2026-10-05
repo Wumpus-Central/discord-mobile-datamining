@@ -2,24 +2,29 @@
 
 // Module 17945 (useRoleSubscriptionEmojis)
 import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5643 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import EmojiStore from "EmojiStore" /* 5638 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-require = fn;
 let items = [];
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionEmojis.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let closure_0;
+  let first;
+  let tmp6;
+  let tmp7;
+  let tmp8;
   _require = arg0;
-  const cResult = require("c").c(9);
+  let obj = require("react");
+  const cResult = obj.c(9);
+  const tmp = _require;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     items = [EmojiStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -31,29 +36,36 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[1] = arg0;
     cResult[2] = fn;
     cResult[3] = items1;
-    let tmp7 = items1;
-    let tmp6 = fn;
+    tmp7 = items1;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[2];
     tmp7 = cResult[3];
   }
-  const obj = require("c");
-  const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
+  const tmpResult = tmp(504);
+  const stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
   if (null != stateFromStores) {
+    if (cResult[4] === stateFromStores) {
+      let tmp9;
+      if (cResult[5] === arg0) {
+        tmp9 = cResult[6];
+      }
+      tmp8 = tmp9;
+    }
     if (cResult[7] !== arg0) {
       class S {
-        constructor(arg0) {
-          obj = closure_0(closure_1[5]);
-          return obj.isRoleSubscriptionEmoji(arg0, closure_0);
+        constructor(roles) {
+          const obj = RoleSubscriptionEmojiUtils;
+          return obj.isRoleSubscriptionEmoji(roles, closure_0);
         }
       }
       cResult[7] = arg0;
       cResult[8] = S;
     } else {
       class S {
-        constructor(arg0) {
-          obj = closure_0(closure_1[5]);
-          return obj.isRoleSubscriptionEmoji(arg0, closure_0);
+        constructor(roles) {
+          const obj = RoleSubscriptionEmojiUtils;
+          return obj.isRoleSubscriptionEmoji(roles, closure_0);
         }
       }
     }
@@ -61,28 +73,39 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[4] = stateFromStores;
     cResult[5] = arg0;
     cResult[6] = found;
+    tmp9 = found;
   } else {
     class S {
-      constructor(arg0) {
-        obj = closure_0(closure_1[5]);
-        return obj.isRoleSubscriptionEmoji(arg0, closure_0);
+      constructor(roles) {
+        const obj = RoleSubscriptionEmojiUtils;
+        return obj.isRoleSubscriptionEmoji(roles, closure_0);
       }
     }
   }
-  const tmpResult = require("initialize");
+  return tmp8;
 }) : ((arg0) => {
+  let closure_0;
+  let stateFromStores;
   _require = arg0;
+  let obj = require("get initialized");
   items = [EmojiStore];
   const items1 = [arg0];
-  stateFromStores = require("initialize").useStateFromStores(items, () => EmojiStore.getGuildEmoji(closure_0), items1);
+  stateFromStores = obj.useStateFromStores(items, () => EmojiStore.getGuildEmoji(closure_0), items1);
   const items2 = [stateFromStores, arg0];
-  return noop.useMemo(() => {
+  return react.useMemo(() => {
+    let found;
     if (null == stateFromStores) {
-      let found = items;
+      found = items;
     } else {
-      found = stateFromStores.filter((item) => closure_0(stateFromStores[5]).isRoleSubscriptionEmoji(item, closure_1_0));
+      found = stateFromStores.filter((item) => {
+        const obj = closure_0(stateFromStores[5]);
+        return obj.isRoleSubscriptionEmoji(item, closure_1_0);
+      });
     }
     return found;
   }, items2);
 });
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionEmojis.tsx");
+
+export default tmp2;
 export const NO_EMOJIS_AVAILABLE = items;

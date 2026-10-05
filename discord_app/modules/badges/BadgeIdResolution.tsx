@@ -8,8 +8,9 @@ import LegacyBadgeIdMap from "LegacyBadgeIdMap" /* 7866 */;
 import types from "types" /* 7867 */;
 import size from "module_2" /* 2 */;
 
+const DEFAULT_PREMIUM_BADGE_ID = Constants2.DEFAULT_PREMIUM_BADGE_ID;
 const getBadgeName = Constants.getBadgeName;
-const items = [BadgeId.BadgeId.PREMIUM_TENURE, Constants2.DEFAULT_PREMIUM_BADGE_ID];
+const items = [BadgeId.BadgeId.PREMIUM_TENURE, DEFAULT_PREMIUM_BADGE_ID];
 const items1 = [items, ];
 const items2 = [BadgeId.BadgeId.ORB_PROFILE, types.OrbBadges.ORB_PROFILE_BADGE];
 items1[1] = items2;
@@ -34,7 +35,7 @@ export const resolveProfileBadgeId = function resolveProfileBadgeId(id) {
   }
 };
 export const toProfileBadgeLegacyId = function toProfileBadgeLegacyId(badge_id) {
-  value = map.get(badge_id);
+  let value = map.get(badge_id);
   if (value == null) {
     value = getBadgeName(badge_id);
   }

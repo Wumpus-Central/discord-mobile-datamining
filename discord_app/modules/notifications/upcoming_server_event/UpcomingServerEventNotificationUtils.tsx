@@ -14,5 +14,7 @@ const result = size.fileFinishedImporting("modules/notifications/upcoming_server
 export const onUpcomingServerEventNotificationSettingsChanged = function onUpcomingServerEventNotificationSettingsChanged(upcoming_server_event_notifications) {
   const EnableUpcomingServerEventNotifications = UserSettings.EnableUpcomingServerEventNotifications;
   EnableUpcomingServerEventNotifications.updateSetting(upcoming_server_event_notifications);
-  AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, { update_type: constants.ACCOUNT, upcoming_server_event_notifications });
+  const obj = AnalyticsUtilsDefault;
+  const obj2 = { update_type: constants.ACCOUNT, upcoming_server_event_notifications };
+  obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj2);
 };

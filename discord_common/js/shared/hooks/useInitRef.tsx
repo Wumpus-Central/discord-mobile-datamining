@@ -1,10 +1,10 @@
-// === Module 16051: useInitRef ===
+// === Module 16051: react ===
 
-// Module 16051 (useInitRef)
-import _mod19 from "module_19" /* 19 */;
+// Module 16051 (react)
+import react from "react" /* 19 */;
 import size from "module_2" /* 2 */;
 
-const useRef = _mod19.useRef;
+const useRef = react.useRef;
 const result = size.fileFinishedImporting("../discord_common/js/shared/hooks/useInitRef.tsx");
 
 export default function useInitRef(fn) {

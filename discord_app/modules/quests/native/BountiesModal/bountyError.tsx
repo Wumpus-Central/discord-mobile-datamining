@@ -1,9 +1,9 @@
 // === Module 14829: bountyError ===
 
 // Module 14829 (bountyError)
-import util from "util" /* 1126 */;
+import intl2 from "intl" /* 1126 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4568 */;
-import _modDef4807 from "module_4807" /* 4807 */;
+import AssetRegistryDefault from "AssetRegistry" /* 4807 */;
 import BountiesModalConstants from "BountiesModalConstants" /* 14815 */;
 import size from "module_2" /* 2 */;
 
@@ -13,23 +13,25 @@ const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/b
 
 export const openBountyRewardClaimErrorToast = function openBountyRewardClaimErrorToast(code) {
   code = undefined;
+  const open = ToastActionCreatorsDefault.open;
+  ToastActionCreatorsDefault;
   if (code != null) {
     code = code.code;
   }
   if (null != code) {
     if (set.has(code.code)) {
+      let message;
       let message1;
       if (code != null) {
         message1 = code.message;
       }
       if (null != message1) {
-        let message = code.message;
+        message = code.message;
       }
-      const obj2 = { key: "QUESTS_BOUNTIES_REWARD_CLAIM_FAILED", content: message, icon: _modDef4807, toastDurationMs };
-      obj.open(obj2);
+      const obj = { key: "QUESTS_BOUNTIES_REWARD_CLAIM_FAILED", content: message, icon: AssetRegistryDefault, toastDurationMs };
+      open(obj);
     }
   }
-  const intl = util.intl;
-  message = intl.string(util.t.uLjCfn);
-  obj = ToastActionCreatorsDefault;
+  const intl = intl2.intl;
+  message = intl.string(intl2.t.uLjCfn);
 };

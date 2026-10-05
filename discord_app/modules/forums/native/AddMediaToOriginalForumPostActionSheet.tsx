@@ -2,269 +2,320 @@
 
 // Module 11612 (AddMediaToOriginalForumPostActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
+import DraftStore from "DraftStore" /* 7031 */;
 import tracking_Tracking from "tracking/Tracking" /* 7263 */;
 import utils_UploadUtils from "utils/UploadUtils" /* 7274 */;
-import _slicedToArray from "module_32" /* 32 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "module_19" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import MessageStore from "MessageStore" /* 5110 */;
+import Constants from "Constants" /* 1085 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size_mod from "module_2" /* 2 */;
 
-require = fn;
+let BottomSheet, c9, closure_6, setIsUploading, threadId;
+
+let closure_12;
+let closure_14;
+let map1;
+let obj2;
+let obj3;
+let unpackModuleId;
 function _upload() {
-  const self = this;
-  const apply = closure_17.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 }
-let closure_17 = async function _upload2(arg0) {
-  if (c9 === 2) {
-    c9 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp8 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj2 = { value, done: true };
-      return obj2;
+let obj = function _upload2() {
+  obj = _asyncToGenerator(async function(arg0) {
+    let MESSAGE;
+    let c0;
+    let c1;
+    let c2;
+    let c3;
+    let c4;
+    let closure_5;
+    let intl;
+    let obj19;
+    let obj20;
+    let obj6;
+    let closure_0 = arg0;
+    if (c9 === 2) {
+      c9 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c9 = 2;
-      if (0 === c8) {
+      const flag = false;
+      if (tmp3 === 3) {
         if (arg0 === 1) {
-          c9 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c9 = 3;
-          let obj3 = { value, done: true };
-          return obj3;
+          let obj2 = { value, done: true };
+          return obj2;
         } else {
-          closure_5 = tmp4;
-          const analyticsLocations = tmp9;
-          closure_132_0 = undefined;
-          closure_132_1 = undefined;
-          closure_132_2 = undefined;
-          closure_132_3 = undefined;
-          closure_132_4 = undefined;
-          ({ threadId: closure_132_0, attachments: closure_132_1, setIsUploading: closure_132_2, guild: closure_132_3, analyticsLocations: closure_132_4 } = closure_0);
-          closure_132_5 = undefined;
-          closure_132_6 = undefined;
-          closure_132_7 = undefined;
-          closure_132_8 = undefined;
-          closure_132_9 = undefined;
-          closure_132_10 = undefined;
-          c8 = 1;
-          c9 = 1;
-          return { value: "Set", done: true };
-        }
-      } else if (1 === tmp9) {
-        if (arg0 === 1) {
-          c9 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c9 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
-        } else {
-          const tmp119 = new closure_133_1(closure_133_2[12])();
-          closure_132_5 = tmp119;
-          closure_132_5.on("start", () => {
-            dependencyMap(true);
-          });
-          closure_132_5.on("progress", (currentSize) => {
-            const maxFileSizeResult = closure_0(7270).maxFileSize(id.id);
-            const obj = closure_0(7270);
-            const effectiveUploadLimit = closure_0(7295).getEffectiveUploadLimit(maxFileSizeResult);
-            if (currentSize.currentSize > effectiveUploadLimit) {
-              closure_1_5.cancel();
-              dependencyMap(false);
-              closure_1(4854).hideActionSheet();
-              const obj4 = { file: currentSize, maxSize: effectiveUploadLimit, baseMaxSize: maxFileSizeResult, guildId: id.id, analyticsLocations };
-              closure_1(8815)(obj4);
-              const obj3 = closure_1(4854);
-            }
-            const obj2 = closure_0(7295);
-          });
-          closure_132_5.on("error", () => {
-            dependencyMap(false);
-            closure_1(4854).hideActionSheet();
-          });
-          closure_132_5.on("complete", () => {
-            dependencyMap(false);
-            closure_1(8812).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
-            const obj = closure_1(8812);
-            closure_1(4854).hideActionSheet();
-          });
-          const messages = closure_133_10.getMessages(closure_132_0);
-          closure_132_7 = messages.get(closure_133_1(closure_133_2[18]).castChannelIdAsMessageId(closure_132_0));
-          if (null != closure_132_7) {
-            let attachments = closure_132_7.attachments;
-          } else {
-            attachments = [];
-          }
-          closure_132_8 = attachments;
-          c7 = 1;
-          closure_132_5.uploadFiles(closure_132_1);
-          c8 = 4;
-          c9 = 1;
-          const obj24 = closure_133_1(closure_133_2[18]);
-        }
-      } else if (2 === tmp9) {
-        c7 = 0;
-        closure_132_11 = closure_6;
-        closure_132_2(false);
-        closure_133_1(closure_133_2[15]).hideActionSheet();
-        const obj11 = closure_133_1(closure_133_2[15]);
-        const obj8 = { file: closure_132_11.file, guildId: closure_132_3.id, analyticsLocations: closure_132_4, code: closure_132_11.code, reason: closure_132_11.reason };
-        const result = closure_133_0(closure_133_2[20]).handleUploadMessageAttachmentsErrors(obj8);
-        c9 = 3;
-        const obj10 = { value: undefined, done: true };
-        return obj10;
-      } else if (3 === tmp9) {
-        c7 = 0;
-        closure_132_2(false);
-        closure_133_1(closure_133_2[15]).hideActionSheet();
-        c9 = 3;
-        const obj13 = { value: undefined, done: true };
-        return obj13;
-      } else if (4 === tmp9) {
-        if (arg0 === 1) {
-          c9 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 0;
-          c9 = 3;
-          const obj14 = { value, done: true };
-          return obj14;
-        } else {
-          closure_132_9 = value;
-          closure_1 = 0;
-          const items = [];
-          closure_1 = HermesBuiltin.arraySpread(closure_132_8, 0);
-          const mapped = closure_132_9.map((item, index) => closure_1_0(7243).getAttachmentPayload(item, index));
-          dependencyMap = mapped;
-          if (mapped == null) {
-            dependencyMap = [];
-          }
-          closure_1 = HermesBuiltin.arraySpread(dependencyMap, closure_1);
-          closure_132_6 = items;
-          c7 = 2;
-          c8 = 6;
-          c9 = 1;
-          const obj15 = { value: closure_133_1(closure_133_2[21]).unarchiveThreadIfNecessary(closure_132_0), done: false };
-          return obj15;
+          return { value: "IconComponent", done: null };
         }
       } else {
-        if (5 === tmp9) {
-          c7 = 0;
-          closure_132_12 = closure_6;
-          closure_132_2(false);
-          closure_133_1(closure_133_2[15]).hideActionSheet();
-          const tmp24 = new closure_133_1(closure_133_2[23])(closure_132_12);
-          closure_132_10 = tmp24;
-          if (closure_132_10.code === closure_133_11.EXPLICIT_CONTENT) {
-            const result1 = closure_133_1(closure_133_2[24]).sendExplicitMediaClydeError(closure_132_0, closure_132_10.attachments, closure_133_0(closure_133_2[25]).TrackMediaRedactionContext.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED);
-            const obj5 = closure_133_1(closure_133_2[24]);
-          } else {
-            const obj16 = { title: null, body: null };
-            const intl = closure_133_0(closure_133_2[27]).intl;
-            obj16.title = intl.string(closure_133_0(closure_133_2[27]).t.B3vFdU);
-            const anyErrorMessage = closure_132_10.getAnyErrorMessage();
-            let message = anyErrorMessage;
-            if (anyErrorMessage == null) {
-              message = closure_132_10.message;
+        let c7;
+        try {
+          let message;
+          let analyticsLocations;
+          let tmp;
+          let items;
+          let attachments;
+          let closure_9;
+          let anyErrorMessage;
+          c9 = 2;
+          if (0 === c8) {
+            if (arg0 === 1) {
+              c9 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c9 = 3;
+              let obj3 = { value, done: true };
+              return obj3;
+            } else {
+              c0 = undefined;
+              c1 = undefined;
+              c2 = undefined;
+              message = undefined;
+              analyticsLocations = undefined;
+              ({ threadId: c0, attachments: c1, setIsUploading: c2, guild: c3, analyticsLocations: c4 } = closure_0);
+              tmp = undefined;
+              items = undefined;
+              attachments = undefined;
+              closure_9 = undefined;
+              anyErrorMessage = undefined;
+              c8 = 1;
+              c9 = 1;
+              return { value: "Set", done: true };
             }
-            obj16.body = message;
-            closure_133_1(closure_133_2[26]).show(obj16);
-            const obj21 = closure_133_1(closure_133_2[26]);
-          }
-          c9 = 3;
-          let obj4 = closure_133_1(closure_133_2[15]);
-        } else if (6 === tmp9) {
-          if (arg0 === 1) {
-            c9 = 3;
-            throw value;
-          } else if (arg0 === 2) {
+          } else if (1 === c8) {
+            if (arg0 === 1) {
+              c9 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c9 = 3;
+              const obj7 = { value, done: true };
+              return obj7;
+            } else {
+              const self3 = this;
+              let self2 = this;
+              const tmp109 = new closure_133_1(closure_133_2[12])();
+              tmp = tmp109;
+              tmp.on("start", () => {
+                closure_1_2(true);
+              });
+              tmp.on("progress", (currentSize) => {
+                obj = closure_0(closure_2[13]);
+                const maxFileSizeResult = obj.maxFileSize(id.id);
+                const obj2 = closure_0(closure_2[14]);
+                const effectiveUploadLimit = obj2.getEffectiveUploadLimit(maxFileSizeResult);
+                if (currentSize.currentSize > effectiveUploadLimit) {
+                  closure_1_5.cancel();
+                  closure_1_2(false);
+                  const obj3 = closure_1(closure_2[15]);
+                  obj3.hideActionSheet();
+                  const obj4 = { file: currentSize, maxSize: effectiveUploadLimit, baseMaxSize: maxFileSizeResult, guildId: id.id, analyticsLocations };
+                  closure_1(closure_2[16])(obj4);
+                }
+              });
+              tmp.on("error", () => {
+                closure_1_2(false);
+                obj = closure_1(closure_2[15]);
+                obj.hideActionSheet();
+              });
+              tmp.on("complete", () => {
+                closure_1_2(false);
+                obj = closure_1(closure_2[17]);
+                obj.clearAll(closure_1_0, ChannelMessage.ChannelMessage);
+                const obj2 = closure_1(closure_2[15]);
+                obj2.hideActionSheet();
+              });
+              const messages = closure_133_10.getMessages(c0);
+              const get = messages.get;
+              const obj23 = closure_133_1(closure_133_2[18]);
+              attachments = get(obj23.castChannelIdAsMessageId(c0));
+              if (null != attachments) {
+                attachments = attachments.attachments;
+              } else {
+                attachments = [];
+              }
+              c7 = 1;
+              c8 = 4;
+              c9 = 1;
+              const obj8 = { value: tmp.uploadFiles(c1), done: false };
+              return obj8;
+            }
+          } else if (2 === c8) {
             c7 = 0;
+            let closure_11 = closure_6;
+            c2(false);
+            const obj11 = closure_133_1(closure_133_2[15]);
+            const hideActionSheetResult = obj11.hideActionSheet();
+            const obj10 = { file: closure_11.file, guildId: message.id, analyticsLocations, code: closure_11.code, reason: closure_11.reason };
+            const obj12 = closure_133_0(closure_133_2[20]);
+            const result = obj12.handleUploadMessageAttachmentsErrors(obj10);
             c9 = 3;
-            const obj17 = { value, done: true };
-            return obj17;
+            const obj13 = { value: undefined, done: true };
+            return obj13;
+          } else if (3 === c8) {
+            c7 = 0;
+            c2(false);
+            const obj9 = closure_133_1(closure_133_2[15]);
+            obj9.hideActionSheet();
+            c9 = 3;
+            const obj14 = { value: undefined, done: true };
+            return obj14;
+          } else if (4 === c8) {
+            if (arg0 === 1) {
+              c9 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c7 = 0;
+              c9 = 3;
+              const obj15 = { value, done: true };
+              return obj15;
+            } else {
+              closure_9 = value;
+              items = [];
+              let closure_1 = HermesBuiltin.arraySpread(items, attachments, 0);
+              const mapped = closure_9.map((item, index) => {
+                obj = closure_1_0(closure_1_2[19]);
+                return obj.getAttachmentPayload(item, index);
+              });
+              let closure_2 = mapped;
+              if (mapped == null) {
+                closure_2 = [];
+              }
+              closure_1 = HermesBuiltin.arraySpread(items, closure_2, closure_1);
+              c7 = 2;
+              c8 = 6;
+              c9 = 1;
+              const obj16 = { value: obj6.unarchiveThreadIfNecessary(c0), done: false };
+              obj6 = closure_133_1(closure_133_2[21]);
+              return obj16;
+            }
           } else {
-            c7 = 3;
-            const HTTP = closure_133_0(closure_133_2[22]).HTTP;
-            const request = { url: closure_133_12.MESSAGE(closure_132_0, closure_133_1(closure_133_2[18]).castChannelIdAsMessageId(closure_132_0)), body: null, rejectWithError: true };
-            const obj18 = { attachments: closure_132_6 };
-            request.body = obj18;
-            c8 = 7;
-            c9 = 1;
-            const obj20 = { value: HTTP.patch(request), done: false };
-            return obj20;
+            if (5 === c8) {
+              c7 = 0;
+              closure_12 = closure_6;
+              c2(false);
+              let obj4 = closure_133_1(closure_133_2[15]);
+              obj4.hideActionSheet();
+              const self = this;
+              self2 = this;
+              const tmp17 = new closure_133_1(closure_133_2[23])(closure_12);
+              anyErrorMessage = tmp17;
+              if (anyErrorMessage.code === closure_133_11.EXPLICIT_CONTENT) {
+                const obj5 = closure_133_1(closure_133_2[24]);
+                const result1 = obj5.sendExplicitMediaClydeError(c0, anyErrorMessage.attachments, closure_133_0(closure_133_2[25]).TrackMediaRedactionContext.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED);
+              } else {
+                const obj17 = { title: intl.string(closure_133_0(closure_133_2[27]).t.B3vFdU), body: message };
+                const show = closure_133_1(closure_133_2[26]).show;
+                const tmp93 = closure_133_1(closure_133_2[26]);
+                intl = closure_133_0(closure_133_2[27]).intl;
+                anyErrorMessage = anyErrorMessage.getAnyErrorMessage();
+                message = anyErrorMessage;
+                if (anyErrorMessage == null) {
+                  message = anyErrorMessage.message;
+                }
+                show(obj17);
+              }
+            } else if (6 === c8) {
+              if (arg0 === 1) {
+                c9 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c7 = 0;
+                c9 = 3;
+                const obj18 = { value, done: true };
+                return obj18;
+              } else {
+                c7 = 3;
+                const HTTP = closure_133_0(closure_133_2[22]).HTTP;
+                const request = { url: MESSAGE(c0, obj20.castChannelIdAsMessageId(c0)), body: obj19, rejectWithError: true };
+                const patch = HTTP.patch;
+                MESSAGE = closure_133_12.MESSAGE;
+                obj20 = closure_133_1(closure_133_2[18]);
+                obj19 = { attachments: items };
+                c8 = 7;
+                c9 = 1;
+                const obj21 = { value: patch(request), done: false };
+                return obj21;
+              }
+            } else if (arg0 === 1) {
+              c9 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c7 = 0;
+              c9 = 3;
+              obj = { value, done: true };
+              return obj;
+            } else {
+              c7 = 0;
+            }
+            c9 = 3;
+            return { value: "IconComponent", done: null };
           }
-        } else if (arg0 === 1) {
-          c9 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          c7 = 0;
+        } catch (tmp72) {
+          closure_6 = tmp72;
+          if (0 === c7) {
+            c9 = 3;
+            throw tmp72;
+          } else if (1 === c7) {
+            c8 = 2;
+          } else if (2 === c7) {
+            c8 = 3;
+          } else {
+            c8 = 5;
+          }
         }
-        c7 = 0;
-        c9 = 3;
-        let obj = { value, done: true };
-        return obj;
-      }
-    } catch (tmp80) {
-      closure_6 = tmp80;
-      if (tmp5 === c7) {
-        c9 = tmp3;
-        throw tmp80;
-      } else if (tmp2 === tmp82) {
-        c8 = tmp;
-      } else if (tmp === tmp82) {
-        c8 = tmp3;
-      } else {
-        c8 = tmp6;
       }
     }
-  }
+  });
+  return obj(...arguments);
 };
-const View = fn(17).View;
-const DraftType = fn(7031).DraftType;
-const Constants = fn(1085);
-({ AbortCodes: closure_11, Endpoints: closure_12 } = Constants);
-const jsxProd = fn(21);
-({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { container: { paddingHorizontal: 16, paddingTop: 24 }, post: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, marginBottom: 32, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, elevation: 4 }, postContent: { marginBottom: 0, padding: 8 }, title: { textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 32 }, button: null, buttonMargin: null };
-let obj3 = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, marginBottom: 32, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, elevation: 4 };
-obj2.button = { borderRadius: nativeDefault.radii.sm };
-obj2.buttonMargin = { marginBottom: 10 };
-let closure_15 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj4 = { borderRadius: nativeDefault.radii.sm };
-let size = fn(2);
-let result = size.fileFinishedImporting("modules/forums/native/AddMediaToOriginalForumPostActionSheet.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((threadId) => {
-  const cResult = threadId(sendMessage[29]).c(71);
+const View = react_native.View;
+const DraftType = DraftStore.DraftType;
+({ AbortCodes: unpackModuleId, Endpoints: closure_12 } = Constants);
+({ jsx: map1, jsxs: closure_14 } = Fragment);
+let createStyles = createStyles_mod;
+obj = { container: { paddingHorizontal: 16, paddingTop: 24 }, post: obj2, postContent: { marginBottom: 0, padding: 8 }, title: { textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 32 }, button: obj3, buttonMargin: { marginBottom: 10 } };
+obj2 = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, marginBottom: 32, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, elevation: 4 };
+createStyles = createStyles.createStyles;
+obj3 = { borderRadius: nativeDefault.radii.sm };
+let closure_15 = createStyles(obj);
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((threadId) => {
+  let _slicedToArray;
+  let analyticsLocations;
+  let first;
+  let sendMessage;
+  let stateFromStores1;
+  let tmp11;
+  let tmp14;
+  let tmp16;
+  let tmp18;
+  let tmp8;
+  let tmp9;
+  const tmp = threadId;
+  const tmp2 = sendMessage;
+  obj = threadId(sendMessage[29]);
+  const cResult = obj.c(71);
   threadId = threadId.threadId;
   const attachments = threadId.attachments;
   sendMessage = threadId.sendMessage;
   closure_15();
-  let obj = threadId(sendMessage[29]);
-  [r10021, _slicedToArray] = stateFromStores1.useState(false);
+  const tmp5 = _slicedToArray(stateFromStores1.useState(false), 2);
+  [r10021, _slicedToArray] = tmp5;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [analyticsLocations];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -276,143 +327,127 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((threadId) => {
     cResult[1] = threadId;
     cResult[2] = fn;
     cResult[3] = items1;
-    let tmp9 = items1;
-    let tmp8 = fn;
+    tmp9 = items1;
+    tmp8 = fn;
   } else {
     tmp8 = cResult[2];
     tmp9 = cResult[3];
   }
-  const tmp5 = _slicedToArray(stateFromStores1.useState(false), 2);
-  const stateFromStores = threadId(sendMessage[30]).useStateFromStores(first, tmp8, tmp9);
+  const tmpResult = tmp(tmp2[30]);
+  const stateFromStores = tmpResult.useStateFromStores(first, tmp8, tmp9);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [GuildStore];
     cResult[4] = items2;
-    let tmp11 = items2;
+    tmp11 = items2;
   } else {
     tmp11 = cResult[4];
   }
   if (cResult[5] !== stateFromStores) {
     class B {
       constructor() {
-        obj = closure_4;
-        guildId = undefined;
-        tmp = closure_9;
-        if (closure_4 != null) {
-          guildId = obj.getGuildId();
+        let guildId;
+        const getGuild = GuildStore.getGuild;
+        if (stateFromStores != null) {
+          guildId = stateFromStores.getGuildId();
         }
-        return closure_9.getGuild(guildId);
+        return getGuild(guildId);
       }
     }
     const items3 = [stateFromStores];
     cResult[5] = stateFromStores;
     cResult[6] = B;
     cResult[7] = items3;
-    let tmp14 = items3;
+    tmp14 = items3;
   } else {
     class B {
       constructor() {
-        obj = closure_4;
-        guildId = undefined;
-        tmp = closure_9;
-        if (closure_4 != null) {
-          guildId = obj.getGuildId();
+        let guildId;
+        const getGuild = GuildStore.getGuild;
+        if (stateFromStores != null) {
+          guildId = stateFromStores.getGuildId();
         }
-        return closure_9.getGuild(guildId);
+        return getGuild(guildId);
       }
     }
     tmp14 = cResult[7];
   }
-  const tmpResult = threadId(sendMessage[30]);
-  stateFromStores1 = threadId(sendMessage[30]).useStateFromStores(tmp11, B, tmp14);
+  const tmpResult3 = tmp(tmp2[30]);
+  stateFromStores1 = tmpResult3.useStateFromStores(tmp11, B, tmp14);
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
     class B {
       constructor() {
-        obj = closure_4;
-        guildId = undefined;
-        tmp = closure_9;
-        if (closure_4 != null) {
-          guildId = obj.getGuildId();
+        let guildId;
+        const getGuild = GuildStore.getGuild;
+        if (stateFromStores != null) {
+          guildId = stateFromStores.getGuildId();
         }
-        return closure_9.getGuild(guildId);
+        return getGuild(guildId);
       }
     }
     const items4 = [MessageStore];
     cResult[8] = items4;
-    const tmp16 = items4;
+    tmp16 = items4;
   } else {
     class B {
       constructor() {
-        obj = closure_4;
-        guildId = undefined;
-        tmp = closure_9;
-        if (closure_4 != null) {
-          guildId = obj.getGuildId();
+        let guildId;
+        const getGuild = GuildStore.getGuild;
+        if (stateFromStores != null) {
+          guildId = stateFromStores.getGuildId();
         }
-        return closure_9.getGuild(guildId);
+        return getGuild(guildId);
       }
     }
   }
   if (cResult[9] !== threadId) {
     class L {
       constructor() {
-        obj = closure_1(closure_2[18]);
-        return closure_10.getMessage(threadId, obj.castChannelIdAsMessageId(threadId));
+        const getMessage = MessageStore.getMessage;
+        obj = SnowflakeUtilsDefault;
+        return getMessage(threadId, obj.castChannelIdAsMessageId(threadId));
       }
     }
     const items5 = [threadId];
     cResult[9] = threadId;
     cResult[10] = L;
     cResult[11] = items5;
-    let tmp18 = items5;
+    tmp18 = items5;
   } else {
     class L {
       constructor() {
-        obj = closure_1(closure_2[18]);
-        return closure_10.getMessage(threadId, obj.castChannelIdAsMessageId(threadId));
+        const getMessage = MessageStore.getMessage;
+        obj = SnowflakeUtilsDefault;
+        return getMessage(threadId, obj.castChannelIdAsMessageId(threadId));
       }
     }
     tmp18 = cResult[11];
   }
-  const tmpResult3 = threadId(sendMessage[30]);
-  const stateFromStores2 = threadId(sendMessage[30]).useStateFromStores(tmp16, L, tmp18);
+  const tmpResult4 = tmp(tmp2[30]);
+  const stateFromStores2 = tmpResult4.useStateFromStores(tmp16, L, tmp18);
   analyticsLocations = attachments(tmp2[31])().analyticsLocations;
   if (cResult[12] === analyticsLocations) {
     class L {
       constructor() {
-        obj = closure_1(closure_2[18]);
-        return closure_10.getMessage(threadId, obj.castChannelIdAsMessageId(threadId));
+        const getMessage = MessageStore.getMessage;
+        obj = SnowflakeUtilsDefault;
+        return getMessage(threadId, obj.castChannelIdAsMessageId(threadId));
       }
     }
   }
   class D {
     constructor() {
-      if (null != closure_4) {
-        tmp = closure_6;
-        if (null != closure_6) {
-          if (null != closure_5) {
-            tmp4 = closure_0;
-            tmp5 = closure_2;
-            obj2 = closure_0(closure_2[32]);
-            result = obj2.trackForumAddMediaToOriginalPostClicked({ added: true });
-            tmp7 = _upload;
-            obj1 = { threadId: null, attachments: null, setIsUploading: null, guild: null, analyticsLocations: null };
-            tmp8 = threadId;
-            obj1.threadId = threadId;
-            tmp9 = attachments;
-            obj1.attachments = attachments;
-            tmp10 = closure_3;
-            obj1.setIsUploading = closure_3;
-            obj1.guild = tmp2;
-            tmp11 = analyticsLocations;
-            obj1.analyticsLocations = analyticsLocations;
-            tmp12 = _upload(obj1);
+      if (null != stateFromStores) {
+        if (null != stateFromStores2) {
+          if (null != stateFromStores1) {
+            const obj2 = tracking_Tracking;
+            const result = obj2.trackForumAddMediaToOriginalPostClicked({ added: true });
+            const obj3 = { threadId, attachments, setIsUploading: _slicedToArray, guild: tmp2, analyticsLocations };
+            _upload(obj3);
           }
-          return;
         }
       }
-      obj = closure_1(closure_2[15]);
-      hideActionSheetResult = obj.hideActionSheet();
-      return;
+      obj = ActionSheetActionCreatorsDefault;
+      obj.hideActionSheet();
     }
   }
   cResult[12] = analyticsLocations;
@@ -422,8 +457,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((threadId) => {
   cResult[16] = stateFromStores;
   cResult[17] = threadId;
   cResult[18] = D;
-  const tmpResult4 = threadId(sendMessage[30]);
 }) : ((threadId) => {
+  let BaseTextButton;
+  let BaseTextButton2;
+  let c3;
+  let c8;
+  let intl;
+  let intl2;
+  let intl3;
+  let intl4;
+  let intl5;
+  let items9;
+  let obj12;
+  let obj14;
+  let obj6;
+  let obj8;
+  let tmp12;
+  let tmp3;
   threadId = threadId.threadId;
   const attachments = threadId.attachments;
   const sendMessage = threadId.sendMessage;
@@ -432,25 +482,31 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((threadId) => {
   let analyticsLocations;
   c8 = undefined;
   const tmp = closure_15();
-  [tmp3, c3] = setIsUploading(stateFromStores1.useState(false), 2);
   const tmp2 = setIsUploading(stateFromStores1.useState(false), 2);
+  [tmp3, c3] = tmp2;
+  obj = threadId(sendMessage[30]);
   const items = [analyticsLocations];
   const items1 = [threadId];
-  const stateFromStores = threadId(sendMessage[30]).useStateFromStores(items, () => ChannelStore.getChannel(threadId), items1);
-  let obj = threadId(sendMessage[30]);
+  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(threadId), items1);
+  let obj2 = threadId(sendMessage[30]);
   const items2 = [GuildStore];
   const items3 = [stateFromStores];
-  stateFromStores1 = threadId(sendMessage[30]).useStateFromStores(items2, () => {
+  stateFromStores1 = obj2.useStateFromStores(items2, () => {
     let guildId;
+    const getGuild = GuildStore.getGuild;
     if (stateFromStores != null) {
       guildId = stateFromStores.getGuildId();
     }
-    return GuildStore.getGuild(guildId);
+    return getGuild(guildId);
   }, items3);
-  let obj2 = threadId(sendMessage[30]);
+  let obj3 = threadId(sendMessage[30]);
   const items4 = [MessageStore];
   const items5 = [threadId];
-  const stateFromStores2 = threadId(sendMessage[30]).useStateFromStores(items4, () => MessageStore.getMessage(threadId, SnowflakeUtilsDefault.castChannelIdAsMessageId(threadId)), items5);
+  const stateFromStores2 = obj3.useStateFromStores(items4, () => {
+    const getMessage = MessageStore.getMessage;
+    obj = SnowflakeUtilsDefault;
+    return getMessage(threadId, obj.castChannelIdAsMessageId(threadId));
+  }, items5);
   analyticsLocations = attachments(sendMessage[31])().analyticsLocations;
   const items6 = [stateFromStores, stateFromStores1, stateFromStores2, threadId, attachments, analyticsLocations];
   const items7 = [sendMessage];
@@ -458,25 +514,30 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((threadId) => {
     if (null != stateFromStores) {
       if (null != stateFromStores2) {
         if (null != stateFromStores1) {
-          const result = tracking_Tracking.trackForumAddMediaToOriginalPostClicked({ added: true });
+          const obj2 = tracking_Tracking;
+          const result = obj2.trackForumAddMediaToOriginalPostClicked({ added: true });
           const obj3 = { threadId, attachments, setIsUploading, guild: tmp2, analyticsLocations };
           _upload(obj3);
         }
       }
     }
-    ActionSheetActionCreatorsDefault.hideActionSheet();
+    obj = ActionSheetActionCreatorsDefault;
+    obj.hideActionSheet();
   }, items6);
   const callback1 = stateFromStores1.useCallback(() => {
-    const result = tracking_Tracking.trackForumAddMediaToOriginalPostClicked({ added: false });
-    ActionSheetActionCreatorsDefault.hideActionSheet();
+    obj = tracking_Tracking;
+    const result = obj.trackForumAddMediaToOriginalPostClicked({ added: false });
+    const obj2 = ActionSheetActionCreatorsDefault;
+    obj2.hideActionSheet();
     sendMessage();
   }, items7);
-  let obj3 = threadId(sendMessage[30]);
   [tmp12, c8] = setIsUploading(stateFromStores1.useState(null), 2);
   const items8 = [attachments];
+  setIsUploading(stateFromStores1.useState(null), 2);
   const effect = stateFromStores1.useEffect(() => {
     if (null != attachments[0]) {
-      const fileInfo = utils_UploadUtils.getFileInfo(tmp[0]);
+      obj = utils_UploadUtils;
+      const fileInfo = obj.getFileInfo(tmp[0]);
       fileInfo.then((uri) => closure_1_8(uri.uri));
     }
   }, items8);
@@ -488,54 +549,52 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((threadId) => {
   let tmp16;
   if (null != item) {
     if (null != tmp12) {
-      const size = { src: tmp12, width: null, height: null, spoiler: null, alt: null };
+      size = { src: tmp12, width: null, height: null, spoiler: attachments[0].spoiler, alt: attachments[0].description };
       ({ width: obj4.width, height: obj4.height } = item);
-      size.spoiler = attachments[0].spoiler;
-      size.alt = attachments[0].description;
       tmp16 = size;
     }
   }
-  const obj5 = { startExpanded: true, children: null };
-  const obj6 = { style: tmp.container, children: null };
-  const obj7 = { pointerEvents: "none", style: tmp.post, children: closure_13(threadId(sendMessage[34]).ForumPostListDisabled, { threadId, localDeviceMedia: tmp16, style: tmp.postContent }) };
-  const items9 = [closure_13(stateFromStores2, obj7), , , , , ];
-  const obj9 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = tmp4(tmp5[27]).intl;
-  obj9.children = intl.string(threadId(sendMessage[27]).t["+SZF6S"]);
-  items9[1] = closure_13(threadId(sendMessage[35]).Text, obj9);
-  const obj10 = { style: tmp.description, variant: "text-md/medium", color: "text-default", children: null };
-  const intl2 = tmp4(tmp5[27]).intl;
-  obj10.children = intl2.string(threadId(sendMessage[27]).t["0Ycgw5"]);
-  items9[2] = closure_13(threadId(sendMessage[35]).Text, obj10);
-  const obj11 = { style: tmp.buttonMargin, children: null };
-  const obj12 = { grow: true, variant: "primary", text: null, pillStyle: null, onPress: null, loading: null, disabled: null };
-  const intl3 = tmp4(tmp5[27]).intl;
-  obj12.text = intl3.string(threadId(sendMessage[27]).t.d611xH);
-  obj12.pillStyle = tmp.button;
-  obj12.onPress = callback;
-  obj12.loading = tmp3;
-  obj12.disabled = tmp3;
-  obj11.children = closure_13(threadId(sendMessage[36]).BaseTextButton, obj12);
+  const obj5 = { startExpanded: true, children: closure_14(stateFromStores2, obj6) };
+  obj6 = { style: tmp.container, children: items9 };
+  const obj7 = { pointerEvents: "none", style: tmp.post, children: closure_13(threadId(sendMessage[34]).ForumPostListDisabled, obj8) };
+  BottomSheet = tmp4(tmp5[37]).BottomSheet;
+  obj8 = { threadId, localDeviceMedia: tmp16, style: tmp.postContent };
+  items9 = [closure_13(stateFromStores2, obj7), , , , , ];
+  const obj9 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: intl.string(threadId(sendMessage[27]).t["+SZF6S"]) };
+  const Text = tmp4(tmp5[35]).Text;
+  intl = tmp4(tmp5[27]).intl;
+  items9[1] = closure_13(Text, obj9);
+  const obj10 = { style: tmp.description, variant: "text-md/medium", color: "text-default", children: intl2.string(threadId(sendMessage[27]).t["0Ycgw5"]) };
+  const Text2 = tmp4(tmp5[35]).Text;
+  intl2 = tmp4(tmp5[27]).intl;
+  items9[2] = closure_13(Text2, obj10);
+  const obj11 = { style: tmp.buttonMargin, children: closure_13(BaseTextButton, obj12) };
+  obj12 = { grow: true, variant: "primary", text: intl3.string(threadId(sendMessage[27]).t.d611xH), pillStyle: tmp.button, onPress: callback, loading: tmp3, disabled: tmp3 };
+  BaseTextButton = tmp4(tmp5[36]).BaseTextButton;
+  intl3 = tmp4(tmp5[27]).intl;
   items9[3] = closure_13(stateFromStores2, obj11);
-  const obj13 = { style: tmp.buttonMargin, children: null };
-  const obj14 = { grow: true, variant: "secondary", text: null, pillStyle: null, onPress: null, disabled: null };
-  const intl4 = tmp4(tmp5[27]).intl;
-  obj14.text = intl4.string(threadId(sendMessage[27]).t["8rKVHL"]);
-  obj14.pillStyle = tmp.button;
-  obj14.onPress = callback1;
-  obj14.disabled = tmp3;
-  obj13.children = closure_13(threadId(sendMessage[36]).BaseTextButton, obj14);
+  const obj13 = { style: tmp.buttonMargin, children: closure_13(BaseTextButton2, obj14) };
+  obj14 = { grow: true, variant: "secondary", text: intl4.string(threadId(sendMessage[27]).t["8rKVHL"]), pillStyle: tmp.button, onPress: callback1, disabled: tmp3 };
+  BaseTextButton2 = tmp4(tmp5[36]).BaseTextButton;
+  intl4 = tmp4(tmp5[27]).intl;
   items9[4] = closure_13(stateFromStores2, obj13);
-  const obj15 = { grow: true, variant: "secondary", text: null, pillStyle: null, onPress: null, disabled: null };
-  const intl5 = tmp4(tmp5[27]).intl;
-  obj15.text = intl5.string(threadId(sendMessage[27]).t["ETE/oC"]);
-  obj15.pillStyle = tmp.button;
-  obj15.onPress = function onPress() {
-    return attachments(sendMessage[15]).hideActionSheet();
+  const obj15 = {
+    grow: true,
+    variant: "secondary",
+    text: intl5.string(threadId(sendMessage[27]).t["ETE/oC"]),
+    pillStyle: tmp.button,
+    onPress() {
+      obj = attachments(sendMessage[15]);
+      return obj.hideActionSheet();
+    },
+    disabled: tmp3
   };
-  obj15.disabled = tmp3;
-  items9[5] = closure_13(threadId(sendMessage[36]).BaseTextButton, obj15);
-  obj6.children = items9;
-  obj5.children = closure_14(stateFromStores2, obj6);
-  return closure_13(threadId(sendMessage[37]).BottomSheet, obj5);
+  const BaseTextButton3 = tmp4(tmp5[36]).BaseTextButton;
+  intl5 = tmp4(tmp5[27]).intl;
+  items9[5] = closure_13(BaseTextButton3, obj15);
+  return closure_13(BottomSheet, obj5);
 });
+let size = size_mod;
+let result = size.fileFinishedImporting("modules/forums/native/AddMediaToOriginalForumPostActionSheet.tsx");
+
+export default tmp5;

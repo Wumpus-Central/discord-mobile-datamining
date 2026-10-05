@@ -12,18 +12,24 @@ const result = size.fileFinishedImporting("modules/client_themes/ClientThemesTyp
 
 export const ClientThemeType = design_shared.ClientThemeType;
 export const getProtoThemeFromBaseTheme = function getProtoThemeFromBaseTheme(arg0) {
-  closure_0 = arg0;
+  let UNSET;
+  let closure_0 = arg0;
   const entries = Object.entries(closure_3);
   const found = entries.find((item) => {
+    let tmp;
     [, tmp] = item;
     return tmp === closure_0;
   });
   if (undefined === found) {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
+    const captureException = SentryUtilsDefault.captureException;
+    const self = this;
+    const self2 = this;
+    SentryUtilsDefault;
     const error = new Error("No ProtoTheme found for base theme: " + arg0);
-    SentryUtilsDefault.captureException(error);
-    let UNSET = preloaded_user_settings.Theme.UNSET;
+    captureException(error);
+    UNSET = preloaded_user_settings.Theme.UNSET;
   } else {
     const _parseInt = parseInt;
     UNSET = parseInt(found[0]);

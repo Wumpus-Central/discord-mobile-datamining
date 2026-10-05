@@ -1,18 +1,22 @@
 // === Module 10989: useBotProfileCommands ===
 
 // Module 10989 (useBotProfileCommands)
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
 import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 8939 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_profile/useBotProfileCommands.tsx");
+let type;
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
-  const cResult = c.c(5);
-  const accessibleCommandsForApplication = ApplicationCommandQueryApiAll.useAccessibleCommandsForApplication(arg0, arg1, arg2);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
+  let application;
+  let commands;
+  let tmp3;
+  const obj = react2;
+  const cResult = obj.c(5);
+  const obj2 = ApplicationCommandQueryApiAll;
+  const accessibleCommandsForApplication = obj2.useAccessibleCommandsForApplication(arg0, arg1, arg2);
   ({ commands, application } = accessibleCommandsForApplication);
   if (cResult[0] !== commands) {
     let found;
@@ -20,12 +24,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
       found = commands.filter((nsfw) => {
         let tmp = true !== nsfw.nsfw;
         if (tmp) {
-          options = nsfw.options;
+          const options = nsfw.options;
           let found;
           if (options != null) {
             found = options.find((type) => {
               type = type.type;
-              return type === closure_1_0(dependencyMap[4]).ApplicationCommandOptionType.SUB_COMMAND || type === closure_1_0(dependencyMap[4]).ApplicationCommandOptionType.SUB_COMMAND_GROUP;
+              const tmp3 = type === closure_1_0(closure_1_2[4]).ApplicationCommandOptionType.SUB_COMMAND || type === closure_1_0(closure_1_2[4]).ApplicationCommandOptionType.SUB_COMMAND_GROUP;
+              return tmp3;
             });
           }
           tmp = null == found;
@@ -35,13 +40,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
     }
     cResult[0] = commands;
     cResult[1] = found;
-    let tmp3 = found;
+    tmp3 = found;
   } else {
     tmp3 = cResult[1];
   }
   if (cResult[2] === application) {
+    let tmp6;
     if (cResult[3] === tmp3) {
-      let tmp6 = cResult[4];
+      tmp6 = cResult[4];
     }
     return tmp6;
   }
@@ -51,30 +57,38 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
   cResult[4] = obj3;
   tmp6 = obj3;
 }) : ((arg0, arg1, arg2) => {
-  const accessibleCommandsForApplication = ApplicationCommandQueryApiAll.useAccessibleCommandsForApplication(arg0, arg1, arg2);
+  let items;
+  const obj = ApplicationCommandQueryApiAll;
+  const accessibleCommandsForApplication = obj.useAccessibleCommandsForApplication(arg0, arg1, arg2);
   const commands = accessibleCommandsForApplication.commands;
-  const obj2 = { application: accessibleCommandsForApplication.application, commands: null };
-  const items = [commands];
-  obj2.commands = noop.useMemo(() => {
-    let found;
-    if (commands != null) {
-      found = commands.filter((nsfw) => {
-        let tmp = true !== nsfw.nsfw;
-        if (tmp) {
-          options = nsfw.options;
-          let found;
-          if (options != null) {
-            found = options.find((type) => {
-              type = type.type;
-              return type === closure_1_0(dependencyMap[4]).ApplicationCommandOptionType.SUB_COMMAND || type === closure_1_0(dependencyMap[4]).ApplicationCommandOptionType.SUB_COMMAND_GROUP;
-            });
+  const obj2 = {
+    application: accessibleCommandsForApplication.application,
+    commands: react.useMemo(() => {
+      let found;
+      if (commands != null) {
+        found = commands.filter((nsfw) => {
+          let tmp = true !== nsfw.nsfw;
+          if (tmp) {
+            const options = nsfw.options;
+            let found;
+            if (options != null) {
+              found = options.find((type) => {
+                type = type.type;
+                const tmp3 = type === closure_1_0(closure_1_2[4]).ApplicationCommandOptionType.SUB_COMMAND || type === closure_1_0(closure_1_2[4]).ApplicationCommandOptionType.SUB_COMMAND_GROUP;
+                return tmp3;
+              });
+            }
+            tmp = null == found;
           }
-          tmp = null == found;
-        }
-        return tmp;
-      });
-    }
-    return found;
-  }, items);
+          return tmp;
+        });
+      }
+      return found;
+    }, items)
+  };
+  items = [commands];
   return obj2;
 });
+const result = size.fileFinishedImporting("modules/user_profile/useBotProfileCommands.tsx");
+
+export default tmp2;

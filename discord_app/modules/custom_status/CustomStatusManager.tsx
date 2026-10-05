@@ -1,154 +1,176 @@
 // === Module 17482: CustomStatusManager ===
 
 // Module 17482 (CustomStatusManager)
+import UserSettings from "UserSettings" /* 2028 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2033 */;
+import Timers from "Timers" /* 2046 */;
+import FocusModeUtils from "FocusModeUtils" /* 12473 */;
 import setUserStatusDefault from "setUserStatus" /* 12474 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 5438 */;
+import Constants from "Constants" /* 1085 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import size from "module_2" /* 2 */;
 
-let require = fn;
-const Constants = fn(1085);
+let closure_4;
+let hasOwnProperty;
 ({ AnalyticsObjects: closure_4, StatusTypes: hasOwnProperty } = Constants);
-const timeout = new fn(2046).Timeout();
-const timeout1 = new fn(2046).Timeout();
-const timeout2 = new fn(2046).Timeout();
-const prototype = function CustomStatusManager() {
-  const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  require = applyArgumentsResult;
-  applyArgumentsResult.actions = {
-    POST_CONNECTION_OPEN() {
-      return applyArgumentsResult.handlePostConnectionOpen();
-    },
-    USER_SETTINGS_PROTO_UPDATE() {
-      return applyArgumentsResult.handleUserSettingsProtoUpdate();
-    }
-  };
-  applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
-    applyArgumentsResult.handleCommonUpdates();
-  };
-  applyArgumentsResult.handleUserSettingsProtoUpdate = function handleUserSettingsProtoUpdate() {
-    applyArgumentsResult.handleCommonUpdates();
-  };
-  applyArgumentsResult.handleCommonUpdates = function handleCommonUpdates() {
-    const result = applyArgumentsResult.manageExpiringCustomStatus();
-    applyArgumentsResult.manageExpiringStatus();
-    const result1 = applyArgumentsResult.lazilyMigrateStatusCreatedAt();
-    const result2 = applyArgumentsResult.manageExpiringFocusMode();
-  };
-  applyArgumentsResult.manageExpiringCustomStatus = function manageExpiringCustomStatus() {
-    let CustomStatusSetting = applyArgumentsResult(2028).CustomStatusSetting;
-    const setting = CustomStatusSetting.getSetting();
-    if (null == setting) {
-      timeout2.stop();
-    } else {
-      if (null != setting.expiresAtMs) {
-        if ("0" !== setting.expiresAtMs) {
-          const _Date = Date;
-          const _Number = Number;
-          const date = new Date(Number(setting.expiresAtMs));
-          const _Date2 = Date;
-          const time = date.getTime();
-          const date1 = new Date();
-          const diff = time - date1.getTime();
-          if (diff > 0) {
-            timeout2.start(diff, () => {
-              const CustomStatusSetting = closure_1_0(dependencyMap[4]).CustomStatusSetting;
-              CustomStatusSetting.updateSetting(undefined);
-            }, true);
-          } else {
-            const CustomStatusSetting2 = applyArgumentsResult(2028).CustomStatusSetting;
-            CustomStatusSetting2.updateSetting(undefined);
-            timeout2.stop();
-          }
-        }
+const timeout = new Timers.Timeout();
+const timeout1 = new Timers.Timeout();
+const timeout2 = new Timers.Timeout();
+class CustomStatusManager extends AutomaticLifecycleManager {
+  constructor() {
+    let constants2;
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    require = applyArgumentsResult;
+    applyArgumentsResult.actions = {
+      POST_CONNECTION_OPEN() {
+        return require.handlePostConnectionOpen();
+      },
+      USER_SETTINGS_PROTO_UPDATE() {
+        return require.handleUserSettingsProtoUpdate();
       }
-      if (null != timeout2) {
+    };
+    applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
+      require.handleCommonUpdates();
+    };
+    applyArgumentsResult.handleUserSettingsProtoUpdate = function handleUserSettingsProtoUpdate() {
+      require.handleCommonUpdates();
+    };
+    applyArgumentsResult.handleCommonUpdates = function handleCommonUpdates() {
+      const result = require.manageExpiringCustomStatus();
+      require.manageExpiringStatus();
+      const result1 = require.lazilyMigrateStatusCreatedAt();
+      const result2 = require.manageExpiringFocusMode();
+    };
+    applyArgumentsResult.manageExpiringCustomStatus = function manageExpiringCustomStatus() {
+      let CustomStatusSetting = UserSettings.CustomStatusSetting;
+      const setting = CustomStatusSetting.getSetting();
+      if (null == setting) {
         timeout2.stop();
+      } else {
+        if (null != setting.expiresAtMs) {
+          if ("0" !== setting.expiresAtMs) {
+            const _Date = Date;
+            const _Number = Number;
+            const self = this;
+            const self2 = this;
+            const _Date2 = Date;
+            const self3 = this;
+            const self4 = this;
+            const date = new Date(Number(setting.expiresAtMs));
+            const time = date.getTime();
+            const date1 = new Date();
+            const diff = time - date1.getTime();
+            if (diff > 0) {
+              timeout2.start(diff, () => {
+                const CustomStatusSetting = closure_1_0(closure_1_2[4]).CustomStatusSetting;
+                CustomStatusSetting.updateSetting(undefined);
+              }, true);
+            } else {
+              const CustomStatusSetting2 = UserSettings.CustomStatusSetting;
+              CustomStatusSetting2.updateSetting(undefined);
+              timeout2.stop();
+            }
+          }
+        }
+        if (null != timeout2) {
+          timeout2.stop();
+        }
       }
-    }
-  };
-  applyArgumentsResult.manageExpiringStatus = function manageExpiringStatus() {
-    const StatusExpiresAtSetting = applyArgumentsResult(2028).StatusExpiresAtSetting;
-    const setting = StatusExpiresAtSetting.getSetting();
-    if (null != setting) {
-      if ("0" !== setting) {
-        if (SelfPresenceStore.getStatus() !== constants2.ONLINE) {
+    };
+    applyArgumentsResult.manageExpiringStatus = function manageExpiringStatus() {
+      let obj3;
+      let obj4;
+      const StatusExpiresAtSetting = UserSettings.StatusExpiresAtSetting;
+      const setting = StatusExpiresAtSetting.getSetting();
+      if (null != setting) {
+        if ("0" !== setting) {
+          if (SelfPresenceStore.getStatus() !== constants2.ONLINE) {
+            const _Date = Date;
+            const _Number = Number;
+            const self = this;
+            const self2 = this;
+            const _Date2 = Date;
+            const self3 = this;
+            const self4 = this;
+            const date = new Date(Number(setting));
+            const time = date.getTime();
+            const date1 = new Date();
+            const diff = time - date1.getTime();
+            if (diff > 0) {
+              timeout.start(diff, () => {
+                let obj2;
+                let obj3;
+                const obj = { nextStatus: constants2.ONLINE, analyticsContext: obj2 };
+                obj2 = { location: obj3 };
+                obj3 = { object: constants.CUSTOM_STATUS_MANAGER };
+                closure_1_1(closure_1_2[5])(obj);
+              }, true);
+            } else {
+              let obj2 = { nextStatus: tmp4.ONLINE, analyticsContext: obj3 };
+              obj3 = { location: obj4 };
+              obj4 = { object: constants.CUSTOM_STATUS_MANAGER };
+              setUserStatusDefault(obj2);
+              timeout.stop();
+            }
+          }
+        }
+      }
+      if (null != timeout) {
+        timeout.stop();
+      }
+    };
+    applyArgumentsResult.lazilyMigrateStatusCreatedAt = function lazilyMigrateStatusCreatedAt() {
+      let tmp = SelfPresenceStore.getStatus() !== constants2.ONLINE;
+      if (tmp) {
+        const StatusCreatedAtSetting = UserSettings.StatusCreatedAtSetting;
+        tmp = null == StatusCreatedAtSetting.getSetting();
+      }
+      if (tmp) {
+        const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
+        PreloadedUserSettingsActionCreators.updateAsync("status", async (arg0) => {
+          const UInt64Value = closure_1_0(closure_1_2[7]).UInt64Value;
+          const obj = { value: "" + Date.now() };
+          arg0.statusCreatedAtMs = UInt64Value.create(obj);
+        }, UserSettingsProtoActionCreators.UserSettingsDelay.INFREQUENT_USER_ACTION);
+      }
+    };
+    applyArgumentsResult.manageExpiringFocusMode = function manageExpiringFocusMode() {
+      const FocusModeExpiresAtSetting = UserSettings.FocusModeExpiresAtSetting;
+      const setting = FocusModeExpiresAtSetting.getSetting();
+      if (null != setting) {
+        if ("0" !== setting) {
           const _Date = Date;
           const _Number = Number;
-          const date = new Date(Number(setting));
+          const self = this;
+          const self2 = this;
           const _Date2 = Date;
+          const self3 = this;
+          const self4 = this;
+          const date = new Date(Number(setting));
           const time = date.getTime();
           const date1 = new Date();
           const diff = time - date1.getTime();
           if (diff > 0) {
-            timeout.start(diff, () => {
-              const obj = { nextStatus: constants2.ONLINE, analyticsContext: null };
-              const obj2 = { location: { object: constants.CUSTOM_STATUS_MANAGER } };
-              obj.analyticsContext = obj2;
-              closure_1_1(dependencyMap[5])(obj);
+            timeout1.start(diff, () => {
+              const obj = closure_1_0(closure_1_2[8]);
+              obj.setFocusMode(false);
             }, true);
           } else {
-            let obj2 = { nextStatus: tmp4.ONLINE, analyticsContext: null };
-            const obj3 = { location: null };
-            const obj4 = { object: constants.CUSTOM_STATUS_MANAGER };
-            obj3.location = obj4;
-            obj2.analyticsContext = obj3;
-            setUserStatusDefault(obj2);
-            timeout.stop();
+            const tmpResult = FocusModeUtils;
+            tmpResult.setFocusMode(false);
+            timeout1.stop();
           }
         }
       }
-    }
-    if (null != timeout) {
-      timeout.stop();
-    }
-  };
-  applyArgumentsResult.lazilyMigrateStatusCreatedAt = function lazilyMigrateStatusCreatedAt() {
-    let tmp = SelfPresenceStore.getStatus() !== constants2.ONLINE;
-    if (tmp) {
-      const StatusCreatedAtSetting = applyArgumentsResult(2028).StatusCreatedAtSetting;
-      tmp = null == StatusCreatedAtSetting.getSetting();
-    }
-    if (tmp) {
-      const PreloadedUserSettingsActionCreators = applyArgumentsResult(2033).PreloadedUserSettingsActionCreators;
-      PreloadedUserSettingsActionCreators.updateAsync("status", async (arg0) => {
-        const UInt64Value = closure_1_0(dependencyMap[7]).UInt64Value;
-        arg0.statusCreatedAtMs = UInt64Value.create({ value: "" + Date.now() });
-      }, applyArgumentsResult(2033).UserSettingsDelay.INFREQUENT_USER_ACTION);
-    }
-  };
-  applyArgumentsResult.manageExpiringFocusMode = function manageExpiringFocusMode() {
-    const FocusModeExpiresAtSetting = applyArgumentsResult(2028).FocusModeExpiresAtSetting;
-    const setting = FocusModeExpiresAtSetting.getSetting();
-    if (null != setting) {
-      if ("0" !== setting) {
-        const _Date = Date;
-        const _Number = Number;
-        const date = new Date(Number(setting));
-        const _Date2 = Date;
-        const time = date.getTime();
-        const date1 = new Date();
-        const diff = time - date1.getTime();
-        if (diff > 0) {
-          timeout1.start(diff, () => {
-            closure_1_0(dependencyMap[8]).setFocusMode(false);
-          }, true);
-        } else {
-          applyArgumentsResult(12473).setFocusMode(false);
-          timeout1.stop();
-          const tmpResult = applyArgumentsResult(12473);
-        }
+      if (null != timeout1) {
+        timeout1.stop();
       }
-    }
-    if (null != timeout1) {
-      timeout1.stop();
-    }
-  };
-  return applyArgumentsResult;
-}.prototype;
-class prototype extends tmp6 {
+    };
+    return applyArgumentsResult;
+  }
 }
-const prototype1 = new prototype();
-const size = fn(2);
+const customStatusManager = new CustomStatusManager();
 let result = size.fileFinishedImporting("modules/custom_status/CustomStatusManager.tsx");
 
-export default prototype1;
+export default customStatusManager;

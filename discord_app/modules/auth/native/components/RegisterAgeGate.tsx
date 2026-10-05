@@ -1,62 +1,84 @@
 // === Module 15902: RegisterAgeGate ===
 
 // Module 15902 (RegisterAgeGate)
+import react_native from "react-native" /* 17 */;
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 587 */;
+import Constants from "Constants" /* 1085 */;
 import RegistrationStepsUtils from "RegistrationStepsUtils" /* 15866 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
 import ConsentStore from "ConsentStore" /* 6084 */;
-import hooks_mod from "module_4461" /* 4461 */;
+import RegistrationUIStore from "RegistrationUIStore" /* 15867 */;
+import RegistrationConstants from "RegistrationConstants" /* 15868 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles from "createStyles" /* 4890 */;
+import module_4461_mod from "module_4461" /* 4461 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, navigation;
 
-require = fn;
-const View = fn(17).View;
-const RegistrationUIStore = fn(15867);
-({ updateRegistrationOptions: closure_7, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
-const RegistrationConstants = fn(15868);
-({ RegisterTransitionSteps: closure_9, RegistrationTransitionActionTypes: c10 } = RegistrationConstants);
-const AuthStates = fn(1085).AuthStates;
-const jsxProd = fn(21);
-({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { inputGroup: { marginTop: 24, marginBottom: 24 }, flexGrow: { flexGrow: 1 }, button: { flexGrow: 0, marginBottom: 4, marginTop: 16, flexDirection: "column" }, datePickerButton: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }, page: { flex: 1 } };
-let closure_15 = createStyles.createStyles(obj2);
-let hooks = hooks_mod;
-hooks = hooks.utc();
-let closure_17 = hooks.toDate();
-hooks = hooks.clone();
-let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-const maximumDate = hooks.endOf("year").toDate();
-hooks = hooks.clone();
-const endOfResult = hooks.endOf("year");
-const minimumDate = hooks.subtract(100, "years").toDate();
-const ReactCompilerGating = fn(558);
-const subtractResult = hooks.subtract(100, "years");
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/auth/native/components/RegisterAgeGate.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = navigation(first1[13]).c(78);
-  closure_15();
+let c10;
+let c9;
+let closure_12;
+let closure_14;
+let map1;
+let metroImportAll;
+let metroImportDefault;
+let obj2;
+const View = react_native.View;
+({ updateRegistrationOptions: metroImportDefault, useRegistrationUIStore: metroImportAll } = RegistrationUIStore);
+({ RegisterTransitionSteps: c9, RegistrationTransitionActionTypes: c10 } = RegistrationConstants);
+const AuthStates = Constants.AuthStates;
+({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = Fragment);
+let obj = { inputGroup: { marginTop: 24, marginBottom: 24 }, flexGrow: { flexGrow: 1 }, button: { flexGrow: 0, marginBottom: 4, marginTop: 16, flexDirection: "column" }, datePickerButton: obj2, page: { flex: 1 } };
+obj2 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let closure_15 = createStyles.createStyles(obj);
+let module_4461 = module_4461_mod;
+module_4461 = module_4461.utc();
+let closure_17 = module_4461.toDate();
+module_4461 = module_4461.clone();
+const endOfResult = module_4461.endOf("year");
+const maximumDate = endOfResult.toDate();
+module_4461 = module_4461.clone();
+const subtractResult = module_4461.subtract(100, "years");
+const minimumDate = subtractResult.toDate();
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let authenticationConsentRequired;
+  let closure_3;
+  let closure_5;
+  let first;
+  let first1;
+  let first2;
+  let tmp14;
+  let tmp27;
+  let tmp28;
+  let tmp32;
+  let tmp34;
+  let tmp38;
+  let tmp39;
   let obj = navigation(first1[13]);
-  const tmp = navigation;
-  const theme = navigation(first1[14]).useThemeContext().theme;
+  const cResult = obj.c(78);
+  let tmp4 = closure_15();
   let obj2 = navigation(first1[14]);
-  navigation = navigation(first1[15]).useNavigation();
+  const theme = obj2.useThemeContext().theme;
+  let obj3 = navigation(first1[15]);
+  const tmp = navigation;
+  navigation = obj3.useNavigation();
   const context = first2.useContext(navigation(first1[16]).TrackRegistrationContext);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const birthday = closure_8.getState().registrationOptions.birthday;
     let tmp10 = null;
     if (null != birthday) {
       tmp10 = null;
-      if (context(tmp2[11])(birthday)) {
+      if (context(first1[11])(birthday)) {
         tmp10 = birthday;
       }
     }
     cResult[0] = tmp10;
-    let first = tmp10;
+    first = tmp10;
   } else {
     first = cResult[0];
   }
@@ -64,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const consent = closure_8.getState().registrationOptions.consent;
     cResult[1] = null != consent && consent;
-    let tmp14 = tmp17;
+    tmp14 = tmp17;
   } else {
     tmp14 = cResult[1];
   }
@@ -77,141 +99,141 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     cResult[2] = first1;
     cResult[3] = toDateResult;
   }
-  let obj3 = navigation(first1[15]);
   [r10081, ConsentStore] = first2.useState(false);
+  _slicedToArray(first2.useState(false), 2);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     class J {
-      constructor(arg0) {
-        return arg0.submitting;
+      constructor(submitting) {
+        return submitting.submitting;
       }
     }
     cResult[4] = J;
   } else {
     class J {
-      constructor(arg0) {
-        return arg0.submitting;
+      constructor(submitting) {
+        return submitting.submitting;
       }
     }
   }
   closure_8(J);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     class J {
-      constructor(arg0) {
-        return arg0.submitting;
+      constructor(submitting) {
+        return submitting.submitting;
       }
     }
     const items = [ConsentStore];
     class H {
       constructor() {
-        return closure_6.getAuthenticationConsentRequired();
+        return ConsentStore.getAuthenticationConsentRequired();
       }
     }
     cResult[5] = items;
     cResult[6] = H;
-    let tmp28 = H;
-    const tmp27 = items;
+    tmp28 = H;
+    tmp27 = items;
   } else {
     class J {
-      constructor(arg0) {
-        return arg0.submitting;
+      constructor(submitting) {
+        return submitting.submitting;
       }
     }
     tmp28 = cResult[6];
   }
-  const tmp12Result2 = _slicedToArray(first2.useState(false), 2);
-  const stateFromStores = tmp(first1[17]).useStateFromStores(tmp27, tmp28);
+  const tmpResult = tmp(first1[17]);
+  const stateFromStores = tmpResult.useStateFromStores(tmp27, tmp28);
   if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
     class Z {
-      constructor(arg0) {
-        return arg0.errors;
+      constructor(errors) {
+        return errors.errors;
       }
     }
     cResult[7] = Z;
     class H {
       constructor() {
-        return closure_6.getAuthenticationConsentRequired();
+        return ConsentStore.getAuthenticationConsentRequired();
       }
     }
   } else {
     class Z {
-      constructor(arg0) {
-        return arg0.errors;
+      constructor(errors) {
+        return errors.errors;
       }
     }
   }
   const tmp25Result = closure_8(tmp30);
   if (cResult[8] !== tmp25Result) {
     class Z {
-      constructor(arg0) {
-        return arg0.errors;
+      constructor(errors) {
+        return errors.errors;
       }
     }
-    const tmp33 = context(tmp2[18])("consent", tmp25Result);
+    const tmp33 = context(first1[18])("consent", tmp25Result);
     class H {
       constructor() {
-        return closure_6.getAuthenticationConsentRequired();
+        return ConsentStore.getAuthenticationConsentRequired();
       }
     }
     cResult[8] = tmp25Result;
     cResult[9] = tmp33;
-    const tmp32 = tmp33;
+    tmp32 = tmp33;
   } else {
     class Z {
-      constructor(arg0) {
-        return arg0.errors;
+      constructor(errors) {
+        return errors.errors;
       }
     }
   }
   if (tmp32 == null) {
     class Z {
-      constructor(arg0) {
-        return arg0.errors;
+      constructor(errors) {
+        return errors.errors;
       }
     }
   }
   if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
     class Z {
-      constructor(arg0) {
-        return arg0.errors;
+      constructor(errors) {
+        return errors.errors;
       }
     }
     const previousRegistrationTransitionStep = obj7.getPreviousRegistrationTransitionStep(AuthStates.AGE_GATE);
     class H {
       constructor() {
-        return closure_6.getAuthenticationConsentRequired();
+        return ConsentStore.getAuthenticationConsentRequired();
       }
     }
     cResult[10] = previousRegistrationTransitionStep;
-    const tmp34 = previousRegistrationTransitionStep;
+    tmp34 = previousRegistrationTransitionStep;
   } else {
     class Z {
-      constructor(arg0) {
-        return arg0.errors;
+      constructor(errors) {
+        return errors.errors;
       }
     }
   }
   context(first1[20])(tmp34);
   if (cResult[11] !== context) {
     class Z {
-      constructor(arg0) {
-        return arg0.errors;
+      constructor(errors) {
+        return errors.errors;
       }
     }
     const items1 = [context];
     class H {
       constructor() {
-        return closure_6.getAuthenticationConsentRequired();
+        return ConsentStore.getAuthenticationConsentRequired();
       }
     }
     cResult[11] = context;
     cResult[12] = items1;
     cResult[13] = tmp40;
-    let tmp39 = tmp40;
-    const tmp38 = items1;
+    tmp39 = tmp40;
+    tmp38 = items1;
   } else {
     class Z {
-      constructor(arg0) {
-        return arg0.errors;
+      constructor(errors) {
+        return errors.errors;
       }
     }
     tmp39 = cResult[13];
@@ -219,43 +241,41 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const effect = obj4.useEffect(tmp39, tmp38);
   if (cResult[14] !== first1) {
     class Z {
-      constructor(arg0) {
-        return arg0.errors;
+      constructor(errors) {
+        return errors.errors;
       }
     }
     cResult[14] = first1;
     class H {
       constructor() {
-        return closure_6.getAuthenticationConsentRequired();
+        return ConsentStore.getAuthenticationConsentRequired();
       }
     }
     cResult[15] = tmp43;
   } else {
     class Z {
-      constructor(arg0) {
-        return arg0.errors;
+      constructor(errors) {
+        return errors.errors;
       }
     }
   }
   if (cResult[16] === first1) {
     class Z {
-      constructor(arg0) {
-        return arg0.errors;
+      constructor(errors) {
+        return errors.errors;
       }
     }
   }
   function it() {
+    let tmp4;
     _modDef38(null != first1, "birthday was not null");
-    const obj = { birthday: first1, consent: null };
-    let tmp4 = first2;
-    if (!first2) {
-      tmp4 = !stateFromStores;
-    }
-    obj.consent = tmp4;
-    React5(obj);
-    context({ step: constants.AGE_GATE, actionType: constants2.SUBMITTED });
-    const result = RegistrationStepsUtils.handleRegistrationSubmit(AuthStates.AGE_GATE, navigation, context);
+    const obj = { birthday: first1, consent: tmp4 };
+    tmp4 = first2 || !stateFromStores;
+    metroImportDefault(obj);
     const obj2 = { step: constants.AGE_GATE, actionType: constants2.SUBMITTED };
+    context(obj2);
+    const obj3 = RegistrationStepsUtils;
+    const result = obj3.handleRegistrationSubmit(AuthStates.AGE_GATE, navigation, context);
   }
   cResult[16] = first1;
   cResult[17] = first2;
@@ -263,23 +283,54 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[19] = navigation;
   cResult[20] = context;
   cResult[21] = it;
-  const tmpResult = tmp(first1[17]);
 }) : (() => {
+  let Button;
+  let Input;
+  let InputButton;
+  let authenticationConsentRequired;
+  let birthday;
+  let closure_0;
+  let closure_3;
+  let first1;
+  let intl;
+  let intl2;
+  let intl4;
+  let intl5;
+  let intl6;
+  let intl7;
+  let items3;
+  let obj12;
+  let obj6;
+  let obj8;
+  let obj9;
+  let str3;
+  let stringResult;
+  let tmp14;
+  let tmp18Result4;
+  let tmp34;
   const tmp = closure_15();
   let obj = require("native");
-  _require = require("useNavigation").useNavigation();
+  const theme = obj.useThemeContext().theme;
+  let obj2 = require("useNavigation");
+  _require = obj2.useNavigation();
+  let obj3 = first1;
   const context = first1.useContext(require("Auth").TrackRegistrationContext);
+  const useState = first1.useState;
   birthday = closure_8.getState().registrationOptions.birthday;
   let tmp5 = null;
   if (null != birthday) {
     tmp5 = null;
-    if (context(tmp3[11])(birthday)) {
+    if (context(birthday[11])(birthday)) {
       tmp5 = birthday;
     }
   }
-  [birthday, _slicedToArray] = first1.useState(tmp5);
+  [birthday, _slicedToArray] = useState(tmp5);
+  const useState2 = obj3.useState;
   const consent = closure_8.getState().registrationOptions.consent;
-  [first1, closure_5] = first1.useState(null != consent && consent);
+  const tmp9 = null != consent && consent;
+  const tmp7Result = _slicedToArray(useState2(tmp9), 2);
+  first1 = tmp7Result[0];
+  let closure_5 = tmp7Result[1];
   const items = [birthday];
   const memo = obj3.useMemo(() => {
     let toDateResult;
@@ -288,38 +339,36 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     return toDateResult;
   }, items);
-  let obj2 = require("useNavigation");
-  const tmp9 = null != consent && consent;
-  [tmp14, ConsentStore] = first1.useState(false);
-  const tmp7Result2 = _slicedToArray(first1.useState(false), 2);
-  const obj4Result = closure_8((submitting) => submitting.submitting);
+  [tmp14, ConsentStore] = _slicedToArray(obj3.useState(false), 2);
+  _slicedToArray(obj3.useState(false), 2);
   const items1 = [ConsentStore];
-  const stateFromStores = require("initialize").useStateFromStores(items1, () => authenticationConsentRequired.getAuthenticationConsentRequired());
+  const obj4Result = closure_8((submitting) => submitting.submitting);
+  const tmp2Result = require("get initialized");
+  const stateFromStores = tmp2Result.useStateFromStores(items1, () => ConsentStore.getAuthenticationConsentRequired());
   const obj4Result2 = closure_8((errors) => errors.errors);
   let message = context(tmp3[18])("consent", obj4Result2);
   if (message == null) {
     message = obj4Result2.message;
   }
-  const tmp2Result = require("initialize");
   const tmp18Result = context(birthday[20]);
-  tmp18Result(require("RegistrationStepsUtils").getPreviousRegistrationTransitionStep(AuthStates.AGE_GATE));
+  const tmp2Result3 = require("RegistrationStepsUtils");
+  tmp18Result(tmp2Result3.getPreviousRegistrationTransitionStep(AuthStates.AGE_GATE));
   const items2 = [context];
   const effect = obj3.useEffect(() => {
-    context({ step: constants.AGE_GATE, actionType: constants2.VIEWED });
+    const obj = { step: constants.AGE_GATE, actionType: constants2.VIEWED };
+    context(obj);
   }, items2);
   const tmp22 = context(birthday[11])(birthday);
-  const obj5 = { style: tmp.page, children: null };
-  const obj6 = { headerText: null, contentStyle: null, children: null };
+  const obj5 = { style: tmp.page, children: closure_13(tmp18Result4, obj6) };
+  obj6 = { headerText: intl.string(require("intl").t.NgL2GX), contentStyle: tmp.flexGrow, children: items3 };
   const tmp23 = !tmp22;
-  const tmp2Result3 = require("RegistrationStepsUtils");
-  const intl = tmp2(tmp3[22]).intl;
-  obj6.headerText = intl.string(require("util").t.NgL2GX);
-  obj6.contentStyle = tmp.flexGrow;
-  const obj7 = { style: tmp.inputGroup, children: null };
-  const obj8 = { label: null, errorMessage: null, children: null };
-  const intl2 = tmp2(tmp3[22]).intl;
-  obj8.label = intl2.string(require("util").t.xNpFJ6);
-  let stringResult = null;
+  tmp18Result4 = context(birthday[28]);
+  intl = tmp2(tmp3[22]).intl;
+  const obj7 = { style: tmp.inputGroup, children: closure_12(Input, obj8) };
+  obj8 = { label: intl2.string(require("intl").t.xNpFJ6), errorMessage: stringResult, children: closure_12(InputButton, obj9) };
+  Input = tmp2(tmp3[24]).Input;
+  intl2 = tmp2(tmp3[22]).intl;
+  stringResult = null;
   if (!tmp22) {
     stringResult = null;
     if (null != birthday) {
@@ -327,58 +376,52 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       stringResult = intl3.string(tmp2(tmp3[22]).t.udnqh6);
     }
   }
-  obj8.errorMessage = stringResult;
   let formatResult;
+  InputButton = tmp2(tmp3[23]).InputButton;
   if (birthday != null) {
     formatResult = birthday.format("L");
   }
-  const obj9 = {
+  obj9 = {
     value: formatResult,
-    text: hooks.format("L"),
+    text: module_4461.format("L"),
     onPress() {
-      return authenticationConsentRequired(true);
+      return ConsentStore(true);
     },
-    accessibilityLabel: null,
-    accessibilityHint: null
+    accessibilityLabel: intl4.string(require("intl").t.xNpFJ6),
+    accessibilityHint: intl5.string(require("intl").t["hZaF/O"])
   };
-  const intl4 = tmp2(tmp3[22]).intl;
-  obj9.accessibilityLabel = intl4.string(require("util").t.xNpFJ6);
-  const intl5 = tmp2(tmp3[22]).intl;
-  obj9.accessibilityHint = intl5.string(require("util").t["hZaF/O"]);
-  obj8.children = closure_12(require("native").InputButton, obj9);
-  obj7.children = closure_12(require("Input").Input, obj8);
-  const items3 = [closure_12(closure_5, obj7), , , ];
-  const obj10 = { consentRequired: null, consent: null, onToggleConsent: null };
-  const tmp18Result4 = context(birthday[28]);
-  obj10.consentRequired = Boolean(stateFromStores);
-  obj10.consent = first1;
-  obj10.onToggleConsent = function onToggleConsent() {
-    return closure_5((arg0) => !arg0);
+  intl4 = tmp2(tmp3[22]).intl;
+  intl5 = tmp2(tmp3[22]).intl;
+  items3 = [closure_12(closure_5, obj7), , , ];
+  const obj10 = {
+    consentRequired: Boolean(stateFromStores),
+    consent: first1,
+    onToggleConsent() {
+      return closure_5((arg0) => !arg0);
+    }
   };
-  items3[1] = closure_12(context(birthday[25]), obj10);
-  const obj11 = { style: tmp.button, children: null };
-  const obj12 = {
+  const tmp18Result5 = context(birthday[25]);
+  items3[1] = closure_12(tmp18Result5, obj10);
+  const obj11 = { style: tmp.button, children: closure_12(Button, obj12) };
+  obj12 = {
     size: "lg",
     loading: obj4Result,
     disabled: tmp23,
     onPress() {
+      let tmp4;
       _modDef38(null != birthday, "birthday was not null");
-      const obj = { birthday, consent: null };
-      let tmp4 = first1;
-      if (!first1) {
-        tmp4 = !stateFromStores;
-      }
-      obj.consent = tmp4;
-      React5(obj);
-      context({ step: constants.AGE_GATE, actionType: constants2.SUBMITTED });
-      const result = RegistrationStepsUtils.handleRegistrationSubmit(AuthStates.AGE_GATE, closure_0, context);
+      const obj = { birthday, consent: tmp4 };
+      tmp4 = first1 || !stateFromStores;
+      metroImportDefault(obj);
       const obj2 = { step: constants.AGE_GATE, actionType: constants2.SUBMITTED };
+      context(obj2);
+      const obj3 = RegistrationStepsUtils;
+      const result = obj3.handleRegistrationSubmit(AuthStates.AGE_GATE, closure_0, context);
     },
-    text: null
+    text: intl6.string(require("intl").t["825cFy"])
   };
-  const intl6 = tmp2(tmp3[22]).intl;
-  obj12.text = intl6.string(require("util").t["825cFy"]);
-  obj11.children = closure_12(require("components/Button/Button").Button, obj12);
+  Button = tmp2(tmp3[26]).Button;
+  intl6 = tmp2(tmp3[22]).intl;
   items3[2] = closure_12(closure_5, obj11);
   let tmp26Result = null;
   if (null != message) {
@@ -389,39 +432,43 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   }
   items3[3] = tmp26Result;
-  obj6.children = items3;
-  obj5.children = closure_13(tmp18Result4, obj6);
   const items4 = [closure_12(closure_5, obj5), ];
-  const obj14 = { modal: true, open: tmp14, title: null, mode: "date", theme: null, date: null, maximumDate: null, minimumDate: null, onConfirm: null, onDateChange: null, onCancel: null, buttonColor: null };
-  const tmp18Result5 = context(birthday[25]);
-  const intl7 = tmp2(tmp3[22]).intl;
-  obj14.title = intl7.string(require("util").t.xNpFJ6);
+  const obj14 = {
+    modal: true,
+    open: tmp14,
+    title: intl7.string(require("intl").t.xNpFJ6),
+    mode: "date",
+    theme: str3,
+    date: tmp34,
+    maximumDate,
+    minimumDate,
+    onConfirm(arg0) {
+      ConsentStore(false);
+      closure_3(module_4461(arg0));
+    },
+    onDateChange(date1) {
+      closure_3(module_4461(date1));
+    },
+    onCancel() {
+      return ConsentStore(false);
+    },
+    buttonColor: tmp.datePickerButton.color
+  };
   const tmp18Result6 = context(birthday[30]);
-  let str3 = "dark";
-  if (tmp2Result4.isThemeLight(obj.useThemeContext().theme)) {
+  intl7 = tmp2(tmp3[22]).intl;
+  str3 = "dark";
+  const tmp2Result4 = require("shared");
+  if (tmp2Result4.isThemeLight(theme)) {
     str3 = "light";
   }
-  obj14.theme = str3;
-  let tmp34 = memo;
+  tmp34 = memo;
   if (memo == null) {
     tmp34 = closure_17;
   }
-  const obj15 = { children: null };
-  obj14.date = tmp34;
-  obj14.maximumDate = maximumDate;
-  obj14.minimumDate = minimumDate;
-  obj14.onConfirm = function onConfirm(arg0) {
-    authenticationConsentRequired(false);
-    closure_3(hooks(arg0));
-  };
-  obj14.onDateChange = function onDateChange(date1) {
-    closure_3(hooks(date1));
-  };
-  obj14.onCancel = function onCancel() {
-    return authenticationConsentRequired(false);
-  };
-  obj14.buttonColor = tmp.datePickerButton.color;
+  const obj15 = { children: items4 };
   items4[1] = closure_12(tmp18Result6, obj14);
-  obj15.children = items4;
   return closure_13(closure_14, obj15);
 });
+let result = size.fileFinishedImporting("modules/auth/native/components/RegisterAgeGate.tsx");
+
+export default tmp5;

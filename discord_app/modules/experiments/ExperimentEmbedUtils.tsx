@@ -37,9 +37,10 @@ export const getExperimentTreatmentFromEmbedURL = function getExperimentTreatmen
   return parsed;
 };
 export const getURLForExperiment = function getURLForExperiment(id, arg1) {
+  let combined;
   if (null != arg1) {
     const _HermesInternal2 = HermesInternal;
-    let combined = "dev://experiment/" + id + "/" + arg1;
+    combined = "dev://experiment/" + id + "/" + arg1;
   } else {
     const _HermesInternal = HermesInternal;
     combined = "dev://experiment/" + id;
@@ -51,7 +52,8 @@ export const getExperimentServerAssignmentLabel = function getExperimentServerAs
     if (null != system) {
       const system2 = system.system;
       if (ExperimentManager.ExperimentSystem.LEGACY === system2) {
-        return ExperimentUtilsDefault.getExperimentBucketName(experimentServerAssignment.bucket);
+        const obj = ExperimentUtilsDefault;
+        return obj.getExperimentBucketName(experimentServerAssignment.bucket);
       } else if (ExperimentManager.ExperimentSystem.APEX === system2) {
         const _HermesInternal = HermesInternal;
         return "Variant " + experimentServerAssignment.variantId;
@@ -64,6 +66,7 @@ export const getExperimentServerAssignmentLabel = function getExperimentServerAs
   return null;
 };
 export const getExperimentBuckets = function getExperimentBuckets(experiment) {
-  const experimentVariantsForDevTools = ExperimentDevToolsUtils.getExperimentVariantsForDevTools(experiment);
+  const obj = ExperimentDevToolsUtils;
+  const experimentVariantsForDevTools = obj.getExperimentVariantsForDevTools(experiment);
   return experimentVariantsForDevTools.map((id) => ({ id: id.id, label: id.label, value: id.id }));
 };

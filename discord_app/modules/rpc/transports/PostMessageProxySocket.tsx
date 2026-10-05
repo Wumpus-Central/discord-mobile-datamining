@@ -8,74 +8,60 @@ import BaseSocket from "BaseSocket" /* 9036 */;
 import size from "module_2" /* 2 */;
 
 const RPCCloseCodes = Constants.RPCCloseCodes;
-class WindowProxySocket extends tmp2 {
-  constructor(arg0) {
-    ({ postMessageToRPCClient, encoding, logger } = global);
-    ({ postClose, onSendingToRPCClient } = global);
-    tmp3 = new WindowProxySocket(global.source, global.version, encoding, tmp2, tmp, new.target, new.target, postMessageToRPCClient, logger);
-    items = ["etf", "json"];
+class WindowProxySocket extends BaseSocket {
+  constructor(source) {
+    let encoding;
+    let logger;
+    let onSendingToRPCClient;
+    let postClose;
+    let postMessageToRPCClient;
+    ({ postMessageToRPCClient, encoding, logger } = source);
+    ({ postClose, onSendingToRPCClient } = source);
+    const tmp3 = new WindowProxySocket(source.source, source.version, encoding, tmp2, tmp, new.target, this, postMessageToRPCClient, logger);
+    const items = ["etf", "json"];
     if (-1 === items.indexOf(encoding)) {
-      tmp13 = closure_0;
-      tmp14 = closure_1;
-      obj1 = { closeCode: null };
-      tmp16 = RPCCloseCodes;
-      obj1.closeCode = RPCCloseCodes.INVALID_ENCODING;
-      tmp17 = globalThis;
-      _HermesInternal = HermesInternal;
-      str3 = "Invalid Encoding: ";
-      tmp15 = closure_0(closure_1[2]);
-      tmp18 = new.target;
-      tmp19 = new.target;
-      tmp20 = obj1;
-      tmp151 = new tmp15(obj1, "Invalid Encoding: " + encoding);
-      tmp22 = tmp151;
-      throw tmp151;
+      const _HermesInternal = HermesInternal;
+      const self3 = this;
+      const self4 = this;
+      const obj2 = { closeCode: RPCCloseCodes.INVALID_ENCODING };
+      const tmp13 = RPCErrorDefault;
+      const tmp132 = new tmp13(obj2, "Invalid Encoding: " + encoding);
+      throw tmp132;
+    } else if ("etf" === encoding) {
+      const self = this;
+      const self2 = this;
+      const obj = { closeCode: RPCCloseCodes.INVALID_ENCODING };
+      const tmp9 = new RPCErrorDefault(obj, "Erlpack cannot be used on this client");
+      throw tmp9;
     } else {
-      str = "etf";
-      if ("etf" === encoding) {
-        tmp5 = closure_0;
-        tmp6 = closure_1;
-        obj = { closeCode: null };
-        tmp7 = RPCCloseCodes;
-        obj.closeCode = RPCCloseCodes.INVALID_ENCODING;
-        tmp8 = new.target;
-        str2 = "Erlpack cannot be used on this client";
-        tmp9 = new.target;
-        tmp10 = obj;
-        tmp11 = new closure_0(closure_1[2])(obj, "Erlpack cannot be used on this client");
-        tmp12 = tmp11;
-        throw tmp11;
-      } else {
-        tmp4 = tmp3;
-        tmp3.postMessageToRPCClient = postMessageToRPCClient;
-        tmp3.logger = logger;
-        tmp3.postClose = postClose;
-        tmp3.onSendingToRPCClient = onSendingToRPCClient;
-        flag = false;
-        tmp3.closed = false;
-        return tmp3;
-      }
+      tmp3.postMessageToRPCClient = postMessageToRPCClient;
+      tmp3.logger = logger;
+      tmp3.postClose = postClose;
+      tmp3.onSendingToRPCClient = onSendingToRPCClient;
+      tmp3.closed = false;
+      return tmp3;
     }
+  }
+  send(arg0) {
+    const self = this;
+    const onSendingToRPCClient = this.onSendingToRPCClient;
+    if (onSendingToRPCClient != null) {
+      onSendingToRPCClient(arg0, self.id);
+    }
+    const postMessageToRPCClient = self.postMessageToRPCClient;
+    const items = [RPCOpcodesDefault.FRAME, arg0];
+    const result = postMessageToRPCClient(items, self.source.origin);
+  }
+  close(code, message) {
+    const self = this;
+    if (!this.closed) {
+      const obj = { code, message };
+      self.postClose(self.source, obj, self.postMessageToRPCClient);
+    }
+    self.closed = true;
   }
 }
 const prototype = WindowProxySocket.prototype;
-prototype["send"] = function send(arg0) {
-  const self = this;
-  const onSendingToRPCClient = this.onSendingToRPCClient;
-  if (onSendingToRPCClient != null) {
-    onSendingToRPCClient(arg0, self.id);
-  }
-  const items = [RPCOpcodesDefault.FRAME, arg0];
-  const result = self.postMessageToRPCClient(items, self.source.origin);
-};
-prototype["close"] = function close(code, message) {
-  const self = this;
-  if (!this.closed) {
-    const obj = { code, message };
-    self.postClose(self.source, obj, self.postMessageToRPCClient);
-  }
-  self.closed = true;
-};
 let result = size.fileFinishedImporting("modules/rpc/transports/PostMessageProxySocket.tsx");
 
 export default WindowProxySocket;

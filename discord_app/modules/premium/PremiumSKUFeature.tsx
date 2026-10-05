@@ -10,6 +10,7 @@ export default function PremiumSKUFeature(INCREASED_FILE_UPLOAD_SIZE, getUserMax
   obj2.name = INCREASED_FILE_UPLOAD_SIZE;
   obj2.description = description;
   obj2.getFeatureValue = getUserMaxFileSize;
-  Object.defineProperty(obj2, "getFeatureValue", { value: getUserMaxFileSize, configurable: false, writable: false });
+  const obj = { value: getUserMaxFileSize, configurable: false, writable: false };
+  Object.defineProperty(obj2, "getFeatureValue", obj);
   return obj2;
-}.prototype;
+};

@@ -2,7 +2,8 @@
 
 // Module 2100 (deserializeChannels)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import size from "module_2" /* 2 */;
 
 function deserializeChannels(arg0) {
   const iter = arg0[Symbol.iterator]();
@@ -22,18 +23,17 @@ function deserializeChannels(arg0) {
     continue;
   }
 }
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/cache/deserializeChannels.tsx");
 
 export default deserializeChannels;
 export const deserializeChannelEntries = function deserializeChannelEntries(guildChannels) {
+  const tmp = guildChannels[Symbol.iterator]();
   while (tmp !== undefined) {
     let tmp4 = _slicedToArray(tmp2, 2);
     let first = tmp4[0];
     let tmp7 = deserializeChannels(tmp4[1]);
     continue;
   }
-  tmp = guildChannels[Symbol.iterator]();
 };
 export const deserializeChannel = function deserializeChannel(permissionOverwrites_) {
   permissionOverwrites_ = permissionOverwrites_.permissionOverwrites_;

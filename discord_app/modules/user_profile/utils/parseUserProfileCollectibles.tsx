@@ -7,6 +7,9 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/user_profile/utils/parseUserProfileCollectibles.tsx");
 
 export default function parseUserProfileCollectibles(collectibles) {
+  let date;
+  let date2;
+  let floorResult;
   let tmp;
   let tmp2;
   let collectibles1;
@@ -22,48 +25,42 @@ export default function parseUserProfileCollectibles(collectibles) {
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp7 = nextResult;
-      let obj = { skuId: null, type: null, expiresAt: null };
+      let obj = { skuId: null, type: null, expiresAt: date };
       ({ sku_id: obj.skuId, type: obj.type } = nextResult);
-      let date;
+      date = undefined;
+      let push = items.push;
       if (null != nextResult.expires_at) {
         let _Date = Date;
-        let tmp10 = new.target;
-        let tmp11 = new.target;
+        let self = this;
+        let self2 = this;
         date = new Date(tmp7.expires_at);
       }
-      obj.expiresAt = date;
-      let arr = items.push(obj);
+      let arr = push(obj);
       if (tmp7.type === CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT) {
-        let obj2 = { skuId: null, expiresAt: null };
-        obj2.skuId = tmp7.sku_id;
-        let rounded;
+        let obj2 = { skuId: tmp7.sku_id, expiresAt: floorResult };
+        floorResult = undefined;
         if (null != tmp7.expires_at) {
           let _Math = Math;
           let _Date3 = Date;
-          let tmp23 = new.target;
-          let tmp24 = new.target;
+          let self5 = this;
+          let self6 = this;
           let date1 = new Date(tmp7.expires_at);
-          rounded = Math.floor(date1.getTime() / 1000);
+          floorResult = floor(date1.getTime() / 1000);
         }
-        obj2.expiresAt = rounded;
         tmp = obj2;
       } else if (tmp7.type === CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME) {
-        let obj3 = { skuId: null, type: null, expiresAt: null };
-        obj3.skuId = tmp7.sku_id;
-        obj3.type = CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME;
-        let date2;
+        let obj3 = { skuId: tmp7.sku_id, type: CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME, expiresAt: date2 };
+        date2 = undefined;
         if (null != tmp7.expires_at) {
           let _Date2 = Date;
-          let tmp17 = new.target;
-          let tmp18 = new.target;
+          let self3 = this;
+          let self4 = this;
           date2 = new Date(tmp7.expires_at);
         }
-        obj3.expiresAt = date2;
         tmp2 = obj3;
       }
       continue;
     }
-    const obj4 = { collectibles: items, profileEffect: tmp, profileFrame: tmp2 };
-    return obj4;
+    return { collectibles: items, profileEffect: tmp, profileFrame: tmp2 };
   }
 };

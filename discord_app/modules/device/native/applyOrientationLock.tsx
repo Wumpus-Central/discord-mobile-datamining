@@ -8,21 +8,22 @@ import size from "module_2" /* 2 */;
 let result = size.fileFinishedImporting("modules/device/native/applyOrientationLock.tsx");
 
 export const applyOrientationLock = function applyOrientationLock(PORTRAIT) {
-  if (flag === undefined) {
-    flag = true;
-  }
   if (isOrientationLockSupportedDefault()) {
-    DeviceOrientation.lockOrientation(PORTRAIT, flag);
+    const obj = DeviceOrientation;
+    obj.lockOrientation(PORTRAIT, flag);
   }
 };
 export const releaseOrientationLock = function releaseOrientationLock(unlockAfterRotatingToPreviousLock) {
+  unlockAfterRotatingToPreviousLock = unlockAfterRotatingToPreviousLock.unlockAfterRotatingToPreviousLock;
   if (isOrientationLockSupportedDefault()) {
-    const obj2 = { unlockAfterRotatingToPreviousLock: unlockAfterRotatingToPreviousLock.unlockAfterRotatingToPreviousLock };
-    DeviceOrientation.unlockOrientation(obj2);
+    const obj2 = { unlockAfterRotatingToPreviousLock };
+    const obj = DeviceOrientation;
+    obj.unlockOrientation(obj2);
   }
 };
 export const restoreDefaultOrientationLock = function restoreDefaultOrientationLock() {
   if (isOrientationLockSupportedDefault()) {
-    const result = DeviceOrientation.restoreDefaultOrientation();
+    const obj = DeviceOrientation;
+    const result = obj.restoreDefaultOrientation();
   }
 };

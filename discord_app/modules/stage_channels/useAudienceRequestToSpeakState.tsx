@@ -2,15 +2,17 @@
 
 // Module 5037 (useAudienceRequestToSpeakState)
 import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, dependencyMap, tmp3, tmp4, tmp5, tmp8;
 
-const require = fn;
-const RequestToSpeakStates = { NONE: 0, [0]: "NONE", REQUESTED_TO_SPEAK: 1, [1]: "REQUESTED_TO_SPEAK", REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK: 2, [2]: "REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK", ON_STAGE: 3, [3]: "ON_STAGE" };
-const ReactCompilerGating = fn(558);
+let obj = { NONE: 0, [0]: "NONE", REQUESTED_TO_SPEAK: 1, [1]: "REQUESTED_TO_SPEAK", REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK: 2, [2]: "REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK", ON_STAGE: 3, [3]: "ON_STAGE" };
 function getAudienceRequestToSpeakState(voiceStateForChannel) {
+  let REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
   if (null == voiceStateForChannel) {
-    let REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK = obj.NONE;
+    REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK = obj.NONE;
   } else {
     if (voiceStateForChannel.suppress) {
       if (null != voiceStateForChannel.requestToSpeakTimestamp) {
@@ -23,48 +25,55 @@ function getAudienceRequestToSpeakState(voiceStateForChannel) {
       }
     }
     if (!voiceStateForChannel.suppress) {
+      let NONE;
       if (null == voiceStateForChannel.requestToSpeakTimestamp) {
-        let NONE = obj.ON_STAGE;
+        NONE = obj.ON_STAGE;
       }
+      REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK = NONE;
     }
     NONE = obj.NONE;
   }
   return REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 }
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/stage_channels/useAudienceRequestToSpeakState.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+  let closure_0;
+  let closure_1;
+  let first;
   _require = arg0;
   dependencyMap = arg1;
-  const cResult = require("c").c(5);
+  const tmp = _require;
+  const obj = require("react");
+  const cResult = obj.c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [VoiceStateStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === arg1) {
+    let tmp6;
+    let tmp7;
     if (cResult[2] === arg0) {
-      let tmp6 = cResult[3];
-      let tmp7 = cResult[4];
+      tmp6 = cResult[3];
+      tmp7 = cResult[4];
     }
-    return tmp(504).useStateFromStores(first, tmp6, tmp7);
+    const tmpResult = tmp(504);
+    return tmpResult.useStateFromStores(first, tmp6, tmp7);
   }
   class E {
     constructor() {
       if (null != closure_0) {
         if (null != closure_1) {
-          tmp9 = closure_2;
-          voiceStateForChannel = closure_2.getVoiceStateForChannel(tmp8, tmp);
+          tmp8 = closure_2;
+          voiceStateForChannel = closure_2.getVoiceStateForChannel(tmp7, tmp);
           if (null == voiceStateForChannel) {
-            tmp7 = closure_3;
+            tmp6 = closure_3;
             NONE = closure_3.NONE;
           } else {
             if (voiceStateForChannel.suppress) {
               if (null != voiceStateForChannel.requestToSpeakTimestamp) {
-                tmp6 = closure_3;
+                tmp5 = closure_3;
                 NONE = closure_3.REQUESTED_TO_SPEAK;
               }
             }
@@ -79,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
                 tmp3 = closure_3;
                 NONE2 = closure_3.ON_STAGE;
               }
-              tmp5 = NONE2;
+              NONE = NONE2;
             }
             tmp4 = closure_3;
             NONE2 = closure_3.NONE;
@@ -98,19 +107,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   cResult[4] = items1;
   tmp7 = items1;
   tmp6 = E;
-  const obj = require("c");
-  tmp = _require;
 }) : ((arg0, arg1) => {
+  let closure_0;
+  let closure_1;
   _require = arg0;
   dependencyMap = arg1;
+  const obj = require("get initialized");
   const items = [VoiceStateStore];
   const items1 = [arg0, arg1];
-  return require("initialize").useStateFromStores(items, () => {
+  return obj.useStateFromStores(items, () => {
     if (null != closure_0) {
+      let NONE;
       if (null != closure_1) {
-        const voiceStateForChannel = VoiceStateStore.getVoiceStateForChannel(tmp8, tmp);
+        const voiceStateForChannel = VoiceStateStore.getVoiceStateForChannel(tmp7, tmp);
         if (null == voiceStateForChannel) {
-          let NONE = obj.NONE;
+          NONE = obj.NONE;
         } else {
           if (voiceStateForChannel.suppress) {
             if (null != voiceStateForChannel.requestToSpeakTimestamp) {
@@ -123,9 +134,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
             }
           }
           if (!voiceStateForChannel.suppress) {
+            let NONE2;
             if (null == voiceStateForChannel.requestToSpeakTimestamp) {
-              let NONE2 = obj.ON_STAGE;
+              NONE2 = obj.ON_STAGE;
             }
+            NONE = NONE2;
           }
           NONE2 = obj.NONE;
         }
@@ -135,5 +148,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     NONE = obj.NONE;
   }, items1);
 });
-export { RequestToSpeakStates };
+const result = size.fileFinishedImporting("modules/stage_channels/useAudienceRequestToSpeakState.tsx");
+
+export default tmp2;
+export const RequestToSpeakStates = obj;
 export { getAudienceRequestToSpeakState };

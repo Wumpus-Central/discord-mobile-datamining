@@ -1,8 +1,10 @@
 // === Module 11515: AppealIngestionConfirmSubmission ===
 
 // Module 11515 (AppealIngestionConfirmSubmission)
-import initialize from "initialize" /* 504 */;
-import util from "util" /* 1126 */;
+import react_native from "react-native" /* 17 */;
+import get_initialized from "get initialized" /* 504 */;
+import Constants from "Constants" /* 1085 */;
+import intl5 from "intl" /* 1126 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import SafetyHubUtils from "SafetyHubUtils" /* 8092 */;
 import useSafetyHubClassifications from "useSafetyHubClassifications" /* 11492 */;
@@ -10,35 +12,44 @@ import AppealIngestionModal from "AppealIngestionModal" /* 11498 */;
 import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 11501 */;
 import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 11511 */;
 import AppealIngestionBreadcrumbsDefault from "AppealIngestionBreadcrumbs" /* 11516 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import SafetyHubStore from "SafetyHubStore" /* 8106 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles from "createStyles" /* 4890 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-require = fn;
-const View = fn(17).View;
-const EMPTY_STRING_SNOWFLAKE_ID = fn(1085).EMPTY_STRING_SNOWFLAKE_ID;
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4890);
+let metroImportDefault;
+let metroRequire;
+const View = react_native.View;
+const EMPTY_STRING_SNOWFLAKE_ID = Constants.EMPTY_STRING_SNOWFLAKE_ID;
+({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
 let closure_8 = createStyles.createStyles({ container: { flex: 1, paddingHorizontal: 16 }, detailsAction: { marginBottom: 16 } });
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionConfirmSubmission.tsx");
 
 export default function AppealIngestionConfirmSubmission(isDsaEligible) {
+  let items4;
+  let items5;
+  let paths;
+  let stringResult2;
   isDsaEligible = isDsaEligible.isDsaEligible;
   const tmp = closure_8();
+  let obj = get_initialized;
   const items = [SafetyHubStore];
-  let stateFromStores = initialize.useStateFromStores(items, () => SafetyHubStore.getAppealClassificationId());
+  let stateFromStores = obj.useStateFromStores(items, () => SafetyHubStore.getAppealClassificationId());
+  const useSafetyHubClassification = useSafetyHubClassifications.useSafetyHubClassification;
+  useSafetyHubClassifications;
   if (stateFromStores == null) {
     stateFromStores = EMPTY_STRING_SNOWFLAKE_ID;
   }
-  const safetyHubClassification = useSafetyHubClassifications.useSafetyHubClassification(stateFromStores);
+  const safetyHubClassification = useSafetyHubClassification(stateFromStores);
   const items1 = [SafetyHubStore];
-  const stateFromStores1 = initialize.useStateFromStores(items1, () => SafetyHubStore.getAppealSignal());
-  const tmp2Result = initialize;
+  const tmp2Result = get_initialized;
+  const stateFromStores1 = tmp2Result.useStateFromStores(items1, () => SafetyHubStore.getAppealSignal());
   const items2 = [SafetyHubStore];
-  const stateFromStores2 = initialize.useStateFromStores(items2, () => SafetyHubStore.getFreeTextAppealReason());
+  const tmp2Result3 = get_initialized;
+  const stateFromStores2 = tmp2Result3.useStateFromStores(items2, () => SafetyHubStore.getFreeTextAppealReason());
   const classification = safetyHubClassification.classification;
   let flagged_content;
   if (classification != null) {
@@ -47,62 +58,64 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
   if (flagged_content == null) {
     flagged_content = [];
   }
-  const intl = util.intl;
-  const tmp2Result3 = initialize;
-  const intl2 = util.intl;
-  const stringResult = intl.string(util.t["C5q+pW"]);
-  const items3 = [timestampProducer(AppealIngestionModal.AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(util.t["G2g/g5"]) }), ];
-  const obj3 = { style: tmp.container, children: null };
-  const obj4 = { reasons: null };
-  const stringResult1 = intl2.string(util.t["G2g/g5"]);
-  const tmp14 = AppealIngestionBreadcrumbsDefault;
-  const items4 = [SafetyHubUtils.getAppealSignalDisplayText(stateFromStores1), stateFromStores2];
-  obj4.reasons = items4.filter((item) => item.length > 0);
-  const items5 = [timestampProducer(tmp14, obj4), , , ];
-  if (!isDsaEligible) {
-    items5[1] = isDsaEligible;
-    let tmp11Result = flagged_content.length > 0;
-    if (tmp11Result) {
-      const obj5 = { flaggedContent: flagged_content };
-      tmp11Result = timestampProducer(AppealIngestionActivitySummaryDefault, obj5);
-    }
-    const obj6 = { children: null };
-    items5[2] = tmp11Result;
-    const obj7 = { classification: safetyHubClassification.classification };
-    items5[3] = timestampProducer(AppealIngestionPolicySummaryDefault, obj7);
-    obj3.children = items5;
-    items3[1] = React5(View, obj3);
-    obj6.children = items3;
-    return React5(AppealIngestionModal.AppealIngestionModalScreen, obj6);
-  } else {
-    const obj8 = {
+  const intl = intl5.intl;
+  const stringResult = intl.string(intl5.t["C5q+pW"]);
+  const intl2 = intl5.intl;
+  const stringResult1 = intl2.string(intl5.t["G2g/g5"]);
+  const AppealIngestionModalScreen = AppealIngestionModal.AppealIngestionModalScreen;
+  const items3 = [metroRequire(AppealIngestionModal.AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), ];
+  let obj2 = { style: tmp.container, children: items5 };
+  let obj3 = { reasons: items4.filter((item) => item.length > 0) };
+  items4 = [, ];
+  const tmp15 = AppealIngestionBreadcrumbsDefault;
+  const tmp2Result4 = SafetyHubUtils;
+  items4[0] = tmp2Result4.getAppealSignalDisplayText(stateFromStores1);
+  items4[1] = stateFromStores2;
+  items5 = [metroRequire(tmp15, obj3), , , ];
+  if (isDsaEligible) {
+    const obj4 = {
       variant: "heading-md/normal",
       color: "text-link",
       style: tmp.detailsAction,
       onPress() {
-          return require("ActionSheetActionCreators").openLazy(require("asyncRequireImpl")(paths[14], paths.paths), "AppealIngestionFreeTextAppealReasonActionSheet", {
+          let obj = require("ActionSheetActionCreators");
+          let obj2 = {
             onSave(userInput) {
-              closure_1_1(584).dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput });
-              const obj = closure_1_1(584);
+              const obj = closure_1_1(paths[16]);
               const obj2 = { type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput };
-              closure_1_1(4854).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+              obj.dispatch(obj2);
+              const obj3 = closure_1_1(paths[13]);
+              obj3.hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
             },
             onClose() {
-              return closure_1_1(4854).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+              const obj = closure_1_1(paths[13]);
+              return obj.hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
             }
-          });
+          };
+          return obj.openLazy(require("asyncRequire")(paths[14], paths.paths), "AppealIngestionFreeTextAppealReasonActionSheet", obj2);
         },
-      children: null
+      children: stringResult2
     };
+    const Text = Text_Text.Text;
     if (stateFromStores2.length > 0) {
-      const intl4 = util.intl;
-      let stringResult2 = intl4.string(util.t.tnE3bZ);
+      const intl4 = intl5.intl;
+      stringResult2 = intl4.string(intl5.t.tnE3bZ);
     } else {
-      const intl3 = util.intl;
-      stringResult2 = intl3.string(util.t.uoQFIp);
+      const intl3 = intl5.intl;
+      stringResult2 = intl3.string(intl5.t.uoQFIp);
     }
-    obj8.children = stringResult2;
-    timestampProducer(Text_Text.Text, obj8);
+    isDsaEligible = metroRequire(Text, obj4);
   }
-  const tmp2Result4 = SafetyHubUtils;
+  items5[1] = isDsaEligible;
+  let tmp12Result = flagged_content.length > 0;
+  if (tmp12Result) {
+    const obj5 = { flaggedContent: flagged_content };
+    tmp12Result = metroRequire(AppealIngestionActivitySummaryDefault, obj5);
+  }
+  const obj6 = { children: items3 };
+  items5[2] = tmp12Result;
+  const obj7 = { classification: safetyHubClassification.classification };
+  items5[3] = metroRequire(AppealIngestionPolicySummaryDefault, obj7);
+  items3[1] = metroImportDefault(View, obj2);
+  return metroImportDefault(AppealIngestionModalScreen, obj6);
 };

@@ -2,21 +2,36 @@
 
 // Module 8810 (ThreadCreationHooks)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
+import MessageConstants from "MessageConstants" /* 4883 */;
 import ThreadHooks from "ThreadHooks" /* 6772 */;
 import sanitizeThreadNameDefault from "sanitizeThreadName" /* 6777 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 6965 */;
+import DraftStore from "DraftStore" /* 7031 */;
 import MessageParserDefault from "MessageParser" /* 7166 */;
-import _slicedToArray from "module_32" /* 32 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import noop from "module_19" /* 19 */;
+import SlowmodeStore from "SlowmodeStore" /* 7171 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import react from "react" /* 19 */;
 import ForumActivePostStore from "ForumActivePostStore" /* 6808 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import MessageStore from "MessageStore" /* 5110 */;
+import ThreadConstants from "ThreadConstants" /* 1125 */;
+import Constants from "Constants" /* 1085 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
+let andDeleteMostRecentUserCreatedThreadId, c3, c4, getChannel, guildId, parentChannel;
 
-require = fn;
+let closure_12;
+let closure_14;
+let closure_15;
+let closure_16;
+let closure_17;
+let closure_18;
+let closure_19;
+let closure_20;
+let map1;
 function getIsPrivate(threadSettingsDraft, privateThreadMode) {
   let tmp = privateThreadMode === obj.PrivateOnly;
   if (!tmp) {
@@ -77,15 +92,18 @@ function getDefaultThreadName(stateFromStores, parentMessageId) {
     return text1;
   } else {
     let str3;
+    const unparse = MessageParserDefault.unparse;
+    MessageParserDefault;
     if (contentMessage != null) {
       str3 = contentMessage.content;
     }
     if (str3 == null) {
       str3 = "";
     }
-    const str4 = MessageParserDefault.unparse(str3, stateFromStores.id, true);
+    const str4 = unparse(str3, stateFromStores.id, true);
     const tmp17Result = sanitizeThreadNameDefault;
-    let str7 = sanitizeThreadNameDefault(str4.split("\n")[0], true).replace(/^[ #-]+/, "");
+    const str6 = tmp17Result(str4.split("\n")[0], true);
+    let str7 = str6.replace(/^[ #-]+/, "");
     const items = [];
     const match = str7.match(/(?:\s|[!@#$%^&*()_\-+={}[\]:";'<>?,./])+/);
     while (null != match) {
@@ -123,19 +141,19 @@ function getDefaultThreadName(stateFromStores, parentMessageId) {
   }
 }
 function buildMessageActivity(activity) {
+  let id;
   let session_id = activity.activity.session_id;
   if (null == session_id) {
     session_id = AuthenticationStore.getSessionId();
   }
   let tmp2 = null;
   if (null != session_id) {
-    obj = { type: activity.type, session_id, target_user_id: activity.targetUserId, party_id: null };
     const party = activity.activity.party;
-    let id;
+    obj = { type: activity.type, session_id, target_user_id: activity.targetUserId, party_id: id };
+    id = undefined;
     if (party != null) {
       id = party.id;
     }
-    obj.party_id = id;
     tmp2 = obj;
   }
   return tmp2;
@@ -149,361 +167,450 @@ function sendMessage(id, arg1, items, arg3, fn) {
     }
   }
   if (null != items) {
+    let sendStickersResult;
     if (items.length > 0) {
-      const obj4 = MessageActionCreatorsDefault;
-      id = id.id;
-      const obj3 = { location: MessageSendLocation.THREAD_CREATION };
-      let sendStickersResult = obj4.sendStickers(id, items, MessageParserDefault.parse(id, arg1), obj3);
+      const id2 = id.id;
+      const sendStickers = MessageActionCreatorsDefault.sendStickers;
+      const obj2 = { location: MessageSendLocation.THREAD_CREATION };
+      const obj3 = MessageParserDefault;
+      sendStickersResult = sendStickers(id2, items, obj3.parse(id, arg1), obj2);
     }
     return sendStickersResult;
   }
-  obj = MessageActionCreatorsDefault;
-  sendStickersResult = obj.sendMessage(id.id, MessageParserDefault.parse(id, arg1), undefined, { location: MessageSendLocation.THREAD_CREATION });
-  const obj6 = { location: MessageSendLocation.THREAD_CREATION };
+  id = id.id;
+  sendMessage = MessageActionCreatorsDefault.sendMessage;
+  MessageActionCreatorsDefault;
+  obj = MessageParserDefault;
+  const obj4 = { location: MessageSendLocation.THREAD_CREATION };
+  sendStickersResult = sendMessage(id, obj.parse(id, arg1), undefined, obj4);
 }
 function createThread_() {
-  const self = this;
-  const apply = closure_28.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 }
-let closure_28 = async function _createThread_(arg0, arg1, arg2, arg3) {
-  let forumLikeChannel = arg0;
-  closure_1 = arg1;
-  closure_2 = arg2;
-  closure_3 = arg3;
-  c10 = 0;
-  c11 = 0;
-  c9 = 0;
-  return (async (arg0, value, arg2, arg3) => {
-    closure_7 = tmp3;
-    closure_6 = tmp6;
-    closure_134_0 = forumLikeChannel;
-    closure_134_1 = closure_1;
-    closure_134_2 = closure_2;
-    closure_134_4 = forumLikeChannel.isForumLikeChannel();
-    await body();
-    if (1 === tmp9) {
-      c9 = 0;
-      closure_134_8 = closure_8;
-      body = closure_134_8.body;
-      let code;
-      if (body != null) {
-        code = body.code;
-      }
-      if (code === closure_135_14.TOO_MANY_THREADS) {
-        const intl9 = closure_135_0(closure_135_2[17]).intl;
-        const string2 = intl9.string;
-        const t2 = closure_135_0(closure_135_2[17]).t;
-        if (closure_134_4) {
-          let string2Result = string2(t2.vWNFkx);
+let obj = function _createThread_() {
+  obj = _asyncToGenerator(async (arg0, arg1, file, arg3) => {
+    let closure_8;
+    let closure_0 = arg0;
+    let closure_1 = arg1;
+    let closure_3 = arg3;
+    let c10 = 0;
+    let c11 = 0;
+    let c9 = 0;
+    return (async function(arg0, value, arg2, arg3) {
+      let code5;
+      let intl;
+      let intl2;
+      let intl3;
+      let intl4;
+      let intl6;
+      let intl7;
+      let intl8;
+      let reason;
+      let string3Result;
+      if (c11 === 2) {
+        c11 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          return { value, done: true };
         } else {
-          string2Result = string2(t2["1KEdvB"]);
+          return { value: "IconComponent", done: null };
         }
-        let obj7 = { title: string2Result, body: null };
-        const intl10 = closure_135_0(closure_135_2[17]).intl;
-        const string3 = intl10.string;
-        let KGaiEK = closure_135_0(closure_135_2[17]).t;
-        if (closure_134_4) {
-          KGaiEK = KGaiEK.KGaiEK;
-          let string3Result = string3(KGaiEK);
-        } else {
-          string3Result = string3(KGaiEK.P0wT5S);
-        }
-        obj7.body = string3Result;
-        obj7 = closure_135_1(closure_135_2[30]).show(obj7);
-        closure_135_1(closure_135_2[30]);
       } else {
-        const body7 = closure_134_8.body;
-        let code1;
-        if (body7 != null) {
-          code1 = body7.code;
-        }
-        if (code1 === closure_135_14.TOO_MANY_ANNOUNCEMENT_THREADS) {
-          const obj8 = { title: null, body: null };
-          const intl7 = closure_135_0(closure_135_2[17]).intl;
-          obj8.title = intl7.string(closure_135_0(closure_135_2[17]).t["1KEdvB"]);
-          const intl8 = closure_135_0(closure_135_2[17]).intl;
-          obj8.body = intl8.string(closure_135_0(closure_135_2[17]).t.jDMxz2);
-          closure_135_1(closure_135_2[30]).show(obj8);
-          closure_135_1(closure_135_2[30]);
-        } else {
-          const body8 = closure_134_8.body;
-          let code2;
-          if (body8 != null) {
-            code2 = body8.code;
-          }
-          if (code2 === closure_135_14.SLOWMODE_RATE_LIMITED) {
-            const retry_after = closure_134_8.body.retry_after;
-            c4 = retry_after;
-            if (retry_after == null) {
-              c4 = 0;
-            }
-            closure_134_5 = c4;
-            if (closure_134_5 > 0) {
-              closure_135_1(closure_135_2[31]).dispatch({ type: "SLOWMODE_SET_COOLDOWN", channelId: closure_134_0.id, slowmodeType: closure_135_11.CreateThread, cooldownMs: closure_134_5 * closure_135_1(closure_135_2[33]).Millis.SECOND });
-              closure_135_1(closure_135_2[31]);
-              { type: "SLOWMODE_SET_COOLDOWN", channelId: closure_134_0.id, slowmodeType: closure_135_11.CreateThread, cooldownMs: closure_134_5 * closure_135_1(closure_135_2[33]).Millis.SECOND };
-            }
-          } else if (429 === closure_134_8.status) {
-            const intl5 = closure_135_0(closure_135_2[17]).intl;
-            const string = intl5.string;
-            const t = closure_135_0(closure_135_2[17]).t;
-            if (closure_134_4) {
-              let stringResult = string(t.vWNFkx);
+        try {
+          let body;
+          let closure_4;
+          c11 = 2;
+          if (0 === c10) {
+            if (arg0 === 1) {
+              c11 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c11 = 3;
+              return { value, done: true };
             } else {
-              stringResult = string(t["1KEdvB"]);
+              body = undefined;
+              analyticsLocations = undefined;
+              self = undefined;
+              value = undefined;
+              closure_4 = closure_0.isForumLikeChannel();
+              c9 = 1;
+              c10 = 3;
+              c11 = 1;
+              const obj4 = { value: body(), done: false };
+              return obj4;
             }
-            const obj13 = { title: stringResult, body: null };
-            const intl6 = closure_135_0(closure_135_2[17]).intl;
-            obj13.body = intl6.string(closure_135_0(closure_135_2[17]).t.Whhv4w);
-            closure_135_1(closure_135_2[30]).show(obj13);
-            closure_135_1(closure_135_2[30]);
           } else {
-            const body9 = closure_134_8.body;
-            let code3;
-            if (body9 != null) {
-              code3 = body9.code;
-            }
-            if (closure_135_12.has(code3)) {
-              throw tmp47;
-            } else {
-              const body2 = tmp47.body;
-              let code4;
-              if (body2 != null) {
-                code4 = body2.code;
+            if (1 === c10) {
+              c9 = 0;
+              body = tmp166.body;
+              self = body == null;
+              let code;
+              if (!self) {
+                code = body.code;
               }
-              if (code4 === closure_135_14.INVALID_FORM_BODY) {
-                const body3 = closure_134_8.body;
-                let name;
-                if (body3 != null) {
-                  const errors = body3.errors;
-                  if (errors != null) {
-                    name = errors.name;
+              if (code === closure_135_14.TOO_MANY_THREADS) {
+                let string2Result;
+                self = closure_135_1(closure_135_2[30]);
+                const show4 = self.show;
+                const intl9 = closure_135_0(closure_135_2[17]).intl;
+                const string2 = intl9.string;
+                const t2 = closure_135_0(closure_135_2[17]).t;
+                if (closure_4) {
+                  string2Result = string2(t2.vWNFkx);
+                } else {
+                  string2Result = string2(t2["1KEdvB"]);
+                }
+                const obj5 = { title: string2Result, body: string3Result };
+                const intl10 = closure_135_0(closure_135_2[17]).intl;
+                const string3 = intl10.string;
+                const t3 = closure_135_0(closure_135_2[17]).t;
+                if (closure_4) {
+                  string3Result = string3(t3.KGaiEK);
+                } else {
+                  string3Result = string3(t3.P0wT5S);
+                }
+                show4(obj5);
+              } else {
+                const body6 = tmp166.body;
+                self = body6 == null;
+                let code1;
+                if (!self) {
+                  code1 = body6.code;
+                }
+                if (code1 === closure_135_14.TOO_MANY_ANNOUNCEMENT_THREADS) {
+                  self = closure_135_1(closure_135_2[30]);
+                  const show3 = self.show;
+                  const obj6 = { title: intl7.string(closure_135_0(closure_135_2[17]).t["1KEdvB"]), body: intl8.string(closure_135_0(closure_135_2[17]).t.jDMxz2) };
+                  intl7 = closure_135_0(closure_135_2[17]).intl;
+                  intl8 = closure_135_0(closure_135_2[17]).intl;
+                  show3(obj6);
+                } else {
+                  const body7 = tmp166.body;
+                  self = body7 == null;
+                  let code2;
+                  if (!self) {
+                    code2 = body7.code;
+                  }
+                  if (code2 === closure_135_14.SLOWMODE_RATE_LIMITED) {
+                    const retry_after = tmp166.body.retry_after;
+                    c4 = retry_after;
+                    if (retry_after == null) {
+                      c4 = 0;
+                    }
+                    analyticsLocations = c4;
+                    if (analyticsLocations > 0) {
+                      self = closure_135_1(closure_135_2[31]);
+                      const dispatch = self.dispatch;
+                      const obj7 = { type: "SLOWMODE_SET_COOLDOWN", channelId: closure_0.id, slowmodeType: closure_135_11.CreateThread, cooldownMs: analyticsLocations * closure_135_1(closure_135_2[33]).Millis.SECOND };
+                      dispatch(obj7);
+                    }
+                  } else if (429 === tmp166.status) {
+                    let stringResult;
+                    self = closure_135_1(closure_135_2[30]);
+                    const show2 = self.show;
+                    const intl5 = closure_135_0(closure_135_2[17]).intl;
+                    const string = intl5.string;
+                    const t = closure_135_0(closure_135_2[17]).t;
+                    if (closure_4) {
+                      stringResult = string(t.vWNFkx);
+                    } else {
+                      stringResult = string(t["1KEdvB"]);
+                    }
+                    const obj8 = { title: stringResult, body: intl6.string(closure_135_0(closure_135_2[17]).t.Whhv4w) };
+                    intl6 = closure_135_0(closure_135_2[17]).intl;
+                    show2(obj8);
+                  } else {
+                    self = closure_135_12;
+                    const body8 = tmp166.body;
+                    let code3;
+                    const has = closure_135_12.has;
+                    if (body8 != null) {
+                      code3 = body8.code;
+                    }
+                    if (has(code3)) {
+                      throw tmp166;
+                    } else {
+                      const body2 = tmp166.body;
+                      self = undefined;
+                      if (body2 != null) {
+                        self = body2.code;
+                      }
+                      if (self === closure_135_14.INVALID_FORM_BODY) {
+                        self = tmp166.body;
+                        let name;
+                        if (self != null) {
+                          self = self.errors;
+                          if (self != null) {
+                            name = self.name;
+                          }
+                        }
+                        if (null != name) {
+                          throw tmp166;
+                        }
+                      }
+                      const body3 = tmp166.body;
+                      self = undefined;
+                      if (body3 != null) {
+                        self = body3.code;
+                      }
+                      if (self === closure_135_14.UNKNOWN_SESSION) {
+                        throw tmp166;
+                      } else {
+                        self = closure_135_13.has;
+                        const body9 = tmp166.body;
+                        let code4;
+                        if (body9 != null) {
+                          code4 = body9.code;
+                        }
+                        if (self(code4)) {
+                          if (null != file) {
+                            const body10 = tmp166.body;
+                            self = undefined;
+                            if (body10 != null) {
+                              self = body10.code;
+                            }
+                            if (self === closure_135_14.EXPLICIT_CONTENT) {
+                              const obj9 = closure_135_0(closure_135_2[34]);
+                              self = obj9.createNonce();
+                              const tmp82 = null != tmp166.body.attachments && tmp166.body.attachments.length > 0;
+                              if (tmp82) {
+                                const obj11 = { type: "MESSAGE_EXPLICIT_CONTENT_FP_CREATE", messageId: self, channelId: closure_0.id, attachments: tmp166.body.attachments };
+                                const obj10 = closure_135_1(closure_135_2[31]);
+                                obj10.dispatch(obj11);
+                                closure_135_1(closure_135_2[35])(closure_0.id, self);
+                              }
+                            } else {
+                              self = closure_135_0(closure_135_2[26]).handleUploadMessageAttachmentsErrors;
+                              const obj12 = { file, guildId: closure_0.getGuildId(), analyticsLocations, code: code5, reason };
+                              closure_135_0(closure_135_2[26]);
+                              analyticsLocations = closure_1;
+                              if (closure_1 == null) {
+                                analyticsLocations = [];
+                              }
+                              const body4 = tmp166.body;
+                              code5 = undefined;
+                              if (body4 != null) {
+                                code5 = body4.code;
+                              }
+                              const body5 = tmp166.body;
+                              reason = undefined;
+                              if (body5 != null) {
+                                reason = body5.reason;
+                              }
+                              self(obj12);
+                            }
+                          }
+                          self = this;
+                          const self2 = this;
+                          c11 = 3;
+                          const obj13 = {
+                            value: new Promise((arg0, fn) => {
+                                                  closure_0 = arg0;
+                                                  closure_1 = fn;
+                                                  if (null == closure_1_8.body) {
+                                                    const tmp = fn();
+                                                  }
+                                                  const result = self.addConditionalChangeListener(() => {
+                                                    andDeleteMostRecentUserCreatedThreadId = andDeleteMostRecentUserCreatedThreadId.getAndDeleteMostRecentUserCreatedThreadId();
+                                                    if (null != andDeleteMostRecentUserCreatedThreadId) {
+                                                      const channel2 = channel.getChannel(andDeleteMostRecentUserCreatedThreadId);
+                                                      obj = closure_1(closure_1_2[31]);
+                                                      obj.wait(() => {
+                                                        if (null == closure_0) {
+                                                          closure_1();
+                                                        } else {
+                                                          closure_0(tmp);
+                                                        }
+                                                      });
+                                                      return false;
+                                                    }
+                                                  });
+                                                }),
+                            done: true
+                          };
+                          return obj13;
+                        } else {
+                          self = closure_135_1(closure_135_2[30]).show;
+                          const obj14 = { title: intl3.string(closure_135_0(closure_135_2[17]).t.j2d6Km), body: intl4.string(closure_135_0(closure_135_2[17]).t.fEptJP) };
+                          closure_135_1(closure_135_2[30]);
+                          intl3 = closure_135_0(closure_135_2[17]).intl;
+                          intl4 = closure_135_0(closure_135_2[17]).intl;
+                          self(obj14);
+                        }
+                      }
+                    }
                   }
                 }
-                if (null != name) {
-                  throw closure_134_8;
-                }
               }
-              const body4 = closure_134_8.body;
-              let code5;
-              if (body4 != null) {
-                code5 = body4.code;
-              }
-              if (code5 === closure_135_14.UNKNOWN_SESSION) {
-                throw closure_134_8;
+            } else if (2 === c10) {
+              if (arg0 === 1) {
+                c11 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c11 = 3;
+                return { value, done: true };
               } else {
-                const body10 = closure_134_8.body;
-                let code6;
-                if (body10 != null) {
-                  code6 = body10.code;
+                c9 = 2;
+                self = closure_135_1(closure_135_2[29]);
+                c10 = 5;
+                c11 = 1;
+                const obj16 = { channelId: value.id, limit: closure_135_19 };
+                const obj17 = { value: self.fetchMessages(obj16), done: false };
+                return obj17;
+              }
+            } else if (3 === c10) {
+              if (arg0 === 1) {
+                c11 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c9 = 0;
+                c11 = 3;
+                return { value, done: true };
+              } else {
+                body = value;
+                if (null == value.body) {
+                  self = closure_135_1(closure_135_2[30]);
+                  const show = self.show;
+                  const obj19 = { title: intl.string(closure_135_0(closure_135_2[17]).t.j2d6Km), body: intl2.string(closure_135_0(closure_135_2[17]).t.fEptJP) };
+                  intl = closure_135_0(closure_135_2[17]).intl;
+                  intl2 = closure_135_0(closure_135_2[17]).intl;
+                  show(obj19);
+                } else {
+                  let XkUoBb;
+                  const obj21 = { type: "SLOWMODE_RESET_COOLDOWN", slowmodeType: closure_135_11.CreateThread, channelId: closure_0.id };
+                  const obj20 = closure_135_1(closure_135_2[31]);
+                  obj20.dispatch(obj21);
+                  const obj23 = { type: "THREAD_CREATE_LOCAL", channelId: body.body.id };
+                  const obj22 = closure_135_1(closure_135_2[31]);
+                  obj22.dispatch(obj23);
+                  self = closure_135_0(closure_135_2[32]).AccessibilityAnnouncer;
+                  const announce = self.announce;
+                  const intl11 = closure_135_0(closure_135_2[17]).intl;
+                  const string4 = intl11.string;
+                  const t4 = closure_135_0(closure_135_2[17]).t;
+                  if (closure_4) {
+                    XkUoBb = t4.zDAG2N;
+                  } else {
+                    XkUoBb = t4.XkUoBb;
+                  }
+                  announce(string4(XkUoBb));
                 }
-                if (closure_135_13.has(code6)) {
-                  if (null == closure_134_2) {
-                    new Promise((arg0, fn) => {
+                c9 = 0;
+              }
+            } else {
+              if (4 === c10) {
+                c9 = 0;
+              } else if (arg0 === 1) {
+                c11 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c9 = 0;
+                c11 = 3;
+                obj = { value, done: true };
+                return obj;
+              } else {
+                c9 = 0;
+              }
+              c11 = 3;
+              return { value, done: true };
+            }
+            self = Promise;
+            const self3 = this;
+            const self4 = this;
+            c10 = 2;
+            c11 = 1;
+            const obj25 = {
+              value: new Promise((arg0, fn) => {
                       closure_0 = arg0;
-                      closure_1 = fn;
-                      if (null == closure_1_8.body) {
+                      if (null == body.body) {
                         fn();
                       }
-                      const result = andDeleteMostRecentUserCreatedThreadId.addConditionalChangeListener(() => {
-                        andDeleteMostRecentUserCreatedThreadId = andDeleteMostRecentUserCreatedThreadId.getAndDeleteMostRecentUserCreatedThreadId();
-                        if (null != andDeleteMostRecentUserCreatedThreadId) {
-                          const channel2 = channel.getChannel(andDeleteMostRecentUserCreatedThreadId);
-                          closure_1(closure_1_2[31]).wait(() => {
-                            if (null == closure_0) {
-                              closure_1();
-                            } else {
-                              closure_0(tmp);
-                            }
+                      const result = closure_1_8.addConditionalChangeListener(() => {
+                        const channel = closure_2_8.getChannel(body.body.id);
+                        if (null != channel) {
+                          obj = closure_2_1(file[31]);
+                          obj.wait(() => {
+                            channel(channel);
                           });
                           return false;
                         }
                       });
-                    });
-                    c11 = 3;
-                  } else {
-                    const body11 = closure_134_8.body;
-                    let code7;
-                    if (body11 != null) {
-                      code7 = body11.code;
-                    }
-                    if (code7 !== closure_135_14.EXPLICIT_CONTENT) {
-                      const obj15 = { file: closure_134_2, guildId: closure_134_0.getGuildId(), analyticsLocations: null, code: null, reason: null };
-                      analyticsLocations = closure_134_1;
-                      if (closure_134_1 == null) {
-                        analyticsLocations = [];
-                      }
-                      obj15.analyticsLocations = analyticsLocations;
-                      const body5 = closure_134_8.body;
-                      let code8;
-                      if (body5 != null) {
-                        code8 = body5.code;
-                      }
-                      obj15.code = code8;
-                      const body6 = closure_134_8.body;
-                      let reason;
-                      if (body6 != null) {
-                        reason = body6.reason;
-                      }
-                      obj15.reason = reason;
-                      let result = closure_135_0(closure_135_2[26]).handleUploadMessageAttachmentsErrors(obj15);
-                      closure_135_0(closure_135_2[26]);
-                    }
-                  }
-                  closure_134_6 = closure_135_0(closure_135_2[34]).createNonce();
-                  let tmp90 = null != closure_134_8.body.attachments;
-                  if (tmp90) {
-                    tmp90 = closure_134_8.body.attachments.length > 0;
-                  }
-                  if (tmp90) {
-                    closure_135_1(closure_135_2[31]).dispatch({ type: "MESSAGE_EXPLICIT_CONTENT_FP_CREATE", messageId: closure_134_6, channelId: closure_134_0.id, attachments: closure_134_8.body.attachments });
-                    closure_135_1(closure_135_2[35])(closure_134_0.id, closure_134_6);
-                    closure_135_1(closure_135_2[31]);
-                  }
-                  closure_135_0(closure_135_2[34]);
-                } else {
-                  const obj19 = { title: null, body: null };
-                  const intl3 = closure_135_0(closure_135_2[17]).intl;
-                  obj19.title = intl3.string(closure_135_0(closure_135_2[17]).t.j2d6Km);
-                  const intl4 = closure_135_0(closure_135_2[17]).intl;
-                  obj19.body = intl4.string(closure_135_0(closure_135_2[17]).t.fEptJP);
-                  closure_135_1(closure_135_2[30]).show(obj19);
-                  closure_135_1(closure_135_2[30]);
-                }
-              }
-            }
+                    }),
+              done: false
+            };
+            return obj25;
           }
-        }
-        new Promise((arg0, fn) => {
-          closure_0 = arg0;
-          if (null == body.body) {
-            fn();
-          }
-          const result = closure_1_8.addConditionalChangeListener(() => {
-            const channel = closure_2_8.getChannel(body.body.id);
-            if (null != channel) {
-              closure_2_1(closure_2_2[31]).wait(() => {
-                channel(channel);
-              });
-              return false;
-            }
-          });
-        });
-        c10 = 2;
-        c11 = 1;
-      }
-    } else if (2 === tmp9) {
-      if (arg0 === 1) {
-        c11 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c11 = 3;
-        return { value, done: true };
-      } else {
-        closure_134_7 = value;
-        c9 = 2;
-        c10 = 5;
-        c11 = 1;
-        return { value: closure_135_1(closure_135_2[29]).fetchMessages({ channelId: closure_134_7.id, limit: closure_135_19 }), done: false };
-      }
-    } else if (3 === tmp9) {
-      if (arg0 === 1) {
-        c11 = 3;
-        throw value;
-      } else if (arg0 !== 2) {
-        closure_134_3 = value;
-        if (null == value.body) {
-          const obj24 = { title: null, body: null };
-          const intl = closure_135_0(closure_135_2[17]).intl;
-          obj24.title = intl.string(closure_135_0(closure_135_2[17]).t.j2d6Km);
-          const intl2 = closure_135_0(closure_135_2[17]).intl;
-          obj24.body = intl2.string(closure_135_0(closure_135_2[17]).t.fEptJP);
-          closure_135_1(closure_135_2[30]).show(obj24);
-          closure_135_1(closure_135_2[30]);
-        } else {
-          closure_135_1(closure_135_2[31]).dispatch({ type: "SLOWMODE_RESET_COOLDOWN", slowmodeType: closure_135_11.CreateThread, channelId: closure_134_0.id });
-          closure_135_1(closure_135_2[31]);
-          closure_135_1(closure_135_2[31]).dispatch({ type: "THREAD_CREATE_LOCAL", channelId: closure_134_3.body.id });
-          const AccessibilityAnnouncer = closure_135_0(closure_135_2[32]).AccessibilityAnnouncer;
-          const intl11 = closure_135_0(closure_135_2[17]).intl;
-          const t3 = closure_135_0(closure_135_2[17]).t;
-          if (closure_134_4) {
-            let XkUoBb = t3.zDAG2N;
+        } catch (tmp166) {
+          if (0 === c9) {
+            c11 = 3;
+            throw tmp166;
+          } else if (1 === tmp168) {
+            c10 = 1;
           } else {
-            XkUoBb = t3.XkUoBb;
+            c10 = 4;
           }
-          AccessibilityAnnouncer.announce(intl11.string(XkUoBb));
-          closure_135_1(closure_135_2[31]);
         }
-        c9 = 0;
       }
-    } else {
-      if (4 === tmp9) {
-        c9 = 0;
-        c11 = 3;
-      } else if (arg0 === 1) {
-        c11 = 3;
-        throw value;
-      } else if (arg0 !== 2) {
-        c9 = 0;
-      }
-      c9 = 0;
-      c11 = 3;
-      return { value, done: true };
-    }
-    return value;
-  })();
+    })();
+  });
+  return obj(...arguments);
 };
-const DraftType = fn(7031).DraftType;
-const SlowmodeType = fn(7171).SlowmodeType;
-const ThreadConstants = fn(1125);
+const DraftType = DraftStore.DraftType;
+const SlowmodeType = SlowmodeStore.SlowmodeType;
 ({ FORUM_POST_CREATION_AUTOMOD_ERRORS: closure_12, FORUM_POST_CREATION_UPLOAD_ERRORS: map1 } = ThreadConstants);
-const Constants = fn(1085);
 ({ AbortCodes: closure_14, AnalyticEvents: closure_15, ChannelTypes: closure_16, Endpoints: closure_17, LoggingInviteTypes: closure_18, MAX_MESSAGES_PER_CHANNEL: closure_19, MessageFlags: closure_20 } = Constants);
-const MessageSendLocation = fn(4883).MessageSendLocation;
-const PrivateThreadMode = { Disabled: 1, [1]: "Disabled", Enabled: 2, [2]: "Enabled", PrivateOnly: 3, [3]: "PrivateOnly" };
-fn(558);
-let ReactCompilerGating = fn(558);
+const MessageSendLocation = MessageConstants.MessageSendLocation;
+obj = { Disabled: 1, [1]: "Disabled", Enabled: 2, [2]: "Enabled", PrivateOnly: 3, [3]: "PrivateOnly" };
+let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let Disabled;
   obj = ThreadHooks;
   const canStartPublicThread = obj.useCanStartPublicThread(arg0);
-  if (!obj2.useCanStartPrivateThread(arg0)) {
-    return tmp2.Disabled;
+  const obj2 = ThreadHooks;
+  if (obj2.useCanStartPrivateThread(arg0)) {
+    Disabled = canStartPublicThread ? tmp2.Enabled : tmp2.PrivateOnly;
+  } else {
+    Disabled = tmp2.Disabled;
   }
+  return Disabled;
 }) : ((arg0) => {
+  let Disabled;
   obj = ThreadHooks;
   const canStartPublicThread = obj.useCanStartPublicThread(arg0);
-  if (!obj2.useCanStartPrivateThread(arg0)) {
-    return tmp2.Disabled;
+  const obj2 = ThreadHooks;
+  if (obj2.useCanStartPrivateThread(arg0)) {
+    Disabled = canStartPublicThread ? tmp2.Enabled : tmp2.PrivateOnly;
+  } else {
+    Disabled = tmp2.Disabled;
   }
+  return Disabled;
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => {
-  const cResult = require("c").c(9);
+  let threadSettings;
+  let uploadHandler;
+  obj = parentChannel(threadSettings[16]);
+  const cResult = obj.c(9);
   parentChannel = parentChannel.parentChannel;
-  _require = parentChannel;
   const parentMessageId = parentChannel.parentMessageId;
   threadSettings = parentChannel.threadSettings;
   const privateThreadMode = parentChannel.privateThreadMode;
-  const _location = parentChannel.location;
+  let _location = parentChannel.location;
   const onThreadCreated = parentChannel.onThreadCreated;
   const useDefaultThreadName = parentChannel.useDefaultThreadName;
-  const uploadHandler = parentChannel.uploadHandler;
   if (cResult[0] === _location) {
     if (cResult[1] === onThreadCreated) {
       if (cResult[2] === parentChannel) {
         if (cResult[3] === parentMessageId) {
           if (cResult[4] === privateThreadMode) {
             if (cResult[5] === threadSettings) {
-              if (cResult[6] === uploadHandler) {
+              if (cResult[6] === parentChannel.uploadHandler) {
+                let tmp2;
                 if (cResult[7] === useDefaultThreadName) {
-                  let tmp2 = cResult[8];
+                  tmp2 = cResult[8];
                 }
                 return tmp2;
               }
@@ -513,27 +620,31 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => 
       }
     }
   }
-  _require = _location((arg0, arg1, arg2) => {
+  let closure_0 = _location((arg0, arg1, arg2) => {
+    let closure_4;
+    let closure_5;
     closure_0 = arg0;
-    closure_1 = arg1;
+    let closure_1 = arg1;
     let name = arg2;
-    c6 = 0;
-    c7 = 0;
+    let c6 = 0;
+    let c7 = 0;
     return (function*(arg0, value, arg2) {
       if (c7 === 2) {
         c7 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp5 === 3) {
+      } else if (tmp4 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
+          return { value, done: true };
         } else {
           return { value: "IconComponent", done: null };
         }
       } else {
         try {
+          let autoArchiveDuration;
+          let closure_6;
+          let closure_7;
           c7 = 2;
           if (0 === c6) {
             if (arg0 === 1) {
@@ -541,64 +652,61 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => 
               throw value;
             } else if (arg0 === 2) {
               c7 = 3;
-              const obj5 = { value, done: true };
-              return obj5;
+              return { value, done: true };
             } else {
-              const auto_archive_duration = tmp3;
-              closure_4 = tmp2;
-              closure_132_0 = closure_0;
-              closure_132_1 = closure_1;
-              closure_132_2 = name;
-              closure_132_3 = undefined;
-              closure_132_4 = undefined;
-              let autoArchiveDuration;
-              let channel2;
-              closure_132_7 = undefined;
-              closure_132_3 = getIsPrivate(name, c3);
+              _location = tmp;
+              let stringResult;
+              autoArchiveDuration = undefined;
+              closure_6 = undefined;
+              closure_7 = undefined;
+              let closure_3 = closure_2_23(name, c3);
               name = name.name;
               c3 = name;
               if (name == null) {
                 c3 = "";
               }
-              closure_132_4 = c3;
+              stringResult = c3;
               if ("" === c3) {
-                if (c6) {
-                  let stringResult = getDefaultThreadName(closure_0, closure_1);
+                const tmp25 = c6;
+                if (tmp25) {
+                  stringResult = closure_2_24(user, closure_1);
                   if ("" === stringResult) {
-                    const intl = closure_0(threadSettings[17]).intl;
-                    stringResult = intl.string(closure_0(threadSettings[17]).t["7Xm5QI"]);
+                    const intl = user(threadSettings[17]).intl;
+                    stringResult = intl.string(user(threadSettings[17]).t["7Xm5QI"]);
                   }
-                  closure_132_4 = stringResult;
                 }
               }
-              autoArchiveDuration = closure_0(threadSettings[18]).getAutoArchiveDuration(closure_0);
-              const obj3 = closure_0(threadSettings[18]);
-              channel2 = channel.getChannel(parentMessageId(threadSettings[19]).castMessageIdAsChannelId(closure_1));
+              const obj3 = user(threadSettings[18]);
+              autoArchiveDuration = obj3.getAutoArchiveDuration(user);
+              getChannel = getChannel.getChannel;
+              const obj4 = parentMessageId(threadSettings[19]);
+              closure_6 = getChannel(obj4.castMessageIdAsChannelId(closure_1));
               c6 = 1;
               c7 = 1;
               const obj6 = {
-                value: createThread_(closure_0, [], undefined, () => {
-                          if (null != closure_1) {
-                            let result = closure_3_17.CHANNEL_MESSAGE_THREADS(closure_0.id, tmp);
-                            let tmp3 = closure_0;
+                value: closure_2_27(user, [], undefined, () => {
+                          let PRIVATE_THREAD;
+                          let result;
+                          let tmp3;
+                          let tmp7Result;
+                          if (null != closure_2_1) {
+                            result = closure_3_17.CHANNEL_MESSAGE_THREADS(user.id, tmp);
+                            tmp3 = user;
                           } else {
-                            tmp3 = closure_0;
-                            result = closure_3_17.CHANNEL_THREADS(closure_0.id);
+                            tmp3 = user;
+                            result = closure_3_17.CHANNEL_THREADS(user.id);
                           }
-                          const HTTP = closure_0(threadSettings[20]).HTTP;
-                          const request = { url: result, body: null, rejectWithError: null };
-                          const body = { name, type: null, auto_archive_duration: null, location: null };
+                          const HTTP = closure_0(closure_2[20]).HTTP;
+                          const request = { url: result, body: obj, rejectWithError: tmp7Result.rejectWithMigratedError() };
+                          const post = HTTP.post;
+                          obj = { name, type: PRIVATE_THREAD, auto_archive_duration, location: _location };
                           if (closure_1_3) {
-                            let PRIVATE_THREAD = constants.PRIVATE_THREAD;
+                            PRIVATE_THREAD = constants.PRIVATE_THREAD;
                           } else {
                             PRIVATE_THREAD = tmp3.type === constants.GUILD_ANNOUNCEMENT ? constants.ANNOUNCEMENT_THREAD : constants.PUBLIC_THREAD;
                           }
-                          body.type = PRIVATE_THREAD;
-                          body.auto_archive_duration = auto_archive_duration;
-                          body.location = location;
-                          request.body = body;
-                          request.rejectWithError = closure_0(threadSettings[20]).rejectWithMigratedError();
-                          return HTTP.post(request);
+                          tmp7Result = closure_0(closure_2[20]);
+                          return post(request);
                         }),
                 done: false
               };
@@ -609,40 +717,33 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => 
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            const obj7 = { value, done: true };
-            return obj7;
+            return { value, done: true };
           } else {
-            closure_132_7 = value;
-            if (closure_132_7 !== channel2) {
-              parentMessageId(threadSettings[21]).clearDraft(closure_0.id, DraftType.ThreadSettings);
+            closure_7 = value;
+            if (closure_7 !== closure_6) {
               const obj8 = parentMessageId(threadSettings[21]);
-              parentMessageId(threadSettings[21]).clearDraft(closure_0.id, DraftType.FirstThreadMessage);
-              if (auto_archive_duration != null) {
-                tmp62(closure_132_7);
-              }
-              sendMessage(closure_132_7, closure_132_0, closure_132_1, closure_132_2, c7);
+              obj8.clearDraft(user.id, closure_2_9.ThreadSettings);
               const obj9 = parentMessageId(threadSettings[21]);
+              obj9.clearDraft(user.id, closure_2_9.FirstThreadMessage);
+              if (autoArchiveDuration != null) {
+                tmp60(closure_7);
+              }
+              closure_2_26(closure_7, user, closure_1, name, c7);
             }
-            parentMessageId(threadSettings[22]).clearAll(closure_0.id, DraftType.FirstThreadMessage);
+            obj = parentMessageId(threadSettings[22]);
+            obj.clearAll(user.id, closure_2_9.FirstThreadMessage);
             c7 = 3;
             return { value: "IconComponent", done: null };
           }
-        } catch (tmp43) {
-          c7 = tmp;
-          throw tmp43;
+        } catch (tmp42) {
+          c7 = 3;
+          throw tmp42;
         }
       }
     })();
   });
   const fn = function() {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
+    return closure_0(...arguments);
   };
   cResult[0] = _location;
   cResult[1] = onThreadCreated;
@@ -650,7 +751,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => 
   cResult[3] = parentMessageId;
   cResult[4] = privateThreadMode;
   cResult[5] = threadSettings;
-  cResult[6] = uploadHandler;
+  cResult[6] = parentChannel.uploadHandler;
   cResult[7] = useDefaultThreadName;
   cResult[8] = fn;
   tmp2 = fn;
@@ -659,31 +760,36 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => 
   const parentMessageId = parentChannel.parentMessageId;
   const threadSettings = parentChannel.threadSettings;
   const privateThreadMode = parentChannel.privateThreadMode;
-  const _location = parentChannel.location;
+  let _location = parentChannel.location;
   const onThreadCreated = parentChannel.onThreadCreated;
   const useDefaultThreadName = parentChannel.useDefaultThreadName;
   const uploadHandler = parentChannel.uploadHandler;
-  closure_0 = _location((arg0, arg1, arg2) => {
+  const useCallback = onThreadCreated.useCallback;
+  let closure_0 = _location((arg0, arg1, arg2) => {
+    let closure_4;
+    let closure_5;
     closure_0 = arg0;
-    closure_1 = arg1;
+    let closure_1 = arg1;
     let name = arg2;
-    c6 = 0;
-    c7 = 0;
+    let c6 = 0;
+    let c7 = 0;
     return (function*(arg0, value, arg2) {
       if (c7 === 2) {
         c7 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp5 === 3) {
+      } else if (tmp4 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
+          return { value, done: true };
         } else {
           return { value: "IconComponent", done: null };
         }
       } else {
         try {
+          let autoArchiveDuration;
+          let closure_6;
+          let closure_7;
           c7 = 2;
           if (0 === c6) {
             if (arg0 === 1) {
@@ -691,64 +797,61 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => 
               throw value;
             } else if (arg0 === 2) {
               c7 = 3;
-              const obj5 = { value, done: true };
-              return obj5;
+              return { value, done: true };
             } else {
-              const auto_archive_duration = tmp3;
-              closure_4 = tmp2;
-              closure_132_0 = closure_0;
-              closure_132_1 = closure_1;
-              closure_132_2 = name;
-              closure_132_3 = undefined;
-              closure_132_4 = undefined;
-              let autoArchiveDuration;
-              let channel2;
-              closure_132_7 = undefined;
-              closure_132_3 = getIsPrivate(name, c3);
+              _location = tmp;
+              let stringResult;
+              autoArchiveDuration = undefined;
+              closure_6 = undefined;
+              closure_7 = undefined;
+              let closure_3 = closure_2_23(name, c3);
               name = name.name;
               c3 = name;
               if (name == null) {
                 c3 = "";
               }
-              closure_132_4 = c3;
+              stringResult = c3;
               if ("" === c3) {
-                if (c6) {
-                  let stringResult = getDefaultThreadName(closure_0, closure_1);
+                const tmp25 = c6;
+                if (tmp25) {
+                  stringResult = closure_2_24(user, closure_1);
                   if ("" === stringResult) {
-                    const intl = closure_0(threadSettings[17]).intl;
-                    stringResult = intl.string(closure_0(threadSettings[17]).t["7Xm5QI"]);
+                    const intl = user(threadSettings[17]).intl;
+                    stringResult = intl.string(user(threadSettings[17]).t["7Xm5QI"]);
                   }
-                  closure_132_4 = stringResult;
                 }
               }
-              autoArchiveDuration = closure_0(threadSettings[18]).getAutoArchiveDuration(closure_0);
-              const obj3 = closure_0(threadSettings[18]);
-              channel2 = channel.getChannel(parentMessageId(threadSettings[19]).castMessageIdAsChannelId(closure_1));
+              const obj3 = user(threadSettings[18]);
+              autoArchiveDuration = obj3.getAutoArchiveDuration(user);
+              getChannel = getChannel.getChannel;
+              const obj4 = parentMessageId(threadSettings[19]);
+              closure_6 = getChannel(obj4.castMessageIdAsChannelId(closure_1));
               c6 = 1;
               c7 = 1;
               const obj6 = {
-                value: createThread_(closure_0, [], undefined, () => {
-                          if (null != closure_1) {
-                            let result = closure_3_17.CHANNEL_MESSAGE_THREADS(closure_0.id, tmp);
-                            let tmp3 = closure_0;
+                value: closure_2_27(user, [], undefined, () => {
+                          let PRIVATE_THREAD;
+                          let result;
+                          let tmp3;
+                          let tmp7Result;
+                          if (null != closure_2_1) {
+                            result = closure_3_17.CHANNEL_MESSAGE_THREADS(user.id, tmp);
+                            tmp3 = user;
                           } else {
-                            tmp3 = closure_0;
-                            result = closure_3_17.CHANNEL_THREADS(closure_0.id);
+                            tmp3 = user;
+                            result = closure_3_17.CHANNEL_THREADS(user.id);
                           }
-                          const HTTP = closure_0(threadSettings[20]).HTTP;
-                          const request = { url: result, body: null, rejectWithError: null };
-                          const body = { name, type: null, auto_archive_duration: null, location: null };
+                          const HTTP = closure_0(closure_2[20]).HTTP;
+                          const request = { url: result, body: obj, rejectWithError: tmp7Result.rejectWithMigratedError() };
+                          const post = HTTP.post;
+                          obj = { name, type: PRIVATE_THREAD, auto_archive_duration, location: _location };
                           if (closure_1_3) {
-                            let PRIVATE_THREAD = constants.PRIVATE_THREAD;
+                            PRIVATE_THREAD = constants.PRIVATE_THREAD;
                           } else {
                             PRIVATE_THREAD = tmp3.type === constants.GUILD_ANNOUNCEMENT ? constants.ANNOUNCEMENT_THREAD : constants.PUBLIC_THREAD;
                           }
-                          body.type = PRIVATE_THREAD;
-                          body.auto_archive_duration = auto_archive_duration;
-                          body.location = location;
-                          request.body = body;
-                          request.rejectWithError = closure_0(threadSettings[20]).rejectWithMigratedError();
-                          return HTTP.post(request);
+                          tmp7Result = closure_0(closure_2[20]);
+                          return post(request);
                         }),
                 done: false
               };
@@ -759,65 +862,42 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => 
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            const obj7 = { value, done: true };
-            return obj7;
+            return { value, done: true };
           } else {
-            closure_132_7 = value;
-            if (closure_132_7 !== channel2) {
-              parentMessageId(threadSettings[21]).clearDraft(closure_0.id, DraftType.ThreadSettings);
+            closure_7 = value;
+            if (closure_7 !== closure_6) {
               const obj8 = parentMessageId(threadSettings[21]);
-              parentMessageId(threadSettings[21]).clearDraft(closure_0.id, DraftType.FirstThreadMessage);
-              if (auto_archive_duration != null) {
-                tmp62(closure_132_7);
-              }
-              sendMessage(closure_132_7, closure_132_0, closure_132_1, closure_132_2, c7);
+              obj8.clearDraft(user.id, closure_2_9.ThreadSettings);
               const obj9 = parentMessageId(threadSettings[21]);
+              obj9.clearDraft(user.id, closure_2_9.FirstThreadMessage);
+              if (autoArchiveDuration != null) {
+                tmp60(closure_7);
+              }
+              closure_2_26(closure_7, user, closure_1, name, c7);
             }
-            parentMessageId(threadSettings[22]).clearAll(closure_0.id, DraftType.FirstThreadMessage);
+            obj = parentMessageId(threadSettings[22]);
+            obj.clearAll(user.id, closure_2_9.FirstThreadMessage);
             c7 = 3;
             return { value: "IconComponent", done: null };
           }
-        } catch (tmp43) {
-          c7 = tmp;
-          throw tmp43;
+        } catch (tmp42) {
+          c7 = 3;
+          throw tmp42;
         }
       }
     })();
   });
   const items = [parentChannel, parentMessageId, threadSettings, onThreadCreated, privateThreadMode, _location, useDefaultThreadName, uploadHandler];
-  return onThreadCreated.useCallback(function() {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
+  return useCallback(function() {
+    return closure_0(...arguments);
   }, items);
 });
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/threads/ThreadCreationHooks.tsx");
-
-export { PrivateThreadMode };
-export const usePrivateThreadMode = tmp4;
-export { getIsPrivate };
-export { getDefaultThreadName };
-export const useCreateThreadCommon = tmp5;
-export const createThread = function createThread(arg0, name, type, auto_archive_duration, _location) {
-  const id = arg0;
-  return createThread_(arg0, [], undefined, () => {
-    const HTTP = HTTPUtils.HTTP;
-    const request = { url: constants.CHANNEL_THREADS(id.id), body: null, rejectWithError: HTTPUtils.rejectWithMigratedError() };
-    const body = { name, type, auto_archive_duration, location: _location };
-    request.body = body;
-    return HTTP.post(request);
-  });
-};
-export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => {
-  const cResult = require("c").c(10);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((parentChannel) => {
+  let appliedTags;
+  obj = parentChannel(appliedTags[16]);
+  const cResult = obj.c(10);
   parentChannel = parentChannel.parentChannel;
-  _require = parentChannel;
   let name = parentChannel.name;
   appliedTags = parentChannel.appliedTags;
   let analyticsLocations = parentChannel.analyticsLocations;
@@ -834,8 +914,9 @@ export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabl
             if (cResult[5] === onThreadCreated) {
               if (cResult[6] === parentChannel) {
                 if (cResult[7] === upload) {
+                  let tmp2;
                   if (cResult[8] === voiceChatEnabled) {
-                    let tmp2 = cResult[9];
+                    tmp2 = cResult[9];
                   }
                   return tmp2;
                 }
@@ -846,26 +927,36 @@ export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabl
       }
     }
   }
-  _require = onThreadCreated((arg0, name, applied_tags) => {
+  let closure_0 = onThreadCreated((arg0, name, applied_tags) => {
+    let closure_5;
+    let closure_6;
     closure_0 = arg0;
-    c8 = 0;
-    c9 = 0;
-    c7 = 0;
+    let c8 = 0;
+    let c9 = 0;
+    let c7 = 0;
     return (function*(arg0, value, arg2) {
+      let obj9;
+      let tmp84;
       if (c9 === 2) {
         c9 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp11 === 3) {
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          const obj6 = { value, done: true };
-          return obj6;
+          return { value, done: true };
         } else {
           return { value: "IconComponent", done: null };
         }
       } else {
+        let tmp91;
         try {
+          let obj8;
+          let tmp;
+          let file;
+          let code;
+          let reason;
+          let createThread;
           c9 = 2;
           if (0 === voiceChatEnabled) {
             if (arg0 === 1) {
@@ -873,139 +964,125 @@ export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabl
               throw value;
             } else if (arg0 === 2) {
               c9 = 3;
-              const obj7 = { value, done: true };
-              return obj7;
+              return { value, done: true };
             } else {
-              closure_4 = tmp9;
-              let tmp83 = closure_0;
+              let tmp75 = closure_0;
               let uploaderFile;
-              closure_132_1 = undefined;
-              closure_132_2 = undefined;
-              closure_132_3 = undefined;
-              closure_132_4 = undefined;
-              closure_132_5 = undefined;
-              closure_132_6 = undefined;
-              let file;
-              let code2;
-              let reason;
-              closure_132_10 = undefined;
-              closure_132_11 = undefined;
-              closure_132_12 = undefined;
+              name = undefined;
+              obj8 = undefined;
+              analyticsLocations = undefined;
+              guildId = undefined;
+              tmp = undefined;
+              tmp91 = undefined;
+              file = undefined;
+              code = undefined;
+              reason = undefined;
+              value = undefined;
+              createThread = undefined;
+              body = undefined;
               let num10 = 0;
-              if (tmp127[0]) {
-                num10 = closure_0(appliedTags[24]).addFlag(0, constants4.SUPPRESS_NOTIFICATIONS);
-                tmp83 = tmp128;
-                const obj13 = closure_0(appliedTags[24]);
+              const tmp115 = name;
+              const tmp119 = closure_2_3(closure_2_1(appliedTags[23])(closure_0), 2);
+              if (tmp119[0]) {
+                const obj12 = closure_0(appliedTags[24]);
+                num10 = obj12.addFlag(0, constants4.SUPPRESS_NOTIFICATIONS);
+                tmp75 = tmp120;
               }
-              tmp127 = analyticsLocations(name(appliedTags[23])(closure_0), 2);
-              const autoArchiveDuration = closure_0(appliedTags[18]).getAutoArchiveDuration(closure_0, null);
-              closure_132_1 = closure_2_17.CHANNEL_THREADS(closure_0.id) + "?use_nested_fields=true";
-              const obj8 = { name, auto_archive_duration: autoArchiveDuration, applied_tags, message: null };
-              const obj9 = { content: tmp83, sticker_ids: name, flags: null };
-              let tmp92;
+              const obj13 = closure_0(appliedTags[18]);
+              const autoArchiveDuration = obj13.getAutoArchiveDuration(closure_0, null);
+              name = closure_2_17.CHANNEL_THREADS(closure_0.id) + "?use_nested_fields=true";
+              obj8 = { name, auto_archive_duration: autoArchiveDuration, applied_tags, message: obj9 };
+              obj9 = { content: tmp75, sticker_ids: tmp115, flags: tmp84 };
+              tmp84 = undefined;
               if (0 !== num10) {
-                tmp92 = num10;
+                tmp84 = num10;
               }
-              obj9.flags = tmp92;
-              obj8.message = obj9;
-              closure_132_2 = obj8;
-              let tmp94 = null;
-              if (null != closure_6) {
-                tmp94 = buildMessageActivity(tmp93);
+              let tmp86 = null;
+              if (null != tmp91) {
+                tmp86 = closure_2_25(tmp85);
               }
-              closure_132_3 = tmp94;
-              let tmp96 = null != tmp94;
-              if (tmp96) {
-                tmp96 = null != tmp93;
-              }
-              if (tmp96) {
-                obj8.message.application_id = tmp93.activity.application_id;
-                obj8.message.activity = tmp94;
+              analyticsLocations = tmp86;
+              guildId = null != tmp86 && null != tmp85;
+              if (guildId) {
+                obj8.message.application_id = tmp91.activity.application_id;
+                obj8.message.activity = tmp86;
               }
               if (null != applied_tags) {
                 if (applied_tags.length > 0) {
                   applicationId = 1;
                   voiceChatEnabled = 3;
                   c9 = 1;
-                  const obj10 = { value: tmp6(applied_tags), done: false };
+                  const obj10 = { value: tmp(applied_tags), done: false };
                   return obj10;
                 }
               }
-              closure_132_11 = function createThread() {
-                return createThread_(closure_0, closure_3, closure_1_0, () => {
-                  const HTTP = closure_0(body[20]).HTTP;
-                  const request = { url, body, rejectWithError: closure_0(body[20]).rejectWithMigratedError() };
-                  return HTTP.post(request);
-                });
-              };
-              applicationId = 2;
-              closure_132_11();
-              voiceChatEnabled = 4;
-              c9 = 1;
-              const obj14 = closure_0(appliedTags[18]);
             }
-          } else if (1 === tmp12) {
+          } else if (1 === voiceChatEnabled) {
             applicationId = 0;
-            closure_132_5 = closure_6;
-            closure_132_6 = closure_132_5;
-            file = closure_132_6.file;
-            code2 = closure_132_6.code;
-            reason = closure_132_6.reason;
-            const obj12 = { file, guildId: closure_0.getGuildId(), analyticsLocations: null, code: null, reason: null };
+            tmp = tmp91;
+            tmp91 = tmp;
+            file = tmp91.file;
+            code = tmp91.code;
+            reason = tmp91.reason;
+            const obj11 = { file, guildId, analyticsLocations, code, reason };
+            const handleUploadMessageAttachmentsErrors = closure_0(appliedTags[26]).handleUploadMessageAttachmentsErrors;
+            closure_0(appliedTags[26]);
+            guildId = closure_0.getGuildId();
             if (analyticsLocations == null) {
               analyticsLocations = [];
             }
-            obj12.analyticsLocations = analyticsLocations;
-            obj12.code = code2;
-            obj12.reason = reason;
-            const result = closure_0(appliedTags[26]).handleUploadMessageAttachmentsErrors(obj12);
-            throw closure_132_5;
-          } else if (2 === tmp12) {
+            guildId = reason;
+            const result = handleUploadMessageAttachmentsErrors(obj11);
+            throw tmp;
+          } else if (2 === voiceChatEnabled) {
             applicationId = 0;
-            closure_132_12 = closure_6;
-            let code;
-            if (closure_132_12 != null) {
-              const body = closure_132_12.body;
+            body = tmp91;
+            code = undefined;
+            if (body != null) {
+              body = body.body;
               if (body != null) {
                 code = body.code;
               }
             }
             if (code === constants.UNKNOWN_SESSION) {
-              if (null != closure_132_3) {
-                const message = closure_132_2.message;
-                delete tmp8[tmp5];
-                const message2 = closure_132_2.message;
-                delete tmp8[tmp4];
+              if (null != analyticsLocations) {
+                delete obj8.message[tmp98];
+                delete obj8.message[tmp99];
                 voiceChatEnabled = 5;
                 c9 = 1;
-                const obj15 = { value: closure_132_11(), done: false };
-                return obj15;
+                const obj14 = { value: createThread(), done: false };
+                return obj14;
               }
             }
-            throw closure_132_12;
-          } else if (3 === tmp12) {
+            throw body;
+          } else if (3 === voiceChatEnabled) {
             if (arg0 === 1) {
               c9 = 3;
               throw value;
-            } else if (arg0 !== 2) {
-              closure_132_4 = value;
-              uploaderFile = closure_132_4.uploaderFile;
-              const files = closure_132_4.files;
-              closure_132_2.message.attachments = files.map((item, index) => closure_1_0(applied_tags[25]).getAttachmentPayload(item, index));
+            } else if (arg0 === 2) {
+              applicationId = 0;
+              c9 = 3;
+              return { value, done: true };
+            } else {
+              guildId = value;
+              uploaderFile = guildId.uploaderFile;
+              const files = guildId.files;
+              obj8.message.attachments = files.map((item, index) => {
+                obj = closure_1_0(applied_tags[25]);
+                return obj.getAttachmentPayload(item, index);
+              });
               applicationId = 0;
             }
           } else {
-            if (4 === tmp12) {
+            if (4 === voiceChatEnabled) {
               if (arg0 === 1) {
                 c9 = 3;
                 throw value;
               } else if (arg0 === 2) {
                 applicationId = 0;
                 c9 = 3;
-                const obj16 = { value, done: true };
-                return obj16;
+                return { value, done: true };
               } else {
-                closure_132_10 = value;
                 applicationId = 0;
               }
             } else if (arg0 === 1) {
@@ -1015,56 +1092,61 @@ export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabl
               c9 = 3;
               obj = { value, done: true };
               return obj;
-            } else {
-              closure_132_10 = value;
             }
-            name(appliedTags[21]).clearDraft(closure_0.id, DraftType.ThreadSettings);
-            const obj2 = name(appliedTags[21]);
-            name(appliedTags[21]).clearDraft(closure_0.id, DraftType.FirstThreadMessage);
-            const obj3 = name(appliedTags[21]);
-            name(appliedTags[22]).clearAll(closure_0.id, DraftType.FirstThreadMessage);
-            const obj4 = name(appliedTags[22]);
-            const obj17 = { guildId: closure_0.guild_id, channelId: closure_0.id, postId: closure_132_10.id, applicationId, voiceChatEnabled };
-            const result1 = closure_0(appliedTags[27]).trackForumPostCreated(obj17);
-            if (null != closure_132_2.message.application_id) {
-              const obj18 = { location: constants5.THREAD_CREATION, invite_type: constants3.APPLICATION, application_id: closure_132_2.message.application_id, guild_id: closure_0.getGuildId(), channel_id: closure_132_10.id, message_id: closure_132_10.id };
-              name(appliedTags[28]).trackWithMetadata(constants2.INVITE_SENT, obj18);
-              const obj20 = name(appliedTags[28]);
+            let obj2 = closure_2_1(appliedTags[21]);
+            obj2.clearDraft(closure_0.id, closure_2_9.ThreadSettings);
+            const obj3 = closure_2_1(appliedTags[21]);
+            obj3.clearDraft(closure_0.id, closure_2_9.FirstThreadMessage);
+            const obj4 = closure_2_1(appliedTags[22]);
+            obj4.clearAll(closure_0.id, closure_2_9.FirstThreadMessage);
+            guildId = voiceChatEnabled;
+            const obj17 = { guildId: closure_0.guild_id, channelId: closure_0.id, postId: value.id, applicationId, voiceChatEnabled };
+            const obj5 = closure_0(appliedTags[27]);
+            const result1 = obj5.trackForumPostCreated(obj17);
+            if (null != obj8.message.application_id) {
+              const obj18 = { location: constants5.THREAD_CREATION, invite_type: constants3.APPLICATION, application_id: obj8.message.application_id, guild_id: closure_0.getGuildId(), channel_id: value.id, message_id: value.id };
+              const trackWithMetadata = closure_2_1(appliedTags[28]).trackWithMetadata;
+              const INVITE_SENT = constants2.INVITE_SENT;
+              closure_2_1(appliedTags[28]);
+              trackWithMetadata(INVITE_SENT, obj18);
             }
-            if (closure_4 != null) {
-              tmp38(closure_132_10);
+            if (guildId != null) {
+              tmp30(value);
             }
             c9 = 3;
-            const obj19 = { value: closure_132_10, done: true };
-            return obj19;
+            return { value, done: true };
           }
-          applicationId = 0;
-          c9 = 3;
-          const obj21 = { value, done: true };
-          return obj21;
-        } catch (tmp101) {
-          closure_6 = tmp101;
-          if (tmp7 === applicationId) {
-            c9 = tmp3;
-            throw tmp101;
-          } else if (tmp2 === tmp103) {
-            voiceChatEnabled = tmp2;
+          createThread = function createThread() {
+            let url;
+            return closure_3_27(closure_2_0, analyticsLocations, uploaderFile, () => {
+              let obj2;
+              const HTTP = closure_3_0(applied_tags[20]).HTTP;
+              const request = { url, body, rejectWithError: obj2.rejectWithMigratedError() };
+              const post = HTTP.post;
+              obj2 = closure_3_0(applied_tags[20]);
+              return post(request);
+            });
+          };
+          applicationId = 2;
+          voiceChatEnabled = 4;
+          c9 = 1;
+          const obj20 = { value: createThread(), done: false };
+          return obj20;
+        } catch (tmp91) {
+          if (0 === applicationId) {
+            c9 = 3;
+            throw tmp91;
+          } else if (1 === tmp93) {
+            voiceChatEnabled = 1;
           } else {
-            voiceChatEnabled = tmp;
+            voiceChatEnabled = 2;
           }
         }
       }
     })();
   });
   const fn = function() {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
+    return closure_0(...arguments);
   };
   cResult[0] = activityAction;
   cResult[1] = analyticsLocations;
@@ -1079,7 +1161,7 @@ export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabl
   tmp2 = fn;
 }) : ((parentChannel) => {
   parentChannel = parentChannel.parentChannel;
-  let name = parentChannel.name;
+  const name = parentChannel.name;
   const appliedTags = parentChannel.appliedTags;
   let analyticsLocations = parentChannel.analyticsLocations;
   const onThreadCreated = parentChannel.onThreadCreated;
@@ -1087,26 +1169,39 @@ export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabl
   const activityAction = parentChannel.activityAction;
   let applicationId = parentChannel.applicationId;
   let voiceChatEnabled = parentChannel.voiceChatEnabled;
-  closure_0 = onThreadCreated((arg0, name, applied_tags) => {
+  const useCallback = upload.useCallback;
+  let closure_0 = onThreadCreated((arg0, arg1, applied_tags) => {
+    let closure_5;
+    let closure_6;
     closure_0 = arg0;
-    c8 = 0;
-    c9 = 0;
-    c7 = 0;
+    let user = arg1;
+    let c8 = 0;
+    let c9 = 0;
+    let c7 = 0;
     return (function*(arg0, value, arg2) {
+      let obj9;
+      let tmp84;
       if (c9 === 2) {
         c9 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp11 === 3) {
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          const obj6 = { value, done: true };
-          return obj6;
+          return { value, done: true };
         } else {
           return { value: "IconComponent", done: null };
         }
       } else {
+        let tmp91;
         try {
+          let obj8;
+          let closure_4;
+          let tmp;
+          let file;
+          let code;
+          let reason;
+          let createThread;
           c9 = 2;
           if (0 === voiceChatEnabled) {
             if (arg0 === 1) {
@@ -1114,136 +1209,134 @@ export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabl
               throw value;
             } else if (arg0 === 2) {
               c9 = 3;
-              const obj7 = { value, done: true };
-              return obj7;
+              return { value, done: true };
             } else {
-              closure_4 = tmp9;
-              let tmp83 = closure_0;
+              let tmp75 = closure_0;
               let uploaderFile;
-              closure_132_1 = undefined;
-              closure_132_2 = undefined;
-              closure_132_3 = undefined;
-              closure_132_4 = undefined;
-              closure_132_5 = undefined;
-              closure_132_6 = undefined;
-              let file;
-              let code2;
-              let reason;
-              closure_132_10 = function createThread() {
-                return createThread_(closure_0, body, closure_1_0, () => {
-                  const HTTP = closure_0(url[20]).HTTP;
-                  const request = { url, body, rejectWithError: closure_0(url[20]).rejectWithMigratedError() };
-                  return HTTP.post(request);
+              user = undefined;
+              applied_tags = undefined;
+              obj8 = undefined;
+              closure_4 = undefined;
+              tmp = undefined;
+              tmp91 = undefined;
+              file = undefined;
+              code = undefined;
+              reason = undefined;
+              createThread = function createThread() {
+                let url;
+                return closure_3_27(closure_2_0, analyticsLocations, uploaderFile, () => {
+                  let obj2;
+                  const HTTP = closure_3_0(applied_tags[20]).HTTP;
+                  const request = { url, body, rejectWithError: obj2.rejectWithMigratedError() };
+                  const post = HTTP.post;
+                  obj2 = closure_3_0(applied_tags[20]);
+                  return post(request);
                 });
               };
               let num10 = 0;
-              if (tmp127[0]) {
-                num10 = closure_0(appliedTags[24]).addFlag(0, constants4.SUPPRESS_NOTIFICATIONS);
-                tmp83 = tmp128;
-                const obj13 = closure_0(appliedTags[24]);
+              const tmp115 = user;
+              const tmp119 = closure_2_3(name(appliedTags[23])(closure_0), 2);
+              if (tmp119[0]) {
+                const obj12 = closure_0(appliedTags[24]);
+                num10 = obj12.addFlag(0, constants4.SUPPRESS_NOTIFICATIONS);
+                tmp75 = tmp120;
               }
-              tmp127 = analyticsLocations(name(appliedTags[23])(closure_0), 2);
-              const autoArchiveDuration = closure_0(appliedTags[18]).getAutoArchiveDuration(closure_0, null);
-              closure_132_2 = closure_2_17.CHANNEL_THREADS(closure_0.id) + "?use_nested_fields=true";
-              const obj8 = { name, auto_archive_duration: autoArchiveDuration, applied_tags, message: null };
-              const obj9 = { content: tmp83, sticker_ids: name, flags: null };
-              let tmp92;
+              const obj13 = closure_0(appliedTags[18]);
+              const autoArchiveDuration = obj13.getAutoArchiveDuration(closure_0, null);
+              applied_tags = closure_2_17.CHANNEL_THREADS(closure_0.id) + "?use_nested_fields=true";
+              obj8 = { name: user, auto_archive_duration: autoArchiveDuration, applied_tags, message: obj9 };
+              obj9 = { content: tmp75, sticker_ids: tmp115, flags: tmp84 };
+              tmp84 = undefined;
               if (0 !== num10) {
-                tmp92 = num10;
+                tmp84 = num10;
               }
-              obj9.flags = tmp92;
-              obj8.message = obj9;
-              closure_132_3 = obj8;
-              let tmp94 = null;
-              if (null != closure_6) {
-                tmp94 = buildMessageActivity(tmp93);
+              let tmp86 = null;
+              if (null != tmp91) {
+                tmp86 = closure_2_25(tmp85);
               }
-              closure_132_4 = tmp94;
-              let tmp96 = null != tmp94;
-              if (tmp96) {
-                tmp96 = null != tmp93;
-              }
-              if (tmp96) {
-                obj8.message.application_id = tmp93.activity.application_id;
-                obj8.message.activity = tmp94;
+              closure_4 = tmp86;
+              guildId = null != tmp86 && null != tmp85;
+              if (guildId) {
+                obj8.message.application_id = tmp91.activity.application_id;
+                obj8.message.activity = tmp86;
               }
               if (null != applied_tags) {
                 if (applied_tags.length > 0) {
                   applicationId = 1;
                   voiceChatEnabled = 3;
                   c9 = 1;
-                  const obj10 = { value: tmp6(applied_tags), done: false };
+                  const obj10 = { value: tmp(applied_tags), done: false };
                   return obj10;
                 }
               }
-              applicationId = 2;
-              closure_132_10();
-              voiceChatEnabled = 4;
-              c9 = 1;
-              const obj14 = closure_0(appliedTags[18]);
             }
-          } else if (1 === tmp12) {
+          } else if (1 === voiceChatEnabled) {
             applicationId = 0;
-            closure_132_11 = closure_6;
-            closure_132_6 = closure_132_11;
-            file = closure_132_6.file;
-            code2 = closure_132_6.code;
-            reason = closure_132_6.reason;
-            const obj12 = { file, guildId: closure_0.getGuildId(), analyticsLocations: null, code: null, reason: null };
+            let closure_11 = tmp91;
+            tmp91 = closure_11;
+            file = tmp91.file;
+            code = tmp91.code;
+            reason = tmp91.reason;
+            const obj11 = { file, guildId, analyticsLocations, code, reason };
+            const handleUploadMessageAttachmentsErrors = closure_0(appliedTags[26]).handleUploadMessageAttachmentsErrors;
+            closure_0(appliedTags[26]);
+            guildId = closure_0.getGuildId();
             if (analyticsLocations == null) {
               analyticsLocations = [];
             }
-            obj12.analyticsLocations = analyticsLocations;
-            obj12.code = code2;
-            obj12.reason = reason;
-            const result = closure_0(appliedTags[26]).handleUploadMessageAttachmentsErrors(obj12);
-            throw closure_132_11;
-          } else if (2 === tmp12) {
+            guildId = reason;
+            const result = handleUploadMessageAttachmentsErrors(obj11);
+            throw closure_11;
+          } else if (2 === voiceChatEnabled) {
             applicationId = 0;
-            closure_132_12 = closure_6;
-            let code;
-            if (closure_132_12 != null) {
-              const body = closure_132_12.body;
+            body = tmp91;
+            code = undefined;
+            if (body != null) {
+              body = body.body;
               if (body != null) {
                 code = body.code;
               }
             }
             if (code === constants.UNKNOWN_SESSION) {
-              if (null != closure_132_4) {
-                const message = closure_132_3.message;
-                delete tmp8[tmp5];
-                const message2 = closure_132_3.message;
-                delete tmp8[tmp4];
+              if (null != closure_4) {
+                delete obj8.message[tmp98];
+                delete obj8.message[tmp99];
                 voiceChatEnabled = 5;
                 c9 = 1;
-                const obj15 = { value: closure_132_10(), done: false };
-                return obj15;
+                const obj14 = { value: createThread(), done: false };
+                return obj14;
               }
             }
-            throw closure_132_12;
-          } else if (3 === tmp12) {
+            throw body;
+          } else if (3 === voiceChatEnabled) {
             if (arg0 === 1) {
               c9 = 3;
               throw value;
-            } else if (arg0 !== 2) {
-              closure_132_5 = value;
-              uploaderFile = closure_132_5.uploaderFile;
-              const files = closure_132_5.files;
-              closure_132_3.message.attachments = files.map((item, index) => closure_1_0(applied_tags[25]).getAttachmentPayload(item, index));
+            } else if (arg0 === 2) {
+              applicationId = 0;
+              c9 = 3;
+              return { value, done: true };
+            } else {
+              tmp = value;
+              uploaderFile = tmp.uploaderFile;
+              const files = tmp.files;
+              obj8.message.attachments = files.map((item, index) => {
+                obj = closure_1_0(applied_tags[25]);
+                return obj.getAttachmentPayload(item, index);
+              });
               applicationId = 0;
             }
           } else {
-            if (4 === tmp12) {
+            if (4 === voiceChatEnabled) {
               if (arg0 === 1) {
                 c9 = 3;
                 throw value;
               } else if (arg0 === 2) {
                 applicationId = 0;
                 c9 = 3;
-                const obj16 = { value, done: true };
-                return obj16;
+                return { value, done: true };
               } else {
-                closure_132_1 = value;
+                user = value;
                 applicationId = 0;
               }
             } else if (arg0 === 1) {
@@ -1254,55 +1347,72 @@ export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabl
               obj = { value, done: true };
               return obj;
             } else {
-              closure_132_1 = value;
+              user = value;
             }
-            name(appliedTags[21]).clearDraft(closure_0.id, DraftType.ThreadSettings);
-            const obj2 = name(appliedTags[21]);
-            name(appliedTags[21]).clearDraft(closure_0.id, DraftType.FirstThreadMessage);
+            let obj2 = name(appliedTags[21]);
+            obj2.clearDraft(closure_0.id, closure_2_9.ThreadSettings);
             const obj3 = name(appliedTags[21]);
-            name(appliedTags[22]).clearAll(closure_0.id, DraftType.FirstThreadMessage);
+            obj3.clearDraft(closure_0.id, closure_2_9.FirstThreadMessage);
             const obj4 = name(appliedTags[22]);
-            const obj17 = { guildId: closure_0.guild_id, channelId: closure_0.id, postId: closure_132_1.id, applicationId, voiceChatEnabled };
-            const result1 = closure_0(appliedTags[27]).trackForumPostCreated(obj17);
-            if (null != closure_132_3.message.application_id) {
-              const obj18 = { location: constants5.THREAD_CREATION, invite_type: constants3.APPLICATION, application_id: closure_132_3.message.application_id, guild_id: closure_0.getGuildId(), channel_id: closure_132_1.id, message_id: closure_132_1.id };
-              name(appliedTags[28]).trackWithMetadata(constants2.INVITE_SENT, obj18);
-              const obj20 = name(appliedTags[28]);
+            obj4.clearAll(closure_0.id, closure_2_9.FirstThreadMessage);
+            guildId = voiceChatEnabled;
+            const obj17 = { guildId: closure_0.guild_id, channelId: closure_0.id, postId: user.id, applicationId, voiceChatEnabled };
+            const obj5 = closure_0(appliedTags[27]);
+            const result1 = obj5.trackForumPostCreated(obj17);
+            if (null != obj8.message.application_id) {
+              const obj18 = { location: constants5.THREAD_CREATION, invite_type: constants3.APPLICATION, application_id: obj8.message.application_id, guild_id: closure_0.getGuildId(), channel_id: user.id, message_id: user.id };
+              const trackWithMetadata = name(appliedTags[28]).trackWithMetadata;
+              const INVITE_SENT = constants2.INVITE_SENT;
+              name(appliedTags[28]);
+              trackWithMetadata(INVITE_SENT, obj18);
             }
-            if (closure_4 != null) {
-              tmp38(closure_132_1);
+            if (guildId != null) {
+              tmp30(user);
             }
             c9 = 3;
-            const obj19 = { value: closure_132_1, done: true };
-            return obj19;
+            return { value: user, done: true };
           }
-          applicationId = 0;
-          c9 = 3;
-          const obj21 = { value, done: true };
-          return obj21;
-        } catch (tmp101) {
-          closure_6 = tmp101;
-          if (tmp7 === applicationId) {
-            c9 = tmp3;
-            throw tmp101;
-          } else if (tmp2 === tmp103) {
-            voiceChatEnabled = tmp2;
+          applicationId = 2;
+          voiceChatEnabled = 4;
+          c9 = 1;
+          const obj20 = { value: createThread(), done: false };
+          return obj20;
+        } catch (tmp91) {
+          if (0 === applicationId) {
+            c9 = 3;
+            throw tmp91;
+          } else if (1 === tmp93) {
+            voiceChatEnabled = 1;
           } else {
-            voiceChatEnabled = tmp;
+            voiceChatEnabled = 2;
           }
         }
       }
     })();
   });
   const items = [parentChannel, name, appliedTags, onThreadCreated, analyticsLocations, upload, activityAction, voiceChatEnabled, applicationId];
-  return upload.useCallback(function() {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
+  return useCallback(function() {
+    return closure_0(...arguments);
   }, items);
 });
+let result = size.fileFinishedImporting("modules/threads/ThreadCreationHooks.tsx");
+const createThread_export = function createThread(arg0, name, type, auto_archive_duration, _location) {
+  const id = arg0;
+  return createThread_(arg0, [], undefined, () => {
+    let obj3;
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: closure_17.CHANNEL_THREADS(id.id), body: obj, rejectWithError: obj3.rejectWithMigratedError() };
+    const post = HTTP.post;
+    obj = { name, type, auto_archive_duration, location: _location };
+    obj3 = HTTPUtils;
+    return post(request);
+  });
+};
+
+export const PrivateThreadMode = obj;
+export const usePrivateThreadMode = tmp4;
+export { getIsPrivate };
+export { getDefaultThreadName };
+export const useCreateThreadCommon = tmp5;
+export { createThread_export as createThread };
+export const useCreateForumPostCommon = tmp6;

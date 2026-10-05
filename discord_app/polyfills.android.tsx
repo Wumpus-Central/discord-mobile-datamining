@@ -1,17 +1,15 @@
 // === Module 13960: polyfills ===
 
 // Module 13960 (polyfills)
-import module_13961 from "module_13961" /* 13961 */;
+import Locale from "Locale" /* 13961 */;
 import polyfillsNative from "polyfillsNative" /* 14057 */;
 import size from "module_2" /* 2 */;
 
 String.prototype.toLocaleLowerCase = function toLocaleLowerCase() {
-  const self = this;
-  if (0 === this.length) {
-    return "";
-  } else {
-    const call = toLocaleLowerCase.call;
-    typeof call === "unknown" ? toLocaleLowerCase() : call(self);
+  let str = "";
+  if (0 !== this.length) {
+    str = toLocaleLowerCase.call(tmp);
   }
+  return str;
 };
 const result = size.fileFinishedImporting("polyfills.android.tsx");

@@ -1,62 +1,75 @@
 // === Module 13777: GameOrganizationInviteRow ===
 
 // Module 13777 (GameOrganizationInviteRow)
-import c from "c" /* 576 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
 import native from "native" /* 1188 */;
 import UserUtilsDefault from "UserUtils" /* 4722 */;
-import TableRow from "TableRow" /* 5993 */;
+import TableRow2 from "TableRow" /* 5993 */;
+import Constants from "Constants" /* 7226 */;
 import DiscordTagDefault from "DiscordTag" /* 9296 */;
 import InviteButtonDefault from "InviteButton" /* 9556 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const InviteSendStates = fn(7226).InviteSendStates;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/game_organization_invites/native/GameOrganizationInviteRow.tsx");
+let user;
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
-  const cResult = c.c(23);
+const InviteSendStates = Constants.InviteSendStates;
+const jsx = Fragment.jsx;
+const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
+  let end;
+  let onInvite;
+  let sendState;
+  let start;
+  const obj = react2;
+  const cResult = obj.c(23);
   user = user.user;
   ({ sendState, onInvite } = user);
   ({ start, end } = user);
   if (cResult[0] === onInvite) {
+    let tmp4;
+    let tmp5;
+    let tmp7;
+    let tmp10;
     if (cResult[1] === user) {
-      let tmp4 = cResult[2];
+      tmp4 = cResult[2];
     }
     if (cResult[3] !== user) {
       const avatarSource = user.getAvatarSource(undefined);
       cResult[3] = user;
       cResult[4] = avatarSource;
-      let tmp5 = avatarSource;
+      tmp5 = avatarSource;
     } else {
       tmp5 = cResult[4];
     }
     if (cResult[5] !== tmp5) {
-      const obj2 = { source: tmp5, size: native.AvatarSizes.REFRESH_MEDIUM_32 };
-      const tmp9 = jsx(native.Avatar, { source: tmp5, size: native.AvatarSizes.REFRESH_MEDIUM_32 });
+      const Avatar = native.Avatar;
+      const tmp9 = <Avatar source={tmp5} size={native.AvatarSizes.REFRESH_MEDIUM_32} />;
       cResult[5] = tmp5;
       cResult[6] = tmp9;
-      let tmp7 = tmp9;
+      tmp7 = tmp9;
     } else {
       tmp7 = cResult[6];
     }
     if (cResult[7] !== user) {
-      const globalName = UserUtilsDefault.getGlobalName(user);
+      const obj3 = UserUtilsDefault;
+      const globalName = obj3.getGlobalName(user);
       cResult[7] = user;
       cResult[8] = globalName;
-      let tmp10 = globalName;
+      tmp10 = globalName;
     } else {
       tmp10 = cResult[8];
     }
     if (cResult[9] === tmp10) {
+      let tmp13;
       if (cResult[10] === user) {
-        let tmp13 = cResult[11];
+        tmp13 = cResult[11];
       }
       if (cResult[12] === tmp4) {
+        let tmp17;
         if (cResult[13] === sendState) {
-          let tmp17 = cResult[14];
+          tmp17 = cResult[14];
         }
         if (cResult[15] === end) {
           if (cResult[16] === tmp4) {
@@ -64,8 +77,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user) 
               if (cResult[18] === tmp7) {
                 if (cResult[19] === tmp13) {
                   if (cResult[20] === tmp17) {
-                    if (cResult[21] === tmp21) {
-                      let tmp22 = cResult[22];
+                    let tmp22;
+                    if (cResult[21] === (sendState === InviteSendStates.SENDING || sendState === InviteSendStates.SENT)) {
+                      tmp22 = cResult[22];
                     }
                     return tmp22;
                   }
@@ -74,8 +88,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user) 
             }
           }
         }
-        const obj4 = { start, end, icon: tmp7, label: tmp13, trailing: tmp17, onPress: tmp4, disabled: sendState === InviteSendStates.SENDING || sendState === InviteSendStates.SENT };
-        const tmp24 = jsx(TableRow.TableRow, { start, end, icon: tmp7, label: tmp13, trailing: tmp17, onPress: tmp4, disabled: sendState === InviteSendStates.SENDING || sendState === InviteSendStates.SENT });
+        const tmp24 = jsx(TableRow2.TableRow, { start, end, icon: tmp7, label: tmp13, trailing: tmp17, onPress: tmp4, disabled: sendState === InviteSendStates.SENDING || sendState === InviteSendStates.SENT });
         cResult[15] = end;
         cResult[16] = tmp4;
         cResult[17] = start;
@@ -86,14 +99,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user) 
         cResult[22] = tmp24;
         tmp22 = tmp24;
       }
-      const obj5 = { sendState, onPressSend: tmp4 };
       const tmp20 = jsx(InviteButtonDefault, { sendState, onPressSend: tmp4 });
       cResult[12] = tmp4;
       cResult[13] = sendState;
       cResult[14] = tmp20;
       tmp17 = tmp20;
     }
-    const obj6 = { nick: tmp10, user };
     const tmp16 = jsx(DiscordTagDefault, { nick: tmp10, user });
     cResult[9] = tmp10;
     cResult[10] = user;
@@ -108,19 +119,24 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user) 
   cResult[2] = fn;
   tmp4 = fn;
 }) : ((user) => {
+  let end;
+  let obj4;
+  let onInvite;
+  let sendState;
+  let start;
   user = user.user;
   ({ sendState, onInvite } = user);
   const items = [onInvite, user];
   ({ start, end } = user);
-  const callback = noop.useCallback(() => onInvite(user), items);
-  const obj = { start, end, icon: jsx(native.Avatar, { source: user.getAvatarSource(undefined), size: native.AvatarSizes.REFRESH_MEDIUM_32 }), label: null, trailing: null, onPress: null, disabled: null };
-  const obj3 = { nick: null, user: null };
-  const obj2 = { source: user.getAvatarSource(undefined), size: native.AvatarSizes.REFRESH_MEDIUM_32 };
-  obj3.nick = UserUtilsDefault.getGlobalName(user);
-  obj3.user = user;
-  obj.label = <tmp3 nick={null} user={null} />;
-  obj.trailing = jsx(InviteButtonDefault, { sendState, onPressSend: callback });
-  obj.onPress = callback;
-  obj.disabled = sendState === InviteSendStates.SENDING || sendState === InviteSendStates.SENT;
-  return jsx(TableRow.TableRow, { start, end, icon: jsx(native.Avatar, { source: user.getAvatarSource(undefined), size: native.AvatarSizes.REFRESH_MEDIUM_32 }), label: null, trailing: null, onPress: null, disabled: null });
+  const callback = react.useCallback(() => onInvite(user), items);
+  const TableRow = TableRow2.TableRow;
+  ({ source: user.getAvatarSource(undefined), size: native.AvatarSizes.REFRESH_MEDIUM_32 });
+  const Avatar = native.Avatar;
+  ({ nick: obj4.getGlobalName(user), user });
+  DiscordTagDefault;
+  obj4 = UserUtilsDefault;
+  return <TableRow start={start} end={end} icon={null} label={null} trailing={null} onPress={callback} disabled={sendState === InviteSendStates.SENDING || sendState === InviteSendStates.SENT} />;
 }));
+const result = size.fileFinishedImporting("modules/game_organization_invites/native/GameOrganizationInviteRow.tsx");
+
+export default memoResult;

@@ -1,6 +1,7 @@
 // === Module 9795: useLikelyAtoWarning ===
 
 // Module 9795 (useLikelyAtoWarning)
+import useStrangerDangerWarning from "useStrangerDangerWarning" /* 9785 */;
 import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 9786 */;
 import useIsSpamMessageRequest from "useIsSpamMessageRequest" /* 9787 */;
 import useIsMessageRequest from "useIsMessageRequest" /* 9788 */;
@@ -10,13 +11,16 @@ import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const SafetyWarningTypes = ChannelSafetyWarningsStore.SafetyWarningTypes;
-const result = size.fileFinishedImporting("modules/ato_alerts/hooks/useLikelyAtoWarning.tsx");
-
-export const useLikelyAtoWarning = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const isSpamMessageRequest = useIsSpamMessageRequest.useIsSpamMessageRequest(arg0);
-  const isMessageRequest = useIsMessageRequest.useIsMessageRequest(arg0);
-  const channelSafetyWarning = useChannelSafetyWarning.useChannelSafetyWarning(arg0, SafetyWarningTypes.LIKELY_ATO);
-  const tmp4 = useInappropriateConversationWarningsForChannel.useInappropriateConversationWarningsForChannel(arg0).length > 0;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const obj = useIsSpamMessageRequest;
+  const isSpamMessageRequest = obj.useIsSpamMessageRequest(arg0);
+  const obj2 = useIsMessageRequest;
+  const isMessageRequest = obj2.useIsMessageRequest(arg0);
+  const obj3 = useChannelSafetyWarning;
+  const channelSafetyWarning = obj3.useChannelSafetyWarning(arg0, SafetyWarningTypes.LIKELY_ATO);
+  const obj4 = useInappropriateConversationWarningsForChannel;
+  const tmp4 = obj4.useInappropriateConversationWarningsForChannel(arg0).length > 0;
+  const obj5 = useStrangerDangerWarning;
   if (!isSpamMessageRequest) {
     if (!isMessageRequest) {
       if (!tmp4) {
@@ -27,10 +31,15 @@ export const useLikelyAtoWarning = ReactCompilerGating.isReactCompilerEnabled() 
     }
   }
 }) : ((arg0) => {
-  const isSpamMessageRequest = useIsSpamMessageRequest.useIsSpamMessageRequest(arg0);
-  const isMessageRequest = useIsMessageRequest.useIsMessageRequest(arg0);
-  const channelSafetyWarning = useChannelSafetyWarning.useChannelSafetyWarning(arg0, SafetyWarningTypes.LIKELY_ATO);
-  const tmp4 = useInappropriateConversationWarningsForChannel.useInappropriateConversationWarningsForChannel(arg0).length > 0;
+  const obj = useIsSpamMessageRequest;
+  const isSpamMessageRequest = obj.useIsSpamMessageRequest(arg0);
+  const obj2 = useIsMessageRequest;
+  const isMessageRequest = obj2.useIsMessageRequest(arg0);
+  const obj3 = useChannelSafetyWarning;
+  const channelSafetyWarning = obj3.useChannelSafetyWarning(arg0, SafetyWarningTypes.LIKELY_ATO);
+  const obj4 = useInappropriateConversationWarningsForChannel;
+  const tmp4 = obj4.useInappropriateConversationWarningsForChannel(arg0).length > 0;
+  const obj5 = useStrangerDangerWarning;
   if (!isSpamMessageRequest) {
     if (!isMessageRequest) {
       if (!tmp4) {
@@ -41,3 +50,6 @@ export const useLikelyAtoWarning = ReactCompilerGating.isReactCompilerEnabled() 
     }
   }
 });
+const result = size.fileFinishedImporting("modules/ato_alerts/hooks/useLikelyAtoWarning.tsx");
+
+export const useLikelyAtoWarning = tmp2;

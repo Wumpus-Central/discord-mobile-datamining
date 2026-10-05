@@ -1,7 +1,7 @@
 // === Module 9732: getParticipantTitle ===
 
 // Module 9732 (getParticipantTitle)
-import util from "util" /* 1126 */;
+import intl2 from "intl" /* 1126 */;
 import CallConstants from "CallConstants" /* 4911 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 5042 */;
 import useIsGuestOrLurker from "useIsGuestOrLurker" /* 9733 */;
@@ -23,16 +23,20 @@ export default function getParticipantTitle(guild_id, type, name) {
   } else {
     const user = type.user;
     let id;
+    const isGuestOrLurkerInGuild = useIsGuestOrLurker.isGuestOrLurkerInGuild;
+    guild_id = guild_id.guild_id;
+    useIsGuestOrLurker;
     if (user != null) {
       id = user.id;
     }
-    const result = useIsGuestOrLurker.isGuestOrLurkerInGuild(guild_id.guild_id, id);
+    const result = isGuestOrLurkerInGuild(guild_id, id);
     let str = "";
-    const name1 = NicknameUtilsDefault.getName(guild_id.getGuildId(), guild_id.id, type.user);
+    const obj = NicknameUtilsDefault;
+    const name1 = obj.getName(guild_id.getGuildId(), guild_id.id, type.user);
     if (result) {
-      const intl = util.intl;
+      const intl = intl2.intl;
       const _HermesInternal = HermesInternal;
-      str = " " + intl.string(util.t["pFO/Ph"]);
+      str = " " + intl.string(intl2.t["pFO/Ph"]);
     }
     return name1 + str;
   }

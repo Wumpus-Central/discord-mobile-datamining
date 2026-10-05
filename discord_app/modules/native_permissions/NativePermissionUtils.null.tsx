@@ -1,28 +1,28 @@
-// === Module 7277: requestPermissionCore ===
+// === Module 7277: nativePermissionDesktopNullUtils ===
 
-// Module 7277 (requestPermissionCore)
+// Module 7277 (nativePermissionDesktopNullUtils)
 import NativePermissionBaseUtils2 from "NativePermissionBaseUtils" /* 7278 */;
 import size from "module_2" /* 2 */;
 
 const NativePermissionBaseUtils = NativePermissionBaseUtils2.NativePermissionBaseUtils;
 class NativePermissionDesktopNullUtils extends NativePermissionBaseUtils {
+  requestPermissionCore() {
+    return Promise.resolve(true);
+  }
+  hasPermissionCore() {
+    return Promise.resolve(true);
+  }
+  openSettings() {
+
+  }
+  didHavePermission() {
+    return true;
+  }
+  openAlertModal() {
+
+  }
 }
 const prototype = NativePermissionDesktopNullUtils.prototype;
-prototype["requestPermissionCore"] = function requestPermissionCore() {
-  return Promise.resolve(true);
-};
-prototype["hasPermissionCore"] = function hasPermissionCore() {
-  return Promise.resolve(true);
-};
-prototype["openSettings"] = function openSettings() {
-
-};
-prototype["didHavePermission"] = function didHavePermission() {
-  return true;
-};
-prototype["openAlertModal"] = function openAlertModal() {
-
-};
 const nativePermissionDesktopNullUtils = new NativePermissionDesktopNullUtils();
 const result = size.fileFinishedImporting("modules/native_permissions/NativePermissionUtils.null.tsx");
 

@@ -1,81 +1,91 @@
 // === Module 10771: SentGiftsStore ===
 
 // Module 10771 (SentGiftsStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import size from "module_2" /* 2 */;
 
-let global = { sentGifts: {} };
-const PersistedStore = initializeDefault.PersistedStore;
+let closure_1;
+
+const PersistedStore = get_initializedDefault.PersistedStore;
 class SentGiftsStore extends PersistedStore {
+  initialize(arg0) {
+    if (null != arg0) {
+      const self = this;
+      closure_1 = arg0;
+      this.cleanupExpiredGifts();
+    }
+  }
+  getState() {
+    return closure_1;
+  }
+  hasSentGift(id, id2) {
+    const tmp = closure_1.sentGifts["" + id + ":" + id2];
+    let tmp2 = null != tmp;
+    if (tmp2) {
+      const _Date = Date;
+      const self = this;
+      const self2 = this;
+      const _Date2 = Date;
+      const self3 = this;
+      const self4 = this;
+      const date = new Date(tmp.expiresAt);
+      tmp2 = date >= new Date();
+      const date1 = new Date();
+    }
+    return tmp2;
+  }
+  getSentGift(arg0, arg1) {
+    const tmp = closure_1.sentGifts["" + arg0 + ":" + arg1];
+    let tmp2 = null;
+    if (null != tmp) {
+      const _Date = Date;
+      const self = this;
+      const self2 = this;
+      const _Date2 = Date;
+      const self3 = this;
+      const self4 = this;
+      const date = new Date(tmp.expiresAt);
+      tmp2 = null;
+      const date1 = new Date();
+      if (date >= date1) {
+        tmp2 = tmp;
+      }
+    }
+    return tmp2;
+  }
+  cleanupExpiredGifts() {
+    const date = new Date();
+    const entries = Object.entries(closure_1.sentGifts);
+    const tmp3 = entries[Symbol.iterator]();
+    while (tmp3 !== undefined) {
+      let tmp6 = _slicedToArray(tmp4, 2);
+      let _Date = Date;
+      let self = this;
+      let self2 = this;
+      let first = tmp6[0];
+      let date1 = new Date(tmp6[1].expiresAt);
+      if (date1 < date) {
+        delete closure_1.sentGifts[tmp7];
+      }
+      continue;
+    }
+  }
 }
 const prototype = SentGiftsStore.prototype;
-prototype["initialize"] = function initialize(arg0) {
-  if (null != arg0) {
-    const self = this;
-    global = arg0;
-    this.cleanupExpiredGifts();
-  }
-};
-prototype["getState"] = function getState() {
-  return global;
-};
-prototype["hasSentGift"] = function hasSentGift(id, id2) {
-  const tmp = global.sentGifts["" + id + ":" + id2];
-  let tmp2 = null != tmp;
-  if (tmp2) {
-    const _Date = Date;
-    const date = new Date(tmp.expiresAt);
-    const _Date2 = Date;
-    const date1 = new Date();
-    tmp2 = date >= date1;
-  }
-  return tmp2;
-};
-prototype["getSentGift"] = function getSentGift(arg0, arg1) {
-  const tmp = global.sentGifts["" + arg0 + ":" + arg1];
-  let tmp2 = null;
-  if (null != tmp) {
-    const _Date = Date;
-    const date = new Date(tmp.expiresAt);
-    const _Date2 = Date;
-    const date1 = new Date();
-    tmp2 = null;
-    if (date >= date1) {
-      tmp2 = tmp;
-    }
-  }
-  return tmp2;
-};
-prototype["cleanupExpiredGifts"] = function cleanupExpiredGifts() {
-  const entries = Object.entries(global.sentGifts);
-  const date = new Date();
-  while (tmp5 !== undefined) {
-    let tmp8 = _slicedToArray(tmp6, 2);
-    let _Date = Date;
-    let tmp9 = new.target;
-    let tmp10 = new.target;
-    let date1 = new Date(tmp8[1].expiresAt);
-    if (date1 < date) {
-      let sentGifts = global.sentGifts;
-      let first = tmp8[0];
-      delete tmp2[tmp];
-    }
-    continue;
-  }
-  tmp5 = entries[Symbol.iterator]();
-};
 SentGiftsStore.displayName = "SentGiftsStore";
 SentGiftsStore.persistKey = "SentGiftsStore";
-const sentGiftsStore = new SentGiftsStore(DispatcherDefault, {
+const obj = {
   WISHLIST_GIFT_SENT: function handleGiftSent(skuId) {
     const combined = "" + skuId.skuId + ":" + skuId.recipientId;
     const date = new Date();
     const date1 = new Date(date.getTime() + 172800000);
-    global.sentGifts[combined] = { skuId: skuId.skuId, recipientId: skuId.recipientId, sentAt: date.toISOString(), expiresAt: new Date(date.getTime() + 172800000).toISOString() };
+    closure_1.sentGifts[combined] = { skuId: skuId.skuId, recipientId: skuId.recipientId, sentAt: date.toISOString(), expiresAt: date1.toISOString() };
+    ({ skuId: skuId.skuId, recipientId: skuId.recipientId, sentAt: date.toISOString(), expiresAt: date1.toISOString() });
   }
-});
-const size = fn(2);
+};
+const sentGiftsStore = new SentGiftsStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/wishlists/SentGiftsStore.tsx");
 
 export default sentGiftsStore;

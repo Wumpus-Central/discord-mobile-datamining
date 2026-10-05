@@ -8,13 +8,10 @@ import AVErrorUtils from "AVErrorUtils" /* 18032 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
 let closure_5 = 20 * DurationsDefault.Millis.SECOND;
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorCameraSendLowFPS.tsx");
-
-export const AVErrorCameraSendLowFPSDefinition = {
+const obj = {
   getActiveErrors() {
     const rTCConnection = RTCConnectionStore.getRTCConnection();
     if (null == rTCConnection) {
@@ -32,15 +29,17 @@ export const AVErrorCameraSendLowFPSDefinition = {
           }
         }
         if (rTCConnection.hasActiveRemoteWants()) {
-          const accumulatedStatsWithMinDatapoints = AVErrorUtils.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, AuthenticationStore.getId());
+          const obj3 = AVErrorUtils;
+          const accumulatedStatsWithMinDatapoints = obj3.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, AuthenticationStore.getId());
           let tmp7 = null;
           if (null != accumulatedStatsWithMinDatapoints) {
+            let tmp8;
             if (accumulatedStatsWithMinDatapoints.short.frameRate < 10) {
               const obj2 = { type: AVError.AVError.CAMERA_SEND_LOW_FPS, userId: AuthenticationStore.getId() };
-              const merged = Object.assign(AVErrorContext.getVoiceChannelErrorContext());
-              const items = [obj2];
               const tmp4Result = AVErrorContext;
-              const tmp8 = items;
+              const merged = Object.assign(tmp4Result.getVoiceChannelErrorContext());
+              const items = [obj2];
+              tmp8 = items;
             }
             tmp7 = tmp8;
           }
@@ -57,3 +56,6 @@ export const AVErrorCameraSendLowFPSDefinition = {
     return "" + mediaSessionId.mediaSessionId;
   }
 };
+const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorCameraSendLowFPS.tsx");
+
+export const AVErrorCameraSendLowFPSDefinition = obj;

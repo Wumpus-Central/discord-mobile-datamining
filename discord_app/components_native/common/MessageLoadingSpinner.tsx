@@ -1,62 +1,72 @@
 // === Module 9113: MessageLoadingSpinner ===
 
 // Module 9113 (MessageLoadingSpinner)
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4580 */;
+import useToken2 from "useToken" /* 4580 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5968 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const jsx = fn(21).jsx;
-const PlatformUtils = fn(1369);
+let color;
+
+const requireNativeComponent = react_native.requireNativeComponent;
+const jsx = Fragment.jsx;
 let result = null;
 if (!PlatformUtils.isAndroid()) {
-  result = fn(17).requireNativeComponent("DCDMessageLoadingSpinner");
+  result = requireNativeComponent("DCDMessageLoadingSpinner");
 }
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result1 = size.fileFinishedImporting("components_native/common/MessageLoadingSpinner.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((color) => {
-  const cResult = c.c(3);
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((color) => {
+  let tmp11;
+  const obj = react2;
+  const cResult = obj.c(3);
+  const useToken = useToken2.useToken;
   color = color.color;
+  useToken2;
   if (color == null) {
-    color = obj2.useToken(nativeDefault.colors.BACKGROUND_BRAND);
+    color = useToken(nativeDefault.colors.BACKGROUND_BRAND);
   }
   if (cResult[0] === color) {
+    let tmp5;
     if (cResult[1] === color) {
-      return cResult[2];
+      tmp5 = cResult[2];
     }
+    return tmp5;
   }
   if (null != result) {
-    const obj3 = {};
     const merged = Object.assign(color);
-    obj3.color = color;
-    let tmp9 = <tmp4 />;
+    tmp11 = <tmp6 color={color} />;
   } else {
-    const obj4 = { animating: color.animate };
+    const ActivityIndicator = ActivityIndicator_ActivityIndicator.ActivityIndicator;
     const merged1 = Object.assign(color);
-    tmp9 = jsx(ActivityIndicator_ActivityIndicator.ActivityIndicator, { animating: color.animate });
+    tmp11 = <ActivityIndicator animating={color.animate} />;
   }
   cResult[0] = color;
   cResult[1] = color;
-  cResult[2] = tmp9;
-  obj2 = useToken;
+  cResult[2] = tmp11;
+  tmp5 = tmp11;
 }) : ((color) => {
+  let tmp9;
+  const useToken = useToken2.useToken;
   color = color.color;
+  useToken2;
   if (color == null) {
-    color = obj.useToken(nativeDefault.colors.BACKGROUND_BRAND);
+    color = useToken(nativeDefault.colors.BACKGROUND_BRAND);
   }
   if (null != result) {
-    const obj2 = {};
     const merged = Object.assign(color);
-    obj2.color = color;
-    let tmp8 = <tmp3 />;
+    tmp9 = <tmp4 color={color} />;
   } else {
-    const obj3 = { animating: color.animate };
+    const ActivityIndicator = ActivityIndicator_ActivityIndicator.ActivityIndicator;
     const merged1 = Object.assign(color);
-    tmp8 = jsx(ActivityIndicator_ActivityIndicator.ActivityIndicator, { animating: color.animate });
+    tmp9 = <ActivityIndicator animating={color.animate} />;
   }
-  return tmp8;
+  return tmp9;
 });
+const result1 = size.fileFinishedImporting("components_native/common/MessageLoadingSpinner.tsx");
+
+export default tmp4;

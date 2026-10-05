@@ -1,18 +1,22 @@
 // === Module 15936: getScreenAnalyticsName ===
 
 // Module 15936 (getScreenAnalyticsName)
+import ChannelConstants from "ChannelConstants" /* 2058 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4736 */;
 import RootNavigationRef from "RootNavigationRef" /* 4737 */;
+import AcceptInviteConstants from "AcceptInviteConstants" /* 7155 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ACCEPT_INVITE_MODAL_KEY = fn(7155).ACCEPT_INVITE_MODAL_KEY;
-const isStaticChannelRoute = fn(2058).isStaticChannelRoute;
-const size = fn(2);
+const ACCEPT_INVITE_MODAL_KEY = AcceptInviteConstants.ACCEPT_INVITE_MODAL_KEY;
+const isStaticChannelRoute = ChannelConstants.isStaticChannelRoute;
 const result = size.fileFinishedImporting("modules/tti_analytics/native/getScreenAnalyticsName.tsx");
 
 export default function getScreenAnalyticsName() {
-  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
+  let name;
+  let params;
+  const obj = RootNavigationRef;
+  const rootNavigationRef = obj.getRootNavigationRef();
   let currentRoute;
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
@@ -22,14 +26,17 @@ export default function getScreenAnalyticsName() {
   if (null == currentRoute) {
     return null;
   } else {
+    const tmpResult = NavigationRouteUtils;
     if (tmpResult.isModalOpen(ACCEPT_INVITE_MODAL_KEY)) {
       return "invite";
     } else {
+      let channelId;
       ({ name, params } = currentRoute);
       if (params != null) {
-        const channelId = params.channelId;
+        channelId = params.channelId;
       }
       if ("channel" === name) {
+        let combined;
         if (null != channelId) {
           let tmp7 = channelId;
           if (!isStaticChannelRoute(channelId)) {
@@ -60,14 +67,13 @@ export default function getScreenAnalyticsName() {
             }
             tmp7 = str3;
           }
-          let combined = tmp7;
+          combined = tmp7;
         }
         return combined;
       }
       const _HermesInternal = HermesInternal;
       combined = "redesign-" + name;
     }
-    tmpResult = NavigationRouteUtils;
   }
 };
 export const getChannelScreenName = function getChannelScreenName(channelId) {

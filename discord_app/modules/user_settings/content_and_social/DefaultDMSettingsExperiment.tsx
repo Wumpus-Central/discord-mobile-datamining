@@ -9,6 +9,9 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/DefaultDMSettingsExperiment.tsx");
 
 export const shouldAgeVerifyForDMDefaultOff = function shouldAgeVerifyForDMDefaultOff() {
-  const isFeatureAgeGatedResult = RegionalFeatureConfigUtils.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.DM_PRIVACY_SETTINGS);
-  return AgeVerificationUtils.shouldShowTiggerPawtect() && isFeatureAgeGatedResult;
+  const obj = RegionalFeatureConfigUtils;
+  const isFeatureAgeGatedResult = obj.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.DM_PRIVACY_SETTINGS);
+  const obj2 = AgeVerificationUtils;
+  const tmp2 = obj2.shouldShowTiggerPawtect() && isFeatureAgeGatedResult;
+  return tmp2;
 };

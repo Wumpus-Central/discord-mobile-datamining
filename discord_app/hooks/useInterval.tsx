@@ -1,19 +1,26 @@
 // === Module 6954: useInterval ===
 
 // Module 6954 (useInterval)
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, dependencyMap;
 
-({ useEffect: c3, useRef: closure_4 } = noop);
-const result = size.fileFinishedImporting("hooks/useInterval.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((current, arg1) => {
+let c3;
+let closure_4;
+({ useEffect: c3, useRef: closure_4 } = react);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((current, arg1) => {
+  let closure_2;
+  let tmp2;
+  let tmp3;
+  let tmp6;
+  let tmp7;
   _require = current;
-  closure_1 = arg1;
-  const cResult = require("c").c(6);
+  let closure_1 = arg1;
+  const obj = require("react");
+  const cResult = obj.c(6);
   dependencyMap = closure_4(current);
   const ref = closure_4(null);
   if (cResult[0] !== current) {
@@ -24,15 +31,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((current, arg1) =
     cResult[0] = current;
     cResult[1] = fn;
     cResult[2] = items;
-    let tmp3 = items;
-    let tmp2 = fn;
+    tmp3 = items;
+    tmp2 = fn;
   } else {
     tmp2 = cResult[1];
     tmp3 = cResult[2];
   }
   ref(tmp2, tmp3);
+  const tmp4 = ref;
   if (cResult[3] !== arg1) {
     const fn2 = function f() {
+      let ref2;
       if (null !== closure_1) {
         const _setInterval = setInterval;
         ref.current = setInterval(() => {
@@ -50,23 +59,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((current, arg1) =
     cResult[3] = arg1;
     cResult[4] = fn2;
     cResult[5] = items1;
-    let tmp7 = items1;
-    let tmp6 = fn2;
+    tmp7 = items1;
+    tmp6 = fn2;
   } else {
     tmp6 = cResult[4];
     tmp7 = cResult[5];
   }
-  ref(tmp6, tmp7);
+  tmp4(tmp6, tmp7);
 }) : ((current, arg1) => {
-  closure_1 = arg1;
-  closure_2 = closure_4(current);
+  let closure_1 = arg1;
+  let closure_2 = closure_4(current);
   const ref = closure_4(null);
   const items = [current];
-  ref(() => {
+  const tmp = ref(() => {
     closure_2.current = current;
   }, items);
   const items1 = [arg1];
   ref(() => {
+    let ref2;
     if (null !== closure_1) {
       const _setInterval = setInterval;
       ref.current = setInterval(() => {
@@ -81,3 +91,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((current, arg1) =
     }
   }, items1);
 });
+const result = size.fileFinishedImporting("hooks/useInterval.tsx");
+
+export default tmp3;

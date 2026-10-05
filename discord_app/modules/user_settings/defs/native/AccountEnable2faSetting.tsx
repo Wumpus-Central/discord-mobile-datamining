@@ -1,23 +1,28 @@
 // === Module 14565: AccountEnable2faSetting ===
 
 // Module 14565 (AccountEnable2faSetting)
-import util from "util" /* 1126 */;
+import intl3 from "intl" /* 1126 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5707 */;
+import SettingsConstants from "SettingsConstants" /* 7634 */;
 import SettingsAccountUtils from "SettingsAccountUtils" /* 14494 */;
 import TwoFASetupModalActionCreatorsDefault from "TwoFASetupModalActionCreators" /* 14566 */;
 import UserStore from "UserStore" /* 1377 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import SettingBuilders from "SettingBuilders" /* 11129 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-let ReactCompilerGating = fn(558);
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(11129);
-const pressable = SettingBuilders.createPressable({
+let obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t.cDgKte);
+    const intl = intl3.intl;
+    return intl.string(intl3.t.cDgKte);
   },
-  parent: fn(7634).MobileUserSettings.ACCOUNT,
+  parent: MobileUserSettings.ACCOUNT,
   onPress: function onAccountEnable2FASettingPress() {
+    let intl;
+    let intl2;
     const currentUser = UserStore.getCurrentUser();
     let verified;
     if (currentUser != null) {
@@ -25,20 +30,24 @@ const pressable = SettingBuilders.createPressable({
     }
     if (verified != null) {
       if (verified) {
-        TwoFASetupModalActionCreatorsDefault.open();
+        const obj = TwoFASetupModalActionCreatorsDefault;
+        obj.open();
       }
     }
-    const obj3 = { title: null, body: null };
-    const intl = util.intl;
-    obj3.title = intl.string(util.t.v740sh);
-    const intl2 = util.intl;
-    obj3.body = intl2.string(util.t.uggF7o);
-    AlertActionCreatorsDefault.show(obj3);
+    const obj2 = { title: intl.string(intl3.t.v740sh), body: intl2.string(intl3.t.uggF7o) };
+    const show = AlertActionCreatorsDefault.show;
+    AlertActionCreatorsDefault;
+    intl = intl3.intl;
+    intl2 = intl3.intl;
+    show(obj2);
   },
   withArrow: true,
-  usePredicate: () => !SettingsAccountUtils.useIsTOTPEnabled()
-});
-const size = fn(2);
+  usePredicate: () => {
+    const obj = SettingsAccountUtils;
+    return !obj.useIsTOTPEnabled();
+  }
+};
+const pressable = SettingBuilders.createPressable(obj);
 const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/AccountEnable2faSetting.tsx");
 
 export default pressable;

@@ -1,24 +1,27 @@
 // === Module 18097: i18nMessagesProvider ===
 
 // Module 18097 (i18nMessagesProvider)
-import util from "util" /* 1126 */;
+import intl2 from "intl" /* 1126 */;
 import _mod1165 from "module_1165" /* 1165 */;
-import NativeI18nModuleDefault from "NativeI18nModule" /* 18098 */;
+import react_nativeDefault from "react-native" /* 18098 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("i18n/native/i18nMessagesProvider.tsx");
 
 export default function newIntlMessagesProvider() {
-  const keys = NativeI18nModuleDefault.getKeys();
+  let obj = react_nativeDefault;
+  const keys = obj.getKeys();
   const mapped = keys.map((item) => {
-    const result = _mod1165.runtimeHashMessageKey(item);
-    const tmp4 = util.t[result];
+    const obj = _mod1165;
+    const result = obj.runtimeHashMessageKey(item);
+    const tmp4 = intl2.t[result];
     let str = "";
     if (null != tmp4) {
-      const intl = util.intl;
+      const intl = intl2.intl;
       str = intl.reserialize(tmp4);
     }
     return str;
   });
-  NativeI18nModuleDefault.valuesResult(mapped);
+  const obj2 = react_nativeDefault;
+  obj2.valuesResult(mapped);
 };

@@ -1,7 +1,7 @@
 // === Module 12142: OwnedGameServersStore ===
 
 // Module 12142 (OwnedGameServersStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GameServerConstants from "GameServerConstants" /* 4769 */;
 import size from "module_2" /* 2 */;
@@ -9,10 +9,12 @@ import size from "module_2" /* 2 */;
 function handleGameServerUpsert(gameServer) {
   gameServer = undefined;
   if (null == gameServer.guildId) {
+    let mapped;
+    let tmp2 = closure_1;
     if (-1 === closure_1.findIndex((id) => id.id === gameServer.id)) {
       const items = [];
-      items[HermesBuiltin.arraySpread(closure_1, 0)] = gameServer;
-      let mapped = items;
+      items[HermesBuiltin.arraySpread(items, closure_1, 0)] = gameServer;
+      mapped = items;
     } else {
       mapped = closure_1.map((id) => {
         let tmp2 = id;
@@ -25,9 +27,8 @@ function handleGameServerUpsert(gameServer) {
             }
             tmp4 = gameServer;
             if (null != subscription_id) {
-              const obj = {};
+              const obj = { subscription_id: id.subscription_id };
               const merged = Object.assign(gameServer);
-              obj.subscription_id = id.subscription_id;
               tmp4 = obj;
             }
           }
@@ -42,26 +43,28 @@ function handleGameServerUpsert(gameServer) {
 const GAME_SERVER_SHOP_MAX_INSTANCES = GameServerConstants.GAME_SERVER_SHOP_MAX_INSTANCES;
 let closure_1 = [];
 let maxServers = GAME_SERVER_SHOP_MAX_INSTANCES;
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class OwnedGameServersStore extends Store {
+  getGameServers() {
+    return closure_1;
+  }
+  getMaxServers() {
+    return maxServers;
+  }
 }
 const prototype = OwnedGameServersStore.prototype;
-prototype["getGameServers"] = function getGameServers() {
-  return closure_1;
-};
-prototype["getMaxServers"] = function getMaxServers() {
-  return maxServers;
-};
 OwnedGameServersStore.displayName = "OwnedGameServersStore";
-const ownedGameServersStore = new OwnedGameServersStore(DispatcherDefault, {
+let obj = {
   LOGOUT: function handleReset() {
     closure_1 = [];
     maxServers = GAME_SERVER_SHOP_MAX_INSTANCES;
   },
   GAME_SERVER_FETCH_MY_SERVERS_SUCCESS: function handleFetchMyServersSuccess(arg0) {
+    let gameServers;
     ({ gameServers, maxServers } = arg0);
     closure_1 = gameServers.map((subscription_id) => {
-      const found = closure_1_1.find((id) => id.id === subscription_id.id);
+      let closure_0 = subscription_id;
+      const found = closure_1_1.find((id) => id.id === id.id);
       let tmp2 = subscription_id;
       if (null == subscription_id.subscription_id) {
         subscription_id = undefined;
@@ -70,9 +73,8 @@ const ownedGameServersStore = new OwnedGameServersStore(DispatcherDefault, {
         }
         tmp2 = subscription_id;
         if (null != subscription_id) {
-          const obj = {};
+          const obj = { subscription_id: found.subscription_id };
           const merged = Object.assign(subscription_id);
-          obj.subscription_id = found.subscription_id;
           tmp2 = obj;
         }
       }
@@ -90,7 +92,8 @@ const ownedGameServersStore = new OwnedGameServersStore(DispatcherDefault, {
       closure_1 = closure_1.filter((id) => id.id !== gameServerId);
     }
   }
-});
+};
+const ownedGameServersStore = new OwnedGameServersStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/game_server/OwnedGameServersStore.tsx");
 
 export default ownedGameServersStore;

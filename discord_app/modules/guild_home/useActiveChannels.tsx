@@ -11,26 +11,32 @@ import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5071 */;
 import ActiveChannelsStore from "ActiveChannelsStore" /* 13518 */;
 import size from "module_2" /* 2 */;
 
+let set;
+
 const isTextChannel = ChannelRecord.isTextChannel;
 const Permissions = Constants.Permissions;
 const ChannelFlags = ChannelConstants.ChannelFlags;
 const result = size.fileFinishedImporting("modules/guild_home/useActiveChannels.tsx");
 
 export const getActiveTextChannels = function getActiveTextChannels(guildId) {
-  let tmp = arg1;
-  if (arg1 === undefined) {
+  let arr;
+  let obj;
+  let obj2;
+  let tmp = items5;
+  if (items5 === undefined) {
     const items = [ChannelStore, PermissionStore, ActiveChannelsStore, UserGuildSettingsStore];
     tmp = items;
   }
   [, , obj, obj2] = tmp;
+  set = undefined;
   const activeChannelIds = obj.getActiveChannelIds(guildId);
   if (null != activeChannelIds) {
     const _Array = Array;
-    let arr = Array.from(activeChannelIds);
+    arr = Array.from(activeChannelIds);
   } else {
     arr = [];
   }
-  obj2.getMutedChannels(guildId);
+  set = obj2.getMutedChannels(guildId);
   const mapped = arr.map((item) => require.getChannel(item));
   const found = mapped.filter(GlobalUtils.isNotNullish);
   return found.filter((hasFlag) => {

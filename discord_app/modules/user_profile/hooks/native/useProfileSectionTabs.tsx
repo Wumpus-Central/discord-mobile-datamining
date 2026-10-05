@@ -1,51 +1,22 @@
 // === Module 12926: useProfileSectionTabs ===
 
 // Module 12926 (useProfileSectionTabs)
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import Constants from "Constants" /* 7854 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
-const UserProfileSections = fn(7854).UserProfileSections;
-const ReactCompilerGating = fn(558);
-function getProfileTabSectionIndex(initialTab, wishlistTabIndex) {
-  if (UserProfileSections.WISHLIST === initialTab) {
-    return wishlistTabIndex.wishlistTabIndex;
-  } else if (UserProfileSections.WIDGETS === initialTab) {
-    return tmp;
-  } else if (UserProfileSections.ACTIVITY === initialTab) {
-    return tmp2;
-  } else if (UserProfileSections.MAIN === initialTab) {
-    return 0;
-  }
-}
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_profile/hooks/native/useProfileSectionTabs.tsx");
+let activeIndex, initialUserProfileSection;
 
-export function useProfileTabIndices(arg0, isRecentActivityMobileEnabled, arg2) {
-  let num = -1;
-  let num2 = 1;
-  let num3 = -1;
-  if (arg0) {
-    num2 = 2;
-    num3 = 1;
-  }
-  const obj = { boardTabIndex: num3, activityTabIndex: null, wishlistTabIndex: null };
-  let sum = num2;
-  let tmp2 = num;
-  if (isRecentActivityMobileEnabled) {
-    sum = num2 + 1;
-    tmp2 = num2;
-  }
-  obj.activityTabIndex = tmp2;
-  if (arg2) {
-    num = sum;
-  }
-  obj.wishlistTabIndex = num;
-  return obj;
-}
-export { getProfileTabSectionIndex };
-export const useProfileSectionTabs = ReactCompilerGating.isReactCompilerEnabled() ? ((initialUserProfileSection) => {
-  const cResult = initialUserProfileSection(wishlistTabIndex[4]).c(19);
+const UserProfileSections = Constants.UserProfileSections;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((initialUserProfileSection) => {
+  let closure_5;
+  let tmp4;
+  let tmp5;
+  let wishlistTabIndex;
+  const obj = initialUserProfileSection(wishlistTabIndex[4]);
+  const cResult = obj.c(19);
   initialUserProfileSection = initialUserProfileSection.initialUserProfileSection;
   wishlistTabIndex = initialUserProfileSection.wishlistTabIndex;
   const boardTabIndex = initialUserProfileSection.boardTabIndex;
@@ -82,8 +53,8 @@ export const useProfileSectionTabs = ReactCompilerGating.isReactCompilerEnabled(
       }
     }
   }
-  const obj = initialUserProfileSection(wishlistTabIndex[4]);
   [tmp4, tmp5] = boardTabIndex(activityTabIndex.useState(T), 2);
+  boardTabIndex(activityTabIndex.useState(T), 2);
   if (cResult[2] === tmp4) {
     class T {
       constructor() {
@@ -99,6 +70,7 @@ export const useProfileSectionTabs = ReactCompilerGating.isReactCompilerEnabled(
       }
     }
   }
+  const tmp7 = wishlistTabIndex;
   if (onTabChange.WISHLIST !== tmp4) {
     class T {
       constructor() {
@@ -113,7 +85,7 @@ export const useProfileSectionTabs = ReactCompilerGating.isReactCompilerEnabled(
         }
       }
     }
-    if (tmp6.WIDGETS !== tmp4) {
+    if (onTabChange.WIDGETS !== tmp4) {
       class T {
         constructor() {
           tmp = initialUserProfileSection;
@@ -127,7 +99,7 @@ export const useProfileSectionTabs = ReactCompilerGating.isReactCompilerEnabled(
           }
         }
       }
-      if (tmp6.ACTIVITY !== tmp4) {
+      if (onTabChange.ACTIVITY !== tmp4) {
         class T {
           constructor() {
             tmp = initialUserProfileSection;
@@ -141,7 +113,7 @@ export const useProfileSectionTabs = ReactCompilerGating.isReactCompilerEnabled(
             }
           }
         }
-        if (tmp6.MAIN === tmp4) {
+        if (onTabChange.MAIN === tmp4) {
           class T {
             constructor() {
               tmp = initialUserProfileSection;
@@ -163,15 +135,18 @@ export const useProfileSectionTabs = ReactCompilerGating.isReactCompilerEnabled(
   cResult[3] = activityTabIndex;
   cResult[4] = boardTabIndex;
   cResult[5] = wishlistTabIndex;
-  cResult[6] = wishlistTabIndex;
-  const tmp3 = boardTabIndex(activityTabIndex.useState(T), 2);
+  cResult[6] = tmp7;
 }) : ((boardTabIndex) => {
+  let _undefined;
+  let tmp2;
+  let tmp3;
+  let wishlistTabIndex;
   ({ initialUserProfileSection: require, wishlistTabIndex } = boardTabIndex);
   boardTabIndex = boardTabIndex.boardTabIndex;
   const activityTabIndex = boardTabIndex.activityTabIndex;
   const onTabChange = boardTabIndex.onTabChange;
   let num2;
-  [tmp2, tmp3] = boardTabIndex(activityTabIndex.useState(() => {
+  const tmp = boardTabIndex(activityTabIndex.useState(() => {
     if (UserProfileSections.WISHLIST === require) {
       return UserProfileSections.WISHLIST;
     } else if (UserProfileSections.WIDGETS === require) {
@@ -180,21 +155,22 @@ export const useProfileSectionTabs = ReactCompilerGating.isReactCompilerEnabled(
       return UserProfileSections.ACTIVITY === require ? UserProfileSections.ACTIVITY : UserProfileSections.MAIN;
     }
   }), 2);
-  c5 = tmp3;
+  [tmp2, tmp3] = tmp;
+  let c5 = tmp3;
   let num = wishlistTabIndex;
   if (onTabChange.WISHLIST !== tmp2) {
     num = boardTabIndex;
-    if (tmp4.WIDGETS !== tmp2) {
+    if (onTabChange.WIDGETS !== tmp2) {
       num = activityTabIndex;
-      if (tmp4.ACTIVITY !== tmp2) {
-        if (tmp4.MAIN === tmp2) {
+      if (onTabChange.ACTIVITY !== tmp2) {
+        if (onTabChange.MAIN === tmp2) {
           num = 0;
         }
       }
     }
   }
   if (num < 0) {
-    tmp3(tmp4.MAIN);
+    tmp3(onTabChange.MAIN);
   }
   num2 = 0;
   if (num >= 0) {
@@ -203,8 +179,9 @@ export const useProfileSectionTabs = ReactCompilerGating.isReactCompilerEnabled(
   const items = [wishlistTabIndex, boardTabIndex, activityTabIndex, onTabChange];
   const items1 = [num2];
   const callback = obj.useCallback((arg0) => {
+    let MAIN;
     if (wishlistTabIndex === arg0) {
-      let MAIN = UserProfileSections.WISHLIST;
+      MAIN = UserProfileSections.WISHLIST;
     } else if (boardTabIndex === arg0) {
       MAIN = UserProfileSections.WIDGETS;
     } else if (activityTabIndex === arg0) {
@@ -217,16 +194,7 @@ export const useProfileSectionTabs = ReactCompilerGating.isReactCompilerEnabled(
       onTabChange(MAIN);
     }
   }, items);
-  const tmp = boardTabIndex(activityTabIndex.useState(() => {
-    if (UserProfileSections.WISHLIST === require) {
-      return UserProfileSections.WISHLIST;
-    } else if (UserProfileSections.WIDGETS === require) {
-      return UserProfileSections.WIDGETS;
-    } else {
-      return UserProfileSections.ACTIVITY === require ? UserProfileSections.ACTIVITY : UserProfileSections.MAIN;
-    }
-  }), 2);
-  return {
+  const obj2 = {
     activeProfileTabSection: tmp2,
     setActiveProfileTabSection: tmp3,
     handleTabChange: callback,
@@ -238,4 +206,41 @@ export const useProfileSectionTabs = ReactCompilerGating.isReactCompilerEnabled(
     }, items1),
     activeProfileTabSectionIndex: num2
   };
+  return obj2;
 });
+function getProfileTabSectionIndex(initialTab, wishlistTabIndex) {
+  if (UserProfileSections.WISHLIST === initialTab) {
+    return wishlistTabIndex.wishlistTabIndex;
+  } else if (UserProfileSections.WIDGETS === initialTab) {
+    return tmp;
+  } else if (UserProfileSections.ACTIVITY === initialTab) {
+    return tmp2;
+  } else if (UserProfileSections.MAIN === initialTab) {
+    return 0;
+  }
+}
+const result = size.fileFinishedImporting("modules/user_profile/hooks/native/useProfileSectionTabs.tsx");
+
+export function useProfileTabIndices(arg0, isRecentActivityMobileEnabled, arg2) {
+  let tmp2;
+  let num = -1;
+  let num2 = 1;
+  let num3 = -1;
+  if (arg0) {
+    num2 = 2;
+    num3 = 1;
+  }
+  let sum = num2;
+  const obj = { boardTabIndex: num3, activityTabIndex: tmp2, wishlistTabIndex: num };
+  tmp2 = num;
+  if (isRecentActivityMobileEnabled) {
+    sum = num2 + 1;
+    tmp2 = num2;
+  }
+  if (arg2) {
+    num = sum;
+  }
+  return obj;
+}
+export { getProfileTabSectionIndex };
+export const useProfileSectionTabs = tmp2;

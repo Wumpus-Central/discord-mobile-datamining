@@ -2,22 +2,21 @@
 
 // Module 7285 (ImagePicker)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
+import Constants from "Constants" /* 1096 */;
+import intl7 from "intl" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import ImagePickerUtils from "ImagePickerUtils" /* 7286 */;
-import launchCamera from "launchCamera" /* 7287 */;
-import openPickerDefault from "openPicker" /* 7289 */;
+import react_native from "react-native" /* 7287 */;
+import react_nativeDefault from "react-native" /* 7289 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
+import size_mod from "module_2" /* 2 */;
 
-require = fn;
-const ThemeTypes = fn(1096).ThemeTypes;
-let size = fn(2);
-const result = size.fileFinishedImporting("modules/image/native/ImagePicker.tsx");
-
-export default {
-  launchImageLibrary(mediaType, fn) {
+const ThemeTypes = Constants.ThemeTypes;
+let obj = {
+  launchImageLibrary(mediaType, arg1) {
+    let str;
     if ("any" !== mediaType.mediaType) {
-      let str = mediaType.mediaType;
+      str = mediaType.mediaType;
     } else {
       PlatformUtils;
       str = "mixed";
@@ -27,29 +26,25 @@ export default {
       selections = [];
     }
     let str2;
+    const tmp3 = !mediaType.disableNewIOSPicker;
+    const obj2 = PlatformUtils;
     if (obj2.isIOS()) {
       str2 = "pageSheet";
     }
-    obj2 = PlatformUtils;
-    const tmp3 = !mediaType.disableNewIOSPicker;
     const tmp4Result = ImagePickerUtils;
-    const tmp6 = !ImagePickerUtils.isActionPickSupported();
-    const obj3 = {};
+    const obj3 = { mediaType: str, presentationStyle: str2, selection: selections, useNewIOSPicker: tmp3, forceGetContent: !tmp4Result.isActionPickSupported() };
+    const launchImageLibrary = react_native.launchImageLibrary;
+    react_native;
     const merged = Object.assign(mediaType);
-    obj3.mediaType = str;
-    obj3.presentationStyle = str2;
-    obj3.selection = selections;
-    obj3.useNewIOSPicker = tmp3;
-    obj3.forceGetContent = tmp6;
-    launchCamera.launchImageLibrary(obj3, fn);
-    const tmp4Result2 = launchCamera;
+    launchImageLibrary(obj3, arg1);
   },
   launchImageLibraryAsync(arg0) {
     let mediaType = arg0;
-    return new Promise((arg0) => {
+    const promise = new Promise((arg0) => {
+      let str;
       mediaType = arg0;
       if ("any" !== mediaType.mediaType) {
-        let str = tmp.mediaType;
+        str = tmp.mediaType;
       } else {
         PlatformUtils;
         str = "mixed";
@@ -59,40 +54,51 @@ export default {
         selections = [];
       }
       let str2;
+      const tmp4 = !mediaType.disableNewIOSPicker;
+      const obj2 = PlatformUtils;
       if (obj2.isIOS()) {
         str2 = "pageSheet";
       }
       const fn = (arg0) => {
         closure_0(arg0);
       };
-      obj2 = PlatformUtils;
-      const tmp4 = !mediaType.disableNewIOSPicker;
       const tmp5Result = ImagePickerUtils;
-      const tmp7 = !ImagePickerUtils.isActionPickSupported();
-      const obj3 = {};
+      const obj3 = { mediaType: str, presentationStyle: str2, selection: selections, useNewIOSPicker: tmp4, forceGetContent: !tmp5Result.isActionPickSupported() };
+      const launchImageLibrary = react_native.launchImageLibrary;
+      react_native;
       const merged = Object.assign(tmp);
-      obj3.mediaType = str;
-      obj3.presentationStyle = str2;
-      obj3.selection = selections;
-      obj3.useNewIOSPicker = tmp4;
-      obj3.forceGetContent = tmp7;
-      launchCamera.launchImageLibrary(obj3, fn);
-      const tmp5Result2 = launchCamera;
+      launchImageLibrary(obj3, fn);
     });
+    return promise;
   },
   launchCamera(arg0, arg1) {
-    launchCamera.launchCamera(arg0, arg1);
+    const obj = react_native;
+    obj.launchCamera(arg0, arg1);
   },
   launchCameraAsync(arg0) {
-    closure_0 = arg0;
-    return new Promise((arg0) => {
+    let closure_0 = arg0;
+    const promise = new Promise((arg0) => {
       closure_0 = arg0;
-      launchCamera.launchCamera(closure_0, (arg0) => {
+      const obj = react_native;
+      obj.launchCamera(closure_0, (arg0) => {
         closure_0(arg0);
       });
     });
+    return promise;
   },
   launchCropper(size) {
+    let freeStyleCropEnabled;
+    let height;
+    let includeBase64;
+    let intl;
+    let intl2;
+    let intl3;
+    let intl4;
+    let intl5;
+    let intl6;
+    let mimeType;
+    let uri;
+    let width;
     const theme = ThemeStore.theme;
     ({ uri, width, height, includeBase64, mimeType, freeStyleCropEnabled } = size);
     const internal = nativeDefault.internal;
@@ -107,25 +113,23 @@ export default {
     const semanticColor4 = internal5.resolveSemanticColor(theme, nativeDefault.colors.TEXT_BRAND);
     const internal6 = nativeDefault.internal;
     const semanticColor5 = internal6.resolveSemanticColor(theme, nativeDefault.colors.TEXT_DEFAULT);
-    size = { mediaType: "photo", path: uri, width, height, includeBase64, mimeType, freeStyleCropEnabled, cropperStatusBarLight: theme === ThemeTypes.LIGHT, cropperNavigationBarLight: theme === ThemeTypes.LIGHT, cropperActiveWidgetColor: semanticColor2, cropperInactiveWidgetColor: semanticColor3, cropperControlsColor: semanticColor1, cropperControlsBarColor: semanticColor, cropperChooseColor: semanticColor4, cropperChooseText: null, cropperCancelColor: null, cropperCancelText: null, cropperToolbarColor: null, cropperToolbarWidgetColor: null, cropperToolbarTitle: null, cropperRotateByAngleAccessibilityLabel: null, cropperResetRotationAccessibilityLabel: null, cropperClampButtonAccessibilityLabel: null };
-    const intl = util.intl;
-    size.cropperChooseText = intl.string(util.t["1Qm822"]);
-    size.cropperCancelColor = semanticColor5;
-    const intl2 = util.intl;
-    size.cropperCancelText = intl2.string(util.t["ETE/oC"]);
-    size.cropperToolbarColor = semanticColor;
-    size.cropperToolbarWidgetColor = semanticColor2;
-    const intl3 = util.intl;
-    size.cropperToolbarTitle = intl3.string(util.t.b0y3DL);
-    const intl4 = util.intl;
-    size.cropperRotateByAngleAccessibilityLabel = intl4.string(util.t.Izf9u1);
-    const intl5 = util.intl;
-    size.cropperResetRotationAccessibilityLabel = intl5.string(util.t.iz4w1M);
-    const intl6 = util.intl;
-    size.cropperClampButtonAccessibilityLabel = intl6.string(util.t.QHvDTL);
-    return openPickerDefault.openCropper(size);
+    size = { mediaType: "photo", path: uri, width, height, includeBase64, mimeType, freeStyleCropEnabled, cropperStatusBarLight: theme === ThemeTypes.LIGHT, cropperNavigationBarLight: theme === ThemeTypes.LIGHT, cropperActiveWidgetColor: semanticColor2, cropperInactiveWidgetColor: semanticColor3, cropperControlsColor: semanticColor1, cropperControlsBarColor: semanticColor, cropperChooseColor: semanticColor4, cropperChooseText: intl.string(intl7.t["1Qm822"]), cropperCancelColor: semanticColor5, cropperCancelText: intl2.string(intl7.t["ETE/oC"]), cropperToolbarColor: semanticColor, cropperToolbarWidgetColor: semanticColor2, cropperToolbarTitle: intl3.string(intl7.t.b0y3DL), cropperRotateByAngleAccessibilityLabel: intl4.string(intl7.t.Izf9u1), cropperResetRotationAccessibilityLabel: intl5.string(intl7.t.iz4w1M), cropperClampButtonAccessibilityLabel: intl6.string(intl7.t.QHvDTL) };
+    const openCropper = react_nativeDefault.openCropper;
+    react_nativeDefault;
+    intl = intl7.intl;
+    intl2 = intl7.intl;
+    intl3 = intl7.intl;
+    intl4 = intl7.intl;
+    intl5 = intl7.intl;
+    intl6 = intl7.intl;
+    return openCropper(size);
   },
   cleanSingle(path) {
-    return openPickerDefault.cleanSingle(path);
+    const obj = react_nativeDefault;
+    return obj.cleanSingle(path);
   }
 };
+let size = size_mod;
+const result = size.fileFinishedImporting("modules/image/native/ImagePicker.tsx");
+
+export default obj;

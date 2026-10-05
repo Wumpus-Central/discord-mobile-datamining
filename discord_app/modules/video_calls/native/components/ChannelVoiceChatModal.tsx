@@ -1,35 +1,41 @@
 // === Module 10701: ChannelVoiceChatModal ===
 
 // Module 10701 (ChannelVoiceChatModal)
-import c from "c" /* 576 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
 import native from "native" /* 4589 */;
 import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4732 */;
-import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 4762 */;
+import reactDefault from "react" /* 4762 */;
 import useChannelNameDefault from "useChannelName" /* 5043 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5091 */;
 import ChannelVoiceChatDefault from "ChannelVoiceChat" /* 9759 */;
 import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10661 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const jsx = fn(21).jsx;
-let ReactCompilerGating = fn(558);
+let channel;
+
+const jsx = Fragment.jsx;
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
-  const cResult = c.c(5);
+  let tmp6;
+  const obj = react2;
+  const cResult = obj.c(5);
   channel = channel.channel;
   const tmp5 = useColorThemeBackgroundDefault();
   if (cResult[0] !== channel) {
-    const obj2 = { channel, inModal: true };
     const tmp8 = jsx(ChannelVoiceChatDefault, { channel, inModal: true });
     cResult[0] = channel;
     cResult[1] = tmp8;
-    let tmp6 = tmp8;
+    tmp6 = tmp8;
   } else {
     tmp6 = cResult[1];
   }
   if (cResult[2] === tmp5) {
+    let tmp9;
     if (cResult[3] === tmp6) {
-      let tmp9 = cResult[4];
+      tmp9 = cResult[4];
     }
     return tmp9;
   }
@@ -39,35 +45,42 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[4] = tmp10;
   tmp9 = tmp10;
 }) : ((channel) => {
-  const tmp = useColorThemeBackgroundDefault();
-  return jsx(native.ThemeContextProvider, { gradient: useColorThemeBackgroundDefault(), children: jsx(ChannelVoiceChatDefault, { channel: channel.channel, inModal: true }) });
+  channel = channel.channel;
+  const ThemeContextProvider = native.ThemeContextProvider;
+  return <ThemeContextProvider gradient={useColorThemeBackgroundDefault()}>{null}</ThemeContextProvider>;
 });
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelVoiceChatModal.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
-  const cResult = channel(576).c(9);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+  let tmp12;
+  let tmp6;
+  let tmp7;
+  let tmp9;
+  let obj = channel(576);
+  const cResult = obj.c(9);
+  const tmp = channel;
   channel = channel.channel;
   const tmp5 = useChannelNameDefault(channel);
   if (cResult[0] !== channel.id) {
     const fn = function o() {
-      ChannelRTCActionCreatorsDefault.updateChatOpen(channel.id, true);
+      let id;
+      let obj = ChannelRTCActionCreatorsDefault;
+      obj.updateChatOpen(channel.id, true);
       return () => {
-        ChannelRTCActionCreatorsDefault.updateChatOpen(id.id, false);
+        const obj = ChannelRTCActionCreatorsDefault;
+        obj.updateChatOpen(id.id, false);
       };
     };
     const items = [channel.id];
     cResult[0] = channel.id;
     cResult[1] = fn;
     cResult[2] = items;
-    let tmp7 = items;
-    let tmp6 = fn;
+    tmp7 = items;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[1];
     tmp7 = cResult[2];
   }
-  const effect = noop.useEffect(tmp6, tmp7);
+  const effect = react.useEffect(tmp6, tmp7);
   let str = tmp5;
   if (tmp5 == null) {
     str = "";
@@ -75,27 +88,29 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const tmp11 = jsx(tmp(5881).StageIcon, { size: "sm" });
     cResult[3] = tmp11;
-    let tmp9 = tmp11;
+    tmp9 = tmp11;
   } else {
     tmp9 = cResult[3];
   }
   if (cResult[4] !== channel) {
     const fn2 = function p() {
       let guild_id = channel.guild_id;
+      const Provider = reactDefault.Provider;
       if (guild_id == null) {
         guild_id = null;
       }
-      return jsx(GuildThemeGuildIdOverrideContextDefault.Provider, { value: guild_id, children: <closure_5 channel={channel} /> });
+      return <Provider value={guild_id}><closure_5 channel={channel} /></Provider>;
     };
     cResult[4] = channel;
     cResult[5] = fn2;
-    let tmp12 = fn2;
+    tmp12 = fn2;
   } else {
     tmp12 = cResult[5];
   }
   if (cResult[6] === str) {
+    let tmp13;
     if (cResult[7] === tmp12) {
-      let tmp13 = cResult[8];
+      tmp13 = cResult[8];
     }
     return tmp13;
   }
@@ -104,27 +119,33 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   cResult[7] = tmp12;
   cResult[8] = tmp14;
   tmp13 = tmp14;
-  const obj = channel(576);
-  tmp = channel;
 }) : ((channel) => {
   channel = channel.channel;
   const tmp2 = useChannelNameDefault(channel);
   const items = [channel.id];
-  const effect = noop.useEffect(() => {
-    ChannelRTCActionCreatorsDefault.updateChatOpen(channel.id, true);
+  const effect = react.useEffect(() => {
+    let id;
+    let obj = ChannelRTCActionCreatorsDefault;
+    obj.updateChatOpen(channel.id, true);
     return () => {
-      ChannelRTCActionCreatorsDefault.updateChatOpen(id.id, false);
+      const obj = ChannelRTCActionCreatorsDefault;
+      obj.updateChatOpen(id.id, false);
     };
   }, items);
   let str = tmp2;
+  ModalStackNavigatorDefault;
   if (tmp2 == null) {
     str = "";
   }
   return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(5881).StageIcon, { size: "sm" })} render={function render() {
     let guild_id = channel.guild_id;
+    const Provider = reactDefault.Provider;
     if (guild_id == null) {
       guild_id = null;
     }
-    return jsx(GuildThemeGuildIdOverrideContextDefault.Provider, { value: guild_id, children: <closure_5 channel={channel} /> });
+    return <Provider value={guild_id}><closure_5 channel={channel} /></Provider>;
   }} />;
 });
+const result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelVoiceChatModal.tsx");
+
+export default tmp2;

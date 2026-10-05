@@ -1,33 +1,35 @@
 // === Module 11083: GameOrganizationInviteStore ===
 
 // Module 11083 (GameOrganizationInviteStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GameOrganizationInviteConstants from "GameOrganizationInviteConstants" /* 11084 */;
 import size from "module_2" /* 2 */;
 
+let set;
+
 const constants = GameOrganizationInviteConstants.GameOrganizationInviteStates;
 let map = new Map();
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class GameOrganizationInviteStore extends Store {
+  getInvite(arg0) {
+    let value = map.get(arg0);
+    if (value == null) {
+      value = null;
+    }
+    return value;
+  }
+  getInvites() {
+    return map;
+  }
 }
 const prototype = GameOrganizationInviteStore.prototype;
-prototype["getInvite"] = function getInvite(arg0) {
-  value = map.get(arg0);
-  if (value == null) {
-    value = null;
-  }
-  return value;
-};
-prototype["getInvites"] = function getInvites() {
-  return map;
-};
 GameOrganizationInviteStore.displayName = "GameOrganizationInviteStore";
-const gameOrganizationInviteStore = new GameOrganizationInviteStore(DispatcherDefault, {
+let obj = {
   GAME_ORGANIZATION_INVITE_RESOLVE: function handleResolve(code) {
     code = code.code;
-    value = map.get(code);
-    state = undefined;
+    const value = map.get(code);
+    let state;
     if (value != null) {
       state = value.state;
     }
@@ -35,30 +37,38 @@ const gameOrganizationInviteStore = new GameOrganizationInviteStore(DispatcherDe
       return false;
     } else {
       const _Map = Map;
+      const self = this;
+      const self2 = this;
       map = new Map(map);
       const obj = { code, state: tmp3.RESOLVING };
       const result = map.set(code, obj);
     }
   },
   GAME_ORGANIZATION_INVITE_RESOLVE_SUCCESS: function handleResolveSuccess(invite) {
+    let application;
+    let application_config;
+    let display_noun;
+    let game_organization;
     invite = invite.invite;
+    const code = invite.code;
     map = new Map(map);
     ({ game_organization, application, application_config } = invite);
-    const obj = { code: invite.code, state: constants.RESOLVED, organization: { id: game_organization.id, name: game_organization.name, description: game_organization.description, iconUrl: game_organization.icon_url, applicationId: game_organization.application_id, memberCount: game_organization.member_count, maxMembers: game_organization.max_members }, application: { id: application.id, name: application.name, iconUrl: application.icon_url }, displayNoun: null };
-    let display_noun;
+    const obj = { code: invite.code, state: constants.RESOLVED, organization: { id: game_organization.id, name: game_organization.name, description: game_organization.description, iconUrl: game_organization.icon_url, applicationId: game_organization.application_id, memberCount: game_organization.member_count, maxMembers: game_organization.max_members }, application: { id: application.id, name: application.name, iconUrl: application.icon_url }, displayNoun: display_noun };
+    display_noun = undefined;
+    set = map.set;
     if (application_config != null) {
       display_noun = application_config.display_noun;
     }
     if (display_noun == null) {
       display_noun = null;
     }
-    obj.displayNoun = display_noun;
-    const result = map.set(invite.code, obj);
+    const result = set(code, obj);
   },
   GAME_ORGANIZATION_INVITE_RESOLVE_FAILURE: function handleResolveFailure(code) {
     code = code.code;
-    value = map.get(code);
-    state = undefined;
+    const error = code.error;
+    const value = map.get(code);
+    let state;
     if (value != null) {
       state = value.state;
     }
@@ -66,12 +76,15 @@ const gameOrganizationInviteStore = new GameOrganizationInviteStore(DispatcherDe
       return false;
     } else {
       const _Map = Map;
+      const self = this;
+      const self2 = this;
       map = new Map(map);
-      const obj = { code, state: tmp3.ERROR, error: code.error };
+      const obj = { code, state: tmp3.ERROR, error };
       const result = map.set(code, obj);
     }
   }
-});
+};
+const gameOrganizationInviteStore = new GameOrganizationInviteStore(DispatcherDefault, obj);
 let result = size.fileFinishedImporting("modules/game_organization_invites/GameOrganizationInviteStore.tsx");
 
 export default gameOrganizationInviteStore;

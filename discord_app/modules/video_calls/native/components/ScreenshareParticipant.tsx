@@ -1,125 +1,145 @@
 // === Module 9708: ScreenshareParticipant ===
 
 // Module 9708 (ScreenshareParticipant)
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
+import intl4 from "intl" /* 1126 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import components_Button_Button from "components/Button/Button" /* 5594 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
 import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 9090 */;
-import _modDef9091 from "module_9091" /* 9091 */;
+import AssetRegistryDefault from "AssetRegistry" /* 9091 */;
 import useScreenshareUtils from "useScreenshareUtils" /* 9631 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { container: { alignItems: "center", justifyContent: "center", flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, image: { marginBottom: 12 }, title: { textAlign: "center", marginBottom: 8 }, description: { lineHeight: 18, textAlign: "center", marginBottom: 16 } };
-let closure_8 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj3 = { alignItems: "center", justifyContent: "center", flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/video_calls/native/components/ScreenshareParticipant.tsx");
+let participant;
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((participant) => {
-  const cResult = c.c(29);
+let closure_4;
+let hasOwnProperty;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+({ View: closure_4, Image: hasOwnProperty } = react_native);
+({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
+let obj = { container: obj2, image: { marginBottom: 12 }, title: { textAlign: "center", marginBottom: 8 }, description: { lineHeight: 18, textAlign: "center", marginBottom: 16 } };
+obj2 = { alignItems: "center", justifyContent: "center", flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+let closure_8 = createStyles.createStyles(obj);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((participant) => {
+  let intl3;
+  let items;
+  const obj = react2;
+  const cResult = obj.c(29);
   participant = participant.participant;
   const onSingleTap = participant.onSingleTap;
   const onDoubleTap = participant.onDoubleTap;
   const containerStyle = participant.containerStyle;
   if (cResult[0] === onSingleTap) {
+    let tmp4;
     if (cResult[1] === participant) {
-      let tmp4 = cResult[2];
+      tmp4 = cResult[2];
     }
     if (cResult[3] === onDoubleTap) {
+      let tmp5;
       if (cResult[4] === participant) {
-        let tmp5 = cResult[5];
+        tmp5 = cResult[5];
       }
       if (cResult[6] === tmp5) {
+        let tmp6;
         if (cResult[7] === tmp4) {
-          let tmp6 = cResult[8];
+          tmp6 = cResult[8];
         }
         const tmp8 = useParticipantTileTapGestureDefault(tmp6);
         const tmp10 = closure_8();
         if (cResult[9] === containerStyle) {
+          let tmp11;
+          let tmp12;
+          let tmp17;
+          let tmp19;
+          let tmp22;
+          let tmp24;
+          let tmp27;
           if (cResult[10] === tmp10.container) {
-            let tmp11 = cResult[11];
+            tmp11 = cResult[11];
           }
           if (cResult[12] !== tmp10.image) {
-            const obj2 = { source: _modDef9091, style: tmp10.image };
-            const tmp15 = timestampProducer(hasOwnProperty, obj2);
+            const obj2 = { source: AssetRegistryDefault, style: tmp10.image };
+            const tmp15 = metroRequire(hasOwnProperty, obj2);
             cResult[12] = tmp10.image;
             cResult[13] = tmp15;
-            let tmp12 = tmp15;
+            tmp12 = tmp15;
           } else {
             tmp12 = cResult[13];
           }
           const _Symbol = Symbol;
+          const title = tmp10.title;
           if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl = util.intl;
-            const stringResult = intl.string(util.t.gMOwov);
+            const intl = intl4.intl;
+            const stringResult = intl.string(intl4.t.gMOwov);
             cResult[14] = stringResult;
-            let tmp17 = stringResult;
+            tmp17 = stringResult;
           } else {
             tmp17 = cResult[14];
           }
           if (cResult[15] !== tmp10.title) {
-            const obj3 = { style: tmp10.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: tmp17 };
-            const tmp21 = timestampProducer(Text_Text.Text, obj3);
+            const obj3 = { style: title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: tmp17 };
+            const tmp21 = metroRequire(Text_Text.Text, obj3);
             cResult[15] = tmp10.title;
             cResult[16] = tmp21;
-            let tmp19 = tmp21;
+            tmp19 = tmp21;
           } else {
             tmp19 = cResult[16];
           }
           const _Symbol2 = Symbol;
+          const description = tmp10.description;
           if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl2 = util.intl;
-            const stringResult1 = intl2.string(util.t.dKeLGt);
+            const intl2 = intl4.intl;
+            const stringResult1 = intl2.string(intl4.t.dKeLGt);
             cResult[17] = stringResult1;
-            let tmp22 = stringResult1;
+            tmp22 = stringResult1;
           } else {
             tmp22 = cResult[17];
           }
           if (cResult[18] !== tmp10.description) {
-            const obj4 = { style: tmp10.description, variant: "text-sm/medium", color: "interactive-text-default", children: tmp22 };
-            const tmp26 = timestampProducer(Text_Text.Text, obj4);
+            const obj4 = { style: description, variant: "text-sm/medium", color: "interactive-text-default", children: tmp22 };
+            const tmp26 = metroRequire(Text_Text.Text, obj4);
             cResult[18] = tmp10.description;
             cResult[19] = tmp26;
-            let tmp24 = tmp26;
+            tmp24 = tmp26;
           } else {
             tmp24 = cResult[19];
           }
           const _Symbol3 = Symbol;
           if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj5 = { variant: "primary-overlay", text: null, onPress: null };
-            const intl3 = util.intl;
-            obj5.text = intl3.string(util.t.CpkXwZ);
-            obj5.onPress = useScreenshareUtils.stopScreenshare;
-            const tmp29 = timestampProducer(components_Button_Button.Button, obj5);
+            const obj5 = { variant: "primary-overlay", text: intl3.string(intl4.t.CpkXwZ), onPress: useScreenshareUtils.stopScreenshare };
+            const Button = components_Button_Button.Button;
+            intl3 = intl4.intl;
+            const tmp29 = metroRequire(Button, obj5);
             cResult[20] = tmp29;
-            let tmp27 = tmp29;
+            tmp27 = tmp29;
           } else {
             tmp27 = cResult[20];
           }
           if (cResult[21] === tmp24) {
             if (cResult[22] === tmp11) {
               if (cResult[23] === tmp12) {
+                let tmp30;
                 if (cResult[24] === tmp19) {
-                  let tmp30 = cResult[25];
+                  tmp30 = cResult[25];
                 }
                 if (cResult[26] === tmp8) {
+                  let tmp34;
                   if (cResult[27] === tmp30) {
-                    let tmp34 = cResult[28];
+                    tmp34 = cResult[28];
                   }
                   return tmp34;
                 }
                 const obj6 = { gesture: tmp8, children: tmp30 };
-                const tmp36 = timestampProducer(LegacyBaseButton.GestureDetector, obj6);
+                const tmp36 = metroRequire(LegacyBaseButton.GestureDetector, obj6);
                 cResult[26] = tmp8;
                 cResult[27] = tmp30;
                 cResult[28] = tmp36;
@@ -127,10 +147,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((participant) => 
               }
             }
           }
-          const obj7 = { style: tmp11, children: null };
-          const items = [tmp12, tmp19, tmp24, tmp27];
-          obj7.children = items;
-          const tmp33 = React5(React4, obj7);
+          const obj7 = { style: tmp11, children: items };
+          items = [tmp12, tmp19, tmp24, tmp27];
+          const tmp33 = metroImportDefault(React3, obj7);
           cResult[21] = tmp24;
           cResult[22] = tmp11;
           cResult[23] = tmp12;
@@ -174,46 +193,54 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((participant) => 
   cResult[2] = fn;
   tmp4 = fn;
 }) : ((participant) => {
+  let intl;
+  let intl2;
+  let intl3;
+  let items2;
+  let items3;
+  let obj2;
   participant = participant.participant;
   const onSingleTap = participant.onSingleTap;
   const onDoubleTap = participant.onDoubleTap;
   const items = [onSingleTap, participant];
+  const containerStyle = participant.containerStyle;
   const items1 = [onDoubleTap, participant];
-  const callback = noop.useCallback(() => {
+  const callback = react.useCallback(() => {
     let tmpResult;
     if (onSingleTap != null) {
       tmpResult = tmp(participant);
     }
     return tmpResult;
   }, items);
-  const callback1 = noop.useCallback(() => {
+  const callback1 = react.useCallback(() => {
     let tmpResult;
     if (onDoubleTap != null) {
       tmpResult = tmp(participant);
     }
     return tmpResult;
   }, items1);
-  const tmp4 = closure_8();
-  const obj = { gesture: useParticipantTileTapGestureDefault({ onSingleTapStart: callback, onDoubleTapStart: callback1 }), children: null };
-  const obj2 = { style: null, children: null };
-  const items2 = [tmp4.container, participant.containerStyle];
-  obj2.style = items2;
   const tmp3 = useParticipantTileTapGestureDefault({ onSingleTapStart: callback, onDoubleTapStart: callback1 });
-  const items3 = [timestampProducer(hasOwnProperty, { source: _modDef9091, style: tmp4.image }), , , ];
-  const obj4 = { style: tmp4.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = util.intl;
-  obj4.children = intl.string(util.t.gMOwov);
-  items3[1] = timestampProducer(Text_Text.Text, obj4);
-  const obj5 = { style: tmp4.description, variant: "text-sm/medium", color: "interactive-text-default", children: null };
-  const intl2 = util.intl;
-  obj5.children = intl2.string(util.t.dKeLGt);
-  items3[2] = timestampProducer(Text_Text.Text, obj5);
-  const obj6 = { variant: "primary-overlay", text: null, onPress: null };
-  const intl3 = util.intl;
-  obj6.text = intl3.string(util.t.CpkXwZ);
-  obj6.onPress = useScreenshareUtils.stopScreenshare;
-  items3[3] = timestampProducer(components_Button_Button.Button, obj6);
-  obj2.children = items3;
-  obj.children = React5(React4, obj2);
-  return timestampProducer(LegacyBaseButton.GestureDetector, obj);
+  const tmp4 = closure_8();
+  const obj = { gesture: tmp3, children: metroImportDefault(React3, obj2) };
+  obj2 = { style: items2, children: items3 };
+  items2 = [tmp4.container, containerStyle];
+  const obj3 = { source: AssetRegistryDefault, style: tmp4.image };
+  const GestureDetector = LegacyBaseButton.GestureDetector;
+  items3 = [metroRequire(hasOwnProperty, obj3), , , ];
+  const obj4 = { style: tmp4.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: intl.string(intl4.t.gMOwov) };
+  const Text = Text_Text.Text;
+  intl = intl4.intl;
+  items3[1] = metroRequire(Text, obj4);
+  const obj5 = { style: tmp4.description, variant: "text-sm/medium", color: "interactive-text-default", children: intl2.string(intl4.t.dKeLGt) };
+  const Text2 = Text_Text.Text;
+  intl2 = intl4.intl;
+  items3[2] = metroRequire(Text2, obj5);
+  const obj6 = { variant: "primary-overlay", text: intl3.string(intl4.t.CpkXwZ), onPress: useScreenshareUtils.stopScreenshare };
+  const Button = components_Button_Button.Button;
+  intl3 = intl4.intl;
+  items3[3] = metroRequire(Button, obj6);
+  return metroRequire(GestureDetector, obj);
 });
+const result = size.fileFinishedImporting("modules/video_calls/native/components/ScreenshareParticipant.tsx");
+
+export default tmp4;

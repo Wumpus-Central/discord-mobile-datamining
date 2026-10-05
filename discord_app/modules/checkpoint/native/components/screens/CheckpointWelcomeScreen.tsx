@@ -1,11 +1,11 @@
 // === Module 15537: CheckpointWelcomeScreen ===
 
 // Module 15537 (CheckpointWelcomeScreen)
-import _mod17 from "module_17" /* 17 */;
-import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import get_initialized from "get initialized" /* 504 */;
+import react from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
+import intl3 from "intl" /* 1126 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
 import _modDef3011 from "module_3011" /* 3011 */;
 import _modDef3043 from "module_3043" /* 3043 */;
@@ -14,25 +14,38 @@ import TextWritingAnimation from "TextWritingAnimation" /* 15538 */;
 import CheckpointKnickKnacksDefault from "CheckpointKnickKnacks" /* 15540 */;
 import CheckpointScreenDefault from "CheckpointScreen" /* 15541 */;
 import UserStore from "UserStore" /* 1377 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles_mod from "createStyles" /* 4890 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const TextWritingAnimationDefault = TextWritingAnimation;
 
-const View = _mod17.View;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+let hasOwnProperty;
+let metroRequire;
+let obj2;
+let obj3;
+const View = react_native.View;
+({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
 let c7 = 100;
-let obj = { container: { width: "100%", flexGrow: 1 }, title: { transformOrigin: "left", width: 340 }, titleText: { textTransform: "uppercase", fontSize: 72, lineHeight: 72, letterSpacing: -2.88 }, subtitle: { maxWidth: 327, marginTop: nativeDefault.space.PX_12 }, content: { flex: 1, justifyContent: "center" }, knickKnacks: null };
-let obj2 = { maxWidth: 327, marginTop: nativeDefault.space.PX_12 };
-obj.knickKnacks = { marginTop: nativeDefault.space.PX_16 };
-let closure_8 = createStyles.createStyles(obj);
-let obj3 = { marginTop: nativeDefault.space.PX_16 };
-const result = size.fileFinishedImporting("modules/checkpoint/native/components/screens/CheckpointWelcomeScreen.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(26);
+let createStyles = createStyles_mod;
+let obj = { container: { width: "100%", flexGrow: 1 }, title: { transformOrigin: "left", width: 340 }, titleText: { textTransform: "uppercase", fontSize: 72, lineHeight: 72, letterSpacing: -2.88 }, subtitle: obj2, content: { flex: 1, justifyContent: "center" }, knickKnacks: obj3 };
+obj2 = { maxWidth: 327, marginTop: nativeDefault.space.PX_12 };
+createStyles = createStyles.createStyles;
+obj3 = { marginTop: nativeDefault.space.PX_16 };
+let closure_8 = createStyles(obj);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let container;
+  let content;
+  let currentUser;
+  let items1;
+  let items2;
+  let obj7;
+  let tmp12;
+  let tmp7;
+  let tmp8;
+  const obj = react;
+  const cResult = obj.c(26);
   const tmp4 = closure_8();
   const bound = Math.min(useWindowDimensionsDefault().width / 392, 1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -47,89 +60,97 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp7, tmp8] = cResult;
   }
-  const stateFromStores = initialize.useStateFromStores(tmp7, tmp8);
-  const tmpResult = initialize;
-  const name = UserUtils.useName(stateFromStores);
+  const tmpResult = get_initialized;
+  const stateFromStores = tmpResult.useStateFromStores(tmp7, tmp8);
+  const tmpResult2 = UserUtils;
+  const name = tmpResult2.useName(stateFromStores);
   ({ container, content } = tmp4);
   if (cResult[2] !== bound) {
-    const obj2 = { transform: null };
+    const obj2 = { transform: items1 };
+    items1 = [{ scale: bound }];
     const obj3 = { scale: bound };
-    const items1 = [obj3];
-    obj2.transform = items1;
     cResult[2] = bound;
     cResult[3] = obj2;
-    let tmp12 = obj2;
+    tmp12 = obj2;
   } else {
     tmp12 = cResult[3];
   }
   if (cResult[4] === tmp4.title) {
+    let tmp13;
+    let tmp14;
     if (cResult[5] === tmp12) {
-      let tmp13 = cResult[6];
+      tmp13 = cResult[6];
     }
     const _Symbol = Symbol;
+    const titleText = tmp4.titleText;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl = util.intl;
+      const intl = intl3.intl;
       const stringResult = intl.string(_modDef3011["CdU/PF"]);
       cResult[7] = stringResult;
-      let tmp14 = stringResult;
+      tmp14 = stringResult;
     } else {
       tmp14 = cResult[7];
     }
     if (cResult[8] === tmp4.titleText) {
+      let tmp16;
+      let tmp20;
       if (cResult[9] === tmp13) {
-        let tmp16 = cResult[10];
+        tmp16 = cResult[10];
       }
+      const subtitle = tmp4.subtitle;
       if (cResult[11] !== name) {
-        const intl2 = util.intl;
+        const intl2 = intl3.intl;
         const obj4 = { username: name };
         const formatToPlainStringResult = intl2.formatToPlainString(_modDef3043.xhZ23b, obj4);
         cResult[11] = name;
         cResult[12] = formatToPlainStringResult;
-        let tmp20 = formatToPlainStringResult;
+        tmp20 = formatToPlainStringResult;
       } else {
         tmp20 = cResult[12];
       }
       if (cResult[13] === tmp4.subtitle) {
+        let tmp22;
+        let tmp27;
         if (cResult[14] === tmp20) {
-          let tmp22 = cResult[15];
+          tmp22 = cResult[15];
         }
         if (cResult[16] !== tmp4.knickKnacks) {
           const obj5 = { style: tmp4.knickKnacks };
           const tmp29 = hasOwnProperty(CheckpointKnickKnacksDefault, obj5);
           cResult[16] = tmp4.knickKnacks;
           cResult[17] = tmp29;
-          let tmp27 = tmp29;
+          tmp27 = tmp29;
         } else {
           tmp27 = cResult[17];
         }
         if (cResult[18] === tmp4.content) {
           if (cResult[19] === tmp22) {
             if (cResult[20] === tmp27) {
+              let tmp30;
               if (cResult[21] === tmp16) {
-                let tmp30 = cResult[22];
+                tmp30 = cResult[22];
               }
               if (cResult[23] === tmp4.container) {
+                let tmp34;
                 if (cResult[24] === tmp30) {
-                  let tmp34 = cResult[25];
+                  tmp34 = cResult[25];
                 }
                 return tmp34;
               }
-              const obj6 = { children: null };
-              const obj7 = { style: container, children: tmp30 };
-              obj6.children = hasOwnProperty(View, obj7);
-              const tmp38 = hasOwnProperty(CheckpointScreenDefault, obj6);
+              const obj6 = { children: hasOwnProperty(View, obj7) };
+              obj7 = { style: container, children: tmp30 };
+              const tmp5Result = CheckpointScreenDefault;
+              const tmp38 = hasOwnProperty(tmp5Result, obj6);
               cResult[23] = tmp4.container;
               cResult[24] = tmp30;
               cResult[25] = tmp38;
               tmp34 = tmp38;
-              const tmp5Result = CheckpointScreenDefault;
             }
           }
         }
-        const obj8 = { style: content, children: null };
-        const items2 = [tmp16, tmp22, tmp27];
-        obj8.children = items2;
-        const tmp33 = timestampProducer(View, obj8);
+        const obj8 = { style: content, children: items2 };
+        items2 = [tmp16, tmp22, tmp27];
+        const tmp33 = metroRequire(View, obj8);
         cResult[18] = tmp4.content;
         cResult[19] = tmp22;
         cResult[20] = tmp27;
@@ -137,15 +158,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         cResult[22] = tmp33;
         tmp30 = tmp33;
       }
-      const obj9 = { style: tmp4.subtitle, text: tmp20, delay: delay + TextWritingAnimation.DURATION, variant: "heading-xl/medium" };
-      const tmp26 = hasOwnProperty(TextWritingAnimationDefault, obj9);
+      const obj9 = { style: subtitle, text: tmp20, delay: delay + TextWritingAnimation.DURATION, variant: "heading-xl/medium" };
+      const tmp5Result2 = TextWritingAnimationDefault;
+      const tmp26 = hasOwnProperty(tmp5Result2, obj9);
       cResult[13] = tmp4.subtitle;
       cResult[14] = tmp20;
       cResult[15] = tmp26;
       tmp22 = tmp26;
-      const tmp5Result2 = TextWritingAnimationDefault;
     }
-    const obj10 = { style: tmp13, textStyle: tmp4.titleText, text: tmp14, delay, variant: "display-lg" };
+    const obj10 = { style: tmp13, textStyle: titleText, text: tmp14, delay, variant: "display-lg" };
     const tmp19 = hasOwnProperty(TextWritingAnimationDefault, obj10);
     cResult[8] = tmp4.titleText;
     cResult[9] = tmp13;
@@ -157,36 +178,42 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[5] = tmp12;
   cResult[6] = items3;
   tmp13 = items3;
-  const tmpResult2 = UserUtils;
 }) : (() => {
+  let currentUser;
+  let intl;
+  let intl2;
+  let items1;
+  let items2;
+  let items3;
+  let obj4;
+  let obj5;
   const tmp = closure_8();
   const bound = Math.min(useWindowDimensionsDefault().width / 392, 1);
   const items = [UserStore];
-  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const name = UserUtils.useName(stateFromStores);
-  const obj3 = { children: null };
-  const obj4 = { style: tmp.container, children: null };
-  const obj5 = { style: tmp.content, children: null };
-  const obj6 = { style: null, textStyle: tmp.titleText, text: null, delay: null, variant: "display-lg" };
-  const items1 = [tmp.title, ];
-  const obj7 = { transform: null };
-  const items2 = [{ scale: bound }];
-  obj7.transform = items2;
+  const obj = get_initialized;
+  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj2 = UserUtils;
+  const name = obj2.useName(stateFromStores);
+  const obj3 = { children: hasOwnProperty(View, obj4) };
+  obj4 = { style: tmp.container, children: metroRequire(View, obj5) };
+  obj5 = { style: tmp.content, children: items3 };
+  const obj6 = { style: items1, textStyle: tmp.titleText, text: intl.string(_modDef3011["CdU/PF"]), delay, variant: "display-lg" };
+  items1 = [tmp.title, ];
+  const obj7 = { transform: items2 };
+  items2 = [{ scale: bound }];
   items1[1] = obj7;
-  obj6.style = items1;
   const tmp5 = CheckpointScreenDefault;
-  const intl = util.intl;
-  obj6.text = intl.string(_modDef3011["CdU/PF"]);
-  obj6.delay = delay;
-  const items3 = [hasOwnProperty(TextWritingAnimationDefault, obj6), , ];
-  const obj8 = { style: tmp.subtitle, text: null, delay: null, variant: "heading-xl/medium" };
-  const intl2 = util.intl;
-  obj8.text = intl2.formatToPlainString(_modDef3043.xhZ23b, { username: name });
-  obj8.delay = delay + TextWritingAnimation.DURATION;
-  items3[1] = hasOwnProperty(TextWritingAnimationDefault, obj8);
-  items3[2] = hasOwnProperty(CheckpointKnickKnacksDefault, { style: tmp.knickKnacks });
-  obj5.children = items3;
-  obj4.children = timestampProducer(View, obj5);
-  obj3.children = hasOwnProperty(View, obj4);
+  const tmp6 = TextWritingAnimationDefault;
+  intl = intl3.intl;
+  items3 = [hasOwnProperty(tmp6, obj6), , ];
+  const obj8 = { style: tmp.subtitle, text: intl2.formatToPlainString(_modDef3043.xhZ23b, { username: name }), delay: delay + TextWritingAnimation.DURATION, variant: "heading-xl/medium" };
+  const tmp7 = TextWritingAnimationDefault;
+  intl2 = intl3.intl;
+  items3[1] = hasOwnProperty(tmp7, obj8);
+  const obj9 = { style: tmp.knickKnacks };
+  items3[2] = hasOwnProperty(CheckpointKnickKnacksDefault, obj9);
   return hasOwnProperty(tmp5, obj3);
 });
+const result = size.fileFinishedImporting("modules/checkpoint/native/components/screens/CheckpointWelcomeScreen.tsx");
+
+export default tmp4;

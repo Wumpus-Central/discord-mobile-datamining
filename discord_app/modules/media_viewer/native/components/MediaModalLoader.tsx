@@ -2,43 +2,58 @@
 
 // Module 12779 (MediaModalLoader)
 import nativeDefault from "native" /* 587 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "module_19" /* 19 */;
+import react_mod from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
+import Fragment_mod from "Fragment" /* 21 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, dependencyMap, nativeEvent, onLoad, tmp, tmp10, tmp3Result, tmp4, tmp6Result, tmp9Result;
 
-const require = fn;
+let StyleSheet;
+let c10;
+let c9;
+let metroImportAll;
+let metroImportDefault;
+let obj2;
+let obj3;
 let closure_3 = ["Component", "style", "onLoadStart", "onLoad", "onError", "index", "source"];
-get_ActivityIndicator = fn(17);
-({ View: closure_7, ActivityIndicator: closure_8, StyleSheet } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4890);
-let obj = { loader: null, loaderIndicator: null, loaderText: null };
-let obj3 = {};
+let _slicedToArray = _slicedToArray_mod;
+let react = react_mod;
+({ View: metroImportDefault, ActivityIndicator: metroImportAll, StyleSheet } = react_native);
+let Fragment = Fragment_mod;
+({ jsx: c9, jsxs: c10 } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { loader: obj2, loaderIndicator: obj3, loaderText: { textAlign: "center" } };
+obj2 = { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: "rgba(0, 0, 0, 0.7)" };
+createStyles = createStyles.createStyles;
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-obj3.flex = 1;
-obj3.alignItems = "center";
-obj3.justifyContent = "center";
-obj3.backgroundColor = "rgba(0, 0, 0, 0.7)";
-obj.loader = obj3;
-obj.loaderIndicator = { marginTop: nativeDefault.space.PX_12 };
-obj.loaderText = { textAlign: "center" };
-let closure_11 = createStyles.createStyles(obj);
+obj3 = { marginTop: nativeDefault.space.PX_12 };
+let closure_11 = createStyles(obj);
 let closure_12 = { None: 0, [0]: "None", Loading: 1, [1]: "Loading", Loaded: 2, [2]: "Loaded", Error: 3, [3]: "Error" };
-const ReactCompilerGating = fn(558);
-let obj4 = { marginTop: nativeDefault.space.PX_12 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaModalLoader.tsx");
-
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((onLoad) => {
-  const cResult = require("c").c(29);
+const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((onLoad) => {
+  let Component;
+  let closure_0;
+  let closure_2;
+  let closure_4;
+  let closure_6;
+  let first;
+  let index;
+  let onLoadStart;
+  let source;
+  let style;
+  let tmp3;
+  const obj = require("react");
+  const cResult = obj.c(29);
   if (cResult[0] !== onLoad) {
     ({ Component, style, onLoadStart } = onLoad);
     dependencyMap = onLoadStart;
     onLoad = onLoad.onLoad;
-    closure_1 = onLoad;
+    let closure_1 = onLoad;
     const onError = onLoad.onError;
     _require = onError;
     ({ index, source } = onLoad);
@@ -52,20 +67,25 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((onLoad
     cResult[6] = source;
     cResult[7] = style;
     cResult[8] = index;
+    let tmp9 = index;
+    let tmp6 = tmp12;
+    tmp3 = onError;
   } else {
     _require = cResult[2];
     closure_1 = cResult[3];
     dependencyMap = cResult[4];
+    tmp6 = cResult[5];
+    tmp9 = cResult[8];
   }
   closure_11();
-  [first, _slicedToArray] = noop.useState(closure_12.None);
-  const obj = require("c");
-  [r10054, _objectWithoutProperties] = noop.useState(0);
-  noop = noop.useRef(null);
+  [first, _slicedToArray] = react.useState(closure_12.None);
+  [r10054, _objectWithoutProperties] = react.useState(0);
+  _slicedToArray(react.useState(0), 2);
+  react = react.useRef(null);
   if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
     class I {
       constructor() {
-        timerId = setTimeout(() => { ... }, 1000);
+        timerId = setTimeout(() => { /* body not rendered: F142817 */ }, 1000);
         closure_6.current = timerId;
         return timerId;
       }
@@ -74,7 +94,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((onLoad
   } else {
     class I {
       constructor() {
-        timerId = setTimeout(() => { ... }, 1000);
+        timerId = setTimeout(() => { /* body not rendered: F142817 */ }, 1000);
         closure_6.current = timerId;
         return timerId;
       }
@@ -163,12 +183,29 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((onLoad
   cResult[16] = first;
   cResult[17] = D;
   cResult[18] = items;
-  const tmp17 = _slicedToArray(noop.useState(0), 2);
 }) : ((onLoad) => {
+  let Text2;
+  let _undefined;
+  let c5;
+  let closure_4;
+  let closure_6;
+  let description;
+  let first;
+  let intl;
+  let items1;
+  let items3;
+  let items4;
+  let items5;
+  let obj3;
+  let onLoadStart;
+  let style;
+  let tmp28Result4;
+  let tmp8;
   ({ style, onLoadStart } = onLoad);
   onLoad = onLoad.onLoad;
   const onError = onLoad.onError;
   let num = onLoad.index;
+  const Component = onLoad.Component;
   if (num === undefined) {
     num = 0;
   }
@@ -177,26 +214,29 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((onLoad
   first = undefined;
   _slicedToArray = undefined;
   c5 = undefined;
-  noop = undefined;
+  react = undefined;
   const tmp2 = closure_11();
-  [first, _slicedToArray] = noop.useState(closure_12.None);
-  [tmp8, c5] = noop.useState(0);
-  noop = noop.useRef(null);
-  const callback = noop.useCallback(() => {
+  const tmp3 = react;
+  [first, _slicedToArray] = react.useState(closure_12.None);
+  [tmp8, c5] = _slicedToArray(react.useState(0), 2);
+  const tmp7 = _slicedToArray(react.useState(0), 2);
+  react = react.useRef(null);
+  const callback = react.useCallback(() => {
     const timerId = setTimeout(() => {
+      let None;
       closure_1_4((arg0) => arg0 === None.None ? None.Loading : None.None);
     }, 1000);
     closure_6.current = timerId;
     return timerId;
   }, []);
-  const callback1 = noop.useCallback((nativeEvent) => {
+  const callback1 = react.useCallback((nativeEvent) => {
     nativeEvent = nativeEvent.nativeEvent;
     _undefined(100 * nativeEvent.loaded / nativeEvent.total);
   }, []);
-  const callback2 = noop.useCallback(() => closure_4(closure_12.Loaded), []);
+  const callback2 = react.useCallback(() => closure_4(closure_12.Loaded), []);
   const items = [first, onLoadStart, onError, onLoad];
-  const callback3 = noop.useCallback(() => closure_4(closure_12.Error), []);
-  const effect = noop.useEffect(() => {
+  const callback3 = react.useCallback(() => closure_4(closure_12.Error), []);
+  const effect = react.useEffect(() => {
     if (closure_12.Loading === first) {
       if (onLoadStart != null) {
         tmp9();
@@ -211,55 +251,48 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((onLoad
       }
     }
   }, items);
-  const effect1 = noop.useEffect(() => () => clearTimeout(ref.current));
+  const effect1 = react.useEffect(() => {
+    let ref;
+    return () => clearTimeout(ref.current);
+  });
   if (first === closure_12.Error) {
-    const obj2 = { style: null, children: null };
-    const items1 = [tmp2.loader, style];
-    obj2.style = items1;
-    const obj3 = { style: tmp2.loaderText, variant: "heading-md/semibold", color: "text-overlay-light", children: null };
-    const intl = onLoadStart(onError[10]).intl;
-    obj3.children = intl.string(onLoadStart(onError[10]).t["+ITMYX"]);
-    obj2.children = closure_9(onLoadStart(onError[9]).Text, obj3);
-    let tmp28Result4 = closure_9(closure_7, obj2);
+    const obj2 = { style: items1, children: closure_9(Text2, obj3) };
+    items1 = [tmp2.loader, style];
+    obj3 = { style: tmp2.loaderText, variant: "heading-md/semibold", color: "text-overlay-light", children: intl.string(onLoadStart(onError[10]).t["+ITMYX"]) };
+    Text2 = onLoadStart(onError[9]).Text;
+    intl = onLoadStart(onError[10]).intl;
+    tmp28Result4 = closure_9(closure_7, obj2);
   } else {
-    const obj4 = {};
+    const Fragment = tmp3.Fragment;
+    const obj4 = { style, source, onLoadStart: callback, onProgress: callback1, onLoad: callback2, onError: callback3, accessibilityRole: "image", accessibilityLabel: description, loop: true };
     const merged1 = Object.assign(merged);
-    obj4.style = style;
-    obj4.source = source;
-    obj4.onLoadStart = callback;
-    obj4.onProgress = callback1;
-    obj4.onLoad = callback2;
-    obj4.onError = callback3;
-    obj4.accessibilityRole = "image";
-    const description = source.description;
-    obj4.accessibilityLabel = description;
-    obj4.loop = true;
-    const items2 = [closure_9(onLoad.Component, obj4), , ];
+    description = source.description;
+    const items2 = [closure_9(Component, obj4), , ];
     let tmp28Result3 = null;
     if (first === closure_12.Loading) {
-      const obj5 = { style: null, children: null };
-      const items3 = [tmp2.loader, style];
-      obj5.style = items3;
+      const obj5 = { style: items3, children: items5 };
+      items3 = [tmp2.loader, style];
       let tmp28Result = null;
       if (null == source.videoURI) {
-        const obj = { style: tmp2.loaderText, variant: "heading-md/semibold", color: "text-overlay-light", children: null };
         const _Math = Math;
-        const items4 = [Math.round(tmp8), "%"];
-        obj.children = items4;
-        tmp28Result = closure_10(onLoadStart(onError[9]).Text, obj);
+        const obj = { style: tmp2.loaderText, variant: "heading-md/semibold", color: "text-overlay-light", children: items4 };
+        const Text = onLoadStart(onError[9]).Text;
+        items4 = [Math.round(tmp8), "%"];
+        tmp28Result = closure_10(Text, obj);
       }
-      const items5 = [tmp28Result, ];
+      items5 = [tmp28Result, ];
       const obj6 = { color: "white", style: tmp2.loaderIndicator, size: "large" };
       items5[1] = closure_9(closure_8, obj6);
-      obj5.children = items5;
       tmp28Result3 = closure_10(closure_7, obj5);
     }
-    const obj7 = { children: null };
+    const obj7 = { children: items2 };
     items2[1] = tmp28Result3;
     const obj8 = { style, index: num, source };
     items2[2] = closure_9(onLoad(onError[11]), obj8);
-    obj7.children = items2;
-    tmp28Result4 = closure_10(noop.Fragment, obj7);
+    tmp28Result4 = closure_10(Fragment, obj7);
   }
   return tmp28Result4;
 }));
+const result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaModalLoader.tsx");
+
+export default memoResult;

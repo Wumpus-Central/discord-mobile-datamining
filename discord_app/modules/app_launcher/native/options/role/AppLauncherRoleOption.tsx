@@ -1,21 +1,30 @@
 // === Module 11809: AppLauncherRoleOption ===
 
 // Module 11809 (AppLauncherRoleOption)
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import Fragment from "Fragment" /* 21 */;
+import asyncRequire from "asyncRequire" /* 1987 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import AppLauncherRoleListActionSheet from "AppLauncherRoleListActionSheet" /* 11805 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2106 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-require = fn;
-const jsx = fn(21).jsx;
-const size = fn(2);
+const jsx = Fragment.jsx;
 const result = size.fileFinishedImporting("modules/app_launcher/native/options/role/AppLauncherRoleOption.tsx");
 
 export default function AppLauncherRoleOption(option) {
+  let autoFocus;
+  let channel;
+  let closure_8;
+  let first;
+  let hasError;
+  let name;
+  let onActionSheetDismiss;
+  let onRolePress;
+  let style;
   option = option.option;
   ({ initialValue: importDefault, onRolePress } = option);
   ({ onActionSheetDismiss: _slicedToArray, channel } = option);
@@ -34,8 +43,11 @@ export default function AppLauncherRoleOption(option) {
     }
     return roleId;
   });
+  const tmp3 = option;
+  let tmp4 = onRolePress;
+  let obj = option(onRolePress[4]);
   const items = [onPress];
-  const stateFromStores = option(onRolePress[4]).useStateFromStores(items, () => {
+  const stateFromStores = obj.useStateFromStores(items, () => {
     if (null != first) {
       let role;
       if (null != guild_id) {
@@ -46,40 +58,43 @@ export default function AppLauncherRoleOption(option) {
   });
   const items1 = [onRolePress, option.name, stateFromStores, first];
   const effect = channel.useEffect(() => {
-    let tmp = null != first;
-    if (tmp) {
-      tmp = null == stateFromStores;
-    }
+    const tmp = null != first && null == stateFromStores;
     if (tmp) {
       onRolePress({ role: null });
     }
   }, items1);
-  const obj2 = { style, option, hasError, selected: null != stateFromStores, selectedItemName: null, onPress: null, leading: null, autoFocus: null };
-  let name;
-  let obj = option(onRolePress[4]);
-  const tmp3 = option;
-  const tmp4 = onRolePress;
+  const obj2 = {
+    style,
+    option,
+    hasError,
+    selected: null != stateFromStores,
+    selectedItemName: name,
+    onPress() {
+      if (onPress != null) {
+        tmp();
+      }
+      const openLazy = ActionSheetActionCreatorsDefault.openLazy;
+      ActionSheetActionCreatorsDefault;
+      const obj = {
+        option,
+        channel,
+        onRolePress(role) {
+          role = role.role;
+          closure_1_8(role.id);
+          onRolePress({ role });
+        },
+        onActionSheetDismiss: _slicedToArray
+      };
+      const tmp4 = asyncRequire(11805, dependencyMap.paths);
+      openLazy(tmp4, AppLauncherRoleListActionSheet.APP_LAUNCHER_ROLE_LIST_ACTION_SHEET_KEY, obj);
+    },
+    leading: guild_id(tmp3(tmp4[9]).RoleIcon, { role: stateFromStores }),
+    autoFocus
+  };
+  name = undefined;
+  const tmp8 = require("AppLauncherSelectOptionFormRow");
   if (null != stateFromStores) {
     name = stateFromStores.name;
   }
-  obj2.selectedItemName = name;
-  obj2.onPress = function onPress() {
-    if (onPress != null) {
-      tmp();
-    }
-    const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(11805, dependencyMap.paths), AppLauncherRoleListActionSheet.APP_LAUNCHER_ROLE_LIST_ACTION_SHEET_KEY, {
-      option,
-      channel,
-      onRolePress(role) {
-        role = role.role;
-        closure_1_8(role.id);
-        onRolePress({ role });
-      },
-      onActionSheetDismiss
-    });
-  };
-  obj2.leading = guild_id(tmp3(tmp4[9]).RoleIcon, { role: stateFromStores });
-  obj2.autoFocus = autoFocus;
-  return guild_id(require("AppLauncherSelectOptionFormRow"), obj2);
+  return guild_id(tmp8, obj2);
 };

@@ -1,14 +1,19 @@
 // === Module 12827: UserProfileActivityCardBadges ===
 
 // Module 12827 (UserProfileActivityCardBadges)
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import Constants from "Constants" /* 1085 */;
 import UserProfileActivityBadges from "UserProfileActivityBadges" /* 12828 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
 function getActivityBadges(activity) {
+  let items3;
   if (activity.type === ActivityTypes.PLAYING) {
     const items = [UserProfileActivityBadges.PartyBadge, UserProfileActivityBadges.TimestampBadge];
-    let items3 = items;
+    items3 = items;
   } else if (activity.type === ActivityTypes.LISTENING) {
     const items1 = [UserProfileActivityBadges.TimestampBadge];
     items3 = items1;
@@ -20,48 +25,52 @@ function getActivityBadges(activity) {
   }
   return items3;
 }
-const View = fn(17).View;
-const ActivityTypes = fn(1085).ActivityTypes;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityCardBadges.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((activity) => {
-  const cResult = activity(576).c(12);
+const View = react_native.View;
+const ActivityTypes = Constants.ActivityTypes;
+const jsx = Fragment.jsx;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((activity) => {
+  const obj = activity(576);
+  const cResult = obj.c(12);
   activity = activity.activity;
   const style = activity.style;
   if (cResult[0] === activity) {
+    let tmp2;
+    let tmp3;
+    let tmp4;
+    let tmp5;
     if (cResult[1] === style) {
-      let tmp5 = cResult[5];
+      tmp2 = cResult[2];
+      tmp3 = cResult[3];
+      tmp4 = cResult[4];
+      tmp5 = cResult[5];
     }
     const _Symbol = Symbol;
-    if (tmp5 !== Symbol.for("react.early_return_sentinel")) {
-      return tmp5;
-    } else {
+    if (tmp5 === Symbol.for("react.early_return_sentinel")) {
       if (cResult[8] === tmp2) {
         if (cResult[9] === tmp3) {
+          let tmp14;
+          if (cResult[10] === tmp4) {
+            tmp14 = cResult[11];
+          }
+          tmp5 = tmp14;
         }
       }
-      const obj2 = { style: tmp3, children: tmp4 };
       const tmp16 = <tmp2 style={tmp3}>{tmp4}</tmp2>;
       cResult[8] = tmp2;
       cResult[9] = tmp3;
       cResult[10] = tmp4;
       cResult[11] = tmp16;
+      tmp14 = tmp16;
     }
+    return tmp5;
   }
-  const obj = activity(576);
+  const forResult = Symbol.for("react.early_return_sentinel");
   const arr = getActivityBadges(activity);
-  if (0 === arr.length) {
-    cResult[0] = activity;
-    cResult[1] = style;
-    cResult[2] = undefined;
-    cResult[3] = undefined;
-    cResult[4] = undefined;
-    cResult[5] = null;
-    tmp5 = null;
-  } else {
+  let tmp7 = null;
+  let mapped;
+  let tmp9;
+  let tmp10;
+  if (0 !== arr.length) {
     if (cResult[6] !== activity) {
       class B {
         constructor(arg0, arg1) {
@@ -79,16 +88,31 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((activity) => {
         }
       }
     }
-    const mapped = arr.map(B);
+    mapped = arr.map(B);
+    tmp7 = forResult;
+    tmp9 = style;
+    tmp10 = View;
   }
-  const forResult = Symbol.for("react.early_return_sentinel");
+  cResult[0] = activity;
+  cResult[1] = style;
+  cResult[2] = tmp10;
+  cResult[3] = tmp9;
+  cResult[4] = mapped;
+  cResult[5] = tmp7;
+  tmp5 = tmp7;
+  tmp4 = mapped;
+  tmp3 = tmp9;
+  tmp2 = tmp10;
 }) : ((activity) => {
   activity = activity.activity;
+  const style = activity.style;
   const arr = getActivityBadges(activity);
   let tmp = null;
   if (0 !== arr.length) {
-    const obj = { style: activity.style, children: arr.map((item, index) => <item key={index} activity={activity} />) };
-    tmp = <View style={activity.style}>{arr.map((item, index) => <item key={index} activity={activity} />)}</View>;
+    tmp = <View style={style}>{arr.map((item, index) => <item key={index} activity={activity} />)}</View>;
   }
   return tmp;
 });
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityCardBadges.tsx");
+
+export default tmp3;

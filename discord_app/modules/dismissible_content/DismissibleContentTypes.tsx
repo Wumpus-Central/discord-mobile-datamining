@@ -5,13 +5,7 @@ import dismissible_content from "dismissible_content" /* 2036 */;
 import size from "module_2" /* 2 */;
 
 function isSingleUseDismissibleContent(item10020) {
-  let hasItem = items1.includes(item10020);
-  if (!hasItem) {
-    hasItem = items.includes(item10020);
-  }
-  if (!hasItem) {
-    hasItem = items2.includes(item10020);
-  }
+  const hasItem = items1.includes(item10020) || items.includes(item10020) || items2.includes(item10020);
   return !hasItem;
 }
 const items = [dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING, dismissible_content.DismissibleContent.ACTIVITIES_VOICE_LAUNCHER_BADGE, dismissible_content.DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK, dismissible_content.DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE, dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_WIDE_BANNER, dismissible_content.DismissibleContent.GAME_SHOP_ANNOUNCEMENT_MODAL, dismissible_content.DismissibleContent.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE, dismissible_content.DismissibleContent.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA, dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_GAME_SERVER_HOSTING_BANNER];
@@ -42,13 +36,7 @@ export const isSnowflakeBoundDismissibleContent = function isSnowflakeBoundDismi
   return items2.includes(id);
 };
 export const isRecurringDismissibleContent = function isRecurringDismissibleContent(arg0) {
-  let hasItem = items1.includes(arg0);
-  if (!hasItem) {
-    hasItem = items.includes(arg0);
-  }
-  if (!hasItem) {
-    hasItem = items2.includes(arg0);
-  }
+  const hasItem = items1.includes(arg0) || items.includes(arg0) || items2.includes(arg0);
   return hasItem;
 };
 export { isSingleUseDismissibleContent };
@@ -62,13 +50,7 @@ export const isSnowflakeBoundGuildDismissibleContent = function isSnowflakeBound
   return items3.includes(GDM_INVITE_REMINDER);
 };
 export const isGuildDismissibleContent = function isGuildDismissibleContent(dismissibleContent) {
-  let hasItem = items4.includes(dismissibleContent);
-  if (!hasItem) {
-    hasItem = items5.includes(dismissibleContent);
-  }
-  if (!hasItem) {
-    hasItem = items3.includes(dismissibleContent);
-  }
+  const hasItem = items4.includes(dismissibleContent) || items5.includes(dismissibleContent) || items3.includes(dismissibleContent);
   return hasItem;
 };
 export const ALL_DISMISSIBLE_CONTENT = found;

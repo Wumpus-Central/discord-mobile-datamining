@@ -1,131 +1,166 @@
 // === Module 6936: showCheckoutOrderErrorModal ===
 
 // Module 6936 (showCheckoutOrderErrorModal)
-import util from "util" /* 1126 */;
+import intl4 from "intl" /* 1126 */;
 import useAlertStore from "useAlertStore" /* 5709 */;
-import AlertModal from "AlertModal" /* 5713 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import AlertModal2 from "AlertModal" /* 5713 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+let c2, c4, closure_2;
+
+let hasOwnProperty;
+let metroImportDefault;
+let metroRequire;
 function SyncedLoadingAlertModal(onConfirm) {
+  let c1;
+  let confirmText;
+  let content;
+  let intl;
+  let items;
+  let obj2;
+  let onCancel;
+  let title;
+  let tmp2;
   onConfirm = onConfirm.onConfirm;
   c1 = undefined;
   ({ title, content, confirmText, onCancel } = onConfirm);
-  [tmp2, c1] = noop.useState(false);
-  let obj = { title, content, actions: null };
-  let obj2 = { children: null };
-  const tmp = _slicedToArray(noop.useState(false), 2);
-  const items = [
-    hasOwnProperty(AlertModal.AlertActionButton, {
-      variant: "primary",
-      text: confirmText,
-      onPress: asyncGeneratorStep(async () => {
-        if (c4 === 2) {
-          c4 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp6 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            const obj2 = { value, done: true };
-            return obj2;
-          } else {
-            return { value: "IconComponent", done: null };
-          }
+  const tmp = _slicedToArray(react.useState(false), 2);
+  [tmp2, c1] = tmp;
+  let obj = { title, content, actions: metroImportDefault(metroRequire, obj2) };
+  obj2 = { children: items };
+  const AlertModal = AlertModal2.AlertModal;
+  let obj3 = {
+    variant: "primary",
+    text: confirmText,
+    onPress: _asyncToGenerator(async () => {
+      let v1;
+      if (c4 === 2) {
+        c4 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
-          try {
-            c4 = 2;
-            if (0 === v2) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                const obj3 = { value, done: true };
-                return obj3;
-              } else {
-                closure_0 = tmp3;
-                v2(true);
-                c3 = 1;
-                v2 = 2;
-                c4 = 1;
-                const obj4 = { value: onConfirm(), done: false };
-                return obj4;
-              }
-            } else if (1 === tmp7) {
-              c3 = 0;
-              closure_128_1(false);
-              throw closure_2;
-            } else if (arg0 === 1) {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        let c3;
+        try {
+          c4 = 2;
+          if (0 === v1) {
+            if (arg0 === 1) {
               c4 = 3;
               throw value;
             } else if (arg0 === 2) {
-              c3 = 0;
-              closure_128_1(false);
               c4 = 3;
-              const obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
-              c3 = 0;
-              closure_128_1(false);
-              c4 = 3;
-              return { value: "IconComponent", done: null };
+              let closure_0 = tmp;
+              v1(true);
+              c3 = 1;
+              v1 = 2;
+              c4 = 1;
+              const obj4 = { value: onConfirm(), done: false };
+              return obj4;
             }
-          } catch (tmp22) {
-            closure_2 = tmp22;
-            if (tmp4 === c3) {
-              c4 = tmp2;
-              throw tmp22;
-            } else {
-              v2 = tmp;
-            }
+          } else if (1 === tmp4) {
+            c3 = 0;
+            closure_128_1(false);
+            throw closure_2;
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 0;
+            closure_128_1(false);
+            c4 = 3;
+            const obj = { value, done: true };
+            return obj;
+          } else {
+            c3 = 0;
+            closure_128_1(false);
+            c4 = 3;
+            return { value: "IconComponent", done: null };
+          }
+        } catch (tmp19) {
+          closure_2 = tmp19;
+          if (0 === c3) {
+            c4 = 3;
+            throw tmp19;
+          } else {
+            v1 = 1;
           }
         }
-      }),
-      loading: tmp2
+      }
     }),
-
-  ];
-  let obj4 = { variant: "secondary", text: null, onPress: null, loading: null };
-  const intl = util.intl;
-  obj4.text = intl.string(util.t["ETE/oC"]);
-  obj4.onPress = onCancel;
-  obj4.loading = tmp2;
-  items[1] = hasOwnProperty(AlertModal.AlertActionButton, obj4);
-  obj2.children = items;
-  obj.actions = React5(timestampProducer, obj2);
-  return hasOwnProperty(AlertModal.AlertModal, obj);
+    loading: tmp2
+  };
+  const AlertActionButton = AlertModal2.AlertActionButton;
+  items = [hasOwnProperty(AlertActionButton, obj3), ];
+  let obj4 = { variant: "secondary", text: intl.string(intl4.t["ETE/oC"]), onPress: onCancel, loading: tmp2 };
+  const AlertActionButton2 = AlertModal2.AlertActionButton;
+  intl = intl4.intl;
+  items[1] = hasOwnProperty(AlertActionButton2, obj4);
+  return hasOwnProperty(AlertModal, obj);
 }
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const size = fn(2);
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: metroImportDefault } = Fragment);
 const result = size.fileFinishedImporting("modules/checkout/native/showCheckoutOrderErrorModal.tsx");
 
 export const showRetryConfirmModal = function showRetryConfirmModal(dismissable) {
+  let key;
+  let onCloseCallback;
   ({ key, onCloseCallback } = dismissable);
+  dismissable = dismissable.dismissable;
   const merged = Object.assign(dismissable, Object.assign({ key: 0, onCloseCallback: 0, dismissable: 0 }));
+  const openAlert = useAlertStore.openAlert;
+  const obj = {};
+  useAlertStore;
   const merged1 = Object.assign(merged);
-  useAlertStore.openAlert(key, hasOwnProperty(SyncedLoadingAlertModal, {}), onCloseCallback, { dismissable: dismissable.dismissable });
+  const obj2 = { dismissable };
+  openAlert(key, hasOwnProperty(SyncedLoadingAlertModal, obj), onCloseCallback, obj2);
 };
 export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(arg0, c6) {
-  closure_0 = arg0;
-  dependencyMap = c6;
-  return new Promise((arg0) => {
+  let closure_0 = arg0;
+  let closure_1 = c6;
+  const promise = new Promise((arg0) => {
+    let intl;
+    let intl2;
+    let intl3;
+    let key;
+    let onCloseCallback;
     closure_0 = arg0;
-    let obj = { key: "checkout-order-error", title: null, content: null, confirmText: null, onConfirm: null, onCancel: null, dismissable: false };
-    const intl = closure_0(1126).intl;
-    obj.title = intl.string(closure_0(1126).t.zrhHH3);
-    const intl2 = closure_0(1126).intl;
-    obj.content = intl2.string(closure_0(1126).t.PjfUXe);
-    const intl3 = closure_0(1126).intl;
-    obj.confirmText = intl3.string(closure_0(1126).t["7NqTJn"]);
-    dependencyMap = asyncGeneratorStep(async () => {
+    let obj = {
+      key: "checkout-order-error",
+      title: intl.string(closure_0(closure_1[5]).t.zrhHH3),
+      content: intl2.string(closure_0(closure_1[5]).t.PjfUXe),
+      confirmText: intl3.string(closure_0(closure_1[5]).t["7NqTJn"]),
+      onConfirm: function() {
+        return closure_1(...arguments);
+      },
+      onCancel() {
+        if (closure_1 != null) {
+          tmp();
+        }
+        closure_0(undefined);
+      },
+      dismissable: false
+    };
+    intl = closure_0(closure_1[5]).intl;
+    intl2 = closure_0(closure_1[5]).intl;
+    intl3 = closure_0(closure_1[5]).intl;
+    closure_1 = _asyncToGenerator(async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp4 === 3) {
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -136,6 +171,7 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
         }
       } else {
         try {
+          let tmp;
           c3 = 2;
           if (0 === c2) {
             if (arg0 === 1) {
@@ -146,11 +182,11 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              closure_1 = tmp5;
-              closure_128_0 = undefined;
+              closure_1 = tmp4;
+              tmp = undefined;
               c2 = 1;
               c3 = 1;
-              const obj4 = { value: tmp2(), done: false };
+              const obj4 = { value: tmp(), done: false };
               return obj4;
             }
           } else if (arg0 === 1) {
@@ -161,36 +197,26 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
             const obj = { value, done: true };
             return obj;
           } else {
-            closure_128_0 = value;
-            closure_129_0(closure_128_0);
+            tmp = value;
+            closure_129_0(tmp);
             c3 = 3;
             return { value: "IconComponent", done: null };
           }
-        } catch (tmp12) {
-          c3 = tmp;
-          throw tmp12;
+        } catch (tmp11) {
+          c3 = 3;
+          throw tmp11;
         }
       }
     });
-    obj.onConfirm = function() {
-      const self = this;
-      const apply = closure_1.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
-    };
-    obj.onCancel = function onCancel() {
-      if (closure_1 != null) {
-        tmp();
-      }
-      closure_0(undefined);
-    };
     ({ key, onCloseCallback } = obj);
+    const dismissable = obj.dismissable;
     const merged = Object.assign(obj, Object.assign({ key: 0, onCloseCallback: 0, dismissable: 0 }));
+    let obj2 = {};
+    const openAlert = closure_0(closure_1[6]).openAlert;
+    closure_0(closure_1[6]);
     const merged1 = Object.assign(merged);
-    closure_0(5709).openAlert(key, closure_1_5(SyncedLoadingAlertModal, {}), onCloseCallback, { dismissable: obj.dismissable });
+    let obj3 = { dismissable };
+    openAlert(key, closure_1_5(SyncedLoadingAlertModal, obj2), onCloseCallback, obj3);
   });
+  return promise;
 };

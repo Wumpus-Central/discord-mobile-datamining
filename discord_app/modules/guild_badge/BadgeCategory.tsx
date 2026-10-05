@@ -9,8 +9,9 @@ const result = size.fileFinishedImporting("modules/guild_badge/BadgeCategory.tsx
 
 export { BadgeCategory };
 export const getBadgeCategory = function getBadgeCategory(guildTraits) {
+  let DISCOVERABLE;
   if (guildTraits.staff) {
-    let DISCOVERABLE = obj.STAFF;
+    DISCOVERABLE = obj.STAFF;
   } else {
     if (guildTraits.verified) {
       if (guildTraits.partnered) {

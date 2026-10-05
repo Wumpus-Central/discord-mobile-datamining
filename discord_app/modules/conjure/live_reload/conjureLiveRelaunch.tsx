@@ -11,7 +11,8 @@ export const relaunchAppFramesForBuild = function relaunchAppFramesForBuild(appl
   let flag = map.get(applicationId) !== build;
   if (flag) {
     const result = map.set(applicationId, build);
-    ConjurePlatformUtilsDefault.reloadAppFrames(applicationId);
+    const obj2 = ConjurePlatformUtilsDefault;
+    obj2.reloadAppFrames(applicationId);
     flag = true;
   }
   return flag;

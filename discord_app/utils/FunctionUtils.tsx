@@ -26,25 +26,25 @@ export const areArraysShallowlyEqual = function areArraysShallowlyEqual(found, f
     return false;
   }
 };
-export function cachedFunction(_computeCategories) {
-  closure_0 = _computeCategories;
+export function cachedFunction(arg0) {
+  let closure_0 = arg0;
   let items = null;
-  closure_2 = null;
+  let closure_2 = null;
   return () => {
     items = [...arguments];
     let flag = true;
     if (items !== items) {
       flag = false;
-      if (null != arr2) {
+      if (null != items) {
         flag = false;
         if (null != items) {
           flag = false;
-          if (arr2.length === items.length) {
+          if (items.length === items.length) {
             let num2 = 0;
             flag = true;
-            if (0 < arr2.length) {
+            if (0 < items.length) {
               flag = false;
-              while (arr2[num2] === items[num2]) {
+              while (items[num2] === items[num2]) {
                 let sum = num2 + 1;
                 num2 = sum;
                 flag = true;
@@ -59,18 +59,18 @@ export function cachedFunction(_computeCategories) {
     }
     if (!flag) {
       const items1 = [];
-      HermesBuiltin.arraySpread(items, 0);
-      closure_2 = HermesBuiltin.apply(items1, undefined);
+      HermesBuiltin.arraySpread(items1, items, 0);
+      closure_2 = HermesBuiltin.apply(closure_0, items1, undefined);
     }
     return closure_2;
   };
 }
 export const clearObject = function clearObject(obj) {
-  for (const key10003 in arg0) {
-    if (!arg0.hasOwnProperty(key10003)) {
+  for (const key10003 in obj) {
+    if (!obj.hasOwnProperty(key10003)) {
       continue;
     } else {
-      delete tmp[tmp2];
+      delete tmp[key10003];
       continue;
     }
     continue;

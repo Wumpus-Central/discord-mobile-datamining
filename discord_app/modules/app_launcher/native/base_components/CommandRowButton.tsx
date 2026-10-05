@@ -1,122 +1,129 @@
 // === Module 11729: CommandRowButton ===
 
 // Module 11729 (CommandRowButton)
-import c from "c" /* 576 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
+import intl2 from "intl" /* 1126 */;
+import components_Button_Button from "components/Button/Button" /* 5594 */;
+import TableRowArrow from "TableRowArrow" /* 6000 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const util = TableRowArrow(1126);
-const SendMessageIcon = TableRowArrow(4841);
-const components_Button_Button = TableRowArrow(5594);
-const TableRowArrow2 = TableRowArrow(6000);
-require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/CommandRowButton.tsx");
+let c4, closure_2;
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let TableRowArrow = require;
-  const cResult = c.c(4);
+const jsx = Fragment.jsx;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let hasOptions;
+  let onPressSend;
+  let sending;
+  let tmp5Result;
+  const obj = react2;
+  const cResult = obj.c(4);
   ({ hasOptions, sending, onPressSend } = arg0);
   if (cResult[0] === hasOptions) {
     if (cResult[1] === onPressSend) {
+      let tmp4;
       if (cResult[2] === sending) {
-        return cResult[3];
+        tmp4 = cResult[3];
       }
+      return tmp4;
     }
   }
   if (hasOptions) {
-    TableRowArrow = TableRowArrow2.TableRowArrow;
-    const obj = {};
-    let tmp2Result = <TableRowArrow />;
+    tmp5Result = jsx(TableRowArrow.TableRowArrow, {});
   } else {
-    const obj3 = { size: "sm", text: null, onPress: null, icon: null, iconPosition: "end", grow: false, variant: "tertiary", disabled: null };
-    const intl = util.intl;
-    obj3.text = intl.string(util.t.TXNS7S);
-    obj3.onPress = onPressSend;
-    obj3.icon = jsx(SendMessageIcon.SendMessageIcon, { size: "sm" });
-    obj3.disabled = sending;
-    tmp2Result = jsx(components_Button_Button.Button, { size: "sm", text: null, onPress: null, icon: null, iconPosition: "end", grow: false, variant: "tertiary", disabled: null });
+    const Button = components_Button_Button.Button;
+    const intl = intl2.intl;
+    tmp5Result = <Button size="sm" text={intl.string(intl2.t.TXNS7S)} onPress={onPressSend} icon={null} iconPosition="end" grow={false} variant="tertiary" disabled={sending} />;
   }
   cResult[0] = hasOptions;
   cResult[1] = onPressSend;
   cResult[2] = sending;
-  cResult[3] = tmp2Result;
+  cResult[3] = tmp5Result;
+  tmp4 = tmp5Result;
 }) : ((hasOptions) => {
+  let tmp3Result;
   if (hasOptions.hasOptions) {
-    let tmp3Result = jsx(TableRowArrow2.TableRowArrow, {});
+    tmp3Result = jsx(TableRowArrow.TableRowArrow, {});
   } else {
-    const obj = { size: "sm", text: null, onPress: null, icon: null, iconPosition: "end", grow: false, variant: "tertiary", disabled: null };
-    const intl = util.intl;
-    obj.text = intl.string(util.t.TXNS7S);
-    obj.onPress = tmp2;
-    obj.icon = jsx(SendMessageIcon.SendMessageIcon, { size: "sm" });
-    obj.disabled = tmp;
-    tmp3Result = jsx(components_Button_Button.Button, { size: "sm", text: null, onPress: null, icon: null, iconPosition: "end", grow: false, variant: "tertiary", disabled: null });
+    const Button = components_Button_Button.Button;
+    const intl = intl2.intl;
+    tmp3Result = <Button size="sm" text={intl.string(intl2.t.TXNS7S)} onPress={tmp2} icon={null} iconPosition="end" grow={false} variant="tertiary" disabled={tmp} />;
   }
   return tmp3Result;
 });
+const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/CommandRowButton.tsx");
+
+export default tmp2;
 export const useCommandRowSend = function useCommandRowSend(command) {
+  let items1;
   command = command.command;
-  const beforeExecuteCommand = command.beforeExecuteCommand;
+  let beforeExecuteCommand = command.beforeExecuteCommand;
   const onExecuteCommand = command.onExecuteCommand;
   const tryExecuteCommand = command.tryExecuteCommand;
   const sectionName = command.sectionName;
-  closure_5 = undefined;
+  let closure_5;
   let commandContext;
   let callback;
-  options = command.options;
+  let options = command.options;
+  const context = command.context;
   if (options == null) {
     options = [];
   }
+  const tmp = options.length > 0;
   const tmp2 = tryExecuteCommand(sectionName.useState(false), 2);
   closure_5 = tmp2[1];
-  commandContext = command(beforeExecuteCommand[4]).useCommandContext(command.context);
+  const first = tmp2[0];
+  let obj = command(beforeExecuteCommand[4]);
+  commandContext = obj.useCommandContext(context);
   const items = [onExecuteCommand, command, commandContext, beforeExecuteCommand, sectionName];
   callback = sectionName.useCallback(onExecuteCommand(function*() {
+    let c1;
+    let closure_0;
+    let obj3;
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
+    } else if (tmp3 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "IconComponent", done: null };
       }
     } else {
+      let c3;
       try {
         c4 = 2;
-        if (0 === dependencyMap) {
+        if (0 === beforeExecuteCommand) {
           if (arg0 === 1) {
             c4 = 3;
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_5(true);
             if (beforeExecuteCommand != null) {
               beforeExecuteCommand();
             }
             c3 = 1;
-            const obj6 = { command, optionValues: null, context: null, sectionName: null, commandOrigin: null };
-            const obj2 = tmp3(8794);
-            obj6.optionValues = tmp3(11607).parseOptionValuesForSend(commandContext.channel, command, {});
-            obj6.context = commandContext;
-            obj6.sectionName = sectionName;
-            obj6.commandOrigin = tmp3(7034).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
-            dependencyMap = 2;
+            const obj5 = { command, optionValues: obj3.parseOptionValuesForSend(commandContext.channel, command, {}), context: commandContext, sectionName, commandOrigin: tmp(beforeExecuteCommand[7]).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW };
+            const executeAppLauncherCommand = tmp(beforeExecuteCommand[5]).executeAppLauncherCommand;
+            const tmp21 = tmp(beforeExecuteCommand[5]);
+            obj3 = tmp(beforeExecuteCommand[6]);
+            beforeExecuteCommand = 2;
             c4 = 1;
-            const obj7 = { value: obj2.executeAppLauncherCommand(obj6), done: false };
-            return obj7;
+            const obj6 = { value: executeAppLauncherCommand(obj5), done: false };
+            return obj6;
           }
-        } else if (1 === tmp7) {
+        } else if (1 === tmp4) {
           c3 = 0;
           closure_128_5(false);
           throw closure_2;
@@ -138,25 +145,28 @@ export const useCommandRowSend = function useCommandRowSend(command) {
           c4 = 3;
           return { value: "IconComponent", done: null };
         }
-      } catch (tmp27) {
-        closure_2 = tmp27;
-        if (tmp4 === c3) {
-          c4 = tmp2;
-          throw tmp27;
+      } catch (tmp25) {
+        closure_2 = tmp25;
+        if (0 === c3) {
+          c4 = 3;
+          throw tmp25;
         } else {
-          dependencyMap = tmp;
+          beforeExecuteCommand = 1;
         }
       }
     }
   }), items);
-  let obj2 = { hasOptions: options.length > 0, sending: tmp2[0], onPressSend: null };
-  const items1 = [tryExecuteCommand, callback];
-  obj2.onPressSend = sectionName.useCallback(() => {
-    if (null != tryExecuteCommand) {
-      tmp(callback);
-    } else {
-      callback();
-    }
-  }, items1);
+  let obj2 = {
+    hasOptions: tmp,
+    sending: first,
+    onPressSend: sectionName.useCallback(() => {
+      if (null != tryExecuteCommand) {
+        tmp(callback);
+      } else {
+        callback();
+      }
+    }, items1)
+  };
+  items1 = [tryExecuteCommand, callback];
   return obj2;
 };

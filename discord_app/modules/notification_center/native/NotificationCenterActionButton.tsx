@@ -1,39 +1,24 @@
 // === Module 16348: NotificationCenterActionButton ===
 
 // Module 16348 (NotificationCenterActionButton)
-import util from "util" /* 1126 */;
-import IconButton from "IconButton" /* 7575 */;
-import _modDef7578 from "module_7578" /* 7578 */;
-import noop from "module_19" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import intl2 from "intl" /* 1126 */;
+import IconButton2 from "IconButton" /* 7575 */;
+import AssetRegistryDefault from "AssetRegistry" /* 7578 */;
+import react from "react" /* 19 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-require = fn;
-const jsx = fn(21).jsx;
-const size = fn(2);
+const jsx = Fragment.jsx;
 const result = size.fileFinishedImporting("modules/notification_center/native/NotificationCenterActionButton.tsx");
 
 export default function NotificationCenterActionButton() {
-  const obj = {
-    variant: "tertiary",
-    size: "sm",
-    icon: _modDef7578,
-    onPress() {
-      return require("ActionSheetActionCreators").openLazy(require("asyncRequireImpl")(paths[5], paths.paths), "NotificationCenterActionSheet");
-    },
-    accessibilityLabel: null,
-    maxFontSizeMultiplier: 2
-  };
-  const intl = util.intl;
-  obj.accessibilityLabel = intl.string(util.t["UKOtz+"]);
-  return jsx(IconButton.IconButton, {
-    variant: "tertiary",
-    size: "sm",
-    icon: _modDef7578,
-    onPress() {
-      return require("ActionSheetActionCreators").openLazy(require("asyncRequireImpl")(paths[5], paths.paths), "NotificationCenterActionSheet");
-    },
-    accessibilityLabel: null,
-    maxFontSizeMultiplier: 2
-  });
+  let paths;
+  const IconButton = IconButton2.IconButton;
+  const intl = intl2.intl;
+  return <IconButton variant="tertiary" size="sm" icon={AssetRegistryDefault} onPress={function onPress() {
+    const obj = require("ActionSheetActionCreators");
+    return obj.openLazy(require("asyncRequire")(paths[5], paths.paths), "NotificationCenterActionSheet");
+  }} accessibilityLabel={intl.string(intl2.t["UKOtz+"])} maxFontSizeMultiplier={2} />;
 };

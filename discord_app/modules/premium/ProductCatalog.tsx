@@ -2,997 +2,1181 @@
 
 // Module 13797 (ProductCatalog)
 import LoggerDefault from "Logger" /* 3 */;
+import PerksStateUtils from "PerksStateUtils" /* 1383 */;
 import user from "user" /* 1385 */;
 import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7483 */;
 import PremiumFeatureUtils from "PremiumFeatureUtils" /* 8864 */;
 import SKUListingDefault from "SKUListing" /* 13799 */;
-import DenormalizedPerksReadExperimentDefault from "DenormalizedPerksReadExperiment" /* 13800 */;
+import DenormalizedPerksReadExperiment from "DenormalizedPerksReadExperiment" /* 13800 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import PremiumSKUFeature_mod from "PremiumSKUFeature" /* 13798 */;
 import size from "module_2" /* 2 */;
 
-let closure_0 = require;
+const DenormalizedPerksReadExperimentDefault = DenormalizedPerksReadExperiment;
+
+let PremiumSubscriptionSKUs;
+let c3;
+let tmp22;
+let tmp3;
 ({ PremiumSubscriptionSKUs, PremiumTypeToActivePremiumSubscriptionSKU: c3 } = PremiumConstants);
 let closure_4 = new LoggerDefault("ProductCatalog.tsx");
+new LoggerDefault("ProductCatalog.tsx");
 let PremiumSKUFeature = PremiumSKUFeature_mod;
-class ProductCatalogFeature extends tmp36 {
+class ProductCatalogFeature extends PremiumSKUFeature {
   constructor(arg0, arg1) {
-    closure_0 = undefined;
-    tmp21 = new tmp2(global, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-      if (null != premiumType) {
-        if (null != premiumType.premiumType) {
-          try {
-            if (null == closure_1_3[premiumType.premiumType]) {
-              const _HermesInternal2 = HermesInternal;
-              logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-              return false;
-            } else {
-              if (null == closure_1_5[tmp4]) {
-                const _HermesInternal = HermesInternal;
-                logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-                let flag = false;
+    const tmp22 = new tmp2(arg0, (premiumType) => {
+      let logger;
+      function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+        if (null != premiumType) {
+          if (null != premiumType.premiumType) {
+            try {
+              if (null == closure_1_3[premiumType.premiumType]) {
+                const _HermesInternal2 = HermesInternal;
+                logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+                return false;
               } else {
-                const skuFeatures = tmp7.skuFeatures;
-                flag = skuFeatures.includes(arg0);
+                let flag;
+                if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+                  const _HermesInternal = HermesInternal;
+                  logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+                  flag = false;
+                } else {
+                  const skuFeatures = tmp6.skuFeatures;
+                  flag = skuFeatures.includes(arg0);
+                }
+                return flag;
               }
-              return flag;
+            } catch (tmp16) {
+              let message = tmp16.message;
+              const error = logger.error;
+              if (message == null) {
+                const _JSON = JSON;
+                message = JSON.stringify(tmp16);
+              }
+              const _HermesInternal3 = HermesInternal;
+              error("Error while retrieving user's feature access: " + message);
+              return false;
             }
-          } catch (tmp17) {
-            let message = tmp17.message;
-            if (message == tmp) {
-              const _JSON = JSON;
-              message = JSON.stringify(tmp17);
-            }
-            const _HermesInternal3 = HermesInternal;
-            logger.error("Error while retrieving user's feature access: " + message);
-            return false;
           }
         }
+        return false;
       }
-      return false;
-    })(closure_0, premiumType), require, new.target, tmp2, tmp);
-    closure_0 = tmp21;
-    return tmp21;
+      return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+    }, arg1, new.target, tmp2, tmp);
+    let closure_0 = tmp22;
+    return tmp22;
   }
 }
-const object = new Object(EntitlementFeatureNames.EntitlementFeatureNames.ANIMATED_EMOJIS, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+const object = new Object(EntitlementFeatureNames.EntitlementFeatureNames.ANIMATED_EMOJIS, (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, tmp27, tmp26, tmp25, tmp24, tmp23, tmp22, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const object16 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.EMOJIS_EVERYWHERE, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, tmp27, tmp26, tmp25, tmp24, tmp23, tmp22, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
+const object16 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.EMOJIS_EVERYWHERE, (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, tmp26, tmp25, tmp24, tmp23, tmp22, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const object17 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.STICKERS_EVERYWHERE, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, tmp26, tmp25, tmp24, tmp23, tmp22, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
+const object17 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.STICKERS_EVERYWHERE, (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, tmp25, tmp24, tmp23, tmp22, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const object18 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, tmp25, tmp24, tmp23, tmp22, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
+const object18 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE, (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, tmp24, tmp23, tmp22, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const object19 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.CUSTOM_CALL_SOUNDS, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, tmp24, tmp23, tmp22, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
+const object19 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.CUSTOM_CALL_SOUNDS, (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, tmp23, tmp22, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const object20 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.PREMIUM_VOICE_FILTERS, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, tmp23, tmp22, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
+const object20 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.PREMIUM_VOICE_FILTERS, (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, tmp22, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const object21 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.ANIMATED_AVATAR, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, tmp22, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
+const object21 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.ANIMATED_AVATAR, (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const object22 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.CUSTOM_DISCRIMINATOR, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
+const object22 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.CUSTOM_DISCRIMINATOR, (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const object23 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.PREMIUM_GUILD_MEMBER_PROFILE, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
+const object23 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.PREMIUM_GUILD_MEMBER_PROFILE, (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const tmp33 = new tmp("profileBadges", (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
+const tmp33 = new tmp("profileBadges", (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const tmp34 = new tmp(EntitlementFeatureNames.EntitlementFeatureNames.PROFILE_PREMIUM_FEATURES, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
+const tmp34 = new tmp(EntitlementFeatureNames.EntitlementFeatureNames.PROFILE_PREMIUM_FEATURES, (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), "custom banner and avatar decoration", tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const tmp36 = new tmp("collectibles", (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, "custom banner and avatar decoration", tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
+const tmp36 = new tmp("collectibles", (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const tmp37 = new tmp("appIcons", (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
+const tmp37 = new tmp("appIcons", (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const object24 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.CLIENT_THEMES, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
+const object24 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.CLIENT_THEMES, (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const tmp38 = new tmp("boostDiscount", (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
+const tmp38 = new tmp("boostDiscount", (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const tmp39 = new tmp("freeBoosts", (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
+const tmp39 = new tmp("freeBoosts", (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp38, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const object25 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.STREAM_MID_QUALITY, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp38, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
+const object25 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.STREAM_MID_QUALITY, (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp38, tmp39, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const object26 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.STREAM_HIGH_QUALITY, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp38, tmp39, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
+const object26 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.STREAM_HIGH_QUALITY, (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp38, tmp39, object25, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const object27 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.CUSTOM_NOTIFICATION_SOUNDS, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp38, tmp39, object25, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
+const object27 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.CUSTOM_NOTIFICATION_SOUNDS, (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp38, tmp39, object25, object26, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const tmp40 = new tmp("fancyVoiceChannelReactions", (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp38, tmp39, object25, object26, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
+const tmp40 = new tmp("fancyVoiceChannelReactions", (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp38, tmp39, object25, object26, object27, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const tmp41 = new tmp("installPremiumApplications", (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp38, tmp39, object25, object26, object27, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
+const tmp41 = new tmp("installPremiumApplications", (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp38, tmp39, object25, object26, object27, tmp40, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const tmp42 = new tmp("redeemPremiumPerks", (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp38, tmp39, object25, object26, object27, tmp40, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
+const tmp42 = new tmp("redeemPremiumPerks", (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp38, tmp39, object25, object26, object27, tmp40, tmp41, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const object28 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.VIDEO_FILTER_ASSETS, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp38, tmp39, object25, object26, object27, tmp40, tmp41, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
+const object28 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.VIDEO_FILTER_ASSETS, (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp38, tmp39, object25, object26, object27, tmp40, tmp41, tmp42, tmp5, tmp4, tmp3, tmp2, tmp);
-let PremiumSKUFeature = PremiumSKUFeature_mod;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp38, tmp39, object25, object26, object27, tmp40, tmp41, tmp42, tmp5, tmp4, tmp3, tmp2, tmp);
+PremiumSKUFeature = PremiumSKUFeature_mod;
 const importDefaultResult11 = new PremiumSKUFeature(EntitlementFeatureNames.EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE, PremiumFeatureUtils.getUserMaxFileSize);
-const object29 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.INCREASED_GUILD_LIMIT, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+const object29 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.INCREASED_GUILD_LIMIT, (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp38, tmp39, object25, object26, object27, tmp40, tmp41, tmp42, object28, new.target, importDefaultResult11, tmp2, tmp);
-const object30 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.INCREASED_MESSAGE_LENGTH, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp38, tmp39, object25, object26, object27, tmp40, tmp41, tmp42, object28, this, importDefaultResult11, tmp2, tmp);
+const object30 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.INCREASED_MESSAGE_LENGTH, (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp38, tmp39, object25, object26, object27, tmp40, tmp41, tmp42, object28, new.target, importDefaultResult11, object29, tmp);
-const tmp282 = new tmp28("increasedVideoUploadQuality", (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp38, tmp39, object25, object26, object27, tmp40, tmp41, tmp42, object28, this, importDefaultResult11, object29, tmp);
+const tmp282 = new tmp28("increasedVideoUploadQuality", (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp38, tmp39, object25, object26, object27, tmp40, tmp41, tmp42, object28, new.target, importDefaultResult11, object29, object30);
-const tmp293 = new tmp29("uploadLargeFiles", (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp38, tmp39, object25, object26, object27, tmp40, tmp41, tmp42, object28, this, importDefaultResult11, object29, object30);
+const tmp293 = new tmp29("uploadLargeFiles", (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp38, tmp39, object25, object26, object27, tmp40, tmp41, tmp42, object28, new.target, importDefaultResult11, object29, object30);
-const tmp294 = new tmp29(EntitlementFeatureNames.EntitlementFeatureNames.QUEST_ORB_MULTIPLIER, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
-  if (null != premiumType) {
-    if (null != premiumType.premiumType) {
-      try {
-        if (null == closure_1_3[premiumType.premiumType]) {
-          const _HermesInternal2 = HermesInternal;
-          logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
-          return false;
-        } else {
-          if (null == closure_1_5[tmp4]) {
-            const _HermesInternal = HermesInternal;
-            logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + tmp4 + " and premium type " + premiumType.premiumType);
-            let flag = false;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp38, tmp39, object25, object26, object27, tmp40, tmp41, tmp42, object28, this, importDefaultResult11, object29, object30);
+const tmp294 = new tmp29(EntitlementFeatureNames.EntitlementFeatureNames.QUEST_ORB_MULTIPLIER, (premiumType) => {
+  let logger;
+  function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+    if (null != premiumType) {
+      if (null != premiumType.premiumType) {
+        try {
+          if (null == closure_1_3[premiumType.premiumType]) {
+            const _HermesInternal2 = HermesInternal;
+            logger.warn("Cannot find the corresponding SKU to the user's premium type " + premiumType.premiumType);
+            return false;
           } else {
-            const skuFeatures = tmp7.skuFeatures;
-            flag = skuFeatures.includes(arg0);
+            let flag;
+            if (null == closure_1_5[closure_1_3[premiumType.premiumType]]) {
+              const _HermesInternal = HermesInternal;
+              logger.warn("Cannot find the corresponding product catalog entry to the user's SKU " + closure_1_3[premiumType.premiumType] + " and premium type " + premiumType.premiumType);
+              flag = false;
+            } else {
+              const skuFeatures = tmp6.skuFeatures;
+              flag = skuFeatures.includes(arg0);
+            }
+            return flag;
           }
-          return flag;
+        } catch (tmp16) {
+          let message = tmp16.message;
+          const error = logger.error;
+          if (message == null) {
+            const _JSON = JSON;
+            message = JSON.stringify(tmp16);
+          }
+          const _HermesInternal3 = HermesInternal;
+          error("Error while retrieving user's feature access: " + message);
+          return false;
         }
-      } catch (tmp17) {
-        let message = tmp17.message;
-        if (message == tmp) {
-          const _JSON = JSON;
-          message = JSON.stringify(tmp17);
-        }
-        const _HermesInternal3 = HermesInternal;
-        logger.error("Error while retrieving user's feature access: " + message);
-        return false;
       }
     }
+    return false;
   }
-  return false;
-})(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, new.target, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp38, tmp39, object25, object26, object27, tmp40, tmp41, tmp42, object28, new.target, importDefaultResult11, object29, object30);
-closure_0 = tmp294;
+  return userHasFeatureByMeritOfPremiumSKUs(closure_0, premiumType);
+}, undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, this, undefined, globalThis, require, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp34, tmp36, tmp37, object24, tmp38, tmp39, object25, object26, object27, tmp40, tmp41, tmp42, object28, this, importDefaultResult11, object29, object30);
+let closure_0 = tmp294;
 let obj = {};
+const TIER_0 = PremiumSubscriptionSKUs.TIER_0;
 const items = [object, object16, object17, tmp33, object28, tmp282, tmp293, tmp37];
-const tmp35 = new LoggerDefault("ProductCatalog.tsx");
-obj[PremiumSubscriptionSKUs.TIER_0] = new SKUListingDefault(PremiumSubscriptionSKUs.TIER_0, items);
+obj[TIER_0] = new SKUListingDefault(PremiumSubscriptionSKUs.TIER_0, items);
+const TIER_1 = PremiumSubscriptionSKUs.TIER_1;
 const items1 = [object, object16, object21, object22, tmp33, tmp38, object25, tmp40, tmp282, tmp293, tmp37];
-const tmp67 = new SKUListingDefault(PremiumSubscriptionSKUs.TIER_0, items);
-obj[PremiumSubscriptionSKUs.TIER_1] = new SKUListingDefault(PremiumSubscriptionSKUs.TIER_1, items1);
+new SKUListingDefault(PremiumSubscriptionSKUs.TIER_0, items);
+obj[TIER_1] = new SKUListingDefault(PremiumSubscriptionSKUs.TIER_1, items1);
+const TIER_2 = PremiumSubscriptionSKUs.TIER_2;
 const items2 = [object, object16, object17, object18, object19, object21, object22, object23, tmp33, tmp34, object24, tmp38, tmp39, object25, object26, tmp40, tmp41, tmp42, object28, object29, object30, tmp282, tmp293, tmp37, tmp36, object27, object20, tmp294];
-const tmp68 = new SKUListingDefault(PremiumSubscriptionSKUs.TIER_1, items1);
-obj[PremiumSubscriptionSKUs.TIER_2] = new SKUListingDefault(PremiumSubscriptionSKUs.TIER_2, items2);
-const frozen = Object.freeze(obj);
+new SKUListingDefault(PremiumSubscriptionSKUs.TIER_1, items1);
+obj[TIER_2] = new SKUListingDefault(PremiumSubscriptionSKUs.TIER_2, items2);
+new SKUListingDefault(PremiumSubscriptionSKUs.TIER_2, items2);
+const freezeResult = freeze(obj);
+const hasOwnProperty = freezeResult;
 const items3 = [tmp38, tmp39];
 const items4 = [tmp294];
 let closure_8 = [];
@@ -1076,7 +1260,7 @@ export const INCREASED_MESSAGE_LENGTH = object30;
 export const INCREASED_VIDEO_UPLOAD_QUALITY = tmp282;
 export const UPLOAD_LARGE_FILES = tmp293;
 export const QUEST_ORB_MULTIPLIER = tmp294;
-export const PRODUCT_CATALOG = frozen;
+export const PRODUCT_CATALOG = freezeResult;
 export const canUserUse = function canUserUse(COLLECTIBLES, isPremiumWithFractionalPremiumOnly, arg2) {
   if (null != isPremiumWithFractionalPremiumOnly) {
     if (isPremiumWithFractionalPremiumOnly.isPremiumWithFractionalPremiumOnly()) {
@@ -1092,27 +1276,31 @@ export const canUserUse = function canUserUse(COLLECTIBLES, isPremiumWithFractio
       }
     }
   }
-  if (arg2) {
+  const tmp3 = arg2;
+  if (tmp3) {
     if (closure_8.includes(COLLECTIBLES)) {
       return false;
     }
   }
-  value = map.get(COLLECTIBLES);
+  const value = map.get(COLLECTIBLES);
   if (null != value) {
     let perks;
     if (isPremiumWithFractionalPremiumOnly != null) {
       perks = isPremiumWithFractionalPremiumOnly.perks;
     }
     if (null != perks) {
-      const config = DenormalizedPerksReadExperimentDefault.getConfig({ location: "product_catalog_can_user_use" });
-      if (config !== closure_0(13800).DenormalizedPerksReadConfig.CONTROL) {
+      const obj = DenormalizedPerksReadExperimentDefault;
+      const config = obj.getConfig({ location: "product_catalog_can_user_use" });
+      if (config !== DenormalizedPerksReadExperiment.DenormalizedPerksReadConfig.CONTROL) {
         let featureValue = COLLECTIBLES.getFeatureValue(isPremiumWithFractionalPremiumOnly);
         let perks1;
+        const hasPerk = PerksStateUtils.hasPerk;
+        PerksStateUtils;
         if (isPremiumWithFractionalPremiumOnly != null) {
           perks1 = isPremiumWithFractionalPremiumOnly.perks;
         }
-        const tmp9Result = closure_0(1383);
-        if (config === closure_0(13800).DenormalizedPerksReadConfig.DUAL_READ_RETURN_NEW) {
+        const hasPerkResult = hasPerk(perks1, value);
+        if (config === DenormalizedPerksReadExperiment.DenormalizedPerksReadConfig.DUAL_READ_RETURN_NEW) {
           featureValue = hasPerkResult;
         }
         return featureValue;

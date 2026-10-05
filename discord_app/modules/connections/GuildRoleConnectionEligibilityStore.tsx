@@ -1,27 +1,29 @@
 // === Module 11430: GuildRoleConnectionEligibilityStore ===
 
 // Module 11430 (GuildRoleConnectionEligibilityStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
+import size from "module_2" /* 2 */;
 
 const map = new Map();
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class GuildRoleConnectionEligibilityStore extends Store {
-}
-GuildRoleConnectionEligibilityStore.prototype["getGuildRoleConnectionEligibility"] = function getGuildRoleConnectionEligibility(roleId) {
-  value = undefined;
-  if (null != roleId) {
-    value = map.get(roleId);
+  getGuildRoleConnectionEligibility(roleId) {
+    let value;
+    if (null != roleId) {
+      value = map.get(roleId);
+    }
+    return value;
   }
-  return value;
-};
+}
+const prototype = GuildRoleConnectionEligibilityStore.prototype;
 GuildRoleConnectionEligibilityStore.displayName = "GuildRoleConnectionEligibilityStore";
-const guildRoleConnectionEligibilityStore = new GuildRoleConnectionEligibilityStore(DispatcherDefault, {
+const obj = {
   GUILD_ROLE_CONNECTION_ELIGIBILITY_FETCH_SUCCESS: function handleFetchSuccess(roleId) {
     const result = map.set(roleId.roleId, roleId.roleConnectionEligibility);
   }
-});
-const size = fn(2);
+};
+const guildRoleConnectionEligibilityStore = new GuildRoleConnectionEligibilityStore(DispatcherDefault, obj);
 let result = size.fileFinishedImporting("modules/connections/GuildRoleConnectionEligibilityStore.tsx");
 
 export default guildRoleConnectionEligibilityStore;

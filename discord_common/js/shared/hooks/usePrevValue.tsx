@@ -1,10 +1,10 @@
-// === Module 9288: usePrevValue ===
+// === Module 9288: react ===
 
-// Module 9288 (usePrevValue)
-import _mod19 from "module_19" /* 19 */;
+// Module 9288 (react)
+import react from "react" /* 19 */;
 import size from "module_2" /* 2 */;
 
-const useRef = _mod19.useRef;
+const useRef = react.useRef;
 const result = size.fileFinishedImporting("../discord_common/js/shared/hooks/usePrevValue.tsx");
 
 export default function usePrevValue(current) {

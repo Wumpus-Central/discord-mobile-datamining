@@ -6,28 +6,37 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("../discord_common/js/shared/utils/MutexUtils.tsx");
 
 export const createLock = function createLock() {
-  closure_0 = Promise.resolve(null);
+  let closure_0 = Promise.resolve(null);
   return (arg0) => {
     let promise = new Promise((arg0, arg1) => {
-      promise = promise.then(promise).then(arg0, arg1);
+      const nextPromise = promise.then(promise);
+      promise = nextPromise.then(arg0, arg1);
     });
     return promise;
   };
 };
 export const createObservableLock = function createObservableLock(arg0) {
-  closure_0 = Promise.resolve(null);
-  closure_1 = [];
-  c2 = false;
+  let closure_3;
+  let closure_4;
+  let closure_5;
+  let closure_6;
+  let closure_0 = Promise.resolve(null);
+  let closure_1 = [];
+  let c2 = false;
   ({ onContention: closure_3, onContentionResolved: closure_4, onTimeout: closure_5, timeoutMs: closure_6 } = arg0);
   function mutex(arg0, arg1) {
+    let timerId;
     let promise = arg0;
     closure_1 = arg1;
     if (closure_1.length > 0) {
-      closure_3(arg1, arr);
-      let timerId = true;
-    } else if (timerId) {
-      closure_4();
-      timerId = false;
+      closure_3(arg1, closure_1);
+      timerId = true;
+    } else {
+      const tmp = timerId;
+      if (tmp) {
+        closure_4();
+        timerId = false;
+      }
     }
     closure_1.push(arg1);
     timerId = null;
@@ -35,12 +44,13 @@ export const createObservableLock = function createObservableLock(arg0) {
       timerId = null;
       if (null != closure_5) {
         const _setTimeout = setTimeout;
-        timerId = setTimeout(() => closure_2_5(closure_1, closure_1), tmp7);
+        timerId = setTimeout(() => closure_5(closure_1, closure_1), tmp7);
       }
     }
     promise = new Promise((arg0, arg1) => {
       const nextPromise = promise.then(promise);
-      promise = promise.then(promise).then(arg0, arg1).then(() => closure_1_1.splice(0, 1));
+      const nextPromise1 = nextPromise.then(arg0, arg1);
+      promise = nextPromise1.then(() => closure_1_1.splice(0, 1));
       if (null != timerId) {
         promise = promise.then(() => clearTimeout(timerId));
       }

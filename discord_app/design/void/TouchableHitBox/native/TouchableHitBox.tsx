@@ -1,102 +1,107 @@
 // === Module 9442: TouchableHitBox ===
 
 // Module 9442 (TouchableHitBox)
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
+import native2 from "native" /* 4589 */;
 import Pressables from "Pressables" /* 5909 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import createStyles from "createStyles" /* 4890 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ActivityIndicator = fn(17).ActivityIndicator;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj2 = { button: { flexGrow: 0, flexShrink: 1, justifyContent: "center", alignItems: "center", backgroundColor: "transparent", alignSelf: "flex-start", borderRadius: nativeDefault.radii.sm }, buttonText: { lineHeight: 24, margin: 10, maxWidth: 60, fontSize: 16 }, buttonIcon: { margin: 10 }, buttonSpinner: { margin: 12 }, buttonDisabled: { opacity: 0.6 } };
-let closure_4 = createStyles.createLegacyClassComponentStyles(obj2);
-const PureComponent = noop.PureComponent;
+let obj2;
+const ActivityIndicator = react_native.ActivityIndicator;
+const jsx = Fragment.jsx;
+const obj = { button: obj2, buttonText: { lineHeight: 24, margin: 10, maxWidth: 60, fontSize: 16 }, buttonIcon: { margin: 10 }, buttonSpinner: { margin: 12 }, buttonDisabled: { opacity: 0.6 } };
+obj2 = { flexGrow: 0, flexShrink: 1, justifyContent: "center", alignItems: "center", backgroundColor: "transparent", alignSelf: "flex-start", borderRadius: nativeDefault.radii.sm };
+const React3 = createStyles.createLegacyClassComponentStyles(obj);
+const PureComponent = react.PureComponent;
 class TouchableHitBox extends PureComponent {
-}
-TouchableHitBox.prototype["render"] = function render() {
-  const tmp = closure_4(this.context);
-  const props = this.props;
-  ({ disabled, source, text, loading, IconComponent, iconStyle, color, disableColor } = props);
-  let tmp2 = undefined !== disableColor;
-  ({ activeOpacity, onPress, onLongPress, style, iconSize } = props);
-  if (tmp2) {
-    tmp2 = disableColor;
-  }
-  const children = props.children;
-  let tmp8Result;
-  ({ accessibilityLabel, accessibilityRole, accessibilityState } = props);
-  if (null != source) {
-    const items = [tmp.buttonIcon, , ];
-    let buttonDisabled = disabled;
-    if (disabled) {
-      buttonDisabled = tmp.buttonDisabled;
+  render() {
+    let IconComponent;
+    let accessibilityLabel;
+    let accessibilityRole;
+    let accessibilityState;
+    let activeOpacity;
+    let color;
+    let disableColor;
+    let disabled;
+    let iconSize;
+    let iconStyle;
+    let loading;
+    let onLongPress;
+    let onPress;
+    let source;
+    let style;
+    let text;
+    const tmp = closure_4(this.context);
+    const props = this.props;
+    ({ disabled, source, text, loading, IconComponent, iconStyle, color, disableColor } = props);
+    let tmp2 = undefined !== disableColor;
+    ({ activeOpacity, onPress, onLongPress, style, iconSize } = props);
+    if (tmp2) {
+      tmp2 = disableColor;
     }
-    const obj = { style: null, source: null, color: null, size: null, disableColor: null };
-    items[1] = buttonDisabled;
-    items[2] = iconStyle;
-    obj.style = items;
-    obj.source = source;
-    obj.color = color;
-    obj.size = iconSize;
-    obj.disableColor = tmp2;
-    tmp8Result = jsx(native.Icon, { style: null, source: null, color: null, size: null, disableColor: null });
-  }
-  if (loading) {
-    const obj2 = { style: tmp.buttonSpinner, animating: true, color };
-    tmp8Result = <ActivityIndicator style={tmp.buttonSpinner} animating color={color} />;
-  } else if (null != text) {
-    const items1 = [tmp.buttonText, , ];
-    let buttonDisabled3 = disabled;
-    if (disabled) {
-      buttonDisabled3 = tmp.buttonDisabled;
+    const children = props.children;
+    let tmp8Result;
+    ({ accessibilityLabel, accessibilityRole, accessibilityState } = props);
+    if (null != source) {
+      const items = [tmp.buttonIcon, , ];
+      let buttonDisabled = disabled;
+      const Icon = native.Icon;
+      if (disabled) {
+        buttonDisabled = tmp.buttonDisabled;
+      }
+      items[1] = buttonDisabled;
+      items[2] = iconStyle;
+      tmp8Result = <Icon style={items} source={source} color={color} size={iconSize} disableColor={tmp2} />;
     }
-    const obj3 = { numberOfLines: 1, style: null, children: null };
-    items1[1] = buttonDisabled3;
-    const obj4 = { color };
-    items1[2] = obj4;
-    obj3.style = items1;
-    obj3.children = text;
-    tmp8Result = jsx(native.LegacyText, { numberOfLines: 1, style: null, children: null });
-  } else {
-    if (null != IconComponent) {
-      if (null != source) {
-        const obj5 = { size: "sm", color, style: null };
-        const items2 = [tmp.buttonIcon, , ];
-        let buttonDisabled2 = disabled;
-        if (disabled) {
-          buttonDisabled2 = tmp.buttonDisabled;
+    if (loading) {
+      tmp8Result = <ActivityIndicator style={tmp.buttonSpinner} animating color={color} />;
+    } else if (null != text) {
+      const items1 = [tmp.buttonText, , ];
+      let buttonDisabled3 = disabled;
+      const LegacyText = native.LegacyText;
+      if (disabled) {
+        buttonDisabled3 = tmp.buttonDisabled;
+      }
+      items1[1] = buttonDisabled3;
+      const obj4 = { color };
+      items1[2] = obj4;
+      tmp8Result = <LegacyText numberOfLines={1} style={items1}>{text}</LegacyText>;
+    } else {
+      if (null != IconComponent) {
+        if (null != source) {
+          const items2 = [tmp.buttonIcon, , ];
+          const buttonDisabled2 = disabled && tmp.buttonDisabled;
+          items2[1] = buttonDisabled2;
+          items2[2] = iconStyle;
+          tmp8Result = <IconComponent size="sm" color={color} style={items2} />;
         }
-        items2[1] = buttonDisabled2;
-        items2[2] = iconStyle;
-        obj5.style = items2;
-        tmp8Result = <IconComponent size="sm" color={color} style={null} />;
+      }
+      if (null == source) {
+        if (null != children) {
+          tmp8Result = children;
+        }
       }
     }
-    if (null == source) {
-      if (null != children) {
-        tmp8Result = children;
-      }
+    const items3 = [tmp.button, style];
+    const PressableOpacity = Pressables.PressableOpacity;
+    if (!disabled) {
+      disabled = loading;
     }
+    return <PressableOpacity accessibilityRole={accessibilityRole} accessibilityLabel={accessibilityLabel} accessibilityState={accessibilityState} onPress={onPress} onLongPress={onLongPress} activeOpacity={activeOpacity} style={items3} disabled={disabled}>{tmp8Result}</PressableOpacity>;
   }
-  const obj6 = { accessibilityRole, accessibilityLabel, accessibilityState, onPress, onLongPress, activeOpacity, style: null, disabled: null, children: null };
-  const items3 = [tmp.button, style];
-  obj6.style = items3;
-  if (!disabled) {
-    disabled = loading;
-  }
-  obj6.disabled = disabled;
-  obj6.children = tmp8Result;
-  return jsx(Pressables.PressableOpacity, { accessibilityRole, accessibilityLabel, accessibilityState, onPress, onLongPress, activeOpacity, style: null, disabled: null, children: null });
-};
-TouchableHitBox.contextType = fn(4589).ThemeContext;
+}
+const prototype = TouchableHitBox.prototype;
+TouchableHitBox.contextType = native2.ThemeContext;
 TouchableHitBox.defaultProps = {
   onPress() {
 
   }
 };
-const size = fn(2);
 const result = size.fileFinishedImporting("design/void/TouchableHitBox/native/TouchableHitBox.tsx");
 
 export default TouchableHitBox;

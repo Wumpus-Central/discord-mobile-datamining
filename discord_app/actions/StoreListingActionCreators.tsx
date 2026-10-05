@@ -2,99 +2,116 @@
 
 // Module 14338 (StoreListingActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
+import Constants from "Constants" /* 1085 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import StoreUtils from "StoreUtils" /* 5322 */;
 import ApplicationStore from "ApplicationStore" /* 5118 */;
 import SKUStore from "SKUStore" /* 5695 */;
 import StoreListingStore from "StoreListingStore" /* 14339 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, application, body, importDefault;
 
-require = fn;
-const Endpoints = fn(1085).Endpoints;
-const size = fn(2);
+const Endpoints = Constants.Endpoints;
 let result = size.fileFinishedImporting("actions/StoreListingActionCreators.tsx");
 
 export const fetchStoreListingsForApplications = function fetchStoreListingsForApplications(arr) {
+  let forSKU;
+  let obj;
+  let obj3;
+  let resolved;
   const found = arr.filter((item) => {
     application = application.getApplication(item);
     if (null == application) {
       return true;
     } else {
       const destinationSkuId = application.destinationSkuId;
-      let tmp2 = null == destinationSkuId;
-      if (!tmp2) {
-        tmp2 = null == forSKU.getForSKU(destinationSkuId);
-      }
+      const tmp2 = null == destinationSkuId || null == forSKU.getForSKU(destinationSkuId);
       return tmp2;
     }
   });
   if (0 === found.length) {
-    let resolved = Promise.resolve();
+    resolved = Promise.resolve();
   } else {
-    const request = { url: Endpoints.STORE_PUBLISHED_LISTINGS_APPLICATIONS, query: null, oldFormErrors: true, rejectWithError: null };
-    const obj2 = { application_ids: found };
-    request.query = obj2;
-    const obj = StoreUtils;
-    request.rejectWithError = HTTPUtils.rejectWithMigratedError();
-    const result = obj.httpGetWithCountryCodeQuery(request);
+    const request = { url: Endpoints.STORE_PUBLISHED_LISTINGS_APPLICATIONS, query: obj, oldFormErrors: true, rejectWithError: obj3.rejectWithMigratedError() };
+    obj = { application_ids: found };
+    const httpGetWithCountryCodeQuery = StoreUtils.httpGetWithCountryCodeQuery;
+    StoreUtils;
+    obj3 = HTTPUtils;
+    const result = httpGetWithCountryCodeQuery(request);
     resolved = result.then((body) => {
-      DispatcherDefault.dispatch({ type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: body.body });
+      const obj = DispatcherDefault;
+      const obj2 = { type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: body.body };
+      obj.dispatch(obj2);
     });
   }
   return resolved;
 };
-export const fetchAllStoreListingsForApplication = function fetchAllStoreListingsForApplication(application_id) {
-  const request = { url: Endpoints.STORE_PUBLISHED_LISTINGS_SKUS, query: { application_id }, oldFormErrors: true, rejectWithError: null };
-  let obj = StoreUtils;
-  let obj2 = { application_id };
-  request.rejectWithError = HTTPUtils.rejectWithMigratedError();
-  const result = obj.httpGetWithCountryCodeQuery(request);
+export const fetchAllStoreListingsForApplication = function fetchAllStoreListingsForApplication(id) {
+  let obj;
+  let obj3;
+  const tmp = StoreUtils;
+  const request = { url: Endpoints.STORE_PUBLISHED_LISTINGS_SKUS, query: obj, oldFormErrors: true, rejectWithError: obj3.rejectWithMigratedError() };
+  obj = { application_id: id };
+  const httpGetWithCountryCodeQuery = tmp.httpGetWithCountryCodeQuery;
+  obj3 = HTTPUtils;
+  const result = httpGetWithCountryCodeQuery(request);
   return result.then((body) => {
-    const obj2 = { type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: null };
+    let obj = {
+      type: "STORE_LISTINGS_FETCH_SUCCESS",
+      storeListings: body.map((item) => {
+        const obj = { published: true };
+        const merged = Object.assign(item);
+        return obj;
+      })
+    };
     body = body.body;
-    obj2.storeListings = body.map((item) => {
-      const obj = {};
-      const merged = Object.assign(item);
-      obj.published = true;
-      return obj;
-    });
-    DispatcherDefault.dispatch(obj2);
+    const dispatch = DispatcherDefault.dispatch;
+    DispatcherDefault;
+    dispatch(obj);
     return body.body;
   });
 };
 export const fetchStoreListingForSku = function fetchStoreListingForSku(skuId) {
+  let STORE_LISTINGS_SKUResult;
+  let tmp7Result;
   _require = skuId;
-  value = SKUStore.get(skuId);
+  const value = SKUStore.get(skuId);
   let result = null != value;
   if (result) {
-    result = require("TestModeUtils").isTestModeForApplication(value.applicationId);
     let obj = require("TestModeUtils");
+    result = obj.isTestModeForApplication(value.applicationId);
   }
   importDefault = result;
-  DispatcherDefault.dispatch({ type: "STORE_LISTINGS_FETCH_START", skuId });
+  let obj2 = DispatcherDefault;
   const obj3 = { type: "STORE_LISTINGS_FETCH_START", skuId };
+  obj2.dispatch(obj3);
+  const httpGetWithCountryCodeQuery = require("StoreUtils").httpGetWithCountryCodeQuery;
+  require("StoreUtils");
   const tmp7 = _require;
   if (result) {
-    let STORE_LISTINGS_SKUResult = Endpoints.STORE_LISTINGS_SKU(skuId);
+    STORE_LISTINGS_SKUResult = Endpoints.STORE_LISTINGS_SKU(skuId);
   } else {
     STORE_LISTINGS_SKUResult = Endpoints.STORE_PUBLISHED_LISTINGS_SKU(skuId);
   }
-  const obj6 = { url: STORE_LISTINGS_SKUResult, rejectWithError: null };
-  const obj4 = require("StoreUtils");
-  obj6.rejectWithError = tmp7(1282).rejectWithMigratedError();
-  const result1 = obj4.httpGetWithCountryCodeQuery(obj6);
-  const tmp7Result = tmp7(1282);
-  return result1.then((body) => {
+  const obj5 = { url: STORE_LISTINGS_SKUResult, rejectWithError: tmp7Result.rejectWithMigratedError() };
+  tmp7Result = tmp7(1282);
+  const result1 = httpGetWithCountryCodeQuery(obj5);
+  const nextPromise = result1.then((body) => {
     const dispatch = DispatcherDefault.dispatch;
-    if (result) {
+    DispatcherDefault;
+    if (importDefault) {
       const obj2 = { type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: body.body };
       dispatch(obj2);
     } else {
       const obj = { type: "STORE_LISTING_FETCH_SUCCESS", storeListing: body.body };
       dispatch(obj);
     }
-  }).catch(() => {
-    DispatcherDefault.dispatch({ type: "SKU_FETCH_FAIL", skuId });
+  });
+  return nextPromise.catch(() => {
+    const obj = DispatcherDefault;
+    const obj2 = { type: "SKU_FETCH_FAIL", skuId };
+    obj.dispatch(obj2);
   });
 };

@@ -1,46 +1,57 @@
 // === Module 14420: UserProfileUpsellButton ===
 
 // Module 14420 (UserProfileUpsellButton)
+import Fragment from "Fragment" /* 21 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import PremiumConstants from "PremiumConstants" /* 1379 */;
 import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 8818 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import Constants from "Constants" /* 1085 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
-const Constants = fn(1085);
-({ AnalyticsPages: closure_4, UpsellTypes: hasOwnProperty, AnalyticsSections: metroRequire, AnalyticEvents: closure_7 } = Constants);
-const PremiumUpsellTypes = fn(1379).PremiumUpsellTypes;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+let analyticsObject, obj1, obj5, obj6, trackResult;
+
+let closure_4;
+let hasOwnProperty;
+let metroImportDefault;
+let metroRequire;
+({ AnalyticsPages: closure_4, UpsellTypes: hasOwnProperty, AnalyticsSections: metroRequire, AnalyticEvents: metroImportDefault } = Constants);
+const PremiumUpsellTypes = PremiumConstants.PremiumUpsellTypes;
+const jsx = Fragment.jsx;
 let closure_10 = createStyles.createStyles({ nitroWheel: { marginRight: 2 } });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileUpsellButton.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsObject) => {
-  const cResult = analyticsObject(576).c(16);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsObject) => {
+  let analyticsLocations;
+  let obj = analyticsObject(576);
+  const cResult = obj.c(16);
   analyticsObject = analyticsObject.analyticsObject;
   const label = analyticsObject.label;
   const tmp4 = closure_10();
   analyticsLocations = analyticsLocations(6657)().analyticsLocations;
-  const obj = analyticsObject(576);
-  const nitroTrialCtaOverride = analyticsObject(6955).useNitroTrialCtaOverride("user_profile_upsell_button");
+  let obj2 = analyticsObject(6955);
+  const nitroTrialCtaOverride = obj2.useNitroTrialCtaOverride("user_profile_upsell_button");
   if (cResult[0] === analyticsLocations) {
+    let tmp6;
+    let tmp7;
     if (cResult[1] === analyticsObject) {
-      let tmp6 = cResult[2];
-      let tmp7 = cResult[3];
+      tmp6 = cResult[2];
+      tmp7 = cResult[3];
     }
-    const effect = noop.useEffect(tmp6, tmp7);
+    const effect = react.useEffect(tmp6, tmp7);
     if (cResult[4] === analyticsLocations) {
+      let tmp10;
       if (cResult[5] === analyticsObject) {
-        let tmp10 = cResult[6];
+        tmp10 = cResult[6];
       }
       if (cResult[7] === label) {
+        let tmp11;
+        let tmp14;
         if (cResult[8] === nitroTrialCtaOverride) {
-          let tmp11 = cResult[9];
+          tmp11 = cResult[9];
         }
         if (cResult[10] !== tmp4.nitroWheel) {
-          const obj3 = { color: "white", size: "sm", style: tmp4.nitroWheel };
-          const tmp16 = jsx(tmp(8313).NitroWheelIcon, { color: "white", size: "sm", style: tmp4.nitroWheel });
+          const tmp16 = jsx(analyticsObject(8313).NitroWheelIcon, { color: "white", size: "sm", style: tmp4.nitroWheel });
           class T {
             constructor() {
               obj = closure_1(closure_2[10]);
@@ -55,14 +66,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsObject)
           }
           cResult[10] = tmp4.nitroWheel;
           cResult[11] = tmp16;
-          let tmp14 = tmp16;
+          tmp14 = tmp16;
         } else {
           tmp14 = cResult[11];
         }
         if (cResult[12] === tmp10) {
           if (cResult[13] === tmp11) {
+            let tmp17;
             if (cResult[14] === tmp14) {
-              let tmp17 = cResult[15];
+              tmp17 = cResult[15];
             }
             return tmp17;
           }
@@ -82,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsObject)
         tmp19[0] = tmp10;
         tmp19[2] = tmp11;
         tmp19[3] = tmp14;
-        const tmp20 = jsx(tmp(5594).Button, tmp19);
+        const tmp20 = jsx(analyticsObject(5594).Button, tmp19);
         cResult[12] = tmp10;
         cResult[13] = tmp11;
         cResult[14] = tmp14;
@@ -145,43 +157,41 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsObject)
   cResult[3] = items;
   tmp7 = items;
   tmp6 = U;
-  let obj2 = analyticsObject(6955);
 }) : ((analyticsObject) => {
   analyticsObject = analyticsObject.analyticsObject;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(6657)().analyticsLocations;
+  const label = analyticsObject.label;
   const tmp = closure_10();
-  let label = analyticsObject(6955).useNitroTrialCtaOverride("user_profile_upsell_button");
+  analyticsLocations = analyticsLocations(6657)().analyticsLocations;
+  let obj = analyticsObject(6955);
+  let nitroTrialCtaOverride = obj.useNitroTrialCtaOverride("user_profile_upsell_button");
   const items = [analyticsLocations, analyticsObject];
-  const effect = noop.useEffect(() => {
-    const obj2 = { type: PremiumUpsellTypes.CUSTOM_PROFILE_SETTINGS_BANNER_BUTTON, location: { page: constants.USER_SETTINGS, section: constants3.USER_PROFILE, object: analyticsObject }, location_stack: analyticsLocations };
-    AnalyticsUtilsDefault.track(constants4.PREMIUM_UPSELL_VIEWED, obj2);
+  const effect = react.useEffect(() => {
+    let obj3;
+    const obj2 = { type: PremiumUpsellTypes.CUSTOM_PROFILE_SETTINGS_BANNER_BUTTON, location: obj3, location_stack: analyticsLocations };
+    obj3 = { page: constants.USER_SETTINGS, section: metroRequire.USER_PROFILE, object: analyticsObject };
+    const obj = AnalyticsUtilsDefault;
+    obj.track(metroImportDefault.PREMIUM_UPSELL_VIEWED, obj2);
   }, items);
-  let obj2 = {
-    onPress() {
-      const obj2 = { initialUpsellKey: constants2.CUSTOM_PROFILES, analyticsLocation: { page: constants.USER_SETTINGS, section: constants3.USER_PROFILE, object: analyticsObject }, analyticsLocations, analyticsProperties: { type: PremiumUpsellTypes.CUSTOM_PROFILE_UPSELL } };
-      const result = PremiumUpsellUtilsDefault.handleShowUpsellAlert(obj2);
-    },
-    variant: "active",
-    text: null,
-    icon: null
-  };
-  if (label == null) {
-    label = analyticsObject.label;
+  const Button = analyticsObject(5594).Button;
+  if (nitroTrialCtaOverride == null) {
+    nitroTrialCtaOverride = label;
   }
-  if (label == null) {
+  if (nitroTrialCtaOverride == null) {
     const intl = tmp3(1126).intl;
-    label = intl.string(tmp3(1126).t.pj0XBN);
+    nitroTrialCtaOverride = intl.string(tmp3(1126).t.pj0XBN);
   }
-  obj2.text = label;
-  obj2.icon = jsx(analyticsObject(8313).NitroWheelIcon, { color: "white", size: "sm", style: tmp.nitroWheel });
-  return jsx(analyticsObject(5594).Button, {
-    onPress() {
-      const obj2 = { initialUpsellKey: constants2.CUSTOM_PROFILES, analyticsLocation: { page: constants.USER_SETTINGS, section: constants3.USER_PROFILE, object: analyticsObject }, analyticsLocations, analyticsProperties: { type: PremiumUpsellTypes.CUSTOM_PROFILE_UPSELL } };
-      const result = PremiumUpsellUtilsDefault.handleShowUpsellAlert(obj2);
-    },
-    variant: "active",
-    text: null,
-    icon: null
-  });
+  let obj3 = { color: "white", size: "sm", style: tmp.nitroWheel };
+  return <Button onPress={function onPress() {
+    let obj3;
+    let obj4;
+    const obj2 = { initialUpsellKey: hasOwnProperty.CUSTOM_PROFILES, analyticsLocation: obj3, analyticsLocations, analyticsProperties: obj4 };
+    obj3 = { page: constants.USER_SETTINGS, section: metroRequire.USER_PROFILE, object: analyticsObject };
+    obj4 = { type: PremiumUpsellTypes.CUSTOM_PROFILE_UPSELL };
+    const obj = PremiumUpsellUtilsDefault;
+    const result = obj.handleShowUpsellAlert(obj2);
+  }} variant="active" text={nitroTrialCtaOverride} icon={null} />;
 });
+let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileUpsellButton.tsx");
+
+export default tmp3;

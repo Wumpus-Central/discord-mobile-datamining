@@ -3,35 +3,25 @@
 // Module 8512 (TestModeUtils)
 import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 8513 */;
 import TestModeStore from "TestModeStore" /* 8515 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/game_store/TestModeUtils.tsx");
-
-export const isTestModeForApplication = function isTestModeForApplication(applicationId) {
-  let result = TestModeStore.inTestModeForApplication(applicationId);
-  if (!result) {
-    result = DeveloperActivityShelfStore.inDevModeForApplication(applicationId);
-  }
-  return result;
-};
-export const isAnyApplicationInTestMode = function isAnyApplicationInTestMode() {
-  let isEnabled = null != TestModeStore.getTestModeApplicationId();
-  if (!isEnabled) {
-    isEnabled = DeveloperActivityShelfStore.getIsEnabled();
-  }
-  return isEnabled;
-};
-export const useIsTestModeForApplication = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let closure_0;
+  let first;
+  let tmp7;
+  let tmp8;
   _require = arg0;
-  const cResult = require("c").c(4);
+  const obj = require("react");
+  const cResult = obj.c(4);
+  const tmp = _require;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [TestModeStore, DeveloperActivityShelfStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -39,10 +29,7 @@ export const useIsTestModeForApplication = ReactCompilerGating.isReactCompilerEn
     const fn = function l() {
       let tmp2 = null != closure_0;
       if (tmp2) {
-        let result = TestModeStore.inTestModeForApplication(closure_0);
-        if (!result) {
-          result = DeveloperActivityShelfStore.inDevModeForApplication(closure_0);
-        }
+        const result = TestModeStore.inTestModeForApplication(closure_0) || DeveloperActivityShelfStore.inDevModeForApplication(closure_0);
         tmp2 = result;
       }
       return tmp2;
@@ -51,27 +38,37 @@ export const useIsTestModeForApplication = ReactCompilerGating.isReactCompilerEn
     cResult[1] = arg0;
     cResult[2] = fn;
     cResult[3] = items1;
-    let tmp8 = items1;
-    let tmp7 = fn;
+    tmp8 = items1;
+    tmp7 = fn;
   } else {
     tmp7 = cResult[2];
     tmp8 = cResult[3];
   }
-  const obj = require("c");
-  return require("initialize").useStateFromStores(first, tmp7, tmp8);
+  const tmpResult = tmp(504);
+  return tmpResult.useStateFromStores(first, tmp7, tmp8);
 }) : ((arg0) => {
+  let closure_0;
   _require = arg0;
   const items = [TestModeStore, DeveloperActivityShelfStore];
   const items1 = [arg0];
-  return require("initialize").useStateFromStores(items, () => {
+  const obj = require("get initialized");
+  return obj.useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      let result = TestModeStore.inTestModeForApplication(closure_0);
-      if (!result) {
-        result = DeveloperActivityShelfStore.inDevModeForApplication(closure_0);
-      }
+      const result = TestModeStore.inTestModeForApplication(closure_0) || DeveloperActivityShelfStore.inDevModeForApplication(closure_0);
       tmp2 = result;
     }
     return tmp2;
   }, items1);
 });
+let result = size.fileFinishedImporting("modules/game_store/TestModeUtils.tsx");
+
+export const isTestModeForApplication = function isTestModeForApplication(applicationId) {
+  const result = TestModeStore.inTestModeForApplication(applicationId) || DeveloperActivityShelfStore.inDevModeForApplication(applicationId);
+  return result;
+};
+export const isAnyApplicationInTestMode = function isAnyApplicationInTestMode() {
+  const isEnabled = null != TestModeStore.getTestModeApplicationId() || DeveloperActivityShelfStore.getIsEnabled();
+  return isEnabled;
+};
+export const useIsTestModeForApplication = tmp2;

@@ -3,19 +3,21 @@
 // Module 13074 (getCanSendInvite)
 import hasFlagDefault from "hasFlag" /* 6816 */;
 import isInviteActiveDefault from "isInviteActive" /* 11386 */;
-import getPartySize from "getPartySize" /* 11387 */;
+import _slicedToArray from "_slicedToArray" /* 11387 */;
 import hasPartySize from "hasPartySize" /* 11388 */;
 import isPartyFull from "isPartyFull" /* 11389 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
+let c3;
+let closure_4;
 ({ ActivityFlags: c3, ActivityActionTypes: closure_4 } = Constants);
 const result = size.fileFinishedImporting("modules/activities/utils/getCanSendInvite.tsx");
 
-export const getCanSendInvite = function getCanSendInvite(findActivityResult, author, application1, id2) {
-  if (author.author.id === id2) {
+export const getCanSendInvite = function getCanSendInvite(applicationActivity, author, application1, id4) {
+  if (author.author.id === id4) {
     return false;
-  } else if (isInviteActiveDefault(findActivityResult, author, application1.id)) {
+  } else if (isInviteActiveDefault(applicationActivity, author, application1.id)) {
     const activity = author.activity;
     let type;
     if (activity != null) {
@@ -23,13 +25,15 @@ export const getCanSendInvite = function getCanSendInvite(findActivityResult, au
     }
     if (type !== constants2.JOIN_REQUEST) {
       return false;
-    } else if (hasFlagDefault(findActivityResult, constants.JOIN)) {
-      const partySize = getPartySize.getPartySize(findActivityResult);
-      const hasPartySizeResult = hasPartySize.hasPartySize(partySize);
+    } else if (hasFlagDefault(applicationActivity, constants.JOIN)) {
+      const obj = _slicedToArray;
+      const partySize = obj.getPartySize(applicationActivity);
+      const obj2 = hasPartySize;
+      const hasPartySizeResult = obj2.hasPartySize(partySize);
       let isPartyFullResult = !hasPartySizeResult;
       if (hasPartySizeResult) {
-        isPartyFullResult = isPartyFull.isPartyFull(partySize);
         const tmp5Result = isPartyFull;
+        isPartyFullResult = tmp5Result.isPartyFull(partySize);
       }
       return !isPartyFullResult;
     } else {

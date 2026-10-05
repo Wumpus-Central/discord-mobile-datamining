@@ -4,10 +4,11 @@
 import size from "module_2" /* 2 */;
 
 function roundIfClose(endImportTime, arg1) {
+  let rounded;
   const diff = endImportTime - Math.floor(endImportTime);
   if (diff >= 1 - arg1) {
     const _Math2 = Math;
-    let rounded = Math.ceil(endImportTime);
+    rounded = Math.ceil(endImportTime);
   } else {
     rounded = endImportTime;
     if (diff <= arg1) {

@@ -6,8 +6,8 @@ import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import size from "module_2" /* 2 */;
 
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/shouldShowVoiceChannelChangeConfirmation.tsx");
 
 export const shouldShowVoiceChannelChangeConfirmation = function shouldShowVoiceChannelChangeConfirmation(id) {
@@ -21,12 +21,13 @@ export const shouldShowVoiceChannelChangeConfirmation = function shouldShowVoice
       if (VoiceStateStore.isInChannel(id.id)) {
         return false;
       } else {
-        guild = GuildStore.getGuild(id.getGuildId());
+        const guild = GuildStore.getGuild(id.getGuildId());
         let afkChannelId;
         if (guild != null) {
           afkChannelId = guild.afkChannelId;
         }
-        return null == afkChannelId || !VoiceStateStore.isInChannel(guild.afkChannelId);
+        const tmp9 = null == afkChannelId || !VoiceStateStore.isInChannel(guild.afkChannelId);
+        return tmp9;
       }
     } else {
       return false;

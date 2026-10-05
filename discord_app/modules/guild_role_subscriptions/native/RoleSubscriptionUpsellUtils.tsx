@@ -1,31 +1,33 @@
 // === Module 9900: RoleSubscriptionUpsellUtils ===
 
 // Module 9900 (RoleSubscriptionUpsellUtils)
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import Fragment from "Fragment" /* 21 */;
+import asyncRequire from "asyncRequire" /* 1987 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const jsx = fn(21).jsx;
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/RoleSubscriptionUpsellUtils.tsx");
-
-export default {
+const jsx = Fragment.jsx;
+let obj = {
   handleShowEmojiUpsellAlert(guildId) {
     guildId = guildId.guildId;
-    actions_AlertActionCreatorsDefault.openLazy({
+    const obj = actions_AlertActionCreatorsDefault;
+    const obj2 = {
       importer() {
-        return asyncRequireImpl(9901, dependencyMap.paths).then((result) => {
-          closure_0 = result.default;
+        const promise = asyncRequire(9901, dependencyMap.paths);
+        return promise.then((result) => {
+          let closure_0 = result.default;
           return (arg0) => {
-            const obj = {};
             const merged = Object.assign(arg0);
-            obj.guildId = guildId;
-            return <closure_0 />;
+            return <closure_0 guildId={guildId} />;
           };
         });
       },
       isDismissable: false
-    });
+    };
+    obj.openLazy(obj2);
   }
 };
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/RoleSubscriptionUpsellUtils.tsx");
+
+export default obj;

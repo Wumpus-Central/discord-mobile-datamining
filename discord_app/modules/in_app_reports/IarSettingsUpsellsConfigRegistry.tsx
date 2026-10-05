@@ -1,60 +1,74 @@
 // === Module 8290: IarSettingsUpsellsConfigRegistry ===
 
 // Module 8290 (IarSettingsUpsellsConfigRegistry)
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
+import MenuTypes from "MenuTypes" /* 8280 */;
 import IarSettingsUpsellsConfigDmSpamFilterDefault from "IarSettingsUpsellsConfigDmSpamFilter" /* 8291 */;
 import IarSettingsUpsellsConfigScFiltersSexualMediaDefault from "IarSettingsUpsellsConfigScFiltersSexualMedia" /* 8292 */;
 import IarSettingsUpsellsConfigScFiltersGraphicMediaDefault from "IarSettingsUpsellsConfigScFiltersGraphicMedia" /* 8293 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-require = fn;
 const SettingsUpsellsConfigRegistry = {};
-SettingsUpsellsConfigRegistry[fn(8280).SettingsUpsells.SAFETY_DM_SPAM_FILTER] = IarSettingsUpsellsConfigDmSpamFilterDefault;
-SettingsUpsellsConfigRegistry[fn(8280).SettingsUpsells.SAFETY_SC_FILTERS_SEXUAL_MEDIA] = IarSettingsUpsellsConfigScFiltersSexualMediaDefault;
-SettingsUpsellsConfigRegistry[fn(8280).SettingsUpsells.SAFETY_SC_FILTERS_GRAPHIC_MEDIA] = IarSettingsUpsellsConfigScFiltersGraphicMediaDefault;
-fn(558);
-const ReactCompilerGating = fn(558);
+SettingsUpsellsConfigRegistry[MenuTypes.SettingsUpsells.SAFETY_DM_SPAM_FILTER] = IarSettingsUpsellsConfigDmSpamFilterDefault;
+SettingsUpsellsConfigRegistry[MenuTypes.SettingsUpsells.SAFETY_SC_FILTERS_SEXUAL_MEDIA] = IarSettingsUpsellsConfigScFiltersSexualMediaDefault;
+SettingsUpsellsConfigRegistry[MenuTypes.SettingsUpsells.SAFETY_SC_FILTERS_GRAPHIC_MEDIA] = IarSettingsUpsellsConfigScFiltersGraphicMediaDefault;
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const obj = c;
+  const obj = react2;
   const cResult = obj.c(2);
-  if (null == arg0) {
-    return null;
-  } else if (cResult[0] !== arg0) {
-    closure_0 = arg0;
-    const items = [];
-    const _Object = Object;
-    const entries = Object.entries(obj);
-    const item = entries.forEach((item) => {
-      [tmp, tmp2] = item;
-      let hasItem = null == tmp2.eligibleReportSubtypes;
-      if (!hasItem) {
-        const eligibleReportSubtypes = tmp2.eligibleReportSubtypes;
-        hasItem = eligibleReportSubtypes.includes(closure_0);
-      }
-      if (hasItem) {
-        items.push(tmp);
-      }
-    });
-    let tmp6 = null;
-    if (0 !== items.length) {
-      tmp6 = items;
-    }
-    cResult[0] = arg0;
-    cResult[1] = tmp6;
-  }
-}) : ((arg0) => {
-  closure_0 = arg0;
-  let items = [arg0];
-  return noop.useMemo(() => {
-    let tmp = null;
-    if (null != closure_0) {
+  let tmp2 = null;
+  if (null != arg0) {
+    let tmp3;
+    if (cResult[0] !== arg0) {
+      let closure_0 = arg0;
       const items = [];
       const _Object = Object;
       const entries = Object.entries(obj);
       const item = entries.forEach((item) => {
+        let tmp;
+        let tmp2;
+        [tmp, tmp2] = item;
+        let hasItem = null == tmp2.eligibleReportSubtypes;
+        if (!hasItem) {
+          const eligibleReportSubtypes = tmp2.eligibleReportSubtypes;
+          hasItem = eligibleReportSubtypes.includes(closure_0);
+        }
+        if (hasItem) {
+          items.push(tmp);
+        }
+      });
+      let tmp7 = null;
+      if (0 !== items.length) {
+        tmp7 = items;
+      }
+      cResult[0] = arg0;
+      cResult[1] = tmp7;
+      tmp3 = tmp7;
+    } else {
+      tmp3 = cResult[1];
+    }
+    tmp2 = tmp3;
+  }
+  return tmp2;
+}) : ((arg0) => {
+  let closure_0 = arg0;
+  let items = [arg0];
+  return react.useMemo(() => {
+    let tmp = null;
+    if (null != closure_0) {
+      const items = [];
+      const tmp2 = globalThis;
+      const _Object = Object;
+      const entries = Object.entries(obj);
+      const item = entries.forEach((item) => {
+        let tmp;
+        let tmp2;
         [tmp, tmp2] = item;
         let hasItem = null == tmp2.eligibleReportSubtypes;
         if (!hasItem) {
@@ -74,22 +88,25 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     return tmp;
   }, items);
 });
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigRegistry.tsx");
-
-export { SettingsUpsellsConfigRegistry };
-export const useIarReportSettingsUpsells = tmp2;
-export const useSettingsUpsellsConfigs = ReactCompilerGating.isReactCompilerEnabled() ? ((arr, arg1) => {
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr, arg1) => {
+  let closure_0;
+  let tmp5;
   _require = arg1;
-  let found = dependencyMap;
-  const cResult = require("c").c(5);
+  const obj = require("react");
+  const cResult = obj.c(5);
+  const tmp = _require;
   if (cResult[0] === arg1) {
+    let tmp4;
     if (cResult[1] === arr) {
-      return cResult[2];
+      tmp4 = cResult[2];
     }
+    return tmp4;
   }
   if (cResult[3] !== arg1) {
     const fn = function n(arg0) {
+      let eligibleChannelTypes;
+      let predicate;
       ({ predicate, eligibleChannelTypes } = obj[arg0]);
       let tmp3 = null == predicate;
       if (!tmp3) {
@@ -99,6 +116,7 @@ export const useSettingsUpsellsConfigs = ReactCompilerGating.isReactCompilerEnab
         }
         tmp3 = true === predicateResult;
       }
+      const tmp5 = null == closure_0 || null == eligibleChannelTypes || eligibleChannelTypes.includes(closure_0);
       if (tmp3) {
         tmp3 = tmp5;
       }
@@ -110,21 +128,24 @@ export const useSettingsUpsellsConfigs = ReactCompilerGating.isReactCompilerEnab
     };
     cResult[3] = arg1;
     cResult[4] = fn;
-    let tmp4 = fn;
+    tmp5 = fn;
   } else {
-    tmp4 = cResult[4];
+    tmp5 = cResult[4];
   }
-  const mapped = arr.map(tmp4);
-  found = mapped.filter(require("GlobalUtils").isNotNullish);
+  const mapped = arr.map(tmp5);
+  const found = mapped.filter(tmp(1375).isNotNullish);
   cResult[0] = arg1;
   cResult[1] = arr;
   cResult[2] = found;
+  tmp4 = found;
 }) : ((arg0, arg1) => {
-  closure_0 = arg0;
-  closure_1 = arg1;
+  let closure_0 = arg0;
+  let closure_1 = arg1;
   const items = [arg0, arg1];
-  return noop.useMemo(() => {
+  return react.useMemo(() => {
     const mapped = closure_0.map((item) => {
+      let eligibleChannelTypes;
+      let predicate;
       ({ predicate, eligibleChannelTypes } = SettingsUpsellsConfigRegistry[item]);
       let tmp3 = null == predicate;
       if (!tmp3) {
@@ -134,6 +155,7 @@ export const useSettingsUpsellsConfigs = ReactCompilerGating.isReactCompilerEnab
         }
         tmp3 = true === predicateResult;
       }
+      const tmp5 = null == closure_1_1 || null == eligibleChannelTypes || eligibleChannelTypes.includes(closure_1_1);
       if (tmp3) {
         tmp3 = tmp5;
       }
@@ -146,3 +168,8 @@ export const useSettingsUpsellsConfigs = ReactCompilerGating.isReactCompilerEnab
     return mapped.filter(GlobalUtils.isNotNullish);
   }, items);
 });
+const result = size.fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigRegistry.tsx");
+
+export { SettingsUpsellsConfigRegistry };
+export const useIarReportSettingsUpsells = tmp2;
+export const useSettingsUpsellsConfigs = tmp3;

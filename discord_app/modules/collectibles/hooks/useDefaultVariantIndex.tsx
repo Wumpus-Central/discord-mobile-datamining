@@ -2,16 +2,19 @@
 
 // Module 8419 (useDefaultVariantIndex)
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7068 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, variants;
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/collectibles/hooks/useDefaultVariantIndex.tsx");
-
-export const useDefaultVariantIndex = ReactCompilerGating.isReactCompilerEnabled() ? ((product) => {
-  const cResult = stateFromStores(576).c(7);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((variants) => {
+  let purchases;
+  let stateFromStores;
+  let tmp4;
+  let tmp5;
+  const obj = stateFromStores(576);
+  const cResult = obj.c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [CollectiblesPurchaseStore];
     const fn = function u() {
@@ -24,16 +27,19 @@ export const useDefaultVariantIndex = ReactCompilerGating.isReactCompilerEnabled
   } else {
     [tmp4, tmp5] = cResult;
   }
-  let variants = product;
-  const obj = stateFromStores(576);
-  stateFromStores = stateFromStores(504).useStateFromStores(tmp4, tmp5);
-  if (null != product) {
+  const tmpResult = stateFromStores(504);
+  stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
+  if (null != variants) {
+    const tmpResult2 = stateFromStores(7064);
     if (tmpResult2.getIsVariantProduct(variants)) {
+      let tmp9;
       if (cResult[2] === variants.variants) {
+        let tmp8;
         if (cResult[3] === stateFromStores) {
-          const _Math = Math;
-          return Math.max(0, cResult[4]);
+          tmp8 = cResult[4];
         }
+        const _Math = Math;
+        return Math.max(0, tmp8);
       }
       if (cResult[5] !== stateFromStores) {
         const fn2 = function c(skuId) {
@@ -41,32 +47,37 @@ export const useDefaultVariantIndex = ReactCompilerGating.isReactCompilerEnabled
         };
         cResult[5] = stateFromStores;
         cResult[6] = fn2;
-        let tmp8 = fn2;
+        tmp9 = fn2;
       } else {
-        tmp8 = cResult[6];
+        tmp9 = cResult[6];
       }
-      const variants2 = variants.variants;
-      const findIndexResult = variants2.findIndex(tmp8);
       variants = variants.variants;
-      cResult[2] = variants;
+      const findIndexResult = variants.findIndex(tmp9);
+      cResult[2] = variants.variants;
       cResult[3] = stateFromStores;
       cResult[4] = findIndexResult;
+      tmp8 = findIndexResult;
     }
-    tmpResult2 = tmp(7064);
   }
   return 0;
 }) : ((variants) => {
+  let purchases;
   const items = [CollectiblesPurchaseStore];
-  _require = require("initialize").useStateFromStores(items, () => purchases.purchases);
+  const obj = require("get initialized");
+  const tmp = _require;
+  _require = obj.useStateFromStores(items, () => purchases.purchases);
   let num = 0;
   if (null != variants) {
     num = 0;
+    const tmpResult = tmp(7064);
     if (tmpResult.getIsVariantProduct(variants)) {
       const _Math = Math;
       variants = variants.variants;
       num = Math.max(0, variants.findIndex((skuId) => !set.has(skuId.skuId)));
     }
-    tmpResult = require("CollectiblesProductUtils");
   }
   return num;
 });
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useDefaultVariantIndex.tsx");
+
+export const useDefaultVariantIndex = tmp2;

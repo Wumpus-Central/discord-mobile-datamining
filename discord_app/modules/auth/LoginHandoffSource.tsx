@@ -14,18 +14,19 @@ const result = size.fileFinishedImporting("modules/auth/LoginHandoffSource.tsx")
 
 export { LoginHandoffSource };
 export const getLoginHandoffSourceFromRedirectTo = function getLoginHandoffSourceFromRedirectTo(arg0) {
+  let ROLE_SUBSCRIPTION_SETTING;
   const str = decodeURIComponent(arg0);
   const obj = LinkUtils;
   const tryParseChannelPathResult = obj.tryParseChannelPath(str);
   if (null != tryParseChannelPathResult) {
     if (tryParseChannelPathResult.channelId === StaticChannelRoute.ROLE_SUBSCRIPTIONS) {
-      let ROLE_SUBSCRIPTION_SETTING = obj.ROLE_SUBSCRIPTION;
+      ROLE_SUBSCRIPTION_SETTING = obj.ROLE_SUBSCRIPTION;
     }
     return ROLE_SUBSCRIPTION_SETTING;
   }
   const formatted = str.toLowerCase();
+  const tmpResult = UserSettingsURLUtils;
   if (formatted === tmpResult.settingsPathToRoute(UserSettingsPath.SUBSCRIPTIONS_ROLE_SUBSCRIPTIONS)) {
     ROLE_SUBSCRIPTION_SETTING = obj.ROLE_SUBSCRIPTION_SETTING;
   }
-  tmpResult = UserSettingsURLUtils;
 };

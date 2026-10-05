@@ -3,13 +3,13 @@
 // Module 7456 (MemoizerUtils)
 import size from "module_2" /* 2 */;
 
-let result = size.fileFinishedImporting("utils/MemoizerUtils.tsx");
+let map;
 
-export default {
+const obj = {
   makeMemoizer(getURL) {
-    const map = new Map();
+    map = new Map();
     return (name) => {
-      value = map.get(name);
+      let value = map.get(name);
       if (undefined === value) {
         const tmp3 = getURL(name);
         const result = map.set(name, tmp3);
@@ -19,3 +19,6 @@ export default {
     };
   }
 };
+let result = size.fileFinishedImporting("utils/MemoizerUtils.tsx");
+
+export default obj;

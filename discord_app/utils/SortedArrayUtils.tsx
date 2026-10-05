@@ -69,9 +69,9 @@ export const remove = function remove(arr, arg1, fn) {
       num2 = sum;
     } while (sum < tmp4);
   }
-  const tmp5 = num2 >= arr.length || 0 !== fn(arr[num2], arg1);
-  let flag = !tmp5;
-  if (!tmp5) {
+  let flag = !(num2 >= arr.length || 0 !== fn(arr[num2], arg1));
+  num2 >= arr.length || 0 !== fn(arr[num2], arg1);
+  if (flag) {
     arr.splice(num2, 1);
     flag = true;
   }

@@ -1,23 +1,33 @@
 // === Module 17333: VoicePanelMaxCapacityAlert ===
 
 // Module 17333 (VoicePanelMaxCapacityAlert)
+import Fragment from "Fragment" /* 21 */;
 import VoicePanelLockedIconDefault from "VoicePanelLockedIcon" /* 17331 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelMaxCapacityAlert.tsx");
+let channelId;
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
-  const cResult = channelId(576).c(14);
+const jsx = Fragment.jsx;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+  let first;
+  let tmp10;
+  let tmp11;
+  let tmp16;
+  let tmp18;
+  let tmp20;
+  let tmp6;
+  let tmp7;
+  const obj = channelId(576);
+  const cResult = obj.c(14);
   channelId = channelId.channelId;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelStore];
+    let num = 0;
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -37,24 +47,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     cResult[1] = channelId;
     cResult[2] = fn;
     cResult[3] = items1;
-    let tmp7 = items1;
-    let tmp6 = fn;
+    tmp7 = items1;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[2];
     tmp7 = cResult[3];
   }
-  const obj = channelId(576);
-  const stateFromStores = channelId(573).useStateFromStores(first, tmp6, tmp7);
   const tmpResult = channelId(573);
-  const dismissModalCallback = channelId(5713).useDismissModalCallback();
+  const stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
+  const tmpResult2 = channelId(5713);
+  const dismissModalCallback = tmpResult2.useDismissModalCallback();
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const tmp14 = jsx(VoicePanelLockedIconDefault, {});
     const intl = tmp(1126).intl;
-    const stringResult = intl.string(tmp(1126).t.hHbsQj);
+    const stringResult = intl.string(channelId(1126).t.hHbsQj);
     cResult[4] = tmp14;
     cResult[5] = stringResult;
-    let tmp11 = stringResult;
-    let tmp10 = tmp14;
+    tmp11 = stringResult;
+    tmp10 = tmp14;
   } else {
     tmp10 = cResult[4];
     tmp11 = cResult[5];
@@ -62,33 +72,33 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   if (cResult[6] !== stateFromStores) {
     const intl2 = tmp(1126).intl;
     const obj2 = { count: stateFromStores };
-    const formatToPlainStringResult = intl2.formatToPlainString(tmp(1126).t["387SQH"], obj2);
+    const formatToPlainStringResult = intl2.formatToPlainString(channelId(1126).t["387SQH"], obj2);
     cResult[6] = stateFromStores;
     cResult[7] = formatToPlainStringResult;
-    let tmp16 = formatToPlainStringResult;
+    tmp16 = formatToPlainStringResult;
   } else {
     tmp16 = cResult[7];
   }
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
     const intl3 = tmp(1126).intl;
-    const stringResult1 = intl3.string(tmp(1126).t["NX+WJN"]);
+    const stringResult1 = intl3.string(channelId(1126).t["NX+WJN"]);
     cResult[8] = stringResult1;
-    let tmp18 = stringResult1;
+    tmp18 = stringResult1;
   } else {
     tmp18 = cResult[8];
   }
   if (cResult[9] !== dismissModalCallback) {
-    const obj3 = { variant: "secondary", text: tmp18, onPress: dismissModalCallback };
-    const tmp22 = jsx(tmp(5713).AlertActionButton, { variant: "secondary", text: tmp18, onPress: dismissModalCallback });
+    const tmp22 = jsx(channelId(5713).AlertActionButton, { variant: "secondary", text: tmp18, onPress: dismissModalCallback });
     cResult[9] = dismissModalCallback;
     cResult[10] = tmp22;
-    let tmp20 = tmp22;
+    tmp20 = tmp22;
   } else {
     tmp20 = cResult[10];
   }
   if (cResult[11] === tmp16) {
+    let tmp23;
     if (cResult[12] === tmp20) {
-      let tmp23 = cResult[13];
+      tmp23 = cResult[13];
     }
     return tmp23;
   }
@@ -97,12 +107,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   cResult[12] = tmp20;
   cResult[13] = tmp24;
   tmp23 = tmp24;
-  const tmpResult2 = channelId(5713);
 }) : ((channelId) => {
+  let intl3;
   channelId = channelId.channelId;
   const items = [ChannelStore];
   const items1 = [channelId];
-  const stateFromStores = channelId(573).useStateFromStores(items, () => {
+  const obj = channelId(573);
+  const stateFromStores = obj.useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(channelId);
     let num;
     if (channel != null) {
@@ -113,18 +124,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     }
     return num;
   }, items1);
-  const obj = channelId(573);
   const obj2 = channelId(5713);
-  const obj3 = { header: jsx(VoicePanelLockedIconDefault, {}), title: null, content: null, actions: null };
+  const dismissModalCallback = obj2.useDismissModalCallback();
+  const AlertModal = channelId(5713).AlertModal;
   const intl = channelId(1126).intl;
-  obj3.title = intl.string(channelId(1126).t.hHbsQj);
   const intl2 = channelId(1126).intl;
-  obj3.content = intl2.formatToPlainString(channelId(1126).t["387SQH"], { count: stateFromStores });
-  const obj4 = { variant: "secondary", text: null, onPress: null };
-  const intl3 = channelId(1126).intl;
-  obj4.text = intl3.string(channelId(1126).t["NX+WJN"]);
-  obj4.onPress = channelId(5713).useDismissModalCallback();
-  obj3.actions = jsx(channelId(5713).AlertActionButton, { variant: "secondary", text: null, onPress: null });
-  return jsx(channelId(5713).AlertModal, { header: jsx(VoicePanelLockedIconDefault, {}), title: null, content: null, actions: null });
+  ({ variant: "secondary", text: intl3.string(channelId(1126).t["NX+WJN"]), onPress: dismissModalCallback });
+  const AlertActionButton = channelId(5713).AlertActionButton;
+  intl3 = channelId(1126).intl;
+  return <AlertModal header={null} title={intl.string(channelId(1126).t.hHbsQj)} content={intl2.formatToPlainString(channelId(1126).t["387SQH"], { count: stateFromStores })} actions={null} />;
 });
+const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelMaxCapacityAlert.tsx");
+
+export default tmp3;
 export const VOICE_PANEL_MAX_CAPACITY_KEY = "voice-panel-max-capacity";

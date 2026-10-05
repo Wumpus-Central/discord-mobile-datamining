@@ -2,23 +2,32 @@
 
 // Module 5768 (useAccessibilityViewIsModalToggle)
 import AccessibilityFocusLockManagerDefault from "AccessibilityFocusLockManager" /* 5769 */;
-import noop from "module_19" /* 19 */;
+import react_mod from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("design/components/AccessibilityView/useAccessibilityViewIsModalToggle.native.tsx");
+let dependencyMap;
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = nativeID(576).c(6);
+let react = react_mod;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let accessibilityViewIsModal;
+  let closure_3;
+  let nativeID;
+  let ref;
+  let obj = nativeID(576);
+  const cResult = obj.c(6);
   ({ accessibilityViewIsModal, nativeID } = arg0);
-  closure_1 = tmp2;
-  dependencyMap = noop.useRef(undefined);
+  let closure_1 = tmp2;
+  let obj2 = react;
+  dependencyMap = react.useRef(undefined);
   if (cResult[0] === (undefined !== accessibilityViewIsModal && accessibilityViewIsModal)) {
+    let tmp3;
+    let tmp5;
+    let tmp4;
     if (cResult[1] === nativeID) {
-      let tmp3 = cResult[2];
+      tmp3 = cResult[2];
     }
-    noop = tmp3;
+    react = tmp3;
     if (cResult[3] !== tmp3) {
       const fn2 = function b() {
         closure_3();
@@ -30,13 +39,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       cResult[3] = tmp3;
       cResult[4] = fn2;
       cResult[5] = items;
-      let tmp5 = items;
-      let tmp4 = fn2;
+      tmp5 = items;
+      tmp4 = fn2;
     } else {
       tmp4 = cResult[4];
       tmp5 = cResult[5];
     }
-    const effect = noop.useEffect(tmp4, tmp5);
+    const effect = obj2.useEffect(tmp4, tmp5);
   }
   const fn = function t(arg0) {
     let tmp = arg0;
@@ -46,19 +55,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     if (tmp) {
       if (null == nativeID) {
         const _Error = Error;
+        const self = this;
+        const self2 = this;
         const error = new Error("Must have a unique nativeID when accessibilityViewIsModal is enabled.");
         throw error;
       } else if (ref.current !== nativeID) {
         ref.current = nativeID;
         const items = [nativeID];
-        const result = AccessibilityFocusLockManagerDefault.enableAccessibilityFocusLock(items);
+        const obj2 = AccessibilityFocusLockManagerDefault;
+        const result = obj2.enableAccessibilityFocusLock(items);
       }
     } else {
       const current = ref.current;
       if (null != current) {
         ref.current = undefined;
         const items1 = [current];
-        const result1 = AccessibilityFocusLockManagerDefault.disableAccessibilityFocusLock(items1);
+        const obj = AccessibilityFocusLockManagerDefault;
+        const result1 = obj.disableAccessibilityFocusLock(items1);
       }
     }
   };
@@ -73,9 +86,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const nativeID = accessibilityViewIsModal.nativeID;
   let callback;
-  callback.useRef(undefined);
+  const ref = callback.useRef(undefined);
   let items = [flag, nativeID];
-  callback = callback.useCallback(() => {
+  callback = callback.useCallback(function() {
     let tmp = arg0;
     if (arg0 === undefined) {
       tmp = flag;
@@ -83,19 +96,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     if (tmp) {
       if (null == nativeID) {
         const _Error = Error;
+        const self = this;
+        const self2 = this;
         const error = new Error("Must have a unique nativeID when accessibilityViewIsModal is enabled.");
         throw error;
       } else if (ref.current !== nativeID) {
         ref.current = nativeID;
         const items = [nativeID];
-        const result = AccessibilityFocusLockManagerDefault.enableAccessibilityFocusLock(items);
+        const obj2 = AccessibilityFocusLockManagerDefault;
+        const result = obj2.enableAccessibilityFocusLock(items);
       }
     } else {
       const current = ref.current;
       if (null != current) {
         ref.current = undefined;
         const items1 = [current];
-        const result1 = AccessibilityFocusLockManagerDefault.disableAccessibilityFocusLock(items1);
+        const obj = AccessibilityFocusLockManagerDefault;
+        const result1 = obj.disableAccessibilityFocusLock(items1);
       }
     }
   }, items);
@@ -107,3 +124,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     };
   }, items1);
 });
+let result = size.fileFinishedImporting("design/components/AccessibilityView/useAccessibilityViewIsModalToggle.native.tsx");
+
+export default tmp2;

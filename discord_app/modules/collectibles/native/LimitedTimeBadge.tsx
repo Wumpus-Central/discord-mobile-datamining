@@ -1,73 +1,91 @@
 // === Module 8490: LimitedTimeBadge ===
 
 // Module 8490 (LimitedTimeBadge)
-import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import get_initialized from "get initialized" /* 504 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
+import intl7 from "intl" /* 1126 */;
 import shared from "shared" /* 4729 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import useCountdownDefault from "useCountdown" /* 6948 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+let obj2;
+let obj3;
+let obj4;
 function getBadgeString(hasItem, days, hours) {
-  if (hasItem) {
+  const tmp = hasItem;
+  if (tmp) {
+    let formatToPlainStringResult;
     if (days > 1) {
-      const intl6 = util.intl;
+      const intl6 = intl7.intl;
       const obj2 = { days };
-      let formatToPlainStringResult = intl6.formatToPlainString(util.t.DkxLY0, obj2);
+      formatToPlainStringResult = intl6.formatToPlainString(intl7.t.DkxLY0, obj2);
     } else {
       if (days <= 1) {
         if (hours > 0) {
-          const intl5 = util.intl;
+          const intl5 = intl7.intl;
           const obj = { hours };
-          formatToPlainStringResult = intl5.formatToPlainString(util.t.WJieZ2, obj);
+          formatToPlainStringResult = intl5.formatToPlainString(intl7.t.WJieZ2, obj);
         }
       }
-      const intl4 = util.intl;
-      formatToPlainStringResult = intl4.formatToPlainString(util.t.WJieZ2, { hours: 0 });
+      const intl4 = intl7.intl;
+      formatToPlainStringResult = intl4.formatToPlainString(intl7.t.WJieZ2, { hours: 0 });
     }
     return formatToPlainStringResult;
   } else {
-    const intl = util.intl;
-    let sum = days + intl.string(util.t.QJyuxY);
-    const intl2 = util.intl;
-    let sum1 = hours + intl2.string(util.t["1LyF1h"]);
+    const intl = intl7.intl;
+    let sum = days + intl.string(intl7.t.QJyuxY);
+    const intl2 = intl7.intl;
+    let sum1 = hours + intl2.string(intl7.t["1LyF1h"]);
     if (days <= 1) {
       if (days > 1) {
-        const intl3 = util.intl;
-        sum1 = `0${tmp5(tmp(1126).t["1LyF1h"])}`;
+        const intl3 = intl7.intl;
+        const string = intl3.string;
+        sum1 = `0${string(tmp2(1126).t["1LyF1h"])}`;
       }
       sum = sum1;
     }
     return sum;
   }
 }
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj2 = { root: { borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 2 }, backgroundDarkMode: null, backgroundLightMode: null };
-let obj3 = { borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 2 };
-obj2.backgroundDarkMode = { backgroundColor: nativeDefault.colors.WHITE };
-let obj4 = { backgroundColor: nativeDefault.colors.WHITE };
-obj2.backgroundLightMode = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
-let closure_7 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/collectibles/native/LimitedTimeBadge.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(22);
+const View = react_native.View;
+const jsx = Fragment.jsx;
+let createStyles = createStyles_mod;
+let obj = { root: obj2, backgroundDarkMode: obj3, backgroundLightMode: obj4 };
+obj2 = { borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 2 };
+createStyles = createStyles.createStyles;
+obj3 = { backgroundColor: nativeDefault.colors.WHITE };
+obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
+let closure_7 = createStyles(obj);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let days;
+  let hours;
+  let locale;
+  let obj4;
+  let style;
+  let theme;
+  let tmp10;
+  let tmp5;
+  let tmp6;
+  let tmp9;
+  let unpublishedAt;
+  let obj = react2;
+  const cResult = obj.c(22);
   ({ unpublishedAt, style } = arg0);
   const tmp4 = closure_7();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ThemeStore];
     const fn = function h() {
-      return shared.isThemeDark(theme.theme);
+      const obj = shared;
+      return obj.isThemeDark(theme.theme);
     };
     cResult[0] = items;
     cResult[1] = fn;
@@ -76,7 +94,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     [tmp5, tmp6] = cResult;
   }
-  const stateFromStores = initialize.useStateFromStores(tmp5, tmp6);
+  const tmpResult = get_initialized;
+  const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [LocaleStore];
     const fn2 = function k() {
@@ -84,61 +103,65 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     };
     cResult[2] = items1;
     cResult[3] = fn2;
-    let tmp10 = fn2;
-    let tmp9 = items1;
+    tmp10 = fn2;
+    tmp9 = items1;
   } else {
     tmp9 = cResult[2];
     tmp10 = cResult[3];
   }
-  const tmpResult = initialize;
-  const stateFromStores1 = initialize.useStateFromStores(tmp9, tmp10);
+  const tmpResult2 = get_initialized;
+  const stateFromStores1 = tmpResult2.useStateFromStores(tmp9, tmp10);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = ["en-US", "en-GB"];
     cResult[4] = items2;
-    let obj4 = items2;
+    obj4 = items2;
   } else {
     obj4 = cResult[4];
   }
   const hasItem = obj4.includes(stateFromStores1);
-  const tmpResult2 = initialize;
   ({ days, hours } = useCountdownDefault(unpublishedAt, 1000, undefined, true));
+  useCountdownDefault(unpublishedAt, 1000, undefined, true);
   if (cResult[5] === days) {
     if (cResult[6] === hours) {
+      let tmp15;
       if (cResult[7] === hasItem) {
-        let tmp15 = cResult[8];
+        tmp15 = cResult[8];
       }
       const tmp17 = stateFromStores ? tmp4.backgroundDarkMode : tmp4.backgroundLightMode;
       if (cResult[9] === style) {
         if (cResult[10] === tmp4.root) {
+          let tmp18;
+          let tmp19;
           if (cResult[11] === tmp17) {
-            let tmp18 = cResult[12];
+            tmp18 = cResult[12];
           }
           let str = "text-overlay-light";
           if (stateFromStores) {
             str = "text-overlay-dark";
           }
           if (cResult[13] !== days) {
-            const intl = util.intl;
+            const intl = intl7.intl;
             const obj2 = { daysLeft: days };
-            const formatToPlainStringResult = intl.formatToPlainString(util.t.TlZULM, obj2);
+            const formatToPlainStringResult = intl.formatToPlainString(intl7.t.TlZULM, obj2);
             cResult[13] = days;
             cResult[14] = formatToPlainStringResult;
-            let tmp19 = formatToPlainStringResult;
+            tmp19 = formatToPlainStringResult;
           } else {
             tmp19 = cResult[14];
           }
           if (cResult[15] === tmp19) {
             if (cResult[16] === str) {
+              let tmp21;
               if (cResult[17] === tmp15) {
-                let tmp21 = cResult[18];
+                tmp21 = cResult[18];
               }
               if (cResult[19] === tmp21) {
+                let tmp24;
                 if (cResult[20] === tmp18) {
-                  let tmp24 = cResult[21];
+                  tmp24 = cResult[21];
                 }
                 return tmp24;
               }
-              const obj3 = { style: tmp18, children: tmp21 };
               const tmp27 = <View style={tmp18}>{tmp21}</View>;
               cResult[19] = tmp21;
               cResult[20] = tmp18;
@@ -146,7 +169,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               tmp24 = tmp27;
             }
           }
-          const obj5 = { color: str, variant: "text-xs/bold", accessibilityLabel: tmp19, allowFontScaling: false, children: tmp15 };
           const tmp23 = jsx(Text_Text.Text, { color: str, variant: "text-xs/bold", accessibilityLabel: tmp19, allowFontScaling: false, children: tmp15 });
           cResult[15] = tmp19;
           cResult[16] = str;
@@ -169,28 +191,38 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[7] = hasItem;
   cResult[8] = tmp16;
   tmp15 = tmp16;
-  const tmp14 = useCountdownDefault(unpublishedAt, 1000, undefined, true);
 }) : ((unpublishedAt) => {
+  let intl;
+  let locale;
+  let theme;
+  unpublishedAt = unpublishedAt.unpublishedAt;
+  const style = unpublishedAt.style;
   const tmp = closure_7();
+  let obj = get_initialized;
   const items = [ThemeStore];
-  const stateFromStores = initialize.useStateFromStores(items, () => shared.isThemeDark(theme.theme));
+  const stateFromStores = obj.useStateFromStores(items, () => {
+    const obj = shared;
+    return obj.isThemeDark(theme.theme);
+  });
   const items1 = [LocaleStore];
   const items2 = ["en-US", "en-GB"];
-  const hasItem = items2.includes(initialize.useStateFromStores(items1, () => locale.locale));
-  const tmp6 = useCountdownDefault(unpublishedAt.unpublishedAt, 1000, undefined, true);
+  const obj2 = get_initialized;
+  const hasItem = items2.includes(obj2.useStateFromStores(items1, () => locale.locale));
+  const tmp6 = useCountdownDefault(unpublishedAt, 1000, undefined, true);
   const days = tmp6.days;
   const items3 = [tmp.root, , ];
-  const obj3 = { style: items3, children: null };
   items3[1] = stateFromStores ? tmp.backgroundDarkMode : tmp.backgroundLightMode;
-  items3[2] = unpublishedAt.style;
+  items3[2] = style;
   let str = "text-overlay-light";
+  const tmp7 = getBadgeString(hasItem, days, tmp6.hours);
+  const Text = Text_Text.Text;
   if (stateFromStores) {
     str = "text-overlay-dark";
   }
-  const obj4 = { color: str, variant: "text-xs/bold", accessibilityLabel: null, allowFontScaling: false, children: null };
-  const intl = util.intl;
-  obj4.accessibilityLabel = intl.formatToPlainString(util.t.TlZULM, { daysLeft: days });
-  obj4.children = getBadgeString(hasItem, days, tmp6.hours);
-  obj3.children = jsx(Text_Text.Text, { color: str, variant: "text-xs/bold", accessibilityLabel: null, allowFontScaling: false, children: null });
+  ({ color: str, variant: "text-xs/bold", accessibilityLabel: intl.formatToPlainString(intl7.t.TlZULM, { daysLeft: days }), allowFontScaling: false, children: tmp7 });
+  intl = intl7.intl;
   return <View style={items3}>{null}</View>;
 });
+const result = size.fileFinishedImporting("modules/collectibles/native/LimitedTimeBadge.tsx");
+
+export default tmp4;

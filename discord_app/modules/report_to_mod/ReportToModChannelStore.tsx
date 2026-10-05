@@ -1,32 +1,34 @@
 // === Module 12432: ReportToModChannelStore ===
 
 // Module 12432 (ReportToModChannelStore)
-import c from "c" /* 576 */;
+import react from "react" /* 576 */;
 import module_570 from "module_570" /* 570 */;
-import "module_4750";
-import module_4750 from "module_4750" /* 4750 */;
+import combine_mod from "combine" /* 4750 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-let obj = { name: "report-to-mod-channel-storage", storage: null };
-obj.storage = module_4750.createJSONStorage(() => require("LocalStorageWrapper"));
-let obj2 = module_570.create(module_4750.persist((arg0, arg1) => {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  return {
+const create = module_570.create;
+let combine = combine_mod;
+let obj = { name: "report-to-mod-channel-storage", storage: combine.createJSONStorage(() => require("LocalStorageWrapper")) };
+const persist = combine.persist;
+combine = combine_mod;
+let obj2 = create(persist((arg0, arg1) => {
+  let closure_0 = arg0;
+  let closure_1 = arg1;
+  let obj = {
     channelShowResolvedFlags: {},
     setShowResolvedFlags(arg0, arg1) {
       closure_0 = arg0;
       closure_1 = arg1;
-      return closure_0(dependencyMap[2]).batchUpdates(() => {
+      let obj = closure_0(dependencyMap[2]);
+      return obj.batchUpdates(() => {
         closure_0((channelShowResolvedFlags) => {
-          const obj = { channelShowResolvedFlags: null };
+          const obj = { channelShowResolvedFlags: obj2 };
           obj2 = {};
           const merged = Object.assign(channelShowResolvedFlags.channelShowResolvedFlags);
           obj2[closure_1_0] = closure_1_1;
-          obj.channelShowResolvedFlags = obj2;
           return obj;
         });
       });
@@ -39,15 +41,16 @@ let obj2 = module_570.create(module_4750.persist((arg0, arg1) => {
       return flag;
     }
   };
+  return obj;
 }, obj));
-const result = size.fileFinishedImporting("modules/report_to_mod/ReportToModChannelStore.tsx");
-
-export const useReportToModChannelFiltersStore = obj2;
-export const useShouldShowResolvedFlagsForChannel = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  closure_0 = arg0;
-  const cResult = c.c(10);
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let tmp4;
+  let closure_0 = arg0;
+  const obj = react;
+  const cResult = obj.c(10);
   obj2 = obj2();
   if (null == arg0) {
+    let first;
     const _Symbol = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const obj3 = {
@@ -57,24 +60,26 @@ export const useShouldShowResolvedFlagsForChannel = ReactCompilerGating.isReactC
             }
       };
       cResult[0] = obj3;
-      let first = obj3;
+      first = obj3;
     } else {
       first = cResult[0];
     }
+    tmp4 = first;
   } else {
     if (cResult[1] === arg0) {
+      let tmp2;
       if (cResult[2] === obj2) {
-        let tmp2 = cResult[3];
+        tmp2 = cResult[3];
       }
       if (cResult[4] === arg0) {
+        let tmp3;
         if (cResult[5] === obj2) {
-          let tmp3 = cResult[6];
+          tmp3 = cResult[6];
         }
         if (cResult[7] === tmp2) {
           if (cResult[8] === tmp3) {
-            let tmp4 = cResult[9];
+            tmp4 = cResult[9];
           }
-          return tmp4;
         }
         const obj4 = { showResolvedFlags: tmp2, setShowResolvedFlags: tmp3 };
         cResult[7] = tmp2;
@@ -99,8 +104,10 @@ export const useShouldShowResolvedFlagsForChannel = ReactCompilerGating.isReactC
     cResult[3] = flag;
     tmp2 = flag;
   }
+  return tmp4;
 }) : ((arg0) => {
-  closure_0 = arg0;
+  let obj3;
+  let closure_0 = arg0;
   const obj = obj2();
   if (null == arg0) {
     obj2 = {
@@ -109,7 +116,7 @@ export const useShouldShowResolvedFlagsForChannel = ReactCompilerGating.isReactC
 
         }
     };
-    let obj3 = obj2;
+    obj3 = obj2;
   } else {
     let flag = obj.getShowResolvedFlags(arg0);
     if (flag == null) {
@@ -124,3 +131,7 @@ export const useShouldShowResolvedFlagsForChannel = ReactCompilerGating.isReactC
   }
   return obj3;
 });
+const result = size.fileFinishedImporting("modules/report_to_mod/ReportToModChannelStore.tsx");
+
+export const useReportToModChannelFiltersStore = obj2;
+export const useShouldShowResolvedFlagsForChannel = tmp5;

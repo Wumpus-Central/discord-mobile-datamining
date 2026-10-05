@@ -2,37 +2,37 @@
 
 // Module 4778 (GuildFilters)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import IntegerDefault from "Integer" /* 14 */;
+import _modDef14 from "module_14" /* 14 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import AuthInviteStore from "AuthInviteStore" /* 4779 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 4780 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import MurmurHashV3_mod from "MurmurHashV3" /* 1251 */;
+import module_1251_mod from "module_1251" /* 1251 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
 function isInRange(memberCount, importDefault, dependencyMap) {
   try {
-    const obj = IntegerDefault(memberCount);
+    const obj = _modDef14(memberCount);
     let tmp6 = null;
     if (null != importDefault) {
-      tmp6 = IntegerDefault(importDefault);
+      tmp6 = _modDef14(importDefault);
     }
     let tmp9 = null;
+    const tmp8 = tmp6;
     if (null != dependencyMap) {
-      tmp9 = IntegerDefault(dependencyMap);
+      tmp9 = _modDef14(dependencyMap);
     }
-    let tmp12 = null == tmp6;
+    let tmp12 = null == tmp8;
+    const tmp10 = tmp9;
     if (!tmp12) {
       tmp12 = !obj.lesser(tmp6);
     }
     if (tmp12) {
-      let tmp15 = null == tmp9;
-      if (!tmp15) {
-        tmp15 = !obj.greater(tmp9);
-      }
-      tmp12 = tmp15;
+      tmp12 = null == tmp10 || !obj.greater(tmp9);
+      const tmp15 = null == tmp10 || !obj.greater(tmp9);
     }
     return tmp12;
   } catch (err) {
@@ -40,16 +40,19 @@ function isInRange(memberCount, importDefault, dependencyMap) {
   }
 }
 function getRangeData(arg0) {
+  let tmp7;
+  let tmp8;
   let min;
   let max;
+  const tmp3 = arg0[Symbol.iterator]();
   while (tmp3 !== undefined) {
     let tmp6 = _slicedToArray(tmp4, 2);
     [tmp7, tmp8] = tmp6;
-    let obj = MurmurHashV3;
+    let obj = module_1251;
     if (obj.v3("min_id") === tmp7) {
       min = tmp8;
     } else {
-      let tmp9Result = MurmurHashV3;
+      let tmp9Result = module_1251;
       if (tmp9Result.v3("max_id") === tmp7) {
         max = tmp8;
       }
@@ -59,80 +62,80 @@ function getRangeData(arg0) {
   return { min, max };
 }
 let obj = {};
-let MurmurHashV3 = MurmurHashV3_mod;
-obj[MurmurHashV3.v3("guild_ids")] = (arg0) => {
-  closure_0 = [];
+let module_1251 = module_1251_mod;
+obj[module_1251.v3("guild_ids")] = (arg0) => {
+  let first;
+  let tmp6;
+  let closure_0 = [];
+  const tmp = arg0[Symbol.iterator]();
   while (tmp !== undefined) {
-    let tmp4 = _slicedToArray(tmp2, 2);
-    let tmp5 = tmp4[1];
-    let obj = MurmurHashV3;
-    if (tmp4[0] === obj.v3("guild_ids")) {
-      closure_0 = tmp5;
+    [first, tmp6] = tmp2;
+    let obj = module_1251;
+    if (first === obj.v3("guild_ids")) {
+      closure_0 = tmp6;
     }
     continue;
   }
   return (arg0) => closure_0.includes(arg0);
 };
-let MurmurHashV3 = MurmurHashV3_mod;
-obj[MurmurHashV3.v3("guild_id_range")] = (arg0) => {
+module_1251 = module_1251_mod;
+obj[module_1251.v3("guild_id_range")] = (arg0) => {
   ({ min: importDefault, max: dependencyMap } = getRangeData(arg0));
+  getRangeData(arg0);
   return (memberCount) => isInRange(memberCount, importDefault, dependencyMap);
 };
-let MurmurHashV3 = MurmurHashV3_mod;
-obj[MurmurHashV3.v3("guild_age_range_days")] = (arg0) => {
+module_1251 = module_1251_mod;
+obj[module_1251.v3("guild_age_range_days")] = (arg0) => {
   ({ min: importDefault, max: dependencyMap } = getRangeData(arg0));
-  return (arg0) => isInRange(Math.floor(SnowflakeUtilsDefault.age(arg0) / DurationsDefault.Millis.DAY), closure_1_0, dependencyMap);
+  getRangeData(arg0);
+  return (arg0) => {
+    const obj = SnowflakeUtilsDefault;
+    const ageResult = obj.age(arg0);
+    return isInRange(floor(ageResult / DurationsDefault.Millis.DAY), importDefault, dependencyMap);
+  };
 };
-let MurmurHashV3 = MurmurHashV3_mod;
-obj[MurmurHashV3.v3("guild_member_count_range")] = (arg0) => {
+module_1251 = module_1251_mod;
+obj[module_1251.v3("guild_member_count_range")] = (arg0) => {
   ({ min: importDefault, max: dependencyMap } = getRangeData(arg0));
+  getRangeData(arg0);
   return (arg0) => {
     const memberCount = GuildMemberCountStore.getMemberCount(arg0);
-    let tmp2 = null != memberCount;
-    if (tmp2) {
-      tmp2 = isInRange(memberCount, importDefault, dependencyMap);
-    }
+    const tmp2 = null != memberCount && isInRange(memberCount, importDefault, dependencyMap);
     return tmp2;
   };
 };
-let MurmurHashV3 = MurmurHashV3_mod;
-obj[MurmurHashV3.v3("guild_has_feature")] = (arg0) => {
-  closure_0 = _slicedToArray(_slicedToArray(arg0, 1)[0], 2)[1];
+module_1251 = module_1251_mod;
+obj[module_1251.v3("guild_has_feature")] = (arg0) => {
+  let closure_0 = _slicedToArray(_slicedToArray(arg0, 1)[0], 2)[1];
   return (arg0) => {
-    guild = GuildStore.getGuild(arg0);
+    let guild = GuildStore.getGuild(arg0);
     if (guild == null) {
       guild = AuthInviteStore.getGuild(arg0);
     }
-    let someResult = null != guild;
-    if (someResult) {
-      someResult = closure_0.some((item) => {
-        const features = guild.features;
-        return features.has(item);
-      });
-    }
+    const someResult = null != guild && closure_0.some((item) => {
+      const features = guild.features;
+      return features.has(item);
+    });
     return someResult;
   };
 };
-let MurmurHashV3 = MurmurHashV3_mod;
-obj[MurmurHashV3.v3("guild_hub_types")] = (arg0) => {
-  closure_0 = _slicedToArray(_slicedToArray(arg0, 1)[0], 2)[1];
+module_1251 = module_1251_mod;
+obj[module_1251.v3("guild_hub_types")] = (arg0) => {
+  let closure_0 = _slicedToArray(_slicedToArray(arg0, 1)[0], 2)[1];
   return (arg0) => {
-    guild = GuildStore.getGuild(arg0);
+    let guild = GuildStore.getGuild(arg0);
     if (guild == null) {
       guild = AuthInviteStore.getGuild(arg0);
     }
-    let someResult = null != guild && typeof guild.hubType === "number";
-    if (someResult) {
-      someResult = closure_0.some((item) => guild.hubType === item);
-    }
+    const someResult = null != guild && typeof guild.hubType === "number" && closure_0.some((item) => guild.hubType === item);
     return someResult;
   };
 };
-let MurmurHashV3 = MurmurHashV3_mod;
-obj[MurmurHashV3.v3("guild_has_vanity_url")] = (arg0) => {
-  closure_0 = _slicedToArray(_slicedToArray(arg0, 1)[0], 2)[1];
+module_1251 = module_1251_mod;
+obj[module_1251.v3("guild_has_vanity_url")] = (arg0) => {
+  let closure_0 = _slicedToArray(_slicedToArray(arg0, 1)[0], 2)[1];
   return (arg0) => {
-    guild = GuildStore.getGuild(arg0);
+    let guild = GuildStore.getGuild(arg0);
     if (guild == null) {
       guild = AuthInviteStore.getGuild(arg0);
     }
@@ -143,14 +146,19 @@ obj[MurmurHashV3.v3("guild_has_vanity_url")] = (arg0) => {
     }
   };
 };
-let MurmurHashV3 = MurmurHashV3_mod;
-obj[MurmurHashV3.v3("guild_in_range_by_hash")] = (arg0) => {
+module_1251 = module_1251_mod;
+obj[module_1251.v3("guild_in_range_by_hash")] = (arg0) => {
+  let closure_0;
+  let num;
+  let tmp5;
+  let tmp6;
+  const tmp = arg0[Symbol.iterator]();
   while (tmp !== undefined) {
     let tmp4 = _slicedToArray(tmp2, 2);
     [tmp5, tmp6] = tmp4;
     let tmp7 = importDefault;
     let tmp8 = num;
-    let obj = require("MurmurHashV3");
+    let obj = require("module_1251");
     if (obj.v3("hash_key") === tmp5) {
       importDefault = tmp6;
     } else {
@@ -166,11 +174,11 @@ obj[MurmurHashV3.v3("guild_in_range_by_hash")] = (arg0) => {
     continue;
   }
   return (arg0) => {
-    const v3Result = MurmurHashV3.v3("" + closure_0 + ":" + arg0);
+    const obj = module_1251;
+    const v3Result = obj.v3("" + importDefault + ":" + arg0);
     return (v3Result > 0 ? v3Result + v3Result : v3Result >>> 0) % 10000 < num;
   };
 };
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/GuildFilters.tsx");
 
 export const GUILD_FILTERS = obj;

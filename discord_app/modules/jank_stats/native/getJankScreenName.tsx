@@ -6,6 +6,11 @@ import getScreenAnalyticsName from "getScreenAnalyticsName" /* 15936 */;
 import JankScreenConstants from "JankScreenConstants" /* 15935 */;
 import size from "module_2" /* 2 */;
 
+let c2;
+let c3;
+let closure_4;
+let hasOwnProperty;
+let metroRequire;
 function resolveScreenName(items) {
   const params = tmp.params;
   if (items[items.length - 1].name === channel) {
@@ -14,13 +19,15 @@ function resolveScreenName(items) {
       channelId1 = params.channelId;
     }
     if (typeof channelId1 === "string") {
+      let channelScreenName;
       const channelId = params.channelId;
       if (true === params.showCreateThread) {
-        let channelScreenName = React3;
+        channelScreenName = _false;
       } else if (null != channelId) {
-        channelScreenName = getScreenAnalyticsName.getChannelScreenName(channelId);
+        const obj = getScreenAnalyticsName;
+        channelScreenName = obj.getChannelScreenName(channelId);
       } else {
-        channelScreenName = React4;
+        channelScreenName = React3;
       }
       return channelScreenName;
     }
@@ -28,23 +35,23 @@ function resolveScreenName(items) {
   const found = items.find((name) => name.name === modal);
   if (null != found) {
     const params2 = found.params;
-    let modal1;
+    let tmp5;
     if (params2 != null) {
       modal = params2.modal;
       if (modal != null) {
-        modal1 = modal.modal;
+        tmp5 = modal.modal;
       }
     }
     let tmp6 = null;
-    if (null != modal1) {
-      let render = modal1.type;
+    if (null != tmp5) {
+      let render = tmp5.type;
       if (render == null) {
-        render = modal1.render;
+        render = tmp5.render;
       }
       if (render == null) {
-        render = modal1;
+        render = tmp5;
       }
-      let name = modal1.displayName;
+      let name = tmp5.displayName;
       if (name == null) {
         name = render.displayName;
       }
@@ -95,7 +102,13 @@ const guilds = "guilds";
 const result = size.fileFinishedImporting("modules/jank_stats/native/getJankScreenName.tsx");
 
 export default function getJankScreenName() {
-  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
+  let concat2;
+  let focused;
+  let items2;
+  let mapped;
+  let rendered;
+  const obj = RootNavigationRef;
+  const rootNavigationRef = obj.getRootNavigationRef();
   let rootState = null;
   if (null != rootNavigationRef) {
     rootState = null;
@@ -108,17 +121,80 @@ export default function getJankScreenName() {
     while (true) {
       let index = rootState.index;
       let tmp2 = rootState;
+      let routes = rootState.routes;
       if (index == null) {
         index = tmp2.routes.length - 1;
       }
-      let tmp3 = rootState.routes[index];
+      let tmp3 = routes[index];
       if (null == tmp3) {
         break;
       } else {
-        if (tmp3.name !== channel) {
-          let obj2 = { name: null, key: null, params: null };
+        let obj5;
+        let obj15;
+        if (tmp3.name === channel) {
+          let items1 = [];
+          let tmp5 = tmp2;
+          let concat = items.concat;
+          if (null != tmp2) {
+            while (true) {
+              let index2 = tmp5.index;
+              let routes2 = tmp5.routes;
+              if (index2 == null) {
+                index2 = tmp5.routes.length - 1;
+              }
+              let tmp7 = routes2[index2];
+              if (null == tmp7) {
+                break;
+              } else {
+                let obj2 = { name: null, key: null, params: null };
+                ({ name: obj4.name, key: obj4.key, params: obj4.params } = tmp7);
+                let arr = items1.push(obj2);
+                if (null == tmp7.state) {
+                  break;
+                }
+              }
+            }
+          }
+          obj5 = { focused: concat(items1), rendered: concat2(items2) };
+          items2 = [];
+          concat2 = items.concat;
+          if (null != tmp2) {
+            while (true) {
+              let index3 = tmp2.index;
+              let routes3 = tmp2.routes;
+              if (index3 == null) {
+                index3 = tmp2.routes.length - 1;
+              }
+              let tmp10 = routes3[index3];
+              let name;
+              if (tmp10 != null) {
+                name = tmp10.name;
+              }
+              let tmp13 = tmp10;
+              if (name === channel) {
+                let routes1 = tmp2.routes;
+                let found = routes1.find((name) => name.name === tabs);
+                if (found == null) {
+                  found = tmp10;
+                }
+                tmp13 = found;
+              }
+              if (null == tmp13) {
+                break;
+              } else {
+                let obj7 = { name: null, key: null, params: null };
+                ({ name: obj6.name, key: obj6.key, params: obj6.params } = tmp13);
+                let arr2 = items2.push(obj7);
+                if (null == tmp13.state) {
+                  break;
+                }
+              }
+            }
+          }
+        } else {
+          let obj8 = { name: null, key: null, params: null };
           ({ name: obj3.name, key: obj3.key, params: obj3.params } = tmp3);
-          let arr = items.push(obj2);
+          let arr3 = items.push(obj8);
           if (null != tmp3.state) {
             continue;
           } else {
@@ -126,77 +202,20 @@ export default function getJankScreenName() {
           }
           break;
         }
-        let items1 = [];
-        let tmp5 = tmp2;
-        if (null != tmp2) {
-          while (true) {
-            let index2 = tmp5.index;
-            if (index2 == null) {
-              index2 = tmp5.routes.length - 1;
-            }
-            let tmp7 = tmp5.routes[index2];
-            if (null == tmp7) {
-              break;
-            } else {
-              let obj5 = { name: null, key: null, params: null };
-              ({ name: obj4.name, key: obj4.key, params: obj4.params } = tmp7);
-              let arr2 = items1.push(obj5);
-              if (null == tmp7.state) {
-                break;
-              }
-            }
-          }
-        }
-        let obj7 = { focused: items.concat(items1), rendered: null };
-        let items2 = [];
-        if (null != tmp2) {
-          while (true) {
-            let index3 = tmp2.index;
-            if (index3 == null) {
-              index3 = tmp2.routes.length - 1;
-            }
-            let tmp10 = tmp2.routes[index3];
-            let name;
-            if (tmp10 != null) {
-              name = tmp10.name;
-            }
-            let tmp13 = tmp10;
-            if (name === channel) {
-              let routes = tmp2.routes;
-              let found = routes.find((name) => name.name === tabs);
-              if (found == null) {
-                found = tmp10;
-              }
-              tmp13 = found;
-            }
-            if (null == tmp13) {
-              break;
-            } else {
-              let obj8 = { name: null, key: null, params: null };
-              ({ name: obj6.name, key: obj6.key, params: obj6.params } = tmp13);
-              let arr3 = items2.push(obj8);
-              if (null == tmp13.state) {
-                break;
-              }
-            }
-          }
-        }
-        obj7.rendered = items.concat(items2);
-        ({ focused, rendered } = obj7);
+        ({ focused, rendered } = obj5);
         if (0 === focused.length) {
-          let obj9 = { screen, expectedScreenIds: "", focusedRoute: "unicodeVersion" };
-          let obj15 = obj9;
+          let obj9 = { screen: metroRequire, expectedScreenIds: "", focusedRoute: "unicodeVersion" };
+          obj15 = obj9;
         } else {
-          obj15 = { screen: resolveScreenName(focused), expectedScreenIds: null, focusedRoute: null };
-          let mapped = rendered.map((key) => key.key);
+          obj15 = { screen: resolveScreenName(focused), expectedScreenIds: mapped.join(","), focusedRoute: focused[focused.length - 1] };
+          mapped = rendered.map((key) => key.key);
           let str = ",";
-          obj15.expectedScreenIds = mapped.join(",");
-          obj15.focusedRoute = focused[focused.length - 1];
         }
         return obj15;
       }
     }
   }
+  obj5 = { focused: items, rendered: items };
 };
 export const CHAT_PANEL_ROUTE = "channel";
 export const getComponentDisplayName = function getComponentDisplayName(type) {
@@ -228,17 +247,23 @@ export const getComponentDisplayName = function getComponentDisplayName(type) {
   }
 };
 export const getChatPanelScreenName = function getChatPanelScreenName(channelId, showCreateThread) {
-  if (showCreateThread) {
-    let channelScreenName = React3;
+  let channelScreenName;
+  const tmp = showCreateThread;
+  if (tmp) {
+    channelScreenName = _false;
   } else if (null != channelId) {
-    channelScreenName = getScreenAnalyticsName.getChannelScreenName(channelId);
+    const obj = getScreenAnalyticsName;
+    channelScreenName = obj.getChannelScreenName(channelId);
   } else {
-    channelScreenName = React4;
+    channelScreenName = React3;
   }
   return channelScreenName;
 };
 export const getPanelListScreenName = function getPanelListScreenName() {
-  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
+  let items;
+  let tmp10;
+  const obj = RootNavigationRef;
+  const rootNavigationRef = obj.getRootNavigationRef();
   let rootState = null;
   if (null != rootNavigationRef) {
     rootState = null;
@@ -247,25 +272,26 @@ export const getPanelListScreenName = function getPanelListScreenName() {
     }
   }
   if (null == rootState) {
-    let items = [];
+    items = [];
   } else {
     const items1 = [];
     items = items1;
     if (null != rootState) {
       while (true) {
         let index = rootState.index;
+        let routes = rootState.routes;
         if (index == null) {
           index = rootState.routes.length - 1;
         }
-        let tmp3 = rootState.routes[index];
+        let tmp3 = routes[index];
         let name;
         if (tmp3 != null) {
           name = tmp3.name;
         }
         let tmp6 = tmp3;
         if (name === channel) {
-          let routes = rootState.routes;
-          let found = routes.find((name) => name.name === tabs);
+          let routes1 = rootState.routes;
+          let found = routes1.find((name) => name.name === tabs);
           if (found == null) {
             found = tmp3;
           }
@@ -290,14 +316,17 @@ export const getPanelListScreenName = function getPanelListScreenName() {
     }
   }
   if (0 === items.length) {
-    let tmp10 = screen;
+    tmp10 = metroRequire;
   } else {
     tmp10 = resolveScreenName(items);
   }
   return tmp10;
 };
 export const getBaseScreenName = function getBaseScreenName() {
-  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
+  let items;
+  let tmp6;
+  const obj = RootNavigationRef;
+  const rootNavigationRef = obj.getRootNavigationRef();
   let rootState = null;
   if (null != rootNavigationRef) {
     rootState = null;
@@ -306,17 +335,18 @@ export const getBaseScreenName = function getBaseScreenName() {
     }
   }
   if (null == rootState) {
-    let items = [];
+    items = [];
   } else {
     const items1 = [];
     items = items1;
     if (null != rootState) {
       while (true) {
         let index = rootState.index;
+        let routes = rootState.routes;
         if (index == null) {
           index = rootState.routes.length - 1;
         }
-        let tmp3 = rootState.routes[index];
+        let tmp3 = routes[index];
         items = items1;
         if (null == tmp3) {
           break;
@@ -336,17 +366,20 @@ export const getBaseScreenName = function getBaseScreenName() {
     }
   }
   if (0 === items.length) {
-    let tmp6 = screen;
+    tmp6 = metroRequire;
   } else {
     tmp6 = resolveScreenName(items);
   }
   return tmp6;
 };
-export const isModalScreenName = function isModalScreenName(str) {
-  return str.startsWith("" + modal + ":") || str === modal;
+export const isModalScreenName = function isModalScreenName(baseScreenName) {
+  const tmp2 = str.startsWith("" + modal + ":") || str === modal;
+  return tmp2;
 };
 export const getWideViewScreenName = function getWideViewScreenName(baseScreenName) {
-  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
+  let items;
+  const obj = RootNavigationRef;
+  const rootNavigationRef = obj.getRootNavigationRef();
   let rootState = null;
   if (null != rootNavigationRef) {
     rootState = null;
@@ -355,17 +388,18 @@ export const getWideViewScreenName = function getWideViewScreenName(baseScreenNa
     }
   }
   if (null == rootState) {
-    let items = [];
+    items = [];
   } else {
     const items1 = [];
     items = items1;
     if (null != rootState) {
       while (true) {
         let index = rootState.index;
+        let routes = rootState.routes;
         if (index == null) {
           index = rootState.routes.length - 1;
         }
-        let tmp3 = rootState.routes[index];
+        let tmp3 = routes[index];
         items = items1;
         if (null == tmp3) {
           break;
@@ -403,10 +437,10 @@ export const getWideViewScreenName = function getWideViewScreenName(baseScreenNa
       }
       combined = null;
       if (name2 === guilds) {
-        if (baseScreenName != null) {
-          const _HermesInternal = HermesInternal;
-          combined = "" + tmp24 + tmp25 + baseScreenName;
-        } else {
+        let tmp18 = baseScreenName;
+        const tmp23 = resolveScreenName(items);
+        if (baseScreenName == null) {
+          let channelScreenName;
           const found = items.find((name) => name.name === guilds);
           let channelId;
           if (found != null) {
@@ -420,11 +454,15 @@ export const getWideViewScreenName = function getWideViewScreenName(baseScreenNa
             tmp14 = channelId;
           }
           if (null != tmp14) {
-            let channelScreenName = getScreenAnalyticsName.getChannelScreenName(tmp14);
+            const obj4 = getScreenAnalyticsName;
+            channelScreenName = obj4.getChannelScreenName(tmp14);
           } else {
-            channelScreenName = React4;
+            channelScreenName = React3;
           }
+          tmp18 = channelScreenName;
         }
+        const _HermesInternal = HermesInternal;
+        combined = "" + tmp23 + hasOwnProperty + tmp18;
       }
     }
   }

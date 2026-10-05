@@ -1,33 +1,50 @@
 // === Module 11720: TrackSectionHeader ===
 
 // Module 11720 (TrackSectionHeader)
-import c from "c" /* 576 */;
+import react from "react" /* 576 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import useTrackImpressionDefault from "useTrackImpression" /* 8422 */;
 import AppLauncherStore from "AppLauncherStore" /* 8931 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-fn(558);
-const ReactCompilerGating = fn(558);
+let children;
+
+let ReactCompilerGating = ReactCompilerGating_mod;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+  children = children.children;
+  closure_4(children.sectionName, children.numItems, children.numVisibleItems, children.viewed);
+  return children;
+}) : ((children) => {
+  children = children.children;
+  closure_4(children.sectionName, children.numItems, children.numVisibleItems, children.viewed);
+  return children;
+});
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? ((section_name, num_items, num_visible_items, arg3) => {
-  const cResult = c.c(9);
+  let first;
+  const obj = react;
+  const cResult = obj.c(9);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const entrypointResult = AppLauncherStore.entrypoint();
     cResult[0] = entrypointResult;
-    let first = entrypointResult;
+    first = entrypointResult;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === num_items) {
     if (cResult[2] === num_visible_items) {
+      let tmp7;
+      let tmp10;
+      let tmp11;
       if (cResult[3] === section_name) {
-        let tmp7 = cResult[4];
+        tmp7 = cResult[4];
       }
       if (cResult[5] !== !arg3) {
-        const obj2 = { disableTrack: tmp9 };
-        cResult[5] = tmp9;
+        const obj2 = { disableTrack: !arg3 };
+        cResult[5] = !arg3;
         cResult[6] = obj2;
-        let tmp10 = obj2;
+        tmp10 = obj2;
       } else {
         tmp10 = cResult[6];
       }
@@ -35,7 +52,7 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? ((section_name, n
         const items = [arg3];
         cResult[7] = arg3;
         cResult[8] = items;
-        let tmp11 = items;
+        tmp11 = items;
       } else {
         tmp11 = cResult[8];
       }
@@ -49,19 +66,14 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? ((section_name, n
   cResult[4] = obj3;
   tmp7 = obj3;
 }) : ((section_name, num_items, num_visible_items, disableTrack) => {
-  const obj = { type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW, name: discord_common_AnalyticsUtils.ImpressionNames.APP_LAUNCHER_SECTION, properties: null };
+  const obj = { type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW, name: discord_common_AnalyticsUtils.ImpressionNames.APP_LAUNCHER_SECTION, properties: { section_name, num_items, num_visible_items, source: AppLauncherStore.entrypoint() } };
+  const items = [];
+  const obj3 = { disableTrack: !disableTrack };
+  items[0] = disableTrack;
   const tmp = useTrackImpressionDefault;
-  obj.properties = { section_name, num_items, num_visible_items, source: AppLauncherStore.entrypoint() };
-  const items = [disableTrack];
-  tmp(obj, { disableTrack: !disableTrack }, items);
+  ({ section_name, num_items, num_visible_items, source: AppLauncherStore.entrypoint() });
+  tmp(obj, obj3, items);
 });
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/TrackSectionHeader.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((sectionName) => {
-  closure_4(sectionName.sectionName, sectionName.numItems, sectionName.numVisibleItems, sectionName.viewed);
-  return sectionName.children;
-}) : ((sectionName) => {
-  closure_4(sectionName.sectionName, sectionName.numItems, sectionName.numVisibleItems, sectionName.viewed);
-  return sectionName.children;
-});
+export default tmp2;

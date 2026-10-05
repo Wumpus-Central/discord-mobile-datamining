@@ -1,54 +1,63 @@
 // === Module 10837: ViewMeasureUtils ===
 
 // Module 10837 (ViewMeasureUtils)
-import size from "module_2" /* 2 */;
+import size_mod from "module_2" /* 2 */;
 
+let size = size_mod;
 const result = size.fileFinishedImporting("modules/view_measure/ViewMeasureUtils.native.tsx");
 
 export const measureView = function measureView(arg0) {
-  closure_0 = arg0;
-  return new Promise((arg0) => {
-    closure_0 = arg0;
+  let closure_0 = arg0;
+  const promise = new Promise((arg0) => {
+    let closure_0 = arg0;
     current.measure((x, y, width, height, pageX, pageY) => {
-      const size = { x, y, width, height, pageX, pageY };
+      size = { x, y, width, height, pageX, pageY };
       closure_0(size);
     });
   });
+  return promise;
 };
 export const measureViewRef = function measureViewRef(current) {
+  let resolved;
   current = current.current;
   if (null == current) {
-    let resolved = Promise.resolve(undefined);
+    resolved = Promise.resolve(undefined);
   } else {
+    const self = this;
+    const self2 = this;
     resolved = new Promise((arg0) => {
-      closure_0 = arg0;
+      let closure_0 = arg0;
       current.measure((x, y, width, height, pageX, pageY) => {
-        const size = { x, y, width, height, pageX, pageY };
+        size = { x, y, width, height, pageX, pageY };
         closure_0(size);
       });
     });
   }
   return resolved;
 };
-export const measureViewInWindow = function measureViewInWindow(arg0) {
-  closure_0 = arg0;
-  return new Promise((arg0) => {
-    closure_0 = arg0;
+export const measureViewInWindow = function measureViewInWindow(current2) {
+  let closure_0 = current2;
+  const promise = new Promise((arg0) => {
+    let closure_0 = arg0;
     current.measureInWindow((x, y, width, height) => {
-      const size = { x, y, width, height };
+      size = { x, y, width, height };
       closure_0(size);
     });
   });
+  return promise;
 };
 export const measureViewRefInWindow = function measureViewRefInWindow(ref) {
+  let resolved;
   const current = ref.current;
   if (null == current) {
-    let resolved = Promise.resolve(undefined);
+    resolved = Promise.resolve(undefined);
   } else {
+    const self = this;
+    const self2 = this;
     resolved = new Promise((arg0) => {
-      closure_0 = arg0;
+      let closure_0 = arg0;
       current.measureInWindow((x, y, width, height) => {
-        const size = { x, y, width, height };
+        size = { x, y, width, height };
         closure_0(size);
       });
     });
@@ -56,28 +65,32 @@ export const measureViewRefInWindow = function measureViewRefInWindow(ref) {
   return resolved;
 };
 export const measureViewInView = function measureViewInView(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  return new Promise((arg0) => {
-    closure_0 = arg0;
-    current.measureLayout(closure_1, (x, y, width, height) => {
-      const size = { x, y, width, height };
+  let closure_0 = arg0;
+  let closure_1 = arg1;
+  const promise = new Promise((arg0) => {
+    let closure_0 = arg0;
+    current.measureLayout(current2, (x, y, width, height) => {
+      size = { x, y, width, height };
       closure_0(size);
     }, () => {
       closure_0(undefined);
     });
   });
+  return promise;
 };
-export const measureViewRefInView = function measureViewRefInView(ref, arg1) {
+export const measureViewRefInView = function measureViewRefInView(ref, current2) {
+  let resolved;
   const current = ref.current;
   if (null == current) {
-    let resolved = Promise.resolve(undefined);
+    resolved = Promise.resolve(undefined);
   } else {
-    closure_1 = arg1;
+    let closure_1 = current2;
+    const self = this;
+    const self2 = this;
     resolved = new Promise((arg0) => {
-      closure_0 = arg0;
-      current.measureLayout(closure_1, (x, y, width, height) => {
-        const size = { x, y, width, height };
+      let closure_0 = arg0;
+      current.measureLayout(current2, (x, y, width, height) => {
+        size = { x, y, width, height };
         closure_0(size);
       }, () => {
         closure_0(undefined);

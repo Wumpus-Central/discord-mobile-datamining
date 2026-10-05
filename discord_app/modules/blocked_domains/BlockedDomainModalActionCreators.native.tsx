@@ -1,14 +1,17 @@
 // === Module 12749: BlockedDomainModalActionCreators ===
 
 // Module 12749 (BlockedDomainModalActionCreators)
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import asyncRequire from "asyncRequire" /* 1987 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import size from "module_2" /* 2 */;
 
-const result = size.fileFinishedImporting("modules/blocked_domains/BlockedDomainModalActionCreators.native.tsx");
-
-export default {
+let obj = {
   show(url) {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12750, dependencyMap.paths), "blocked-domain", { url });
+    const obj = ActionSheetActionCreatorsDefault;
+    const obj2 = { url };
+    obj.openLazy(asyncRequire(12750, dependencyMap.paths), "blocked-domain", obj2);
   }
 };
+const result = size.fileFinishedImporting("modules/blocked_domains/BlockedDomainModalActionCreators.native.tsx");
+
+export default obj;

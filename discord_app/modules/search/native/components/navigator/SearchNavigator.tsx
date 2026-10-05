@@ -1,74 +1,99 @@
 // === Module 17044: SearchNavigator ===
 
 // Module 17044 (SearchNavigator)
+import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
+import Constants from "Constants" /* 1085 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1370 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
+import TrackingConstants from "TrackingConstants" /* 7512 */;
 import ConversationNavigatorHeader from "ConversationNavigatorHeader" /* 7569 */;
 import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 11982 */;
+import SearchNavigatorConstants from "SearchNavigatorConstants" /* 16813 */;
 import SearchNavigatorPreviewHeaderDefault from "SearchNavigatorPreviewHeader" /* 17039 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles from "createStyles" /* 4890 */;
+import NativeStackView from "NativeStackView" /* 7556 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-let closure_5 = fn(7512).SearchEntrypointAnalyticsLocations;
-const SearchNavigatorScreens = fn(16813).SearchNavigatorScreens;
-const SearchTypes = fn(1085).SearchTypes;
-const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4890);
-let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
+let navigation;
+
+let c9;
+let metroImportAll;
+let obj2;
+const View = react_native.View;
+let closure_5 = TrackingConstants.SearchEntrypointAnalyticsLocations;
+const SearchNavigatorScreens = SearchNavigatorConstants.SearchNavigatorScreens;
+const SearchTypes = Constants.SearchTypes;
+({ jsx: metroImportAll, jsxs: c9 } = Fragment);
+let obj = { container: obj2 };
+obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 let closure_10 = createStyles.createStyles(obj);
-const NativeStackNavigator = fn(7556);
-let closure_11 = NativeStackNavigator.createNativeStackNavigator();
-const ReactCompilerGating = fn(558);
-let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/search/native/components/navigator/SearchNavigator.tsx");
-
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
-  const cResult = searchContext(576).c(30);
-  searchContext = route.route.params.searchContext;
-  let obj = searchContext(576);
+let closure_11 = NativeStackView.createNativeStackNavigator();
+const memo = react.memo;
+const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
+  let items1;
+  let left;
+  let right;
+  let searchContext;
+  let tmp5;
+  let tmp6;
   const tmp = searchContext;
-  const accessibilityNativeStackOptions = searchContext(6496).useAccessibilityNativeStackOptions();
+  let obj = searchContext(576);
+  const cResult = obj.c(30);
+  searchContext = route.route.params.searchContext;
+  let obj2 = searchContext(6496);
+  const accessibilityNativeStackOptions = obj2.useAccessibilityNativeStackOptions();
   if (cResult[0] !== searchContext) {
     const fn = function v() {
+      let DM_LIST;
       if (searchContext.type === SearchTypes.GUILD) {
-        let DM_LIST = constants.GUILD;
+        DM_LIST = constants.GUILD;
       } else {
         DM_LIST = constants.DM_LIST;
       }
-      search_tracking_TrackingDefault.trackSearchOpened({ searchContext, searchLocation: DM_LIST });
+      let obj = search_tracking_TrackingDefault;
+      obj.trackSearchOpened({ searchContext, searchLocation: DM_LIST });
       return () => {
-        search_tracking_TrackingDefault.trackSearchClosed({ searchContext });
+        const obj = search_tracking_TrackingDefault;
+        const obj2 = { searchContext };
+        obj.trackSearchClosed(obj2);
       };
     };
     const items = [searchContext];
     cResult[0] = searchContext;
     cResult[1] = fn;
     cResult[2] = items;
-    let tmp6 = items;
-    let tmp5 = fn;
+    tmp6 = items;
+    tmp5 = fn;
   } else {
     tmp5 = cResult[1];
     tmp6 = cResult[2];
   }
-  const effect = noop.useEffect(tmp5, tmp6);
+  const effect = react.useEffect(tmp5, tmp6);
   const tmp8 = closure_10();
-  const obj2 = searchContext(6496);
   ({ left, right } = useSafeAreaInsetsDefault());
+  useSafeAreaInsetsDefault();
   if (cResult[3] === left) {
+    let tmp10;
     if (cResult[4] === right) {
-      let tmp10 = cResult[5];
+      tmp10 = cResult[5];
     }
     if (cResult[6] === tmp8.container) {
+      let tmp12;
+      let tmp16;
+      let tmp18;
+      let tmp19;
+      let tmp20;
+      let tmp24;
       if (cResult[9] !== accessibilityNativeStackOptions) {
         const obj3 = {};
         const merged = Object.assign(accessibilityNativeStackOptions);
         cResult[9] = accessibilityNativeStackOptions;
         cResult[10] = obj3;
-        let tmp12 = obj3;
+        tmp12 = obj3;
       } else {
         tmp12 = cResult[10];
       }
@@ -76,7 +101,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((route)
         const obj4 = { searchContext };
         cResult[11] = searchContext;
         cResult[12] = obj4;
-        let tmp16 = obj4;
+        tmp16 = obj4;
       } else {
         tmp16 = cResult[12];
       }
@@ -85,32 +110,32 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((route)
         const obj5 = { headerShown: false, fullScreenGestureEnabled: true };
         class N {
           constructor() {
-            return searchContext(closure_1_2[14]).default;
+            return searchContext(dependencyMap[14]).default;
           }
         }
         cResult[13] = N;
         cResult[14] = obj5;
-        let tmp18 = N;
-        const tmp19 = obj5;
+        tmp18 = N;
+        tmp19 = obj5;
       } else {
         tmp18 = cResult[13];
         class N {
           constructor() {
-            return searchContext(closure_1_2[14]).default;
+            return searchContext(dependencyMap[14]).default;
           }
         }
       }
       if (cResult[15] !== tmp16) {
         class N {
           constructor() {
-            return searchContext(closure_1_2[14]).default;
+            return searchContext(dependencyMap[14]).default;
           }
         }
         const obj6 = { initialParams: tmp16, name: SearchNavigatorScreens.SEARCH_TABS, options: tmp19, getComponent: tmp18 };
         const tmp23 = closure_8(closure_11.Screen, obj6);
         cResult[15] = tmp16;
         cResult[16] = tmp23;
-        let tmp20 = tmp23;
+        tmp20 = tmp23;
       } else {
         tmp20 = cResult[16];
       }
@@ -118,52 +143,53 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((route)
       if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
         class N {
           constructor() {
-            return searchContext(closure_1_2[14]).default;
+            return searchContext(dependencyMap[14]).default;
           }
         }
         const obj7 = {
           name: SearchNavigatorScreens.SEARCH_CHAT_PREVIEW,
           options(route) {
+                  let obj2;
                   route = route.route;
-                  const obj = {
+                  let obj = {
                     headerShown: true,
-                    header: route(7498).renderHeader,
-                    headerLeft: route(7498).getRenderBackImage(route.navigation),
+                    header: route(closure_2[15]).renderHeader,
+                    headerLeft: obj2.getRenderBackImage(navigation),
                     headerTitle() {
-                      return closure_2_8(SearchNavigatorPreviewHeaderDefault, { channelId: route.params.channelId });
+                      const obj = { channelId: route.params.channelId };
+                      return closure_2_8(SearchNavigatorPreviewHeaderDefault, obj);
                     },
                     fullScreenGestureEnabled: true
                   };
+                  navigation = route.navigation;
+                  obj2 = route(closure_2[15]);
                   return obj;
                 },
           getComponent() {
-                  return searchContext(17040).default;
+                  return searchContext(dependencyMap[17]).default;
                 }
         };
         const tmp27 = closure_8(closure_11.Screen, obj7);
         cResult[17] = tmp27;
-        let tmp24 = tmp27;
+        tmp24 = tmp27;
       } else {
         tmp24 = cResult[17];
       }
       if (cResult[18] !== searchContext) {
         class H {
           constructor(arg0) {
-            ({ route, navigation } = route);
-            obj = closure_0(closure_2[18]);
-            obj2 = closure_0(closure_2[19]);
-            isAndroidResult = obj2.isAndroid();
-            if (!isAndroidResult) {
-              tmp2 = searchContext;
-              tmp3 = SearchTypes;
-              isAndroidResult = searchContext.type === SearchTypes.GUILD;
-            }
-            return obj.conversationNavigatorFocusHeaderOptions(route, navigation, { shouldHandleSafeArea: isAndroidResult });
+            let route;
+            ({ route, navigation } = arg0);
+            const conversationNavigatorFocusHeaderOptions = ConversationNavigatorHeader.conversationNavigatorFocusHeaderOptions;
+            ConversationNavigatorHeader;
+            const obj = utils_PlatformUtils;
+            const shouldHandleSafeArea = obj.isAndroid() || searchContext.type === SearchTypes.GUILD;
+            return conversationNavigatorFocusHeaderOptions(route, navigation, { shouldHandleSafeArea });
           }
         }
         class N {
           constructor() {
-            return searchContext(closure_1_2[14]).default;
+            return searchContext(dependencyMap[14]).default;
           }
         }
         cResult[18] = searchContext;
@@ -171,16 +197,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((route)
       } else {
         class H {
           constructor(arg0) {
-            ({ route, navigation } = route);
-            obj = closure_0(closure_2[18]);
-            obj2 = closure_0(closure_2[19]);
-            isAndroidResult = obj2.isAndroid();
-            if (!isAndroidResult) {
-              tmp2 = searchContext;
-              tmp3 = SearchTypes;
-              isAndroidResult = searchContext.type === SearchTypes.GUILD;
-            }
-            return obj.conversationNavigatorFocusHeaderOptions(route, navigation, { shouldHandleSafeArea: isAndroidResult });
+            let route;
+            ({ route, navigation } = arg0);
+            const conversationNavigatorFocusHeaderOptions = ConversationNavigatorHeader.conversationNavigatorFocusHeaderOptions;
+            ConversationNavigatorHeader;
+            const obj = utils_PlatformUtils;
+            const shouldHandleSafeArea = obj.isAndroid() || searchContext.type === SearchTypes.GUILD;
+            return conversationNavigatorFocusHeaderOptions(route, navigation, { shouldHandleSafeArea });
           }
         }
       }
@@ -188,59 +211,59 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((route)
       if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
         class R {
           constructor() {
-            return searchContext(closure_1_2[20]).default;
+            return searchContext(dependencyMap[20]).default;
           }
         }
         class N {
           constructor() {
-            return searchContext(closure_1_2[14]).default;
+            return searchContext(dependencyMap[14]).default;
           }
         }
         cResult[20] = R;
       } else {
         class R {
           constructor() {
-            return searchContext(closure_1_2[20]).default;
+            return searchContext(dependencyMap[20]).default;
           }
         }
       }
       if (cResult[21] !== H) {
         class R {
           constructor() {
-            return searchContext(closure_1_2[20]).default;
+            return searchContext(dependencyMap[20]).default;
           }
         }
         class N {
           constructor() {
-            return searchContext(closure_1_2[14]).default;
+            return searchContext(dependencyMap[14]).default;
           }
         }
+        const Screen = closure_11.Screen;
         const obj8 = { name: tmp(7568).ConversationNavigatorScreens.FOCUS, options: H, getComponent: R };
-        const tmp31 = closure_8(closure_11.Screen, obj8);
         cResult[21] = H;
-        cResult[22] = tmp31;
+        cResult[22] = closure_8(Screen, obj8);
+        const tmp31 = closure_8(Screen, obj8);
       } else {
         class R {
           constructor() {
-            return searchContext(closure_1_2[20]).default;
+            return searchContext(dependencyMap[20]).default;
           }
         }
       }
       if (cResult[23] === tmp20) {
         class R {
           constructor() {
-            return searchContext(closure_1_2[20]).default;
+            return searchContext(dependencyMap[20]).default;
           }
         }
       }
-      const obj9 = { id: "search-navigator", screenOptions: tmp12, children: null };
-      const items1 = [tmp20, tmp24, tmp30];
-      obj9.children = items1;
-      const tmp35 = closure_9(closure_11.Navigator, obj9);
+      const obj9 = { id: "search-navigator", screenOptions: tmp12, children: items1 };
+      items1 = [tmp20, tmp24, tmp30];
       cResult[23] = tmp20;
       cResult[24] = tmp30;
       cResult[25] = tmp12;
-      cResult[26] = tmp35;
+      cResult[26] = closure_9(closure_11.Navigator, obj9);
+      const tmp35 = closure_9(closure_11.Navigator, obj9);
     }
     const items2 = [tmp8.container, tmp10];
     cResult[6] = tmp8.container;
@@ -252,105 +275,91 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((route)
   cResult[4] = right;
   cResult[5] = obj10;
   tmp10 = obj10;
-  const tmp9 = useSafeAreaInsetsDefault();
 }) : ((route) => {
+  let Navigator;
+  let items1;
+  let items2;
+  let obj3;
+  let obj4;
   const searchContext = route.route.params.searchContext;
-  const accessibilityNativeStackOptions = searchContext(6496).useAccessibilityNativeStackOptions();
+  let obj = searchContext(6496);
+  const accessibilityNativeStackOptions = obj.useAccessibilityNativeStackOptions();
   const items = [searchContext];
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(() => {
+    let DM_LIST;
     if (searchContext.type === SearchTypes.GUILD) {
-      let DM_LIST = constants.GUILD;
+      DM_LIST = constants.GUILD;
     } else {
       DM_LIST = constants.DM_LIST;
     }
-    search_tracking_TrackingDefault.trackSearchOpened({ searchContext, searchLocation: DM_LIST });
+    let obj = search_tracking_TrackingDefault;
+    obj.trackSearchOpened({ searchContext, searchLocation: DM_LIST });
     return () => {
-      search_tracking_TrackingDefault.trackSearchClosed({ searchContext });
+      const obj = search_tracking_TrackingDefault;
+      const obj2 = { searchContext };
+      obj.trackSearchClosed(obj2);
     };
   }, items);
-  let obj = searchContext(6496);
+  const tmp3 = closure_10();
   const rect = useSafeAreaInsetsDefault();
-  const obj2 = { style: null, children: null };
-  const items1 = [closure_10().container, { paddingLeft: rect.left, paddingRight: rect.right }];
-  obj2.style = items1;
-  const obj3 = { id: "search-navigator", screenOptions: null, children: null };
+  let obj2 = { style: items1, children: closure_9(Navigator, obj3) };
+  items1 = [tmp3.container, { paddingLeft: rect.left, paddingRight: rect.right }];
+  Navigator = closure_11.Navigator;
+  obj3 = { id: "search-navigator", screenOptions: obj4, children: items2 };
+  obj4 = {};
   const merged = Object.assign(accessibilityNativeStackOptions);
-  obj3.screenOptions = {};
-  const items2 = [
-    closure_8(closure_11.Screen, {
-      initialParams: { searchContext },
-      name: SearchNavigatorScreens.SEARCH_TABS,
-      options: { headerShown: false, fullScreenGestureEnabled: true },
-      getComponent() {
-        return searchContext(17045).default;
-      }
-    }),
-    closure_8(closure_11.Screen, {
-      name: SearchNavigatorScreens.SEARCH_CHAT_PREVIEW,
-      options(route) {
-        route = route.route;
-        const obj = {
-          headerShown: true,
-          header: route(7498).renderHeader,
-          headerLeft: route(7498).getRenderBackImage(route.navigation),
-          headerTitle() {
-            return closure_2_8(SearchNavigatorPreviewHeaderDefault, { channelId: route.params.channelId });
-          },
-          fullScreenGestureEnabled: true
-        };
-        return obj;
-      },
-      getComponent() {
-        return searchContext(17040).default;
-      }
-    }),
-
-  ];
-  const obj4 = {};
+  items2 = [, , ];
   const obj5 = {
     initialParams: { searchContext },
     name: SearchNavigatorScreens.SEARCH_TABS,
     options: { headerShown: false, fullScreenGestureEnabled: true },
     getComponent() {
-      return searchContext(17045).default;
+      return searchContext(dependencyMap[14]).default;
     }
   };
+  items2[0] = closure_8(closure_11.Screen, obj5);
   const obj6 = {
     name: SearchNavigatorScreens.SEARCH_CHAT_PREVIEW,
     options(route) {
+      let obj2;
       route = route.route;
-      const obj = {
+      let obj = {
         headerShown: true,
-        header: route(7498).renderHeader,
-        headerLeft: route(7498).getRenderBackImage(route.navigation),
+        header: route(closure_2[15]).renderHeader,
+        headerLeft: obj2.getRenderBackImage(navigation),
         headerTitle() {
-          return closure_2_8(SearchNavigatorPreviewHeaderDefault, { channelId: route.params.channelId });
+          const obj = { channelId: route.params.channelId };
+          return closure_2_8(SearchNavigatorPreviewHeaderDefault, obj);
         },
         fullScreenGestureEnabled: true
       };
+      navigation = route.navigation;
+      obj2 = route(closure_2[15]);
       return obj;
     },
     getComponent() {
-      return searchContext(17040).default;
+      return searchContext(dependencyMap[17]).default;
     }
   };
-  const tmp3 = closure_10();
-  items2[2] = closure_8(closure_11.Screen, {
+  items2[1] = closure_8(closure_11.Screen, obj6);
+  const obj7 = {
     name: searchContext(7568).ConversationNavigatorScreens.FOCUS,
     options(arg0) {
+      let route;
       ({ route, navigation } = arg0);
-      const obj = ConversationNavigatorHeader;
-      let shouldHandleSafeArea = utils_PlatformUtils.isAndroid();
-      if (!shouldHandleSafeArea) {
-        shouldHandleSafeArea = searchContext.type === SearchTypes.GUILD;
-      }
-      return obj.conversationNavigatorFocusHeaderOptions(route, navigation, { shouldHandleSafeArea });
+      const conversationNavigatorFocusHeaderOptions = ConversationNavigatorHeader.conversationNavigatorFocusHeaderOptions;
+      ConversationNavigatorHeader;
+      const obj = utils_PlatformUtils;
+      const shouldHandleSafeArea = obj.isAndroid() || searchContext.type === SearchTypes.GUILD;
+      return conversationNavigatorFocusHeaderOptions(route, navigation, { shouldHandleSafeArea });
     },
     getComponent() {
-      return searchContext(17041).default;
+      return searchContext(dependencyMap[20]).default;
     }
-  });
-  obj3.children = items2;
-  obj2.children = closure_9(closure_11.Navigator, obj3);
+  };
+  items2[2] = closure_8(closure_11.Screen, obj7);
   return closure_8(View, obj2);
 }));
+const result = size.fileFinishedImporting("modules/search/native/components/navigator/SearchNavigator.tsx");
+
+export default memoResult;

@@ -6,6 +6,9 @@ import ExperimentStore from "ExperimentStore" /* 4776 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import size from "module_2" /* 2 */;
+
+let map;
 
 function isLikelyControl(registeredExperiments, variantId2) {
   if (null == registeredExperiments) {
@@ -36,15 +39,25 @@ function flushFlags(items, set) {
   }
 }
 function syncAllExperimentFlags() {
-  (function resetGuildFlags() {
+  function resetGuildFlags() {
+    const tmp2 = set[Symbol.iterator]();
     while (tmp2 !== undefined) {
       let obj = SentryUtilsDefault;
       let addFeatureFlagResult = obj.addFeatureFlag(tmp3, false);
       continue;
     }
     set.clear();
-    tmp2 = set[Symbol.iterator]();
-  })();
+  }
+  function getHashToName() {
+    const registeredExperiments = ApexExperimentStore.getRegisteredExperiments();
+    const obj = {};
+    for (const key10006 in registeredExperiments) {
+      obj[ApexExperimentStore.getHash(key10006)] = key10006;
+      continue;
+    }
+    return obj;
+  }
+  resetGuildFlags();
   const items = [];
   const items1 = [];
   const items2 = [];
@@ -53,10 +66,7 @@ function syncAllExperimentFlags() {
   const allExperimentAssignments = ExperimentStore.getAllExperimentAssignments();
   for (const key10027 in allExperimentAssignments) {
     let tmp40 = allExperimentAssignments[key10027];
-    let tmp4 = null == tmp40;
-    if (!tmp4) {
-      tmp4 = tmp40 <= 0;
-    }
+    let tmp4 = null == tmp40 || tmp40 <= 0;
     if (tmp4) {
       continue;
     } else {
@@ -84,15 +94,7 @@ function syncAllExperimentFlags() {
     continue;
   }
   let registeredExperiments = ApexExperimentStore.getRegisteredExperiments();
-  const tmp9 = (function getHashToName() {
-    const registeredExperiments = ApexExperimentStore.getRegisteredExperiments();
-    const obj = {};
-    for (const key10006 in registeredExperiments) {
-      obj[ApexExperimentStore.getHash(key10006)] = key10006;
-      continue;
-    }
-    return obj;
-  })();
+  const tmp9 = getHashToName();
   const evaluatedExperiments = ApexExperimentStore.getState().evaluatedExperiments;
   const items4 = ["user", "installation"];
   for (const item10060 of items4) {
@@ -151,7 +153,7 @@ function syncAllExperimentFlags() {
     let tmp28 = evaluatedExperiments == null;
     let tmp29;
     if (!tmp28) {
-      guild = evaluatedExperiments.guild;
+      const guild = evaluatedExperiments.guild;
       tmp28 = guild == null;
       if (!tmp28) {
         tmp29 = guild[guildId];
@@ -190,17 +192,17 @@ function syncAllExperimentFlags() {
   flushFlags(items6, set);
 }
 const set = new Set();
-const prototype = function SentryExperimentFeatureFlagManager() {
-  const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  const result = new Map().set(ExperimentStore, syncAllExperimentFlags);
-  const result1 = result.set(ApexExperimentStore, syncAllExperimentFlags);
-  applyArgumentsResult.stores = result1.set(SelectedGuildStore, syncAllExperimentFlags);
-  return applyArgumentsResult;
-}.prototype;
-class prototype extends tmp3 {
+class SentryExperimentFeatureFlagManager extends AutomaticLifecycleManager {
+  constructor() {
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    map = new Map();
+    const result = map.set(ExperimentStore, syncAllExperimentFlags);
+    const result1 = result.set(ApexExperimentStore, syncAllExperimentFlags);
+    applyArgumentsResult.stores = result1.set(SelectedGuildStore, syncAllExperimentFlags);
+    return applyArgumentsResult;
+  }
 }
-const prototype1 = new prototype();
-const size = fn(2);
+const sentryExperimentFeatureFlagManager = new SentryExperimentFeatureFlagManager();
 let result = size.fileFinishedImporting("modules/sentry/SentryExperimentFeatureFlagManager.tsx");
 
-export default prototype1;
+export default sentryExperimentFeatureFlagManager;

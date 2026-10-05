@@ -1,27 +1,28 @@
 // === Module 5706: BulkBanStore ===
 
 // Module 5706 (BulkBanStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import size from "module_2" /* 2 */;
 
 const set = new Set();
 const set1 = new Set();
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class BulkBanStore extends Store {
+  initialize() {
+    this.waitFor(AuthenticationStore);
+  }
+  hasPendingBulkBan(arg0) {
+    return set.has(arg0);
+  }
+  consumeCompletedBeforeStarted(arg0, id) {
+    return set1.delete("" + arg0 + ":" + id);
+  }
 }
 const prototype = BulkBanStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(AuthenticationStore);
-};
-prototype["hasPendingBulkBan"] = function hasPendingBulkBan(arg0) {
-  return set.has(arg0);
-};
-prototype["consumeCompletedBeforeStarted"] = function consumeCompletedBeforeStarted(arg0, id) {
-  return set1.delete("" + arg0 + ":" + id);
-};
 BulkBanStore.displayName = "BulkBanStore";
-const bulkBanStore = new BulkBanStore(DispatcherDefault, {
+const obj = {
   GUILD_BULK_BAN_STARTED: function handleBulkBanStarted(guildId) {
     set.add(guildId.guildId);
   },
@@ -45,8 +46,8 @@ const bulkBanStore = new BulkBanStore(DispatcherDefault, {
     set.clear();
     set1.clear();
   }
-});
-const size = fn(2);
+};
+const bulkBanStore = new BulkBanStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/BulkBanStore.tsx");
 
 export default bulkBanStore;

@@ -1,33 +1,39 @@
 // === Module 10932: AppStoreOverlayMediaModalWrapper ===
 
 // Module 10932 (AppStoreOverlayMediaModalWrapper)
+import Fragment from "Fragment" /* 21 */;
+import Constants from "Constants" /* 1085 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
 import MediaModalSheetWrapperDefault from "MediaModalSheetWrapper" /* 7962 */;
 import MediaModalDefault from "MediaModal" /* 7963 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 4561 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, onCloseCallback;
 
-const require = fn;
 let closure_3 = ["onCloseCallback"];
-const MEDIA_MODAL_KEY = fn(1085).MEDIA_MODAL_KEY;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayMediaModalWrapper.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCloseCallback) => {
-  let tmp = dependencyMap;
-  const cResult = require("c").c(13);
+const MEDIA_MODAL_KEY = Constants.MEDIA_MODAL_KEY;
+const jsx = Fragment.jsx;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onCloseCallback) => {
+  let closure_0;
+  let tmp11;
+  let tmp12;
+  let tmp4;
+  let tmp8;
+  let tmp9;
+  let obj = require("react");
+  const cResult = obj.c(13);
   if (cResult[0] !== onCloseCallback) {
     _require = onCloseCallback;
     const tmp7 = _objectWithoutProperties(onCloseCallback.onCloseCallback, closure_3);
     cResult[0] = onCloseCallback.onCloseCallback;
     cResult[1] = onCloseCallback.onCloseCallback;
     cResult[2] = tmp7;
-    let tmp4 = tmp7;
+    tmp4 = tmp7;
   } else {
     _require = cResult[1];
     tmp4 = cResult[2];
@@ -35,83 +41,91 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCloseCallback)
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function f() {
       return () => {
-        const result = closure_1_0(closure_1_2[7]).clearMediaModalFooterAction();
+        const obj = closure_1_0(closure_1_2[7]);
+        const result = obj.clearMediaModalFooterAction();
       };
     };
     const items = [];
     cResult[3] = fn;
     cResult[4] = items;
-    let tmp9 = items;
-    let tmp8 = fn;
+    tmp9 = items;
+    tmp8 = fn;
   } else {
     tmp8 = cResult[3];
     tmp9 = cResult[4];
   }
-  const effect = noop.useEffect(tmp8, tmp9);
+  const effect = react.useEffect(tmp8, tmp9);
   if (cResult[5] !== tmp3) {
     const fn2 = function v() {
       if (closure_0 != null) {
         tmp();
       }
-      ModalActionCreatorsDefault.popWithKey(MEDIA_MODAL_KEY);
+      const obj = ModalActionCreatorsDefault;
+      obj.popWithKey(MEDIA_MODAL_KEY);
     };
     cResult[5] = tmp3;
     cResult[6] = fn2;
-    let tmp11 = fn2;
+    tmp11 = fn2;
   } else {
     tmp11 = cResult[6];
   }
   if (ActionSheetStore.isOpen()) {
     if (cResult[7] === tmp3) {
+      let tmp20;
+      if (cResult[8] === tmp4) {
+        tmp20 = cResult[9];
+      }
+      tmp12 = tmp20;
     }
-    const obj2 = {};
+    MediaModalSheetWrapperDefault;
     const merged = Object.assign(tmp4);
-    obj2.onCloseCallback = tmp3;
-    tmp = jsx(MediaModalSheetWrapperDefault, {});
+    const tmp27 = <tmp23 onCloseCallback={tmp3} />;
     cResult[7] = tmp3;
     cResult[8] = tmp4;
-    cResult[9] = tmp;
+    cResult[9] = tmp27;
+    tmp20 = tmp27;
   } else {
     if (cResult[10] === tmp11) {
       if (cResult[11] === tmp4) {
-        let tmp12 = cResult[12];
+        tmp12 = cResult[12];
       }
-      return tmp12;
     }
-    const obj3 = {};
+    MediaModalDefault;
     const merged1 = Object.assign(tmp4);
-    obj3.onClose = tmp11;
-    const tmp19 = jsx(MediaModalDefault, {});
+    const tmp19 = <tmp15 onClose={tmp11} />;
     cResult[10] = tmp11;
     cResult[11] = tmp4;
     cResult[12] = tmp19;
     tmp12 = tmp19;
   }
-  const obj = require("c");
+  return tmp12;
 }) : ((onCloseCallback) => {
+  let tmp4Result;
+  onCloseCallback = onCloseCallback.onCloseCallback;
   const merged = Object.assign(onCloseCallback, Object.assign({ onCloseCallback: 0 }));
-  const effect = noop.useEffect(() => () => {
-    const result = onCloseCallback(closure_1_2[7]).clearMediaModalFooterAction();
+  const effect = react.useEffect(() => () => {
+    const obj = onCloseCallback(closure_1_2[7]);
+    const result = obj.clearMediaModalFooterAction();
   }, []);
-  const items = [onCloseCallback.onCloseCallback];
-  const callback = noop.useCallback(() => {
+  const items = [onCloseCallback];
+  const callback = react.useCallback(() => {
     if (onCloseCallback != null) {
       tmp();
     }
-    ModalActionCreatorsDefault.popWithKey(MEDIA_MODAL_KEY);
+    const obj = ModalActionCreatorsDefault;
+    obj.popWithKey(MEDIA_MODAL_KEY);
   }, items);
   if (ActionSheetStore.isOpen()) {
-    const obj2 = {};
+    MediaModalSheetWrapperDefault;
     const merged1 = Object.assign(merged);
-    obj2.onCloseCallback = onCloseCallback;
-    let tmp4Result = jsx(MediaModalSheetWrapperDefault, {});
-    const tmp5Result = MediaModalSheetWrapperDefault;
+    tmp4Result = <tmp5Result onCloseCallback={onCloseCallback} />;
   } else {
-    const obj = {};
+    MediaModalDefault;
     const merged2 = Object.assign(merged);
-    obj.onClose = callback;
-    tmp4Result = jsx(MediaModalDefault, {});
-    const tmp5Result2 = MediaModalDefault;
+    tmp4Result = <tmp5Result2 onClose={callback} />;
   }
   return tmp4Result;
 });
+let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayMediaModalWrapper.tsx");
+
+export default tmp2;

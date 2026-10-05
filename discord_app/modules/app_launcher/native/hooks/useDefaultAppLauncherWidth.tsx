@@ -8,9 +8,7 @@ import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const ACTION_SHEET_MAX_WIDTH = ActionSheetConstants.ACTION_SHEET_MAX_WIDTH;
-const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useDefaultAppLauncherWidth.tsx");
-
-export const useDefaultAppLauncherWidth = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const width = useWindowDimensionsDefault().width;
   let bound = width;
   if (arg0 !== AppLauncherTypes.AppLauncherEntrypoint.TEXT) {
@@ -27,3 +25,6 @@ export const useDefaultAppLauncherWidth = ReactCompilerGating.isReactCompilerEna
   }
   return bound;
 });
+const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useDefaultAppLauncherWidth.tsx");
+
+export const useDefaultAppLauncherWidth = tmp2;

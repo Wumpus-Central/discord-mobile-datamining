@@ -1,528 +1,621 @@
 // === Module 14558: SafetyHubViolationsContainer ===
 
 // Module 14558 (SafetyHubViolationsContainer)
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
+import Constants from "Constants" /* 1085 */;
+import intl4 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import asyncRequire from "asyncRequire" /* 1987 */;
+import WarningIcon2 from "WarningIcon" /* 4803 */;
+import Text_Text from "Text/Text" /* 4886 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
 import SafetyHubUtils from "SafetyHubUtils" /* 8092 */;
 import SafetyHubModels from "SafetyHubModels" /* 8094 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 9442 */;
+import ChevronSmallDownIcon2 from "ChevronSmallDownIcon" /* 10844 */;
 import useSafetyHubClassifications from "useSafetyHubClassifications" /* 11492 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import ChevronSmallUpIcon from "ChevronSmallUpIcon" /* 13379 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
 import SafetyHubStore from "SafetyHubStore" /* 8106 */;
+import SafetyHubConstants from "SafetyHubConstants" /* 8093 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size_mod from "module_2" /* 2 */;
 
-const util = items4(1126);
-const WarningIcon = items4(4803);
-const Text_Text = items4(4886);
-const ChevronSmallDownIcon2 = items4(10844);
-const ChevronSmallUpIcon = items4(13379);
-require = fn;
+let dependencyMap, importDefault, is_dsa_eligible, timestamp;
+
+let c9;
+let closure_12;
+let hasOwnProperty;
+let map1;
+let metroImportAll;
+let metroRequire;
+let obj10;
+let obj11;
+let obj2;
+let obj3;
+let obj4;
+let obj5;
+let obj6;
+let obj7;
+let obj8;
+let obj9;
+let size;
+let size1;
+let unpackModuleId;
 function ClassificationDetail(classification) {
+  let items2;
+  let items3;
+  let obj4;
+  let obj5;
+  let tmp2Result;
+  let tmp8Result;
   classification = classification.classification;
   const tmp = closure_14();
   const id = classification.id;
   const description = classification.description;
   const guild_metadata = classification.guild_metadata;
   let obj = description(guild_metadata[18]);
-  const tmp2 = description;
-  const extractTimestampResult = description(guild_metadata[18]).extractTimestamp(id);
-  const tmp5 = id;
-  const isNewClassification = id(guild_metadata[19]).useIsNewClassification(classification);
+  const extractTimestampResult = obj.extractTimestamp(id);
+  let obj2 = id(guild_metadata[19]);
+  const isNewClassification = obj2.useIsNewClassification(classification);
   const items = [description, guild_metadata];
   const items1 = [tmp.detailContainerOuter, ];
   let prop = null;
-  const memo = noop.useMemo(() => {
+  const memo = react.useMemo(() => {
+    let formatResult;
+    let name;
+    let name1;
     function hook(children, arg1) {
-      return closure_1_11(id(guild_metadata[13]).Text, { variant: "heading-md/extrabold", children }, arg1);
+      const obj = { variant: "heading-md/extrabold", children };
+      return closure_1_11(id(guild_metadata[13]).Text, obj, arg1);
     }
-    let obj2 = { description, descriptionHook: hook };
-    let tmp4 = null;
+    let obj = { description, descriptionHook: hook };
     if (null != guild_metadata) {
+      let format2Result;
       let member_type;
-      if (guild_metadata != tmp4) {
+      if (guild_metadata != null) {
         member_type = guild_metadata.member_type;
       }
-      let Lb0HVv = require;
-      let obj = dependencyMap;
       if (member_type === SafetyHubModels.MemberType.OWNER) {
-        const intl3 = Lb0HVv(1126).intl;
-        Lb0HVv = Lb0HVv(1126).t.Lb0HVv;
-        obj = {};
-        const merged = Object.assign(obj2);
-        tmp4 = guild_metadata == tmp4;
-        obj2 = undefined;
-        if (!tmp4) {
-          obj2 = guild_metadata.name;
-        }
-        obj.guildName = obj2;
-        let formatResult = intl3.format(Lb0HVv, obj);
-      } else {
-        const intl2 = Lb0HVv(1126).intl;
-        const obj4 = { classification_type: tmp2, classificationHook: hook, guildName: null };
-        let name;
-        if (guild_metadata != tmp4) {
+        const intl3 = intl4.intl;
+        const format2 = intl3.format;
+        const obj2 = { guildName: name };
+        const Lb0HVv = intl4.t.Lb0HVv;
+        const merged = Object.assign(obj);
+        name = undefined;
+        if (guild_metadata != null) {
           name = guild_metadata.name;
         }
-        obj4.guildName = name;
-        formatResult = intl2.format(Lb0HVv(1126).t.rmpEPD, obj4);
+        format2Result = format2(Lb0HVv, obj2);
+      } else {
+        const intl2 = intl4.intl;
+        const format = intl2.format;
+        const obj3 = { classification_type: tmp, classificationHook: hook, guildName: name1 };
+        name1 = undefined;
+        const rmpEPD = intl4.t.rmpEPD;
+        if (guild_metadata != null) {
+          name1 = guild_metadata.name;
+        }
+        format2Result = format(rmpEPD, obj3);
       }
+      formatResult = format2Result;
     } else {
-      const intl = util.intl;
-      return intl.format(util.t.QY4g5t, obj2);
+      const intl = intl4.intl;
+      formatResult = intl.format(intl4.t.QY4g5t, obj);
     }
+    return formatResult;
   }, items);
+  const tmp2 = description;
+  const tmp5 = id;
   if (isNewClassification) {
     prop = tmp.detailContainerOuterNew;
   }
-  const obj3 = { style: items1, children: null };
+  let obj3 = { style: items1, children: closure_11(tmp2Result, obj4) };
   items1[1] = prop;
-  let obj4 = {
+  obj4 = {
     onPress() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11490, dependencyMap.paths), { classificationId: id, source: closure_2_8.StandingTab });
+      const obj = ModalActionCreatorsDefault;
+      const obj2 = { classificationId: id, source: metroImportAll.StandingTab };
+      obj.pushLazy(asyncRequire(11490, dependencyMap.paths), obj2);
     },
-    children: null
+    children: closure_12(closure_6, obj5)
   };
-  const obj5 = { style: null, children: null };
-  const items2 = [tmp.detailContainerInner];
-  obj5.style = items2;
-  let obj2 = id(guild_metadata[19]);
+  obj5 = { style: items2, children: items3 };
+  items2 = [tmp.detailContainerInner];
+  tmp2Result = tmp2(guild_metadata[16]);
   if (isNewClassification) {
-    let tmp8Result = closure_11(closure_19, {});
+    tmp8Result = closure_11(closure_19, {});
   } else {
     const obj6 = { timestamp: extractTimestampResult };
     tmp8Result = closure_11(closure_18, obj6);
   }
-  const items3 = [tmp8Result, closure_11(tmp5(guild_metadata[13]).Text, { variant: "heading-md/normal", children: memo })];
-  obj5.children = items3;
-  obj4.children = closure_12(closure_6, obj5);
-  obj3.children = closure_11(tmp2(guild_metadata[16]), obj4);
+  items3 = [tmp8Result, closure_11(tmp5(guild_metadata[13]).Text, { variant: "heading-md/normal", children: memo })];
   return closure_11(closure_6, obj3);
 }
-get_ActivityIndicator = fn(17);
-({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SafetyHubConstants = fn(8093);
-({ SafetyHubAnalyticsActionSource: closure_8, SafetyHubAnalyticsActions: closure_9 } = SafetyHubConstants);
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const jsxProd = fn(21);
-({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { connectedContainer: { display: "flex", marginTop: nativeDefault.space.PX_12, marginBottom: 36, gap: nativeDefault.space.PX_12 }, container: null, header: null, detailContainerOuter: null, detailContainerOuterNew: null, detailContainerInner: null, iconBackground: null, chevron: null, incidentDate: null, incidentDateNew: null, newText: null, emptyState: null, separator: null, moreButtonContainer: null, moreButton: null, headerTextContainer: null };
-let obj3 = { display: "flex", marginTop: nativeDefault.space.PX_12, marginBottom: 36, gap: nativeDefault.space.PX_12 };
-obj2.container = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_8, width: "100%" };
-let obj4 = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_8, width: "100%" };
-obj2.header = { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16, width: "100%" };
-let obj5 = { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16, width: "100%" };
-obj2.detailContainerOuter = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12, marginTop: 10 };
-let obj6 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12, marginTop: 10 };
-obj2.detailContainerOuterNew = { borderColor: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT, borderWidth: 1, borderStyle: "solid" };
-let obj7 = { borderColor: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT, borderWidth: 1, borderStyle: "solid" };
-obj2.detailContainerInner = { display: "flex", gap: nativeDefault.space.PX_8 };
-let obj8 = { display: "flex", gap: nativeDefault.space.PX_8 };
-obj2.iconBackground = { display: "flex", borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, justifyContent: "center", alignItems: "center", padding: 6 };
-obj2.chevron = { marginLeft: "auto" };
-let obj9 = { display: "flex", borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, justifyContent: "center", alignItems: "center", padding: 6 };
-obj2.incidentDate = { alignSelf: "flex-start", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.md, paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8 };
-let obj10 = { alignSelf: "flex-start", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.md, paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8 };
-obj2.incidentDateNew = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
-obj2.newText = { textTransform: "capitalize" };
-let obj11 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
-obj2.emptyState = { display: "flex", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: nativeDefault.radii.md, gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_24 };
-let size = { height: 1, width: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: 10 };
-obj2.separator = size;
-obj2.moreButtonContainer = { display: "flex", alignItems: "center", justifyContent: "center" };
-const size1 = { display: "flex", alignItems: "center", justifyContent: "center", borderBottomEndRadius: nativeDefault.radii.xs, borderBottomStartRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height: 29, width: 207 };
-obj2.moreButton = size1;
-obj2.headerTextContainer = { flexShrink: 0, flexGrow: 1, gap: 2 };
-let closure_14 = createStyles.createStyles(obj2);
-let ReactCompilerGating = fn(558);
+({ Pressable: hasOwnProperty, View: metroRequire } = react_native);
+({ SafetyHubAnalyticsActionSource: metroImportAll, SafetyHubAnalyticsActions: c9 } = SafetyHubConstants);
+const AnalyticEvents = Constants.AnalyticEvents;
+({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { connectedContainer: obj2, container: obj3, header: obj4, detailContainerOuter: obj5, detailContainerOuterNew: obj6, detailContainerInner: obj7, iconBackground: obj8, chevron: { marginLeft: "auto" }, incidentDate: obj9, incidentDateNew: obj10, newText: { textTransform: "capitalize" }, emptyState: obj11, separator: size, moreButtonContainer: { display: "flex", alignItems: "center", justifyContent: "center" }, moreButton: size1, headerTextContainer: { flexShrink: 0, flexGrow: 1, gap: 2 } };
+obj2 = { display: "flex", marginTop: nativeDefault.space.PX_12, marginBottom: 36, gap: nativeDefault.space.PX_12 };
+createStyles = createStyles.createStyles;
+obj3 = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_8, width: "100%" };
+obj4 = { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16, width: "100%" };
+obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12, marginTop: 10 };
+obj6 = { borderColor: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT, borderWidth: 1, borderStyle: "solid" };
+obj7 = { display: "flex", gap: nativeDefault.space.PX_8 };
+obj8 = { display: "flex", borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, justifyContent: "center", alignItems: "center", padding: 6 };
+obj9 = { alignSelf: "flex-start", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.md, paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8 };
+obj10 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
+obj11 = { display: "flex", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: nativeDefault.radii.md, gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_24 };
+size = { height: 1, width: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: 10 };
+size1 = { display: "flex", alignItems: "center", justifyContent: "center", borderBottomEndRadius: nativeDefault.radii.xs, borderBottomStartRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height: 29, width: 207 };
+let closure_14 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  let items4 = require;
-  const cResult = c.c(33);
+  let ICON_MUTED;
+  let count;
+  let items3;
+  let items4;
+  let items5;
+  let onClick;
+  let opened;
+  let status;
+  let tmp10;
+  let tmp5;
+  let tmp6;
+  let tmp9;
+  const obj = react2;
+  const cResult = obj.c(33);
   ({ count, onClick, opened, status } = arg0);
-  let chevron = closure_14();
-  if (cResult[0] !== chevron.header) {
-    const items = [chevron.header];
-    cResult[0] = chevron.header;
+  const tmp4 = closure_14();
+  if (cResult[0] !== tmp4.header) {
+    const items = [tmp4.header];
+    cResult[0] = tmp4.header;
     cResult[1] = items;
-    let tmp3 = items;
+    tmp5 = items;
   } else {
-    tmp3 = cResult[1];
+    tmp5 = cResult[1];
   }
-  if (cResult[2] !== chevron.iconBackground) {
-    const items1 = [chevron.iconBackground];
-    cResult[2] = chevron.iconBackground;
+  if (cResult[2] !== tmp4.iconBackground) {
+    const items1 = [tmp4.iconBackground];
+    cResult[2] = tmp4.iconBackground;
     cResult[3] = items1;
-    let tmp4 = items1;
+    tmp6 = items1;
   } else {
-    tmp4 = cResult[3];
+    tmp6 = cResult[3];
   }
   const colors = nativeDefault.colors;
   if ("active" === status) {
-    let ICON_MUTED = colors.INTERACTIVE_TEXT_DEFAULT;
-    let tmp7 = importDefault;
+    ICON_MUTED = colors.INTERACTIVE_TEXT_DEFAULT;
+    tmp9 = importDefault;
   } else {
     ICON_MUTED = colors.ICON_MUTED;
-    tmp7 = importDefault;
+    tmp9 = importDefault;
   }
   if (cResult[4] !== ICON_MUTED) {
     const obj2 = { color: ICON_MUTED, size: "xs" };
-    const tmp10 = closure_1_11(WarningIcon.WarningIcon, obj2);
+    const tmp12 = unpackModuleId(WarningIcon2.WarningIcon, obj2);
     cResult[4] = ICON_MUTED;
-    cResult[5] = tmp10;
-    let tmp8 = tmp10;
+    cResult[5] = tmp12;
+    tmp10 = tmp12;
   } else {
-    tmp8 = cResult[5];
+    tmp10 = cResult[5];
   }
-  if (cResult[6] === tmp4) {
-    if (cResult[7] === tmp8) {
-      let tmp11 = cResult[8];
+  if (cResult[6] === tmp6) {
+    let tmp13;
+    let tmp15;
+    let formatToPlainStringResult;
+    if (cResult[7] === tmp10) {
+      tmp13 = cResult[8];
     }
-    if (cResult[9] !== chevron.headerTextContainer) {
-      const items2 = [chevron.headerTextContainer];
-      cResult[9] = chevron.headerTextContainer;
+    if (cResult[9] !== tmp4.headerTextContainer) {
+      const items2 = [tmp4.headerTextContainer];
+      cResult[9] = tmp4.headerTextContainer;
       cResult[10] = items2;
-      let tmp13 = items2;
+      tmp15 = items2;
     } else {
-      tmp13 = cResult[10];
+      tmp15 = cResult[10];
     }
     if (cResult[11] === count) {
+      let tmp16;
+      let tmp18;
+      let tmp21;
+      let tmp23;
       if (cResult[12] === status) {
-        if (cResult[14] !== cResult[13]) {
-          const obj3 = { variant: "heading-sm/semibold", children: tmp14 };
-          const tmp19 = closure_1_11(Text_Text.Text, obj3);
-          cResult[14] = tmp14;
-          cResult[15] = tmp19;
-          let tmp17 = tmp19;
+        tmp16 = cResult[13];
+      }
+      if (cResult[14] !== tmp16) {
+        const obj3 = { variant: "heading-sm/semibold", children: tmp16 };
+        const tmp20 = unpackModuleId(Text_Text.Text, obj3);
+        cResult[14] = tmp16;
+        cResult[15] = tmp20;
+        tmp18 = tmp20;
+      } else {
+        tmp18 = cResult[15];
+      }
+      if (cResult[16] !== status) {
+        let stringResult;
+        const intl2 = intl4.intl;
+        const string = intl2.string;
+        const t2 = intl4.t;
+        if ("active" === status) {
+          stringResult = string(t2.XJ2YVR);
         } else {
-          tmp17 = cResult[15];
+          stringResult = string(t2.SzGV0g);
         }
-        if (cResult[16] !== status) {
-          const intl2 = util.intl;
-          const string = intl2.string;
-          let XJ2YVR = util.t;
-          if (tmp5) {
-            XJ2YVR = XJ2YVR.XJ2YVR;
-            let stringResult = string(XJ2YVR);
-          } else {
-            stringResult = string(XJ2YVR.SzGV0g);
+        cResult[16] = status;
+        cResult[17] = stringResult;
+        tmp21 = stringResult;
+      } else {
+        tmp21 = cResult[17];
+      }
+      if (cResult[18] !== tmp21) {
+        const obj4 = { variant: "text-xxs/normal", color: "text-muted", children: tmp21 };
+        const tmp25 = unpackModuleId(Text_Text.Text, obj4);
+        cResult[18] = tmp21;
+        cResult[19] = tmp25;
+        tmp23 = tmp25;
+      } else {
+        tmp23 = cResult[19];
+      }
+      if (cResult[20] === tmp23) {
+        if (cResult[21] === tmp15) {
+          let tmp26;
+          let ChevronSmallDownIcon;
+          if (cResult[22] === tmp18) {
+            tmp26 = cResult[23];
           }
-          cResult[16] = status;
-          cResult[17] = stringResult;
-        } else {
-          if (cResult[18] !== cResult[17]) {
-            const obj4 = { variant: "text-xxs/normal", color: "text-muted", children: tmp20 };
-            const tmp25 = closure_1_11(Text_Text.Text, obj4);
-            cResult[18] = tmp20;
-            cResult[19] = tmp25;
-            let tmp23 = tmp25;
-          } else {
-            tmp23 = cResult[19];
-          }
-          if (cResult[20] === tmp23) {
-            if (cResult[21] === tmp13) {
-              if (cResult[22] === tmp17) {
-                let tmp26 = cResult[23];
-              }
-              if (cResult[24] === opened) {
-                if (cResult[25] === chevron.chevron) {
-                  if (cResult[27] === onClick) {
-                    if (cResult[28] === tmp3) {
-                      if (cResult[29] === tmp26) {
-                        if (cResult[30] === tmp30) {
-                          if (cResult[31] === tmp11) {
-                            let tmp34 = cResult[32];
-                          }
-                          return tmp34;
-                        }
-                      }
+          if (cResult[24] === opened) {
+            let tmp30;
+            if (cResult[25] === tmp4.chevron) {
+              tmp30 = cResult[26];
+            }
+            if (cResult[27] === onClick) {
+              if (cResult[28] === tmp5) {
+                if (cResult[29] === tmp26) {
+                  if (cResult[30] === tmp30) {
+                    let tmp33;
+                    if (cResult[31] === tmp13) {
+                      tmp33 = cResult[32];
                     }
+                    return tmp33;
                   }
-                  const obj5 = { onPress: onClick, style: tmp3, children: null };
-                  const items3 = [tmp11, tmp26, cResult[26]];
-                  obj5.children = items3;
-                  const tmp36 = __initData(tmp7(9442), obj5);
-                  cResult[27] = onClick;
-                  cResult[28] = tmp3;
-                  cResult[29] = tmp26;
-                  cResult[30] = cResult[26];
-                  cResult[31] = tmp11;
-                  cResult[32] = tmp36;
-                  tmp34 = tmp36;
                 }
               }
-              if (opened) {
-                let ChevronSmallDownIcon = ChevronSmallUpIcon.ChevronSmallUpIcon;
-              } else {
-                ChevronSmallDownIcon = ChevronSmallDownIcon2.ChevronSmallDownIcon;
-              }
-              const obj6 = { size: "md", style: null };
-              items4 = [chevron.chevron];
-              obj6.style = items4;
-              const tmp31Result = closure_1_11(ChevronSmallDownIcon, obj6);
-              cResult[24] = opened;
-              chevron = chevron.chevron;
-              cResult[25] = chevron;
-              cResult[26] = tmp31Result;
             }
+            const obj5 = { onPress: onClick, style: tmp5, children: items3 };
+            items3 = [tmp13, tmp26, tmp30];
+            const tmp35 = closure_12(tmp9(9442), obj5);
+            cResult[27] = onClick;
+            cResult[28] = tmp5;
+            cResult[29] = tmp26;
+            cResult[30] = tmp30;
+            cResult[31] = tmp13;
+            cResult[32] = tmp35;
+            tmp33 = tmp35;
           }
-          const obj7 = { style: tmp13, children: null };
-          const items5 = [tmp17, tmp23];
-          obj7.children = items5;
-          const tmp29 = __initData(timestampProducer, obj7);
-          cResult[20] = tmp23;
-          cResult[21] = tmp13;
-          cResult[22] = tmp17;
-          cResult[23] = tmp29;
-          tmp26 = tmp29;
+          if (opened) {
+            ChevronSmallDownIcon = ChevronSmallUpIcon.ChevronSmallUpIcon;
+          } else {
+            ChevronSmallDownIcon = ChevronSmallDownIcon2.ChevronSmallDownIcon;
+          }
+          const obj6 = { size: "md", style: items4 };
+          items4 = [tmp4.chevron];
+          const tmp31Result = unpackModuleId(ChevronSmallDownIcon, obj6);
+          cResult[24] = opened;
+          cResult[25] = tmp4.chevron;
+          cResult[26] = tmp31Result;
+          tmp30 = tmp31Result;
         }
       }
+      const obj7 = { style: tmp15, children: items5 };
+      items5 = [tmp18, tmp23];
+      const tmp29 = closure_12(metroRequire, obj7);
+      cResult[20] = tmp23;
+      cResult[21] = tmp15;
+      cResult[22] = tmp18;
+      cResult[23] = tmp29;
+      tmp26 = tmp29;
     }
-    const intl = util.intl;
+    const intl = intl4.intl;
     const formatToPlainString = intl.formatToPlainString;
-    let t = util.t;
-    if (tmp5) {
-      t = { count: count.toString() };
-      let formatToPlainStringResult = formatToPlainString(t.IeV2oY, t);
-    } else {
+    const t = intl4.t;
+    if ("active" === status) {
+      const IeV2oY = t.IeV2oY;
       const obj8 = { count: count.toString() };
-      formatToPlainStringResult = formatToPlainString(t.fZAHBT, obj8);
+      formatToPlainStringResult = formatToPlainString(IeV2oY, obj8);
+    } else {
+      const fZAHBT = t.fZAHBT;
+      const obj9 = { count: count.toString() };
+      formatToPlainStringResult = formatToPlainString(fZAHBT, obj9);
     }
     cResult[11] = count;
     cResult[12] = status;
     cResult[13] = formatToPlainStringResult;
+    tmp16 = formatToPlainStringResult;
   }
-  const tmp12 = closure_1_11(timestampProducer, { style: tmp4, children: tmp8 });
-  cResult[6] = tmp4;
-  cResult[7] = tmp8;
-  cResult[8] = tmp12;
-  tmp11 = tmp12;
+  const tmp14 = unpackModuleId(metroRequire, { style: tmp6, children: tmp10 });
+  cResult[6] = tmp6;
+  cResult[7] = tmp10;
+  cResult[8] = tmp14;
+  tmp13 = tmp14;
 }) : ((count) => {
+  let ChevronSmallDownIcon;
+  let WarningIcon;
+  let formatToPlainStringResult;
+  let items;
+  let items1;
+  let items2;
+  let items3;
+  let items4;
+  let items5;
+  let obj3;
+  let onClick;
+  let opened;
+  let status;
+  let stringResult;
   ({ onClick, opened, status } = count);
   const tmp = closure_14();
-  const obj = { onPress: onClick, style: null, children: null };
-  const items = [tmp.header];
-  obj.style = items;
-  const obj2 = { style: null, children: null };
-  const items1 = [tmp.iconBackground];
-  obj2.style = items1;
+  const obj = { onPress: onClick, style: items, children: items2 };
+  items = [tmp.header];
+  const obj2 = { style: items1, children: unpackModuleId(WarningIcon, obj3) };
+  items1 = [tmp.iconBackground];
+  const tmp4 = TouchableHitBoxDefault;
+  WarningIcon = WarningIcon2.WarningIcon;
   const colors = nativeDefault.colors;
-  obj2.children = closure_1_11(WarningIcon.WarningIcon, { color: "active" === status ? colors.INTERACTIVE_TEXT_DEFAULT : colors.ICON_MUTED, size: "xs" });
-  const items2 = [closure_1_11(timestampProducer, obj2), , ];
-  const obj4 = { style: null, children: null };
-  const items3 = [tmp.headerTextContainer];
-  obj4.style = items3;
-  const intl = util.intl;
+  obj3 = { color: "active" === status ? colors.INTERACTIVE_TEXT_DEFAULT : colors.ICON_MUTED, size: "xs" };
+  items2 = [unpackModuleId(metroRequire, obj2), , ];
+  const obj4 = { style: items3, children: items4 };
+  items3 = [tmp.headerTextContainer];
+  const Text = Text_Text.Text;
+  const intl = intl4.intl;
   const formatToPlainString = intl.formatToPlainString;
-  const t = util.t;
+  const t = intl4.t;
   if ("active" === status) {
-    const obj5 = { count: str.toString() };
-    let formatToPlainStringResult = formatToPlainString(t.IeV2oY, obj5);
+    const IeV2oY = t.IeV2oY;
+    const obj5 = { count: count.count.toString() };
+    formatToPlainStringResult = formatToPlainString(IeV2oY, obj5);
   } else {
-    const obj6 = { count: str.toString() };
-    formatToPlainStringResult = formatToPlainString(t.fZAHBT, obj6);
+    const fZAHBT = t.fZAHBT;
+    const obj6 = { count: count.count.toString() };
+    formatToPlainStringResult = formatToPlainString(fZAHBT, obj6);
   }
-  const items4 = [closure_1_11(Text_Text.Text, { variant: "heading-sm/semibold", children: formatToPlainStringResult }), ];
-  const intl2 = util.intl;
+  items4 = [unpackModuleId(Text, { variant: "heading-sm/semibold", children: formatToPlainStringResult }), ];
+  const Text2 = Text_Text.Text;
+  const intl2 = intl4.intl;
   const string = intl2.string;
-  const t2 = util.t;
+  const t2 = intl4.t;
   if ("active" === status) {
-    let stringResult = string(t2.XJ2YVR);
+    stringResult = string(t2.XJ2YVR);
   } else {
     stringResult = string(t2.SzGV0g);
   }
-  items4[1] = closure_1_11(Text_Text.Text, { variant: "text-xxs/normal", color: "text-muted", children: stringResult });
-  obj4.children = items4;
-  items2[1] = __initData(timestampProducer, obj4);
+  items4[1] = unpackModuleId(Text2, { variant: "text-xxs/normal", color: "text-muted", children: stringResult });
+  items2[1] = closure_12(metroRequire, obj4);
   if (opened) {
-    let ChevronSmallDownIcon = ChevronSmallUpIcon.ChevronSmallUpIcon;
+    ChevronSmallDownIcon = ChevronSmallUpIcon.ChevronSmallUpIcon;
   } else {
     ChevronSmallDownIcon = ChevronSmallDownIcon2.ChevronSmallDownIcon;
   }
-  const obj7 = { size: "md", style: null };
-  const items5 = [tmp.chevron];
-  obj7.style = items5;
-  items2[2] = closure_1_11(ChevronSmallDownIcon, obj7);
-  obj.children = items2;
-  return __initData(TouchableHitBoxDefault, obj);
+  const obj7 = { size: "md", style: items5 };
+  items5 = [tmp.chevron];
+  items2[2] = unpackModuleId(ChevronSmallDownIcon, obj7);
+  return closure_12(tmp4, obj);
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(6);
+  let intl;
+  let intl2;
+  let items1;
+  let tmp12;
+  let tmp5;
+  let tmp6;
+  let tmp9;
+  const obj = react2;
+  const cResult = obj.c(6);
   const tmp4 = closure_14();
   if (cResult[0] !== tmp4.emptyState) {
     const items = [tmp4.emptyState];
     cResult[0] = tmp4.emptyState;
     cResult[1] = items;
-    let tmp5 = items;
+    tmp5 = items;
   } else {
     tmp5 = cResult[1];
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { variant: "heading-sm/extrabold", children: null };
-    const intl = util.intl;
-    obj2.children = intl.string(util.t.reLFaV);
-    const tmp8 = closure_1_11(Text_Text.Text, obj2);
+    const obj2 = { variant: "heading-sm/extrabold", children: intl.string(intl4.t.reLFaV) };
+    const Text = Text_Text.Text;
+    intl = intl4.intl;
+    const tmp8 = unpackModuleId(Text, obj2);
     cResult[2] = tmp8;
-    let tmp6 = tmp8;
+    tmp6 = tmp8;
   } else {
     tmp6 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { variant: "text-xs/normal", children: null };
-    const intl2 = util.intl;
-    obj3.children = intl2.string(util.t.ERdH1o);
-    const tmp11 = closure_1_11(Text_Text.Text, obj3);
+    const obj3 = { variant: "text-xs/normal", children: intl2.string(intl4.t.ERdH1o) };
+    const Text2 = Text_Text.Text;
+    intl2 = intl4.intl;
+    const tmp11 = unpackModuleId(Text2, obj3);
     cResult[3] = tmp11;
-    let tmp9 = tmp11;
+    tmp9 = tmp11;
   } else {
     tmp9 = cResult[3];
   }
   if (cResult[4] !== tmp5) {
-    const obj4 = { style: tmp5, children: null };
-    const items1 = [tmp6, tmp9];
-    obj4.children = items1;
-    const tmp15 = __initData(timestampProducer, obj4);
+    const obj4 = { style: tmp5, children: items1 };
+    items1 = [tmp6, tmp9];
+    const tmp15 = closure_12(metroRequire, obj4);
     cResult[4] = tmp5;
     cResult[5] = tmp15;
-    let tmp12 = tmp15;
+    tmp12 = tmp15;
   } else {
     tmp12 = cResult[5];
   }
   return tmp12;
 }) : (() => {
-  const obj = { style: null, children: null };
-  const items = [closure_14().emptyState];
-  obj.style = items;
-  const obj2 = { variant: "heading-sm/extrabold", children: null };
-  const intl = util.intl;
-  obj2.children = intl.string(util.t.reLFaV);
-  const items1 = [closure_1_11(Text_Text.Text, obj2), ];
-  const obj3 = { variant: "text-xs/normal", children: null };
-  const intl2 = util.intl;
-  obj3.children = intl2.string(util.t.ERdH1o);
-  items1[1] = closure_1_11(Text_Text.Text, obj3);
-  obj.children = items1;
-  return __initData(timestampProducer, obj);
+  let intl;
+  let intl2;
+  let items;
+  let items1;
+  const obj = { style: items, children: items1 };
+  items = [closure_14().emptyState];
+  const obj2 = { variant: "heading-sm/extrabold", children: intl.string(intl4.t.reLFaV) };
+  const Text = Text_Text.Text;
+  intl = intl4.intl;
+  items1 = [unpackModuleId(Text, obj2), ];
+  const obj3 = { variant: "text-xs/normal", children: intl2.string(intl4.t.ERdH1o) };
+  const Text2 = Text_Text.Text;
+  intl2 = intl4.intl;
+  items1[1] = unpackModuleId(Text2, obj3);
+  return closure_12(metroRequire, obj);
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(5);
+  let intl;
+  let tmp5;
+  let tmp6;
+  let tmp9;
+  const obj = react2;
+  const cResult = obj.c(5);
   const tmp4 = closure_14();
   if (cResult[0] !== tmp4.emptyState) {
     const items = [tmp4.emptyState];
     cResult[0] = tmp4.emptyState;
     cResult[1] = items;
-    let tmp5 = items;
+    tmp5 = items;
   } else {
     tmp5 = cResult[1];
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { variant: "text-xs/normal", children: null };
-    const intl = util.intl;
-    obj2.children = intl.string(util.t.RV3AXf);
-    const tmp8 = closure_1_11(Text_Text.Text, obj2);
+    const obj2 = { variant: "text-xs/normal", children: intl.string(intl4.t.RV3AXf) };
+    const Text = Text_Text.Text;
+    intl = intl4.intl;
+    const tmp8 = unpackModuleId(Text, obj2);
     cResult[2] = tmp8;
-    let tmp6 = tmp8;
+    tmp6 = tmp8;
   } else {
     tmp6 = cResult[2];
   }
   if (cResult[3] !== tmp5) {
     const obj3 = { style: tmp5, children: tmp6 };
-    const tmp12 = closure_1_11(timestampProducer, obj3);
+    const tmp12 = unpackModuleId(metroRequire, obj3);
     cResult[3] = tmp5;
     cResult[4] = tmp12;
-    let tmp9 = tmp12;
+    tmp9 = tmp12;
   } else {
     tmp9 = cResult[4];
   }
   return tmp9;
 }) : (() => {
-  const obj = { style: null, children: null };
-  const items = [closure_14().emptyState];
-  obj.style = items;
-  const obj2 = { variant: "text-xs/normal", children: null };
-  const intl = util.intl;
-  obj2.children = intl.string(util.t.RV3AXf);
-  obj.children = closure_1_11(Text_Text.Text, obj2);
-  return closure_1_11(timestampProducer, obj);
+  let Text;
+  let intl;
+  let items;
+  let obj2;
+  const obj = { style: items, children: unpackModuleId(Text, obj2) };
+  items = [closure_14().emptyState];
+  obj2 = { variant: "text-xs/normal", children: intl.string(intl4.t.RV3AXf) };
+  Text = Text_Text.Text;
+  intl = intl4.intl;
+  return unpackModuleId(metroRequire, obj);
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((timestamp) => {
-  const cResult = c.c(7);
+  let tmp5;
+  let tmp7;
+  const obj = react2;
+  const cResult = obj.c(7);
   timestamp = timestamp.timestamp;
   const tmp4 = closure_14();
+  const incidentDate = tmp4.incidentDate;
   if (cResult[0] !== timestamp) {
-    const classificationRelativeIncidentTime = SafetyHubUtils.getClassificationRelativeIncidentTime(timestamp);
+    const tmpResult = SafetyHubUtils;
+    const classificationRelativeIncidentTime = tmpResult.getClassificationRelativeIncidentTime(timestamp);
     cResult[0] = timestamp;
     cResult[1] = classificationRelativeIncidentTime;
-    let tmp5 = classificationRelativeIncidentTime;
-    const tmpResult = SafetyHubUtils;
+    tmp5 = classificationRelativeIncidentTime;
   } else {
     tmp5 = cResult[1];
   }
   if (cResult[2] !== tmp5) {
     const obj2 = { variant: "text-xs/medium", children: tmp5 };
-    const tmp9 = closure_1_11(Text_Text.Text, obj2);
+    const tmp9 = unpackModuleId(Text_Text.Text, obj2);
     cResult[2] = tmp5;
     cResult[3] = tmp9;
-    let tmp7 = tmp9;
+    tmp7 = tmp9;
   } else {
     tmp7 = cResult[3];
   }
   if (cResult[4] === tmp4.incidentDate) {
+    let tmp10;
     if (cResult[5] === tmp7) {
-      let tmp10 = cResult[6];
+      tmp10 = cResult[6];
     }
     return tmp10;
   }
-  const tmp11 = closure_1_11(timestampProducer, { style: tmp4.incidentDate, children: tmp7 });
+  const tmp11 = unpackModuleId(metroRequire, { style: incidentDate, children: tmp7 });
   cResult[4] = tmp4.incidentDate;
   cResult[5] = tmp7;
   cResult[6] = tmp11;
   tmp10 = tmp11;
 }) : ((timestamp) => {
-  const obj = { style: closure_14().incidentDate, children: null };
-  const obj2 = { variant: "text-xs/medium", children: SafetyHubUtils.getClassificationRelativeIncidentTime(timestamp.timestamp) };
-  obj.children = closure_1_11(Text_Text.Text, obj2);
-  return closure_1_11(timestampProducer, obj);
+  let Text;
+  let obj2;
+  let obj3;
+  timestamp = timestamp.timestamp;
+  const obj = { style: closure_14().incidentDate, children: unpackModuleId(Text, obj2) };
+  obj2 = { variant: "text-xs/medium", children: obj3.getClassificationRelativeIncidentTime(timestamp) };
+  Text = Text_Text.Text;
+  obj3 = SafetyHubUtils;
+  return unpackModuleId(metroRequire, obj);
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(9);
+  const obj = react2;
+  const cResult = obj.c(9);
   const tmp4 = closure_14();
   if (cResult[0] === tmp4.incidentDate) {
+    let tmp5;
+    let tmp7;
+    let tmp9;
     if (cResult[1] === tmp4.incidentDateNew) {
-      let tmp5 = cResult[2];
+      tmp5 = cResult[2];
     }
     const _Symbol = Symbol;
+    const newText = tmp4.newText;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl = util.intl;
-      const stringResult = intl.string(util.t.QKMRC4);
+      const intl = intl4.intl;
+      const stringResult = intl.string(intl4.t.QKMRC4);
       cResult[3] = stringResult;
-      let tmp7 = stringResult;
+      tmp7 = stringResult;
     } else {
       tmp7 = cResult[3];
     }
     if (cResult[4] !== tmp4.newText) {
-      const obj2 = { variant: "text-xs/medium", color: "text-overlay-light", style: tmp4.newText, children: tmp7 };
-      const tmp11 = closure_1_11(Text_Text.Text, obj2);
+      const obj2 = { variant: "text-xs/medium", color: "text-overlay-light", style: newText, children: tmp7 };
+      const tmp11 = unpackModuleId(Text_Text.Text, obj2);
       cResult[4] = tmp4.newText;
       cResult[5] = tmp11;
-      let tmp9 = tmp11;
+      tmp9 = tmp11;
     } else {
       tmp9 = cResult[5];
     }
     if (cResult[6] === tmp5) {
+      let tmp12;
       if (cResult[7] === tmp9) {
-        let tmp12 = cResult[8];
+        tmp12 = cResult[8];
       }
       return tmp12;
     }
     const obj3 = { style: tmp5, children: tmp9 };
-    const tmp15 = closure_1_11(timestampProducer, obj3);
+    const tmp15 = unpackModuleId(metroRequire, obj3);
     cResult[6] = tmp5;
     cResult[7] = tmp9;
     cResult[8] = tmp15;
@@ -535,31 +628,45 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[2] = items;
   tmp5 = items;
 }) : (() => {
+  let Text;
+  let intl;
+  let items;
+  let obj2;
   const tmp = closure_14();
-  const obj = { style: null, children: null };
-  const items = [, ];
+  const obj = { style: items, children: unpackModuleId(Text, obj2) };
+  items = [, ];
   ({ incidentDate: arr[0], incidentDateNew: arr[1] } = tmp);
-  obj.style = items;
-  const obj2 = { variant: "text-xs/medium", color: "text-overlay-light", style: tmp.newText, children: null };
-  const intl = util.intl;
-  obj2.children = intl.string(util.t.QKMRC4);
-  obj.children = closure_1_11(Text_Text.Text, obj2);
-  return closure_1_11(timestampProducer, obj);
+  obj2 = { variant: "text-xs/medium", color: "text-overlay-light", style: tmp.newText, children: intl.string(intl4.t.QKMRC4) };
+  Text = Text_Text.Text;
+  intl = intl4.intl;
+  return unpackModuleId(metroRequire, obj);
 });
-ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = opened(576).c(31);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let classifications;
+  let closure_1;
+  let isDsaEligible;
+  let items2;
+  let opened;
+  let safetyHubAccountStanding;
+  let stateFromStores;
+  let status;
+  let tmp10;
+  let tmp11;
+  let tmp8;
+  let obj = opened(576);
+  const cResult = obj.c(31);
   ({ status, classifications } = arg0);
   const tmp4 = closure_14();
   const tmp5 = safetyHubAccountStanding(stateFromStores.useState(false), 2);
+  const tmp = opened;
   opened = tmp5[0];
   importDefault = tmp5[1];
-  let obj = opened(576);
-  let obj2 = stateFromStores;
-  const tmp = opened;
   [tmp8, dependencyMap] = safetyHubAccountStanding(stateFromStores.useState(3), 2);
-  const tmp7 = safetyHubAccountStanding(stateFromStores.useState(3), 2);
-  safetyHubAccountStanding = opened(11494).useSafetyHubAccountStanding();
+  safetyHubAccountStanding(stateFromStores.useState(3), 2);
+  const obj3 = opened(11494);
+  safetyHubAccountStanding = obj3.useSafetyHubAccountStanding();
+  const obj2 = stateFromStores;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SafetyHubStore];
     const fn = function x() {
@@ -572,71 +679,53 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     [tmp10, tmp11] = cResult;
   }
-  const obj3 = opened(11494);
-  stateFromStores = tmp(504).useStateFromStores(tmp10, tmp11);
+  const tmpResult = tmp(504);
+  stateFromStores = tmpResult.useStateFromStores(tmp10, tmp11);
   if (cResult[2] === classifications) {
+    let tmp14;
     if (cResult[3] === tmp8) {
-      let tmp14 = cResult[4];
+      tmp14 = cResult[4];
     }
-    closure_5 = tmp14;
+    let closure_5 = tmp14;
     if (cResult[5] === safetyHubAccountStanding.state) {
       if (cResult[6] === tmp14) {
         if (cResult[7] === stateFromStores) {
+          let tmp16;
+          let tmp17;
+          let tmp19;
+          let tmp20;
           if (cResult[8] === opened) {
-            let tmp16 = cResult[9];
-            let tmp17 = cResult[10];
+            tmp16 = cResult[9];
+            tmp17 = cResult[10];
           }
           const effect = obj2.useEffect(tmp16, tmp17);
+          const num9 = 3;
           class L {
             constructor() {
-              if (closure_0) {
-                tmp = closure_1;
-                tmp2 = closure_2;
-                obj = closure_1(closure_2[26]);
-                tmp3 = AnalyticEvents;
-                obj1 = { action: null, account_standing: null, classification_ids: null, source: null, is_violative_content_shown: false, is_dsa_eligible: null };
-                tmp4 = SafetyHubAnalyticsActions;
-                obj1.action = SafetyHubAnalyticsActions.ViewViolationsDropdown;
-                tmp5 = closure_3;
-                obj1.account_standing = closure_3.state;
-                tmp6 = closure_5;
-                obj1.classification_ids = closure_5.map((id) => Number(id.id));
-                tmp7 = closure_8;
-                obj1.source = closure_8.StandingTab;
-                tmp8 = closure_4;
-                obj1.is_dsa_eligible = closure_4;
-                trackResult = obj.track(AnalyticEvents.SAFETY_HUB_ACTION, obj1);
+              if (first) {
+                const obj = { action: React4.ViewViolationsDropdown, account_standing: safetyHubAccountStanding.state, classification_ids: closure_5.map((id) => Number(id.id)), source: metroImportAll.StandingTab, is_violative_content_shown: false, is_dsa_eligible: stateFromStores };
+                const track = AnalyticsUtilsDefault.track;
+                const SAFETY_HUB_ACTION = AnalyticEvents.SAFETY_HUB_ACTION;
+                AnalyticsUtilsDefault;
+                track(SAFETY_HUB_ACTION, obj);
               }
-              return;
             }
           }
           if (cResult[11] !== tmp4.container) {
             const items1 = [tmp4.container];
             class L {
               constructor() {
-                if (closure_0) {
-                  tmp = closure_1;
-                  tmp2 = closure_2;
-                  obj = closure_1(closure_2[26]);
-                  tmp3 = AnalyticEvents;
-                  obj1 = { action: null, account_standing: null, classification_ids: null, source: null, is_violative_content_shown: false, is_dsa_eligible: null };
-                  tmp4 = SafetyHubAnalyticsActions;
-                  obj1.action = SafetyHubAnalyticsActions.ViewViolationsDropdown;
-                  tmp5 = closure_3;
-                  obj1.account_standing = closure_3.state;
-                  tmp6 = closure_5;
-                  obj1.classification_ids = closure_5.map((id) => Number(id.id));
-                  tmp7 = closure_8;
-                  obj1.source = closure_8.StandingTab;
-                  tmp8 = closure_4;
-                  obj1.is_dsa_eligible = closure_4;
-                  trackResult = obj.track(AnalyticEvents.SAFETY_HUB_ACTION, obj1);
+                if (first) {
+                  const obj = { action: React4.ViewViolationsDropdown, account_standing: safetyHubAccountStanding.state, classification_ids: closure_5.map((id) => Number(id.id)), source: metroImportAll.StandingTab, is_violative_content_shown: false, is_dsa_eligible: stateFromStores };
+                  const track = AnalyticsUtilsDefault.track;
+                  const SAFETY_HUB_ACTION = AnalyticEvents.SAFETY_HUB_ACTION;
+                  AnalyticsUtilsDefault;
+                  track(SAFETY_HUB_ACTION, obj);
                 }
-                return;
               }
             }
             cResult[12] = items1;
-            let tmp19 = items1;
+            tmp19 = items1;
           } else {
             tmp19 = cResult[12];
           }
@@ -648,34 +737,23 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             cResult[13] = fn2;
             class L {
               constructor() {
-                if (closure_0) {
-                  tmp = closure_1;
-                  tmp2 = closure_2;
-                  obj = closure_1(closure_2[26]);
-                  tmp3 = AnalyticEvents;
-                  obj1 = { action: null, account_standing: null, classification_ids: null, source: null, is_violative_content_shown: false, is_dsa_eligible: null };
-                  tmp4 = SafetyHubAnalyticsActions;
-                  obj1.action = SafetyHubAnalyticsActions.ViewViolationsDropdown;
-                  tmp5 = closure_3;
-                  obj1.account_standing = closure_3.state;
-                  tmp6 = closure_5;
-                  obj1.classification_ids = closure_5.map((id) => Number(id.id));
-                  tmp7 = closure_8;
-                  obj1.source = closure_8.StandingTab;
-                  tmp8 = closure_4;
-                  obj1.is_dsa_eligible = closure_4;
-                  trackResult = obj.track(AnalyticEvents.SAFETY_HUB_ACTION, obj1);
+                if (first) {
+                  const obj = { action: React4.ViewViolationsDropdown, account_standing: safetyHubAccountStanding.state, classification_ids: closure_5.map((id) => Number(id.id)), source: metroImportAll.StandingTab, is_violative_content_shown: false, is_dsa_eligible: stateFromStores };
+                  const track = AnalyticsUtilsDefault.track;
+                  const SAFETY_HUB_ACTION = AnalyticEvents.SAFETY_HUB_ACTION;
+                  AnalyticsUtilsDefault;
+                  track(SAFETY_HUB_ACTION, obj);
                 }
-                return;
               }
             }
           } else {
-            const tmp20 = cResult[13];
+            tmp20 = cResult[13];
           }
           if (cResult[14] === classifications.length) {
             if (cResult[15] === opened) {
+              let tmp21;
               if (cResult[16] === status) {
-                let tmp21 = cResult[17];
+                tmp21 = cResult[17];
               }
               if (cResult[18] === classifications.length) {
                 if (cResult[19] === tmp14) {
@@ -684,43 +762,32 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                       if (cResult[22] === status) {
                         if (cResult[23] === tmp4.moreButton) {
                           if (cResult[24] === tmp4.moreButtonContainer) {
+                            let tmp25;
                             if (cResult[25] === tmp4.separator) {
-                              let tmp25 = cResult[26];
+                              tmp25 = cResult[26];
                             }
                             if (cResult[27] === tmp19) {
                               if (cResult[28] === tmp21) {
+                                let tmp27;
                                 if (cResult[29] === tmp25) {
-                                  let tmp27 = cResult[30];
+                                  tmp27 = cResult[30];
                                 }
                                 return tmp27;
                               }
                             }
                             class L {
                               constructor() {
-                                if (closure_0) {
-                                  tmp = closure_1;
-                                  tmp2 = closure_2;
-                                  obj = closure_1(closure_2[26]);
-                                  tmp3 = AnalyticEvents;
-                                  obj1 = { action: null, account_standing: null, classification_ids: null, source: null, is_violative_content_shown: false, is_dsa_eligible: null };
-                                  tmp4 = SafetyHubAnalyticsActions;
-                                  obj1.action = SafetyHubAnalyticsActions.ViewViolationsDropdown;
-                                  tmp5 = closure_3;
-                                  obj1.account_standing = closure_3.state;
-                                  tmp6 = closure_5;
-                                  obj1.classification_ids = closure_5.map((id) => Number(id.id));
-                                  tmp7 = closure_8;
-                                  obj1.source = closure_8.StandingTab;
-                                  tmp8 = closure_4;
-                                  obj1.is_dsa_eligible = closure_4;
-                                  trackResult = obj.track(AnalyticEvents.SAFETY_HUB_ACTION, obj1);
+                                if (first) {
+                                  const obj = { action: React4.ViewViolationsDropdown, account_standing: safetyHubAccountStanding.state, classification_ids: closure_5.map((id) => Number(id.id)), source: metroImportAll.StandingTab, is_violative_content_shown: false, is_dsa_eligible: stateFromStores };
+                                  const track = AnalyticsUtilsDefault.track;
+                                  const SAFETY_HUB_ACTION = AnalyticEvents.SAFETY_HUB_ACTION;
+                                  AnalyticsUtilsDefault;
+                                  track(SAFETY_HUB_ACTION, obj);
                                 }
-                                return;
                               }
                             }
-                            const obj4 = { style: tmp19, children: null };
-                            const items2 = [tmp21, tmp25];
-                            obj4.children = items2;
+                            const obj4 = { style: tmp19, children: items2 };
+                            items2 = [tmp21, tmp25];
                             const tmp29 = closure_12(num9, obj4);
                             cResult[27] = tmp19;
                             cResult[28] = tmp21;
@@ -736,25 +803,13 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               }
               class L {
                 constructor() {
-                  if (closure_0) {
-                    tmp = closure_1;
-                    tmp2 = closure_2;
-                    obj = closure_1(closure_2[26]);
-                    tmp3 = AnalyticEvents;
-                    obj1 = { action: null, account_standing: null, classification_ids: null, source: null, is_violative_content_shown: false, is_dsa_eligible: null };
-                    tmp4 = SafetyHubAnalyticsActions;
-                    obj1.action = SafetyHubAnalyticsActions.ViewViolationsDropdown;
-                    tmp5 = closure_3;
-                    obj1.account_standing = closure_3.state;
-                    tmp6 = closure_5;
-                    obj1.classification_ids = closure_5.map((id) => Number(id.id));
-                    tmp7 = closure_8;
-                    obj1.source = closure_8.StandingTab;
-                    tmp8 = closure_4;
-                    obj1.is_dsa_eligible = closure_4;
-                    trackResult = obj.track(AnalyticEvents.SAFETY_HUB_ACTION, obj1);
+                  if (first) {
+                    const obj = { action: React4.ViewViolationsDropdown, account_standing: safetyHubAccountStanding.state, classification_ids: closure_5.map((id) => Number(id.id)), source: metroImportAll.StandingTab, is_violative_content_shown: false, is_dsa_eligible: stateFromStores };
+                    const track = AnalyticsUtilsDefault.track;
+                    const SAFETY_HUB_ACTION = AnalyticEvents.SAFETY_HUB_ACTION;
+                    AnalyticsUtilsDefault;
+                    track(SAFETY_HUB_ACTION, obj);
                   }
-                  return;
                 }
               }
               cResult[18] = classifications.length;
@@ -781,25 +836,13 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     class L {
       constructor() {
-        if (closure_0) {
-          tmp = closure_1;
-          tmp2 = closure_2;
-          obj = closure_1(closure_2[26]);
-          tmp3 = AnalyticEvents;
-          obj1 = { action: null, account_standing: null, classification_ids: null, source: null, is_violative_content_shown: false, is_dsa_eligible: null };
-          tmp4 = SafetyHubAnalyticsActions;
-          obj1.action = SafetyHubAnalyticsActions.ViewViolationsDropdown;
-          tmp5 = closure_3;
-          obj1.account_standing = closure_3.state;
-          tmp6 = closure_5;
-          obj1.classification_ids = closure_5.map((id) => Number(id.id));
-          tmp7 = closure_8;
-          obj1.source = closure_8.StandingTab;
-          tmp8 = closure_4;
-          obj1.is_dsa_eligible = closure_4;
-          trackResult = obj.track(AnalyticEvents.SAFETY_HUB_ACTION, obj1);
+        if (first) {
+          const obj = { action: React4.ViewViolationsDropdown, account_standing: safetyHubAccountStanding.state, classification_ids: closure_5.map((id) => Number(id.id)), source: metroImportAll.StandingTab, is_violative_content_shown: false, is_dsa_eligible: stateFromStores };
+          const track = AnalyticsUtilsDefault.track;
+          const SAFETY_HUB_ACTION = AnalyticEvents.SAFETY_HUB_ACTION;
+          AnalyticsUtilsDefault;
+          track(SAFETY_HUB_ACTION, obj);
         }
-        return;
       }
     }
     const items3 = [opened, safetyHubAccountStanding.state, tmp14, stateFromStores];
@@ -817,8 +860,27 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = tmp8;
   cResult[4] = substr;
   tmp14 = substr;
-  const tmpResult = tmp(504);
 }) : ((arg0) => {
+  let Text;
+  let classifications;
+  let closure_2;
+  let closure_4;
+  let intl;
+  let items10;
+  let items3;
+  let items4;
+  let items5;
+  let items7;
+  let items8;
+  let items9;
+  let obj10;
+  let obj11;
+  let obj9;
+  let status;
+  const f117299 = (classification) => {
+    const obj = { classification };
+    return closure_1_11(ClassificationDetail, obj, classification.id);
+  };
   ({ status, classifications } = arg0);
   let first1;
   is_dsa_eligible = undefined;
@@ -830,165 +892,165 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const tmp4 = first1(is_dsa_eligible.useState(3), 2);
   first1 = tmp4[0];
   is_dsa_eligible = tmp4[1];
-  const safetyHubAccountStanding = classifications(11494).useSafetyHubAccountStanding();
   let obj = classifications(11494);
+  const safetyHubAccountStanding = obj.useSafetyHubAccountStanding();
   const items = [memo];
-  const stateFromStores = classifications(504).useStateFromStores(items, () => memo.getIsDsaEligible());
+  const obj2 = classifications(504);
+  const stateFromStores = obj2.useStateFromStores(items, () => memo.getIsDsaEligible());
   const items1 = [classifications, first1];
   memo = is_dsa_eligible.useMemo(() => classifications.slice(0, first1), items1);
   const items2 = [opened, safetyHubAccountStanding.state, memo, stateFromStores];
   const effect = is_dsa_eligible.useEffect(() => {
     if (first) {
-      const obj2 = { action: options.ViewViolationsDropdown, account_standing: safetyHubAccountStanding.state, classification_ids: memo.map((id) => Number(id.id)), source: closure_2_8.StandingTab, is_violative_content_shown: false, is_dsa_eligible: stateFromStores };
-      AnalyticsUtilsDefault.track(AnalyticEvents.SAFETY_HUB_ACTION, obj2);
+      const obj = { action: React4.ViewViolationsDropdown, account_standing: safetyHubAccountStanding.state, classification_ids: memo.map((id) => Number(id.id)), source: metroImportAll.StandingTab, is_violative_content_shown: false, is_dsa_eligible: stateFromStores };
+      const track = AnalyticsUtilsDefault.track;
+      const SAFETY_HUB_ACTION = AnalyticEvents.SAFETY_HUB_ACTION;
+      AnalyticsUtilsDefault;
+      track(SAFETY_HUB_ACTION, obj);
     }
   }, items2);
   let num = 3;
   if (classifications.length - memo.length <= 3) {
     num = classifications.length - memo.length;
   }
-  const obj3 = { style: null, children: null };
-  const items3 = [tmp.container];
-  obj3.style = items3;
-  const items4 = [
-    closure_11(closure_15, {
-      status,
-      onClick() {
-        return closure_2((arg0) => !arg0);
-      },
-      opened,
-      count: classifications.length
-    }),
-
-  ];
+  const obj3 = { style: items3, children: items4 };
+  items3 = [tmp.container];
+  items4 = [, ];
+  const obj4 = {
+    status,
+    onClick() {
+      return closure_2((arg0) => !arg0);
+    },
+    opened,
+    count: classifications.length
+  };
+  items4[0] = closure_11(closure_15, obj4);
   if (opened) {
-    const obj5 = { style: null };
-    const items5 = [tmp.separator];
-    obj5.style = items5;
-    const items6 = [closure_11(tmp12, obj5), memo.length > 0 && memo.map((classification) => closure_1_11(ClassificationDetail, { classification }, classification.id)), , , ];
+    const obj5 = { style: items5 };
+    items5 = [tmp.separator];
+    const items6 = [closure_11(stateFromStores, obj5), memo.length > 0 && memo.map(f117299), , , ];
     let tmp11Result = memo.length < classifications.length;
+    memo.length > 0 && memo.map(f117299);
     if (tmp11Result) {
-      const obj6 = { children: null };
-      const obj7 = { style: null };
-      const items7 = [tmp.separator];
-      obj7.style = items7;
-      const items8 = [closure_11(tmp12, obj7), ];
-      const obj8 = { style: null, children: null };
-      const items9 = [tmp.moreButtonContainer];
-      obj8.style = items9;
-      const obj9 = { style: null, onPress: null, children: null };
-      const items10 = [tmp.moreButton];
-      obj9.style = items10;
-      obj9.onPress = function onPress() {
-        return closure_4((arg0) => arg0 + num);
+      const obj7 = { style: items7 };
+      items7 = [tmp.separator];
+      const obj6 = { children: items8 };
+      items8 = [closure_11(stateFromStores, obj7), ];
+      const obj8 = { style: items9, children: closure_11(safetyHubAccountStanding, obj9) };
+      items9 = [tmp.moreButtonContainer];
+      obj9 = {
+        style: items10,
+        onPress() {
+              return closure_4((arg0) => arg0 + num);
+            },
+        children: closure_11(Text, obj10)
       };
-      const obj10 = { variant: "heading-sm/semibold", children: null };
-      const intl = classifications(1126).intl;
-      const obj11 = { nextPageSize: num };
-      obj10.children = intl.format(classifications(1126).t["9Ml56H"], obj11);
-      obj9.children = closure_11(classifications(4886).Text, obj10);
-      obj8.children = closure_11(safetyHubAccountStanding, obj9);
-      items8[1] = closure_11(tmp12, obj8);
-      obj6.children = items8;
+      items10 = [tmp.moreButton];
+      obj10 = { variant: "heading-sm/semibold", children: intl.format(classifications(1126).t["9Ml56H"], obj11) };
+      Text = classifications(4886).Text;
+      intl = classifications(1126).intl;
+      obj11 = { nextPageSize: num };
+      items8[1] = closure_11(stateFromStores, obj8);
       tmp11Result = closure_12(closure_13, obj6);
     }
     items6[2] = tmp11Result;
-    let tmp13Result = 0 === memo.length;
-    if (tmp13Result) {
-      tmp13Result = "active" === status;
-    }
-    if (tmp13Result) {
-      tmp13Result = closure_11(closure_16, {});
-    }
-    items6[3] = tmp13Result;
-    let tmp13Result2 = 0 === memo.length;
-    if (tmp13Result2) {
-      tmp13Result2 = "expired" === status;
-    }
-    if (tmp13Result2) {
-      tmp13Result2 = closure_11(closure_17, {});
-    }
-    const obj12 = { children: null };
-    items6[4] = tmp13Result2;
-    obj12.children = items6;
+    items6[3] = 0 === memo.length && "active" === status && closure_11(closure_16, {});
+    const tmp13Result = 0 === memo.length && "active" === status && closure_11(closure_16, {});
+    const obj12 = { children: items6 };
+    items6[4] = 0 === memo.length && "expired" === status && closure_11(closure_17, {});
+    const tmp13Result2 = 0 === memo.length && "expired" === status && closure_11(closure_17, {});
     opened = closure_12(tmp12, obj12);
-    const tmp14 = memo.length > 0 && memo.map((classification) => closure_1_11(ClassificationDetail, { classification }, classification.id));
   }
   items4[1] = opened;
-  obj3.children = items4;
   return closure_12(stateFromStores, obj3);
 });
-let closure_21 = tmp5;
-ReactCompilerGating = fn(558);
-let obj12 = { display: "flex", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: nativeDefault.radii.md, gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_24 };
-size = fn(2);
-const result = size.fileFinishedImporting("modules/safety_hub/native/SafetyHubViolationsContainer.tsx");
-
-export default tmp5;
-export const ConnectedSafetyHubViolationsContainer = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(10);
+let closure_21 = tmp6;
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let items1;
+  let tmp3;
+  const obj = react2;
+  const cResult = obj.c(10);
   const tmp2 = closure_14();
-  const activeSafetyHubClassifications = useSafetyHubClassifications.useActiveSafetyHubClassifications();
-  const expiredSafetyHubClassifications = useSafetyHubClassifications.useExpiredSafetyHubClassifications();
-  if (0 === activeSafetyHubClassifications.length) {
-    if (0 === expiredSafetyHubClassifications.length) {
-      return null;
-    }
-  }
-  if (cResult[0] !== tmp2.connectedContainer) {
-    const items = [];
-    ({ connectedContainer: arr3[0], connectedContainer: tmp[0] } = tmp2);
-    cResult[1] = items;
-    let tmp4 = items;
-  } else {
-    tmp4 = cResult[1];
-  }
-  if (cResult[2] !== activeSafetyHubClassifications) {
-    const obj4 = { status: "active", classifications: activeSafetyHubClassifications };
-    const tmp8 = closure_1_11(closure_21, obj4);
-    cResult[2] = activeSafetyHubClassifications;
-    cResult[3] = tmp8;
-    let tmp5 = tmp8;
-  } else {
-    tmp5 = cResult[3];
-  }
-  if (cResult[4] !== expiredSafetyHubClassifications) {
-    const obj5 = { status: "expired", classifications: expiredSafetyHubClassifications };
-    const tmp12 = closure_1_11(closure_21, obj5);
-    cResult[4] = expiredSafetyHubClassifications;
-    cResult[5] = tmp12;
-    let tmp9 = tmp12;
-  } else {
-    tmp9 = cResult[5];
-  }
-  if (cResult[6] === tmp4) {
-    if (cResult[7] === tmp5) {
-    }
-  }
-  const obj6 = { style: tmp4, children: null };
-  const items1 = [tmp5, tmp9];
-  obj6.children = items1;
-  const tmp14 = __initData(timestampProducer, obj6);
-  cResult[6] = tmp4;
-  cResult[7] = tmp5;
-  cResult[8] = tmp9;
-  cResult[9] = tmp14;
-}) : (() => {
-  const tmp = closure_14();
-  const activeSafetyHubClassifications = useSafetyHubClassifications.useActiveSafetyHubClassifications();
-  const expiredSafetyHubClassifications = useSafetyHubClassifications.useExpiredSafetyHubClassifications();
+  const obj2 = useSafetyHubClassifications;
+  const activeSafetyHubClassifications = obj2.useActiveSafetyHubClassifications();
+  const obj3 = useSafetyHubClassifications;
+  const expiredSafetyHubClassifications = obj3.useExpiredSafetyHubClassifications();
   if (0 !== activeSafetyHubClassifications.length) {
-    const obj3 = { style: null, children: null };
-    const items = [tmp.connectedContainer];
-    obj3.style = items;
+    let tmp4;
+    let tmp5;
+    let tmp9;
+    if (cResult[0] !== tmp2.connectedContainer) {
+      const items = [];
+      ({ connectedContainer: arr3[0], connectedContainer: tmp[0] } = tmp2);
+      cResult[1] = items;
+      tmp4 = items;
+    } else {
+      tmp4 = cResult[1];
+    }
+    if (cResult[2] !== activeSafetyHubClassifications) {
+      const obj4 = { status: "active", classifications: activeSafetyHubClassifications };
+      const tmp8 = unpackModuleId(closure_21, obj4);
+      cResult[2] = activeSafetyHubClassifications;
+      cResult[3] = tmp8;
+      tmp5 = tmp8;
+    } else {
+      tmp5 = cResult[3];
+    }
+    if (cResult[4] !== expiredSafetyHubClassifications) {
+      const obj5 = { status: "expired", classifications: expiredSafetyHubClassifications };
+      const tmp12 = unpackModuleId(closure_21, obj5);
+      cResult[4] = expiredSafetyHubClassifications;
+      cResult[5] = tmp12;
+      tmp9 = tmp12;
+    } else {
+      tmp9 = cResult[5];
+    }
+    if (cResult[6] === tmp4) {
+      if (cResult[7] === tmp5) {
+        let tmp13;
+        if (cResult[8] === tmp9) {
+          tmp13 = cResult[9];
+        }
+        tmp3 = tmp13;
+      }
+    }
+    const obj6 = { style: tmp4, children: items1 };
+    items1 = [tmp5, tmp9];
+    const tmp16 = closure_12(metroRequire, obj6);
+    cResult[6] = tmp4;
+    cResult[7] = tmp5;
+    cResult[8] = tmp9;
+    cResult[9] = tmp16;
+    tmp13 = tmp16;
+  } else {
+    tmp3 = null;
+  }
+  return tmp3;
+}) : (() => {
+  let items;
+  let items1;
+  let tmp2;
+  const tmp = closure_14();
+  const obj = useSafetyHubClassifications;
+  const activeSafetyHubClassifications = obj.useActiveSafetyHubClassifications();
+  const obj2 = useSafetyHubClassifications;
+  const expiredSafetyHubClassifications = obj2.useExpiredSafetyHubClassifications();
+  if (0 !== activeSafetyHubClassifications.length) {
+    const obj3 = { style: items, children: items1 };
+    items = [tmp.connectedContainer];
     const obj4 = { status: "active", classifications: activeSafetyHubClassifications };
-    const items1 = [closure_1_11(closure_21, obj4), ];
+    items1 = [unpackModuleId(closure_21, obj4), ];
     const obj5 = { status: "expired", classifications: expiredSafetyHubClassifications };
-    items1[1] = closure_1_11(closure_21, obj5);
-    obj3.children = items1;
-    let tmp2 = __initData(timestampProducer, obj3);
+    items1[1] = unpackModuleId(closure_21, obj5);
+    tmp2 = closure_12(metroRequire, obj3);
   } else {
     tmp2 = null;
   }
   return tmp2;
 });
+size = size_mod;
+const result = size.fileFinishedImporting("modules/safety_hub/native/SafetyHubViolationsContainer.tsx");
+
+export default tmp6;
+export const ConnectedSafetyHubViolationsContainer = tmp7;

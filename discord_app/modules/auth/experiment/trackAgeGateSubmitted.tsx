@@ -10,11 +10,14 @@ const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/auth/experiment/trackAgeGateSubmitted.tsx");
 
 export default function trackAgeGateSubmitted(format, section) {
-  const obj = AnalyticsUtilsDefault;
+  const track = AnalyticsUtilsDefault.track;
+  const AGE_GATE_SUBMITTED = AnalyticEvents.AGE_GATE_SUBMITTED;
+  AnalyticsUtilsDefault;
   let formatResult = null;
-  if (obj2.diff(format, "years") < 18) {
+  const obj = _modDef4461();
+  if (obj.diff(format, "years") < 18) {
     formatResult = format.format("YYYY-MM-DD");
   }
-  obj2 = _modDef4461();
-  obj.track(AnalyticEvents.AGE_GATE_SUBMITTED, { dob: formatResult, dob_day: format.date(), dob_month: format.month() + 1, dob_year: format.year(), source: { section } });
+  const obj2 = { dob: formatResult, dob_day: format.date(), dob_month: format.month() + 1, dob_year: format.year(), source: { section } };
+  track(AGE_GATE_SUBMITTED, obj2);
 };

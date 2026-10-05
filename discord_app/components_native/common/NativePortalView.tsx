@@ -1,43 +1,54 @@
 // === Module 7942: NativePortalView ===
 
 // Module 7942 (NativePortalView)
+import Fragment from "Fragment" /* 21 */;
 import PortalViewNativeComponentDefault from "PortalViewNativeComponent" /* 7943 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
+import createStyles from "createStyles" /* 4890 */;
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, dependencyMap, duration, flag, importDefault, setLoopPlaybackResult, tmp5;
 
-const require = fn;
+let NativeEventEmitter;
+let NativeModules;
+let importDefaultResult;
+let requireNativeComponent;
 let closure_3 = ["style", "children", "paused", "muted", "onLoad"];
-get_ActivityIndicator = fn(17);
-({ requireNativeComponent, NativeEventEmitter, NativeModules } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+({ requireNativeComponent, NativeEventEmitter, NativeModules } = react_native);
+const jsx = Fragment.jsx;
 let closure_7 = createStyles.createStyles({ base: { overflow: "hidden" } });
-const PlatformUtils = fn(1369);
 if (PlatformUtils.isAndroid()) {
-  let importDefaultResult = PortalViewNativeComponentDefault;
+  importDefaultResult = PortalViewNativeComponentDefault;
 } else {
   importDefaultResult = requireNativeComponent("DCDPortalView");
 }
+const metroImportAll = importDefaultResult;
 const MediaPlayerManager = NativeModules.MediaPlayerManager;
 const nativeEventEmitter = new NativeEventEmitter(MediaPlayerManager);
 const set = new Set();
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2, arg3) => {
   _require = arg0;
-  closure_1 = arg1;
+  let closure_1 = arg1;
   dependencyMap = arg2;
   closure_3 = arg3;
-  const cResult = require("c").c(6);
+  const obj = require("react");
+  const cResult = obj.c(6);
   if (cResult[0] === arg3) {
     if (cResult[1] === arg2) {
       if (cResult[2] === arg1) {
+        let tmp2;
+        let tmp3;
         if (cResult[3] === arg0) {
-          let tmp2 = cResult[4];
-          let tmp3 = cResult[5];
+          tmp2 = cResult[4];
+          tmp3 = cResult[5];
         }
-        const effect = noop.useEffect(tmp2, tmp3);
+        const effect = react.useEffect(tmp2, tmp3);
       }
     }
   }
@@ -45,15 +56,17 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, ar
     closure_0 = nativeEventEmitter.addListener("MediaPlayerProgress", (duration) => {
       duration = duration.duration;
       let tmp = duration.id === closure_0;
+      const time = duration.time;
       if (tmp) {
         tmp = duration > 0;
       }
       if (tmp) {
-        closure_1(duration.time, duration);
+        closure_1(time, duration);
       }
     });
     closure_1 = nativeEventEmitter.addListener("MediaPlayerDownloadProgress", (id) => {
       let tmp2 = id.id === closure_0;
+      const progressPercent = id.progressPercent;
       if (tmp2) {
         tmp2 = tmp > 0;
       }
@@ -61,7 +74,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, ar
         tmp2 = null != closure_1_3;
       }
       if (tmp2) {
-        closure_1_3(id.progressPercent);
+        closure_1_3(progressPercent);
       }
     });
     closure_2 = nativeEventEmitter.addListener("MediaPlayerPause", (id) => {
@@ -84,26 +97,27 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, ar
   cResult[5] = items;
   tmp3 = items;
   tmp2 = fn;
-  const obj = require("c");
 }) : ((arg0, arg1, arg2, arg3) => {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  closure_2 = arg2;
+  let closure_0 = arg0;
+  let closure_1 = arg1;
+  let closure_2 = arg2;
   closure_3 = arg3;
   const items = [arg0, arg2, arg1, arg3];
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(() => {
     closure_0 = nativeEventEmitter.addListener("MediaPlayerProgress", (duration) => {
       duration = duration.duration;
       let tmp = duration.id === closure_0;
+      const time = duration.time;
       if (tmp) {
         tmp = duration > 0;
       }
       if (tmp) {
-        closure_1(duration.time, duration);
+        closure_1(time, duration);
       }
     });
     closure_1 = nativeEventEmitter.addListener("MediaPlayerDownloadProgress", (id) => {
       let tmp2 = id.id === closure_0;
+      const progressPercent = id.progressPercent;
       if (tmp2) {
         tmp2 = tmp > 0;
       }
@@ -111,7 +125,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, ar
         tmp2 = null != closure_1_3;
       }
       if (tmp2) {
-        closure_1_3(id.progressPercent);
+        closure_1_3(progressPercent);
       }
     });
     closure_2 = nativeEventEmitter.addListener("MediaPlayerPause", (id) => {
@@ -126,12 +140,21 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, ar
     };
   }, items);
 });
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("components_native/common/NativePortalView.tsx");
-
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((muted) => {
-  const cResult = require("c").c(35);
+const memo = react.memo;
+ReactCompilerGating = ReactCompilerGating_mod;
+const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? (function(muted) {
+  let children;
+  let closure_0;
+  let closure_1;
+  let closure_2;
+  let loopPlayback;
+  let paused;
+  let style;
+  let tmp4;
+  let tmp9;
+  const tmp = _require;
+  let obj = require("react");
+  const cResult = obj.c(35);
   if (cResult[0] !== muted) {
     ({ style, children, paused } = muted);
     dependencyMap = paused;
@@ -148,8 +171,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((muted)
     cResult[4] = paused;
     cResult[5] = tmp12;
     cResult[6] = style;
-    let tmp9 = style;
-    let tmp4 = children;
+    tmp9 = style;
+    tmp4 = children;
   } else {
     tmp4 = cResult[1];
     _require = cResult[2];
@@ -161,56 +184,58 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((muted)
   const tmp13 = closure_7();
   if (null != tmp4) {
     const _Error = Error;
+    const self = this;
+    const self2 = this;
     const error = new Error("The <NativePortalView> component cannot contain children.");
     throw error;
   } else {
     if (cResult[7] === paused) {
+      let tmp14;
+      let tmp15;
       if (cResult[8] === tmp8.portal) {
-        let tmp14 = cResult[9];
-        let tmp15 = cResult[10];
+        tmp14 = cResult[9];
+        tmp15 = cResult[10];
       }
-      const layoutEffect = noop.useLayoutEffect(tmp14, tmp15);
+      const layoutEffect = react.useLayoutEffect(tmp14, tmp15);
       if (cResult[11] === tmp5) {
+        let tmp17;
+        let tmp18;
         if (cResult[12] === tmp8.portal) {
-          let tmp17 = cResult[13];
-          let tmp18 = cResult[14];
+          tmp17 = cResult[13];
+          tmp18 = cResult[14];
         }
-        const layoutEffect1 = noop.useLayoutEffect(tmp17, tmp18);
+        const layoutEffect1 = react.useLayoutEffect(tmp17, tmp18);
         if (cResult[15] === tmp6) {
+          let tmp20;
+          let tmp21;
           if (cResult[16] === tmp8.portal) {
-            let tmp20 = cResult[17];
-            let tmp21 = cResult[18];
+            tmp20 = cResult[17];
+            tmp21 = cResult[18];
           }
-          const layoutEffect2 = noop.useLayoutEffect(tmp20, tmp21);
+          const layoutEffect2 = react.useLayoutEffect(tmp20, tmp21);
           if (cResult[19] === tmp6) {
+            let tmp23;
             if (cResult[20] === tmp8.portal) {
-              let tmp23 = cResult[21];
+              tmp23 = cResult[21];
             }
+            const tmpResult = tmp(1369);
             if (tmpResult.isAndroid()) {
               if (cResult[22] === tmp9) {
+                let tmp31;
                 if (cResult[23] === tmp13.base) {
-                  let tmp31 = cResult[24];
-                }
-                if (cResult[25] === tmp23) {
-                  if (cResult[26] === tmp8) {
-                  }
+                  tmp31 = cResult[24];
                 }
                 class D {
-                  constructor(arg0) {
-                    if (closure_3.portal === muted.nativeEvent.portal) {
-                      tmp2 = null;
+                  constructor(nativeEvent) {
+                    if (closure_3.portal === nativeEvent.nativeEvent.portal) {
                       if (closure_1 != null) {
-                        tmpResult = tmp();
+                        tmp();
                       }
                     }
-                    return;
                   }
                 }
-                const obj3 = {};
                 const merged = Object.assign(tmp8);
-                obj3.style = tmp31;
-                obj3.onPortalViewLoaded = tmp23;
-                const tmp37 = <closure_8 />;
+                const tmp37 = <closure_8 style={tmp31} onPortalViewLoaded={tmp23} />;
                 cResult[25] = tmp23;
                 cResult[26] = tmp8;
                 cResult[27] = tmp31;
@@ -218,14 +243,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((muted)
               }
               const items = [tmp13.base, ];
               class D {
-                constructor(arg0) {
-                  if (closure_3.portal === muted.nativeEvent.portal) {
-                    tmp2 = null;
+                constructor(nativeEvent) {
+                  if (closure_3.portal === nativeEvent.nativeEvent.portal) {
                     if (closure_1 != null) {
-                      tmpResult = tmp();
+                      tmp();
                     }
                   }
-                  return;
                 }
               }
               cResult[22] = tmp9;
@@ -234,45 +257,33 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((muted)
               tmp31 = items;
             } else {
               if (cResult[29] === tmp9) {
+                let tmp24;
                 if (cResult[30] === tmp13.base) {
-                  let tmp24 = cResult[31];
-                }
-                if (cResult[32] === tmp8) {
-                  if (cResult[33] === tmp24) {
-                    let tmp25 = cResult[34];
-                  }
-                  return tmp25;
+                  tmp24 = cResult[31];
                 }
                 class D {
-                  constructor(arg0) {
-                    if (closure_3.portal === muted.nativeEvent.portal) {
-                      tmp2 = null;
+                  constructor(nativeEvent) {
+                    if (closure_3.portal === nativeEvent.nativeEvent.portal) {
                       if (closure_1 != null) {
-                        tmpResult = tmp();
+                        tmp();
                       }
                     }
-                    return;
                   }
                 }
-                const obj4 = {};
                 const merged1 = Object.assign(tmp8);
-                obj4.style = tmp24;
-                const tmp30 = <closure_8 />;
+                const tmp30 = <closure_8 style={tmp24} />;
                 cResult[32] = tmp8;
                 cResult[33] = tmp24;
                 cResult[34] = tmp30;
-                tmp25 = tmp30;
               }
               const items1 = [tmp13.base, ];
               class D {
-                constructor(arg0) {
-                  if (closure_3.portal === muted.nativeEvent.portal) {
-                    tmp2 = null;
+                constructor(nativeEvent) {
+                  if (closure_3.portal === nativeEvent.nativeEvent.portal) {
                     if (closure_1 != null) {
-                      tmpResult = tmp();
+                      tmp();
                     }
                   }
-                  return;
                 }
               }
               cResult[29] = tmp9;
@@ -280,17 +291,23 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((muted)
               cResult[31] = items1;
               tmp24 = items1;
             }
-            tmpResult = tmp(1369);
-          }
-          class D {
-            constructor(arg0) {
-              if (closure_3.portal === muted.nativeEvent.portal) {
-                tmp2 = null;
-                if (closure_1 != null) {
-                  tmpResult = tmp();
+            class D {
+              constructor(nativeEvent) {
+                if (closure_3.portal === nativeEvent.nativeEvent.portal) {
+                  if (closure_1 != null) {
+                    tmp();
+                  }
                 }
               }
-              return;
+            }
+          }
+          class D {
+            constructor(nativeEvent) {
+              if (closure_3.portal === nativeEvent.nativeEvent.portal) {
+                if (closure_1 != null) {
+                  tmp();
+                }
+              }
             }
           }
           cResult[19] = tmp6;
@@ -314,7 +331,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((muted)
               setLoopPlaybackResult = MediaPlayerManager.setLoopPlayback(tmp.portal, true);
               return () => {
                 loopPlayback.setLoopPlayback(closure_1_3.portal, false);
-                closure_1(closure_2[9]).unregisterView(closure_1_3.portal);
+                const obj = closure_1(closure_2[9]);
+                obj.unregisterView(closure_1_3.portal);
                 set.add(closure_1_3.portal);
               };
             } else {
@@ -356,9 +374,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((muted)
     tmp15 = items4;
     tmp14 = fn;
   }
-  const obj = require("c");
-  tmp = _require;
-}) : ((paused) => {
+}) : (function(paused) {
+  let children;
+  let items4;
+  let loopPlayback;
+  let style;
   paused = paused.paused;
   const muted = paused.muted;
   const onLoad = paused.onLoad;
@@ -366,24 +386,28 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((muted)
   const merged = Object.assign(paused, Object.assign({ style: 0, children: 0, paused: 0, muted: 0, onLoad: 0 }));
   if (null != children) {
     const _Error = Error;
+    const self = this;
+    const self2 = this;
     const error = new Error("The <NativePortalView> component cannot contain children.");
     throw error;
   } else {
+    let tmp15Result;
     const items = [merged.portal, paused];
-    const layoutEffect = noop.useLayoutEffect(() => {
+    const layoutEffect = react.useLayoutEffect(() => {
       if (null != merged.portal) {
         MediaPlayerManager.toggle(tmp.portal, !paused);
       }
     }, items);
     const items1 = [merged.portal, muted];
-    const layoutEffect1 = noop.useLayoutEffect(() => {
+    const layoutEffect1 = react.useLayoutEffect(() => {
       if (null != merged.portal) {
         MediaPlayerManager.setMuted(tmp.portal, muted);
       }
     }, items1);
     const items2 = [onLoad, merged.portal];
-    const layoutEffect2 = noop.useLayoutEffect(() => {
+    const layoutEffect2 = react.useLayoutEffect(() => {
       if (null != merged.portal) {
+        let obj = PlatformUtils;
         if (!obj.isAndroid()) {
           if (onLoad != null) {
             onLoad();
@@ -392,44 +416,48 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((muted)
         MediaPlayerManager.setLoopPlayback(tmp.portal, true);
         return () => {
           loopPlayback.setLoopPlayback(merged.portal, false);
-          muted(onLoad[9]).unregisterView(merged.portal);
+          const obj = muted(onLoad[9]);
+          obj.unregisterView(merged.portal);
           set.add(merged.portal);
         };
       }
     }, items2);
     const items3 = [onLoad, merged.portal];
-    const callback = noop.useCallback((nativeEvent) => {
+    const callback = react.useCallback((nativeEvent) => {
       if (merged.portal === nativeEvent.nativeEvent.portal) {
         if (onLoad != null) {
           tmp();
         }
       }
     }, items3);
-    const obj2 = {};
-    const obj = paused(onLoad[5]);
+    let obj = paused(onLoad[5]);
+    const obj2 = { style: items4 };
+    const isAndroidResult = obj.isAndroid();
     const merged1 = Object.assign(merged);
-    const items4 = [tmp2.base, style];
-    obj2.style = items4;
+    items4 = [tmp2.base, style];
     if (isAndroidResult) {
       obj2.onPortalViewLoaded = callback;
-      let tmp17Result = <closure_8 {...obj2} />;
+      tmp15Result = <closure_8 {...obj2} />;
     } else {
-      tmp17Result = <closure_8 {...obj2} />;
+      tmp15Result = <closure_8 {...obj2} />;
     }
-    return tmp17Result;
+    return tmp15Result;
   }
 }));
+const result = size.fileFinishedImporting("components_native/common/NativePortalView.tsx");
+
+export default memoResult;
 export function createPortalControls(portal) {
-  closure_0 = portal;
+  let closure_0 = portal;
   return {
     seek(arg0) {
-      MediaPlayerManager.changeProgress(closure_0, arg0);
+      MediaPlayerManager.changeProgress(portal, arg0);
     },
     pause(arg0) {
-      MediaPlayerManager.toggle(closure_0, !arg0);
+      MediaPlayerManager.toggle(portal, !arg0);
     },
     useSubscribe(arg0, arg1, arg2) {
-      closure_12(closure_0, arg0, arg1, arg2);
+      closure_12(portal, arg0, arg1, arg2);
     }
   };
 }

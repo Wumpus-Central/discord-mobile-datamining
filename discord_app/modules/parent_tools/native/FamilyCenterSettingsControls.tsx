@@ -1,89 +1,105 @@
 // === Module 14714: FamilyCenterSettingsControls ===
 
 // Module 14714 (FamilyCenterSettingsControls)
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import Constants from "Constants" /* 1085 */;
+import intl6 from "intl" /* 1126 */;
+import asyncRequire from "asyncRequire" /* 1987 */;
 import _modDef2493 from "module_2493" /* 2493 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4903 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
+import FamilyCenterConstants from "FamilyCenterConstants" /* 7049 */;
 import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7050 */;
 import LayerActionCreators from "LayerActionCreators" /* 7096 */;
 import useUserLinks from "useUserLinks" /* 8295 */;
 import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 14719 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+const require = globalThis.__r;
+let dependencyMap, importDefault, navigation, teenId;
+
+let metroImportAll;
+let metroImportDefault;
+let obj2;
+let obj3;
+let obj4;
+let obj5;
+let obj6;
+let obj7;
 function getSpendingLimitRowProps(spendingLimitDisplayState, subLabelWarning) {
+  let obj10;
+  let obj11;
+  let obj12;
+  let obj13;
+  let obj3;
   const kind = spendingLimitDisplayState.kind;
   if ("off" === kind) {
-    const obj2 = { trailing: null };
-    const intl4 = util.intl;
-    const obj3 = { variant: "text-sm/normal", color: "text-muted", children: intl4.string(_modDef2493.YEnpaj) };
-    obj2.trailing = React5(Text_Text.Text, obj3);
+    const obj2 = { trailing: metroImportDefault(Text_Text.Text, obj3) };
+    const intl4 = intl6.intl;
+    obj3 = { variant: "text-sm/normal", color: "text-muted", children: intl4.string(_modDef2493.YEnpaj) };
+    intl4.string(_modDef2493.YEnpaj);
     return obj2;
   } else if ("on" === kind) {
-    const obj4 = { trailing: null };
-    const obj5 = { variant: "text-sm/normal", color: "text-muted", children: spendingLimitDisplayState.monthlyText };
-    obj4.trailing = React5(Text_Text.Text, obj5);
+    const obj4 = { trailing: metroImportDefault(Text_Text.Text, obj5) };
     return obj4;
   } else if ("close-to-limit" === kind) {
-    const obj6 = { trailing: null, subLabel: null };
-    const obj7 = { variant: "text-sm/normal", color: "text-muted", children: spendingLimitDisplayState.monthlyText };
-    obj6.trailing = React5(Text_Text.Text, obj7);
-    const obj8 = { variant: "text-sm/normal", style: subLabelWarning.subLabelWarning, children: spendingLimitDisplayState.remainingText };
-    obj6.subLabel = React5(Text_Text.Text, obj8);
+    const obj6 = { trailing: metroImportDefault(Text_Text.Text, obj7), subLabel: metroImportDefault(Text_Text.Text, obj8) };
     return obj6;
   } else if ("spent" === kind) {
-    const obj9 = { trailing: null, subLabel: null };
-    const obj10 = { variant: "text-sm/normal", color: "text-muted", children: spendingLimitDisplayState.monthlyText };
-    obj9.trailing = React5(Text_Text.Text, obj10);
-    const intl3 = util.intl;
-    const obj11 = { variant: "text-sm/normal", style: subLabelWarning.subLabelCritical, children: intl3.string(_modDef2493.Q2msVQ) };
-    obj9.subLabel = React5(Text_Text.Text, obj11);
+    const obj9 = { trailing: metroImportDefault(Text_Text.Text, obj10), subLabel: metroImportDefault(Text_Text.Text, obj11) };
+    obj10 = { variant: "text-sm/normal", color: "text-muted", children: spendingLimitDisplayState.monthlyText };
+    const intl3 = intl6.intl;
+    obj11 = { variant: "text-sm/normal", style: subLabelWarning.subLabelCritical, children: intl3.string(_modDef2493.Q2msVQ) };
+    intl3.string(_modDef2493.Q2msVQ);
     return obj9;
   } else if ("blocked" === kind) {
-    const obj = { trailing: null, subLabel: null };
-    const intl = util.intl;
-    const obj12 = { variant: "text-sm/normal", color: "text-muted", children: intl.string(_modDef2493.kGFuGn) };
-    obj.trailing = React5(Text_Text.Text, obj12);
-    const intl2 = util.intl;
-    const stringResult2 = intl.string(_modDef2493.kGFuGn);
-    const obj13 = { variant: "text-sm/normal", style: subLabelWarning.subLabelCritical, children: intl2.string(_modDef2493.FUu2b0) };
-    obj.subLabel = React5(Text_Text.Text, obj13);
+    const obj = { trailing: metroImportDefault(Text_Text.Text, obj12), subLabel: metroImportDefault(Text_Text.Text, obj13) };
+    const intl = intl6.intl;
+    obj12 = { variant: "text-sm/normal", color: "text-muted", children: intl.string(_modDef2493.kGFuGn) };
+    intl.string(_modDef2493.kGFuGn);
+    const intl2 = intl6.intl;
+    obj13 = { variant: "text-sm/normal", style: subLabelWarning.subLabelCritical, children: intl2.string(_modDef2493.FUu2b0) };
+    intl2.string(_modDef2493.FUu2b0);
     return obj;
   }
 }
-const View = fn(17).View;
-const FamilyCenterSubPages = fn(7049).FamilyCenterSubPages;
-const UserSettingsSections = fn(1085).UserSettingsSections;
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { teenControlsContainer: { gap: nativeDefault.space.PX_16 }, controlledSettingsHeader: null, parentalControlsContainer: null, controlsGroup: null, subLabelWarning: null, subLabelCritical: null };
-let obj3 = { gap: nativeDefault.space.PX_16 };
-obj2.controlledSettingsHeader = { gap: nativeDefault.space.PX_4 };
-let obj4 = { gap: nativeDefault.space.PX_4 };
-obj2.parentalControlsContainer = { gap: nativeDefault.space.PX_4 };
-let obj5 = { gap: nativeDefault.space.PX_4 };
-obj2.controlsGroup = { marginTop: nativeDefault.space.PX_8 };
-let obj6 = { marginTop: nativeDefault.space.PX_8 };
-obj2.subLabelWarning = { color: nativeDefault.colors.ICON_FEEDBACK_WARNING };
-let obj7 = { color: nativeDefault.colors.ICON_FEEDBACK_WARNING };
-obj2.subLabelCritical = { color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
-let closure_9 = createStyles.createStyles(obj2);
-let ReactCompilerGating = fn(558);
+const View = react_native.View;
+const FamilyCenterSubPages = FamilyCenterConstants.FamilyCenterSubPages;
+const UserSettingsSections = Constants.UserSettingsSections;
+({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { teenControlsContainer: obj2, controlledSettingsHeader: obj3, parentalControlsContainer: obj4, controlsGroup: obj5, subLabelWarning: obj6, subLabelCritical: obj7 };
+obj2 = { gap: nativeDefault.space.PX_16 };
+createStyles = createStyles.createStyles;
+obj3 = { gap: nativeDefault.space.PX_4 };
+obj4 = { gap: nativeDefault.space.PX_4 };
+obj5 = { marginTop: nativeDefault.space.PX_8 };
+obj6 = { color: nativeDefault.colors.ICON_FEEDBACK_WARNING };
+obj7 = { color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
+let closure_9 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((teenId) => {
-  const cResult = teenId(576).c(13);
+  let subLabel;
+  let trailing;
+  let obj = teenId(576);
+  const cResult = obj.c(13);
   teenId = teenId.teenId;
+  const cap = teenId.cap;
   const tmp4 = closure_9();
-  const obj = teenId(576);
-  const spendingLimitDisplayState = teenId(14717).useSpendingLimitDisplayState(teenId.cap);
+  let obj2 = teenId(14717);
+  const spendingLimitDisplayState = obj2.useSpendingLimitDisplayState(cap);
   if (cResult[0] === spendingLimitDisplayState) {
+    let tmp6;
+    let tmp11;
     if (cResult[1] === tmp4) {
-      let tmp6 = cResult[2];
+      tmp6 = cResult[2];
     }
     ({ trailing, subLabel } = tmp6);
     const _Symbol = Symbol;
@@ -91,32 +107,34 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((teenId) => {
       const intl = tmp(1126).intl;
       const stringResult = intl.string(_modDef2493.gMeekL);
       cResult[3] = stringResult;
-      let tmp11 = stringResult;
+      tmp11 = stringResult;
     } else {
       tmp11 = cResult[3];
     }
     if (cResult[4] === null == teenId) {
+      let tmp14;
       if (cResult[5] === teenId) {
-        let tmp14 = cResult[6];
+        tmp14 = cResult[6];
       }
-      if (cResult[7] === tmp9) {
+      if (cResult[7] === null == teenId) {
         if (cResult[8] === subLabel) {
           if (cResult[9] === tmp14) {
-            if (cResult[10] === tmp15) {
+            if (cResult[10] === null != teenId) {
+              let tmp16;
               if (cResult[11] === trailing) {
-                let tmp16 = cResult[12];
+                tmp16 = cResult[12];
               }
               return tmp16;
             }
           }
         }
       }
-      const obj3 = { label: tmp11, trailing, subLabel, onPress: tmp14, arrow: !tmp9, disabled: tmp9 };
-      const tmp18 = closure_7(tmp(5993).TableRow, obj3);
-      cResult[7] = tmp9;
+      const obj3 = { label: tmp11, trailing, subLabel, onPress: tmp14, arrow: null != teenId, disabled: null == teenId };
+      const tmp18 = closure_7(teenId(5993).TableRow, obj3);
+      cResult[7] = null == teenId;
       cResult[8] = subLabel;
       cResult[9] = tmp14;
-      cResult[10] = !tmp9;
+      cResult[10] = null != teenId;
       cResult[11] = trailing;
       cResult[12] = tmp18;
       tmp16 = tmp18;
@@ -124,7 +142,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((teenId) => {
     let fn;
     if (null != teenId) {
       fn = () => {
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14715, dependencyMap.paths), { teenId }, undefined, { animation: "slide_from_right" });
+        const obj = ModalActionCreatorsDefault;
+        const obj2 = { teenId };
+        obj.pushLazy(asyncRequire(14715, dependencyMap.paths), obj2, undefined, { animation: "slide_from_right" });
       };
     }
     cResult[4] = null == teenId;
@@ -137,46 +157,59 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((teenId) => {
   cResult[1] = tmp4;
   cResult[2] = tmp7;
   tmp6 = tmp7;
-  const obj2 = teenId(14717);
 }) : ((teenId) => {
-  teenId = teenId.teenId;
-  const tmp = closure_9();
-  const obj = teenId(14717);
-  ({ trailing, subLabel } = getSpendingLimitRowProps(teenId(14717).useSpendingLimitDisplayState(teenId.cap), tmp));
-  const obj2 = { label: null, trailing: null, subLabel: null, onPress: null, arrow: null, disabled: null };
-  const intl = teenId(1126).intl;
-  obj2.label = intl.string(_modDef2493.gMeekL);
-  obj2.trailing = trailing;
-  obj2.subLabel = subLabel;
   let fn;
+  let intl;
+  let subLabel;
+  let trailing;
+  teenId = teenId.teenId;
+  const cap = teenId.cap;
+  const tmp = closure_9();
+  let obj = teenId(14717);
+  ({ trailing, subLabel } = getSpendingLimitRowProps(obj.useSpendingLimitDisplayState(cap), tmp));
+  let obj2 = { label: intl.string(_modDef2493.gMeekL), trailing, subLabel, onPress: fn, arrow: null != teenId, disabled: null == teenId };
+  getSpendingLimitRowProps(obj.useSpendingLimitDisplayState(cap), tmp);
+  const TableRow = teenId(5993).TableRow;
+  intl = teenId(1126).intl;
+  fn = undefined;
   if (null != teenId) {
     fn = () => {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14715, dependencyMap.paths), { teenId }, undefined, { animation: "slide_from_right" });
+      const obj = ModalActionCreatorsDefault;
+      const obj2 = { teenId };
+      obj.pushLazy(asyncRequire(14715, dependencyMap.paths), obj2, undefined, { animation: "slide_from_right" });
     };
   }
-  obj2.onPress = fn;
-  obj2.arrow = null != teenId;
-  obj2.disabled = null == teenId;
-  return closure_7(teenId(5993).TableRow, obj2);
+  return closure_7(TableRow, obj2);
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = activeLinkUserIds(576).c(40);
+  let activeLinkUserIds;
+  let arr;
+  let controlledSettingsHeader;
+  let intl;
+  let items;
+  let subLabel;
+  let teenControlsContainer;
+  let tmp17;
+  let trailing;
+  let obj = activeLinkUserIds(N[14]);
+  const cResult = obj.c(40);
   const tmp4 = closure_9();
-  let obj = activeLinkUserIds(576);
-  activeLinkUserIds = activeLinkUserIds(8295).useActiveLinkUserIds();
-  const obj2 = activeLinkUserIds(8295);
-  const selectedTeenUser = activeLinkUserIds(14701).useSelectedTeenUser();
-  const obj3 = activeLinkUserIds(14701);
-  const navigation = activeLinkUserIds(1490).useNavigation();
+  let obj2 = activeLinkUserIds(N[17]);
+  activeLinkUserIds = obj2.useActiveLinkUserIds();
+  let obj3 = activeLinkUserIds(N[18]);
+  const selectedTeenUser = obj3.useSelectedTeenUser();
+  const obj4 = activeLinkUserIds(N[19]);
+  navigation = obj4.useNavigation();
   let rules;
+  const first = cResult[0];
   if (selectedTeenUser != null) {
     const restrictedSchedule = selectedTeenUser.restrictedSchedule;
     if (restrictedSchedule != null) {
       rules = restrictedSchedule.rules;
     }
   }
-  if (cResult[0] !== rules) {
+  if (first !== rules) {
     let rules1;
     if (selectedTeenUser != null) {
       const restrictedSchedule2 = selectedTeenUser.restrictedSchedule;
@@ -196,21 +229,20 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     cResult[0] = rules2;
     cResult[1] = rules1;
-    let arr = rules1;
+    arr = rules1;
   } else {
     arr = cResult[1];
   }
-  const obj4 = activeLinkUserIds(1490);
-  const spendingLimitFromUserSettings = activeLinkUserIds(14717).useSpendingLimitFromUserSettings();
+  const tmpResult = activeLinkUserIds(N[15]);
+  const spendingLimitFromUserSettings = tmpResult.useSpendingLimitFromUserSettings();
   if (cResult[2] !== activeLinkUserIds) {
     class L {
       constructor() {
-        obj = closure_0(closure_2[20]);
-        popLayerResult = obj.popLayer();
-        obj2 = closure_1(closure_2[21]);
-        obj1 = { recipientIds: closure_0 };
-        openPrivateChannelResult = obj2.openPrivateChannel(obj1);
-        return;
+        const obj = LayerActionCreators;
+        obj.popLayer();
+        const obj2 = ChannelActionCreatorsDefault;
+        const obj3 = { recipientIds: activeLinkUserIds };
+        obj2.openPrivateChannel(obj3);
       }
     }
     cResult[2] = activeLinkUserIds;
@@ -218,20 +250,18 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     class L {
       constructor() {
-        obj = closure_0(closure_2[20]);
-        popLayerResult = obj.popLayer();
-        obj2 = closure_1(closure_2[21]);
-        obj1 = { recipientIds: closure_0 };
-        openPrivateChannelResult = obj2.openPrivateChannel(obj1);
-        return;
+        const obj = LayerActionCreators;
+        obj.popLayer();
+        const obj2 = ChannelActionCreatorsDefault;
+        const obj3 = { recipientIds: activeLinkUserIds };
+        obj2.openPrivateChannel(obj3);
       }
     }
   }
   if (cResult[4] !== navigation) {
     class N {
       constructor() {
-        navigateResult = closure_1.navigate(UserSettingsSections.CONTENT_AND_SOCIAL);
-        return;
+        navigation.navigate(UserSettingsSections.CONTENT_AND_SOCIAL);
       }
     }
     cResult[4] = navigation;
@@ -239,18 +269,16 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     class N {
       constructor() {
-        navigateResult = closure_1.navigate(UserSettingsSections.CONTENT_AND_SOCIAL);
-        return;
+        navigation.navigate(UserSettingsSections.CONTENT_AND_SOCIAL);
       }
     }
   }
-  dependencyMap = N;
+  N = tmp13;
   if (cResult[6] !== navigation) {
     class P {
       constructor() {
-        obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
-        navigateResult = closure_1.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
-        return;
+        const obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
+        navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
       }
     }
     cResult[6] = navigation;
@@ -258,111 +286,103 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     class P {
       constructor() {
-        obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
-        navigateResult = closure_1.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
-        return;
+        const obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
+        navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
       }
     }
   }
-  const tmpResult = activeLinkUserIds(14717);
-  ({ subLabel, trailing } = navigation(14718)(arr));
+  ({ subLabel, trailing } = navigation(N[22])(arr));
   ({ teenControlsContainer, controlledSettingsHeader } = tmp4);
+  navigation(N[22])(arr);
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
     class P {
       constructor() {
-        obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
-        navigateResult = closure_1.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
-        return;
+        const obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
+        navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
       }
     }
-    const obj5 = { variant: "text-sm/semibold", children: null };
-    const intl = tmp(1126).intl;
-    obj5.children = intl.string(tmp14(2493).ahKIJO);
-    const tmp17 = closure_7(tmp(4886).Text, obj5);
-    cResult[8] = tmp17;
-    const tmp16 = tmp17;
+    const obj5 = { variant: "text-sm/semibold", children: intl.string(navigation(N[9]).ahKIJO) };
+    const Text = tmp(tmp2[7]).Text;
+    intl = tmp(tmp2[8]).intl;
+    const tmp18 = closure_7(Text, obj5);
+    cResult[8] = tmp18;
+    tmp17 = tmp18;
   } else {
     class P {
       constructor() {
-        obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
-        navigateResult = closure_1.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
-        return;
+        const obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
+        navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
       }
     }
   }
-  if (cResult[9] !== N) {
+  if (cResult[9] !== tmp13) {
     class P {
       constructor() {
-        obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
-        navigateResult = closure_1.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
-        return;
+        const obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
+        navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
       }
     }
     const obj6 = {
-      openSettingsHook(children, arg1) {
-          return React5(Text_Text.Text, { variant: "text-sm/medium", color: "text-link", onPress, children }, arg1);
+      openSettingsHook(children, id) {
+          const obj = { variant: "text-sm/medium", color: "text-link", onPress: N, children };
+          return metroImportDefault(Text_Text.Text, obj, id);
         }
     };
-    const formatResult = obj7.format(tmp14(2493).X9rW0j, obj6);
-    cResult[9] = N;
-    cResult[10] = formatResult;
+    cResult[9] = tmp13;
+    cResult[10] = obj7.format(navigation(N[9]).X9rW0j, obj6);
+    const formatResult = obj7.format(navigation(N[9]).X9rW0j, obj6);
   } else {
     class P {
       constructor() {
-        obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
-        navigateResult = closure_1.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
-        return;
+        const obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
+        navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
       }
     }
   }
-  if (cResult[11] !== tmp18) {
+  if (cResult[11] !== tmp19) {
     class P {
       constructor() {
-        obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
-        navigateResult = closure_1.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
-        return;
+        const obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
+        navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
       }
     }
-    const obj8 = { variant: "text-sm/medium", color: "text-muted", children: tmp18 };
-    const tmp21 = closure_7(tmp(4886).Text, obj8);
-    cResult[11] = tmp18;
-    cResult[12] = tmp21;
+    const obj8 = { variant: "text-sm/medium", color: "text-muted", children: tmp19 };
+    cResult[11] = tmp19;
+    cResult[12] = closure_7(activeLinkUserIds(N[7]).Text, obj8);
+    const tmp22 = closure_7(activeLinkUserIds(N[7]).Text, obj8);
   } else {
     class P {
       constructor() {
-        obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
-        navigateResult = closure_1.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
-        return;
+        const obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
+        navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
       }
     }
   }
   if (cResult[13] === tmp4.controlledSettingsHeader) {
+    let tmp27;
     class P {
       constructor() {
-        obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
-        navigateResult = closure_1.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
-        return;
+        const obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
+        navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
       }
     }
     const controlsGroup = tmp4.controlsGroup;
     if (cResult[16] !== spendingLimitFromUserSettings) {
       class P {
         constructor() {
-          obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
-          navigateResult = closure_1.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
-          return;
+          const obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
+          navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
         }
       }
       const obj9 = { cap: spendingLimitFromUserSettings };
-      const tmp25 = closure_7(closure_11, obj9);
       cResult[16] = spendingLimitFromUserSettings;
-      cResult[17] = tmp25;
+      cResult[17] = closure_7(closure_11, obj9);
+      const tmp26 = closure_7(closure_11, obj9);
     } else {
       class P {
         constructor() {
-          obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
-          navigateResult = closure_1.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
-          return;
+          const obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
+          navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
         }
       }
     }
@@ -370,67 +390,76 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
       class P {
         constructor() {
-          obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
-          navigateResult = closure_1.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
-          return;
+          const obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
+          navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
         }
       }
-      const stringResult = obj12.string(tmp14(2493)["1Op+NP"]);
+      const stringResult = obj12.string(navigation(N[9])["1Op+NP"]);
       cResult[18] = stringResult;
-      const tmp26 = stringResult;
+      tmp27 = stringResult;
     } else {
       class P {
         constructor() {
-          obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
-          navigateResult = closure_1.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
-          return;
+          const obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
+          navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
         }
       }
     }
     if (arr.length > 0) {
       class P {
         constructor() {
-          obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
-          navigateResult = closure_1.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
-          return;
+          const obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
+          navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
         }
       }
     }
     if (cResult[19] === subLabel) {
       class P {
         constructor() {
-          obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
-          navigateResult = closure_1.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
-          return;
+          const obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
+          navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
         }
       }
     }
-    const obj10 = { label: tmp26, subLabel, trailing, onPress: undefined, arrow: arr.length > 0 };
-    const tmp32 = closure_7(tmp(5993).TableRow, obj10);
+    const obj10 = { label: tmp27, subLabel, trailing, onPress: undefined, arrow: arr.length > 0 };
     cResult[19] = subLabel;
     cResult[20] = undefined;
     cResult[21] = arr.length > 0;
     cResult[22] = trailing;
-    cResult[23] = tmp32;
+    cResult[23] = closure_7(activeLinkUserIds(N[16]).TableRow, obj10);
+    const tmp33 = closure_7(activeLinkUserIds(N[16]).TableRow, obj10);
   }
-  const obj11 = { style: controlledSettingsHeader, children: null };
-  const items = [tmp16, tmp20];
-  obj11.children = items;
-  const tmp15 = navigation(14718)(arr);
+  const obj11 = { style: controlledSettingsHeader, children: items };
+  items = [tmp17, tmp21];
   cResult[13] = tmp4.controlledSettingsHeader;
-  cResult[14] = tmp20;
-  cResult[15] = closure_8(activeLinkUserIds(5593).Stack, obj11);
-  const tmp22 = closure_8(activeLinkUserIds(5593).Stack, obj11);
+  cResult[14] = tmp21;
+  cResult[15] = closure_8(activeLinkUserIds(N[23]).Stack, obj11);
+  closure_8(activeLinkUserIds(N[23]).Stack, obj11);
 }) : (() => {
+  let TableRowGroup;
+  let activeLinkUserIds;
+  let fn;
+  let intl;
+  let intl2;
+  let intl3;
+  let intl4;
+  let items;
+  let items1;
+  let obj11;
+  let obj13;
+  let obj8;
+  let subLabel;
+  let trailing;
   function handleOpenSettings() {
     navigation.navigate(UserSettingsSections.CONTENT_AND_SOCIAL);
   }
   const tmp = closure_9();
-  activeLinkUserIds = activeLinkUserIds(handleOpenSettings[17]).useActiveLinkUserIds();
   let obj = activeLinkUserIds(handleOpenSettings[17]);
-  const selectedTeenUser = activeLinkUserIds(handleOpenSettings[18]).useSelectedTeenUser();
-  const obj2 = activeLinkUserIds(handleOpenSettings[18]);
-  importDefault = activeLinkUserIds(handleOpenSettings[19]).useNavigation();
+  activeLinkUserIds = obj.useActiveLinkUserIds();
+  let obj2 = activeLinkUserIds(handleOpenSettings[18]);
+  const selectedTeenUser = obj2.useSelectedTeenUser();
+  let obj3 = activeLinkUserIds(handleOpenSettings[19]);
+  importDefault = obj3.useNavigation();
   let rules;
   if (selectedTeenUser != null) {
     const restrictedSchedule = selectedTeenUser.restrictedSchedule;
@@ -441,78 +470,90 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (rules == null) {
     rules = [];
   }
-  const obj3 = activeLinkUserIds(handleOpenSettings[19]);
-  const spendingLimitFromUserSettings = activeLinkUserIds(handleOpenSettings[15]).useSpendingLimitFromUserSettings();
   const tmp2Result = activeLinkUserIds(handleOpenSettings[15]);
-  const tmp6 = importDefault;
+  const spendingLimitFromUserSettings = tmp2Result.useSpendingLimitFromUserSettings();
   ({ subLabel, trailing } = require("useScheduleTimeControlsRowProps")(rules));
-  const obj4 = { style: tmp.teenControlsContainer, children: null };
-  const obj5 = { style: tmp.controlledSettingsHeader, children: null };
-  const obj6 = { variant: "text-sm/semibold", children: null };
-  const intl = tmp2(tmp3[8]).intl;
-  obj6.children = intl.string(require("module_2493").ahKIJO);
-  const items = [closure_7(activeLinkUserIds(handleOpenSettings[7]).Text, obj6), ];
-  const obj7 = { variant: "text-sm/medium", color: "text-muted", children: null };
-  const intl2 = tmp2(tmp3[8]).intl;
-  obj7.children = intl2.format(require("module_2493").X9rW0j, {
-    openSettingsHook(children, arg1) {
-      return React5(Text_Text.Text, { variant: "text-sm/medium", color: "text-link", onPress: handleOpenSettings, children }, arg1);
+  const obj4 = { style: tmp.teenControlsContainer, children: items1 };
+  require("useScheduleTimeControlsRowProps")(rules);
+  const Stack = tmp2(tmp3[23]).Stack;
+  const obj5 = { style: tmp.controlledSettingsHeader, children: items };
+  const Stack2 = tmp2(tmp3[23]).Stack;
+  const obj6 = { variant: "text-sm/semibold", children: intl.string(require("module_2493").ahKIJO) };
+  const Text = tmp2(tmp3[7]).Text;
+  intl = tmp2(tmp3[8]).intl;
+  items = [closure_7(Text, obj6), ];
+  const obj7 = { variant: "text-sm/medium", color: "text-muted", children: intl2.format(require("module_2493").X9rW0j, obj8) };
+  const Text2 = tmp2(tmp3[7]).Text;
+  intl2 = tmp2(tmp3[8]).intl;
+  obj8 = {
+    openSettingsHook(children, id) {
+      const obj = { variant: "text-sm/medium", color: "text-link", onPress: handleOpenSettings, children };
+      return metroImportDefault(Text_Text.Text, obj, id);
     }
-  });
-  items[1] = closure_7(activeLinkUserIds(handleOpenSettings[7]).Text, obj7);
-  obj5.children = items;
-  const items1 = [closure_8(activeLinkUserIds(handleOpenSettings[23]).Stack, obj5), , ];
-  const obj9 = { style: tmp.controlsGroup, children: null };
+  };
+  items[1] = closure_7(Text2, obj7);
+  items1 = [closure_8(Stack2, obj5), , ];
+  const obj9 = { style: tmp.controlsGroup, children: closure_8(TableRowGroup, obj11) };
+  TableRowGroup = tmp2(tmp3[24]).TableRowGroup;
   const items2 = [closure_7(closure_11, { cap: spendingLimitFromUserSettings }), ];
-  const obj10 = { label: null, subLabel: null, trailing: null, onPress: null, arrow: null };
-  const intl3 = tmp2(tmp3[8]).intl;
-  obj10.label = intl3.string(require("module_2493")["1Op+NP"]);
-  obj10.subLabel = subLabel;
-  obj10.trailing = trailing;
-  let fn;
+  const obj10 = { label: intl3.string(require("module_2493")["1Op+NP"]), subLabel, trailing, onPress: fn, arrow: rules.length > 0 };
+  const TableRow = tmp2(tmp3[16]).TableRow;
+  intl3 = tmp2(tmp3[8]).intl;
+  fn = undefined;
+  const tmp6 = importDefault;
   if (rules.length > 0) {
     fn = () => {
-      navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS });
+      const obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS };
+      navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
     };
   }
-  const obj11 = { hasIcons: false, children: null };
-  obj10.onPress = fn;
-  obj10.arrow = rules.length > 0;
-  items2[1] = closure_7(activeLinkUserIds(handleOpenSettings[16]).TableRow, obj10);
-  obj11.children = items2;
-  obj9.children = closure_8(activeLinkUserIds(handleOpenSettings[24]).TableRowGroup, obj11);
+  obj11 = { hasIcons: false, children: items2 };
+  items2[1] = closure_7(TableRow, obj10);
   items1[1] = closure_7(View, obj9);
-  const obj12 = { text: null, onPress: null, shrink: true, grow: false, variant: "secondary", size: "sm" };
-  const intl4 = tmp2(tmp3[8]).intl;
-  obj12.text = intl4.formatToPlainString(tmp6(handleOpenSettings[9]).w0JA3P, { count: activeLinkUserIds.length });
-  obj12.onPress = function onPress() {
-    LayerActionCreators.popLayer();
-    ChannelActionCreatorsDefault.openPrivateChannel({ recipientIds: activeLinkUserIds });
+  const obj12 = {
+    text: intl4.formatToPlainString(tmp6(handleOpenSettings[9]).w0JA3P, obj13),
+    onPress() {
+      const obj = LayerActionCreators;
+      obj.popLayer();
+      const obj2 = ChannelActionCreatorsDefault;
+      const obj3 = { recipientIds: activeLinkUserIds };
+      obj2.openPrivateChannel(obj3);
+    },
+    shrink: true,
+    grow: false,
+    variant: "secondary",
+    size: "sm"
   };
-  items1[2] = closure_7(activeLinkUserIds(handleOpenSettings[25]).Button, obj12);
-  obj4.children = items1;
-  return closure_8(activeLinkUserIds(handleOpenSettings[23]).Stack, obj4);
+  const Button = tmp2(tmp3[25]).Button;
+  intl4 = tmp2(tmp3[8]).intl;
+  obj13 = { count: activeLinkUserIds.length };
+  items1[2] = closure_7(Button, obj12);
+  return closure_8(Stack, obj4);
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = selectedTeenUser(navigation[14]).c(41);
-  closure_9();
-  let obj = selectedTeenUser(navigation[14]);
-  const tmp = selectedTeenUser;
+  let arr;
+  let selectedTeenUser;
   let tmp2 = navigation;
-  selectedTeenUser = selectedTeenUser(navigation[18]).useSelectedTeenUser();
+  let obj = selectedTeenUser(navigation[14]);
+  const cResult = obj.c(41);
+  closure_9();
   const obj2 = selectedTeenUser(navigation[18]);
-  const shouldLoadSettingsForSelectedTeenUser = selectedTeenUser(navigation[18]).useShouldLoadSettingsForSelectedTeenUser();
+  const tmp = selectedTeenUser;
+  selectedTeenUser = obj2.useSelectedTeenUser();
   const obj3 = selectedTeenUser(navigation[18]);
-  navigation = selectedTeenUser(navigation[19]).useNavigation();
+  const shouldLoadSettingsForSelectedTeenUser = obj3.useShouldLoadSettingsForSelectedTeenUser();
+  const obj4 = selectedTeenUser(navigation[19]);
+  navigation = obj4.useNavigation();
   let rules;
+  const first = cResult[0];
   if (selectedTeenUser != null) {
     const restrictedSchedule = selectedTeenUser.restrictedSchedule;
     if (restrictedSchedule != null) {
       rules = restrictedSchedule.rules;
     }
   }
-  if (cResult[0] !== rules) {
+  if (first !== rules) {
     let rules1;
     if (selectedTeenUser != null) {
       const restrictedSchedule2 = selectedTeenUser.restrictedSchedule;
@@ -532,56 +573,57 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     cResult[0] = rules2;
     cResult[1] = rules1;
-    let arr = rules1;
+    arr = rules1;
   } else {
     arr = cResult[1];
   }
   const ParentalControlledSpendingLimit = tmp(tmp2[26]).ParentalControlledSpendingLimit;
   let id;
+  const useControlledSetting = ParentalControlledSpendingLimit.useControlledSetting;
   if (selectedTeenUser != null) {
     id = selectedTeenUser.id;
   }
-  const controlledSetting = ParentalControlledSpendingLimit.useControlledSetting(id);
+  const controlledSetting = useControlledSetting(id);
   if (cResult[2] === selectedTeenUser) {
+    let tmp13;
     if (cResult[3] === shouldLoadSettingsForSelectedTeenUser) {
-      let tmp12 = cResult[4];
+      tmp13 = cResult[4];
     }
     let id1;
     if (selectedTeenUser != null) {
       id1 = selectedTeenUser.id;
     }
     if (cResult[5] === shouldLoadSettingsForSelectedTeenUser) {
+      let tmp15;
+      let tmp18;
       if (cResult[6] === id1) {
-        let tmp14 = cResult[7];
+        tmp15 = cResult[7];
       }
-      const effect = arr.useEffect(tmp12, tmp14);
+      const effect = arr.useEffect(tmp13, tmp15);
       if (cResult[8] !== navigation) {
         class P {
-          constructor(arg0) {
-            obj = { selectedSubPage: arg0 };
-            navigateResult = closure_2.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
-            return;
+          constructor(selectedSubPage) {
+            const obj = { selectedSubPage };
+            navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
           }
         }
         cResult[8] = navigation;
         cResult[9] = P;
-        const tmp17 = P;
+        tmp18 = P;
       } else {
         class P {
-          constructor(arg0) {
-            obj = { selectedSubPage: arg0 };
-            navigateResult = closure_2.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
-            return;
+          constructor(selectedSubPage) {
+            const obj = { selectedSubPage };
+            navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
           }
         }
       }
-      P = tmp17;
+      P = tmp18;
       if (cResult[10] === navigation) {
         class P {
-          constructor(arg0) {
-            obj = { selectedSubPage: arg0 };
-            navigateResult = closure_2.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
-            return;
+          constructor(selectedSubPage) {
+            const obj = { selectedSubPage };
+            navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
           }
         }
       }
@@ -589,16 +631,18 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       cResult[11] = arr.length;
       if (selectedTeenUser != null) {
         class P {
-          constructor(arg0) {
-            obj = { selectedSubPage: arg0 };
-            navigateResult = closure_2.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
-            return;
+          constructor(selectedSubPage) {
+            const obj = { selectedSubPage };
+            navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
           }
         }
       }
       const fn2 = function f() {
-        const obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS, autoOpenCreate: null };
-        let tmp2 = 0 === arr.length;
+        let tmp2;
+        const obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS, autoOpenCreate: tmp2 };
+        tmp2 = 0 === arr.length;
+        const navigate = navigation.navigate;
+        const FAMILY_CENTER_PARENTAL_CONTROLS = UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS;
         if (tmp2) {
           let id;
           if (selectedTeenUser != null) {
@@ -606,8 +650,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           }
           tmp2 = null != id;
         }
-        obj.autoOpenCreate = tmp2;
-        navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
+        navigate(FAMILY_CENTER_PARENTAL_CONTROLS, obj);
       };
       cResult[12] = undefined;
       cResult[13] = fn2;
@@ -616,29 +659,44 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     cResult[5] = shouldLoadSettingsForSelectedTeenUser;
     cResult[6] = id1;
     cResult[7] = items;
-    tmp14 = items;
+    tmp15 = items;
   }
   const fn = function _() {
     let id;
     if (selectedTeenUser != null) {
       id = selectedTeenUser.id;
     }
+    const tmp3 = null != id && shouldLoadSettingsForSelectedTeenUser;
     if (tmp3) {
-      const teenSettingsAndConsents = FamilyCenterActionCreatorsDefault.fetchTeenSettingsAndConsents(selectedTeenUser.id);
+      const obj = FamilyCenterActionCreatorsDefault;
+      const teenSettingsAndConsents = obj.fetchTeenSettingsAndConsents(selectedTeenUser.id);
     }
-    tmp3 = null != id && shouldLoadSettingsForSelectedTeenUser;
   };
   cResult[2] = selectedTeenUser;
   cResult[3] = shouldLoadSettingsForSelectedTeenUser;
   cResult[4] = fn;
-  tmp12 = fn;
+  tmp13 = fn;
 }) : (() => {
+  let TableRowGroup;
+  let intl;
+  let intl2;
+  let intl3;
+  let intl4;
+  let intl5;
+  let items1;
+  let items2;
+  let selectedTeenUser;
+  let subLabel;
+  let trailing;
   const tmp = closure_9();
-  selectedTeenUser = selectedTeenUser(14701).useSelectedTeenUser();
+  let tmp2 = selectedTeenUser;
+  let tmp3 = dependencyMap;
   let obj = selectedTeenUser(14701);
-  const shouldLoadSettingsForSelectedTeenUser = selectedTeenUser(14701).useShouldLoadSettingsForSelectedTeenUser();
+  selectedTeenUser = obj.useSelectedTeenUser();
   const obj2 = selectedTeenUser(14701);
-  dependencyMap = selectedTeenUser(1490).useNavigation();
+  const shouldLoadSettingsForSelectedTeenUser = obj2.useShouldLoadSettingsForSelectedTeenUser();
+  const obj3 = selectedTeenUser(1490);
+  dependencyMap = obj3.useNavigation();
   let rules;
   if (selectedTeenUser != null) {
     const restrictedSchedule = selectedTeenUser.restrictedSchedule;
@@ -651,53 +709,66 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   const ParentalControlledSpendingLimit = tmp2(14626).ParentalControlledSpendingLimit;
   let id;
+  const useControlledSetting = ParentalControlledSpendingLimit.useControlledSetting;
   if (selectedTeenUser != null) {
     id = selectedTeenUser.id;
   }
   let id1;
-  const controlledSetting = ParentalControlledSpendingLimit.useControlledSetting(id);
+  const controlledSetting = useControlledSetting(id);
+  const useEffect = rules.useEffect;
   if (selectedTeenUser != null) {
     id1 = selectedTeenUser.id;
   }
   const items = [id1, shouldLoadSettingsForSelectedTeenUser];
-  const effect = rules.useEffect(() => {
+  const effect = useEffect(() => {
     let id;
     if (selectedTeenUser != null) {
       id = selectedTeenUser.id;
     }
+    const tmp3 = null != id && shouldLoadSettingsForSelectedTeenUser;
     if (tmp3) {
-      const teenSettingsAndConsents = FamilyCenterActionCreatorsDefault.fetchTeenSettingsAndConsents(selectedTeenUser.id);
+      const obj = FamilyCenterActionCreatorsDefault;
+      const teenSettingsAndConsents = obj.fetchTeenSettingsAndConsents(selectedTeenUser.id);
     }
-    tmp3 = null != id && shouldLoadSettingsForSelectedTeenUser;
   }, items);
-  const obj3 = selectedTeenUser(1490);
-  const tmp11 = shouldLoadSettingsForSelectedTeenUser;
   ({ subLabel, trailing } = shouldLoadSettingsForSelectedTeenUser(14718)(rules));
-  const obj4 = { style: tmp.parentalControlsContainer, children: null };
-  const obj5 = { variant: "text-sm/semibold", children: null };
-  const intl = tmp2(1126).intl;
-  obj5.children = intl.string(shouldLoadSettingsForSelectedTeenUser(2493).ahKIJO);
-  const items1 = [closure_7(selectedTeenUser(4886).Text, obj5), , ];
-  const obj6 = { variant: "text-sm/medium", color: "text-muted", children: null };
-  const intl2 = tmp2(1126).intl;
-  obj6.children = intl2.string(shouldLoadSettingsForSelectedTeenUser(2493).Sv236e);
-  items1[1] = closure_7(selectedTeenUser(4886).Text, obj6);
-  const obj7 = { style: tmp.controlsGroup, children: null };
-  const obj8 = { label: null, onPress: null, arrow: true };
-  const intl3 = tmp2(1126).intl;
-  obj8.label = intl3.string(selectedTeenUser(1126).t["+o1pDZ"]);
-  obj8.onPress = function onPress() {
-    navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, { selectedSubPage: FamilyCenterSubPages.CONTENT_AND_SOCIAL });
+  const obj4 = { style: tmp.parentalControlsContainer, children: items1 };
+  shouldLoadSettingsForSelectedTeenUser(14718)(rules);
+  const Stack = tmp2(5593).Stack;
+  const obj5 = { variant: "text-sm/semibold", children: intl.string(shouldLoadSettingsForSelectedTeenUser(2493).ahKIJO) };
+  const Text = tmp2(4886).Text;
+  intl = tmp2(1126).intl;
+  items1 = [closure_7(Text, obj5), , ];
+  const obj6 = { variant: "text-sm/medium", color: "text-muted", children: intl2.string(shouldLoadSettingsForSelectedTeenUser(2493).Sv236e) };
+  const Text2 = tmp2(4886).Text;
+  intl2 = tmp2(1126).intl;
+  items1[1] = closure_7(Text2, obj6);
+  const obj7 = { style: tmp.controlsGroup, children: closure_8(TableRowGroup, { hasIcons: false, children: items2 }) };
+  TableRowGroup = tmp2(6074).TableRowGroup;
+  const obj8 = {
+    label: intl3.string(tmp2(1126).t["+o1pDZ"]),
+    onPress() {
+      const obj = { selectedSubPage: FamilyCenterSubPages.CONTENT_AND_SOCIAL };
+      navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
+    },
+    arrow: true
   };
-  const items2 = [closure_7(selectedTeenUser(5993).TableRow, obj8), , , ];
-  const obj9 = { label: null, onPress: null, arrow: true };
-  const intl4 = tmp2(1126).intl;
-  obj9.label = intl4.string(selectedTeenUser(1126).t.OAuOHD);
-  obj9.onPress = function onPress() {
-    navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, { selectedSubPage: FamilyCenterSubPages.DATA_AND_PRIVACY });
+  const TableRow = tmp2(5993).TableRow;
+  intl3 = tmp2(1126).intl;
+  items2 = [closure_7(TableRow, obj8), , , ];
+  const obj9 = {
+    label: intl4.string(tmp2(1126).t.OAuOHD),
+    onPress() {
+      const obj = { selectedSubPage: FamilyCenterSubPages.DATA_AND_PRIVACY };
+      navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
+    },
+    arrow: true
   };
-  items2[1] = closure_7(selectedTeenUser(5993).TableRow, obj9);
+  const TableRow2 = tmp2(5993).TableRow;
+  intl4 = tmp2(1126).intl;
+  items2[1] = closure_7(TableRow2, obj9);
   let id2;
+  const tmp11 = shouldLoadSettingsForSelectedTeenUser;
   if (selectedTeenUser != null) {
     id2 = selectedTeenUser.id;
   }
@@ -713,58 +784,66 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   let tmp14Result2 = null != id3;
   if (tmp14Result2) {
-    const obj11 = { label: null, subLabel: null, trailing: null, onPress: null, arrow: true };
-    const intl5 = tmp2(1126).intl;
-    obj11.label = intl5.string(tmp11(2493)["1Op+NP"]);
-    obj11.subLabel = subLabel;
-    obj11.trailing = trailing;
-    obj11.onPress = function onPress() {
-      const obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS, autoOpenCreate: null };
-      let tmp2 = 0 === rules.length;
-      if (tmp2) {
-        let id;
-        if (selectedTeenUser != null) {
-          id = selectedTeenUser.id;
-        }
-        tmp2 = null != id;
-      }
-      obj.autoOpenCreate = tmp2;
-      navigation.navigate(UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS, obj);
+    const obj11 = {
+      label: intl5.string(tmp11(2493)["1Op+NP"]),
+      subLabel,
+      trailing,
+      onPress() {
+          let tmp2;
+          const obj = { selectedSubPage: FamilyCenterSubPages.SCREEN_TIME_CONTROLS, autoOpenCreate: tmp2 };
+          tmp2 = 0 === rules.length;
+          const navigate = navigation.navigate;
+          const FAMILY_CENTER_PARENTAL_CONTROLS = UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS;
+          if (tmp2) {
+            let id;
+            if (selectedTeenUser != null) {
+              id = selectedTeenUser.id;
+            }
+            tmp2 = null != id;
+          }
+          navigate(FAMILY_CENTER_PARENTAL_CONTROLS, obj);
+        },
+      arrow: true
     };
-    tmp14Result2 = closure_7(tmp2(5993).TableRow, obj11);
+    const TableRow3 = tmp2(5993).TableRow;
+    intl5 = tmp2(1126).intl;
+    tmp14Result2 = closure_7(TableRow3, obj11);
   }
   items2[3] = tmp14Result2;
-  obj7.children = closure_8(selectedTeenUser(6074).TableRowGroup, { hasIcons: false, children: items2 });
   items1[2] = closure_7(View, obj7);
-  obj4.children = items1;
-  return closure_8(selectedTeenUser(5593).Stack, obj4);
+  return closure_8(Stack, obj4);
 });
-ReactCompilerGating = fn(558);
-let obj8 = { color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
-const size = fn(2);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const obj = react2;
+  const cResult = obj.c(2);
+  const tmp2 = useUserIsTeenAgeGroupDefault();
+  let tmp3 = null;
+  const obj2 = useUserLinks;
+  if (0 !== obj2.useActiveLinkUserIds().length) {
+    let tmp4;
+    if (cResult[0] !== tmp2) {
+      const obj3 = { children: metroImportDefault(tmp2 ? closure_12 : closure_13, {}) };
+      const tmp5Result = metroImportDefault(View, obj3);
+      cResult[0] = tmp2;
+      cResult[1] = tmp5Result;
+      tmp4 = tmp5Result;
+    } else {
+      tmp4 = cResult[1];
+    }
+    tmp3 = tmp4;
+  }
+  return tmp3;
+}) : (() => {
+  let tmp3Result = null;
+  const tmp = useUserIsTeenAgeGroupDefault();
+  const obj = useUserLinks;
+  if (0 !== obj.useActiveLinkUserIds().length) {
+    const obj2 = { children: metroImportDefault(tmp ? closure_12 : closure_13, {}) };
+    tmp3Result = metroImportDefault(View, obj2);
+  }
+  return tmp3Result;
+});
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterSettingsControls.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(2);
-  const tmp2 = useUserIsTeenAgeGroupDefault();
-  let num = 0;
-  if (0 === obj2.useActiveLinkUserIds().length) {
-    return null;
-  } else {
-    const obj3 = { children: React5(tmp2 ? closure_12 : closure_13, {}) };
-    const tmp3Result = React5(View, obj3);
-    cResult[num] = tmp2;
-    num = 1;
-    cResult[1] = tmp3Result;
-  }
-  obj2 = useUserLinks;
-}) : (() => {
-  const tmp = useUserIsTeenAgeGroupDefault();
-  if (0 === obj.useActiveLinkUserIds().length) {
-    return null;
-  } else {
-    const obj2 = { children: React5(tmp ? closure_12 : closure_13, {}) };
-    React5(View, obj2);
-  }
-  obj = useUserLinks;
-});
+export default tmp4;

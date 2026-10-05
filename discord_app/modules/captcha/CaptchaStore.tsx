@@ -1,61 +1,71 @@
 // === Module 5408: CaptchaStore ===
 
 // Module 5408 (CaptchaStore)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
+import react_native from "react-native" /* 1259 */;
 import MonitoringAgentDefault from "MonitoringAgent" /* 5409 */;
 import MetricEvents from "MetricEvents" /* 5414 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import module_570 from "module_570" /* 570 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-require = fn;
-const module_570 = fn(570);
-let obj3 = module_570.create(() => ({ captchaServeVolume: {} }));
-const size = fn(2);
+const useCaptchaStore = module_570.create(() => ({ captchaServeVolume: {} }));
 const result = size.fileFinishedImporting("modules/captcha/CaptchaStore.tsx");
 
-export const useCaptchaStore = obj3;
+export { useCaptchaStore };
 export const isCaptchaStoreVolumeEmpty = function isCaptchaStoreVolumeEmpty() {
-  return 0 === Object.keys(obj3.getState().captchaServeVolume).length;
+  return 0 === Object.keys(obj.getState().captchaServeVolume).length;
 };
 export const incrementCaptchaServeVolume = function incrementCaptchaServeVolume(arg0) {
+  let closure_0;
   _require = arg0;
-  require("ReactBatchUpdates").batchUpdates(() => {
-    obj3.setState((arg0) => {
-      let sum = arg0;
-      if (null == closure_1_0) {
-        return sum;
-      } else {
+  let obj = require("react-native");
+  obj.batchUpdates(() => {
+    let obj;
+    obj.setState((captchaServeVolume) => {
+      let tmp2 = captchaServeVolume;
+      if (null != closure_1_0) {
+        let tmp6;
         const obj = { captchaServeVolume: null };
         const obj2 = {};
-        const merged = Object.assign(sum.captchaServeVolume);
+        const tmp3 = closure_1_0 in captchaServeVolume.captchaServeVolume;
+        const merged = Object.assign(captchaServeVolume.captchaServeVolume);
         if (tmp3) {
-          sum = sum.captchaServeVolume[closure_1_0] + 1;
-          obj2[closure_1_0] = sum;
+          obj2[closure_1_0] = captchaServeVolume.captchaServeVolume[closure_1_0] + 1;
           obj.captchaServeVolume = obj2;
+          tmp6 = obj;
         } else {
           obj2[closure_1_0] = 1;
           obj.captchaServeVolume = obj2;
+          tmp6 = obj;
         }
-        tmp3 = closure_1_0 in sum.captchaServeVolume;
+        tmp2 = tmp6;
       }
+      return tmp2;
     });
   });
 };
 export const flushCaptchaServeVolume = function flushCaptchaServeVolume() {
-  const entries = Object.entries(obj3.getState().captchaServeVolume);
+  let items;
+  let obj;
+  let state;
+  let tmp6;
+  let tmp7;
+  const entries = Object.entries(obj.getState().captchaServeVolume);
+  const tmp2 = entries[Symbol.iterator]();
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);
     [tmp6, tmp7] = tmp5;
-    let obj = MonitoringAgentDefault;
-    let obj2 = { name: MetricEvents.MetricEvents.CAPTCHA_SERVE_VOLUME_DISTRIBUTION, tags: null };
+    let tmp10 = MonitoringAgentDefault;
+    obj = { name: MetricEvents.MetricEvents.CAPTCHA_SERVE_VOLUME_DISTRIBUTION, tags: items };
+    let distribution = tmp10.distribution;
     let _HermesInternal = HermesInternal;
-    let items = ["user_flow:" + tmp6];
-    obj2.tags = items;
-    let distributionResult = obj.distribution(obj2, tmp7, true);
+    items = ["user_flow:" + tmp6];
+    let distributionResult = distribution(obj, tmp7, true);
     continue;
   }
-  obj3 = ReactBatchUpdates;
-  obj3.batchUpdates(() => state.setState({ captchaServeVolume: {} }));
-  tmp2 = entries[Symbol.iterator]();
+  const obj2 = react_native;
+  obj2.batchUpdates(() => state.setState({ captchaServeVolume: {} }));
 };

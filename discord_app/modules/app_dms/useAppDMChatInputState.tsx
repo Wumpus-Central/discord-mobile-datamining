@@ -2,35 +2,45 @@
 
 // Module 13102 (useAppDMChatInputState)
 import DispatcherDefault from "Dispatcher" /* 584 */;
+import Constants from "Constants" /* 1085 */;
+import Server from "Server" /* 1985 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7858 */;
-import noop from "module_19" /* 19 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 8795 */;
+import react from "react" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 5118 */;
 import UserProfileStore from "UserProfileStore" /* 7111 */;
 import ApplicationRecord from "ApplicationRecord" /* 2009 */;
 import UserStore from "UserStore" /* 1377 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const useQueryState = fn(8795).useQueryState;
-const EMPTY_STRING_SNOWFLAKE_ID = fn(1085).EMPTY_STRING_SNOWFLAKE_ID;
-let items = [fn(1985).ApplicationCommandType.PRIMARY_ENTRY_POINT, fn(1985).ApplicationCommandType.CHAT, fn(1985).ApplicationCommandType.MESSAGE, fn(1985).ApplicationCommandType.USER];
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/app_dms/useAppDMChatInputState.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
-  const cResult = require("c").c(32);
+const useQueryState = ApplicationCommandIndexStore.useQueryState;
+const EMPTY_STRING_SNOWFLAKE_ID = Constants.EMPTY_STRING_SNOWFLAKE_ID;
+let items = [Server.ApplicationCommandType.PRIMARY_ENTRY_POINT, Server.ApplicationCommandType.CHAT, Server.ApplicationCommandType.MESSAGE, Server.ApplicationCommandType.USER];
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
+  let fn2;
+  let tmp13;
+  let tmp16;
+  let tmp23;
+  let tmp37;
+  let tmp47;
+  let tmp9;
+  let obj = require("react");
+  const cResult = obj.c(32);
   const channel = context.context.channel;
   let tmp4 = null;
   if (null != channel) {
     tmp4 = null;
     if (true === channel.isDM()) {
+      let tmp5;
       if (cResult[0] !== channel) {
         const user = UserStore.getUser(channel.getRecipientId());
         cResult[0] = channel;
         cResult[1] = user;
-        let tmp5 = user;
+        tmp5 = user;
       } else {
         tmp5 = cResult[1];
       }
@@ -48,54 +58,55 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     items = [ApplicationStore];
     cResult[2] = items;
-    let tmp9 = items;
+    tmp9 = items;
   } else {
     tmp9 = cResult[2];
   }
   let id;
+  const tmp11 = cResult[3];
   if (tmp4 != null) {
     id = tmp4.id;
   }
-  if (cResult[3] !== id) {
+  if (tmp11 !== id) {
     let id1;
     if (tmp4 != null) {
       id1 = tmp4.id;
     }
     const fn = function y() {
       let id;
+      const getAppIdForBotUserId = ApplicationStore.getAppIdForBotUserId;
       if (user != null) {
         id = user.id;
       }
-      return ApplicationStore.getAppIdForBotUserId(id);
+      return getAppIdForBotUserId(id);
     };
     cResult[3] = id1;
     cResult[4] = fn;
-    let tmp12 = fn;
+    tmp13 = fn;
   } else {
-    tmp12 = cResult[4];
+    tmp13 = cResult[4];
   }
-  let obj = require("c");
-  let stateFromStores = require("initialize").useStateFromStores(tmp9, tmp12);
+  const tmpResult = require("get initialized");
+  let stateFromStores = tmpResult.useStateFromStores(tmp9, tmp13);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [UserProfileStore];
     cResult[5] = items1;
-    let tmp15 = items1;
+    tmp16 = items1;
   } else {
-    tmp15 = cResult[5];
+    tmp16 = cResult[5];
   }
   if (cResult[6] !== tmp4) {
     class E {
       constructor() {
-        tmp = closure_0;
-        tmp2 = undefined;
-        if (null !== closure_0) {
-          id = undefined;
-          tmp3 = closure_6;
-          if (tmp != null) {
-            id = tmp.id;
+        let tmp2;
+        if (null !== user) {
+          let id;
+          const getUserProfile = UserProfileStore.getUserProfile;
+          if (user != null) {
+            id = user.id;
           }
-          userProfile = closure_6.getUserProfile(id);
-          application = undefined;
+          const userProfile = getUserProfile(id);
+          let application;
           if (userProfile != null) {
             application = userProfile.application;
           }
@@ -109,16 +120,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
   } else {
     class E {
       constructor() {
-        tmp = closure_0;
-        tmp2 = undefined;
-        if (null !== closure_0) {
-          id = undefined;
-          tmp3 = closure_6;
-          if (tmp != null) {
-            id = tmp.id;
+        let tmp2;
+        if (null !== user) {
+          let id;
+          const getUserProfile = UserProfileStore.getUserProfile;
+          if (user != null) {
+            id = user.id;
           }
-          userProfile = closure_6.getUserProfile(id);
-          application = undefined;
+          const userProfile = getUserProfile(id);
+          let application;
           if (userProfile != null) {
             application = userProfile.application;
           }
@@ -128,21 +138,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
       }
     }
   }
-  const tmpResult = require("initialize");
-  const stateFromStores1 = require("initialize").useStateFromStores(tmp15, E);
+  const tmpResult3 = require("get initialized");
+  const stateFromStores1 = tmpResult3.useStateFromStores(tmp16, E);
   if (stateFromStores == null) {
     class E {
       constructor() {
-        tmp = closure_0;
-        tmp2 = undefined;
-        if (null !== closure_0) {
-          id = undefined;
-          tmp3 = closure_6;
-          if (tmp != null) {
-            id = tmp.id;
+        let tmp2;
+        if (null !== user) {
+          let id;
+          const getUserProfile = UserProfileStore.getUserProfile;
+          if (user != null) {
+            id = user.id;
           }
-          userProfile = closure_6.getUserProfile(id);
-          application = undefined;
+          const userProfile = getUserProfile(id);
+          let application;
           if (userProfile != null) {
             application = userProfile.application;
           }
@@ -154,16 +163,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
     if (stateFromStores1 != null) {
       class E {
         constructor() {
-          tmp = closure_0;
-          tmp2 = undefined;
-          if (null !== closure_0) {
-            id = undefined;
-            tmp3 = closure_6;
-            if (tmp != null) {
-              id = tmp.id;
+          let tmp2;
+          if (null !== user) {
+            let id;
+            const getUserProfile = UserProfileStore.getUserProfile;
+            if (user != null) {
+              id = user.id;
             }
-            userProfile = closure_6.getUserProfile(id);
-            application = undefined;
+            const userProfile = getUserProfile(id);
+            let application;
             if (userProfile != null) {
               application = userProfile.application;
             }
@@ -173,21 +181,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
         }
       }
     }
-    stateFromStores = tmp19;
+    stateFromStores = tmp20;
   }
   if (cResult[8] === stateFromStores) {
     class E {
       constructor() {
-        tmp = closure_0;
-        tmp2 = undefined;
-        if (null !== closure_0) {
-          id = undefined;
-          tmp3 = closure_6;
-          if (tmp != null) {
-            id = tmp.id;
+        let tmp2;
+        if (null !== user) {
+          let id;
+          const getUserProfile = UserProfileStore.getUserProfile;
+          if (user != null) {
+            id = user.id;
           }
-          userProfile = closure_6.getUserProfile(id);
-          application = undefined;
+          const userProfile = getUserProfile(id);
+          let application;
           if (userProfile != null) {
             application = userProfile.application;
           }
@@ -196,19 +203,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
         return tmp2;
       }
     }
+    const tmp21 = cResult[9];
     if (tmp4 != null) {
       class E {
         constructor() {
-          tmp = closure_0;
-          tmp2 = undefined;
-          if (null !== closure_0) {
-            id = undefined;
-            tmp3 = closure_6;
-            if (tmp != null) {
-              id = tmp.id;
+          let tmp2;
+          if (null !== user) {
+            let id;
+            const getUserProfile = UserProfileStore.getUserProfile;
+            if (user != null) {
+              id = user.id;
             }
-            userProfile = closure_6.getUserProfile(id);
-            application = undefined;
+            const userProfile = getUserProfile(id);
+            let application;
             if (userProfile != null) {
               application = userProfile.application;
             }
@@ -218,19 +225,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
         }
       }
     }
-    if (cResult[9] === tmp20) {
+    if (tmp21 === tmp22) {
       class E {
         constructor() {
-          tmp = closure_0;
-          tmp2 = undefined;
-          if (null !== closure_0) {
-            id = undefined;
-            tmp3 = closure_6;
-            if (tmp != null) {
-              id = tmp.id;
+          let tmp2;
+          if (null !== user) {
+            let id;
+            const getUserProfile = UserProfileStore.getUserProfile;
+            if (user != null) {
+              id = user.id;
             }
-            userProfile = closure_6.getUserProfile(id);
-            application = undefined;
+            const userProfile = getUserProfile(id);
+            let application;
             if (userProfile != null) {
               application = userProfile.application;
             }
@@ -243,16 +249,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
     if (cResult[11] === stateFromStores) {
       class E {
         constructor() {
-          tmp = closure_0;
-          tmp2 = undefined;
-          if (null !== closure_0) {
-            id = undefined;
-            tmp3 = closure_6;
-            if (tmp != null) {
-              id = tmp.id;
+          let tmp2;
+          if (null !== user) {
+            let id;
+            const getUserProfile = UserProfileStore.getUserProfile;
+            if (user != null) {
+              id = user.id;
             }
-            userProfile = closure_6.getUserProfile(id);
-            application = undefined;
+            const userProfile = getUserProfile(id);
+            let application;
             if (userProfile != null) {
               application = userProfile.application;
             }
@@ -261,24 +266,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
           return tmp2;
         }
       }
-      const effect = noop.useEffect(fn2, tmp21);
+      const effect = react.useEffect(fn2, tmp23);
       if (cResult[14] !== tmp4) {
         class U {
           constructor() {
-            tmp = closure_0;
-            id = undefined;
-            if (closure_0 != null) {
-              id = tmp.id;
+            let id;
+            if (user != null) {
+              id = user.id;
             }
             if (null != id) {
-              tmp3 = closure_1;
-              tmp4 = closure_2;
-              obj = closure_1(closure_2[12]);
-              obj1 = { type: "APP_DM_OPEN", botUserId: null };
-              obj1.botUserId = tmp.id;
-              dispatchResult = obj.dispatch(obj1);
+              const obj2 = { type: "APP_DM_OPEN", botUserId: user.id };
+              const obj = DispatcherDefault;
+              obj.dispatch(obj2);
             }
-            return;
           }
         }
         cResult[14] = tmp4;
@@ -286,125 +286,95 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
       } else {
         class U {
           constructor() {
-            tmp = closure_0;
-            id = undefined;
-            if (closure_0 != null) {
-              id = tmp.id;
+            let id;
+            if (user != null) {
+              id = user.id;
             }
             if (null != id) {
-              tmp3 = closure_1;
-              tmp4 = closure_2;
-              obj = closure_1(closure_2[12]);
-              obj1 = { type: "APP_DM_OPEN", botUserId: null };
-              obj1.botUserId = tmp.id;
-              dispatchResult = obj.dispatch(obj1);
+              const obj2 = { type: "APP_DM_OPEN", botUserId: user.id };
+              const obj = DispatcherDefault;
+              obj.dispatch(obj2);
             }
-            return;
           }
         }
       }
       if (tmp4 != null) {
         class U {
           constructor() {
-            tmp = closure_0;
-            id = undefined;
-            if (closure_0 != null) {
-              id = tmp.id;
+            let id;
+            if (user != null) {
+              id = user.id;
             }
             if (null != id) {
-              tmp3 = closure_1;
-              tmp4 = closure_2;
-              obj = closure_1(closure_2[12]);
-              obj1 = { type: "APP_DM_OPEN", botUserId: null };
-              obj1.botUserId = tmp.id;
-              dispatchResult = obj.dispatch(obj1);
+              const obj2 = { type: "APP_DM_OPEN", botUserId: user.id };
+              const obj = DispatcherDefault;
+              obj.dispatch(obj2);
             }
-            return;
           }
         }
       }
       if (cResult[16] !== undefined) {
         class U {
           constructor() {
-            tmp = closure_0;
-            id = undefined;
-            if (closure_0 != null) {
-              id = tmp.id;
+            let id;
+            if (user != null) {
+              id = user.id;
             }
             if (null != id) {
-              tmp3 = closure_1;
-              tmp4 = closure_2;
-              obj = closure_1(closure_2[12]);
-              obj1 = { type: "APP_DM_OPEN", botUserId: null };
-              obj1.botUserId = tmp.id;
-              dispatchResult = obj.dispatch(obj1);
+              const obj2 = { type: "APP_DM_OPEN", botUserId: user.id };
+              const obj = DispatcherDefault;
+              obj.dispatch(obj2);
             }
-            return;
           }
         }
-        tmp26[0] = tmp24;
-        cResult[16] = tmp24;
-        cResult[17] = tmp26;
+        tmp28[0] = undefined;
+        cResult[16] = undefined;
+        cResult[17] = tmp28;
       } else {
         class U {
           constructor() {
-            tmp = closure_0;
-            id = undefined;
-            if (closure_0 != null) {
-              id = tmp.id;
+            let id;
+            if (user != null) {
+              id = user.id;
             }
             if (null != id) {
-              tmp3 = closure_1;
-              tmp4 = closure_2;
-              obj = closure_1(closure_2[12]);
-              obj1 = { type: "APP_DM_OPEN", botUserId: null };
-              obj1.botUserId = tmp.id;
-              dispatchResult = obj.dispatch(obj1);
+              const obj2 = { type: "APP_DM_OPEN", botUserId: user.id };
+              const obj = DispatcherDefault;
+              obj.dispatch(obj2);
             }
-            return;
           }
         }
       }
-      const effect1 = noop.useEffect(U, tmp26);
+      const effect1 = react.useEffect(U, tmp28);
       if (cResult[18] !== channel) {
         class U {
           constructor() {
-            tmp = closure_0;
-            id = undefined;
-            if (closure_0 != null) {
-              id = tmp.id;
+            let id;
+            if (user != null) {
+              id = user.id;
             }
             if (null != id) {
-              tmp3 = closure_1;
-              tmp4 = closure_2;
-              obj = closure_1(closure_2[12]);
-              obj1 = { type: "APP_DM_OPEN", botUserId: null };
-              obj1.botUserId = tmp.id;
-              dispatchResult = obj.dispatch(obj1);
+              const obj2 = { type: "APP_DM_OPEN", botUserId: user.id };
+              const obj = DispatcherDefault;
+              obj.dispatch(obj2);
             }
-            return;
           }
         }
-        tmp29[0] = channel;
+        tmp31[0] = channel;
         cResult[18] = channel;
-        cResult[19] = tmp29;
+        cResult[19] = tmp31;
       } else {
         class U {
           constructor() {
-            tmp = closure_0;
-            id = undefined;
-            if (closure_0 != null) {
-              id = tmp.id;
+            let id;
+            if (user != null) {
+              id = user.id;
             }
             if (null != id) {
-              tmp3 = closure_1;
-              tmp4 = closure_2;
-              obj = closure_1(closure_2[12]);
-              obj1 = { type: "APP_DM_OPEN", botUserId: null };
-              obj1.botUserId = tmp.id;
-              dispatchResult = obj.dispatch(obj1);
+              const obj2 = { type: "APP_DM_OPEN", botUserId: user.id };
+              const obj = DispatcherDefault;
+              obj.dispatch(obj2);
             }
-            return;
           }
         }
       }
@@ -412,295 +382,226 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
       if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
         class U {
           constructor() {
-            tmp = closure_0;
-            id = undefined;
-            if (closure_0 != null) {
-              id = tmp.id;
+            let id;
+            if (user != null) {
+              id = user.id;
             }
             if (null != id) {
-              tmp3 = closure_1;
-              tmp4 = closure_2;
-              obj = closure_1(closure_2[12]);
-              obj1 = { type: "APP_DM_OPEN", botUserId: null };
-              obj1.botUserId = tmp.id;
-              dispatchResult = obj.dispatch(obj1);
+              const obj2 = { type: "APP_DM_OPEN", botUserId: user.id };
+              const obj = DispatcherDefault;
+              obj.dispatch(obj2);
             }
-            return;
           }
         }
-        tmp31[0] = items;
-        cResult[20] = tmp31;
+        tmp33[0] = items;
+        cResult[20] = tmp33;
       } else {
         class U {
           constructor() {
-            tmp = closure_0;
-            id = undefined;
-            if (closure_0 != null) {
-              id = tmp.id;
+            let id;
+            if (user != null) {
+              id = user.id;
             }
             if (null != id) {
-              tmp3 = closure_1;
-              tmp4 = closure_2;
-              obj = closure_1(closure_2[12]);
-              obj1 = { type: "APP_DM_OPEN", botUserId: null };
-              obj1.botUserId = tmp.id;
-              dispatchResult = obj.dispatch(obj1);
+              const obj2 = { type: "APP_DM_OPEN", botUserId: user.id };
+              const obj = DispatcherDefault;
+              obj.dispatch(obj2);
             }
-            return;
           }
         }
       }
       if (tmp4 != null) {
         class U {
           constructor() {
-            tmp = closure_0;
-            id = undefined;
-            if (closure_0 != null) {
-              id = tmp.id;
+            let id;
+            if (user != null) {
+              id = user.id;
             }
             if (null != id) {
-              tmp3 = closure_1;
-              tmp4 = closure_2;
-              obj = closure_1(closure_2[12]);
-              obj1 = { type: "APP_DM_OPEN", botUserId: null };
-              obj1.botUserId = tmp.id;
-              dispatchResult = obj.dispatch(obj1);
+              const obj2 = { type: "APP_DM_OPEN", botUserId: user.id };
+              const obj = DispatcherDefault;
+              obj.dispatch(obj2);
             }
-            return;
           }
         }
       }
       if (cResult[21] === stateFromStores) {
         class U {
           constructor() {
-            tmp = closure_0;
-            id = undefined;
-            if (closure_0 != null) {
-              id = tmp.id;
+            let id;
+            if (user != null) {
+              id = user.id;
             }
             if (null != id) {
-              tmp3 = closure_1;
-              tmp4 = closure_2;
-              obj = closure_1(closure_2[12]);
-              obj1 = { type: "APP_DM_OPEN", botUserId: null };
-              obj1.botUserId = tmp.id;
-              dispatchResult = obj.dispatch(obj1);
+              const obj2 = { type: "APP_DM_OPEN", botUserId: user.id };
+              const obj = DispatcherDefault;
+              obj.dispatch(obj2);
             }
-            return;
           }
         }
-        const tmp37 = useQueryState(tmp29, tmp31, tmp35);
+        const tmp39 = useQueryState(tmp31, tmp33, tmp37);
         if (cResult[24] === stateFromStores) {
           class U {
             constructor() {
-              tmp = closure_0;
-              id = undefined;
-              if (closure_0 != null) {
-                id = tmp.id;
+              let id;
+              if (user != null) {
+                id = user.id;
               }
               if (null != id) {
-                tmp3 = closure_1;
-                tmp4 = closure_2;
-                obj = closure_1(closure_2[12]);
-                obj1 = { type: "APP_DM_OPEN", botUserId: null };
-                obj1.botUserId = tmp.id;
-                dispatchResult = obj.dispatch(obj1);
+                const obj2 = { type: "APP_DM_OPEN", botUserId: user.id };
+                const obj = DispatcherDefault;
+                obj.dispatch(obj2);
               }
-              return;
             }
           }
-          if (cResult[27] !== tmp38) {
+          if (cResult[27] !== tmp40) {
+            let fromServer;
             class U {
               constructor() {
-                tmp = closure_0;
-                id = undefined;
-                if (closure_0 != null) {
-                  id = tmp.id;
+                let id;
+                if (user != null) {
+                  id = user.id;
                 }
                 if (null != id) {
-                  tmp3 = closure_1;
-                  tmp4 = closure_2;
-                  obj = closure_1(closure_2[12]);
-                  obj1 = { type: "APP_DM_OPEN", botUserId: null };
-                  obj1.botUserId = tmp.id;
-                  dispatchResult = obj.dispatch(obj1);
+                  const obj2 = { type: "APP_DM_OPEN", botUserId: user.id };
+                  const obj = DispatcherDefault;
+                  obj.dispatch(obj2);
                 }
-                return;
               }
             }
-            if (null != tmp38) {
+            if (null != tmp40) {
               class U {
                 constructor() {
-                  tmp = closure_0;
-                  id = undefined;
-                  if (closure_0 != null) {
-                    id = tmp.id;
+                  let id;
+                  if (user != null) {
+                    id = user.id;
                   }
                   if (null != id) {
-                    tmp3 = closure_1;
-                    tmp4 = closure_2;
-                    obj = closure_1(closure_2[12]);
-                    obj1 = { type: "APP_DM_OPEN", botUserId: null };
-                    obj1.botUserId = tmp.id;
-                    dispatchResult = obj.dispatch(obj1);
+                    const obj2 = { type: "APP_DM_OPEN", botUserId: user.id };
+                    const obj = DispatcherDefault;
+                    obj.dispatch(obj2);
                   }
-                  return;
                 }
               }
-              const fromServer = ApplicationRecord.createFromServer(tmp38);
+              fromServer = ApplicationRecord.createFromServer(tmp40);
             }
-            cResult[27] = tmp38;
+            cResult[27] = tmp40;
             cResult[28] = fromServer;
           } else {
             class U {
               constructor() {
-                tmp = closure_0;
-                id = undefined;
-                if (closure_0 != null) {
-                  id = tmp.id;
+                let id;
+                if (user != null) {
+                  id = user.id;
                 }
                 if (null != id) {
-                  tmp3 = closure_1;
-                  tmp4 = closure_2;
-                  obj = closure_1(closure_2[12]);
-                  obj1 = { type: "APP_DM_OPEN", botUserId: null };
-                  obj1.botUserId = tmp.id;
-                  dispatchResult = obj.dispatch(obj1);
+                  const obj2 = { type: "APP_DM_OPEN", botUserId: user.id };
+                  const obj = DispatcherDefault;
+                  obj.dispatch(obj2);
                 }
-                return;
               }
             }
           }
-          const useGetOrFetchApplication = tmp(6663).useGetOrFetchApplication;
-          if (null == tmp41) {
+          const useGetOrFetchApplication = require("useGetOrFetchApplications").useGetOrFetchApplication;
+          require("useGetOrFetchApplications");
+          if (null == tmp43) {
             class U {
               constructor() {
-                tmp = closure_0;
-                id = undefined;
-                if (closure_0 != null) {
-                  id = tmp.id;
+                let id;
+                if (user != null) {
+                  id = user.id;
                 }
                 if (null != id) {
-                  tmp3 = closure_1;
-                  tmp4 = closure_2;
-                  obj = closure_1(closure_2[12]);
-                  obj1 = { type: "APP_DM_OPEN", botUserId: null };
-                  obj1.botUserId = tmp.id;
-                  dispatchResult = obj.dispatch(obj1);
+                  const obj2 = { type: "APP_DM_OPEN", botUserId: user.id };
+                  const obj = DispatcherDefault;
+                  obj.dispatch(obj2);
                 }
-                return;
               }
             }
           }
-          if (tmp41 == null) {
+          if (tmp43 == null) {
             class U {
               constructor() {
-                tmp = closure_0;
-                id = undefined;
-                if (closure_0 != null) {
-                  id = tmp.id;
+                let id;
+                if (user != null) {
+                  id = user.id;
                 }
                 if (null != id) {
-                  tmp3 = closure_1;
-                  tmp4 = closure_2;
-                  obj = closure_1(closure_2[12]);
-                  obj1 = { type: "APP_DM_OPEN", botUserId: null };
-                  obj1.botUserId = tmp.id;
-                  dispatchResult = obj.dispatch(obj1);
+                  const obj2 = { type: "APP_DM_OPEN", botUserId: user.id };
+                  const obj = DispatcherDefault;
+                  obj.dispatch(obj2);
                 }
-                return;
               }
             }
           }
-          if (tmp41 == null) {
+          if (tmp43 == null) {
             class U {
               constructor() {
-                tmp = closure_0;
-                id = undefined;
-                if (closure_0 != null) {
-                  id = tmp.id;
+                let id;
+                if (user != null) {
+                  id = user.id;
                 }
                 if (null != id) {
-                  tmp3 = closure_1;
-                  tmp4 = closure_2;
-                  obj = closure_1(closure_2[12]);
-                  obj1 = { type: "APP_DM_OPEN", botUserId: null };
-                  obj1.botUserId = tmp.id;
-                  dispatchResult = obj.dispatch(obj1);
+                  const obj2 = { type: "APP_DM_OPEN", botUserId: user.id };
+                  const obj = DispatcherDefault;
+                  obj.dispatch(obj2);
                 }
-                return;
               }
             }
           }
           if (tmp4 != null) {
             class U {
               constructor() {
-                tmp = closure_0;
-                id = undefined;
-                if (closure_0 != null) {
-                  id = tmp.id;
+                let id;
+                if (user != null) {
+                  id = user.id;
                 }
                 if (null != id) {
-                  tmp3 = closure_1;
-                  tmp4 = closure_2;
-                  obj = closure_1(closure_2[12]);
-                  obj1 = { type: "APP_DM_OPEN", botUserId: null };
-                  obj1.botUserId = tmp.id;
-                  dispatchResult = obj.dispatch(obj1);
+                  const obj2 = { type: "APP_DM_OPEN", botUserId: user.id };
+                  const obj = DispatcherDefault;
+                  obj.dispatch(obj2);
                 }
-                return;
               }
             }
           }
           if (undefined == null) {
             class U {
               constructor() {
-                tmp = closure_0;
-                id = undefined;
-                if (closure_0 != null) {
-                  id = tmp.id;
+                let id;
+                if (user != null) {
+                  id = user.id;
                 }
                 if (null != id) {
-                  tmp3 = closure_1;
-                  tmp4 = closure_2;
-                  obj = closure_1(closure_2[12]);
-                  obj1 = { type: "APP_DM_OPEN", botUserId: null };
-                  obj1.botUserId = tmp.id;
-                  dispatchResult = obj.dispatch(obj1);
+                  const obj2 = { type: "APP_DM_OPEN", botUserId: user.id };
+                  const obj = DispatcherDefault;
+                  obj.dispatch(obj2);
                 }
-                return;
               }
             }
           }
-          if (cResult[29] === tmp41) {
+          if (cResult[29] === tmp43) {
             class U {
               constructor() {
-                tmp = closure_0;
-                id = undefined;
-                if (closure_0 != null) {
-                  id = tmp.id;
+                let id;
+                if (user != null) {
+                  id = user.id;
                 }
                 if (null != id) {
-                  tmp3 = closure_1;
-                  tmp4 = closure_2;
-                  obj = closure_1(closure_2[12]);
-                  obj1 = { type: "APP_DM_OPEN", botUserId: null };
-                  obj1.botUserId = tmp.id;
-                  dispatchResult = obj.dispatch(obj1);
+                  const obj2 = { type: "APP_DM_OPEN", botUserId: user.id };
+                  const obj = DispatcherDefault;
+                  obj.dispatch(obj2);
                 }
-                return;
               }
             }
-            return tmp45;
+            return tmp47;
           }
-          let obj2 = { application: tmp41, isAppDM: undefined };
-          cResult[29] = tmp41;
+          let obj2 = { application: tmp43, isAppDM: undefined };
+          cResult[29] = tmp43;
           cResult[30] = undefined;
           cResult[31] = obj2;
-          tmp45 = obj2;
-          const tmpResult4 = tmp(6663);
+          tmp47 = obj2;
         }
-        const descriptors = tmp37.descriptors;
+        const descriptors = tmp39.descriptors;
         const found = descriptors.find((application) => {
           application = application.application;
           let id;
@@ -712,79 +613,73 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
         if (found != null) {
           class U {
             constructor() {
-              tmp = closure_0;
-              id = undefined;
-              if (closure_0 != null) {
-                id = tmp.id;
+              let id;
+              if (user != null) {
+                id = user.id;
               }
               if (null != id) {
-                tmp3 = closure_1;
-                tmp4 = closure_2;
-                obj = closure_1(closure_2[12]);
-                obj1 = { type: "APP_DM_OPEN", botUserId: null };
-                obj1.botUserId = tmp.id;
-                dispatchResult = obj.dispatch(obj1);
+                const obj2 = { type: "APP_DM_OPEN", botUserId: user.id };
+                const obj = DispatcherDefault;
+                obj.dispatch(obj2);
               }
-              return;
             }
           }
         }
         cResult[24] = stateFromStores;
-        cResult[25] = tmp37.descriptors;
+        cResult[25] = tmp39.descriptors;
         cResult[26] = undefined;
       }
       const obj3 = { applicationId: stateFromStores, allowFetch: null != undefined, allowApplicationState: true };
       cResult[21] = stateFromStores;
       cResult[22] = null != undefined;
       cResult[23] = obj3;
-      tmp35 = obj3;
+      tmp37 = obj3;
     }
     const items2 = [tmp4, stateFromStores];
     cResult[11] = stateFromStores;
     cResult[12] = tmp4;
     cResult[13] = items2;
-    tmp21 = items2;
+    tmp23 = items2;
   }
   cResult[8] = stateFromStores;
   if (tmp4 != null) {
     class U {
       constructor() {
-        tmp = closure_0;
-        id = undefined;
-        if (closure_0 != null) {
-          id = tmp.id;
+        let id;
+        if (user != null) {
+          id = user.id;
         }
         if (null != id) {
-          tmp3 = closure_1;
-          tmp4 = closure_2;
-          obj = closure_1(closure_2[12]);
-          obj1 = { type: "APP_DM_OPEN", botUserId: null };
-          obj1.botUserId = tmp.id;
-          dispatchResult = obj.dispatch(obj1);
+          const obj2 = { type: "APP_DM_OPEN", botUserId: user.id };
+          const obj = DispatcherDefault;
+          obj.dispatch(obj2);
         }
-        return;
       }
     }
   }
   fn2 = function b() {
     if (null == stateFromStores) {
       let id;
+      const tmp3 = maybeFetchUserProfileDefault;
       if (user != null) {
         id = user.id;
       }
       if (id == null) {
         id = EMPTY_STRING_SNOWFLAKE_ID;
       }
-      maybeFetchUserProfileDefault(id, undefined, { withMutualGuilds: true });
+      tmp3(id, undefined, { withMutualGuilds: true });
     }
   };
   cResult[9] = undefined;
   cResult[10] = fn2;
-  const tmpResult3 = require("initialize");
 }) : ((context) => {
+  let flag;
+  let id2;
+  let tmp16;
   let stateFromStores;
   let application;
   const channel = context.context.channel;
+  let obj = application;
   items = [channel];
   const memo = application.useMemo(() => {
     if (null != channel) {
@@ -802,24 +697,29 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
     }
     return null;
   }, items);
+  let tmp2 = channel;
+  let tmp3 = stateFromStores;
+  let obj2 = channel(stateFromStores[10]);
   const items1 = [ApplicationStore];
-  stateFromStores = channel(stateFromStores[10]).useStateFromStores(items1, () => {
+  stateFromStores = obj2.useStateFromStores(items1, () => {
     let id;
+    const getAppIdForBotUserId = ApplicationStore.getAppIdForBotUserId;
     if (memo != null) {
       id = memo.id;
     }
-    return ApplicationStore.getAppIdForBotUserId(id);
+    return getAppIdForBotUserId(id);
   });
-  let obj2 = channel(stateFromStores[10]);
   const items2 = [UserProfileStore];
-  const stateFromStores1 = channel(stateFromStores[10]).useStateFromStores(items2, () => {
+  const obj3 = channel(stateFromStores[10]);
+  const stateFromStores1 = obj3.useStateFromStores(items2, () => {
     let tmp2;
     if (null !== memo) {
       let id;
+      const getUserProfile = UserProfileStore.getUserProfile;
       if (memo != null) {
         id = memo.id;
       }
-      const userProfile = UserProfileStore.getUserProfile(id);
+      const userProfile = getUserProfile(id);
       application = undefined;
       if (userProfile != null) {
         application = userProfile.application;
@@ -839,37 +739,40 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
   const effect = obj.useEffect(() => {
     if (null == stateFromStores) {
       let id;
+      const tmp3 = maybeFetchUserProfileDefault;
       if (memo != null) {
         id = memo.id;
       }
       if (id == null) {
         id = EMPTY_STRING_SNOWFLAKE_ID;
       }
-      maybeFetchUserProfileDefault(id, undefined, { withMutualGuilds: true });
+      tmp3(id, undefined, { withMutualGuilds: true });
     }
   }, items3);
   let id1;
+  const useEffect = obj.useEffect;
   if (memo != null) {
     id1 = memo.id;
   }
   const items4 = [id1];
-  const effect1 = obj.useEffect(() => {
+  const effect1 = useEffect(() => {
     let id;
     if (memo != null) {
       id = memo.id;
     }
     if (null != id) {
       const obj2 = { type: "APP_DM_OPEN", botUserId: memo.id };
-      DispatcherDefault.dispatch(obj2);
+      const obj = DispatcherDefault;
+      obj.dispatch(obj2);
     }
   }, items4);
-  const obj5 = { applicationId: stateFromStores, allowFetch: null, allowApplicationState: true };
-  let id2;
+  const obj5 = { applicationId: stateFromStores, allowFetch: null != id2, allowApplicationState: true };
+  id2 = undefined;
+  const obj4 = { commandTypes: items };
   if (memo != null) {
     id2 = memo.id;
   }
-  obj5.allowFetch = null != id2;
-  const descriptors = useQueryState({ channel, type: "channel" }, { commandTypes: items }, obj5).descriptors;
+  const descriptors = useQueryState({ channel, type: "channel" }, obj4, obj5).descriptors;
   const found = descriptors.find((application) => {
     application = application.application;
     let id;
@@ -890,22 +793,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
     }
     return fromServer;
   }, items5);
-  const obj3 = channel(stateFromStores[10]);
-  const obj4 = { commandTypes: items };
+  const useGetOrFetchApplication = tmp2(tmp3[13]).useGetOrFetchApplication;
+  tmp2(tmp3[13]);
   if (null == memo1) {
-    const tmp15 = stateFromStores;
+    tmp16 = stateFromStores;
   }
   if (memo1 == null) {
-    memo1 = tmp2Result.useGetOrFetchApplication(tmp15);
+    memo1 = useGetOrFetchApplication(tmp16);
   }
-  const obj6 = { application: memo1, isAppDM: null };
-  let flag;
+  const obj6 = { application: memo1, isAppDM: flag };
+  flag = undefined;
   if (memo != null) {
     flag = memo.bot;
   }
   if (flag == null) {
     flag = false;
   }
-  obj6.isAppDM = flag;
   return obj6;
 });
+const result = size.fileFinishedImporting("modules/app_dms/useAppDMChatInputState.tsx");
+
+export default tmp2;

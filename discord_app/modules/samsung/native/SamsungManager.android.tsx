@@ -1,16 +1,14 @@
-// === Module 8721: SamsungManager ===
+// === Module 8721: react-native ===
 
-// Module 8721 (SamsungManager)
-import _mod17 from "module_17" /* 17 */;
+// Module 8721 (react-native)
+import react_native from "react-native" /* 17 */;
 import size from "module_2" /* 2 */;
 
-const NativeModules = _mod17.NativeModules;
-const result = size.fileFinishedImporting("modules/samsung/native/SamsungManager.android.tsx");
-
-export default {
-  checkIfOAuthRequest(arg0) {
+const NativeModules = react_native.NativeModules;
+const obj = {
+  checkIfOAuthRequest(clientId) {
     const Samsung = NativeModules.Samsung;
-    return Samsung.checkIfOAuthRequest(arg0);
+    return Samsung.checkIfOAuthRequest(clientId);
   },
   showConnectionDisclaimer() {
     const Samsung = NativeModules.Samsung;
@@ -20,8 +18,11 @@ export default {
     const Samsung = NativeModules.Samsung;
     return Samsung.getAccountUrlAndAuthCode();
   },
-  finishSamsungAuthorization(arg0, arg1, text1) {
+  finishSamsungAuthorization(arg0, arg1, state) {
     const Samsung = NativeModules.Samsung;
-    return Samsung.finishSamsungAuthorization(arg0, arg1, text1);
+    return Samsung.finishSamsungAuthorization(arg0, arg1, state);
   }
 };
+const result = size.fileFinishedImporting("modules/samsung/native/SamsungManager.android.tsx");
+
+export default obj;

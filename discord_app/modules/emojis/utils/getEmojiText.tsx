@@ -6,15 +6,17 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/emojis/utils/getEmojiText.tsx");
 
 export default function getEmojiText(id) {
+  let surrogates;
   if (null == id.id) {
     if (null != id.surrogates) {
-      let surrogates = id.surrogates;
+      surrogates = id.surrogates;
     }
     return surrogates;
   }
   if (null != id.uniqueName) {
+    let name;
     if ("" !== id.uniqueName) {
-      let name = id.uniqueName;
+      name = id.uniqueName;
     }
     const _HermesInternal = HermesInternal;
     surrogates = ":" + name + ":";

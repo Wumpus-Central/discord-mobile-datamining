@@ -4,18 +4,18 @@
 import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
-const result = size.fileFinishedImporting("modules/slayer_storefront/hooks/useSlayerStorefrontDevOverrideStore.tsx");
-
-export const useSlayerStorefrontDevOverrideStore = module_570.create()((arg0) => {
-  closure_0 = arg0;
-  return {
+const tmp2 = module_570.create()((arg0) => {
+  let closure_0 = arg0;
+  let obj = {
     overrideApplicationId: null,
     setOverrideApplicationId(overrideApplicationId) {
-      return closure_0({ overrideApplicationId });
+      const obj = { overrideApplicationId };
+      return closure_0(obj);
     },
     showSelfActivity: false,
     setShowSelfActivity(showSelfActivity) {
-      return closure_0({ showSelfActivity });
+      const obj = { showSelfActivity };
+      return closure_0(obj);
     },
     recommendationApplicationIds: null,
     setRecommendationApplicationIds(str) {
@@ -27,19 +27,27 @@ export const useSlayerStorefrontDevOverrideStore = module_570.create()((arg0) =>
     },
     overrideNitroEligibilityForSocialLayerStorefront: false,
     setOverrideNitroEligibilityForSocialLayerStorefront(overrideNitroEligibilityForSocialLayerStorefront) {
-      return closure_0({ overrideNitroEligibilityForSocialLayerStorefront });
+      const obj = { overrideNitroEligibilityForSocialLayerStorefront };
+      return closure_0(obj);
     },
     isNitroEligibleForSocialLayerStorefront: false,
     setIsNitroEligibleForSocialLayerStorefront(isNitroEligibleForSocialLayerStorefront) {
-      return closure_0({ isNitroEligibleForSocialLayerStorefront });
+      const obj = { isNitroEligibleForSocialLayerStorefront };
+      return closure_0(obj);
     },
     overrideCurrentPremiumPlanId: false,
     setOverrideCurrentPremiumPlanId(overrideCurrentPremiumPlanId) {
-      return closure_0({ overrideCurrentPremiumPlanId });
+      const obj = { overrideCurrentPremiumPlanId };
+      return closure_0(obj);
     },
     currentPremiumPlanId: null,
     setCurrentPremiumPlanId(currentPremiumPlanId) {
-      return closure_0({ currentPremiumPlanId });
+      const obj = { currentPremiumPlanId };
+      return closure_0(obj);
     }
   };
+  return obj;
 });
+const result = size.fileFinishedImporting("modules/slayer_storefront/hooks/useSlayerStorefrontDevOverrideStore.tsx");
+
+export const useSlayerStorefrontDevOverrideStore = tmp2;

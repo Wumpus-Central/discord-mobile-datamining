@@ -1,10 +1,10 @@
 // === Module 4899: PlainTextEligibility ===
 
 // Module 4899 (PlainTextEligibility)
-import _mod17 from "module_17" /* 17 */;
+import react_native from "react-native" /* 17 */;
 import size from "module_2" /* 2 */;
 
-const StyleSheet = _mod17.StyleSheet;
+const StyleSheet = react_native.StyleSheet;
 const set = new Set(["accessibilityActions", "accessibilityElementsHidden", "accessibilityHint", "accessibilityIgnoresInvertColors", "accessibilityLabel", "accessibilityLabelledBy", "accessibilityLanguage", "accessibilityLargeContentTitle", "accessibilityLiveRegion", "accessibilityRespondsToUserInteraction", "accessibilityRole", "accessibilityShowsLargeContentViewer", "accessibilityState", "accessibilityValue", "accessibilityViewIsModal", "accessible", "allowFontScaling", "aria-busy", "aria-checked", "aria-disabled", "aria-expanded", "aria-hidden", "aria-label", "aria-labelledby", "aria-live", "aria-modal", "aria-selected", "aria-valuemax", "aria-valuemin", "aria-valuenow", "aria-valuetext", "id", "importantForAccessibility", "maxFontSizeMultiplier", "nativeID", "onAccessibilityAction", "onAccessibilityEscape", "onAccessibilityTap", "onMagicTap", "role", "screenReaderFocusable", "testID"]);
 const set1 = new Set(["fontVariant", "textDecorationColor", "textDecorationStyle", "textShadowColor", "textShadowOffset", "textShadowRadius", "userSelect", "writingDirection"]);
 let closure_3 = { eligible: false, reason: "animated" };
@@ -20,6 +20,27 @@ export const isPlainTextEligible = function isPlainTextEligible(plainTextEligibi
   return !("eligible" in plainTextEligibility);
 };
 export const getPlainTextEligibility = function getPlainTextEligibility(element) {
+  function getPlainTextStyle(style) {
+    const flattenResult = StyleSheet.flatten(style);
+    delete tmp["includeFontPadding"];
+    if (null != flattenResult.textTransform) {
+      if ("none" !== flattenResult.textTransform) {
+        return { eligible: false, reason: "unsupported-style", unsupportedName: "textTransform" };
+      }
+    }
+    delete tmp["textTransform"];
+    for (const item10016 of set1) {
+      if (null != flattenResult[item10016]) {
+        let obj2 = { eligible: false, reason: "unsupported-style", unsupportedName: item10016 };
+        obj.return();
+        return obj2;
+      } else {
+        delete tmp[item10016];
+        continue;
+      }
+    }
+    return flattenResult;
+  }
   if (element.enabled) {
     if (element.isIOS) {
       if (element.hasTextAncestor) {
@@ -33,8 +54,8 @@ export const getPlainTextEligibility = function getPlainTextEligibility(element)
       } else if (typeof element.children !== "string") {
         return closure_7;
       } else {
-        for (const key10010 in arg0.props) {
-          if (null == arg0.props[key10010]) {
+        for (const key10010 in element.props) {
+          if (null == element.props[key10010]) {
             continue;
           } else if (set.has(key10010)) {
             continue;
@@ -44,27 +65,7 @@ export const getPlainTextEligibility = function getPlainTextEligibility(element)
           }
           continue;
         }
-        return (function getPlainTextStyle(style) {
-          const flattenResult = StyleSheet.flatten(style);
-          delete tmp[tmp2];
-          if (null != flattenResult.textTransform) {
-            if ("none" !== flattenResult.textTransform) {
-              return { eligible: false, reason: "unsupported-style", unsupportedName: "textTransform" };
-            }
-          }
-          delete tmp[tmp2];
-          for (const item10016 of closure_1_2) {
-            if (null != flattenResult[item10016]) {
-              let obj2 = { eligible: false, reason: "unsupported-style", unsupportedName: item10016 };
-              obj.return();
-              return obj2;
-            } else {
-              delete tmp[tmp3];
-              continue;
-            }
-          }
-          return flattenResult;
-        })(element.style);
+        return getPlainTextStyle(element.style);
       }
     } else {
       return closure_8;

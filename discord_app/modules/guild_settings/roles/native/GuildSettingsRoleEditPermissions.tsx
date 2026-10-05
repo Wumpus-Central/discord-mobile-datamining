@@ -4,130 +4,177 @@
 import nativeDefault from "native" /* 587 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import asyncRequire from "asyncRequire" /* 1987 */;
+import GuildRecord from "GuildRecord" /* 2070 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _slicedToArray_mod from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
 import PermissionStore from "PermissionStore" /* 4509 */;
-import UserStore from "UserStore" /* 1377 */;
+import UserStore_mod from "UserStore" /* 1377 */;
+import Constants from "Constants" /* 1085 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
+let permissions;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ View: metroRequire, Keyboard: closure_7, SectionList: closure_8 } = get_ActivityIndicator);
-let isGuildOwner = fn(2070).isGuildOwner;
-const Constants = fn(1085);
+let closure_12;
+let closure_14;
+let closure_15;
+let closure_16;
+let map1;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let obj3;
+let _slicedToArray = _slicedToArray_mod;
+({ View: metroRequire, Keyboard: metroImportDefault, SectionList: metroImportAll } = react_native);
+let isGuildOwner = GuildRecord.isGuildOwner;
+let UserStore = UserStore_mod;
 ({ AnalyticEvents: closure_12, Permissions: map1 } = Constants);
-const jsxProd = fn(21);
-({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { emptyState: { backgroundColor: "transparent", paddingTop: 40 }, sectionSeparator: { height: nativeDefault.space.PX_24 }, emptyStateText: null, subLabel: null };
-let obj3 = { height: nativeDefault.space.PX_24 };
-obj2.emptyStateText = { color: nativeDefault.colors.TEXT_DEFAULT };
-obj2.subLabel = { includeFontPadding: true };
-let closure_17 = createStyles.createStyles(obj2);
-const size = fn(2);
+({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { emptyState: { backgroundColor: "transparent", paddingTop: 40 }, sectionSeparator: obj2, emptyStateText: obj3, subLabel: { includeFontPadding: true } };
+obj2 = { height: nativeDefault.space.PX_24 };
+createStyles = createStyles.createStyles;
+obj3 = { color: nativeDefault.colors.TEXT_DEFAULT };
+let closure_17 = createStyles(obj);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleEditPermissions.tsx");
 
 export default function GuildSettingsRoleEditPermission(guild) {
+  let _undefined;
+  let c10;
+  let c9;
+  let closure_4;
+  let closure_8;
+  let intl;
+  let intl2;
+  let obj11;
+  let obj4;
+  let obj5;
+  let obj7;
+  let onPermissionsChanged;
+  let permissionsEdited;
+  let query;
+  let ref;
+  let tmp19Result4;
   guild = guild.guild;
   const role = guild.role;
   ({ permissions: importAll, onPermissionsChanged: dependencyMap } = guild);
-  closure_6 = undefined;
+  let closure_6;
   query = undefined;
   closure_8 = undefined;
   isGuildOwner = undefined;
   c10 = undefined;
   UserStore = undefined;
+  const contentContainerStyle = guild.contentContainerStyle;
   let tmp = closure_17();
   _slicedToArray = tmp;
   const currentUser = UserStore.getCurrentUser();
   let highestRole;
   if (null != currentUser) {
-    highestRole = PermissionUtilsAll.getHighestRole(guild, currentUser.id);
+    let obj = PermissionUtilsAll;
+    highestRole = obj.getHighestRole(guild, currentUser.id);
   }
   let id;
+  const isRoleHigher = PermissionUtilsAll.isRoleHigher;
   if (currentUser != null) {
     id = currentUser.id;
   }
-  const isRoleHigherResult = PermissionUtilsAll.isRoleHigher(guild, id, highestRole, role);
-  closure_6 = tmp10;
+  closure_6 = tmp11;
+  const isRoleHigherResult = isRoleHigher(guild, id, highestRole, role);
   [query, closure_8] = highestRole.useState("");
   [c9, c10] = highestRole.useState(false);
+  _slicedToArray(highestRole.useState(false), 2);
   role(38)(null != guild, "Guild cannot be null");
-  const tmp16 = isGuildOwner(guild, currentUser);
-  const tmp13 = _slicedToArray(highestRole.useState(false), 2);
-  let obj3 = { permission: constants2.ADMINISTRATOR, user: currentUser, context: guild };
+  let obj2 = { permission: constants2.ADMINISTRATOR, user: currentUser, context: guild };
+  const tmp17 = isGuildOwner(guild, currentUser);
   const tmp6Result = PermissionUtilsAll;
+  const canResult = tmp6Result.can(obj2);
   UserStore = highestRole.useRef(false);
-  let tmp18Result = tmp16;
-  if (!tmp16) {
-    let tmp21 = !tmp10;
+  let tmp19Result = tmp17;
+  if (!tmp19Result) {
+    let tmp22 = !tmp11;
     if (isRoleHigherResult) {
-      tmp21 = canResult;
+      tmp22 = canResult;
     }
-    tmp18Result = tmp21;
+    tmp19Result = tmp22;
   }
-  if (tmp18Result) {
-    let obj4 = { variant: "text-sm/medium", color: "text-muted", children: null };
-    const intl = guild(1126).intl;
-    let obj5 = { onTemplateOpen: null };
-    let obj6 = {
+  if (tmp19Result) {
+    let obj3 = { variant: "text-sm/medium", color: "text-muted", children: intl.format(guild(1126).t.ZhSOBy, obj4) };
+    let Text = guild(4886).Text;
+    intl = guild(1126).intl;
+    obj4 = { onTemplateOpen: obj5 };
+    obj5 = {
       onClick() {
-          React5.dismiss();
-          const obj = ActionSheetActionCreatorsDefault;
-          obj.openLazy(asyncRequireImpl(17804, dependencyMap.paths), "role-permission-templates-" + guild.id + "-" + role.id, { permissionsEdited, onPermissionsChanged, guildId: guild.id });
+          metroImportDefault.dismiss();
+          const openLazy = ActionSheetActionCreatorsDefault.openLazy;
+          ActionSheetActionCreatorsDefault;
+          const obj = { permissionsEdited, onPermissionsChanged: dependencyMap, guildId: guild.id };
+          const tmp3 = asyncRequire(17804, dependencyMap.paths);
+          openLazy(tmp3, "role-permission-templates-" + guild.id + "-" + role.id, obj);
         },
       accessibilityRole: "button"
     };
-    obj5.onTemplateOpen = obj6;
-    obj4.children = intl.format(guild(1126).t.ZhSOBy, obj5);
-    tmp18Result = closure_14(guild(4886).Text, obj4);
+    tmp19Result = closure_14(Text, obj3);
   }
-  canResult = PermissionUtilsAll.can({ permission: constants2.ADMINISTRATOR, user: currentUser, context: guild });
-  const tmp18Result3 = closure_14(closure_6, { children: tmp18Result });
-  const guildPermissionSpec = role(17009).generateGuildPermissionSpec(guild);
+  const tmp19Result3 = closure_14(closure_6, { children: tmp19Result });
+  const tmp15Result = role(17009);
+  const guildPermissionSpec = tmp15Result.generateGuildPermissionSpec(guild);
   const mapped = guildPermissionSpec.map((permissions) => {
-    const obj = {};
+    const obj = {
+      permissions: permissions.filter((title) => {
+        const str = title.title;
+        const formatted = str.toLowerCase();
+        const includes = formatted.includes;
+        const str2 = query.trimStart();
+        return includes(str2.toLowerCase());
+      })
+    };
     const merged = Object.assign(permissions);
     permissions = permissions.permissions;
-    obj.permissions = permissions.filter((title) => {
-      const formatted = title.title.toLowerCase();
-      return formatted.includes(query.trimStart().toLowerCase());
-    });
     return obj;
   });
   const found = mapped.filter((permissions) => permissions.permissions.length > 0);
   const mapped1 = found.map((title) => ({ title: title.title, data: title.permissions }));
-  const children = [closure_14(role(17801), { role }), , , ];
-  const obj7 = {
-    children: closure_14(guild(6547).SearchField, {
-      size: "md",
-      onChange(str) {
-        closure_8(str);
-        let current = "" === str.trimStart();
-        if (!current) {
-          current = ref.current;
-        }
-        if (!current) {
-          AnalyticsUtilsDefault.track(constants.SEARCH_STARTED, { search_type: "Permissions" });
-          ref.current = true;
-        }
+  const children = [, , , ];
+  const tmp25 = mapped1.length > 0;
+  children[0] = closure_14(role(17801), { role });
+  let obj6 = { children: closure_14(guild(6547).SearchField, obj7) };
+  obj7 = {
+    size: "md",
+    onChange(str) {
+      closure_8(str);
+      const current = "" === str.trimStart() || ref.current;
+      if (!current) {
+        const obj = AnalyticsUtilsDefault;
+        obj.track(constants.SEARCH_STARTED, { search_type: "Permissions" });
+        ref.current = true;
       }
-    })
+    }
   };
-  children[1] = closure_14(closure_6, obj7);
-  children[2] = tmp18Result3;
-  if (tmp24) {
-    const obj9 = {
+  children[1] = closure_14(closure_6, obj6);
+  children[2] = tmp19Result3;
+  if (tmp25) {
+    const obj8 = {
       sections: mapped1,
       stickySectionHeadersEnabled: false,
       renderItem(section) {
+          let description;
+          let index;
+          let item;
+          let obj3;
+          let obj5;
+          let obj7;
+          let title;
+          let tmp21;
           ({ item, index } = section);
           const flag = item.flag;
           let tmp2 = closure_6;
+          section = section.section;
           ({ description, title } = item);
           if (closure_6) {
             tmp2 = role === highestRole;
@@ -140,42 +187,52 @@ export default function GuildSettingsRoleEditPermission(guild) {
           }
           if (!tmp2) {
             let obj = {};
-            const obj2 = {};
+            const can = _undefined.can;
+            const id = role.id;
+            const obj2 = { permissions: obj3.remove(importAll, flag) };
             const merged = Object.assign(role);
-            obj2.permissions = require("BigFlagUtils").remove(closure_2, flag);
-            obj[role.id] = obj2;
-            tmp2 = !_undefined.can(flag, flag, null, obj);
-            const obj3 = require("BigFlagUtils");
+            obj[id] = obj2;
+            obj3 = BigFlagUtilsAll;
+            tmp2 = !can(flag, flag, null, obj);
           }
-          const obj4 = { variant: "text-xs/medium", color: "text-subtle", style: closure_4.subLabel, children: guild(onPermissionsChanged[22]).renderDescription(description) };
-          const obj5 = guild(onPermissionsChanged[22]);
-          const obj6 = { start: 0 === index, end: index === section.section.data.length - 1, value: null, disabled: null, onValueChange: null, label: null, subLabel: null };
-          const tmp21 = closure_1_14(guild(onPermissionsChanged[12]).Text, obj4);
-          obj6.value = require("BigFlagUtils").has(closure_2, flag);
-          obj6.disabled = tmp2;
-          obj6.onValueChange = function onValueChange(arg0) {
-            const obj = BigFlagUtilsAll;
-            if (arg0) {
-              let addResult = obj.add(closure_2_2, flag);
-            } else {
-              addResult = obj.remove(closure_2_2, flag);
-            }
-            onPermissionsChanged(addResult);
-            c10(true);
+          const obj4 = { variant: "text-xs/medium", color: "text-subtle", style: closure_4.subLabel, children: obj5.renderDescription(description) };
+          const Text = guild(dependencyMap[12]).Text;
+          obj5 = guild(dependencyMap[22]);
+          const obj6 = {
+            start: 0 === index,
+            end: index === section.data.length - 1,
+            value: obj7.has(importAll, flag),
+            disabled: tmp2,
+            onValueChange(arg0) {
+              let addResult;
+              const obj = BigFlagUtilsAll;
+              const tmp2 = arg0;
+              if (tmp2) {
+                addResult = obj.add(importAll, flag);
+              } else {
+                addResult = obj.remove(importAll, flag);
+              }
+              dependencyMap(addResult);
+              c10(true);
+            },
+            label: title,
+            subLabel: tmp21
           };
-          obj6.label = title;
-          obj6.subLabel = tmp21;
-          return closure_1_14(guild(onPermissionsChanged[23]).TableSwitchRow, obj6);
+          tmp21 = closure_1_14(Text, obj4);
+          const TableSwitchRow = guild(dependencyMap[23]).TableSwitchRow;
+          obj7 = BigFlagUtilsAll;
+          return closure_1_14(TableSwitchRow, obj6);
         },
       renderSectionHeader(section) {
           const title = section.section.title;
-          return closure_1_14(closure_6, { accessible: true, accessibilityRole: "header", accessibilityLabel: title, children: closure_1_14(guild(onPermissionsChanged[24]).TableRowGroupTitle, { title }) });
+          const obj = { accessible: true, accessibilityRole: "header", accessibilityLabel: title, children: closure_1_14(guild(dependencyMap[24]).TableRowGroupTitle, { title }) };
+          return closure_1_14(closure_6, obj);
         },
       SectionSeparatorComponent(leadingItem) {
           let tmp = null;
           if (null != leadingItem.leadingItem) {
             const obj = { style: closure_4.sectionSeparator };
-            tmp = state(timestampProducer, obj);
+            tmp = authStore2(metroRequire, obj);
           }
           return tmp;
         },
@@ -183,20 +240,21 @@ export default function GuildSettingsRoleEditPermission(guild) {
           return null;
         },
       keyExtractor(flag) {
-          return flag.flag.toString();
+          const str = flag.flag;
+          return str.toString();
         },
       keyboardDismissMode: "on-drag",
-      contentContainerStyle: guild.contentContainerStyle
+      contentContainerStyle
     };
-    let tmp18Result4 = closure_14(closure_8, obj9);
+    tmp19Result4 = closure_14(closure_8, obj8);
   } else {
-    const obj10 = { Illustration: tmp27(9240).NoResultsAlt, style: null, bodyStyle: null, body: null };
-    ({ emptyState: obj11.style, emptyStateText: obj11.bodyStyle } = tmp);
-    const intl2 = tmp27(1126).intl;
-    const obj12 = { query };
-    obj10.body = intl2.format(tmp27(1126).t.Psh5OO, obj12);
-    tmp18Result4 = closure_14(tmp27(1188).EmptyState, obj10);
+    const obj9 = { Illustration: guild(9240).NoResultsAlt, style: null, bodyStyle: null, body: intl2.format(guild(1126).t.Psh5OO, obj11) };
+    const EmptyState = tmp28(1188).EmptyState;
+    ({ emptyState: obj10.style, emptyStateText: obj10.bodyStyle } = tmp);
+    intl2 = tmp28(1126).intl;
+    obj11 = { query };
+    tmp19Result4 = closure_14(EmptyState, obj9);
   }
-  children[3] = tmp18Result4;
+  children[3] = tmp19Result4;
   return closure_16(closure_15, { children });
 };

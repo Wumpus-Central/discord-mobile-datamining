@@ -1,45 +1,59 @@
 // === Module 14615: IgnoredUserRow ===
 
 // Module 14615 (IgnoredUserRow)
+import Fragment from "Fragment" /* 21 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7850 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9434 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
-const jsx = fn(21).jsx;
-let ReactCompilerGating = fn(558);
+let dependencyMap, userId, userRecord;
+
+const jsx = Fragment.jsx;
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userRecord) => {
-  const cResult = userRecord(576).c(31);
+  let analyticsLocations;
+  let closure_2;
+  let obj = userRecord(576);
+  const cResult = obj.c(31);
   userRecord = userRecord.userRecord;
   analyticsLocations = analyticsLocations(6657)().analyticsLocations;
   if (cResult[0] === userRecord.globalName) {
+    let tmp4;
     if (cResult[1] === userRecord.username) {
-      let tmp4 = cResult[2];
+      tmp4 = cResult[2];
     }
     if (cResult[3] === analyticsLocations) {
+      let tmp6;
       if (cResult[4] === userRecord.id) {
-        let tmp6 = cResult[5];
+        tmp6 = cResult[5];
       }
       dependencyMap = tmp6;
       if (cResult[6] === tmp6) {
+        let tmp7;
+        let tmp8;
+        let tmp10;
+        let tmp14;
+        let tmp15;
         if (cResult[7] === userRecord.id) {
-          let tmp7 = cResult[8];
+          tmp7 = cResult[8];
         }
         if (cResult[9] !== userRecord) {
           const avatarSource = userRecord.getAvatarSource(undefined);
           cResult[9] = userRecord;
           cResult[10] = avatarSource;
-          let tmp8 = avatarSource;
+          tmp8 = avatarSource;
         } else {
           tmp8 = cResult[10];
         }
         if (cResult[11] !== tmp8) {
-          const obj2 = { source: tmp8, size: tmp(1188).AvatarSizes.REFRESH_MEDIUM_32 };
-          const tmp12 = jsx(tmp(1188).Avatar, { source: tmp8, size: tmp(1188).AvatarSizes.REFRESH_MEDIUM_32 });
+          const Avatar = tmp(1188).Avatar;
+          const tmp12 = <Avatar source={tmp8} size={userRecord(1188).AvatarSizes.REFRESH_MEDIUM_32} />;
           cResult[11] = tmp8;
           cResult[12] = tmp12;
-          let tmp10 = tmp12;
+          tmp10 = tmp12;
         } else {
           tmp10 = cResult[12];
         }
@@ -47,7 +61,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userRecord) => 
         if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
           const obj3 = { name: "activate" };
           cResult[13] = obj3;
-          let tmp14 = obj3;
+          tmp14 = obj3;
         } else {
           tmp14 = cResult[13];
         }
@@ -57,50 +71,56 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userRecord) => 
           items[1] = obj4;
           cResult[14] = tmp4;
           cResult[15] = items;
-          let tmp15 = items;
+          tmp15 = items;
         } else {
           tmp15 = cResult[15];
         }
         if (cResult[16] === tmp7) {
           if (cResult[17] === tmp15) {
+            let tmp16;
+            let tmp19;
+            let tmp21;
             if (cResult[18] === userRecord) {
-              let tmp16 = cResult[19];
+              tmp16 = cResult[19];
             }
             const _Symbol2 = Symbol;
             if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
               const intl2 = tmp(1126).intl;
-              const stringResult = intl2.string(tmp(1126).t["3GZE6a"]);
+              const stringResult = intl2.string(userRecord(1126).t["3GZE6a"]);
               cResult[20] = stringResult;
-              let tmp19 = stringResult;
+              tmp19 = stringResult;
             } else {
               tmp19 = cResult[20];
             }
             if (cResult[21] !== userRecord.id) {
               const fn3 = function h() {
-                RelationshipActionCreatorsDefault.unignoreUser(userRecord.id, "ignored-users-list-mobile");
+                const id = userRecord.id;
+                const obj = RelationshipActionCreatorsDefault;
+                obj.unignoreUser(id, "ignored-users-list-mobile");
               };
               cResult[21] = userRecord.id;
               cResult[22] = fn3;
-              let tmp21 = fn3;
+              tmp21 = fn3;
             } else {
               tmp21 = cResult[22];
             }
             if (cResult[23] === tmp21) {
+              let tmp22;
               if (cResult[24] === tmp4) {
-                let tmp22 = cResult[25];
+                tmp22 = cResult[25];
               }
               if (cResult[26] === tmp6) {
                 if (cResult[27] === tmp22) {
                   if (cResult[28] === tmp10) {
+                    let tmp25;
                     if (cResult[29] === tmp16) {
-                      let tmp25 = cResult[30];
+                      tmp25 = cResult[30];
                     }
                     return tmp25;
                   }
                 }
               }
-              const obj5 = { accessible: false, icon: tmp10, label: tmp16, onPress: tmp6, trailing: tmp22 };
-              const tmp27 = jsx(tmp(5993).TableRow, { accessible: false, icon: tmp10, label: tmp16, onPress: tmp6, trailing: tmp22 });
+              const tmp27 = jsx(userRecord(5993).TableRow, { accessible: false, icon: tmp10, label: tmp16, onPress: tmp6, trailing: tmp22 });
               cResult[26] = tmp6;
               cResult[27] = tmp22;
               cResult[28] = tmp10;
@@ -108,16 +128,14 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userRecord) => 
               cResult[30] = tmp27;
               tmp25 = tmp27;
             }
-            const obj6 = { size: "sm", variant: "secondary", text: tmp19, accessibilityLabel: tmp4, onPress: tmp21 };
-            const tmp24 = jsx(tmp(5594).Button, { size: "sm", variant: "secondary", text: tmp19, accessibilityLabel: tmp4, onPress: tmp21 });
+            const tmp24 = jsx(userRecord(5594).Button, { size: "sm", variant: "secondary", text: tmp19, accessibilityLabel: tmp4, onPress: tmp21 });
             cResult[23] = tmp21;
             cResult[24] = tmp4;
             cResult[25] = tmp24;
             tmp22 = tmp24;
           }
         }
-        const obj7 = { userRecord, accessibilityActions: tmp15, onAccessibilityAction: tmp7 };
-        const tmp18 = jsx(tmp(14612).RestrictedUserRowLabel, { userRecord, accessibilityActions: tmp15, onAccessibilityAction: tmp7 });
+        const tmp18 = jsx(userRecord(14612).RestrictedUserRowLabel, { userRecord, accessibilityActions: tmp15, onAccessibilityAction: tmp7 });
         cResult[16] = tmp7;
         cResult[17] = tmp15;
         cResult[18] = userRecord;
@@ -129,7 +147,9 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userRecord) => 
         if ("activate" === actionName) {
           return closure_2();
         } else if ("unignore" === actionName) {
-          RelationshipActionCreatorsDefault.unignoreUser(userRecord.id, "ignored-users-list-mobile");
+          const id = userRecord.id;
+          const obj = RelationshipActionCreatorsDefault;
+          obj.unignoreUser(id, "ignored-users-list-mobile");
         }
       };
       cResult[6] = tmp6;
@@ -138,7 +158,8 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userRecord) => 
       tmp7 = fn2;
     }
     const fn = function u() {
-      showUserProfileActionSheetDefault({ userId: userRecord.id, sourceAnalyticsLocations: analyticsLocations });
+      const obj = { userId: userRecord.id, sourceAnalyticsLocations: analyticsLocations };
+      showUserProfileActionSheetDefault(obj);
     };
     cResult[3] = analyticsLocations;
     cResult[4] = userRecord.id;
@@ -146,79 +167,65 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userRecord) => 
     tmp6 = fn;
   }
   const intl = tmp(1126).intl;
+  const formatToPlainString = intl.formatToPlainString;
   let username = userRecord.globalName;
+  const e3qAIz = tmp(1126).t.e3qAIz;
   if (username == null) {
     username = userRecord.username;
   }
-  const formatToPlainStringResult = intl.formatToPlainString(userRecord(1126).t.e3qAIz, { name: username });
+  const formatToPlainStringResult = formatToPlainString(e3qAIz, { name: username });
   cResult[0] = userRecord.globalName;
   cResult[1] = userRecord.username;
   cResult[2] = formatToPlainStringResult;
   tmp4 = formatToPlainStringResult;
-  let obj = userRecord(576);
 }) : ((userRecord) => {
+  let intl2;
   userRecord = userRecord.userRecord;
   let analyticsLocations;
   analyticsLocations = analyticsLocations(6657)().analyticsLocations;
   const intl = userRecord(1126).intl;
+  const formatToPlainString = intl.formatToPlainString;
   let username = userRecord.globalName;
+  const e3qAIz = userRecord(1126).t.e3qAIz;
   if (username == null) {
     username = userRecord.username;
   }
   function handleOpenProfile() {
-    showUserProfileActionSheetDefault({ userId: userRecord.id, sourceAnalyticsLocations: analyticsLocations });
+    const obj = { userId: userRecord.id, sourceAnalyticsLocations: analyticsLocations };
+    showUserProfileActionSheetDefault(obj);
   }
-  const formatToPlainStringResult = intl.formatToPlainString(userRecord(1126).t.e3qAIz, { name: username });
-  let obj = { accessible: false, icon: jsx(userRecord(1188).Avatar, { source: userRecord.getAvatarSource(undefined), size: userRecord(1188).AvatarSizes.REFRESH_MEDIUM_32 }), label: null, onPress: handleOpenProfile, trailing: null };
-  const obj3 = {
-    userRecord,
-    accessibilityActions: null,
-    onAccessibilityAction(nativeEvent) {
-      const actionName = nativeEvent.nativeEvent.actionName;
-      if ("activate" === actionName) {
-        const obj2 = { userId: userRecord.id, sourceAnalyticsLocations: analyticsLocations };
-        showUserProfileActionSheetDefault(obj2);
-      } else if ("unignore" === actionName) {
-        RelationshipActionCreatorsDefault.unignoreUser(userRecord.id, "ignored-users-list-mobile");
-      }
-    }
-  };
+  const formatToPlainStringResult = formatToPlainString(e3qAIz, { name: username });
+  const TableRow = tmp2(5993).TableRow;
+  let obj2 = { source: userRecord.getAvatarSource(undefined), size: userRecord(1188).AvatarSizes.REFRESH_MEDIUM_32 };
+  const Avatar = tmp2(1188).Avatar;
   const items = [{ name: "activate" }, { name: "unignore", label: formatToPlainStringResult }];
-  obj3.accessibilityActions = items;
-  obj.label = jsx(userRecord(14612).RestrictedUserRowLabel, {
-    userRecord,
-    accessibilityActions: null,
-    onAccessibilityAction(nativeEvent) {
-      const actionName = nativeEvent.nativeEvent.actionName;
-      if ("activate" === actionName) {
-        const obj2 = { userId: userRecord.id, sourceAnalyticsLocations: analyticsLocations };
-        showUserProfileActionSheetDefault(obj2);
-      } else if ("unignore" === actionName) {
-        RelationshipActionCreatorsDefault.unignoreUser(userRecord.id, "ignored-users-list-mobile");
-      }
+  ({
+    size: "sm",
+    variant: "secondary",
+    text: intl2.string(userRecord(1126).t["3GZE6a"]),
+    accessibilityLabel: formatToPlainStringResult,
+    onPress() {
+      const id = userRecord.id;
+      const obj = RelationshipActionCreatorsDefault;
+      obj.unignoreUser(id, "ignored-users-list-mobile");
     }
   });
-  const obj4 = { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null };
-  const intl2 = tmp2(1126).intl;
-  obj4.text = intl2.string(userRecord(1126).t["3GZE6a"]);
-  obj4.accessibilityLabel = formatToPlainStringResult;
-  obj4.onPress = function onPress() {
-    RelationshipActionCreatorsDefault.unignoreUser(userRecord.id, "ignored-users-list-mobile");
-  };
-  obj.trailing = jsx(userRecord(5594).Button, { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null });
-  return jsx(userRecord(5993).TableRow, { accessible: false, icon: jsx(userRecord(1188).Avatar, { source: userRecord.getAvatarSource(undefined), size: userRecord(1188).AvatarSizes.REFRESH_MEDIUM_32 }), label: null, onPress: handleOpenProfile, trailing: null });
+  const Button = tmp2(5594).Button;
+  intl2 = tmp2(1126).intl;
+  return <TableRow accessible={false} icon={null} label={null} onPress={handleOpenProfile} trailing={null} />;
 });
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/IgnoredUserRow.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
-  const cResult = userId(576).c(5);
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+  let first;
+  let tmp6;
+  const obj = userId(576);
+  const cResult = obj.c(5);
+  const tmp = userId;
   userId = userId.userId;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -228,29 +235,37 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     };
     cResult[1] = userId;
     cResult[2] = fn;
-    let tmp6 = fn;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
-  const obj = userId(576);
-  const stateFromStores = userId(504).useStateFromStores(first, tmp6);
-  if (null == stateFromStores) {
-    return null;
-  } else if (cResult[3] !== stateFromStores) {
-    const obj2 = { userRecord: stateFromStores };
-    const tmp11 = <closure_5 userRecord={stateFromStores} />;
-    cResult[3] = stateFromStores;
-    cResult[4] = tmp11;
+  const tmpResult = tmp(504);
+  const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
+  let tmp8 = null;
+  if (null != stateFromStores) {
+    let tmp9;
+    if (cResult[3] !== stateFromStores) {
+      const tmp12 = <closure_5 userRecord={stateFromStores} />;
+      cResult[3] = stateFromStores;
+      cResult[4] = tmp12;
+      tmp9 = tmp12;
+    } else {
+      tmp9 = cResult[4];
+    }
+    tmp8 = tmp9;
   }
-  const tmpResult = userId(504);
+  return tmp8;
 }) : ((userId) => {
   userId = userId.userId;
   const items = [UserStore];
-  const stateFromStores = userId(504).useStateFromStores(items, () => UserStore.getUser(userId));
+  const obj = userId(504);
+  const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(userId));
   let tmp2 = null;
   if (null != stateFromStores) {
-    const obj2 = { userRecord: stateFromStores };
     tmp2 = <closure_5 userRecord={stateFromStores} />;
   }
   return tmp2;
 });
+const result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/IgnoredUserRow.tsx");
+
+export default tmp3;

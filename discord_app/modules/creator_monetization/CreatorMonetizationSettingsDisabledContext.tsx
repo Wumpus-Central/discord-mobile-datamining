@@ -1,46 +1,52 @@
 // === Module 17922: CreatorMonetizationSettingsDisabledContext ===
 
 // Module 17922 (CreatorMonetizationSettingsDisabledContext)
-import c from "c" /* 576 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
 import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 6756 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const jsx = fn(21).jsx;
-let context = noop.createContext(undefined);
-fn(558);
-const ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  context = noop.useContext(context);
+const jsx = Fragment.jsx;
+let context = react.createContext(undefined);
+let ReactCompilerGating = ReactCompilerGating_mod;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function() {
+  context = react.useContext(context);
   if (null == context) {
     const _Error = Error;
+    const self = this;
+    const self2 = this;
     const error = new Error("useCreatorMonetizationSettingsDisabled must be used within a CreatorMonetizationSettingsDisabledContext");
     throw error;
   } else {
     return context;
   }
-}) : (() => {
-  context = noop.useContext(context);
+}) : (function() {
+  context = react.useContext(context);
   if (null == context) {
     const _Error = Error;
+    const self = this;
+    const self2 = this;
     const error = new Error("useCreatorMonetizationSettingsDisabled must be used within a CreatorMonetizationSettingsDisabledContext");
     throw error;
   } else {
     return context;
   }
 });
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/creator_monetization/CreatorMonetizationSettingsDisabledContext.tsx");
-
-export default context;
-export const useCreatorMonetizationSettingsDisabled = tmp3;
-export const CreatorMonetizationSettingsDisabledContextProvider = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(3);
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let children;
+  let guildId;
+  const obj = react2;
+  const cResult = obj.c(3);
   ({ children, guildId } = arg0);
-  const shouldRestrictUpdatingCreatorMonetizationSettings = CreatorMonetizationRestrictionsHooks.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId).shouldRestrictUpdatingCreatorMonetizationSettings;
+  const obj2 = CreatorMonetizationRestrictionsHooks;
+  const shouldRestrictUpdatingCreatorMonetizationSettings = obj2.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId).shouldRestrictUpdatingCreatorMonetizationSettings;
   if (cResult[0] === children) {
+    let tmp2;
     if (cResult[1] === shouldRestrictUpdatingCreatorMonetizationSettings) {
-      let tmp2 = cResult[2];
+      tmp2 = cResult[2];
     }
     return tmp2;
   }
@@ -50,6 +56,14 @@ export const CreatorMonetizationSettingsDisabledContextProvider = ReactCompilerG
   cResult[2] = tmp3;
   tmp2 = tmp3;
 }) : ((arg0) => {
+  let children;
+  let guildId;
   ({ guildId, children } = arg0);
-  return <context.Provider value={CreatorMonetizationRestrictionsHooks.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId).shouldRestrictUpdatingCreatorMonetizationSettings}>{children}</context.Provider>;
+  const obj = CreatorMonetizationRestrictionsHooks;
+  return <context.Provider value={obj.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId).shouldRestrictUpdatingCreatorMonetizationSettings}>{children}</context.Provider>;
 });
+const result = size.fileFinishedImporting("modules/creator_monetization/CreatorMonetizationSettingsDisabledContext.tsx");
+
+export default context;
+export const useCreatorMonetizationSettingsDisabled = tmp3;
+export const CreatorMonetizationSettingsDisabledContextProvider = tmp4;

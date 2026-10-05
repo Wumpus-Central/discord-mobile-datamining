@@ -1,18 +1,23 @@
 // === Module 6764: CreatorMonetizationEligibilityExperimentUtils ===
 
 // Module 6764 (CreatorMonetizationEligibilityExperimentUtils)
-import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
+import get_initialized from "get initialized" /* 504 */;
+import react from "react" /* 576 */;
+import Constants from "Constants" /* 1085 */;
 import UserStore from "UserStore" /* 1377 */;
 import BillingInfoStore from "BillingInfoStore" /* 4530 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const GuildFeatures = fn(1085).GuildFeatures;
+const GuildFeatures = Constants.GuildFeatures;
 const set = new Set(["US"]);
-fn(558);
-const ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(2);
+  let ipCountryCode;
+  let tmp4;
+  let tmp5;
+  const obj = react;
+  const cResult = obj.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore, BillingInfoStore];
     const fn = function l() {
@@ -27,10 +32,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       if (country == null) {
         country = ipCountryCode.ipCountryCode;
       }
-      let hasItem = null != country;
-      if (hasItem) {
-        hasItem = set.has(country);
-      }
+      const hasItem = null != country && set.has(country);
       return hasItem;
     };
     cResult[0] = items;
@@ -40,10 +42,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  return initialize.useStateFromStores(tmp4, tmp5);
+  const tmpResult = get_initialized;
+  return tmpResult.useStateFromStores(tmp4, tmp5);
 }) : (() => {
+  let ipCountryCode;
   const items = [UserStore, BillingInfoStore];
-  return initialize.useStateFromStores(items, () => {
+  const obj = get_initialized;
+  return obj.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let country;
     if (currentUser != null) {
@@ -55,62 +60,12 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     if (country == null) {
       country = ipCountryCode.ipCountryCode;
     }
-    let hasItem = null != country;
-    if (hasItem) {
-      hasItem = set.has(country);
-    }
+    const hasItem = null != country && set.has(country);
     return hasItem;
   });
 });
-function useIsRavenOnboardingGuild(arg0) {
-  return null != arg0;
-}
-function isRavenOnboardingGuild(arg0) {
-  return null != arg0;
-}
-function useIsWhitegloveOnboardingGuild(features) {
-  let hasItem = null != features;
-  if (hasItem) {
-    features = features.features;
-    hasItem = features.has(GuildFeatures.CREATOR_MONETIZABLE_WHITEGLOVE);
-  }
-  return hasItem;
-}
-function isWhitegloveOnboardingGuild(features) {
-  let hasItem = null != features;
-  if (hasItem) {
-    features = features.features;
-    hasItem = features.has(GuildFeatures.CREATOR_MONETIZABLE_WHITEGLOVE);
-  }
-  return hasItem;
-}
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx");
-
-export const useIsUserInCreatorMonetizationEligibleCountry = tmp3;
-export const isUserInCreatorMonetizationEligibleCountry = function isUserInCreatorMonetizationEligibleCountry() {
-  const currentUser = UserStore.getCurrentUser();
-  let country;
-  if (currentUser != null) {
-    const storeCountry = currentUser.storeCountry;
-    if (storeCountry != null) {
-      country = storeCountry.country;
-    }
-  }
-  if (country == null) {
-    country = BillingInfoStore.ipCountryCode;
-  }
-  let hasItem = null != country;
-  if (hasItem) {
-    hasItem = set.has(country);
-  }
-  return hasItem;
-};
-export { useIsRavenOnboardingGuild };
-export { isRavenOnboardingGuild };
-export { useIsWhitegloveOnboardingGuild };
-export { isWhitegloveOnboardingGuild };
-export const useIsExpeditedOnboardingGuild = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -141,6 +96,51 @@ export const useIsExpeditedOnboardingGuild = ReactCompilerGating.isReactCompiler
   }
   return tmp2;
 });
+function useIsRavenOnboardingGuild(arg0) {
+  return null != arg0;
+}
+function isRavenOnboardingGuild(arg0) {
+  return null != arg0;
+}
+function useIsWhitegloveOnboardingGuild(features) {
+  let hasItem = null != features;
+  if (hasItem) {
+    features = features.features;
+    hasItem = features.has(GuildFeatures.CREATOR_MONETIZABLE_WHITEGLOVE);
+  }
+  return hasItem;
+}
+function isWhitegloveOnboardingGuild(features) {
+  let hasItem = null != features;
+  if (hasItem) {
+    features = features.features;
+    hasItem = features.has(GuildFeatures.CREATOR_MONETIZABLE_WHITEGLOVE);
+  }
+  return hasItem;
+}
+const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx");
+
+export const useIsUserInCreatorMonetizationEligibleCountry = tmp3;
+export const isUserInCreatorMonetizationEligibleCountry = function isUserInCreatorMonetizationEligibleCountry() {
+  const currentUser = UserStore.getCurrentUser();
+  let country;
+  if (currentUser != null) {
+    const storeCountry = currentUser.storeCountry;
+    if (storeCountry != null) {
+      country = storeCountry.country;
+    }
+  }
+  if (country == null) {
+    country = BillingInfoStore.ipCountryCode;
+  }
+  const hasItem = null != country && set.has(country);
+  return hasItem;
+};
+export { useIsRavenOnboardingGuild };
+export { isRavenOnboardingGuild };
+export { useIsWhitegloveOnboardingGuild };
+export { isWhitegloveOnboardingGuild };
+export const useIsExpeditedOnboardingGuild = tmp4;
 export const isExpeditedMonetizationOnboardingGuild = function isExpeditedMonetizationOnboardingGuild(id) {
   id = undefined;
   if (id != null) {

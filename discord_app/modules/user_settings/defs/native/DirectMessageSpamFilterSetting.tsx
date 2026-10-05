@@ -1,67 +1,58 @@
 // === Module 14644: DirectMessageSpamFilterSetting ===
 
 // Module 14644 (DirectMessageSpamFilterSetting)
-import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
+import react2 from "react" /* 576 */;
+import intl3 from "intl" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;
+import SettingsConstants from "SettingsConstants" /* 7634 */;
 import ModerationUtils from "ModerationUtils" /* 14645 */;
-import noop from "module_19" /* 19 */;
+import useDerivedDMSpamFilterSetting from "useDerivedDMSpamFilterSetting" /* 14647 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import SettingBuilders from "SettingBuilders" /* 11129 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11129);
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(1);
+  let first;
+  const obj = react2;
+  const cResult = obj.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const dmSpamOptions = ModerationUtils.generateDmSpamOptions();
+    const tmpResult = ModerationUtils;
+    const dmSpamOptions = tmpResult.generateDmSpamOptions();
     const mapped = dmSpamOptions.map((value) => ({ value: value.value, label: value.name, subLabel: value.desc }));
     cResult[0] = mapped;
-    let first = mapped;
-    const tmpResult = ModerationUtils;
+    first = mapped;
   } else {
     first = cResult[0];
   }
   return first;
-}) : (() => noop.useMemo(() => {
-  const dmSpamOptions = ModerationUtils.generateDmSpamOptions();
+}) : (() => react.useMemo(() => {
+  const obj = ModerationUtils;
+  const dmSpamOptions = obj.generateDmSpamOptions();
   return dmSpamOptions.map((value) => ({ value: value.value, label: value.name, subLabel: value.desc }));
 }, []));
-const radio = SettingBuilders.createRadio({
+let obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t.tiCXaH);
+    const intl = intl3.intl;
+    return intl.string(intl3.t.tiCXaH);
   },
-  parent: fn(7634).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useOptions: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-    const cResult = c.c(1);
-    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const dmSpamOptions = ModerationUtils.generateDmSpamOptions();
-      const mapped = dmSpamOptions.map((value) => ({ value: value.value, label: value.name, subLabel: value.desc }));
-      cResult[0] = mapped;
-      let first = mapped;
-      const tmpResult = ModerationUtils;
-    } else {
-      first = cResult[0];
-    }
-    return first;
-  }) : (() => noop.useMemo(() => {
-    const dmSpamOptions = ModerationUtils.generateDmSpamOptions();
-    return dmSpamOptions.map((value) => ({ value: value.value, label: value.name, subLabel: value.desc }));
-  }, [])),
-  useValue: fn(14647).useDerivedDmSpamFilterSettingValue,
+  parent: MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  useOptions: tmp2,
+  useValue: useDerivedDMSpamFilterSetting.useDerivedDmSpamFilterSettingValue,
   onValueChange: function onDmSpamFilterSettingValueChange(arg0) {
     const DmSpamFilterV2 = UserSettings.DmSpamFilterV2;
     DmSpamFilterV2.updateSetting(Number(arg0));
   },
   useSearchTerms() {
-    const intl = util.intl;
-    const items = [intl.string(util.t.H9XOl3), ];
-    const intl2 = util.intl;
-    items[1] = intl2.string(util.t.k4W40P);
+    const intl = intl3.intl;
+    const items = [intl.string(intl3.t.H9XOl3), ];
+    const intl2 = intl3.intl;
+    items[1] = intl2.string(intl3.t.k4W40P);
     return items;
   }
-});
-const size = fn(2);
+};
+const radio = SettingBuilders.createRadio(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/DirectMessageSpamFilterSetting.tsx");
 
 export default radio;

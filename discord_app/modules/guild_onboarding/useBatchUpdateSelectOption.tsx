@@ -3,23 +3,31 @@
 // Module 11171 (useBatchUpdateSelectOption)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
+import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 6600 */;
-import noop from "module_19" /* 19 */;
+import OptInOnboardingUtils from "OptInOnboardingUtils" /* 11172 */;
+import react from "react" /* 19 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5071 */;
 import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6595 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-require = fn;
 function getRoles(singleSelect, roleIds, arg2, arg3) {
-  const id = roleIds;
-  closure_1 = arg3;
+  let difference2Result;
+  let items;
+  let closure_0 = roleIds;
+  let closure_1 = arg3;
   if (singleSelect.singleSelect) {
     if (arg2) {
-      options = singleSelect.options;
+      const options = singleSelect.options;
       const found = options.find((id) => closure_1.includes(id.id));
       roleIds = roleIds.roleIds;
+      const difference = _modDef12.difference;
+      _modDef12;
       if (roleIds == null) {
         roleIds = [];
       }
@@ -30,8 +38,10 @@ function getRoles(singleSelect, roleIds, arg2, arg3) {
       if (roleIds1 == null) {
         roleIds1 = [];
       }
-      const differenceResult = _modDef12.difference(roleIds, roleIds1);
       let roleIds2;
+      const differenceResult = difference(roleIds, roleIds1);
+      const difference2 = _modDef12.difference;
+      _modDef12;
       if (found != null) {
         roleIds2 = found.roleIds;
       }
@@ -42,42 +52,50 @@ function getRoles(singleSelect, roleIds, arg2, arg3) {
       if (roleIds3 == null) {
         roleIds3 = [];
       }
-      let differenceResult1 = _modDef12.difference(roleIds2, roleIds3);
-      let items = differenceResult;
-      const tmp8Result = _modDef12;
+      difference2Result = difference2(roleIds2, roleIds3);
+      items = differenceResult;
     }
-    const obj = { addedRoleIds: items, removedRoleIds: differenceResult1 };
-    return obj;
+    return { addedRoleIds: items, removedRoleIds: difference2Result };
   }
   if (arg2) {
     let roleIds4 = roleIds.roleIds;
     if (roleIds4 == null) {
       roleIds4 = [];
     }
-    differenceResult1 = [];
+    difference2Result = [];
     items = roleIds4;
   } else {
     const options1 = singleSelect.options;
     const found1 = options1.filter((id) => closure_1.includes(id.id));
     const found2 = found1.filter((id) => id.id !== id.id);
     const mapped = found1.map((roleIds) => roleIds.roleIds);
-    const found3 = mapped.flat().filter(GlobalUtils.isNotNullish);
-    const mapped1 = found2.map((roleIds) => roleIds.roleIds);
     const flatResult = mapped.flat();
+    const found3 = flatResult.filter(GlobalUtils.isNotNullish);
+    const mapped1 = found2.map((roleIds) => roleIds.roleIds);
     items = [];
-    const found4 = mapped1.flat().filter(GlobalUtils.isNotNullish);
     const flatResult1 = mapped1.flat();
-    differenceResult1 = _modDef12.difference(found3, found4);
+    const found4 = flatResult1.filter(GlobalUtils.isNotNullish);
+    const obj3 = _modDef12;
+    difference2Result = obj3.difference(found3, found4);
   }
 }
 function getChannels(arg0) {
+  let _prompt;
+  let closure_129_1;
+  let difference2Result;
+  let guildId;
+  let items1;
+  let option;
+  let selected;
   ({ guildId, prompt: _prompt, option } = arg0);
-  ({ selected, responses: importDefault } = arg0);
+  ({ selected, responses: closure_129_1 } = arg0);
   if (_prompt.singleSelect) {
     if (selected) {
-      options = _prompt.options;
-      const found = options.find((id) => importDefault.includes(id.id));
+      const options = _prompt.options;
+      const found = options.find((id) => closure_1_1.includes(id.id));
       let channelIds = option.channelIds;
+      const difference = _modDef12.difference;
+      _modDef12;
       if (channelIds == null) {
         channelIds = [];
       }
@@ -88,8 +106,10 @@ function getChannels(arg0) {
       if (channelIds1 == null) {
         channelIds1 = [];
       }
-      const differenceResult = _modDef12.difference(channelIds, channelIds1);
       let channelIds2;
+      const differenceResult = difference(channelIds, channelIds1);
+      const difference2 = _modDef12.difference;
+      _modDef12;
       if (found != null) {
         channelIds2 = found.channelIds;
       }
@@ -100,59 +120,62 @@ function getChannels(arg0) {
       if (channelIds3 == null) {
         channelIds3 = [];
       }
-      let differenceResult1 = _modDef12.difference(channelIds2, channelIds3);
-      let items1 = differenceResult;
-      const tmp8Result = _modDef12;
+      difference2Result = difference2(channelIds2, channelIds3);
+      items1 = differenceResult;
     }
-    if (obj6.hasNotSetUpChannelOptIn(guildId)) {
+    const obj4 = OptInOnboardingUtils;
+    if (obj4.hasNotSetUpChannelOptIn(guildId)) {
       const push = items1.push;
       const items = [];
-      HermesBuiltin.arraySpread(GuildOnboardingPromptsStore.getDefaultChannelIds(guildId), 0);
-      HermesBuiltin.apply(items, items1);
+      HermesBuiltin.arraySpread(items, GuildOnboardingPromptsStore.getDefaultChannelIds(guildId), 0);
+      HermesBuiltin.apply(push, items, items1);
     }
-    const obj = { addedChannelIds: items1, removedChannelIds: differenceResult1 };
-    return obj;
+    return { addedChannelIds: items1, removedChannelIds: difference2Result };
   }
   if (selected) {
     let channelIds4 = option.channelIds;
     if (channelIds4 == null) {
       channelIds4 = [];
     }
-    differenceResult1 = [];
+    difference2Result = [];
     items1 = channelIds4;
   } else {
     const options1 = _prompt.options;
-    const found1 = options1.filter((id) => importDefault.includes(id.id));
+    const found1 = options1.filter((id) => closure_1_1.includes(id.id));
     const found2 = found1.filter((id) => option.id !== id.id);
     const mapped = found1.map((channelIds) => channelIds.channelIds);
-    const found3 = mapped.flat().filter(GlobalUtils.isNotNullish);
-    const mapped1 = found2.map((channelIds) => channelIds.channelIds);
     const flatResult = mapped.flat();
+    const found3 = flatResult.filter(GlobalUtils.isNotNullish);
+    const mapped1 = found2.map((channelIds) => channelIds.channelIds);
     items1 = [];
-    const found4 = mapped1.flat().filter(GlobalUtils.isNotNullish);
     const flatResult1 = mapped1.flat();
-    differenceResult1 = _modDef12.difference(found3, found4);
+    const found4 = flatResult1.filter(GlobalUtils.isNotNullish);
+    const obj3 = _modDef12;
+    difference2Result = obj3.difference(found3, found4);
   }
 }
-let closure_6 = fn(1095).ChannelNotificationSettingsFlags;
+let closure_6 = UserSettingsConstants.ChannelNotificationSettingsFlags;
 let closure_9 = {};
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/guild_onboarding/useBatchUpdateSelectOption.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+  let first;
+  let tmp10;
+  let tmp6;
+  let tmp7;
+  let tmp9;
   _require = guildId;
-  const cResult = require("c").c(15);
+  const tmp = _require;
+  let obj = require("react");
+  const cResult = obj.c(15);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildOnboardingPromptsStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== guildId) {
     const fn = function u() {
-      let pendingResponseOptions = GuildOnboardingPromptsStore.getPendingResponseOptions(closure_0);
+      let pendingResponseOptions = GuildOnboardingPromptsStore.getPendingResponseOptions(guildId);
       if (pendingResponseOptions == null) {
         pendingResponseOptions = closure_9;
       }
@@ -162,69 +185,88 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     cResult[1] = guildId;
     cResult[2] = fn;
     cResult[3] = items1;
-    let tmp7 = items1;
-    let tmp6 = fn;
+    tmp7 = items1;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[2];
     tmp7 = cResult[3];
   }
-  let obj = require("c");
-  const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
+  const tmpResult = tmp(504);
+  const stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
   if (cResult[4] !== guildId) {
     const fn2 = function h() {
-      DispatcherDefault.dispatch({ type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId });
+      let obj = DispatcherDefault;
+      let obj2 = { type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId };
+      obj.dispatch(obj2);
       return () => {
-        stateFromStores(584).dispatch({ type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId });
+        const obj = stateFromStores(dependencyMap[4]);
+        const obj2 = { type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId };
+        obj.dispatch(obj2);
       };
     };
     const items2 = [guildId];
     cResult[4] = guildId;
     cResult[5] = fn2;
     cResult[6] = items2;
-    let tmp10 = items2;
-    let tmp9 = fn2;
+    tmp10 = items2;
+    tmp9 = fn2;
   } else {
     tmp9 = cResult[5];
     tmp10 = cResult[6];
   }
-  const effect = noop.useEffect(tmp9, tmp10);
+  const effect = react.useEffect(tmp9, tmp10);
   if (cResult[7] === guildId) {
+    let tmp12;
+    let tmp13;
+    let tmp15;
+    let tmp16;
     if (cResult[8] === stateFromStores) {
-      let tmp12 = cResult[9];
-      let tmp13 = cResult[10];
+      tmp12 = cResult[9];
+      tmp13 = cResult[10];
     }
-    const effect1 = noop.useEffect(tmp12, tmp13);
+    const effect1 = react.useEffect(tmp12, tmp13);
     if (cResult[11] !== guildId) {
       const fn3 = function v(prompt, option, selected) {
+        let addedChannelIds;
+        let addedRoleIds;
+        let removedChannelIds;
+        let removedRoleIds;
         const onboardingResponses = GuildOnboardingPromptsStore.getOnboardingResponses(guildId);
-        ({ addedRoleIds, removedRoleIds } = getRoles(prompt, option, selected, onboardingResponses));
         let obj = { guildId, prompt, option, selected, responses: onboardingResponses };
-        const tmp2 = getRoles(prompt, option, selected, onboardingResponses);
-        ({ addedChannelIds, removedChannelIds } = getChannels({ guildId, prompt, option, selected, responses: onboardingResponses }));
+        ({ addedRoleIds, removedRoleIds } = getRoles(prompt, option, selected, onboardingResponses));
+        getRoles(prompt, option, selected, onboardingResponses);
+        ({ addedChannelIds, removedChannelIds } = getChannels(obj));
+        let obj2 = {};
+        getChannels(obj);
         const merged = Object.assign(addedChannelIds.reduce((acc, item) => {
-          const obj = { flags: null };
-          const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(guildId, item);
-          obj.flags = closure_0(1390).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
+          let channelIdFlags;
+          let obj2;
+          const obj = { flags: obj2.setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true) };
+          channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(closure_1_0, item);
           acc[item] = obj;
+          obj2 = closure_0(dependencyMap[12]);
           return acc;
         }, {}));
         const merged1 = Object.assign(removedChannelIds.reduce((acc, item) => {
-          const obj = { flags: null };
-          const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(guildId, item);
-          obj.flags = closure_0(1390).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
+          let channelIdFlags;
+          let obj2;
+          const obj = { flags: obj2.setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false) };
+          channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(closure_1_0, item);
           acc[item] = obj;
+          obj2 = closure_0(dependencyMap[12]);
           return acc;
         }, {}));
-        const obj2 = {};
-        const tmp3 = getChannels({ guildId, prompt, option, selected, responses: onboardingResponses });
-        option = GuildOnboardingActionCreatorsDefault.selectOption(guildId, prompt.id, option.id, selected);
-        DispatcherDefault.dispatch({ type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK", guildId, overrides: obj2 });
+        const obj3 = GuildOnboardingActionCreatorsDefault;
+        option = obj3.selectOption(guildId, prompt.id, option.id, selected);
+        const obj4 = DispatcherDefault;
         const obj5 = { type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK", guildId, overrides: obj2 };
-        GuildOnboardingActionCreatorsDefault.updateRolesLocal(guildId, addedRoleIds, removedRoleIds);
+        obj4.dispatch(obj5);
+        const obj6 = GuildOnboardingActionCreatorsDefault;
+        obj6.updateRolesLocal(guildId, addedRoleIds, removedRoleIds);
       };
       cResult[11] = guildId;
       cResult[12] = fn3;
-      let tmp15 = fn3;
+      tmp15 = fn3;
     } else {
       tmp15 = cResult[12];
     }
@@ -232,7 +274,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       let obj2 = { handleSelectOption: tmp15 };
       cResult[13] = tmp15;
       cResult[14] = obj2;
-      let tmp16 = obj2;
+      tmp16 = obj2;
     } else {
       tmp16 = cResult[14];
     }
@@ -240,21 +282,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   }
   class N {
     constructor() {
-      tmp2 = null != closure_1;
+      let tmp2 = null != stateFromStores;
       if (tmp2) {
-        tmp3 = globalThis;
-        _Object = Object;
-        num = 0;
+        const _Object = Object;
         tmp2 = 0 !== Object.keys(tmp).length;
       }
       if (tmp2) {
-        tmp4 = closure_1;
-        tmp5 = closure_2;
-        obj = closure_1(closure_2[11]);
-        tmp6 = closure_0;
-        result = obj.updateOnboardingResponses(closure_0);
+        const obj = GuildOnboardingActionCreatorsDefault;
+        const result = obj.updateOnboardingResponses(guildId);
       }
-      return;
     }
   }
   const items3 = [guildId, stateFromStores];
@@ -264,64 +300,85 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[10] = items3;
   tmp13 = items3;
   tmp12 = N;
-  const tmpResult = require("initialize");
 }) : ((guildId) => {
+  let items4;
   _require = guildId;
+  let obj = require("get initialized");
   const items = [GuildOnboardingPromptsStore];
   const items1 = [guildId];
-  const stateFromStores = require("initialize").useStateFromStores(items, () => {
-    let pendingResponseOptions = GuildOnboardingPromptsStore.getPendingResponseOptions(closure_0);
+  const stateFromStores = obj.useStateFromStores(items, () => {
+    let pendingResponseOptions = GuildOnboardingPromptsStore.getPendingResponseOptions(guildId);
     if (pendingResponseOptions == null) {
       pendingResponseOptions = closure_9;
     }
     return pendingResponseOptions;
   }, items1);
   const items2 = [guildId];
-  const effect = noop.useEffect(() => {
-    DispatcherDefault.dispatch({ type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId });
+  const effect = react.useEffect(() => {
+    let obj = DispatcherDefault;
+    let obj2 = { type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId };
+    obj.dispatch(obj2);
     return () => {
-      stateFromStores(584).dispatch({ type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId });
+      const obj = stateFromStores(dependencyMap[4]);
+      const obj2 = { type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId };
+      obj.dispatch(obj2);
     };
   }, items2);
   const items3 = [guildId, stateFromStores];
-  const effect1 = noop.useEffect(() => {
+  const effect1 = react.useEffect(() => {
     let tmp2 = null != stateFromStores;
     if (tmp2) {
       const _Object = Object;
       tmp2 = 0 !== Object.keys(tmp).length;
     }
     if (tmp2) {
-      const result = GuildOnboardingActionCreatorsDefault.updateOnboardingResponses(closure_0);
+      const obj = GuildOnboardingActionCreatorsDefault;
+      const result = obj.updateOnboardingResponses(guildId);
     }
   }, items3);
-  let obj2 = { handleSelectOption: null };
-  const items4 = [guildId];
-  obj2.handleSelectOption = noop.useCallback((prompt, option, selected) => {
-    const onboardingResponses = GuildOnboardingPromptsStore.getOnboardingResponses(guildId);
-    ({ addedRoleIds, removedRoleIds } = getRoles(prompt, option, selected, onboardingResponses));
-    let obj = { guildId, prompt, option, selected, responses: onboardingResponses };
-    const tmp2 = getRoles(prompt, option, selected, onboardingResponses);
-    ({ addedChannelIds, removedChannelIds } = getChannels({ guildId, prompt, option, selected, responses: onboardingResponses }));
-    const merged = Object.assign(addedChannelIds.reduce((acc, item) => {
-      const obj = { flags: null };
-      const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(guildId, item);
-      obj.flags = closure_0(1390).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
-      acc[item] = obj;
-      return acc;
-    }, {}));
-    const merged1 = Object.assign(removedChannelIds.reduce((acc, item) => {
-      const obj = { flags: null };
-      const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(guildId, item);
-      obj.flags = closure_0(1390).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
-      acc[item] = obj;
-      return acc;
-    }, {}));
-    const obj2 = {};
-    const tmp3 = getChannels({ guildId, prompt, option, selected, responses: onboardingResponses });
-    option = GuildOnboardingActionCreatorsDefault.selectOption(guildId, prompt.id, option.id, selected);
-    DispatcherDefault.dispatch({ type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK", guildId, overrides: obj2 });
-    const obj5 = { type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK", guildId, overrides: obj2 };
-    GuildOnboardingActionCreatorsDefault.updateRolesLocal(guildId, addedRoleIds, removedRoleIds);
-  }, items4);
+  let obj2 = {
+    handleSelectOption: react.useCallback((prompt, option, selected) => {
+      let addedChannelIds;
+      let addedRoleIds;
+      let removedChannelIds;
+      let removedRoleIds;
+      const onboardingResponses = GuildOnboardingPromptsStore.getOnboardingResponses(guildId);
+      let obj = { guildId, prompt, option, selected, responses: onboardingResponses };
+      ({ addedRoleIds, removedRoleIds } = getRoles(prompt, option, selected, onboardingResponses));
+      getRoles(prompt, option, selected, onboardingResponses);
+      ({ addedChannelIds, removedChannelIds } = getChannels(obj));
+      let obj2 = {};
+      getChannels(obj);
+      const merged = Object.assign(addedChannelIds.reduce((acc, item) => {
+        let channelIdFlags;
+        let obj2;
+        const obj = { flags: obj2.setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true) };
+        channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(closure_1_0, item);
+        acc[item] = obj;
+        obj2 = closure_0(dependencyMap[12]);
+        return acc;
+      }, {}));
+      const merged1 = Object.assign(removedChannelIds.reduce((acc, item) => {
+        let channelIdFlags;
+        let obj2;
+        const obj = { flags: obj2.setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false) };
+        channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(closure_1_0, item);
+        acc[item] = obj;
+        obj2 = closure_0(dependencyMap[12]);
+        return acc;
+      }, {}));
+      const obj3 = GuildOnboardingActionCreatorsDefault;
+      option = obj3.selectOption(guildId, prompt.id, option.id, selected);
+      const obj4 = DispatcherDefault;
+      const obj5 = { type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK", guildId, overrides: obj2 };
+      obj4.dispatch(obj5);
+      const obj6 = GuildOnboardingActionCreatorsDefault;
+      obj6.updateRolesLocal(guildId, addedRoleIds, removedRoleIds);
+    }, items4)
+  };
+  items4 = [guildId];
   return obj2;
 });
+let result = size.fileFinishedImporting("modules/guild_onboarding/useBatchUpdateSelectOption.tsx");
+
+export default tmp2;

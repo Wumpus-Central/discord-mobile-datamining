@@ -1,80 +1,96 @@
 // === Module 15956: ? ===
 
 // Module 15956
+import CameraLottie from "CameraLottie" /* 9627 */;
+import SpendEarnOrbsLightThemeLottie from "SpendEarnOrbsLightThemeLottie" /* 11004 */;
+import SpendEarnOrbsLottie from "SpendEarnOrbsLottie" /* 11006 */;
+import MessagesTabLottie from "MessagesTabLottie" /* 14219 */;
+import ServerTabLottie from "ServerTabLottie" /* 14221 */;
+import YouTabLottie from "YouTabLottie" /* 14223 */;
+import NotificationsTabLottie from "NotificationsTabLottie" /* 14225 */;
+import MicrophoneLottie from "MicrophoneLottie" /* 14227 */;
+import NitroGem1Lottie from "NitroGem1Lottie" /* 14229 */;
+import NitroGem2Lottie from "NitroGem2Lottie" /* 14231 */;
+import NitroGem3Lottie from "NitroGem3Lottie" /* 14233 */;
+import NitroGem6Lottie from "NitroGem6Lottie" /* 14235 */;
+import NitroGem9Lottie from "NitroGem9Lottie" /* 14237 */;
+import NitroGem12Lottie from "NitroGem12Lottie" /* 14239 */;
+import NitroGem15Lottie from "NitroGem15Lottie" /* 14241 */;
+import NitroGem18Lottie from "NitroGem18Lottie" /* 14243 */;
+import NitroGem24Lottie from "NitroGem24Lottie" /* 14245 */;
+import MessageRequestLottie from "MessageRequestLottie" /* 14247 */;
 import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
-
 const result = size.fileFinishedImporting("design/components/LottieIcon/native/generated/index.tsx");
-for (const key10018 in require("MessagesTabLottie")) {
-  arg5[key10018] = require("MessagesTabLottie")[key10018];
+for (const key10018 in MessagesTabLottie) {
+  exports[key10018] = MessagesTabLottie[key10018];
   continue;
 }
-for (const key10022 in require("ServerTabLottie")) {
-  arg5[key10022] = require("ServerTabLottie")[key10022];
+for (const key10022 in ServerTabLottie) {
+  exports[key10022] = ServerTabLottie[key10022];
   continue;
 }
-for (const key10026 in require("YouTabLottie")) {
-  arg5[key10026] = require("YouTabLottie")[key10026];
+for (const key10026 in YouTabLottie) {
+  exports[key10026] = YouTabLottie[key10026];
   continue;
 }
-for (const key10030 in require("NotificationsTabLottie")) {
-  arg5[key10030] = require("NotificationsTabLottie")[key10030];
+for (const key10030 in NotificationsTabLottie) {
+  exports[key10030] = NotificationsTabLottie[key10030];
   continue;
 }
-for (const key10034 in require("MicrophoneLottie")) {
-  arg5[key10034] = require("MicrophoneLottie")[key10034];
+for (const key10034 in MicrophoneLottie) {
+  exports[key10034] = MicrophoneLottie[key10034];
   continue;
 }
-for (const key10038 in require("CameraLottie")) {
-  arg5[key10038] = require("CameraLottie")[key10038];
+for (const key10038 in CameraLottie) {
+  exports[key10038] = CameraLottie[key10038];
   continue;
 }
-for (const key10042 in require("NitroGem1Lottie")) {
-  arg5[key10042] = require("NitroGem1Lottie")[key10042];
+for (const key10042 in NitroGem1Lottie) {
+  exports[key10042] = NitroGem1Lottie[key10042];
   continue;
 }
-for (const key10046 in require("NitroGem2Lottie")) {
-  arg5[key10046] = require("NitroGem2Lottie")[key10046];
+for (const key10046 in NitroGem2Lottie) {
+  exports[key10046] = NitroGem2Lottie[key10046];
   continue;
 }
-for (const key10050 in require("NitroGem3Lottie")) {
-  arg5[key10050] = require("NitroGem3Lottie")[key10050];
+for (const key10050 in NitroGem3Lottie) {
+  exports[key10050] = NitroGem3Lottie[key10050];
   continue;
 }
-for (const key10054 in require("NitroGem6Lottie")) {
-  arg5[key10054] = require("NitroGem6Lottie")[key10054];
+for (const key10054 in NitroGem6Lottie) {
+  exports[key10054] = NitroGem6Lottie[key10054];
   continue;
 }
-for (const key10058 in require("NitroGem9Lottie")) {
-  arg5[key10058] = require("NitroGem9Lottie")[key10058];
+for (const key10058 in NitroGem9Lottie) {
+  exports[key10058] = NitroGem9Lottie[key10058];
   continue;
 }
-for (const key10062 in require("NitroGem12Lottie")) {
-  arg5[key10062] = require("NitroGem12Lottie")[key10062];
+for (const key10062 in NitroGem12Lottie) {
+  exports[key10062] = NitroGem12Lottie[key10062];
   continue;
 }
-for (const key10066 in require("NitroGem15Lottie")) {
-  arg5[key10066] = require("NitroGem15Lottie")[key10066];
+for (const key10066 in NitroGem15Lottie) {
+  exports[key10066] = NitroGem15Lottie[key10066];
   continue;
 }
-for (const key10070 in require("NitroGem18Lottie")) {
-  arg5[key10070] = require("NitroGem18Lottie")[key10070];
+for (const key10070 in NitroGem18Lottie) {
+  exports[key10070] = NitroGem18Lottie[key10070];
   continue;
 }
-for (const key10074 in require("NitroGem24Lottie")) {
-  arg5[key10074] = require("NitroGem24Lottie")[key10074];
+for (const key10074 in NitroGem24Lottie) {
+  exports[key10074] = NitroGem24Lottie[key10074];
   continue;
 }
-for (const key10078 in require("MessageRequestLottie")) {
-  arg5[key10078] = require("MessageRequestLottie")[key10078];
+for (const key10078 in MessageRequestLottie) {
+  exports[key10078] = MessageRequestLottie[key10078];
   continue;
 }
-for (const key10082 in require("SpendEarnOrbsLottie")) {
-  arg5[key10082] = require("SpendEarnOrbsLottie")[key10082];
+for (const key10082 in SpendEarnOrbsLottie) {
+  exports[key10082] = SpendEarnOrbsLottie[key10082];
   continue;
 }
-for (const key10086 in require("SpendEarnOrbsLightThemeLottie")) {
-  arg5[key10086] = require("SpendEarnOrbsLightThemeLottie")[key10086];
+for (const key10086 in SpendEarnOrbsLightThemeLottie) {
+  exports[key10086] = SpendEarnOrbsLightThemeLottie[key10086];
   continue;
 }

@@ -1,38 +1,39 @@
 // === Module 8918: ExplicitMediaActionCreators ===
 
 // Module 8918 (ExplicitMediaActionCreators)
-import util from "util" /* 1126 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import intl4 from "intl" /* 1126 */;
+import asyncRequire from "asyncRequire" /* 1987 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
 import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7109 */;
+import ExplicitMediaRedactionConstants from "ExplicitMediaRedactionConstants" /* 7110 */;
 import ExplicitMediaFalsePositiveActionCreatorsDefault from "ExplicitMediaFalsePositiveActionCreators" /* 8919 */;
 import ExplicitMediaStore from "ExplicitMediaStore" /* 6796 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-let closure_4 = fn(7110).EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_ACTION_SHEET_KEY;
-const size = fn(2);
+let closure_4 = ExplicitMediaRedactionConstants.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_ACTION_SHEET_KEY;
 let result = size.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaActionCreators.native.tsx");
 
 export const handleSenderFalsePositiveFlow = function handleSenderFalsePositiveFlow(channelId, messageId) {
+  let intl;
+  let intl2;
+  let intl3;
   const obj = ExplicitMediaRedactionUtils;
-  const result = obj.trackMediaRedactionAction({ action: ExplicitMediaRedactionUtils.TrackMediaRedactionActionType.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_CLICKED, messageId, channelId });
+  const obj2 = { action: ExplicitMediaRedactionUtils.TrackMediaRedactionActionType.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_CLICKED, messageId, channelId };
+  const result = obj.trackMediaRedactionAction(obj2);
   if (ExplicitMediaStore.canSubmitFpReport(messageId)) {
     const obj3 = { channelId, messageId };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8920, dependencyMap.paths), closure_4, obj3);
     const tmp4Result = ActionSheetActionCreatorsDefault;
+    tmp4Result.openLazy(asyncRequire(8920, dependencyMap.paths), closure_4, obj3);
   } else {
-    const obj4 = { title: null, body: null, confirmText: null };
-    const intl = util.intl;
-    obj4.title = intl.string(util.t["iS/eFN"]);
-    const intl2 = util.intl;
-    obj4.body = intl2.string(util.t.YrjcgR);
-    const intl3 = util.intl;
-    obj4.confirmText = intl3.string(util.t.BddRzS);
-    actions_AlertActionCreatorsDefault.show(obj4);
-    const tmp4Result3 = actions_AlertActionCreatorsDefault;
-    const result1 = ExplicitMediaFalsePositiveActionCreatorsDefault.disableFalsePositiveButton(channelId, messageId);
+    const obj4 = { title: intl.string(intl4.t["iS/eFN"]), body: intl2.string(intl4.t.YrjcgR), confirmText: intl3.string(intl4.t.BddRzS) };
+    const show = actions_AlertActionCreatorsDefault.show;
+    actions_AlertActionCreatorsDefault;
+    intl = intl4.intl;
+    intl2 = intl4.intl;
+    intl3 = intl4.intl;
+    show(obj4);
     const tmp4Result4 = ExplicitMediaFalsePositiveActionCreatorsDefault;
+    const result1 = tmp4Result4.disableFalsePositiveButton(channelId, messageId);
   }
-  const obj2 = { action: ExplicitMediaRedactionUtils.TrackMediaRedactionActionType.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_CLICKED, messageId, channelId };
 };

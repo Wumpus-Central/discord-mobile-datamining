@@ -22,11 +22,12 @@ getHorizontalOrVerticalStartPoint.__closure = {};
 getHorizontalOrVerticalStartPoint.__workletHash = 16439230263550;
 getHorizontalOrVerticalStartPoint.__initData = { code: "function getHorizontalOrVerticalStartPoint_getGradientStartPontTsx1(angle,width,height){switch(angle){case 0:return[-width/2,0];case 90:return[0,-height/2];case 180:return[width/2,0];default:return[0,height/2];}}" };
 function getStartCornerToIntersect(arg0, arg1, arg2) {
+  let items3;
   const result = arg1 / 2;
   const result1 = arg2 / 2;
   if (arg0 < 90) {
     const items = [-result, -result1];
-    let items3 = items;
+    items3 = items;
   } else if (arg0 < 180) {
     const items1 = [result, -result1];
     items3 = items1;
@@ -49,9 +50,10 @@ const fn = function t(arg0, arg1, arg2) {
   }
   if (sum % 90 === 0) {
     if (typeof getHorizontalOrVerticalStartPoint === "function") {
+      let items3;
       if (0 === sum) {
         const items = [-arg1 / 2, 0];
-        let items3 = items;
+        items3 = items;
       } else if (90 === sum) {
         const items1 = [0, -arg2 / 2];
         items3 = items1;
@@ -71,11 +73,12 @@ const fn = function t(arg0, arg1, arg2) {
     const tanResult = Math.tan(sum * Math.PI / 180);
     const result1 = -1 / tanResult;
     if (typeof getStartCornerToIntersect === "function") {
+      let items7;
       const result2 = arg1 / 2;
       const result3 = arg2 / 2;
       if (sum < 90) {
         const items4 = [-result2, -result3];
-        let items7 = items4;
+        items7 = items4;
       } else if (sum < 180) {
         const items5 = [result2, -result3];
         items7 = items5;

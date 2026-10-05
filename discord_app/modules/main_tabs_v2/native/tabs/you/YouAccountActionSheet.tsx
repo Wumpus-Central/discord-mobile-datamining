@@ -1,9 +1,10 @@
 // === Module 16312: YouAccountActionSheet ===
 
 // Module 16312 (YouAccountActionSheet)
-import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
+import get_initialized from "get initialized" /* 504 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
+import intl6 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -14,384 +15,465 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854
 import Text_Text from "Text/Text" /* 4886 */;
 import Stack_Stack from "Stack/Stack" /* 5593 */;
 import Pressables from "Pressables" /* 5909 */;
-import Card from "Card" /* 5995 */;
-import TableRowIcon from "TableRowIcon" /* 5999 */;
+import Card_Card from "Card/Card" /* 5995 */;
+import TableRowIcon5 from "TableRowIcon" /* 5999 */;
 import useDesignToggleDefault from "useDesignToggle" /* 6012 */;
-import TableRadioRow from "TableRadioRow" /* 6071 */;
-import TableRadioGroup from "TableRadioGroup" /* 6072 */;
+import TableRadioRow5 from "TableRadioRow" /* 6071 */;
+import TableRadioGroup2 from "TableRadioGroup" /* 6072 */;
+import TableRowGroup2 from "TableRowGroup" /* 6074 */;
 import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6470 */;
-import _modDef6584 from "module_6584" /* 6584 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6644 */;
+import AssetRegistryDefault from "AssetRegistry" /* 6584 */;
+import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6644 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6681 */;
-import ActionSheet from "ActionSheet" /* 6701 */;
+import TableSwitchRow2 from "TableSwitchRow" /* 6698 */;
+import ActionSheet2 from "ActionSheet" /* 6701 */;
 import ReactionIcon from "ReactionIcon" /* 8411 */;
 import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 8863 */;
 import getChannelA11yLabel from "getChannelA11yLabel" /* 9260 */;
-import useGameMentionsAsPlainText from "useGameMentionsAsPlainText" /* 10613 */;
+import BellSlashIcon from "BellSlashIcon" /* 9813 */;
+import useGameMentionsAsPlainText2 from "useGameMentionsAsPlainText" /* 10613 */;
 import ActivityEmojiDefault from "ActivityEmoji" /* 10629 */;
 import userSettingToActivity from "userSettingToActivity" /* 10826 */;
 import removeCustomStatusDefault from "removeCustomStatus" /* 10835 */;
+import MultiAccountStore2 from "MultiAccountStore" /* 12056 */;
+import Constants2 from "Constants" /* 12057 */;
 import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 12059 */;
 import FocusModeUtils from "FocusModeUtils" /* 12473 */;
 import setUserStatusDefault from "setUserStatus" /* 12474 */;
 import ThemeDarkIcon from "ThemeDarkIcon" /* 12544 */;
-import _modDef13924 from "module_13924" /* 13924 */;
-import _modDef13925 from "module_13925" /* 13925 */;
-import _modDef13926 from "module_13926" /* 13926 */;
-import _modDef13927 from "module_13927" /* 13927 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 13924 */;
+import AssetRegistryDefault3 from "AssetRegistry" /* 13925 */;
+import AssetRegistryDefault4 from "AssetRegistry" /* 13926 */;
+import AssetRegistryDefault5 from "AssetRegistry" /* 13927 */;
 import ThemeLightIcon from "ThemeLightIcon" /* 15087 */;
 import ThemeMidnightIcon from "ThemeMidnightIcon" /* 15089 */;
+import DevToolsContentDefault from "DevToolsContent" /* 15625 */;
 import ThemeGrayIcon from "ThemeGrayIcon" /* 16313 */;
 import openManageAccountsModalDefault from "openManageAccountsModal" /* 16315 */;
-import noop from "module_19" /* 19 */;
-import MultiAccountStore from "MultiAccountStore" /* 12056 */;
+import YouSwitchClientsRadioGroupDefault from "YouSwitchClientsRadioGroup" /* 16321 */;
+import react from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
 import UserRecord from "UserRecord" /* 1391 */;
 import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7204 */;
 import StreamerModeStore from "StreamerModeStore" /* 4723 */;
 import UserStore from "UserStore" /* 1377 */;
+import Constants from "Constants" /* 1085 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size_mod from "module_2" /* 2 */;
 
-const util = currentLocale(1126);
-const TableRowGroup = currentLocale(6074);
-const TableSwitchRow = currentLocale(6698);
-const BellSlashIcon = currentLocale(9813);
-const DevToolsContentDefault = tmp9(15625);
-const YouSwitchClientsRadioGroupDefault = tmp9(16321);
-require = fn;
+const require = globalThis.__r;
+const MultiAccountStore = MultiAccountStore2;
+let _require, children, statusOnly;
+
+let closure_14;
+let closure_15;
+let closure_16;
+let closure_17;
+let closure_19;
+let closure_20;
+let hasOwnProperty;
+let metroRequire;
+let obj2;
+let obj3;
+let obj4;
+let obj5;
+let size;
 function FocusModeSetting() {
-  let currentLocale = require;
-  let toLocaleStringResult = dependencyMap;
-  const tmp = closure_21();
-  const focusModeEnabled = FocusModeUtils.useFocusModeEnabled();
+  let date;
+  let intl;
+  let intl2;
+  let intl3;
+  let obj3;
+  let paths;
+  let tmp = closure_21();
+  let obj = FocusModeUtils;
+  const focusModeEnabled = obj.useFocusModeEnabled();
   const FocusModeExpiresAtSetting = UserSettings.FocusModeExpiresAtSetting;
-  let setting = FocusModeExpiresAtSetting.useSetting();
-  if (!focusModeEnabled) {
-    return null;
-  } else {
-    let obj2 = { accessibilityLabel: null, accessibilityHint: null, icon: null, onValueChange: null, value: null, label: null, subLabel: null };
-    const intl = util.intl;
-    obj2.accessibilityLabel = intl.string(util.t.wCxBOc);
-    const intl2 = util.intl;
-    obj2.accessibilityHint = intl2.string(util.t.wCxBOc);
-    let obj3 = { style: tmp.leadingIcon };
-    obj2.icon = closure_1_19(BellSlashIcon.BellSlashIcon, obj3);
-    obj2.onValueChange = function onValueChange(arg0) {
-      if (arg0) {
-        const obj3 = {
-          onSelect(quiet_mode_enabled, arg1) {
-              closure_1_0(12473).setFocusMode(quiet_mode_enabled, arg1);
-              const obj = closure_1_0(12473);
-              closure_1_1(4854).hideActionSheet();
-              const obj2 = closure_1_1(4854);
-              const result = closure_1_0(16310).showYouAccountActionSheet();
-            }
-        };
-        require("ActionSheetActionCreators").openLazy(require("asyncRequireImpl")(paths[50], paths.paths), "FocusModeOptionsActionSheet", obj3);
-        let obj2 = require("ActionSheetActionCreators");
-      } else {
-        require("FocusModeUtils").setFocusMode(false);
-        let obj = require("FocusModeUtils");
-      }
+  const setting = FocusModeExpiresAtSetting.useSetting();
+  let tmp7Result = null;
+  if (focusModeEnabled) {
+    const TableRowGroup = TableRowGroup2.TableRowGroup;
+    let obj2 = {
+      accessibilityLabel: intl.string(intl6.t.wCxBOc),
+      accessibilityHint: intl2.string(intl6.t.wCxBOc),
+      icon: closure_19(BellSlashIcon.BellSlashIcon, obj3),
+      onValueChange(arg0) {
+          const tmp = arg0;
+          if (tmp) {
+            let obj2 = require("ActionSheetActionCreators");
+            let obj3 = {
+              onSelect(quiet_mode_enabled, arg1) {
+                  const obj = closure_1_0(paths[46]);
+                  obj.setFocusMode(quiet_mode_enabled, arg1);
+                  const obj2 = closure_1_1(paths[24]);
+                  obj2.hideActionSheet();
+                  const obj3 = closure_1_0(paths[52]);
+                  const result = obj3.showYouAccountActionSheet();
+                }
+            };
+            obj2.openLazy(require("asyncRequire")(paths[50], paths.paths), "FocusModeOptionsActionSheet", obj3);
+          } else {
+            let obj = require("FocusModeUtils");
+            obj.setFocusMode(false);
+          }
+        },
+      value: focusModeEnabled,
+      label: intl3.string(intl6.t.wCxBOc),
+      subLabel: null
     };
-    obj2.value = focusModeEnabled;
-    const intl3 = util.intl;
-    obj2.label = intl3.string(util.t.wCxBOc);
-    if (null == setting) {
-      const intl4 = util.intl;
-      let stringResult = intl4.string(util.t.i0nsoY);
-      const obj4 = { hasIcons: true, children: null };
-      obj2.subLabel = stringResult;
-      obj2 = closure_1_19(TableSwitchRow.TableSwitchRow, obj2);
-      obj4.children = obj2;
-      closure_1_19(TableRowGroup.TableRowGroup, obj4);
+    const TableSwitchRow = TableSwitchRow2.TableSwitchRow;
+    intl = intl6.intl;
+    intl2 = intl6.intl;
+    obj3 = { style: tmp.leadingIcon };
+    intl3 = intl6.intl;
+    if (null != setting) {
+      let formatToPlainStringResult;
+      if ("0" !== setting) {
+        const intl5 = intl6.intl;
+        const formatToPlainString = intl5.formatToPlainString;
+        const _Date = Date;
+        const _Number = Number;
+        const obj4 = { endTime: date.toLocaleString(intl6.intl.currentLocale, { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" }) };
+        const BWD8fs = intl6.t.BWD8fs;
+        const self = this;
+        const self2 = this;
+        date = new Date(Number(setting));
+        formatToPlainStringResult = formatToPlainString(BWD8fs, obj4);
+      }
+      obj2.subLabel = formatToPlainStringResult;
+      const obj5 = { hasIcons: true, children: closure_19(TableSwitchRow, obj2) };
+      tmp7Result = closure_19(TableRowGroup, obj5);
     }
-    const intl5 = util.intl;
-    const obj5 = { endTime: null };
-    const _Date = Date;
-    const _Number = Number;
-    const date = new Date(Number(setting));
-    setting = date;
-    currentLocale = util.intl.currentLocale;
-    toLocaleStringResult = date.toLocaleString(currentLocale, { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
-    obj5.endTime = toLocaleStringResult;
-    stringResult = intl5.formatToPlainString(util.t.BWD8fs, obj5);
+    const intl4 = intl6.intl;
+    formatToPlainStringResult = intl4.string(intl6.t.i0nsoY);
   }
+  return tmp7Result;
 }
-get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
-const MultiAccountTokenStatus = fn(12056).MultiAccountTokenStatus;
-const Constants = fn(1085);
+({ View: hasOwnProperty, Image: metroRequire } = react_native);
+const MultiAccountTokenStatus = MultiAccountStore2.MultiAccountTokenStatus;
 ({ AnalyticEvents: closure_14, AuthStates: closure_15, StatusTypes: closure_16, ThemeTypes: closure_17 } = Constants);
-let closure_18 = fn(12057).MultiAccountSwitchLocation;
-const jsxProd = fn(21);
-({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(4890);
-let obj = { account: { position: "relative" }, manage: { position: "absolute", right: 0, zIndex: 100 }, leadingIcon: { width: 24, height: 24, margin: 4 }, trailingIcon: null, customStatusRow: null, customStatusEditButton: null, customStatusRemoveButton: null, customStatusText: null, sectionHeading: null };
-let size = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, width: 16, height: 16 };
-obj.trailingIcon = size;
-obj.customStatusRow = { padding: 0, flexDirection: "row", alignItems: "center", gap: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
-let obj3 = { padding: 0, flexDirection: "row", alignItems: "center", gap: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
-obj.customStatusEditButton = { minHeight: nativeDefault.modules.mobile.TABLE_ROW_HEIGHT, padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING, flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
-let obj4 = { minHeight: nativeDefault.modules.mobile.TABLE_ROW_HEIGHT, padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING, flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
-obj.customStatusRemoveButton = { height: nativeDefault.modules.mobile.TABLE_ROW_HEIGHT, paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING, alignItems: "center", justifyContent: "center" };
-obj.customStatusText = { flexShrink: 1 };
-let obj5 = { height: nativeDefault.modules.mobile.TABLE_ROW_HEIGHT, paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING, alignItems: "center", justifyContent: "center" };
-obj.sectionHeading = { marginBottom: nativeDefault.space.PX_8 };
-let closure_21 = createStyles.createStyles(obj);
-let ReactCompilerGating = fn(558);
+let closure_18 = Constants2.MultiAccountSwitchLocation;
+({ jsx: closure_19, jsxs: closure_20 } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { account: { position: "relative" }, manage: { position: "absolute", right: 0, zIndex: 100 }, leadingIcon: { width: 24, height: 24, margin: 4 }, trailingIcon: size, customStatusRow: obj2, customStatusEditButton: obj3, customStatusRemoveButton: obj4, customStatusText: { flexShrink: 1 }, sectionHeading: obj5 };
+size = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, width: 16, height: 16 };
+createStyles = createStyles.createStyles;
+obj2 = { padding: 0, flexDirection: "row", alignItems: "center", gap: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
+obj3 = { minHeight: nativeDefault.modules.mobile.TABLE_ROW_HEIGHT, padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING, flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
+obj4 = { height: nativeDefault.modules.mobile.TABLE_ROW_HEIGHT, paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING, alignItems: "center", justifyContent: "center" };
+obj5 = { marginBottom: nativeDefault.space.PX_8 };
+let closure_21 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
-  const cResult = c.c(3);
+  const obj = react2;
+  const cResult = obj.c(3);
   children = children.children;
   const tmp4 = closure_21();
   if (cResult[0] === children) {
+    let tmp5;
     if (cResult[1] === tmp4.sectionHeading) {
-      let tmp5 = cResult[2];
+      tmp5 = cResult[2];
     }
     return tmp5;
   }
-  const tmp6 = closure_1_19(Text_Text.Text, { accessibilityRole: "header", variant: "experimental/body-sm/medium", color: "text-subtle", style: tmp4.sectionHeading, children });
+  const obj2 = { accessibilityRole: "header", variant: "experimental/body-sm/medium", color: "text-subtle", style: tmp4.sectionHeading, children };
+  const tmp6 = closure_19(Text_Text.Text, obj2);
   cResult[0] = children;
   cResult[1] = tmp4.sectionHeading;
   cResult[2] = tmp6;
   tmp5 = tmp6;
-  const obj2 = { accessibilityRole: "header", variant: "experimental/body-sm/medium", color: "text-subtle", style: tmp4.sectionHeading, children };
 }) : ((children) => {
-  const tmp = closure_21();
-  return closure_1_19(Text_Text.Text, { accessibilityRole: "header", variant: "experimental/body-sm/medium", color: "text-subtle", style: closure_21().sectionHeading, children: children.children });
+  children = children.children;
+  const obj = { accessibilityRole: "header", variant: "experimental/body-sm/medium", color: "text-subtle", style: closure_21().sectionHeading, children };
+  return closure_19(Text_Text.Text, obj);
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(1);
+  let TableRowIcon;
+  let TableRowIcon2;
+  let TableRowIcon3;
+  let TableRowIcon4;
+  let first;
+  let obj3;
+  let obj5;
+  let obj7;
+  let obj9;
+  const obj = react2;
+  const cResult = obj.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { icon: null, value: null };
-    const obj3 = { source: _modDef13927, variant: "text-status-online" };
-    obj2.icon = closure_1_19(TableRowIcon.TableRowIcon, obj3);
-    obj2.value = constants3.ONLINE;
+    const obj2 = { icon: closure_19(TableRowIcon, obj3), value: constants3.ONLINE };
+    obj3 = { source: AssetRegistryDefault5, variant: "text-status-online" };
+    TableRowIcon = TableRowIcon5.TableRowIcon;
     const items = [obj2, , , ];
-    const obj4 = { icon: null, value: null };
-    const obj5 = { source: _modDef13924, variant: "text-status-idle" };
-    obj4.icon = closure_1_19(TableRowIcon.TableRowIcon, obj5);
-    obj4.value = constants3.IDLE;
+    const obj4 = { icon: closure_19(TableRowIcon2, obj5), value: constants3.IDLE };
+    obj5 = { source: AssetRegistryDefault2, variant: "text-status-idle" };
+    TableRowIcon2 = TableRowIcon5.TableRowIcon;
     items[1] = obj4;
-    const obj6 = { icon: null, value: null };
-    const obj7 = { source: _modDef13925, variant: "text-status-dnd" };
-    obj6.icon = closure_1_19(TableRowIcon.TableRowIcon, obj7);
-    obj6.value = constants3.DND;
+    const obj6 = { icon: closure_19(TableRowIcon3, obj7), value: constants3.DND };
+    obj7 = { source: AssetRegistryDefault3, variant: "text-status-dnd" };
+    TableRowIcon3 = TableRowIcon5.TableRowIcon;
     items[2] = obj6;
-    const obj8 = { icon: null, value: null };
-    const obj9 = { source: _modDef13926, variant: "text-status-offline" };
-    obj8.icon = closure_1_19(TableRowIcon.TableRowIcon, obj9);
-    obj8.value = constants3.INVISIBLE;
+    const obj8 = { icon: closure_19(TableRowIcon4, obj9), value: constants3.INVISIBLE };
+    obj9 = { source: AssetRegistryDefault4, variant: "text-status-offline" };
+    TableRowIcon4 = TableRowIcon5.TableRowIcon;
     items[3] = obj8;
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
   return first;
-}) : (() => noop.useMemo(() => {
-  const obj = { icon: closure_1_19(require("TableRowIcon").TableRowIcon, { source: _modDef13927, variant: "text-status-online" }), value: constants.ONLINE };
+}) : (() => react.useMemo(() => {
+  let TableRowIcon;
+  let TableRowIcon2;
+  let TableRowIcon3;
+  let TableRowIcon4;
+  let obj2;
+  let obj4;
+  let obj6;
+  let obj8;
+  const obj = { icon: closure_1_19(TableRowIcon, obj2), value: constants.ONLINE };
+  obj2 = { source: AssetRegistryDefault5, variant: "text-status-online" };
+  TableRowIcon = require("TableRowIcon").TableRowIcon;
   const items = [obj, , , ];
-  const obj3 = { icon: null, value: null };
-  const obj2 = { source: _modDef13927, variant: "text-status-online" };
-  obj3.icon = closure_1_19(require("TableRowIcon").TableRowIcon, { source: _modDef13924, variant: "text-status-idle" });
-  obj3.value = constants.IDLE;
+  const obj3 = { icon: closure_1_19(TableRowIcon2, obj4), value: constants.IDLE };
+  obj4 = { source: AssetRegistryDefault2, variant: "text-status-idle" };
+  TableRowIcon2 = require("TableRowIcon").TableRowIcon;
   items[1] = obj3;
-  const obj5 = { icon: null, value: null };
-  const obj4 = { source: _modDef13924, variant: "text-status-idle" };
-  obj5.icon = closure_1_19(require("TableRowIcon").TableRowIcon, { source: _modDef13925, variant: "text-status-dnd" });
-  obj5.value = constants.DND;
+  const obj5 = { icon: closure_1_19(TableRowIcon3, obj6), value: constants.DND };
+  obj6 = { source: AssetRegistryDefault3, variant: "text-status-dnd" };
+  TableRowIcon3 = require("TableRowIcon").TableRowIcon;
   items[2] = obj5;
-  const obj7 = { icon: null, value: null };
-  const obj6 = { source: _modDef13925, variant: "text-status-dnd" };
-  obj7.icon = closure_1_19(require("TableRowIcon").TableRowIcon, { source: _modDef13926, variant: "text-status-offline" });
-  obj7.value = constants.INVISIBLE;
+  const obj7 = { icon: closure_1_19(TableRowIcon4, obj8), value: constants.INVISIBLE };
+  obj8 = { source: AssetRegistryDefault4, variant: "text-status-offline" };
+  TableRowIcon4 = require("TableRowIcon").TableRowIcon;
   items[3] = obj7;
   return items;
 }, []));
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = setting(576).c(19);
+  let items;
+  let setting;
+  let tmp12;
+  let tmp7;
+  let tmp8;
+  let obj = setting(576);
+  const cResult = obj.c(19);
   const arr = closure_23();
   const StatusSetting = setting(2028).StatusSetting;
   setting = StatusSetting.useSetting();
   const StatusExpiresAtSetting = setting(2028).StatusExpiresAtSetting;
   const setting1 = StatusExpiresAtSetting.useSetting();
-  let obj = setting(576);
-  const manaTypeConsolidationExperiment = setting(6470).useManaTypeConsolidationExperiment("YouAccountActionSheetOnlineStatus");
+  let obj2 = setting(6470);
+  const manaTypeConsolidationExperiment = obj2.useManaTypeConsolidationExperiment("YouAccountActionSheetOnlineStatus");
   if (cResult[0] !== setting) {
     const fn = function e(nextStatus) {
-      setUserStatusDefault({ prevStatus: setting, nextStatus });
-      ActionSheetActionCreatorsDefault.hideActionSheet();
+      const obj = { prevStatus: setting, nextStatus };
+      setUserStatusDefault(obj);
+      const obj2 = ActionSheetActionCreatorsDefault;
+      obj2.hideActionSheet();
     };
     cResult[0] = setting;
     cResult[1] = fn;
-    let tmp7 = fn;
+    tmp7 = fn;
   } else {
     tmp7 = cResult[1];
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     let intl = tmp(1126).intl;
-    const stringResult = intl.string(tmp(1126).t["0DPAZH"]);
+    const stringResult = intl.string(setting(1126).t["0DPAZH"]);
     cResult[2] = stringResult;
-    let tmp8 = stringResult;
+    tmp8 = stringResult;
   } else {
     tmp8 = cResult[2];
   }
   if (cResult[3] === arr) {
     if (cResult[4] === setting) {
       if (cResult[5] === setting1) {
-        if (cResult[10] === tmp7) {
-          if (cResult[11] === setting) {
-            if (cResult[12] === tmp10) {
-              if (cResult[13] === tmp11) {
-                if (cResult[14] === tmp12) {
-                  let tmp16 = cResult[15];
-                }
-                if (cResult[16] === manaTypeConsolidationExperiment) {
-                  if (cResult[17] === tmp16) {
-                    let tmp19 = cResult[18];
-                  }
-                  return tmp19;
-                }
-                let tmp20 = tmp16;
-                if (manaTypeConsolidationExperiment) {
-                  let obj3 = { children: null };
-                  const obj4 = { children: tmp8 };
-                  const items = [closure_19(closure_22, obj4), tmp16];
-                  obj3.children = items;
-                  tmp20 = closure_20(closure_5, obj3);
-                }
-                cResult[16] = manaTypeConsolidationExperiment;
-                cResult[17] = tmp16;
-                cResult[18] = tmp20;
-                tmp19 = tmp20;
+        tmp12 = cResult[6];
+      }
+      if (cResult[10] === tmp7) {
+        if (cResult[11] === setting) {
+          if (cResult[12] === tmp10) {
+            if (cResult[13] === tmp11) {
+              let tmp15;
+              if (cResult[14] === tmp12) {
+                tmp15 = cResult[15];
               }
+              if (cResult[16] === manaTypeConsolidationExperiment) {
+                let tmp18;
+                if (cResult[17] === tmp15) {
+                  tmp18 = cResult[18];
+                }
+                return tmp18;
+              }
+              let tmp19 = tmp15;
+              if (manaTypeConsolidationExperiment) {
+                let obj3 = { children: items };
+                const obj4 = { children: tmp8 };
+                items = [closure_19(closure_22, obj4), tmp15];
+                tmp19 = closure_20(closure_5, obj3);
+              }
+              cResult[16] = manaTypeConsolidationExperiment;
+              cResult[17] = tmp15;
+              cResult[18] = tmp19;
+              tmp18 = tmp19;
             }
           }
         }
-        const obj5 = { title: tmp10, accessibilityLabel: tmp11, onChange: tmp7, defaultValue: setting, hasIcons: true, children: cResult[6] };
-        const tmp18 = closure_19(tmp(6072).TableRadioGroup, obj5);
-        cResult[10] = tmp7;
-        cResult[11] = setting;
-        cResult[12] = tmp10;
-        cResult[13] = tmp11;
-        cResult[14] = cResult[6];
-        cResult[15] = tmp18;
-        tmp16 = tmp18;
       }
+      const obj5 = { title: tmp10, accessibilityLabel: tmp11, onChange: tmp7, defaultValue: setting, hasIcons: true, children: tmp12 };
+      const tmp17 = closure_19(setting(6072).TableRadioGroup, obj5);
+      cResult[10] = tmp7;
+      cResult[11] = setting;
+      cResult[12] = tmp10;
+      cResult[13] = tmp11;
+      cResult[14] = tmp12;
+      cResult[15] = tmp17;
+      tmp15 = tmp17;
     }
   }
   if (cResult[7] === setting) {
+    let tmp13;
     if (cResult[8] === setting1) {
-      let tmp13 = cResult[9];
+      tmp13 = cResult[9];
     }
     const mapped = arr.map(tmp13);
     cResult[3] = arr;
     cResult[4] = setting;
     cResult[5] = setting1;
     cResult[6] = mapped;
+    tmp12 = mapped;
   }
   class T {
-    constructor(arg0) {
-      tmp2 = closure_0;
-      tmp3 = closure_3;
-      tmp = jsx;
-      obj = {};
-      merged = Object.assign(arg0);
-      obj2 = closure_0(closure_3[27]);
-      obj.label = obj2.getStatusLabel(arg0.value);
+    constructor(value) {
+      let date;
+      let formatToPlainStringResult;
+      let obj2;
+      const obj = { label: obj2.getStatusLabel(value.value), subLabel: formatToPlainStringResult };
+      const TableRadioRow = TableRadioRow5.TableRadioRow;
+      const merged = Object.assign(value);
       formatToPlainStringResult = undefined;
-      if (arg0.value === closure_0) {
-        tmp6 = closure_1;
-        tmp7 = null;
-        if (null != closure_1) {
-          str = "0";
-          if ("0" !== tmp6) {
-            intl = tmp2(tmp3[25]).intl;
-            obj1 = { endTime: null };
-            tmp8 = globalThis;
-            _Date = Date;
-            _Number = Number;
-            tmp9 = new.target;
-            tmp10 = new.target;
-            date = new Date(Number(tmp6));
-            tmp11 = date;
-            obj1.endTime = date.toLocaleString(tmp2(tmp3[25]).intl.currentLocale, { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
-            formatToPlainStringResult = intl.formatToPlainString(tmp2(tmp3[25]).t.BWD8fs, obj1);
+      obj2 = getChannelA11yLabel;
+      if (value.value === setting) {
+        if (null != setting1) {
+          if ("0" !== setting1) {
+            const intl = intl6.intl;
+            const formatToPlainString = intl.formatToPlainString;
+            const _Date = Date;
+            const _Number = Number;
+            const obj3 = { endTime: date.toLocaleString(intl6.intl.currentLocale, { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" }) };
+            const BWD8fs = intl6.t.BWD8fs;
+            const self = this;
+            const self2 = this;
+            date = new Date(Number(setting1));
+            formatToPlainStringResult = formatToPlainString(BWD8fs, obj3);
           }
         }
       }
-      obj.subLabel = formatToPlainStringResult;
-      return tmp(closure_0(closure_3[26]).TableRadioRow, obj, arg0.value);
+      return closure_19(TableRadioRow, obj, value.value);
     }
   }
   cResult[7] = setting;
   cResult[8] = setting1;
   cResult[9] = T;
   tmp13 = T;
-  const obj2 = setting(6470);
 }) : (() => {
+  let items1;
+  let setting;
+  let tmp7;
+  const arr = closure_23();
   const StatusSetting = setting(2028).StatusSetting;
   setting = StatusSetting.useSetting();
   const StatusExpiresAtSetting = setting(2028).StatusExpiresAtSetting;
-  closure_1 = StatusExpiresAtSetting.useSetting();
-  const arr = closure_23();
-  const manaTypeConsolidationExperiment = setting(6470).useManaTypeConsolidationExperiment("YouAccountActionSheetOnlineStatus");
+  let closure_1 = StatusExpiresAtSetting.useSetting();
+  let obj = setting(6470);
+  const manaTypeConsolidationExperiment = obj.useManaTypeConsolidationExperiment("YouAccountActionSheetOnlineStatus");
   const items = [setting];
-  const callback = noop.useCallback((nextStatus) => {
-    setUserStatusDefault({ prevStatus: setting, nextStatus });
-    ActionSheetActionCreatorsDefault.hideActionSheet();
+  const callback = react.useCallback((nextStatus) => {
+    const obj = { prevStatus: setting, nextStatus };
+    setUserStatusDefault(obj);
+    const obj2 = ActionSheetActionCreatorsDefault;
+    obj2.hideActionSheet();
   }, items);
   let intl = setting(1126).intl;
   const stringResult = intl.string(setting(1126).t["0DPAZH"]);
   let tmp6;
+  const TableRadioGroup = setting(6072).TableRadioGroup;
   if (!manaTypeConsolidationExperiment) {
     tmp6 = stringResult;
   }
-  const obj2 = { title: tmp6, accessibilityLabel: null, onChange: null, defaultValue: null, hasIcons: true, children: null };
-  let tmp7;
+  let obj2 = {
+    title: tmp6,
+    accessibilityLabel: tmp7,
+    onChange: callback,
+    defaultValue: setting,
+    hasIcons: true,
+    children: arr.map(function(value) {
+      let date;
+      let formatToPlainStringResult;
+      let obj2;
+      const obj = { label: obj2.getStatusLabel(value.value), subLabel: formatToPlainStringResult };
+      const TableRadioRow = TableRadioRow5.TableRadioRow;
+      const merged = Object.assign(value);
+      formatToPlainStringResult = undefined;
+      obj2 = getChannelA11yLabel;
+      if (value.value === setting) {
+        if (null != closure_1) {
+          if ("0" !== closure_1) {
+            const intl = intl6.intl;
+            const formatToPlainString = intl.formatToPlainString;
+            const _Date = Date;
+            const _Number = Number;
+            const obj3 = { endTime: date.toLocaleString(intl6.intl.currentLocale, { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" }) };
+            const BWD8fs = intl6.t.BWD8fs;
+            const self = this;
+            const self2 = this;
+            date = new Date(Number(closure_1));
+            formatToPlainStringResult = formatToPlainString(BWD8fs, obj3);
+          }
+        }
+      }
+      return closure_19(TableRadioRow, obj, value.value);
+    })
+  };
+  tmp7 = undefined;
   if (manaTypeConsolidationExperiment) {
     tmp7 = stringResult;
   }
-  obj2.accessibilityLabel = tmp7;
-  obj2.onChange = callback;
-  obj2.defaultValue = setting;
-  obj2.children = arr.map((value) => {
-    const obj = {};
-    const merged = Object.assign(value);
-    obj.label = getChannelA11yLabel.getStatusLabel(value.value);
-    let formatToPlainStringResult;
-    if (value.value === setting) {
-      if (null != closure_1) {
-        if ("0" !== closure_1) {
-          const intl = util.intl;
-          const obj3 = { endTime: null };
-          const _Date = Date;
-          const _Number = Number;
-          const date = new Date(Number(closure_1));
-          obj3.endTime = date.toLocaleString(util.intl.currentLocale, { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
-          formatToPlainStringResult = intl.formatToPlainString(util.t.BWD8fs, obj3);
-        }
-      }
-    }
-    obj.subLabel = formatToPlainStringResult;
-    return closure_2_19(TableRadioRow.TableRadioRow, obj, value.value);
-  });
-  const tmp5Result = closure_19(setting(6072).TableRadioGroup, obj2);
+  const tmp5Result = closure_19(TableRadioGroup, obj2);
   let tmp9 = tmp5Result;
   if (manaTypeConsolidationExperiment) {
-    let obj3 = { children: null };
+    let obj3 = { children: items1 };
     const obj4 = { children: stringResult };
-    const items1 = [closure_19(closure_22, obj4), tmp5Result];
-    obj3.children = items1;
+    items1 = [closure_19(closure_22, obj4), tmp5Result];
     tmp9 = closure_20(closure_5, obj3);
   }
   return tmp9;
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(17);
+  let items1;
+  let items2;
+  let theme;
+  let tmp10;
+  let tmp12;
+  let tmp18;
+  let tmp22;
+  let tmp26;
+  let tmp30;
+  let tmp4;
+  let tmp5;
+  let tmp9;
+  let tmpResult10;
+  let tmpResult7;
+  let tmpResult8;
+  let tmpResult9;
+  let obj = react2;
+  const cResult = obj.c(17);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ThemeStore];
     const fn = function t() {
@@ -404,39 +486,41 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
-  const tmpResult = initialize;
-  const manaTypeConsolidationExperiment = ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("YouAccountActionSheetTheme");
+  const tmpResult = get_initialized;
+  const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
+  const tmpResult6 = ManaTypeConsolidationExperiment;
+  const manaTypeConsolidationExperiment = tmpResult6.useManaTypeConsolidationExperiment("YouAccountActionSheetTheme");
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function l(arg0) {
-      const result = require("ClientThemesBackgroundActionCreators").resetBackgroundGradientPreset();
       const obj = require("ClientThemesBackgroundActionCreators");
-      require("CustomThemeMobileActionCreators").resetCustomTheme();
+      const result = obj.resetBackgroundGradientPreset();
       const obj2 = require("CustomThemeMobileActionCreators");
-      UserSettingsActionCreatorsDefault.updateTheme(arg0);
+      obj2.resetCustomTheme();
+      const obj3 = UserSettingsActionCreatorsDefault;
+      obj3.updateTheme(arg0);
     };
     cResult[2] = fn2;
-    let tmp9 = fn2;
+    tmp9 = fn2;
   } else {
     tmp9 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = util.intl;
-    const stringResult = intl.string(util.t.Ksh3ik);
+    const intl = intl6.intl;
+    const stringResult = intl.string(intl6.t.Ksh3ik);
     cResult[3] = stringResult;
-    let tmp10 = stringResult;
+    tmp10 = stringResult;
   } else {
     tmp10 = cResult[3];
   }
   if (cResult[4] !== manaTypeConsolidationExperiment) {
     let tmp13 = manaTypeConsolidationExperiment;
-    if (manaTypeConsolidationExperiment) {
+    if (tmp13) {
       let obj2 = { children: tmp10 };
-      tmp13 = closure_1_19(closure_22, obj2);
+      tmp13 = closure_19(closure_22, obj2);
     }
     cResult[4] = manaTypeConsolidationExperiment;
     cResult[5] = tmp13;
-    let tmp12 = tmp13;
+    tmp12 = tmp13;
   } else {
     tmp12 = cResult[5];
   }
@@ -449,131 +533,143 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp17 = tmp10;
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { icon: closure_1_19(ThemeLightIcon.ThemeLightIcon, {}), label: ClientThemesUtils.getThemeName(constants4.LIGHT), value: constants4.LIGHT };
-    const tmp21 = closure_1_19(TableRadioRow.TableRadioRow, obj3);
+    let obj3 = { icon: closure_19(ThemeLightIcon.ThemeLightIcon, {}), label: tmpResult7.getThemeName(constants4.LIGHT), value: constants4.LIGHT };
+    const TableRadioRow = TableRadioRow5.TableRadioRow;
+    tmpResult7 = ClientThemesUtils;
+    const tmp21 = closure_19(TableRadioRow, obj3);
     cResult[6] = tmp21;
-    let tmp18 = tmp21;
-    const tmpResult7 = ClientThemesUtils;
+    tmp18 = tmp21;
   } else {
     tmp18 = cResult[6];
   }
   if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj4 = { icon: closure_1_19(ThemeGrayIcon.ThemeGrayIcon, {}), label: ClientThemesUtils.getThemeName(constants4.ASH), value: constants4.ASH };
-    const tmp25 = closure_1_19(TableRadioRow.TableRadioRow, obj4);
+    const obj4 = { icon: closure_19(ThemeGrayIcon.ThemeGrayIcon, {}), label: tmpResult8.getThemeName(constants4.ASH), value: constants4.ASH };
+    const TableRadioRow2 = TableRadioRow5.TableRadioRow;
+    tmpResult8 = ClientThemesUtils;
+    const tmp25 = closure_19(TableRadioRow2, obj4);
     cResult[7] = tmp25;
-    let tmp22 = tmp25;
-    const tmpResult8 = ClientThemesUtils;
+    tmp22 = tmp25;
   } else {
     tmp22 = cResult[7];
   }
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj5 = { icon: closure_1_19(ThemeDarkIcon.ThemeDarkIcon, {}), label: ClientThemesUtils.getThemeName(constants4.DARK), value: constants4.DARK };
-    const tmp29 = closure_1_19(TableRadioRow.TableRadioRow, obj5);
+    const obj5 = { icon: closure_19(ThemeDarkIcon.ThemeDarkIcon, {}), label: tmpResult9.getThemeName(constants4.DARK), value: constants4.DARK };
+    const TableRadioRow3 = TableRadioRow5.TableRadioRow;
+    tmpResult9 = ClientThemesUtils;
+    const tmp29 = closure_19(TableRadioRow3, obj5);
     cResult[8] = tmp29;
-    let tmp26 = tmp29;
-    const tmpResult9 = ClientThemesUtils;
+    tmp26 = tmp29;
   } else {
     tmp26 = cResult[8];
   }
   if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj6 = { icon: closure_1_19(ThemeMidnightIcon.ThemeMidnightIcon, {}), label: ClientThemesUtils.getThemeName(constants4.ONYX), value: constants4.ONYX };
-    const tmp33 = closure_1_19(TableRadioRow.TableRadioRow, obj6);
+    const obj6 = { icon: closure_19(ThemeMidnightIcon.ThemeMidnightIcon, {}), label: tmpResult10.getThemeName(constants4.ONYX), value: constants4.ONYX };
+    const TableRadioRow4 = TableRadioRow5.TableRadioRow;
+    tmpResult10 = ClientThemesUtils;
+    const tmp33 = closure_19(TableRadioRow4, obj6);
     cResult[9] = tmp33;
-    let tmp30 = tmp33;
-    const tmpResult10 = ClientThemesUtils;
+    tmp30 = tmp33;
   } else {
     tmp30 = cResult[9];
   }
   if (cResult[10] === tmp16) {
     if (cResult[11] === tmp17) {
+      let tmp34;
       if (cResult[12] === stateFromStores) {
-        let tmp34 = cResult[13];
+        tmp34 = cResult[13];
       }
       if (cResult[14] === tmp34) {
+        let tmp36;
         if (cResult[15] === tmp12) {
-          let tmp36 = cResult[16];
+          tmp36 = cResult[16];
         }
         return tmp36;
       }
-      const obj7 = { children: null };
-      const items1 = [tmp12, tmp34];
-      obj7.children = items1;
-      const tmp39 = closure_1_20(hasOwnProperty, obj7);
+      const obj7 = { children: items1 };
+      items1 = [tmp12, tmp34];
+      const tmp39 = closure_20(hasOwnProperty, obj7);
       cResult[14] = tmp34;
       cResult[15] = tmp12;
       cResult[16] = tmp39;
       tmp36 = tmp39;
     }
   }
-  const obj8 = { title: tmp16, accessibilityLabel: tmp17, onChange: tmp9, defaultValue: stateFromStores, hasIcons: true, children: null };
-  const items2 = [tmp18, tmp22, tmp26, tmp30];
-  obj8.children = items2;
-  const tmp35 = closure_1_20(TableRadioGroup.TableRadioGroup, obj8);
+  const obj8 = { title: tmp16, accessibilityLabel: tmp17, onChange: tmp9, defaultValue: stateFromStores, hasIcons: true, children: items2 };
+  items2 = [tmp18, tmp22, tmp26, tmp30];
+  const tmp35 = closure_20(TableRadioGroup2.TableRadioGroup, obj8);
   cResult[10] = tmp16;
   cResult[11] = tmp17;
   cResult[12] = stateFromStores;
   cResult[13] = tmp35;
   tmp34 = tmp35;
-  const tmpResult6 = ManaTypeConsolidationExperiment;
 }) : (() => {
+  let items2;
+  let theme;
+  let tmp13;
+  let tmpResult;
+  let tmpResult4;
+  let tmpResult5;
+  let tmpResult6;
+  let obj = get_initialized;
   const items = [ThemeStore];
-  const stateFromStores = initialize.useStateFromStores(items, () => theme.theme);
-  const manaTypeConsolidationExperiment = ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("YouAccountActionSheetTheme");
-  const callback = noop.useCallback((arg0) => {
-    const result = require("ClientThemesBackgroundActionCreators").resetBackgroundGradientPreset();
+  const stateFromStores = obj.useStateFromStores(items, () => theme.theme);
+  let obj2 = ManaTypeConsolidationExperiment;
+  const manaTypeConsolidationExperiment = obj2.useManaTypeConsolidationExperiment("YouAccountActionSheetTheme");
+  const callback = react.useCallback((arg0) => {
     const obj = require("ClientThemesBackgroundActionCreators");
-    require("CustomThemeMobileActionCreators").resetCustomTheme();
+    const result = obj.resetBackgroundGradientPreset();
     const obj2 = require("CustomThemeMobileActionCreators");
-    UserSettingsActionCreatorsDefault.updateTheme(arg0);
+    obj2.resetCustomTheme();
+    const obj3 = UserSettingsActionCreatorsDefault;
+    obj3.updateTheme(arg0);
   }, []);
-  const intl = util.intl;
-  const stringResult = intl.string(util.t.Ksh3ik);
+  const intl = intl6.intl;
+  const stringResult = intl.string(intl6.t.Ksh3ik);
   let tmp9 = manaTypeConsolidationExperiment;
-  if (manaTypeConsolidationExperiment) {
-    const obj3 = { children: stringResult };
-    tmp9 = closure_1_19(closure_22, obj3);
+  if (tmp9) {
+    let obj3 = { children: stringResult };
+    tmp9 = closure_19(closure_22, obj3);
   }
   const items1 = [tmp9, ];
   let tmp12;
+  const TableRadioGroup = TableRadioGroup2.TableRadioGroup;
   if (!manaTypeConsolidationExperiment) {
     tmp12 = stringResult;
   }
-  const obj4 = { title: tmp12, accessibilityLabel: null, onChange: null, defaultValue: null, hasIcons: true, children: null };
-  let tmp13;
+  const obj4 = { title: tmp12, accessibilityLabel: tmp13, onChange: callback, defaultValue: stateFromStores, hasIcons: true, children: items2 };
+  tmp13 = undefined;
   if (manaTypeConsolidationExperiment) {
     tmp13 = stringResult;
   }
-  const obj5 = { children: null };
-  obj4.accessibilityLabel = tmp13;
-  obj4.onChange = callback;
-  obj4.defaultValue = stateFromStores;
-  const obj6 = { icon: closure_1_19(ThemeLightIcon.ThemeLightIcon, {}), label: null, value: null };
-  obj6.label = ClientThemesUtils.getThemeName(constants4.LIGHT);
-  obj6.value = constants4.LIGHT;
-  const items2 = [closure_1_19(TableRadioRow.TableRadioRow, obj6), , , ];
-  const obj7 = { icon: closure_1_19(ThemeGrayIcon.ThemeGrayIcon, {}), label: null, value: null };
-  const tmpResult = ClientThemesUtils;
-  obj7.label = ClientThemesUtils.getThemeName(constants4.ASH);
-  obj7.value = constants4.ASH;
-  items2[1] = closure_1_19(TableRadioRow.TableRadioRow, obj7);
-  const obj8 = { icon: closure_1_19(ThemeDarkIcon.ThemeDarkIcon, {}), label: null, value: null };
-  const tmpResult4 = ClientThemesUtils;
-  obj8.label = ClientThemesUtils.getThemeName(constants4.DARK);
-  obj8.value = constants4.DARK;
-  items2[2] = closure_1_19(TableRadioRow.TableRadioRow, obj8);
-  const obj9 = { icon: closure_1_19(ThemeMidnightIcon.ThemeMidnightIcon, {}), label: null, value: null };
-  const tmpResult5 = ClientThemesUtils;
-  obj9.label = ClientThemesUtils.getThemeName(constants4.ONYX);
-  obj9.value = constants4.ONYX;
-  items2[3] = closure_1_19(TableRadioRow.TableRadioRow, obj9);
-  obj4.children = items2;
-  items1[1] = closure_1_20(TableRadioGroup.TableRadioGroup, obj4);
-  obj5.children = items1;
-  return closure_1_20(hasOwnProperty, obj5);
+  const obj5 = { children: items1 };
+  const obj6 = { icon: closure_19(ThemeLightIcon.ThemeLightIcon, {}), label: tmpResult.getThemeName(constants4.LIGHT), value: constants4.LIGHT };
+  const TableRadioRow = TableRadioRow5.TableRadioRow;
+  tmpResult = ClientThemesUtils;
+  items2 = [closure_19(TableRadioRow, obj6), , , ];
+  const obj7 = { icon: closure_19(ThemeGrayIcon.ThemeGrayIcon, {}), label: tmpResult4.getThemeName(constants4.ASH), value: constants4.ASH };
+  const TableRadioRow2 = TableRadioRow5.TableRadioRow;
+  tmpResult4 = ClientThemesUtils;
+  items2[1] = closure_19(TableRadioRow2, obj7);
+  const obj8 = { icon: closure_19(ThemeDarkIcon.ThemeDarkIcon, {}), label: tmpResult5.getThemeName(constants4.DARK), value: constants4.DARK };
+  const TableRadioRow3 = TableRadioRow5.TableRadioRow;
+  tmpResult5 = ClientThemesUtils;
+  items2[2] = closure_19(TableRadioRow3, obj8);
+  const obj9 = { icon: closure_19(ThemeMidnightIcon.ThemeMidnightIcon, {}), label: tmpResult6.getThemeName(constants4.ONYX), value: constants4.ONYX };
+  const TableRadioRow4 = TableRadioRow5.TableRadioRow;
+  tmpResult6 = ClientThemesUtils;
+  items2[3] = closure_19(TableRadioRow4, obj9);
+  items1[1] = closure_20(TableRadioGroup, obj4);
+  return closure_20(hasOwnProperty, obj5);
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
-  const cResult = stateFromStores(576).c(7);
+  let stateFromStores;
+  let tmp4;
+  let tmp5;
+  let tmp9;
+  let obj = stateFromStores(576);
+  const cResult = obj.c(7);
+  const tmp = stateFromStores;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [StreamerModeStore];
     const fn = function n() {
@@ -581,20 +677,24 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
     };
     cResult[0] = items;
     cResult[1] = fn;
-    tmp4 = items;
     tmp5 = fn;
+    tmp4 = items;
   } else {
     [tmp4, tmp5] = cResult;
   }
-  let obj = stateFromStores(576);
-  stateFromStores = stateFromStores(504).useStateFromStores(tmp4, tmp5);
+  const tmpResult = tmp(504);
+  stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
   if (cResult[2] === stateFromStores) {
+    let tmp8;
     if (cResult[3] === arr) {
-      return cResult[4];
+      tmp8 = cResult[4];
     }
+    return tmp8;
   }
   if (cResult[5] !== stateFromStores) {
     const fn2 = function s(id) {
+      let Avatar;
+      let obj3;
       const obj = new UserRecord(id);
       let combined = null;
       if (!stateFromStores) {
@@ -605,31 +705,37 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
         }
       }
       let str2 = "always";
+      const getUserTag = UserUtilsDefault.getUserTag;
+      UserUtilsDefault;
       if (stateFromStores) {
         str2 = "never";
       }
-      const obj3 = { label: UserUtilsDefault.getUserTag(obj, { mode: "username", identifiable: str2 }), value: id.id, subLabel: combined, icon: null };
-      const obj4 = { user: obj, guildId: "Array", size: native.AvatarSizes.REFRESH_MEDIUM_32 };
-      obj3.icon = closure_2_19(native.Avatar, obj4);
-      return obj3;
+      const obj2 = { label: getUserTag(obj, { mode: "username", identifiable: str2 }), value: id.id, subLabel: combined, icon: closure_19(Avatar, obj3) };
+      obj3 = { user: obj, guildId: "Array", size: native.AvatarSizes.REFRESH_MEDIUM_32 };
+      Avatar = native.Avatar;
+      return obj2;
     };
     cResult[5] = stateFromStores;
     cResult[6] = fn2;
-    let tmp8 = fn2;
+    tmp9 = fn2;
   } else {
-    tmp8 = cResult[6];
+    tmp9 = cResult[6];
   }
-  const mapped = arr.map(tmp8);
+  const mapped = arr.map(tmp9);
   cResult[2] = stateFromStores;
   cResult[3] = arr;
   cResult[4] = mapped;
-  const tmpResult = stateFromStores(504);
+  tmp8 = mapped;
 }) : ((arg0) => {
+  let closure_0;
   _require = arg0;
+  let obj = require("get initialized");
   const items = [StreamerModeStore];
-  const stateFromStores = require("initialize").useStateFromStores(items, () => StreamerModeStore.hidePersonalInformation);
+  const stateFromStores = obj.useStateFromStores(items, () => StreamerModeStore.hidePersonalInformation);
   const items1 = [arg0, stateFromStores];
-  return noop.useMemo(() => closure_0.map((id) => {
+  return react.useMemo(() => closure_0.map((id) => {
+    let Avatar;
+    let obj3;
     const obj = new UserRecord(id);
     let combined = null;
     if (!closure_1_1) {
@@ -640,18 +746,28 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
       }
     }
     let str2 = "always";
+    const getUserTag = stateFromStores(dependencyMap[38]).getUserTag;
+    stateFromStores(dependencyMap[38]);
     if (closure_1_1) {
       str2 = "never";
     }
-    const obj3 = { label: stateFromStores(dependencyMap[38]).getUserTag(obj, { mode: "username", identifiable: str2 }), value: id.id, subLabel: combined, icon: null };
-    const obj4 = { user: obj, guildId: "Array", size: closure_0(dependencyMap[39]).AvatarSizes.REFRESH_MEDIUM_32 };
-    obj3.icon = closure_2_19(closure_0(dependencyMap[39]).Avatar, obj4);
-    return obj3;
+    const obj2 = { label: getUserTag(obj, { mode: "username", identifiable: str2 }), value: id.id, subLabel: combined, icon: closure_2_19(Avatar, obj3) };
+    obj3 = { user: obj, guildId: "Array", size: closure_0(dependencyMap[39]).AvatarSizes.REFRESH_MEDIUM_32 };
+    Avatar = closure_0(dependencyMap[39]).Avatar;
+    return obj2;
   }), items1);
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = stateFromStores(576).c(26);
+  let Text;
+  let currentUser;
+  let intl2;
+  let obj3;
+  let stateFromStores;
+  let tmp5;
+  let tmp6;
+  let obj = stateFromStores(576);
+  const cResult = obj.c(26);
   const tmp4 = closure_21();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -665,89 +781,105 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp5, tmp6] = cResult;
   }
-  let obj = stateFromStores(576);
-  stateFromStores = stateFromStores(504).useStateFromStores(tmp5, tmp6);
   const tmpResult = stateFromStores(504);
-  const multiAccountUsers = stateFromStores(15872).useMultiAccountUsers().multiAccountUsers;
-  const arr2 = closure_26(multiAccountUsers);
+  stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
   const tmpResult3 = stateFromStores(15872);
-  const manaTypeConsolidationExperiment = stateFromStores(6470).useManaTypeConsolidationExperiment("YouAccountActionSheetSwitchAccounts");
-  let id;
+  const multiAccountUsers = tmpResult3.useMultiAccountUsers().multiAccountUsers;
+  const arr2 = closure_26(multiAccountUsers);
+  const tmpResult4 = stateFromStores(6470);
+  const manaTypeConsolidationExperiment = tmpResult4.useManaTypeConsolidationExperiment("YouAccountActionSheetSwitchAccounts");
+  let id1;
+  const tmp10 = cResult[2];
   if (stateFromStores != null) {
-    id = stateFromStores.id;
+    id1 = stateFromStores.id;
   }
-  if (cResult[2] === id) {
+  if (tmp10 === id1) {
+    let tmp12;
     if (cResult[3] === multiAccountUsers) {
-      let tmp11 = cResult[4];
+      tmp12 = cResult[4];
     }
     if (null == stateFromStores) {
       return null;
     } else {
+      let tmp13;
+      let tmp15;
+      let tmp16;
       const _Symbol4 = Symbol;
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
-        const stringResult = intl.string(tmp(1126).t.oMNyYN);
+        const stringResult = intl.string(stateFromStores(1126).t.oMNyYN);
         cResult[5] = stringResult;
-        let tmp12 = stringResult;
+        tmp13 = stringResult;
       } else {
-        tmp12 = cResult[5];
+        tmp13 = cResult[5];
       }
       const _Symbol = Symbol;
       const account = tmp4.account;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const fn3 = function p() {
-          return multiAccountUsers(16315)();
+          return multiAccountUsers(dependencyMap[41])();
         };
         cResult[6] = fn3;
-        let tmp14 = fn3;
+        tmp15 = fn3;
       } else {
-        tmp14 = cResult[6];
+        tmp15 = cResult[6];
       }
       const _Symbol2 = Symbol;
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj2 = { onPress: tmp14, children: null };
-        let obj3 = { variant: "text-sm/semibold", color: "text-brand", children: null };
-        const intl2 = tmp(1126).intl;
-        obj3.children = intl2.string(tmp(1126).t.HxrBOZ);
-        obj2.children = closure_19(tmp(4886).Text, obj3);
-        const tmp17 = closure_19(tmp(5909).PressableOpacity, obj2);
-        cResult[7] = tmp17;
-        let tmp15 = tmp17;
+        let obj2 = { onPress: tmp15, children: closure_19(Text, obj3) };
+        const PressableOpacity = tmp(5909).PressableOpacity;
+        obj3 = { variant: "text-sm/semibold", color: "text-brand", children: intl2.string(stateFromStores(1126).t.HxrBOZ) };
+        Text = tmp(4886).Text;
+        intl2 = tmp(1126).intl;
+        const tmp18 = closure_19(PressableOpacity, obj2);
+        cResult[7] = tmp18;
+        tmp16 = tmp18;
       } else {
-        tmp15 = cResult[7];
+        tmp16 = cResult[7];
       }
       if (cResult[8] !== tmp4.manage) {
-        let obj4 = { style: tmp4.manage, children: tmp15 };
-        const tmp21 = closure_19(closure_5, obj4);
+        let obj4 = { style: tmp4.manage, children: tmp16 };
         cResult[8] = tmp4.manage;
-        cResult[9] = tmp21;
+        cResult[9] = closure_19(closure_5, obj4);
+        const tmp22 = closure_19(closure_5, obj4);
       }
       if (cResult[10] !== manaTypeConsolidationExperiment) {
-        let tmp23 = manaTypeConsolidationExperiment;
-        if (manaTypeConsolidationExperiment) {
-          let obj5 = { children: tmp12 };
-          tmp23 = closure_19(closure_22, obj5);
+        let tmp24 = manaTypeConsolidationExperiment;
+        if (tmp24) {
+          const obj5 = { children: tmp13 };
+          tmp24 = closure_19(closure_22, obj5);
         }
         cResult[10] = manaTypeConsolidationExperiment;
-        cResult[11] = tmp23;
+        cResult[11] = tmp24;
       }
+      let tmp27;
+      if (!manaTypeConsolidationExperiment) {
+        tmp27 = tmp13;
+      }
+      let tmp28;
+      if (manaTypeConsolidationExperiment) {
+        tmp28 = tmp13;
+      }
+      let id = stateFromStores.id;
       if (cResult[12] !== arr2) {
         const _Symbol3 = Symbol;
         if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
           class H {
-            constructor(arg0) {
-              obj = {};
-              merged = Object.assign(arg0);
-              return closure_1_19(closure_0(closure_1_3[26]).TableRadioRow, obj, arg0.value);
+            constructor(value) {
+              const obj = {};
+              const TableRadioRow = stateFromStores(dependencyMap[26]).TableRadioRow;
+              const merged = Object.assign(value);
+              return closure_1_19(TableRadioRow, obj, value.value);
             }
           }
           cResult[14] = H;
         } else {
           class H {
-            constructor(arg0) {
-              obj = {};
-              merged = Object.assign(arg0);
-              return closure_1_19(closure_0(closure_1_3[26]).TableRadioRow, obj, arg0.value);
+            constructor(value) {
+              const obj = {};
+              const TableRadioRow = stateFromStores(dependencyMap[26]).TableRadioRow;
+              const merged = Object.assign(value);
+              return closure_1_19(TableRadioRow, obj, value.value);
             }
           }
         }
@@ -756,43 +888,46 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         cResult[13] = mapped;
       } else {
         class H {
-          constructor(arg0) {
-            obj = {};
-            merged = Object.assign(arg0);
-            return closure_1_19(closure_0(closure_1_3[26]).TableRadioRow, obj, arg0.value);
+          constructor(value) {
+            const obj = {};
+            const TableRadioRow = stateFromStores(dependencyMap[26]).TableRadioRow;
+            const merged = Object.assign(value);
+            return closure_1_19(TableRadioRow, obj, value.value);
           }
         }
-        if (cResult[15] === stateFromStores.id) {
-          class H {
-            constructor(arg0) {
-              obj = {};
-              merged = Object.assign(arg0);
-              return closure_1_19(closure_0(closure_1_3[26]).TableRadioRow, obj, arg0.value);
-            }
-          }
-        }
-        const obj6 = { title: tmp26, accessibilityLabel: tmp27, onChange: tmp11, defaultValue: tmp28, hasIcons: true, children: tmp29 };
-        const tmp35 = closure_19(tmp(6072).TableRadioGroup, obj6);
-        cResult[15] = stateFromStores.id;
-        cResult[16] = tmp11;
-        cResult[17] = tmp27;
-        cResult[18] = tmp29;
-        cResult[19] = tmp26;
-        cResult[20] = tmp35;
       }
+      if (cResult[15] === stateFromStores.id) {
+        class H {
+          constructor(value) {
+            const obj = {};
+            const TableRadioRow = stateFromStores(dependencyMap[26]).TableRadioRow;
+            const merged = Object.assign(value);
+            return closure_1_19(TableRadioRow, obj, value.value);
+          }
+        }
+      }
+      const obj6 = { title: tmp27, accessibilityLabel: tmp28, onChange: tmp12, defaultValue: id, hasIcons: true, children: tmp29 };
+      cResult[15] = stateFromStores.id;
+      cResult[16] = tmp12;
+      cResult[17] = tmp28;
+      cResult[18] = tmp29;
+      cResult[19] = tmp27;
+      cResult[20] = closure_19(stateFromStores(6072).TableRadioGroup, obj6);
+      const tmp34 = closure_19(stateFromStores(6072).TableRadioGroup, obj6);
     }
   }
   if (stateFromStores != null) {
     class H {
-      constructor(arg0) {
-        obj = {};
-        merged = Object.assign(arg0);
-        return closure_1_19(closure_0(closure_1_3[26]).TableRadioRow, obj, arg0.value);
+      constructor(value) {
+        const obj = {};
+        const TableRadioRow = stateFromStores(dependencyMap[26]).TableRadioRow;
+        const merged = Object.assign(value);
+        return closure_1_19(TableRadioRow, obj, value.value);
       }
     }
   }
   const fn2 = function c(arg0) {
-    closure_0 = arg0;
+    let closure_0 = arg0;
     let id;
     if (stateFromStores != null) {
       id = stateFromStores.id;
@@ -802,12 +937,18 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       if (null != found) {
         if (found.tokenStatus === MultiAccountTokenStatus.INVALID) {
           openManageAccountsModalDefault(constants2.LOGIN);
-          AnalyticsUtilsDefault.track(constants.LOGIN_VIEWED, { source: "you_account_action_sheet" });
+          const obj = AnalyticsUtilsDefault;
+          obj.track(constants.LOGIN_VIEWED, { source: "you_account_action_sheet" });
         } else {
-          const obj3 = { location: AnalyticsLocationDefault.YOU_ACCOUNT_ACTION_SHEET };
-          AnalyticsUtilsDefault.track(constants.MULTI_ACCOUNT_SWITCH_ATTEMPT, obj3);
-          ActionSheetActionCreatorsDefault.hideActionSheet();
-          MultiAccountActionCreatorsAll.switchAccount(found.id, undefined, constants.YOU_ACCOUNT_ACTION_SHEET);
+          const obj2 = { location: AnalyticsLocationDefault.YOU_ACCOUNT_ACTION_SHEET };
+          const track = AnalyticsUtilsDefault.track;
+          const MULTI_ACCOUNT_SWITCH_ATTEMPT = constants.MULTI_ACCOUNT_SWITCH_ATTEMPT;
+          AnalyticsUtilsDefault;
+          track(MULTI_ACCOUNT_SWITCH_ATTEMPT, obj2);
+          const obj3 = ActionSheetActionCreatorsDefault;
+          obj3.hideActionSheet();
+          const obj4 = MultiAccountActionCreatorsAll;
+          obj4.switchAccount(found.id, undefined, constants.YOU_ACCOUNT_ACTION_SHEET);
         }
       }
     }
@@ -815,17 +956,26 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[2] = undefined;
   cResult[3] = multiAccountUsers;
   cResult[4] = fn2;
-  tmp11 = fn2;
-  const tmpResult4 = stateFromStores(6470);
+  tmp12 = fn2;
 }) : (() => {
+  let PressableOpacity;
+  let Text;
+  let currentUser;
+  let intl2;
+  let items2;
+  let obj6;
+  let obj7;
+  let stateFromStores;
+  let tmp11;
   const tmp = closure_21();
-  const items = [UserStore];
-  stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = stateFromStores(504);
-  const multiAccountUsers = stateFromStores(15872).useMultiAccountUsers().multiAccountUsers;
+  const items = [UserStore];
+  stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj2 = stateFromStores(15872);
+  const multiAccountUsers = obj2.useMultiAccountUsers().multiAccountUsers;
   const arr2 = closure_26(multiAccountUsers);
-  const manaTypeConsolidationExperiment = stateFromStores(6470).useManaTypeConsolidationExperiment("YouAccountActionSheetSwitchAccounts");
+  let obj3 = stateFromStores(6470);
+  const manaTypeConsolidationExperiment = obj3.useManaTypeConsolidationExperiment("YouAccountActionSheetSwitchAccounts");
   const items1 = [multiAccountUsers, ];
   let id;
   if (stateFromStores != null) {
@@ -836,63 +986,72 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     return null;
   } else {
     const intl = tmp2(1126).intl;
-    const stringResult = intl.string(tmp2(1126).t.oMNyYN);
-    let obj4 = { style: tmp.account, children: null };
-    let obj5 = { style: tmp.manage, children: null };
-    const obj6 = {
+    const stringResult = intl.string(stateFromStores(1126).t.oMNyYN);
+    let obj4 = { style: tmp.account, children: items2 };
+    const obj5 = { style: tmp.manage, children: closure_19(PressableOpacity, obj6) };
+    obj6 = {
       onPress() {
-          return multiAccountUsers(16315)();
+          return multiAccountUsers(dependencyMap[41])();
         },
-      children: null
+      children: closure_19(Text, obj7)
     };
-    const obj7 = { variant: "text-sm/semibold", color: "text-brand", children: null };
-    const intl2 = tmp2(1126).intl;
-    obj7.children = intl2.string(tmp2(1126).t.HxrBOZ);
-    obj6.children = closure_19(tmp2(4886).Text, obj7);
-    obj5.children = closure_19(tmp2(5909).PressableOpacity, obj6);
-    const items2 = [closure_19(closure_5, obj5), , ];
+    PressableOpacity = tmp2(5909).PressableOpacity;
+    obj7 = { variant: "text-sm/semibold", color: "text-brand", children: intl2.string(stateFromStores(1126).t.HxrBOZ) };
+    Text = tmp2(4886).Text;
+    intl2 = tmp2(1126).intl;
+    items2 = [closure_19(closure_5, obj5), , ];
     let tmp15Result = manaTypeConsolidationExperiment;
-    if (manaTypeConsolidationExperiment) {
+    if (tmp15Result) {
       const obj8 = { children: stringResult };
       tmp15Result = closure_19(closure_22, obj8);
     }
     items2[1] = tmp15Result;
     let tmp10;
+    const TableRadioGroup = tmp2(6072).TableRadioGroup;
     if (!manaTypeConsolidationExperiment) {
       tmp10 = stringResult;
     }
-    const obj9 = { title: tmp10, accessibilityLabel: null, onChange: null, defaultValue: null, hasIcons: true, children: null };
-    let tmp11;
+    const obj9 = {
+      title: tmp10,
+      accessibilityLabel: tmp11,
+      onChange: tmp7,
+      defaultValue: stateFromStores.id,
+      hasIcons: true,
+      children: arr2.map((value) => {
+          const obj = {};
+          const TableRadioRow = stateFromStores(dependencyMap[26]).TableRadioRow;
+          const merged = Object.assign(value);
+          return closure_1_19(TableRadioRow, obj, value.value);
+        })
+    };
+    tmp11 = undefined;
     if (manaTypeConsolidationExperiment) {
       tmp11 = stringResult;
     }
-    obj9.accessibilityLabel = tmp11;
-    obj9.onChange = tmp7;
-    obj9.defaultValue = stateFromStores.id;
-    obj9.children = arr2.map((value) => {
-      const merged = Object.assign(value);
-      return closure_1_19(stateFromStores(6071).TableRadioRow, {}, value.value);
-    });
-    items2[2] = closure_19(tmp2(6072).TableRadioGroup, obj9);
-    obj4.children = items2;
+    items2[2] = closure_19(TableRadioGroup, obj9);
     return closure_20(closure_5, obj4);
   }
-  let obj3 = stateFromStores(6470);
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(33);
+  let intl4;
+  let items;
+  let items1;
+  let obj5;
+  let obj7;
+  let tmp16;
+  let obj = react2;
+  const cResult = obj.c(33);
   const tmp4 = closure_21();
-  const customStatusActivity = userSettingToActivity.useCustomStatusActivity();
-  const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE);
-  state = undefined;
+  let obj2 = userSettingToActivity;
+  const customStatusActivity = obj2.useCustomStatusActivity();
+  const obj3 = useToken;
+  const token = obj3.useToken(nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE);
+  let state;
   if (customStatusActivity != null) {
     state = customStatusActivity.state;
   }
-  let tmp9 = null != state;
-  if (tmp9) {
-    tmp9 = "" !== customStatusActivity.state;
-  }
+  let tmp9 = null != state && "" !== customStatusActivity.state;
   if (!tmp9) {
     let emoji1;
     if (customStatusActivity != null) {
@@ -901,205 +1060,227 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp9 = null != emoji1;
   }
   let state1;
+  const useGameMentionsAsPlainText = useGameMentionsAsPlainText2.useGameMentionsAsPlainText;
+  useGameMentionsAsPlainText2;
   if (customStatusActivity != null) {
     state1 = customStatusActivity.state;
   }
-  const gameMentionsAsPlainText = useGameMentionsAsPlainText.useGameMentionsAsPlainText(state1);
-  const tmpResult = useGameMentionsAsPlainText;
-  const token1 = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_LABEL_TEXT_STYLE);
+  const gameMentionsAsPlainText = useGameMentionsAsPlainText(state1);
   const tmpResult3 = useToken;
-  const token2 = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_LABEL_COLOR);
+  const token1 = tmpResult3.useToken(nativeDefault.modules.mobile.TABLE_ROW_LABEL_TEXT_STYLE);
+  const tmpResult4 = useToken;
+  const token2 = tmpResult4.useToken(nativeDefault.modules.mobile.TABLE_ROW_LABEL_COLOR);
   if (cResult[0] !== tmp9) {
-    const intl = util.intl;
+    let stringResult;
+    const intl = intl6.intl;
     const string = intl.string;
-    let t = util.t;
+    const t = intl6.t;
     if (tmp9) {
-      t = t["2p9FMw"];
-      let stringResult = string(t);
+      stringResult = string(t["2p9FMw"]);
     } else {
       stringResult = string(t["/UonHN"]);
     }
     cResult[0] = tmp9;
     cResult[1] = stringResult;
+    tmp16 = stringResult;
   } else {
-    if (cResult[2] === customStatusActivity) {
-      if (cResult[3] === tmp9) {
-        if (cResult[4] === gameMentionsAsPlainText) {
-          let tmp19 = cResult[5];
-        }
-        const _Symbol = Symbol;
-        if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn = function n() {
-            ActionSheetActionCreatorsDefault.hideActionSheet();
-            const obj3 = { analyticsLocations: null };
-            const items = [AnalyticsLocationDefault.YOU_ACCOUNT_ACTION_SHEET];
-            obj3.analyticsLocations = items;
-            const result = require("CustomStatusUtils").openEditCustomStatusModal(obj3);
-          };
-          cResult[6] = fn;
-          let tmp22 = fn;
-        } else {
-          tmp22 = cResult[6];
-        }
-        if (cResult[7] === customStatusActivity) {
-          if (cResult[8] === tmp4.leadingIcon) {
-            if (cResult[9] === token) {
-              if (cResult[11] === tmp9) {
-                if (cResult[12] === gameMentionsAsPlainText) {
-                  let tmp29 = cResult[13];
-                }
-                if (cResult[14] === token2) {
-                  if (cResult[15] === token1) {
-                    if (cResult[16] === tmp4.customStatusText) {
-                      if (cResult[17] === tmp29) {
-                        let tmp31 = cResult[18];
-                      }
-                      if (cResult[19] === tmp4.customStatusEditButton) {
-                        if (cResult[20] === tmp15) {
-                          if (cResult[21] === tmp19) {
-                            if (cResult[22] === tmp23) {
-                              if (cResult[23] === tmp31) {
-                                let tmp34 = cResult[24];
+    tmp16 = cResult[1];
+  }
+  if (cResult[2] === customStatusActivity) {
+    if (cResult[3] === tmp9) {
+      let tmp18;
+      let tmp21;
+      let tmp25;
+      if (cResult[4] === gameMentionsAsPlainText) {
+        tmp18 = cResult[5];
+      }
+      const _Symbol = Symbol;
+      if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+        const fn = function n() {
+          let items;
+          const obj = ActionSheetActionCreatorsDefault;
+          obj.hideActionSheet();
+          const obj2 = { analyticsLocations: items };
+          const openEditCustomStatusModal = require("CustomStatusUtils").openEditCustomStatusModal;
+          items = [];
+          require("CustomStatusUtils");
+          items[0] = AnalyticsLocationDefault.YOU_ACCOUNT_ACTION_SHEET;
+          const result = openEditCustomStatusModal(obj2);
+        };
+        cResult[6] = fn;
+        tmp21 = fn;
+      } else {
+        tmp21 = cResult[6];
+      }
+      if (cResult[7] === customStatusActivity) {
+        if (cResult[8] === tmp4.leadingIcon) {
+          let tmp22;
+          if (cResult[9] === token) {
+            tmp22 = cResult[10];
+          }
+          if (cResult[11] === tmp9) {
+            let tmp27;
+            if (cResult[12] === gameMentionsAsPlainText) {
+              tmp27 = cResult[13];
+            }
+            if (cResult[14] === token2) {
+              if (cResult[15] === token1) {
+                if (cResult[16] === tmp4.customStatusText) {
+                  let tmp29;
+                  if (cResult[17] === tmp27) {
+                    tmp29 = cResult[18];
+                  }
+                  if (cResult[19] === tmp4.customStatusEditButton) {
+                    if (cResult[20] === tmp16) {
+                      if (cResult[21] === tmp18) {
+                        if (cResult[22] === tmp22) {
+                          let tmp32;
+                          if (cResult[23] === tmp29) {
+                            tmp32 = cResult[24];
+                          }
+                          if (cResult[25] === customStatusActivity) {
+                            if (cResult[26] === tmp4.customStatusRemoveButton) {
+                              let tmp35;
+                              if (cResult[27] === tmp4.trailingIcon) {
+                                tmp35 = cResult[28];
                               }
-                              if (cResult[25] === customStatusActivity) {
-                                if (cResult[26] === tmp4.customStatusRemoveButton) {
-                                  if (cResult[27] === tmp4.trailingIcon) {
-                                    let tmp37 = cResult[28];
+                              if (cResult[29] === tmp4.customStatusRow) {
+                                if (cResult[30] === tmp32) {
+                                  let tmp39;
+                                  if (cResult[31] === tmp35) {
+                                    tmp39 = cResult[32];
                                   }
-                                  if (cResult[29] === tmp4.customStatusRow) {
-                                    if (cResult[30] === tmp34) {
-                                      if (cResult[31] === tmp37) {
-                                        let tmp41 = cResult[32];
-                                      }
-                                      return tmp41;
-                                    }
-                                  }
-                                  const obj4 = { hasIcons: false, children: null };
-                                  const obj5 = { shadow: "none", border: "none", style: tmp4.customStatusRow, children: null };
-                                  let items = [tmp34, tmp37];
-                                  obj5.children = items;
-                                  obj4.children = closure_1_20(Card.Card, obj5);
-                                  const tmp44 = closure_1_19(TableRowGroup.TableRowGroup, obj4);
-                                  cResult[29] = tmp4.customStatusRow;
-                                  cResult[30] = tmp34;
-                                  cResult[31] = tmp37;
-                                  cResult[32] = tmp44;
-                                  tmp41 = tmp44;
+                                  return tmp39;
                                 }
                               }
-                              let tmp38 = null;
-                              if (null != customStatusActivity) {
-                                const obj6 = {
-                                  onPress(stopPropagation) {
-                                                                  stopPropagation.stopPropagation();
-                                                                  removeCustomStatusDefault();
-                                                                },
-                                  accessibilityRole: "button",
-                                  accessibilityLabel: null,
-                                  style: null,
-                                  children: null
-                                };
-                                const intl4 = util.intl;
-                                obj6.accessibilityLabel = intl4.string(util.t.wfYTHe);
-                                obj6.style = tmp4.customStatusRemoveButton;
-                                const obj7 = { style: tmp4.trailingIcon, source: _modDef6584 };
-                                obj6.children = closure_1_19(timestampProducer, obj7);
-                                tmp38 = closure_1_19(Pressables.PressableOpacity, obj6);
-                              }
-                              cResult[25] = customStatusActivity;
-                              cResult[26] = tmp4.customStatusRemoveButton;
-                              cResult[27] = tmp4.trailingIcon;
-                              cResult[28] = tmp38;
-                              tmp37 = tmp38;
+                              const obj4 = { hasIcons: false, children: closure_20(Card_Card.Card, obj5) };
+                              const TableRowGroup = TableRowGroup2.TableRowGroup;
+                              obj5 = { shadow: "none", border: "none", style: tmp4.customStatusRow, children: items };
+                              items = [tmp32, tmp35];
+                              const tmp42 = closure_19(TableRowGroup, obj4);
+                              cResult[29] = tmp4.customStatusRow;
+                              cResult[30] = tmp32;
+                              cResult[31] = tmp35;
+                              cResult[32] = tmp42;
+                              tmp39 = tmp42;
                             }
                           }
+                          let tmp36 = null;
+                          if (null != customStatusActivity) {
+                            const obj6 = {
+                              onPress(stopPropagation) {
+                                                          stopPropagation.stopPropagation();
+                                                          removeCustomStatusDefault();
+                                                        },
+                              accessibilityRole: "button",
+                              accessibilityLabel: intl4.string(intl6.t.wfYTHe),
+                              style: tmp4.customStatusRemoveButton,
+                              children: closure_19(metroRequire, obj7)
+                            };
+                            const PressableOpacity = Pressables.PressableOpacity;
+                            intl4 = intl6.intl;
+                            obj7 = { style: tmp4.trailingIcon, source: AssetRegistryDefault };
+                            tmp36 = closure_19(PressableOpacity, obj6);
+                          }
+                          cResult[25] = customStatusActivity;
+                          cResult[26] = tmp4.customStatusRemoveButton;
+                          cResult[27] = tmp4.trailingIcon;
+                          cResult[28] = tmp36;
+                          tmp35 = tmp36;
                         }
                       }
-                      const obj8 = { style: tmp4.customStatusEditButton, accessibilityRole: "button", accessibilityLabel: tmp15, accessibilityHint: tmp19, onPress: tmp22, children: null };
-                      const items1 = [tmp23, tmp31];
-                      obj8.children = items1;
-                      const tmp36 = closure_1_20(Pressables.PressableOpacity, obj8);
-                      cResult[19] = tmp4.customStatusEditButton;
-                      cResult[20] = tmp15;
-                      cResult[21] = tmp19;
-                      cResult[22] = tmp23;
-                      cResult[23] = tmp31;
-                      cResult[24] = tmp36;
-                      tmp34 = tmp36;
                     }
                   }
+                  const obj8 = { style: tmp4.customStatusEditButton, accessibilityRole: "button", accessibilityLabel: tmp16, accessibilityHint: tmp18, onPress: tmp21, children: items1 };
+                  items1 = [tmp22, tmp29];
+                  const tmp34 = closure_20(Pressables.PressableOpacity, obj8);
+                  cResult[19] = tmp4.customStatusEditButton;
+                  cResult[20] = tmp16;
+                  cResult[21] = tmp18;
+                  cResult[22] = tmp22;
+                  cResult[23] = tmp29;
+                  cResult[24] = tmp34;
+                  tmp32 = tmp34;
                 }
-                const obj9 = { variant: token1, color: token2, lineClamp: 2, style: tmp4.customStatusText, children: tmp29 };
-                const tmp33 = closure_1_19(Text_Text.Text, obj9);
-                cResult[14] = token2;
-                cResult[15] = token1;
-                cResult[16] = tmp4.customStatusText;
-                cResult[17] = tmp29;
-                cResult[18] = tmp33;
-                tmp31 = tmp33;
               }
-              let stringResult1 = gameMentionsAsPlainText;
-              if (!tmp9) {
-                const intl3 = util.intl;
-                stringResult1 = intl3.string(util.t["/UonHN"]);
-              }
-              cResult[11] = tmp9;
-              cResult[12] = gameMentionsAsPlainText;
-              cResult[13] = stringResult1;
-              tmp29 = stringResult1;
             }
+            const obj9 = { variant: token1, color: token2, lineClamp: 2, style: tmp4.customStatusText, children: tmp27 };
+            const tmp31 = closure_19(Text_Text.Text, obj9);
+            cResult[14] = token2;
+            cResult[15] = token1;
+            cResult[16] = tmp4.customStatusText;
+            cResult[17] = tmp27;
+            cResult[18] = tmp31;
+            tmp29 = tmp31;
           }
+          let stringResult1 = gameMentionsAsPlainText;
+          if (!tmp9) {
+            const intl3 = intl6.intl;
+            stringResult1 = intl3.string(intl6.t["/UonHN"]);
+          }
+          cResult[11] = tmp9;
+          cResult[12] = gameMentionsAsPlainText;
+          cResult[13] = stringResult1;
+          tmp27 = stringResult1;
         }
-        let emoji2;
-        if (customStatusActivity != null) {
-          emoji2 = customStatusActivity.emoji;
-        }
-        if (null != emoji2) {
-          const obj10 = { emoji: customStatusActivity.emoji, size: token };
-          let tmp26 = closure_1_19(ActivityEmojiDefault, obj10);
-        } else {
-          const obj11 = { size: "md", style: tmp4.leadingIcon };
-          tmp26 = closure_1_19(ReactionIcon.ReactionIcon, obj11);
-        }
-        cResult[7] = customStatusActivity;
-        cResult[8] = tmp4.leadingIcon;
-        cResult[9] = token;
-        cResult[10] = tmp26;
       }
+      let emoji2;
+      if (customStatusActivity != null) {
+        emoji2 = customStatusActivity.emoji;
+      }
+      if (null != emoji2) {
+        const obj10 = { emoji: customStatusActivity.emoji, size: token };
+        tmp25 = closure_19(ActivityEmojiDefault, obj10);
+      } else {
+        const obj11 = { size: "md", style: tmp4.leadingIcon };
+        tmp25 = closure_19(ReactionIcon.ReactionIcon, obj11);
+      }
+      cResult[7] = customStatusActivity;
+      cResult[8] = tmp4.leadingIcon;
+      cResult[9] = token;
+      cResult[10] = tmp25;
+      tmp22 = tmp25;
     }
-    let formatToPlainStringResult;
-    if (tmp9) {
-      const intl2 = util.intl;
-      const emoji = customStatusActivity.emoji;
-      let str2;
-      if (emoji != null) {
-        str2 = emoji.name;
-      }
-      if (str2 == null) {
-        str2 = "";
-      }
-      const obj12 = { emoji: str2, status: gameMentionsAsPlainText };
-      formatToPlainStringResult = intl2.formatToPlainString(util.t.GE7QzY, obj12);
-    }
-    cResult[2] = customStatusActivity;
-    cResult[3] = tmp9;
-    cResult[4] = gameMentionsAsPlainText;
-    cResult[5] = formatToPlainStringResult;
-    tmp19 = formatToPlainStringResult;
   }
-  const tmpResult4 = useToken;
+  let formatToPlainStringResult;
+  if (tmp9) {
+    const intl2 = intl6.intl;
+    const formatToPlainString = intl2.formatToPlainString;
+    const emoji = customStatusActivity.emoji;
+    let str2;
+    const GE7QzY = intl6.t.GE7QzY;
+    if (emoji != null) {
+      str2 = emoji.name;
+    }
+    if (str2 == null) {
+      str2 = "";
+    }
+    const obj12 = { emoji: str2, status: gameMentionsAsPlainText };
+    formatToPlainStringResult = formatToPlainString(GE7QzY, obj12);
+  }
+  cResult[2] = customStatusActivity;
+  cResult[3] = tmp9;
+  cResult[4] = gameMentionsAsPlainText;
+  cResult[5] = formatToPlainStringResult;
+  tmp18 = formatToPlainStringResult;
 }) : (() => {
+  let formatToPlainStringResult;
+  let intl4;
+  let items;
+  let items1;
+  let obj10;
+  let stringResult;
+  let tmp15Result;
   const tmp = closure_21();
-  const customStatusActivity = userSettingToActivity.useCustomStatusActivity();
-  state = undefined;
-  const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE);
+  let obj = userSettingToActivity;
+  const customStatusActivity = obj.useCustomStatusActivity();
+  let obj2 = useToken;
+  let state;
+  const token = obj2.useToken(nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE);
   if (customStatusActivity != null) {
     state = customStatusActivity.state;
   }
-  let tmp8 = null != state;
-  if (tmp8) {
-    tmp8 = "" !== customStatusActivity.state;
-  }
+  let tmp8 = null != state && "" !== customStatusActivity.state;
   if (!tmp8) {
     let emoji1;
     if (customStatusActivity != null) {
@@ -1108,30 +1289,53 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp8 = null != emoji1;
   }
   let state1;
+  const useGameMentionsAsPlainText = useGameMentionsAsPlainText2.useGameMentionsAsPlainText;
+  useGameMentionsAsPlainText2;
   if (customStatusActivity != null) {
     state1 = customStatusActivity.state;
   }
-  let gameMentionsAsPlainText = useGameMentionsAsPlainText.useGameMentionsAsPlainText(state1);
-  const tmp2Result = useGameMentionsAsPlainText;
-  const token1 = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_LABEL_TEXT_STYLE);
+  let gameMentionsAsPlainText = useGameMentionsAsPlainText(state1);
   const tmp2Result3 = useToken;
-  const token2 = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_LABEL_COLOR);
-  let obj3 = { shadow: "none", border: "none", style: tmp.customStatusRow, children: null };
-  const obj4 = { style: tmp.customStatusEditButton, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
-  const intl = util.intl;
+  const token1 = tmp2Result3.useToken(nativeDefault.modules.mobile.TABLE_ROW_LABEL_TEXT_STYLE);
+  const tmp2Result4 = useToken;
+  const token2 = tmp2Result4.useToken(nativeDefault.modules.mobile.TABLE_ROW_LABEL_COLOR);
+  const TableRowGroup = TableRowGroup2.TableRowGroup;
+  const obj3 = { shadow: "none", border: "none", style: tmp.customStatusRow, children: items1 };
+  const Card = Card_Card.Card;
+  const obj4 = {
+    style: tmp.customStatusEditButton,
+    accessibilityRole: "button",
+    accessibilityLabel: stringResult,
+    accessibilityHint: formatToPlainStringResult,
+    onPress() {
+      let items;
+      const obj = ActionSheetActionCreatorsDefault;
+      obj.hideActionSheet();
+      const obj2 = { analyticsLocations: items };
+      const openEditCustomStatusModal = require("CustomStatusUtils").openEditCustomStatusModal;
+      items = [];
+      require("CustomStatusUtils");
+      items[0] = AnalyticsLocationDefault.YOU_ACCOUNT_ACTION_SHEET;
+      const result = openEditCustomStatusModal(obj2);
+    },
+    children: items
+  };
+  const PressableOpacity = Pressables.PressableOpacity;
+  const intl = intl6.intl;
   const string = intl.string;
-  const t = util.t;
+  const t = intl6.t;
   if (tmp8) {
-    let stringResult = string(t["2p9FMw"]);
+    stringResult = string(t["2p9FMw"]);
   } else {
     stringResult = string(t["/UonHN"]);
   }
-  obj4.accessibilityLabel = stringResult;
-  let formatToPlainStringResult;
+  formatToPlainStringResult = undefined;
   if (tmp8) {
-    const intl2 = util.intl;
+    const intl2 = intl6.intl;
+    const formatToPlainString = intl2.formatToPlainString;
     const emoji = customStatusActivity.emoji;
     let str2;
+    const GE7QzY = intl6.t.GE7QzY;
     if (emoji != null) {
       str2 = emoji.name;
     }
@@ -1139,38 +1343,29 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       str2 = "";
     }
     const obj5 = { emoji: str2, status: gameMentionsAsPlainText };
-    formatToPlainStringResult = intl2.formatToPlainString(util.t.GE7QzY, obj5);
+    formatToPlainStringResult = formatToPlainString(GE7QzY, obj5);
   }
-  obj4.accessibilityHint = formatToPlainStringResult;
-  obj4.onPress = function onPress() {
-    ActionSheetActionCreatorsDefault.hideActionSheet();
-    const obj3 = { analyticsLocations: null };
-    const items = [AnalyticsLocationDefault.YOU_ACCOUNT_ACTION_SHEET];
-    obj3.analyticsLocations = items;
-    const result = require("CustomStatusUtils").openEditCustomStatusModal(obj3);
-  };
   let emoji2;
   if (customStatusActivity != null) {
     emoji2 = customStatusActivity.emoji;
   }
   if (null != emoji2) {
     const obj6 = { emoji: customStatusActivity.emoji, size: token };
-    let tmp14Result = closure_1_19(ActivityEmojiDefault, obj6);
+    tmp15Result = closure_19(ActivityEmojiDefault, obj6);
   } else {
     const obj7 = { size: "md", style: tmp.leadingIcon };
-    tmp14Result = closure_1_19(ReactionIcon.ReactionIcon, obj7);
+    tmp15Result = closure_19(ReactionIcon.ReactionIcon, obj7);
   }
-  let items = [tmp14Result, ];
-  const obj8 = { variant: token1, color: token2, lineClamp: 2, style: tmp.customStatusText, children: null };
+  items = [tmp15Result, ];
+  const obj8 = { variant: token1, color: token2, lineClamp: 2, style: tmp.customStatusText, children: gameMentionsAsPlainText };
+  const Text = Text_Text.Text;
   if (!tmp8) {
-    const intl3 = util.intl;
-    gameMentionsAsPlainText = intl3.string(util.t["/UonHN"]);
+    const intl3 = intl6.intl;
+    gameMentionsAsPlainText = intl3.string(intl6.t["/UonHN"]);
   }
-  obj8.children = gameMentionsAsPlainText;
-  items[1] = closure_1_19(Text_Text.Text, obj8);
-  obj4.children = items;
-  const items1 = [closure_1_20(Pressables.PressableOpacity, obj4), ];
-  let tmp14Result2 = null;
+  items[1] = closure_19(Text, obj8);
+  items1 = [closure_20(PressableOpacity, obj4), ];
+  let tmp15Result2 = null;
   if (null != customStatusActivity) {
     const obj9 = {
       onPress(stopPropagation) {
@@ -1178,29 +1373,31 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           removeCustomStatusDefault();
         },
       accessibilityRole: "button",
-      accessibilityLabel: null,
-      style: null,
-      children: null
+      accessibilityLabel: intl4.string(intl6.t.wfYTHe),
+      style: tmp.customStatusRemoveButton,
+      children: closure_19(metroRequire, obj10)
     };
-    const intl4 = util.intl;
-    obj9.accessibilityLabel = intl4.string(util.t.wfYTHe);
-    obj9.style = tmp.customStatusRemoveButton;
-    const obj10 = { style: tmp.trailingIcon, source: _modDef6584 };
-    obj9.children = closure_1_19(timestampProducer, obj10);
-    tmp14Result2 = closure_1_19(Pressables.PressableOpacity, obj9);
+    const PressableOpacity2 = Pressables.PressableOpacity;
+    intl4 = intl6.intl;
+    obj10 = { style: tmp.trailingIcon, source: AssetRegistryDefault };
+    tmp15Result2 = closure_19(PressableOpacity2, obj9);
   }
-  const tmp2Result4 = useToken;
-  items1[1] = tmp14Result2;
-  obj3.children = items1;
-  return closure_1_19(TableRowGroup.TableRowGroup, { hasIcons: false, children: closure_1_20(Card.Card, obj3) });
+  items1[1] = tmp15Result2;
+  const obj11 = { hasIcons: false, children: closure_20(Card, obj3) };
+  return closure_19(TableRowGroup, obj11);
 });
-ReactCompilerGating = fn(558);
-let obj6 = { marginBottom: nativeDefault.space.PX_8 };
-size = fn(2);
-let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouAccountActionSheet.tsx");
-
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((statusOnly) => {
-  const cResult = c.c(33);
+const memo = react.memo;
+ReactCompilerGating = ReactCompilerGating_mod;
+const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((statusOnly) => {
+  let canUseMultiAccountMobile;
+  let isDeveloper;
+  let stringResult;
+  let tmp10;
+  let tmp11;
+  let tmp5;
+  let tmp6;
+  const obj = react2;
+  const cResult = obj.c(33);
   statusOnly = statusOnly.statusOnly;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [MultiAccountStore];
@@ -1214,208 +1411,184 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((status
   } else {
     [tmp5, tmp6] = cResult;
   }
-  const stateFromStores = initialize.useStateFromStores(tmp5, tmp6);
-  let tmp9 = importDefault;
-  const tmp10 = useDesignToggleDefault("theme_setting_in_account_sheet");
+  const tmpResult = get_initialized;
+  const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
+  const tmp9 = useDesignToggleDefault("theme_setting_in_account_sheet");
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [DeveloperExperimentStore];
     class T {
       constructor() {
-        return closure_1_11.isDeveloper;
+        return isDeveloper.isDeveloper;
       }
     }
     cResult[2] = items1;
     cResult[3] = T;
-    let tmp12 = T;
-    let tmp11 = items1;
+    tmp11 = T;
+    tmp10 = items1;
   } else {
-    tmp11 = cResult[2];
-    tmp12 = cResult[3];
+    tmp10 = cResult[2];
+    tmp11 = cResult[3];
   }
-  const tmpResult = initialize;
-  const stateFromStores1 = initialize.useStateFromStores(tmp11, tmp12);
-  const tmpResult3 = initialize;
-  const manaTypeConsolidationExperiment = ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("YouAccountActionSheetDeveloperTools");
+  const tmpResult3 = get_initialized;
+  const stateFromStores1 = tmpResult3.useStateFromStores(tmp10, tmp11);
+  const tmpResult4 = ManaTypeConsolidationExperiment;
+  const manaTypeConsolidationExperiment = tmpResult4.useManaTypeConsolidationExperiment("YouAccountActionSheetDeveloperTools");
   if (cResult[4] === stateFromStores) {
-    if (cResult[5] === tmp4) {
-      if (cResult[7] !== cResult[6]) {
-        { title: null }.title = tmp16;
-        class T {
-          constructor() {
-            return closure_1_11.isDeveloper;
-          }
+    let tmp15;
+    let tmp17;
+    let tmp20;
+    let tmp26;
+    let tmp25;
+    let tmp24;
+    if (cResult[5] === (undefined !== statusOnly && statusOnly)) {
+      tmp15 = cResult[6];
+    }
+    if (cResult[7] !== tmp15) {
+      class T {
+        constructor() {
+          return isDeveloper.isDeveloper;
         }
-        cResult[7] = tmp16;
-        cResult[8] = tmp21;
-        let tmp19 = tmp21;
-        const obj2 = { title: null };
-      } else {
-        tmp19 = cResult[8];
       }
-      if (cResult[9] !== tmp10) {
-        let tmp23 = tmp10;
-        if (tmp10) {
-          tmp23 = closure_1_19(closure_25, {});
+      cResult[7] = tmp15;
+      cResult[8] = tmp19;
+      tmp17 = tmp19;
+    } else {
+      tmp17 = cResult[8];
+    }
+    if (cResult[9] !== tmp9) {
+      const tmp21 = tmp9 && closure_19(closure_25, {});
+      class T {
+        constructor() {
+          return isDeveloper.isDeveloper;
+        }
+      }
+      cResult[10] = tmp21;
+      tmp20 = tmp21;
+    } else {
+      tmp20 = cResult[10];
+    }
+    class T {
+      constructor() {
+        return isDeveloper.isDeveloper;
+      }
+    }
+    if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+      const tmp29 = closure_19(closure_24, {});
+      class T {
+        constructor() {
+          return isDeveloper.isDeveloper;
+        }
+      }
+      const tmp30 = closure_19(FocusModeSetting, {});
+      const tmp32 = closure_19(closure_29, {});
+      cResult[11] = tmp30;
+      cResult[12] = tmp32;
+      cResult[13] = tmp29;
+      tmp26 = tmp29;
+      tmp25 = tmp32;
+      tmp24 = tmp30;
+    } else {
+      tmp24 = cResult[11];
+      tmp25 = cResult[12];
+      tmp26 = cResult[13];
+    }
+    if (cResult[14] === stateFromStores) {
+      let tmp33;
+      if (cResult[15] === (undefined !== statusOnly && statusOnly)) {
+        tmp33 = cResult[16];
+      }
+      if (cResult[17] === stateFromStores1) {
+        let tmp37;
+        if (cResult[18] === (undefined !== statusOnly && statusOnly)) {
+          tmp37 = cResult[19];
+        }
+        if (cResult[20] === stateFromStores1) {
+          if (cResult[21] === manaTypeConsolidationExperiment) {
+            let tmp39;
+            if (cResult[22] === (undefined !== statusOnly && statusOnly)) {
+              tmp39 = cResult[23];
+            }
+            if (cResult[24] === tmp33) {
+              if (cResult[25] === tmp37) {
+                if (cResult[26] === tmp39) {
+                  let tmp41;
+                  if (cResult[27] === tmp20) {
+                    tmp41 = cResult[28];
+                  }
+                  if (cResult[29] === stateFromStores) {
+                    if (cResult[30] === tmp41) {
+                      let tmp45;
+                      if (cResult[31] === tmp17) {
+                        tmp45 = cResult[32];
+                      }
+                      return tmp45;
+                    }
+                  }
+                  class T {
+                    constructor() {
+                      return isDeveloper.isDeveloper;
+                    }
+                  }
+                  tmp47[0] = stateFromStores;
+                  tmp47[1] = tmp17;
+                  tmp47[3] = tmp41;
+                  const tmp48 = closure_19(ActionSheet2.ActionSheet, tmp47);
+                  cResult[29] = stateFromStores;
+                  cResult[30] = tmp41;
+                  cResult[31] = tmp17;
+                  cResult[32] = tmp48;
+                  tmp45 = tmp48;
+                }
+              }
+            }
+            class T {
+              constructor() {
+                return isDeveloper.isDeveloper;
+              }
+            }
+            const items2 = [tmp20, tmp26, tmp24, tmp25, tmp33, tmp37, tmp39];
+            tmp43[1] = items2;
+            const tmp44 = closure_20(Stack_Stack.Stack, tmp43);
+            cResult[24] = tmp33;
+            cResult[25] = tmp37;
+            cResult[26] = tmp39;
+            cResult[27] = tmp20;
+            cResult[28] = tmp44;
+            tmp41 = tmp44;
+          }
         }
         class T {
           constructor() {
-            return closure_1_11.isDeveloper;
+            return isDeveloper.isDeveloper;
           }
         }
-        cResult[10] = tmp23;
-        let tmp22 = tmp23;
-      } else {
-        tmp22 = cResult[10];
+        cResult[20] = stateFromStores1;
+        cResult[21] = manaTypeConsolidationExperiment;
+        cResult[22] = undefined !== statusOnly && statusOnly;
+        cResult[23] = !(undefined !== statusOnly && statusOnly) && stateFromStores1;
+        tmp39 = tmp40;
       }
       class T {
         constructor() {
-          return closure_1_11.isDeveloper;
+          return isDeveloper.isDeveloper;
         }
       }
-      if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp31 = closure_1_19(closure_24, {});
-        class T {
-          constructor() {
-            return closure_1_11.isDeveloper;
-          }
-        }
-        const tmp32 = closure_1_19(FocusModeSetting, {});
-        const tmp34 = closure_1_19(closure_29, {});
-        cResult[11] = tmp32;
-        cResult[12] = tmp34;
-        cResult[13] = tmp31;
-        let tmp28 = tmp31;
-        let tmp27 = tmp34;
-        let tmp26 = tmp32;
-      } else {
-        tmp26 = cResult[11];
-        tmp27 = cResult[12];
-        tmp28 = cResult[13];
-      }
-      if (cResult[14] === stateFromStores) {
-        if (cResult[15] === tmp4) {
-          let tmp35 = cResult[16];
-        }
-        if (cResult[17] === stateFromStores1) {
-          if (cResult[18] === tmp4) {
-            let tmp39 = cResult[19];
-          }
-          if (cResult[20] === stateFromStores1) {
-            if (cResult[21] === manaTypeConsolidationExperiment) {
-              if (cResult[22] === tmp4) {
-                let tmp42 = cResult[23];
-              }
-              if (cResult[24] === tmp35) {
-                if (cResult[25] === tmp39) {
-                  if (cResult[26] === tmp42) {
-                    if (cResult[27] === tmp22) {
-                      let tmp50 = cResult[28];
-                    }
-                    if (cResult[29] === stateFromStores) {
-                      if (cResult[30] === tmp50) {
-                        if (cResult[31] === tmp19) {
-                          let tmp54 = cResult[32];
-                        }
-                        return tmp54;
-                      }
-                    }
-                    class T {
-                      constructor() {
-                        return closure_1_11.isDeveloper;
-                      }
-                    }
-                    tmp56[0] = stateFromStores;
-                    tmp56[1] = tmp19;
-                    tmp56[3] = tmp50;
-                    const tmp57 = closure_1_19(ActionSheet.ActionSheet, tmp56);
-                    cResult[29] = stateFromStores;
-                    cResult[30] = tmp50;
-                    cResult[31] = tmp19;
-                    cResult[32] = tmp57;
-                    tmp54 = tmp57;
-                  }
-                }
-              }
-              class T {
-                constructor() {
-                  return closure_1_11.isDeveloper;
-                }
-              }
-              const items2 = [tmp22, tmp28, tmp26, tmp27, tmp35, tmp39, tmp42];
-              tmp52[1] = items2;
-              const tmp53 = closure_1_20(Stack_Stack.Stack, tmp52);
-              cResult[24] = tmp35;
-              cResult[25] = tmp39;
-              cResult[26] = tmp42;
-              cResult[27] = tmp22;
-              cResult[28] = tmp53;
-              tmp50 = tmp53;
-            }
-          }
-          class T {
-            constructor() {
-              return closure_1_11.isDeveloper;
-            }
-          }
-          if (!!tmp4) {
-            cResult[20] = stateFromStores1;
-            class T {
-              constructor() {
-                return closure_1_11.isDeveloper;
-              }
-            }
-            cResult[22] = tmp4;
-            cResult[23] = tmp43;
-            tmp42 = tmp43;
-          } else if (manaTypeConsolidationExperiment) {
-            const obj3 = { children: null };
-            class T {
-              constructor() {
-                return closure_1_11.isDeveloper;
-              }
-            }
-            const items3 = [closure_1_19(closure_22, { children: "Developer Tools" }), ];
-            tmp9 = DevToolsContentDefault;
-            items3[1] = closure_1_19(tmp9, { embedded: true });
-            obj3.children = items3;
-            let tmp45 = closure_1_20(hasOwnProperty, obj3);
-          } else {
-            tmp45 = closure_1_19(DevToolsContentDefault, { title: "Developer Tools", embedded: true });
-          }
-        }
-        let tmp40 = !tmp4;
-        class T {
-          constructor() {
-            return closure_1_11.isDeveloper;
-          }
-        }
-        if (tmp40) {
-          tmp40 = closure_1_19(YouSwitchClientsRadioGroupDefault, {});
-        }
-        cResult[17] = stateFromStores1;
-        cResult[18] = tmp4;
-        cResult[19] = tmp40;
-        tmp39 = tmp40;
-      }
-      let tmp36 = !tmp4;
-      if (!tmp4) {
-        tmp36 = stateFromStores;
-      }
-      if (tmp36) {
-        tmp36 = closure_1_19(closure_27, {});
-      }
-      cResult[14] = stateFromStores;
-      cResult[15] = tmp4;
-      cResult[16] = tmp36;
-      tmp35 = tmp36;
+      cResult[17] = stateFromStores1;
+      cResult[18] = undefined !== statusOnly && statusOnly;
+      cResult[19] = !(undefined !== statusOnly && statusOnly) && stateFromStores1;
+      tmp37 = tmp38;
     }
+    const tmp34 = !tmp4 && stateFromStores && closure_19(closure_27, {});
+    cResult[14] = stateFromStores;
+    cResult[15] = undefined !== statusOnly && statusOnly;
+    cResult[16] = tmp34;
+    tmp33 = tmp34;
   }
-  const intl = util.intl;
+  const intl = intl6.intl;
   const string = intl.string;
-  let t = util.t;
+  const t = intl6.t;
   if (undefined !== statusOnly && statusOnly) {
-    t = t["3Uj+2p"];
-    let stringResult = string(t);
+    stringResult = string(t["3Uj+2p"]);
   } else if (stateFromStores) {
     stringResult = string(t["ldCE/p"]);
   } else {
@@ -1424,72 +1597,67 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((status
   cResult[4] = stateFromStores;
   cResult[5] = undefined !== statusOnly && statusOnly;
   cResult[6] = stringResult;
-  const tmpResult4 = ManaTypeConsolidationExperiment;
+  tmp15 = stringResult;
 }) : ((statusOnly) => {
+  let BottomSheetTitleHeader;
+  let Stack;
+  let canUseMultiAccountMobile;
+  let isDeveloper;
+  let items2;
+  let items3;
+  let stringResult;
   let flag = statusOnly.statusOnly;
   if (flag === undefined) {
     flag = false;
   }
-  let tmp8Result6 = dependencyMap;
   const items = [MultiAccountStore];
-  const stateFromStores = initialize.useStateFromStores(items, () => canUseMultiAccountMobile.getCanUseMultiAccountMobile());
-  let tmp4 = importDefault;
+  const obj = get_initialized;
+  const stateFromStores = obj.useStateFromStores(items, () => canUseMultiAccountMobile.getCanUseMultiAccountMobile());
   const tmp5 = useDesignToggleDefault("theme_setting_in_account_sheet");
   const items1 = [DeveloperExperimentStore];
-  const stateFromStores1 = initialize.useStateFromStores(items1, () => isDeveloper.isDeveloper);
-  const manaTypeConsolidationExperiment = ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("YouAccountActionSheetDeveloperTools");
-  const obj4 = { startExpanded: stateFromStores, header: null, showGradient: true, children: null };
-  const intl = util.intl;
+  const obj2 = get_initialized;
+  const stateFromStores1 = obj2.useStateFromStores(items1, () => isDeveloper.isDeveloper);
+  const obj3 = ManaTypeConsolidationExperiment;
+  const manaTypeConsolidationExperiment = obj3.useManaTypeConsolidationExperiment("YouAccountActionSheetDeveloperTools");
+  const obj4 = { startExpanded: stateFromStores, header: closure_19(BottomSheetTitleHeader, { title: stringResult }), showGradient: true, children: closure_20(Stack, { spacing: 24, children: items2 }) };
+  const ActionSheet = ActionSheet2.ActionSheet;
+  BottomSheetTitleHeader = BottomSheetTitleHeader2.BottomSheetTitleHeader;
+  const intl = intl6.intl;
   const string = intl.string;
-  const t = util.t;
+  const t = intl6.t;
   if (flag) {
-    let stringResult = string(t["3Uj+2p"]);
+    stringResult = string(t["3Uj+2p"]);
   } else if (stateFromStores) {
     stringResult = string(t["ldCE/p"]);
   } else {
     stringResult = string(t["qP/i6k"]);
   }
-  obj4.header = closure_1_19(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: stringResult });
   let tmp8Result = tmp5;
+  Stack = Stack_Stack.Stack;
   if (tmp5) {
-    tmp8Result = closure_1_19(closure_25, {});
+    tmp8Result = closure_19(closure_25, {});
   }
-  const items2 = [tmp8Result, closure_1_19(closure_24, {}), closure_1_19(FocusModeSetting, {}), closure_1_19(closure_29, {}), , , ];
-  let tmp8Result4 = !flag;
-  if (!flag) {
-    tmp8Result4 = stateFromStores;
+  items2 = [tmp8Result, closure_19(closure_24, {}), closure_19(FocusModeSetting, {}), closure_19(closure_29, {}), , , ];
+  items2[4] = !flag && stateFromStores && closure_19(closure_27, {});
+  const tmp8Result2 = !flag && stateFromStores && closure_19(closure_27, {});
+  items2[5] = !flag && stateFromStores1 && closure_19(YouSwitchClientsRadioGroupDefault, {});
+  let tmp16 = !flag && stateFromStores1;
+  !flag && stateFromStores1 && closure_19(YouSwitchClientsRadioGroupDefault, {});
+  if (tmp16) {
+    let tmp8Result3;
+    if (manaTypeConsolidationExperiment) {
+      const obj5 = { children: items3 };
+      items3 = [closure_19(closure_22, { children: "Developer Tools" }), closure_19(DevToolsContentDefault, { embedded: true })];
+      tmp8Result3 = closure_20(hasOwnProperty, obj5);
+    } else {
+      tmp8Result3 = closure_19(DevToolsContentDefault, { title: "Developer Tools", embedded: true });
+    }
+    tmp16 = tmp8Result3;
   }
-  if (tmp8Result4) {
-    tmp8Result4 = closure_1_19(closure_27, {});
-  }
-  items2[4] = tmp8Result4;
-  let tmp8Result5 = !flag;
-  if (!flag) {
-    tmp8Result5 = stateFromStores1;
-  }
-  if (tmp8Result5) {
-    tmp8Result5 = closure_1_19(YouSwitchClientsRadioGroupDefault, {});
-  }
-  items2[5] = tmp8Result5;
-  let tmp16 = !flag;
-  if (!flag) {
-    tmp16 = stateFromStores1;
-  }
-  if (!tmp16) {
-    const obj5 = { spacing: 24, children: null };
-    items2[6] = tmp16;
-    obj5.children = items2;
-    obj4.children = closure_1_20(Stack_Stack.Stack, obj5);
-    return closure_1_19(ActionSheet.ActionSheet, obj4);
-  } else if (manaTypeConsolidationExperiment) {
-    const obj6 = { children: null };
-    const items3 = [closure_1_19(closure_22, { children: "Developer Tools" }), ];
-    tmp4 = DevToolsContentDefault;
-    tmp8Result6 = closure_1_19(tmp4, { embedded: true });
-    items3[1] = tmp8Result6;
-    obj6.children = items3;
-    let tmp8Result7 = closure_1_20(hasOwnProperty, obj6);
-  } else {
-    tmp8Result7 = closure_1_19(DevToolsContentDefault, { title: "Developer Tools", embedded: true });
-  }
+  items2[6] = tmp16;
+  return closure_19(ActionSheet, obj4);
 }));
+size = size_mod;
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouAccountActionSheet.tsx");
+
+export default memoResult;

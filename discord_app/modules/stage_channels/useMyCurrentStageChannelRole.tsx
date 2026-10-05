@@ -4,21 +4,25 @@
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import StageChannelRoleStore from "StageChannelRoleStore" /* 5578 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/stage_channels/useMyCurrentStageChannelRole.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let closure_0;
+  let first;
+  let tmp8;
+  let tmp9;
   _require = arg0;
-  const cResult = require("c").c(4);
+  const obj = require("react");
+  const cResult = obj.c(4);
+  const tmp = _require;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AuthenticationStore, SelectedChannelStore, StageChannelRoleStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -35,19 +39,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[1] = arg0;
     cResult[2] = fn;
     cResult[3] = items1;
-    let tmp9 = items1;
-    let tmp8 = fn;
+    tmp9 = items1;
+    tmp8 = fn;
   } else {
     tmp8 = cResult[2];
     tmp9 = cResult[3];
   }
-  const obj = require("c");
-  return require("initialize").useStateFromStores(first, tmp8, tmp9);
+  const tmpResult = tmp(504);
+  return tmpResult.useStateFromStores(first, tmp8, tmp9);
 }) : ((arg0) => {
+  let closure_0;
   _require = arg0;
   const items = [AuthenticationStore, SelectedChannelStore, StageChannelRoleStore];
   const items1 = [arg0];
-  return require("initialize").useStateFromStores(items, () => {
+  const obj = require("get initialized");
+  return obj.useStateFromStores(items, () => {
     const id = AuthenticationStore.getId();
     let permissionsForUser = null;
     if (SelectedChannelStore.getVoiceChannelId() === closure_0) {
@@ -56,3 +62,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     return permissionsForUser;
   }, items1);
 });
+const result = size.fileFinishedImporting("modules/stage_channels/useMyCurrentStageChannelRole.tsx");
+
+export default tmp2;

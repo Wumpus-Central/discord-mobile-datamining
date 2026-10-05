@@ -1,8 +1,8 @@
 // === Module 15823: VideoBackgroundSetting ===
 
 // Module 15823 (VideoBackgroundSetting)
-import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
+import react from "react" /* 576 */;
+import intl2 from "intl" /* 1126 */;
 import SettingsConstants from "SettingsConstants" /* 7634 */;
 import applyBackgroundOption from "applyBackgroundOption" /* 9312 */;
 import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 9314 */;
@@ -14,62 +14,61 @@ import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import SettingBuilders from "SettingBuilders" /* 11129 */;
 import size from "module_2" /* 2 */;
 
+let c3;
+let closure_4;
+let hasOwnProperty;
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
 ({ AnalyticsSections: c3, NOOP: closure_4, AnalyticsPages: hasOwnProperty } = Constants);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(2);
-  const lastUsedVideoBackgroundOption = LastUsedVideoBackgroundOption.useLastUsedVideoBackgroundOption();
+  let tmp5;
+  const obj = react;
+  const cResult = obj.c(2);
+  const obj2 = LastUsedVideoBackgroundOption;
+  const lastUsedVideoBackgroundOption = obj2.useLastUsedVideoBackgroundOption();
   if (cResult[0] !== lastUsedVideoBackgroundOption) {
-    const result = VideoBackgroundOptions.toVideoBackgroundRadioValue(lastUsedVideoBackgroundOption);
+    const tmpResult = VideoBackgroundOptions;
+    const result = tmpResult.toVideoBackgroundRadioValue(lastUsedVideoBackgroundOption);
     cResult[0] = lastUsedVideoBackgroundOption;
     cResult[1] = result;
-    let tmp5 = result;
-    const tmpResult = VideoBackgroundOptions;
+    tmp5 = result;
   } else {
     tmp5 = cResult[1];
   }
   return "" + tmp5;
 }) : (() => {
-  const lastUsedVideoBackgroundOption = LastUsedVideoBackgroundOption.useLastUsedVideoBackgroundOption();
-  return "" + VideoBackgroundOptions.toVideoBackgroundRadioValue(lastUsedVideoBackgroundOption);
+  const obj = LastUsedVideoBackgroundOption;
+  const lastUsedVideoBackgroundOption = obj.useLastUsedVideoBackgroundOption();
+  const obj2 = VideoBackgroundOptions;
+  return "" + obj2.toVideoBackgroundRadioValue(lastUsedVideoBackgroundOption);
 });
-const radio = SettingBuilders.createRadio({
+let obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t.lZTUPs);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.lZTUPs);
   },
-  parent: SettingsConstants.MobileUserSettings.VOICE,
+  parent: MobileUserSettings.VOICE,
   usePredicate() {
     return useIsVideoBackgroundEnabledDefault("VideoBackgroundSetting");
   },
-  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-    const cResult = c.c(2);
-    const lastUsedVideoBackgroundOption = LastUsedVideoBackgroundOption.useLastUsedVideoBackgroundOption();
-    if (cResult[0] !== lastUsedVideoBackgroundOption) {
-      const result = VideoBackgroundOptions.toVideoBackgroundRadioValue(lastUsedVideoBackgroundOption);
-      cResult[0] = lastUsedVideoBackgroundOption;
-      cResult[1] = result;
-      let tmp5 = result;
-      const tmpResult = VideoBackgroundOptions;
-    } else {
-      tmp5 = cResult[1];
-    }
-    return "" + tmp5;
-  }) : (() => {
-    const lastUsedVideoBackgroundOption = LastUsedVideoBackgroundOption.useLastUsedVideoBackgroundOption();
-    return "" + VideoBackgroundOptions.toVideoBackgroundRadioValue(lastUsedVideoBackgroundOption);
-  }),
+  useValue: tmp3,
   onValueChange: function onVideoBackgroundSettingChange(arg0) {
+    let obj4;
+    const fromVideoBackgroundRadioValue = VideoBackgroundOptions.fromVideoBackgroundRadioValue;
+    VideoBackgroundOptions;
     const obj = VideoBackgroundOptions;
-    const result = obj.fromVideoBackgroundRadioValue(VideoBackgroundOptions.parseVideoBackgroundRadioValue(arg0));
-    const obj4 = { location: { page: constants2.USER_SETTINGS, section: constants.SETTINGS_VOICE_AND_VIDEO } };
-    const result1 = applyBackgroundOption.applyBackgroundOptionLive(result, obj4);
-    result1.catch(React4);
-    const obj5 = { page: constants2.USER_SETTINGS, section: constants.SETTINGS_VOICE_AND_VIDEO };
-    const result2 = VideoBackgroundActionCreators.saveLastUsedBackgroundOption(result);
-    result2.catch(React4);
+    const result = fromVideoBackgroundRadioValue(obj.parseVideoBackgroundRadioValue(arg0));
+    const obj3 = { location: obj4 };
+    obj4 = { page: hasOwnProperty.USER_SETTINGS, section: constants.SETTINGS_VOICE_AND_VIDEO };
+    const obj2 = applyBackgroundOption;
+    const result1 = obj2.applyBackgroundOptionLive(result, obj3);
+    result1.catch(React3);
+    const obj5 = VideoBackgroundActionCreators;
+    const result2 = obj5.saveLastUsedBackgroundOption(result);
+    result2.catch(React3);
   },
   useOptions: VideoBackgroundOptions.useVideoBackgroundRadioOptions
-});
+};
+const radio = SettingBuilders.createRadio(obj);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/VideoBackgroundSetting.tsx");
 
 export default radio;

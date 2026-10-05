@@ -1,33 +1,36 @@
 // === Module 12202: GuildPowerupAnalytics ===
 
 // Module 12202 (GuildPowerupAnalytics)
+import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, dependencyMap;
 
-const require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/powerups/analytics/GuildPowerupAnalytics.tsx");
-
-export const ModalType = { DETAIL: "Boost Perk Shop Details", DEACTIVATE: "Boost Perk Shop Disable" };
-export const useLogPowerupModalOpened = ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id, skuId, type) => {
+const AnalyticEvents = Constants.AnalyticEvents;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id, skuId, type) => {
   _require = guild_id;
   dependencyMap = type;
-  const cResult = require("c").c(5);
+  let obj = require("react");
+  const cResult = obj.c(5);
   if (cResult[0] === guild_id) {
     if (cResult[1] === skuId.skuId) {
+      let tmp2;
+      let tmp3;
       if (cResult[2] === type) {
-        let tmp2 = cResult[3];
-        let tmp3 = cResult[4];
+        tmp2 = cResult[3];
+        tmp3 = cResult[4];
       }
-      const effect = noop.useEffect(tmp2, tmp3);
+      const effect = react.useEffect(tmp2, tmp3);
     }
   }
   const fn = function l() {
-    AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type, sku_id: skuId.skuId, guild_id });
+    const obj = AnalyticsUtilsDefault;
+    const obj2 = { type, sku_id: skuId.skuId, guild_id };
+    obj.track(AnalyticEvents.OPEN_MODAL, obj2);
   };
   const items = [type, guild_id, skuId.skuId];
   cResult[0] = guild_id;
@@ -37,10 +40,15 @@ export const useLogPowerupModalOpened = ReactCompilerGating.isReactCompilerEnabl
   cResult[4] = items;
   tmp3 = items;
   tmp2 = fn;
-  const obj = require("c");
 }) : ((guild_id, skuId, type) => {
   const items = [type, guild_id, skuId.skuId];
-  const effect = noop.useEffect(() => {
-    AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type, sku_id: skuId.skuId, guild_id });
+  const effect = react.useEffect(() => {
+    const obj = AnalyticsUtilsDefault;
+    const obj2 = { type, sku_id: skuId.skuId, guild_id };
+    obj.track(AnalyticEvents.OPEN_MODAL, obj2);
   }, items);
 });
+const result = size.fileFinishedImporting("modules/premium/powerups/analytics/GuildPowerupAnalytics.tsx");
+
+export const ModalType = { DETAIL: "Boost Perk Shop Details", DEACTIVATE: "Boost Perk Shop Disable" };
+export const useLogPowerupModalOpened = tmp2;

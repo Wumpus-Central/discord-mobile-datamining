@@ -9,8 +9,11 @@ const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/utils/PremiumNitroHomeUtils.tsx");
 
 export const trackIfScrolledToBottom = function trackIfScrolledToBottom(trackedType) {
+  let hasTrackedScrolledToBottom;
+  let nativeEvent;
   ({ nativeEvent, hasTrackedScrolledToBottom } = trackedType);
   let current = hasTrackedScrolledToBottom.current;
+  trackedType = trackedType.trackedType;
   if (!current) {
     const _Math = Math;
     const _Math2 = Math;
@@ -20,8 +23,9 @@ export const trackIfScrolledToBottom = function trackIfScrolledToBottom(trackedT
     current = sum < Math.floor(tmp3.height);
   }
   if (!current) {
-    const obj2 = { type: trackedType.trackedType };
-    AnalyticsUtilsDefault.track(AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, obj2);
+    const obj2 = { type: trackedType };
+    const obj = AnalyticsUtilsDefault;
+    obj.track(AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, obj2);
     hasTrackedScrolledToBottom.current = true;
   }
 };

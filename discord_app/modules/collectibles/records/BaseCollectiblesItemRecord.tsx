@@ -2,29 +2,33 @@
 
 // Module 1979 (BaseCollectiblesItemRecord)
 import Record from "Record" /* 1392 */;
+import size from "module_2" /* 2 */;
 
-const prototype = function BaseCollectiblesItemRecord(skuId) {
-  const tmp = new prototype(new.target);
-  tmp.skuId = skuId.skuId;
-  return tmp;
-}.prototype;
-class prototype extends tmp2 {
-}
-prototype["fromServer"] = function fromServer(sku_id) {
-  const merged = Object.assign({ sku_id: 0 });
-  const merged1 = Object.assign(sku_id, merged);
-  const obj = {};
-  const merged2 = Object.assign(merged1);
-  obj.skuId = sku_id.sku_id;
-  if (typeof prototype === "function") {
-    const tmp7 = new prototype(obj, merged1, merged);
-    tmp7.skuId = obj.skuId;
-    return tmp7;
-  } else {
-    throw new TypeError("Trying to call a non-function");
+let sku_id;
+
+class BaseCollectiblesItemRecord extends Record {
+  constructor(skuId) {
+    const tmp = new BaseCollectiblesItemRecord(new.target);
+    tmp.skuId = skuId.skuId;
+    return tmp;
   }
-};
-const size = fn(2);
+  static fromServer(sku_id) {
+    sku_id = sku_id.sku_id;
+    const merged = Object.assign({ sku_id: 0 });
+    const merged1 = Object.assign(sku_id, merged);
+    const obj = { skuId: sku_id };
+    const merged2 = Object.assign(merged1);
+    if (typeof BaseCollectiblesItemRecord === "function") {
+      const self = this;
+      const self2 = this;
+      const tmp5 = new BaseCollectiblesItemRecord(obj, merged1, merged);
+      tmp5.skuId = obj.skuId;
+      return tmp5;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  }
+}
 const result = size.fileFinishedImporting("modules/collectibles/records/BaseCollectiblesItemRecord.tsx");
 
-export default prototype;
+export default BaseCollectiblesItemRecord;

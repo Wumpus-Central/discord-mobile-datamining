@@ -1,29 +1,31 @@
 // === Module 6642: FormCheckmark ===
 
 // Module 6642 (FormCheckmark)
-import c from "c" /* 576 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 6628 */;
-import noop from "module_19" /* 19 */;
+import CheckmarkSmallIcon2 from "CheckmarkSmallIcon" /* 6628 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("design/void/Form/native/FormCheckmark.tsx");
+let selected;
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((selected) => {
-  const cResult = c.c(2);
+const jsx = Fragment.jsx;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((selected) => {
+  let tmp4;
+  const obj = react2;
+  const cResult = obj.c(2);
   selected = selected.selected;
   if (cResult[0] !== selected) {
     let tmp5 = null;
     if (selected) {
-      const obj2 = { color: nativeDefault.unsafe_rawColors.BRAND_500 };
-      tmp5 = jsx(CheckmarkSmallIcon.CheckmarkSmallIcon, { color: nativeDefault.unsafe_rawColors.BRAND_500 });
+      const CheckmarkSmallIcon = CheckmarkSmallIcon2.CheckmarkSmallIcon;
+      tmp5 = <CheckmarkSmallIcon color={nativeDefault.unsafe_rawColors.BRAND_500} />;
     }
     cResult[0] = selected;
     cResult[1] = tmp5;
-    let tmp4 = tmp5;
+    tmp4 = tmp5;
   } else {
     tmp4 = cResult[1];
   }
@@ -31,8 +33,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((selected) => {
 }) : ((selected) => {
   let tmp = null;
   if (selected.selected) {
-    const obj = { color: nativeDefault.unsafe_rawColors.BRAND_500 };
-    tmp = jsx(CheckmarkSmallIcon.CheckmarkSmallIcon, { color: nativeDefault.unsafe_rawColors.BRAND_500 });
+    const CheckmarkSmallIcon = CheckmarkSmallIcon2.CheckmarkSmallIcon;
+    tmp = <CheckmarkSmallIcon color={nativeDefault.unsafe_rawColors.BRAND_500} />;
   }
   return tmp;
 });
+const result = size.fileFinishedImporting("design/void/Form/native/FormCheckmark.tsx");
+
+export default tmp3;

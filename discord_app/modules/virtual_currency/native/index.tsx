@@ -8,8 +8,10 @@ import BalanceWidgetActionSheetDefault from "BalanceWidgetActionSheet" /* 11011 
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/virtual_currency/native/index.tsx");
+const BalanceWidgetPillButton_export = BalanceWidgetPillButton.BalanceWidgetPillButton;
+const BalanceCounter_export = BalanceCounter.BalanceCounter;
 
 export const BalanceWidgetPill = virtual_currency_BalanceWidgetPill.BalanceWidgetPill;
-export const BalanceWidgetPillButton = BalanceWidgetPillButton.BalanceWidgetPillButton;
-export const BalanceCounter = BalanceCounter.BalanceCounter;
+export { BalanceWidgetPillButton_export as BalanceWidgetPillButton };
+export { BalanceCounter_export as BalanceCounter };
 export const BalanceWidgetActionSheet = BalanceWidgetActionSheetDefault;

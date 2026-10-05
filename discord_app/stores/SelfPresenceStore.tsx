@@ -2,11 +2,12 @@
 
 // Module 5438 (SelfPresenceStore)
 import _modDef12 from "module_12" /* 12 */;
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _modDef1342 from "module_1342" /* 1342 */;
 import FlagUtils from "FlagUtils" /* 1390 */;
 import UserSettings from "UserSettings" /* 2028 */;
+import PresenceStore2 from "PresenceStore" /* 4930 */;
 import LibraryApplicationUtils from "LibraryApplicationUtils" /* 6904 */;
 import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10625 */;
 import SpotifyStore from "SpotifyStore" /* 5439 */;
@@ -15,10 +16,17 @@ import DetectableGameStore from "DetectableGameStore" /* 2024 */;
 import IdleStore from "IdleStore" /* 5567 */;
 import LibraryApplicationStore from "LibraryApplicationStore" /* 6902 */;
 import LocalActivityStore from "LocalActivityStore" /* 11116 */;
-import PresenceStore from "PresenceStore" /* 4930 */;
 import SessionsStore from "SessionsStore" /* 4908 */;
+import Constants from "Constants" /* 1085 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+const PresenceStore = PresenceStore2;
+
+let IDLE;
+let closure_14;
+let closure_15;
+let closure_18;
+let map1;
 function filterPlayingActivities(arg0) {
   if (0 === arg0.length) {
     return arg0;
@@ -28,11 +36,11 @@ function filterPlayingActivities(arg0) {
     const iter = arg0[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let tmp4 = nextResult;
+      let tmp5 = nextResult;
       if (nextResult.type === constants2.PLAYING) {
-        let arr = items1.push(tmp4);
+        let arr = items1.push(tmp5);
       } else {
-        let arr2 = items.push(tmp4);
+        let arr2 = items.push(tmp5);
       }
       continue;
     }
@@ -42,42 +50,49 @@ function filterPlayingActivities(arg0) {
       return arg0;
     } else {
       const items2 = [];
-      HermesBuiltin.arraySpread(items1, 0);
+      HermesBuiltin.arraySpread(items2, items1, 0);
       const items3 = [];
-      items3[HermesBuiltin.arraySpread(items, 0)] = items2.sort(sortActivity)[0];
+      items3[HermesBuiltin.arraySpread(items3, items, 0)] = items2.sort(sortActivity)[0];
       return items3.sort(sortActivity);
     }
   }
 }
 function shouldShowActivity(flags) {
   num = flags.flags;
+  const hasFlag = FlagUtils.hasFlag;
+  FlagUtils;
   if (num == null) {
     num = 0;
   }
-  if (obj.hasFlag(num, constants.CONTEXTLESS)) {
+  if (hasFlag(num, map1.CONTEXTLESS)) {
     return true;
   } else {
     const type = flags.type;
     if (constants2.LISTENING === type) {
+      let shouldShowActivityResult;
       if (isListeningOnSpotifyDefault(flags)) {
-        let shouldShowActivityResult = SpotifyStore.shouldShowActivity();
+        shouldShowActivityResult = SpotifyStore.shouldShowActivity();
       } else {
         shouldShowActivityResult = null != flags.application_id;
         if (shouldShowActivityResult) {
-          shouldShowActivityResult = LibraryApplicationUtils.shouldShareApplicationActivity(flags.application_id, LibraryApplicationStore);
+          const application_id3 = flags.application_id;
           const tmpResult = LibraryApplicationUtils;
+          shouldShowActivityResult = tmpResult.shouldShareApplicationActivity(application_id3, LibraryApplicationStore);
         }
       }
       return shouldShowActivityResult;
     } else if (constants2.PLAYING === type) {
+      let result;
       if (null != flags.application_id) {
-        let result = LibraryApplicationUtils.shouldShareApplicationActivity(flags.application_id, LibraryApplicationStore);
+        const application_id2 = flags.application_id;
         const tmpResult4 = LibraryApplicationUtils;
+        result = tmpResult4.shouldShareApplicationActivity(application_id2, LibraryApplicationStore);
       } else {
         const searchGamesByNameResult = DetectableGameStore.searchGamesByName(flags.name);
         if (1 === searchGamesByNameResult.length) {
-          result = LibraryApplicationUtils.shouldShareApplicationActivity(searchGamesByNameResult[0], LibraryApplicationStore);
+          const first = searchGamesByNameResult[0];
           const tmpResult5 = LibraryApplicationUtils;
+          result = tmpResult5.shouldShareApplicationActivity(first, LibraryApplicationStore);
         } else {
           const ShowCurrentGame = UserSettings.ShowCurrentGame;
           result = ShowCurrentGame.getSetting();
@@ -90,23 +105,24 @@ function shouldShowActivity(flags) {
       }
       let result1 = null == flags.application_id;
       if (!result1) {
-        result1 = LibraryApplicationUtils.shouldShareApplicationActivity(flags.application_id, LibraryApplicationStore);
+        const application_id = flags.application_id;
         const tmpResult6 = LibraryApplicationUtils;
+        result1 = tmpResult6.shouldShareApplicationActivity(application_id, LibraryApplicationStore);
       }
       return result1;
     }
   }
-  obj = FlagUtils;
 }
 function handleUpdate() {
+  let ONLINE;
   num = IdleStore.getIdleSince();
   if (num == null) {
     num = 0;
   }
-  closure_22 = IdleStore.isAFK();
+  let closure_22 = IdleStore.isAFK();
   if (c23) {
     IDLE = closure_18;
-    let ONLINE = closure_18;
+    ONLINE = closure_18;
   } else if (c16) {
     const INVISIBLE = StatusTypes.INVISIBLE;
     IDLE = INVISIBLE;
@@ -119,11 +135,8 @@ function handleUpdate() {
     }
     IDLE = ONLINE;
   }
-  let tmp7 = ONLINE === StatusTypes.ONLINE;
-  if (tmp7) {
-    tmp7 = num > 0;
-  }
-  if (tmp7) {
+  const tmp9 = ONLINE === StatusTypes.ONLINE && num > 0;
+  if (tmp9) {
     IDLE = StatusTypes.IDLE;
   }
   if (!c23) {
@@ -133,7 +146,7 @@ function handleUpdate() {
     }
     let flag = false;
     if (!_modDef1342(found, found)) {
-      closure_21 = filterPlayingActivities(found);
+      let closure_21 = filterPlayingActivities(found);
       flag = true;
     }
     remoteActivities = SessionsStore.getRemoteActivities();
@@ -143,13 +156,13 @@ function handleUpdate() {
     hiddenActivities = SessionsStore.getHiddenActivities();
     if (flag) {
       const items = [];
-      const tmp12Result = _modDef12;
-      HermesBuiltin.arraySpread(remoteActivities.filter((type) => type.type !== constants.CUSTOM_STATUS), HermesBuiltin.arraySpread(found, 0));
-      const arraySpreadResult = HermesBuiltin.arraySpread(found, 0);
-      const tmp12ResultResult = tmp12Result(items.sort(sortActivity));
-      const iter = tmp12Result(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name);
-      closure_27 = filterPlayingActivities(tmp12Result(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name).value());
-      valueResult = tmp12Result(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name).value();
+      const tmp15Result = _modDef12;
+      const arraySpreadResult = HermesBuiltin.arraySpread(items, found, 0);
+      HermesBuiltin.arraySpread(items, remoteActivities.filter((type) => type.type !== constants.CUSTOM_STATUS), arraySpreadResult);
+      const tmp15ResultResult = tmp15Result(items.sort(sortActivity));
+      const iter = tmp15ResultResult.uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name);
+      valueResult = iter.value();
+      closure_27 = filterPlayingActivities(valueResult);
     }
   }
   found = [];
@@ -160,76 +173,77 @@ function handleConnectionOpen() {
   handleUpdate();
   const result = PresenceStore.setCurrentUserOnConnectionOpen(IDLE, valueResult);
 }
-const sortActivity = fn(4930).sortActivity;
-const Constants = fn(1085);
+const sortActivity = PresenceStore2.sortActivity;
 const StatusTypes = Constants.StatusTypes;
 ({ ActivityFlags: map1, ActivityTypes: closure_14, AppStates: closure_15 } = Constants);
 let c16 = false;
 ({ ONLINE: IDLE, UNKNOWN: closure_18 } = StatusTypes);
+let num = 0;
 let found = [];
 let activities = [];
 const afk = false;
 let c23 = true;
 let remoteActivities = Object.freeze([]);
 let hiddenActivities = Object.freeze([]);
+let valueResult = [];
 let closure_27 = [];
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class SelfPresenceStore extends Store {
+  initialize() {
+    this.waitFor(DetectableGameStore, IdleStore, LibraryApplicationStore, LocalActivityStore, PresenceStore, SessionsStore, SpotifyStore, UserSettingsProtoStore);
+    const items = [LocalActivityStore];
+    this.syncWith(items, handleUpdate);
+  }
+  getLocalPresence() {
+    return { status: IDLE, since: num, activities, afk };
+  }
+  getStatus() {
+    return IDLE;
+  }
+  getActivities() {
+    let flag = arg0;
+    if (arg0 === undefined) {
+      flag = true;
+    }
+    return flag ? closure_27 : activities;
+  }
+  getUnfilteredActivities() {
+    let flag = arg0;
+    if (arg0 === undefined) {
+      flag = true;
+    }
+    return flag ? valueResult : found;
+  }
+  getHiddenActivities() {
+    return hiddenActivities;
+  }
+  getPrimaryActivity() {
+    let flag = arg0;
+    if (arg0 === undefined) {
+      flag = true;
+    }
+    return this.getActivities(flag)[0];
+  }
+  getApplicationActivity(arg0) {
+    let closure_0 = arg0;
+    let flag = arg1;
+    if (arg1 === undefined) {
+      flag = true;
+    }
+    return this.findActivity((application_id) => application_id.application_id === closure_0, flag);
+  }
+  findActivity(cResult) {
+    let flag = arg1;
+    if (arg1 === undefined) {
+      flag = true;
+    }
+    activities = this.getActivities(flag);
+    return activities.find(cResult);
+  }
 }
 const prototype = SelfPresenceStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(DetectableGameStore, IdleStore, LibraryApplicationStore, LocalActivityStore, PresenceStore, SessionsStore, SpotifyStore, UserSettingsProtoStore);
-  const items = [LocalActivityStore];
-  this.syncWith(items, handleUpdate);
-};
-prototype["getLocalPresence"] = function getLocalPresence() {
-  return { status: IDLE, since: num, activities, afk };
-};
-prototype["getStatus"] = function getStatus() {
-  return IDLE;
-};
-prototype["getActivities"] = function getActivities() {
-  let flag = arg0;
-  if (arg0 === undefined) {
-    flag = true;
-  }
-  return flag ? closure_27 : closure_21;
-};
-prototype["getUnfilteredActivities"] = function getUnfilteredActivities() {
-  let flag = arg0;
-  if (arg0 === undefined) {
-    flag = true;
-  }
-  return flag ? valueResult : found;
-};
-prototype["getHiddenActivities"] = function getHiddenActivities() {
-  return hiddenActivities;
-};
-prototype["getPrimaryActivity"] = function getPrimaryActivity() {
-  let flag = arg0;
-  if (arg0 === undefined) {
-    flag = true;
-  }
-  return this.getActivities(flag)[0];
-};
-prototype["getApplicationActivity"] = function getApplicationActivity(arg0) {
-  closure_0 = arg0;
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = true;
-  }
-  return this.findActivity((application_id) => application_id.application_id === closure_0, flag);
-};
-prototype["findActivity"] = function findActivity(cResult) {
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = true;
-  }
-  activities = this.getActivities(flag);
-  return activities.find(cResult);
-};
 SelfPresenceStore.displayName = "SelfPresenceStore";
-const selfPresenceStore = new SelfPresenceStore(DispatcherDefault, {
+const obj = {
   START_SESSION: handleUpdate,
   CONNECTION_OPEN: function handleConnectionOpenTracked() {
     c23 = false;
@@ -268,15 +282,16 @@ const selfPresenceStore = new SelfPresenceStore(DispatcherDefault, {
   },
   APP_STATE_UPDATE: function handleAppStateUpdate(state) {
     if (state.state === constants3.ACTIVE) {
-      if (c16) {
+      const tmp = c16;
+      if (tmp) {
         c16 = false;
         handleUpdate();
       }
     }
     return false;
   }
-});
-const size = fn(2);
+};
+const selfPresenceStore = new SelfPresenceStore(DispatcherDefault, obj);
 let result = size.fileFinishedImporting("stores/SelfPresenceStore.tsx");
 
 export default selfPresenceStore;

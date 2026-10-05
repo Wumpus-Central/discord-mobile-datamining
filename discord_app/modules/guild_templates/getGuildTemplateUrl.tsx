@@ -20,5 +20,5 @@ export default function getGuildTemplateUrl() {
     const _HermesInternal = HermesInternal;
     str2 = "" + location.protocol;
   }
-  return "" + str2 + "//" + window.GLOBAL_ENV.GUILD_TEMPLATE_HOST + "/" + str;
+  return "" + str2 + "//" + GUILD_TEMPLATE_HOST + "/" + str;
 };

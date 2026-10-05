@@ -1,33 +1,32 @@
 // === Module 8362: useGameProfileHeroBackgroundURL ===
 
 // Module 8362 (useGameProfileHeroBackgroundURL)
-import c from "c" /* 576 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import react2 from "react" /* 576 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileHeroBackgroundURL.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((screenshotUrls, size) => {
-  const cResult = c.c(9);
-  let screenshotURL = globalThis;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((screenshotUrls, size) => {
+  let first;
+  const obj = react2;
+  const cResult = obj.c(9);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function s() {
       return Math.random();
     };
     cResult[0] = fn;
-    let first = fn;
+    first = fn;
   } else {
     first = cResult[0];
   }
-  const first1 = _slicedToArray(noop.useState(first), 1)[0];
+  const first1 = _slicedToArray(react.useState(first), 1)[0];
   if (cResult[1] === size) {
+    let tmp4;
     if (cResult[2] === screenshotUrls) {
-      let tmp5 = cResult[3];
+      tmp4 = cResult[3];
     }
-    if (null == tmp5) {
+    if (null == tmp4) {
       screenshotUrls = screenshotUrls.screenshotUrls;
       let num2;
       if (screenshotUrls != null) {
@@ -36,36 +35,42 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((screenshotUrls, 
       if (num2 == null) {
         num2 = 0;
       }
-      tmp5 = null;
+      tmp4 = null;
       if (0 !== num2) {
         if (cResult[4] === size) {
           if (cResult[5] === screenshotUrls) {
             if (cResult[6] === first1) {
+              let tmp7;
+              if (cResult[7] === num2) {
+                tmp7 = cResult[8];
+              }
+              tmp4 = tmp7;
             }
           }
         }
-        const _Math = screenshotURL.Math;
-        screenshotURL = screenshotUrls.getScreenshotURL(_Math.floor(first1 * num2), size);
+        const _Math = Math;
+        const screenshotURL = screenshotUrls.getScreenshotURL(Math.floor(first1 * num2), size);
         cResult[4] = size;
         cResult[5] = screenshotUrls;
         cResult[6] = first1;
         cResult[7] = num2;
         cResult[8] = screenshotURL;
+        tmp7 = screenshotURL;
       }
     }
-    return tmp5;
+    return tmp4;
   }
   const bannerURL = screenshotUrls.getBannerURL(size);
   cResult[1] = size;
   cResult[2] = screenshotUrls;
   cResult[3] = bannerURL;
-  tmp5 = bannerURL;
+  tmp4 = bannerURL;
 }) : ((arg0, arg1) => {
-  let bannerURL = arg0;
-  closure_1 = arg1;
-  const first = _slicedToArray(noop.useState(() => Math.random()), 1)[0];
+  let closure_0 = arg0;
+  let closure_1 = arg1;
+  const first = _slicedToArray(react.useState(() => Math.random()), 1)[0];
   const items = [arg1, arg0, first];
-  return noop.useMemo(() => {
+  return react.useMemo(() => {
     bannerURL = bannerURL.getBannerURL(closure_1);
     if (null != bannerURL) {
       return bannerURL;
@@ -87,3 +92,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((screenshotUrls, 
     }
   }, items);
 });
+const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileHeroBackgroundURL.tsx");
+
+export default tmp2;

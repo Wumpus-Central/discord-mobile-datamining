@@ -1,17 +1,24 @@
 // === Module 15078: AdvancedVoiceActivitySetting ===
 
 // Module 15078 (AdvancedVoiceActivitySetting)
-import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
+import get_initialized from "get initialized" /* 504 */;
+import react from "react" /* 576 */;
+import intl2 from "intl" /* 1126 */;
+import SettingsConstants from "SettingsConstants" /* 7634 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 9306 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import SettingBuilders from "SettingBuilders" /* 11129 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-fn(558);
-const ReactCompilerGating = fn(558);
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(2);
+  let advancedVoiceActivitySupported;
+  let tmp4;
+  let tmp5;
+  const obj = react;
+  const cResult = obj.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [MediaEngineStore];
     const fn = function o() {
@@ -24,14 +31,21 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  return initialize.useStateFromStores(tmp4, tmp5);
+  const tmpResult = get_initialized;
+  return tmpResult.useStateFromStores(tmp4, tmp5);
 }) : (() => {
+  let advancedVoiceActivitySupported;
   const items = [MediaEngineStore];
-  return initialize.useStateFromStores(items, () => advancedVoiceActivitySupported.isAdvancedVoiceActivitySupported());
+  const obj = get_initialized;
+  return obj.useStateFromStores(items, () => advancedVoiceActivitySupported.isAdvancedVoiceActivitySupported());
 });
-const SettingBuilders = fn(11129);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(2);
+  let modeOptions;
+  let tmp4;
+  let tmp5;
+  const obj = react;
+  const cResult = obj.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [MediaEngineStore];
     const fn = function o() {
@@ -44,47 +58,34 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  return initialize.useStateFromStores(tmp4, tmp5);
+  const tmpResult = get_initialized;
+  return tmpResult.useStateFromStores(tmp4, tmp5);
 }) : (() => {
+  let modeOptions;
   const items = [MediaEngineStore];
-  return initialize.useStateFromStores(items, () => modeOptions.getModeOptions().vadUseKrisp);
+  const obj = get_initialized;
+  return obj.useStateFromStores(items, () => modeOptions.getModeOptions().vadUseKrisp);
 });
-const toggle = SettingBuilders.createToggle({
+let obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t.BbESsg);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.BbESsg);
   },
-  parent: fn(7634).MobileUserSettings.VOICE,
-  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-    const cResult = c.c(2);
-    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const items = [MediaEngineStore];
-      const fn = function o() {
-        return modeOptions.getModeOptions().vadUseKrisp;
-      };
-      cResult[0] = items;
-      cResult[1] = fn;
-      tmp4 = items;
-      tmp5 = fn;
-    } else {
-      [tmp4, tmp5] = cResult;
-    }
-    return initialize.useStateFromStores(tmp4, tmp5);
-  }) : (() => {
-    const items = [MediaEngineStore];
-    return initialize.useStateFromStores(items, () => modeOptions.getModeOptions().vadUseKrisp);
-  }),
+  parent: MobileUserSettings.VOICE,
+  useValue: tmp3,
   onValueChange: function onAdvancedVoiceActivitySettingValueChange(vadUseKrisp) {
     const mode = MediaEngineStore.getMode();
-    AudioActionCreatorsDefault.setMode(mode, { vadUseKrisp });
+    const obj = AudioActionCreatorsDefault;
+    const obj2 = { vadUseKrisp };
+    obj.setMode(mode, obj2);
   },
   useDescription: function useAdvancedVoiceActivitySettingDescription() {
-    const intl = util.intl;
-    return intl.string(util.t.LoOB1F);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.LoOB1F);
   },
   usePredicate: tmp2
-});
-const size = fn(2);
+};
+const toggle = SettingBuilders.createToggle(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AdvancedVoiceActivitySetting.tsx");
 
 export default toggle;

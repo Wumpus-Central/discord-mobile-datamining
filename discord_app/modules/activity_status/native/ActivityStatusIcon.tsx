@@ -1,21 +1,25 @@
 // === Module 10615: ActivityStatusIcon ===
 
 // Module 10615 (ActivityStatusIcon)
-import c from "c" /* 576 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
 let closure_2 = ["icon", "style"];
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+const jsx = Fragment.jsx;
 let closure_5 = createStyles.createStyles({ icon: { flexShrink: 0 } });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/activity_status/native/ActivityStatusIcon.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(11);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let icon;
+  let style;
+  let tmp2;
+  let tmp3;
+  let tmp4;
+  const obj = react2;
+  const cResult = obj.c(11);
   if (cResult[0] !== arg0) {
     ({ icon, style } = arg0);
     const tmp7 = _objectWithoutProperties(arg0, closure_2);
@@ -23,9 +27,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[1] = icon;
     cResult[2] = tmp7;
     cResult[3] = style;
-    let tmp4 = style;
-    let tmp3 = tmp7;
-    let tmp2 = icon;
+    tmp4 = style;
+    tmp3 = tmp7;
+    tmp2 = icon;
   } else {
     tmp2 = cResult[1];
     tmp3 = cResult[2];
@@ -33,18 +37,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const tmp8 = closure_5();
   if (cResult[4] === tmp4) {
+    let tmp9;
     if (cResult[5] === tmp8.icon) {
-      let tmp9 = cResult[6];
+      tmp9 = cResult[6];
     }
     if (cResult[7] === tmp2) {
       if (cResult[8] === tmp3) {
+        let tmp10;
         if (cResult[9] === tmp9) {
-          let tmp10 = cResult[10];
+          tmp10 = cResult[10];
         }
         return tmp10;
       }
     }
-    const obj2 = { size: "xxs", style: tmp9, color: "status-positive" };
     const merged = Object.assign(tmp3);
     const tmp15 = <tmp2 size="xxs" style={tmp9} color="status-positive" />;
     cResult[7] = tmp2;
@@ -59,11 +64,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = items;
   tmp9 = items;
 }) : ((arg0) => {
+  let icon;
+  let style;
   ({ icon, style } = arg0);
   const merged = Object.assign(arg0, Object.assign({ icon: 0, style: 0 }));
-  const obj = { size: "xxs", style: null, color: "status-positive" };
   const items = [closure_5().icon, style];
-  obj.style = items;
   const merged1 = Object.assign(merged);
-  return <icon size="xxs" style={null} color="status-positive" />;
+  return <icon size="xxs" style={items} color="status-positive" />;
 });
+const result = size.fileFinishedImporting("modules/activity_status/native/ActivityStatusIcon.tsx");
+
+export default tmp3;

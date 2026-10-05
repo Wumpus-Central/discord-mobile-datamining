@@ -1,84 +1,81 @@
 // === Module 15898: WumpTrash ===
 
 // Module 15898 (WumpTrash)
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
 import shared from "shared" /* 4729 */;
 import _mod7905 from "module_7905" /* 7905 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const Image = fn(17).Image;
-const jsx = fn(21).jsx;
-let ReactCompilerGating = fn(558);
+const require = globalThis.__r;
+
+function dark() {
+  return require("AssetRegistry");
+}
+function darker() {
+  return require("AssetRegistry");
+}
+const Image = react_native.Image;
+const jsx = Fragment.jsx;
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(2);
-  const theme = shared.useThemeContext().theme;
+  let tmp4;
+  const obj = react2;
+  const cResult = obj.c(2);
+  const obj2 = shared;
+  const theme = obj2.useThemeContext().theme;
   if (cResult[0] !== theme) {
-    const obj3 = {
-      dark() {
-          return require("module_15899");
-        },
-      darker() {
-          return require("module_15900");
-        }
-    };
-    const illustrationSource = _mod7905.getIllustrationSource(theme, obj3);
+    const obj3 = { dark, darker };
+    const tmpResult = _mod7905;
+    const illustrationSource = tmpResult.getIllustrationSource(theme, obj3);
     cResult[0] = theme;
     cResult[1] = illustrationSource;
-    let tmp4 = illustrationSource;
-    const tmpResult = _mod7905;
+    tmp4 = illustrationSource;
   } else {
     tmp4 = cResult[1];
   }
   return tmp4;
 }) : (() => {
   const obj = shared;
-  return _mod7905.getIllustrationSource(obj.useThemeContext().theme, {
-    dark() {
-      return require("module_15899");
-    },
-    darker() {
-      return require("module_15900");
-    }
-  });
+  const theme = obj.useThemeContext().theme;
+  const obj2 = _mod7905;
+  const obj3 = { dark, darker };
+  return obj2.getIllustrationSource(theme, obj3);
 });
 let closure_4 = tmp3;
-ReactCompilerGating = fn(558);
-function getWumpTrashSource(theme) {
-  return _mod7905.getIllustrationSource(theme, {
-    dark() {
-      return require("module_15899");
-    },
-    darker() {
-      return require("module_15900");
-    }
-  });
-}
-const size = fn(2);
-const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/WumpTrash.tsx");
-
-export { getWumpTrashSource };
-export const useWumpTrashSource = tmp3;
-export const WumpTrash = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(3);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const obj = react2;
+  const cResult = obj.c(3);
   const tmp2 = closure_4();
   if (cResult[0] === arg0) {
+    let tmp3;
     if (cResult[1] === tmp2) {
-      let tmp3 = cResult[2];
+      tmp3 = cResult[2];
     }
     return tmp3;
   }
-  const obj2 = {};
   const merged = Object.assign(arg0);
-  obj2.source = tmp2;
-  const tmp5 = <Image />;
+  const tmp5 = <Image source={tmp2} />;
   cResult[0] = arg0;
   cResult[1] = tmp2;
   cResult[2] = tmp5;
   tmp3 = tmp5;
 }) : ((arg0) => {
-  const obj = {};
+  const tmp = closure_4();
   const merged = Object.assign(arg0);
-  obj.source = closure_4();
-  return <Image />;
+  return <Image source={tmp} />;
 });
+function getWumpTrashSource(theme) {
+  const obj = _mod7905;
+  const obj2 = { dark, darker };
+  return obj.getIllustrationSource(theme, obj2);
+}
+const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/WumpTrash.tsx");
+
+export { getWumpTrashSource };
+export const useWumpTrashSource = tmp3;
+export const WumpTrash = tmp4;

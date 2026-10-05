@@ -1,27 +1,98 @@
 // === Module 7184: AdDeliveryStore ===
 
 // Module 7184 (AdDeliveryStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import AdPlacement from "AdPlacement" /* 5629 */;
 import AdCreativeType from "AdCreativeType" /* 5630 */;
 import AdDecisionUtils from "AdDecisionUtils" /* 7185 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+let set;
+
 let closure_9 = 30 * DurationsDefault.Millis.SECOND;
 let closure_10 = 10 * DurationsDefault.Millis.MINUTE;
 new Map();
 let closure_4 = 0;
 let map1 = new Map();
-let map = new Map();
-let map3 = new Map();
-let map4 = new Map();
+let map2 = new Map();
+let map = map2;
+const map3 = new Map();
+const map4 = new Map();
 let closure_11 = null;
 let c12 = false;
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class AdDeliveryStore extends Store {
+  isFetchingAdToDeliverByPlacement(MOBILE_HOME_DOCK_AREA) {
+    let flag;
+    if (map != null) {
+      flag = map.get(MOBILE_HOME_DOCK_AREA);
+    }
+    if (flag == null) {
+      flag = false;
+    }
+    return flag;
+  }
+  canRefreshAd(MOBILE_HOME_DOCK_AREA) {
+    let value;
+    if (map4 != null) {
+      value = map4.get(MOBILE_HOME_DOCK_AREA);
+    }
+    let tmp3 = null == value;
+    if (!tmp3) {
+      const _Date = Date;
+      tmp3 = Date.now() >= value;
+    }
+    return tmp3;
+  }
+  getNoFillForPlacement(arg0, arg1) {
+    let obj = arg1;
+    if (arg1 === undefined) {
+      obj = {};
+    }
+    let flag = obj.includeExpired;
+    if (flag === undefined) {
+      flag = false;
+    }
+    const value = map.get(arg0);
+    let tmp2 = null;
+    if (null != value) {
+      let tmp5;
+      if (flag) {
+        tmp5 = value;
+      } else {
+        const _Date = Date;
+        const sum = value.fetchedAt + value.ttlMillis;
+        tmp5 = null;
+      }
+      tmp2 = tmp5;
+    }
+    return tmp2;
+  }
+  isFetchingQuestHomeHero() {
+    return c12;
+  }
+  getLastFetchedQuestHomeHero() {
+    return closure_11;
+  }
+  getQuestHomeHero() {
+    const value = map1.get(AdPlacement.AdPlacement.QUEST_HOME_BANNER_DESKTOP);
+    let creative;
+    if (value != null) {
+      creative = value.creative;
+    }
+    let type;
+    if (creative != null) {
+      type = creative.type;
+    }
+    let questHomeHero = null;
+    if (type === AdCreativeType.AdCreativeType.QUEST_HOME_HERO) {
+      questHomeHero = creative.questHomeHero;
+    }
+    return questHomeHero;
+  }
 }
 const prototype = AdDeliveryStore.prototype;
 Object.defineProperty(prototype, "lastFetchedQuestToDeliver", {
@@ -30,96 +101,44 @@ Object.defineProperty(prototype, "lastFetchedQuestToDeliver", {
   },
   set: undefined
 });
-prototype["isFetchingAdToDeliverByPlacement"] = function isFetchingAdToDeliverByPlacement(MOBILE_HOME_DOCK_AREA) {
-  let flag;
-  if (map != null) {
-    flag = map.get(MOBILE_HOME_DOCK_AREA);
-  }
-  if (flag == null) {
-    flag = false;
-  }
-  return flag;
-};
-prototype["canRefreshAd"] = function canRefreshAd(MOBILE_HOME_DOCK_AREA) {
-  value = undefined;
-  if (map4 != null) {
-    value = map4.get(MOBILE_HOME_DOCK_AREA);
-  }
-  let tmp3 = null == value;
-  if (!tmp3) {
-    const _Date = Date;
-    tmp3 = Date.now() >= value;
-  }
-  return tmp3;
-};
 Object.defineProperty(prototype, "deliveryAdDecisionByPlacement", {
   get: function deliveryAdDecisionByPlacement() {
     return map1;
   },
   set: undefined
 });
-prototype["getNoFillForPlacement"] = function getNoFillForPlacement(arg0, arg1) {
-  let obj = arg1;
-  if (arg1 === undefined) {
-    obj = {};
-  }
-  let flag = obj.includeExpired;
-  if (flag === undefined) {
-    flag = false;
-  }
-  value = map.get(arg0);
-  let tmp2 = null;
-  if (null != value) {
-    if (flag) {
-      let tmp5 = value;
-    } else {
-      const _Date = Date;
-      const sum = value.fetchedAt + value.ttlMillis;
-      tmp5 = null;
-    }
-    tmp2 = tmp5;
-  }
-  return tmp2;
-};
-prototype["isFetchingQuestHomeHero"] = function isFetchingQuestHomeHero() {
-  return c12;
-};
-prototype["getLastFetchedQuestHomeHero"] = function getLastFetchedQuestHomeHero() {
-  return closure_11;
-};
-prototype["getQuestHomeHero"] = function getQuestHomeHero() {
-  value = map1.get(AdPlacement.AdPlacement.QUEST_HOME_BANNER_DESKTOP);
-  let creative;
-  if (value != null) {
-    creative = value.creative;
-  }
-  let type;
-  if (creative != null) {
-    type = creative.type;
-  }
-  let questHomeHero = null;
-  if (type === AdCreativeType.AdCreativeType.QUEST_HOME_HERO) {
-    questHomeHero = creative.questHomeHero;
-  }
-  return questHomeHero;
-};
 AdDeliveryStore.displayName = "AdDeliveryStore";
-const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, {
+let obj = {
   LOGOUT: function handleLogout() {
     new Map();
     closure_4 = 0;
-    map1 = new Map();
-    map = new Map();
-    map3 = new Map();
-    map4 = new Map();
+    new Map();
+    new Map();
+    new Map();
+    new Map();
+    new Map();
     closure_11 = null;
     c12 = false;
   },
   QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN: function handleFetchQuestToDeliverBegin(placement) {
+    placement = placement.placement;
     map = new Map(map);
-    const result = map.set(placement.placement, true);
+    const result = map.set(placement, true);
   },
   QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS: function handleFetchQuestToDeliverSuccess(arg0) {
+    let adContext;
+    let adDecisionData;
+    let creative;
+    let fetchedAt;
+    let isNoFill;
+    let metadataSealed;
+    let obj3;
+    let obj6;
+    let placement;
+    let provenanceMetadataSealed;
+    let quest;
+    let responseTtlSeconds;
+    let trafficMetadataSealed;
     ({ creative, placement, adDecisionData, responseTtlSeconds, metadataSealed, trafficMetadataSealed, fetchedAt } = arg0);
     ({ quest, isNoFill, adContext, provenanceMetadataSealed } = arg0);
     closure_4 = Date.now();
@@ -134,10 +153,12 @@ const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, {
           decision_id = adDecisionData.decision_id;
         }
         if (null != decision_id) {
-          const obj = { decisionId: adDecisionData.decision_id, metadataSealed, trafficMetadataSealed, fetchedAt, ttlMillis: AdDecisionUtils.resolveResponseTtl(responseTtlSeconds) };
-          const result1 = map.set(placement, obj);
+          const obj = { decisionId: adDecisionData.decision_id, metadataSealed, trafficMetadataSealed, fetchedAt, ttlMillis: obj3.resolveResponseTtl(responseTtlSeconds) };
+          set = map.set;
+          obj3 = AdDecisionUtils;
+          const result1 = set(placement, obj);
         }
-        value = map3.get(placement);
+        const value = map3.get(placement);
         if (value != null) {
           value.succeed();
         }
@@ -145,8 +166,11 @@ const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, {
         if (creative == null) {
           creative = null;
         }
-        const obj2 = { creative, fetchedAt, ttlMillis: AdDecisionUtils.resolveResponseTtl(responseTtlSeconds), adDecisionData, adContext, metadataSealed, trafficMetadataSealed, provenanceMetadataSealed };
+        const obj2 = { creative, fetchedAt, ttlMillis: obj6.resolveResponseTtl(responseTtlSeconds), adDecisionData, adContext, metadataSealed, trafficMetadataSealed, provenanceMetadataSealed };
         const _Map = Map;
+        const self = this;
+        const self2 = this;
+        obj6 = AdDecisionUtils;
         const map2 = new Map(map1);
         map1 = map2;
         const result2 = map2.set(placement, obj2);
@@ -162,51 +186,63 @@ const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, {
     map1 = new Map(map);
     map = map1;
     const result = map1.set(placement, false);
-    value = map3.get(placement);
+    let value = map3.get(placement);
     if (null == value) {
-      const tmp9 = new BackoffDefault(closure_9, closure_10);
-      const result1 = map3.set(placement, tmp9);
-      value = tmp9;
+      const self = this;
+      const self2 = this;
+      const tmp7 = new BackoffDefault(closure_9, closure_10);
+      const result1 = map3.set(placement, tmp7);
+      value = tmp7;
     }
+    set = map4.set;
     const timestamp = Date.now();
-    const result2 = map4.set(placement, timestamp + value.fail());
+    const result2 = set(placement, timestamp + value.fail());
   },
   QUESTS_CLEAR_EXPIRED_QUEST_TO_DELIVER: function handleClearExpiredQuestToDeliver(placement) {
+    let fetchedAt;
+    let obj3;
+    let responseTtlSeconds;
     placement = placement.placement;
     ({ responseTtlSeconds, fetchedAt } = placement);
     map = new Map(map);
     const result = map.set(placement, false);
-    const obj = { creative: null, fetchedAt, ttlMillis: AdDecisionUtils.resolveResponseTtl(responseTtlSeconds) };
+    const obj = { creative: null, fetchedAt, ttlMillis: obj3.resolveResponseTtl(responseTtlSeconds) };
+    obj3 = AdDecisionUtils;
     map1 = new Map(map1);
     const result1 = map1.set(placement, obj);
   },
   QUESTS_FETCH_QUEST_HOME_HERO_BEGIN: function handleFetchQuestHomeHeroBegin(placement) {
     c12 = true;
+    placement = placement.placement;
     map = new Map(map);
-    const result = map.set(placement.placement, true);
+    const result = map.set(placement, true);
   },
   QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS: function handleFetchQuestHomeHeroSuccess(fetchedAt) {
+    let obj4;
     c12 = false;
     closure_11 = Date.now();
+    const placement = fetchedAt.placement;
     map = new Map(map);
-    const result = map.set(fetchedAt.placement, false);
+    const result = map.set(placement, false);
     let tmp2 = null;
     if (null != fetchedAt.questHomeHero) {
+      tmp2 = { type: AdCreativeType.AdCreativeType.QUEST_HOME_HERO, questHomeHero: fetchedAt.questHomeHero };
       const obj = { type: AdCreativeType.AdCreativeType.QUEST_HOME_HERO, questHomeHero: fetchedAt.questHomeHero };
-      tmp2 = obj;
     }
-    const obj2 = { creative: tmp2, fetchedAt: fetchedAt.fetchedAt, ttlMillis: AdDecisionUtils.resolveResponseTtl(fetchedAt.responseTtlSeconds), adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null, provenanceMetadataSealed: null };
+    const obj2 = { creative: tmp2, fetchedAt: fetchedAt.fetchedAt, ttlMillis: obj4.resolveResponseTtl(fetchedAt.responseTtlSeconds), adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null, provenanceMetadataSealed: null };
     ({ adDecisionData: obj3.adDecisionData, adContext: obj3.adContext, metadataSealed: obj3.metadataSealed, trafficMetadataSealed: obj3.trafficMetadataSealed, provenanceMetadataSealed: obj3.provenanceMetadataSealed } = fetchedAt);
+    obj4 = AdDecisionUtils;
     map1 = new Map(map1);
     const result1 = map1.set(fetchedAt.placement, obj2);
   },
   QUESTS_FETCH_QUEST_HOME_HERO_FAILURE: function handleFetchQuestHomeHeroFailure(placement) {
     c12 = false;
+    placement = placement.placement;
     map = new Map(map);
-    const result = map.set(placement.placement, false);
+    const result = map.set(placement, false);
   }
-});
-const size = fn(2);
+};
+const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, obj);
 let result = size.fileFinishedImporting("modules/ads/AdDeliveryStore.tsx");
 
 export default adDeliveryStore;

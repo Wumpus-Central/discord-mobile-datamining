@@ -1,7 +1,10 @@
 // === Module 14321: validateOpenInviteDialog ===
 
 // Module 14321 (validateOpenInviteDialog)
+import Constants from "Constants" /* 1085 */;
+import Constants2 from "Constants" /* 5316 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8514 */;
+import FramesConstants from "FramesConstants" /* 8704 */;
 import RPCErrorDefault from "RPCError" /* 9026 */;
 import canViewInviteModal from "canViewInviteModal" /* 9263 */;
 import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14308 */;
@@ -9,63 +12,73 @@ import FramesStore from "FramesStore" /* 8703 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import PermissionStore from "PermissionStore" /* 4509 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const TransportTypes = fn(5316).TransportTypes;
-const RPCErrors = fn(1085).RPCErrors;
-const asLaunched = fn(8704).asLaunched;
-const size = fn(2);
+const TransportTypes = Constants2.TransportTypes;
+const RPCErrors = Constants.RPCErrors;
+const asLaunched = FramesConstants.asLaunched;
 const result = size.fileFinishedImporting("modules/rpc/helpers/validateOpenInviteDialog.tsx");
 
 export const validateOpenInviteDialog = function validateOpenInviteDialog(socket) {
   if (socket.source.type !== TransportTypes.POST_MESSAGE) {
-    const obj2 = { errorCode: RPCErrors.INVALID_COMMAND };
     const _HermesInternal3 = HermesInternal;
-    const tmp362 = new RPCErrorDefault(obj2, "command not available from \"" + socket.source.type + "\" transport");
-    throw tmp362;
+    const self9 = this;
+    const self10 = this;
+    const obj2 = { errorCode: RPCErrors.INVALID_COMMAND };
+    const tmp28 = RPCErrorDefault;
+    const tmp282 = new tmp28(obj2, "command not available from \"" + socket.source.type + "\" transport");
+    throw tmp282;
   } else {
-    const tmp46 = asLaunched(FramesStore.getFrameByIframeId(socket.source.iframeId));
-    if (null != tmp46) {
-      const surface = tmp46.surface;
+    const tmp36 = asLaunched(FramesStore.getFrameByIframeId(socket.source.iframeId));
+    if (null != tmp36) {
+      const surface = tmp36.surface;
       const type = surface.type;
       if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
-        const obj3 = { frame: tmp46, channel: "Array", guild: "toCharArray$esjava$1" };
-        return obj3;
+        return { frame: tmp36, channel: "Array", guild: "toCharArray$esjava$1" };
       } else {
         if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL !== type) {
           if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL !== type) {
+            const self7 = this;
+            const self8 = this;
             const obj4 = { errorCode: RPCErrors.INVALID_CHANNEL };
-            const tmp30 = new RPCErrorDefault(obj4, "Invalid channel");
-            throw tmp30;
+            const tmp22 = new RPCErrorDefault(obj4, "Invalid channel");
+            throw tmp22;
           }
         }
-        const obj5 = { frame: tmp46, channel: ChannelStore.getChannel(surface.channelId), guild: GuildStore.getGuild(surface.guildId) };
+        const obj5 = { frame: tmp36, channel: ChannelStore.getChannel(surface.channelId), guild: GuildStore.getGuild(surface.guildId) };
         return obj5;
       }
     } else {
       const obj9 = getCurrentEmbeddedActivityChannelDefault();
       if (null == obj9) {
+        const self5 = this;
+        const self6 = this;
         const obj6 = { errorCode: RPCErrors.INVALID_CHANNEL };
-        const tmp21 = new RPCErrorDefault(obj6, "Invalid channel");
-        throw tmp21;
+        const tmp15 = new RPCErrorDefault(obj6, "Invalid channel");
+        throw tmp15;
       } else {
-        guild = GuildStore.getGuild(obj9.getGuildId());
+        const guild = GuildStore.getGuild(obj9.getGuildId());
         if (null == guild) {
-          const obj7 = { errorCode: RPCErrors.INVALID_CHANNEL };
           const _HermesInternal2 = HermesInternal;
-          const tmp48Result1 = new RPCErrorDefault(obj7, "Invalid guild " + obj9.getGuildId());
-          throw tmp48Result1;
+          const self3 = this;
+          const self4 = this;
+          const obj7 = { errorCode: RPCErrors.INVALID_CHANNEL };
+          const tmp38Result = RPCErrorDefault;
+          const tmp38Result1 = new tmp38Result(obj7, "Invalid guild " + obj9.getGuildId());
+          throw tmp38Result1;
         } else {
+          const obj10 = canViewInviteModal;
           if (obj10.canViewInviteModal(PermissionStore, guild, obj9)) {
-            const obj8 = { frame: "r", channel: obj9, guild };
-            return obj8;
+            return { frame: "r", channel: obj9, guild };
           } else {
-            const obj = { errorCode: RPCErrors.INVALID_PERMISSIONS };
             const _HermesInternal = HermesInternal;
-            const tmp7 = new RPCErrorDefault(obj, "No invite permissions for " + obj9.id);
-            throw tmp7;
+            const self = this;
+            const self2 = this;
+            const obj = { errorCode: RPCErrors.INVALID_PERMISSIONS };
+            const tmp = RPCErrorDefault;
+            const tmp5 = new tmp(obj, "No invite permissions for " + obj9.id);
+            throw tmp5;
           }
-          obj10 = canViewInviteModal;
         }
       }
     }

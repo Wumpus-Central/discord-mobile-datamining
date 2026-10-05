@@ -1,24 +1,24 @@
 // === Module 11454: CommunicationDisabledActionCreators ===
 
 // Module 11454 (CommunicationDisabledActionCreators)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _asyncToGenerator_mod from "_asyncToGenerator" /* 5 */;
+import size from "module_2" /* 2 */;
 
-const size = fn(2);
-const result = size.fileFinishedImporting("actions/CommunicationDisabledActionCreators.tsx");
-
-export default {
+let _asyncToGenerator = _asyncToGenerator_mod;
+let obj = {
   setCommunicationDisabledDuration(guildId, id, value, current, arg4, arg5) {
-    closure_0 = guildId;
-    closure_1 = id;
-    asyncGeneratorStep = value;
-    closure_3 = current;
-    closure_4 = arg4;
-    closure_5 = arg5;
+    let closure_0 = guildId;
+    let closure_1 = id;
+    _asyncToGenerator = value;
+    let closure_3 = current;
+    let closure_4 = arg4;
+    let closure_5 = arg5;
     return (async () => {
+      let userId;
       if (guildId === 2) {
         guildId = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+      } else if (tmp2 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -40,15 +40,16 @@ export default {
               return obj5;
             } else {
               let toISOStringResult = null;
-              if (null != duration) {
+              if (null != _asyncToGenerator) {
                 const obj2 = guildId(userId[1])();
-                toISOStringResult = guildId(userId[1])().add(duration, "s").toISOString();
-                const addResult = guildId(userId[1])().add(duration, "s");
+                const addResult = obj2.add(_asyncToGenerator, "s");
+                toISOStringResult = addResult.toISOString();
               }
-              const obj6 = { guildId, userId, communicationDisabledUntilTimestamp: toISOStringResult, duration, reason, location: _location, moderatorReportId };
+              const obj6 = { guildId, userId, communicationDisabledUntilTimestamp: toISOStringResult, duration: _asyncToGenerator, reason, location: _location, moderatorReportId };
+              const obj4 = guildId(userId[2]);
               userId = 1;
               guildId = 1;
-              const obj7 = { value: guildId(userId[2]).setCommunicationDisabledUntil(obj6), done: false };
+              const obj7 = { value: obj4.setCommunicationDisabledUntil(obj6), done: false };
               return obj7;
             }
           } else if (arg0 === 1) {
@@ -62,11 +63,14 @@ export default {
             guildId = 3;
             return { value: "IconComponent", done: null };
           }
-        } catch (tmp15) {
-          guildId = tmp;
-          throw tmp15;
+        } catch (tmp14) {
+          guildId = 3;
+          throw tmp14;
         }
       }
     })();
   }
 };
+const result = size.fileFinishedImporting("actions/CommunicationDisabledActionCreators.tsx");
+
+export default obj;

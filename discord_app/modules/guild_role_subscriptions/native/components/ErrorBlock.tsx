@@ -1,32 +1,37 @@
 // === Module 11852: ErrorBlock ===
 
 // Module 11852 (ErrorBlock)
-import c from "c" /* 576 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
 import MessageBlock from "MessageBlock" /* 11853 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const MessageBlockDefault = MessageBlock;
+let children;
 
-require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/ErrorBlock.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
-  const cResult = c.c(2);
+const jsx = Fragment.jsx;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+  let tmp4;
+  const obj = react2;
+  const cResult = obj.c(2);
   children = children.children;
   if (cResult[0] !== children) {
-    const obj2 = { color: MessageBlock.MessageBlockColors.RED, children };
-    const tmp8 = jsx(MessageBlockDefault, { color: MessageBlock.MessageBlockColors.RED, children });
+    MessageBlockDefault;
+    const tmp8 = <tmp7 color={MessageBlock.MessageBlockColors.RED}>{children}</tmp7>;
     cResult[0] = children;
     cResult[1] = tmp8;
-    let tmp4 = tmp8;
+    tmp4 = tmp8;
   } else {
     tmp4 = cResult[1];
   }
   return tmp4;
 }) : ((children) => {
-  const obj = { color: MessageBlock.MessageBlockColors.RED, children: children.children };
-  return jsx(MessageBlockDefault, { color: MessageBlock.MessageBlockColors.RED, children: children.children });
+  children = children.children;
+  MessageBlockDefault;
+  return <tmp color={MessageBlock.MessageBlockColors.RED}>{children}</tmp>;
 });
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/ErrorBlock.tsx");
+
+export default tmp3;

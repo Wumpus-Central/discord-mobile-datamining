@@ -2,159 +2,189 @@
 
 // Module 9212 (useCreateChannelSubmit)
 import CreateChannelActionCreatorsDefault from "CreateChannelActionCreators" /* 9213 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import Constants from "Constants" /* 1085 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
-const Constants = fn(1085);
-({ ChannelTypes: closure_7, Permissions: closure_8 } = Constants);
+let closure_5, permissionOverwrites;
+
+let metroImportAll;
+let metroImportDefault;
+({ ChannelTypes: metroImportDefault, Permissions: metroImportAll } = Constants);
 const CreateChannelMode = { PREMIUM_CHANNEL: 0, [0]: "PREMIUM_CHANNEL" };
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/useCreateChannelSubmit.tsx");
 
 export default function useCreateChannelSubmit(arg0) {
-  [tmp2, importDefault] = noop.useState(false);
-  const tmp3 = _slicedToArray(noop.useState({}), 2);
-  closure_2 = tmp3[1];
-  closure_0 = asyncGeneratorStep(async (arg0) => {
-    if (c8 === 2) {
-      c8 = 3;
+  let closure_2;
+  let first;
+  let tmp2;
+  const tmp = _slicedToArray(react.useState(false), 2);
+  [tmp2, importDefault] = tmp;
+  [first, closure_2] = react.useState({});
+  const useCallback = react.useCallback;
+  let closure_0 = _asyncToGenerator(async (permissionOverwrites) => {
+    let applicationId;
+    let c0;
+    let c1;
+    let c2;
+    let c3;
+    let c4;
+    let c5;
+    let c6;
+    let c7;
+    let c8;
+    let obj9;
+    let tmp57;
+    if (applicationId === 2) {
+      applicationId = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp7 === 3) {
-      if (arg0 === 1) {
+    } else if (tmp3 === 3) {
+      if (permissionOverwrites === 1) {
         throw value;
-      } else if (arg0 === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
+      } else if (permissionOverwrites === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "IconComponent", done: null };
       }
     } else {
+      let type;
       try {
-        c8 = 2;
+        let bitrate;
+        let userLimit;
+        let name;
+        let body;
+        let closure_10;
+        let id;
+        let guild_id;
+        applicationId = 2;
         if (0 === c7) {
-          if (arg0 === 1) {
-            c8 = 3;
+          if (permissionOverwrites === 1) {
+            applicationId = 3;
             throw value;
-          } else if (arg0 === 2) {
-            c8 = 3;
+          } else if (permissionOverwrites === 2) {
+            applicationId = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            let closure_4 = tmp;
+            let closure_3 = tmp4;
+            permissionOverwrites = undefined;
+            bitrate = undefined;
+            userLimit = undefined;
+            c3 = undefined;
+            name = undefined;
+            type = undefined;
+            ({ overwrites: c0, bitrate: c1, userLimit: c2, createMode: c3, guildId: c4, name: c5, channelType: c6, categoryId: c7, applicationId: c8 } = permissionOverwrites);
+            body = undefined;
+            closure_10 = undefined;
+            id = undefined;
+            guild_id = undefined;
+            c7 = 1;
+            applicationId = 1;
+            return { value: "Set", done: true };
+          }
+        } else if (1 === c7) {
+          if (permissionOverwrites === 1) {
+            applicationId = 3;
+            throw value;
+          } else if (permissionOverwrites === 2) {
+            applicationId = 3;
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            closure_4 = tmp4;
-            closure_3 = tmp8;
-            closure_131_0 = undefined;
-            closure_131_1 = undefined;
-            closure_131_2 = undefined;
-            closure_131_3 = undefined;
-            closure_131_4 = undefined;
-            closure_131_5 = undefined;
-            closure_131_6 = undefined;
-            closure_131_7 = undefined;
-            closure_131_8 = undefined;
-            ({ overwrites: closure_131_0, bitrate: closure_131_1, userLimit: closure_131_2, createMode: closure_131_3, guildId: closure_131_4, name: closure_131_5, channelType: closure_131_6, categoryId: closure_131_7, applicationId: closure_131_8 } = closure_0);
-            closure_131_9 = undefined;
-            closure_131_10 = undefined;
-            let id;
-            let guild_id;
-            c7 = 1;
-            c8 = 1;
-            return { value: "Set", done: true };
-          }
-        } else if (1 === tmp8) {
-          if (arg0 === 1) {
-            c8 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c8 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
-          } else {
-            if (closure_131_3 === constants3.PREMIUM_CHANNEL) {
-              const obj6 = { id: closure_131_4, type: closure_0(1985).PermissionOverwriteType.ROLE, deny: constants2.VIEW_CHANNEL, allow: closure_2(1097).getFlag(0) };
-              closure_131_0.push(obj6);
-              const obj10 = closure_2(1097);
+            if (c3 === constants3.PREMIUM_CHANNEL) {
+              const obj5 = { id: tmp, type: permissionOverwrites(dependencyMap[4]).PermissionOverwriteType.ROLE, deny: constants2.VIEW_CHANNEL, allow: obj9.getFlag(0) };
+              const push = permissionOverwrites.push;
+              obj9 = closure_2_2(dependencyMap[5]);
+              push(obj5);
             }
-            closure_1(true);
-            c6 = 2;
-            const obj7 = { guildId: closure_131_4, type: closure_131_6, name: closure_131_5, permissionOverwrites: closure_131_0, bitrate: closure_131_1, userLimit: closure_131_2, parentId: null, applicationId: null };
-            let tmp60 = null;
-            if (closure_131_6 !== constants.GUILD_CATEGORY) {
-              tmp60 = closure_131_7;
+            bitrate(true);
+            type = 2;
+            const obj6 = { guildId: tmp, type, name, permissionOverwrites, bitrate, userLimit, parentId: tmp57, applicationId };
+            tmp57 = null;
+            const createChannel = CreateChannelActionCreatorsDefault.createChannel;
+            if (type !== constants.GUILD_CATEGORY) {
+              tmp57 = c7;
             }
-            obj7.parentId = tmp60;
-            obj7.applicationId = closure_131_8;
             c7 = 4;
-            c8 = 1;
-            const obj8 = { value: CreateChannelActionCreatorsDefault.createChannel(obj7), done: false };
-            return obj8;
+            applicationId = 1;
+            const obj7 = { value: createChannel(obj6), done: false };
+            return obj7;
           }
-        } else if (2 === tmp8) {
-          c6 = 0;
-          closure_1(false);
+        } else if (2 === c7) {
+          type = 0;
+          bitrate(false);
           throw closure_5;
         } else {
-          if (3 === tmp8) {
-            c6 = 1;
-            closure_131_13 = closure_5;
-            const AccessibilityAnnouncer = closure_0(4729).AccessibilityAnnouncer;
-            const intl = closure_0(1126).intl;
-            AccessibilityAnnouncer.announce(intl.string(closure_0(1126).t["0SbUzm"]));
-            const body = closure_131_13.body;
+          let body2;
+          if (3 === c7) {
+            type = 1;
+            body2 = closure_5;
+            const AccessibilityAnnouncer = permissionOverwrites(dependencyMap[7]).AccessibilityAnnouncer;
+            const announce = AccessibilityAnnouncer.announce;
+            const intl = permissionOverwrites(dependencyMap[8]).intl;
+            announce(intl.string(permissionOverwrites(dependencyMap[8]).t["0SbUzm"]));
+            body = body2.body;
             let errors;
+            const tmp28 = closure_2;
             if (body != null) {
               errors = body.errors;
             }
-            closure_1 = errors;
+            bitrate = errors;
             if (errors == null) {
-              closure_1 = {};
+              bitrate = {};
             }
-            closure_2(closure_1);
-            c6 = 0;
-            closure_1(false);
-            c8 = 3;
-          } else if (arg0 === 1) {
-            c8 = 3;
+            tmp28(bitrate);
+          } else if (permissionOverwrites === 1) {
+            applicationId = 3;
             throw value;
-          } else if (arg0 !== 2) {
-            closure_131_9 = value;
-            if (null != closure_131_9) {
-              const body2 = closure_131_9.body;
+          } else if (permissionOverwrites === 2) {
+            type = 0;
+            bitrate(false);
+            applicationId = 3;
+            const obj = { value, done: true };
+            return obj;
+          } else {
+            body = value;
+            if (null != body) {
+              body2 = body.body;
               closure_2 = body2;
               if (body2 == null) {
                 closure_2 = {};
               }
-              closure_131_10 = closure_2;
-              id = closure_131_10.id;
-              guild_id = closure_131_10.guild_id;
+              closure_10 = closure_2;
+              id = closure_10.id;
+              guild_id = closure_10.guild_id;
               if (null != id) {
-                const AccessibilityAnnouncer2 = closure_0(4729).AccessibilityAnnouncer;
-                const intl2 = closure_0(1126).intl;
-                const obj9 = { name: closure_131_5 };
-                AccessibilityAnnouncer2.announce(intl2.formatToPlainString(closure_0(1126).t.Wke70b, obj9));
-                if (closure_0 != null) {
-                  tmp86(id, guild_id);
+                const AccessibilityAnnouncer2 = permissionOverwrites(dependencyMap[7]).AccessibilityAnnouncer;
+                const announce2 = AccessibilityAnnouncer2.announce;
+                const intl2 = permissionOverwrites(dependencyMap[8]).intl;
+                const obj8 = { name };
+                announce2(intl2.formatToPlainString(permissionOverwrites(dependencyMap[8]).t.Wke70b, obj8));
+                if (permissionOverwrites != null) {
+                  tmp82(id, guild_id);
                 }
               }
             }
-            c6 = 1;
+            type = 1;
           }
-          c6 = 0;
-          closure_1(false);
-          c8 = 3;
-          const obj = { value, done: true };
-          return obj;
+          type = 0;
+          bitrate(false);
+          applicationId = 3;
+          return { value: "IconComponent", done: null };
         }
-      } catch (tmp64) {
-        closure_5 = tmp64;
-        if (tmp5 === c6) {
-          c8 = tmp3;
-          throw tmp64;
-        } else if (tmp2 === tmp66) {
-          c7 = tmp;
+      } catch (tmp61) {
+        closure_5 = tmp61;
+        if (0 === type) {
+          applicationId = 3;
+          throw tmp61;
+        } else if (1 === tmp63) {
+          c7 = 2;
         } else {
-          c7 = tmp3;
+          c7 = 3;
         }
       }
     }
@@ -162,16 +192,9 @@ export default function useCreateChannelSubmit(arg0) {
   const items = [arg0];
   const items1 = [
     tmp2,
-    tmp3[0],
-    noop.useCallback(function() {
-      const self = this;
-      const apply = closure_0.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
+    first,
+    useCallback(function() {
+      return closure_0(...arguments);
     }, items)
   ];
   return items1;

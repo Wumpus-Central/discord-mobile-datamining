@@ -27,8 +27,9 @@ export default function useFirstMessageOrEmbedContent(content) {
         for (const item10013 of embeds) {
           if (null != item10013.rawDescription) {
             if (tmp5.rawDescription.length > 0) {
+              let rawDescription = item10013.rawDescription;
               obj.return();
-              return item10013.rawDescription;
+              return rawDescription;
             }
           }
           continue;

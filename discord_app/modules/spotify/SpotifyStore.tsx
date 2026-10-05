@@ -3,7 +3,7 @@
 // Module 5439 (SpotifyStore)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
@@ -20,93 +20,124 @@ import IdleStore from "IdleStore" /* 5567 */;
 import PresenceStore from "PresenceStore" /* 4930 */;
 import SpeakingStore from "SpeakingStore" /* 5576 */;
 import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import SpotifyConstants from "SpotifyConstants" /* 8016 */;
+import Constants from "Constants" /* 1085 */;
 import Platforms from "Platforms" /* 5442 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+const require = globalThis.__r;
+let _null, _null2, _require, body, closure_3;
+
+let closure_14;
+let closure_15;
+let closure_16;
+let closure_17;
+let closure_19;
+let closure_20;
+let map1;
+const f90407 = (is_active) => is_active.is_active;
+const f90411 = () => closure_1_35.stop();
+const f90418 = () => {
+  let accessToken;
+  let accountId;
+  let obj2;
+  obj = SpotifyActionCreators;
+  const devices = obj.getDevices(obj.accountId, obj.accessToken);
+  ({ accountId, accessToken } = obj);
+  const SpotifyAPI = SpotifyActionCreators.SpotifyAPI;
+  const request = { url: constants.PLAYER, query: obj2, onlyRetryOnAuthorizationErrors: true };
+  obj2 = { additional_types: "" + constants2.TRACK + "," + constants2.EPISODE };
+  const value = SpotifyAPI.get(accountId, accessToken, request);
+  const nextPromise = value.then((body) => {
+    let closure_0 = body;
+    body = body.body;
+    if (null != body) {
+      const promise = closure_2_53(accountId, accessToken, body);
+      promise.then(() => closure_0);
+    } else {
+      const obj2 = { type: "SPOTIFY_PLAYER_STATE", accountId, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null };
+      obj = closure_2_1(closure_2_2[13]);
+      obj.dispatch(obj2);
+    }
+  });
+  nextPromise.catch(() => {
+    obj = closure_2_1(closure_2_2[13]);
+    const obj2 = { type: "SPOTIFY_PLAYER_STATE", accountId, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null };
+    obj.dispatch(obj2);
+  });
+};
 function upsertAccount(accountId, accessToken) {
-  if (accountId in dependencyMap) {
-    dependencyMap[accountId].accessToken = accessToken;
+  if (accountId in closure_40) {
+    closure_40[accountId].accessToken = accessToken;
     const _HermesInternal2 = HermesInternal;
     logger.info("Updated account access token: " + accountId);
-  } else if (typeof SpotifySocket === "function") {
-    const obj = Object.create(SpotifySocket.prototype);
-    obj._requestedDisconnect = false;
-    obj._requestedConnect = false;
-    obj.handleDeviceStateChange = _modDef12.throttle(() => {
-      obj = SpotifyActionCreators;
-      const devices = obj.getDevices(obj.accountId, obj.accessToken);
-      ({ accountId, accessToken } = obj);
-      const SpotifyAPI = SpotifyActionCreators.SpotifyAPI;
-      const request = { url: constants.PLAYER, query: { additional_types: "" + constants2.TRACK + "," + constants2.EPISODE }, onlyRetryOnAuthorizationErrors: true };
-      value = SpotifyAPI.get(accountId, accessToken, request);
-      let obj2 = { additional_types: "" + constants2.TRACK + "," + constants2.EPISODE };
-      value.then((body) => {
-        closure_0 = body;
-        body = body.body;
-        if (null != body) {
-          updatePlayerState(accountId, accessToken, body).then(() => closure_0);
-          const promise = updatePlayerState(accountId, accessToken, body);
-        } else {
-          const obj2 = { type: "SPOTIFY_PLAYER_STATE", accountId, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null };
-          DispatcherDefault.dispatch(obj2);
-        }
-      }).catch(() => {
-        DispatcherDefault.dispatch({ type: "SPOTIFY_PLAYER_STATE", accountId, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null });
-      });
-    }, closure_29);
-    obj.accountId = accountId;
-    obj.accessToken = accessToken;
-    const interval = new obj(2046).Interval();
-    obj.pingInterval = interval;
-    const tmp14 = new BackoffDefault(undefined, MINUTE);
-    obj.backoff = tmp14;
-    obj.connect();
-    dependencyMap[accountId] = obj;
-    const _HermesInternal = HermesInternal;
-    logger.info("Added account: " + accountId);
   } else {
-    throw new TypeError("Trying to call a non-function");
+    const self = this;
+    if (typeof SpotifySocket === "function") {
+      const obj = Object.create(SpotifySocket.prototype);
+      obj._requestedDisconnect = false;
+      obj._requestedConnect = false;
+      const obj2 = _modDef12;
+      obj.handleDeviceStateChange = obj2.throttle(f90418, closure_29);
+      obj.accountId = accountId;
+      obj.accessToken = accessToken;
+      const self2 = this;
+      const self3 = this;
+      const interval = new obj(2046).Interval();
+      obj.pingInterval = interval;
+      const self4 = this;
+      const self5 = this;
+      obj.backoff = new BackoffDefault(undefined, MINUTE);
+      const tmp9 = new BackoffDefault(undefined, MINUTE);
+      obj.connect();
+      closure_40[accountId] = obj;
+      const _HermesInternal = HermesInternal;
+      logger.info("Added account: " + accountId);
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
   }
 }
 function removeAccount(arg0) {
-  if (arg0 in dependencyMap) {
-    dependencyMap[arg0].disconnect();
-    delete tmp[tmp2];
-    let tmp7 = null != tmp5;
-    if (tmp7) {
-      tmp7 = null != _null;
-    }
-    if (tmp7) {
-      tmp7 = tmp5.track.id === _null.track.id;
-    }
+  if (arg0 in closure_40) {
+    const obj = closure_40[arg0];
+    obj.disconnect();
+    delete closure_40[arg0];
+    const tmp7 = null != tmp5 && null != _null && tmp5.track.id === _null.track.id;
     if (tmp7) {
       _null = null;
     }
-    delete tmp[tmp2];
+    delete closure_42[arg0];
     const _HermesInternal = HermesInternal;
     logger.info("Removed account: " + arg0);
   }
 }
 function setActiveDevice(arg0, arg1) {
+  const tmp = closure_41[arg0];
   for (const item10008 of tmp) {
     item10008.is_active = item10008.id === arg1;
     continue;
   }
 }
 function activitySync(userId, activity, arg2) {
+  let device;
+  let party;
+  let socket;
+  let sync_id;
+  let timestamps;
   let tmp2;
   const keys = Object.keys();
   if (keys !== undefined) {
     while (keys[tmp] !== undefined) {
-      let tmp28 = dependencyMap[tmp4];
+      let tmp28 = closure_40[tmp4];
       if (!tmp28.connected) {
         continue;
       } else {
-        if (null == dependencyMap2[tmp4]) {
+        if (null == closure_41[tmp4]) {
           continue;
         } else {
           let arr = tmp5[tmp4];
-          let found = arr.find((is_active) => is_active.is_active);
+          let found = arr.find(f90407);
           if (null == found) {
             continue;
           } else {
@@ -129,10 +160,11 @@ function activitySync(userId, activity, arg2) {
     if (null != sync_id) {
       if (null != party) {
         if (null != party.id) {
-          if (state(party.id)) {
+          if (authStore2(party.id)) {
             if (null != timestamps) {
+              let start;
               if (null != timestamps.start) {
-                let start = timestamps.start;
+                start = timestamps.start;
               }
               const _Math = Math;
               const _Date2 = Date;
@@ -153,17 +185,18 @@ function activitySync(userId, activity, arg2) {
               if (type == null) {
                 type = constants2.TRACK;
               }
-              const tmp14Result = __initData2(type);
+              const tmp14Result = map1(type);
               if (null != tmp14Result) {
-                const obj4 = SpotifyActionCreators;
                 const obj3 = { position: +bound, deviceId: device.id, repeat: tmp13 };
+                const obj4 = SpotifyActionCreators;
                 obj4.play(socket.accountId, socket.accessToken, sync_id, tmp14Result, obj3);
-                const obj5 = { userId, partyId: party.id, trackId: sync_id, startTime: start };
-                c4 = obj5;
+                let c4 = { userId, partyId: party.id, trackId: sync_id, startTime: start };
                 let str = "presence change";
+                const obj5 = { userId, partyId: party.id, trackId: sync_id, startTime: start };
                 if (arg2) {
                   const obj6 = { party_id: party.id, other_user_id: userId };
-                  AnalyticsUtilsDefault.track(constants4.SPOTIFY_LISTEN_ALONG_STARTED, obj6);
+                  const obj2 = AnalyticsUtilsDefault;
+                  obj2.track(constants4.SPOTIFY_LISTEN_ALONG_STARTED, obj6);
                   str = "started";
                 }
                 const _HermesInternal = HermesInternal;
@@ -180,41 +213,44 @@ function activitySync(userId, activity, arg2) {
   }
 }
 function handleUserActivitySyncStop() {
+  let userId;
   let partyId = null;
+  const track = AnalyticsUtilsDefault.track;
+  const SPOTIFY_LISTEN_ALONG_ENDED = constants4.SPOTIFY_LISTEN_ALONG_ENDED;
+  AnalyticsUtilsDefault;
   if (null != _null2) {
     partyId = _null2.partyId;
   }
-  const obj2 = { party_id: partyId, other_user_id: null };
-  let userId = null;
+  const obj = { party_id: partyId, other_user_id: userId };
+  userId = null;
   if (null != _null2) {
     userId = _null2.userId;
   }
-  obj2.other_user_id = userId;
-  AnalyticsUtilsDefault.track(constants4.SPOTIFY_LISTEN_ALONG_ENDED, obj2);
+  track(SPOTIFY_LISTEN_ALONG_ENDED, obj);
   let trackId = null;
   if (null != _null2) {
     trackId = _null2.trackId;
   }
   _null2 = null;
   logger.info("Listen along stopped");
-  let tmp11;
+  let tmp12;
   const keys = Object.keys();
   if (keys !== undefined) {
     while (keys[tmp] !== undefined) {
-      let tmp23 = dependencyMap[tmp13];
-      if (!tmp23.connected) {
+      let tmp24 = closure_40[tmp14];
+      if (!tmp24.connected) {
         continue;
       } else {
-        if (null == dependencyMap2[tmp13]) {
+        if (null == closure_41[tmp14]) {
           continue;
         } else {
-          let arr = tmp14[tmp13];
-          let found = arr.find((is_active) => is_active.is_active);
+          let arr = tmp15[tmp14];
+          let found = arr.find(f90407);
           if (null == found) {
             continue;
           } else {
-            let obj3 = { socket: tmp23, device: found };
-            tmp11 = obj3;
+            let obj2 = { socket: tmp24, device: found };
+            tmp12 = obj2;
             break;
           }
           break;
@@ -224,12 +260,13 @@ function handleUserActivitySyncStop() {
       continue;
     }
   }
-  if (null != tmp11) {
-    const socket = tmp11.socket;
-    if (tmp18) {
-      SpotifyActionCreators.pause(socket.accountId, socket.accessToken);
+  if (null != tmp12) {
+    const socket = tmp12.socket;
+    const tmp19 = null != closure_42[socket.accountId] && closure_42[socket.accountId].track.id === trackId;
+    if (tmp19) {
+      const obj3 = SpotifyActionCreators;
+      obj3.pause(socket.accountId, socket.accessToken);
     }
-    tmp18 = null != dependencyMap3[socket.accountId] && dependencyMap3[socket.accountId].track.id === trackId;
   }
 }
 function handleUserConnectionsUpdate() {
@@ -251,10 +288,7 @@ function handleUserConnectionsUpdate() {
     }
     let flag = false;
     for (const item10030 of found) {
-      let tmp12 = null != _null;
-      if (tmp12) {
-        tmp12 = _null.account.id === item10030.id;
-      }
+      let tmp12 = null != _null && _null.account.id === item10030.id;
       if (tmp12) {
         _null.account = item10030;
         flag = true;
@@ -278,15 +312,15 @@ function autoPause() {
     const keys = Object.keys();
     if (keys !== undefined) {
       while (keys[tmp] !== undefined) {
-        let tmp18 = dependencyMap[tmp3];
+        let tmp18 = closure_40[tmp3];
         if (!tmp18.connected) {
           continue;
         } else {
-          if (null == dependencyMap2[tmp3]) {
+          if (null == closure_41[tmp3]) {
             continue;
           } else {
             let arr = tmp4[tmp3];
-            let found = arr.find((is_active) => is_active.is_active);
+            let found = arr.find(f90407);
             if (null == found) {
               continue;
             } else {
@@ -304,27 +338,43 @@ function autoPause() {
     if (null != tmp2) {
       const socket = tmp2.socket;
       c43 = true;
-      SpotifyActionCreators.pause(socket.accountId, socket.accessToken);
-      AnalyticsUtilsDefault.track(constants4.SPOTIFY_AUTO_PAUSED);
+      const obj2 = SpotifyActionCreators;
+      obj2.pause(socket.accountId, socket.accessToken);
+      const obj3 = AnalyticsUtilsDefault;
+      obj3.track(constants4.SPOTIFY_AUTO_PAUSED);
       logger.info("Playback auto paused");
     }
   }
 }
 function updatePlayerState(accountId, arg1, device) {
+  let c3;
+  let c4;
+  let context;
+  let first;
+  let first1;
+  let found;
+  let isPlaying;
+  let item;
+  let obj;
+  let obj4;
+  let position;
+  let str2;
+  let str4;
+  let type;
+  let type1;
   _require = accountId;
   device = device.device;
-  let obj5 = device;
   ({ progress_ms: dependencyMap, is_playing: c3, repeat_state: c4, item, context } = device);
   let obj12;
   if (null != item) {
     if (item.type === constants2.TRACK) {
       id = item.id;
+      const tmp4 = null != item.linked_from && null != item.linked_from.id;
       if (tmp4) {
         id = item.linked_from.id;
       }
-      const obj3 = { id, name: null, duration: null, type: null, album: null, artists: null, isLocal: null };
+      const obj3 = { id, name: null, duration: null, type: constants2.TRACK, album: obj4, artists: found, isLocal: item.is_local || false };
       ({ name: obj2.name, duration_ms: obj2.duration } = item);
-      obj3.type = constants2.TRACK;
       const album2 = item.album;
       let str3;
       if (album2 != null) {
@@ -333,119 +383,107 @@ function updatePlayerState(accountId, arg1, device) {
       if (str3 == null) {
         str3 = "";
       }
-      const obj4 = { id: str3, name: null, image: null, type: null };
       const album3 = item.album;
-      let str4;
+      obj4 = { id: str3, name: str4, image: first, type };
+      str4 = undefined;
       if (album3 != null) {
         str4 = album3.name;
       }
       if (str4 == null) {
         str4 = "";
       }
-      obj4.name = str4;
       const album4 = item.album;
-      let first;
+      first = undefined;
       if (album4 != null) {
         first = album4.images[0];
       }
-      obj4.image = first;
       const album5 = item.album;
-      let type;
+      type = undefined;
       if (album5 != null) {
         type = album5.type;
       }
       if (type == null) {
         type = constants2.ALBUM;
       }
-      obj4.type = type;
-      obj3.album = obj4;
       const _Array = Array;
       if (Array.isArray(item.artists)) {
         const artists = item.artists;
-        let found = artists.filter((id) => {
-          let isNotNullishResult = accountId(position[21]).isNotNullish(id.id);
+        found = artists.filter((id) => {
+          const obj = accountId(dependencyMap[21]);
+          let isNotNullishResult = obj.isNotNullish(id.id);
           if (isNotNullishResult) {
-            isNotNullishResult = accountId(position[21]).isNotNullish(id.name);
-            const tmpResult = accountId(position[21]);
+            const tmpResult = accountId(dependencyMap[21]);
+            isNotNullishResult = tmpResult.isNotNullish(id.name);
           }
           return isNotNullishResult;
         });
       } else {
         found = [];
       }
-      obj3.artists = found;
-      obj3.isLocal = item.is_local || false;
       obj12 = obj3;
-      tmp4 = null != item.linked_from && null != item.linked_from.id;
     }
-    let tmp8 = null != device;
+    const tmp8 = null != device && true !== device.is_active;
     if (tmp8) {
-      tmp8 = true !== device.is_active;
-    }
-    if (tmp8) {
-      obj5 = {};
+      const obj5 = { is_active: true };
       const merged = Object.assign(device);
-      obj5.is_active = true;
+      device = obj5;
     }
     if (null != context) {
+      let resolved1;
       const items = [, ];
       ({ PLAYLIST: arr3[0], ALBUM: arr3[1] } = constants2);
       if (items.includes(context.type)) {
-        let context2 = spotifyStore.getPlayerState(accountId);
-        if (null != context2) {
-          context2 = context2.context;
-          let resolved = Promise.resolve(context2);
+        let resolved;
+        const playerState = spotifyStore.getPlayerState(accountId);
+        if (null != playerState) {
+          if (null != playerState.context) {
+            if (playerState.context.uri === context.uri) {
+              resolved = Promise.resolve(playerState.context);
+            }
+            resolved1 = resolved;
+          }
         }
         if (context.type === constants2.ALBUM) {
           resolved = Promise.resolve(context);
         } else {
           const SpotifyAPI = require("SpotifyActionCreators").SpotifyAPI;
           const obj11 = { url: context.href };
-          value = SpotifyAPI.get(accountId, arg1, obj11);
-          resolved = value.then((body) => body.body).catch((error) => {
-            if (error) {
+          const value = SpotifyAPI.get(accountId, arg1, obj11);
+          const nextPromise = value.then((body) => body.body);
+          resolved = nextPromise.catch((error) => {
+            const tmp = error;
+            if (tmp) {
               if (404 === error.status) {
                 return null;
               }
             }
             throw error;
           });
-          const nextPromise = value.then((body) => body.body);
         }
       }
+      return resolved1.then((result) => {
+        let num;
+        let tmp = result;
+        const _public = null == result || tmp.type !== constants.PLAYLIST || tmp.public;
+        if (!_public) {
+          tmp = null;
+        }
+        const obj = { type: "SPOTIFY_PLAYER_STATE", accountId, track: obj12, volumePercent: num, isPlaying, repeat: "off" !== _null2, position: dependencyMap, context: tmp, device };
+        num = 0;
+        const dispatch = DispatcherDefault.dispatch;
+        DispatcherDefault;
+        if (null != device) {
+          num = device.volume_percent;
+        }
+        dispatch(obj);
+      });
     }
-    const resolved1 = Promise.resolve(undefined);
-    return resolved1.then((result) => {
-      let tmp = result;
-      let _public = null == result;
-      if (!_public) {
-        _public = tmp.type !== constants2.PLAYLIST;
-      }
-      if (!_public) {
-        _public = tmp.public;
-      }
-      if (!_public) {
-        tmp = null;
-      }
-      const obj2 = { type: "SPOTIFY_PLAYER_STATE", accountId, track: obj12, volumePercent: null, isPlaying: null, repeat: null, position: null, context: null, device: null };
-      let num = 0;
-      if (null != obj5) {
-        num = obj5.volume_percent;
-      }
-      obj2.volumePercent = num;
-      obj2.isPlaying = isPlaying;
-      obj2.repeat = "off" !== _null2;
-      obj2.position = position;
-      obj2.context = tmp;
-      obj2.device = obj5;
-      DispatcherDefault.dispatch(obj2);
-    });
+    resolved1 = Promise.resolve(undefined);
   }
   if (null != item) {
     if (item.type === constants2.EPISODE) {
-      obj12 = { id: null, name: null, duration: null, type: null, album: null, artists: null, isLocal: false };
+      obj12 = { id: null, name: null, duration: null, type: constants2.EPISODE, album: obj, artists: [], isLocal: false };
       ({ id: obj6.id, name: obj6.name, duration_ms: obj6.duration } = item);
-      obj12.type = constants2.EPISODE;
       const show3 = item.show;
       let str;
       if (show3 != null) {
@@ -454,39 +492,32 @@ function updatePlayerState(accountId, arg1, device) {
       if (str == null) {
         str = "";
       }
-      let obj = { id: str, name: null, image: null, type: null };
+      obj = { id: str, name: str2, image: first1, type: type1 };
       const show = item.show;
-      let str2;
+      str2 = undefined;
       if (show != null) {
         str2 = show.name;
       }
       if (str2 == null) {
         str2 = "";
       }
-      obj.name = str2;
       const show2 = item.show;
-      let first1;
+      first1 = undefined;
       if (show2 != null) {
         first1 = show2.images[0];
       }
-      obj.image = first1;
       const album = item.album;
-      let type1;
+      type1 = undefined;
       if (album != null) {
         type1 = album.type;
       }
       if (type1 == null) {
         type1 = constants2.SHOW;
       }
-      obj.type = type1;
-      obj12.album = obj;
-      obj12.artists = [];
     }
   }
 }
-const SpotifyConstants = fn(8016);
 ({ getSpotifyResourceType: map1, isSpotifyParty: closure_14, SPOTIFY_PARTY_PREFIX: closure_15, SpotifyEndpoints: closure_16, SpotifyResourceTypes: closure_17 } = SpotifyConstants);
-const Constants = fn(1085);
 const PlatformTypes = Constants.PlatformTypes;
 ({ ActivityFlags: closure_19, AnalyticEvents: closure_20 } = Constants);
 const user = Platforms.get(PlatformTypes.SPOTIFY);
@@ -498,550 +529,484 @@ let closure_26 = 5 * DurationsDefault.Millis.SECOND;
 let closure_27 = 1.5 * DurationsDefault.Millis.SECOND;
 const MINUTE = DurationsDefault.Millis.MINUTE;
 let closure_29 = 3 * DurationsDefault.Millis.SECOND;
-const constants5 = { PLAYER_STATE_CHANGED: "PLAYER_STATE_CHANGED", DEVICE_STATE_CHANGED: "DEVICE_STATE_CHANGED" };
+const __initData = { PLAYER_STATE_CHANGED: "PLAYER_STATE_CHANGED", DEVICE_STATE_CHANGED: "DEVICE_STATE_CHANGED" };
 const message = "message";
-const ping = "ping";
+const ping_str = "ping";
 const single = "single";
-const logger = new LoggerDefault("Spotify");
-const timeout = new fn(2046).Timeout();
-const timeout1 = new fn(2046).Timeout();
-const timeout2 = new fn(2046).Timeout();
-const timeout3 = new fn(2046).Timeout();
-const timeout4 = new fn(2046).Timeout();
-const dependencyMap = {};
-const dependencyMap2 = {};
-const dependencyMap3 = {};
+let tmp4 = new LoggerDefault("Spotify");
+const __initData3 = tmp4;
+const timeout = new Timers.Timeout();
+const timeout1 = new Timers.Timeout();
+const timeout2 = new Timers.Timeout();
+const timeout3 = new Timers.Timeout();
+const timeout4 = new Timers.Timeout();
+const BottomSheet = {};
+let closure_42 = {};
 let c43 = false;
 let c44 = null;
 let items = [WebSocket.CONNECTING, WebSocket.OPEN];
 const set = new Set(items);
 class SpotifySocket {
-  constructor(arg0, arg1) {
-    obj = Object.create(new.target.prototype);
-    closure_0 = obj;
+  constructor(accountId, accessToken) {
+    let obj = Object.create(new.target.prototype);
     obj._requestedDisconnect = false;
     obj._requestedConnect = false;
-    obj2 = closure_1(closure_2[16]);
-    obj.handleDeviceStateChange = obj2.throttle(() => {
-      obj = SpotifyActionCreators;
-      const devices = obj.getDevices(obj.accountId, obj.accessToken);
-      ({ accountId, accessToken } = obj);
-      const SpotifyAPI = SpotifyActionCreators.SpotifyAPI;
-      const request = { url: constants.PLAYER, query: { additional_types: "" + constants2.TRACK + "," + constants2.EPISODE }, onlyRetryOnAuthorizationErrors: true };
-      value = SpotifyAPI.get(accountId, accessToken, request);
-      let obj2 = { additional_types: "" + constants2.TRACK + "," + constants2.EPISODE };
-      value.then((body) => {
-        closure_0 = body;
-        body = body.body;
-        if (null != body) {
-          updatePlayerState(accountId, accessToken, body).then(() => closure_0);
-          const promise = updatePlayerState(accountId, accessToken, body);
-        } else {
-          const obj2 = { type: "SPOTIFY_PLAYER_STATE", accountId, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null };
-          DispatcherDefault.dispatch(obj2);
-        }
-      }).catch(() => {
-        DispatcherDefault.dispatch({ type: "SPOTIFY_PLAYER_STATE", accountId, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null });
-      });
-    }, closure_29);
-    obj.accountId = global;
-    obj.accessToken = fn;
-    interval = new closure_0(closure_2[12]).Interval();
+    let obj2 = _modDef12;
+    obj.handleDeviceStateChange = obj2.throttle(f90418, closure_29);
+    obj.accountId = accountId;
+    obj.accessToken = accessToken;
+    const interval = new obj(2046).Interval();
     obj.pingInterval = interval;
-    tmp2 = new closure_1(closure_2[14])(undefined, closure_28);
-    obj.backoff = tmp2;
-    connectResult = obj.connect();
+    obj.backoff = new BackoffDefault(undefined, MINUTE);
+    new BackoffDefault(undefined, MINUTE);
+    obj.connect();
     return obj;
   }
-}
-const prototype = SpotifySocket.prototype;
-Object.defineProperty(prototype, "connected", {
-  get: function connected() {
-    let hasItem = null != this.socket;
-    if (hasItem) {
-      hasItem = set.has(tmp.socket.readyState);
+  connect() {
+    let accessToken;
+    let accountId;
+    let obj;
+    const self = this;
+    const tmp = this.connected || self._requestedConnect;
+    if (!tmp) {
+      logger.info("WS Connecting");
+      self._requestedDisconnect = false;
+      self._requestedConnect = true;
+      ({ accountId, accessToken } = self);
+      const SpotifyAPI = self(11383).SpotifyAPI;
+      const request = { url: constants.PLAYER, query: obj, onlyRetryOnAuthorizationErrors: true };
+      const _HermesInternal = HermesInternal;
+      const get = SpotifyAPI.get;
+      obj = { additional_types: "" + constants2.TRACK + "," + constants2.EPISODE };
+      const value = get(accountId, accessToken, request);
+      const nextPromise = value.then((body) => {
+        let closure_0 = body;
+        body = body.body;
+        if (null != body) {
+          const promise = closure_2_53(accountId, accessToken, body);
+          promise.then(() => closure_0);
+        } else {
+          const obj2 = { type: "SPOTIFY_PLAYER_STATE", accountId, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null };
+          obj = closure_2_1(closure_2_2[13]);
+          obj.dispatch(obj2);
+        }
+      });
+      const catchPromise = nextPromise.catch(() => {
+        obj = closure_2_1(closure_2_2[13]);
+        const obj2 = { type: "SPOTIFY_PLAYER_STATE", accountId, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null };
+        obj.dispatch(obj2);
+      });
+      const nextPromise1 = catchPromise.then(() => {
+        let handleClose;
+        let handleMessage;
+        let handleOpen;
+        let socket;
+        let socket2;
+        let socket3;
+        let socket4;
+        self._requestedConnect = false;
+        const webSocket = new WebSocket("wss://dealer.spotify.com/?access_token=" + self.accessToken);
+        self.socket = webSocket;
+        ({ handleOpen, socket } = self);
+        socket.onopen = handleOpen.bind(self);
+        ({ handleMessage, socket: socket2 } = self);
+        socket2.onmessage = handleMessage.bind(self);
+        ({ handleClose, socket: socket3, socket: socket4 } = self);
+        const bindResult = handleClose.bind(self);
+        socket4.onerror = bindResult;
+        socket3.onclose = bindResult;
+      });
+      nextPromise1.catch((error) => {
+        logger.error(error);
+        self._requestedConnect = false;
+        self.handleClose();
+      });
     }
+  }
+  disconnect() {
+    this._requestedDisconnect = true;
+    const backoff = this.backoff;
+    backoff.cancel();
+    try {
+      const socket = this.socket;
+      if (socket != null) {
+        socket.close();
+      }
+    } catch (err) {
+    }
+  }
+  ping() {
+    if (this.connected) {
+      const socket = this.socket;
+      if (socket != null) {
+        const _JSON = JSON;
+        const obj = { type: ping_str };
+        socket.send(JSON.stringify(obj));
+      }
+    }
+  }
+  handleOpen() {
+    const self = this;
+    logger.info("WS Connected");
+    const backoff = this.backoff;
+    backoff.succeed();
+    const pingInterval = this.pingInterval;
+    pingInterval.start(closure_23, () => self.ping());
+    const obj = SpotifyActionCreators;
+    const profile = obj.getProfile(this.accountId, this.accessToken);
+    const obj2 = SpotifyActionCreators;
+    const devices = obj2.getDevices(this.accountId, this.accessToken);
+  }
+  handleMessage(data) {
+    let payloads;
+    let uri;
+    data = data.data;
+    if (typeof data === "string") {
+      const _JSON = JSON;
+      const parsed = JSON.parse(data);
+      ({ uri, payloads } = parsed);
+      if (parsed.type === message) {
+        const self = this;
+        if (typeof uri === "string") {
+          if (uri.startsWith(c22)) {
+            const _decodeURIComponent = decodeURIComponent;
+            self.connectionId = decodeURIComponent(uri.split(c22)[1]);
+            const obj = SpotifyActionCreators;
+            const result = obj.subscribePlayerStateNotifications(self.accountId, self.accessToken, self.connectionId);
+          }
+        }
+        const _Array = Array;
+        if (Array.isArray(payloads)) {
+          const iter = payloads[Symbol.iterator]();
+          while (iter !== undefined) {
+            let events = iter.next().events;
+            if (null != events) {
+              for (const item10019 of events) {
+                let handleEventResult = self.handleEvent(item10019);
+                continue;
+              }
+            }
+            continue;
+          }
+        }
+      }
+    }
+  }
+  handleClose() {
+    const self = this;
+    const pingInterval = this.pingInterval;
+    pingInterval.stop();
+    if (!this._requestedDisconnect) {
+      try {
+        const backoff = this.backoff;
+        const _Math = Math;
+        const _HermesInternal = HermesInternal;
+        logger.info("WS Disconnected. Next retry in " + Math.round(backoff.fail(() => {
+          if (!self._requestedDisconnect) {
+            self.connect();
+          }
+        })) + "ms");
+      } catch (err) {
+      }
+    }
+  }
+  handleEvent(arg0) {
+    let event;
+    let type;
+    const self = this;
+    ({ type, event } = arg0);
+    if (constants5.PLAYER_STATE_CHANGED === type) {
+      const tmp4 = null != event && null != event.state;
+      if (tmp4) {
+        updatePlayerState(self.accountId, self.accessToken, event.state);
+      }
+    } else if (tmp.DEVICE_STATE_CHANGED === type) {
+      const result = self.handleDeviceStateChange();
+    }
+  }
+}
+Object.defineProperty(SpotifySocket.prototype, "connected", {
+  get: function connected() {
+    const hasItem = null != this.socket && set.has(tmp.socket.readyState);
     return hasItem;
   },
   set: undefined
 });
-prototype["connect"] = function connect() {
-  const self = this;
-  if (!tmp) {
-    logger.info("WS Connecting");
-    self._requestedDisconnect = false;
-    self._requestedConnect = true;
-    ({ accountId, accessToken } = self);
-    closure_129_0 = accountId;
-    closure_129_1 = accessToken;
-    const SpotifyAPI = self(11383).SpotifyAPI;
-    const request = { url: constants.PLAYER, query: null, onlyRetryOnAuthorizationErrors: true };
-    const obj = { additional_types: null };
-    const _HermesInternal = HermesInternal;
-    obj.additional_types = "" + constants2.TRACK + "," + constants2.EPISODE;
-    request.query = obj;
-    value = SpotifyAPI.get(accountId, accessToken, request);
-    const nextPromise = value.then((body) => {
-      closure_0 = body;
-      body = body.body;
-      if (null != body) {
-        updatePlayerState(accountId, accessToken, body).then(() => closure_0);
-        const promise = updatePlayerState(accountId, accessToken, body);
-      } else {
-        const obj2 = { type: "SPOTIFY_PLAYER_STATE", accountId, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null };
-        DispatcherDefault.dispatch(obj2);
-      }
-    });
-    const catchPromise = value.then((body) => {
-      closure_0 = body;
-      body = body.body;
-      if (null != body) {
-        updatePlayerState(accountId, accessToken, body).then(() => closure_0);
-        const promise = updatePlayerState(accountId, accessToken, body);
-      } else {
-        const obj2 = { type: "SPOTIFY_PLAYER_STATE", accountId, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null };
-        DispatcherDefault.dispatch(obj2);
-      }
-    }).catch(() => {
-      DispatcherDefault.dispatch({ type: "SPOTIFY_PLAYER_STATE", accountId, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null });
-    });
-    value.then((body) => {
-      closure_0 = body;
-      body = body.body;
-      if (null != body) {
-        updatePlayerState(accountId, accessToken, body).then(() => closure_0);
-        const promise = updatePlayerState(accountId, accessToken, body);
-      } else {
-        const obj2 = { type: "SPOTIFY_PLAYER_STATE", accountId, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null };
-        DispatcherDefault.dispatch(obj2);
-      }
-    }).catch(() => {
-      DispatcherDefault.dispatch({ type: "SPOTIFY_PLAYER_STATE", accountId, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null });
-    }).then(() => {
-      self._requestedConnect = false;
-      const webSocket = new WebSocket("wss://dealer.spotify.com/?access_token=" + self.accessToken);
-      self.socket = webSocket;
-      ({ handleOpen, socket } = self);
-      socket.onopen = handleOpen.bind(self);
-      ({ handleMessage, socket: socket2 } = self);
-      socket2.onmessage = handleMessage.bind(self);
-      ({ handleClose, socket: socket3, socket: socket4 } = self);
-      const bindResult = handleClose.bind(self);
-      socket4.onerror = bindResult;
-      socket3.onclose = bindResult;
-    }).catch((error) => {
-      logger.error(error);
-      self._requestedConnect = false;
-      self.handleClose();
-    });
-    const nextPromise1 = value.then((body) => {
-      closure_0 = body;
-      body = body.body;
-      if (null != body) {
-        updatePlayerState(accountId, accessToken, body).then(() => closure_0);
-        const promise = updatePlayerState(accountId, accessToken, body);
-      } else {
-        const obj2 = { type: "SPOTIFY_PLAYER_STATE", accountId, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null };
-        DispatcherDefault.dispatch(obj2);
-      }
-    }).catch(() => {
-      DispatcherDefault.dispatch({ type: "SPOTIFY_PLAYER_STATE", accountId, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null });
-    }).then(() => {
-      self._requestedConnect = false;
-      const webSocket = new WebSocket("wss://dealer.spotify.com/?access_token=" + self.accessToken);
-      self.socket = webSocket;
-      ({ handleOpen, socket } = self);
-      socket.onopen = handleOpen.bind(self);
-      ({ handleMessage, socket: socket2 } = self);
-      socket2.onmessage = handleMessage.bind(self);
-      ({ handleClose, socket: socket3, socket: socket4 } = self);
-      const bindResult = handleClose.bind(self);
-      socket4.onerror = bindResult;
-      socket3.onclose = bindResult;
-    });
-  }
-  tmp = this.connected || self._requestedConnect;
-};
-prototype["disconnect"] = function disconnect() {
-  this._requestedDisconnect = true;
-  const backoff = this.backoff;
-  backoff.cancel();
-  try {
-    const socket = this.socket;
-    if (socket != null) {
-      socket.close();
-    }
-  } catch (err) {
-  }
-};
-prototype["ping"] = function ping() {
-  if (this.connected) {
-    const socket = this.socket;
-    if (socket != null) {
-      const _JSON = JSON;
-      const obj = { type: ping };
-      socket.send(JSON.stringify(obj));
-    }
-  }
-};
-prototype["handleOpen"] = function handleOpen() {
-  const self = this;
-  logger.info("WS Connected");
-  const backoff = this.backoff;
-  backoff.succeed();
-  const pingInterval = this.pingInterval;
-  pingInterval.start(closure_23, () => self.ping());
-  const profile = SpotifyActionCreators.getProfile(this.accountId, this.accessToken);
-  const devices = SpotifyActionCreators.getDevices(this.accountId, this.accessToken);
-};
-prototype["handleMessage"] = function handleMessage(data) {
-  data = data.data;
-  if (typeof data === "string") {
-    const _JSON = JSON;
-    const parsed = JSON.parse(data);
-    ({ uri, payloads } = parsed);
-    if (parsed.type === message) {
-      const self = this;
-      if (typeof uri === "string") {
-        if (uri.startsWith(c22)) {
-          const _decodeURIComponent = decodeURIComponent;
-          self.connectionId = decodeURIComponent(uri.split(c22)[1]);
-          const result = SpotifyActionCreators.subscribePlayerStateNotifications(self.accountId, self.accessToken, self.connectionId);
-        }
-      }
-      const _Array = Array;
-      if (Array.isArray(payloads)) {
-        const iter = payloads[Symbol.iterator]();
-        while (iter !== undefined) {
-          let events = iter.next().events;
-          if (null != events) {
-            for (const item10019 of events) {
-              let handleEventResult = self.handleEvent(item10019);
-              continue;
-            }
-          }
-          continue;
-        }
-      }
-    }
-  }
-};
-prototype["handleClose"] = function handleClose() {
-  const self = this;
-  const pingInterval = this.pingInterval;
-  pingInterval.stop();
-  if (!this._requestedDisconnect) {
-    try {
-      const backoff = this.backoff;
-      const _Math = Math;
-      const _HermesInternal = HermesInternal;
-      logger.info("WS Disconnected. Next retry in " + Math.round(backoff.fail(() => {
-        if (!self._requestedDisconnect) {
-          self.connect();
-        }
-      })) + "ms");
-    } catch (err) {
-    }
-  }
-};
-prototype["handleEvent"] = function handleEvent(arg0) {
-  const self = this;
-  ({ type, event } = arg0);
-  if (constants5.PLAYER_STATE_CHANGED === type) {
-    if (tmp4) {
-      updatePlayerState(self.accountId, self.accessToken, event.state);
-    }
-    tmp4 = null != event && null != event.state;
-  } else if (tmp.DEVICE_STATE_CHANGED === type) {
-    const result = self.handleDeviceStateChange();
-  }
-};
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class SpotifyStore extends Store {
-}
-const prototype2 = SpotifyStore.prototype;
-prototype2["initialize"] = function initialize() {
-  this.waitFor(AuthenticationStore, ConnectedAccountsStore, IdleStore, PresenceStore, RunningGameStore, SpeakingStore, VoiceStateStore);
-  const items = [PresenceStore];
-  this.syncWith(items, () => {
-    let flag = false;
-    if (null != closure_4) {
-      let tmp3;
-      const keys = Object.keys();
-      if (keys !== undefined) {
-        while (keys[tmp] !== undefined) {
-          let tmp23 = closure_40[tmp5];
-          if (!tmp23.connected) {
-            continue;
-          } else {
-            if (null == closure_41[tmp5]) {
+  initialize() {
+    this.waitFor(AuthenticationStore, ConnectedAccountsStore, IdleStore, PresenceStore, RunningGameStore, SpeakingStore, VoiceStateStore);
+    const items = [PresenceStore];
+    this.syncWith(items, () => {
+      let party;
+      let sync_id;
+      let timestamps;
+      let tmp;
+      let flag = false;
+      if (null != closure_4) {
+        let tmp3;
+        const keys = Object.keys();
+        if (keys !== undefined) {
+          while (keys[tmp] !== undefined) {
+            let tmp23 = closure_40[tmp5];
+            if (!tmp23.connected) {
               continue;
             } else {
-              let arr = tmp6[tmp5];
-              let found = arr.find((is_active) => is_active.is_active);
-              if (null == found) {
+              if (null == closure_41[tmp5]) {
                 continue;
               } else {
-                let obj = { socket: tmp23, device: found };
-                tmp3 = obj;
+                let arr = tmp6[tmp5];
+                let found = arr.find(f90407);
+                if (null == found) {
+                  continue;
+                } else {
+                  let obj = { socket: tmp23, device: found };
+                  tmp3 = obj;
+                  break;
+                }
                 break;
               }
+              continue;
+            }
+            continue;
+          }
+        }
+        flag = false;
+        if (null != tmp3) {
+          const userId = closure_4.userId;
+          const findActivityResult = closure_10.findActivity(userId, (party) => {
+            const tmp = null != party.party && null != party.party.id && closure_1_14(party.party.id);
+            return tmp;
+          });
+          if (null == findActivityResult) {
+            closure_37.start(closure_25, () => {
+              const tmp = null != _null2 && _null2.userId === userId;
+              if (tmp) {
+                stopSyncingUserActivityDefault();
+              }
+            });
+            flag = false;
+          } else {
+            closure_37.stop();
+            ({ sync_id, timestamps, party } = findActivityResult);
+            const tmp12 = null != sync_id && closure_4.trackId !== sync_id;
+            const tmp13 = null != timestamps && closure_4.startTime !== timestamps.start;
+            if (!tmp12) {
+              let flag2;
+              if (!tmp13) {
+                flag2 = null != party && party.id !== closure_4.partyId;
+                if (flag2) {
+                  closure_4.partyId = party.id;
+                  flag2 = true;
+                }
+              }
+              flag = flag2;
+            }
+            flag2 = closure_50(userId, findActivityResult, false);
+          }
+        }
+      }
+      return flag;
+    });
+    let obj = SpotifyActionCreators;
+    const isSpotifyProtocolRegistered = obj.fetchIsSpotifyProtocolRegistered();
+  }
+  hasConnectedAccount() {
+    return Object.keys(closure_40).length > 0;
+  }
+  getActiveSocketAndDevice() {
+    let tmp2;
+    const keys = Object.keys();
+    if (keys !== undefined) {
+      while (keys[tmp] !== undefined) {
+        let tmp9 = closure_40[tmp4];
+        if (!tmp9.connected) {
+          continue;
+        } else {
+          if (null == closure_41[tmp4]) {
+            continue;
+          } else {
+            let arr = tmp5[tmp4];
+            let found = arr.find(f90407);
+            if (null == found) {
+              continue;
+            } else {
+              let obj = { socket: tmp9, device: found };
+              tmp2 = obj;
               break;
             }
-            continue;
+            break;
           }
           continue;
         }
-      }
-      flag = false;
-      if (null != tmp3) {
-        const userId = closure_4.userId;
-        const findActivityResult = closure_10.findActivity(userId, (party) => {
-          let tmp = null != party.party && null != party.party.id;
-          if (tmp) {
-            tmp = closure_1_14(party.party.id);
-          }
-          return tmp;
-        });
-        if (null == findActivityResult) {
-          closure_37.start(closure_25, () => {
-            let tmp = null != _null2;
-            if (tmp) {
-              tmp = _null2.userId === userId;
-            }
-            if (tmp) {
-              stopSyncingUserActivityDefault();
-            }
-          });
-          flag = false;
-        } else {
-          closure_37.stop();
-          ({ sync_id, timestamps, party } = findActivityResult);
-          let tmp12 = null != sync_id;
-          if (tmp12) {
-            tmp12 = closure_4.trackId !== sync_id;
-          }
-          let tmp13 = null != timestamps;
-          if (tmp13) {
-            tmp13 = closure_4.startTime !== timestamps.start;
-          }
-          if (!tmp12) {
-            if (!tmp13) {
-              let flag2 = null != party;
-              if (flag2) {
-                flag2 = party.id !== closure_4.partyId;
-              }
-              if (flag2) {
-                closure_4.partyId = party.id;
-                flag2 = true;
-              }
-            }
-            flag = flag2;
-          }
-          flag2 = closure_50(userId, findActivityResult, false);
-        }
+        continue;
       }
     }
-    return flag;
-  });
-  const isSpotifyProtocolRegistered = SpotifyActionCreators.fetchIsSpotifyProtocolRegistered();
-};
-prototype2["hasConnectedAccount"] = function hasConnectedAccount() {
-  return Object.keys(closure_40).length > 0;
-};
-prototype2["getActiveSocketAndDevice"] = function getActiveSocketAndDevice() {
-  let tmp2;
-  const keys = Object.keys();
-  if (keys !== undefined) {
-    while (keys[tmp] !== undefined) {
-      let tmp9 = dependencyMap[tmp4];
-      if (!tmp9.connected) {
+    return tmp2;
+  }
+  getPlayableComputerDevices() {
+    const items = [];
+    for (const key10005 in closure_40) {
+      let tmp6 = closure_40[key10005];
+      if (!tmp6.connected) {
         continue;
       } else {
-        if (null == dependencyMap2[tmp4]) {
+        if (null == closure_41[key10005]) {
           continue;
         } else {
-          let arr = tmp5[tmp4];
-          let found = arr.find((is_active) => is_active.is_active);
+          let arr2 = tmp[key10005];
+          let found = arr2.find((is_restricted) => !is_restricted.is_restricted && "Computer" === is_restricted.type);
           if (null == found) {
             continue;
           } else {
-            let obj = { socket: tmp9, device: found };
-            tmp2 = obj;
-            break;
+            let obj = { socket: tmp6, device: found };
+            let arr = items.push(obj);
+            continue;
           }
-          break;
+          continue;
         }
         continue;
       }
       continue;
     }
+    return items;
   }
-  return tmp2;
-};
-prototype2["getPlayableComputerDevices"] = function getPlayableComputerDevices() {
-  const items = [];
-  for (const key10005 in closure_40) {
-    let tmp6 = dependencyMap[key10005];
-    if (!tmp6.connected) {
-      continue;
+  canPlay(party) {
+    party = party.party;
+    let tmp2;
+    const sync_id = party.sync_id;
+    const keys = Object.keys();
+    if (keys !== undefined) {
+      while (keys[tmp] !== undefined) {
+        let tmp11 = closure_40[tmp4];
+        if (!tmp11.connected) {
+          continue;
+        } else {
+          if (null == closure_41[tmp4]) {
+            continue;
+          } else {
+            let arr = tmp5[tmp4];
+            let found = arr.find(f90407);
+            if (null == found) {
+              continue;
+            } else {
+              let obj = { socket: tmp11, device: found };
+              tmp2 = obj;
+              break;
+            }
+            break;
+          }
+          continue;
+        }
+        continue;
+      }
+    }
+    const tmp7 = null != tmp2 && null != sync_id && null != party && null != party.id && authStore2(party.id);
+    return tmp7;
+  }
+  getSyncingWith() {
+    return c4;
+  }
+  wasAutoPaused() {
+    return c43;
+  }
+  getLastPlayedTrackId() {
+    return id;
+  }
+  getTrack() {
+    let track = null;
+    if (null != _null) {
+      track = _null.track;
+    }
+    return track;
+  }
+  getPlayerState(accountId) {
+    return closure_42[accountId];
+  }
+  shouldShowActivity() {
+    const showActivity = null != _null && _null.account.showActivity && !IdleStore.isIdle();
+    return showActivity;
+  }
+  getActivity() {
+    let album;
+    let artists;
+    let context;
+    let duration;
+    let isLocal;
+    let name;
+    let obj5;
+    let obj6;
+    let startTime;
+    let type;
+    if (null == _null) {
+      let findActivityResult = null;
+      if (null != _null2) {
+        findActivityResult = PresenceStore.findActivity(_null2.userId, (party) => {
+          const tmp = null != party.party && null != party.party.id && closure_1_14(party.party.id);
+          return tmp;
+        });
+      }
+      return findActivityResult;
     } else {
-      if (null == dependencyMap2[key10005]) {
-        continue;
-      } else {
-        let arr2 = tmp[key10005];
-        let found = arr2.find((is_restricted) => {
-          is_restricted = is_restricted.is_restricted;
-          let tmp = !is_restricted;
-          if (!is_restricted) {
-            tmp = "Computer" === is_restricted.type;
-          }
-          return tmp;
+      let joined;
+      let uri;
+      const track = _null.track;
+      ({ artists, album, name } = track);
+      ({ startTime, context } = _null);
+      ({ id, duration, isLocal, type } = track);
+      const substr = artists.slice(0, 5);
+      if (artists.length > 0) {
+        const mapped = substr.map((name) => {
+          const str = name.name;
+          return str.replace(/;/g, "");
         });
-        if (null == found) {
-          continue;
-        } else {
-          let obj = { socket: tmp6, device: found };
-          let arr = items.push(obj);
-          continue;
+        let str = "; ";
+        joined = mapped.join("; ");
+      }
+      let assetFromImageURL = null;
+      if (null != album.image) {
+        const obj2 = ApplicationAssetUtils;
+        assetFromImageURL = obj2.getAssetFromImageURL(PlatformTypes.SPOTIFY, album.image.url);
+      }
+      const obj = {};
+      const tmp6 = null != album.image && null != assetFromImageURL;
+      if (tmp6) {
+        obj.large_image = assetFromImageURL;
+      }
+      if (album.type !== single) {
+        obj.large_text = album.name;
+      }
+      if (null != context) {
+        uri = context.uri;
+      }
+      if (null != _null2) {
+        let partyId;
+        if (null != _null2.partyId) {
+          partyId = _null2.partyId;
         }
-        continue;
-      }
-      continue;
-    }
-    continue;
-  }
-  return items;
-};
-prototype2["canPlay"] = function canPlay(party) {
-  party = party.party;
-  let tmp2;
-  const keys = Object.keys();
-  if (keys !== undefined) {
-    while (keys[tmp] !== undefined) {
-      let tmp11 = dependencyMap[tmp4];
-      if (!tmp11.connected) {
-        continue;
-      } else {
-        if (null == dependencyMap2[tmp4]) {
-          continue;
-        } else {
-          let arr = tmp5[tmp4];
-          let found = arr.find((is_active) => is_active.is_active);
-          if (null == found) {
-            continue;
-          } else {
-            let obj = { socket: tmp11, device: found };
-            tmp2 = obj;
-            break;
-          }
-          break;
+        let text = name;
+        if (name.length > 128) {
+          text = `${name.substring(0, 125)}...`;
         }
-        continue;
-      }
-      continue;
-    }
-  }
-  let tmp7 = null != tmp2 && null != party.sync_id && null != party && null != party.id;
-  if (tmp7) {
-    tmp7 = state(party.id);
-  }
-  return tmp7;
-};
-prototype2["getSyncingWith"] = function getSyncingWith() {
-  return c4;
-};
-prototype2["wasAutoPaused"] = function wasAutoPaused() {
-  return c43;
-};
-prototype2["getLastPlayedTrackId"] = function getLastPlayedTrackId() {
-  return id;
-};
-prototype2["getTrack"] = function getTrack() {
-  let track = null;
-  if (null != _null) {
-    track = _null.track;
-  }
-  return track;
-};
-prototype2["getPlayerState"] = function getPlayerState(accountId) {
-  return dependencyMap3[accountId];
-};
-prototype2["shouldShowActivity"] = function shouldShowActivity() {
-  let showActivity = null != _null;
-  if (showActivity) {
-    showActivity = _null.account.showActivity;
-  }
-  if (showActivity) {
-    showActivity = !IdleStore.isIdle();
-  }
-  return showActivity;
-};
-prototype2["getActivity"] = function getActivity() {
-  if (null == _null) {
-    let findActivityResult = null;
-    if (null != _null2) {
-      findActivityResult = PresenceStore.findActivity(_null2.userId, (party) => {
-        let tmp = null != party.party && null != party.party.id;
-        if (tmp) {
-          tmp = closure_1_14(party.party.id);
+        const obj4 = { name: user.name, assets: obj, details: text, state: joined, timestamps: obj5, party: obj6 };
+        const obj3 = { context_uri: uri, album_id: album.id, artist_ids: substr.map((id) => id.id), type, button_urls: [] };
+        obj5 = { start: startTime, end: startTime + duration };
+        obj6 = { id: partyId };
+        if (!isLocal) {
+          obj4.sync_id = id;
+          obj4.flags = constants3.PLAY | constants3.SYNC;
+          obj4.metadata = obj3;
         }
-        return tmp;
-      });
-    }
-    return findActivityResult;
-  } else {
-    const track = _null.track;
-    ({ artists, album, name } = track);
-    ({ startTime, context } = _null);
-    ({ id, duration, isLocal, type } = track);
-    const substr = artists.slice(0, 5);
-    if (artists.length > 0) {
-      const mapped = substr.map((name) => name.name.replace(/;/g, ""));
-      const joined = mapped.join("; ");
-    }
-    let assetFromImageURL = null;
-    if (null != album.image) {
-      assetFromImageURL = ApplicationAssetUtils.getAssetFromImageURL(PlatformTypes.SPOTIFY, album.image.url);
-    }
-    const obj = {};
-    if (tmp6) {
-      obj.large_image = assetFromImageURL;
-    }
-    if (album.type !== single) {
-      obj.large_text = album.name;
-    }
-    if (null != context) {
-      const uri = context.uri;
-    }
-    if (null != _null2) {
-      if (null != _null2.partyId) {
-        let partyId = _null2.partyId;
+        return obj4;
       }
-      let text = name;
-      if (name.length > 128) {
-        text = `${name.substring(0, 125)}...`;
-      }
-      const obj3 = { context_uri: uri, album_id: album.id, artist_ids: substr.map((id) => id.id), type, button_urls: [] };
-      const obj4 = { name: user.name, assets: obj, details: text, state: joined, timestamps: null, party: null };
-      const obj5 = { start: startTime, end: startTime + duration };
-      obj4.timestamps = obj5;
-      const obj6 = { id: partyId };
-      obj4.party = obj6;
-      if (!isLocal) {
-        obj4.sync_id = id;
-        obj4.flags = constants3.PLAY | constants3.SYNC;
-        obj4.metadata = obj3;
-      }
-      return obj4;
+      const _HermesInternal = HermesInternal;
+      partyId = "" + closure_15 + AuthenticationStore.getId();
     }
-    const _HermesInternal = HermesInternal;
-    partyId = "" + closure_1_15 + AuthenticationStore.getId();
-    tmp6 = null != album.image && null != assetFromImageURL;
   }
-};
+}
+const prototype = SpotifyStore.prototype;
 SpotifyStore.displayName = "SpotifyStore";
-const spotifyStore = new SpotifyStore(DispatcherDefault, {
+let obj = {
   USER_CONNECTIONS_UPDATE: handleUserConnectionsUpdate,
   CONNECTION_OPEN: handleUserConnectionsUpdate,
   SPOTIFY_ACCOUNT_ACCESS_TOKEN: function handleSpotifyAccountAccessToken(accountId) {
@@ -1050,46 +1015,56 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
   },
   SPOTIFY_ACCOUNT_ACCESS_TOKEN_REVOKE: function handleSpotifyAccountAccessTokenRevoked(accountId) {
     accountId = accountId.accountId;
-    if (accountId in dependencyMap) {
-      dependencyMap[accountId].disconnect();
-      delete tmp[tmp2];
-      let tmp7 = null != tmp5;
-      if (tmp7) {
-        tmp7 = null != _null;
-      }
-      if (tmp7) {
-        tmp7 = tmp5.track.id === _null.track.id;
-      }
-      if (tmp7) {
+    if (accountId in closure_40) {
+      const obj = closure_40[accountId];
+      obj.disconnect();
+      delete closure_40[accountId];
+      const tmp6 = null != tmp4 && null != _null && tmp4.track.id === _null.track.id;
+      if (tmp6) {
         _null = null;
       }
-      delete tmp[tmp2];
+      delete closure_42[accountId];
       const _HermesInternal = HermesInternal;
       logger.info("Removed account: " + accountId);
     }
   },
   SPOTIFY_PROFILE_UPDATE: function handleSpotifyProfileUpdate(arg0) {
+    let accountId;
+    let isPremium;
     ({ accountId, isPremium } = arg0);
-    if (null == dependencyMap[accountId]) {
+    if (null == closure_40[accountId]) {
       return false;
     } else {
-      tmp.isPremium = isPremium;
+      closure_40[accountId].isPremium = isPremium;
       const _HermesInternal = HermesInternal;
       logger.info("Profile updated for " + accountId + ": isPremium = " + isPremium);
     }
   },
   SPOTIFY_PLAYER_STATE: function handleSpotifyPlayerState(arg0) {
+    let accountId;
+    let artists;
+    let artists1;
+    let context;
+    let device;
+    let isPlaying;
+    let num2;
+    let position;
+    let repeat;
+    let tmp10;
+    let track;
     ({ accountId, isPlaying, track, position, device } = arg0);
     let account;
     let flag = false;
     ({ repeat, context } = arg0);
     if (null != device) {
-      id = dependencyMap2;
-      if (null != dependencyMap2[accountId]) {
-        const found = id[accountId].find((id) => id.id === device.id);
+      if (null != closure_41[accountId]) {
+        let flag2;
+        const arr2 = closure_41[accountId];
+        const found = arr2.find((id) => id.id === device.id);
         if (null == found) {
-          id[accountId].push(device);
-          let flag2 = true;
+          const arr3 = closure_41[accountId];
+          arr3.push(device);
+          flag2 = true;
         } else {
           flag2 = false;
           if (!account(568)(found, device)) {
@@ -1098,16 +1073,16 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
             flag2 = true;
           }
         }
-        id = device.id;
-        setActiveDevice(accountId, id);
+        setActiveDevice(accountId, device.id);
+        flag = flag2;
       } else {
         const items = [device];
-        id[accountId] = items;
+        closure_41[accountId] = items;
         flag = true;
       }
     }
     if (isPlaying) {
-      let tmp10 = track;
+      tmp10 = track;
       if (_null != null) {
         _null.start(closure_24, autoPause);
         tmp10 = track;
@@ -1125,57 +1100,48 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
     } else {
       let tmp21 = null;
       if (null != tmp10) {
-        const obj2 = { account, track: tmp10, startTime: null, context: null, repeat: null };
         const _Date = Date;
-        let num2 = 0;
+        const obj2 = { account, track: tmp10, startTime: num2, context, repeat };
+        num2 = 0;
         const timestamp = Date.now();
-        if (null != tmp60) {
-          num2 = tmp60.startTime;
+        if (null != closure_42[accountId]) {
+          num2 = tmp61.startTime;
         }
         const diff = timestamp - position;
         const _Math = Math;
         if (Math.abs(diff - num2) > closure_27) {
           num2 = diff;
         }
-        obj2.startTime = num2;
-        obj2.context = context;
-        obj2.repeat = repeat;
         tmp21 = obj2;
       }
-      let tmp22 = null != device;
-      if (tmp22) {
-        tmp22 = null != _null2;
+      if (!(null != device && null != _null2 && 0 === position && !isPlaying)) {
+        closure_42[accountId] = tmp21;
       }
-      if (tmp22) {
-        tmp22 = 0 === position;
-      }
-      if (tmp22) {
-        tmp22 = !isPlaying;
-      }
-      if (!tmp22) {
-        dependencyMap3[accountId] = tmp21;
-      }
-      const values = account(12).values(dependencyMap3);
+      const obj3 = account(12);
+      const values = obj3.values(closure_42);
+      const tmp24 = closure_3;
       closure_3 = values.find((item) => null != item);
-      const id1 = AuthenticationStore.getId();
-      if (id1 === AuthenticationStore.getId()) {
+      id = AuthenticationStore.getId();
+      if (id === AuthenticationStore.getId()) {
         const result = VoiceStateStore.isCurrentClientInVoiceChannel();
-        const obj5 = { userId: id1, checkSoundSharing: true, checkSoundboardSounds: false };
+        const obj5 = { userId: id, checkSoundSharing: true, checkSoundboardSounds: false };
+        const obj8 = device(9018);
         if (result) {
-          if (obj9.getIsSpeaking(obj5)) {
+          if (obj8.getIsSpeaking(obj5)) {
             if (null != closure_3) {
               timeout.start(closure_24, autoPause, false);
               timeout1.stop();
             }
           }
         }
-        timeout1.start(100, () => closure_1_35.stop(), false);
-        obj9 = device(9018);
+        timeout1.start(100, f90411, false);
       }
       if (null != tmp10) {
-        if (!tmp22) {
+        if (!(null != device && null != _null2 && 0 === position && !isPlaying)) {
           timeout3.start(tmp10.duration - position + closure_26, () => {
-            DispatcherDefault.dispatch({ type: "SPOTIFY_PLAYER_STATE", accountId: account.id, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null });
+            id = account.id;
+            const obj = DispatcherDefault;
+            obj.dispatch({ type: "SPOTIFY_PLAYER_STATE", accountId: id, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null });
           });
         }
         if (null == _null2) {
@@ -1189,30 +1155,32 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
           timeout4.start(closure_26, () => {
             logger.info("Stopping listening along");
             stopSyncingUserActivityDefault();
-            DispatcherDefault.dispatch({ type: "SPOTIFY_PLAYER_STATE", accountId: account.id, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null });
+            id = account.id;
+            const obj = DispatcherDefault;
+            obj.dispatch({ type: "SPOTIFY_PLAYER_STATE", accountId: id, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null });
           });
         }
         let tmp55 = flag;
         if (tmp24 !== closure_3) {
-          if (null != tmp60) {
-            if (null != tmp60) {
+          if (null != closure_42[accountId]) {
+            if (null != closure_42[accountId]) {
               if (null != tmp21) {
-                if (tmp60.track.id === tmp21.track.id) {
+                if (closure_42[accountId].track.id === tmp21.track.id) {
                   tmp55 = flag;
                 }
               }
             }
             if (null != tmp10) {
               const obj6 = { type: "SPOTIFY_NEW_TRACK", track: tmp10, connectionId: accountId };
-              tmp25(584).dispatch(obj6);
-              const tmp25Result = tmp25(584);
-              const obj7 = { party_platform: PlatformTypes.SPOTIFY, track_id: tmp10.id, has_images: true, details: tmp10.album.name, state: tmp10.name, album_id: tmp10.album.id, author_ids: null, author_names: null };
-              const artists = tmp10.artists;
-              obj7.author_ids = artists.map((id) => id.id);
-              const artists1 = tmp10.artists;
-              obj7.author_names = artists1.map((name) => name.name);
-              tmp25(1252).track(constants4.ACTIVITY_UPDATED, obj7);
-              const tmp25Result2 = tmp25(1252);
+              const tmp25Result = account(584);
+              tmp25Result.dispatch(obj6);
+              const obj7 = { party_platform: PlatformTypes.SPOTIFY, track_id: tmp10.id, has_images: true, details: tmp10.album.name, state: tmp10.name, album_id: tmp10.album.id, author_ids: artists.map((id) => id.id), author_names: artists1.map((name) => name.name) };
+              artists = tmp10.artists;
+              const track2 = account(1252).track;
+              const ACTIVITY_UPDATED = constants4.ACTIVITY_UPDATED;
+              account(1252);
+              artists1 = tmp10.artists;
+              track2(ACTIVITY_UPDATED, obj7);
             }
           } else {
             tmp55 = flag;
@@ -1221,32 +1189,38 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
         return tmp55;
       }
       timeout3.stop();
-      const obj3 = account(12);
-      tmp24 = closure_3;
     }
   },
   SPOTIFY_PLAYER_PLAY: function handleSpotifyPlayerPlay(id) {
     id = id.id;
   },
   ACTIVITY_PLAY: function handleUserActivityPlay(arg0) {
+    let accessToken;
+    let accountId;
+    let activity;
+    let device;
+    let metadata;
+    let party;
+    let socket;
+    let sync_id;
     ({ activity, metadata } = arg0);
     let tmp2;
     const keys = Object.keys();
     if (keys !== undefined) {
       while (keys[tmp] !== undefined) {
-        let tmp30 = dependencyMap[tmp4];
-        if (!tmp30.connected) {
+        let tmp31 = closure_40[tmp4];
+        if (!tmp31.connected) {
           continue;
         } else {
-          if (null == dependencyMap2[tmp4]) {
+          if (null == closure_41[tmp4]) {
             continue;
           } else {
             let arr = tmp5[tmp4];
-            let found = arr.find((is_active) => is_active.is_active);
+            let found = arr.find(f90407);
             if (null == found) {
               continue;
             } else {
-              let obj = { socket: tmp30, device: found };
+              let obj = { socket: tmp31, device: found };
               tmp2 = obj;
               break;
             }
@@ -1262,27 +1236,25 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
     } else {
       ({ socket, device } = tmp2);
       ({ sync_id, party } = activity);
-      let tmp7 = null == sync_id || null == party || null == party.id;
-      if (!tmp7) {
-        tmp7 = !state(party.id);
-      }
-      let tmp9 = !tmp7;
-      if (!tmp7) {
+      let tmp9 = !(null == sync_id || null == party || null == party.id || !authStore2(party.id));
+      const tmp7 = null == sync_id || null == party || null == party.id || !authStore2(party.id);
+      if (tmp9) {
+        let context_uri;
         if (null != metadata) {
-          const context_uri = metadata.context_uri;
+          context_uri = metadata.context_uri;
         }
         if (null != c4) {
           handleUserActivitySyncStop();
         }
         if (null != metadata) {
-          const obj2 = SpotifyActionCreators;
           ({ accountId, accessToken } = socket);
           let TRACK = metadata.type;
+          const play = SpotifyActionCreators.play;
           if (TRACK == null) {
             TRACK = constants2.TRACK;
           }
-          const obj3 = { contextUri: context_uri, deviceId: device.id };
-          obj2.play(accountId, accessToken, sync_id, TRACK, obj3);
+          const obj2 = { contextUri: context_uri, deviceId: device.id };
+          play(accountId, accessToken, sync_id, TRACK, obj2);
           const _HermesInternal = HermesInternal;
           logger.info("Play started: " + socket.accountId + " playing " + sync_id + " on " + device.name);
         }
@@ -1296,6 +1268,8 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
   },
   ACTIVITY_SYNC_STOP: handleUserActivitySyncStop,
   SPOTIFY_SET_DEVICES: function handleSpotifySetDevices(arg0) {
+    let accountId;
+    let devices;
     ({ accountId, devices } = arg0);
     closure_41[accountId] = devices;
     logger.info("Devices updated for " + accountId + ":", devices);
@@ -1308,6 +1282,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
     if (userId === AuthenticationStore.getId()) {
       const result = VoiceStateStore.isCurrentClientInVoiceChannel();
       const obj2 = { userId, checkSoundSharing: true, checkSoundboardSounds: false };
+      const obj = useIsSpeaking;
       if (result) {
         if (obj.getIsSpeaking(obj2)) {
           if (null != c3) {
@@ -1316,18 +1291,19 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
           }
         }
       }
-      timeout1.start(100, () => closure_1_35.stop(), false);
-      obj = useIsSpeaking;
+      timeout1.start(100, f90411, false);
     }
     return false;
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
+    let currentClientInVoiceChannel;
     voiceStates = voiceStates.voiceStates;
     return voiceStates.reduce((acc, userId) => {
       userId = userId.userId;
       if (userId === id.getId()) {
         const result = currentClientInVoiceChannel.isCurrentClientInVoiceChannel();
         const obj2 = { userId, checkSoundSharing: true, checkSoundboardSounds: false };
+        const obj = require("useIsSpeaking");
         if (result) {
           if (obj.getIsSpeaking(obj2)) {
             if (null != _null) {
@@ -1336,8 +1312,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
             }
           }
         }
-        timeout1.start(100, () => closure_1_35.stop(), false);
-        obj = require("useIsSpeaking");
+        timeout1.start(100, f90411, false);
       }
       return acc;
     }, false);
@@ -1349,6 +1324,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
       desktopSettings = settings.desktopSettings;
     }
     if (null != desktopSettings) {
+      const obj = c44;
       if (c44 != null) {
         obj.stop();
       }
@@ -1360,28 +1336,29 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
       if (null != sourceId) {
         if (RunningGameStore.getObservedAppNameForWindow(sourceId) === user.name) {
           if (tmp5) {
+            const self = this;
+            const self2 = this;
             const interval = new Timers.Interval();
             c44 = interval;
             interval.start(closure_24, autoPause);
           }
         }
       }
+      const obj2 = c44;
       if (c44 != null) {
         obj2.stop();
       }
       c44 = null;
-      obj = c44;
-      obj2 = c44;
     } else if (null == settings) {
+      const obj4 = c44;
       if (c44 != null) {
         obj4.stop();
       }
       c44 = null;
-      obj4 = c44;
     }
   }
-});
-const size = fn(2);
+};
+const spotifyStore = new SpotifyStore(DispatcherDefault, obj);
 let result = size.fileFinishedImporting("modules/spotify/SpotifyStore.tsx");
 
 export default spotifyStore;

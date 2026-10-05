@@ -1,33 +1,72 @@
 // === Module 1128: intl/util ===
 
 // Module 1128 (intl/util)
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
 import _mod1165 from "module_1165" /* 1165 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, code;
 
-require = fn;
-const ReactCompilerGating = fn(558);
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+  let tmp2;
+  let closure_0 = arg0;
+  let closure_1 = arg1;
+  const obj = react2;
+  const cResult = obj.c(5);
+  if (cResult[0] !== arg0) {
+    const fn = function l(arg0) {
+      return closure_0.onChange(arg0);
+    };
+    cResult[0] = arg0;
+    cResult[1] = fn;
+    tmp2 = fn;
+  } else {
+    tmp2 = cResult[1];
+  }
+  if (cResult[2] === arg1) {
+    let tmp3;
+    if (cResult[3] === arg0) {
+      tmp3 = cResult[4];
+    }
+    const syncExternalStore = react.useSyncExternalStore(tmp2, tmp3);
+  }
+  const fn2 = function o() {
+    return closure_0.isLocaleLoaded(currentLocale.currentLocale);
+  };
+  cResult[2] = arg1;
+  cResult[3] = arg0;
+  cResult[4] = fn2;
+  tmp3 = fn2;
+}) : ((arg0, arg1) => {
+  let closure_0 = arg0;
+  let closure_1 = arg1;
+  const syncExternalStore = react.useSyncExternalStore((arg0) => closure_0.onChange(arg0), () => closure_0.isLocaleLoaded(currentLocale.currentLocale));
+});
 function getLanguages() {
   return require("module_1187");
 }
-const size = fn(2);
 const result = size.fileFinishedImporting("intl/util.tsx");
 
 export const getAvailableLocales = function getAvailableLocales() {
+  let closure_0;
   _require = require("module_1129").default;
-  const found = require("module_1187").filter((enabled) => enabled.enabled);
+  const arr = require("module_1187");
+  const found = arr.filter((enabled) => enabled.enabled);
   const mapped = found.map((code) => {
+    let obj2;
     code = code.code;
-    const obj = { value: code, name: code.name, localizedName: null };
-    const obj2 = _mod1165;
-    obj.localizedName = closure_0[obj2.runtimeHashMessageKey(obj2, code)];
+    const obj = { value: code, name: code.name, localizedName: closure_0[obj2.runtimeHashMessageKey(obj2, code)] };
+    obj2 = _mod1165;
     return obj;
   });
   return mapped.sort((name, name2) => {
-    const formatted = name.name.toLowerCase();
-    const formatted1 = name2.name.toLowerCase();
+    const str = name.name;
+    const str2 = name2.name;
+    const formatted = str.toLowerCase();
+    const formatted1 = str2.toLowerCase();
     let num = -1;
     if (formatted >= formatted1) {
       let num2 = 0;
@@ -41,15 +80,17 @@ export const getAvailableLocales = function getAvailableLocales() {
 };
 export { getLanguages };
 export const getNormalizedLocale = function getNormalizedLocale(Language, arg1) {
-  const found = require("module_1187").filter((enabled) => enabled.enabled);
+  const arr = require("module_1187");
+  const found = arr.filter((enabled) => enabled.enabled);
   const mapped = found.map((code) => code.code);
   if (mapped.includes(Language)) {
     return Language;
   } else {
+    let found2;
     const parts = Language.split("-");
     const first = parts[0];
     if (mapped.includes(parts[0])) {
-      let found2 = first;
+      found2 = first;
     } else {
       if ("zh" === first) {
         if (parts.length > 1) {
@@ -69,37 +110,5 @@ export const getNormalizedLocale = function getNormalizedLocale(Language, arg1) 
     }
     return found2;
   }
-  const arr = require("module_1187");
 };
-export const useSyncMessages = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
-  closure_0 = arg0;
-  const currentLocale = arg1;
-  const cResult = c.c(5);
-  if (cResult[0] !== arg0) {
-    const fn = function l(arg0) {
-      return closure_0.onChange(arg0);
-    };
-    cResult[0] = arg0;
-    cResult[1] = fn;
-    let tmp2 = fn;
-  } else {
-    tmp2 = cResult[1];
-  }
-  if (cResult[2] === arg1) {
-    if (cResult[3] === arg0) {
-      let tmp3 = cResult[4];
-    }
-    const syncExternalStore = noop.useSyncExternalStore(tmp2, tmp3);
-  }
-  const fn2 = function o() {
-    return closure_0.isLocaleLoaded(currentLocale.currentLocale);
-  };
-  cResult[2] = arg1;
-  cResult[3] = arg0;
-  cResult[4] = fn2;
-  tmp3 = fn2;
-}) : ((arg0, arg1) => {
-  closure_0 = arg0;
-  const currentLocale = arg1;
-  const syncExternalStore = noop.useSyncExternalStore((arg0) => closure_0.onChange(arg0), () => closure_0.isLocaleLoaded(currentLocale.currentLocale));
-});
+export const useSyncMessages = tmp2;

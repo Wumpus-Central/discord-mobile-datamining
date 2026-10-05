@@ -1,50 +1,64 @@
 // === Module 8818: PremiumUpsellUtils ===
 
 // Module 8818 (PremiumUpsellUtils)
-import util from "util" /* 1126 */;
+import Fragment from "Fragment" /* 21 */;
+import intl20 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import asyncRequire from "asyncRequire" /* 1987 */;
 import PremiumUtils from "PremiumUtils" /* 4528 */;
 import ChatInputUtils from "ChatInputUtils" /* 4745 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import _modDef8819 from "module_8819" /* 8819 */;
-import _modDef8820 from "module_8820" /* 8820 */;
-import _modDef8821 from "module_8821" /* 8821 */;
-import _modDef8822 from "module_8822" /* 8822 */;
-import _modDef8823 from "module_8823" /* 8823 */;
-import _modDef8824 from "module_8824" /* 8824 */;
+import AssetRegistryDefault from "AssetRegistry" /* 8819 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 8820 */;
+import AssetRegistryDefault3 from "AssetRegistry" /* 8821 */;
+import AssetRegistryDefault4 from "AssetRegistry" /* 8822 */;
+import AssetRegistryDefault5 from "AssetRegistry" /* 8823 */;
+import AssetRegistryDefault6 from "AssetRegistry" /* 8824 */;
 import PremiumFeaturesCards from "PremiumFeaturesCards" /* 8867 */;
 import openPremiumModalDefault from "openPremiumModal" /* 8914 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
+import Constants from "Constants" /* 1085 */;
+import PremiumConstants from "PremiumConstants" /* 1379 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const Constants = fn(1085);
-({ AnalyticEvents: hasOwnProperty, AnalyticsObjects: metroRequire, UpsellTypes: closure_7 } = Constants);
-const PremiumConstants = fn(1379);
-({ PremiumSubscriptionSKUs: closure_8, PremiumTypes: closure_9 } = PremiumConstants);
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, _location) => {
+const require = globalThis.__r;
+let _require, closeCustomKeyboardResult, dependencyMap, hideAllActionSheetsResult, importDefault, obj1, set, tmp5Result, trackResult;
+
+let c9;
+let hasOwnProperty;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+({ AnalyticEvents: hasOwnProperty, AnalyticsObjects: metroRequire, UpsellTypes: metroImportDefault } = Constants);
+({ PremiumSubscriptionSKUs: metroImportAll, PremiumTypes: c9 } = PremiumConstants);
+const jsx = Fragment.jsx;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0, arg1, _location) {
+  let TIER_2_LEADING;
+  let closure_0;
+  let first;
   _require = arg1;
   importDefault = _location;
-  let stringResult = TIER_2_LEADING;
-  const cResult = require("c").c(13);
-  let obj = require("c");
-  const premiumTrialOffer = require("usePremiumTrialOffer").usePremiumTrialOffer();
+  let obj = require("react");
+  const cResult = obj.c(13);
+  let obj2 = require("usePremiumTrialOffer");
+  const premiumTrialOffer = obj2.usePremiumTrialOffer();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const _Set = Set;
     let items = [, ];
     ({ GLOBAL_EMOJI: arr[0], UPLOAD: arr[1] } = constants3);
-    const set = new Set(items);
+    const self = this;
+    const self2 = this;
+    set = new Set(items);
     cResult[0] = set;
-    let first = set;
+    first = set;
   } else {
     first = cResult[0];
   }
-  const tmp11 = null != premiumTrialOffer && first.has(arg0);
-  let tmp12 = tmp11;
-  if (tmp11) {
+  const tmp9 = null != premiumTrialOffer && first.has(arg0);
+  let tmp10 = tmp9;
+  if (tmp10) {
     let skuId;
     if (premiumTrialOffer != null) {
       const subscriptionTrial = premiumTrialOffer.subscriptionTrial;
@@ -52,10 +66,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, _locatio
         skuId = subscriptionTrial.skuId;
       }
     }
-    tmp12 = skuId === closure_8.TIER_0;
+    tmp10 = skuId === closure_8.TIER_0;
   }
-  if (tmp12) {
-    TIER_2_LEADING = tmp(stringResult[20]).PremiumFeatureCardOrder.TIER_0_LEADING;
+  if (tmp10) {
+    TIER_2_LEADING = tmp(tmp2[20]).PremiumFeatureCardOrder.TIER_0_LEADING;
   } else {
     if (constants3.UPLOAD !== arg0) {
       if (constants3.ANIMATED_EMOJI !== arg0) {
@@ -71,7 +85,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, _locatio
                           const ANIMATED_AVATAR = constants3.ANIMATED_AVATAR;
                         }
                       }
-                      TIER_2_LEADING = tmp(stringResult[20]).PremiumFeatureCardOrder.TIER_0_LEADING;
+                      TIER_2_LEADING = tmp(tmp2[20]).PremiumFeatureCardOrder.TIER_0_LEADING;
                     }
                   }
                 }
@@ -81,14 +95,17 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, _locatio
         }
       }
     }
-    TIER_2_LEADING = tmp(stringResult[20]).PremiumFeatureCardOrder.TIER_2_LEADING;
+    TIER_2_LEADING = tmp(tmp2[20]).PremiumFeatureCardOrder.TIER_2_LEADING;
   }
   if (cResult[1] === _location) {
     if (cResult[2] === arg1) {
+      let tmp14;
+      let tmp15;
+      let tmp19;
       if (cResult[3] === TIER_2_LEADING) {
-        let tmp16 = cResult[4];
+        tmp14 = cResult[4];
       }
-      if (tmp11) {
+      if (tmp9) {
         let skuId1;
         if (premiumTrialOffer != null) {
           const subscriptionTrial2 = premiumTrialOffer.subscriptionTrial;
@@ -97,61 +114,66 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, _locatio
           }
         }
         if (closure_8.TIER_0 === skuId1) {
+          let tmp23;
           const _Symbol4 = Symbol;
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl4 = tmp(stringResult[6]).intl;
-            stringResult = intl4.string(tmp(stringResult[6]).t.hz78hE);
+            const intl4 = tmp(tmp2[6]).intl;
+            const stringResult = intl4.string(require("intl").t.hz78hE);
             cResult[5] = stringResult;
+            tmp23 = stringResult;
+          } else {
+            tmp23 = cResult[5];
           }
-        } else {
-          if (tmp20.TIER_2 === skuId1) {
-            const _Symbol3 = Symbol;
-            if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl3 = tmp(stringResult[6]).intl;
-              const stringResult1 = intl3.string(tmp(stringResult[6]).t["Gd/XHF"]);
-              cResult[6] = stringResult1;
-              let tmp23 = stringResult1;
-            } else {
-              tmp23 = cResult[6];
-            }
-            let tmp17 = tmp23;
+          tmp15 = tmp23;
+        } else if (tmp18.TIER_2 === skuId1) {
+          let tmp21;
+          const _Symbol3 = Symbol;
+          if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+            const intl3 = tmp(tmp2[6]).intl;
+            const stringResult1 = intl3.string(require("intl").t["Gd/XHF"]);
+            cResult[6] = stringResult1;
+            tmp21 = stringResult1;
+          } else {
+            tmp21 = cResult[6];
           }
-          if (cResult[9] === tmp17) {
-            if (cResult[10] === tmp16) {
-              if (cResult[11] === tmp12) {
-                let tmp27 = cResult[12];
-              }
-              return tmp27;
-            }
-          }
-          let obj3 = { useTier0UpsellContent: tmp12, onViewAllPerks: tmp16, getNitroText: tmp17 };
-          cResult[9] = tmp17;
-          cResult[10] = tmp16;
-          cResult[11] = tmp12;
-          cResult[12] = obj3;
-          tmp27 = obj3;
+          tmp15 = tmp21;
         }
-      } else if (tmp12) {
+        if (cResult[9] === tmp15) {
+          if (cResult[10] === tmp14) {
+            let tmp25;
+            if (cResult[11] === tmp10) {
+              tmp25 = cResult[12];
+            }
+            return tmp25;
+          }
+        }
+        let obj3 = { useTier0UpsellContent: tmp10, onViewAllPerks: tmp14, getNitroText: tmp15 };
+        cResult[9] = tmp15;
+        cResult[10] = tmp14;
+        cResult[11] = tmp10;
+        cResult[12] = obj3;
+        tmp25 = obj3;
+      } else if (tmp10) {
         const _Symbol = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = tmp(stringResult[6]).intl;
-          const stringResult2 = intl.string(tmp(stringResult[6]).t["9CM5v9"]);
+          const intl = tmp(tmp2[6]).intl;
+          const stringResult2 = intl.string(require("intl").t["9CM5v9"]);
           cResult[7] = stringResult2;
-          tmp17 = stringResult2;
+          tmp15 = stringResult2;
         } else {
-          tmp17 = cResult[7];
+          tmp15 = cResult[7];
         }
       }
       const _Symbol2 = Symbol;
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl2 = tmp(stringResult[6]).intl;
-        const stringResult3 = intl2.string(tmp(stringResult[6]).t.pj0XBN);
+        const intl2 = tmp(tmp2[6]).intl;
+        const stringResult3 = intl2.string(require("intl").t.pj0XBN);
         cResult[8] = stringResult3;
-        let tmp21 = stringResult3;
+        tmp19 = stringResult3;
       } else {
-        tmp21 = cResult[8];
+        tmp19 = cResult[8];
       }
-      tmp17 = tmp21;
+      tmp15 = tmp19;
     }
   }
   class P {
@@ -187,22 +209,20 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, _locatio
   cResult[2] = arg1;
   cResult[3] = TIER_2_LEADING;
   cResult[4] = P;
-  tmp16 = P;
-  let obj2 = require("usePremiumTrialOffer");
+  tmp14 = P;
 }) : ((arg0, arg1, _location) => {
+  let closure_0;
   _require = arg0;
-  closure_1 = arg1;
+  let closure_1 = arg1;
   dependencyMap = _location;
-  const premiumTrialOffer = require("usePremiumTrialOffer").usePremiumTrialOffer();
+  let obj = require("usePremiumTrialOffer");
+  const premiumTrialOffer = obj.usePremiumTrialOffer();
   let items = [, ];
   ({ GLOBAL_EMOJI: arr[0], UPLOAD: arr[1] } = closure_7);
-  const set = new Set(items);
-  let hasItem = null != premiumTrialOffer;
-  if (hasItem) {
-    hasItem = set.has(arg0);
-  }
+  set = new Set(items);
+  const hasItem = null != premiumTrialOffer && set.has(arg0);
   let tmp4 = hasItem;
-  if (hasItem) {
+  if (tmp4) {
     let skuId;
     if (premiumTrialOffer != null) {
       let subscriptionTrial = premiumTrialOffer.subscriptionTrial;
@@ -212,24 +232,24 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, _locatio
     }
     tmp4 = skuId === closure_8.TIER_0;
   }
-  closure_5 = tmp4;
+  let closure_5 = tmp4;
   const items1 = [arg0, tmp4];
   const memo = premiumTrialOffer.useMemo(() => {
     if (closure_5) {
       return PremiumFeaturesCards.PremiumFeatureCardOrder.TIER_0_LEADING;
     } else {
-      if (constants3.UPLOAD !== closure_0) {
-        if (constants3.ANIMATED_EMOJI !== closure_0) {
-          if (constants3.GLOBAL_EMOJI !== closure_0) {
-            if (constants3.GLOBAL_STICKER !== closure_0) {
-              if (constants3.CUSTOM_PROFILES !== closure_0) {
-                if (constants3.PREMIUM_GUILD_PROFILE !== closure_0) {
-                  if (constants3.APP_ICONS !== closure_0) {
-                    if (constants3.STREAM_HIGH_QUALITY !== closure_0) {
-                      if (constants3.SHOP_MEMBER_PRICING !== closure_0) {
-                        if (constants3.LONGER_MESSAGE !== closure_0) {
-                          if (constants3.GUILD_CAP !== closure_0) {
-                            const ANIMATED_AVATAR = constants3.ANIMATED_AVATAR;
+      if (metroImportDefault.UPLOAD !== closure_0) {
+        if (metroImportDefault.ANIMATED_EMOJI !== closure_0) {
+          if (metroImportDefault.GLOBAL_EMOJI !== closure_0) {
+            if (metroImportDefault.GLOBAL_STICKER !== closure_0) {
+              if (metroImportDefault.CUSTOM_PROFILES !== closure_0) {
+                if (metroImportDefault.PREMIUM_GUILD_PROFILE !== closure_0) {
+                  if (metroImportDefault.APP_ICONS !== closure_0) {
+                    if (metroImportDefault.STREAM_HIGH_QUALITY !== closure_0) {
+                      if (metroImportDefault.SHOP_MEMBER_PRICING !== closure_0) {
+                        if (metroImportDefault.LONGER_MESSAGE !== closure_0) {
+                          if (metroImportDefault.GUILD_CAP !== closure_0) {
+                            const ANIMATED_AVATAR = metroImportDefault.ANIMATED_AVATAR;
                           }
                         }
                         return PremiumFeaturesCards.PremiumFeatureCardOrder.TIER_0_LEADING;
@@ -248,28 +268,29 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, _locatio
   const items2 = [memo, arg1, _location];
   const items3 = [tmp4, premiumTrialOffer, hasItem];
   const callback = premiumTrialOffer.useCallback(() => {
-    const bestActiveInput = ChatInputUtils.getBestActiveInput();
+    let items;
+    let obj6;
+    const obj = ChatInputUtils;
+    const bestActiveInput = obj.getBestActiveInput();
     if (bestActiveInput != null) {
       bestActiveInput.closeCustomKeyboard();
     }
-    AnalyticsUtilsDefault.track(constants.PREMIUM_PROMOTION_OPENED, { location: _location });
     const obj2 = { location: _location };
-    ActionSheetActionCreatorsDefault.hideAllActionSheets();
-    const obj4 = { analyticsLocation: null, analyticsLocations: null, premiumFeatureCardOrder: null };
-    const obj6 = {};
+    const obj3 = AnalyticsUtilsDefault;
+    obj3.track(hasOwnProperty.PREMIUM_PROMOTION_OPENED, obj2);
+    const obj5 = ActionSheetActionCreatorsDefault;
+    obj5.hideAllActionSheets();
+    const obj4 = { analyticsLocation: obj6, analyticsLocations: items, premiumFeatureCardOrder: memo };
+    obj6 = { object: metroRequire.BUTTON_CTA };
+    const tmp5 = openPremiumModalDefault;
     const merged = Object.assign(_location);
-    obj6.object = constants2.BUTTON_CTA;
-    obj4.analyticsLocation = obj6;
-    let items = closure_1;
+    items = closure_1;
     if (closure_1 == null) {
       items = [];
     }
-    obj4.analyticsLocations = items;
-    obj4.premiumFeatureCardOrder = memo;
-    openPremiumModalDefault(obj4);
+    tmp5(obj4);
   }, items2);
-  let obj = require("usePremiumTrialOffer");
-  return {
+  let obj2 = {
     useTier0UpsellContent: tmp4,
     onViewAllPerks: callback,
     getNitroText: premiumTrialOffer.useMemo(() => {
@@ -281,27 +302,27 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, _locatio
             skuId = subscriptionTrial.skuId;
           }
         }
-        if (closure_2_8.TIER_0 === skuId) {
-          const intl4 = util.intl;
-          return intl4.string(util.t.hz78hE);
-        } else if (tmp8.TIER_2 === skuId) {
-          const intl3 = util.intl;
-          return intl3.string(util.t["Gd/XHF"]);
+        if (metroImportAll.TIER_0 === skuId) {
+          const intl4 = intl20.intl;
+          return intl4.string(intl20.t.hz78hE);
+        } else if (tmp9.TIER_2 === skuId) {
+          const intl3 = intl20.intl;
+          return intl3.string(intl20.t["Gd/XHF"]);
         }
       } else if (closure_5) {
-        const intl = util.intl;
-        return intl.string(util.t["9CM5v9"]);
+        const intl = intl20.intl;
+        return intl.string(intl20.t["9CM5v9"]);
       }
-      const intl2 = util.intl;
-      return intl2.string(util.t.pj0XBN);
+      const intl2 = intl20.intl;
+      return intl2.string(intl20.t.pj0XBN);
     }, items3)
   };
+  return obj2;
 });
-const size = fn(2);
-const result = size.fileFinishedImporting("utils/native/PremiumUpsellUtils.tsx");
-
-export default {
+let obj = {
   handleShowUpsellAlert(initialUpsellKey) {
+    let closure_5;
+    let isDismissable;
     initialUpsellKey = initialUpsellKey.initialUpsellKey;
     let analyticsLocation = initialUpsellKey.analyticsLocation;
     if (undefined === analyticsLocation) {
@@ -316,53 +337,54 @@ export default {
       analyticsProperties = {};
     }
     ({ largestFileSize: UserStore, imageSource: closure_5, isDismissable } = initialUpsellKey);
+    const tmp = undefined !== isDismissable && isDismissable;
     const currentUser = UserStore.getCurrentUser();
     let flag = false;
     if (null != currentUser) {
       if (constants3.UPLOAD === initialUpsellKey) {
-        flag = !analyticsLocation(analyticsLocations[10]).isPremiumExactly(currentUser, TIER_2.TIER_2);
         const obj15 = analyticsLocation(analyticsLocations[10]);
+        flag = !obj15.isPremiumExactly(currentUser, TIER_2.TIER_2);
       } else if (constants3.GLOBAL_EMOJI === initialUpsellKey) {
-        flag = !analyticsLocation(analyticsLocations[10]).canUseEmojisEverywhere(currentUser);
         const obj14 = analyticsLocation(analyticsLocations[10]);
+        flag = !obj14.canUseEmojisEverywhere(currentUser);
       } else if (constants3.ANIMATED_AVATAR === initialUpsellKey) {
-        flag = !analyticsLocation(analyticsLocations[10]).canUseAnimatedAvatar(currentUser);
         const obj13 = analyticsLocation(analyticsLocations[10]);
+        flag = !obj13.canUseAnimatedAvatar(currentUser);
       } else if (constants3.BADGE === initialUpsellKey) {
-        flag = !analyticsLocation(analyticsLocations[10]).canUseBadges(currentUser);
         const obj12 = analyticsLocation(analyticsLocations[10]);
+        flag = !obj12.canUseBadges(currentUser);
       } else if (constants3.ANIMATED_EMOJI === initialUpsellKey) {
-        flag = !analyticsLocation(analyticsLocations[10]).canUseAnimatedEmojis(currentUser);
         const obj11 = analyticsLocation(analyticsLocations[10]);
+        flag = !obj11.canUseAnimatedEmojis(currentUser);
       } else if (constants3.EMOJI_AUTOCOMPLETE === initialUpsellKey) {
-        const canUseAnimatedEmojisResult = analyticsLocation(analyticsLocations[10]).canUseAnimatedEmojis(currentUser);
+        const obj9 = analyticsLocation(analyticsLocations[10]);
+        const canUseAnimatedEmojisResult = obj9.canUseAnimatedEmojis(currentUser);
         let tmp19 = !canUseAnimatedEmojisResult;
+        const tmp16 = analyticsLocation;
+        const tmp17 = analyticsLocations;
         if (canUseAnimatedEmojisResult) {
-          tmp19 = !tmp16(tmp17[10]).canUseEmojisEverywhere(currentUser);
           const tmp16Result = tmp16(tmp17[10]);
+          tmp19 = !tmp16Result.canUseEmojisEverywhere(currentUser);
         }
         flag = tmp19;
-        const obj9 = analyticsLocation(analyticsLocations[10]);
-        tmp16 = analyticsLocation;
-        tmp17 = analyticsLocations;
       } else if (constants3.CUSTOM_PROFILES === initialUpsellKey) {
-        flag = !analyticsLocation(analyticsLocations[10]).canUsePremiumProfileCustomization(currentUser);
         const obj8 = analyticsLocation(analyticsLocations[10]);
+        flag = !obj8.canUsePremiumProfileCustomization(currentUser);
       } else if (constants3.APP_ICONS === initialUpsellKey) {
-        flag = !analyticsLocation(analyticsLocations[10]).canUsePremiumAppIcons(currentUser);
         const obj7 = analyticsLocation(analyticsLocations[10]);
+        flag = !obj7.canUsePremiumAppIcons(currentUser);
       } else if (constants3.GLOBAL_STICKER === initialUpsellKey) {
-        flag = !analyticsLocation(analyticsLocations[10]).canUseCustomStickersEverywhere(currentUser);
         const obj6 = analyticsLocation(analyticsLocations[10]);
+        flag = !obj6.canUseCustomStickersEverywhere(currentUser);
       } else if (constants3.PREMIUM_GUILD_PROFILE === initialUpsellKey) {
-        flag = !analyticsLocation(analyticsLocations[10]).canUsePremiumGuildMemberProfile(currentUser);
         const obj5 = analyticsLocation(analyticsLocations[10]);
+        flag = !obj5.canUsePremiumGuildMemberProfile(currentUser);
       } else if (constants3.LONGER_MESSAGE === initialUpsellKey) {
-        flag = !analyticsLocation(analyticsLocations[10]).canUseIncreasedMessageLength(currentUser);
         const obj4 = analyticsLocation(analyticsLocations[10]);
+        flag = !obj4.canUseIncreasedMessageLength(currentUser);
       } else if (constants3.GUILD_CAP === initialUpsellKey) {
-        flag = !analyticsLocation(analyticsLocations[10]).canUseIncreasedGuildCap(currentUser);
         const obj3 = analyticsLocation(analyticsLocations[10]);
+        flag = !obj3.canUseIncreasedGuildCap(currentUser);
       } else {
         flag = false;
         if (constants3.STREAM_HIGH_QUALITY === initialUpsellKey) {
@@ -371,88 +393,91 @@ export default {
       }
     }
     if (flag) {
+      const tmp31 = analyticsLocation;
+      const tmp32 = analyticsLocations;
       if (!analyticsLocation(analyticsLocations[13])(initialUpsellKey)) {
-        let obj = {
+        const obj = {
           importer() {
-                return asyncRequireImpl(8827, dependencyMap.paths).then((result) => {
-                  closure_0 = result.default;
+                let imageSource;
+                let largestFileSize;
+                const promise = asyncRequire(8827, dependencyMap.paths);
+                return promise.then((result) => {
+                  let closure_0 = result.default;
                   return (arg0) => {
-                    const obj = {};
                     const merged = Object.assign(arg0);
-                    obj.initialUpsellKey = initialUpsellKey;
-                    obj.analyticsLocation = analyticsLocation;
-                    obj.analyticsProperties = analyticsProperties;
-                    obj.analyticsLocations = analyticsLocations;
-                    obj.largestFileSize = largestFileSize;
-                    obj.imageSource = imageSource;
-                    return <closure_0 />;
+                    return <closure_0 initialUpsellKey={initialUpsellKey} analyticsLocation={analyticsLocation} analyticsProperties={analyticsProperties} analyticsLocations={analyticsLocations} largestFileSize={largestFileSize} imageSource={imageSource} />;
                   };
                 });
               },
           isDismissable: tmp
         };
-        tmp31(tmp32[14]).openLazy(obj);
         const tmp31Result = tmp31(tmp32[14]);
+        tmp31Result.openLazy(obj);
       }
-      tmp31 = analyticsLocation;
-      tmp32 = analyticsLocations;
     }
-    tmp = undefined !== isDismissable && isDismissable;
   },
   usePremiumUpsellConfig: tmp4
 };
+const result = size.fileFinishedImporting("utils/native/PremiumUpsellUtils.tsx");
+
+export default obj;
 export const getUpsellItems = function getUpsellItems() {
-  const obj = { key: constants3.GLOBAL_EMOJI, image: _modDef8819, activeTitle: null, passiveTitle: null, description: null };
-  const intl = util.intl;
-  obj.activeTitle = intl.string(util.t.gKtr8N);
-  const intl2 = util.intl;
-  obj.passiveTitle = intl2.string(util.t.N8ZRNb);
-  const intl3 = util.intl;
-  obj.description = intl3.format(util.t.rf7Ixp, {});
+  let DUT5IC;
+  let format;
+  let intl;
+  let intl10;
+  let intl11;
+  let intl13;
+  let intl14;
+  let intl15;
+  let intl16;
+  let intl17;
+  let intl18;
+  let intl19;
+  let intl2;
+  let intl3;
+  let intl4;
+  let intl5;
+  let intl6;
+  let intl7;
+  let intl8;
+  let intl9;
+  let obj5;
+  let obj6;
+  const obj = { key: metroImportDefault.GLOBAL_EMOJI, image: AssetRegistryDefault, activeTitle: intl.string(intl20.t.gKtr8N), passiveTitle: intl2.string(intl20.t.N8ZRNb), description: intl3.format(intl20.t.rf7Ixp, {}) };
+  intl = intl20.intl;
+  intl2 = intl20.intl;
+  intl3 = intl20.intl;
   const items = [obj, , , , , ];
-  const obj2 = { key: constants3.ANIMATED_EMOJI, image: _modDef8820, activeTitle: null, passiveTitle: null, description: null };
-  const intl4 = util.intl;
-  obj2.activeTitle = intl4.string(util.t.F6rmyq);
-  const intl5 = util.intl;
-  obj2.passiveTitle = intl5.string(util.t.e4cKNt);
-  const intl6 = util.intl;
-  obj2.description = intl6.format(util.t.JxTzzb, {});
+  const obj2 = { key: metroImportDefault.ANIMATED_EMOJI, image: AssetRegistryDefault2, activeTitle: intl4.string(intl20.t.F6rmyq), passiveTitle: intl5.string(intl20.t.e4cKNt), description: intl6.format(intl20.t.JxTzzb, {}) };
+  intl4 = intl20.intl;
+  intl5 = intl20.intl;
+  intl6 = intl20.intl;
   items[1] = obj2;
-  const obj3 = { key: constants3.ANIMATED_AVATAR, image: _modDef8821, activeTitle: null, passiveTitle: null, description: null };
-  const intl7 = util.intl;
-  obj3.activeTitle = intl7.string(util.t["tQh+gF"]);
-  const intl8 = util.intl;
-  obj3.passiveTitle = intl8.string(util.t.HGSXTM);
-  const intl9 = util.intl;
-  obj3.description = intl9.format(util.t["Tso/Fn"], {});
+  const obj3 = { key: metroImportDefault.ANIMATED_AVATAR, image: AssetRegistryDefault3, activeTitle: intl7.string(intl20.t["tQh+gF"]), passiveTitle: intl8.string(intl20.t.HGSXTM), description: intl9.format(intl20.t["Tso/Fn"], {}) };
+  intl7 = intl20.intl;
+  intl8 = intl20.intl;
+  intl9 = intl20.intl;
   items[2] = obj3;
-  const obj4 = { key: constants3.UPLOAD, image: _modDef8822, activeTitle: null, passiveTitle: null, description: null };
-  const intl10 = util.intl;
-  obj4.activeTitle = intl10.string(util.t["1EOZqw"]);
-  const intl11 = util.intl;
-  obj4.passiveTitle = intl11.string(util.t.tB51W4);
-  const intl12 = util.intl;
-  const obj5 = { maxUploadStandard: null, maxUploadPremium: null };
-  const intl13 = util.intl;
-  obj5.maxUploadStandard = intl13.string(util.t.Ll40SK);
-  obj5.maxUploadPremium = PremiumUtils.getMaxFileSizeForPremiumType(options.TIER_2);
-  obj4.description = intl12.format(util.t.DUT5IC, obj5);
+  const obj4 = { key: metroImportDefault.UPLOAD, image: AssetRegistryDefault4, activeTitle: intl10.string(intl20.t["1EOZqw"]), passiveTitle: intl11.string(intl20.t.tB51W4), description: format(DUT5IC, obj5) };
+  intl10 = intl20.intl;
+  intl11 = intl20.intl;
+  const intl12 = intl20.intl;
+  format = intl12.format;
+  obj5 = { maxUploadStandard: intl13.string(intl20.t.Ll40SK), maxUploadPremium: obj6.getMaxFileSizeForPremiumType(React4.TIER_2) };
+  DUT5IC = intl20.t.DUT5IC;
+  intl13 = intl20.intl;
   items[3] = obj4;
-  const obj7 = { key: constants3.BADGE, image: _modDef8823, activeTitle: null, passiveTitle: null, description: null };
-  const intl14 = util.intl;
-  obj7.activeTitle = intl14.string(util.t["602BK4"]);
-  const intl15 = util.intl;
-  obj7.passiveTitle = intl15.string(util.t.j0TXTX);
-  const intl16 = util.intl;
-  obj7.description = intl16.format(util.t["p7i+li"], {});
+  obj6 = PremiumUtils;
+  const obj7 = { key: metroImportDefault.BADGE, image: AssetRegistryDefault5, activeTitle: intl14.string(intl20.t["602BK4"]), passiveTitle: intl15.string(intl20.t.j0TXTX), description: intl16.format(intl20.t["p7i+li"], {}) };
+  intl14 = intl20.intl;
+  intl15 = intl20.intl;
+  intl16 = intl20.intl;
   items[4] = obj7;
-  const obj8 = { key: constants3.APP_ICONS, image: _modDef8824, activeTitle: null, passiveTitle: null, description: null };
-  const intl17 = util.intl;
-  obj8.activeTitle = intl17.string(util.t["1B1Cyn"]);
-  const intl18 = util.intl;
-  obj8.passiveTitle = intl18.string(util.t["1B1Cyn"]);
-  const intl19 = util.intl;
-  obj8.description = intl19.string(util.t.VL5TYT);
+  const obj8 = { key: metroImportDefault.APP_ICONS, image: AssetRegistryDefault6, activeTitle: intl17.string(intl20.t["1B1Cyn"]), passiveTitle: intl18.string(intl20.t["1B1Cyn"]), description: intl19.string(intl20.t.VL5TYT) };
+  intl17 = intl20.intl;
+  intl18 = intl20.intl;
+  intl19 = intl20.intl;
   items[5] = obj8;
   return items;
 };

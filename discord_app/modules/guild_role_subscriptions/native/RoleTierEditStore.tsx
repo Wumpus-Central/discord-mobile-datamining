@@ -1,80 +1,153 @@
 // === Module 17926: RoleTierEditStore ===
 
 // Module 17926 (RoleTierEditStore)
-import c from "c" /* 576 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
-import _mod4492 from "module_4492" /* 4492 */;
+import react from "react" /* 576 */;
+import react_native from "react-native" /* 1259 */;
+import _slicedToArray2 from "_slicedToArray" /* 4492 */;
+import GuildRoleSubscriptionsHttpApiAll from "GuildRoleSubscriptionsHttpApi" /* 6759 */;
 import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15030 */;
-import _slicedToArray from "module_32" /* 32 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray_mod from "_slicedToArray" /* 32 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import module_1254 from "module_1254" /* 1254 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+const require = globalThis.__r;
+let _require, c3, c4, dependencyMap, set;
+
+let _slicedToArray = _slicedToArray_mod;
 const LoadingState = { IDLE: 0, [0]: "IDLE", LOADING: 1, [1]: "LOADING", ERROR: 2, [2]: "ERROR" };
 let closure_7 = Object.freeze({ currentScene: null, groupCover: null, groupDescription: "", groupIsFullGate: false });
-const identity = fn(1254);
-const withEqualityFn = identity.createWithEqualityFn((arg0) => {
-  closure_0 = arg0;
-  const obj = {};
+const withEqualityFn = module_1254.createWithEqualityFn((arg0) => {
+  let obj;
+  const setGroupCover = (arg0) => {
+    closure_0 = arg0;
+    let obj = closure_0(closure_1_3[2]);
+    obj.batchUpdates(() => {
+      const obj = { [closure_2_1]: closure_0 };
+      return closure_0(obj);
+    });
+  };
+  obj = {
+    setScene(currentScene) {
+      let obj = currentScene(dependencyMap[2]);
+      obj.batchUpdates(() => {
+        const obj = { currentScene };
+        return currentScene(obj);
+      });
+    },
+    setGroupCover,
+    setGroupDescription: setGroupCover,
+    setGroupIsFullGate: setGroupCover,
+    priceTiers: null,
+    priceTierState: obj.IDLE,
+    loadPriceTiers(arg0) {
+      closure_0 = arg0;
+      return (async () => {
+        let obj5;
+        if (c4 === 2) {
+          c4 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp3 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            return { value: "IconComponent", done: null };
+          }
+        } else {
+          let c2;
+          try {
+            let priceTiers;
+            c4 = 2;
+            if (0 === c3) {
+              if (arg0 === 1) {
+                c4 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c4 = 3;
+                const obj6 = { value, done: true };
+                return obj6;
+              } else {
+                let closure_1 = tmp;
+                priceTiers = undefined;
+                c2 = 1;
+                const obj4 = priceTiers(dependencyMap[2]);
+                obj4.batchUpdates(() => {
+                  const obj = { priceTierState: constants.LOADING };
+                  return priceTiers(obj);
+                });
+                c3 = 2;
+                c4 = 1;
+                const obj7 = { value: obj5.getPriceTiers(priceTiers), done: false };
+                obj5 = GuildRoleSubscriptionsHttpApiAll;
+                return obj7;
+              }
+            } else {
+              if (1 === c3) {
+                c2 = 0;
+                const obj3 = priceTiers(dependencyMap[2]);
+                obj3.batchUpdates(() => {
+                  const obj = { priceTierState: constants.ERROR };
+                  return priceTiers(obj);
+                });
+              } else if (arg0 === 1) {
+                c4 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c2 = 0;
+                c4 = 3;
+                const obj8 = { value, done: true };
+                return obj8;
+              } else {
+                priceTiers = value;
+                let obj = priceTiers(dependencyMap[2]);
+                obj.batchUpdates(() => {
+                  const obj = { priceTiers, priceTierState: constants.IDLE };
+                  return priceTiers(obj);
+                });
+                c2 = 0;
+              }
+              c4 = 3;
+              return { value: "IconComponent", done: null };
+            }
+          } catch (tmp21) {
+            if (0 === c2) {
+              c4 = 3;
+              throw tmp21;
+            } else {
+              c3 = 1;
+            }
+          }
+        }
+      })();
+    },
+    reset() {
+      const obj = react_native;
+      obj.batchUpdates(() => closure_1_0(closure_2_7));
+    }
+  };
   const merged = Object.assign(closure_7);
-  obj.setScene = function setScene(currentScene) {
-    currentScene(1259).batchUpdates(() => currentScene({ currentScene }));
-  };
-  closure_129_0 = arg0;
-  closure_129_1 = "groupCover";
-  obj.setGroupCover = (arg0) => {
-    closure_0 = arg0;
-    closure_0(1259).batchUpdates(() => closure_0({ [closure_2_1]: closure_0 }));
-  };
-  closure_130_0 = arg0;
-  closure_130_1 = "groupDescription";
-  obj.setGroupDescription = (arg0) => {
-    closure_0 = arg0;
-    closure_0(1259).batchUpdates(() => closure_0({ [closure_2_1]: closure_0 }));
-  };
-  closure_131_0 = arg0;
-  closure_131_1 = "groupIsFullGate";
-  obj.setGroupIsFullGate = (arg0) => {
-    closure_0 = arg0;
-    closure_0(1259).batchUpdates(() => closure_0({ [closure_2_1]: closure_0 }));
-  };
-  obj.priceTiers = null;
-  obj.priceTierState = obj.IDLE;
-  obj.loadPriceTiers = function loadPriceTiers(arg0) {
-    closure_0 = arg0;
-    return (async () => {
-      closure_1 = tmp3;
-      priceTiers(1259).batchUpdates(() => priceTiers({ priceTierState: constants.LOADING }));
-      await closure_2_2(6759).getPriceTiers(priceTiers);
-      if (1 === tmp7) {
-        c2 = 0;
-        priceTiers(1259).batchUpdates(() => priceTiers({ priceTierState: constants.ERROR }));
-        c4 = 3;
-        priceTiers(1259);
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw value;
-      } else if (arg0 !== 2) {
-        closure_128_0 = value;
-        priceTiers(1259).batchUpdates(() => priceTiers({ priceTiers, priceTierState: constants.IDLE }));
-        c2 = 0;
-        priceTiers(1259);
-      }
-      return value;
-    })();
-  };
-  obj.reset = function reset() {
-    ReactBatchUpdates.batchUpdates(() => closure_1_0(closure_2_7));
-  };
+  const groupCover = "groupCover";
+  const groupDescription = "groupDescription";
+  let closure_0 = arg0;
+  const groupIsFullGate = "groupIsFullGate";
   return obj;
 });
-fn(558);
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(3);
+  let currentScene;
+  let setScene;
+  const obj = react;
+  const cResult = obj.c(3);
   ({ currentScene, setScene } = withEqualityFn());
+  withEqualityFn();
   if (cResult[0] === currentScene) {
+    let tmp3;
     if (cResult[1] === setScene) {
-      let tmp3 = cResult[2];
+      tmp3 = cResult[2];
     }
     return tmp3;
   }
@@ -86,12 +159,34 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
 }) : (() => {
   const items = [, ];
   ({ currentScene: arr[0], setScene: arr[1] } = withEqualityFn());
+  withEqualityFn();
   return items;
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let first;
+  const obj = react;
+  const cResult = obj.c(1);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function t(reset) {
+      return reset.reset;
+    };
+    cResult[0] = fn;
+    first = fn;
+  } else {
+    first = cResult[0];
+  }
+  return withEqualityFn(first);
+}) : (() => withEqualityFn((reset) => reset.reset));
+ReactCompilerGating = ReactCompilerGating_mod;
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+  let closure_3;
+  let closure_4;
+  let first;
   _require = guildId;
-  const cResult = require("c").c(13);
+  let tmp = _require;
+  const obj = require("react");
+  const cResult = obj.c(13);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function o(arg0) {
       const items = [, , ];
@@ -99,42 +194,42 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       return items;
     };
     cResult[0] = fn;
-    let first = fn;
+    first = fn;
   } else {
     first = cResult[0];
   }
-  const tmp5 = _slicedToArray(withEqualityFn(first, require("module_4492").shallow), 3);
+  const tmp5 = _slicedToArray(withEqualityFn(first, tmp(4492).shallow), 3);
   const first1 = tmp5[0];
-  closure_2 = tmp7;
+  let closure_2 = tmp7;
   dependencyMap = tmp8;
   if (cResult[1] === tmp5[2]) {
-    if (cResult[2] === tmp7) {
+    if (cResult[2] === tmp5[1]) {
+      let tmp9;
       if (cResult[3] === first1) {
-        let tmp9 = cResult[4];
+        tmp9 = cResult[4];
       }
       _slicedToArray = tmp9;
       if (cResult[5] === guildId) {
+        let tmp10;
         if (cResult[6] === tmp9) {
-          let tmp10 = cResult[7];
+          tmp10 = cResult[7];
         }
         first1(5590)(tmp10);
         class G {
           constructor() {
-            tmp = closure_4(closure_0);
-            return;
+            closure_4(guildId);
           }
         }
-        const obj2 = { tiers: first1, state: tmp7, onRefresh: tmp9, guildId };
+        const obj2 = { tiers: first1, state: tmp5[1], onRefresh: tmp9, guildId };
         cResult[8] = guildId;
         cResult[9] = tmp9;
-        cResult[10] = tmp7;
+        cResult[10] = tmp5[1];
         cResult[11] = first1;
         cResult[12] = obj2;
       }
       class G {
         constructor() {
-          tmp = closure_4(closure_0);
-          return;
+          closure_4(guildId);
         }
       }
       cResult[5] = guildId;
@@ -144,10 +239,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     }
   }
   const fn2 = function l(arg0) {
-    let tmp = null == first1;
-    if (tmp) {
-      tmp = closure_2 !== obj.LOADING;
-    }
+    const tmp = null == first1 && closure_2 !== obj.LOADING;
     if (tmp) {
       closure_3(arg0);
     }
@@ -158,63 +250,52 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[4] = fn2;
   tmp9 = fn2;
 }) : ((guildId) => {
+  let closure_3;
+  let tiers;
   _require = guildId;
-  let tmp = _slicedToArray(withEqualityFn((arg0) => {
+  [tiers, , dependencyMap] = withEqualityFn((arg0) => {
     const items = [, , ];
     ({ priceTiers: arr[0], priceTierState: arr[1], loadPriceTiers: arr[2] } = arg0);
     return items;
-  }, require("module_4492").shallow), 3);
-  const tiers = tmp[0];
-  closure_2 = tmp3;
-  dependencyMap = tmp[2];
+  }, require("_slicedToArray").shallow);
+  let closure_2 = tmp3;
   tiers(5590)(() => {
-    let tmp2 = null == first;
+    const tmp2 = null == first && closure_2 !== obj.LOADING;
     if (tmp2) {
-      tmp2 = closure_2 !== obj.LOADING;
-    }
-    if (tmp2) {
-      closure_3(closure_0);
+      closure_3(guildId);
     }
   });
-  return {
+  const obj = {
     tiers,
-    state: tmp[1],
+    state: tmp3,
     onRefresh(arg0) {
-      let tmp = null == first;
-      if (tmp) {
-        tmp = closure_2 !== obj.LOADING;
-      }
+      const tmp = null == first && closure_2 !== obj.LOADING;
       if (tmp) {
         closure_3(arg0);
       }
     },
     guildId
   };
+  return obj;
 });
 let closure_9 = tmp5;
-ReactCompilerGating = fn(558);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(1);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function t(reset) {
-      return reset.reset;
-    };
-    cResult[0] = fn;
-    let first = fn;
-  } else {
-    first = cResult[0];
-  }
-  return withEqualityFn(first);
-}) : (() => withEqualityFn((reset) => reset.reset));
-ReactCompilerGating = fn(558);
-const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(9);
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
+  let onRefresh;
+  let state;
+  let tiers;
+  const obj = react;
+  const cResult = obj.c(9);
   ({ tiers, state, onRefresh } = closure_9(arg0));
-  const tmp2 = closure_9(arg0);
-  const subscriptionListingsForGuild = GuildRoleSubscriptionsHooks.useSubscriptionListingsForGuild(arg0);
+  closure_9(arg0);
+  const obj2 = GuildRoleSubscriptionsHooks;
+  const subscriptionListingsForGuild = obj2.useSubscriptionListingsForGuild(arg0);
   if (cResult[0] !== subscriptionListingsForGuild) {
     const _Set = Set;
-    let set = new Set();
+    const self = this;
+    const self2 = this;
+    set = new Set();
+    let closure_0 = set;
     for (const item10029 of subscriptionListingsForGuild) {
       let addResult = set.add(item10029.subscription_plans[0].price);
       continue;
@@ -222,26 +303,28 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[0] = subscriptionListingsForGuild;
     cResult[1] = set;
   } else {
-    set = cResult[1];
+    closure_0 = cResult[1];
   }
   if (cResult[2] === tiers) {
+    let tmp10;
     if (cResult[3] === tmp4) {
-      let tmp12 = cResult[4];
+      tmp10 = cResult[4];
     }
     if (cResult[5] === onRefresh) {
       if (cResult[6] === state) {
-        if (cResult[7] === tmp12) {
-          let tmp14 = cResult[8];
+        let tmp12;
+        if (cResult[7] === tmp10) {
+          tmp12 = cResult[8];
         }
-        return tmp14;
+        return tmp12;
       }
     }
-    const obj3 = { tiers: tmp12, state, onRefresh };
+    const obj3 = { tiers: tmp10, state, onRefresh };
     cResult[5] = onRefresh;
     cResult[6] = state;
-    cResult[7] = tmp12;
+    cResult[7] = tmp10;
     cResult[8] = obj3;
-    tmp14 = obj3;
+    tmp12 = obj3;
   }
   let found;
   if (tiers != null) {
@@ -250,13 +333,16 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[2] = tiers;
   cResult[3] = tmp4;
   cResult[4] = found;
-  tmp12 = found;
+  tmp10 = found;
 }) : ((arg0) => {
+  let onRefresh;
+  let state;
   const tmp = closure_9(arg0);
   const tiers = tmp.tiers;
   ({ state, onRefresh } = tmp);
-  const subscriptionListingsForGuild = GuildRoleSubscriptionsHooks.useSubscriptionListingsForGuild(arg0);
-  const set = new Set();
+  const obj = GuildRoleSubscriptionsHooks;
+  const subscriptionListingsForGuild = obj.useSubscriptionListingsForGuild(arg0);
+  set = new Set();
   for (const item10022 of subscriptionListingsForGuild) {
     let addResult = set.add(item10022.subscription_plans[0].price);
     continue;
@@ -267,9 +353,11 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   return { tiers: tiers1, state, onRefresh };
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(1);
+  let first;
+  const obj = react;
+  const cResult = obj.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t(arg0) {
       const items = [, ];
@@ -277,19 +365,21 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       return items;
     };
     cResult[0] = fn;
-    let first = fn;
+    first = fn;
   } else {
     first = cResult[0];
   }
-  return withEqualityFn(first, _mod4492.shallow);
+  return withEqualityFn(first, _slicedToArray2.shallow);
 }) : (() => withEqualityFn((arg0) => {
   const items = [, ];
   ({ groupCover: arr[0], setGroupCover: arr[1] } = arg0);
   return items;
-}, _mod4492.shallow));
-ReactCompilerGating = fn(558);
+}, _slicedToArray2.shallow));
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(1);
+  let first;
+  const obj = react;
+  const cResult = obj.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t(arg0) {
       const items = [, ];
@@ -297,17 +387,38 @@ const tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       return items;
     };
     cResult[0] = fn;
-    let first = fn;
+    first = fn;
   } else {
     first = cResult[0];
   }
-  return withEqualityFn(first, _mod4492.shallow);
+  return withEqualityFn(first, _slicedToArray2.shallow);
 }) : (() => withEqualityFn((arg0) => {
   const items = [, ];
   ({ groupDescription: arr[0], setGroupDescription: arr[1] } = arg0);
   return items;
-}, _mod4492.shallow));
-const size = fn(2);
+}, _slicedToArray2.shallow));
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let first;
+  const obj = react;
+  const cResult = obj.c(1);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function t(arg0) {
+      const items = [, ];
+      ({ groupIsFullGate: arr[0], setGroupIsFullGate: arr[1] } = arg0);
+      return items;
+    };
+    cResult[0] = fn;
+    first = fn;
+  } else {
+    first = cResult[0];
+  }
+  return withEqualityFn(first, _slicedToArray2.shallow);
+}) : (() => withEqualityFn((arg0) => {
+  const items = [, ];
+  ({ groupIsFullGate: arr[0], setGroupIsFullGate: arr[1] } = arg0);
+  return items;
+}, _slicedToArray2.shallow));
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/RoleTierEditStore.tsx");
 
 export { LoadingState };
@@ -321,22 +432,4 @@ export const usePriceTiers = tmp5;
 export const usePriceTiersAvailableInGuild = tmp6;
 export const useGroupCoverState = tmp7;
 export const useGroupDescriptionState = tmp8;
-export const useGroupIsFullGateState = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(1);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function t(arg0) {
-      const items = [, ];
-      ({ groupIsFullGate: arr[0], setGroupIsFullGate: arr[1] } = arg0);
-      return items;
-    };
-    cResult[0] = fn;
-    let first = fn;
-  } else {
-    first = cResult[0];
-  }
-  return withEqualityFn(first, _mod4492.shallow);
-}) : (() => withEqualityFn((arg0) => {
-  const items = [, ];
-  ({ groupIsFullGate: arr[0], setGroupIsFullGate: arr[1] } = arg0);
-  return items;
-}, _mod4492.shallow));
+export const useGroupIsFullGateState = tmp9;

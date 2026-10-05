@@ -1,12 +1,12 @@
 // === Module 13384: orderMarketablePerksForDisplay ===
 
 // Module 13384 (orderMarketablePerksForDisplay)
+import GameServerConstants from "GameServerConstants" /* 4769 */;
 import Powerups from "Powerups" /* 4771 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-let closure_3 = fn(4769).GAME_SERVER_POWERUP_SKU_ID;
-const size = fn(2);
+let closure_3 = GameServerConstants.GAME_SERVER_POWERUP_SKU_ID;
 const result = size.fileFinishedImporting("modules/premium/powerups/utils/orderMarketablePerksForDisplay.tsx");
 
 export default function orderMarketablePerksForDisplay(arg0) {

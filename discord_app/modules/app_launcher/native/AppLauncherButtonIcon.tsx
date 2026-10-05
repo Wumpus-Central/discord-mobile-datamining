@@ -1,95 +1,100 @@
 // === Module 11874: AppLauncherButtonIcon ===
 
 // Module 11874 (AppLauncherButtonIcon)
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
+import KeyboardTypes from "KeyboardTypes" /* 1616 */;
 import useKeyboardTypeDefault from "useKeyboardType" /* 4747 */;
+import AppsIcon2 from "AppsIcon" /* 5890 */;
+import PlusLargeIcon2 from "PlusLargeIcon" /* 10689 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const KeyboardTypes = PlusLargeIcon(1616);
-const AppsIcon = PlusLargeIcon(5890);
-const PlusLargeIcon2 = PlusLargeIcon(10689);
-require = fn;
+let style;
+
 let closure_3 = ["style"];
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherButtonIcon.tsx");
-
-export const AppLauncherButtonIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
-  let PlusLargeIcon = require;
-  let obj = dependencyMap;
-  const cResult = c.c(8);
+const View = react_native.View;
+const jsx = Fragment.jsx;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+  let items1;
+  let tmp10;
+  let tmp12Result;
+  let tmp4;
+  let tmp5;
+  const obj = react2;
+  const cResult = obj.c(8);
   if (cResult[0] !== style) {
     style = style.style;
-    const tmp6 = _objectWithoutProperties(style, closure_3);
+    const tmp8 = _objectWithoutProperties(style, closure_3);
     cResult[0] = style;
-    cResult[1] = tmp6;
+    cResult[1] = tmp8;
     cResult[2] = style;
-    let tmp3 = style;
-    let tmp2 = tmp6;
+    tmp5 = style;
+    tmp4 = tmp8;
   } else {
-    tmp2 = cResult[1];
-    tmp3 = cResult[2];
+    tmp4 = cResult[1];
+    tmp5 = cResult[2];
   }
-  const tmp7 = useKeyboardTypeDefault();
+  const tmp9 = useKeyboardTypeDefault();
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { overflow: "hidden" };
-    cResult[3] = obj3;
-    let tmp8 = obj3;
+    const obj2 = { overflow: "hidden" };
+    cResult[3] = obj2;
+    tmp10 = obj2;
   } else {
-    tmp8 = cResult[3];
+    tmp10 = cResult[3];
   }
-  if (cResult[4] === tmp7) {
-    if (cResult[5] === tmp2) {
-      if (cResult[6] === tmp3) {
-        return cResult[7];
+  if (cResult[4] === tmp9) {
+    if (cResult[5] === tmp4) {
+      let tmp11;
+      if (cResult[6] === tmp5) {
+        tmp11 = cResult[7];
       }
+      return tmp11;
     }
   }
-  let obj4 = { style: tmp8, children: null };
-  if (tmp7 === KeyboardTypes.KeyboardTypes.APP_LAUNCHER) {
-    PlusLargeIcon = PlusLargeIcon2.PlusLargeIcon;
-    obj = {};
-    const merged = Object.assign(tmp2);
-    const items = [tmp3, ];
-    const obj5 = { transform: null };
-    const items1 = [{ rotate: "45deg" }];
-    obj5.transform = items1;
+  if (tmp9 === KeyboardTypes.KeyboardTypes.APP_LAUNCHER) {
+    const PlusLargeIcon = PlusLargeIcon2.PlusLargeIcon;
+    const merged = Object.assign(tmp4);
+    const items = [tmp5, ];
+    const obj5 = { transform: items1 };
+    items1 = [{ rotate: "45deg" }];
     items[1] = obj5;
-    obj.style = items;
-    let tmp9Result = <PlusLargeIcon />;
+    tmp12Result = <PlusLargeIcon style={items} />;
   } else {
-    const obj6 = { style: tmp3 };
-    const merged1 = Object.assign(tmp2);
-    tmp9Result = jsx(AppsIcon.AppsIcon, { style: tmp3 });
+    const AppsIcon = AppsIcon2.AppsIcon;
+    const merged1 = Object.assign(tmp4);
+    tmp12Result = <AppsIcon style={tmp5} />;
   }
-  obj4.children = tmp9Result;
-  obj4 = <View style={tmp8}>{null}</View>;
-  cResult[4] = tmp7;
-  cResult[5] = tmp2;
-  cResult[6] = tmp3;
-  cResult[7] = obj4;
+  const tmp12Result2 = <View style={tmp10}>{tmp12Result}</View>;
+  cResult[4] = tmp9;
+  cResult[5] = tmp4;
+  cResult[6] = tmp5;
+  cResult[7] = tmp12Result2;
+  tmp11 = tmp12Result2;
 }) : ((style) => {
+  let items1;
+  let tmp4Result;
   style = style.style;
   const merged = Object.assign(style, Object.assign({ style: 0 }));
-  const obj = { style: { overflow: "hidden" }, children: null };
+  const tmp3 = useKeyboardTypeDefault();
   if (tmp3 === KeyboardTypes.KeyboardTypes.APP_LAUNCHER) {
-    const obj2 = {};
+    const PlusLargeIcon = PlusLargeIcon2.PlusLargeIcon;
     const merged1 = Object.assign(merged);
     const items = [style, ];
-    const obj3 = { transform: null };
-    const items1 = [{ rotate: "45deg" }];
-    obj3.transform = items1;
+    const obj3 = { transform: items1 };
+    items1 = [{ rotate: "45deg" }];
     items[1] = obj3;
-    obj2.style = items;
-    let tmp4Result = jsx(PlusLargeIcon2.PlusLargeIcon, {});
+    tmp4Result = <PlusLargeIcon style={items} />;
   } else {
-    const obj4 = { style };
+    const AppsIcon = AppsIcon2.AppsIcon;
     const merged2 = Object.assign(merged);
-    tmp4Result = jsx(AppsIcon.AppsIcon, { style });
+    tmp4Result = <AppsIcon style={style} />;
   }
-  obj.children = tmp4Result;
-  return <View style={{ overflow: "hidden" }}>{null}</View>;
+  return <View style={{ overflow: "hidden" }}>{tmp4Result}</View>;
 });
+const result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherButtonIcon.tsx");
+
+export const AppLauncherButtonIcon = tmp3;

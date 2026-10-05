@@ -1,21 +1,20 @@
 // === Module 8760: useConnectRetry ===
 
 // Module 8760 (useConnectRetry)
-import c from "c" /* 576 */;
-import noop from "module_19" /* 19 */;
+import react2 from "react" /* 576 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/useConnectRetry.tsx");
-
-export const useConnectRetry = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
-  state = arg0;
-  closure_1 = arg1;
-  const cResult = c.c(3);
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+  let closure_0 = arg0;
+  let closure_1 = arg1;
+  const obj = react2;
+  const cResult = obj.c(3);
   if (cResult[0] === arg0) {
+    let tmp2;
     if (cResult[1] === arg1) {
-      let tmp2 = cResult[2];
+      tmp2 = cResult[2];
     }
     return tmp2;
   }
@@ -33,10 +32,10 @@ export const useConnectRetry = ReactCompilerGating.isReactCompilerEnabled() ? ((
   cResult[2] = fn;
   tmp2 = fn;
 }) : ((arg0, arg1) => {
-  state = arg0;
-  closure_1 = arg1;
+  let closure_0 = arg0;
+  let closure_1 = arg1;
   const items = [arg0, arg1];
-  return noop.useCallback(() => {
+  return react.useCallback(() => {
     const routes = state.getState().routes;
     const findIndexResult = routes.findIndex((name) => name.name === closure_1_1);
     if (findIndexResult >= 0) {
@@ -46,3 +45,6 @@ export const useConnectRetry = ReactCompilerGating.isReactCompilerEnabled() ? ((
     }
   }, items);
 });
+const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/useConnectRetry.tsx");
+
+export const useConnectRetry = tmp2;

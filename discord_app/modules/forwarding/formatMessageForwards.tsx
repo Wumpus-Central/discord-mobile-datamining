@@ -2,7 +2,7 @@
 
 // Module 7613 (formatMessageForwards)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import util from "util" /* 1126 */;
+import intl4 from "intl" /* 1126 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
 import DateUtils from "DateUtils" /* 4552 */;
 import useChannelName from "useChannelName" /* 5043 */;
@@ -13,144 +13,159 @@ import GuildStore from "GuildStore" /* 2074 */;
 import PermissionStore from "PermissionStore" /* 4509 */;
 import RelationshipStore from "RelationshipStore" /* 4519 */;
 import UserStore from "UserStore" /* 1377 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
 class MessageForward {
-  constructor(arg0, arg1, arg2) {
-    obj = Object.create(new.target.prototype);
-    obj.parentMessage = global;
-    obj.messageSnapshot = fn;
-    obj.snapshotIndex = importDefault;
+  constructor(parentMessage, messageSnapshot, snapshotIndex) {
+    const obj = Object.create(new.target.prototype);
+    obj.parentMessage = parentMessage;
+    obj.messageSnapshot = messageSnapshot;
+    obj.snapshotIndex = snapshotIndex;
     return obj;
   }
-}
-MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0) {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = ChannelStore;
-  }
-  let tmp = UserStore;
-  if (UserStore === undefined) {
-    tmp = UserStore;
-  }
-  let tmp2 = RelationshipStore;
-  if (RelationshipStore === undefined) {
-    tmp2 = RelationshipStore;
-  }
-  let obj2 = arg3;
-  if (arg3 === undefined) {
-    obj2 = PermissionStore;
-  }
-  let obj3 = arg4;
-  if (arg4 === undefined) {
-    obj3 = GuildStore;
-  }
-  let obj4 = arg5;
-  if (arg5 === undefined) {
-    obj4 = BasicGuildStore;
-  }
-  ({ snapshotIndex, parentMessage } = this);
-  let tmp5;
-  if (isForwardMessageDefault(parentMessage)) {
-    const messageReference = parentMessage.messageReference;
-    let message_id;
-    if (messageReference != null) {
-      message_id = messageReference.message_id;
+  getForwardInfo(arg0) {
+    let intl;
+    let intl2;
+    let intl3;
+    let obj11;
+    let obj12;
+    let obj17;
+    let obj19;
+    let obj20;
+    let obj7;
+    let obj8;
+    let obj9;
+    let parentMessage;
+    let snapshotIndex;
+    let timestamp;
+    let tmp3Result3;
+    let tmp3Result4;
+    let obj = arg0;
+    if (arg0 === undefined) {
+      obj = ChannelStore;
     }
-    tmp5 = message_id;
-  }
-  if (null != tmp5) {
-    const _Date = Date;
-    let timestamp = new Date(SnowflakeUtilsDefault.extractTimestamp(tmp5));
-    const tmp3Result = SnowflakeUtilsDefault;
-  } else {
-    timestamp = this.messageSnapshot.message.timestamp;
-  }
-  const result = DateUtils.calendarFormatCompact(timestamp);
-  const channel = obj.getChannel(this.parentMessage.channel_id);
-  if (null != channel) {
-    const messageReference2 = parentMessage.messageReference;
-    let guild_id;
-    if (messageReference2 != null) {
-      guild_id = messageReference2.guild_id;
+    let tmp = UserStore;
+    if (UserStore === undefined) {
+      tmp = UserStore;
     }
-    if (channel.guild_id === guild_id) {
-      const messageReference4 = parentMessage.messageReference;
-      let channel_id;
-      if (messageReference4 != null) {
-        channel_id = messageReference4.channel_id;
+    let tmp2 = RelationshipStore;
+    if (RelationshipStore === undefined) {
+      tmp2 = RelationshipStore;
+    }
+    let obj2 = arg3;
+    if (arg3 === undefined) {
+      obj2 = PermissionStore;
+    }
+    let obj3 = arg4;
+    if (arg4 === undefined) {
+      obj3 = GuildStore;
+    }
+    let obj4 = arg5;
+    if (arg5 === undefined) {
+      obj4 = BasicGuildStore;
+    }
+    ({ snapshotIndex, parentMessage } = this);
+    const messageSnapshot = this.messageSnapshot;
+    let tmp5;
+    if (isForwardMessageDefault(parentMessage)) {
+      const messageReference = parentMessage.messageReference;
+      let message_id;
+      if (messageReference != null) {
+        message_id = messageReference.message_id;
       }
-      const channel1 = obj.getChannel(channel_id);
-      if (null == channel1) {
-        guild = obj3.getGuild(channel.guild_id);
-        if (null == guild) {
-          const obj6 = { snapshotIndex };
-          let obj7 = obj6;
-        } else {
-          obj7 = { snapshotIndex, footerInfo: null };
-          const obj8 = { originLabel: guild.name, originIconUrl: null, timestampLabel: null, accessibilityLabel: null };
-          ({ id: obj23.id, icon: obj23.icon } = guild);
-          obj8.originIconUrl = AvatarUtilsDefault.getGuildIconURL({ id: null, size: 16, icon: null, canAnimate: false });
-          obj8.timestampLabel = result;
-          const intl3 = util.intl;
-          const obj10 = { origin: guild.name, timestamp: result };
-          obj8.accessibilityLabel = intl3.formatToPlainString(util.t["+l04BN"], obj10);
-          obj7.footerInfo = obj8;
-          const obj9 = { id: null, size: 16, icon: null, canAnimate: false };
-          const tmp3Result3 = AvatarUtilsDefault;
-        }
-        return obj7;
-      } else {
-        if (obj2.can(channel1.accessPermissions, channel1)) {
-          const obj11 = { snapshotIndex, footerInfo: null };
-          const tmp8Result = useChannelName;
-          const channelName = tmp8Result.computeChannelName(channel1, tmp, tmp2, true);
-          const obj12 = { originLabel: channelName, timestampLabel: result, accessibilityLabel: null };
-          const intl = util.intl;
-          const obj13 = { origin: channelName, timestamp: result };
-          obj12.accessibilityLabel = intl.formatToPlainString(util.t["+l04BN"], obj13);
-          obj11.footerInfo = obj12;
-          let obj14 = obj11;
-        } else {
-          obj14 = { snapshotIndex };
-        }
-        return obj14;
-      }
+      tmp5 = message_id;
     }
-  }
-  const messageReference3 = parentMessage.messageReference;
-  let guild_id1;
-  if (messageReference3 != null) {
-    guild_id1 = messageReference3.guild_id;
-  }
-  if (null == guild_id1) {
-    const obj15 = { snapshotIndex };
-    return obj15;
-  } else {
-    let guild1 = obj3.getGuild(guild_id1);
-    if (guild1 == null) {
-      guild1 = obj4.getGuild(guild_id1);
-    }
-    if (null == guild1) {
-      const obj16 = { snapshotIndex };
-      let obj17 = obj16;
+    const calendarFormatCompact = DateUtils.calendarFormatCompact;
+    DateUtils;
+    if (null != tmp5) {
+      const _Date = Date;
+      const self = this;
+      const self2 = this;
+      const tmp3Result = SnowflakeUtilsDefault;
+      timestamp = new Date(tmp3Result.extractTimestamp(tmp5));
     } else {
-      obj17 = { snapshotIndex, footerInfo: null };
-      const obj18 = { originLabel: guild1.name, originIconUrl: null, timestampLabel: null, accessibilityLabel: null };
-      ({ id: obj19.id, icon: obj19.icon } = guild1);
-      obj18.originIconUrl = AvatarUtilsDefault.getGuildIconURL({ id: null, size: 16, icon: null, canAnimate: false });
-      obj18.timestampLabel = result;
-      const intl2 = util.intl;
-      const obj21 = { origin: guild1.name, timestamp: result };
-      obj18.accessibilityLabel = intl2.formatToPlainString(util.t["+l04BN"], obj21);
-      obj17.footerInfo = obj18;
-      const obj20 = { id: null, size: 16, icon: null, canAnimate: false };
-      const tmp3Result4 = AvatarUtilsDefault;
+      timestamp = messageSnapshot.message.timestamp;
     }
-    return obj17;
+    const result = calendarFormatCompact(timestamp);
+    const channel = obj.getChannel(this.parentMessage.channel_id);
+    if (null != channel) {
+      const messageReference2 = parentMessage.messageReference;
+      let guild_id1;
+      const guild_id = channel.guild_id;
+      if (messageReference2 != null) {
+        guild_id1 = messageReference2.guild_id;
+      }
+      if (guild_id === guild_id1) {
+        const messageReference4 = parentMessage.messageReference;
+        let channel_id;
+        const getChannel = obj.getChannel;
+        if (messageReference4 != null) {
+          channel_id = messageReference4.channel_id;
+        }
+        const channel1 = getChannel(channel_id);
+        if (null == channel1) {
+          let obj6;
+          const guild = obj3.getGuild(channel.guild_id);
+          if (null == guild) {
+            obj6 = { snapshotIndex };
+            const obj5 = { snapshotIndex };
+          } else {
+            obj6 = { snapshotIndex, footerInfo: obj7 };
+            obj7 = { originLabel: guild.name, originIconUrl: tmp3Result3.getGuildIconURL(obj8), timestampLabel: result, accessibilityLabel: intl3.formatToPlainString(intl4.t["+l04BN"], obj9) };
+            obj8 = { id: null, size: 16, icon: null, canAnimate: false };
+            ({ id: obj22.id, icon: obj22.icon } = guild);
+            tmp3Result3 = AvatarUtilsDefault;
+            intl3 = intl4.intl;
+            obj9 = { origin: guild.name, timestamp: result };
+          }
+          return obj6;
+        } else {
+          let obj13;
+          if (obj2.can(channel1.accessPermissions, channel1)) {
+            const obj10 = { snapshotIndex, footerInfo: obj11 };
+            const tmp8Result = useChannelName;
+            const channelName = tmp8Result.computeChannelName(channel1, tmp, tmp2, true);
+            obj11 = { originLabel: channelName, timestampLabel: result, accessibilityLabel: intl.formatToPlainString(intl4.t["+l04BN"], obj12) };
+            intl = intl4.intl;
+            obj13 = obj10;
+            obj12 = { origin: channelName, timestamp: result };
+          } else {
+            obj13 = { snapshotIndex };
+          }
+          return obj13;
+        }
+      }
+    }
+    const messageReference3 = parentMessage.messageReference;
+    let guild_id2;
+    if (messageReference3 != null) {
+      guild_id2 = messageReference3.guild_id;
+    }
+    if (null == guild_id2) {
+      return { snapshotIndex };
+    } else {
+      let obj16;
+      let guild1 = obj3.getGuild(guild_id2);
+      if (guild1 == null) {
+        guild1 = obj4.getGuild(guild_id2);
+      }
+      if (null == guild1) {
+        obj16 = { snapshotIndex };
+        const obj15 = { snapshotIndex };
+      } else {
+        obj16 = { snapshotIndex, footerInfo: obj17 };
+        obj17 = { originLabel: guild1.name, originIconUrl: tmp3Result4.getGuildIconURL(obj19), timestampLabel: result, accessibilityLabel: intl2.formatToPlainString(intl4.t["+l04BN"], obj20) };
+        obj19 = { id: null, size: 16, icon: null, canAnimate: false };
+        ({ id: obj18.id, icon: obj18.icon } = guild1);
+        tmp3Result4 = AvatarUtilsDefault;
+        intl2 = intl4.intl;
+        obj20 = { origin: guild1.name, timestamp: result };
+      }
+      return obj16;
+    }
   }
-};
-const size = fn(2);
+}
+const prototype = MessageForward.prototype;
 let result = size.fileFinishedImporting("modules/forwarding/formatMessageForwards.tsx");
 
 export { MessageForward };
@@ -158,6 +173,7 @@ export const maybeCreateSingleForwardForMessage = function maybeCreateSingleForw
   if (isForwardMessageDefault(message)) {
     const first = message.messageSnapshots[0];
     if (null != first) {
+      const self = this;
       if (typeof MessageForward === "function") {
         const obj = Object.create(MessageForward.prototype);
         obj.parentMessage = message;

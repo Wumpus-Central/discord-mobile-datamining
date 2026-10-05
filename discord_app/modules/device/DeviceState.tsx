@@ -22,10 +22,11 @@ export const logDeviceState = function logDeviceState(thermalState) {
     logger4.info("- Battery Level: " + 100 * thermalState.batteryLevel + "%");
     const logger5 = device_DeviceState.logger;
     let str6 = "Disabled";
+    const info = logger5.info;
     if (thermalState.isLowPowerMode) {
       str6 = "Enabled";
     }
-    logger5.info(`- Low Power Mode: ${str6}`);
+    info(`- Low Power Mode: ${str6}`);
   } else {
     const logger = device_DeviceState.logger;
     logger.info("Device state not available");

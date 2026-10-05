@@ -4,6 +4,8 @@
 import Future from "Future" /* 8798 */;
 import size from "module_2" /* 2 */;
 
+let c1;
+
 const future = new Future.Future();
 let closure_1 = null;
 const result = size.fileFinishedImporting("modules/app_startup/awaitExperiments.tsx");

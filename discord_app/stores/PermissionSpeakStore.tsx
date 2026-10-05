@@ -1,49 +1,48 @@
 // === Module 13562: PermissionSpeakStore ===
 
 // Module 13562 (PermissionSpeakStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+let c2, c3, channelId, suppress;
+
 const hideSuppressWarning = "hideSuppressWarning";
 let c7 = false;
 let c8 = true;
 let c9 = false;
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class PermissionSpeakStore extends Store {
+  initialize() {
+    this.waitFor(ChannelStore, GuildStore);
+    const Storage = Storage2.Storage;
+    const tmp2 = Storage.get(hideSuppressWarning) || c9;
+    c9 = tmp2;
+  }
+  isAFKChannel() {
+    const channel = ChannelStore.getChannel(c3);
+    if (null == channel) {
+      return false;
+    } else {
+      const guild = GuildStore.getGuild(channel.getGuildId());
+      return null != guild && channel.id === guild.afkChannelId;
+    }
+  }
+  shouldShowWarning() {
+    const channel = ChannelStore.getChannel(c3);
+    let isGuildStageVoiceResult;
+    if (channel != null) {
+      isGuildStageVoiceResult = channel.isGuildStageVoice();
+    }
+    return !isGuildStageVoiceResult && !c8;
+  }
 }
 const prototype = PermissionSpeakStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(ChannelStore, GuildStore);
-  const Storage = Storage2.Storage;
-  c9 = Storage.get(hideSuppressWarning) || c9;
-};
-prototype["isAFKChannel"] = function isAFKChannel() {
-  const channel = ChannelStore.getChannel(c3);
-  if (null == channel) {
-    return false;
-  } else {
-    guild = GuildStore.getGuild(channel.getGuildId());
-    return null != guild && channel.id === guild.afkChannelId;
-  }
-};
-prototype["shouldShowWarning"] = function shouldShowWarning() {
-  const channel = ChannelStore.getChannel(c3);
-  let isGuildStageVoiceResult;
-  if (channel != null) {
-    isGuildStageVoiceResult = channel.isGuildStageVoice();
-  }
-  let tmp2 = !isGuildStageVoiceResult;
-  if (!isGuildStageVoiceResult) {
-    tmp2 = !c8;
-  }
-  return tmp2;
-};
 PermissionSpeakStore.displayName = "PermissionSpeakStore";
-const permissionSpeakStore = new PermissionSpeakStore(DispatcherDefault, {
+const obj = {
   CONNECTION_OPEN: function handleConnectionOpen(sessionId) {
     sessionId = sessionId.sessionId;
     c7 = false;
@@ -66,11 +65,8 @@ const permissionSpeakStore = new PermissionSpeakStore(DispatcherDefault, {
           channelId = sessionId.channelId;
           c8 = !suppress;
         }
-        let tmp4 = closure_1_9;
-        if (!closure_1_9) {
-          tmp4 = null == sessionId.channelId;
-        }
         flag = true;
+        const tmp4 = closure_1_9 || null == sessionId.channelId;
         if (tmp4) {
           c8 = true;
           flag = true;
@@ -87,8 +83,8 @@ const permissionSpeakStore = new PermissionSpeakStore(DispatcherDefault, {
       const result = Storage.set(hideSuppressWarning, c9);
     }
   }
-});
-const size = fn(2);
+};
+const permissionSpeakStore = new PermissionSpeakStore(DispatcherDefault, obj);
 let result = size.fileFinishedImporting("stores/PermissionSpeakStore.tsx");
 
 export default permissionSpeakStore;

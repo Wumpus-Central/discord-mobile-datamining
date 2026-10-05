@@ -1,18 +1,38 @@
 // === Module 6664: useAuthorizedAppsToken ===
 
 // Module 6664 (useAuthorizedAppsToken)
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
+import AuthorizedAppsStore2 from "AuthorizedAppsStore" /* 6602 */;
 import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 6665 */;
-import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6602 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const FetchState = fn(6602).FetchState;
-let ReactCompilerGating = fn(558);
+const require = globalThis.__r;
+const AuthorizedAppsStore = AuthorizedAppsStore2;
+let _require, importDefault;
+
+const FetchState = AuthorizedAppsStore2.FetchState;
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+  let closure_0;
+  let closure_1;
+  let stateFromStoresArray1;
+  let tmp10;
+  let tmp12;
+  let tmp14;
+  let tmp15;
+  let tmp17;
+  let tmp19;
+  let tmp20;
+  let tmp4;
+  let tmp7;
+  let tmp9;
   _require = arg0;
-  const cResult = require("c").c(21);
+  let tmp = _require;
+  let obj = require("react");
+  const cResult = obj.c(21);
   if (cResult[0] !== arg1) {
     let obj2 = arg1;
     if (arg1 == null) {
@@ -20,7 +40,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     }
     cResult[0] = arg1;
     cResult[1] = obj2;
-    let tmp4 = obj2;
+    tmp4 = obj2;
   } else {
     tmp4 = cResult[1];
   }
@@ -29,12 +49,13 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AuthorizedAppsStore];
     cResult[2] = items;
-    let tmp7 = items;
+    tmp7 = items;
   } else {
     tmp7 = cResult[2];
   }
   if (cResult[3] !== arg0) {
     const fn = function f() {
+      let newestTokenForApplication;
       let found;
       if (closure_0 != null) {
         const mapped = closure_0.map((item) => newestTokenForApplication.getNewestTokenForApplication(item));
@@ -49,23 +70,24 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     cResult[3] = arg0;
     cResult[4] = fn;
     cResult[5] = items1;
-    let tmp10 = items1;
-    let tmp9 = fn;
+    tmp10 = items1;
+    tmp9 = fn;
   } else {
     tmp9 = cResult[4];
     tmp10 = cResult[5];
   }
-  let obj = require("c");
-  const stateFromStoresArray = require("initialize").useStateFromStoresArray(tmp7, tmp9, tmp10);
+  const tmpResult = tmp(stateFromStoresArray1[5]);
+  const stateFromStoresArray = tmpResult.useStateFromStoresArray(tmp7, tmp9, tmp10);
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [AuthorizedAppsStore];
     cResult[6] = items2;
-    let tmp12 = items2;
+    tmp12 = items2;
   } else {
     tmp12 = cResult[6];
   }
   if (cResult[7] !== arg0) {
     const fn2 = function v() {
+      let fetchStateForApplication;
       let flag;
       if (closure_0 != null) {
         flag = closure_0.every((item) => fetchStateForApplication.getFetchStateForApplication(item) === constants.FETCHED);
@@ -79,23 +101,24 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     cResult[7] = arg0;
     cResult[8] = fn2;
     cResult[9] = items3;
-    let tmp15 = items3;
-    let tmp14 = fn2;
+    tmp15 = items3;
+    tmp14 = fn2;
   } else {
     tmp14 = cResult[8];
     tmp15 = cResult[9];
   }
-  const tmpResult = require("initialize");
-  const stateFromStores = require("initialize").useStateFromStores(tmp12, tmp14, tmp15);
+  const tmpResult3 = tmp(stateFromStoresArray1[5]);
+  const stateFromStores = tmpResult3.useStateFromStores(tmp12, tmp14, tmp15);
   if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
     const items4 = [AuthorizedAppsStore];
     cResult[10] = items4;
-    let tmp17 = items4;
+    tmp17 = items4;
   } else {
     tmp17 = cResult[10];
   }
   if (cResult[11] !== arg0) {
     const fn3 = function y() {
+      let fetchStateForApplication;
       let found;
       if (closure_0 != null) {
         found = closure_0.filter((item) => fetchStateForApplication.getFetchStateForApplication(item) === constants.NOT_FETCHED);
@@ -109,23 +132,26 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     cResult[11] = arg0;
     cResult[12] = items5;
     cResult[13] = fn3;
-    let tmp20 = fn3;
-    let tmp19 = items5;
+    tmp20 = fn3;
+    tmp19 = items5;
   } else {
     tmp19 = cResult[12];
     tmp20 = cResult[13];
   }
-  const tmpResult3 = require("initialize");
-  stateFromStoresArray1 = require("initialize").useStateFromStoresArray(tmp17, tmp20, tmp19);
+  const tmpResult4 = tmp(stateFromStoresArray1[5]);
+  stateFromStoresArray1 = tmpResult4.useStateFromStoresArray(tmp17, tmp20, tmp19);
   if (cResult[14] === stateFromStoresArray1) {
-    if (cResult[15] === tmp6) {
-      let tmp22 = cResult[16];
-      let tmp23 = cResult[17];
+    let tmp22;
+    let tmp23;
+    if (cResult[15] === (undefined !== disableFetch && disableFetch)) {
+      tmp22 = cResult[16];
+      tmp23 = cResult[17];
     }
-    const effect = noop.useEffect(tmp22, tmp23);
+    const effect = react.useEffect(tmp22, tmp23);
     if (cResult[18] === stateFromStores) {
+      let tmp26;
       if (cResult[19] === stateFromStoresArray) {
-        let tmp26 = cResult[20];
+        tmp26 = cResult[20];
       }
       return tmp26;
     }
@@ -137,20 +163,11 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   }
   class N {
     constructor() {
-      tmp = disableFetch;
-      if (!disableFetch) {
-        tmp2 = closure_2;
-        num = 0;
-        tmp = 0 === closure_2.length;
-      }
+      const tmp = closure_1 || 0 === stateFromStoresArray1.length;
       if (!tmp) {
-        tmp3 = closure_1;
-        tmp4 = closure_2;
-        obj = closure_1(closure_2[6]);
-        tmp5 = closure_2;
-        response = obj.fetch(closure_2);
+        const obj = AuthorizedAppsActionCreatorsDefault;
+        const response = obj.fetch(stateFromStoresArray1);
       }
-      return;
     }
   }
   const items6 = [undefined !== disableFetch && disableFetch, stateFromStoresArray1];
@@ -160,18 +177,22 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   cResult[17] = items6;
   tmp23 = items6;
   tmp22 = N;
-  const tmpResult4 = require("initialize");
 }) : ((arg0, arg1) => {
+  let closure_0;
+  let stateFromStoresArray1;
   _require = arg0;
   let obj = arg1;
   if (arg1 == null) {
     obj = {};
   }
   const disableFetch = obj.disableFetch;
-  closure_1 = tmp;
+  let tmp = undefined !== disableFetch && disableFetch;
+  let closure_1 = tmp;
   const items = [AuthorizedAppsStore];
   const items1 = [arg0];
-  const tokens = require("initialize").useStateFromStoresArray(items, () => {
+  const obj2 = require("get initialized");
+  const tokens = obj2.useStateFromStoresArray(items, () => {
+    let newestTokenForApplication;
     let found;
     if (closure_0 != null) {
       const mapped = closure_0.map((item) => newestTokenForApplication.getNewestTokenForApplication(item));
@@ -182,10 +203,11 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     }
     return found;
   }, items1);
-  const obj2 = require("initialize");
   const items2 = [AuthorizedAppsStore];
   const items3 = [arg0];
-  const fetched = require("initialize").useStateFromStores(items2, () => {
+  const obj3 = require("get initialized");
+  const fetched = obj3.useStateFromStores(items2, () => {
+    let fetchStateForApplication;
     let flag;
     if (closure_0 != null) {
       flag = closure_0.every((item) => fetchStateForApplication.getFetchStateForApplication(item) === constants.FETCHED);
@@ -195,10 +217,11 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     }
     return flag;
   }, items3);
-  const obj3 = require("initialize");
   const items4 = [AuthorizedAppsStore];
   const items5 = [arg0];
-  stateFromStoresArray1 = require("initialize").useStateFromStoresArray(items4, () => {
+  const obj4 = require("get initialized");
+  stateFromStoresArray1 = obj4.useStateFromStoresArray(items4, () => {
+    let fetchStateForApplication;
     let found;
     if (closure_0 != null) {
       found = closure_0.filter((item) => fetchStateForApplication.getFetchStateForApplication(item) === constants.NOT_FETCHED);
@@ -208,26 +231,24 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     }
     return found;
   }, items5);
-  const items6 = [undefined !== disableFetch && disableFetch, stateFromStoresArray1];
-  const effect = noop.useEffect(() => {
-    let tmp = closure_1;
-    if (!closure_1) {
-      tmp = 0 === stateFromStoresArray1.length;
-    }
+  const items6 = [tmp, stateFromStoresArray1];
+  const effect = react.useEffect(() => {
+    const tmp = closure_1 || 0 === stateFromStoresArray1.length;
     if (!tmp) {
-      const response = AuthorizedAppsActionCreatorsDefault.fetch(stateFromStoresArray1);
+      const obj = AuthorizedAppsActionCreatorsDefault;
+      const response = obj.fetch(stateFromStoresArray1);
     }
   }, items6);
   return { tokens, fetched };
 });
 let closure_6 = tmp2;
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/application_account_linking/hooks/useAuthorizedAppsToken.tsx");
-
-export const useAuthorizedAppsTokens = tmp2;
-export const useAuthorizedAppsToken = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
-  const cResult = c.c(5);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+  let fetched;
+  let tmp2;
+  let tokens;
+  const obj = react2;
+  const cResult = obj.c(5);
   if (cResult[0] !== arg0) {
     let tmp3 = null;
     if (null != arg0) {
@@ -236,18 +257,20 @@ export const useAuthorizedAppsToken = ReactCompilerGating.isReactCompilerEnabled
     }
     cResult[0] = arg0;
     cResult[1] = tmp3;
-    let tmp2 = tmp3;
+    tmp2 = tmp3;
   } else {
     tmp2 = cResult[1];
   }
   ({ tokens, fetched } = closure_6(tmp2, arg1));
   let first = null;
+  closure_6(tmp2, arg1);
   if (tokens.length > 0) {
     first = tokens[0];
   }
   if (cResult[2] === fetched) {
+    let tmp6;
     if (cResult[3] === first) {
-      let tmp6 = cResult[4];
+      tmp6 = cResult[4];
     }
     return tmp6;
   }
@@ -257,9 +280,9 @@ export const useAuthorizedAppsToken = ReactCompilerGating.isReactCompilerEnabled
   cResult[4] = obj2;
   tmp6 = obj2;
 }) : ((arg0, arg1) => {
-  closure_0 = arg0;
+  let closure_0 = arg0;
   let items = [arg0];
-  const fetched = closure_6(noop.useMemo(() => {
+  const tmp = closure_6(react.useMemo(() => {
     let tmp2 = null;
     if (null != closure_0) {
       const items = [tmp];
@@ -267,10 +290,15 @@ export const useAuthorizedAppsToken = ReactCompilerGating.isReactCompilerEnabled
     }
     return tmp2;
   }, items), arg1);
-  const tokens = fetched.tokens;
+  const tokens = tmp.tokens;
   let token = null;
+  const fetched = tmp.fetched;
   if (tokens.length > 0) {
     token = tokens[0];
   }
-  return { token, fetched: fetched.fetched };
+  return { token, fetched };
 });
+const result = size.fileFinishedImporting("modules/application_account_linking/hooks/useAuthorizedAppsToken.tsx");
+
+export const useAuthorizedAppsTokens = tmp2;
+export const useAuthorizedAppsToken = tmp3;

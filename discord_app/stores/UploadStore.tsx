@@ -1,45 +1,48 @@
 // === Module 7466: UploadStore ===
 
 // Module 7466 (UploadStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import MessageStore from "MessageStore" /* 5110 */;
+import size_mod from "module_2" /* 2 */;
+
+let cancel, closure_8, item;
 
 const re1 = /^(assets-library|ph|file):\/\//;
 const re2 = /^content:\/\//;
 let closure_3 = Object.freeze([]);
-const dependencyMap = {};
-const dependencyMap2 = {};
-const dependencyMap3 = {};
-const dependencyMap4 = {};
-let closure_8 = {};
-const Store = initializeDefault.Store;
+const React3 = {};
+let closure_5 = {};
+const metroRequire = {};
+const metroImportDefault = {};
+const metroImportAll = {};
+const Store = get_initializedDefault.Store;
 class UploadStore extends Store {
+  initialize() {
+    this.waitFor(MessageStore);
+  }
+  getFiles(arg0) {
+    let tmp = closure_4[arg0];
+    if (tmp == null) {
+      tmp = closure_3;
+    }
+    return tmp;
+  }
+  getMessageForFile(id) {
+    return closure_6[id];
+  }
+  getUploaderFileForMessageId(id) {
+    return closure_7[id];
+  }
+  getUploadAttachments(nonce) {
+    if (null != nonce) {
+      return closure_8[nonce];
+    }
+  }
 }
 const prototype = UploadStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(MessageStore);
-};
-prototype["getFiles"] = function getFiles(arg0) {
-  let tmp = dependencyMap[arg0];
-  if (tmp == null) {
-    tmp = closure_3;
-  }
-  return tmp;
-};
-prototype["getMessageForFile"] = function getMessageForFile(id) {
-  return dependencyMap3[id];
-};
-prototype["getUploaderFileForMessageId"] = function getUploaderFileForMessageId(id) {
-  return dependencyMap4[id];
-};
-prototype["getUploadAttachments"] = function getUploadAttachments(nonce) {
-  if (null != nonce) {
-    return closure_8[nonce];
-  }
-};
 UploadStore.displayName = "UploadStore";
-const uploadStore = new UploadStore(DispatcherDefault, {
+let obj = {
   CONNECTION_OPEN: function handleConnectionOpen() {
     closure_8 = {};
   },
@@ -47,71 +50,76 @@ const uploadStore = new UploadStore(DispatcherDefault, {
     closure_8 = {};
   },
   UPLOAD_START: function handleUploadStart(arg0) {
+    let channelId;
+    let file;
+    let message;
+    let uploader;
     ({ channelId, file, uploader, message } = arg0);
     if (!uploader._aborted) {
       if (!uploader._errored) {
-        let tmp2 = dependencyMap[channelId];
-        if (tmp2 == null) {
-          tmp2 = closure_3;
+        let tmp3 = closure_4[channelId];
+        if (tmp3 == null) {
+          tmp3 = closure_3;
         }
         closure_5[file.id] = uploader;
         const items1 = [];
-        items1[HermesBuiltin.arraySpread(tmp2, 0)] = file;
-        dependencyMap[channelId] = items1;
+        items1[HermesBuiltin.arraySpread(items1, tmp3, 0)] = file;
+        closure_4[channelId] = items1;
         if (null != message) {
           closure_6[file.id] = message;
           const items = file.items;
           if (null != items) {
-            const obj = {};
+            const id = message.id;
+            const obj = { items };
             const merged = Object.assign(file);
-            obj.items = items;
-            closure_7[message.id] = obj;
+            closure_7[id] = obj;
           }
-          let id = message.nonce;
-          if (id == null) {
-            id = message.id;
+          let id2 = message.nonce;
+          if (id2 == null) {
+            id2 = message.id;
           }
           const items2 = file.items;
           let mapped;
           if (items2 != null) {
             mapped = items2.map((item) => {
+              let num2;
+              let str;
+              let str2;
               item = item.item;
               let num = item.width;
               if (num == null) {
                 num = 0;
               }
-              const size = { width: num, height: null, localUri: null, uploaderId: null, uploaderItemId: null };
-              let num2 = item.height;
+              size = { width: num, height: num2, localUri: str, uploaderId: file.id, uploaderItemId: str2 };
+              num2 = item.height;
               if (num2 == null) {
                 num2 = 0;
               }
-              size.height = num2;
-              let str = item.originalUri;
+              str = item.originalUri;
               if (str == null) {
                 str = "";
               }
-              size.localUri = str;
-              size.uploaderId = file.id;
-              let str2 = item.id;
+              str2 = item.id;
               if (str2 == null) {
                 str2 = "";
               }
-              size.uploaderItemId = str2;
               return size;
             });
           }
           if (mapped == null) {
             mapped = [];
           }
-          closure_8[id] = mapped;
+          closure_8[id2] = mapped;
         }
       }
     }
   },
   UPLOAD_COMPRESSION_PROGRESS: function handleUploadCompressionProgress(arg0) {
+    let channelId;
+    let file;
     ({ channelId, file } = arg0);
-    if (null != dependencyMap[channelId]) {
-      tmp[channelId] = arr.map((id) => {
+    if (null != closure_4[channelId]) {
+      tmp[channelId] = closure_4[channelId].map((id) => {
         let tmp2 = id;
         if (id.id === file.id) {
           const obj = {};
@@ -121,22 +129,22 @@ const uploadStore = new UploadStore(DispatcherDefault, {
         }
         return tmp2;
       });
-      let tmp4 = null != tmp3;
+      const tmp4 = null != tmp3 && null != closure_7[tmp3.id];
       if (tmp4) {
-        tmp4 = null != dependencyMap4[tmp3.id];
-      }
-      if (tmp4) {
+        const id = tmp3.id;
         const obj = {};
-        const merged = Object.assign(dependencyMap4[tmp3.id]);
+        const merged = Object.assign(closure_7[tmp3.id]);
         const merged1 = Object.assign(file);
-        dependencyMap4[tmp3.id] = obj;
+        closure_7[id] = obj;
       }
     }
   },
   UPLOAD_PROGRESS: function handleUploadProgress(arg0) {
+    let channelId;
+    let file;
     ({ channelId, file } = arg0);
-    if (null != dependencyMap[channelId]) {
-      tmp[channelId] = arr.map((id) => {
+    if (null != closure_4[channelId]) {
+      tmp[channelId] = closure_4[channelId].map((id) => {
         let tmp2 = id;
         if (id.id === file.id) {
           const obj = {};
@@ -146,45 +154,43 @@ const uploadStore = new UploadStore(DispatcherDefault, {
         }
         return tmp2;
       });
-      let tmp4 = null != tmp3;
+      const tmp4 = null != tmp3 && null != closure_7[tmp3.id];
       if (tmp4) {
-        tmp4 = null != dependencyMap4[tmp3.id];
-      }
-      if (tmp4) {
+        const id = tmp3.id;
         const obj = {};
-        const merged = Object.assign(dependencyMap4[tmp3.id]);
+        const merged = Object.assign(closure_7[tmp3.id]);
         const merged1 = Object.assign(file);
-        dependencyMap4[tmp3.id] = obj;
+        closure_7[id] = obj;
       }
     }
   },
   UPLOAD_COMPLETE: function handleUploadComplete(channelId) {
     channelId = channelId.channelId;
     const id = channelId.file.id;
-    let tmp5 = null != arr;
-    if (tmp5) {
-      dependencyMap[channelId] = arr.filter((id) => id.id !== id);
-      delete tmp3[tmp2];
-      delete tmp[tmp2];
-      tmp5 = arr.length !== dependencyMap[channelId].length;
+    let tmp2 = null != arr;
+    if (tmp2) {
+      closure_4[channelId] = closure_4[channelId].filter((id) => id.id !== id);
+      delete closure_5[id];
+      delete closure_6[id];
+      tmp2 = arr.length !== closure_4[channelId].length;
     }
-    return tmp5;
+    return tmp2;
   },
   UPLOAD_FAIL: function handleUploadFail(channelId) {
     channelId = channelId.channelId;
     const id = channelId.file.id;
-    let tmp5 = null != arr;
-    if (tmp5) {
-      dependencyMap[channelId] = arr.filter((id) => id.id !== id);
-      delete tmp3[tmp2];
-      delete tmp[tmp2];
-      tmp5 = arr.length !== dependencyMap[channelId].length;
+    let tmp2 = null != arr;
+    if (tmp2) {
+      closure_4[channelId] = closure_4[channelId].filter((id) => id.id !== id);
+      delete closure_5[id];
+      delete closure_6[id];
+      tmp2 = arr.length !== closure_4[channelId].length;
     }
-    return tmp5;
+    return tmp2;
   },
   UPLOAD_CANCEL_REQUEST: function handleUploadCancel(arg0) {
-    let cancel = tmp;
-    if (null == dependencyMap2[arg0.file.id]) {
+    let closure_0 = tmp;
+    if (null == closure_5[arg0.file.id]) {
       return false;
     } else {
       const _setImmediate = setImmediate;
@@ -200,8 +206,8 @@ const uploadStore = new UploadStore(DispatcherDefault, {
   },
   UPLOAD_ITEM_CANCEL_REQUEST: function handleUploadItemCancel(itemId) {
     itemId = itemId.itemId;
-    closure_1 = tmp;
-    if (null == dependencyMap2[itemId.file.id]) {
+    let closure_1 = tmp;
+    if (null == closure_5[itemId.file.id]) {
       return false;
     } else {
       const _setImmediate = setImmediate;
@@ -209,8 +215,11 @@ const uploadStore = new UploadStore(DispatcherDefault, {
     }
   },
   UPLOAD_FILE_UPDATE: function handleUploadFileUpdate(arg0) {
+    let channelId;
+    let file;
     ({ channelId, file } = arg0);
-    if (null != dependencyMap3[file.id]) {
+    let tmp2 = closure_6[file.id];
+    if (null != tmp2) {
       let id = tmp2.nonce;
       if (id == null) {
         id = tmp2.id;
@@ -219,28 +228,27 @@ const uploadStore = new UploadStore(DispatcherDefault, {
       let mapped;
       if (items != null) {
         mapped = items.map((item) => {
+          let num2;
+          let str;
+          let str2;
           item = item.item;
           let num = item.width;
           if (num == null) {
             num = 0;
           }
-          const size = { width: num, height: null, localUri: null, uploaderId: null, uploaderItemId: null };
-          let num2 = item.height;
+          size = { width: num, height: num2, localUri: str, uploaderId: file.id, uploaderItemId: str2 };
+          num2 = item.height;
           if (num2 == null) {
             num2 = 0;
           }
-          size.height = num2;
-          let str = item.originalUri;
+          str = item.originalUri;
           if (str == null) {
             str = "";
           }
-          size.localUri = str;
-          size.uploaderId = file.id;
-          let str2 = item.id;
+          str2 = item.id;
           if (str2 == null) {
             str2 = "";
           }
-          size.uploaderItemId = str2;
           return size;
         });
       }
@@ -249,8 +257,8 @@ const uploadStore = new UploadStore(DispatcherDefault, {
       }
       closure_8[id] = mapped;
     }
-    if (null != dependencyMap[channelId]) {
-      tmp4[channelId] = arr3.map((id) => {
+    if (null != closure_4[channelId]) {
+      tmp4[channelId] = closure_4[channelId].map((id) => {
         let tmp2 = id;
         if (id.id === file.id) {
           const obj = {};
@@ -260,23 +268,22 @@ const uploadStore = new UploadStore(DispatcherDefault, {
         }
         return tmp2;
       });
-      let tmp6 = null != tmp5;
-      if (tmp6) {
-        tmp6 = null != dependencyMap4[tmp5.id];
-      }
+      const tmp6 = null != tmp5 && null != closure_7[tmp5.id];
       if (tmp6) {
         let obj = {};
-        let merged = Object.assign(dependencyMap4[tmp5.id]);
+        const id2 = tmp5.id;
+        let merged = Object.assign(closure_7[tmp5.id]);
         let merged1 = Object.assign(file);
-        dependencyMap4[tmp5.id] = obj;
+        closure_7[id2] = obj;
       }
     }
   },
   UPLOAD_RESTORE_FAILED_UPLOAD: function restoreFailedUpload(messageId) {
     closure_7[messageId.messageId] = messageId.file;
   }
-});
-let size = fn(2);
+};
+const uploadStore = new UploadStore(DispatcherDefault, obj);
+let size = size_mod;
 const result = size.fileFinishedImporting("stores/UploadStore.tsx");
 
 export default uploadStore;

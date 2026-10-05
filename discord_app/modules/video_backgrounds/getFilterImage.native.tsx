@@ -2,25 +2,31 @@
 
 // Module 9323 (getFilterImage)
 import VideoBackgroundConstants from "VideoBackgroundConstants" /* 6484 */;
-import size from "module_2" /* 2 */;
+import size_mod from "module_2" /* 2 */;
 
 let closure_0 = VideoBackgroundConstants.BACKGROUND_REPLACEMENT_SIZE;
+let size = size_mod;
 const result = size.fileFinishedImporting("modules/video_backgrounds/getFilterImage.native.tsx");
 
 export default function getFilterImage(arg0) {
   const response = fetch(arg0);
-  return response.then((ok) => {
+  const nextPromise = response.then(function(ok) {
     if (ok.ok) {
       return ok.arrayBuffer();
     } else {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
+      const self = this;
+      const self2 = this;
       const error = new Error("Got invalid status code when fetching image: " + ok.status);
       throw error;
     }
-  }).then((result) => {
-    const size = { data: Buffer.from(result).toString("base64"), width: null, height: null, pixelFormat: "image" };
+  });
+  return nextPromise.then((result) => {
+    let str;
+    size = { data: str.toString("base64"), width: null, height: null, pixelFormat: "image" };
     ({ width: obj.width, height: obj.height } = closure_1_0);
+    str = Buffer.from(result);
     return size;
   });
 };

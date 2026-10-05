@@ -1,19 +1,30 @@
 // === Module 15624: ExperimentOverrideActiveSetting ===
 
 // Module 15624 (ExperimentOverrideActiveSetting)
-import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
+import Fragment from "Fragment" /* 21 */;
+import get_initialized from "get initialized" /* 504 */;
+import react from "react" /* 576 */;
 import DevToolsNavigator from "DevToolsNavigator" /* 14406 */;
 import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14650 */;
+import BeakerIcon from "BeakerIcon" /* 15413 */;
 import DevToolsContent from "DevToolsContent" /* 15625 */;
 import ExperimentStore from "ExperimentStore" /* 4776 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import SettingBuilders from "SettingBuilders" /* 11129 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const jsx = fn(21).jsx;
-let ReactCompilerGating = fn(558);
+const jsx = Fragment.jsx;
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(4);
+  let allExperimentOverrideDescriptors;
+  let clientOverrides;
+  let tmp4;
+  let tmp5;
+  let tmp8;
+  let tmp9;
+  const obj = react;
+  const cResult = obj.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ExperimentStore];
     const fn = function o() {
@@ -26,7 +37,8 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
+  const tmpResult = get_initialized;
+  const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [ApexExperimentStore];
     const fn2 = function u() {
@@ -34,75 +46,80 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     };
     cResult[2] = items1;
     cResult[3] = fn2;
-    let tmp9 = fn2;
-    let tmp8 = items1;
+    tmp9 = fn2;
+    tmp8 = items1;
   } else {
     tmp8 = cResult[2];
     tmp9 = cResult[3];
   }
-  const tmpResult = initialize;
-  return stateFromStores + initialize.useStateFromStores(tmp8, tmp9);
+  const tmpResult2 = get_initialized;
+  return stateFromStores + tmpResult2.useStateFromStores(tmp8, tmp9);
 }) : (() => {
+  let allExperimentOverrideDescriptors;
+  let clientOverrides;
   const items = [ExperimentStore];
-  const stateFromStores = initialize.useStateFromStores(items, () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length);
+  const obj = get_initialized;
+  const stateFromStores = obj.useStateFromStores(items, () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length);
   const items1 = [ApexExperimentStore];
-  return stateFromStores + initialize.useStateFromStores(items1, () => Object.keys(clientOverrides.getClientOverrides()).length);
+  const obj2 = get_initialized;
+  return stateFromStores + obj2.useStateFromStores(items1, () => Object.keys(clientOverrides.getClientOverrides()).length);
 });
-fn(558);
-ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(4);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let tmp4;
+  let tmp6;
+  const obj = react;
+  const cResult = obj.c(4);
   const str = closure_5();
   if (cResult[0] !== str) {
     const str1 = str.toString();
     cResult[0] = str;
     cResult[1] = str1;
-    let tmp4 = str1;
+    tmp4 = str1;
   } else {
     tmp4 = cResult[1];
   }
   if (cResult[2] !== tmp4) {
-    const obj2 = { label: "Experiments overridden: ", value: tmp4 };
     const tmp8 = jsx(DevToolsContent.DevToolsContentSubLabel, { label: "Experiments overridden: ", value: tmp4 });
     cResult[2] = tmp4;
     cResult[3] = tmp8;
-    let tmp6 = tmp8;
+    tmp6 = tmp8;
   } else {
     tmp6 = cResult[3];
   }
   return tmp6;
 }) : (() => {
   const str = closure_5();
-  return jsx(DevToolsContent.DevToolsContentSubLabel, { label: "Experiments overridden: ", value: closure_5().toString() });
+  const DevToolsContentSubLabel = DevToolsContent.DevToolsContentSubLabel;
+  return <DevToolsContentSubLabel label="Experiments overridden: " value={str.toString()} />;
 });
-const SettingBuilders = fn(11129);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const staffOrDeveloperSettingPredicate = useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
-  return closure_5() > 0 && staffOrDeveloperSettingPredicate;
+  const obj = useIsStaffOrDeveloperSettingPredicate;
+  const staffOrDeveloperSettingPredicate = obj.useStaffOrDeveloperSettingPredicate();
+  const tmp2 = closure_5() > 0 && staffOrDeveloperSettingPredicate;
+  return tmp2;
 }) : (() => {
-  const staffOrDeveloperSettingPredicate = useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
-  return closure_5() > 0 && staffOrDeveloperSettingPredicate;
+  const obj = useIsStaffOrDeveloperSettingPredicate;
+  const staffOrDeveloperSettingPredicate = obj.useStaffOrDeveloperSettingPredicate();
+  const tmp2 = closure_5() > 0 && staffOrDeveloperSettingPredicate;
+  return tmp2;
 });
-const pressable = SettingBuilders.createPressable({
+let obj = {
   useTitle() {
     return "Experiments Overrides Active";
   },
   parent: null,
-  IconComponent: fn(15413).BeakerIcon,
+  IconComponent: BeakerIcon.BeakerIcon,
   useDescription: tmp2,
-  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-    const staffOrDeveloperSettingPredicate = useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
-    return closure_5() > 0 && staffOrDeveloperSettingPredicate;
-  }) : (() => {
-    const staffOrDeveloperSettingPredicate = useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
-    return closure_5() > 0 && staffOrDeveloperSettingPredicate;
-  }),
+  usePredicate: tmp3,
   onPress: function handleExperimentOverrideActivePress() {
-    DevToolsNavigator.navigateToDevTools({ screenKey: "experiments" });
+    const obj = DevToolsNavigator;
+    obj.navigateToDevTools({ screenKey: "experiments" });
   },
   withArrow: true
-});
-const size = fn(2);
+};
+const pressable = SettingBuilders.createPressable(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/ExperimentOverrideActiveSetting.tsx");
 
 export default pressable;

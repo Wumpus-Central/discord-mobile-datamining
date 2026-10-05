@@ -7,5 +7,7 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/media/VideoActionCreators.tsx");
 
 export const updateVideoSize = function updateVideoSize(streamId, size, scale) {
-  DispatcherDefault.dispatch({ type: "VIDEO_SIZE_UPDATE", streamId, dimensions: size, zoom: scale });
+  const obj = DispatcherDefault;
+  const obj2 = { type: "VIDEO_SIZE_UPDATE", streamId, dimensions: size, zoom: scale };
+  obj.dispatch(obj2);
 };

@@ -1,17 +1,18 @@
 // === Module 17064: useMessageRequestsCount ===
 
 // Module 17064 (useMessageRequestsCount)
-import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
+import get_initialized from "get initialized" /* 504 */;
+import react from "react" /* 576 */;
 import MessageRequestStore from "MessageRequestStore" /* 6720 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/message_request/hooks/useMessageRequestsCount.tsx");
-
-export const useMessageRequestsCount = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(2);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let messageRequestsCount;
+  let tmp4;
+  let tmp5;
+  const obj = react;
+  const cResult = obj.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [MessageRequestStore];
     const fn = function u() {
@@ -24,8 +25,14 @@ export const useMessageRequestsCount = ReactCompilerGating.isReactCompilerEnable
   } else {
     [tmp4, tmp5] = cResult;
   }
-  return initialize.useStateFromStores(tmp4, tmp5);
+  const tmpResult = get_initialized;
+  return tmpResult.useStateFromStores(tmp4, tmp5);
 }) : (() => {
+  let messageRequestsCount;
   const items = [MessageRequestStore];
-  return initialize.useStateFromStores(items, () => messageRequestsCount.getMessageRequestsCount());
+  const obj = get_initialized;
+  return obj.useStateFromStores(items, () => messageRequestsCount.getMessageRequestsCount());
 });
+const result = size.fileFinishedImporting("modules/message_request/hooks/useMessageRequestsCount.tsx");
+
+export const useMessageRequestsCount = tmp2;

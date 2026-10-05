@@ -1,40 +1,33 @@
 // === Module 7614: BasicGuildStore ===
 
 // Module 7614 (BasicGuildStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
+import size from "module_2" /* 2 */;
 
 let closure_0 = 0;
-const dependencyMap = {};
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class BasicGuildStore extends Store {
-}
-const prototype = BasicGuildStore.prototype;
-prototype["getGuild"] = function getGuild(arg0) {
-  if (null != dependencyMap[arg0]) {
-    if (!("type" in tmp)) {
-      return tmp;
+  getGuild(arg0) {
+    if (null != closure_1[arg0]) {
+      if (!("type" in closure_1[arg0])) {
+        return closure_1[arg0];
+      }
     }
   }
-};
-prototype["isGuildFetching"] = function isGuildFetching(arg0) {
-  let tmp2 = null != tmp;
-  if (tmp2) {
-    tmp2 = "type" in tmp;
+  isGuildFetching(arg0) {
+    return null != tmp && "type" in tmp && "loading" === tmp.type;
   }
-  if (tmp2) {
-    tmp2 = "loading" === tmp.type;
+  getGuildOrStatus(guild_id) {
+    return closure_1[guild_id];
   }
-  return tmp2;
-};
-prototype["getGuildOrStatus"] = function getGuildOrStatus(guild_id) {
-  return dependencyMap[guild_id];
-};
-prototype["getVersion"] = function getVersion() {
-  return closure_0;
-};
+  getVersion() {
+    return closure_0;
+  }
+}
+const prototype = BasicGuildStore.prototype;
 BasicGuildStore.displayName = "BasicGuildStore";
-const basicGuildStore = new BasicGuildStore(DispatcherDefault, {
+const obj = {
   BASIC_GUILD_FETCH: function handleBasicGuildFetch(guildId) {
     closure_1[guildId.guildId] = { type: "loading" };
     return false;
@@ -47,8 +40,8 @@ const basicGuildStore = new BasicGuildStore(DispatcherDefault, {
     closure_1[guildId.guildId] = { type: "failed" };
     return false;
   }
-});
-const size = fn(2);
+};
+const basicGuildStore = new BasicGuildStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/guild/BasicGuildStore.tsx");
 
 export default basicGuildStore;

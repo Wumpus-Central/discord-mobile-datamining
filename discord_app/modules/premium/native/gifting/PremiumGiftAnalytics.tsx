@@ -1,67 +1,75 @@
 // === Module 11018: PremiumGiftAnalytics ===
 
 // Module 11018 (PremiumGiftAnalytics)
-import util from "util" /* 1126 */;
+import Constants from "Constants" /* 1085 */;
+import intl2 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10394 */;
 import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10539 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftAnalytics.tsx");
+let currentStep, flag, obj1, obj12, obj13, obj14, obj15, obj16, ref, ref2, tmp, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp18, tmp19, tmp20, tmp21, tmp22, tmp24, tmp25, tmp26, tmp27, tmp28, tmp29, tmp3, tmp30, tmp31, tmp32, tmp33, tmp34, tmp37, tmp38, tmp4, tmp40, tmp41, tmp42, tmp43, tmp45, tmp46, tmp47, tmp48, tmp49, tmp50, tmp51, tmp8, tmp9, track2Result, track3Result, trackResult;
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((currentStep) => {
-  const cResult = currentStep(productId[3]).c(10);
-  currentStep = currentStep.currentStep;
+const AnalyticEvents = Constants.AnalyticEvents;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((currentStep) => {
+  let first;
+  let productId;
   let obj = currentStep(productId[3]);
-  const nativeGiftContext = currentStep(productId[4]).useNativeGiftContext();
+  const cResult = obj.c(10);
+  currentStep = currentStep.currentStep;
+  const children = currentStep.children;
+  let obj2 = currentStep(productId[4]);
+  const nativeGiftContext = obj2.useNativeGiftContext();
   const customGiftMessage = nativeGiftContext.customGiftMessage;
   productId = nativeGiftContext.productId;
   const basePurchaseAnalytics = nativeGiftContext.basePurchaseAnalytics;
+  let obj3 = basePurchaseAnalytics;
   ref = basePurchaseAnalytics.useRef(null);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let _Date = Date;
     let timestamp = Date.now();
     cResult[0] = timestamp;
-    let first = timestamp;
+    first = timestamp;
   } else {
     first = cResult[0];
   }
   ref = obj3.useRef(first);
-  basePurchaseAnalytics.useRef(first);
+  ref2 = obj3.useRef(first);
   if (cResult[1] === basePurchaseAnalytics) {
     if (cResult[2] === currentStep) {
       if (cResult[3] === customGiftMessage) {
+        let tmp6;
+        let tmp7;
+        let tmp10;
         if (cResult[4] === productId) {
-          let tmp6 = cResult[5];
-          let tmp7 = cResult[6];
+          tmp6 = cResult[5];
+          tmp7 = cResult[6];
         }
         const effect = obj3.useEffect(tmp6, tmp7);
         if (cResult[7] !== basePurchaseAnalytics) {
           class A {
             constructor() {
-              return () => { ... };
+              return () => { /* body not rendered: F140930 */ };
             }
           }
           const items = [basePurchaseAnalytics, ref];
           cResult[7] = basePurchaseAnalytics;
           cResult[8] = A;
           cResult[9] = items;
-          let tmp10 = items;
+          tmp10 = items;
         } else {
           class A {
             constructor() {
-              return () => { ... };
+              return () => { /* body not rendered: F140930 */ };
             }
           }
           tmp10 = cResult[9];
         }
         const effect1 = obj3.useEffect(A, tmp10);
-        return currentStep.children;
+        return children;
       }
     }
   }
@@ -69,13 +77,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((currentStep) => 
     constructor() {
       tmp = currentStep;
       tmp2 = closure_4;
-      if (currentStep === closure_4.current) {
-        return;
-      } else {
-        tmp36 = globalThis;
+      if (currentStep !== closure_4.current) {
+        tmp38 = globalThis;
         _Date = Date;
         timestamp = Date.now();
-        tmp38 = null;
+        tmp40 = null;
         if (null != tmp2.current) {
           tmp3 = closure_0;
           tmp4 = closure_2;
@@ -89,72 +95,78 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((currentStep) => 
           if (isIOSResult) {
             tmp8 = closure_1;
             tmp9 = closure_2;
-            obj2 = closure_1(closure_2[7]);
-            tmp10 = AnalyticEvents;
+            tmp10 = closure_1(closure_2[7]);
+            tmp11 = AnalyticEvents;
             obj1 = {};
-            tmp11 = closure_0;
-            tmp12 = closure_2;
-            obj4 = closure_0(closure_2[5]);
-            tmp13 = basePurchaseAnalytics;
-            obj15 = { subscription_plan_gateway_plan_id: null };
-            tmp14 = productId;
-            obj15.subscription_plan_gateway_plan_id = productId;
-            tmp15 = obj1;
-            merged = Object.assign(obj4.getPaymentFlowStepAnalyticsFields(basePurchaseAnalytics, obj15));
-            tmp17 = customGiftMessage;
-            tmp18 = closure_0;
-            tmp19 = closure_2;
+            tmp12 = closure_0;
+            tmp13 = closure_2;
+            track = tmp10.track;
+            PAYMENT_FLOW_SUCCEEDED = AnalyticEvents.PAYMENT_FLOW_SUCCEEDED;
+            obj3 = closure_0(closure_2[5]);
+            tmp14 = basePurchaseAnalytics;
+            obj12 = { subscription_plan_gateway_plan_id: null };
+            tmp15 = productId;
+            obj12.subscription_plan_gateway_plan_id = productId;
+            tmp16 = obj1;
+            merged = Object.assign(obj3.getPaymentFlowStepAnalyticsFields(basePurchaseAnalytics, obj12));
+            tmp18 = customGiftMessage;
+            tmp19 = closure_0;
+            tmp20 = closure_2;
             intl = closure_0(closure_2[8]).intl;
-            tmp20 = closure_0;
-            tmp21 = closure_2;
+            tmp21 = closure_0;
+            tmp22 = closure_2;
             obj1.is_custom_message_edited = customGiftMessage !== intl.string(closure_0(closure_2[8]).t.ZkOo1U);
             flag = false;
             obj1.is_custom_emoji_sound_available = false;
-            trackResult = obj2.track(AnalyticEvents.PAYMENT_FLOW_SUCCEEDED, obj1);
+            trackResult = track(PAYMENT_FLOW_SUCCEEDED, obj1);
           }
-          tmp23 = closure_1;
-          tmp24 = closure_2;
-          obj6 = closure_1(closure_2[7]);
-          tmp25 = AnalyticEvents;
-          obj16 = {};
-          tmp26 = closure_0;
-          tmp27 = closure_2;
-          obj8 = closure_0(closure_2[5]);
-          tmp28 = basePurchaseAnalytics;
-          obj17 = { from_step: null, to_step: null, step_duration_ms: null, flow_duration_ms: null, subscription_plan_gateway_plan_id: null };
-          obj17.from_step = tmp2.current;
-          obj17.to_step = tmp;
-          tmp29 = closure_6;
-          obj17.step_duration_ms = timestamp - closure_6.current;
-          tmp30 = closure_5;
-          obj17.flow_duration_ms = timestamp - closure_5.current;
-          tmp31 = productId;
-          obj17.subscription_plan_gateway_plan_id = productId;
-          tmp32 = obj16;
-          merged1 = Object.assign(obj8.getPaymentFlowStepAnalyticsFields(basePurchaseAnalytics, obj17));
-          trackResult1 = obj6.track(AnalyticEvents.PAYMENT_FLOW_STEP, obj16);
+          tmp24 = closure_1;
+          tmp25 = closure_2;
+          tmp26 = closure_1(closure_2[7]);
+          tmp27 = AnalyticEvents;
+          obj13 = {};
+          tmp28 = closure_0;
+          tmp29 = closure_2;
+          track2 = tmp26.track;
+          PAYMENT_FLOW_STEP = AnalyticEvents.PAYMENT_FLOW_STEP;
+          obj6 = closure_0(closure_2[5]);
+          tmp30 = basePurchaseAnalytics;
+          obj14 = { from_step: null, to_step: null, step_duration_ms: null, flow_duration_ms: null, subscription_plan_gateway_plan_id: null };
+          obj14.from_step = tmp2.current;
+          obj14.to_step = tmp;
+          tmp31 = closure_6;
+          obj14.step_duration_ms = timestamp - closure_6.current;
+          tmp32 = closure_5;
+          obj14.flow_duration_ms = timestamp - closure_5.current;
+          tmp33 = productId;
+          obj14.subscription_plan_gateway_plan_id = productId;
+          tmp34 = obj13;
+          merged1 = Object.assign(obj6.getPaymentFlowStepAnalyticsFields(basePurchaseAnalytics, obj14));
+          track2Result = track2(PAYMENT_FLOW_STEP, obj13);
         } else {
-          tmp39 = closure_0;
-          tmp40 = closure_2;
-          obj10 = closure_0(closure_2[9]);
-          tmp41 = basePurchaseAnalytics;
-          result = obj10.trackPaymentFlowStartedAnalyticsAndCTP(basePurchaseAnalytics);
-          tmp43 = closure_1;
-          tmp44 = closure_2;
-          obj11 = closure_1(closure_2[7]);
-          tmp45 = AnalyticEvents;
-          obj18 = {};
-          tmp46 = closure_0;
-          tmp47 = closure_2;
-          obj13 = closure_0(closure_2[5]);
-          obj19 = { initial_step: null };
-          obj19.initial_step = tmp;
-          tmp48 = obj18;
-          merged2 = Object.assign(obj13.getPaymentFlowStepAnalyticsFields(basePurchaseAnalytics, obj19));
-          trackResult2 = obj11.track(AnalyticEvents.PAYMENT_FLOW_LOADED, obj18);
+          tmp41 = closure_0;
+          tmp42 = closure_2;
+          obj8 = closure_0(closure_2[9]);
+          tmp43 = basePurchaseAnalytics;
+          result = obj8.trackPaymentFlowStartedAnalyticsAndCTP(basePurchaseAnalytics);
+          tmp45 = closure_1;
+          tmp46 = closure_2;
+          tmp47 = closure_1(closure_2[7]);
+          tmp48 = AnalyticEvents;
+          obj15 = {};
+          tmp49 = closure_0;
+          tmp50 = closure_2;
+          track3 = tmp47.track;
+          PAYMENT_FLOW_LOADED = AnalyticEvents.PAYMENT_FLOW_LOADED;
+          obj10 = closure_0(closure_2[5]);
+          obj16 = { initial_step: null };
+          obj16.initial_step = tmp;
+          tmp51 = obj15;
+          merged2 = Object.assign(obj10.getPaymentFlowStepAnalyticsFields(basePurchaseAnalytics, obj16));
+          track3Result = track3(PAYMENT_FLOW_LOADED, obj15);
         }
         tmp2.current = tmp;
-        tmp35 = closure_6;
+        tmp37 = closure_6;
         closure_6.current = timestamp;
       }
       return;
@@ -169,50 +181,61 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((currentStep) => 
   cResult[6] = items1;
   tmp7 = items1;
   tmp6 = E;
-  let obj2 = currentStep(productId[4]);
 }) : ((currentStep) => {
   currentStep = currentStep.currentStep;
   let productId;
-  const nativeGiftContext = currentStep(productId[4]).useNativeGiftContext();
+  const children = currentStep.children;
+  let obj = currentStep(productId[4]);
+  const nativeGiftContext = obj.useNativeGiftContext();
   const customGiftMessage = nativeGiftContext.customGiftMessage;
   productId = nativeGiftContext.productId;
   const basePurchaseAnalytics = nativeGiftContext.basePurchaseAnalytics;
   basePurchaseAnalytics.useRef(null);
   let timestamp = Date.now();
   ref = basePurchaseAnalytics.useRef(timestamp);
-  basePurchaseAnalytics.useRef(timestamp);
+  ref2 = basePurchaseAnalytics.useRef(timestamp);
   const items = [basePurchaseAnalytics, currentStep, ref, customGiftMessage, productId];
   const effect = basePurchaseAnalytics.useEffect(() => {
+    let intl;
     if (currentStep !== ref.current) {
       const _Date = Date;
       const timestamp = Date.now();
       if (null != ref.current) {
         let isIOSResult = currentStep === PremiumAnalyticsUtils.PaymentFlowStep.CONFIRM;
         if (isIOSResult) {
-          isIOSResult = PlatformUtils.isIOS();
+          const obj = PlatformUtils;
+          isIOSResult = obj.isIOS();
         }
         if (isIOSResult) {
-          const obj3 = {};
-          const obj2 = AnalyticsUtilsDefault;
-          const obj5 = { subscription_plan_gateway_plan_id: productId };
-          const merged = Object.assign(PremiumAnalyticsUtils.getPaymentFlowStepAnalyticsFields(basePurchaseAnalytics, obj5));
-          const intl = util.intl;
-          obj3.is_custom_message_edited = customGiftMessage !== intl.string(util.t.ZkOo1U);
-          obj3.is_custom_emoji_sound_available = false;
-          obj2.track(AnalyticEvents.PAYMENT_FLOW_SUCCEEDED, obj3);
+          const obj2 = { is_custom_message_edited: customGiftMessage !== intl.string(intl2.t.ZkOo1U), is_custom_emoji_sound_available: false };
+          const track = AnalyticsUtilsDefault.track;
+          const PAYMENT_FLOW_SUCCEEDED = AnalyticEvents.PAYMENT_FLOW_SUCCEEDED;
+          AnalyticsUtilsDefault;
+          const obj4 = { subscription_plan_gateway_plan_id: productId };
+          const obj3 = PremiumAnalyticsUtils;
+          const merged = Object.assign(obj3.getPaymentFlowStepAnalyticsFields(basePurchaseAnalytics, obj4));
+          intl = intl2.intl;
+          track(PAYMENT_FLOW_SUCCEEDED, obj2);
         }
-        const obj7 = {};
-        const obj6 = AnalyticsUtilsDefault;
-        const obj9 = { from_step: ref.current, to_step: currentStep, step_duration_ms: timestamp - ref2.current, flow_duration_ms: timestamp - ref.current, subscription_plan_gateway_plan_id: productId };
-        const merged1 = Object.assign(PremiumAnalyticsUtils.getPaymentFlowStepAnalyticsFields(basePurchaseAnalytics, obj9));
-        obj6.track(AnalyticEvents.PAYMENT_FLOW_STEP, obj7);
+        const obj5 = {};
+        const track2 = AnalyticsUtilsDefault.track;
+        const PAYMENT_FLOW_STEP = AnalyticEvents.PAYMENT_FLOW_STEP;
+        AnalyticsUtilsDefault;
+        const obj7 = { from_step: ref.current, to_step: currentStep, step_duration_ms: timestamp - ref2.current, flow_duration_ms: timestamp - ref.current, subscription_plan_gateway_plan_id: productId };
+        const obj6 = PremiumAnalyticsUtils;
+        const merged1 = Object.assign(obj6.getPaymentFlowStepAnalyticsFields(basePurchaseAnalytics, obj7));
+        track2(PAYMENT_FLOW_STEP, obj5);
       } else {
-        const result = PaymentFlowStartedTriggerPoint.trackPaymentFlowStartedAnalyticsAndCTP(basePurchaseAnalytics);
-        const obj12 = {};
-        const obj11 = AnalyticsUtilsDefault;
-        const obj14 = { initial_step: currentStep };
-        const merged2 = Object.assign(PremiumAnalyticsUtils.getPaymentFlowStepAnalyticsFields(basePurchaseAnalytics, obj14));
-        obj11.track(AnalyticEvents.PAYMENT_FLOW_LOADED, obj12);
+        const obj8 = PaymentFlowStartedTriggerPoint;
+        const result = obj8.trackPaymentFlowStartedAnalyticsAndCTP(basePurchaseAnalytics);
+        const obj9 = {};
+        const track3 = AnalyticsUtilsDefault.track;
+        const PAYMENT_FLOW_LOADED = AnalyticEvents.PAYMENT_FLOW_LOADED;
+        AnalyticsUtilsDefault;
+        const obj11 = { initial_step: currentStep };
+        const obj10 = PremiumAnalyticsUtils;
+        const merged2 = Object.assign(obj10.getPaymentFlowStepAnalyticsFields(basePurchaseAnalytics, obj11));
+        track3(PAYMENT_FLOW_LOADED, obj9);
       }
       ref.current = currentStep;
       ref2.current = timestamp;
@@ -221,9 +244,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((currentStep) => 
   const items1 = [basePurchaseAnalytics, ref];
   const effect1 = basePurchaseAnalytics.useEffect(() => () => {
     if (ref.current !== currentStep(productId[5]).PaymentFlowStep.CONFIRM) {
-      customGiftMessage(productId[7]).track(ref.PAYMENT_FLOW_CANCELED, basePurchaseAnalytics);
       const obj = customGiftMessage(productId[7]);
+      obj.track(ref.PAYMENT_FLOW_CANCELED, basePurchaseAnalytics);
     }
   }, items1);
-  return currentStep.children;
+  return children;
 });
+let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftAnalytics.tsx");
+
+export default tmp2;

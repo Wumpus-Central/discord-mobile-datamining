@@ -1,8 +1,8 @@
 // === Module 15027: UserSettingsGuildRoleSubscriptions ===
 
 // Module 15027 (UserSettingsGuildRoleSubscriptions)
-import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
+import react2 from "react" /* 576 */;
+import intl3 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import useRestorePurchasesDefault from "useRestorePurchases" /* 15028 */;
@@ -10,9 +10,17 @@ import useActiveGuildSubscriptionsDefault from "useActiveGuildSubscriptions" /* 
 import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15030 */;
 import LoadingIndicatorDefault from "LoadingIndicator" /* 15033 */;
 import ManageSubscriptionCardDefault from "ManageSubscriptionCard" /* 15034 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+let c3;
+let closure_4;
+let hasOwnProperty;
+let metroRequire;
 function renderSectionHeader(section) {
   let tmp = null;
   if (section.section.key === c7) {
@@ -20,95 +28,104 @@ function renderSectionHeader(section) {
   }
   return tmp;
 }
-get_ActivityIndicator = fn(17);
-({ View: c3, SectionList: closure_4 } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ View: c3, SectionList: closure_4 } = react_native);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
 let c7 = "role-subscriptions";
-const createStyles = fn(4890);
 let closure_8 = createStyles.createStyles({ container: { flex: 1 }, list: { flex: 1 }, listContentContainer: { paddingHorizontal: 16 }, sectionHeader: { paddingVertical: 24 }, sectionSubtitle: { marginTop: 4 } });
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(7);
+  let first;
+  let intl;
+  let items;
+  let tmp10;
+  let tmp8;
+  const obj = react2;
+  const cResult = obj.c(7);
   const tmp4 = closure_8();
+  const sectionHeader = tmp4.sectionHeader;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { variant: "eyebrow", color: "text-default", children: null };
-    const intl = util.intl;
-    obj2.children = intl.string(util.t["KzCF/6"]);
-    const tmp7 = hasOwnProperty(Text_Text.Text, obj2);
+    const obj2 = { variant: "eyebrow", color: "text-default", children: intl.string(intl3.t["KzCF/6"]) };
+    const Text = Text_Text.Text;
+    intl = intl3.intl;
+    const tmp7 = hasOwnProperty(Text, obj2);
     cResult[0] = tmp7;
-    let first = tmp7;
+    first = tmp7;
   } else {
     first = cResult[0];
   }
+  const sectionSubtitle = tmp4.sectionSubtitle;
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl2 = util.intl;
-    const stringResult = intl2.string(util.t["Y+ucR7"]);
+    const intl2 = intl3.intl;
+    const stringResult = intl2.string(intl3.t["Y+ucR7"]);
     cResult[1] = stringResult;
-    let tmp8 = stringResult;
+    tmp8 = stringResult;
   } else {
     tmp8 = cResult[1];
   }
   if (cResult[2] !== tmp4.sectionSubtitle) {
-    const obj3 = { style: tmp4.sectionSubtitle, variant: "text-sm/medium", color: "text-default", children: tmp8 };
+    const obj3 = { style: sectionSubtitle, variant: "text-sm/medium", color: "text-default", children: tmp8 };
     const tmp12 = hasOwnProperty(Text_Text.Text, obj3);
     cResult[2] = tmp4.sectionSubtitle;
     cResult[3] = tmp12;
-    let tmp10 = tmp12;
+    tmp10 = tmp12;
   } else {
     tmp10 = cResult[3];
   }
   if (cResult[4] === tmp4.sectionHeader) {
+    let tmp13;
     if (cResult[5] === tmp10) {
-      let tmp13 = cResult[6];
+      tmp13 = cResult[6];
     }
     return tmp13;
   }
-  const obj4 = { style: tmp4.sectionHeader, children: null };
-  const items = [first, tmp10];
-  obj4.children = items;
-  const tmp14 = timestampProducer(React3, obj4);
+  const obj4 = { style: sectionHeader, children: items };
+  items = [first, tmp10];
+  const tmp14 = metroRequire(_false, obj4);
   cResult[4] = tmp4.sectionHeader;
   cResult[5] = tmp10;
   cResult[6] = tmp14;
   tmp13 = tmp14;
 }) : (() => {
+  let intl;
+  let intl2;
+  let items;
   const tmp = closure_8();
-  const obj = { style: tmp.sectionHeader, children: null };
-  const obj2 = { variant: "eyebrow", color: "text-default", children: null };
-  const intl = util.intl;
-  obj2.children = intl.string(util.t["KzCF/6"]);
-  const items = [hasOwnProperty(Text_Text.Text, obj2), ];
-  const obj3 = { style: tmp.sectionSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = util.intl;
-  obj3.children = intl2.string(util.t["Y+ucR7"]);
-  items[1] = hasOwnProperty(Text_Text.Text, obj3);
-  obj.children = items;
-  return timestampProducer(React3, obj);
+  const obj = { style: tmp.sectionHeader, children: items };
+  const obj2 = { variant: "eyebrow", color: "text-default", children: intl.string(intl3.t["KzCF/6"]) };
+  const Text = Text_Text.Text;
+  intl = intl3.intl;
+  items = [hasOwnProperty(Text, obj2), ];
+  const obj3 = { style: tmp.sectionSubtitle, variant: "text-sm/medium", color: "text-default", children: intl2.string(intl3.t["Y+ucR7"]) };
+  const Text2 = Text_Text.Text;
+  intl2 = intl3.intl;
+  items[1] = hasOwnProperty(Text2, obj3);
+  return metroRequire(_false, obj);
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 const ItemSeparatorComponent = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(1);
+  let first;
+  const obj = react2;
+  const cResult = obj.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const tmp6 = hasOwnProperty(native.Spacer, { size: 8 });
     cResult[0] = tmp6;
-    let first = tmp6;
+    first = tmp6;
   } else {
     first = cResult[0];
   }
   return first;
 }) : (() => hasOwnProperty(native.Spacer, { size: 8 }));
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/manage_subscriptions/UserSettingsGuildRoleSubscriptions.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(14);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let first;
+  let tmp8;
+  const obj = react2;
+  const cResult = obj.c(14);
   const tmp4 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { forceRestore: true };
     cResult[0] = obj2;
-    let first = obj2;
+    first = obj2;
   } else {
     first = cResult[0];
   }
@@ -116,28 +133,32 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { ensureFresh: true };
     cResult[1] = obj3;
-    let tmp8 = obj3;
+    tmp8 = obj3;
   } else {
     tmp8 = cResult[1];
   }
   const tmp9 = useActiveGuildSubscriptionsDefault(tmp8);
+  const tmpResult = GuildRoleSubscriptionsHooks;
   if (tmpResult.useFetchListingsForSubscriptions(tmp9).loading) {
+    let tmp20;
     const _Symbol3 = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
       const tmp22 = hasOwnProperty(LoadingIndicatorDefault, {});
       cResult[2] = tmp22;
-      let tmp20 = tmp22;
+      tmp20 = tmp22;
     } else {
       tmp20 = cResult[2];
     }
     return tmp20;
   } else {
+    let tmp10;
+    let tmp12;
     if (cResult[3] !== tmp9) {
+      const items = [{ key, data: tmp9 }];
       const obj4 = { key, data: tmp9 };
-      const items = [obj4];
       cResult[3] = tmp9;
       cResult[4] = items;
-      let tmp10 = items;
+      tmp10 = items;
     } else {
       tmp10 = cResult[4];
     }
@@ -147,69 +168,73 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         return id.id;
       };
       cResult[5] = fn;
-      let tmp12 = fn;
+      tmp12 = fn;
     } else {
       tmp12 = cResult[5];
     }
     const _Symbol2 = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
       class C {
-        constructor(arg0) {
-          return closure_1_5(closure_1_1(closure_1_2[13]), { subscription: arg0.item });
+        constructor(subscription) {
+          return closure_1_5(ManageSubscriptionCardDefault, { subscription: subscription.item });
         }
       }
       cResult[6] = C;
     } else {
       class C {
-        constructor(arg0) {
-          return closure_1_5(closure_1_1(closure_1_2[13]), { subscription: arg0.item });
+        constructor(subscription) {
+          return closure_1_5(ManageSubscriptionCardDefault, { subscription: subscription.item });
         }
       }
     }
     if (cResult[7] === tmp10) {
       class C {
-        constructor(arg0) {
-          return closure_1_5(closure_1_1(closure_1_2[13]), { subscription: arg0.item });
+        constructor(subscription) {
+          return closure_1_5(ManageSubscriptionCardDefault, { subscription: subscription.item });
         }
       }
     }
-    const obj5 = { contentContainerStyle: null, style: null, sections: null, stickySectionHeadersEnabled: false, keyExtractor: null, renderSectionHeader: null, renderItem: null, ItemSeparatorComponent: null };
+    const obj5 = { contentContainerStyle: null, style: null, sections: tmp10, stickySectionHeadersEnabled: false, keyExtractor: tmp12, renderSectionHeader, renderItem: C, ItemSeparatorComponent };
     ({ listContentContainer: obj6.contentContainerStyle, list: obj6.style } = tmp4);
-    obj5.sections = tmp10;
-    obj5.keyExtractor = tmp12;
-    obj5.renderSectionHeader = renderSectionHeader;
-    obj5.renderItem = C;
-    obj5.ItemSeparatorComponent = ItemSeparatorComponent;
-    const tmp19 = hasOwnProperty(React4, obj5);
     cResult[7] = tmp10;
     cResult[8] = tmp4.list;
     cResult[9] = tmp4.listContentContainer;
-    cResult[10] = tmp19;
+    cResult[10] = hasOwnProperty(React3, obj5);
+    const tmp19 = hasOwnProperty(React3, obj5);
   }
-  tmpResult = GuildRoleSubscriptionsHooks;
 }) : (() => {
+  let items;
+  let obj4;
+  let tmp6Result;
   const tmp = closure_8();
   useRestorePurchasesDefault({ forceRestore: true });
   const tmp5 = useActiveGuildSubscriptionsDefault({ ensureFresh: true });
+  const obj = GuildRoleSubscriptionsHooks;
   if (obj.useFetchListingsForSubscriptions(tmp5).loading) {
-    let tmp6Result = hasOwnProperty(LoadingIndicatorDefault, {});
+    tmp6Result = hasOwnProperty(LoadingIndicatorDefault, {});
   } else {
-    const obj2 = { style: tmp.container, children: null };
-    const obj4 = { contentContainerStyle: null, style: null, sections: null, stickySectionHeadersEnabled: false, keyExtractor: null, renderSectionHeader: null, renderItem: null, ItemSeparatorComponent: null };
+    const obj2 = { style: tmp.container, children: hasOwnProperty(React3, obj4) };
+    obj4 = {
+      contentContainerStyle: null,
+      style: null,
+      sections: items,
+      stickySectionHeadersEnabled: false,
+      keyExtractor(id) {
+          return id.id;
+        },
+      renderSectionHeader,
+      renderItem(subscription) {
+          return closure_1_5(ManageSubscriptionCardDefault, { subscription: subscription.item });
+        },
+      ItemSeparatorComponent
+    };
     ({ listContentContainer: obj3.contentContainerStyle, list: obj3.style } = tmp);
+    items = [{ key, data: tmp5 }];
     const obj7 = { key, data: tmp5 };
-    const items = [obj7];
-    obj4.sections = items;
-    obj4.keyExtractor = function keyExtractor(id) {
-      return id.id;
-    };
-    obj4.renderSectionHeader = renderSectionHeader;
-    obj4.renderItem = function renderItem(subscription) {
-      return closure_1_5(ManageSubscriptionCardDefault, { subscription: subscription.item });
-    };
-    obj4.ItemSeparatorComponent = ItemSeparatorComponent;
-    obj2.children = hasOwnProperty(React4, obj4);
-    tmp6Result = hasOwnProperty(React3, obj2);
+    tmp6Result = hasOwnProperty(_false, obj2);
   }
   return tmp6Result;
 });
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/manage_subscriptions/UserSettingsGuildRoleSubscriptions.tsx");
+
+export default tmp5;

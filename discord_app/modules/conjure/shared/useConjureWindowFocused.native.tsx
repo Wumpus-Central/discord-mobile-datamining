@@ -1,18 +1,20 @@
 // === Module 16144: useConjureWindowFocused ===
 
 // Module 16144 (useConjureWindowFocused)
-import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
+import get_initialized from "get initialized" /* 504 */;
+import react from "react" /* 576 */;
+import Constants from "Constants" /* 1085 */;
 import AppStateStore from "AppStateStore" /* 1986 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const AppStates = fn(1085).AppStates;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/shared/useConjureWindowFocused.native.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(2);
+const AppStates = Constants.AppStates;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let state;
+  let tmp4;
+  let tmp5;
+  const obj = react;
+  const cResult = obj.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AppStateStore];
     const fn = function s() {
@@ -25,8 +27,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  return initialize.useStateFromStores(tmp4, tmp5);
+  const tmpResult = get_initialized;
+  return tmpResult.useStateFromStores(tmp4, tmp5);
 }) : (() => {
+  let state;
   const items = [AppStateStore];
-  return initialize.useStateFromStores(items, () => state.getState() === constants.ACTIVE);
+  const obj = get_initialized;
+  return obj.useStateFromStores(items, () => state.getState() === constants.ACTIVE);
 });
+const result = size.fileFinishedImporting("modules/conjure/shared/useConjureWindowFocused.native.tsx");
+
+export default tmp2;

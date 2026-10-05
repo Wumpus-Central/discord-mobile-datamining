@@ -1,69 +1,105 @@
 // === Module 6750: safeTransitionTo ===
 
 // Module 6750 (safeTransitionTo)
+import Constants from "Constants" /* 1085 */;
 import router_utils from "router_utils" /* 1112 */;
 import LinkUtils from "LinkUtils" /* 5044 */;
 import DiceRollActionCreators from "DiceRollActionCreators" /* 6751 */;
 import isAccessibleChannelOrThreadPathDefault from "isAccessibleChannelOrThreadPath" /* 6752 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import GuildStore from "GuildStore" /* 2074 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-let closure_6 = async function _safeTransitionTo(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
+let c5, c6;
+
+let obj = function _safeTransitionTo() {
+  obj = _asyncToGenerator(async (arg0, arg1) => {
+    let closure_3;
+    let diceCount;
+    let diceSides;
+    let guildId;
+    let intl;
+    let intl2;
+    let intl3;
+    let intl4;
+    let intl5;
+    let intl6;
+    let closure_0 = arg0;
+    let closure_1 = arg1;
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
     } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          c4 = 0;
-          closure_3 = tmp2;
-          closure_131_0 = closure_0;
-          closure_131_1 = closure_1;
-          closure_131_2 = undefined;
-          guild = undefined;
-          let channelId2;
-          const tryParseDiceRollLinkResult = LinkUtils.tryParseDiceRollLink(closure_0);
-          if (null != tryParseDiceRollLinkResult) {
-            const channelId = tryParseDiceRollLinkResult.channelId;
-            ({ guildId, diceCount, diceSides } = tryParseDiceRollLinkResult);
-            DiceRollActionCreators.startDiceRoll(channelId, diceCount, diceSides);
-            router_utils.transitionTo(Routes.CHANNEL(guildId, channelId), closure_1);
+      try {
+        let c2;
+        let guild;
+        let channelId2;
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
             c6 = 3;
-            const obj5 = { value: undefined, done: true };
-            return obj5;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            const tryParseChannelPathResult = LinkUtils.tryParseChannelPath(closure_0);
-            closure_131_2 = tryParseChannelPathResult;
-            if (null != tryParseChannelPathResult) {
-              c5 = 1;
-              c6 = 1;
-              const obj6 = { value: isAccessibleChannelOrThreadPathDefault(tryParseChannelPathResult), done: false };
-              return obj6;
+            let c4 = 0;
+            c2 = undefined;
+            guild = undefined;
+            channelId2 = undefined;
+            const obj15 = LinkUtils;
+            const tryParseDiceRollLinkResult = obj15.tryParseDiceRollLink(closure_0);
+            if (null != tryParseDiceRollLinkResult) {
+              const channelId = tryParseDiceRollLinkResult.channelId;
+              ({ guildId, diceCount, diceSides } = tryParseDiceRollLinkResult);
+              const obj10 = DiceRollActionCreators;
+              obj10.startDiceRoll(channelId, diceCount, diceSides);
+              const obj11 = router_utils;
+              obj11.transitionTo(Routes.CHANNEL(guildId, channelId), closure_1);
+              c6 = 3;
+              const obj4 = { value: undefined, done: true };
+              return obj4;
+            } else {
+              const obj16 = LinkUtils;
+              const tryParseChannelPathResult = obj16.tryParseChannelPath(closure_0);
+              c2 = tryParseChannelPathResult;
+              if (null != tryParseChannelPathResult) {
+                c5 = 1;
+                c6 = 1;
+                const obj5 = { value: isAccessibleChannelOrThreadPathDefault(tryParseChannelPathResult), done: false };
+                return obj5;
+              }
             }
           }
-        }
-      } else {
-        if (1 === tmp5) {
-          if (arg0 === 1) {
+        } else {
+          if (1 === tmp4) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              const obj7 = { value, done: true };
+              return obj7;
+            } else if (!value) {
+              const obj8 = { title: intl.string(closure_132_0(closure_132_2[8]).t.r0DLNm), body: intl2.string(closure_132_0(closure_132_2[8]).t["6Y0JlN"]), confirmText: intl3.string(closure_132_0(closure_132_2[8]).t.BddRzS) };
+              const show = closure_132_1(closure_132_2[7]).show;
+              const tmp15 = closure_132_1(closure_132_2[7]);
+              intl = closure_132_0(closure_132_2[8]).intl;
+              intl2 = closure_132_0(closure_132_2[8]).intl;
+              intl3 = closure_132_0(closure_132_2[8]).intl;
+              show(obj8);
+            }
+          } else if (arg0 === 1) {
             c6 = 3;
             throw value;
           } else if (arg0 === 2) {
@@ -71,77 +107,54 @@ let closure_6 = async function _safeTransitionTo(arg0) {
             const obj9 = { value, done: true };
             return obj9;
           } else if (!value) {
-            const obj11 = { title: null, body: null, confirmText: null };
-            const intl = closure_132_0(closure_132_2[8]).intl;
-            obj11.title = intl.string(closure_132_0(closure_132_2[8]).t.r0DLNm);
-            const intl2 = closure_132_0(closure_132_2[8]).intl;
-            obj11.body = intl2.string(closure_132_0(closure_132_2[8]).t["6Y0JlN"]);
-            const intl3 = closure_132_0(closure_132_2[8]).intl;
-            obj11.confirmText = intl3.string(closure_132_0(closure_132_2[8]).t.BddRzS);
-            closure_132_1(closure_132_2[7]).show(obj11);
-            c6 = 3;
-            const obj3 = closure_132_1(closure_132_2[7]);
+            obj = closure_132_0(closure_132_2[5]);
+            obj.transitionTo(closure_0, closure_1);
           }
-        } else if (arg0 === 1) {
           c6 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          if (!value) {
-            closure_132_0(closure_132_2[5]).transitionTo(closure_131_0, closure_131_1);
-            const obj = closure_132_0(closure_132_2[5]);
-          }
+          return { value: "IconComponent", done: null };
         }
-        c6 = 3;
-        const obj12 = { value, done: true };
-        return obj12;
-      }
-      if (null != closure_131_2) {
-        if (null != closure_131_2.guildId) {
-          guild = closure_132_4.getGuild(closure_131_2.guildId);
-          channelId2 = closure_131_2.channelId;
-          if (null != guild) {
-            if (obj7.isModeratorReportOrPostChannelId(channelId2)) {
-              const obj15 = { title: null, body: null, confirmText: null };
-              const intl4 = closure_132_0(closure_132_2[8]).intl;
-              obj15.title = intl4.string(closure_132_1(closure_132_2[10]).iCIEAV);
-              const intl5 = closure_132_0(closure_132_2[8]).intl;
-              obj15.body = intl5.string(closure_132_1(closure_132_2[10]).bvzo6p);
-              const intl6 = closure_132_0(closure_132_2[8]).intl;
-              obj15.confirmText = intl6.string(closure_132_0(closure_132_2[8]).t.BddRzS);
-              closure_132_1(closure_132_2[7]).show(obj15);
-              c6 = 3;
-              const obj16 = { value: undefined, done: true };
-              return obj16;
+        if (null != c2) {
+          if (null != c2.guildId) {
+            guild = closure_132_4.getGuild(c2.guildId);
+            channelId2 = c2.channelId;
+            if (null != guild) {
+              const obj6 = closure_132_0(closure_132_2[9]);
+              if (obj6.isModeratorReportOrPostChannelId(channelId2)) {
+                const obj12 = { title: intl4.string(closure_132_1(closure_132_2[10]).iCIEAV), body: intl5.string(closure_132_1(closure_132_2[10]).bvzo6p), confirmText: intl6.string(closure_132_0(closure_132_2[8]).t.BddRzS) };
+                const show2 = closure_132_1(closure_132_2[7]).show;
+                const tmp57 = closure_132_1(closure_132_2[7]);
+                intl4 = closure_132_0(closure_132_2[8]).intl;
+                intl5 = closure_132_0(closure_132_2[8]).intl;
+                intl6 = closure_132_0(closure_132_2[8]).intl;
+                show2(obj12);
+                c6 = 3;
+                const obj13 = { value: undefined, done: true };
+                return obj13;
+              }
             }
-            obj7 = closure_132_0(closure_132_2[9]);
           }
         }
+        let closure_2 = c2;
+        const maybePerformRoleSubscriptionUpsellRedirect = closure_132_1(closure_132_2[11]).maybePerformRoleSubscriptionUpsellRedirect;
+        const tmp51 = closure_132_1(closure_132_2[11]);
+        if (c2 == null) {
+          closure_2 = { guildId: "r" };
+        }
+        c5 = 2;
+        c6 = 1;
+        const obj14 = { value: maybePerformRoleSubscriptionUpsellRedirect(closure_2), done: false };
+        return obj14;
+      } catch (tmp78) {
+        c6 = 3;
+        throw tmp78;
       }
-      closure_2 = closure_131_2;
-      if (closure_131_2 == null) {
-        closure_2 = { guildId: "r" };
-      }
-      c5 = 2;
-      c6 = 1;
-      const obj17 = { value: closure_132_1(closure_132_2[11]).maybePerformRoleSubscriptionUpsellRedirect(closure_2), done: false };
-      return obj17;
-    } catch (tmp76) {
-      c6 = tmp;
-      throw tmp76;
     }
-  }
+  });
+  return obj(...arguments);
 };
-const Routes = fn(1085).Routes;
-const size = fn(2);
+const Routes = Constants.Routes;
 const result = size.fileFinishedImporting("modules/links/safeTransitionTo.native.tsx");
 
 export default function safeTransitionTo() {
-  const self = this;
-  const apply = closure_6.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };

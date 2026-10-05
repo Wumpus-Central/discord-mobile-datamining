@@ -1,7 +1,7 @@
 // === Module 16190: useIsEligibleForServerOnboardingSetupProgress ===
 
 // Module 16190 (useIsEligibleForServerOnboardingSetupProgress)
-import c from "c" /* 576 */;
+import react from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12170 */;
@@ -14,11 +14,11 @@ let closure_3 = ServerOnboardingSetupProgressCompletionStore.useIsServerOnboardi
 let closure_4 = ServerOnboardingSetupProgressSkipStore.useIsServerOnboardingSetupProgressSkipped;
 const EMPTY_STRING_SNOWFLAKE_ID = Constants.EMPTY_STRING_SNOWFLAKE_ID;
 const DAY = DurationsDefault.Millis.DAY;
-const result = size.fileFinishedImporting("modules/guild_onboarding_home/useIsEligibleForServerOnboardingSetupProgress.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(5);
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const obj = react;
+  const cResult = obj.c(5);
   let tmp4 = arg0;
+  const tmp2 = useHasAllocateBoostPermissionDefault(arg0);
   if (arg0 == null) {
     tmp4 = EMPTY_STRING_SNOWFLAKE_ID;
   }
@@ -27,25 +27,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (arg0 == null) {
     tmp7 = EMPTY_STRING_SNOWFLAKE_ID;
   }
-  const tmp8 = true === useHasAllocateBoostPermissionDefault(arg0);
   const tmp6Result = closure_3(tmp7);
-  if (cResult[0] === tmp8) {
+  if (cResult[0] === true === tmp2) {
     if (cResult[1] === arg0) {
       if (cResult[2] === tmp6Result) {
+        let flag;
         if (cResult[3] === tmp3Result) {
-          let flag = cResult[4];
+          flag = cResult[4];
         }
         return flag;
       }
     }
   }
-  cResult[0] = tmp8;
+  cResult[0] = true === tmp2;
   cResult[1] = arg0;
   cResult[2] = tmp6Result;
   cResult[3] = tmp3Result;
   cResult[4] = false;
   flag = false;
-  const tmp2 = useHasAllocateBoostPermissionDefault(arg0);
 }) : ((arg0) => {
   let tmp = arg0;
   useHasAllocateBoostPermissionDefault(arg0);
@@ -60,3 +59,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   closure_3(tmp);
   return false;
 });
+const result = size.fileFinishedImporting("modules/guild_onboarding_home/useIsEligibleForServerOnboardingSetupProgress.tsx");
+
+export default tmp2;

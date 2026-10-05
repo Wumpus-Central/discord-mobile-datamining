@@ -7,50 +7,53 @@ import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/activities/records/CustomActivityLinkRecord.tsx");
 class CustomActivityLinkRecord {
-  constructor(arg0) {
-    obj = closure_0(closure_1[0]);
-    result = obj.decodeCustomActivityLink(global.link_id);
-    type = undefined;
+  constructor(link) {
+    const prototype = new.target.prototype;
+    const obj = utils_CustomActivityLinkUtils;
+    const result = obj.decodeCustomActivityLink(link.link_id);
+    let type;
     if (result != null) {
       type = result.type;
     }
     if (type == null) {
       type = null;
     }
-    obj1 = Object.create(new.target.prototype);
-    obj1.type = type;
-    ({ application_id: tmp3.applicationId, link_id: tmp3.linkId } = global);
-    asset_id = undefined;
-    if ("asset_id" in global) {
-      asset_id = global.asset_id;
+    const obj2 = Object.create(prototype);
+    obj2.type = type;
+    ({ application_id: tmp3.applicationId, link_id: tmp3.linkId } = link);
+    let asset_id;
+    if ("asset_id" in link) {
+      asset_id = link.asset_id;
     }
-    obj1.assetId = asset_id;
-    asset_path = undefined;
-    if ("asset_path" in global) {
-      asset_path = global.asset_path;
+    obj2.assetId = asset_id;
+    let asset_path;
+    if ("asset_path" in link) {
+      asset_path = link.asset_path;
     }
-    obj1.assetPath = asset_path;
-    ({ title: tmp3.title, description: tmp3.description, custom_id: tmp3.customId } = global);
-    return obj1;
+    obj2.assetPath = asset_path;
+    ({ title: tmp3.title, description: tmp3.description, custom_id: tmp3.customId } = link);
+    return obj2;
+  }
+  getAssetURL() {
+    let assetImage;
+    const self = this;
+    if (this.type === utils_CustomActivityLinkUtils.CustomLinkType.MANAGED) {
+      const tmpResult = ApplicationAssetUtils;
+      assetImage = tmpResult.getAssetImage(self.applicationId, self.assetId, 512);
+    } else if (self.type === utils_CustomActivityLinkUtils.CustomLinkType.QUICK) {
+      const assetPath = self.assetPath;
+      let combined;
+      if (null != assetPath) {
+        const _location = location;
+        const _window = window;
+        const _HermesInternal = HermesInternal;
+        combined = "" + location.protocol + "//" + window.GLOBAL_ENV.CDN_HOST + "/attachments-quick-links/" + assetPath;
+      }
+      assetImage = combined;
+    }
+    return assetImage;
   }
 }
-CustomActivityLinkRecord.prototype["getAssetURL"] = function getAssetURL() {
-  const self = this;
-  if (this.type === utils_CustomActivityLinkUtils.CustomLinkType.MANAGED) {
-    let assetImage = ApplicationAssetUtils.getAssetImage(self.applicationId, self.assetId, 512);
-    const tmpResult = ApplicationAssetUtils;
-  } else if (self.type === utils_CustomActivityLinkUtils.CustomLinkType.QUICK) {
-    const assetPath = self.assetPath;
-    let combined;
-    if (null != assetPath) {
-      const _location = location;
-      const _window = window;
-      const _HermesInternal = HermesInternal;
-      combined = "" + location.protocol + "//" + window.GLOBAL_ENV.CDN_HOST + "/attachments-quick-links/" + assetPath;
-    }
-    assetImage = combined;
-  }
-  return assetImage;
-};
+let prototype = CustomActivityLinkRecord.prototype;
 
 export default CustomActivityLinkRecord;

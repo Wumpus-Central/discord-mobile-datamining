@@ -1,127 +1,165 @@
 // === Module 14807: QuestHomeSortingFilteringBottomSheet ===
 
 // Module 14807 (QuestHomeSortingFilteringBottomSheet)
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
+import intl3 from "intl" /* 1126 */;
 import shared from "shared" /* 4729 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import ButtonGroup from "ButtonGroup" /* 5592 */;
+import ButtonGroup2 from "ButtonGroup" /* 5592 */;
 import components_Button_Button from "components/Button/Button" /* 5594 */;
-import TableRowGroup from "TableRowGroup" /* 6074 */;
+import QuestConstants from "QuestConstants" /* 5623 */;
+import TableRowGroup2 from "TableRowGroup" /* 6074 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 6619 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _slicedToArray_mod from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const QuestHomeSortMethods = fn(5623).QuestHomeSortMethods;
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, bodyContainer: { flex: 1, minHeight: 0 }, footerInline: null, footer: null, footerButtonGroup: null };
-let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
-obj2.footerInline = { paddingTop: nativeDefault.space.PX_16 };
-let obj4 = { paddingTop: nativeDefault.space.PX_16 };
-obj2.footer = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-obj2.footerButtonGroup = { paddingBottom: 0 };
-let closure_9 = createStyles.createStyles(obj2);
+let BottomSheet, onSortMethodChange, ref;
+
+let metroImportAll;
+let metroImportDefault;
+let obj2;
+let obj3;
+let obj4;
+let _slicedToArray = _slicedToArray_mod;
+const View = react_native.View;
+const QuestHomeSortMethods = QuestConstants.QuestHomeSortMethods;
+({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { content: obj2, bodyContainer: { flex: 1, minHeight: 0 }, footerInline: obj3, footer: obj4, footerButtonGroup: { paddingBottom: 0 } };
+obj2 = { paddingHorizontal: nativeDefault.space.PX_16 };
+createStyles = createStyles.createStyles;
+obj3 = { paddingTop: nativeDefault.space.PX_16 };
+obj4 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let closure_9 = createStyles(obj);
 let closure_10 = [];
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(19);
+  let footerInline;
+  let inline;
+  let items;
+  let obj6;
+  let onConfirm;
+  let onLayout;
+  let onReset;
+  const obj = react2;
+  const cResult = obj.c(19);
   ({ onConfirm, onReset, onLayout, inline } = arg0);
-  footerInline = undefined !== inline && inline;
-  const tmp4 = closure_9();
-  if (cResult[0] === footerInline) {
-    if (cResult[1] === tmp4.content) {
-      if (cResult[2] === tmp4.footer) {
-        if (cResult[3] === tmp4.footerInline) {
-          const _Symbol = Symbol;
-          if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl = util.intl;
-            const stringResult = intl.string(util.t.i4jeWR);
-            cResult[5] = stringResult;
-            let tmp7 = stringResult;
-          } else {
-            tmp7 = cResult[5];
-          }
-          if (cResult[6] !== onConfirm) {
-            const obj2 = { size: "lg", grow: true, text: tmp7, onPress: onConfirm };
-            const tmp11 = ref(components_Button_Button.Button, obj2);
-            cResult[6] = onConfirm;
-            cResult[7] = tmp11;
-            let tmp9 = tmp11;
-          } else {
-            tmp9 = cResult[7];
-          }
-          const _Symbol2 = Symbol;
-          if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl2 = util.intl;
-            const stringResult1 = intl2.string(util.t.yBZMsQ);
-            cResult[8] = stringResult1;
-            let tmp12 = stringResult1;
-          } else {
-            tmp12 = cResult[8];
-          }
-          if (cResult[9] !== onReset) {
-            const obj3 = { size: "lg", grow: true, text: tmp12, onPress: onReset, variant: "secondary" };
-            const tmp16 = ref(components_Button_Button.Button, obj3);
-            cResult[9] = onReset;
-            cResult[10] = tmp16;
-            let tmp14 = tmp16;
-          } else {
-            tmp14 = cResult[10];
-          }
-          if (cResult[11] === tmp4.footerButtonGroup) {
-            if (cResult[12] === tmp9) {
-              if (cResult[13] === tmp14) {
-                let tmp17 = cResult[14];
-              }
-              if (cResult[15] === onLayout) {
-                if (cResult[16] === tmp5) {
-                  if (cResult[17] === tmp17) {
-                    let tmp21 = cResult[18];
-                  }
-                  return tmp21;
-                }
-              }
-              const obj4 = { style: tmp5, onLayout, children: tmp17 };
-              const tmp24 = ref(View, obj4);
-              cResult[15] = onLayout;
-              cResult[16] = tmp5;
-              cResult[17] = tmp17;
-              cResult[18] = tmp24;
-              tmp21 = tmp24;
-            }
-          }
-          const obj5 = { bottom: true, children: null };
-          const obj6 = { direction: "vertical", style: tmp4.footerButtonGroup, children: null };
-          const items = [tmp9, tmp14];
-          obj6.children = items;
-          obj5.children = closure_1_8(ButtonGroup.ButtonGroup, obj6);
-          const tmp20 = ref(common_SafeAreaView.SafeAreaPaddingView, obj5);
-          cResult[11] = tmp4.footerButtonGroup;
-          cResult[12] = tmp9;
-          cResult[13] = tmp14;
-          cResult[14] = tmp20;
-          tmp17 = tmp20;
+  const tmp5 = closure_9();
+  if (cResult[0] === (undefined !== inline && inline)) {
+    if (cResult[1] === tmp5.content) {
+      if (cResult[2] === tmp5.footer) {
+        let tmp6;
+        let tmp8;
+        let tmp10;
+        let tmp13;
+        let tmp15;
+        if (cResult[3] === tmp5.footerInline) {
+          tmp6 = cResult[4];
         }
+        const _Symbol = Symbol;
+        const footerButtonGroup = tmp5.footerButtonGroup;
+        if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+          const intl = intl3.intl;
+          const stringResult = intl.string(intl3.t.i4jeWR);
+          cResult[5] = stringResult;
+          tmp8 = stringResult;
+        } else {
+          tmp8 = cResult[5];
+        }
+        if (cResult[6] !== onConfirm) {
+          const obj2 = { size: "lg", grow: true, text: tmp8, onPress: onConfirm };
+          const tmp12 = metroImportDefault(components_Button_Button.Button, obj2);
+          cResult[6] = onConfirm;
+          cResult[7] = tmp12;
+          tmp10 = tmp12;
+        } else {
+          tmp10 = cResult[7];
+        }
+        const _Symbol2 = Symbol;
+        if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+          const intl2 = intl3.intl;
+          const stringResult1 = intl2.string(intl3.t.yBZMsQ);
+          cResult[8] = stringResult1;
+          tmp13 = stringResult1;
+        } else {
+          tmp13 = cResult[8];
+        }
+        if (cResult[9] !== onReset) {
+          const obj3 = { size: "lg", grow: true, text: tmp13, onPress: onReset, variant: "secondary" };
+          const tmp17 = metroImportDefault(components_Button_Button.Button, obj3);
+          cResult[9] = onReset;
+          cResult[10] = tmp17;
+          tmp15 = tmp17;
+        } else {
+          tmp15 = cResult[10];
+        }
+        if (cResult[11] === tmp5.footerButtonGroup) {
+          if (cResult[12] === tmp10) {
+            let tmp18;
+            if (cResult[13] === tmp15) {
+              tmp18 = cResult[14];
+            }
+            if (cResult[15] === onLayout) {
+              if (cResult[16] === tmp6) {
+                let tmp22;
+                if (cResult[17] === tmp18) {
+                  tmp22 = cResult[18];
+                }
+                return tmp22;
+              }
+            }
+            const obj4 = { style: tmp6, onLayout, children: tmp18 };
+            const tmp25 = metroImportDefault(View, obj4);
+            cResult[15] = onLayout;
+            cResult[16] = tmp6;
+            cResult[17] = tmp18;
+            cResult[18] = tmp25;
+            tmp22 = tmp25;
+          }
+        }
+        const obj5 = { bottom: true, children: metroImportAll(ButtonGroup2.ButtonGroup, obj6) };
+        const SafeAreaPaddingView = common_SafeAreaView.SafeAreaPaddingView;
+        obj6 = { direction: "vertical", style: footerButtonGroup, children: items };
+        items = [tmp10, tmp15];
+        const tmp21 = metroImportDefault(SafeAreaPaddingView, obj5);
+        cResult[11] = tmp5.footerButtonGroup;
+        cResult[12] = tmp10;
+        cResult[13] = tmp15;
+        cResult[14] = tmp21;
+        tmp18 = tmp21;
       }
     }
   }
-  if (footerInline) {
-    let footerInline1 = tmp4.footerInline;
+  if (undefined !== inline && inline) {
+    footerInline = tmp5.footerInline;
   } else {
-    footerInline1 = [, ];
-    ({ footer: arr[0], content: arr[1] } = tmp4);
+    footerInline = [, ];
+    ({ footer: arr[0], content: arr[1] } = tmp5);
   }
-  cResult[0] = footerInline;
-  cResult[1] = tmp4.content;
-  ({ footer: tmp3[2], footerInline } = tmp4);
-  cResult[3] = footerInline;
-  cResult[4] = footerInline1;
+  cResult[0] = undefined !== inline && inline;
+  cResult[1] = tmp5.content;
+  cResult[2] = tmp5.footer;
+  cResult[3] = tmp5.footerInline;
+  cResult[4] = footerInline;
+  tmp6 = footerInline;
 }) : ((inline) => {
+  let ButtonGroup;
+  let SafeAreaPaddingView;
+  let footerInline;
+  let intl;
+  let intl2;
+  let items;
+  let obj2;
+  let obj3;
+  let onConfirm;
+  let onLayout;
+  let onReset;
   let flag = inline.inline;
   ({ onConfirm, onReset, onLayout } = inline);
   if (flag === undefined) {
@@ -129,47 +167,48 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const tmp = closure_9();
   if (flag) {
-    let footerInline = tmp.footerInline;
+    footerInline = tmp.footerInline;
   } else {
     footerInline = [, ];
     ({ footer: arr[0], content: arr[1] } = tmp);
   }
-  const obj = { style: footerInline, onLayout, children: null };
-  const obj2 = { bottom: true, children: null };
-  const obj3 = { direction: "vertical", style: tmp.footerButtonGroup, children: null };
-  const obj4 = { size: "lg", grow: true, text: null, onPress: null };
-  const intl = util.intl;
-  obj4.text = intl.string(util.t.i4jeWR);
-  obj4.onPress = onConfirm;
-  const items = [ref(components_Button_Button.Button, obj4), ];
-  const obj5 = { size: "lg", grow: true, text: null, onPress: null, variant: "secondary" };
-  const intl2 = util.intl;
-  obj5.text = intl2.string(util.t.yBZMsQ);
-  obj5.onPress = onReset;
-  items[1] = ref(components_Button_Button.Button, obj5);
-  obj3.children = items;
-  obj2.children = closure_1_8(ButtonGroup.ButtonGroup, obj3);
-  obj.children = ref(common_SafeAreaView.SafeAreaPaddingView, obj2);
-  return ref(View, obj);
+  const obj = { style: footerInline, onLayout, children: metroImportDefault(SafeAreaPaddingView, obj2) };
+  obj2 = { bottom: true, children: metroImportAll(ButtonGroup, obj3) };
+  SafeAreaPaddingView = common_SafeAreaView.SafeAreaPaddingView;
+  obj3 = { direction: "vertical", style: tmp.footerButtonGroup, children: items };
+  ButtonGroup = ButtonGroup2.ButtonGroup;
+  const obj4 = { size: "lg", grow: true, text: intl.string(intl3.t.i4jeWR), onPress: onConfirm };
+  const Button = components_Button_Button.Button;
+  intl = intl3.intl;
+  items = [metroImportDefault(Button, obj4), ];
+  const obj5 = { size: "lg", grow: true, text: intl2.string(intl3.t.yBZMsQ), onPress: onReset, variant: "secondary" };
+  const Button2 = components_Button_Button.Button;
+  intl2 = intl3.intl;
+  items[1] = metroImportDefault(Button2, obj5);
+  return metroImportDefault(View, obj);
 });
-ReactCompilerGating = fn(558);
-let obj5 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/quests/native/QuestHomeSortingFilteringBottomSheet.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSortMethodChange) => {
-  const cResult = onSortMethodChange(first[8]).c(44);
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onSortMethodChange) => {
+  let closure_3;
+  let closure_5;
+  let first;
+  let first1;
+  let initialFilters;
+  let initialSortMethod;
+  let tmp11;
+  let obj = onSortMethodChange(first[8]);
+  const cResult = obj.c(44);
   onSortMethodChange = onSortMethodChange.onSortMethodChange;
   const onFiltersChange = onSortMethodChange.onFiltersChange;
   ({ initialSortMethod, initialFilters } = onSortMethodChange);
   closure_9();
-  let obj = onSortMethodChange(first[8]);
-  const isScreenReaderEnabled = onSortMethodChange(first[13]).useIsScreenReaderEnabled();
+  let obj2 = onSortMethodChange(first[13]);
+  const isScreenReaderEnabled = obj2.useIsScreenReaderEnabled();
   [first, _slicedToArray] = first1.useState(initialSortMethod);
   [first1, View] = first1.useState(initialFilters);
-  const obj2 = onSortMethodChange(first[13]);
   [r10036, QuestHomeSortMethods] = first1.useState(0);
-  first1.useRef(null);
+  _slicedToArray(first1.useState(0), 2);
+  ref = first1.useRef(null);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function a(nativeEvent) {
       QuestHomeSortMethods(nativeEvent.nativeEvent.layout.height);
@@ -185,12 +224,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSortMethodChan
         closure_0 = onSortMethodChange;
         closure_1 = arg1;
         tmp = closure_5((arr) => {
+          let found;
           if (closure_1) {
             const items = [];
-            items[HermesBuiltin.arraySpread(arr, 0)] = group;
-            let found = items;
+            items[HermesBuiltin.arraySpread(items, arr, 0)] = group;
+            found = items;
           } else {
-            found = arr.filter(() => { ... });
+            found = arr.filter(() => { /* body not rendered: F153029 */ });
           }
           return found;
         });
@@ -198,18 +238,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSortMethodChan
       }
     }
     cResult[1] = A;
+    tmp11 = A;
   } else {
     class A {
       constructor(arg0, arg1) {
         closure_0 = onSortMethodChange;
         closure_1 = arg1;
         tmp = closure_5((arr) => {
+          let found;
           if (closure_1) {
             const items = [];
-            items[HermesBuiltin.arraySpread(arr, 0)] = group;
-            let found = items;
+            items[HermesBuiltin.arraySpread(items, arr, 0)] = group;
+            found = items;
           } else {
-            found = arr.filter(() => { ... });
+            found = arr.filter(() => { /* body not rendered: F153029 */ });
           }
           return found;
         });
@@ -217,65 +259,61 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSortMethodChan
       }
     }
   }
-  closure_8 = A;
+  A = tmp11;
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     class M {
       constructor() {
-        tmp = QuestHomeSortMethods;
-        tmp2 = closure_3(QuestHomeSortMethods.SUGGESTED);
-        tmp3 = closure_5(closure_10);
-        current = closure_7.current;
+        closure_3(QuestHomeSortMethods.SUGGESTED);
+        closure_5(closure_10);
+        const current = ref.current;
         if (current != null) {
-          setValueResult = current.setValue(tmp.SUGGESTED);
+          current.setValue(QuestHomeSortMethods.SUGGESTED);
         }
-        AccessibilityAnnouncer = closure_0(closure_2[14]).AccessibilityAnnouncer;
-        intl = closure_0(closure_2[9]).intl;
-        announceResult = AccessibilityAnnouncer.announce(intl.string(closure_0(closure_2[9]).t.bK5N8u));
-        return;
+        const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
+        const announce = AccessibilityAnnouncer.announce;
+        const intl = intl3.intl;
+        announce(intl.string(intl3.t.bK5N8u));
       }
     }
     cResult[2] = M;
   } else {
     class M {
       constructor() {
-        tmp = QuestHomeSortMethods;
-        tmp2 = closure_3(QuestHomeSortMethods.SUGGESTED);
-        tmp3 = closure_5(closure_10);
-        current = closure_7.current;
+        closure_3(QuestHomeSortMethods.SUGGESTED);
+        closure_5(closure_10);
+        const current = ref.current;
         if (current != null) {
-          setValueResult = current.setValue(tmp.SUGGESTED);
+          current.setValue(QuestHomeSortMethods.SUGGESTED);
         }
-        AccessibilityAnnouncer = closure_0(closure_2[14]).AccessibilityAnnouncer;
-        intl = closure_0(closure_2[9]).intl;
-        announceResult = AccessibilityAnnouncer.announce(intl.string(closure_0(closure_2[9]).t.bK5N8u));
-        return;
+        const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
+        const announce = AccessibilityAnnouncer.announce;
+        const intl = intl3.intl;
+        announce(intl.string(intl3.t.bK5N8u));
       }
     }
   }
   if (cResult[3] === onFiltersChange) {
     class M {
       constructor() {
-        tmp = QuestHomeSortMethods;
-        tmp2 = closure_3(QuestHomeSortMethods.SUGGESTED);
-        tmp3 = closure_5(closure_10);
-        current = closure_7.current;
+        closure_3(QuestHomeSortMethods.SUGGESTED);
+        closure_5(closure_10);
+        const current = ref.current;
         if (current != null) {
-          setValueResult = current.setValue(tmp.SUGGESTED);
+          current.setValue(QuestHomeSortMethods.SUGGESTED);
         }
-        AccessibilityAnnouncer = closure_0(closure_2[14]).AccessibilityAnnouncer;
-        intl = closure_0(closure_2[9]).intl;
-        announceResult = AccessibilityAnnouncer.announce(intl.string(closure_0(closure_2[9]).t.bK5N8u));
-        return;
+        const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
+        const announce = AccessibilityAnnouncer.announce;
+        const intl = intl3.intl;
+        announce(intl.string(intl3.t.bK5N8u));
       }
     }
   }
   class L {
     constructor() {
-      tmp = onSortMethodChange(closure_2);
-      tmp2 = onFiltersChange(closure_4);
-      obj = closure_1(closure_2[15]);
-      hideActionSheetResult = obj.hideActionSheet("QuestHomeSortingFilteringBottomSheet");
-      return;
+      onSortMethodChange(first);
+      onFiltersChange(first1);
+      const obj = ActionSheetActionCreatorsDefault;
+      obj.hideActionSheet("QuestHomeSortingFilteringBottomSheet");
     }
   }
   cResult[3] = onFiltersChange;
@@ -283,31 +321,49 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSortMethodChan
   cResult[5] = first1;
   cResult[6] = first;
   cResult[7] = L;
-  const tmp8 = _slicedToArray(first1.useState(0), 2);
 }) : ((onSortMethodChange) => {
+  let BottomSheetScrollView;
+  let BottomSheetTitleHeader;
+  let closure_3;
+  let closure_5;
+  let closure_6;
+  let defaultValue;
+  let first1;
+  let first2;
+  let initialFilters;
+  let initialSortMethod;
+  let intl;
+  let intl2;
+  let items1;
+  let items2;
+  let items3;
+  let obj5;
+  let obj8;
+  let tmp16Result;
   onSortMethodChange = onSortMethodChange.onSortMethodChange;
   const onFiltersChange = onSortMethodChange.onFiltersChange;
   ({ initialSortMethod, initialFilters } = onSortMethodChange);
   const tmp = closure_9();
-  let isScreenReaderEnabled = onSortMethodChange(defaultValue[13]).useIsScreenReaderEnabled();
+  let obj = onSortMethodChange(defaultValue[13]);
+  let isScreenReaderEnabled = obj.useIsScreenReaderEnabled();
   const tmp5 = _slicedToArray(first1.useState(initialSortMethod), 2);
   defaultValue = tmp5[0];
   _slicedToArray = tmp7;
   [first1, closure_5] = first1.useState(initialFilters);
-  const tmp10 = _slicedToArray(first1.useState(0), 2);
-  closure_6 = tmp10[1];
+  [first2, closure_6] = first1.useState(0);
   ref = first1.useRef(null);
   const callback = first1.useCallback((nativeEvent) => {
     closure_6(nativeEvent.nativeEvent.layout.height);
   }, []);
-  closure_8 = first1.useCallback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
+  let closure_8 = first1.useCallback((arg0, arg1) => {
+    let closure_0 = arg0;
+    let closure_1 = arg1;
     closure_5((arr) => {
+      let found;
       if (closure_1) {
         const items = [];
-        items[HermesBuiltin.arraySpread(arr, 0)] = group;
-        let found = items;
+        items[HermesBuiltin.arraySpread(items, arr, 0)] = group;
+        found = items;
       } else {
         found = arr.filter((group) => !(group.group === group.group && group.filter === arr.filter));
       }
@@ -322,70 +378,89 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSortMethodChan
       current.setValue(QuestHomeSortMethods.SUGGESTED);
     }
     const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
-    const intl = util.intl;
-    AccessibilityAnnouncer.announce(intl.string(util.t.bK5N8u));
+    const announce = AccessibilityAnnouncer.announce;
+    const intl = intl3.intl;
+    announce(intl.string(intl3.t.bK5N8u));
   }, []);
   let items = [onSortMethodChange, onFiltersChange, defaultValue, first1];
   const callback2 = first1.useCallback(() => {
     onSortMethodChange(first);
     onFiltersChange(first1);
-    ActionSheetActionCreatorsDefault.hideActionSheet("QuestHomeSortingFilteringBottomSheet");
+    const obj = ActionSheetActionCreatorsDefault;
+    obj.hideActionSheet("QuestHomeSortingFilteringBottomSheet");
   }, items);
-  let obj = onSortMethodChange(defaultValue[13]);
-  const questHomeSortOptions = onSortMethodChange(defaultValue[16]).useQuestHomeSortOptions();
-  const obj2 = onSortMethodChange(defaultValue[16]);
-  const questHomeFilterOptions = onSortMethodChange(defaultValue[16]).useQuestHomeFilterOptions();
-  const obj4 = { header: null, footer: null, scrollable: true, startExpanded: true, children: null };
-  const obj5 = { title: null };
-  let intl = onSortMethodChange(defaultValue[9]).intl;
-  obj5.title = intl.string(onSortMethodChange(defaultValue[9]).t.UdhTtk);
-  obj4.header = ref(onSortMethodChange(defaultValue[17]).BottomSheetTitleHeader, obj5);
-  let tmp15Result = null;
+  let obj2 = onSortMethodChange(defaultValue[16]);
+  const questHomeSortOptions = obj2.useQuestHomeSortOptions();
+  const obj3 = onSortMethodChange(defaultValue[16]);
+  const questHomeFilterOptions = obj3.useQuestHomeFilterOptions();
+  const obj4 = { header: ref(BottomSheetTitleHeader, obj5), footer: tmp16Result, scrollable: true, startExpanded: true, children: closure_8(BottomSheetScrollView, obj8) };
+  BottomSheet = onSortMethodChange(defaultValue[25]).BottomSheet;
+  obj5 = { title: intl.string(onSortMethodChange(defaultValue[9]).t.UdhTtk) };
+  BottomSheetTitleHeader = onSortMethodChange(defaultValue[17]).BottomSheetTitleHeader;
+  intl = onSortMethodChange(defaultValue[9]).intl;
+  tmp16Result = null;
   if (!isScreenReaderEnabled) {
     const obj6 = { onConfirm: callback2, onReset: callback1, onLayout: callback };
-    tmp15Result = tmp15(closure_11, obj6);
+    tmp16Result = tmp16(closure_11, obj6);
   }
-  obj4.footer = tmp15Result;
-  let tmp19;
+  let tmp20;
+  BottomSheetScrollView = tmp2(tmp3[24]).BottomSheetScrollView;
   if (!isScreenReaderEnabled) {
-    const obj7 = { paddingBottom: tmp10[0] };
-    tmp19 = obj7;
+    tmp20 = { paddingBottom: first2 };
+    const obj7 = { paddingBottom: first2 };
   }
-  const obj8 = { contentContainerStyle: tmp19, style: null, children: null };
-  const items1 = [, ];
+  obj8 = { contentContainerStyle: tmp20, style: items1, children: items3 };
+  items1 = [, ];
   ({ content: arr4[0], bodyContainer: arr4[1] } = tmp);
-  obj8.style = items1;
-  const obj9 = { spacing: onFiltersChange(defaultValue[6]).space.PX_32, children: null };
-  const obj10 = { groupRef: ref, hasIcons: false, defaultValue, onChange: tmp5[1], title: null, children: null };
-  const intl2 = tmp2(tmp3[9]).intl;
-  obj10.title = intl2.string(onSortMethodChange(defaultValue[9]).t.tZXJIS);
-  obj10.children = questHomeSortOptions.map((label, index) => ref(onSortMethodChange(first[18]).TableRadioRow, { label: label.label, value: label.value }, index));
-  const items2 = [
-    ref(onSortMethodChange(defaultValue[19]).TableRadioGroup, obj10),
+  const obj9 = { spacing: onFiltersChange(defaultValue[6]).space.PX_32, children: items2 };
+  const Stack = tmp2(tmp3[23]).Stack;
+  const obj10 = {
+    groupRef: ref,
+    hasIcons: false,
+    defaultValue,
+    onChange: tmp5[1],
+    title: intl2.string(onSortMethodChange(defaultValue[9]).t.tZXJIS),
+    children: questHomeSortOptions.map((label, index) => {
+      const obj = { label: label.label, value: label.value };
+      return ref(onSortMethodChange(first[18]).TableRadioRow, obj, index);
+    })
+  };
+  const TableRadioGroup = tmp2(tmp3[19]).TableRadioGroup;
+  intl2 = tmp2(tmp3[9]).intl;
+  items2 = [
+    ref(TableRadioGroup, obj10),
     questHomeFilterOptions.map((heading, index) => {
-      let obj = { title: heading.heading, hasIcons: false, children: null };
+      let options;
+      let obj = {
+        title: heading.heading,
+        hasIcons: false,
+        children: options.map((item, index) => {
+          let obj2;
+          const obj = {
+            label: obj2.getFilterTypeText(item.filter),
+            onPress(arg0) {
+              return closure_2_8(item, arg0);
+            },
+            checked: closure_4.some((group) => group.group === item.group && group.filter === arr.filter)
+          };
+          const TableCheckboxRow = onSortMethodChange(defaultValue[21]).TableCheckboxRow;
+          obj2 = onSortMethodChange(defaultValue[22]);
+          return ref(TableCheckboxRow, obj, index);
+        })
+      };
       options = heading.options;
-      obj.children = options.map((item, index) => {
-        const obj = {
-          label: onSortMethodChange(10010).getFilterTypeText(item.filter),
-          onPress(arg0) {
-            return closure_2_8(closure_0, arg0);
-          },
-          checked: closure_4.some((group) => group.group === item.group && group.filter === arr.filter)
-        };
-        return ref(onSortMethodChange(5990).TableCheckboxRow, obj, index);
-      });
-      return ref(TableRowGroup.TableRowGroup, obj, index);
+      const TableRowGroup = TableRowGroup2.TableRowGroup;
+      return metroImportDefault(TableRowGroup, obj, index);
     })
   ];
-  obj9.children = items2;
-  const items3 = [closure_8(onSortMethodChange(defaultValue[23]).Stack, obj9), ];
+  items3 = [closure_8(Stack, obj9), ];
   if (isScreenReaderEnabled) {
     const obj11 = { onConfirm: callback2, onReset: callback1, inline: true };
-    isScreenReaderEnabled = tmp15(closure_11, obj11);
+    isScreenReaderEnabled = tmp16(closure_11, obj11);
   }
   items3[1] = isScreenReaderEnabled;
-  obj8.children = items3;
-  obj4.children = closure_8(onSortMethodChange(defaultValue[24]).BottomSheetScrollView, obj8);
-  return ref(onSortMethodChange(defaultValue[25]).BottomSheet, obj4);
+  return ref(BottomSheet, obj4);
 });
+const result = size.fileFinishedImporting("modules/quests/native/QuestHomeSortingFilteringBottomSheet.tsx");
+
+export default tmp4;

@@ -1,106 +1,131 @@
 // === Module 17695: MentionSpamTriggerFields ===
 
 // Module 17695 (MentionSpamTriggerFields)
+import react_native from "react-native" /* 17 */;
 import AutomodRuleUtils from "AutomodRuleUtils" /* 17678 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react_mod from "react" /* 19 */;
+import Constants from "Constants" /* 11474 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const Constants = fn(11474);
+let rule;
+
+let hasOwnProperty;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+let react = react_mod;
+const View = react_native.View;
 ({ MAX_MENTION_SPAM_LIMIT: hasOwnProperty, MIN_MENTION_SPAM_LIMIT: metroRequire } = Constants);
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4890);
+({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
 let closure_9 = createStyles.createStyles({ limitField: { width: 52 } });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/guild_automod/native/components/MentionSpamTriggerFields.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((rule) => {
-  const cResult = rule(onChangeRule[7]).c(25);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((rule) => {
+  let first;
+  let intl3;
+  let intl5;
+  let intl6;
+  let items;
+  let mentionRaidProtectionEnabled;
+  let mentionTotalLimit;
+  let obj4;
+  let obj8;
+  let onChangeRule;
+  let tmp9;
+  let obj = rule(onChangeRule[7]);
+  const cResult = obj.c(25);
   rule = rule.rule;
   onChangeRule = rule.onChangeRule;
   const onValidityChange = rule.onValidityChange;
   const tmp4 = closure_9();
   ({ mentionRaidProtectionEnabled, mentionTotalLimit } = rule.triggerMetadata);
-  let obj = rule(onChangeRule[7]);
-  const hasMentionRaidLimitAccess = rule(onChangeRule[8]).useHasMentionRaidLimitAccess(rule.guildId);
+  let obj2 = rule(onChangeRule[8]);
+  const hasMentionRaidLimitAccess = obj2.useHasMentionRaidLimitAccess(rule.guildId);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(tmp2[9]).intl;
-    const stringResult = intl.string(tmp(tmp2[9]).t["s/26oQ"]);
+    const stringResult = intl.string(rule(onChangeRule[9]).t["s/26oQ"]);
     cResult[0] = stringResult;
-    let first = stringResult;
+    first = stringResult;
   } else {
     first = cResult[0];
   }
-  let obj2 = rule(onChangeRule[8]);
-  [tmp9, noop] = onValidityChange(noop.useState(true), 2);
+  const tmp8 = onValidityChange(react.useState(true), 2);
+  [tmp9, react] = tmp8;
   if (cResult[1] === onChangeRule) {
     if (cResult[2] === onValidityChange) {
+      let tmp10;
+      let tmp11;
+      let tmp13;
+      let tmp18;
       if (cResult[3] === rule) {
-        let tmp10 = cResult[4];
+        tmp10 = cResult[4];
       }
       const _Symbol = Symbol;
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const intl2 = tmp(tmp2[9]).intl;
-        const stringResult1 = intl2.string(tmp(tmp2[9]).t.IGfuTa);
+        const stringResult1 = intl2.string(rule(onChangeRule[9]).t.IGfuTa);
         cResult[5] = stringResult1;
-        let tmp11 = stringResult1;
+        tmp11 = stringResult1;
       } else {
         tmp11 = cResult[5];
       }
       if (cResult[6] !== tmp9) {
         let tmp14;
         if (!tmp9) {
-          let obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
-          const intl3 = tmp(tmp2[9]).intl;
-          const obj4 = { minimum, maximum };
-          obj3.children = intl3.formatToPlainString(tmp(tmp2[9]).t["8Y5zsp"], obj4);
-          tmp14 = closure_7(tmp(tmp2[11]).Text, obj3);
+          let obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: intl3.formatToPlainString(rule(onChangeRule[9]).t["8Y5zsp"], obj4) };
+          const Text = tmp(tmp2[11]).Text;
+          intl3 = tmp(tmp2[9]).intl;
+          obj4 = { minimum, maximum };
+          tmp14 = closure_7(Text, obj3);
         }
         cResult[6] = tmp9;
         cResult[7] = tmp14;
-        let tmp13 = tmp14;
+        tmp13 = tmp14;
       } else {
         tmp13 = cResult[7];
       }
       const _Symbol2 = Symbol;
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         const intl4 = tmp(tmp2[9]).intl;
-        const stringResult2 = intl4.string(tmp(tmp2[9]).t["8uW4/N"]);
+        const stringResult2 = intl4.string(rule(onChangeRule[9]).t["8uW4/N"]);
         cResult[8] = stringResult2;
-        let tmp18 = stringResult2;
+        tmp18 = stringResult2;
       } else {
         tmp18 = cResult[8];
       }
       const _String = String;
+      const limitField = tmp4.limitField;
       const _String2 = String;
+      const length = String(maximum).length;
       const StringResult = String(mentionTotalLimit);
       if (cResult[9] === tmp10) {
         if (cResult[10] === StringResult) {
           if (cResult[13] === tmp4.limitField) {
+            let tmp25;
             if (cResult[14] === tmp22) {
-              let tmp25 = cResult[15];
+              tmp25 = cResult[15];
             }
             if (cResult[16] === mentionRaidProtectionEnabled) {
               if (cResult[17] === onChangeRule) {
                 if (cResult[18] === hasMentionRaidLimitAccess) {
+                  let tmp29;
                   if (cResult[19] === rule) {
-                    let tmp29 = cResult[20];
+                    tmp29 = cResult[20];
                   }
                   if (cResult[21] === tmp25) {
                     if (cResult[22] === tmp29) {
+                      let tmp32;
                       if (cResult[23] === tmp13) {
-                        let tmp32 = cResult[24];
+                        tmp32 = cResult[24];
                       }
                       return tmp32;
                     }
                   }
-                  const obj5 = { title: tmp11, hasIcons: false, helperText: tmp13, children: null };
-                  const items = [tmp25, tmp29];
-                  obj5.children = items;
-                  const tmp34 = closure_8(tmp(tmp2[15]).TableRowGroup, obj5);
+                  const obj5 = { title: tmp11, hasIcons: false, helperText: tmp13, children: items };
+                  items = [tmp25, tmp29];
+                  const tmp34 = closure_8(rule(onChangeRule[15]).TableRowGroup, obj5);
                   cResult[21] = tmp25;
                   cResult[22] = tmp29;
                   cResult[23] = tmp13;
@@ -110,23 +135,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((rule) => {
               }
             }
             let tmp30 = hasMentionRaidLimitAccess;
-            if (hasMentionRaidLimitAccess) {
-              const obj6 = { label: null, subLabel: null, checked: null, onPress: null };
-              const intl5 = tmp(tmp2[9]).intl;
-              obj6.label = intl5.string(tmp(tmp2[9]).t.XnuC9g);
-              const intl6 = tmp(tmp2[9]).intl;
-              obj6.subLabel = intl6.string(tmp(tmp2[9]).t.EDBe5m);
-              obj6.checked = mentionRaidProtectionEnabled;
-              obj6.onPress = function onPress(mentionRaidProtectionEnabled) {
-                const obj = {};
-                const merged = Object.assign(rule);
-                const obj2 = {};
-                const merged1 = Object.assign(rule.triggerMetadata);
-                obj2.mentionRaidProtectionEnabled = mentionRaidProtectionEnabled;
-                obj.triggerMetadata = obj2;
-                return onChangeRule(obj);
+            if (tmp30) {
+              const obj6 = {
+                label: intl5.string(rule(onChangeRule[9]).t.XnuC9g),
+                subLabel: intl6.string(rule(onChangeRule[9]).t.EDBe5m),
+                checked: mentionRaidProtectionEnabled,
+                onPress(mentionRaidProtectionEnabled) {
+                              let obj2;
+                              const obj = { triggerMetadata: obj2 };
+                              const merged = Object.assign(rule);
+                              obj2 = { mentionRaidProtectionEnabled };
+                              const merged1 = Object.assign(rule.triggerMetadata);
+                              return onChangeRule(obj);
+                            }
               };
-              tmp30 = closure_7(tmp(tmp2[14]).TableCheckboxRow, obj6);
+              const TableCheckboxRow = tmp(tmp2[14]).TableCheckboxRow;
+              intl5 = tmp(tmp2[9]).intl;
+              intl6 = tmp(tmp2[9]).intl;
+              tmp30 = closure_7(TableCheckboxRow, obj6);
             }
             cResult[16] = mentionRaidProtectionEnabled;
             cResult[17] = onChangeRule;
@@ -135,94 +161,76 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((rule) => {
             cResult[20] = tmp30;
             tmp29 = tmp30;
           }
-          const obj7 = { label: first, subLabel: tmp18, trailing: null };
-          const obj8 = { style: tmp4.limitField, children: tmp22 };
-          obj7.trailing = closure_7(View, obj8);
-          const tmp28 = closure_7(tmp(tmp2[13]).TableRow, obj7);
+          const obj7 = { label: first, subLabel: tmp18, trailing: closure_7(View, obj8) };
+          obj8 = { style: limitField, children: tmp22 };
+          const TableRow = tmp(tmp2[13]).TableRow;
+          const tmp28 = closure_7(TableRow, obj7);
           cResult[13] = tmp4.limitField;
           cResult[14] = tmp22;
           cResult[15] = tmp28;
           tmp25 = tmp28;
         }
       }
-      const obj9 = { keyboardType: "number-pad", maxLength: String(maximum).length, textAlign: "center", defaultValue: StringResult, onChange: tmp10, status: "error", accessibilityLabel: first };
+      const obj9 = { keyboardType: "number-pad", maxLength: length, textAlign: "center", defaultValue: StringResult, onChange: tmp10, status: "error", accessibilityLabel: first };
       cResult[9] = tmp10;
       cResult[10] = StringResult;
       cResult[11] = "error";
-      cResult[12] = closure_7(tmp(tmp2[12]).TextField, obj9);
+      cResult[12] = closure_7(rule(onChangeRule[12]).TextField, obj9);
+      closure_7(rule(onChangeRule[12]).TextField, obj9);
       class R {
         constructor(arg0) {
-          NumberResult = Number(rule);
-          isFiniteResult = "" !== rule;
-          result = isFiniteResult;
-          if (isFiniteResult) {
-            tmp4 = closure_0;
-            tmp5 = closure_1;
-            obj = closure_0(closure_1[10]);
+          let obj3;
+          const NumberResult = Number(arg0);
+          let isFiniteResult = "" !== arg0;
+          let result = isFiniteResult;
+          if (result) {
+            const obj = AutomodRuleUtils;
             result = obj.isValidMentionSpamLimit(NumberResult);
           }
-          tmp6 = closure_3(result);
+          react(result);
           if (onValidityChange != null) {
-            tmp7 = onValidityChange(result);
+            onValidityChange(result);
           }
           if (isFiniteResult) {
-            _Number = Number;
+            const _Number = Number;
             isFiniteResult = Number.isFinite(NumberResult);
           }
           if (isFiniteResult) {
-            tmp8 = onChangeRule;
-            obj1 = {};
-            tmp9 = rule;
-            tmp10 = obj1;
-            tmp11 = rule;
-            merged = Object.assign(rule);
-            obj4 = {};
-            tmp13 = obj4;
-            merged1 = Object.assign(rule.triggerMetadata);
-            obj4.mentionTotalLimit = NumberResult;
-            obj1.triggerMetadata = obj4;
-            tmp15 = onChangeRule(obj1);
+            const obj2 = { triggerMetadata: obj3 };
+            const merged = Object.assign(rule);
+            obj3 = { mentionTotalLimit: NumberResult };
+            const merged1 = Object.assign(rule.triggerMetadata);
+            onChangeRule(obj2);
           }
-          return;
         }
       }
-      const tmp24 = closure_7(tmp(tmp2[12]).TextField, obj9);
     }
   }
   class R {
     constructor(arg0) {
-      NumberResult = Number(rule);
-      isFiniteResult = "" !== rule;
-      result = isFiniteResult;
-      if (isFiniteResult) {
-        tmp4 = closure_0;
-        tmp5 = closure_1;
-        obj = closure_0(closure_1[10]);
+      let obj3;
+      const NumberResult = Number(arg0);
+      let isFiniteResult = "" !== arg0;
+      let result = isFiniteResult;
+      if (result) {
+        const obj = AutomodRuleUtils;
         result = obj.isValidMentionSpamLimit(NumberResult);
       }
-      tmp6 = closure_3(result);
+      react(result);
       if (onValidityChange != null) {
-        tmp7 = onValidityChange(result);
+        onValidityChange(result);
       }
       if (isFiniteResult) {
-        _Number = Number;
+        const _Number = Number;
         isFiniteResult = Number.isFinite(NumberResult);
       }
       if (isFiniteResult) {
-        tmp8 = onChangeRule;
-        obj1 = {};
-        tmp9 = rule;
-        tmp10 = obj1;
-        tmp11 = rule;
-        merged = Object.assign(rule);
-        obj4 = {};
-        tmp13 = obj4;
-        merged1 = Object.assign(rule.triggerMetadata);
-        obj4.mentionTotalLimit = NumberResult;
-        obj1.triggerMetadata = obj4;
-        tmp15 = onChangeRule(obj1);
+        const obj2 = { triggerMetadata: obj3 };
+        const merged = Object.assign(rule);
+        obj3 = { mentionTotalLimit: NumberResult };
+        const merged1 = Object.assign(rule.triggerMetadata);
+        onChangeRule(obj2);
       }
-      return;
     }
   }
   cResult[1] = onChangeRule;
@@ -230,45 +238,63 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((rule) => {
   cResult[3] = rule;
   cResult[4] = R;
   tmp10 = R;
-  const tmp8 = onValidityChange(noop.useState(true), 2);
 }) : ((rule) => {
+  let TextField;
+  let _undefined;
+  let c3;
+  let intl2;
+  let intl3;
+  let intl4;
+  let intl5;
+  let intl6;
+  let items;
+  let mentionRaidProtectionEnabled;
+  let mentionTotalLimit;
+  let obj4;
+  let obj6;
+  let obj7;
+  let tmp7;
+  let tmp9;
   rule = rule.rule;
   ({ onChangeRule: dependencyMap, onValidityChange: _slicedToArray } = rule);
-  noop = undefined;
-  ({ mentionTotalLimit, mentionRaidProtectionEnabled } = rule.triggerMetadata);
+  react = undefined;
+  const triggerMetadata = rule.triggerMetadata;
+  ({ mentionTotalLimit, mentionRaidProtectionEnabled } = triggerMetadata);
   const tmp = closure_9();
-  let hasMentionRaidLimitAccess = rule(17012).useHasMentionRaidLimitAccess(rule.guildId);
+  let obj = rule(17012);
+  let hasMentionRaidLimitAccess = obj.useHasMentionRaidLimitAccess(rule.guildId);
   const intl = rule(1126).intl;
   const stringResult = intl.string(rule(1126).t["s/26oQ"]);
-  let obj = rule(17012);
-  [tmp7, c3] = noop.useState(true);
-  let obj2 = { title: null, hasIcons: false, helperText: null, children: null };
-  const intl2 = rule(1126).intl;
-  obj2.title = intl2.string(rule(1126).t.IGfuTa);
-  let tmp9;
+  [tmp7, c3] = _slicedToArray(react.useState(true), 2);
+  const tmp6 = _slicedToArray(react.useState(true), 2);
+  let obj2 = { title: intl2.string(rule(1126).t.IGfuTa), hasIcons: false, helperText: tmp9, children: items };
+  const TableRowGroup = rule(6074).TableRowGroup;
+  intl2 = rule(1126).intl;
+  tmp9 = undefined;
   if (!tmp7) {
-    let obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
-    const intl3 = tmp2(1126).intl;
-    const obj4 = { minimum, maximum };
-    obj3.children = intl3.formatToPlainString(tmp2(1126).t["8Y5zsp"], obj4);
-    tmp9 = closure_7(tmp2(4886).Text, obj3);
+    let obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: intl3.formatToPlainString(rule(1126).t["8Y5zsp"], obj4) };
+    const Text = tmp2(4886).Text;
+    intl3 = tmp2(1126).intl;
+    obj4 = { minimum, maximum };
+    tmp9 = closure_7(Text, obj3);
   }
-  obj2.helperText = tmp9;
-  const obj5 = { label: stringResult, subLabel: null, trailing: null };
-  const intl4 = tmp2(1126).intl;
-  obj5.subLabel = intl4.string(rule(1126).t["8uW4/N"]);
-  const obj6 = { style: tmp.limitField, children: null };
-  const obj7 = {
+  const obj5 = { label: stringResult, subLabel: intl4.string(rule(1126).t["8uW4/N"]), trailing: closure_7(View, obj6) };
+  const TableRow = tmp2(5993).TableRow;
+  intl4 = tmp2(1126).intl;
+  obj6 = { style: tmp.limitField, children: closure_7(TextField, obj7) };
+  obj7 = {
     keyboardType: "number-pad",
     maxLength: String(maximum).length,
     textAlign: "center",
     defaultValue: String(mentionTotalLimit),
     onChange(arg0) {
+      let obj3;
       const NumberResult = Number(arg0);
       let isFiniteResult = "" !== arg0;
       let result = isFiniteResult;
-      if (isFiniteResult) {
-        result = AutomodRuleUtils.isValidMentionSpamLimit(NumberResult);
+      if (result) {
+        const obj = AutomodRuleUtils;
+        result = obj.isValidMentionSpamLimit(NumberResult);
       }
       _undefined(result);
       if (_slicedToArray != null) {
@@ -279,40 +305,40 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((rule) => {
         isFiniteResult = Number.isFinite(NumberResult);
       }
       if (isFiniteResult) {
-        const obj2 = {};
+        const obj2 = { triggerMetadata: obj3 };
         const merged = Object.assign(rule);
-        const obj3 = {};
+        obj3 = { mentionTotalLimit: NumberResult };
         const merged1 = Object.assign(rule.triggerMetadata);
-        obj3.mentionTotalLimit = NumberResult;
-        obj2.triggerMetadata = obj3;
         dependencyMap(obj2);
       }
     },
     status: "error",
     accessibilityLabel: stringResult
   };
-  obj6.children = closure_7(rule(6100).TextField, obj7);
-  obj5.trailing = closure_7(View, obj6);
-  const items = [closure_7(rule(5993).TableRow, obj5), ];
+  TextField = tmp2(6100).TextField;
+  items = [closure_7(TableRow, obj5), ];
   if (hasMentionRaidLimitAccess) {
-    const obj8 = { label: null, subLabel: null, checked: null, onPress: null };
-    const intl5 = tmp2(1126).intl;
-    obj8.label = intl5.string(tmp2(1126).t.XnuC9g);
-    const intl6 = tmp2(1126).intl;
-    obj8.subLabel = intl6.string(tmp2(1126).t.EDBe5m);
-    obj8.checked = mentionRaidProtectionEnabled;
-    obj8.onPress = function onPress(mentionRaidProtectionEnabled) {
-      const obj = {};
-      const merged = Object.assign(rule);
-      const obj2 = {};
-      const merged1 = Object.assign(rule.triggerMetadata);
-      obj2.mentionRaidProtectionEnabled = mentionRaidProtectionEnabled;
-      obj.triggerMetadata = obj2;
-      return dependencyMap(obj);
+    const obj8 = {
+      label: intl5.string(rule(1126).t.XnuC9g),
+      subLabel: intl6.string(rule(1126).t.EDBe5m),
+      checked: mentionRaidProtectionEnabled,
+      onPress(mentionRaidProtectionEnabled) {
+          let obj2;
+          const obj = { triggerMetadata: obj2 };
+          const merged = Object.assign(rule);
+          obj2 = { mentionRaidProtectionEnabled };
+          const merged1 = Object.assign(rule.triggerMetadata);
+          return dependencyMap(obj);
+        }
     };
-    hasMentionRaidLimitAccess = closure_7(tmp2(5990).TableCheckboxRow, obj8);
+    const TableCheckboxRow = tmp2(5990).TableCheckboxRow;
+    intl5 = tmp2(1126).intl;
+    intl6 = tmp2(1126).intl;
+    hasMentionRaidLimitAccess = closure_7(TableCheckboxRow, obj8);
   }
   items[1] = hasMentionRaidLimitAccess;
-  obj2.children = items;
-  return closure_8(rule(6074).TableRowGroup, obj2);
+  return closure_8(TableRowGroup, obj2);
 });
+let result = size.fileFinishedImporting("modules/guild_automod/native/components/MentionSpamTriggerFields.tsx");
+
+export default tmp4;

@@ -1,21 +1,32 @@
 // === Module 10542: HeadlessSlayerStorefrontPurchaseRunner ===
 
 // Module 10542 (HeadlessSlayerStorefrontPurchaseRunner)
+import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import noop from "module_19" /* 19 */;
+import NativeCheckoutStore from "NativeCheckoutStore" /* 6930 */;
+import react_mod from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let onPurchaseComplete, ref;
 
-require = fn;
-let useNativeCheckoutStore = fn(6930).useNativeCheckoutStore;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/slayer_storefront/native/headless_components/HeadlessSlayerStorefrontPurchaseRunner.tsx");
-
-export const HeadlessSlayerStorefrontPurchaseRunner = ReactCompilerGating.isReactCompilerEnabled() ? ((onPurchaseComplete) => {
-  const cResult = attempt(onPurchaseError[4]).c(27);
+let react = react_mod;
+let useNativeCheckoutStore = NativeCheckoutStore.useNativeCheckoutStore;
+const AnalyticEvents = Constants.AnalyticEvents;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPurchaseComplete) => {
+  let analyticsLocations;
+  let attempt;
+  let closure_3;
+  let closure_4;
+  let first;
+  let onPurchaseError;
+  let ref2;
+  let sku;
+  let skuId;
+  let obj = attempt(onPurchaseError[4]);
+  const cResult = obj.c(27);
   ({ skuId, sku, analyticsLocations, attempt } = onPurchaseComplete);
   onPurchaseComplete = onPurchaseComplete.onPurchaseComplete;
   onPurchaseError = onPurchaseComplete.onPurchaseError;
@@ -24,152 +35,162 @@ export const HeadlessSlayerStorefrontPurchaseRunner = ReactCompilerGating.isReac
       return analyticsFields.analyticsFields;
     };
     cResult[0] = fn;
-    let first = fn;
+    first = fn;
   } else {
     first = cResult[0];
   }
+  let tmp3 = useNativeCheckoutStore;
   const tmp4 = useNativeCheckoutStore(first);
-  noop = tmp4;
+  react = tmp4;
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     class P {
-      constructor(arg0) {
-        return onPurchaseComplete.setCheckoutFailed;
+      constructor(setCheckoutFailed) {
+        return setCheckoutFailed.setCheckoutFailed;
       }
     }
     cResult[1] = P;
   } else {
     class P {
-      constructor(arg0) {
-        return onPurchaseComplete.setCheckoutFailed;
+      constructor(setCheckoutFailed) {
+        return setCheckoutFailed.setCheckoutFailed;
       }
     }
   }
-  const tmp3Result = useNativeCheckoutStore(P);
+  const tmp3Result = tmp3(P);
   useNativeCheckoutStore = tmp3Result;
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     class S {
-      constructor(arg0) {
-        return onPurchaseComplete.orderRecord;
+      constructor(orderRecord) {
+        return orderRecord.orderRecord;
       }
     }
     cResult[2] = S;
   } else {
     class S {
-      constructor(arg0) {
-        return onPurchaseComplete.orderRecord;
+      constructor(orderRecord) {
+        return orderRecord.orderRecord;
       }
     }
   }
-  let obj = attempt(onPurchaseError[4]);
-  closure_5 = useNativeCheckoutStore(S);
+  let closure_5 = tmp3(S);
+  tmp3(S);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     class C {
-      constructor(arg0) {
-        return onPurchaseComplete.orderRequired;
+      constructor(orderRequired) {
+        return orderRequired.orderRequired;
       }
     }
     cResult[3] = C;
   } else {
     class C {
-      constructor(arg0) {
-        return onPurchaseComplete.orderRequired;
+      constructor(orderRequired) {
+        return orderRequired.orderRequired;
       }
     }
   }
-  const tmp3Result3 = useNativeCheckoutStore(S);
-  closure_6 = useNativeCheckoutStore(C);
-  noop.useRef(false);
+  let closure_6 = tmp3(C);
+  tmp3(C);
+  ref = react.useRef(false);
   if (cResult[4] === tmp4) {
     class C {
-      constructor(arg0) {
-        return onPurchaseComplete.orderRequired;
+      constructor(orderRequired) {
+        return orderRequired.orderRequired;
       }
     }
   }
   class L {
     constructor() {
-      if (!closure_7.current) {
-        flag = true;
+      if (!ref.current) {
         tmp.current = true;
-        tmp2 = closure_1;
-        tmp3 = closure_2;
-        obj = closure_1(closure_2[5]);
-        tmp4 = AnalyticEvents;
-        tmp5 = closure_3;
-        trackResult = obj.track(AnalyticEvents.PAYMENT_FLOW_FAILED, closure_3);
-        tmp7 = closure_4;
-        tmp8 = closure_4();
+        const obj = AnalyticsUtilsDefault;
+        obj.track(AnalyticEvents.PAYMENT_FLOW_FAILED, closure_3);
+        closure_4();
       }
-      tmp9 = onPurchaseError();
-      return;
+      onPurchaseError();
     }
   }
   cResult[4] = tmp4;
   cResult[5] = onPurchaseError;
   cResult[6] = tmp3Result;
   cResult[7] = L;
-  const tmp3Result4 = useNativeCheckoutStore(C);
 }) : ((attempt) => {
+  let analyticsLocations;
+  let closure_3;
+  let closure_4;
+  let id;
+  let onPurchaseError;
+  let sku;
+  let skuId;
   attempt = attempt.attempt;
   ({ onPurchaseComplete: importDefault, onPurchaseError } = attempt);
   useNativeCheckoutStore = undefined;
   onPurchaseError = undefined;
-  closure_9 = undefined;
+  let closure_9;
+  let ref2;
   ({ skuId, sku, analyticsLocations } = attempt);
   const tmp = useNativeCheckoutStore((analyticsFields) => analyticsFields.analyticsFields);
-  noop = tmp;
+  react = tmp;
   const tmp2 = useNativeCheckoutStore((setCheckoutFailed) => setCheckoutFailed.setCheckoutFailed);
   useNativeCheckoutStore = tmp2;
   let tmp3 = useNativeCheckoutStore((orderRecord) => orderRecord.orderRecord);
-  closure_5 = tmp3;
+  let closure_5 = tmp3;
   const tmp4 = useNativeCheckoutStore((orderRequired) => orderRequired.orderRequired);
-  closure_6 = tmp4;
-  noop.useRef(false);
+  let closure_6 = tmp4;
+  let obj = react;
+  ref = react.useRef(false);
   const items = [tmp, tmp2, onPurchaseError];
-  onPurchaseError = noop.useCallback(() => {
+  onPurchaseError = react.useCallback(() => {
     if (!ref.current) {
       tmp.current = true;
-      AnalyticsUtilsDefault.track(AnalyticEvents.PAYMENT_FLOW_FAILED, closure_3);
+      const obj = AnalyticsUtilsDefault;
+      obj.track(AnalyticEvents.PAYMENT_FLOW_FAILED, closure_3);
       closure_4();
     }
     onPurchaseError();
   }, items);
-  let obj2 = { skuId, sku, analyticsLoadId: tmp.load_id, analyticsLocations, orderId: null, analyticsData: null, onPurchaseComplete: null, onPurchaseError: null, onPurchasePending: null };
-  let id;
+  let obj2 = {
+    skuId,
+    sku,
+    analyticsLoadId: tmp.load_id,
+    analyticsLocations,
+    orderId: id,
+    analyticsData: tmp,
+    onPurchaseComplete() {
+      ref.current = true;
+      const obj = PlatformUtils;
+      if (obj.isIOS()) {
+        const obj2 = AnalyticsUtilsDefault;
+        obj2.track(AnalyticEvents.PAYMENT_FLOW_SUCCEEDED, closure_3);
+      }
+      importDefault();
+    },
+    onPurchaseError,
+    onPurchasePending() {
+
+    }
+  };
+  id = undefined;
+  const tmp6 = require("useMobileSocialLayerPurchaseSKU");
   if (tmp3 != null) {
     id = tmp3.id;
   }
-  obj2.orderId = id;
-  obj2.analyticsData = tmp;
-  obj2.onPurchaseComplete = function onPurchaseComplete() {
-    closure_7.current = true;
-    if (obj.isIOS()) {
-      AnalyticsUtilsDefault.track(AnalyticEvents.PAYMENT_FLOW_SUCCEEDED, closure_3);
-    }
-    closure_1_1();
-    obj = PlatformUtils;
-  };
-  obj2.onPurchaseError = onPurchaseError;
-  obj2.onPurchasePending = function onPurchasePending() {
-
-  };
-  const tmp6Result = require("useMobileSocialLayerPurchaseSKU")(obj2);
+  const tmp6Result = tmp6(obj2);
   closure_9 = tmp6Result;
-  noop.useRef(0);
+  ref2 = obj.useRef(0);
   const items1 = [attempt, tmp6Result, onPurchaseError, tmp3, tmp4];
   const effect = obj.useEffect(() => {
     if (ref2.current !== attempt) {
-      let tmp3 = closure_6;
-      if (closure_6) {
-        tmp3 = null == closure_5;
-      }
+      const tmp3 = closure_6 && null == closure_5;
       if (!tmp3) {
         tmp.current = tmp2;
-        closure_7.current = false;
-        closure_9().catch(callback);
+        ref.current = false;
         const promise = closure_9();
+        promise.catch(callback);
       }
     }
   }, items1);
   return null;
 });
+const result = size.fileFinishedImporting("modules/slayer_storefront/native/headless_components/HeadlessSlayerStorefrontPurchaseRunner.tsx");
+
+export const HeadlessSlayerStorefrontPurchaseRunner = tmp2;

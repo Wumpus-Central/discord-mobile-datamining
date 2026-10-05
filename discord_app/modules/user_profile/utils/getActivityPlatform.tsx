@@ -19,21 +19,27 @@ const set = new Set(items);
 const result = size.fileFinishedImporting("modules/user_profile/utils/getActivityPlatform.tsx");
 
 export default function getActivityPlatform(session_id) {
+  let closure_0 = session_id;
   const tmp3 = parseProviderRouteHeadlessSessionIdDefault(session_id.session_id);
   if (null != tmp3) {
     return tmp3;
   } else if (isListeningOnSpotifyDefault(session_id)) {
-    return PlatformsDefault.get(PlatformTypes.SPOTIFY);
+    const tmpResult = PlatformsDefault;
+    return tmpResult.get(PlatformTypes.SPOTIFY);
   } else if (isCrunchyrollActivityDefault(session_id)) {
-    return PlatformsDefault.get(PlatformTypes.CRUNCHYROLL);
+    const tmpResult6 = PlatformsDefault;
+    return tmpResult6.get(PlatformTypes.CRUNCHYROLL);
   } else if (isOnXboxDefault(session_id)) {
-    return PlatformsDefault.get(PlatformTypes.XBOX);
+    const tmpResult7 = PlatformsDefault;
+    return tmpResult7.get(PlatformTypes.XBOX);
   } else if (isOnPlayStationDefault(session_id)) {
-    return PlatformsDefault.get(PlatformTypes.PLAYSTATION);
+    const tmpResult8 = PlatformsDefault;
+    return tmpResult8.get(PlatformTypes.PLAYSTATION);
   } else {
     if (!isOnMetaQuestDefault(session_id)) {
       if (!isOnMetaHorizonDefault(session_id)) {
-        const found = PlatformsDefault.find((name) => name.name === session_id.name);
+        const tmpResult9 = PlatformsDefault;
+        const found = tmpResult9.find((name) => name.name === name.name);
         let tmp5 = null;
         if (null != found) {
           tmp5 = null;
@@ -44,6 +50,7 @@ export default function getActivityPlatform(session_id) {
         return tmp5;
       }
     }
-    return PlatformsDefault.get(PlatformTypes.META_QUEST_OR_HORIZON);
+    const tmpResult10 = PlatformsDefault;
+    return tmpResult10.get(PlatformTypes.META_QUEST_OR_HORIZON);
   }
 };

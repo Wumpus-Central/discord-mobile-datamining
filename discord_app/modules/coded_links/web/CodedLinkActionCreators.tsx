@@ -6,16 +6,21 @@ import ConferenceModeConstants from "ConferenceModeConstants" /* 1092 */;
 import size from "module_2" /* 2 */;
 
 const CONFERENCE_MODE_ENABLED = ConferenceModeConstants.CONFERENCE_MODE_ENABLED;
-const result = size.fileFinishedImporting("modules/coded_links/web/CodedLinkActionCreators.tsx");
-
-export default {
+let obj = {
   openNativeAppModal(arg0, arg1) {
 
   },
   nativeModalOpened(code) {
-    DispatcherDefault.dispatch({ type: "NATIVE_APP_MODAL_OPENED", code });
+    const obj = DispatcherDefault;
+    const obj2 = { type: "NATIVE_APP_MODAL_OPENED", code };
+    obj.dispatch(obj2);
   },
   nativeModalOpenFailed(code) {
-    DispatcherDefault.dispatch({ type: "NATIVE_APP_MODAL_OPEN_FAILED", code });
+    const obj = DispatcherDefault;
+    const obj2 = { type: "NATIVE_APP_MODAL_OPEN_FAILED", code };
+    obj.dispatch(obj2);
   }
 };
+const result = size.fileFinishedImporting("modules/coded_links/web/CodedLinkActionCreators.tsx");
+
+export default obj;

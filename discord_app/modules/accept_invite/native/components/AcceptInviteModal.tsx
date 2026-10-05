@@ -1,22 +1,34 @@
 // === Module 17442: AcceptInviteModal ===
 
 // Module 17442 (AcceptInviteModal)
+import Fragment from "Fragment" /* 21 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import InviteCodeUtils from "InviteCodeUtils" /* 4872 */;
-import AcceptInviteContainerDefault from "AcceptInviteContainer" /* 12382 */;
-import noop from "module_19" /* 19 */;
+import CreateGuildConstants from "CreateGuildConstants" /* 6468 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-require = fn;
-const CreateGuildModalStates = fn(6468).CreateGuildModalStates;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/accept_invite/native/components/AcceptInviteModal.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((deeplinkAttemptId) => {
-  const cResult = require("c").c(6);
+function render() {
+  const obj = { onPressClose: closure_2_0(closure_2_2[6]).clearDisplayedInvite };
+  const tmp = closure_2_1(closure_2_2[5]);
+  const merged = Object.assign(closure_0);
+  return closure_2_5(tmp, obj);
+}
+const CreateGuildModalStates = CreateGuildConstants.CreateGuildModalStates;
+const jsx = Fragment.jsx;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((deeplinkAttemptId) => {
+  let obj4;
+  let tmp4;
+  let tmp5;
+  let tmp7;
+  let tmp9;
+  let tmpResult;
+  const obj = require("react");
+  const cResult = obj.c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function c() {
       return () => {
@@ -31,57 +43,50 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((deeplinkAttemptI
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const effect = noop.useEffect(tmp4, tmp5);
+  const effect = react.useEffect(tmp4, tmp5);
   if (cResult[2] !== deeplinkAttemptId) {
     _require = deeplinkAttemptId;
     const obj2 = {};
-    const obj3 = { fullscreen: true, headerShown: false, impressionName: tmp(1260).ImpressionNames.INVITE_ACCEPT, impressionProperties: null, render: null };
-    const obj4 = { deeplink_attempt_id: deeplinkAttemptId.deeplinkAttemptId, invite_code: tmp(4872).parseInviteCodeFromInviteKey(deeplinkAttemptId.code) };
-    obj3.impressionProperties = obj4;
-    obj3.render = function render() {
-      const obj = {};
-      const merged = Object.assign(closure_0);
-      obj.onPressClose = closure_0(8392).clearDisplayedInvite;
-      return jsx(AcceptInviteContainerDefault, {});
-    };
-    obj2[CreateGuildModalStates.ACCEPT_INVITE] = obj3;
+    const ACCEPT_INVITE = CreateGuildModalStates.ACCEPT_INVITE;
+    const obj3 = { fullscreen: true, headerShown: false, impressionName: require("discord_common/AnalyticsUtils").ImpressionNames.INVITE_ACCEPT, impressionProperties: obj4, render };
+    obj4 = { deeplink_attempt_id: deeplinkAttemptId.deeplinkAttemptId, invite_code: tmpResult.parseInviteCodeFromInviteKey(deeplinkAttemptId.code) };
+    obj2[ACCEPT_INVITE] = obj3;
     cResult[2] = deeplinkAttemptId;
     cResult[3] = obj2;
-    let tmp7 = obj2;
-    const tmpResult = tmp(4872);
+    tmp7 = obj2;
+    tmpResult = require("InviteCodeUtils");
   } else {
     tmp7 = cResult[3];
   }
   if (cResult[4] !== tmp7) {
-    const obj5 = { screens: tmp7, initialRouteName: CreateGuildModalStates.ACCEPT_INVITE };
-    const tmp12 = jsx(tmp(6496).Navigator, { screens: tmp7, initialRouteName: CreateGuildModalStates.ACCEPT_INVITE });
+    const tmp12 = jsx(require("Navigator").Navigator, { screens: tmp7, initialRouteName: CreateGuildModalStates.ACCEPT_INVITE });
     cResult[4] = tmp7;
     cResult[5] = tmp12;
-    let tmp9 = tmp12;
+    tmp9 = tmp12;
   } else {
     tmp9 = cResult[5];
   }
   return tmp9;
 }) : ((arg0) => {
+  let closure_0;
   _require = arg0;
-  const effect = noop.useEffect(() => () => {
+  const effect = react.useEffect(() => () => {
 
   }, []);
-  let obj = { screens: null, initialRouteName: CreateGuildModalStates.ACCEPT_INVITE };
   const items = [arg0];
-  obj.screens = noop.useMemo(() => {
+  const Navigator = require("Navigator").Navigator;
+  return <Navigator screens={react.useMemo(() => {
+    let obj3;
+    let obj4;
     let obj = {};
-    const obj2 = { fullscreen: true, headerShown: false, impressionName: discord_common_AnalyticsUtils.ImpressionNames.INVITE_ACCEPT, impressionProperties: null, render: null };
-    const obj3 = { deeplink_attempt_id: closure_0.deeplinkAttemptId, invite_code: InviteCodeUtils.parseInviteCodeFromInviteKey(closure_0.code) };
-    obj2.impressionProperties = obj3;
-    obj2.render = function render() {
-      const obj = {};
-      const merged = Object.assign(closure_0);
-      obj.onPressClose = closure_0(8392).clearDisplayedInvite;
-      return jsx(AcceptInviteContainerDefault, {});
-    };
-    obj[CreateGuildModalStates.ACCEPT_INVITE] = obj2;
+    const ACCEPT_INVITE = CreateGuildModalStates.ACCEPT_INVITE;
+    const obj2 = { fullscreen: true, headerShown: false, impressionName: discord_common_AnalyticsUtils.ImpressionNames.INVITE_ACCEPT, impressionProperties: obj3, render };
+    obj3 = { deeplink_attempt_id: closure_0.deeplinkAttemptId, invite_code: obj4.parseInviteCodeFromInviteKey(closure_0.code) };
+    obj[ACCEPT_INVITE] = obj2;
+    obj4 = InviteCodeUtils;
     return obj;
-  }, items);
-  return jsx(require("Navigator").Navigator, { screens: null, initialRouteName: CreateGuildModalStates.ACCEPT_INVITE });
+  }, items)} initialRouteName={CreateGuildModalStates.ACCEPT_INVITE} />;
 });
+const result = size.fileFinishedImporting("modules/accept_invite/native/components/AcceptInviteModal.tsx");
+
+export default tmp2;

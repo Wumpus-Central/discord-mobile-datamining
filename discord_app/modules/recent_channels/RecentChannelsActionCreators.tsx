@@ -1,83 +1,85 @@
 // === Module 11177: RecentChannelsActionCreators ===
 
 // Module 11177 (RecentChannelsActionCreators)
+import Constants from "Constants" /* 1085 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2033 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-let closure_5 = async function _bulkClearRecents(arg0) {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
+let closure_2, closure_3;
+
+let obj = function _bulkClearRecents() {
+  obj = _asyncToGenerator(async (guildId, channelIds) => {
+    let c4 = 0;
+    let c5 = 0;
+    return (async (arg0, value) => {
+      let obj8;
+      if (c5 === 2) {
+        c5 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          c5 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c5 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          return { value, done: true };
         } else {
-          closure_3 = tmp5;
-          closure_2 = tmp2;
-          closure_130_0 = closure_0;
-          closure_130_1 = closure_1;
-          c4 = 1;
-          c5 = 1;
-          const obj4 = {
-            value: UserSettingsProtoActionCreators.updateUserGuildSettings(closure_0, (arg0) => {
-                      const Timestamp = closure_1_0(closure_1_2[3]).Timestamp;
-                      arg0.guildRecentsDismissedAt = Timestamp.fromDate(new Date());
-                      return true;
-                    }, UserSettingsProtoActionCreators.UserSettingsDelay.INFREQUENT_USER_ACTION),
-            done: false
-          };
-          return obj4;
+          return { value: "IconComponent", done: null };
         }
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 3;
-        const obj = { value, done: true };
-        return obj;
       } else {
-        const obj6 = { type: "BULK_CLEAR_RECENTS", guildId: closure_130_0, channelIds: closure_130_1 };
-        closure_131_1(closure_131_2[4]).dispatch(obj6);
-        const obj5 = closure_131_1(closure_131_2[4]);
-        closure_131_1(closure_131_2[5]).track(closure_131_4.CHANNEL_LIST_UPDATED, { action_type: "recents_dismissed" });
-        c5 = 3;
-        return { value: "IconComponent", done: null };
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              return { value, done: true };
+            } else {
+              closure_3 = tmp4;
+              closure_2 = tmp;
+              c4 = 1;
+              c5 = 1;
+              const obj4 = {
+                value: obj8.updateUserGuildSettings(guildId, (arg0) => {
+                          const Timestamp = guildId(closure_1_2[3]).Timestamp;
+                          const fromDate = Timestamp.fromDate;
+                          const date = new Date();
+                          arg0.guildRecentsDismissedAt = fromDate(date);
+                          return true;
+                        }, UserSettingsProtoActionCreators.UserSettingsDelay.INFREQUENT_USER_ACTION),
+                done: false
+              };
+              obj8 = UserSettingsProtoActionCreators;
+              return obj4;
+            }
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            return { value, done: true };
+          } else {
+            const obj6 = { type: "BULK_CLEAR_RECENTS", guildId, channelIds };
+            const obj5 = closure_131_1(closure_131_2[4]);
+            obj5.dispatch(obj6);
+            const obj7 = closure_131_1(closure_131_2[5]);
+            obj7.track(closure_131_4.CHANNEL_LIST_UPDATED, { action_type: "recents_dismissed" });
+            c5 = 3;
+            return { value: "IconComponent", done: null };
+          }
+        } catch (tmp5) {
+          c5 = 3;
+          throw tmp5;
+        }
       }
-    } catch (tmp6) {
-      c5 = tmp;
-      throw tmp6;
-    }
-  }
+    })();
+  });
+  return obj(...arguments);
 };
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const size = fn(2);
+const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/recent_channels/RecentChannelsActionCreators.tsx");
 
 export const bulkClearRecents = function bulkClearRecents() {
-  const self = this;
-  const apply = closure_5.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };

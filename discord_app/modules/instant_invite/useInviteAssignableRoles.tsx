@@ -1,28 +1,35 @@
 // === Module 17993: useInviteAssignableRoles ===
 
 // Module 17993 (useInviteAssignableRoles)
+import Constants from "Constants" /* 1085 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 2107 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2106 */;
 import PermissionStore from "PermissionStore" /* 4509 */;
 import UserStore from "UserStore" /* 1377 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, tmp4, tmp5;
 
-const require = fn;
-const isEveryoneRole = fn(2107).isEveryoneRole;
-const Permissions = fn(1085).Permissions;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/instant_invite/useInviteAssignableRoles.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const isEveryoneRole = GuildRoleRecord.isEveryoneRole;
+const Permissions = Constants.Permissions;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let currentUser;
+  let first;
+  let id;
+  let sortedRoles;
+  let tmp9;
   _require = arg0;
-  const cResult = require("c").c(9);
+  const tmp = _require;
+  let obj = require("react");
+  const cResult = obj.c(9);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildRoleStore, UserStore, PermissionStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -51,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[1] = arg0;
     cResult[2] = R;
     cResult[3] = items1;
-    let tmp9 = items1;
+    tmp9 = items1;
   } else {
     class R {
       constructor() {
@@ -75,8 +82,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     tmp9 = cResult[3];
   }
-  let obj = require("c");
-  const stateFromStoresObject = require("initialize").useStateFromStoresObject(first, R, tmp9);
+  const tmpResult = tmp(504);
+  const stateFromStoresObject = tmpResult.useStateFromStoresObject(first, R, tmp9);
   ({ sortedRoles, currentUser } = stateFromStoresObject);
   if (null != arg0) {
     class R {
@@ -144,23 +151,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
   }
-  return tmp12;
 }) : ((arg0) => {
+  let currentUser;
+  let id;
   _require = arg0;
+  let obj = require("get initialized");
   const items = [GuildRoleStore, UserStore, PermissionStore];
   const items1 = [arg0];
-  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
+    let canResult;
     if (null != id) {
       sortedRoles = GuildRoleStore.getSortedRoles(id.id);
     } else {
       sortedRoles = [];
     }
-    const obj = { sortedRoles, currentUser: UserStore.getCurrentUser(), canManageRoles: null };
-    let canResult = null != id;
-    if (canResult) {
-      canResult = PermissionStore.can(Permissions.MANAGE_ROLES, id);
-    }
-    obj.canManageRoles = canResult;
+    const obj = { sortedRoles, currentUser: UserStore.getCurrentUser(), canManageRoles: canResult };
+    canResult = null != id && PermissionStore.can(Permissions.MANAGE_ROLES, id);
     return obj;
   }, items1);
   let sortedRoles = stateFromStoresObject.sortedRoles;
@@ -168,17 +174,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const canManageRoles = stateFromStoresObject.canManageRoles;
   const items2 = [arg0, currentUser, canManageRoles, sortedRoles];
   return canManageRoles.useMemo(() => {
+    let closure_0;
+    let highestRole;
+    let tmp2;
     if (null != highestRole) {
       if (null != currentUser) {
         if (canManageRoles) {
-          highestRole = sortedRoles(currentUser[9]).getHighestRole(tmp, tmp2.id);
+          let obj = sortedRoles(currentUser[9]);
+          highestRole = obj.getHighestRole(tmp, tmp2.id);
           return sortedRoles.filter((managed) => {
-            const tmp = isEveryoneRole(managed);
-            let tmp2 = !tmp;
-            if (!tmp) {
-              managed = managed.managed;
-              let tmp3 = !managed;
-              if (!managed) {
+            let tmp2 = !isEveryoneRole(managed);
+            isEveryoneRole(managed);
+            if (tmp2) {
+              let tmp3 = !managed.managed;
+              if (tmp3) {
                 const tags = managed.tags;
                 let guild_connections;
                 if (tags != null) {
@@ -187,7 +196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 let isRoleHigherResult = undefined === guild_connections;
                 if (isRoleHigherResult) {
                   const obj = PermissionUtilsAll;
-                  isRoleHigherResult = obj.isRoleHigher(closure_0, currentUser.id, closure_0, managed);
+                  isRoleHigherResult = obj.isRoleHigher(id, currentUser.id, id, managed);
                 }
                 tmp3 = isRoleHigherResult;
               }
@@ -201,3 +210,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     return [];
   }, items2);
 });
+const result = size.fileFinishedImporting("modules/instant_invite/useInviteAssignableRoles.tsx");
+
+export default tmp2;

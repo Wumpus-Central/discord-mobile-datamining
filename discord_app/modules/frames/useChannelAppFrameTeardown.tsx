@@ -1,24 +1,32 @@
 // === Module 16780: useChannelAppFrameTeardown ===
 
 // Module 16780 (useChannelAppFrameTeardown)
+import Constants from "Constants" /* 1085 */;
+import FramesConstants from "FramesConstants" /* 8704 */;
 import getFramesManagerDefault from "getFramesManager" /* 9040 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import PermissionStore from "PermissionStore" /* 4509 */;
 import FramesStore from "FramesStore" /* 8703 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, id;
 
-const require = fn;
-const getFrameSurfaceForChannel = fn(8704).getFrameSurfaceForChannel;
-const Permissions = fn(1085).Permissions;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/frames/useChannelAppFrameTeardown.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
-  const cResult = id(stateFromStores[7]).c(10);
+const getFrameSurfaceForChannel = FramesConstants.getFrameSurfaceForChannel;
+const Permissions = Constants.Permissions;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+  let stateFromStores;
+  let tmp11;
+  let tmp12;
+  let tmp5;
+  let tmp8;
+  const tmp = id;
+  let obj = id(stateFromStores[7]);
+  const cResult = obj.c(10);
   id = undefined;
+  const tmp2 = stateFromStores;
   if (id != null) {
     id = id.id;
   }
@@ -29,45 +37,44 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
     }
     cResult[0] = id;
     cResult[1] = tmp6;
-    let tmp5 = tmp6;
+    tmp5 = tmp6;
   } else {
     tmp5 = cResult[1];
   }
-  closure_1 = tmp5;
+  let closure_1 = tmp5;
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelStore, PermissionStore];
     cResult[2] = items;
-    let tmp8 = items;
+    tmp8 = items;
   } else {
     tmp8 = cResult[2];
   }
   if (cResult[3] !== id) {
     const fn = function _() {
       const channel = ChannelStore.getChannel(id);
-      let canResult = null != channel;
-      if (canResult) {
-        canResult = PermissionStore.can(Permissions.VIEW_CHANNEL, channel);
-      }
+      const canResult = null != channel && PermissionStore.can(Permissions.VIEW_CHANNEL, channel);
       return canResult;
     };
     const items1 = [id];
     cResult[3] = id;
     cResult[4] = fn;
     cResult[5] = items1;
-    let tmp12 = items1;
-    let tmp11 = fn;
+    tmp12 = items1;
+    tmp11 = fn;
   } else {
     tmp11 = cResult[4];
     tmp12 = cResult[5];
   }
-  let obj = id(stateFromStores[7]);
-  stateFromStores = id(stateFromStores[8]).useStateFromStores(tmp8, tmp11, tmp12);
+  const tmpResult = tmp(tmp2[8]);
+  stateFromStores = tmpResult.useStateFromStores(tmp8, tmp11, tmp12);
   if (cResult[6] === stateFromStores) {
+    let tmp14;
+    let tmp15;
     if (cResult[7] === tmp5) {
-      let tmp14 = cResult[8];
-      let tmp15 = cResult[9];
+      tmp14 = cResult[8];
+      tmp15 = cResult[9];
     }
-    const effect = noop.useEffect(tmp14, tmp15);
+    const effect = react.useEffect(tmp14, tmp15);
   }
   const fn2 = function h() {
     if (null != closure_1) {
@@ -88,8 +95,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
   cResult[9] = items2;
   tmp15 = items2;
   tmp14 = fn2;
-  const tmpResult = id(stateFromStores[8]);
 }) : ((id) => {
+  let stateFromStores;
   _require = id;
   id = undefined;
   if (id != null) {
@@ -98,19 +105,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
   const items = [id];
   const memo = stateFromStores.useMemo(() => {
     let tmp2 = null;
-    if (null != closure_0) {
+    if (null != id) {
       tmp2 = getFrameSurfaceForChannel(tmp);
     }
     return tmp2;
   }, items);
+  let obj = require("get initialized");
   const items1 = [ChannelStore, PermissionStore];
   const items2 = [id];
-  stateFromStores = require("initialize").useStateFromStores(items1, () => {
+  stateFromStores = obj.useStateFromStores(items1, () => {
     const channel = ChannelStore.getChannel(id);
-    let canResult = null != channel;
-    if (canResult) {
-      canResult = PermissionStore.can(Permissions.VIEW_CHANNEL, channel);
-    }
+    const canResult = null != channel && PermissionStore.can(Permissions.VIEW_CHANNEL, channel);
     return canResult;
   }, items2);
   const items3 = [memo, stateFromStores];
@@ -127,3 +132,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
     }
   }, items3);
 });
+const result = size.fileFinishedImporting("modules/frames/useChannelAppFrameTeardown.tsx");
+
+export default tmp2;

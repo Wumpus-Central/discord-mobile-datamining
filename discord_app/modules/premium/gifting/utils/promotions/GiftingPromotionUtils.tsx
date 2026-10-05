@@ -1,22 +1,36 @@
 // === Module 10464: GiftingPromotionUtils ===
 
 // Module 10464 (GiftingPromotionUtils)
+import PremiumConstants from "PremiumConstants" /* 1379 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4698 */;
 import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10469 */;
 import MarketingComponentType from "MarketingComponentType" /* 10470 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
 import PromotionsStore from "PromotionsStore" /* 10396 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const SubscriptionPlans = fn(1379).SubscriptionPlans;
-fn(558);
-let ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = require("c").c(8);
+const require = globalThis.__r;
+let _require, map;
+
+const SubscriptionPlans = PremiumConstants.SubscriptionPlans;
+let ReactCompilerGating = ReactCompilerGating_mod;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let closure_0;
+  let fetchPurchasesError;
+  let hasPreviouslyFetched;
+  let purchases;
+  let stateFromStoresArray;
+  let tmp6;
+  let tmp7;
+  const tmp2 = stateFromStoresArray;
+  const obj = require("react");
+  const cResult = obj.c(8);
   const tmp4 = purchases(hasPreviouslyFetched.useState(), 2);
   _require = tmp4[1];
+  const first = tmp4[0];
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [fetchPurchasesError];
     const fn = function l() {
@@ -24,28 +38,30 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     };
     cResult[0] = items;
     cResult[1] = fn;
-    tmp5 = items;
-    tmp6 = fn;
+    tmp6 = items;
+    tmp7 = fn;
   } else {
-    [tmp5, tmp6] = cResult;
+    [tmp6, tmp7] = cResult;
   }
-  const obj = require("c");
-  stateFromStoresArray = require("initialize").useStateFromStoresArray(tmp5, tmp6);
-  const tmpResult = require("initialize");
-  const fetchPurchases = require("useFetchCollectiblesCategoriesAndPurchases").useFetchPurchases();
+  const tmpResult = require("get initialized");
+  stateFromStoresArray = tmpResult.useStateFromStoresArray(tmp6, tmp7);
+  const tmpResult2 = require("useFetchCollectiblesCategoriesAndPurchases");
+  const fetchPurchases = tmpResult2.useFetchPurchases();
   purchases = fetchPurchases.purchases;
   hasPreviouslyFetched = fetchPurchases.hasPreviouslyFetched;
   fetchPurchasesError = fetchPurchases.fetchPurchasesError;
-  hasPreviouslyFetched.useRef(false);
+  const ref = obj2.useRef(false);
   if (cResult[2] === fetchPurchasesError) {
     if (cResult[3] === hasPreviouslyFetched) {
       if (cResult[4] === purchases) {
+        let tmp11;
+        let tmp12;
         if (cResult[5] === stateFromStoresArray) {
-          let tmp10 = cResult[6];
-          let tmp11 = cResult[7];
+          tmp11 = cResult[6];
+          tmp12 = cResult[7];
         }
-        const effect = obj2.useEffect(tmp10, tmp11);
-        return tmp4[0];
+        const effect = obj2.useEffect(tmp11, tmp12);
+        return first;
       }
     }
   }
@@ -53,13 +69,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     if (hasPreviouslyFetched) {
       if (!ref.current) {
         if (stateFromStoresArray.length > 0) {
+          let found;
           if (null == fetchPurchasesError) {
-            let found = stateFromStoresArray.filter((item) => null == purchases.get(item));
+            found = stateFromStoresArray.filter((item) => null == purchases.get(item));
           } else {
             found = [];
           }
           closure_0(found);
-          tmp.current = true;
+          tmp2.current = true;
         }
       }
     }
@@ -71,140 +88,141 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[5] = stateFromStoresArray;
   cResult[6] = fn2;
   cResult[7] = items1;
-  tmp11 = items1;
-  tmp10 = fn2;
+  tmp12 = items1;
+  tmp11 = fn2;
 }) : (() => {
+  let closure_0;
+  let fetchPurchasesError;
+  let hasPreviouslyFetched;
+  let purchases;
+  let stateFromStoresArray;
   const tmp = purchases(hasPreviouslyFetched.useState(), 2);
   _require = tmp[1];
+  const first = tmp[0];
   const items = [fetchPurchasesError];
-  stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => fetchPurchasesError.getGiftPromotionRewardSkuIds());
-  const obj = require("initialize");
-  const fetchPurchases = require("useFetchCollectiblesCategoriesAndPurchases").useFetchPurchases();
+  const obj = require("get initialized");
+  stateFromStoresArray = obj.useStateFromStoresArray(items, () => fetchPurchasesError.getGiftPromotionRewardSkuIds());
+  const obj2 = require("useFetchCollectiblesCategoriesAndPurchases");
+  const fetchPurchases = obj2.useFetchPurchases();
   purchases = fetchPurchases.purchases;
   hasPreviouslyFetched = fetchPurchases.hasPreviouslyFetched;
   fetchPurchasesError = fetchPurchases.fetchPurchasesError;
-  hasPreviouslyFetched.useRef(false);
+  const ref = hasPreviouslyFetched.useRef(false);
   const items1 = [stateFromStoresArray, purchases, hasPreviouslyFetched, fetchPurchasesError];
   const effect = hasPreviouslyFetched.useEffect(() => {
     if (hasPreviouslyFetched) {
       if (!ref.current) {
         if (stateFromStoresArray.length > 0) {
+          let found;
           if (null == fetchPurchasesError) {
-            let found = stateFromStoresArray.filter((item) => null == purchases.get(item));
+            found = stateFromStoresArray.filter((item) => null == purchases.get(item));
           } else {
             found = [];
           }
           closure_0(found);
-          tmp.current = true;
+          tmp2.current = true;
         }
       }
     }
   }, items1);
-  return tmp[0];
+  return first;
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) => {
   const items = [, ];
   ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1] } = SubscriptionPlans);
   id = undefined;
+  const includes = items.includes;
   if (id != null) {
     id = id.id;
   }
   let tmp3 = null != arg2;
-  const hasItem = items.includes(id);
+  const hasItem = includes(id);
   if (tmp3) {
     tmp3 = arg2.length >= 1;
   }
-  let tmp4 = arg1;
-  if (arg1) {
-    tmp4 = hasItem;
-  }
-  if (tmp4) {
-    tmp4 = tmp3;
-  }
-  return tmp4;
+  return arg1 && hasItem && tmp3;
 }) : ((id, arg1, arg2) => {
   const items = [, ];
   ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1] } = SubscriptionPlans);
   id = undefined;
+  const includes = items.includes;
   if (id != null) {
     id = id.id;
   }
   let tmp3 = null != arg2;
-  const hasItem = items.includes(id);
+  const hasItem = includes(id);
   if (tmp3) {
     tmp3 = arg2.length >= 1;
   }
-  let tmp4 = arg1;
-  if (arg1) {
-    tmp4 = hasItem;
+  return arg1 && hasItem && tmp3;
+});
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) => {
+  const items = [, ];
+  ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1] } = SubscriptionPlans);
+  id = undefined;
+  const includes = items.includes;
+  if (id != null) {
+    id = id.id;
   }
-  if (tmp4) {
-    tmp4 = tmp3;
+  let tmp3 = null != arg2;
+  const hasItem = includes(id);
+  if (tmp3) {
+    tmp3 = 1 === arg2.length;
   }
-  return tmp4;
+  if (tmp3) {
+    tmp3 = hasItem;
+  }
+  if (tmp3) {
+    tmp3 = arg1;
+  }
+  return tmp3;
+}) : ((id, arg1, arg2) => {
+  const items = [, ];
+  ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1] } = SubscriptionPlans);
+  id = undefined;
+  const includes = items.includes;
+  if (id != null) {
+    id = id.id;
+  }
+  let tmp3 = null != arg2;
+  const hasItem = includes(id);
+  if (tmp3) {
+    tmp3 = 1 === arg2.length;
+  }
+  if (tmp3) {
+    tmp3 = hasItem;
+  }
+  if (tmp3) {
+    tmp3 = arg1;
+  }
+  return tmp3;
 });
 function useIsPlanEligibleForGiftingPromotion(id) {
   const items = [, ];
   ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1] } = SubscriptionPlans);
   id = undefined;
+  const includes = items.includes;
   if (id != null) {
     id = id.id;
   }
-  return items.includes(id);
+  return includes(id);
 }
-const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx");
 
 export const useFetchClaimableGiftingPromotionRewardSkuIds = tmp2;
 export const getRewardAssetIdMap = function getRewardAssetIdMap(arr) {
-  const map = new Map();
+  map = new Map();
   const item = arr.forEach((skuId) => map.set(skuId.skuId, skuId.assetId));
   return map;
 };
 export const useShouldShowSelectFreeSkuStep = tmp3;
-export const useShouldAutoSelectGiftingPromotionReward = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) => {
-  const items = [, ];
-  ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1] } = SubscriptionPlans);
-  id = undefined;
-  if (id != null) {
-    id = id.id;
-  }
-  let tmp3 = null != arg2;
-  const hasItem = items.includes(id);
-  if (tmp3) {
-    tmp3 = 1 === arg2.length;
-  }
-  if (tmp3) {
-    tmp3 = hasItem;
-  }
-  if (tmp3) {
-    tmp3 = arg1;
-  }
-  return tmp3;
-}) : ((id, arg1, arg2) => {
-  const items = [, ];
-  ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1] } = SubscriptionPlans);
-  id = undefined;
-  if (id != null) {
-    id = id.id;
-  }
-  let tmp3 = null != arg2;
-  const hasItem = items.includes(id);
-  if (tmp3) {
-    tmp3 = 1 === arg2.length;
-  }
-  if (tmp3) {
-    tmp3 = hasItem;
-  }
-  if (tmp3) {
-    tmp3 = arg1;
-  }
-  return tmp3;
-});
+export const useShouldAutoSelectGiftingPromotionReward = tmp4;
 export { useIsPlanEligibleForGiftingPromotion };
 export const createGradientStyle = function createGradientStyle(gradient, arg1) {
   if (null != gradient) {
+    let joined;
     let obj = arg1;
     if (arg1 == null) {
       obj = {};
@@ -213,6 +231,7 @@ export const createGradientStyle = function createGradientStyle(gradient, arg1) 
     const colorStops = obj.colorStops;
     const defaultAngle = obj.defaultAngle;
     let num = 78.98;
+    const tmp = undefined !== reverse && reverse;
     if (undefined !== defaultAngle) {
       num = defaultAngle;
     }
@@ -234,21 +253,19 @@ export const createGradientStyle = function createGradientStyle(gradient, arg1) 
     }
     if (null != colorStops) {
       const mapped = gradient.map((item, index) => "" + item + " " + colorStops[index] + "%");
-      let joined = mapped.join(", ");
+      joined = mapped.join(", ");
     } else {
       joined = gradient.join(", ");
     }
-    const obj2 = { background: null };
     const _HermesInternal = HermesInternal;
-    obj2.background = "linear-gradient(" + result + "deg, " + joined + ")";
+    const obj2 = { background: "linear-gradient(" + result + "deg, " + joined + ")" };
     return obj2;
   }
 };
 export const createBackgroundStyle = function createBackgroundStyle(arg0) {
   if (null != arg0) {
-    const obj = { backgroundImage: null, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" };
     const _HermesInternal = HermesInternal;
-    obj.backgroundImage = "url(" + arg0 + ")";
+    const obj = { backgroundImage: "url(" + arg0 + ")", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" };
     return obj;
   }
 };
@@ -291,13 +308,13 @@ export const shouldShowGiftPromotionReminderNotice = function shouldShowGiftProm
       }
       let tmp5 = null != id;
       if (tmp5) {
-        let isDismissed = DismissibleContentUnsafeUtils.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(dismissible_content.DismissibleContent.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK, id).isDismissed;
+        const tmpResult = DismissibleContentUnsafeUtils;
+        let isDismissed = tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(dismissible_content.DismissibleContent.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK, id).isDismissed;
         if (isDismissed) {
-          isDismissed = !DismissibleContentUnsafeUtils.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(dismissible_content.DismissibleContent.GIFTING_PROMOTION_REMINDER, id).isDismissed;
           const tmpResult2 = DismissibleContentUnsafeUtils;
+          isDismissed = !tmpResult2.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(dismissible_content.DismissibleContent.GIFTING_PROMOTION_REMINDER, id).isDismissed;
         }
         tmp5 = isDismissed;
-        const tmpResult = DismissibleContentUnsafeUtils;
       }
       return tmp5;
     }

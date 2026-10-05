@@ -1,24 +1,27 @@
 // === Module 14399: useTrackNavigatorScreenImpression ===
 
 // Module 14399 (useTrackNavigatorScreenImpression)
-import c from "c" /* 576 */;
+import react from "react" /* 576 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import useTrackImpressionDefault from "useTrackImpression" /* 8422 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-const result = size.fileFinishedImporting("modules/app_analytics/native/useTrackNavigatorScreenImpression.tsx");
-
-export const useTrackNavigatorScreenImpression = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, params) => {
-  const cResult = c.c(6);
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, params) => {
+  let impressionName;
+  let impressionProperties;
+  const obj = react;
+  const cResult = obj.c(6);
   ({ impressionName, impressionProperties } = arg0);
   if (cResult[0] === impressionProperties) {
+    let tmp4;
     if (cResult[1] === params) {
-      let tmp4 = cResult[2];
+      tmp4 = cResult[2];
     }
     if (cResult[3] === impressionName) {
+      let tmp6;
       if (cResult[4] === tmp4) {
-        let tmp6 = cResult[5];
+        tmp6 = cResult[5];
       }
       useTrackImpressionDefault(tmp6);
     }
@@ -39,9 +42,14 @@ export const useTrackNavigatorScreenImpression = ReactCompilerGating.isReactComp
 }) : ((impressionProperties, params) => {
   impressionProperties = impressionProperties.impressionProperties;
   let impressionPropertiesResult = impressionProperties;
+  const impressionName = impressionProperties.impressionName;
   if (typeof impressionProperties === "function") {
     impressionPropertiesResult = impressionProperties(params.params);
   }
-  const obj = { type: discord_common_AnalyticsUtils.ImpressionTypes.PAGE, name: impressionProperties.impressionName, properties: impressionPropertiesResult };
-  useTrackImpressionDefault(obj);
+  const obj = { type: discord_common_AnalyticsUtils.ImpressionTypes.PAGE, name: impressionName, properties: impressionPropertiesResult };
+  const tmp2 = useTrackImpressionDefault;
+  tmp2(obj);
 });
+const result = size.fileFinishedImporting("modules/app_analytics/native/useTrackNavigatorScreenImpression.tsx");
+
+export const useTrackNavigatorScreenImpression = tmp2;

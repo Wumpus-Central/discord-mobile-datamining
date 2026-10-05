@@ -10,11 +10,10 @@ import size from "module_2" /* 2 */;
 
 const PADDING_HORIZONTAL = ExpressionPickerConstants.PADDING_HORIZONTAL;
 const ACTION_SHEET_MAX_WIDTH = ActionSheetConstants.ACTION_SHEET_MAX_WIDTH;
-const result = size.fileFinishedImporting("modules/expression_picker/native/useExpressionPickerListWidth.native.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const width = useWindowDimensionsDefault().width;
   const rect = useSafeAreaInsetsDefault();
-  const diff = useWindowDimensionsDefault().width - rect.left - rect.right - 2 * PADDING_HORIZONTAL;
+  const diff = width - rect.left - rect.right - 2 * PADDING_HORIZONTAL;
   let bound = diff;
   if (!arg0) {
     const _Math = Math;
@@ -22,8 +21,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   return bound;
 }) : ((arg0) => {
+  const width = useWindowDimensionsDefault().width;
   const rect = useSafeAreaInsetsDefault();
-  const diff = useWindowDimensionsDefault().width - rect.left - rect.right - 2 * PADDING_HORIZONTAL;
+  const diff = width - rect.left - rect.right - 2 * PADDING_HORIZONTAL;
   let bound = diff;
   if (!arg0) {
     const _Math = Math;
@@ -31,3 +31,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   return bound;
 });
+const result = size.fileFinishedImporting("modules/expression_picker/native/useExpressionPickerListWidth.native.tsx");
+
+export default tmp2;

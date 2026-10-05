@@ -1,32 +1,39 @@
 // === Module 14724: FamilyCenterEmpty ===
 
 // Module 14724 (FamilyCenterEmpty)
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
 import Text_Text from "Text/Text" /* 4886 */;
-import _modDef14725 from "module_14725" /* 14725 */;
-import noop from "module_19" /* 19 */;
+import AssetRegistryDefault from "AssetRegistry" /* 14725 */;
+import react from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ View: c3, Image: closure_4 } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4890);
+let text;
+
+let c3;
+let closure_4;
+let hasOwnProperty;
+let metroRequire;
+({ View: c3, Image: closure_4 } = react_native);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
 let closure_7 = createStyles.createStyles({ art: { marginBottom: 10, width: 243 }, empty: { display: "flex", alignItems: "center" } });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterEmpty.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
-  const cResult = c.c(8);
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
+  let items;
+  let tmp10;
+  let tmp5;
+  const obj = react2;
+  const cResult = obj.c(8);
   text = text.text;
   const tmp4 = closure_7();
   if (cResult[0] !== tmp4.art) {
-    const obj2 = { source: _modDef14725, style: tmp4.art, resizeMethod: "scale" };
-    const tmp9 = hasOwnProperty(React4, obj2);
+    const obj2 = { source: AssetRegistryDefault, style: tmp4.art, resizeMethod: "scale" };
+    const tmp9 = hasOwnProperty(React3, obj2);
     cResult[0] = tmp4.art;
     cResult[1] = tmp9;
-    let tmp5 = tmp9;
+    tmp5 = tmp9;
   } else {
     tmp5 = cResult[1];
   }
@@ -35,31 +42,38 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
     const tmp12 = hasOwnProperty(Text_Text.Text, obj3);
     cResult[2] = text;
     cResult[3] = tmp12;
-    let tmp10 = tmp12;
+    tmp10 = tmp12;
   } else {
     tmp10 = cResult[3];
   }
   if (cResult[4] === tmp4.empty) {
     if (cResult[5] === tmp5) {
+      let tmp13;
       if (cResult[6] === tmp10) {
-        let tmp13 = cResult[7];
+        tmp13 = cResult[7];
       }
       return tmp13;
     }
   }
-  const obj4 = { style: tmp4.empty, children: null };
-  const items = [tmp5, tmp10];
-  obj4.children = items;
-  const tmp14 = timestampProducer(React3, obj4);
+  const obj4 = { style: tmp4.empty, children: items };
+  items = [tmp5, tmp10];
+  const tmp14 = metroRequire(_false, obj4);
   cResult[4] = tmp4.empty;
   cResult[5] = tmp5;
   cResult[6] = tmp10;
   cResult[7] = tmp14;
   tmp13 = tmp14;
-}) : ((children) => {
+}) : ((text) => {
+  let items;
+  text = text.text;
   const tmp = closure_7();
-  const obj = { style: tmp.empty, children: null };
-  const items = [hasOwnProperty(React4, { source: _modDef14725, style: tmp.art, resizeMethod: "scale" }), hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: children.text })];
-  obj.children = items;
-  return timestampProducer(React3, obj);
+  const obj = { style: tmp.empty, children: items };
+  items = [, ];
+  const obj2 = { source: AssetRegistryDefault, style: tmp.art, resizeMethod: "scale" };
+  items[0] = hasOwnProperty(React3, obj2);
+  items[1] = hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: text });
+  return metroRequire(_false, obj);
 });
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterEmpty.tsx");
+
+export default tmp5;

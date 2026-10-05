@@ -4,10 +4,9 @@
 import DurationsDefault from "Durations" /* 1102 */;
 import ContentInventoryHttpApi from "ContentInventoryHttpApi" /* 12918 */;
 import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8447 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
 const MINUTE = DurationsDefault.Millis.MINUTE;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/content_inventory/maybeFetchContentInventoryOutbox.tsx");
 
 export default function maybeFetchContentInventoryOutbox(id, arg1) {
@@ -22,7 +21,8 @@ export default function maybeFetchContentInventoryOutbox(id, arg1) {
     }
     const _Date = Date;
     if (Date.now() - num >= MINUTE) {
-      return ContentInventoryHttpApi.getContentInventoryOutbox(id, arg1);
+      const obj2 = ContentInventoryHttpApi;
+      return obj2.getContentInventoryOutbox(id, arg1);
     }
   }
 };

@@ -1,45 +1,43 @@
 // === Module 12256: DeveloperApplicationsStore ===
 
 // Module 12256 (DeveloperApplicationsStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DeveloperApplicationsConstants from "DeveloperApplicationsConstants" /* 12257 */;
 import size from "module_2" /* 2 */;
 
 const DeveloperApplicationsFetchState = DeveloperApplicationsConstants.DeveloperApplicationsFetchState;
-let ERROR = DeveloperApplicationsFetchState.INITIALIZED;
+let INITIALIZED = DeveloperApplicationsFetchState.INITIALIZED;
 let set = new Set();
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class DeveloperApplicationsStore extends Store {
+  getFetchState() {
+    return INITIALIZED;
+  }
+  isDeveloperOfApplication(arg0) {
+    const hasItem = null != arg0 && set.has(arg0);
+    return hasItem;
+  }
 }
 const prototype = DeveloperApplicationsStore.prototype;
-prototype["getFetchState"] = function getFetchState() {
-  return ERROR;
-};
-prototype["isDeveloperOfApplication"] = function isDeveloperOfApplication(arg0) {
-  let hasItem = null != arg0;
-  if (hasItem) {
-    hasItem = set.has(arg0);
-  }
-  return hasItem;
-};
 DeveloperApplicationsStore.displayName = "DeveloperApplicationsStore";
-const developerApplicationsStore = new DeveloperApplicationsStore(DispatcherDefault, {
+const obj = {
   LOGOUT: function reset() {
-    ERROR = DeveloperApplicationsFetchState.INITIALIZED;
+    INITIALIZED = DeveloperApplicationsFetchState.INITIALIZED;
     set = new Set();
   },
   DEVELOPER_APPLICATIONS_FETCH_START() {
-    ERROR = DeveloperApplicationsFetchState.LOADING;
+    INITIALIZED = DeveloperApplicationsFetchState.LOADING;
   },
   DEVELOPER_APPLICATIONS_FETCH_SUCCESS: function handleFetchSuccess(applicationIds) {
-    ERROR = DeveloperApplicationsFetchState.LOADED;
+    INITIALIZED = DeveloperApplicationsFetchState.LOADED;
     set = new Set(applicationIds.applicationIds);
   },
   DEVELOPER_APPLICATIONS_FETCH_FAIL() {
-    ERROR = DeveloperApplicationsFetchState.ERROR;
+    INITIALIZED = DeveloperApplicationsFetchState.ERROR;
   }
-});
+};
+const developerApplicationsStore = new DeveloperApplicationsStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/applications/DeveloperApplicationsStore.tsx");
 
 export default developerApplicationsStore;

@@ -4,7 +4,8 @@
 import _modDef12 from "module_12" /* 12 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import UrlDefault from "Url" /* 1373 */;
+import urlParseDefault from "urlParse" /* 1373 */;
+import ChannelRecord from "ChannelRecord" /* 2055 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 4877 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 5042 */;
 import useMessageAuthor from "useMessageAuthor" /* 5304 */;
@@ -14,7 +15,7 @@ import getURLForApplicationDefault from "getURLForApplication" /* 8706 */;
 import RPCErrorDefault from "RPCError" /* 9026 */;
 import transformUserDefault from "transformUser" /* 9032 */;
 import LeakyBucketDefault from "LeakyBucket" /* 9033 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 5118 */;
 import ApplicationRecord from "ApplicationRecord" /* 2009 */;
 import UserRecord from "UserRecord" /* 1391 */;
@@ -25,29 +26,42 @@ import MessageStore from "MessageStore" /* 5110 */;
 import PresenceStore from "PresenceStore" /* 4930 */;
 import UserStore from "UserStore" /* 1377 */;
 import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import Constants_mod from "Constants" /* 5316 */;
+import Constants_mod2 from "Constants" /* 1085 */;
 import URLUtils from "URLUtils" /* 1371 */;
-import "RegexUtils";
-import RegexUtils from "RegexUtils" /* 4874 */;
+import RegexUtils_mod from "RegexUtils" /* 4874 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+let c4, closure_6, createFromServer, rpc_origins;
+
+let closure_15;
+let closure_16;
+let closure_17;
+let closure_18;
+let closure_19;
+let closure_20;
+let closure_21;
+let closure_22;
+let closure_23;
 function recurseReplaceContentTree(type) {
   if ("customEmoji" === type.type) {
     type.type = "emoji";
   }
+  const tmp = "emoji" === type.type && type.src;
   if (tmp) {
     let combined = str2;
+    obj = /^http/;
     if (!obj.test(type.src)) {
       const _location = location;
       const _location2 = location;
       let str3 = "/";
-      if ("/" === str2.charAt(0)) {
+      if ("/" === type.src.charAt(0)) {
         str3 = "";
       }
       const _HermesInternal = HermesInternal;
       combined = "" + protocol + "//" + host + str3 + str2;
     }
     type.src = combined;
-    obj = /^http/;
   }
   if (Array.isArray(type.content)) {
     const content = type.content;
@@ -63,64 +77,194 @@ function validateOrigin(arg0) {
   return items.indexOf(arg0) > -1;
 }
 function transformInternalTextMessage(message) {
+  let colorString;
+  let nick;
+  let tmp11;
+  let tmp8;
+  obj = MarkupUtilsDefault;
   const obj2 = { channelId: message.channel_id };
-  const mapped = MarkupUtilsDefault.parseToAST(message.content, true, { channelId: message.channel_id }).map(recurseReplaceContentTree);
+  const parseToASTResult = obj.parseToAST(message.content, true, obj2);
+  const mapped = parseToASTResult.map(recurseReplaceContentTree);
   let tmp4;
   const channel = ChannelStore.getChannel(message.channel_id);
   if (null != message.author) {
+    const self = this;
+    const self2 = this;
     tmp4 = new UserRecord(message.author);
   }
   let userAuthor;
   if (null != message.author) {
-    userAuthor = useMessageAuthor.getUserAuthor(tmp4, channel);
+    const obj3 = useMessageAuthor;
+    userAuthor = obj3.getUserAuthor(tmp4, channel);
   }
-  const obj6 = { id: message.id, blocked: message.blocked, bot: message.bot, content: message.content, content_parsed: null, nick: null, author_color: null, edited_timestamp: null, timestamp: null, tts: null, mentions: null, mention_everyone: null, mention_roles: null, embeds: null, attachments: null, author: null, pinned: null, type: null };
-  let tmp10;
+  const obj6 = { id: message.id, blocked: message.blocked, bot: message.bot, content: message.content, content_parsed: tmp8, nick, author_color: colorString, edited_timestamp: message.edited_timestamp || message.editedTimestamp, timestamp: null, tts: null, mentions: null, mention_everyone: message.mention_everyone || message.mentionEveryone, mention_roles: message.mention_roles || message.mentionRoles, embeds: null, attachments: null, author: tmp11, pinned: null, type: null };
+  tmp8 = undefined;
   if (mapped.length) {
-    tmp10 = mapped;
+    tmp8 = mapped;
   }
-  obj6.content_parsed = tmp10;
-  let nick;
+  nick = undefined;
   if (userAuthor != null) {
     nick = userAuthor.nick;
   }
-  obj6.nick = nick;
-  let colorString;
+  colorString = undefined;
   if (userAuthor != null) {
     colorString = userAuthor.colorString;
   }
-  obj6.author_color = colorString;
-  obj6.edited_timestamp = message.edited_timestamp || message.editedTimestamp;
   ({ timestamp: obj4.timestamp, tts: obj4.tts, mentions: obj4.mentions } = message);
-  obj6.mention_everyone = message.mention_everyone || message.mentionEveryone;
-  obj6.mention_roles = message.mention_roles || message.mentionRoles;
   ({ embeds: obj4.embeds, attachments: obj4.attachments } = message);
-  let tmp13;
+  tmp11 = undefined;
   if (null != tmp4) {
-    tmp13 = transformUserDefault(tmp4);
+    tmp11 = transformUserDefault(tmp4);
   }
-  obj6.author = tmp13;
   ({ pinned: obj4.pinned, type: obj4.type } = message);
   return obj6;
 }
 function fetchApplicationRPC(arg0) {
   const HTTP = HTTPUtils.HTTP;
-  value = HTTP.get({ url: closure_1_19.APPLICATION_RPC(arg0), oldFormErrors: true, retries: 3, rejectWithError: true });
+  obj = { url: closure_19.APPLICATION_RPC(arg0), oldFormErrors: true, retries: 3, rejectWithError: true };
+  const value = HTTP.get(obj);
   return value.then((body) => body.body, () => {
-    throw new RPCErrorDefault({ closeCode: constants.INVALID_CLIENTID }, "Invalid Client ID");
+    obj = { closeCode: constants.INVALID_CLIENTID };
+    const tmp = new RPCErrorDefault(obj, "Invalid Client ID");
+    throw tmp;
   });
 }
-let closure_31 = async function _validateSocketApplication(arg0, arg1, arg2) {
-  let transport = arg0;
-  closure_1 = arg1;
-  closure_2 = arg2;
-  c7 = 0;
-  c8 = 0;
-  return (async (arg0, value, arg2) => {
-    if (c8 === 2) {
-      c8 = 3;
+let obj = function _validateSocketApplication() {
+  let application;
+  obj = _asyncToGenerator(async (arg0, arg1, arg2) => {
+    const transport = arg0;
+    let closure_1 = arg1;
+    let closure_2 = arg2;
+    let c7 = 0;
+    let c8 = 0;
+    return (async function(arg0, value, arg2) {
+      if (c8 === 2) {
+        c8 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (c8 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          return { value, done: true };
+        } else {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          let id;
+          let name;
+          let icon;
+          let coverImage;
+          let flags;
+          let parentId;
+          let embeddedSurfaces;
+          let application2;
+          c8 = 2;
+          if (0 === c7) {
+            if (arg0 === 1) {
+              c8 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c8 = 3;
+              return { value, done: true };
+            } else {
+              closure_6 = tmp;
+              rpc_origins = undefined;
+              user = undefined;
+              id = undefined;
+              name = undefined;
+              icon = undefined;
+              coverImage = undefined;
+              flags = undefined;
+              parentId = undefined;
+              embeddedSurfaces = undefined;
+              application2 = application.getApplication(closure_1);
+              if (typeof closure_2 === "string") {
+                if (transport.transport === constants.POST_MESSAGE) {
+                  const tmp18 = getURLForApplicationDefault(closure_1);
+                  if (null != tmp18) {
+                    const items = [tmp18];
+                  }
+                  const self3 = this;
+                  const self4 = this;
+                  const obj4 = { closeCode: constants2.INVALID_ORIGIN };
+                  const tmp49 = new RPCErrorDefault(obj4, "Invalid Origin");
+                  throw tmp49;
+                } else {
+                  c7 = 1;
+                  c8 = 1;
+                  const obj5 = { value: fetchApplicationRPC(closure_1), done: false };
+                  return obj5;
+                }
+              }
+            }
+          } else {
+            if (1 === tmp4) {
+              if (arg0 === 1) {
+                c8 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c8 = 3;
+                return { value, done: true };
+              } else {
+                rpc_origins = value;
+                application2 = closure_133_5.createFromServer(rpc_origins);
+                if (!closure_133_28(closure_2, rpc_origins.rpc_origins)) {
+                  const self = this;
+                  const self2 = this;
+                  const obj7 = { closeCode: closure_133_21.INVALID_ORIGIN };
+                  const tmp13 = new closure_133_1(closure_133_2[26])(obj7, "Invalid Origin");
+                  throw tmp13;
+                }
+              }
+            } else if (arg0 === 1) {
+              c8 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c8 = 3;
+              return { value, done: true };
+            } else {
+              application2 = createFromServer(value);
+            }
+            user = application2;
+            id = user.id;
+            name = user.name;
+            icon = user.icon;
+            coverImage = user.coverImage;
+            flags = user.flags;
+            parentId = user.parentId;
+            embeddedSurfaces = user.embeddedSurfaces;
+            const obj8 = { id, parentId, name, icon, coverImage, flags, embeddedSurfaces };
+            transport.application = obj8;
+            c8 = 3;
+            return { value: "IconComponent", done: null };
+          }
+          if (null == application2) {
+            rpc_origins = closure_133_5;
+            createFromServer = closure_133_5.createFromServer;
+            c7 = 2;
+            c8 = 1;
+            const obj9 = { value: closure_133_30(closure_1), done: false };
+            return obj9;
+          }
+        } catch (tmp51) {
+          c8 = 3;
+          throw tmp51;
+        }
+      }
+    })();
+  });
+  return obj(...arguments);
+};
+obj = function _processSocketThrottlers() {
+  obj = _asyncToGenerator(async function(arg0, arg1, arg2) {
+    let closure_1;
+    let closure_0 = arg0;
+    let closure_2 = arg2;
+    if (c7 === 2) {
+      c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
+    } else if (tmp3 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -130,178 +274,74 @@ let closure_31 = async function _validateSocketApplication(arg0, arg1, arg2) {
         return { value: "IconComponent", done: null };
       }
     } else {
+      let c6;
       try {
-        c8 = 2;
-        if (0 === c7) {
+        c7 = 2;
+        if (0 === c4) {
           if (arg0 === 1) {
-            c8 = 3;
+            c7 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c8 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            c7 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            closure_5 = tmp4;
-            closure_6 = tmp2;
-            closure_134_0 = transport;
-            closure_134_1 = closure_1;
-            closure_134_2 = closure_2;
-            let application2;
-            closure_134_4 = undefined;
-            closure_134_5 = undefined;
-            let id;
-            let name;
-            let icon;
-            let coverImage;
-            let flags;
-            let parentId;
-            let embeddedSurfaces;
-            application2 = application.getApplication(closure_1);
-            if (typeof closure_2 === "string") {
-              if (transport.transport === constants.POST_MESSAGE) {
-                const tmp21 = getURLForApplicationDefault(closure_1);
-                if (null != tmp21) {
-                  const items = [tmp21];
-                }
-                const obj4 = { closeCode: constants2.INVALID_ORIGIN };
-                const tmp54 = new RPCErrorDefault(obj4, "Invalid Origin");
-                throw tmp54;
-              } else {
-                c7 = 1;
-                c8 = 1;
-                const obj5 = { value: fetchApplicationRPC(closure_1), done: false };
-                return obj5;
+            let closure_3 = tmp;
+            let obj3 = closure_2_26[closure_0];
+            if (null == obj3) {
+              let num5 = 60;
+              if (tmp27) {
+                num5 = 2;
               }
+              const self3 = this;
+              const self4 = this;
+              const tmp17 = new LeakyBucketDefault(num5, MINUTE);
+              tmp29[tmp26] = tmp17;
+              obj3 = tmp17;
             }
-            if (null == application2) {
-              closure_4 = closure_133_5;
-              createFromServer = closure_133_5.createFromServer;
-              c7 = 2;
-              c8 = 1;
-              const obj6 = { value: closure_133_30(closure_134_1), done: false };
-              return obj6;
-            } else {
-              closure_134_5 = application2;
-              id = closure_134_5.id;
-              name = closure_134_5.name;
-              icon = closure_134_5.icon;
-              coverImage = closure_134_5.coverImage;
-              flags = closure_134_5.flags;
-              parentId = closure_134_5.parentId;
-              embeddedSurfaces = closure_134_5.embeddedSurfaces;
-              const obj7 = { id, parentId, name, icon, coverImage, flags, embeddedSurfaces };
-              closure_134_0.application = obj7;
-              c8 = 3;
-            }
+            c6 = 1;
+            c4 = 2;
+            c7 = 1;
+            const obj5 = { value: obj3.process(closure_2), done: false };
+            return obj5;
           }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
-            c8 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c8 = 3;
-            const obj8 = { value, done: true };
-            return obj8;
-          } else {
-            closure_134_4 = value;
-            application2 = closure_133_5.createFromServer(closure_134_4);
-            if (!closure_133_28(closure_134_2, closure_134_4.rpc_origins)) {
-              const obj9 = { closeCode: closure_133_21.INVALID_ORIGIN };
-              const tmp16 = new closure_133_1(closure_133_2[26])(obj9, "Invalid Origin");
-              throw tmp16;
-            }
-          }
+        } else if (1 === tmp4) {
+          c6 = 0;
+          const obj6 = { closeCode: closure_131_21.CLOSE_ABNORMAL };
+          const self = this;
+          const self2 = this;
+          const tmp11 = new closure_131_1(closure_131_2[26])(obj6, "Socket closed during throttle");
+          throw tmp11;
         } else if (arg0 === 1) {
-          c8 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          application2 = createFromServer(value);
-        }
-        c8 = 3;
-        const obj = { value, done: true };
-        return obj;
-      } catch (tmp56) {
-        c8 = tmp;
-        throw tmp56;
-      }
-    }
-  })();
-};
-let closure_32 = async function _processSocketThrottlers(arg0) {
-  if (c7 === 2) {
-    c7 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c7 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
           c7 = 3;
           throw value;
         } else if (arg0 === 2) {
+          c6 = 0;
           c7 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          obj = { value, done: true };
+          return obj;
         } else {
-          closure_3 = tmp3;
-          let obj3 = VALIDATE_SOCKET_THROTTLERS[closure_0];
-          if (null == obj3) {
-            let num5 = 60;
-            if (tmp35) {
-              num5 = 2;
-            }
-            const tmp24 = new LeakyBucketDefault(num5, MINUTE);
-            tmp37[tmp34] = tmp24;
-            obj3 = tmp24;
-          }
-          c6 = 1;
-          c4 = 2;
-          c7 = 1;
-          const obj5 = { value: obj3.process(closure_2), done: false };
-          return obj5;
+          c6 = 0;
+          c7 = 3;
+          return { value: "IconComponent", done: null };
         }
-      } else if (1 === tmp7) {
-        c6 = 0;
-        const obj6 = { closeCode: closure_131_21.CLOSE_ABNORMAL };
-        const tmp16 = new closure_131_1(closure_131_2[26])(obj6, "Socket closed during throttle");
-        throw tmp16;
-      } else if (arg0 === 1) {
-        c7 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c6 = 0;
-        c7 = 3;
-        const obj = { value, done: true };
-        return obj;
-      } else {
-        c6 = 0;
-        c7 = 3;
-        return { value: "IconComponent", done: null };
-      }
-    } catch (tmp26) {
-      closure_5 = tmp26;
-      if (tmp4 === c6) {
-        c7 = tmp2;
-        throw tmp26;
-      } else {
-        c4 = tmp;
+      } catch (tmp19) {
+        let closure_5 = tmp19;
+        if (0 === c6) {
+          c7 = 3;
+          throw tmp19;
+        } else {
+          c4 = 1;
+        }
       }
     }
-  }
+  });
+  return obj(...arguments);
 };
-const GUILD_VOCAL_CHANNEL_TYPES = fn(2055).GUILD_VOCAL_CHANNEL_TYPES;
-let Constants = fn(5316);
+const GUILD_VOCAL_CHANNEL_TYPES = ChannelRecord.GUILD_VOCAL_CHANNEL_TYPES;
+let Constants = Constants_mod2;
 ({ RPC_LOCAL_SCOPE: closure_15, TransportTypes: closure_16 } = Constants);
-Constants = fn(1085);
+Constants = Constants_mod2;
 ({ ActivityActionTypes: closure_17, ChannelTypes: closure_18, Endpoints: closure_19, MAX_MESSAGES_PER_CHANNEL: closure_20, RPCCloseCodes: closure_21, RPCErrors: closure_22, RTCConnectionStates: closure_23 } = Constants);
 const toURLSafeResult = URLUtils.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT);
 let str;
@@ -315,15 +355,16 @@ let str2 = str.split(":")[0];
 let tmp5 = str2;
 if (str2.includes(".")) {
   const parts = str2.split(".");
+  let obj2 = /^\d+$/;
   if (!obj2.test(parts[parts.length - 1])) {
     const substr = parts.slice(-2);
     str2 = substr.join(".");
   }
   tmp5 = str2;
-  obj2 = /^\d+$/;
 }
 function getRemoteIconURL(icon) {
   let combined = icon;
+  obj = /^http/;
   if (!obj.test(icon)) {
     const _location = location;
     const _location2 = location;
@@ -337,83 +378,112 @@ function getRemoteIconURL(icon) {
   return combined;
 }
 function transformVoiceState(arg0, id, userId) {
+  let deaf;
+  let mute;
+  let obj2;
+  let selfDeaf;
+  let selfMute;
+  let suppress;
   userId = userId.userId;
   ({ mute, deaf, selfMute, selfDeaf, suppress } = userId);
   const user = UserStore.getUser(userId);
   if (null == user) {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
+    const self = this;
+    const self2 = this;
     const error = new Error("Invalid user id: " + userId);
     throw error;
   } else {
-    const obj = { nick: NicknameUtilsDefault.getName(arg0, id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
-    const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
-    obj.voice_state = obj3;
-    obj.user = transformUserDefault(user);
+    obj = { nick: obj2.getName(arg0, id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: obj3, user: transformUserDefault(user) };
+    obj2 = NicknameUtilsDefault;
     return obj;
   }
 }
-const regExp = new RegExp("^" + RegexUtils.escape("https://") + "(?:[a-z]+\\.)?(" + RegexUtils.escape(tmp5) + "|discordapp.com|discord.com)$");
+let RegexUtils = RegexUtils_mod;
+const escapeResult = RegexUtils.escape("https://");
+RegexUtils = RegexUtils_mod;
+const regExp = new RegExp("^" + escapeResult + "(?:[a-z]+\\.)?(" + RegexUtils.escape(tmp5) + "|discordapp.com|discord.com)$");
 const MINUTE = DurationsDefault.Millis.MINUTE;
-const VALIDATE_SOCKET_THROTTLERS = {};
-const size = fn(2);
+obj = {};
 const result = size.fileFinishedImporting("modules/rpc/RPCHelpers.tsx");
 
 export const VALIDATE_SOCKET_CALLS_PER_PERIOD_LOW = 2;
 export const VALIDATE_SOCKET_CALLS_PER_PERIOD_HIGH = 60;
 export const VALIDATE_SOCKET_PERIOD_MS = MINUTE;
-export { VALIDATE_SOCKET_THROTTLERS };
+export const VALIDATE_SOCKET_THROTTLERS = obj;
 export { getRemoteIconURL };
 export const containsSameValues = function containsSameValues(arg0, arg1) {
-  const obj = _modDef12;
-  return obj.isEqual(arg0, _modDef12.pick(arg1, Object.keys(arg0)));
+  const isEqual = _modDef12.isEqual;
+  _modDef12;
+  obj = _modDef12;
+  return isEqual(arg0, obj.pick(arg1, Object.keys(arg0)));
 };
 export { validateOrigin };
 export const transformChannel = function transformChannel(channel, arg1) {
-  let nSFW = channel;
-  closure_1 = arg1;
+  let closure_1 = arg1;
   const items = [];
   const guild_id = channel.getGuildId();
   const items1 = [constants3.GUILD_CATEGORY, ...GUILD_VOCAL_CHANNEL_TYPES];
   if (!items1.includes(channel.type)) {
+    let self = this;
+    let self2 = this;
+    const push = items.push;
     const promise = new Promise((arg0) => {
-      nSFW = arg0;
-      MessageStore.whenReady(nSFW.id, () => closure_0());
-      const messages = MessageActionCreatorsDefault.fetchMessages({ channelId: nSFW.id, limit });
+      channel = arg0;
+      MessageStore.whenReady(channel.id, () => closure_0());
+      obj = MessageActionCreatorsDefault;
+      const obj2 = { channelId: channel.id, limit };
+      const messages = obj.fetchMessages(obj2);
     });
-    items.push(promise);
+    push(promise);
   }
-  return Promise.all(items).then(() => {
-    if (!nSFW.isNSFW()) {
+  const allPromises = Promise.all(items);
+  return allPromises.then(() => {
+    if (!channel.isNSFW()) {
       if (closure_1) {
-        const messages = MessageStore.getMessages(nSFW.id);
-        const mapped = messages.toArray().map(transformInternalTextMessage);
+        const messages = MessageStore.getMessages(channel.id);
         const toArrayResult = messages.toArray();
+        const mapped = toArrayResult.map(transformInternalTextMessage);
       }
       const _Object = Object;
-      const values = Object.values(VoiceStateStore.getVoiceStatesForChannel(nSFW.id));
-      let obj = { id: null, name: null, type: null, topic: null, bitrate: null, user_limit: null, guild_id: null, position: null, messages: null, voice_states: null };
-      ({ id: obj2.id, name: obj2.name, type: obj2.type, topic: obj2.topic, bitrate: obj2.bitrate, userLimit: obj2.user_limit } = nSFW);
-      obj.guild_id = guild_id;
-      obj.position = nSFW.position;
-      obj.messages = [];
-      obj.voice_states = values.map((userId) => {
-        userId = userId.userId;
-        ({ mute, deaf, selfMute, selfDeaf, suppress } = userId);
-        user = user.getUser(userId);
-        if (null == user) {
-          const _Error = Error;
-          const _HermesInternal = HermesInternal;
-          const error = new Error("Invalid user id: " + userId);
-          throw error;
-        } else {
-          const obj = { nick: closure_1(5042).getName(dependencyMap, id.id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
-          const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
-          obj.voice_state = obj3;
-          obj.user = closure_1(9032)(user);
-          return obj;
-        }
-      });
+      const values = Object.values(VoiceStateStore.getVoiceStatesForChannel(channel.id));
+      obj = {
+        id: null,
+        name: null,
+        type: null,
+        topic: null,
+        bitrate: null,
+        user_limit: null,
+        guild_id,
+        position: channel.position,
+        messages: [],
+        voice_states: values.map(function(userId) {
+            let deaf;
+            let mute;
+            let obj2;
+            let selfDeaf;
+            let selfMute;
+            let suppress;
+            userId = userId.userId;
+            id = id.id;
+            ({ mute, deaf, selfMute, selfDeaf, suppress } = userId);
+            user = user.getUser(userId);
+            if (null == user) {
+              const _Error = Error;
+              const _HermesInternal = HermesInternal;
+              const self = this;
+              const self2 = this;
+              const error = new Error("Invalid user id: " + userId);
+              throw error;
+            } else {
+              obj = { nick: obj2.getName(closure_1_2, id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: obj3, user: closure_1(closure_2[21])(user) };
+              obj2 = closure_1(closure_2[22]);
+              return obj;
+            }
+          })
+      };
+      ({ id: obj2.id, name: obj2.name, type: obj2.type, topic: obj2.topic, bitrate: obj2.bitrate, userLimit: obj2.user_limit } = channel);
       return obj;
     } else {
       const currentUser = UserStore.getCurrentUser();
@@ -427,50 +497,46 @@ export const transformChannel = function transformChannel(channel, arg1) {
 export { transformInternalTextMessage };
 export { transformVoiceState };
 export const transformBaseRelationship = function transformBaseRelationship(relationshipType, user) {
-  const obj = { type: relationshipType, user: transformUserDefault(user), presence: { status: PresenceStore.getStatus(user.id, null), activity: null } };
+  obj = { type: relationshipType, user: transformUserDefault(user), presence: { status: PresenceStore.getStatus(user.id, null), activity: null } };
+  ({ status: PresenceStore.getStatus(user.id, null), activity: null });
   return obj;
 };
 export const transformApplicationRelationship = function transformApplicationRelationship(presence, id) {
+  let applicationActivity;
+  let obj2;
   let tmp = presence;
   if (null != id) {
-    const obj = {};
+    obj = { presence: obj2 };
     const merged = Object.assign(presence);
-    const obj2 = {};
+    obj2 = { activity: applicationActivity };
     const merged1 = Object.assign(presence.presence);
-    let applicationActivity = PresenceStore.getApplicationActivity(presence.user.id, id);
+    applicationActivity = PresenceStore.getApplicationActivity(presence.user.id, id);
     if (applicationActivity == null) {
       applicationActivity = null;
     }
-    obj2.activity = applicationActivity;
-    obj.presence = obj2;
     tmp = obj;
   }
   return tmp;
 };
-export const isMatchingOrigin = function isMatchingOrigin(str) {
-  if (null == str) {
+export const isMatchingOrigin = function isMatchingOrigin(GUILD_TEMPLATE_HOST) {
+  if (null == GUILD_TEMPLATE_HOST) {
     return false;
   } else {
     const _window2 = window;
-    if (str === origin) {
+    if (GUILD_TEMPLATE_HOST === origin) {
       return true;
     } else {
       try {
-        const hostname = UrlDefault.parse(str).hostname;
+        obj = urlParseDefault;
+        const hostname = obj.parse(GUILD_TEMPLATE_HOST).hostname;
         const _window = window;
-        let tmp4 = window.location.hostname === hostname;
-        if (tmp4) {
-          tmp4 = "localhost" === hostname;
-        }
+        let tmp4 = window.location.hostname === hostname && "localhost" === hostname;
         if (!tmp4) {
-          let tmp6 = null == str.match("staging");
+          let tmp6 = null == GUILD_TEMPLATE_HOST.match("staging");
           if (tmp6) {
-            const isMatch = regExp.test(str);
-            let tmp8 = !isMatch;
-            if (isMatch) {
-              tmp8 = !regExp.test(origin);
-            }
-            tmp6 = !tmp8;
+            const isMatch = regExp.test(GUILD_TEMPLATE_HOST);
+            tmp6 = !(!isMatch || !regExp.test(origin));
+            const tmp8 = !isMatch || !regExp.test(origin);
           }
           tmp4 = tmp6;
         }
@@ -482,16 +548,14 @@ export const isMatchingOrigin = function isMatchingOrigin(str) {
   }
 };
 export const hasMessageReadPermission = function hasMessageReadPermission(channel, id, scopes) {
-  guild = GuildStore.getGuild(channel.getGuildId());
+  let application_id;
+  const guild = GuildStore.getGuild(channel.getGuildId());
   if (null != guild) {
-    let application_id = guild.application_id;
+    application_id = guild.application_id;
   } else {
     application_id = channel.getApplicationId();
   }
-  let tmp2 = application_id === id;
-  if (!tmp2) {
-    tmp2 = scopes.indexOf(OAuth2Scopes.OAuth2Scopes.MESSAGES_READ) > -1;
-  }
+  const tmp2 = application_id === id || scopes.indexOf(OAuth2Scopes.OAuth2Scopes.MESSAGES_READ) > -1;
   return tmp2;
 };
 export const getVoiceConnectionState = function getVoiceConnectionState(state) {
@@ -507,78 +571,70 @@ export const getVoiceConnectionState = function getVoiceConnectionState(state) {
 export const validateActivityInvite = function validateActivityInvite(arg0, id, join) {
   let tmp = arg0 === constants2.JOIN;
   if (tmp) {
-    let tmp4 = null != id && null != id.id;
-    if (tmp4) {
-      tmp4 = null != join.join;
-    }
-    tmp = tmp4;
+    tmp = null != id && null != id.id && null != join.join;
+    const tmp4 = null != id && null != id.id && null != join.join;
   }
   return tmp;
 };
 export const validateSocketApplication = function validateSocketApplication() {
-  const self = this;
-  const apply = closure_31.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const processSocketThrottlers = function processSocketThrottlers() {
-  const self = this;
-  const apply = closure_32.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const validateOriginAndUpdateSocket = function validateOriginAndUpdateSocket(authorization, arg1) {
   if (null == arg1) {
-    const items = [closure_1_15];
+    const items = [closure_15];
     authorization.authorization.scopes = items;
   }
 };
 export const getDeprecatedVoiceSettingsWithShortcut = function getDeprecatedVoiceSettingsWithShortcut(fn) {
+  let obj3;
+  let obj5;
+  let sorted;
+  let sorted1;
+  let tmp2;
+  const f139440 = (index, index2) => index.index - index2.index;
+  const f139441 = (id) => ({ id: id.id, name: id.name });
   const settings = MediaEngineStore.getSettings();
-  const obj = { input: null, output: null, mode: null, automatic_gain_control: null, echo_cancellation: null, noise_suppression: null, qos: null, silence_warning: null, deaf: null, mute: null };
-  const obj3 = { available_devices: null, device_id: null, volume: null };
+  obj = { input: obj3, output: obj5, mode: { type: settings.mode, auto_threshold: settings.modeOptions.autoThreshold, threshold: settings.modeOptions.threshold, shortcut: tmp2, delay: settings.modeOptions.delay }, automatic_gain_control: null, echo_cancellation: null, noise_suppression: null, qos: null, silence_warning: null, deaf: null, mute: null };
+  obj3 = { available_devices: sorted.map(f139441), device_id: null, volume: null };
+  tmp2 = fn(settings);
   const values = Object.values(MediaEngineStore.getInputDevices());
-  const sorted = values.sort((index, index2) => index.index - index2.index);
-  obj3.available_devices = sorted.map((id) => ({ id: id.id, name: id.name }));
+  sorted = values.sort(f139440);
   ({ inputDeviceId: obj2.device_id, inputVolume: obj2.volume } = settings);
-  obj.input = obj3;
-  const obj5 = { available_devices: null, device_id: null, volume: null };
+  obj5 = { available_devices: sorted1.map(f139441), device_id: null, volume: null };
   const values2 = Object.values(MediaEngineStore.getOutputDevices());
-  const sorted1 = values2.sort((index, index2) => index.index - index2.index);
-  obj5.available_devices = sorted1.map((id) => ({ id: id.id, name: id.name }));
+  sorted1 = values2.sort(f139440);
   ({ outputDeviceId: obj4.device_id, outputVolume: obj4.volume } = settings);
-  obj.output = obj5;
-  obj.mode = { type: settings.mode, auto_threshold: settings.modeOptions.autoThreshold, threshold: settings.modeOptions.threshold, shortcut: fn(settings), delay: settings.modeOptions.delay };
   ({ automaticGainControl: obj.automatic_gain_control, echoCancellation: obj.echo_cancellation, noiseSuppression: obj.noise_suppression, qos: obj.qos, silenceWarning: obj.silence_warning, deaf: obj.deaf, mute: obj.mute } = settings);
   return obj;
 };
 export const getVoiceSettingsWithShortcut = function getVoiceSettingsWithShortcut(arg0, fn) {
   const settings = MediaEngineStore.getSettings(arg0);
-  const obj = { input_mode: { type: settings.mode, shortcut: fn(settings) }, local_mutes: Object.keys(settings.localMutes), local_volumes: null, self_mute: null, self_deaf: null };
+  obj = { input_mode: { type: settings.mode, shortcut: fn(settings) }, local_mutes: Object.keys(settings.localMutes), local_volumes: null, self_mute: null, self_deaf: null };
+  ({ type: settings.mode, shortcut: fn(settings) });
   ({ localVolumes: obj.local_volumes, mute: obj.self_mute, deaf: obj.self_deaf } = settings);
   return obj;
 };
 export const validatePostMessageTransport = function validatePostMessageTransport(transport) {
   if (transport !== constants.POST_MESSAGE) {
-    const obj = { errorCode: constants4.INVALID_COMMAND };
     const _HermesInternal = HermesInternal;
-    const tmp32 = new RPCErrorDefault(obj, "command not available from \"" + transport + " transport");
+    const self = this;
+    const self2 = this;
+    obj = { errorCode: constants4.INVALID_COMMAND };
+    const tmp3 = RPCErrorDefault;
+    const tmp32 = new tmp3(obj, "command not available from \"" + transport + " transport");
     throw tmp32;
   }
 };
 export const validateApplication = function validateApplication(application) {
   if (null == application.id) {
-    const obj = { errorCode: constants4.INVALID_COMMAND };
-    const tmp7 = new RPCErrorDefault(obj, "Invalid application");
-    throw tmp7;
+    const self = this;
+    const self2 = this;
+    obj = { errorCode: constants4.INVALID_COMMAND };
+    const tmp5 = new RPCErrorDefault(obj, "Invalid application");
+    throw tmp5;
   } else {
     return application.id;
   }

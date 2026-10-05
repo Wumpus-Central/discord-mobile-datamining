@@ -3,7 +3,7 @@
 // Module 14296 (FrecencySettingsMigrations)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
 import Constants from "Constants" /* 1085 */;
 import frecency_user_settings from "frecency_user_settings" /* 1232 */;
@@ -12,22 +12,27 @@ import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let format, importDefault, set;
 
+let c3;
+let closure_4;
 function readFavoriteGIFs(arg0) {
-  c0 = 1;
+  let state;
+  let c0 = 1;
   importDefault = { IMAGE: "IMAGE", VIDEO: "VIDEO" };
-  const PersistedStore = require("initialize").PersistedStore;
+  const PersistedStore = require("get initialized").PersistedStore;
   const items = [
     (favorites) => {
+      let tmp2;
       if (null == favorites) {
+        tmp2 = { favorites: [], timesFavorited: 0 };
         const obj2 = { favorites: [], timesFavorited: 0 };
-        let tmp2 = obj2;
       } else {
         const _Array = Array;
         tmp2 = favorites;
         if (Array.isArray(favorites)) {
+          tmp2 = { favorites, timesFavorited: 0 };
           const obj = { favorites, timesFavorited: 0 };
-          tmp2 = obj;
         }
       }
       return tmp2;
@@ -35,8 +40,8 @@ function readFavoriteGIFs(arg0) {
     (favorites) => {
       let tmp = favorites;
       if (!Array.isArray(favorites.favorites)) {
+        tmp = { favorites: [], timesFavorited: 0 };
         const obj = { favorites: [], timesFavorited: 0 };
-        tmp = obj;
       }
       return tmp;
     }
@@ -46,11 +51,12 @@ function readFavoriteGIFs(arg0) {
     if (0 !== state.favorites.length) {
       const favorites = state.favorites;
       const mapped = favorites.map((format, index) => {
+        let NONE;
         const FavoriteGIF = frecency_user_settings.FavoriteGIF;
         const obj2 = FavoriteGIF.create();
         format = format.format;
         if (constants.IMAGE === format) {
-          let NONE = frecency_user_settings.GIFType.IMAGE;
+          NONE = frecency_user_settings.GIFType.IMAGE;
         } else if (tmp4.VIDEO === format) {
           NONE = frecency_user_settings.GIFType.VIDEO;
         } else {
@@ -69,41 +75,42 @@ function readFavoriteGIFs(arg0) {
 ({ MAX_FAVORITES: c3, MAX_FAVORITE_GIFS_SIZE: closure_4 } = UserSettingsConstants);
 const ID_REGEX = Constants.ID_REGEX;
 const selectedChannelGuildFrecency = "selectedChannelGuildFrecency";
-let items = [
-  {
-    version: 2,
-    run(favoriteGifs) {
-      const arr = readFavoriteGIFs(1);
-      if (0 === arr.length) {
-        return false;
-      } else {
-        if (null == favoriteGifs.favoriteGifs) {
-          const FavoriteGIFs = frecency_user_settings.FavoriteGIFs;
-          favoriteGifs.favoriteGifs = FavoriteGIFs.create();
-        }
-        favoriteGifs.favoriteGifs.gifs = {};
-        for (const item10019 of arr) {
-          arg0.favoriteGifs.gifs[item10019.url] = item10019.favorite;
-          continue;
-        }
-        favoriteGifs.favoriteGifs.hideTooltip = arr.length > 2;
-        return true;
+let obj = {
+  version: 2,
+  run(favoriteGifs) {
+    const arr = readFavoriteGIFs(1);
+    if (0 === arr.length) {
+      return false;
+    } else {
+      if (null == favoriteGifs.favoriteGifs) {
+        const FavoriteGIFs = frecency_user_settings.FavoriteGIFs;
+        favoriteGifs.favoriteGifs = FavoriteGIFs.create();
       }
-    },
-    cleanup() {
-
+      favoriteGifs.favoriteGifs.gifs = {};
+      for (const item10019 of arr) {
+        favoriteGifs.favoriteGifs.gifs[item10019.url] = item10019.favorite;
+        continue;
+      }
+      favoriteGifs.favoriteGifs.hideTooltip = arr.length > 2;
+      return true;
     }
   },
+  cleanup() {
+
+  }
+};
+let items = [
+  obj,
   {
     version: 3,
     run(favoriteStickers) {
-      const PersistedStore = initializeDefault.PersistedStore;
+      const PersistedStore = get_initializedDefault.PersistedStore;
       const items = [
         (arg0) => {
           let tmp = arg0;
           if (null == arg0) {
+            tmp = { usageHistory: {}, favorites: [] };
             const obj = { usageHistory: {}, favorites: [] };
-            tmp = obj;
           } else {
             const _Object = Object;
           }
@@ -111,9 +118,10 @@ let items = [
         },
         (favorites) => {
           if (null != favorites) {
+            let obj;
             const _Object = Object;
             if (0 !== Object.keys(favorites).length) {
-              let obj = favorites;
+              obj = favorites;
               if (null == favorites.favorites) {
                 favorites.favorites = [];
                 obj = favorites;
@@ -124,7 +132,7 @@ let items = [
           obj = { usageHistory: {}, favorites: [] };
         }
       ];
-      state = PersistedStore.migrateAndReadStoreState("StickersPersistedStore", items).state;
+      const state = PersistedStore.migrateAndReadStoreState("StickersPersistedStore", items).state;
       if (null == state) {
         return false;
       } else {
@@ -132,15 +140,19 @@ let items = [
         if (state.favorites.length > 0) {
           const FavoriteStickers = frecency_user_settings.FavoriteStickers;
           favoriteStickers.favoriteStickers = FavoriteStickers.create();
+          favoriteStickers = favoriteStickers.favoriteStickers;
           const tmpResult = _modDef12;
-          favoriteStickers.favoriteStickers.stickerIds = _modDef12.uniq(state.favorites).slice(0, React3);
+          const uniqResult = tmpResult.uniq(state.favorites);
+          favoriteStickers.stickerIds = uniqResult.slice(0, _false);
           flag = true;
-          const uniqResult = _modDef12.uniq(state.favorites);
         }
+        const tmpResult2 = _modDef12;
         if (tmpResult2.size(state.usageHistory) > 0) {
           const StickerFrecency = frecency_user_settings.StickerFrecency;
           favoriteStickers.stickerFrecency = StickerFrecency.create();
-          favoriteStickers.stickerFrecency.stickers = user_settings_UserSettingsUtils.serializeUsageHistory(state.usageHistory, 100);
+          const stickerFrecency = favoriteStickers.stickerFrecency;
+          const obj3 = user_settings_UserSettingsUtils;
+          stickerFrecency.stickers = obj3.serializeUsageHistory(state.usageHistory, 100);
           flag = true;
         }
         return flag;
@@ -154,7 +166,7 @@ let items = [
   {
     version: 4,
     run(favoriteEmojis) {
-      const PersistedStore = initializeDefault.PersistedStore;
+      const PersistedStore = get_initializedDefault.PersistedStore;
       const items = [
         () => {
           const Storage = Storage4.Storage;
@@ -162,27 +174,28 @@ let items = [
           return { usageHistory };
         }
       ];
-      state = PersistedStore.migrateAndReadStoreState("EmojiStore", items).state;
+      const state = PersistedStore.migrateAndReadStoreState("EmojiStore", items).state;
       if (null == state) {
         return false;
       } else {
-        let tmp3 = null != state.favorites;
-        if (tmp3) {
-          tmp3 = state.favorites.length > 0;
-        }
         let flag = false;
+        const tmp3 = null != state.favorites && state.favorites.length > 0;
         if (tmp3) {
           const FavoriteEmojis = frecency_user_settings.FavoriteEmojis;
           favoriteEmojis.favoriteEmojis = FavoriteEmojis.create();
+          favoriteEmojis = favoriteEmojis.favoriteEmojis;
           const tmpResult = _modDef12;
-          favoriteEmojis.favoriteEmojis.emojis = _modDef12.uniq(state.favorites).slice(0, React3);
+          const uniqResult = tmpResult.uniq(state.favorites);
+          favoriteEmojis.emojis = uniqResult.slice(0, _false);
           flag = true;
-          const uniqResult = _modDef12.uniq(state.favorites);
         }
+        const tmpResult2 = _modDef12;
         if (tmpResult2.size(state.usageHistory) > 0) {
           const EmojiFrecency = frecency_user_settings.EmojiFrecency;
           favoriteEmojis.emojiFrecency = EmojiFrecency.create();
-          favoriteEmojis.emojiFrecency.emojis = user_settings_UserSettingsUtils.serializeUsageHistory(state.usageHistory, 100);
+          const emojiFrecency = favoriteEmojis.emojiFrecency;
+          const obj3 = user_settings_UserSettingsUtils;
+          emojiFrecency.emojis = obj3.serializeUsageHistory(state.usageHistory, 100);
           flag = true;
         }
         return flag;
@@ -212,9 +225,11 @@ let items = [
       if (0 === arr.length) {
         return false;
       } else {
-        const values = _modDef12(favoriteGifs.favoriteGifs.gifs).values();
+        let tmp;
         const obj = _modDef12(favoriteGifs.favoriteGifs.gifs);
-        const item = values.sortBy("order").forEach((item, index) => {
+        const values = obj.values();
+        const sortByResult = values.sortBy("order");
+        const item = sortByResult.forEach((item, index) => {
           const sum = arr.length + 1 + index;
           item.order = sum;
           return sum;
@@ -228,33 +243,32 @@ let items = [
           let url = nextResult.url;
           let arr2 = url;
           let favorite = nextResult.favorite;
-          let tmp9 = favorite;
+          let tmp7 = favorite;
           favorite.order = arr.length - num;
           num = num + 1;
           if (url in favoriteGifs.favoriteGifs.gifs) {
-            favoriteGifs.favoriteGifs.gifs[arr2].order = tmp9.order;
+            favoriteGifs.favoriteGifs.gifs[arr2].order = tmp7.order;
           } else {
             let FavoriteGIF = frecency_user_settings.FavoriteGIF;
-            let sum = FavoriteGIF.toBinary(tmp9).length + arr2.length + 7;
-            let tmp3 = sum;
-            if (length + sum <= React4) {
-              length = length + tmp3;
-              favoriteGifs.favoriteGifs.gifs[arr2] = tmp9;
+            let sum = FavoriteGIF.toBinary(tmp7).length + arr2.length + 7;
+            tmp = sum;
+            if (length + sum <= React3) {
+              length = length + tmp;
+              favoriteGifs.favoriteGifs.gifs[arr2] = tmp7;
             }
           }
           continue;
         }
         const FavoriteGIFs2 = frecency_user_settings.FavoriteGIFs;
         const length2 = FavoriteGIFs2.toBinary(favoriteGifs.favoriteGifs).length;
-        if (length2 > React4) {
+        if (length2 > React3) {
           do {
             let num3 = 0;
             let keys = Object.keys();
             if (keys !== undefined) {
-              let tmp30 = keys[tmp3];
-              while (tmp30 !== undefined) {
-                let gifs = favoriteGifs.favoriteGifs.gifs;
-                delete tmp[tmp2];
+              let tmp28 = keys[tmp];
+              while (tmp28 !== undefined) {
+                delete favoriteGifs.favoriteGifs.gifs[tmp28];
                 num3 = num3 + 1;
                 if (10 <= num3) {
                   break;
@@ -263,7 +277,7 @@ let items = [
             }
             let FavoriteGIFs3 = frecency_user_settings.FavoriteGIFs;
             length3 = FavoriteGIFs3.toBinary(favoriteGifs.favoriteGifs).length;
-          } while (length3 > React4);
+          } while (length3 > React3);
         }
         return true;
       }
@@ -275,16 +289,19 @@ let items = [
   {
     version: 7,
     run(applicationCommandFrecency) {
-      const PersistedStore = initializeDefault.PersistedStore;
-      state = PersistedStore.migrateAndReadStoreState("ApplicationCommandFrecency", []).state;
+      const PersistedStore = get_initializedDefault.PersistedStore;
+      const state = PersistedStore.migrateAndReadStoreState("ApplicationCommandFrecency", []).state;
       if (null == state) {
         return false;
       } else {
         let flag = false;
+        const tmpResult = _modDef12;
         if (tmpResult.size(state.usageHistory) > 0) {
           const ApplicationCommandFrecency = frecency_user_settings.ApplicationCommandFrecency;
           applicationCommandFrecency.applicationCommandFrecency = ApplicationCommandFrecency.create();
-          applicationCommandFrecency.applicationCommandFrecency.applicationCommands = user_settings_UserSettingsUtils.serializeUsageHistory(state.usageHistory, 500);
+          applicationCommandFrecency = applicationCommandFrecency.applicationCommandFrecency;
+          const obj = user_settings_UserSettingsUtils;
+          applicationCommandFrecency.applicationCommands = obj.serializeUsageHistory(state.usageHistory, 500);
           flag = true;
         }
         return flag;
@@ -298,19 +315,22 @@ let items = [
   {
     version: 8,
     run(arg0) {
-      closure_0 = arg0;
-      const PersistedStore = initializeDefault.PersistedStore;
-      state = PersistedStore.migrateAndReadStoreState("SoundboardFavoriteStore", []).state;
+      let closure_0 = arg0;
+      const PersistedStore = get_initializedDefault.PersistedStore;
+      const state = PersistedStore.migrateAndReadStoreState("SoundboardFavoriteStore", []).state;
       if (null == state) {
         return false;
       } else {
         let flag = false;
+        const tmpResult = _modDef12;
         if (tmpResult.size(state.favoriteSounds) > 0) {
           const FavoriteSoundboardSounds = frecency_user_settings.FavoriteSoundboardSounds;
           arg0.favoriteSoundboardSounds = FavoriteSoundboardSounds.create();
-          const keys = SnowflakeUtilsDefault.keys(state.favoriteSounds);
+          const tmpResult2 = SnowflakeUtilsDefault;
+          const keys = tmpResult2.keys(state.favoriteSounds);
           let item = keys.forEach((item) => {
-            item = new Set(state.favoriteSounds[item]).forEach((item) => {
+            set = new Set(state.favoriteSounds[item]);
+            item = set.forEach((item) => {
               const favoriteSoundboardSounds = closure_1_0.favoriteSoundboardSounds;
               if (favoriteSoundboardSounds != null) {
                 const soundIds = favoriteSoundboardSounds.soundIds;
@@ -319,7 +339,6 @@ let items = [
             });
           });
           flag = true;
-          const tmpResult2 = SnowflakeUtilsDefault;
         }
         return flag;
       }
@@ -333,7 +352,7 @@ let items = [
     version: 9,
     run(guildAndChannelFrecency) {
       const Storage = Storage4.Storage;
-      value = Storage.get(selectedChannelGuildFrecency);
+      const value = Storage.get(selectedChannelGuildFrecency);
       if (null == value) {
         return false;
       } else {
@@ -341,14 +360,16 @@ let items = [
           if (ID_REGEX.test(key10010)) {
             continue;
           } else {
-            delete tmp[tmp2];
+            delete tmp[key10010];
             continue;
           }
           continue;
         }
         const GuildAndChannelFrecency = frecency_user_settings.GuildAndChannelFrecency;
         guildAndChannelFrecency.guildAndChannelFrecency = GuildAndChannelFrecency.create();
-        guildAndChannelFrecency.guildAndChannelFrecency.guildAndChannels = user_settings_UserSettingsUtils.serializeUsageHistory(value, 100);
+        guildAndChannelFrecency = guildAndChannelFrecency.guildAndChannelFrecency;
+        const obj = user_settings_UserSettingsUtils;
+        guildAndChannelFrecency.guildAndChannels = obj.serializeUsageHistory(value, 100);
         return true;
       }
     },
@@ -368,6 +389,7 @@ let items = [
           emojis = {};
         }
         let flag = false;
+        const obj2 = _modDef12;
         if (obj2.size(emojis) > 0) {
           const EmojiFrecency = frecency_user_settings.EmojiFrecency;
           const obj = EmojiFrecency.create();
@@ -442,16 +464,19 @@ let items = [
       } else {
         favoriteSoundboardSounds = favoriteSoundboardSounds.favoriteSoundboardSounds;
         const soundIds = favoriteSoundboardSounds.soundIds;
-        let tmp3 = 0 === _modDef12.size(soundIds);
-        if (!tmp3) {
-          tmp3 = _modDef12.size(favoriteSoundboardSounds.orderedSoundIds) > 0;
-          const tmpResult = _modDef12;
+        const orderedSoundIds = favoriteSoundboardSounds.orderedSoundIds;
+        const obj = _modDef12;
+        let tmp4 = 0 === obj.size(soundIds);
+        if (!tmp4) {
+          const tmp2Result = _modDef12;
+          tmp4 = tmp2Result.size(orderedSoundIds) > 0;
         }
-        let flag = !tmp3;
-        if (!tmp3) {
+        let flag = !tmp4;
+        if (flag) {
           const items = [];
-          HermesBuiltin.arraySpread(soundIds, 0);
-          favoriteSoundboardSounds.favoriteSoundboardSounds.orderedSoundIds = items;
+          const favoriteSoundboardSounds2 = favoriteSoundboardSounds.favoriteSoundboardSounds;
+          HermesBuiltin.arraySpread(items, soundIds, 0);
+          favoriteSoundboardSounds2.orderedSoundIds = items;
           flag = true;
         }
         return flag;

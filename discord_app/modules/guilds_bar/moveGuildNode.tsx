@@ -4,9 +4,8 @@
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5705 */;
 import UserSettingsActionCreators from "UserSettingsActionCreators" /* 8863 */;
 import SortedGuildStore from "SortedGuildStore" /* 5616 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/moveGuildNode.tsx");
 
 export default function moveGuildNode(id, id1) {
@@ -14,12 +13,12 @@ export default function moveGuildNode(id, id1) {
   if (c4 === undefined) {
     flag = false;
   }
-  if (flag2 === undefined) {
-    flag2 = false;
-  }
-  GuildActionCreatorsDefault.moveById(id, id1, flag, flag2);
-  UserSettingsActionCreators.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
+  const obj = GuildActionCreatorsDefault;
+  obj.moveById(id, id1, flag, flag2);
+  const obj2 = UserSettingsActionCreators;
+  obj2.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
 };
 export const persistGuildsBarOrder = function persistGuildsBarOrder() {
-  UserSettingsActionCreators.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
+  const obj = UserSettingsActionCreators;
+  obj.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
 };

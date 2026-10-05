@@ -1,25 +1,25 @@
 // === Module 17776: GuildSettingsConstants ===
 
 // Module 17776 (GuildSettingsConstants)
-import util from "util" /* 1126 */;
+import intl2 from "intl" /* 1126 */;
 import size from "module_2" /* 2 */;
 
 const ERROR_KEY_TO_LABEL_FUNC = {
   afk_channel_id() {
-    const intl = util.intl;
-    return intl.string(util.t.KuYcnU);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.KuYcnU);
   },
   public_updates_channel_id() {
-    const intl = util.intl;
-    return intl.string(util.t.vAyDGU);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.vAyDGU);
   },
   safety_alerts_channel_id() {
-    const intl = util.intl;
-    return intl.string(util.t.sMkYE8);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.sMkYE8);
   },
   system_channel_id() {
-    const intl = util.intl;
-    return intl.string(util.t.NASFnq);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.NASFnq);
   }
 };
 const result = size.fileFinishedImporting("modules/guild_settings/GuildSettingsConstants.tsx");
@@ -33,6 +33,7 @@ export const getSettingsErrorMessage = function getSettingsErrorMessage(arg0) {
   if (0 === Object.keys(arg0).length) {
     return null;
   } else {
+    let combined;
     const _Object = Object;
     const first = Object.keys(arg0)[0];
     let tmp2Result;
@@ -41,7 +42,7 @@ export const getSettingsErrorMessage = function getSettingsErrorMessage(arg0) {
     }
     if (null != tmp2Result) {
       const _HermesInternal = HermesInternal;
-      let combined = "(" + tmp2Result + ") " + arg0[first];
+      combined = "(" + tmp2Result + ") " + arg0[first];
     } else {
       combined = arg0[first];
     }

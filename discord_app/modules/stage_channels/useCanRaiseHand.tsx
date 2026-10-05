@@ -1,23 +1,27 @@
 // === Module 9594: useCanRaiseHand ===
 
 // Module 9594 (useCanRaiseHand)
+import Constants from "Constants" /* 1096 */;
 import PermissionStore from "PermissionStore" /* 4509 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const Permissions = fn(1096).Permissions;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/stage_channels/useCanRaiseHand.tsx");
-
-export const useCanRaiseHand = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const Permissions = Constants.Permissions;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let closure_0;
+  let first;
+  let tmp6;
   _require = arg0;
-  const cResult = require("c").c(3);
+  const obj = require("react");
+  const cResult = obj.c(3);
+  const tmp = _require;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [PermissionStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -27,14 +31,19 @@ export const useCanRaiseHand = ReactCompilerGating.isReactCompilerEnabled() ? ((
     };
     cResult[1] = arg0;
     cResult[2] = fn;
-    let tmp6 = fn;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
-  const obj = require("c");
-  return require("initialize").useStateFromStores(first, tmp6);
+  const tmpResult = tmp(504);
+  return tmpResult.useStateFromStores(first, tmp6);
 }) : ((arg0) => {
+  let closure_0;
   _require = arg0;
   const items = [PermissionStore];
-  return require("initialize").useStateFromStores(items, () => PermissionStore.can(Permissions.REQUEST_TO_SPEAK, closure_0));
+  const obj = require("get initialized");
+  return obj.useStateFromStores(items, () => PermissionStore.can(Permissions.REQUEST_TO_SPEAK, closure_0));
 });
+const result = size.fileFinishedImporting("modules/stage_channels/useCanRaiseHand.tsx");
+
+export const useCanRaiseHand = tmp2;

@@ -2,12 +2,16 @@
 
 // Module 5686 (StickersPersistedStore)
 import _modDef12 from "module_12" /* 12 */;
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
+import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import FrecencyDefault from "Frecency" /* 4927 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import StickersStore from "StickersStore" /* 5687 */;
+import size from "module_2" /* 2 */;
+
+let closure_5, pendingUsages, recentUses;
 
 function handleStickersStoreUpdate() {
   if (StickersStore.isLoaded) {
@@ -23,19 +27,22 @@ function handleUserSettingsProtoStoreChange() {
   if (null == stickers) {
     return false;
   } else {
-    closure_6.overwriteHistory(_modDef12.mapValues(stickers, (recentUses) => {
-      const obj = {};
+    const overwriteHistory = closure_6.overwriteHistory;
+    let obj = _modDef12;
+    overwriteHistory(obj.mapValues(stickers, (recentUses) => {
+      let mapped;
+      const obj = { recentUses: mapped.filter((item) => item > 0) };
       const merged = Object.assign(recentUses);
       recentUses = recentUses.recentUses;
-      const mapped = recentUses.map(Number);
-      obj.recentUses = mapped.filter((item) => item > 0);
+      mapped = recentUses.map(Number);
       return obj;
-    }), global.pendingUsages);
+    }), closure_5.pendingUsages);
   }
 }
-const UserSettingsTypes = fn(1095).UserSettingsTypes;
-let global = { pendingUsages: [] };
-let closure_6 = new FrecencyDefault({
+const UserSettingsTypes = UserSettingsConstants.UserSettingsTypes;
+const hasOwnProperty = { pendingUsages: [] };
+const DAY = DurationsDefault.Millis.DAY;
+let obj = {
   computeBonus() {
     return 100;
   },
@@ -46,29 +53,30 @@ let closure_6 = new FrecencyDefault({
 
   },
   numFrequentlyItems: 20
-});
-const PersistedStore = initializeDefault.PersistedStore;
+};
+let closure_6 = new FrecencyDefault(obj);
+new FrecencyDefault(obj);
+const PersistedStore = get_initializedDefault.PersistedStore;
 class StickersPersistedStore extends PersistedStore {
-}
-const prototype = StickersPersistedStore.prototype;
-prototype["initialize"] = function initialize(arg0) {
-  const self = this;
-  this.waitFor(StickersStore, UserSettingsProtoStore);
-  if (null != arg0) {
-    global = arg0;
+  initialize(arg0) {
+    const self = this;
+    this.waitFor(StickersStore, UserSettingsProtoStore);
+    if (null != arg0) {
+      closure_5 = arg0;
+    }
+    const items = [StickersStore];
+    self.syncWith(items, handleStickersStoreUpdate);
+    const items1 = [UserSettingsProtoStore];
+    self.syncWith(items1, handleUserSettingsProtoStoreChange);
   }
-  const items = [StickersStore];
-  self.syncWith(items, handleStickersStoreUpdate);
-  const items1 = [UserSettingsProtoStore];
-  self.syncWith(items1, handleUserSettingsProtoStoreChange);
-};
-prototype["getState"] = function getState() {
-  return global;
-};
-prototype["hasPendingUsage"] = function hasPendingUsage() {
-  return global.pendingUsages.length > 0;
-};
-Object.defineProperty(prototype, "stickerFrecencyWithoutFetchingLatest", {
+  getState() {
+    return closure_5;
+  }
+  hasPendingUsage() {
+    return closure_5.pendingUsages.length > 0;
+  }
+}
+Object.defineProperty(StickersPersistedStore.prototype, "stickerFrecencyWithoutFetchingLatest", {
   get: function stickerFrecencyWithoutFetchingLatest() {
     return closure_6;
   },
@@ -76,14 +84,15 @@ Object.defineProperty(prototype, "stickerFrecencyWithoutFetchingLatest", {
 });
 StickersPersistedStore.displayName = "StickersPersistedStore";
 StickersPersistedStore.persistKey = "StickersPersistedStoreV2";
-const stickersPersistedStore = new StickersPersistedStore(DispatcherDefault, {
+const obj2 = {
   STICKER_TRACK_USAGE: function handleStickersUsage(stickerIds) {
     stickerIds = stickerIds.stickerIds;
     if (stickerIds != null) {
       const item = stickerIds.forEach((key) => {
         closure_1_6.track(key);
         pendingUsages = pendingUsages.pendingUsages;
-        pendingUsages.push({ key, timestamp: Date.now() });
+        const obj = { key, timestamp: Date.now() };
+        pendingUsages.push(obj);
       });
     }
     if (StickersStore.isLoaded) {
@@ -93,14 +102,14 @@ const stickersPersistedStore = new StickersPersistedStore(DispatcherDefault, {
   USER_SETTINGS_PROTO_UPDATE: function handleUserSettingsProtoUpdate(settings) {
     if (settings.settings.type === UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) {
       if (settings.wasSaved) {
-        global.pendingUsages = [];
+        closure_5.pendingUsages = [];
       }
     }
     return false;
   }
-});
-const size = fn(2);
+};
+const stickersPersistedStore = new StickersPersistedStore(DispatcherDefault, obj2);
 const result = size.fileFinishedImporting("modules/stickers/StickersPersistedStore.tsx");
 
 export default stickersPersistedStore;
-export const STICKER_PACK_NEW_TIMESTAMP_THRESHOLD = DurationsDefault.Millis.DAY;
+export const STICKER_PACK_NEW_TIMESTAMP_THRESHOLD = DAY;

@@ -1,13 +1,12 @@
 // === Module 11890: getChatInputPositionStyle ===
 
 // Module 11890 (getChatInputPositionStyle)
-import _mod17 from "module_17" /* 17 */;
+import react_native from "react-native" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import size from "module_2" /* 2 */;
 
-let obj = {};
-const merged = Object.assign(_mod17.StyleSheet.absoluteFillObject);
-obj.top = undefined;
+let obj = { top: undefined };
+const merged = Object.assign(react_native.StyleSheet.absoluteFillObject);
 const result = size.fileFinishedImporting("modules/chat_input/native/getChatInputPositionStyle.tsx");
 
 export default function getChatInputPositionStyle() {
@@ -17,10 +16,10 @@ export default function getChatInputPositionStyle() {
   }
   let tmp;
   if (!obj.isCreatingThread) {
+    const obj2 = PlatformUtils;
     if (obj2.isIOS()) {
       tmp = obj;
     }
-    obj2 = PlatformUtils;
   }
   return tmp;
 };

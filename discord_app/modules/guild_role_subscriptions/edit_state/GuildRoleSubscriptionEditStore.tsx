@@ -4,39 +4,43 @@
 import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
-const result = size.fileFinishedImporting("modules/guild_role_subscriptions/edit_state/GuildRoleSubscriptionEditStore.tsx");
-
-export const AllChannelAccessOptions = { ALL_CHANNELS_ACCESS: 0, [0]: "ALL_CHANNELS_ACCESS", SOME_CHANNELS_ACCESS: 1, [1]: "SOME_CHANNELS_ACCESS" };
-export const useEditStateStore = module_570.create((arg0) => {
-  closure_0 = arg0;
-  return {
+let obj = module_570.create((arg0) => {
+  let closure_0 = arg0;
+  let obj = {
     listings: {},
     setListing(arg0, arg1) {
       closure_0 = arg0;
-      closure_1 = arg1;
-      return closure_0(1259).batchUpdates(() => closure_0((listings) => {
-        const obj = { listings: null };
-        const obj2 = {};
+      let closure_1 = arg1;
+      let obj = closure_0(dependencyMap[1]);
+      return obj.batchUpdates(() => closure_0((listings) => {
+        let obj2;
+        const obj = { listings: obj2 };
+        obj2 = {};
         const merged = Object.assign(listings.listings);
         obj2[closure_1_0] = closure_1_1(listings.listings[closure_1_0]);
-        obj.listings = obj2;
         return obj;
       }));
     },
     editStateIdsForGroup: {},
     setEditStateIdsForGroup(arg0, arg1) {
       closure_0 = arg0;
-      closure_1 = arg1;
-      return closure_0(1259).batchUpdates(() => {
+      let closure_1 = arg1;
+      let obj = closure_0(dependencyMap[1]);
+      return obj.batchUpdates(() => {
         closure_0((editStateIdsForGroup) => {
-          const obj = { editStateIdsForGroup: null };
-          const obj2 = {};
+          let obj2;
+          const obj = { editStateIdsForGroup: obj2 };
+          obj2 = {};
           const merged = Object.assign(editStateIdsForGroup.editStateIdsForGroup);
           obj2[closure_1_0] = closure_1_1(editStateIdsForGroup.editStateIdsForGroup[closure_1_0]);
-          obj.editStateIdsForGroup = obj2;
           return obj;
         });
       });
     }
   };
+  return obj;
 });
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/edit_state/GuildRoleSubscriptionEditStore.tsx");
+
+export const AllChannelAccessOptions = { ALL_CHANNELS_ACCESS: 0, [0]: "ALL_CHANNELS_ACCESS", SOME_CHANNELS_ACCESS: 1, [1]: "SOME_CHANNELS_ACCESS" };
+export const useEditStateStore = obj;

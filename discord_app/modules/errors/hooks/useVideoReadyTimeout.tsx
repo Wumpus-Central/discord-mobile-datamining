@@ -3,67 +3,78 @@
 // Module 9108 (useVideoReadyTimeout)
 import DurationsDefault from "Durations" /* 1102 */;
 import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 9112 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
 let closure_3 = 20 * DurationsDefault.Millis.SECOND;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/errors/hooks/useVideoReadyTimeout.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((streamId) => {
-  const cResult = streamId(userId[3]).c(14);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function(streamId) {
+  let first;
+  let streamKey;
+  let userId;
+  let videoSpinnerContext;
+  let obj = streamId(userId[3]);
+  const cResult = obj.c(14);
   streamId = streamId.streamId;
   userId = streamId.userId;
   ({ videoSpinnerContext, streamKey } = streamId);
   const loading = streamId.loading;
   const paused = streamId.paused;
-  closure_4 = tmp4;
+  let closure_4 = tmp4;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const self = this;
+    const self2 = this;
     const timeout = new tmp(tmp2[4]).Timeout();
     cResult[0] = timeout;
-    let first = timeout;
+    first = timeout;
   } else {
     first = cResult[0];
   }
-  streamKey.useRef(first);
+  const ref = streamKey.useRef(first);
+  const obj2 = streamKey;
   if (videoSpinnerContext !== streamId(userId[5]).VideoSpinnerContext.SELF_STREAM) {
-    if (videoSpinnerContext !== tmp(tmp2[5]).VideoSpinnerContext.REMOTE_STREAM) {
-      let STREAM = tmp(tmp2[6]).MediaEngineContextTypes.DEFAULT;
+    let STREAM;
+    if (videoSpinnerContext !== streamId(userId[5]).VideoSpinnerContext.REMOTE_STREAM) {
+      STREAM = tmp(tmp2[6]).MediaEngineContextTypes.DEFAULT;
     }
     if (cResult[1] === loading) {
       if (cResult[2] === STREAM) {
-        if (cResult[3] === tmp4) {
+        if (cResult[3] === (undefined !== paused && paused)) {
           if (cResult[4] === streamId) {
             if (cResult[5] === streamKey) {
+              let tmp8;
+              let tmp9;
               if (cResult[6] === userId) {
-                let tmp10 = cResult[7];
-                let tmp11 = cResult[8];
+                tmp8 = cResult[7];
+                tmp9 = cResult[8];
               }
-              const effect = streamKey.useEffect(tmp10, tmp11);
+              const effect = obj2.useEffect(tmp8, tmp9);
               if (cResult[9] === STREAM) {
+                let tmp11;
+                let tmp12;
                 if (cResult[10] === userId) {
-                  let tmp13 = cResult[11];
+                  tmp11 = cResult[11];
                 }
-                if (cResult[12] !== tmp13) {
-                  const obj3 = { onReady: tmp13 };
-                  cResult[12] = tmp13;
+                if (cResult[12] !== tmp11) {
+                  const obj3 = { onReady: tmp11 };
+                  cResult[12] = tmp11;
                   cResult[13] = obj3;
-                  let tmp14 = obj3;
+                  tmp12 = obj3;
                 } else {
-                  tmp14 = cResult[13];
+                  tmp12 = cResult[13];
                 }
-                return tmp14;
+                return tmp12;
               }
               const fn2 = function v() {
                 const current = ref.current;
                 current.stop();
-                const result = VideoStreamReadyActionCreators.clearVideoStreamTimeout(STREAM, userId);
+                const obj = VideoStreamReadyActionCreators;
+                const result = obj.clearVideoStreamTimeout(STREAM, userId);
               };
               cResult[9] = STREAM;
               cResult[10] = userId;
               cResult[11] = fn2;
-              tmp13 = fn2;
+              tmp11 = fn2;
             }
           }
         }
@@ -76,7 +87,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((streamId) => {
           if (WindowVisibilityVideoManager.isIncomingVideoEnabled()) {
             const current = ref.current;
             current.start(loading, () => {
-              streamId(userId[8]).videoStreamTimedOut(current, closure_1_1, STREAM, streamKey);
+              const obj = streamId(userId[8]);
+              obj.videoStreamTimedOut(current, closure_1_1, STREAM, streamKey);
             });
             return () => {
               current.stop();
@@ -85,20 +97,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((streamId) => {
         }
       }
     };
-    const items = [tmp4, streamId, loading, STREAM, streamKey, userId];
+    const items = [undefined !== paused && paused, streamId, loading, STREAM, streamKey, userId];
     cResult[1] = loading;
     cResult[2] = STREAM;
-    cResult[3] = tmp4;
+    cResult[3] = undefined !== paused && paused;
     cResult[4] = streamId;
     cResult[5] = streamKey;
     cResult[6] = userId;
     cResult[7] = fn;
     cResult[8] = items;
-    tmp11 = items;
-    tmp10 = fn;
+    tmp9 = items;
+    tmp8 = fn;
   }
   STREAM = tmp(tmp2[6]).MediaEngineContextTypes.STREAM;
 }) : ((streamId) => {
+  let items1;
+  let streamKey;
+  let videoSpinnerContext;
   streamId = streamId.streamId;
   const userId = streamId.userId;
   ({ videoSpinnerContext, streamKey } = streamId);
@@ -108,10 +123,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((streamId) => {
     flag = false;
   }
   let STREAM;
+  let obj = streamKey;
+  const useRef = streamKey.useRef;
   const timeout = new streamId(userId[4]).Timeout();
-  streamKey.useRef(timeout);
+  const ref = useRef(timeout);
   if (videoSpinnerContext !== streamId(userId[5]).VideoSpinnerContext.SELF_STREAM) {
-    if (videoSpinnerContext !== tmp(tmp2[5]).VideoSpinnerContext.REMOTE_STREAM) {
+    if (videoSpinnerContext !== streamId(userId[5]).VideoSpinnerContext.REMOTE_STREAM) {
       STREAM = tmp(tmp2[6]).MediaEngineContextTypes.DEFAULT;
     }
     const items = [flag, streamId, loading, STREAM, streamKey, userId];
@@ -122,7 +139,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((streamId) => {
           if (WindowVisibilityVideoManager.isIncomingVideoEnabled()) {
             const current = ref.current;
             current.start(loading, () => {
-              streamId(userId[8]).videoStreamTimedOut(current, closure_1_1, STREAM, streamKey);
+              const obj = streamId(userId[8]);
+              obj.videoStreamTimedOut(current, closure_1_1, STREAM, streamKey);
             });
             return () => {
               current.stop();
@@ -131,14 +149,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((streamId) => {
         }
       }
     }, items);
-    const obj2 = { onReady: null };
-    const items1 = [userId, STREAM];
-    obj2.onReady = obj.useCallback(() => {
-      const current = ref.current;
-      current.stop();
-      const result = VideoStreamReadyActionCreators.clearVideoStreamTimeout(STREAM, userId);
-    }, items1);
+    const obj2 = {
+      onReady: obj.useCallback(() => {
+          const current = ref.current;
+          current.stop();
+          const obj = VideoStreamReadyActionCreators;
+          const result = obj.clearVideoStreamTimeout(STREAM, userId);
+        }, items1)
+    };
+    items1 = [userId, STREAM];
     return obj2;
   }
   STREAM = tmp(tmp2[6]).MediaEngineContextTypes.STREAM;
 });
+let result = size.fileFinishedImporting("modules/errors/hooks/useVideoReadyTimeout.tsx");
+
+export default tmp2;

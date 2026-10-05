@@ -1,24 +1,31 @@
 // === Module 10994: AppLauncherContext ===
 
 // Module 10994 (AppLauncherContext)
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
 import AppLauncherTypes from "AppLauncherTypes" /* 8932 */;
 import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 10995 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+let noop;
+
 const AppLauncherKeyboardCloseReason = { DISMISSED: 0, [0]: "DISMISSED", COMMAND: 1, [1]: "COMMAND", ACTIVITY: 2, [2]: "ACTIVITY", BACK: 3, [3]: "BACK", OAUTH_MODAL: 4, [4]: "OAUTH_MODAL" };
-let context = noop.createContext(undefined);
-let ReactCompilerGating = fn(558);
+let context = react.createContext(undefined);
+let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((noop) => {
-  const cResult = c.c(2);
+  let tmp2;
+  const obj = react2;
+  const cResult = obj.c(2);
   noop = noop.noop;
   if (cResult[0] !== noop) {
     const obj2 = {
       getApplicationCommandManager() {
           if (!noop) {
             const _Error = Error;
+            const self = this;
+            const self2 = this;
             const error = new Error("use useRequiredAppLauncherContext and provide a ChatInputRef");
             throw error;
           }
@@ -26,6 +33,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((noop) => {
       openCustomKeyboard() {
           if (!noop) {
             const _Error = Error;
+            const self = this;
+            const self2 = this;
             const error = new Error("use useRequiredAppLauncherContext and provide a ChatInputRef");
             throw error;
           }
@@ -33,6 +42,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((noop) => {
       closeCustomKeyboard() {
           if (!noop) {
             const _Error = Error;
+            const self = this;
+            const self2 = this;
             const error = new Error("use useRequiredAppLauncherContext and provide a ChatInputRef");
             throw error;
           }
@@ -40,17 +51,19 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((noop) => {
     };
     cResult[0] = noop;
     cResult[1] = obj2;
-    let tmp2 = obj2;
+    tmp2 = obj2;
   } else {
     tmp2 = cResult[1];
   }
-  return noop.useRef(tmp2);
+  return react.useRef(tmp2);
 }) : ((noop) => {
   noop = noop.noop;
-  return noop.useRef({
+  const obj = {
     getApplicationCommandManager() {
       if (!noop) {
         const _Error = Error;
+        const self = this;
+        const self2 = this;
         const error = new Error("use useRequiredAppLauncherContext and provide a ChatInputRef");
         throw error;
       }
@@ -58,6 +71,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((noop) => {
     openCustomKeyboard() {
       if (!noop) {
         const _Error = Error;
+        const self = this;
+        const self2 = this;
         const error = new Error("use useRequiredAppLauncherContext and provide a ChatInputRef");
         throw error;
       }
@@ -65,55 +80,58 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((noop) => {
     closeCustomKeyboard() {
       if (!noop) {
         const _Error = Error;
+        const self = this;
+        const self2 = this;
         const error = new Error("use useRequiredAppLauncherContext and provide a ChatInputRef");
         throw error;
       }
     }
-  });
+  };
+  return react.useRef(obj);
 });
 let closure_5 = tmp3;
-fn(558);
-ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  context = noop.useContext(context);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function() {
+  context = react.useContext(context);
   if (null == context) {
     const _Error = Error;
+    const self = this;
+    const self2 = this;
     const error = new Error("AppLauncherContext not found, must be used within AppLauncherNavigator");
     throw error;
   } else {
     return context;
   }
-}) : (() => {
-  context = noop.useContext(context);
+}) : (function() {
+  context = react.useContext(context);
   if (null == context) {
     const _Error = Error;
+    const self = this;
+    const self2 = this;
     const error = new Error("AppLauncherContext not found, must be used within AppLauncherNavigator");
     throw error;
   } else {
     return context;
   }
 });
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherContext.tsx");
-
-export { AppLauncherKeyboardCloseReason };
-export const AppLauncherBottomSheetExpandReason = { GESTURE: 0, [0]: "GESTURE", KEYBOARD: 1, [1]: "KEYBOARD", APP_VIEW: 2, [2]: "APP_VIEW", COMMAND_VIEW: 3, [3]: "COMMAND_VIEW", OTHER: 4, [4]: "OTHER" };
-export const AppLauncherContext = context;
-export const useAppLauncherChatInputRefDummy = tmp3;
-export const useRequiredAppLauncherContext = tmp4;
-export const useAppLauncherContext = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const obj = c;
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let first;
+  const obj = react2;
   const cResult = obj.c(6);
-  const ref = noop.useRef(obj.DISMISSED);
-  const ref1 = noop.useRef(undefined);
-  const sharedValue = ReanimatedRexport.useSharedValue(-1);
-  const sharedValue1 = ReanimatedRexport.useSharedValue(0);
+  const ref = react.useRef(obj.DISMISSED);
+  const ref1 = react.useRef(undefined);
+  const obj3 = ReanimatedRexport;
+  const sharedValue = obj3.useSharedValue(-1);
+  const obj4 = ReanimatedRexport;
+  const sharedValue1 = obj4.useSharedValue(0);
   const TEXT = AppLauncherTypes.AppLauncherEntrypoint.TEXT;
-  const defaultAppLauncherWidth = useDefaultAppLauncherWidth.useDefaultAppLauncherWidth(TEXT);
+  const obj5 = useDefaultAppLauncherWidth;
+  const defaultAppLauncherWidth = obj5.useDefaultAppLauncherWidth(TEXT);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj6 = { noop: false };
     cResult[0] = obj6;
-    let first = obj6;
+    first = obj6;
   } else {
     first = cResult[0];
   }
@@ -121,10 +139,11 @@ export const useAppLauncherContext = ReactCompilerGating.isReactCompilerEnabled(
   if (cResult[1] === sharedValue) {
     if (cResult[2] === sharedValue1) {
       if (cResult[3] === tmp8) {
+        let tmp9;
         if (cResult[4] === defaultAppLauncherWidth) {
-          let tmp9 = cResult[5];
+          tmp9 = cResult[5];
         }
-        context = noop.useContext(context);
+        context = react.useContext(context);
         if (context == null) {
           context = tmp9;
         }
@@ -140,20 +159,31 @@ export const useAppLauncherContext = ReactCompilerGating.isReactCompilerEnabled(
   cResult[5] = obj7;
   tmp9 = obj7;
 }) : (() => {
-  const keyboardCloseReasonRef = noop.useRef(obj.DISMISSED);
-  const bottomSheetExpandReasonRef = noop.useRef(undefined);
+  let obj;
+  let closure_0 = react.useRef(obj.DISMISSED);
+  let closure_1 = react.useRef(undefined);
   obj = ReanimatedRexport;
   const sharedValue = obj.useSharedValue(-1);
-  const sharedValue1 = ReanimatedRexport.useSharedValue(0);
+  const obj2 = ReanimatedRexport;
+  const sharedValue1 = obj2.useSharedValue(0);
   const TEXT = AppLauncherTypes.AppLauncherEntrypoint.TEXT;
-  const defaultAppLauncherWidth = useDefaultAppLauncherWidth.useDefaultAppLauncherWidth(TEXT);
+  const obj3 = useDefaultAppLauncherWidth;
+  const defaultAppLauncherWidth = obj3.useDefaultAppLauncherWidth(TEXT);
   const tmp4 = closure_5({ noop: false });
-  const chatInputRef = tmp4;
+  let closure_6 = tmp4;
   const items = [defaultAppLauncherWidth, TEXT, tmp4, sharedValue, sharedValue1];
-  const memo = noop.useMemo(() => ({ keyboardCloseReasonRef, bottomSheetIndex: sharedValue, bottomSheetPosition: sharedValue1, bottomSheetExpandReasonRef, chatInputRef, width: defaultAppLauncherWidth, entrypoint: TEXT, onActivityItemSelected: "Boolean" }), items);
-  context = noop.useContext(context);
+  const memo = react.useMemo(() => ({ keyboardCloseReasonRef, bottomSheetIndex: sharedValue, bottomSheetPosition: sharedValue1, bottomSheetExpandReasonRef, chatInputRef, width: defaultAppLauncherWidth, entrypoint: TEXT, onActivityItemSelected: "Boolean" }), items);
+  context = react.useContext(context);
   if (context == null) {
     context = memo;
   }
   return context;
 });
+const result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherContext.tsx");
+
+export { AppLauncherKeyboardCloseReason };
+export const AppLauncherBottomSheetExpandReason = { GESTURE: 0, [0]: "GESTURE", KEYBOARD: 1, [1]: "KEYBOARD", APP_VIEW: 2, [2]: "APP_VIEW", COMMAND_VIEW: 3, [3]: "COMMAND_VIEW", OTHER: 4, [4]: "OTHER" };
+export const AppLauncherContext = context;
+export const useAppLauncherChatInputRefDummy = tmp3;
+export const useRequiredAppLauncherContext = tmp4;
+export const useAppLauncherContext = tmp5;

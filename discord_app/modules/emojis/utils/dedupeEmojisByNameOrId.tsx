@@ -4,10 +4,12 @@
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4523 */;
 import size from "module_2" /* 2 */;
 
+let map;
+
 let result = size.fileFinishedImporting("modules/emojis/utils/dedupeEmojisByNameOrId.tsx");
 
 export default function dedupeEmojisByNameOrId(arg0) {
-  const map = new Map();
+  map = new Map();
   const iter = arg0[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {

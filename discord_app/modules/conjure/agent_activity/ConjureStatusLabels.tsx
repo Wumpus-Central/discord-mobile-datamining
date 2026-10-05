@@ -1,12 +1,15 @@
 // === Module 16740: ConjureStatusLabels ===
 
 // Module 16740 (ConjureStatusLabels)
-import util from "util" /* 1126 */;
+import intl4 from "intl" /* 1126 */;
 import _modDef3723 from "module_3723" /* 3723 */;
 import ConjureTypes from "ConjureTypes" /* 6747 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
 function thinkingLabel(restoring) {
+  let activity;
+  let compacting;
+  let xnCAaP;
   ({ activity, compacting } = restoring);
   if (compacting === undefined) {
     compacting = false;
@@ -23,12 +26,9 @@ function thinkingLabel(restoring) {
   if (flag3 === undefined) {
     flag3 = false;
   }
-  let tmp = null != activity;
-  if (tmp) {
-    tmp = "end" !== activity.phase;
-  }
+  const tmp = null != activity && "end" !== activity.phase;
   if (flag3) {
-    let xnCAaP = _modDef3723["1jqaAc"];
+    xnCAaP = _modDef3723["1jqaAc"];
   } else if (flag) {
     xnCAaP = _modDef3723.M4KI5F;
   } else if (flag2) {
@@ -44,46 +44,51 @@ function thinkingLabel(restoring) {
   return xnCAaP;
 }
 const items = [_modDef3723["AX+5lk"], _modDef3723.VAU6A7, _modDef3723["1emysd"], _modDef3723.EXHX3L, _modDef3723.ChslmX];
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/agent_activity/ConjureStatusLabels.tsx");
 
 export const INDICATOR_PASS_MS = 1000;
 export const INDICATOR_PASS_STAGGER_MS = 1800;
 export const RECALLING_LINES = items;
 export const recallingLine = function recallingLine(current) {
-  const intl = util.intl;
+  const intl = intl4.intl;
   return intl.string(items[current % items.length]);
 };
 export const isRecallingLine = function isRecallingLine(current) {
-  closure_0 = current;
+  let closure_0 = current;
   return items.some((item) => {
-    const intl = util.intl;
-    return intl.string(item) === closure_0;
+    const intl = intl4.intl;
+    return intl.string(item) === current;
   });
 };
 export const connectionLabel = function connectionLabel(stateFromStores7) {
   if ("connecting" === stateFromStores7) {
-    const intl3 = util.intl;
+    const intl3 = intl4.intl;
     return intl3.string(_modDef3723["ECl+Dx"]);
   } else if ("closed" === stateFromStores7) {
-    const intl2 = util.intl;
+    const intl2 = intl4.intl;
     return intl2.string(_modDef3723.mQZSp1);
   } else if ("failed" === stateFromStores7) {
-    const intl = util.intl;
+    const intl = intl4.intl;
     return intl.string(_modDef3723.xzJSZ6);
   }
 };
 export { thinkingLabel };
 export const thinkingLine = function thinkingLine(restoring) {
-  const intl = util.intl;
+  const intl = intl4.intl;
   return intl.string(thinkingLabel(restoring));
 };
 export const runesUsedLabels = function runesUsedLabels(projectUsage) {
-  const runesFromUsdResult = ConjureTypes.runesFromUsd(projectUsage.cost_usd);
-  const obj2 = { text: null, aria: null };
-  const intl = util.intl;
-  obj2.text = intl.formatToPlainString(_modDef3723.gMuw5d, { runes: runesFromUsdResult.toLocaleString() });
-  const intl2 = util.intl;
-  obj2.aria = intl2.formatToPlainString(_modDef3723.Z4LvGa, { runes: runesFromUsdResult, turns: projectUsage.turns });
+  let formatToPlainString;
+  let gMuw5d;
+  let intl2;
+  let obj3;
+  const obj = ConjureTypes;
+  const runesFromUsdResult = obj.runesFromUsd(projectUsage.cost_usd);
+  const obj2 = { text: formatToPlainString(gMuw5d, obj3), aria: intl2.formatToPlainString(_modDef3723.Z4LvGa, obj4) };
+  const intl = intl4.intl;
+  formatToPlainString = intl.formatToPlainString;
+  obj3 = { runes: runesFromUsdResult.toLocaleString() };
+  gMuw5d = _modDef3723.gMuw5d;
+  intl2 = intl4.intl;
   return obj2;
 };

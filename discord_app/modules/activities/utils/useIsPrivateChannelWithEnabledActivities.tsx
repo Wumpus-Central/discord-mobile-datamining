@@ -2,21 +2,25 @@
 
 // Module 9081 (useIsPrivateChannelWithEnabledActivities)
 import ChannelStore from "ChannelStore" /* 2051 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/activities/utils/useIsPrivateChannelWithEnabledActivities.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let closure_0;
+  let first;
+  let tmp6;
+  let tmp7;
   _require = arg0;
-  const cResult = require("c").c(5);
+  const obj = require("react");
+  const cResult = obj.c(5);
+  const tmp = _require;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -26,12 +30,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     };
     cResult[1] = arg0;
     cResult[2] = fn;
-    let tmp6 = fn;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
-  const obj = require("c");
-  const stateFromStores = require("useStateFromStores").useStateFromStores(first, tmp6);
+  const tmpResult = tmp(573);
+  const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
   if (cResult[3] !== stateFromStores) {
     let flag;
     if (stateFromStores != null) {
@@ -42,15 +46,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     cResult[3] = stateFromStores;
     cResult[4] = flag;
-    let tmp7 = flag;
+    tmp7 = flag;
   } else {
     tmp7 = cResult[4];
   }
   return tmp7;
 }) : ((arg0) => {
+  let closure_0;
   _require = arg0;
   const items = [ChannelStore];
-  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => ChannelStore.getChannel(closure_0));
+  const obj = require("useStateFromStores");
+  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(closure_0));
   let flag;
   if (stateFromStores != null) {
     flag = stateFromStores.isPrivate();
@@ -60,6 +66,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   return flag;
 });
+const result = size.fileFinishedImporting("modules/activities/utils/useIsPrivateChannelWithEnabledActivities.tsx");
+
+export default tmp2;
 export const isPrivateChannelWithEnabledActivities = function isPrivateChannelWithEnabledActivities(arg0) {
   if (null == arg0) {
     return false;

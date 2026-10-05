@@ -2,81 +2,95 @@
 
 // Module 16182 (ChannelsEmpty)
 import nativeDefault from "native" /* 587 */;
+import Constants from "Constants" /* 1085 */;
+import Text_Text from "Text/Text" /* 4886 */;
 import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 9214 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9247 */;
-import _modDef16183 from "module_16183" /* 16183 */;
-import _modDef16184 from "module_16184" /* 16184 */;
-import noop from "module_19" /* 19 */;
+import AssetRegistryDefault from "AssetRegistry" /* 16183 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 16184 */;
+import react from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
 import PermissionStore from "PermissionStore" /* 4509 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
-get_ActivityIndicator = fn(17);
-({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const Permissions = fn(1085).Permissions;
-const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4890);
-let obj = { wrapper: { flex: 1, paddingTop: 12 }, content: { flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: 48 }, headerText: null, text: null, buttonWrapper: null, buttonPill: null, personalizeButtonWrapper: null };
-let obj3 = {};
-const merged = Object.assign(fn(4886).TextStyleSheet["heading-md/bold"]);
-obj3.fontSize = 18;
-obj3.marginTop = 16;
-obj3.marginBottom = 8;
-obj.headerText = obj3;
-obj.text = { textAlign: "center" };
-obj.buttonWrapper = { marginTop: 24 };
-obj.buttonPill = { borderRadius: nativeDefault.radii.xl, height: 44, paddingHorizontal: 20 };
-obj.personalizeButtonWrapper = { marginHorizontal: 12, marginBottom: 12 };
-let closure_10 = createStyles.createStyles(obj);
-const ReactCompilerGating = fn(558);
-let obj4 = { borderRadius: nativeDefault.radii.xl, height: 44, paddingHorizontal: 20 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/empty_states/ChannelsEmpty.tsx");
+let guild;
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
-  const cResult = guild(576).c(41);
+let c9;
+let closure_4;
+let hasOwnProperty;
+let metroImportAll;
+let obj2;
+let obj3;
+({ View: closure_4, Image: hasOwnProperty } = react_native);
+const Permissions = Constants.Permissions;
+({ jsx: metroImportAll, jsxs: c9 } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { wrapper: { flex: 1, paddingTop: 12 }, content: { flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: 48 }, headerText: obj2, text: { textAlign: "center" }, buttonWrapper: { marginTop: 24 }, buttonPill: obj3, personalizeButtonWrapper: { marginHorizontal: 12, marginBottom: 12 } };
+obj2 = { fontSize: 18, marginTop: 16, marginBottom: 8 };
+createStyles = createStyles.createStyles;
+const merged = Object.assign(Text_Text.TextStyleSheet["heading-md/bold"]);
+obj3 = { borderRadius: nativeDefault.radii.xl, height: 44, paddingHorizontal: 20 };
+let closure_10 = createStyles(obj);
+const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
+  let Icon;
+  let RowButton;
+  let canCreateChannel;
+  let canCustomizeGuild;
+  let first;
+  let intl;
+  let obj3;
+  let obj4;
+  let tmp10;
+  let tmp7;
+  let tmp8;
+  let obj = guild(576);
+  const cResult = obj.c(41);
   guild = guild.guild;
   const tmp4 = closure_10();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [PermissionStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== guild) {
     const fn = function u() {
-      return { canCustomizeGuild: PermissionStore.can(Permissions.MANAGE_GUILD, guild), canCreateChannel: PermissionStore.can(Permissions.MANAGE_CHANNELS, guild) };
+      const obj = { canCustomizeGuild: PermissionStore.can(Permissions.MANAGE_GUILD, guild), canCreateChannel: PermissionStore.can(Permissions.MANAGE_CHANNELS, guild) };
+      return obj;
     };
     const items1 = [guild];
     cResult[1] = guild;
     cResult[2] = fn;
     cResult[3] = items1;
-    let tmp8 = items1;
-    let tmp7 = fn;
+    tmp8 = items1;
+    tmp7 = fn;
   } else {
     tmp7 = cResult[2];
     tmp8 = cResult[3];
   }
-  const obj = guild(576);
-  const stateFromStoresObject = guild(573).useStateFromStoresObject(first, tmp7, tmp8);
+  const tmpResult = guild(573);
+  const stateFromStoresObject = tmpResult.useStateFromStoresObject(first, tmp7, tmp8);
   ({ canCustomizeGuild, canCreateChannel } = stateFromStoresObject);
   if (cResult[4] !== guild.id) {
     const fn2 = function _() {
-      GuildSettingsActionCreatorsDefault.open(guild.id);
+      const obj = GuildSettingsActionCreatorsDefault;
+      obj.open(guild.id);
     };
     cResult[4] = guild.id;
     cResult[5] = fn2;
-    let tmp10 = fn2;
+    tmp10 = fn2;
   } else {
     tmp10 = cResult[5];
   }
   if (cResult[6] !== guild.id) {
     class S {
       constructor() {
-        obj = closure_1(closure_2[12]);
-        openResult = obj.open(null, guild.id, null, null);
-        return;
+        const obj = CreateChannelModalActionCreatorsDefault;
+        obj.open(null, guild.id, null, null);
       }
     }
     cResult[6] = guild.id;
@@ -84,20 +98,18 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guild)
   } else {
     class S {
       constructor() {
-        obj = closure_1(closure_2[12]);
-        openResult = obj.open(null, guild.id, null, null);
-        return;
+        const obj = CreateChannelModalActionCreatorsDefault;
+        obj.open(null, guild.id, null, null);
       }
     }
   }
-  const tmpResult = guild(573);
-  const youBarTotalHeight = guild(14901).useYouBarTotalHeight(16);
+  const tmpResult2 = guild(14901);
+  const youBarTotalHeight = tmpResult2.useYouBarTotalHeight(16);
   if (cResult[8] !== youBarTotalHeight) {
     class S {
       constructor() {
-        obj = closure_1(closure_2[12]);
-        openResult = obj.open(null, guild.id, null, null);
-        return;
+        const obj = CreateChannelModalActionCreatorsDefault;
+        obj.open(null, guild.id, null, null);
       }
     }
     tmp14[0] = youBarTotalHeight;
@@ -106,46 +118,40 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guild)
   } else {
     class S {
       constructor() {
-        obj = closure_1(closure_2[12]);
-        openResult = obj.open(null, guild.id, null, null);
-        return;
+        const obj = CreateChannelModalActionCreatorsDefault;
+        obj.open(null, guild.id, null, null);
       }
     }
   }
   if (cResult[10] === tmp4.wrapper) {
     class S {
       constructor() {
-        obj = closure_1(closure_2[12]);
-        openResult = obj.open(null, guild.id, null, null);
-        return;
+        const obj = CreateChannelModalActionCreatorsDefault;
+        obj.open(null, guild.id, null, null);
       }
     }
     if (cResult[13] === canCustomizeGuild) {
       class S {
         constructor() {
-          obj = closure_1(closure_2[12]);
-          openResult = obj.open(null, guild.id, null, null);
-          return;
+          const obj = CreateChannelModalActionCreatorsDefault;
+          obj.open(null, guild.id, null, null);
         }
       }
     }
     let tmp16 = canCustomizeGuild;
-    if (canCustomizeGuild) {
+    if (tmp16) {
       class S {
         constructor() {
-          obj = closure_1(closure_2[12]);
-          openResult = obj.open(null, guild.id, null, null);
-          return;
+          const obj = CreateChannelModalActionCreatorsDefault;
+          obj.open(null, guild.id, null, null);
         }
       }
-      const obj2 = { style: tmp4.personalizeButtonWrapper, children: null };
-      const obj3 = { icon: null, label: null, onPress: null };
-      const obj4 = { source: _modDef16183, disableColor: true };
-      obj3.icon = closure_8(tmp(1188).Icon, obj4);
-      const intl = tmp(1126).intl;
-      obj3.label = intl.string(tmp(1126).t["Yhi9/N"]);
-      obj3.onPress = tmp10;
-      obj2.children = closure_8(tmp(8897).RowButton, obj3);
+      const obj2 = { style: tmp4.personalizeButtonWrapper, children: closure_8(RowButton, obj3) };
+      obj3 = { icon: closure_8(Icon, obj4), label: intl.string(guild(1126).t["Yhi9/N"]), onPress: tmp10 };
+      RowButton = tmp(8897).RowButton;
+      obj4 = { source: AssetRegistryDefault, disableColor: true };
+      Icon = tmp(1188).Icon;
+      intl = tmp(1126).intl;
       tmp16 = closure_8(closure_4, obj2);
     }
     cResult[13] = canCustomizeGuild;
@@ -157,66 +163,83 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guild)
   cResult[10] = tmp4.wrapper;
   cResult[11] = tmp14;
   cResult[12] = items2;
-  const tmpResult2 = guild(14901);
 }) : ((guild) => {
+  let BaseTextButton;
+  let Icon;
+  let RowButton;
+  let canCreateChannel;
+  let canCustomizeGuild;
+  let intl;
+  let intl2;
+  let intl3;
+  let intl4;
+  let items4;
+  let items5;
+  let items6;
+  let items7;
+  let obj13;
+  let obj6;
+  let obj7;
   guild = guild.guild;
   const tmp = closure_10();
+  let obj = guild(573);
   const items = [PermissionStore];
   const items1 = [guild];
-  const stateFromStoresObject = guild(573).useStateFromStoresObject(items, () => ({ canCustomizeGuild: PermissionStore.can(Permissions.MANAGE_GUILD, guild), canCreateChannel: PermissionStore.can(Permissions.MANAGE_CHANNELS, guild) }), items1);
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
+    const obj = { canCustomizeGuild: PermissionStore.can(Permissions.MANAGE_GUILD, guild), canCreateChannel: PermissionStore.can(Permissions.MANAGE_CHANNELS, guild) };
+    return obj;
+  }, items1);
   ({ canCustomizeGuild, canCreateChannel } = stateFromStoresObject);
   const items2 = [guild.id];
   const items3 = [guild.id];
-  const callback = noop.useCallback(() => {
-    GuildSettingsActionCreatorsDefault.open(guild.id);
+  const callback = react.useCallback(() => {
+    const obj = GuildSettingsActionCreatorsDefault;
+    obj.open(guild.id);
   }, items2);
-  const callback1 = noop.useCallback(() => {
-    CreateChannelModalActionCreatorsDefault.open(null, guild.id, null, null);
+  const callback1 = react.useCallback(() => {
+    const obj = CreateChannelModalActionCreatorsDefault;
+    obj.open(null, guild.id, null, null);
   }, items3);
-  const obj = guild(573);
-  const obj3 = { style: null, children: null };
-  const items4 = [tmp.wrapper, ];
+  const obj3 = { style: items4, children: items5 };
+  items4 = [tmp.wrapper, ];
   const obj2 = guild(14901);
-  items4[1] = { paddingBottom: guild(14901).useYouBarTotalHeight(16) };
-  obj3.style = items4;
+  items4[1] = { paddingBottom: obj2.useYouBarTotalHeight(16) };
+  ({ paddingBottom: obj2.useYouBarTotalHeight(16) });
   if (canCustomizeGuild) {
-    const obj5 = { style: tmp.personalizeButtonWrapper, children: null };
-    const obj6 = { icon: null, label: null, onPress: null };
-    const obj7 = { source: _modDef16183, disableColor: true };
-    obj6.icon = closure_8(tmp2(1188).Icon, obj7);
-    const intl = tmp2(1126).intl;
-    obj6.label = intl.string(tmp2(1126).t["Yhi9/N"]);
-    obj6.onPress = callback;
-    obj5.children = closure_8(tmp2(8897).RowButton, obj6);
+    const obj5 = { style: tmp.personalizeButtonWrapper, children: closure_8(RowButton, obj6) };
+    obj6 = { icon: closure_8(Icon, obj7), label: intl.string(guild(1126).t["Yhi9/N"]), onPress: callback };
+    RowButton = tmp2(8897).RowButton;
+    obj7 = { source: AssetRegistryDefault, disableColor: true };
+    Icon = tmp2(1188).Icon;
+    intl = tmp2(1126).intl;
     canCustomizeGuild = closure_8(closure_4, obj5);
   }
-  const items5 = [canCustomizeGuild, ];
-  const obj8 = { style: tmp.content, children: null };
-  const obj4 = { paddingBottom: guild(14901).useYouBarTotalHeight(16) };
-  const items6 = [closure_8(closure_5, { source: _modDef16184 }), , , ];
-  const obj10 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: null, children: null };
-  const items7 = [, ];
+  items5 = [canCustomizeGuild, ];
+  const obj8 = { style: tmp.content, children: items6 };
+  items6 = [, , , ];
+  const obj9 = { source: AssetRegistryDefault2 };
+  items6[0] = closure_8(closure_5, obj9);
+  const obj10 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: items7, children: intl2.string(guild(1126).t.o4s29v) };
+  items7 = [, ];
   ({ text: arr8[0], headerText: arr8[1] } = tmp);
-  obj10.style = items7;
-  const intl2 = tmp2(1126).intl;
-  obj10.children = intl2.string(guild(1126).t.o4s29v);
-  items6[1] = closure_8(guild(4886).Text, obj10);
-  const obj11 = { color: "text-default", variant: "text-md/medium", style: tmp.text, children: null };
-  const intl3 = tmp2(1126).intl;
-  obj11.children = intl3.string(guild(1126).t.iypvFu);
-  items6[2] = closure_8(guild(4886).Text, obj11);
+  const Text = tmp2(4886).Text;
+  intl2 = tmp2(1126).intl;
+  items6[1] = closure_8(Text, obj10);
+  const obj11 = { color: "text-default", variant: "text-md/medium", style: tmp.text, children: intl3.string(guild(1126).t.iypvFu) };
+  const Text2 = tmp2(4886).Text;
+  intl3 = tmp2(1126).intl;
+  items6[2] = closure_8(Text2, obj11);
   if (canCreateChannel) {
-    const obj12 = { style: tmp.buttonWrapper, children: null };
-    const obj13 = { shrink: true, size: "md", pillStyle: tmp.buttonPill, text: null, onPress: null };
-    const intl4 = tmp2(1126).intl;
-    obj13.text = intl4.string(tmp2(1126).t["63PyJQ"]);
-    obj13.onPress = callback1;
-    obj12.children = closure_8(tmp2(5595).BaseTextButton, obj13);
+    const obj12 = { style: tmp.buttonWrapper, children: closure_8(BaseTextButton, obj13) };
+    obj13 = { shrink: true, size: "md", pillStyle: tmp.buttonPill, text: intl4.string(guild(1126).t["63PyJQ"]), onPress: callback1 };
+    BaseTextButton = tmp2(5595).BaseTextButton;
+    intl4 = tmp2(1126).intl;
     canCreateChannel = closure_8(closure_4, obj12);
   }
   items6[3] = canCreateChannel;
-  obj8.children = items6;
   items5[1] = closure_9(closure_4, obj8);
-  obj3.children = items5;
   return closure_9(closure_4, obj3);
 }));
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/empty_states/ChannelsEmpty.tsx");
+
+export default memoResult;

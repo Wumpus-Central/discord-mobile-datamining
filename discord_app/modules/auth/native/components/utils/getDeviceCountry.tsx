@@ -1,13 +1,13 @@
-// === Module 15885: getDeviceCountry ===
+// === Module 15885: react-native ===
 
-// Module 15885 (getDeviceCountry)
-import NativeDeviceLocaleModule from "NativeDeviceLocaleModule" /* 1127 */;
+// Module 15885 (react-native)
+import react_native from "react-native" /* 1127 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/getDeviceCountry.tsx");
 
 export const getDeviceCountry = function getDeviceCountry() {
-  const _default = NativeDeviceLocaleModule.default;
+  const _default = react_native.default;
   let Language;
   if (_default != null) {
     Language = _default.getConstants().Language;
@@ -18,7 +18,8 @@ export const getDeviceCountry = function getDeviceCountry() {
     const parts = Language.split("-");
     let formatted = null;
     if (parts.length >= 2) {
-      formatted = parts[parts.length - 1].toUpperCase();
+      const str2 = parts[parts.length - 1];
+      formatted = str2.toUpperCase();
     }
     return formatted;
   }

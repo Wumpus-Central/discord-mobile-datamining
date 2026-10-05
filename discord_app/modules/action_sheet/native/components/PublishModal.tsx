@@ -1,50 +1,58 @@
 // === Module 11293: PublishModal ===
 
 // Module 11293 (PublishModal)
-import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
+import intl2 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
+import LegacyTokens from "LegacyTokens" /* 5620 */;
 import useChannelFollowerStatsDefault from "useChannelFollowerStats" /* 11294 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj2 = { alertContainer: { paddingTop: 16 }, alertLoading: { paddingTop: 62, paddingBottom: 46 }, alertBodyText: { marginBottom: 16, fontSize: 16, lineHeight: 24, color: fn(5620).DARK_PRIMARY_300_LIGHT_PRIMARY_400 } };
-let closure_7 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj3 = { marginBottom: 16, fontSize: 16, lineHeight: 24, color: fn(5620).DARK_PRIMARY_300_LIGHT_PRIMARY_400 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/action_sheet/native/components/PublishModal.tsx");
+let channelId;
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
-  const cResult = c.c(10);
+let closure_4;
+let hasOwnProperty;
+let obj2;
+({ View: closure_4, ActivityIndicator: hasOwnProperty } = react_native);
+const jsx = Fragment.jsx;
+let obj = { alertContainer: { paddingTop: 16 }, alertLoading: { paddingTop: 62, paddingBottom: 46 }, alertBodyText: obj2 };
+obj2 = { marginBottom: 16, fontSize: 16, lineHeight: 24, color: LegacyTokens.DARK_PRIMARY_300_LIGHT_PRIMARY_400 };
+let closure_7 = createStyles.createStyles(obj);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+  const obj = react2;
+  const cResult = obj.c(10);
+  channelId = channelId.channelId;
   const tmp4 = closure_7();
-  const tmp5 = _slicedToArray(useChannelFollowerStatsDefault(channelId.channelId), 2);
+  const tmp5 = _slicedToArray(useChannelFollowerStatsDefault(channelId), 2);
   const first = tmp5[0];
   if (tmp5[1]) {
+    let first1;
+    let tmp27;
     const _Symbol = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp25 = <hasOwnProperty animating />;
-      cResult[0] = tmp25;
-      let first1 = tmp25;
+      const tmp26 = <hasOwnProperty animating />;
+      cResult[0] = tmp26;
+      first1 = tmp26;
     } else {
       first1 = cResult[0];
     }
     if (cResult[1] !== tmp4.alertLoading) {
-      const obj2 = { style: tmp4.alertLoading, children: first1 };
-      const tmp29 = <React4 style={tmp4.alertLoading}>{first1}</React4>;
+      const tmp30 = <React3 style={tmp4.alertLoading}>{first1}</React3>;
       cResult[1] = tmp4.alertLoading;
-      cResult[2] = tmp29;
-      let tmp26 = tmp29;
+      cResult[2] = tmp30;
+      tmp27 = tmp30;
     } else {
-      tmp26 = cResult[2];
+      tmp27 = cResult[2];
     }
-    return tmp26;
+    return tmp27;
   } else {
+    let tmp15;
     let guildsFollowing;
     if (first != null) {
       guildsFollowing = first.guildsFollowing;
@@ -58,32 +66,37 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
       tmp9 = guildsFollowing1 > 0;
     }
     let guildsFollowing2;
+    const tmp11 = cResult[3];
     if (first != null) {
       guildsFollowing2 = first.guildsFollowing;
     }
-    if (cResult[3] === guildsFollowing2) {
+    if (tmp11 === guildsFollowing2) {
       if (cResult[4] === tmp9) {
+        let tmp13;
         if (cResult[5] === tmp4.alertBodyText) {
-          let tmp12 = cResult[6];
+          tmp13 = cResult[6];
         }
         if (cResult[7] === tmp4.alertContainer) {
-          if (cResult[8] === tmp12) {
-            let tmp17 = cResult[9];
+          let tmp18;
+          if (cResult[8] === tmp13) {
+            tmp18 = cResult[9];
           }
-          return tmp17;
+          return tmp18;
         }
-        const obj3 = { style: tmp4.alertContainer, children: tmp12 };
-        const tmp20 = <React4 style={tmp4.alertContainer}>{tmp12}</React4>;
+        const tmp21 = <React3 style={tmp4.alertContainer}>{tmp13}</React3>;
         cResult[7] = tmp4.alertContainer;
-        cResult[8] = tmp12;
-        cResult[9] = tmp20;
-        tmp17 = tmp20;
+        cResult[8] = tmp13;
+        cResult[9] = tmp21;
+        tmp18 = tmp21;
       }
     }
     const obj4 = { style: tmp4.alertBodyText, children: null };
-    const intl = util.intl;
+    const LegacyText = native.LegacyText;
+    const intl = intl2.intl;
     if (tmp9) {
+      const format = intl.format;
       let num2;
+      const GCGrNP = intl2.t.GCGrNP;
       if (first != null) {
         num2 = first.guildsFollowing;
       }
@@ -91,13 +104,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
         num2 = 0;
       }
       const obj5 = { numGuildsFollowing: num2 };
-      obj4.children = intl.format(util.t.GCGrNP, obj5);
-      let tmp14 = obj4;
+      obj4.children = format(GCGrNP, obj5);
+      tmp15 = obj4;
     } else {
-      obj4.children = intl.string(util.t["8FpqOs"]);
-      tmp14 = obj4;
+      obj4.children = intl.string(intl2.t["8FpqOs"]);
+      tmp15 = obj4;
     }
-    const tmp13Result = jsx(native.LegacyText, tmp14);
+    const tmp14Result = <LegacyText {...tmp15} />;
     let guildsFollowing3;
     if (first != null) {
       guildsFollowing3 = first.guildsFollowing;
@@ -105,16 +118,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     cResult[3] = guildsFollowing3;
     cResult[4] = tmp9;
     cResult[5] = tmp4.alertBodyText;
-    cResult[6] = tmp13Result;
-    tmp12 = tmp13Result;
+    cResult[6] = tmp14Result;
+    tmp13 = tmp14Result;
   }
 }) : ((channelId) => {
+  channelId = channelId.channelId;
   const tmp = closure_7();
-  const tmp3 = _slicedToArray(useChannelFollowerStatsDefault(channelId.channelId), 2);
+  const tmp3 = _slicedToArray(useChannelFollowerStatsDefault(channelId), 2);
   const first = tmp3[0];
   if (tmp3[1]) {
-    const obj2 = { style: tmp.alertLoading, children: <hasOwnProperty animating /> };
-    return <React4 style={tmp.alertLoading}><hasOwnProperty animating /></React4>;
+    return <React3 style={tmp.alertLoading}><hasOwnProperty animating /></React3>;
   } else {
     let guildsFollowing;
     if (first != null) {
@@ -128,11 +141,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
       }
       tmp7 = guildsFollowing1 > 0;
     }
-    const obj = { style: tmp.alertContainer, children: null };
     const obj3 = { style: tmp.alertBodyText, children: null };
-    const intl = util.intl;
+    const LegacyText = native.LegacyText;
+    const intl = intl2.intl;
     if (tmp7) {
+      const format = intl.format;
       let num2;
+      const GCGrNP = intl2.t.GCGrNP;
       if (first != null) {
         num2 = first.guildsFollowing;
       }
@@ -140,13 +155,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
         num2 = 0;
       }
       const obj4 = { numGuildsFollowing: num2 };
-      obj3.children = intl.format(util.t.GCGrNP, obj4);
-      let tmp12 = obj3;
+      obj3.children = format(GCGrNP, obj4);
     } else {
-      obj3.children = intl.string(util.t["8FpqOs"]);
-      tmp12 = obj3;
+      obj3.children = intl.string(intl2.t["8FpqOs"]);
     }
-    obj.children = jsx(native.LegacyText, tmp12);
-    return <React4 style={tmp.alertContainer}>{null}</React4>;
+    return <React3 style={tmp.alertContainer}>{null}</React3>;
   }
 });
+const result = size.fileFinishedImporting("modules/action_sheet/native/components/PublishModal.tsx");
+
+export default tmp4;

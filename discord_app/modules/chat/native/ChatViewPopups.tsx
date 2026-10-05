@@ -4,24 +4,33 @@
 import useIsHubRealNamePromptShowingDefault from "useIsHubRealNamePromptShowing" /* 12444 */;
 import WelcomeScreenUtils from "WelcomeScreenUtils" /* 12448 */;
 import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 12454 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ReactCompilerGating = fn(558);
+let dependencyMap, guildId, importDefault;
+
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
-  const cResult = guildId(576).c(5);
+  let closure_2;
+  let ref;
+  let showWelcomeModal;
+  let obj = guildId(576);
+  const cResult = obj.c(5);
   guildId = guildId.guildId;
+  let obj2 = showWelcomeModal;
+  const channelId = guildId.channelId;
   importDefault = showWelcomeModal.useRef(false);
   const tmp2 = useIsHubRealNamePromptShowingDefault(guildId);
   dependencyMap = tmp2;
-  let obj = guildId(576);
-  let obj2 = showWelcomeModal;
-  showWelcomeModal = guildId(12448).useShowWelcomeModal(guildId, guildId.channelId);
+  let obj3 = guildId(12448);
+  showWelcomeModal = obj3.useShowWelcomeModal(guildId, channelId);
   if (cResult[0] === guildId) {
     if (cResult[1] === tmp2) {
+      let tmp4;
+      let tmp5;
       if (cResult[2] === showWelcomeModal) {
-        let tmp4 = cResult[3];
-        let tmp5 = cResult[4];
+        tmp4 = cResult[3];
+        tmp5 = cResult[4];
       }
       const effect = obj2.useEffect(tmp4, tmp5);
       return null;
@@ -37,7 +46,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
                 return false;
               }
         };
-        GuildDirectoryNicknameUpsellModalActionCreatorsDefault.open(obj2);
+        const obj3 = GuildDirectoryNicknameUpsellModalActionCreatorsDefault;
+        obj3.open(obj2);
         ref.current = true;
       } else if (showWelcomeModal) {
         const obj4 = {
@@ -47,7 +57,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
                 return false;
               }
         };
-        const result = WelcomeScreenUtils.openWelcomeActionSheet(obj4);
+        const obj = WelcomeScreenUtils;
+        const result = obj.openWelcomeActionSheet(obj4);
         ref.current = true;
       }
     }
@@ -61,12 +72,16 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   tmp5 = items;
   tmp4 = fn;
 }) : ((guildId) => {
+  let closure_2;
+  let ref;
   guildId = guildId.guildId;
   let showWelcomeModal;
+  const channelId = guildId.channelId;
   importDefault = showWelcomeModal.useRef(false);
   const tmp = useIsHubRealNamePromptShowingDefault(guildId);
   dependencyMap = tmp;
-  showWelcomeModal = guildId(12448).useShowWelcomeModal(guildId, guildId.channelId);
+  let obj = guildId(12448);
+  showWelcomeModal = obj.useShowWelcomeModal(guildId, channelId);
   const items = [guildId, showWelcomeModal, tmp];
   const effect = showWelcomeModal.useEffect(() => {
     if (!ref.current) {
@@ -78,7 +93,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
                 return false;
               }
         };
-        GuildDirectoryNicknameUpsellModalActionCreatorsDefault.open(obj2);
+        const obj3 = GuildDirectoryNicknameUpsellModalActionCreatorsDefault;
+        obj3.open(obj2);
         ref.current = true;
       } else if (showWelcomeModal) {
         const obj4 = {
@@ -88,15 +104,16 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
                 return false;
               }
         };
-        const result = WelcomeScreenUtils.openWelcomeActionSheet(obj4);
+        const obj = WelcomeScreenUtils;
+        const result = obj.openWelcomeActionSheet(obj4);
         ref.current = true;
       }
     }
   }, items);
   return null;
 });
-const size = fn(2);
+const memoResult = react.memo(tmp2);
 let result = size.fileFinishedImporting("modules/chat/native/ChatViewPopups.tsx");
 
-export default noop.memo(tmp2);
+export default memoResult;
 export const ChatViewPopups = tmp2;

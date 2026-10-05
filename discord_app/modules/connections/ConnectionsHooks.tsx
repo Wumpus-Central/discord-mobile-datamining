@@ -2,26 +2,41 @@
 
 // Module 7012 (ConnectionsHooks)
 import _modDef12 from "module_12" /* 12 */;
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import PlatformsDefault from "Platforms" /* 5442 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import KeyboardConstants from "KeyboardConstants" /* 7013 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5440 */;
 import UserStore from "UserStore" /* 1377 */;
+import Constants from "Constants" /* 1085 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const Constants = fn(1085);
-({ ACTIVITY_PLATFORM_TYPES: closure_7, PlatformTypes } = Constants);
-const KeyboardKeysUpdated = fn(7013).KeyboardKeysUpdated;
+const require = globalThis.__r;
+let _require, forUserProfile, set;
+
+let PlatformTypes;
+let metroImportDefault;
+({ ACTIVITY_PLATFORM_TYPES: metroImportDefault, PlatformTypes } = Constants);
+const KeyboardKeysUpdated = KeyboardConstants.KeyboardKeysUpdated;
 let closure_10 = { [PlatformTypes.INSTAGRAM]: ["1036753656588017764"] };
-let items = [PlatformTypes.INSTAGRAM, new Date(2023, 1, 18).getTime()];
+let items = [PlatformTypes.INSTAGRAM, ];
+const date = new Date(2023, 1, 18);
+items[1] = date.getTime();
 let items1 = [items];
-const map = new Map(items1);
+new Map(items1);
 let closure_12 = 30 * DurationsDefault.Millis.DAY;
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((forUserProfile) => {
-  const cResult = forUserProfile(allowPlayStationStaging[8]).c(7);
+  let allowPlayStationStaging;
+  let currentUser;
+  let tmp4;
+  let tmp5;
+  let tmp8;
+  const obj = forUserProfile(allowPlayStationStaging[8]);
+  const cResult = obj.c(7);
   forUserProfile = forUserProfile.forUserProfile;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -30,17 +45,17 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((forUserProfile) => {
     };
     cResult[0] = items;
     cResult[1] = fn;
-    tmp4 = items;
     tmp5 = fn;
+    tmp4 = items;
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const obj = forUserProfile(allowPlayStationStaging[8]);
-  const stateFromStores = forUserProfile(allowPlayStationStaging[9]).useStateFromStores(tmp4, tmp5);
+  const tmpResult = forUserProfile(allowPlayStationStaging[9]);
+  const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { location: "f2f7ef_1" };
     cResult[2] = obj2;
-    let tmp8 = obj2;
+    tmp8 = obj2;
   } else {
     tmp8 = cResult[2];
   }
@@ -48,21 +63,23 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((forUserProfile) => {
   allowPlayStationStaging = PlayStationVoiceExperiment.useConfig(tmp8).allowPlayStationStaging;
   if (cResult[3] === allowPlayStationStaging) {
     if (cResult[4] === stateFromStores) {
+      let tmp9;
       if (cResult[5] === forUserProfile) {
-        let tmp9 = cResult[6];
+        tmp9 = cResult[6];
       }
       return tmp9;
     }
   }
   const fn2 = function p(type) {
+    let tmp5;
     if (type.type === PlatformTypes.PLAYSTATION_STAGING) {
-      let tmp5 = allowPlayStationStaging;
+      tmp5 = allowPlayStationStaging;
     } else {
       let tmp4 = undefined === stateFromStores;
       if (!tmp4) {
         let hasItem;
         if (closure_10[type.type] != null) {
-          hasItem = obj.includes(tmp10.id);
+          hasItem = obj.includes(tmp11.id);
         }
         tmp4 = !hasItem;
       }
@@ -75,11 +92,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((forUserProfile) => {
           if (migrationData != null) {
             migrationExperimentEnabled = migrationData.getMigrationExperimentEnabled("ConnectionsHooks");
           }
-          let enabled = !migrationExperimentEnabled;
-          if (!migrationExperimentEnabled) {
-            enabled = type.enabled;
-          }
-          tmp7 = enabled;
+          tmp7 = !migrationExperimentEnabled && type.enabled;
         }
         tmp5 = tmp7;
       }
@@ -91,23 +104,25 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((forUserProfile) => {
   cResult[5] = forUserProfile;
   cResult[6] = fn2;
   tmp9 = fn2;
-  const tmpResult = forUserProfile(allowPlayStationStaging[9]);
 }) : ((forUserProfile) => {
+  let currentUser;
   forUserProfile = forUserProfile.forUserProfile;
   let allowPlayStationStaging;
+  const obj = forUserProfile(allowPlayStationStaging[9]);
   const items = [UserStore];
-  closure_1 = forUserProfile(allowPlayStationStaging[9]).useStateFromStores(items, () => currentUser.getCurrentUser());
+  let closure_1 = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   const PlayStationVoiceExperiment = forUserProfile(allowPlayStationStaging[10]).PlayStationVoiceExperiment;
   allowPlayStationStaging = PlayStationVoiceExperiment.useConfig({ location: "f2f7ef_1" }).allowPlayStationStaging;
   return (type) => {
+    let tmp5;
     if (type.type === PlatformTypes.PLAYSTATION_STAGING) {
-      let tmp5 = allowPlayStationStaging;
+      tmp5 = allowPlayStationStaging;
     } else {
       let tmp4 = undefined === closure_1;
       if (!tmp4) {
         let hasItem;
         if (closure_10[type.type] != null) {
-          hasItem = obj.includes(tmp10.id);
+          hasItem = obj.includes(tmp11.id);
         }
         tmp4 = !hasItem;
       }
@@ -120,11 +135,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((forUserProfile) => {
           if (migrationData != null) {
             migrationExperimentEnabled = migrationData.getMigrationExperimentEnabled("ConnectionsHooks");
           }
-          let enabled = !migrationExperimentEnabled;
-          if (!migrationExperimentEnabled) {
-            enabled = type.enabled;
-          }
-          tmp7 = enabled;
+          tmp7 = !migrationExperimentEnabled && type.enabled;
         }
         tmp5 = tmp7;
       }
@@ -133,7 +144,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((forUserProfile) => {
   };
 });
 let closure_13 = tmp4;
-fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let items2 = [PlatformTypes.PLAYSTATION, 2];
 const items3 = [items2, , , , ];
 const items4 = [PlatformTypes.XBOX, 2];
@@ -144,17 +155,23 @@ const items6 = [PlatformTypes.STEAM, 1];
 items3[3] = items6;
 const items7 = [PlatformTypes.TWITCH, 1];
 items3[4] = items7;
-const date = new Date(2023, 1, 18);
-const map1 = new Map(items3);
-ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let sortByResult = dependencyMap;
-  const cResult = require("c").c(14);
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function() {
+  let accounts;
+  let tmp14;
+  let tmp15;
+  let tmp16;
+  let tmp4;
+  let tmp5;
+  let tmp7;
+  const obj = require("react");
+  const cResult = obj.c(14);
+  const tmp = _require;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ConnectedAccountsStore];
     const fn = function o() {
       return accounts.getAccounts();
     };
+    let num = 0;
     cResult[0] = items;
     cResult[1] = fn;
     tmp4 = items;
@@ -162,18 +179,20 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const obj = require("c");
-  const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
+  const tmpResult = tmp(504);
+  const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { forUserProfile: false };
     cResult[2] = obj2;
-    let tmp7 = obj2;
+    tmp7 = obj2;
   } else {
     tmp7 = cResult[2];
   }
   const tmp8 = closure_13(tmp7);
   if (cResult[3] !== stateFromStores) {
     const _Set = Set;
+    const self = this;
+    const self2 = this;
     set = new Set();
     _require = set;
     const item = stateFromStores.forEach((type) => set.add(type.type));
@@ -184,9 +203,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   set = tmp9;
   if (cResult[5] === tmp9) {
+    let tmp13;
     if (cResult[6] === tmp8) {
-      return cResult[7];
+      tmp13 = cResult[7];
     }
+    return tmp13;
   }
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function h(type) {
@@ -203,9 +224,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       return !hasItem;
     };
     cResult[8] = fn2;
-    let tmp15 = fn2;
+    tmp14 = fn2;
   } else {
-    tmp15 = cResult[8];
+    tmp14 = cResult[8];
   }
   if (cResult[9] !== tmp9) {
     const fn3 = function v(type) {
@@ -213,63 +234,69 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     };
     cResult[9] = tmp9;
     cResult[10] = fn3;
-    let tmp16 = fn3;
+    tmp15 = fn3;
   } else {
-    tmp16 = cResult[10];
+    tmp15 = cResult[10];
   }
   if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
     const fn4 = function w(hasMetadata) {
       return hasMetadata.hasMetadata;
     };
     class P {
-      constructor(arg0) {
-        return !closure_1_7.has(arg0.type);
+      constructor(type) {
+        return !set2.has(type.type);
       }
     }
     class E {
-      constructor(arg0) {
-        return arg0.name;
+      constructor(name) {
+        return name.name;
       }
     }
     cResult[11] = fn4;
     cResult[12] = P;
     cResult[13] = E;
-    let tmp17 = fn4;
+    tmp16 = fn4;
   } else {
-    tmp17 = cResult[11];
+    tmp16 = cResult[11];
     class P {
-      constructor(arg0) {
-        return !closure_1_7.has(arg0.type);
+      constructor(type) {
+        return !set2.has(type.type);
       }
     }
     class E {
-      constructor(arg0) {
-        return arg0.name;
+      constructor(name) {
+        return name.name;
       }
     }
   }
-  const tmpResult = require("initialize");
-  const obj4 = set(12);
-  const items1 = [tmp15, tmp16, tmp17, P, E];
-  sortByResult = obj4.sortBy(set(5442).filter(tmp8), items1);
+  const sortBy = set(12).sortBy;
+  set(12);
+  const items1 = [tmp14, tmp15, tmp16, P, E];
+  const arr3 = set(5442);
+  const sortByResult = sortBy(arr3.filter(tmp8), items1);
   cResult[5] = tmp9;
   cResult[6] = tmp8;
   cResult[7] = sortByResult;
-  const arr3 = set(5442);
+  tmp13 = sortByResult;
 }) : (() => {
+  let accounts;
+  let memo;
+  let stateFromStores;
   let items = [ConnectedAccountsStore];
-  stateFromStores = stateFromStores(memo[9]).useStateFromStores(items, () => accounts.getAccounts());
+  const obj = stateFromStores(memo[9]);
+  stateFromStores = obj.useStateFromStores(items, () => accounts.getAccounts());
   const tmp2 = closure_13({ forUserProfile: false });
-  closure_1 = tmp2;
+  let closure_1 = tmp2;
   const items1 = [stateFromStores];
-  memo = noop.useMemo(() => {
+  memo = react.useMemo(() => {
     set = new Set();
     const item = stateFromStores.forEach((type) => set.add(type.type));
     return set;
   }, items1);
   const items2 = [memo, tmp2];
-  return noop.useMemo(() => {
-    const obj = _modDef12;
+  return react.useMemo(() => {
+    const sortBy = _modDef12.sortBy;
+    _modDef12;
     const items = [
       (type) => {
         let hasItem = set3.has(type.type);
@@ -289,26 +316,29 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       (type) => !set2.has(type.type),
       (name) => name.name
     ];
-    return obj.sortBy(PlatformsDefault.filter(closure_1), items);
+    const arr = PlatformsDefault;
+    return sortBy(arr.filter(closure_1), items);
   }, items2);
 });
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/connections/ConnectionsHooks.tsx");
-
-export const usePlatformAllowed = tmp4;
-export const usePlatforms = tmp5;
-export const useEmptyStatePlatforms = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let sortByResult = dependencyMap;
-  const cResult = c.c(5);
+const map1 = new Map(items3);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let first;
+  let tmp5;
+  const obj = react2;
+  const cResult = obj.c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { forUserProfile: false };
+    let num = 0;
     cResult[0] = obj2;
-    let first = obj2;
+    first = obj2;
   } else {
     first = cResult[0];
   }
   const tmp4 = closure_13(first);
   if (cResult[1] !== tmp4) {
+    let tmp7;
+    let tmp6;
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
       const fn = function s(type) {
@@ -323,26 +353,31 @@ export const useEmptyStatePlatforms = ReactCompilerGating.isReactCompilerEnabled
       };
       cResult[3] = fn;
       cResult[4] = fn2;
-      let tmp6 = fn2;
-      let tmp5 = fn;
+      tmp7 = fn2;
+      tmp6 = fn;
     } else {
-      tmp5 = cResult[3];
-      tmp6 = cResult[4];
+      tmp6 = cResult[3];
+      tmp7 = cResult[4];
     }
-    const obj3 = _modDef12;
-    const items = [tmp5, tmp6];
-    sortByResult = obj3.sortBy(PlatformsDefault.filter(tmp4), items);
+    const sortBy = _modDef12.sortBy;
+    _modDef12;
+    const items = [tmp6, tmp7];
+    const arr = PlatformsDefault;
+    const sortByResult = sortBy(arr.filter(tmp4), items);
     cResult[1] = tmp4;
     cResult[2] = sortByResult;
+    tmp5 = sortByResult;
   } else {
-    return cResult[2];
+    tmp5 = cResult[2];
   }
+  return tmp5;
 }) : (() => {
   const tmp = closure_13({ forUserProfile: false });
-  closure_0 = tmp;
+  let closure_0 = tmp;
   let items = [tmp];
-  return noop.useMemo(() => {
-    const obj = _modDef12;
+  return react.useMemo(() => {
+    const sortBy = _modDef12.sortBy;
+    _modDef12;
     const items = [
       (type) => {
         let num = closure_1_14.get(type.type);
@@ -353,10 +388,18 @@ export const useEmptyStatePlatforms = ReactCompilerGating.isReactCompilerEnabled
       },
       (name) => name.name
     ];
-    return obj.sortBy(PlatformsDefault.filter(closure_0), items);
+    const arr = PlatformsDefault;
+    return sortBy(arr.filter(closure_0), items);
   }, items);
 });
+const result = size.fileFinishedImporting("modules/connections/ConnectionsHooks.tsx");
+
+export const usePlatformAllowed = tmp4;
+export const usePlatforms = tmp5;
+export const useEmptyStatePlatforms = tmp7;
 export const useLegacyPlatformType = function useLegacyPlatformType(arg0) {
+  let require;
+  let tmp2;
   function handleKeyDown(key) {
     if (key.key === KeyboardKeysUpdated.SHIFT) {
       _require(true);
@@ -367,8 +410,9 @@ export const useLegacyPlatformType = function useLegacyPlatformType(arg0) {
       _require(false);
     }
   }
-  [tmp2, require] = noop.useState(false);
-  const effect = noop.useEffect(() => {
+  [tmp2, require] = react.useState(false);
+  _slicedToArray(react.useState(false), 2);
+  const effect = react.useEffect(() => {
     const listener = window.addEventListener("keydown", handleKeyDown);
     const listener1 = window.addEventListener("keyup", handleKeyUp);
     return () => {

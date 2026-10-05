@@ -1,11 +1,14 @@
 // === Module 13543: VoiceChannelBlockedUserStore ===
 
 // Module 13543 (VoiceChannelBlockedUserStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import SharedSpacesWarningManagerDefault from "SharedSpacesWarningManager" /* 13544 */;
 import RelationshipStore from "RelationshipStore" /* 4519 */;
 import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import size from "module_2" /* 2 */;
+
+let closure_4, closure_5;
 
 function init() {
   closure_4 = {};
@@ -14,45 +17,49 @@ function init() {
 function handleRelationshipChange(relationship) {
   relationship = relationship.relationship;
   const voiceStateForUser = VoiceStateStore.getVoiceStateForUser(relationship.id);
-  let tmp2 = null != voiceStateForUser && null != voiceStateForUser.channelId;
-  if (tmp2) {
-    tmp2 = processUserInChannel(voiceStateForUser.channelId, relationship.id);
-  }
+  const tmp2 = null != voiceStateForUser && null != voiceStateForUser.channelId && processUserInChannel(voiceStateForUser.channelId, relationship.id);
   return tmp2;
 }
 function processUserInChannel(channelId, userId) {
-  set = new Set(dependencyMap[channelId]);
+  let flag;
+  let flag2;
+  set = new Set(closure_4[channelId]);
   const isBlockedResult = RelationshipStore.isBlocked(userId);
   if (isBlockedResult) {
     if (!set.has(userId)) {
       set.add(userId);
-      let flag = true;
-      let flag2 = true;
+      flag = true;
+      flag2 = true;
     }
     if (0 === set.size) {
+      let flag4;
+      let flag3;
       if (flag2) {
-        delete tmp3[tmp2];
+        delete closure_4[channelId];
       }
       const _Set = Set;
-      const set1 = new Set(dependencyMap2[channelId]);
+      const self = this;
+      const self2 = this;
+      const set1 = new Set(closure_5[channelId]);
       const isIgnoredResult = RelationshipStore.isIgnored(userId);
       if (isIgnoredResult) {
         if (!set1.has(userId)) {
           set1.add(userId);
-          let flag3 = true;
-          let flag4 = true;
+          flag3 = true;
+          flag4 = true;
         }
         if (0 === set1.size) {
           if (flag4) {
-            delete tmp[tmp2];
+            delete closure_5[channelId];
           }
           if (flag3) {
-            const result = SharedSpacesWarningManagerDefault.handleBlockedOrIgnoredUserVoiceChannelJoin(channelId, userId);
+            const obj4 = SharedSpacesWarningManagerDefault;
+            const result = obj4.handleBlockedOrIgnoredUserVoiceChannelJoin(channelId, userId);
           }
           return flag4;
         }
         if (flag4) {
-          dependencyMap2[channelId] = set1;
+          closure_5[channelId] = set1;
         }
       }
       flag3 = flag;
@@ -63,7 +70,7 @@ function processUserInChannel(channelId, userId) {
       }
     }
     if (flag2) {
-      dependencyMap[channelId] = set;
+      closure_4[channelId] = set;
     }
   }
   flag = false;
@@ -73,46 +80,44 @@ function processUserInChannel(channelId, userId) {
     flag = false;
   }
 }
-const dependencyMap = {};
-const dependencyMap2 = {};
+const React3 = {};
+const hasOwnProperty = {};
 let set = new Set();
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class VoiceChannelBlockedUserStore extends Store {
+  initialize() {
+    this.waitFor(RelationshipStore, VoiceStateStore);
+  }
+  getBlockedUsersForVoiceChannel(voiceStatesForChannelAlt) {
+    let tmp = closure_4[voiceStatesForChannelAlt];
+    if (tmp == null) {
+      tmp = set;
+    }
+    return tmp;
+  }
+  getIgnoredUsersForVoiceChannel(voiceStatesForChannelAlt) {
+    let tmp = closure_5[voiceStatesForChannelAlt];
+    if (tmp == null) {
+      tmp = set;
+    }
+    return tmp;
+  }
 }
 const prototype = VoiceChannelBlockedUserStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(RelationshipStore, VoiceStateStore);
-};
-prototype["getBlockedUsersForVoiceChannel"] = function getBlockedUsersForVoiceChannel(voiceStatesForChannelAlt) {
-  let tmp = dependencyMap[voiceStatesForChannelAlt];
-  if (tmp == null) {
-    tmp = set;
-  }
-  return tmp;
-};
-prototype["getIgnoredUsersForVoiceChannel"] = function getIgnoredUsersForVoiceChannel(voiceStatesForChannelAlt) {
-  let tmp = dependencyMap2[voiceStatesForChannelAlt];
-  if (tmp == null) {
-    tmp = set;
-  }
-  return tmp;
-};
-const voiceChannelBlockedUserStore = new VoiceChannelBlockedUserStore(DispatcherDefault, {
+const obj = {
   CONNECTION_OPEN: init,
   LOGOUT: init,
   OVERLAY_INITIALIZE: function handleOverlayInitialize() {
     init();
     let flag = false;
     const values = Object.values(VoiceStateStore.getAllVoiceStates());
+    const tmp3 = values[Symbol.iterator]();
     while (tmp3 !== undefined) {
       let _Object = Object;
       let values2 = Object.values(tmp4);
       for (const item10026 of values2) {
         if (null != item10026.channelId) {
-          let tmp11 = processUserInChannel(item10026.channelId, item10026.userId);
-          if (!tmp11) {
-            tmp11 = flag;
-          }
+          let tmp11 = processUserInChannel(item10026.channelId, item10026.userId) || flag;
           flag = tmp11;
         }
         continue;
@@ -123,25 +128,25 @@ const voiceChannelBlockedUserStore = new VoiceChannelBlockedUserStore(Dispatcher
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
-    closure_0 = false;
+    let closure_0 = false;
     const item = voiceStates.forEach((oldChannelId) => {
       if (null != oldChannelId.oldChannelId) {
-        if (null != dependencyMap[oldChannelId.oldChannelId]) {
-          if (dependencyMap[oldChannelId.oldChannelId] != null) {
-            obj.delete(oldChannelId.userId);
+        if (null != closure_4[oldChannelId.oldChannelId]) {
+          if (closure_4[oldChannelId.oldChannelId] != null) {
+            closure_4[oldChannelId.oldChannelId].delete(oldChannelId.userId);
           }
           closure_0 = true;
         }
-        if (null != dependencyMap2[oldChannelId.oldChannelId]) {
-          if (dependencyMap2[oldChannelId.oldChannelId] != null) {
-            obj2.delete(oldChannelId.userId);
+        if (null != closure_5[oldChannelId.oldChannelId]) {
+          if (closure_5[oldChannelId.oldChannelId] != null) {
+            closure_5[oldChannelId.oldChannelId].delete(oldChannelId.userId);
           }
           closure_0 = true;
         }
       }
       if (null != oldChannelId.channelId) {
-        closure_0 = processUserInChannel(oldChannelId.channelId, oldChannelId.userId) || closure_0;
         const tmp8 = processUserInChannel(oldChannelId.channelId, oldChannelId.userId) || closure_0;
+        closure_0 = tmp8;
       }
     });
     return closure_0;
@@ -149,8 +154,8 @@ const voiceChannelBlockedUserStore = new VoiceChannelBlockedUserStore(Dispatcher
   RELATIONSHIP_ADD: handleRelationshipChange,
   RELATIONSHIP_REMOVE: handleRelationshipChange,
   RELATIONSHIP_UPDATE: handleRelationshipChange
-});
-const size = fn(2);
+};
+const voiceChannelBlockedUserStore = new VoiceChannelBlockedUserStore(DispatcherDefault, obj);
 let result = size.fileFinishedImporting("modules/shared_space_warnings/VoiceChannelBlockedUserStore.tsx");
 
 export default voiceChannelBlockedUserStore;

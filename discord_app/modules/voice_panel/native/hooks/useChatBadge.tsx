@@ -2,21 +2,24 @@
 
 // Module 17269 (useChatBadge)
 import ReadStateStore from "ReadStateStore" /* 4905 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useChatBadge.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let closure_0;
+  let first;
+  let tmp6;
   _require = arg0;
-  const cResult = require("c").c(3);
+  const obj = require("react");
+  const cResult = obj.c(3);
+  const tmp = _require;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ReadStateStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -34,16 +37,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     };
     cResult[1] = arg0;
     cResult[2] = fn;
-    let tmp6 = fn;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
-  const obj = require("c");
-  return require("initialize").useStateFromStores(first, tmp6);
+  const tmpResult = tmp(504);
+  return tmpResult.useStateFromStores(first, tmp6);
 }) : ((arg0) => {
+  let closure_0;
   _require = arg0;
   const items = [ReadStateStore];
-  return require("initialize").useStateFromStores(items, () => {
+  const obj = require("get initialized");
+  return obj.useStateFromStores(items, () => {
     let str = "mention";
     if (ReadStateStore.getMentionCount(closure_0) <= 0) {
       let str2 = null;
@@ -55,3 +60,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     return str;
   });
 });
+const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useChatBadge.tsx");
+
+export default tmp2;

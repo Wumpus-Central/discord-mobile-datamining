@@ -1,19 +1,21 @@
 // === Module 16336: useNotificationsTabBadge ===
 
 // Module 16336 (useNotificationsTabBadge)
-import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
+import get_initialized from "get initialized" /* 504 */;
+import react2 from "react" /* 576 */;
 import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7125 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7124 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/notifications/useNotificationsTabBadge.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(8);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let arr3;
+  let localItems;
+  let tmp4;
+  let tmp5;
+  const obj = react2;
+  const cResult = obj.c(8);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [NotificationCenterItemsStore];
     const fn = function n() {
@@ -26,55 +28,53 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
+  const tmpResult = get_initialized;
+  const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
   if (cResult[2] !== stateFromStores) {
+    let tmp7;
     const _Symbol = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
       const fn2 = function l(type) {
-        let tmp3 = type.type === NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS;
-        if (!tmp3) {
-          tmp3 = type.type === NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS;
-        }
-        if (!tmp3) {
-          tmp3 = type.type === NotificationCenterItemsTypes.NotificationCenterLocalItems.MOBILE_NATIVE_UPDATE_AVAILABLE;
-        }
+        const tmp3 = type.type === NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS || type.type === NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS || type.type === NotificationCenterItemsTypes.NotificationCenterLocalItems.MOBILE_NATIVE_UPDATE_AVAILABLE;
         return tmp3;
       };
       cResult[4] = fn2;
-      let tmp7 = fn2;
+      tmp7 = fn2;
     } else {
       tmp7 = cResult[4];
     }
     const found = stateFromStores.filter(tmp7);
     cResult[2] = stateFromStores;
     cResult[3] = found;
+    arr3 = found;
   } else {
-    if (cResult[5] === cResult[3].length) {
-      if (cResult[6] === tmp10) {
-        let tmp11 = cResult[7];
-      }
-      return tmp11;
-    }
-    const obj2 = { value: cResult[3].length, showDot: cResult[3].length > 0 };
-    cResult[5] = cResult[3].length;
-    cResult[6] = cResult[3].length > 0;
-    cResult[7] = obj2;
-    tmp11 = obj2;
+    arr3 = cResult[3];
   }
-  const tmpResult = initialize;
+  if (cResult[5] === arr3.length) {
+    let tmp10;
+    if (cResult[6] === arr3.length > 0) {
+      tmp10 = cResult[7];
+    }
+    return tmp10;
+  }
+  const obj2 = { value: arr3.length, showDot: arr3.length > 0 };
+  cResult[5] = arr3.length;
+  cResult[6] = arr3.length > 0;
+  cResult[7] = obj2;
+  tmp10 = obj2;
 }) : (() => {
+  let localItems;
+  let stateFromStores;
   const items = [NotificationCenterItemsStore];
-  stateFromStores = stateFromStores(504).useStateFromStores(items, () => localItems.localItems);
+  const obj = stateFromStores(504);
+  stateFromStores = obj.useStateFromStores(items, () => localItems.localItems);
   const items1 = [stateFromStores];
-  const memo = noop.useMemo(() => stateFromStores.filter((type) => {
-    let tmp3 = type.type === stateFromStores(dependencyMap[5]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS;
-    if (!tmp3) {
-      tmp3 = type.type === stateFromStores(dependencyMap[5]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS;
-    }
-    if (!tmp3) {
-      tmp3 = type.type === stateFromStores(dependencyMap[5]).NotificationCenterLocalItems.MOBILE_NATIVE_UPDATE_AVAILABLE;
-    }
+  const memo = react.useMemo(() => stateFromStores.filter((type) => {
+    const tmp3 = type.type === stateFromStores(closure_1_1[5]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS || type.type === stateFromStores(closure_1_1[5]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS || type.type === stateFromStores(closure_1_1[5]).NotificationCenterLocalItems.MOBILE_NATIVE_UPDATE_AVAILABLE;
     return tmp3;
   }).length, items1);
   return { value: memo, showDot: memo > 0 };
 });
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/notifications/useNotificationsTabBadge.tsx");
+
+export default tmp2;

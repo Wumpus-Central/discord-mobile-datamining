@@ -1,62 +1,62 @@
 // === Module 16052: VoiceUsersItem ===
 
 // Module 16052 (VoiceUsersItem)
-import c from "c" /* 576 */;
-import noop from "module_19" /* 19 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
+import react from "react" /* 19 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+const View = react_native.View;
+const jsx = Fragment.jsx;
 let closure_4 = createStyles.createStyles({ voiceStates: { paddingRight: 8 }, voiceStatesCollapsed: { paddingRight: 0, flexDirection: "row", flexWrap: "wrap", alignItems: "center" } });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_sidebar/native/VoiceUsersItem.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(6);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let children;
+  let collapsed;
+  const obj = react2;
+  const cResult = obj.c(6);
   ({ collapsed, children } = arg0);
   const tmp2 = closure_4();
-  let voiceStates = !collapsed;
-  if (!collapsed) {
-    voiceStates = tmp2.voiceStates;
-  }
   if (collapsed) {
     collapsed = tmp2.voiceStatesCollapsed;
   }
-  if (cResult[0] === voiceStates) {
+  if (cResult[0] === (!collapsed && tmp2.voiceStates)) {
+    let tmp4;
     if (cResult[1] === collapsed) {
-      let tmp3 = cResult[2];
+      tmp4 = cResult[2];
     }
     if (cResult[3] === children) {
-      if (cResult[4] === tmp3) {
-        let tmp4 = cResult[5];
+      let tmp5;
+      if (cResult[4] === tmp4) {
+        tmp5 = cResult[5];
       }
-      return tmp4;
+      return tmp5;
     }
-    const obj2 = { style: tmp3, children };
-    const tmp7 = <View style={tmp3}>{children}</View>;
+    const tmp8 = <View style={tmp4}>{children}</View>;
     cResult[3] = children;
-    cResult[4] = tmp3;
-    cResult[5] = tmp7;
-    tmp4 = tmp7;
+    cResult[4] = tmp4;
+    cResult[5] = tmp8;
+    tmp5 = tmp8;
   }
-  const items = [voiceStates, collapsed];
-  cResult[0] = voiceStates;
+  const items = [!collapsed && tmp2.voiceStates, collapsed];
+  cResult[0] = !collapsed && tmp2.voiceStates;
   cResult[1] = collapsed;
   cResult[2] = items;
-  tmp3 = items;
-}) : ((children) => {
-  let voiceStatesCollapsed = children.collapsed;
+  tmp4 = items;
+}) : ((collapsed) => {
+  let voiceStatesCollapsed = collapsed.collapsed;
+  const children = collapsed.children;
   const tmp = closure_4();
-  let voiceStates = !voiceStatesCollapsed;
-  if (!voiceStatesCollapsed) {
-    voiceStates = tmp.voiceStates;
-  }
+  const voiceStates = !voiceStatesCollapsed && tmp.voiceStates;
   const style = [voiceStates, ];
   if (voiceStatesCollapsed) {
     voiceStatesCollapsed = tmp.voiceStatesCollapsed;
   }
   style[1] = voiceStatesCollapsed;
-  return <View style={style}>{children.children}</View>;
+  return <View style={style}>{children}</View>;
 });
+const result = size.fileFinishedImporting("modules/guild_sidebar/native/VoiceUsersItem.tsx");
+
+export default tmp3;

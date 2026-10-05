@@ -1,88 +1,30 @@
 // === Module 14675: ParentalConsentWarningStore ===
 
 // Module 14675 (ParentalConsentWarningStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
+import size from "module_2" /* 2 */;
 
-let c0 = null;
-let c1 = null;
-let c2 = null;
-const PersistedStore = initializeDefault.PersistedStore;
+let prop = null;
+let prop1 = null;
+let warning = null;
+const PersistedStore = get_initializedDefault.PersistedStore;
 class ParentalConsentWarningStore extends PersistedStore {
-}
-const prototype = ParentalConsentWarningStore.prototype;
-prototype["initialize"] = function initialize(lastWarningFetchDayStart) {
-  let prop;
-  if (lastWarningFetchDayStart != null) {
-    prop = lastWarningFetchDayStart.lastWarningFetchDayStart;
-  }
-  if (prop == null) {
-    prop = null;
-  }
-  c0 = prop;
-  let prop1;
-  if (lastWarningFetchDayStart != null) {
-    prop1 = lastWarningFetchDayStart.lastModalShownDayStart;
-  }
-  if (prop1 == null) {
-    prop1 = null;
-  }
-  c1 = prop1;
-  warning = undefined;
-  if (lastWarningFetchDayStart != null) {
-    warning = lastWarningFetchDayStart.warning;
-  }
-  if (warning == null) {
-    warning = null;
-  }
-  c2 = warning;
-};
-prototype["getWarning"] = function getWarning() {
-  return c2;
-};
-prototype["shouldFetchToday"] = function shouldFetchToday() {
-  let tmp = null == c0;
-  if (!tmp) {
-    const _Date = Date;
-    const date = new Date();
-    date.setHours(0, 0, 0, 0);
-    tmp = c0 !== date.getTime();
-  }
-  return tmp;
-};
-prototype["hasShownModalToday"] = function hasShownModalToday() {
-  let tmp = null != c1;
-  if (tmp) {
-    const _Date = Date;
-    const date = new Date();
-    date.setHours(0, 0, 0, 0);
-    tmp = c1 === date.getTime();
-  }
-  return tmp;
-};
-prototype["getState"] = function getState() {
-  return { lastWarningFetchDayStart, lastModalShownDayStart, warning };
-};
-ParentalConsentWarningStore.displayName = "ParentalConsentWarningStore";
-ParentalConsentWarningStore.persistKey = "ParentalConsentWarningStore";
-const items = [
-  (lastWarningFetchDayStart) => {
-    let prop;
+  initialize(lastWarningFetchDayStart) {
+    prop = undefined;
     if (lastWarningFetchDayStart != null) {
       prop = lastWarningFetchDayStart.lastWarningFetchDayStart;
     }
     if (prop == null) {
       prop = null;
     }
-    const obj = { lastWarningFetchDayStart: prop, lastModalShownDayStart: null, warning: null };
-    let prop1;
+    prop1 = undefined;
     if (lastWarningFetchDayStart != null) {
       prop1 = lastWarningFetchDayStart.lastModalShownDayStart;
     }
     if (prop1 == null) {
       prop1 = null;
     }
-    obj.lastModalShownDayStart = prop1;
     warning = undefined;
     if (lastWarningFetchDayStart != null) {
       warning = lastWarningFetchDayStart.warning;
@@ -90,37 +32,95 @@ const items = [
     if (warning == null) {
       warning = null;
     }
-    obj.warning = warning;
+  }
+  getWarning() {
+    return warning;
+  }
+  shouldFetchToday() {
+    let tmp = null == prop;
+    if (!tmp) {
+      const _Date = Date;
+      const self = this;
+      const self2 = this;
+      const date = new Date();
+      date.setHours(0, 0, 0, 0);
+      tmp = prop !== date.getTime();
+    }
+    return tmp;
+  }
+  hasShownModalToday() {
+    let tmp = null != prop1;
+    if (tmp) {
+      const _Date = Date;
+      const self = this;
+      const self2 = this;
+      const date = new Date();
+      date.setHours(0, 0, 0, 0);
+      tmp = prop1 === date.getTime();
+    }
+    return tmp;
+  }
+  getState() {
+    return { lastWarningFetchDayStart: prop, lastModalShownDayStart: prop1, warning };
+  }
+}
+const prototype = ParentalConsentWarningStore.prototype;
+ParentalConsentWarningStore.displayName = "ParentalConsentWarningStore";
+ParentalConsentWarningStore.persistKey = "ParentalConsentWarningStore";
+const items = [
+  (lastWarningFetchDayStart) => {
+    prop = undefined;
+    if (lastWarningFetchDayStart != null) {
+      prop = lastWarningFetchDayStart.lastWarningFetchDayStart;
+    }
+    if (prop == null) {
+      prop = null;
+    }
+    const obj = { lastWarningFetchDayStart: prop, lastModalShownDayStart: prop1, warning };
+    prop1 = undefined;
+    if (lastWarningFetchDayStart != null) {
+      prop1 = lastWarningFetchDayStart.lastModalShownDayStart;
+    }
+    if (prop1 == null) {
+      prop1 = null;
+    }
+    warning = undefined;
+    if (lastWarningFetchDayStart != null) {
+      warning = lastWarningFetchDayStart.warning;
+    }
+    if (warning == null) {
+      warning = null;
+    }
     return obj;
   }
 ];
 ParentalConsentWarningStore.migrations = items;
-const parentalConsentWarningStore = new ParentalConsentWarningStore(DispatcherDefault, {
+let obj = {
   PARENTAL_CONSENT_WARNING_FETCH_SUCCESS: function handleFetchSuccess(warning) {
     warning = warning.warning;
     const date = new Date();
     date.setHours(0, 0, 0, 0);
-    const time = date.getTime();
+    prop = date.getTime();
     parentalConsentWarningStore.persist();
   },
   PARENTAL_CONSENT_WARNING_MODAL_SHOWN: function handleModalShown() {
     const date = new Date();
     date.setHours(0, 0, 0, 0);
-    const time = date.getTime();
+    prop1 = date.getTime();
     parentalConsentWarningStore.persist();
   },
   PARENTAL_CONSENT_WARNING_CLEARED: function handleWarningCleared() {
-    c2 = null;
+    warning = null;
     parentalConsentWarningStore.persist();
   },
   LOGOUT: function handleLogout() {
-    c0 = null;
-    c1 = null;
-    c2 = null;
+    prop = null;
+    prop1 = null;
+    warning = null;
     parentalConsentWarningStore.persist();
   }
-});
-const size = fn(2);
+};
+const parentalConsentWarningStore = new ParentalConsentWarningStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/parent_tools/ParentalConsentWarningStore.tsx");
 
 export default parentalConsentWarningStore;

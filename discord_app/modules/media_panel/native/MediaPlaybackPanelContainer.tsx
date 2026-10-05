@@ -1,23 +1,25 @@
 // === Module 17372: MediaPlaybackPanelContainer ===
 
 // Module 17372 (MediaPlaybackPanelContainer)
-import c from "c" /* 576 */;
-import _mod4494 from "module_4494" /* 4494 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
+import react3 from "react" /* 4494 */;
 import MediaPlayerManager from "MediaPlayerManager" /* 14378 */;
 import MediaPlaybackPanelControllerDefault from "MediaPlaybackPanelController" /* 17373 */;
-import MediaPlaybackPanelUIDefault from "MediaPlaybackPanelUI" /* 17375 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelContainer.tsx");
-
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(3);
+const jsx = Fragment.jsx;
+const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let first;
+  let tmp7;
+  const obj = react2;
+  const cResult = obj.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function t(showPip) {
+      let activeMediaPlayerSource;
+      let mediaSourceMessage;
       showPip = showPip.showPip;
       let tmp = !showPip;
       if (showPip) {
@@ -27,10 +29,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         tmp = null == showPip.activeMediaPlayerSource;
       }
       let tmp3 = !tmp;
-      if (!tmp) {
+      if (tmp3) {
+        let attachmentIndex;
         ({ mediaSourceMessage, activeMediaPlayerSource } = showPip);
         if (activeMediaPlayerSource != null) {
-          const attachmentIndex = activeMediaPlayerSource.attachmentIndex;
+          attachmentIndex = activeMediaPlayerSource.attachmentIndex;
         }
         let flag = false;
         if (null != mediaSourceMessage) {
@@ -61,29 +64,34 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       return tmp3;
     };
     cResult[0] = fn;
-    let first = fn;
+    first = fn;
   } else {
     first = cResult[0];
   }
-  const tmpResult = MediaPlayerManager;
-  const mediaPlayerManagerStore = tmpResult.useMediaPlayerManagerStore(_mod4494.useShallow(first));
+  const useMediaPlayerManagerStore = MediaPlayerManager.useMediaPlayerManagerStore;
+  MediaPlayerManager;
+  const tmpResult2 = react3;
+  const mediaPlayerManagerStore = useMediaPlayerManagerStore(tmpResult2.useShallow(first));
   if (cResult[1] !== mediaPlayerManagerStore) {
-    let tmp7 = null;
+    let tmp8 = null;
     if (mediaPlayerManagerStore) {
-      const obj2 = { children: jsx(MediaPlaybackPanelUIDefault, {}) };
-      tmp7 = jsx(MediaPlaybackPanelControllerDefault, { children: jsx(MediaPlaybackPanelUIDefault, {}) });
+      MediaPlaybackPanelControllerDefault;
+      tmp8 = <tmp11>{null}</tmp11>;
     }
     cResult[1] = mediaPlayerManagerStore;
-    cResult[2] = tmp7;
-    let tmp6 = tmp7;
+    cResult[2] = tmp8;
+    tmp7 = tmp8;
   } else {
-    tmp6 = cResult[2];
+    tmp7 = cResult[2];
   }
-  return tmp6;
+  return tmp7;
 }) : (() => {
-  const obj = MediaPlayerManager;
-  let tmp2 = null;
-  if (obj.useMediaPlayerManagerStore(obj2.useShallow((showPip) => {
+  const useMediaPlayerManagerStore = MediaPlayerManager.useMediaPlayerManagerStore;
+  let tmp3 = null;
+  const obj = react3;
+  if (useMediaPlayerManagerStore(obj.useShallow((showPip) => {
+    let activeMediaPlayerSource;
+    let mediaSourceMessage;
     showPip = showPip.showPip;
     let tmp = !showPip;
     if (showPip) {
@@ -93,10 +101,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       tmp = null == showPip.activeMediaPlayerSource;
     }
     let tmp3 = !tmp;
-    if (!tmp) {
+    if (tmp3) {
+      let attachmentIndex;
       ({ mediaSourceMessage, activeMediaPlayerSource } = showPip);
       if (activeMediaPlayerSource != null) {
-        const attachmentIndex = activeMediaPlayerSource.attachmentIndex;
+        attachmentIndex = activeMediaPlayerSource.attachmentIndex;
       }
       let flag = false;
       if (null != mediaSourceMessage) {
@@ -126,8 +135,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     return tmp3;
   }))) {
-    const obj3 = { children: jsx(MediaPlaybackPanelUIDefault, {}) };
-    tmp2 = jsx(MediaPlaybackPanelControllerDefault, { children: jsx(MediaPlaybackPanelUIDefault, {}) });
+    MediaPlaybackPanelControllerDefault;
+    tmp3 = <tmp6>{null}</tmp6>;
   }
-  return tmp2;
+  return tmp3;
 }));
+const result = size.fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelContainer.tsx");
+
+export default memoResult;

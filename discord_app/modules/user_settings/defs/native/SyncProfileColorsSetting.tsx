@@ -1,16 +1,22 @@
 // === Module 15236: SyncProfileColorsSetting ===
 
 // Module 15236 (SyncProfileColorsSetting)
-import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
+import get_initialized from "get initialized" /* 504 */;
+import react from "react" /* 576 */;
+import intl2 from "intl" /* 1126 */;
+import SettingsConstants from "SettingsConstants" /* 7634 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14277 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import SettingBuilders from "SettingBuilders" /* 11129 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11129);
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(2);
+  let tmp4;
+  let tmp5;
+  const obj = react;
+  const cResult = obj.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
     const fn = function n() {
@@ -23,39 +29,23 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  return initialize.useStateFromStores(tmp4, tmp5);
+  const tmpResult = get_initialized;
+  return tmpResult.useStateFromStores(tmp4, tmp5);
 }) : (() => {
   const items = [AccessibilityStore];
-  return initialize.useStateFromStores(items, () => AccessibilityStore.syncProfileThemeWithUserTheme);
+  const obj = get_initialized;
+  return obj.useStateFromStores(items, () => AccessibilityStore.syncProfileThemeWithUserTheme);
 });
-const toggle = SettingBuilders.createToggle({
+let obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t["sSY+mD"]);
+    const intl = intl2.intl;
+    return intl.string(intl2.t["sSY+mD"]);
   },
-  parent: fn(7634).MobileUserSettings.ACCESSIBILITY,
-  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-    const cResult = c.c(2);
-    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const items = [AccessibilityStore];
-      const fn = function n() {
-        return AccessibilityStore.syncProfileThemeWithUserTheme;
-      };
-      cResult[0] = items;
-      cResult[1] = fn;
-      tmp4 = items;
-      tmp5 = fn;
-    } else {
-      [tmp4, tmp5] = cResult;
-    }
-    return initialize.useStateFromStores(tmp4, tmp5);
-  }) : (() => {
-    const items = [AccessibilityStore];
-    return initialize.useStateFromStores(items, () => AccessibilityStore.syncProfileThemeWithUserTheme);
-  }),
-  onValueChange: fn(14277).toggleSyncProfileThemeWithUserTheme
-});
-const size = fn(2);
+  parent: MobileUserSettings.ACCESSIBILITY,
+  useValue: tmp2,
+  onValueChange: AccessibilityActionCreators.toggleSyncProfileThemeWithUserTheme
+};
+const toggle = SettingBuilders.createToggle(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/SyncProfileColorsSetting.tsx");
 
 export default toggle;

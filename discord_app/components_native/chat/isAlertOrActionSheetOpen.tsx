@@ -4,9 +4,8 @@
 import useAlertStore2 from "useAlertStore" /* 5709 */;
 import ActionSheetStore from "ActionSheetStore" /* 4561 */;
 import AlertStore from "AlertStore" /* 11162 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const size = fn(2);
 const result = size.fileFinishedImporting("components_native/chat/isAlertOrActionSheetOpen.tsx");
 
 export const isAlertOrActionSheetOpen = function isAlertOrActionSheetOpen(selectedChannelId) {
@@ -19,8 +18,9 @@ export const isAlertOrActionSheetOpen = function isAlertOrActionSheetOpen(select
     obj2 = AlertStore;
   }
   let tmp = null != obj.getContent();
-  const useAlertStore = useAlertStore2.useAlertStore;
   const tmp2 = null != obj2.getAlert();
+  const useAlertStore = useAlertStore2.useAlertStore;
+  const tmp3 = useAlertStore.getState().alerts.length > 0;
   if (!tmp) {
     tmp = tmp2;
   }

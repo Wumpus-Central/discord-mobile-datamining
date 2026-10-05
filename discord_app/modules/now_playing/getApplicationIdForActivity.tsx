@@ -17,10 +17,11 @@ let closure_5 = Constants.XBOX_ACTIVITY_APPLICATION_ID;
 const result = size.fileFinishedImporting("modules/now_playing/getApplicationIdForActivity.tsx");
 
 export default function getApplicationIdForActivity(party) {
+  let id;
   if (isListeningOnSpotifyDefault(party)) {
     if (null != party.party) {
       if (null != party.party.id) {
-        let id = SpotifyApplication.id;
+        id = SpotifyApplication.id;
       }
       return id;
     }

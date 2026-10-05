@@ -1,17 +1,40 @@
 // === Module 7596: MessageWithContent ===
 
 // Module 7596 (MessageWithContent)
-import util from "util" /* 1126 */;
+import intl6 from "intl" /* 1126 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 7592 */;
 import createMessageContentDefault from "createMessageContent" /* 7599 */;
 import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 7791 */;
 import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 7597 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const RowType = fn(7592).RowType;
-const size = fn(2);
+const RowType = RowGeneratorConstants.RowType;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/MessageWithContent.tsx");
 
 export const generateMessageRowData = function generateMessageRowData(canShowImages, options, theme) {
+  let alwaysShowAddReaction;
+  let canAddNewReactions;
+  let canReply;
+  let changeType;
+  let createSwipeActions;
+  let forcedTheme;
+  let intl;
+  let intl2;
+  let intl3;
+  let intl4;
+  let intl5;
+  let isEditing;
+  let isFirst;
+  let isSystemDM;
+  let message;
+  let obj2;
+  let pushFeedbackType;
+  let reactionsTheme;
+  let renderContentOnly;
+  let roleStyle;
+  let separatorBefore;
+  let tmp11;
+  let truncation;
   ({ message, isEditing, isSystemDM } = canShowImages);
   let tmp = undefined !== isSystemDM;
   ({ changeType, roleStyle, isFirst, separatorBefore, canAddNewReactions, reactionsTheme } = canShowImages);
@@ -19,6 +42,7 @@ export const generateMessageRowData = function generateMessageRowData(canShowIma
     tmp = isSystemDM;
   }
   canShowImages = canShowImages.canShowImages;
+  const tmp2 = undefined === canShowImages || canShowImages;
   ({ renderContentOnly, alwaysShowAddReaction } = canShowImages);
   let tmp3 = undefined !== alwaysShowAddReaction;
   ({ truncation, pushFeedbackType } = canShowImages);
@@ -26,35 +50,26 @@ export const generateMessageRowData = function generateMessageRowData(canShowIma
     tmp3 = alwaysShowAddReaction;
   }
   let overrideBackgroundHighlight = canShowImages.overrideBackgroundHighlight;
-  const obj = { type: RowType.MESSAGE, message: createMessageContentDefault({ options, message, roleStyle, isFirst, isEditing, canShowImages: undefined === canShowImages || canShowImages, isSystemDM: tmp, isInlineReplyPreview: false, pushFeedbackType, renderContentOnly, showContentInventoryEntryFallbackEmbed: canShowImages.showContentInventoryEntryFallbackEmbed }), canAddNewReactions, addNewReactionAccessibilityLabel: null, reactionsTheme: null, highlightLabel: null, renderContentOnly: null, separatorBefore: null, changeType: null, truncation: null, alwaysShowAddReaction: null, backgroundHighlight: null, swipeActions: null, replyAccessibilityLabel: null, forwardAccessibilityLabel: null, threadAccessibilityLabel: null, forcedTheme: null };
-  const intl = util.intl;
-  obj.addNewReactionAccessibilityLabel = intl.string(util.t.lfIHs4);
-  obj.reactionsTheme = reactionsTheme;
-  const intl2 = util.intl;
-  obj.highlightLabel = intl2.string(util.t["IOS/dU"]);
-  obj.renderContentOnly = renderContentOnly;
-  obj.separatorBefore = separatorBefore;
-  obj.changeType = changeType;
-  obj.truncation = truncation;
-  obj.alwaysShowAddReaction = tmp3;
+  const obj = { type: RowType.MESSAGE, message: createMessageContentDefault(obj2), canAddNewReactions, addNewReactionAccessibilityLabel: intl.string(intl6.t.lfIHs4), reactionsTheme, highlightLabel: intl2.string(intl6.t["IOS/dU"]), renderContentOnly, separatorBefore, changeType, truncation, alwaysShowAddReaction: tmp3, backgroundHighlight: overrideBackgroundHighlight, swipeActions: createSwipeActions(canReply, tmp11), replyAccessibilityLabel: intl3.string(intl6.t["5IEsGx"]), forwardAccessibilityLabel: intl4.string(intl6.t.I3ltXO), threadAccessibilityLabel: intl5.string(intl6.t.rBIGBL), forcedTheme };
+  obj2 = { options, message, roleStyle, isFirst, isEditing, canShowImages: tmp2, isSystemDM: tmp, isInlineReplyPreview: false, pushFeedbackType, renderContentOnly, showContentInventoryEntryFallbackEmbed: canShowImages.showContentInventoryEntryFallbackEmbed };
+  intl = intl6.intl;
+  intl2 = intl6.intl;
   if (overrideBackgroundHighlight == null) {
     const obj3 = { message, theme, isEditing, isAutomodBlockedMessage: null != GuildAutomodMessageStore.getMessage(message.id) };
-    overrideBackgroundHighlight = RowGeneratorUtilsDefault.createBackgroundHighlight(obj3);
-    const tmp4Result = RowGeneratorUtilsDefault;
+    const createBackgroundHighlight = RowGeneratorUtilsDefault.createBackgroundHighlight;
+    RowGeneratorUtilsDefault;
+    overrideBackgroundHighlight = createBackgroundHighlight(obj3);
   }
-  obj.backgroundHighlight = overrideBackgroundHighlight;
-  let canReply = options.enableSwipeActions;
+  canReply = options.enableSwipeActions;
+  createSwipeActions = RowGeneratorUtilsDefault.createSwipeActions;
+  RowGeneratorUtilsDefault;
   if (canReply) {
     canReply = canShowImages.canReply;
   }
-  obj.swipeActions = RowGeneratorUtilsDefault.createSwipeActions(canReply, options.enableSwipeActions && canShowImages.canEdit);
-  const intl3 = util.intl;
-  obj.replyAccessibilityLabel = intl3.string(util.t["5IEsGx"]);
-  const intl4 = util.intl;
-  obj.forwardAccessibilityLabel = intl4.string(util.t.I3ltXO);
-  const intl5 = util.intl;
-  obj.threadAccessibilityLabel = intl5.string(util.t.rBIGBL);
-  const forcedTheme = options.forcedTheme;
-  obj.forcedTheme = forcedTheme;
+  tmp11 = options.enableSwipeActions && canShowImages.canEdit;
+  intl3 = intl6.intl;
+  intl4 = intl6.intl;
+  intl5 = intl6.intl;
+  forcedTheme = options.forcedTheme;
   return obj;
 };

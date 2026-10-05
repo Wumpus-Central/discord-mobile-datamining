@@ -1,90 +1,92 @@
 // === Module 11771: FrecencyCommandsSection ===
 
 // Module 11771 (FrecencyCommandsSection)
+import react_native from "react-native" /* 17 */;
+import Constants from "Constants" /* 1085 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5070 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7034 */;
 import AppLauncherTypes from "AppLauncherTypes" /* 8932 */;
 import AppDetailContent from "AppDetailContent" /* 11753 */;
 import useFilterAndSortToOnlyFrecentCommandsDefault from "useFilterAndSortToOnlyFrecentCommands" /* 11772 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { container: { marginBottom: fn(11753).BETWEEN_SECTIONS_MARGIN }, header: { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 8 } };
-let closure_8 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj3 = { marginBottom: fn(11753).BETWEEN_SECTIONS_MARGIN };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/FrecencyCommandsSection.tsx");
+let context;
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
-  const cResult = context(section[7]).c(30);
+let metroImportDefault;
+let metroRequire;
+let obj2;
+const View = react_native.View;
+const AnalyticEvents = Constants.AnalyticEvents;
+({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
+let obj = { container: obj2, header: { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 8 } };
+obj2 = { marginBottom: AppDetailContent.BETWEEN_SECTIONS_MARGIN };
+let closure_8 = createStyles.createStyles(obj);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
+  let allCommands;
+  let items;
+  let onPressCommand;
+  let section;
+  let obj = context(section[7]);
+  const cResult = obj.c(30);
   context = context.context;
   ({ allCommands, onPressCommand } = context);
+  const tmp = section;
   section = context.section;
   const onExecuteCommand = context.onExecuteCommand;
   const installOnDemand = context.installOnDemand;
   const sectionName = context.sectionName;
   const tmp3 = closure_8();
   if (cResult[0] === allCommands) {
+    let tmp4;
     if (cResult[1] === context) {
-      let tmp4 = cResult[2];
+      tmp4 = cResult[2];
     }
     const arr = onPressCommand(tmp[8])(tmp4);
     if (cResult[3] === arr.length) {
+      let tmp6;
+      let tmp7;
       if (cResult[4] === sectionName) {
-        let tmp6 = cResult[5];
-        let tmp7 = cResult[6];
+        tmp6 = cResult[5];
+        tmp7 = cResult[6];
       }
       const effect = onExecuteCommand.useEffect(tmp6, tmp7);
       if (0 === arr.length) {
         return null;
       } else {
+        let tmp11;
+        let tmp15;
         const _Symbol = Symbol;
         const container = tmp3.container;
         class R {
           constructor() {
-            if (0 !== closure_6.length) {
-              tmp = closure_0;
-              tmp2 = closure_2;
-              obj = closure_0(closure_2[9]);
-              tmp3 = AnalyticEvents;
-              obj1 = { num: null, section_name: null, location: null };
-              obj1.num = arr.length;
-              tmp4 = sectionName;
-              obj1.section_name = sectionName;
-              obj1.location = closure_0(closure_2[10]).AppLauncherLocations.APP_DETAIL;
-              trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_FRECENTS_SEEN, obj1);
+            if (0 !== arr.length) {
+              const obj = { num: arr.length, section_name: sectionName, location: AppLauncherTypes.AppLauncherLocations.APP_DETAIL };
+              const trackWithMetadata = AppAnalyticsUtils.trackWithMetadata;
+              const APP_LAUNCHER_FRECENTS_SEEN = AnalyticEvents.APP_LAUNCHER_FRECENTS_SEEN;
+              AppAnalyticsUtils;
+              trackWithMetadata(APP_LAUNCHER_FRECENTS_SEEN, obj);
             }
-            return;
           }
         }
         if (cResult[8] !== tmp3.header) {
-          let obj2 = { style: tmp3.header, children: tmp10 };
           class R {
             constructor() {
-              if (0 !== closure_6.length) {
-                tmp = closure_0;
-                tmp2 = closure_2;
-                obj = closure_0(closure_2[9]);
-                tmp3 = AnalyticEvents;
-                obj1 = { num: null, section_name: null, location: null };
-                obj1.num = arr.length;
-                tmp4 = sectionName;
-                obj1.section_name = sectionName;
-                obj1.location = closure_0(closure_2[10]).AppLauncherLocations.APP_DETAIL;
-                trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_FRECENTS_SEEN, obj1);
+              if (0 !== arr.length) {
+                const obj = { num: arr.length, section_name: sectionName, location: AppLauncherTypes.AppLauncherLocations.APP_DETAIL };
+                const trackWithMetadata = AppAnalyticsUtils.trackWithMetadata;
+                const APP_LAUNCHER_FRECENTS_SEEN = AnalyticEvents.APP_LAUNCHER_FRECENTS_SEEN;
+                AppAnalyticsUtils;
+                trackWithMetadata(APP_LAUNCHER_FRECENTS_SEEN, obj);
               }
-              return;
             }
           }
           cResult[8] = tmp3.header;
           cResult[9] = tmp14;
-          let tmp11 = tmp14;
+          tmp11 = tmp14;
         } else {
           tmp11 = cResult[9];
         }
@@ -95,41 +97,36 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
                 if (cResult[14] === onPressCommand) {
                   if (cResult[15] === section) {
                     if (cResult[16] === sectionName) {
-                      if (cResult[26] === tmp3.container) {
-                        if (cResult[27] === tmp11) {
-                          if (cResult[28] === tmp15) {
-                            let tmp19 = cResult[29];
-                          }
-                          return tmp19;
-                        }
-                      }
-                      const obj3 = { style: null, children: null };
-                      class R {
-                        constructor() {
-                          if (0 !== closure_6.length) {
-                            tmp = closure_0;
-                            tmp2 = closure_2;
-                            obj = closure_0(closure_2[9]);
-                            tmp3 = AnalyticEvents;
-                            obj1 = { num: null, section_name: null, location: null };
-                            obj1.num = arr.length;
-                            tmp4 = sectionName;
-                            obj1.section_name = sectionName;
-                            obj1.location = closure_0(closure_2[10]).AppLauncherLocations.APP_DETAIL;
-                            trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_FRECENTS_SEEN, obj1);
-                          }
-                          return;
-                        }
-                      }
-                      const items = [tmp11, cResult[17]];
-                      obj3.children = items;
-                      const tmp22 = closure_7(installOnDemand, obj3);
-                      cResult[26] = tmp3.container;
-                      cResult[27] = tmp11;
-                      cResult[28] = cResult[17];
-                      cResult[29] = tmp22;
-                      tmp19 = tmp22;
+                      tmp15 = cResult[17];
                     }
+                    if (cResult[26] === tmp3.container) {
+                      if (cResult[27] === tmp11) {
+                        let tmp18;
+                        if (cResult[28] === tmp15) {
+                          tmp18 = cResult[29];
+                        }
+                        return tmp18;
+                      }
+                    }
+                    const obj3 = { style: null, children: items };
+                    class R {
+                      constructor() {
+                        if (0 !== arr.length) {
+                          const obj = { num: arr.length, section_name: sectionName, location: AppLauncherTypes.AppLauncherLocations.APP_DETAIL };
+                          const trackWithMetadata = AppAnalyticsUtils.trackWithMetadata;
+                          const APP_LAUNCHER_FRECENTS_SEEN = AnalyticEvents.APP_LAUNCHER_FRECENTS_SEEN;
+                          AppAnalyticsUtils;
+                          trackWithMetadata(APP_LAUNCHER_FRECENTS_SEEN, obj);
+                        }
+                      }
+                    }
+                    items = [tmp11, tmp15];
+                    const tmp21 = closure_7(installOnDemand, obj3);
+                    cResult[26] = tmp3.container;
+                    cResult[27] = tmp11;
+                    cResult[28] = tmp15;
+                    cResult[29] = tmp21;
+                    tmp18 = tmp21;
                   }
                 }
               }
@@ -142,26 +139,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
               if (cResult[21] === onExecuteCommand) {
                 if (cResult[22] === onPressCommand) {
                   if (cResult[23] === section) {
+                    let tmp16;
                     if (cResult[24] === sectionName) {
-                      let tmp16 = cResult[25];
+                      tmp16 = cResult[25];
                     }
                     const mapped = arr.map(tmp16);
                     cResult[10] = context;
                     class R {
                       constructor() {
-                        if (0 !== closure_6.length) {
-                          tmp = closure_0;
-                          tmp2 = closure_2;
-                          obj = closure_0(closure_2[9]);
-                          tmp3 = AnalyticEvents;
-                          obj1 = { num: null, section_name: null, location: null };
-                          obj1.num = arr.length;
-                          tmp4 = sectionName;
-                          obj1.section_name = sectionName;
-                          obj1.location = closure_0(closure_2[10]).AppLauncherLocations.APP_DETAIL;
-                          trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_FRECENTS_SEEN, obj1);
+                        if (0 !== arr.length) {
+                          const obj = { num: arr.length, section_name: sectionName, location: AppLauncherTypes.AppLauncherLocations.APP_DETAIL };
+                          const trackWithMetadata = AppAnalyticsUtils.trackWithMetadata;
+                          const APP_LAUNCHER_FRECENTS_SEEN = AnalyticEvents.APP_LAUNCHER_FRECENTS_SEEN;
+                          AppAnalyticsUtils;
+                          trackWithMetadata(APP_LAUNCHER_FRECENTS_SEEN, obj);
                         }
-                        return;
                       }
                     }
                     cResult[12] = installOnDemand;
@@ -170,6 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
                     cResult[15] = section;
                     cResult[16] = sectionName;
                     cResult[17] = mapped;
+                    tmp15 = mapped;
                   }
                 }
               }
@@ -177,7 +170,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
           }
         }
         const fn = function w(command, arg1) {
-          return timestampProducer(AppDetailContent.CommandRow, { command, onPressCommand, isFirstRow: 0 === arg1, isLastRow: arg1 === arr.length - 1, context, onExecuteCommand, installOnDemand, section, location: ApplicationCommandTypes.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_FRECENCT, sectionName }, command.id);
+          const obj = { command, onPressCommand, isFirstRow: 0 === arg1, isLastRow: arg1 === arr.length - 1, context, onExecuteCommand, installOnDemand, section, location: ApplicationCommandTypes.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_FRECENCT, sectionName };
+          const CommandRow = AppDetailContent.CommandRow;
+          return metroRequire(CommandRow, obj, command.id);
         };
         cResult[18] = context;
         cResult[19] = arr.length;
@@ -192,19 +187,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
     }
     class R {
       constructor() {
-        if (0 !== closure_6.length) {
-          tmp = closure_0;
-          tmp2 = closure_2;
-          obj = closure_0(closure_2[9]);
-          tmp3 = AnalyticEvents;
-          obj1 = { num: null, section_name: null, location: null };
-          obj1.num = arr.length;
-          tmp4 = sectionName;
-          obj1.section_name = sectionName;
-          obj1.location = closure_0(closure_2[10]).AppLauncherLocations.APP_DETAIL;
-          trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_FRECENTS_SEEN, obj1);
+        if (0 !== arr.length) {
+          const obj = { num: arr.length, section_name: sectionName, location: AppLauncherTypes.AppLauncherLocations.APP_DETAIL };
+          const trackWithMetadata = AppAnalyticsUtils.trackWithMetadata;
+          const APP_LAUNCHER_FRECENTS_SEEN = AnalyticEvents.APP_LAUNCHER_FRECENTS_SEEN;
+          AppAnalyticsUtils;
+          trackWithMetadata(APP_LAUNCHER_FRECENTS_SEEN, obj);
         }
-        return;
       }
     }
     const items1 = [arr.length, sectionName];
@@ -220,31 +209,50 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
   cResult[1] = context;
   cResult[2] = obj4;
   tmp4 = obj4;
-  let obj = context(section[7]);
-  tmp = section;
-}) : ((commands) => {
-  const context = commands.context;
-  ({ onPressCommand: importDefault, section: dependencyMap, onExecuteCommand: noop, installOnDemand: View, sectionName } = commands);
+}) : ((context) => {
+  let Heading;
+  let installOnDemand;
+  let intl;
+  let items1;
+  let obj3;
+  let onExecuteCommand;
+  let onPressCommand;
+  let section;
+  let sectionName;
+  context = context.context;
+  ({ onPressCommand: importDefault, section: dependencyMap, onExecuteCommand: react, installOnDemand: View, sectionName } = context);
+  const allCommands = context.allCommands;
   const tmp = closure_8();
-  const arr = useFilterAndSortToOnlyFrecentCommandsDefault({ context, commands: commands.allCommands, limit: 5 });
+  const arr = useFilterAndSortToOnlyFrecentCommandsDefault({ context, commands: allCommands, limit: 5 });
   const items = [arr.length, sectionName];
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(() => {
     if (0 !== arr.length) {
-      const obj2 = { num: arr.length, section_name: sectionName, location: AppLauncherTypes.AppLauncherLocations.APP_DETAIL };
-      AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_FRECENTS_SEEN, obj2);
+      const obj = { num: arr.length, section_name: sectionName, location: AppLauncherTypes.AppLauncherLocations.APP_DETAIL };
+      const trackWithMetadata = AppAnalyticsUtils.trackWithMetadata;
+      const APP_LAUNCHER_FRECENTS_SEEN = AnalyticEvents.APP_LAUNCHER_FRECENTS_SEEN;
+      AppAnalyticsUtils;
+      trackWithMetadata(APP_LAUNCHER_FRECENTS_SEEN, obj);
     }
   }, items);
   let tmp4 = null;
   if (0 !== arr.length) {
-    let obj = { style: tmp.container, children: null };
-    let obj2 = { style: tmp.header, children: null };
-    const obj3 = { variant: "text-md/medium", color: "text-default", children: null };
-    const intl = context(1126).intl;
-    obj3.children = intl.string(context(1126).t.acSE0h);
-    obj2.children = arr(context(4886).Heading, obj3);
-    const items1 = [arr(View, obj2), arr.map((command, index) => timestampProducer(AppDetailContent.CommandRow, { command, onPressCommand, isFirstRow: 0 === index, isLastRow: index === arr.length - 1, context, onExecuteCommand, installOnDemand, section, location: ApplicationCommandTypes.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_FRECENCT, sectionName }, command.id))];
-    obj.children = items1;
+    let obj = { style: tmp.container, children: items1 };
+    const obj2 = { style: tmp.header, children: arr(Heading, obj3) };
+    obj3 = { variant: "text-md/medium", color: "text-default", children: intl.string(context(1126).t.acSE0h) };
+    Heading = context(4886).Heading;
+    intl = context(1126).intl;
+    items1 = [
+      arr(View, obj2),
+      arr.map((command, index) => {
+          const obj = { command, onPressCommand: importDefault, isFirstRow: 0 === index, isLastRow: index === arr.length - 1, context, onExecuteCommand: react, installOnDemand: View, section: dependencyMap, location: ApplicationCommandTypes.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_FRECENCT, sectionName };
+          const CommandRow = AppDetailContent.CommandRow;
+          return metroRequire(CommandRow, obj, command.id);
+        })
+    ];
     tmp4 = closure_7(View, obj);
   }
   return tmp4;
 });
+const result = size.fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/FrecencyCommandsSection.tsx");
+
+export default tmp3;

@@ -1,61 +1,78 @@
 // === Module 9409: useGuildProfileGames ===
 
 // Module 9409 (useGuildProfileGames)
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import GameRecord from "GameRecord" /* 2008 */;
 import GameStore from "GameStore" /* 2007 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-let ReactCompilerGating = fn(558);
-let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(2);
+const require = globalThis.__r;
+let _require, dependencyMap, game, gameActivity, games, map, set;
+
+let ReactCompilerGating = ReactCompilerGating_mod;
+let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
+  let tmp2;
+  const obj = react2;
+  const cResult = obj.c(2);
   if (cResult[0] !== arg0) {
     const _Map = Map;
-    const map = new Map();
+    const self = this;
+    const self2 = this;
+    map = new Map();
     if (null != arg0) {
       const iter = arg0[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
-        let tmp13 = new.target;
-        let tmp14 = new.target;
-        let tmp16 = new GameRecord(nextResult);
-        let result = map.set(nextResult.id, tmp16);
+        let self3 = this;
+        let self4 = this;
+        set = map.set;
+        let id = nextResult.id;
+        let tmp13 = new GameRecord(nextResult);
+        let result = set(id, tmp13);
         continue;
       }
     }
     cResult[0] = arg0;
     cResult[1] = map;
-    let tmp2 = map;
+    tmp2 = map;
   } else {
     tmp2 = cResult[1];
   }
   return tmp2;
 }) : ((arg0) => {
-  closure_0 = arg0;
+  let closure_0 = arg0;
   const items = [arg0];
-  return noop.useMemo(() => {
-    const map = new Map();
+  return react.useMemo(function() {
+    map = new Map();
     if (null == closure_0) {
       return map;
     } else {
-      for (const item10012 of tmp) {
-        let tmp5 = new.target;
-        let tmp6 = new.target;
-        let tmp8 = new GameRecord(item10012);
-        let result = map.set(item10012.id, tmp8);
+      for (const item10012 of closure_0) {
+        let self = this;
+        let self2 = this;
+        set = map.set;
+        let id = item10012.id;
+        let tmp7 = new GameRecord(item10012);
+        let result = set(id, tmp7);
         continue;
       }
       return map;
     }
   }, items);
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((games) => {
+  let authenticated;
+  let closure_1;
+  let tmp4;
+  let tmp5;
   _require = games;
-  const cResult = require("c").c(9);
+  const obj = require("react");
+  const cResult = obj.c(9);
   games = games.games;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AuthenticationStore];
@@ -69,64 +86,75 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((games) => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const obj = require("c");
-  const tmp7 = null != games && !require("initialize").useStateFromStores(tmp4, tmp5);
+  const tmpResult = require("get initialized");
+  const tmp7 = null != games && !tmpResult.useStateFromStores(tmp4, tmp5);
   if (cResult[2] === games.gameApplicationIds) {
+    let tmp8;
+    let tmp13;
     if (cResult[3] === tmp7) {
-      const games1 = tmp(6812).useGames(cResult[4]);
-      const tmp11 = closure_6(games);
-      dependencyMap = tmp11;
-      const _Symbol = Symbol;
-      if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const items1 = [GameStore];
-        cResult[5] = items1;
-        let tmp12 = items1;
-      } else {
-        tmp12 = cResult[5];
-      }
-      if (cResult[6] === tmp11) {
-        if (cResult[7] === games.gameApplicationIds) {
-          let tmp14 = cResult[8];
-        }
-        return tmp(504).useStateFromStoresArray(tmp12, tmp14);
-      }
-      const fn2 = function y() {
-        const gameApplicationIds = games.gameApplicationIds;
-        const mapped = gameApplicationIds.map((item) => {
-          game = game.getGame(item);
-          if (game == null) {
-            game = closure_1_1.get(item);
-          }
-          return game;
-        });
-        return mapped.filter(GlobalUtils.isNotNullish);
-      };
-      cResult[6] = tmp11;
-      cResult[7] = games.gameApplicationIds;
-      cResult[8] = fn2;
-      tmp14 = fn2;
-      const tmpResult3 = tmp(6812);
+      tmp8 = cResult[4];
     }
+    const tmpResult3 = require("useGame");
+    const games1 = tmpResult3.useGames(tmp8);
+    const tmp12 = closure_6(games);
+    dependencyMap = tmp12;
+    const _Symbol = Symbol;
+    if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+      const items1 = [GameStore];
+      cResult[5] = items1;
+      tmp13 = items1;
+    } else {
+      tmp13 = cResult[5];
+    }
+    if (cResult[6] === tmp12) {
+      let tmp15;
+      if (cResult[7] === games.gameApplicationIds) {
+        tmp15 = cResult[8];
+      }
+      const tmpResult4 = require("get initialized");
+      return tmpResult4.useStateFromStoresArray(tmp13, tmp15);
+    }
+    const fn2 = function y() {
+      const gameApplicationIds = games.gameApplicationIds;
+      const mapped = gameApplicationIds.map((item) => {
+        game = game.getGame(item);
+        if (game == null) {
+          game = closure_1_1.get(item);
+        }
+        return game;
+      });
+      return mapped.filter(GlobalUtils.isNotNullish);
+    };
+    cResult[6] = tmp12;
+    cResult[7] = games.gameApplicationIds;
+    cResult[8] = fn2;
+    tmp15 = fn2;
   }
+  const tmp9 = tmp7 ? [] : games.gameApplicationIds;
   cResult[2] = games.gameApplicationIds;
   cResult[3] = tmp7;
-  cResult[4] = tmp7 ? [] : games.gameApplicationIds;
-  const tmp8 = tmp7 ? [] : games.gameApplicationIds;
-  const tmpResult = require("initialize");
+  cResult[4] = tmp9;
+  tmp8 = tmp9;
 }) : ((games) => {
+  let authenticated;
+  let closure_1;
   _require = games;
   games = games.games;
   const items = [AuthenticationStore];
-  const stateFromStores = require("initialize").useStateFromStores(items, () => authenticated.isAuthenticated());
+  const obj = require("get initialized");
+  const stateFromStores = obj.useStateFromStores(items, () => authenticated.isAuthenticated());
   require("useGame");
+  const tmp = _require;
   if (null != games) {
+    let items1;
     if (!stateFromStores) {
-      let items1 = [];
+      items1 = [];
     }
     tmp5(items1);
     dependencyMap = closure_6(games);
     const items2 = [GameStore];
-    return tmp(504).useStateFromStoresArray(items2, () => {
+    const tmpResult = tmp(504);
+    return tmpResult.useStateFromStoresArray(items2, () => {
       const gameApplicationIds = games.gameApplicationIds;
       const mapped = gameApplicationIds.map((item) => {
         game = game.getGame(item);
@@ -139,27 +167,26 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((games) => {
     });
   }
   items1 = games.gameApplicationIds;
-  const obj = require("initialize");
-  tmp = _require;
 });
 let closure_7 = tmp2;
-ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/guild_profile/hooks/useGuildProfileGames.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameActivity) => {
-  const cResult = c.c(11);
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((gameActivity) => {
+  const obj = react2;
+  const cResult = obj.c(11);
   gameActivity = gameActivity.gameActivity;
   const tmp2 = closure_7(gameActivity);
   if (cResult[0] === gameActivity) {
+    let arr;
+    let tmp4;
+    let tmp8;
     if (cResult[1] === tmp2) {
-      let arr = cResult[2];
+      arr = cResult[2];
     }
     if (cResult[3] !== arr) {
       const substr = arr.slice(0, 5);
       cResult[3] = arr;
       cResult[4] = substr;
-      let tmp4 = substr;
+      tmp4 = substr;
     } else {
       tmp4 = cResult[4];
     }
@@ -171,14 +198,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameActivity) =>
       const substr1 = arr.slice(5);
       cResult[5] = arr;
       cResult[6] = substr1;
-      let tmp8 = substr1;
+      tmp8 = substr1;
     } else {
       tmp8 = cResult[6];
     }
     if (cResult[7] === tmp4) {
       if (cResult[8] === tmp6) {
+        let tmp10;
         if (cResult[9] === tmp8) {
-          let tmp10 = cResult[10];
+          tmp10 = cResult[10];
         }
         return tmp10;
       }
@@ -193,14 +221,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameActivity) =>
   const items = [...tmp2];
   const sorted = items.sort((arg0, arg1) => {
     let num;
-    if (dependencyMap[arg0.id] != null) {
+    if (closure_0[arg0.id] != null) {
       num = tmp2.score;
     }
     if (num == null) {
       num = 0;
     }
     let num2;
-    if (dependencyMap[arg1.id] != null) {
+    if (closure_0[arg1.id] != null) {
       num2 = tmp3.score;
     }
     if (num2 == null) {
@@ -217,23 +245,27 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameActivity) =>
   cResult[2] = sorted;
   arr = sorted;
 }) : ((gameActivity) => {
+  let items1;
+  let items2;
+  let items3;
+  let memo;
   gameActivity = gameActivity.gameActivity;
   let tmp = closure_7(gameActivity);
   const args = tmp;
   let items = [tmp, gameActivity];
   memo = memo.useMemo(() => {
-    dependencyMap = gameActivity;
+    let closure_0 = gameActivity;
     const items = [...closure_1];
     return items.sort((arg0, arg1) => {
       let num;
-      if (dependencyMap[arg0.id] != null) {
+      if (closure_0[arg0.id] != null) {
         num = tmp2.score;
       }
       if (num == null) {
         num = 0;
       }
       let num2;
-      if (dependencyMap[arg1.id] != null) {
+      if (closure_0[arg1.id] != null) {
         num2 = tmp3.score;
       }
       if (num2 == null) {
@@ -246,19 +278,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameActivity) =>
       return num3;
     });
   }, items);
-  const obj = { gamesToDisplay: null, lastGameToDisplay: null, remainingGames: null };
-  const items1 = [memo];
-  obj.gamesToDisplay = memo.useMemo(() => memo.slice(0, 5), items1);
-  const items2 = [memo];
-  obj.lastGameToDisplay = memo.useMemo(() => {
-    let tmp = memo[5];
-    if (tmp == null) {
-      tmp = null;
-    }
-    return tmp;
-  }, items2);
-  const items3 = [memo];
-  obj.remainingGames = memo.useMemo(() => memo.slice(5), items3);
+  const obj = {
+    gamesToDisplay: memo.useMemo(() => memo.slice(0, 5), items1),
+    lastGameToDisplay: memo.useMemo(() => {
+      let tmp = memo[5];
+      if (tmp == null) {
+        tmp = null;
+      }
+      return tmp;
+    }, items2),
+    remainingGames: memo.useMemo(() => memo.slice(5), items3)
+  };
+  items1 = [memo];
+  items2 = [memo];
+  items3 = [memo];
   return obj;
 });
+let result = size.fileFinishedImporting("modules/guild_profile/hooks/useGuildProfileGames.tsx");
+
+export default tmp3;
 export const useAllGuildProfileGames = tmp2;

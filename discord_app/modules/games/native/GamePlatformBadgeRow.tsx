@@ -1,79 +1,92 @@
 // === Module 12027: GamePlatformBadgeRow ===
 
 // Module 12027 (GamePlatformBadgeRow)
-import c from "c" /* 576 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Stack_Stack from "Stack/Stack" /* 5593 */;
+import MobilePhoneIcon from "MobilePhoneIcon" /* 6448 */;
+import ScreenIcon from "ScreenIcon" /* 8544 */;
+import GameControllerIcon from "GameControllerIcon" /* 8739 */;
+import GamePlatformAvailability from "GamePlatformAvailability" /* 12028 */;
 import GamePlatformBadges from "GamePlatformBadges" /* 12029 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const jsx = fn(21).jsx;
+let platforms;
+
+const jsx = Fragment.jsx;
 let obj = {};
-obj[fn(12028).GamePlatformAvailability.DESKTOP] = fn(8544).ScreenIcon;
-obj[fn(12028).GamePlatformAvailability.MOBILE] = fn(6448).MobilePhoneIcon;
-obj[fn(12028).GamePlatformAvailability.CONSOLE] = fn(8739).GameControllerIcon;
-const createStyles = fn(4890);
+obj[GamePlatformAvailability.GamePlatformAvailability.DESKTOP] = ScreenIcon.ScreenIcon;
+obj[GamePlatformAvailability.GamePlatformAvailability.MOBILE] = MobilePhoneIcon.MobilePhoneIcon;
+obj[GamePlatformAvailability.GamePlatformAvailability.CONSOLE] = GameControllerIcon.GameControllerIcon;
 let closure_6 = createStyles.createStyles({ row: { width: "auto" } });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/games/native/GamePlatformBadgeRow.tsx");
-
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((platforms) => {
-  const cResult = c.c(8);
+const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((platforms) => {
+  let arr;
+  let tmp6;
+  obj = react2;
+  const cResult = obj.c(8);
   platforms = platforms.platforms;
   const tmp4 = closure_6();
   if (cResult[0] !== platforms) {
-    const result = GamePlatformBadges.sortGamePlatformAvailability(platforms);
+    const tmpResult = GamePlatformBadges;
+    const result = tmpResult.sortGamePlatformAvailability(platforms);
     cResult[0] = platforms;
     cResult[1] = result;
-    let arr = result;
-    const tmpResult = GamePlatformBadges;
+    arr = result;
   } else {
     arr = cResult[1];
   }
+  const row = tmp4.row;
   if (cResult[2] !== arr) {
+    let tmp8;
     const _Symbol = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
       const fn = function y(item) {
-        obj = { size: "xs", color: "icon-subtle", accessibilityLabel: GamePlatformBadges.getGamePlatformAvailabilityLabel(item) };
-        return jsx(obj[item], { size: "xs", color: "icon-subtle", accessibilityLabel: GamePlatformBadges.getGamePlatformAvailabilityLabel(item) }, item);
+        const obj2 = GamePlatformBadges;
+        return <tmp key={item} size="xs" color="icon-subtle" accessibilityLabel={obj2.getGamePlatformAvailabilityLabel(item)} />;
       };
       cResult[4] = fn;
-      let tmp9 = fn;
+      tmp8 = fn;
     } else {
-      tmp9 = cResult[4];
+      tmp8 = cResult[4];
     }
-    const mapped = arr.map(tmp9);
+    const mapped = arr.map(tmp8);
     cResult[2] = arr;
     cResult[3] = mapped;
+    tmp6 = mapped;
   } else {
-    if (cResult[5] === tmp4.row) {
-      if (cResult[6] === tmp7) {
-        let tmp12 = cResult[7];
-      }
-      return tmp12;
-    }
-    const obj2 = { direction: "horizontal", align: "center", spacing: nativeDefault.space.PX_4, style: tmp6, children: cResult[3] };
-    const tmp15 = jsx(Stack_Stack.Stack, { direction: "horizontal", align: "center", spacing: nativeDefault.space.PX_4, style: tmp6, children: cResult[3] });
-    cResult[5] = tmp4.row;
-    cResult[6] = cResult[3];
-    cResult[7] = tmp15;
-    tmp12 = tmp15;
+    tmp6 = cResult[3];
   }
+  if (cResult[5] === tmp4.row) {
+    let tmp10;
+    if (cResult[6] === tmp6) {
+      tmp10 = cResult[7];
+    }
+    return tmp10;
+  }
+  const Stack = Stack_Stack.Stack;
+  const tmp11 = <Stack direction="horizontal" align="center" spacing={nativeDefault.space.PX_4} style={row}>{tmp6}</Stack>;
+  cResult[5] = tmp4.row;
+  cResult[6] = tmp6;
+  cResult[7] = tmp11;
+  tmp10 = tmp11;
 }) : ((platforms) => {
   platforms = platforms.platforms;
   const items = [platforms];
-  const memo = noop.useMemo(() => GamePlatformBadges.sortGamePlatformAvailability(platforms), items);
   const tmp = closure_6();
-  return jsx(platforms(5593).Stack, {
-    direction: "horizontal",
-    align: "center",
-    spacing: nativeDefault.space.PX_4,
-    style: closure_6().row,
-    children: memo.map((item) => {
-      obj = { size: "xs", color: "icon-subtle", accessibilityLabel: platforms(dependencyMap[9]).getGamePlatformAvailabilityLabel(item) };
-      return jsx(obj[item], { size: "xs", color: "icon-subtle", accessibilityLabel: platforms(dependencyMap[9]).getGamePlatformAvailabilityLabel(item) }, item);
-    })
-  });
+  const memo = react.useMemo(() => {
+    obj = GamePlatformBadges;
+    return obj.sortGamePlatformAvailability(platforms);
+  }, items);
+  const Stack = platforms(5593).Stack;
+  return <Stack direction="horizontal" align="center" spacing={nativeDefault.space.PX_4} style={tmp.row}>{memo.map((item) => {
+    const obj2 = platforms(dependencyMap[9]);
+    return <tmp key={item} size="xs" color="icon-subtle" accessibilityLabel={obj2.getGamePlatformAvailabilityLabel(item)} />;
+  })}</Stack>;
 }));
+let result = size.fileFinishedImporting("modules/games/native/GamePlatformBadgeRow.tsx");
+
+export default memoResult;

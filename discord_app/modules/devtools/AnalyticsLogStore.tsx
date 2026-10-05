@@ -1,26 +1,26 @@
 // === Module 14163: AnalyticsLogStore ===
 
 // Module 14163 (AnalyticsLogStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import FingerprintUtils from "FingerprintUtils" /* 1265 */;
 import v1 from "v1" /* 1266 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7204 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
 let closure_4 = 0;
 let closure_5 = [];
 let closure_6 = 0;
 let closure_7 = [];
 let enabled = false;
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class AnalyticsLogStore extends Store {
+  initialize() {
+    this.waitFor(AuthenticationStore, DeveloperExperimentStore);
+  }
 }
 const prototype = AnalyticsLogStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(AuthenticationStore, DeveloperExperimentStore);
-};
 Object.defineProperty(prototype, "loggedEvents", {
   get: function loggedEvents() {
     return closure_5;
@@ -46,25 +46,26 @@ Object.defineProperty(prototype, "trackTriggers", {
   set: undefined
 });
 AnalyticsLogStore.displayName = "AnalyticsLogStore";
-const analyticsLogStore = new AnalyticsLogStore(DispatcherDefault, {
+let obj = {
   TRACK: function handleTrack(fingerprint) {
+    let date;
+    let extractIdResult;
     fingerprint = fingerprint.fingerprint;
     if (DeveloperExperimentStore.isDeveloper) {
-      const obj = { key: null, event: null, properties: null, fingerprint: null, timestamp: null };
+      const obj = { key: (+closure_4).toString(), event: tmp, properties: tmp2, fingerprint: extractIdResult, timestamp: date };
       closure_4 = str + 1;
-      obj.key = +closure_4.toString();
-      obj.event = tmp;
-      obj.properties = tmp2;
+      const push = closure_5.push;
       if (null != fingerprint) {
-        let extractIdResult = FingerprintUtils.extractId(fingerprint);
+        const obj2 = FingerprintUtils;
+        extractIdResult = obj2.extractId(fingerprint);
       } else {
         extractIdResult = AuthenticationStore.getId();
       }
-      obj.fingerprint = extractIdResult;
       const _Date = Date;
-      const date = new Date();
-      obj.timestamp = date;
-      closure_5.push(obj);
+      const self = this;
+      const self2 = this;
+      date = new Date();
+      push(obj);
       closure_6 = closure_6 + 1;
       if (closure_5.length > 500) {
         const _Math = Math;
@@ -73,6 +74,14 @@ const analyticsLogStore = new AnalyticsLogStore(DispatcherDefault, {
     }
   },
   TRACK_TRIGGER: function handleTrackTrigger(arg0) {
+    let _location;
+    let date;
+    let descriptor;
+    let excluded;
+    let experimentId;
+    let exposureType;
+    let obj2;
+    let previouslyTracked;
     let isDeveloper = DeveloperExperimentStore.isDeveloper;
     ({ experimentId, descriptor, exposureType, excluded, location: _location, previouslyTracked } = arg0);
     if (isDeveloper) {
@@ -80,21 +89,16 @@ const analyticsLogStore = new AnalyticsLogStore(DispatcherDefault, {
     }
     if (isDeveloper) {
       const items = [];
-      const obj = { key: null, experimentId: null, descriptor: null, exposureType: null, excluded: null, location: null, previouslyTracked: null, timestamp: null };
-      const arraySpreadResult = HermesBuiltin.arraySpread(closure_7, 0);
-      obj.key = v1.v4();
-      obj.experimentId = experimentId;
-      obj.descriptor = descriptor;
-      obj.exposureType = exposureType;
-      obj.excluded = excluded;
-      obj.location = _location;
-      obj.previouslyTracked = previouslyTracked;
+      const obj = { key: obj2.v4(), experimentId, descriptor, exposureType, excluded, location: _location, previouslyTracked, timestamp: date };
+      const arraySpreadResult = HermesBuiltin.arraySpread(items, closure_7, 0);
       const _Date = Date;
-      const date = new Date();
-      obj.timestamp = date;
+      const self = this;
+      const self2 = this;
+      obj2 = v1;
       items[arraySpreadResult] = obj;
       closure_7 = items;
       isDeveloper = items.length > 500;
+      date = new Date();
     }
     if (isDeveloper) {
       closure_7.shift();
@@ -108,8 +112,8 @@ const analyticsLogStore = new AnalyticsLogStore(DispatcherDefault, {
     closure_6 = closure_6 + 1;
     closure_7 = [];
   }
-});
-const size = fn(2);
+};
+const analyticsLogStore = new AnalyticsLogStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/devtools/AnalyticsLogStore.tsx");
 
 export default analyticsLogStore;

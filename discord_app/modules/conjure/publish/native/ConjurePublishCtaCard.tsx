@@ -1,30 +1,45 @@
 // === Module 16731: ConjurePublishCtaCard ===
 
 // Module 16731 (ConjurePublishCtaCard)
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
 import useConjurePublishActionDefault from "useConjurePublishAction" /* 16614 */;
 import conjurePublishCard from "conjurePublishCard" /* 16703 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
+import Fragment from "Fragment" /* 21 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let ReactCompilerGating = fn(558);
+let publish;
+
+let closure_4;
+let hasOwnProperty;
+({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((publish) => {
-  const cResult = publish(576).c(20);
+  let first;
+  let intl;
+  let items1;
+  let items2;
+  let items3;
+  let tmp6;
+  let tmp8;
+  let tmpResult2;
+  const tmp = publish;
+  const obj = publish(576);
+  const cResult = obj.c(20);
   publish = publish.publish;
   const guildId = publish.guildId;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== guildId) {
     const fn = function o() {
-      guild = null;
+      let guild = null;
       if (null != guildId) {
         guild = GuildStore.getGuild(tmp);
       }
@@ -32,55 +47,59 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((publish) => {
     };
     cResult[1] = guildId;
     cResult[2] = fn;
-    let tmp6 = fn;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
-  const obj = publish(576);
-  const stateFromStores = publish(504).useStateFromStores(first, tmp6);
+  const tmpResult = tmp(504);
+  const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
   if (cResult[3] !== publish) {
     const fn2 = function p() {
       return publish.run("card");
     };
     cResult[3] = publish;
     cResult[4] = fn2;
-    let tmp8 = fn2;
+    tmp8 = fn2;
   } else {
     tmp8 = cResult[4];
   }
   if (cResult[5] === publish.disabled) {
     if (cResult[6] === publish.label) {
       if (cResult[7] === publish.publishing) {
+        let tmp9;
+        let tmp11;
         if (cResult[8] === tmp8) {
-          let tmp9 = cResult[9];
+          tmp9 = cResult[9];
         }
         if (cResult[10] !== stateFromStores) {
           let tmp12 = null;
           if (null != stateFromStores) {
-            const obj2 = { direction: "horizontal", spacing: 4, align: "center", children: null };
-            const obj3 = { variant: "text-sm/normal", color: "text-muted", children: null };
-            const intl = tmp(1126).intl;
-            obj3.children = intl.string(guildId(3723)["+HGTlC"]);
-            const items1 = [closure_4(tmp(4886).Text, obj3), , ];
+            const obj2 = { direction: "horizontal", spacing: 4, align: "center", children: items1 };
+            const Stack = tmp(5593).Stack;
+            const obj3 = { variant: "text-sm/normal", color: "text-muted", children: intl.string(guildId(3723)["+HGTlC"]) };
+            const Text = tmp(4886).Text;
+            intl = tmp(1126).intl;
+            items1 = [closure_4(Text, obj3), , ];
             const obj4 = { guild: stateFromStores, size: tmp(5971).GuildIconSizes.XXSMALL };
-            items1[1] = closure_4(guildId(5971), obj4);
-            const obj5 = { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: null };
             const tmp16 = guildId(5971);
-            obj5.children = tmp(16703).publishCardServerName(stateFromStores.name);
-            items1[2] = closure_4(tmp(4886).Text, obj5);
-            obj2.children = items1;
-            tmp12 = closure_5(tmp(5593).Stack, obj2);
-            const tmpResult2 = tmp(16703);
+            items1[1] = closure_4(tmp16, obj4);
+            const obj5 = { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: tmpResult2.publishCardServerName(stateFromStores.name) };
+            const Text2 = tmp(4886).Text;
+            tmpResult2 = tmp(16703);
+            items1[2] = closure_4(Text2, obj5);
+            tmp12 = closure_5(Stack, obj2);
           }
           cResult[10] = stateFromStores;
           cResult[11] = tmp12;
-          let tmp11 = tmp12;
+          tmp11 = tmp12;
         } else {
           tmp11 = cResult[11];
         }
         if (cResult[12] === tmp9) {
+          let tmp17;
+          let tmp20;
           if (cResult[13] === tmp11) {
-            let tmp17 = cResult[14];
+            tmp17 = cResult[14];
           }
           if (cResult[15] !== publish.disabledReason) {
             let tmp21 = null;
@@ -90,28 +109,27 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((publish) => {
             }
             cResult[15] = publish.disabledReason;
             cResult[16] = tmp21;
-            let tmp20 = tmp21;
+            tmp20 = tmp21;
           } else {
             tmp20 = cResult[16];
           }
           if (cResult[17] === tmp17) {
+            let tmp23;
             if (cResult[18] === tmp20) {
-              let tmp23 = cResult[19];
+              tmp23 = cResult[19];
             }
             return tmp23;
           }
-          const obj7 = { direction: "vertical", spacing: 8, children: null };
-          const items2 = [tmp17, tmp20];
-          obj7.children = items2;
+          const obj7 = { direction: "vertical", spacing: 8, children: items2 };
+          items2 = [tmp17, tmp20];
           const tmp25 = closure_5(tmp(5593).Stack, obj7);
           cResult[17] = tmp17;
           cResult[18] = tmp20;
           cResult[19] = tmp25;
           tmp23 = tmp25;
         }
-        const obj8 = { direction: "horizontal", spacing: 8, align: "center", children: null };
-        const items3 = [tmp9, tmp11];
-        obj8.children = items3;
+        const obj8 = { direction: "horizontal", spacing: 8, align: "center", children: items3 };
+        items3 = [tmp9, tmp11];
         const tmp19 = closure_5(tmp(5593).Stack, obj8);
         cResult[12] = tmp9;
         cResult[13] = tmp11;
@@ -120,86 +138,90 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((publish) => {
       }
     }
   }
-  const tmp10 = closure_4(publish(5594).Button, { text: publish.label, variant: "primary", size: "sm", loading: publish.publishing, disabled: publish.disabled, onPress: tmp8 });
+  const obj9 = { text: publish.label, variant: "primary", size: "sm", loading: publish.publishing, disabled: publish.disabled, onPress: tmp8 };
+  const tmp10 = closure_4(tmp(5594).Button, obj9);
   cResult[5] = publish.disabled;
   cResult[6] = publish.label;
   cResult[7] = publish.publishing;
   cResult[8] = tmp8;
   cResult[9] = tmp10;
   tmp9 = tmp10;
-  const obj9 = { text: publish.label, variant: "primary", size: "sm", loading: publish.publishing, disabled: publish.disabled, onPress: tmp8 };
-  const tmpResult = publish(504);
 }) : ((publish) => {
+  let intl;
+  let items2;
+  let tmpResult;
   publish = publish.publish;
   const guildId = publish.guildId;
+  const tmp = publish;
   const items = [GuildStore];
-  const stateFromStores = publish(504).useStateFromStores(items, () => {
-    guild = null;
+  const obj = publish(504);
+  const stateFromStores = obj.useStateFromStores(items, () => {
+    let guild = null;
     if (null != guildId) {
       guild = GuildStore.getGuild(tmp);
     }
     return guild;
   });
-  const items1 = [
-    closure_4(publish(5594).Button, {
-      text: publish.label,
-      variant: "primary",
-      size: "sm",
-      loading: publish.publishing,
-      disabled: publish.disabled,
-      onPress() {
-        return publish.run("card");
-      }
-    }),
-
-  ];
+  const Stack = publish(5593).Stack;
+  const Stack2 = publish(5593).Stack;
+  const items1 = [, ];
+  const obj2 = {
+    text: publish.label,
+    variant: "primary",
+    size: "sm",
+    loading: publish.publishing,
+    disabled: publish.disabled,
+    onPress() {
+      return publish.run("card");
+    }
+  };
+  items1[0] = closure_4(publish(5594).Button, obj2);
   let tmp4Result = null;
   if (null != stateFromStores) {
-    const obj3 = { direction: "horizontal", spacing: 4, align: "center", children: null };
-    const obj4 = { variant: "text-sm/normal", color: "text-muted", children: null };
-    const intl = tmp(1126).intl;
-    obj4.children = intl.string(guildId(3723)["+HGTlC"]);
-    const items2 = [closure_4(tmp(4886).Text, obj4), , ];
+    const obj3 = { direction: "horizontal", spacing: 4, align: "center", children: items2 };
+    const Stack3 = tmp(5593).Stack;
+    const obj4 = { variant: "text-sm/normal", color: "text-muted", children: intl.string(guildId(3723)["+HGTlC"]) };
+    const Text = tmp(4886).Text;
+    intl = tmp(1126).intl;
+    items2 = [closure_4(Text, obj4), , ];
     const obj5 = { guild: stateFromStores, size: tmp(5971).GuildIconSizes.XXSMALL };
-    items2[1] = closure_4(guildId(5971), obj5);
-    const obj6 = { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: null };
     const tmp8 = guildId(5971);
-    obj6.children = tmp(16703).publishCardServerName(stateFromStores.name);
-    items2[2] = closure_4(tmp(4886).Text, obj6);
-    obj3.children = items2;
-    tmp4Result = closure_5(tmp(5593).Stack, obj3);
-    const tmpResult = tmp(16703);
+    items2[1] = closure_4(tmp8, obj5);
+    const obj6 = { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: tmpResult.publishCardServerName(stateFromStores.name) };
+    const Text2 = tmp(4886).Text;
+    tmpResult = tmp(16703);
+    items2[2] = closure_4(Text2, obj6);
+    tmp4Result = closure_5(Stack3, obj3);
   }
   items1[1] = tmp4Result;
-  const children = [closure_5(publish(5593).Stack, { direction: "horizontal", spacing: 8, align: "center", children: items1 }), ];
+  const children = [closure_5(Stack2, { direction: "horizontal", spacing: 8, align: "center", children: items1 }), ];
   let tmp5Result = null;
   if (null != publish.disabledReason) {
     const obj7 = { variant: "text-sm/normal", color: "text-muted", children: publish.disabledReason };
     tmp5Result = closure_4(tmp(4886).Text, obj7);
   }
   children[1] = tmp5Result;
-  return closure_5(publish(5593).Stack, { direction: "vertical", spacing: 8, children });
+  return closure_5(Stack, { direction: "vertical", spacing: 8, children });
 });
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/publish/native/ConjurePublishCtaCard.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
-  const cResult = c.c(2);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
+  let tmp5;
+  const obj = react2;
+  const cResult = obj.c(2);
   const tmp4 = useConjurePublishActionDefault(projectId.projectId);
   if (cResult[0] !== tmp4) {
     let tmp7 = null;
     if (null != tmp4) {
       tmp7 = null;
+      const tmpResult = conjurePublishCard;
       if (tmpResult.isConjurePublishCtaVisible(tmp4)) {
         const obj2 = { publish: tmp4 };
-        tmp7 = React4(closure_6, obj2);
+        tmp7 = React3(closure_6, obj2);
       }
-      tmpResult = conjurePublishCard;
     }
     cResult[0] = tmp4;
     cResult[1] = tmp7;
-    let tmp5 = tmp7;
+    tmp5 = tmp7;
   } else {
     tmp5 = cResult[1];
   }
@@ -209,11 +231,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   let tmp3 = null;
   if (null != tmp2) {
     tmp3 = null;
+    const obj = conjurePublishCard;
     if (obj.isConjurePublishCtaVisible(tmp2)) {
       const obj2 = { publish: tmp2 };
-      tmp3 = React4(closure_6, obj2);
+      tmp3 = React3(closure_6, obj2);
     }
-    obj = conjurePublishCard;
   }
   return tmp3;
 });
+const result = size.fileFinishedImporting("modules/conjure/publish/native/ConjurePublishCtaCard.tsx");
+
+export default tmp4;

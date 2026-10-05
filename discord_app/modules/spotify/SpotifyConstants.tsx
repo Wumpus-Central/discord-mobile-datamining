@@ -1,10 +1,15 @@
 // === Module 8016: SpotifyConstants ===
 
 // Module 8016 (SpotifyConstants)
+import Constants from "Constants" /* 1085 */;
 import Platforms from "Platforms" /* 5442 */;
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import size from "module_2" /* 2 */;
 
+let str;
 const spotify = "spotify";
 let c1 = "spotify:";
+const PlatformTypes = Constants.PlatformTypes;
 const SpotifyResourceTypes = { TRACK: "track", ARTIST: "artist", ALBUM: "album", PLAYLIST: "playlist", EPISODE: "episode", SHOW: "show" };
 const obj2 = {
   PROFILE: "" + "https://api.spotify.com/v1" + "/me",
@@ -20,7 +25,8 @@ const obj2 = {
       str = "desktop";
     }
     const encodeURIComponentResult = encodeURIComponent(ALBUM);
-    return "https://open.spotify.com/" + encodeURIComponentResult + "/" + encodeURIComponent(album_id) + "?utm_source=discord&utm_medium=" + str;
+    const encodeURIComponentResult1 = encodeURIComponent(album_id);
+    return "https://open.spotify.com/" + encodeURIComponentResult + "/" + encodeURIComponentResult1 + "?utm_source=discord&utm_medium=" + str;
   },
   IMAGE(arg0) {
     return "https://i.scdn.co/image/" + encodeURIComponent(arg0);
@@ -41,46 +47,43 @@ const obj2 = {
     if (mobile === undefined) {
       str = "desktop";
     }
-    const encodeURIComponentResult = encodeURIComponent(TRACK);
     let str2 = "";
+    const encodeURIComponentResult = encodeURIComponent(TRACK);
+    const encodeURIComponentResult1 = encodeURIComponent(sync_id);
     if (flag) {
       const _HermesInternal = HermesInternal;
       str2 = "?utm_source=discord&utm_medium=" + str;
     }
-    return "" + spotify + ":" + encodeURIComponentResult + ":" + encodeURIComponent(sync_id) + str2;
+    return "" + spotify + ":" + encodeURIComponentResult + ":" + encodeURIComponentResult1 + str2;
   },
   WEB_HOME: "https://open.spotify.com/" + "?utm_source=discord&utm_medium=" + "desktop",
   PREMIUM_SITE: "https://www.spotify.com/premium/" + "?utm_source=discord&utm_medium=" + "desktop",
   INSTALL_ATTRIBUTION(Identifier) {
     return "https://app.adjust.com/bdyga9?campaign=" + Identifier;
   },
-  APP_STORE: null,
+  APP_STORE: str,
   IOS_APP_STORE: "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8"
 };
-const PlatformUtils = fn(1369);
-let str = "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8";
+const name = Platforms.get(PlatformTypes.SPOTIFY).name;
+const _Object = Object;
+str = "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8";
 if (PlatformUtils.isAndroid()) {
   str = "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US";
 }
-obj2.APP_STORE = str;
-const frozen = Object.freeze(obj2);
-const size = fn(2);
+const freezeResult = freeze(obj2);
 const result = size.fileFinishedImporting("modules/spotify/SpotifyConstants.tsx");
 
 export const SPOTIFY_APP_PROTOCOL = "spotify";
 export const SPOTIFY_PARTY_PREFIX = "spotify:";
-export const SPOTIFY_PLATFORM_NAME = Platforms.get(fn(1085).PlatformTypes.SPOTIFY).name;
+export const SPOTIFY_PLATFORM_NAME = name;
 export const isSpotifyParty = function isSpotifyParty(id) {
-  let startsWithResult = null != id;
-  if (startsWithResult) {
-    startsWithResult = id.startsWith(c1);
-  }
+  const startsWithResult = null != id && id.startsWith(c1);
   return startsWithResult;
 };
 export { SpotifyResourceTypes };
 export const SpotifyActionTypes = { USER_ACTIVITY_PLAY: "user_activity_play", USER_ACTIVITY_SYNC: "user_activity_sync", EMBED_SYNC: "embed_sync" };
 export const SPOTIFY_HOSTNAMES = ["open.spotify.com", "www.spotify.com"];
-export const SpotifyEndpoints = frozen;
+export const SpotifyEndpoints = freezeResult;
 export const getSpotifyResourceType = function getSpotifyResourceType(str) {
   if (typeof str !== "string") {
     return null;
@@ -88,13 +91,13 @@ export const getSpotifyResourceType = function getSpotifyResourceType(str) {
     return obj.TRACK;
   } else if ("artist" === "artist") {
     return obj.ARTIST;
-  } else if ("album" === str) {
+  } else if ("album" === "artist") {
     return obj.ALBUM;
-  } else if ("playlist" === str) {
+  } else if ("playlist" === "artist") {
     return obj.PLAYLIST;
-  } else if ("episode" === str) {
+  } else if ("episode" === "artist") {
     return obj.EPISODE;
-  } else if ("show" === str) {
+  } else if ("show" === "artist") {
     return obj.SHOW;
   } else {
     return null;

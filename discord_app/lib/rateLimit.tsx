@@ -6,11 +6,13 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("lib/rateLimit.tsx");
 
 export default function rateLimit(arg0, arg1, arg2) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  closure_2 = arg2;
-  closure_4 = [];
+  let closure_0 = arg0;
+  let closure_1 = arg1;
+  let closure_2 = arg2;
+  let closure_4 = [];
   function wrapper() {
+    let closure_3;
+    let timeout;
     const items = [...arguments];
     const timestamp = Date.now();
     if (null != timeout) {
@@ -35,8 +37,8 @@ export default function rateLimit(arg0, arg1, arg2) {
     if (arr2.length < items) {
       arr2.push(timestamp + closure_1);
       const items1 = [];
-      HermesBuiltin.arraySpread(items, 0);
-      HermesBuiltin.apply(items1, undefined);
+      HermesBuiltin.arraySpread(items1, items, 0);
+      HermesBuiltin.apply(closure_2, items1, undefined);
     } else {
       const _setTimeout = setTimeout;
       timeout = setTimeout(() => wrapper(...items), arr2[0] - timestamp);

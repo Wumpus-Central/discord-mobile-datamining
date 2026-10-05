@@ -1,22 +1,22 @@
 // === Module 4561: ActionSheetStore ===
 
 // Module 4561 (ActionSheetStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
+import size from "module_2" /* 2 */;
 
-const array = new Array();
-let found = array;
+let array = new Array();
 let zIndex;
 const QuickSwitcher = "QuickSwitcher";
 function setContent(arg0) {
 
 }
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class ActionSheetStore extends Store {
   constructor() {
-    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
     applyArgumentsResult.getContent = function getContent() {
-      const atResult = found.at(-1);
+      const atResult = array.at(-1);
       let content;
       if (atResult != null) {
         content = atResult.content;
@@ -24,13 +24,13 @@ class ActionSheetStore extends Store {
       return content;
     };
     applyArgumentsResult.getStack = function getStack() {
-      return found;
+      return array;
     };
     applyArgumentsResult.isOpen = function isOpen() {
-      return found.length > 0;
+      return array.length > 0;
     };
     applyArgumentsResult.getKey = function getKey() {
-      const atResult = found.at(-1);
+      const atResult = array.at(-1);
       let key;
       if (atResult != null) {
         key = atResult.key;
@@ -39,14 +39,14 @@ class ActionSheetStore extends Store {
     };
     return applyArgumentsResult;
   }
+  initialize() {
+
+  }
 }
 const prototype = ActionSheetStore.prototype;
-prototype["initialize"] = function initialize() {
-
-};
 Object.defineProperty(prototype, "impressionName", {
   get: function impressionName() {
-    const atResult = found.at(-1);
+    const atResult = array.at(-1);
     let impressionName;
     if (atResult != null) {
       impressionName = atResult.impressionName;
@@ -57,7 +57,7 @@ Object.defineProperty(prototype, "impressionName", {
 });
 Object.defineProperty(prototype, "impressionProperties", {
   get: function impressionProperties() {
-    const atResult = found.at(-1);
+    const atResult = array.at(-1);
     let impressionProperties;
     if (atResult != null) {
       impressionProperties = atResult.impressionProperties;
@@ -68,7 +68,7 @@ Object.defineProperty(prototype, "impressionProperties", {
 });
 Object.defineProperty(prototype, "backdropKind", {
   get: function backdropKind() {
-    const atResult = found.at(-1);
+    const atResult = array.at(-1);
     let backdropKind;
     if (atResult != null) {
       backdropKind = atResult.backdropKind;
@@ -78,9 +78,15 @@ Object.defineProperty(prototype, "backdropKind", {
   set: undefined
 });
 ActionSheetStore.displayName = "ActionSheetStore";
-const actionSheetStore = new ActionSheetStore(DispatcherDefault, {
+let obj = {
   SHOW_ACTION_SHEET: function handleShowActionSheet(stackingBehavior) {
+    let backdropKind;
+    let content;
+    let impressionName;
+    let impressionProperties;
+    let key;
     if (typeof setContent === "function") {
+      let combined;
       let str = stackingBehavior.stackingBehavior;
       ({ content, key, impressionName, impressionProperties, backdropKind } = stackingBehavior);
       if (str === undefined) {
@@ -93,27 +99,33 @@ const actionSheetStore = new ActionSheetStore(DispatcherDefault, {
       const obj = { content, key, impressionName, impressionProperties, backdropKind, appEntryKey: str2, zIndex };
       if ("replaceAll" === str) {
         const items = [obj];
-        let combined = items;
+        combined = items;
       } else {
         if ("stack" === str) {
-          if (tmp4) {
+          if (tmp5) {
             const items1 = [];
-            items1[HermesBuiltin.arraySpread(found, 0)] = obj;
+            items1[HermesBuiltin.arraySpread(items1, array, 0)] = obj;
             combined = items1;
           }
         }
-        const substr = found.slice(0, -1);
+        const substr = array.slice(0, -1);
         combined = substr.concat(obj);
       }
-      found = combined;
+      array = combined;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   },
   SHOW_ACTION_SHEET_QUICK_SWITCHER: function handleShowActionSheetQuickSwitcher(arg0) {
+    let backdropKind;
+    let content;
+    let impressionName;
+    let impressionProperties;
+    let key;
     const obj = { key: QuickSwitcher };
     const merged = Object.assign(arg0);
     if (typeof setContent === "function") {
+      let combined;
       let str = obj.stackingBehavior;
       ({ content, key, impressionName, impressionProperties, backdropKind } = obj);
       if (str === undefined) {
@@ -126,52 +138,53 @@ const actionSheetStore = new ActionSheetStore(DispatcherDefault, {
       const obj2 = { content, key, impressionName, impressionProperties, backdropKind, appEntryKey: str2, zIndex };
       if ("replaceAll" === str) {
         const items = [obj2];
-        let combined = items;
+        combined = items;
       } else {
         if ("stack" === str) {
-          if (tmp4) {
+          if (tmp5) {
             const items1 = [];
-            items1[HermesBuiltin.arraySpread(found, 0)] = obj2;
+            items1[HermesBuiltin.arraySpread(items1, array, 0)] = obj2;
             combined = items1;
           }
         }
-        const substr = found.slice(0, -1);
+        const substr = array.slice(0, -1);
         combined = substr.concat(obj2);
       }
-      found = combined;
+      array = combined;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   },
   HIDE_ACTION_SHEET: function handleHideActionSheet(key) {
-    key = key.key;
-    if (null == key) {
-      found = found.slice(0, -1);
+    if (null == key.key) {
+      array = array.slice(0, -1);
     }
-    found = found.filter((key) => key.key !== closure_0);
+    array = array.filter((key) => key.key !== closure_0);
   },
   HIDE_ALL_ACTION_SHEETS: function handleHideAllActionSheets() {
-    found = [];
+    array = [];
   },
   HIDE_ACTION_SHEET_QUICK_SWITCHER: function handleHideActionSheetQuickSwitcher() {
-    closure_0 = QuickSwitcher;
+    let closure_0 = QuickSwitcher;
     if (null == QuickSwitcher) {
-      found = found.slice(0, -1);
+      array = array.slice(0, -1);
     }
-    found = found.filter((key) => key.key !== closure_0);
+    array = array.filter((key) => key.key !== closure_0);
   },
   SET_ACTION_SHEET_Z_INDEX: function handleSetActionSheetZIndex(zIndex) {
     zIndex = zIndex.zIndex;
   },
   RESET_ACTION_SHEETS_FOR_APP_ENTRY_KEY: function handleResetActionSheetsForAppEntryKey(appEntryKey) {
     appEntryKey = appEntryKey.appEntryKey;
-    found = found.filter((appEntryKey) => appEntryKey.appEntryKey !== appEntryKey);
-    if (found.length === found.length) {
+    const found = array.filter((appEntryKey) => appEntryKey.appEntryKey !== appEntryKey);
+    if (found.length === array.length) {
       return false;
+    } else {
+      array = found;
     }
   }
-});
-const size = fn(2);
+};
+const actionSheetStore = new ActionSheetStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/action_sheet/native/ActionSheetStore.tsx");
 
 export default actionSheetStore;

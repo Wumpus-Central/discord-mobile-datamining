@@ -1,85 +1,95 @@
 // === Module 14764: ConnectionsSettingScreen ===
 
 // Module 14764 (ConnectionsSettingScreen)
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import Fragment from "Fragment" /* 21 */;
+import asyncRequire from "asyncRequire" /* 1987 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
 function onPress() {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14765, dependencyMap.paths), "AddConnection");
+  const obj = ActionSheetActionCreatorsDefault;
+  obj.openLazy(asyncRequire(14765, dependencyMap.paths), "AddConnection");
 }
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/connections/native/ConnectionsSettingScreen.tsx");
-
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = stackNavigation(576).c(5);
+const jsx = Fragment.jsx;
+const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let stackNavigation;
+  let tmp6;
+  let tmp7;
+  let tmp9;
   let obj = stackNavigation(576);
-  const tmp = stackNavigation;
-  stackNavigation = stackNavigation(1490).useStackNavigation();
+  const cResult = obj.c(5);
   const obj2 = stackNavigation(1490);
-  const params = stackNavigation(6490).useSettingNavigationRoute().params;
+  const tmp = stackNavigation;
+  stackNavigation = obj2.useStackNavigation();
+  const obj3 = stackNavigation(6490);
+  const params = obj3.useSettingNavigationRoute().params;
   let selectedPlatformType;
   if (params != null) {
     selectedPlatformType = params.selectedPlatformType;
   }
   if (cResult[0] !== stackNavigation) {
     const fn = function s() {
-      stackNavigation.setOptions({
+      let obj = {
         headerRight(arg0) {
-          const obj = {};
+          let intl;
+          const obj = { onPress, label: intl.string(stackNavigation(closure_1_2[10]).t.OYkgVk) };
+          const HeaderTextButton = stackNavigation(closure_1_2[9]).HeaderTextButton;
           const merged = Object.assign(arg0);
-          obj.onPress = onPress;
-          const intl = stackNavigation(1126).intl;
-          obj.label = intl.string(stackNavigation(1126).t.OYkgVk);
-          return closure_1_4(stackNavigation(7498).HeaderTextButton, obj);
+          intl = stackNavigation(closure_1_2[10]).intl;
+          return closure_1_4(HeaderTextButton, obj);
         }
-      });
+      };
+      stackNavigation.setOptions(obj);
     };
     const items = [stackNavigation];
     cResult[0] = stackNavigation;
     cResult[1] = fn;
     cResult[2] = items;
-    let tmp7 = items;
-    let tmp6 = fn;
+    tmp7 = items;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[1];
     tmp7 = cResult[2];
   }
-  const layoutEffect = noop.useLayoutEffect(tmp6, tmp7);
+  const layoutEffect = react.useLayoutEffect(tmp6, tmp7);
   if (cResult[3] !== selectedPlatformType) {
-    const obj4 = { selectedPlatformType };
     const tmp11 = jsx(tmp(14766).UserSettingsConnections, { selectedPlatformType });
     cResult[3] = selectedPlatformType;
     cResult[4] = tmp11;
-    let tmp9 = tmp11;
+    tmp9 = tmp11;
   } else {
     tmp9 = cResult[4];
   }
   return tmp9;
 }) : (() => {
-  stackNavigation = stackNavigation(1490).useStackNavigation();
+  let stackNavigation;
   let obj = stackNavigation(1490);
   const tmp = stackNavigation;
-  const params = stackNavigation(6490).useSettingNavigationRoute().params;
+  stackNavigation = obj.useStackNavigation();
+  const obj2 = stackNavigation(6490);
+  const params = obj2.useSettingNavigationRoute().params;
   let selectedPlatformType;
   if (params != null) {
     selectedPlatformType = params.selectedPlatformType;
   }
   const items = [stackNavigation];
-  const layoutEffect = noop.useLayoutEffect(() => {
-    stackNavigation.setOptions({
+  const layoutEffect = react.useLayoutEffect(() => {
+    let obj = {
       headerRight(arg0) {
-        const obj = {};
+        let intl;
+        const obj = { onPress, label: intl.string(stackNavigation(closure_1_2[10]).t.OYkgVk) };
+        const HeaderTextButton = stackNavigation(closure_1_2[9]).HeaderTextButton;
         const merged = Object.assign(arg0);
-        obj.onPress = onPress;
-        const intl = stackNavigation(1126).intl;
-        obj.label = intl.string(stackNavigation(1126).t.OYkgVk);
-        return closure_1_4(stackNavigation(7498).HeaderTextButton, obj);
+        intl = stackNavigation(closure_1_2[10]).intl;
+        return closure_1_4(HeaderTextButton, obj);
       }
-    });
+    };
+    stackNavigation.setOptions(obj);
   }, items);
   return jsx(tmp(14766).UserSettingsConnections, { selectedPlatformType });
 }));
+const result = size.fileFinishedImporting("modules/user_settings/connections/native/ConnectionsSettingScreen.tsx");
+
+export default memoResult;

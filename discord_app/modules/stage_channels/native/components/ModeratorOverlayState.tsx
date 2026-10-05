@@ -1,64 +1,76 @@
 // === Module 9158: ModeratorOverlayState ===
 
 // Module 9158 (ModeratorOverlayState)
-import c from "c" /* 576 */;
-import _mod4492 from "module_4492" /* 4492 */;
-import identity from "module_1254" /* 1254 */;
+import react from "react" /* 576 */;
+import _slicedToArray from "_slicedToArray" /* 4492 */;
+import module_1254 from "module_1254" /* 1254 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-let closure_2 = identity.createWithEqualityFn((arg0, arg1) => {
-  closure_0 = arg0;
-  dependencyMap = arg1;
-  const obj = {
+let closure_2 = module_1254.createWithEqualityFn((arg0, arg1) => {
+  let closure_0 = arg0;
+  let closure_1 = arg1;
+  let obj = {
     overlayDismissedChannelIds: new Set(),
     dismissOverlay(arg0) {
-      const overlayDismissedChannelIds = dependencyMap().overlayDismissedChannelIds;
+      const overlayDismissedChannelIds = closure_1().overlayDismissedChannelIds;
       overlayDismissedChannelIds.add(arg0);
-      overlayDismissedChannelIds(1259).batchUpdates(() => overlayDismissedChannelIds({ overlayDismissedChannelIds }));
+      let obj = overlayDismissedChannelIds(closure_1[1]);
+      obj.batchUpdates(() => {
+        const obj = { overlayDismissedChannelIds };
+        return overlayDismissedChannelIds(obj);
+      });
     }
   };
+  new Set();
   return obj;
 });
-const result = size.fileFinishedImporting("modules/stage_channels/native/components/ModeratorOverlayState.tsx");
-
-export const useModeratorOverlayChannelState = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  closure_0 = arg0;
-  const cResult = c.c(11);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let first;
+  let tmp6;
+  let closure_0 = arg0;
+  const obj = react;
+  const cResult = obj.c(11);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function n(overlayDismissedChannelIds) {
       return overlayDismissedChannelIds.overlayDismissedChannelIds;
     };
     cResult[0] = fn;
-    let first = fn;
+    first = fn;
   } else {
     first = cResult[0];
   }
-  const obj2 = closure_2(first, _mod4492.shallow);
+  const obj2 = closure_2(first, _slicedToArray.shallow);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function o(dismissOverlay) {
       return dismissOverlay.dismissOverlay;
     };
     cResult[1] = fn2;
-    let tmp6 = fn2;
+    tmp6 = fn2;
   } else {
     tmp6 = cResult[1];
   }
-  const tmp5Result = closure_2(tmp6, _mod4492.shallow);
-  closure_1 = tmp5Result;
+  const tmp5Result = closure_2(tmp6, _slicedToArray.shallow);
+  let closure_1 = tmp5Result;
   if (cResult[2] === arg0) {
+    let tmp8;
+    if (cResult[3] === obj2) {
+      tmp8 = cResult[4];
+    }
     if (cResult[5] === arg0) {
+      let tmp11;
       if (cResult[6] === tmp5Result) {
-        let tmp11 = cResult[7];
+        tmp11 = cResult[7];
       }
-      if (cResult[8] === tmp10) {
+      if (cResult[8] === !tmp8) {
+        let tmp12;
         if (cResult[9] === tmp11) {
-          let tmp12 = cResult[10];
+          tmp12 = cResult[10];
         }
         return tmp12;
       }
-      const items = [tmp10, tmp11];
-      cResult[8] = tmp10;
+      const items = [!tmp8, tmp11];
+      cResult[8] = !tmp8;
       cResult[9] = tmp11;
       cResult[10] = items;
       tmp12 = items;
@@ -75,9 +87,14 @@ export const useModeratorOverlayChannelState = ReactCompilerGating.isReactCompil
   cResult[2] = arg0;
   cResult[3] = obj2;
   cResult[4] = hasItem;
+  tmp8 = hasItem;
 }) : ((arg0) => {
-  closure_0 = arg0;
-  closure_1 = closure_2((dismissOverlay) => dismissOverlay.dismissOverlay, _mod4492.shallow);
-  const items = [!closure_2((overlayDismissedChannelIds) => overlayDismissedChannelIds.overlayDismissedChannelIds, _mod4492.shallow).has(arg0), () => closure_1(closure_0)];
+  let closure_0 = arg0;
+  const obj = closure_2((overlayDismissedChannelIds) => overlayDismissedChannelIds.overlayDismissedChannelIds, _slicedToArray.shallow);
+  let closure_1 = closure_2((dismissOverlay) => dismissOverlay.dismissOverlay, _slicedToArray.shallow);
+  const items = [!obj.has(arg0), () => closure_1(closure_0)];
   return items;
 });
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/ModeratorOverlayState.tsx");
+
+export const useModeratorOverlayChannelState = tmp2;

@@ -8,9 +8,9 @@ import size from "module_2" /* 2 */;
 const ActivityActionTypes = Constants.ActivityActionTypes;
 const result = size.fileFinishedImporting("modules/activities/utils/isMostRecentDeadEndInvite.tsx");
 
-export const isMostRecentDeadEndInvite = function isMostRecentDeadEndInvite(id, messages, id2, findActivityResult) {
-  closure_0 = id2;
-  closure_1 = findActivityResult;
+export const isMostRecentDeadEndInvite = function isMostRecentDeadEndInvite(id, messages, id2, applicationActivity) {
+  let closure_0 = id2;
+  let closure_1 = applicationActivity;
   return !messages.hasAnyAfter(id, (activity) => {
     let tmp = null != activity.activity;
     if (tmp) {
@@ -19,13 +19,13 @@ export const isMostRecentDeadEndInvite = function isMostRecentDeadEndInvite(id, 
       if (application != null) {
         id = application.id;
       }
-      tmp = id === closure_0;
+      tmp = id === id2;
     }
     if (tmp) {
       tmp = activity.activity.type === ActivityActionTypes.JOIN;
     }
     if (tmp) {
-      tmp = !isInviteActiveDefault(closure_1, activity, closure_0);
+      tmp = !isInviteActiveDefault(applicationActivity, activity, id2);
     }
     return tmp;
   }, 25);

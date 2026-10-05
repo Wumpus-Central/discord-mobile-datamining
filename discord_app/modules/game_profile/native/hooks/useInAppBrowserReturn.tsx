@@ -3,35 +3,41 @@
 // Module 8331 (useInAppBrowserReturn)
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8319 */;
 import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8325 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import GameProfileStore from "GameProfileStore" /* 8327 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/game_profile/native/hooks/useInAppBrowserReturn.tsx");
+let c0, gameId;
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameId) => {
-  const cResult = gameId(576).c(4);
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((gameId) => {
+  let obj = gameId(576);
+  const cResult = obj.c(4);
   gameId = gameId.gameId;
   const scrollY = gameId.scrollY;
   if (cResult[0] === gameId) {
+    let tmp2;
+    let tmp3;
     if (cResult[1] === scrollY) {
-      let tmp2 = cResult[2];
-      let tmp3 = cResult[3];
+      tmp2 = cResult[2];
+      tmp3 = cResult[3];
     }
-    const effect = noop.useEffect(tmp2, tmp3);
+    const effect = react.useEffect(tmp2, tmp3);
   }
   const fn = function s() {
     if (null != c0) {
+      let obj = gameId(dependencyMap[4]);
       if (obj.isIOS()) {
         c0 = false;
-        closure_1 = gameId(dependencyMap[5]).subscribeToIsInAppBrowserOpen((arg0, arg1) => {
-          if (!arg1) {
+        const tmpResult = gameId(dependencyMap[5]);
+        let closure_1 = tmpResult.subscribeToIsInAppBrowserOpen((arg0, arg1) => {
+          const tmp = arg1;
+          if (!tmp) {
             if (arg0) {
               c0 = true;
-              const obj2 = { gameId, initialScrollOffset: scrollY.get() };
-              const result = GameProfileActionCreatorsDefault.setGameProfilePendingReturn(obj2);
+              const obj = { gameId, initialScrollOffset: scrollY.get() };
+              const setGameProfilePendingReturn = GameProfileActionCreatorsDefault.setGameProfilePendingReturn;
+              const result = setGameProfilePendingReturn(obj);
             }
           }
           if (arg1) {
@@ -40,8 +46,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameId) => {
               c0 = false;
               const pendingReturn = GameProfileStore.getPendingReturn();
               if (null != pendingReturn) {
-                const obj4 = { gameId: pendingReturn.gameId, source: GameProfileAnalyticUtils.GameProfileSources.InAppBrowserReturn, initialScrollOffset: pendingReturn.initialScrollOffset };
-                GameProfileActionCreatorsDefault.returnToGameProfile(obj4);
+                const obj2 = { gameId: pendingReturn.gameId, source: GameProfileAnalyticUtils.GameProfileSources.InAppBrowserReturn, initialScrollOffset: pendingReturn.initialScrollOffset };
+                const returnToGameProfile = GameProfileActionCreatorsDefault.returnToGameProfile;
+                GameProfileActionCreatorsDefault;
+                returnToGameProfile(obj2);
               }
             }
           }
@@ -52,7 +60,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameId) => {
           }
         };
       }
-      obj = gameId(dependencyMap[4]);
     }
   };
   const items = [gameId, scrollY];
@@ -62,21 +69,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameId) => {
   cResult[3] = items;
   tmp3 = items;
   tmp2 = fn;
-  let obj = gameId(576);
 }) : ((gameId) => {
   gameId = gameId.gameId;
   const scrollY = gameId.scrollY;
   const items = [gameId, scrollY];
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(() => {
     if (null != c0) {
+      let obj = gameId(dependencyMap[4]);
       if (obj.isIOS()) {
         c0 = false;
-        closure_1 = gameId(dependencyMap[5]).subscribeToIsInAppBrowserOpen((arg0, arg1) => {
-          if (!arg1) {
+        const tmpResult = gameId(dependencyMap[5]);
+        let closure_1 = tmpResult.subscribeToIsInAppBrowserOpen((arg0, arg1) => {
+          const tmp = arg1;
+          if (!tmp) {
             if (arg0) {
               c0 = true;
-              const obj2 = { gameId, initialScrollOffset: scrollY.get() };
-              const result = GameProfileActionCreatorsDefault.setGameProfilePendingReturn(obj2);
+              const obj = { gameId, initialScrollOffset: scrollY.get() };
+              const setGameProfilePendingReturn = GameProfileActionCreatorsDefault.setGameProfilePendingReturn;
+              const result = setGameProfilePendingReturn(obj);
             }
           }
           if (arg1) {
@@ -85,8 +95,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameId) => {
               c0 = false;
               const pendingReturn = GameProfileStore.getPendingReturn();
               if (null != pendingReturn) {
-                const obj4 = { gameId: pendingReturn.gameId, source: GameProfileAnalyticUtils.GameProfileSources.InAppBrowserReturn, initialScrollOffset: pendingReturn.initialScrollOffset };
-                GameProfileActionCreatorsDefault.returnToGameProfile(obj4);
+                const obj2 = { gameId: pendingReturn.gameId, source: GameProfileAnalyticUtils.GameProfileSources.InAppBrowserReturn, initialScrollOffset: pendingReturn.initialScrollOffset };
+                const returnToGameProfile = GameProfileActionCreatorsDefault.returnToGameProfile;
+                GameProfileActionCreatorsDefault;
+                returnToGameProfile(obj2);
               }
             }
           }
@@ -97,7 +109,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((gameId) => {
           }
         };
       }
-      obj = gameId(dependencyMap[4]);
     }
   }, items);
 });
+let result = size.fileFinishedImporting("modules/game_profile/native/hooks/useInAppBrowserReturn.tsx");
+
+export default tmp2;

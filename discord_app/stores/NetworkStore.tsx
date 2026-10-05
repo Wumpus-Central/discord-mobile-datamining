@@ -1,7 +1,7 @@
 // === Module 4939: NetworkStore ===
 
 // Module 4939 (NetworkStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import NetworkUtilsDefault from "NetworkUtils" /* 1468 */;
 import Constants from "Constants" /* 1085 */;
@@ -25,24 +25,26 @@ const NetworkConnectionSpeeds = Constants.NetworkConnectionSpeeds;
 let UNKNOWN = NetworkConnectionTypes.UNKNOWN;
 let UNKNOWN2 = NetworkConnectionSpeeds.UNKNOWN;
 let serviceProvider = null;
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class NetworkStoreClass extends Store {
+  initialize() {
+    const obj = NetworkUtilsDefault;
+    const networkInformation = obj.getNetworkInformation();
+    networkInformation.then(handleConnectionInfoChange);
+    const obj2 = NetworkUtilsDefault;
+    obj2.addChangeCallback(handleConnectionInfoChange);
+  }
+  getType() {
+    return UNKNOWN;
+  }
+  getEffectiveConnectionSpeed() {
+    return UNKNOWN2;
+  }
+  getServiceProvider() {
+    return serviceProvider;
+  }
 }
 const prototype = NetworkStoreClass.prototype;
-prototype["initialize"] = function initialize() {
-  const networkInformation = NetworkUtilsDefault.getNetworkInformation();
-  networkInformation.then(handleConnectionInfoChange);
-  NetworkUtilsDefault.addChangeCallback(handleConnectionInfoChange);
-};
-prototype["getType"] = function getType() {
-  return UNKNOWN;
-};
-prototype["getEffectiveConnectionSpeed"] = function getEffectiveConnectionSpeed() {
-  return UNKNOWN2;
-};
-prototype["getServiceProvider"] = function getServiceProvider() {
-  return serviceProvider;
-};
 NetworkStoreClass.displayName = "NetworkStore";
 const networkStoreClass = new NetworkStoreClass(DispatcherDefault, {});
 const result = size.fileFinishedImporting("stores/NetworkStore.tsx");

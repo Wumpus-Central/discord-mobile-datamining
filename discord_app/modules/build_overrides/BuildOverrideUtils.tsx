@@ -5,45 +5,44 @@ import Constants from "Constants" /* 1085 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import BuildOverrideConstants from "BuildOverrideConstants" /* 1367 */;
 import URLUtilsDefault from "URLUtils" /* 1371 */;
-import UrlAll from "Url" /* 1373 */;
+import urlParseAll from "urlParse" /* 1373 */;
 import _modDef1376 from "module_1376" /* 1376 */;
-import ClientInfoUtils_mod from "ClientInfoUtils" /* 1368 */;
+import react_native_mod from "react-native" /* 1368 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import size from "module_2" /* 2 */;
 
+let Version;
 let closure_4 = BuildOverrideConstants.BUILD_OVERRIDE_COOKIE_NAME;
 const PRIMARY_DOMAIN = Constants.PRIMARY_DOMAIN;
-let ClientInfoUtils = ClientInfoUtils_mod;
-ClientInfoUtils = ClientInfoUtils.getConstants();
+let react_native = react_native_mod;
+react_native = react_native.getConstants();
 if (PlatformUtils.isAndroid()) {
-  let Version = ClientInfoUtils.Version.split(" - ")[0];
+  const str = react_native.Version;
+  Version = str.split(" - ")[0];
 } else {
   const _module2 = PlatformUtils;
   if (_module2.isIOS()) {
-    Version = ClientInfoUtils.Version;
+    Version = react_native.Version;
   }
 }
 function getAPIEndpoint(arg0) {
   return "" + location.protocol + "//" + location.host + arg0;
 }
 function isManualBuildOverrideLink(iter) {
-  let isMatch = null != iter;
-  if (isMatch) {
-    isMatch = regExp1.test(iter);
-  }
+  const isMatch = null != iter && regExp1.test(iter);
   return isMatch;
 }
 function manualOverrideLinkMeta(str) {
+  let obj3;
   const match = str.match(regExp1);
   if (null != match) {
     if (2 === match.length) {
-      const obj2 = { targetBuildOverride: null, validForUserIds: null, expiresAt: "Mon, 1 Jan 2038 00:00:00 GMT" };
-      const obj3 = {};
+      const obj2 = { targetBuildOverride: obj3, validForUserIds: [], expiresAt: "Mon, 1 Jan 2038 00:00:00 GMT" };
+      obj3 = {};
       const _HermesInternal = HermesInternal;
       const obj4 = { type: "branch", id: match[1] };
       obj3["discord_" + PlatformUtils.getNativePlatform()] = obj4;
-      obj2.targetBuildOverride = obj3;
-      obj2.validForUserIds = [];
+      PlatformUtils;
       return obj2;
     }
   }
@@ -58,47 +57,52 @@ const result = size.fileFinishedImporting("modules/build_overrides/BuildOverride
 export const APP_VERSION = Version;
 export { getAPIEndpoint };
 export const getBuildOverride = function getBuildOverride() {
-  const safeParseWithQueryResult = URLUtilsDefault.safeParseWithQuery("" + location.protocol + "//" + location.host + "/__development/build_overrides");
+  let obj3;
+  let resolved;
+  const obj = URLUtilsDefault;
+  const safeParseWithQueryResult = obj.safeParseWithQuery("" + location.protocol + "//" + location.host + "/__development/build_overrides");
   if (null == safeParseWithQueryResult) {
-    let resolved = Promise.resolve(null);
+    resolved = Promise.resolve(null);
   } else {
     safeParseWithQueryResult.search = null;
     if (Version) {
       safeParseWithQueryResult.query.version = tmp3;
     }
     const HTTP = HTTPUtils.HTTP;
-    const obj2 = { url: UrlAll.format(safeParseWithQueryResult), oldFormErrors: true, rejectWithError: false };
-    value = HTTP.get(obj2);
+    const get = HTTP.get;
+    const obj2 = { url: obj3.format(safeParseWithQueryResult), oldFormErrors: true, rejectWithError: false };
+    obj3 = urlParseAll;
+    const value = get(obj2);
     resolved = value.then((body) => body.body || null, () => null);
   }
   return resolved;
 };
 export const getBuildOverrideMeta = function getBuildOverrideMeta(url) {
-  let isMatch = null != url;
-  if (isMatch) {
-    isMatch = regExp1.test(url);
-  }
+  let obj3;
+  let obj5;
+  const isMatch = null != url && regExp1.test(url);
   if (isMatch) {
     const match = url.match(regExp1);
     let tmp13 = null;
     if (null != match) {
       tmp13 = null;
       if (2 === match.length) {
-        const obj2 = { targetBuildOverride: null, validForUserIds: null, expiresAt: "Mon, 1 Jan 2038 00:00:00 GMT" };
-        const obj5 = {};
+        const obj2 = { targetBuildOverride: obj5, validForUserIds: [], expiresAt: "Mon, 1 Jan 2038 00:00:00 GMT" };
+        obj5 = {};
         const _HermesInternal = HermesInternal;
         const obj6 = { type: "branch", id: match[1] };
         obj5["discord_" + PlatformUtils.getNativePlatform()] = obj6;
-        obj2.targetBuildOverride = obj5;
-        obj2.validForUserIds = [];
         tmp13 = obj2;
+        PlatformUtils;
       }
     }
-    return Promise.resolve(tmp13);
+    return resolve(tmp13);
   } else {
-    const safeParseWithQueryResult = URLUtilsDefault.safeParseWithQuery(url);
+    let resolved;
+    const obj = URLUtilsDefault;
+    const safeParseWithQueryResult = obj.safeParseWithQuery(url);
     if (null == safeParseWithQueryResult) {
-      let resolved = Promise.resolve(null);
+      resolved = Promise.resolve(null);
     } else {
       safeParseWithQueryResult.search = null;
       safeParseWithQueryResult.query.meta = "true";
@@ -108,8 +112,10 @@ export const getBuildOverrideMeta = function getBuildOverrideMeta(url) {
       const _window = window;
       safeParseWithQueryResult.host = window.location.host;
       const HTTP = HTTPUtils.HTTP;
-      const obj7 = { url: UrlAll.format(safeParseWithQueryResult), oldFormErrors: true, rejectWithError: false };
-      value = HTTP.get(obj7);
+      const get = HTTP.get;
+      const obj7 = { url: obj3.format(safeParseWithQueryResult), oldFormErrors: true, rejectWithError: false };
+      obj3 = urlParseAll;
+      const value = get(obj7);
       resolved = value.then((body) => body.body || null, () => null);
     }
     return resolved;
@@ -120,17 +126,16 @@ export const probablyHasBuildOverride = function probablyHasBuildOverride() {
 };
 export const getBuildOverrideExperiments = function getBuildOverrideExperiments() {
   try {
+    let obj2;
     const _window = window;
-    const tmp5 = _modDef1376.parse(window.document.cookie)[closure_4];
+    const obj = _modDef1376;
+    const tmp5 = obj.parse(window.document.cookie)[closure_4];
     if (null == tmp5) {
-      let obj2 = {};
+      obj2 = {};
     } else {
       const _JSON = JSON;
       const _atob = atob;
-      obj2 = JSON.parse(atob(str.substring(str.indexOf(".") + 1))).$meta.experiments;
-      if (obj2 == null) {
-        obj2 = {};
-      }
+      obj2 = JSON.parse(atob(str.substring(str.indexOf(".") + 1))).$meta.experiments ?? {};
     }
     return obj2;
   } catch (err) {
@@ -138,24 +143,19 @@ export const getBuildOverrideExperiments = function getBuildOverrideExperiments(
   }
 };
 export const isBuildOverrideLink = function isBuildOverrideLink(target) {
-  let isMatch = null != target;
-  if (isMatch) {
-    isMatch = regExp.test(target);
-  }
+  const isMatch = null != target && regExp.test(target);
   return isMatch;
 };
 export { isManualBuildOverrideLink };
 export { manualOverrideLinkMeta };
 export const validateURL = function validateURL(url) {
-  let isMatch = null != url;
+  let obj3;
+  const isMatch = null != url && regExp1.test(url);
   if (isMatch) {
-    isMatch = regExp1.test(url);
-  }
-  if (isMatch) {
-    const obj2 = { payload: null, url };
-    return obj2;
+    return { payload: null, url };
   } else {
-    url = URLUtilsDefault.safeParseWithQuery(url);
+    const obj = URLUtilsDefault;
+    url = obj.safeParseWithQuery(url);
     if (null == url) {
       return null;
     } else {
@@ -166,13 +166,13 @@ export const validateURL = function validateURL(url) {
               if ("s" === key10021) {
                 continue;
               } else {
-                let query = url.query;
-                delete tmp[tmp2];
+                delete url.query[tmp9];
                 continue;
               }
               continue;
             }
-            const obj4 = { payload: url.query.s, url: UrlAll.format(url) };
+            const obj4 = { payload: url.query.s, url: obj3.format(url) };
+            obj3 = urlParseAll;
             return obj4;
           }
         }

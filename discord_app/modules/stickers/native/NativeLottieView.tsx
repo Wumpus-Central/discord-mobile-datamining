@@ -1,30 +1,44 @@
 // === Module 7659: NativeLottieView ===
 
 // Module 7659 (NativeLottieView)
-import _mod17 from "module_17" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
 import codegenNativeCommandsDefault from "codegenNativeCommands" /* 113 */;
 import LottieNodeNativeComponentDefault from "LottieNodeNativeComponent" /* 7660 */;
-import noop_mod from "module_19" /* 19 */;
+import react_mod from "react" /* 19 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import size_mod from "module_2" /* 2 */;
 
-let noop = noop_mod;
-({ useEffect: c2, useRef: c3 } = noop);
-let noop = noop_mod;
-const jsx = jsxProd.jsx;
+let current;
+
+let c2;
+let c3;
+let importDefaultResult;
+let react = react_mod;
+({ useEffect: c2, useRef: c3 } = react);
+react = react_mod;
+const requireNativeComponent = react_native.requireNativeComponent;
+const jsx = Fragment.jsx;
 if (PlatformUtils.isAndroid()) {
-  let importDefaultResult = LottieNodeNativeComponentDefault;
+  importDefaultResult = LottieNodeNativeComponentDefault;
 } else {
-  importDefaultResult = _mod17.requireNativeComponent("NativeLottieNode");
+  importDefaultResult = requireNativeComponent("NativeLottieNode");
 }
 const metroRequire = importDefaultResult;
 let closure_7 = codegenNativeCommandsDefault({ supportedCommands: ["setup"] });
 const NativeLottieRenderMode = { LOOP: 0, [0]: "LOOP", STILL: 1, [1]: "STILL", ONCE: 2, [2]: "ONCE" };
-const result = size.fileFinishedImporting("modules/stickers/native/NativeLottieView.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let accessibilityLabel;
+  let animating;
+  let asset;
+  let first;
+  let height;
+  let opacity;
+  let ref;
+  let renderMode;
+  let url;
+  let width;
   const obj = renderMode(ref[7]);
   const cResult = obj.c(17);
   ({ asset, url, width, height, opacity, renderMode, animating, accessibilityLabel } = arg0);
@@ -35,41 +49,42 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (undefined === renderMode) {
     renderMode = obj.LOOP;
   }
-  ref = noop.useRef(null);
+  ref = react.useRef(null);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function l(arg0) {
+      let accessibilityLabel;
+      let animating;
+      let asset;
+      let height;
+      let url;
+      let width;
       ({ asset, url, width, height, renderMode, animating, accessibilityLabel } = arg0);
-      let tmp = "" !== url;
-      if (tmp) {
-        tmp = 0 !== width;
-      }
-      if (tmp) {
-        tmp = 0 !== height;
-      }
+      const tmp = "" !== url && 0 !== width && 0 !== height;
       if (tmp) {
         closure_7.setup(ref.current, asset, url, width, height, renderMode, animating, accessibilityLabel);
       }
     };
     cResult[0] = fn;
-    let first = fn;
+    first = fn;
   } else {
     first = cResult[0];
   }
   if (cResult[1] === accessibilityLabel) {
-    if (cResult[2] === tmp3) {
+    if (cResult[2] === (undefined === animating || animating)) {
       if (cResult[3] === asset) {
         if (cResult[4] === height) {
           if (cResult[5] === url) {
+            let tmp6;
+            let tmp13;
             if (cResult[6] === width) {
-              let tmp6 = cResult[7];
+              tmp6 = cResult[7];
             }
             current = tmp6;
-            noop = current(tmp6);
+            react = current(tmp6);
             if (cResult[8] !== tmp6) {
               class S {
                 constructor() {
-                  closure_4.current = closure_3;
-                  return;
+                  ref.current = current;
                 }
               }
               cResult[8] = tmp6;
@@ -77,46 +92,41 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             } else {
               class S {
                 constructor() {
-                  closure_4.current = closure_3;
-                  return;
+                  ref.current = current;
                 }
               }
             }
             first(S);
+            const tmp10 = first;
             if (cResult[10] !== renderMode) {
               class S {
                 constructor() {
-                  closure_4.current = closure_3;
-                  return;
+                  ref.current = current;
                 }
               }
               const items = [renderMode];
               cResult[10] = renderMode;
               cResult[11] = tmp14;
               cResult[12] = items;
-              let tmp13 = items;
+              tmp13 = items;
             } else {
               class S {
                 constructor() {
-                  closure_4.current = closure_3;
-                  return;
+                  ref.current = current;
                 }
               }
               tmp13 = cResult[12];
             }
-            first(tmp14, tmp13);
+            tmp10(tmp14, tmp13);
             if (cResult[13] === height) {
               class S {
                 constructor() {
-                  closure_4.current = closure_3;
-                  return;
+                  ref.current = current;
                 }
               }
             }
-            const obj2 = { ref, style: null };
-            let size = { width, height, opacity: num };
-            obj2.style = size;
-            const tmp19 = <closure_6 ref={ref} style={null} />;
+            size = { width, height, opacity: num };
+            const tmp19 = <closure_6 ref={ref} style={size} />;
             cResult[13] = height;
             cResult[14] = num;
             cResult[15] = width;
@@ -135,42 +145,51 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[6] = width;
   cResult[7] = size1;
   tmp6 = size1;
-}) : ((accessibilityLabel) => {
-  ({ width, height, opacity } = accessibilityLabel);
-  ({ asset, url } = accessibilityLabel);
+}) : ((renderMode) => {
+  let asset;
+  let height;
+  let opacity;
+  let url;
+  let width;
+  ({ width, height, opacity } = renderMode);
+  ({ asset, url } = renderMode);
   if (opacity === undefined) {
     opacity = 1;
   }
-  let LOOP = accessibilityLabel.renderMode;
+  let LOOP = renderMode.renderMode;
   if (LOOP === undefined) {
     LOOP = obj.LOOP;
   }
-  let flag = accessibilityLabel.animating;
+  let flag = renderMode.animating;
   if (flag === undefined) {
     flag = true;
   }
   current = undefined;
-  const ref = noop.useRef(null);
-  const size = { asset, url, width, height, animating: flag, accessibilityLabel: accessibilityLabel.accessibilityLabel };
+  const accessibilityLabel = renderMode.accessibilityLabel;
+  const ref = react.useRef(null);
+  size = { asset, url, width, height, animating: flag, accessibilityLabel };
   current = current(size);
   size(() => {
-    closure_3.current = size;
+    ref.current = size;
   });
   const items = [LOOP];
   size(() => {
+    let accessibilityLabel;
+    let animating;
+    let asset;
+    let height;
+    let url;
+    let width;
     ({ asset, url, width, height, animating, accessibilityLabel } = ref.current);
-    let tmp2 = "" !== url;
-    if (tmp2) {
-      tmp2 = 0 !== width;
-    }
-    if (tmp2) {
-      tmp2 = 0 !== height;
-    }
+    const tmp2 = "" !== url && 0 !== width && 0 !== height;
     if (tmp2) {
       closure_7.setup(ref.current, asset, url, width, height, LOOP, animating, accessibilityLabel);
     }
   }, items);
-  obj = { ref, style: { width, height, opacity } };
   return <closure_6 ref={ref} style={{ width, height, opacity }} />;
 });
+let size = size_mod;
+const result = size.fileFinishedImporting("modules/stickers/native/NativeLottieView.tsx");
+
+export default tmp4;
 export { NativeLottieRenderMode };

@@ -1,22 +1,34 @@
 // === Module 17211: VoicePanelAccessibilityView ===
 
 // Module 17211 (VoicePanelAccessibilityView)
-import c from "c" /* 576 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
+import AccessibilityView from "AccessibilityView" /* 5767 */;
+import VoicePanelPIPConstants from "VoicePanelPIPConstants" /* 17206 */;
 import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17207 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
 let closure_2 = ["style", "pointerEvents", "nativeID", "accessibilityViewIsModal", "onAccessibilityEscape"];
-const VoicePanelPIPModes = fn(17206).VoicePanelPIPModes;
-const jsx = fn(21).jsx;
-let closure_6 = noop.memo(fn(5767).AccessibilityViewAnimated);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/voice_panel/native/VoicePanelAccessibilityView.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(14);
+const VoicePanelPIPModes = VoicePanelPIPConstants.VoicePanelPIPModes;
+const jsx = Fragment.jsx;
+let closure_6 = react.memo(AccessibilityView.AccessibilityViewAnimated);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let accessibilityViewIsModal;
+  let nativeID;
+  let onAccessibilityEscape;
+  let pointerEvents;
+  let style;
+  let tmp4;
+  let tmp5;
+  let tmp6;
+  let tmp7;
+  let tmp8;
+  let tmp9;
+  const obj = react2;
+  const cResult = obj.c(14);
   if (cResult[0] !== arg0) {
     ({ style, pointerEvents, nativeID, accessibilityViewIsModal, onAccessibilityEscape } = arg0);
     const tmp12 = _objectWithoutProperties(arg0, closure_2);
@@ -27,12 +39,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[4] = tmp12;
     cResult[5] = style;
     cResult[6] = pointerEvents;
-    let tmp9 = pointerEvents;
-    let tmp8 = style;
-    let tmp7 = tmp12;
-    let tmp6 = onAccessibilityEscape;
-    let tmp5 = nativeID;
-    let tmp4 = accessibilityViewIsModal;
+    tmp9 = pointerEvents;
+    tmp8 = style;
+    tmp7 = tmp12;
+    tmp6 = onAccessibilityEscape;
+    tmp5 = nativeID;
+    tmp4 = accessibilityViewIsModal;
   } else {
     tmp4 = cResult[1];
     tmp5 = cResult[2];
@@ -45,6 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (undefined !== tmp9) {
     str = tmp9;
   }
+  const tmpResult = VoicePanelPIPStateContext;
   if (tmp4) {
     tmp4 = tmpResult.usePIPState().mode !== VoicePanelPIPModes.IN_APP;
   }
@@ -53,8 +66,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       if (cResult[9] === str) {
         if (cResult[10] === tmp7) {
           if (cResult[11] === tmp8) {
+            let tmp14;
             if (cResult[12] === tmp4) {
-              let tmp14 = cResult[13];
+              tmp14 = cResult[13];
             }
             return tmp14;
           }
@@ -72,22 +86,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[12] = tmp4;
   cResult[13] = tmp16;
   tmp14 = tmp16;
-  const obj2 = { style: tmp8, pointerEvents: str, nativeID: tmp5, accessibilityViewIsModal: tmp4, onAccessibilityEscape: tmp6 };
-  tmpResult = VoicePanelPIPStateContext;
 }) : ((pointerEvents) => {
+  let nativeID;
+  let onAccessibilityEscape;
   let str = pointerEvents.pointerEvents;
+  const style = pointerEvents.style;
   if (str === undefined) {
     str = "box-none";
   }
   let accessibilityViewIsModal = pointerEvents.accessibilityViewIsModal;
   ({ nativeID, onAccessibilityEscape } = pointerEvents);
   const merged = Object.assign(pointerEvents, Object.assign({ style: 0, pointerEvents: 0, nativeID: 0, accessibilityViewIsModal: 0, onAccessibilityEscape: 0 }));
-  const obj2 = { style: pointerEvents.style, pointerEvents: str, nativeID, accessibilityViewIsModal: null, onAccessibilityEscape: null };
+  const obj = VoicePanelPIPStateContext;
   if (accessibilityViewIsModal) {
     accessibilityViewIsModal = obj.usePIPState().mode !== VoicePanelPIPModes.IN_APP;
   }
-  obj2.accessibilityViewIsModal = accessibilityViewIsModal;
-  obj2.onAccessibilityEscape = onAccessibilityEscape;
   const merged1 = Object.assign(merged);
-  return <closure_6 style={pointerEvents.style} pointerEvents={str} nativeID={nativeID} accessibilityViewIsModal={null} onAccessibilityEscape={null} />;
+  return <closure_6 style={style} pointerEvents={str} nativeID={nativeID} accessibilityViewIsModal={accessibilityViewIsModal} onAccessibilityEscape={onAccessibilityEscape} />;
 });
+const result = size.fileFinishedImporting("modules/voice_panel/native/VoicePanelAccessibilityView.tsx");
+
+export default tmp2;

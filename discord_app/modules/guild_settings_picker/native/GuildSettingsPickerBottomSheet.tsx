@@ -1,81 +1,84 @@
 // === Module 13701: GuildSettingsPickerBottomSheet ===
 
 // Module 13701 (GuildSettingsPickerBottomSheet)
+import react_native from "react-native" /* 17 */;
 import _modDef38 from "module_38" /* 38 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9247 */;
 import GuildPickerDefault from "GuildPicker" /* 13706 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4890);
-const timestampProducer = createStyles.createStyles({ content: { paddingHorizontal: 16 } });
-const ReactCompilerGating = fn(558);
+let BottomSheet;
+
+let closure_4;
+let hasOwnProperty;
+const View = react_native.View;
+({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
+const metroRequire = createStyles.createStyles({ content: { paddingHorizontal: 16 } });
 if (ReactCompilerGating.isReactCompilerEnabled()) {
   class GuildSettingsPickerBottomSheet {
-    constructor(arg0) {
-      tmp = feature;
-      tmp2 = subsection;
-      obj = feature(subsection[5]);
-      cResult = obj.c(33);
-      feature = global.feature;
-      section = global.section;
-      subsection = global.subsection;
-      guildId = global.guildId;
-      tmp4 = closure_6();
-      obj2 = feature(subsection[6]);
-      guildSettingsPickerFeature = obj2.useGuildSettingsPickerFeature(feature);
+    constructor(feature) {
+      let description;
+      let isGuildSupported;
+      let items;
+      let selectGuildCta;
+      let subsection;
+      let title;
+      let obj = feature(subsection[5]);
+      const cResult = obj.c(33);
+      feature = feature.feature;
+      const section = feature.section;
+      subsection = feature.subsection;
+      const guildId = feature.guildId;
+      const tmp4 = closure_6();
+      let obj2 = feature(subsection[6]);
+      const guildSettingsPickerFeature = obj2.useGuildSettingsPickerFeature(feature);
       ({ selectGuildCta, title, description, isGuildSupported } = guildSettingsPickerFeature);
       if (cResult[0] === feature) {
         if (cResult[1] === section) {
+          let tmp6;
           if (cResult[2] === subsection) {
             tmp6 = cResult[3];
           }
           if (cResult[4] === guildId) {
             if (cResult[5] === section) {
+              let tmp7;
+              let tmp8;
+              let tmp11;
               if (cResult[6] === subsection) {
                 tmp7 = cResult[7];
               }
               if (cResult[8] !== title) {
-                tmp9 = jsx;
-                obj1 = { title: null };
-                obj1.title = title;
-                tmp10 = jsx(tmp(tmp2[10]).BottomSheetTitleHeader, obj1);
-                num5 = 8;
+                const obj3 = { title };
+                const tmp10 = closure_4(feature(subsection[10]).BottomSheetTitleHeader, obj3);
                 cResult[8] = title;
-                num6 = 9;
                 cResult[9] = tmp10;
                 tmp8 = tmp10;
               } else {
                 tmp8 = cResult[9];
               }
               if (cResult[10] !== description) {
-                tmp12 = jsx;
-                obj10 = { variant: "text-md/medium", children: null };
-                obj10.children = description;
-                tmp13 = jsx(tmp(tmp2[11]).Text, obj10);
-                num7 = 10;
+                const obj4 = { variant: "text-md/medium", children: description };
+                const tmp13 = closure_4(feature(subsection[11]).Text, obj4);
                 cResult[10] = description;
-                num8 = 11;
                 cResult[11] = tmp13;
                 tmp11 = tmp13;
               } else {
                 tmp11 = cResult[11];
               }
               if (cResult[12] === tmp4.content) {
+                let tmp14;
+                let tmp19;
                 if (cResult[13] === tmp11) {
                   tmp14 = cResult[14];
                 }
-                tmp18 = globalThis;
-                _Symbol = Symbol;
-                str = "react.memo_cache_sentinel";
+                const _Symbol = Symbol;
                 if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-                  tmp20 = jsx;
-                  tmp21 = jsx(tmp(tmp2[12]).Spacer, { size: 16 });
-                  num12 = 15;
+                  const tmp21 = closure_4(feature(subsection[12]).Spacer, { size: 16 });
                   cResult[15] = tmp21;
                   tmp19 = tmp21;
                 } else {
@@ -83,33 +86,34 @@ if (ReactCompilerGating.isReactCompilerEnabled()) {
                 }
                 if (cResult[16] === guildId) {
                   if (cResult[17] === tmp6) {
+                    let tmp22;
+                    let tmp26;
                     if (cResult[18] === isGuildSupported) {
                       tmp22 = cResult[19];
                     }
-                    _Symbol2 = Symbol;
+                    const _Symbol2 = Symbol;
                     if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-                      tmp27 = jsx;
-                      tmp28 = jsx(tmp(tmp2[12]).Spacer, { size: 16 });
-                      num17 = 20;
+                      const tmp28 = closure_4(feature(subsection[12]).Spacer, { size: 16 });
                       cResult[20] = tmp28;
                       tmp26 = tmp28;
                     } else {
                       tmp26 = cResult[20];
                     }
-                    tmp29 = null;
-                    tmp30 = null == guildId;
                     if (cResult[21] === tmp7) {
                       if (cResult[22] === selectGuildCta) {
-                        if (cResult[23] === tmp30) {
+                        let tmp31;
+                        if (cResult[23] === null == guildId) {
                           tmp31 = cResult[24];
                         }
                         if (cResult[25] === tmp4.content) {
+                          let tmp34;
                           if (cResult[26] === tmp31) {
                             tmp34 = cResult[27];
                           }
                           if (cResult[28] === tmp34) {
                             if (cResult[29] === tmp8) {
                               if (cResult[30] === tmp14) {
+                                let tmp38;
                                 if (cResult[31] === tmp22) {
                                   tmp38 = cResult[32];
                                 }
@@ -117,339 +121,128 @@ if (ReactCompilerGating.isReactCompilerEnabled()) {
                               }
                             }
                           }
-                          tmp39 = jsxs;
-                          obj11 = { startExpanded: true, children: null };
-                          items = [, , , , , ];
-                          items[0] = tmp8;
-                          items[1] = tmp14;
-                          items[2] = tmp19;
-                          items[3] = tmp22;
-                          items[4] = tmp26;
-                          items[5] = tmp34;
-                          obj11.children = items;
-                          tmp40 = jsxs(tmp(tmp2[15]).BottomSheet, obj11);
-                          num25 = 28;
+                          const obj5 = { startExpanded: true, children: items };
+                          items = [tmp8, tmp14, tmp19, tmp22, tmp26, tmp34];
+                          const tmp40 = closure_5(feature(subsection[15]).BottomSheet, obj5);
                           cResult[28] = tmp34;
-                          num26 = 29;
                           cResult[29] = tmp8;
-                          num27 = 30;
                           cResult[30] = tmp14;
-                          num28 = 31;
                           cResult[31] = tmp22;
-                          num29 = 32;
                           cResult[32] = tmp40;
                           tmp38 = tmp40;
                         }
-                        tmp35 = jsx;
-                        tmp36 = guildId;
-                        obj12 = { style: null, children: null };
-                        obj12.style = tmp4.content;
-                        obj12.children = tmp31;
-                        tmp37 = jsx(guildId, obj12);
-                        num22 = 25;
+                        const obj6 = { style: tmp4.content, children: tmp31 };
+                        const tmp37 = closure_4(guildId, obj6);
                         cResult[25] = tmp4.content;
-                        num23 = 26;
                         cResult[26] = tmp31;
-                        num24 = 27;
                         cResult[27] = tmp37;
                         tmp34 = tmp37;
                       }
                     }
-                    tmp32 = jsx;
-                    obj13 = { grow: true, text: null, disabled: null, onPress: null };
-                    obj13.text = selectGuildCta;
-                    obj13.disabled = tmp30;
-                    obj13.onPress = tmp7;
-                    tmp33 = jsx(tmp(tmp2[14]).Button, obj13);
-                    num18 = 21;
+                    const obj7 = { grow: true, text: selectGuildCta, disabled: null == guildId, onPress: tmp7 };
+                    const tmp33 = closure_4(feature(subsection[14]).Button, obj7);
                     cResult[21] = tmp7;
-                    num19 = 22;
                     cResult[22] = selectGuildCta;
-                    num20 = 23;
-                    cResult[23] = tmp30;
-                    num21 = 24;
+                    cResult[23] = null == guildId;
                     cResult[24] = tmp33;
                     tmp31 = tmp33;
                   }
                 }
-                tmp23 = jsx;
-                tmp24 = section;
-                obj14 = { guildId: null, onChange: null, isGuildIncluded: null };
-                obj14.guildId = guildId;
-                obj14.onChange = tmp6;
-                obj14.isGuildIncluded = isGuildSupported;
-                tmp25 = jsx(section(tmp2[13]), obj14);
-                num13 = 16;
+                const obj8 = { guildId, onChange: tmp6, isGuildIncluded: isGuildSupported };
+                const tmp25 = closure_4(section(subsection[13]), obj8);
                 cResult[16] = guildId;
-                num14 = 17;
                 cResult[17] = tmp6;
-                num15 = 18;
                 cResult[18] = isGuildSupported;
-                num16 = 19;
                 cResult[19] = tmp25;
                 tmp22 = tmp25;
               }
-              tmp15 = jsx;
-              tmp16 = guildId;
-              obj15 = { style: null, children: null };
-              obj15.style = tmp4.content;
-              obj15.children = tmp11;
-              tmp17 = jsx(guildId, obj15);
-              num9 = 12;
+              const obj9 = { style: tmp4.content, children: tmp11 };
+              const tmp17 = closure_4(guildId, obj9);
               cResult[12] = tmp4.content;
-              num10 = 13;
               cResult[13] = tmp11;
-              num11 = 14;
               cResult[14] = tmp17;
               tmp14 = tmp17;
             }
           }
-          handleOpenSelected = function handleOpenSelected() {
+          function handleOpenSelected() {
             _modDef38(null != guildId, "Guild ID must not be null on click");
-            GuildSettingsActionCreatorsDefault.open(guildId, section, undefined, subsection);
-            ActionSheetActionCreatorsDefault.hideActionSheet();
-          };
-          num = 4;
+            const obj = GuildSettingsActionCreatorsDefault;
+            obj.open(guildId, section, undefined, subsection);
+            const obj2 = ActionSheetActionCreatorsDefault;
+            obj2.hideActionSheet();
+          }
           cResult[4] = guildId;
-          num2 = 5;
           cResult[5] = section;
-          num3 = 6;
           cResult[6] = subsection;
-          num4 = 7;
           cResult[7] = handleOpenSelected;
           tmp7 = handleOpenSelected;
         }
       }
-      handleGuildSelected = function handleGuildSelected(guildId) {
-        ActionSheetActionCreatorsDefault.openLazy(() => Promise.resolve(closure_1_7), "GuildSettingsPickerBottomSheet", { feature, section, subsection, guildId });
-      };
+      function handleGuildSelected(guildId) {
+        const obj = ActionSheetActionCreatorsDefault;
+        const obj2 = { feature, section, subsection, guildId };
+        obj.openLazy(() => Promise.resolve(closure_1_7), "GuildSettingsPickerBottomSheet", obj2);
+      }
       cResult[0] = feature;
       cResult[1] = section;
       cResult[2] = subsection;
       cResult[3] = handleGuildSelected;
       tmp6 = handleGuildSelected;
-      return;
     }
   }
 } else {
   class GuildSettingsPickerBottomSheet {
-    constructor(arg0) {
-      tmp = feature;
-      tmp2 = subsection;
-      obj = feature(subsection[5]);
-      cResult = obj.c(33);
-      feature = global.feature;
-      section = global.section;
-      subsection = global.subsection;
-      guildId = global.guildId;
-      tmp4 = closure_6();
-      obj2 = feature(subsection[6]);
-      guildSettingsPickerFeature = obj2.useGuildSettingsPickerFeature(feature);
+    constructor(feature) {
+      let description;
+      let guildId;
+      let isGuildSupported;
+      let items;
+      let obj6;
+      let section;
+      let selectGuildCta;
+      let subsection;
+      let title;
+      feature = feature.feature;
+      ({ section: importDefault, subsection: dependencyMap, guildId } = feature);
+      const tmp = closure_6();
+      let obj = feature(13702);
+      const guildSettingsPickerFeature = obj.useGuildSettingsPickerFeature(feature);
       ({ selectGuildCta, title, description, isGuildSupported } = guildSettingsPickerFeature);
-      if (cResult[0] === feature) {
-        if (cResult[1] === section) {
-          if (cResult[2] === subsection) {
-            tmp6 = cResult[3];
-          }
-          if (cResult[4] === guildId) {
-            if (cResult[5] === section) {
-              if (cResult[6] === subsection) {
-                tmp7 = cResult[7];
-              }
-              if (cResult[8] !== title) {
-                tmp9 = jsx;
-                obj1 = { title: null };
-                obj1.title = title;
-                tmp10 = jsx(tmp(tmp2[10]).BottomSheetTitleHeader, obj1);
-                num5 = 8;
-                cResult[8] = title;
-                num6 = 9;
-                cResult[9] = tmp10;
-                tmp8 = tmp10;
-              } else {
-                tmp8 = cResult[9];
-              }
-              if (cResult[10] !== description) {
-                tmp12 = jsx;
-                obj10 = { variant: "text-md/medium", children: null };
-                obj10.children = description;
-                tmp13 = jsx(tmp(tmp2[11]).Text, obj10);
-                num7 = 10;
-                cResult[10] = description;
-                num8 = 11;
-                cResult[11] = tmp13;
-                tmp11 = tmp13;
-              } else {
-                tmp11 = cResult[11];
-              }
-              if (cResult[12] === tmp4.content) {
-                if (cResult[13] === tmp11) {
-                  tmp14 = cResult[14];
-                }
-                tmp18 = globalThis;
-                _Symbol = Symbol;
-                str = "react.memo_cache_sentinel";
-                if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-                  tmp20 = jsx;
-                  tmp21 = jsx(tmp(tmp2[12]).Spacer, { size: 16 });
-                  num12 = 15;
-                  cResult[15] = tmp21;
-                  tmp19 = tmp21;
-                } else {
-                  tmp19 = cResult[15];
-                }
-                if (cResult[16] === guildId) {
-                  if (cResult[17] === tmp6) {
-                    if (cResult[18] === isGuildSupported) {
-                      tmp22 = cResult[19];
-                    }
-                    _Symbol2 = Symbol;
-                    if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-                      tmp27 = jsx;
-                      tmp28 = jsx(tmp(tmp2[12]).Spacer, { size: 16 });
-                      num17 = 20;
-                      cResult[20] = tmp28;
-                      tmp26 = tmp28;
-                    } else {
-                      tmp26 = cResult[20];
-                    }
-                    tmp29 = null;
-                    tmp30 = null == guildId;
-                    if (cResult[21] === tmp7) {
-                      if (cResult[22] === selectGuildCta) {
-                        if (cResult[23] === tmp30) {
-                          tmp31 = cResult[24];
-                        }
-                        if (cResult[25] === tmp4.content) {
-                          if (cResult[26] === tmp31) {
-                            tmp34 = cResult[27];
-                          }
-                          if (cResult[28] === tmp34) {
-                            if (cResult[29] === tmp8) {
-                              if (cResult[30] === tmp14) {
-                                if (cResult[31] === tmp22) {
-                                  tmp38 = cResult[32];
-                                }
-                                return tmp38;
-                              }
-                            }
-                          }
-                          tmp39 = jsxs;
-                          obj11 = { startExpanded: true, children: null };
-                          items = [, , , , , ];
-                          items[0] = tmp8;
-                          items[1] = tmp14;
-                          items[2] = tmp19;
-                          items[3] = tmp22;
-                          items[4] = tmp26;
-                          items[5] = tmp34;
-                          obj11.children = items;
-                          tmp40 = jsxs(tmp(tmp2[15]).BottomSheet, obj11);
-                          num25 = 28;
-                          cResult[28] = tmp34;
-                          num26 = 29;
-                          cResult[29] = tmp8;
-                          num27 = 30;
-                          cResult[30] = tmp14;
-                          num28 = 31;
-                          cResult[31] = tmp22;
-                          num29 = 32;
-                          cResult[32] = tmp40;
-                          tmp38 = tmp40;
-                        }
-                        tmp35 = jsx;
-                        tmp36 = guildId;
-                        obj12 = { style: null, children: null };
-                        obj12.style = tmp4.content;
-                        obj12.children = tmp31;
-                        tmp37 = jsx(guildId, obj12);
-                        num22 = 25;
-                        cResult[25] = tmp4.content;
-                        num23 = 26;
-                        cResult[26] = tmp31;
-                        num24 = 27;
-                        cResult[27] = tmp37;
-                        tmp34 = tmp37;
-                      }
-                    }
-                    tmp32 = jsx;
-                    obj13 = { grow: true, text: null, disabled: null, onPress: null };
-                    obj13.text = selectGuildCta;
-                    obj13.disabled = tmp30;
-                    obj13.onPress = tmp7;
-                    tmp33 = jsx(tmp(tmp2[14]).Button, obj13);
-                    num18 = 21;
-                    cResult[21] = tmp7;
-                    num19 = 22;
-                    cResult[22] = selectGuildCta;
-                    num20 = 23;
-                    cResult[23] = tmp30;
-                    num21 = 24;
-                    cResult[24] = tmp33;
-                    tmp31 = tmp33;
-                  }
-                }
-                tmp23 = jsx;
-                tmp24 = section;
-                obj14 = { guildId: null, onChange: null, isGuildIncluded: null };
-                obj14.guildId = guildId;
-                obj14.onChange = tmp6;
-                obj14.isGuildIncluded = isGuildSupported;
-                tmp25 = jsx(section(tmp2[13]), obj14);
-                num13 = 16;
-                cResult[16] = guildId;
-                num14 = 17;
-                cResult[17] = tmp6;
-                num15 = 18;
-                cResult[18] = isGuildSupported;
-                num16 = 19;
-                cResult[19] = tmp25;
-                tmp22 = tmp25;
-              }
-              tmp15 = jsx;
-              tmp16 = guildId;
-              obj15 = { style: null, children: null };
-              obj15.style = tmp4.content;
-              obj15.children = tmp11;
-              tmp17 = jsx(guildId, obj15);
-              num9 = 12;
-              cResult[12] = tmp4.content;
-              num10 = 13;
-              cResult[13] = tmp11;
-              num11 = 14;
-              cResult[14] = tmp17;
-              tmp14 = tmp17;
-            }
-          }
-          handleOpenSelected = function handleOpenSelected() {
-            _modDef38(null != guildId, "Guild ID must not be null on click");
-            GuildSettingsActionCreatorsDefault.open(guildId, section, undefined, subsection);
-            ActionSheetActionCreatorsDefault.hideActionSheet();
-          };
-          num = 4;
-          cResult[4] = guildId;
-          num2 = 5;
-          cResult[5] = section;
-          num3 = 6;
-          cResult[6] = subsection;
-          num4 = 7;
-          cResult[7] = handleOpenSelected;
-          tmp7 = handleOpenSelected;
-        }
-      }
-      handleGuildSelected = function handleGuildSelected(guildId) {
-        ActionSheetActionCreatorsDefault.openLazy(() => Promise.resolve(closure_1_7), "GuildSettingsPickerBottomSheet", { feature, section, subsection, guildId });
+      let obj2 = { startExpanded: true, children: items };
+      BottomSheet = feature(6645).BottomSheet;
+      items = [closure_4(feature(6644).BottomSheetTitleHeader, { title }), , , , , ];
+      const obj3 = { style: tmp.content, children: closure_4(feature(4886).Text, { variant: "text-md/medium", children: description }) };
+      items[1] = closure_4(guildId, obj3);
+      items[2] = closure_4(feature(1188).Spacer, { size: 16 });
+      const obj4 = {
+        guildId,
+        onChange: function handleGuildSelected(guildId) {
+          const obj = ActionSheetActionCreatorsDefault;
+          const obj2 = { feature, section: importDefault, subsection: dependencyMap, guildId };
+          obj.openLazy(() => Promise.resolve(closure_1_8), "GuildSettingsPickerBottomSheet", obj2);
+        },
+        isGuildIncluded: isGuildSupported
       };
-      cResult[0] = feature;
-      cResult[1] = section;
-      cResult[2] = subsection;
-      cResult[3] = handleGuildSelected;
-      tmp6 = handleGuildSelected;
-      return;
+      items[3] = closure_4(GuildPickerDefault, obj4);
+      items[4] = closure_4(feature(1188).Spacer, { size: 16 });
+      const obj5 = { style: tmp.content, children: closure_4(feature(5594).Button, obj6) };
+      obj6 = {
+        grow: true,
+        text: selectGuildCta,
+        disabled: null == guildId,
+        onPress: function handleOpenSelected() {
+          _modDef38(null != guildId, "Guild ID must not be null on click");
+          const obj = GuildSettingsActionCreatorsDefault;
+          obj.open(guildId, importDefault, undefined, dependencyMap);
+          const obj2 = ActionSheetActionCreatorsDefault;
+          obj2.hideActionSheet();
+        }
+      };
+      items[5] = closure_4(guildId, obj5);
+      return closure_5(BottomSheet, obj2);
     }
   }
 }
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings_picker/native/GuildSettingsPickerBottomSheet.tsx");
 
 export default GuildSettingsPickerBottomSheet;

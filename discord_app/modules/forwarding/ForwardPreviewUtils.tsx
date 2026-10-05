@@ -3,15 +3,19 @@
 // Module 11321 (ForwardPreviewUtils)
 import EmbedUtils from "EmbedUtils" /* 5426 */;
 import PermissionStore from "PermissionStore" /* 4509 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/forwarding/ForwardPreviewUtils.tsx");
+let message, set;
 
-export const useForwardPreviewContent = ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
-  const cResult = message(channel[2]).c(20);
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
+  let channel;
+  let tmp12;
+  const tmp = message;
+  let obj = message(channel[2]);
+  const cResult = obj.c(20);
   message = message.message;
+  const tmp2 = channel;
   channel = message.channel;
   const forwardOptions = message.forwardOptions;
   let onlyAttachmentIds;
@@ -32,159 +36,160 @@ export const useForwardPreviewContent = ReactCompilerGating.isReactCompilerEnabl
   }
   let attachments = message1.attachments;
   if (null != onlyAttachmentIds) {
+    let tmp10;
+    if (cResult[0] === message1.attachments) {
+      let tmp9;
+      if (cResult[1] === onlyAttachmentIds) {
+        tmp9 = cResult[2];
+      }
+      attachments = tmp9;
+    }
     if (cResult[3] !== onlyAttachmentIds) {
       const fn = function b(id) {
         return onlyAttachmentIds.includes(id.id);
       };
       cResult[3] = onlyAttachmentIds;
       cResult[4] = fn;
-      let tmp9 = fn;
+      tmp10 = fn;
     } else {
-      tmp9 = cResult[4];
+      tmp10 = cResult[4];
     }
     const attachments1 = message1.attachments;
-    const found = attachments1.filter(tmp9);
+    const found = attachments1.filter(tmp10);
     cResult[0] = message1.attachments;
     cResult[1] = onlyAttachmentIds;
     cResult[2] = found;
-  } else {
-    if (null != onlyEmbedIndices) {
-      const _Symbol3 = Symbol;
-      if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [];
-        cResult[5] = items;
-        let tmp8 = items;
-      } else {
-        tmp8 = cResult[5];
-      }
-      attachments = tmp8;
-    }
-    const _Symbol = Symbol;
-    if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      const items1 = [onlyAttachmentIds];
-      cResult[6] = items1;
-      let tmp14 = items1;
+    tmp9 = found;
+  } else if (null != onlyEmbedIndices) {
+    let tmp8;
+    const _Symbol2 = Symbol;
+    if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+      const items = [];
+      cResult[5] = items;
+      tmp8 = items;
     } else {
-      tmp14 = cResult[6];
+      tmp8 = cResult[5];
     }
-    if (cResult[7] === channel) {
-      if (cResult[8] === message) {
-        let tmp16 = cResult[9];
-      }
-      const items2 = [];
-      if (tmpResult.useStateFromStores(tmp14, tmp16)) {
-        let tmp22 = null != onlyEmbedIndices;
-        if (!tmp22) {
-          let tmp23 = "" === message1.content;
-          if (tmp23) {
-            tmp23 = items2.length > 0;
-          }
-          tmp22 = tmp23;
-        }
-        if (!tmp22) {
-          let tmp27 = "" === message1.content;
-          if (tmp27) {
-            const first1 = message1.embeds[0];
-            let rawDescription;
-            if (first1 != null) {
-              rawDescription = first1.rawDescription;
-            }
-            tmp27 = null != rawDescription;
-          }
-          if (!tmp27) {
-            if (cResult[15] === attachments) {
-              if (cResult[16] === tmp24) {
-                if (cResult[17] === items2) {
-                  if (cResult[18] === tmp34) {
-                    let tmp35 = cResult[19];
-                  }
-                  return tmp35;
-                }
-              }
-            }
-            let obj2 = { attachments, embeds: items2, hasContent: "" !== tmp24.content && null == onlyAttachmentIds, contentMessage: tmp24 };
-            cResult[15] = attachments;
-            cResult[16] = tmp24;
-            cResult[17] = items2;
-            cResult[18] = "" !== tmp24.content && null == onlyAttachmentIds;
-            cResult[19] = obj2;
-            tmp35 = obj2;
-          } else if (cResult[13] !== message1) {
-            const result = message1.set("content", message1.embeds[0].rawDescription);
-            cResult[13] = message1;
-            cResult[14] = result;
-          }
+    attachments = tmp8;
+  }
+  if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+    const items1 = [onlyAttachmentIds];
+    cResult[6] = items1;
+    tmp12 = items1;
+  } else {
+    tmp12 = cResult[6];
+  }
+  if (cResult[7] === channel) {
+    let tmp14;
+    if (cResult[8] === message) {
+      tmp14 = cResult[9];
+    }
+    let items2 = [];
+    const tmpResult = tmp(tmp2[4]);
+    if (!tmpResult.useStateFromStores(tmp12, tmp14)) {
+      let embeds = message1.embeds;
+      if (null != onlyEmbedIndices) {
+        let tmp15;
+        if (cResult[10] !== onlyEmbedIndices) {
+          const fn3 = function w(arg0, arg1) {
+            return onlyEmbedIndices.includes(arg1);
+          };
+          cResult[10] = onlyEmbedIndices;
+          cResult[11] = fn3;
+          tmp15 = fn3;
         } else {
-          const _Symbol2 = Symbol;
-          if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-            class S {
-              constructor(arg0) {
-                return message.url;
-              }
-            }
-            cResult[12] = S;
-          } else {
-            class S {
-              constructor(arg0) {
-                return message.url;
-              }
-            }
-          }
-          const mapped = items2.map(S);
-          const result1 = message1.set("content", mapped.join("\n"));
+          tmp15 = cResult[11];
         }
+        const embeds1 = message1.embeds;
+        embeds = embeds1.filter(tmp15);
+      } else if (null != onlyAttachmentIds) {
+        embeds = [];
+      }
+      items2 = embeds;
+    }
+    let tmp16 = null != onlyEmbedIndices;
+    if (!tmp16) {
+      tmp16 = "" === message1.content && items2.length > 0;
+      const tmp17 = "" === message1.content && items2.length > 0;
+    }
+    let result = message1;
+    if (tmp16) {
+      const _Symbol = Symbol;
+      if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
+        class S {
+          constructor(url) {
+            return url.url;
+          }
+        }
+        cResult[12] = S;
       } else {
         class S {
-          constructor(arg0) {
-            return message.url;
+          constructor(url) {
+            return url.url;
           }
         }
-        if (null == onlyEmbedIndices) {
-          class S {
-            constructor(arg0) {
-              return message.url;
-            }
-          }
-        }
-        if (cResult[10] !== onlyEmbedIndices) {
-          class S {
-            constructor(arg0) {
-              return message.url;
-            }
-          }
-          cResult[10] = onlyEmbedIndices;
-          cResult[11] = tmp19;
-        } else {
-          class S {
-            constructor(arg0) {
-              return message.url;
-            }
-          }
-        }
-        const embeds = message1.embeds;
-        const found1 = embeds.filter(tmp19);
       }
-      tmpResult = tmp(tmp2[4]);
+      set = message1.set;
+      const mapped = items2.map(S);
+      result = set("content", mapped.join("\n"));
     }
-    const fn2 = function v() {
-      let shouldStripEmbedsResult = null != channel;
-      if (shouldStripEmbedsResult) {
-        shouldStripEmbedsResult = !EmbedUtils.canEmbedLinks(tmp, PermissionStore);
+    let tmp20 = "" === result.content;
+    if (tmp20) {
+      class S {
+        constructor(url) {
+          return url.url;
+        }
       }
-      if (shouldStripEmbedsResult) {
-        shouldStripEmbedsResult = EmbedUtils.shouldStripEmbeds(message);
+      if (tmp21 != null) {
+        class S {
+          constructor(url) {
+            return url.url;
+          }
+        }
       }
-      return shouldStripEmbedsResult;
-    };
-    cResult[7] = channel;
-    cResult[8] = message;
-    cResult[9] = fn2;
-    tmp16 = fn2;
+      tmp20 = null != tmp22;
+    }
+    let tmp23 = result;
+    if (tmp20) {
+      class S {
+        constructor(url) {
+          return url.url;
+        }
+      }
+      tmp23 = tmp24;
+    }
+    if (cResult[15] === attachments) {
+      class S {
+        constructor(url) {
+          return url.url;
+        }
+      }
+    }
+    let obj2 = { attachments, embeds: items2, hasContent: "" !== tmp23.content && null == onlyAttachmentIds, contentMessage: tmp23 };
+    cResult[15] = attachments;
+    cResult[16] = tmp23;
+    cResult[17] = items2;
+    cResult[18] = "" !== tmp23.content && null == onlyAttachmentIds;
+    cResult[19] = obj2;
   }
-  let obj = message(channel[2]);
-  tmp = message;
-  tmp2 = channel;
+  const fn2 = function v() {
+    let shouldStripEmbedsResult = null != channel;
+    if (shouldStripEmbedsResult) {
+      const obj = EmbedUtils;
+      shouldStripEmbedsResult = !obj.canEmbedLinks(tmp, PermissionStore);
+    }
+    if (shouldStripEmbedsResult) {
+      const obj2 = EmbedUtils;
+      shouldStripEmbedsResult = obj2.shouldStripEmbeds(message);
+    }
+    return shouldStripEmbedsResult;
+  };
+  cResult[7] = channel;
+  cResult[8] = message;
+  cResult[9] = fn2;
+  tmp14 = fn2;
 }) : ((message) => {
+  let forwardOptions;
   message = message.message;
   ({ channel: dependencyMap, forwardOptions } = message);
   let onlyEmbedIndices;
@@ -211,47 +216,21 @@ export const useForwardPreviewContent = ReactCompilerGating.isReactCompilerEnabl
   } else if (null != onlyEmbedIndices) {
     attachments = [];
   }
-  const items = [];
+  let items = [];
+  let obj = message(504);
   const items1 = [onlyAttachmentIds];
-  if (obj.useStateFromStores(items1, () => {
+  if (!obj.useStateFromStores(items1, () => {
     let shouldStripEmbedsResult = null != dependencyMap;
     if (shouldStripEmbedsResult) {
-      shouldStripEmbedsResult = !EmbedUtils.canEmbedLinks(tmp, PermissionStore);
+      const obj = EmbedUtils;
+      shouldStripEmbedsResult = !obj.canEmbedLinks(tmp, PermissionStore);
     }
     if (shouldStripEmbedsResult) {
-      shouldStripEmbedsResult = EmbedUtils.shouldStripEmbeds(message);
+      const obj2 = EmbedUtils;
+      shouldStripEmbedsResult = obj2.shouldStripEmbeds(message);
     }
     return shouldStripEmbedsResult;
   })) {
-    let tmp6 = null != onlyEmbedIndices;
-    if (!tmp6) {
-      let tmp7 = "" === message1.content;
-      if (tmp7) {
-        tmp7 = items.length > 0;
-      }
-      tmp6 = tmp7;
-    }
-    let result = message1;
-    if (tmp6) {
-      const mapped = items.map((url) => url.url);
-      result = message1.set("content", mapped.join("\n"));
-    }
-    let tmp8 = "" === result.content;
-    if (tmp8) {
-      const first1 = result.embeds[0];
-      let rawDescription;
-      if (first1 != null) {
-        rawDescription = first1.rawDescription;
-      }
-      tmp8 = null != rawDescription;
-    }
-    let result1 = result;
-    if (tmp8) {
-      result1 = result.set("content", result.embeds[0].rawDescription);
-    }
-    let obj2 = { attachments, embeds: items, hasContent: "" !== result1.content && null == onlyAttachmentIds, contentMessage: result1 };
-    return obj2;
-  } else {
     let embeds = message1.embeds;
     if (null != onlyEmbedIndices) {
       const embeds1 = message1.embeds;
@@ -259,5 +238,35 @@ export const useForwardPreviewContent = ReactCompilerGating.isReactCompilerEnabl
     } else if (null != onlyAttachmentIds) {
       embeds = [];
     }
+    items = embeds;
   }
+  let tmp5 = null != onlyEmbedIndices;
+  if (!tmp5) {
+    tmp5 = "" === message1.content && items.length > 0;
+    const tmp6 = "" === message1.content && items.length > 0;
+  }
+  let result = message1;
+  if (tmp5) {
+    set = message1.set;
+    const mapped = items.map((url) => url.url);
+    result = set("content", mapped.join("\n"));
+  }
+  let tmp7 = "" === result.content;
+  if (tmp7) {
+    const first1 = result.embeds[0];
+    let rawDescription;
+    if (first1 != null) {
+      rawDescription = first1.rawDescription;
+    }
+    tmp7 = null != rawDescription;
+  }
+  let result1 = result;
+  if (tmp7) {
+    result1 = result.set("content", result.embeds[0].rawDescription);
+  }
+  let obj2 = { attachments, embeds: items, hasContent: "" !== result1.content && null == onlyAttachmentIds, contentMessage: result1 };
+  return obj2;
 });
+let result = size.fileFinishedImporting("modules/forwarding/ForwardPreviewUtils.tsx");
+
+export const useForwardPreviewContent = tmp2;

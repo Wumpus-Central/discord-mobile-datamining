@@ -2,70 +2,76 @@
 
 // Module 16361 (useNotificationCenterItemAcked)
 import NotificationCenterStore from "NotificationCenterStore" /* 16354 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/notification_center/useNotificationCenterItemAcked.tsx");
-
-export const useNotificationCenterItemAcked = ReactCompilerGating.isReactCompilerEnabled() ? ((forceUnacked, setting) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((forceUnacked, setting) => {
+  let first;
+  let tmp6;
   _require = forceUnacked;
-  let tmp = _require;
-  let isRemoteAcked = dependencyMap;
-  const cResult = require("c").c(7);
+  const obj = require("react");
+  const cResult = obj.c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [NotificationCenterStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== forceUnacked) {
     const fn = function s() {
-      return NotificationCenterStore.isLocalItemAcked(closure_0);
+      return NotificationCenterStore.isLocalItemAcked(forceUnacked);
     };
     cResult[1] = forceUnacked;
     cResult[2] = fn;
-    let tmp5 = fn;
+    tmp6 = fn;
   } else {
-    tmp5 = cResult[2];
+    tmp6 = cResult[2];
   }
-  const obj = require("c");
-  const stateFromStores = tmp(504).useStateFromStores(first, tmp5);
-  forceUnacked = forceUnacked.forceUnacked;
-  if (forceUnacked) {
-    return !forceUnacked;
-  } else {
+  const tmpResult = require("get initialized");
+  const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
+  let tmp8 = !forceUnacked.forceUnacked;
+  if (tmp8) {
     if (cResult[3] === setting) {
       if (cResult[4] === stateFromStores) {
+        let tmp10;
+        if (cResult[5] === forceUnacked) {
+          tmp10 = cResult[6];
+        }
+        tmp8 = tmp10;
       }
     }
     let isRemoteAckedResult = stateFromStores;
-    if (!stateFromStores) {
-      tmp = tmp(7126);
-      isRemoteAcked = tmp.isRemoteAcked;
-      isRemoteAckedResult = isRemoteAcked(forceUnacked, setting);
+    if (!isRemoteAckedResult) {
+      const tmpResult2 = require("NotificationCenterUtils");
+      isRemoteAckedResult = tmpResult2.isRemoteAcked(forceUnacked, setting);
     }
     cResult[3] = setting;
     cResult[4] = stateFromStores;
     cResult[5] = forceUnacked;
     cResult[6] = isRemoteAckedResult;
+    tmp10 = isRemoteAckedResult;
   }
-  const tmpResult = tmp(504);
+  return tmp8;
 }) : ((forceUnacked, setting) => {
   _require = forceUnacked;
   const items = [NotificationCenterStore];
-  let stateFromStores = require("initialize").useStateFromStores(items, () => NotificationCenterStore.isLocalItemAcked(closure_0));
-  forceUnacked = forceUnacked.forceUnacked;
-  let tmp4 = !forceUnacked;
-  if (!forceUnacked) {
+  const obj = require("get initialized");
+  let stateFromStores = obj.useStateFromStores(items, () => NotificationCenterStore.isLocalItemAcked(forceUnacked));
+  let tmp4 = !forceUnacked.forceUnacked;
+  const tmp = _require;
+  if (tmp4) {
     if (!stateFromStores) {
-      stateFromStores = require("NotificationCenterUtils").isRemoteAcked(forceUnacked, setting);
-      const tmpResult = require("NotificationCenterUtils");
+      const tmpResult = tmp(7126);
+      stateFromStores = tmpResult.isRemoteAcked(forceUnacked, setting);
     }
     tmp4 = stateFromStores;
   }
   return tmp4;
 });
+const result = size.fileFinishedImporting("modules/notification_center/useNotificationCenterItemAcked.tsx");
+
+export const useNotificationCenterItemAcked = tmp2;

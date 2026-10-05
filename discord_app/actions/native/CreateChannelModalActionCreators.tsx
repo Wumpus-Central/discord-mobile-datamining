@@ -9,37 +9,39 @@ import size from "module_2" /* 2 */;
 
 const isGuildReadableType = ChannelRecord.isGuildReadableType;
 const CREATE_CHANNEL_MODAL_KEY = "CREATE_CHANNEL_MODAL_KEY";
-const result = size.fileFinishedImporting("actions/native/CreateChannelModalActionCreators.tsx");
-
-export default {
+let obj = {
   CREATE_CHANNEL_MODAL_KEY: "CREATE_CHANNEL_MODAL_KEY",
-  open(arg0, guildId, categoryId, cloneChannelId) {
+  open(channelType, guildId, categoryId, arg3) {
+    let tmp3;
     const self = this;
     if (null != guildId) {
-      const obj2 = ModalActionCreatorsDefault;
-      const tmp = arg0;
+      const pushLazy = ModalActionCreatorsDefault.pushLazy;
+      ModalActionCreatorsDefault;
       let obj = {
-        channelType: tmp,
+        channelType,
         guildId,
         categoryId,
-        cloneChannelId,
+        cloneChannelId: tmp3,
         onChannelCreated(id, arg1) {
             self.close();
             const channel = ChannelStore.getChannel(id);
-            let tmp3 = null != arg1 && null != channel;
+            const tmp3 = null != arg1 && null != channel && isGuildReadableType(channel.type);
             if (tmp3) {
-              tmp3 = isGuildReadableType(channel.type);
-            }
-            if (tmp3) {
-              transitionToChannel.transitionToChannel(id);
+              const obj = transitionToChannel;
+              obj.transitionToChannel(id);
             }
           }
       };
-      obj2.pushLazy(self(1987)(9209, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
-      const tmp9 = self(1987)(9209, dependencyMap.paths);
+      tmp3 = arg3;
+      const tmp10 = self(1987)(9209, dependencyMap.paths);
+      pushLazy(tmp10, obj, CREATE_CHANNEL_MODAL_KEY);
     }
   },
   close() {
-    ModalActionCreatorsDefault.popWithKey(CREATE_CHANNEL_MODAL_KEY);
+    const obj = ModalActionCreatorsDefault;
+    obj.popWithKey(CREATE_CHANNEL_MODAL_KEY);
   }
 };
+const result = size.fileFinishedImporting("actions/native/CreateChannelModalActionCreators.tsx");
+
+export default obj;

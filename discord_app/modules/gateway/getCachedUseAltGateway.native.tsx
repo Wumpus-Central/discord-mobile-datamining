@@ -1,13 +1,14 @@
-// === Module 13447: getCachedUseAltGateway ===
+// === Module 13447: react-native ===
 
-// Module 13447 (getCachedUseAltGateway)
-import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 13448 */;
+// Module 13447 (react-native)
+import react_nativeDefault from "react-native" /* 13448 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/gateway/getCachedUseAltGateway.native.tsx");
 
 export default function getCachedUseAltGateway() {
-  let flag = NativeFastConnectModuleDefault.getConstants().useAltGateway;
+  const obj = react_nativeDefault;
+  let flag = obj.getConstants().useAltGateway;
   if (flag == null) {
     flag = false;
   }

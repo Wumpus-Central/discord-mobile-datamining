@@ -5,24 +5,29 @@ import ExternalPipEnablerState from "ExternalPipEnablerState" /* 17155 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/external_pip/useExternalPipEnabler.android.tsx");
+let disabled;
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((disabled) => {
-  const cResult = disabled(576).c(4);
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((disabled) => {
+  let first;
+  let tmp8;
+  let tmp9;
+  const obj = disabled(576);
+  const cResult = obj.c(4);
+  const tmp = disabled;
   disabled = disabled.disabled;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelRTCStore, RTCConnectionStore, AuthenticationStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== disabled) {
     const fn = function o() {
+      let id;
       const channelId = RTCConnectionStore.getChannelId();
       if (null != channelId) {
         if (!disabled) {
@@ -33,9 +38,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((disabled) => {
             const found = streamParticipants.filter((user) => user.user.id !== id.getId());
             tmp2 = null != found.find((streamId) => null != streamId.streamId);
           }
-          const obj2 = {};
+          const obj2 = { externalPipEnabled: tmp2 };
           const merged = Object.assign(ExternalPipEnablerState.DEFAULT_STATE);
-          obj2.externalPipEnabled = tmp2;
           return obj2;
         }
       }
@@ -45,19 +49,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((disabled) => {
     cResult[1] = disabled;
     cResult[2] = fn;
     cResult[3] = items1;
-    let tmp9 = items1;
-    let tmp8 = fn;
+    tmp9 = items1;
+    tmp8 = fn;
   } else {
     tmp8 = cResult[2];
     tmp9 = cResult[3];
   }
-  const obj = disabled(576);
-  return disabled(504).useStateFromStoresObject(first, tmp8, tmp9);
+  const tmpResult = tmp(504);
+  return tmpResult.useStateFromStoresObject(first, tmp8, tmp9);
 }) : ((disabled) => {
   disabled = disabled.disabled;
   const items = [ChannelRTCStore, RTCConnectionStore, AuthenticationStore];
   const items1 = [disabled];
-  return disabled(504).useStateFromStoresObject(items, () => {
+  const obj = disabled(504);
+  return obj.useStateFromStoresObject(items, () => {
+    let id;
     const channelId = RTCConnectionStore.getChannelId();
     if (null != channelId) {
       if (!disabled) {
@@ -68,12 +74,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((disabled) => {
           const found = streamParticipants.filter((user) => user.user.id !== id.getId());
           tmp2 = null != found.find((streamId) => null != streamId.streamId);
         }
-        const obj2 = {};
+        const obj2 = { externalPipEnabled: tmp2 };
         const merged = Object.assign(ExternalPipEnablerState.DEFAULT_STATE);
-        obj2.externalPipEnabled = tmp2;
         return obj2;
       }
     }
     return ExternalPipEnablerState.DEFAULT_STATE;
   }, items1);
 });
+const result = size.fileFinishedImporting("modules/external_pip/useExternalPipEnabler.android.tsx");
+
+export default tmp2;

@@ -13,17 +13,8 @@ const result = size.fileFinishedImporting("modules/activities/utils/isPlayingGam
 export default function isPlayingGameActivity(application_id) {
   let tmp = null != application_id;
   if (tmp) {
-    let tmp2 = null != application_id.application_id;
-    if (tmp2) {
-      tmp2 = application_id.type === ActivityTypes.PLAYING;
-    }
-    if (tmp2) {
-      tmp2 = !isEmbeddedActivityDefault(application_id);
-    }
-    if (tmp2) {
-      tmp2 = application_id.application_id !== closure_2;
-    }
-    tmp = tmp2;
+    tmp = null != application_id.application_id && application_id.type === ActivityTypes.PLAYING && !isEmbeddedActivityDefault(application_id) && application_id.application_id !== closure_2;
+    const tmp2 = null != application_id.application_id && application_id.type === ActivityTypes.PLAYING && !isEmbeddedActivityDefault(application_id) && application_id.application_id !== closure_2;
   }
   return tmp;
 };

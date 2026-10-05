@@ -6,21 +6,26 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("lib/websocketTelemetryHook.android.tsx");
 
 export const installWebsocketTelemetryHook = function installWebsocketTelemetryHook(arg0) {
-  closure_0 = arg0;
+  let _globalThis;
+  let closure_0 = arg0;
   function handleMessage(arg0, str) {
-    const obj = {};
-    const tmp = (function sanitizeUrl(arg0) {
+    function sanitizeUrl(arg0) {
+      let hostname;
+      let pathname;
       try {
         const _URL = URL;
+        const self = this;
+        const self2 = this;
         const uRL = new URL(arg0);
         ({ hostname, pathname } = uRL);
         if (null != hostname) {
-          if ("" !== tmp7) {
+          if ("" !== tmp5) {
             if (null != pathname) {
               if ("" !== pathname) {
+                let combined;
                 if ("/" !== pathname) {
                   const _HermesInternal = HermesInternal;
-                  let combined = "" + hostname + pathname;
+                  combined = "" + hostname + pathname;
                 }
                 return combined;
               }
@@ -29,14 +34,16 @@ export const installWebsocketTelemetryHook = function installWebsocketTelemetryH
           }
         }
         const first = arg0.split("?")[0];
-        let tmp15 = null;
+        let tmp13 = null;
         if ("" !== first) {
-          tmp15 = first;
+          tmp13 = first;
         }
-        return tmp15;
+        return tmp13;
       } catch (err) {
       }
-    })(arg0);
+    }
+    const obj = {};
+    const tmp = sanitizeUrl(arg0);
     if (null != tmp) {
       obj.url = tmp;
     }
@@ -52,22 +59,23 @@ export const installWebsocketTelemetryHook = function installWebsocketTelemetryH
               tmp5 = typeof tmp4 === "object";
             }
             if (tmp5) {
-              if (null != tmp4.op) {
-                obj.op = tmp4.op;
+              if (null != parsed.op) {
+                obj.op = parsed.op;
               }
-              if (null != tmp4.s) {
-                obj.s = tmp4.s;
+              if (null != parsed.s) {
+                obj.s = parsed.s;
               }
-              if (null != tmp4.t) {
-                obj.t = tmp4.t;
+              if (null != parsed.t) {
+                obj.t = parsed.t;
               }
-              if (null != tmp4.type) {
-                obj.type = tmp4.type;
+              let tmp13 = parsed;
+              if (null != parsed.type) {
+                obj.type = parsed.type;
               }
-              if (null != tmp4.evt) {
-                obj.evt = tmp4.evt;
+              if (null != parsed.evt) {
+                obj.evt = parsed.evt;
               }
-              if (null != tmp4.cmd) {
+              if (null != parsed.cmd) {
                 obj.cmd = parsed.cmd;
               }
               flag = true;
@@ -92,7 +100,7 @@ export const installWebsocketTelemetryHook = function installWebsocketTelemetryH
     }
   }
   if (typeof globalThis !== "undefined") {
-    let _globalThis = globalThis;
+    _globalThis = globalThis;
   } else {
     _globalThis = global;
     if (undefined === global) {
@@ -113,21 +121,19 @@ export const installWebsocketTelemetryHook = function installWebsocketTelemetryH
       const _WebSocket = _globalThis.WebSocket;
       class PatchedWebSocket {
         constructor() {
-          items = [...arguments];
-          obj = WebSocket(...items);
+          let str;
+          const items = [...arguments];
+          const obj = _WebSocket(...items);
           if (typeof items[0] === "string") {
             str = items[0];
           } else {
             str = obj.url;
-            tmp = null;
             if (str == null) {
               str = "";
             }
           }
-          c0 = str;
           if (typeof obj.addEventListener === "function") {
-            str2 = "message";
-            listener = obj.addEventListener("message", (event) => {
+            const listener = obj.addEventListener("message", (event) => {
               let data;
               if (event != null) {
                 data = event.data;
@@ -142,6 +148,7 @@ export const installWebsocketTelemetryHook = function installWebsocketTelemetryH
       const _Object = Object;
       const merged = Object.assign(PatchedWebSocket, _WebSocket);
       _globalThis.WebSocket = PatchedWebSocket;
+      let flag = true;
       _globalThis.__discordWebsocketTelemetryPatched = true;
     }
   }

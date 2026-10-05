@@ -10,18 +10,24 @@ import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
+let hasOwnProperty;
+let metroRequire;
 const DraftType = DraftStore.DraftType;
 ({ MAX_UPLOAD_COUNT: hasOwnProperty, Permissions: metroRequire } = Constants);
-const result = size.fileFinishedImporting("modules/media_keyboard/native/useUploadDisabled.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let first;
+  let id;
+  let tmp7;
   _require = arg0;
-  const cResult = require("c").c(3);
+  let tmp = _require;
+  const obj = require("react");
+  const cResult = obj.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [PermissionStore, UploadAttachmentStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -31,11 +37,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       if (!tmp) {
         let tmp4 = id.id === FakePlaceholderPrivateChannel.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
         if (!tmp4) {
-          let isPrivateResult = id.isPrivate();
-          if (!isPrivateResult) {
-            isPrivateResult = PermissionStore.can(constants.ATTACH_FILES, id);
-          }
-          tmp4 = !isPrivateResult;
+          tmp4 = !(id.isPrivate() || PermissionStore.can(metroRequire.ATTACH_FILES, id));
+          const isPrivateResult = id.isPrivate() || PermissionStore.can(metroRequire.ATTACH_FILES, id);
         }
         tmp = tmp4;
       }
@@ -43,28 +46,30 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     };
     cResult[1] = arg0;
     cResult[2] = fn;
-    let tmp7 = fn;
+    tmp7 = fn;
   } else {
     tmp7 = cResult[2];
   }
-  const obj = require("c");
-  return require("initialize").useStateFromStores(first, tmp7);
+  const tmpResult = tmp(504);
+  return tmpResult.useStateFromStores(first, tmp7);
 }) : ((arg0) => {
+  let id;
   _require = arg0;
   const items = [PermissionStore, UploadAttachmentStore];
-  return require("initialize").useStateFromStores(items, () => {
+  const obj = require("get initialized");
+  return obj.useStateFromStores(items, () => {
     let tmp = UploadAttachmentStore.getUploads(id.id, DraftType.ChannelMessage).length >= hasOwnProperty;
     if (!tmp) {
       let tmp4 = id.id === FakePlaceholderPrivateChannel.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
       if (!tmp4) {
-        let isPrivateResult = id.isPrivate();
-        if (!isPrivateResult) {
-          isPrivateResult = PermissionStore.can(constants.ATTACH_FILES, id);
-        }
-        tmp4 = !isPrivateResult;
+        tmp4 = !(id.isPrivate() || PermissionStore.can(metroRequire.ATTACH_FILES, id));
+        const isPrivateResult = id.isPrivate() || PermissionStore.can(metroRequire.ATTACH_FILES, id);
       }
       tmp = tmp4;
     }
     return tmp;
   });
 });
+const result = size.fileFinishedImporting("modules/media_keyboard/native/useUploadDisabled.tsx");
+
+export default tmp3;

@@ -4,9 +4,11 @@
 import size from "module_2" /* 2 */;
 
 const re0 = /^( *)([-*]|\d+\.) +(.*)$/;
+const length = ["\u2022", "\u25E6", "\u25AA"];
 const result = size.fileFinishedImporting("modules/conjure/chat/ConjureMarkdownBlocks.tsx");
 
 export const splitMarkdownBlocks = function splitMarkdownBlocks(source) {
+  let combined;
   const parts = source.split("\n");
   const items = [];
   let items1 = [];
@@ -17,47 +19,51 @@ export const splitMarkdownBlocks = function splitMarkdownBlocks(source) {
   let tmp2 = null;
   if (0 < parts.length) {
     do {
+      let items6;
+      let items3;
+      let items5;
+      let diff;
       let str = parts[num];
       let match = re0.exec(str);
       if (null == match) {
-        let tmp16 = tmp;
+        let tmp17 = tmp;
         let items4 = items2;
         if (null == tmp) {
           let arr = items1.push(str);
-          let items6 = tmp16;
-          let items3 = items4;
-          let items5 = items1;
-          let diff = num;
+          items6 = tmp17;
+          items3 = items4;
+          items5 = items1;
+          diff = num;
         } else if ("" === str.trim()) {
           let sum = num + 1;
-          let tmp22 = sum;
+          let tmp23 = sum;
           if (sum < parts.length) {
             let str3 = parts[sum];
-            let tmp23 = sum;
-            tmp22 = sum;
+            let tmp24 = sum;
+            tmp23 = sum;
             if ("" === str3.trim()) {
-              let sum1 = tmp23 + 1;
-              tmp22 = sum1;
+              let sum1 = tmp24 + 1;
+              tmp23 = sum1;
               while (sum1 < parts.length) {
                 let str4 = parts[sum1];
+                tmp24 = sum1;
                 tmp23 = sum1;
-                tmp22 = sum1;
                 if ("" !== str4.trim()) {
                   break;
                 }
               }
             }
           }
-          if (tmp22 < parts.length) {
-            if (re0.test(parts[tmp22])) {
-              diff = tmp22 - 1;
+          if (tmp23 < parts.length) {
+            if (re0.test(parts[tmp23])) {
+              diff = tmp23 - 1;
               items5 = items1;
               items6 = tmp;
               items3 = items2;
             }
           }
-          let tmp26 = null != tmp && tmp.length > 0;
-          if (tmp26) {
+          let tmp27 = null != tmp && tmp.length > 0;
+          if (tmp27) {
             let obj2 = { kind: "list", items: tmp };
             let arr2 = items.push(obj2);
           }
@@ -68,21 +74,21 @@ export const splitMarkdownBlocks = function splitMarkdownBlocks(source) {
         } else {
           let obj9 = /^\s/;
           if (obj9.test(str)) {
-            let tmp20 = tmp[tmp.length - 1];
+            let tmp21 = tmp[tmp.length - 1];
             let _HermesInternal2 = HermesInternal;
-            tmp20.text = "" + tmp20.text + " " + str.trim();
+            tmp21.text = "" + tmp21.text + " " + str.trim();
             items5 = items1;
             items6 = tmp;
             items3 = items2;
             diff = num;
           } else {
-            let tmp17 = null != tmp && tmp.length > 0;
-            if (tmp17) {
+            let tmp18 = null != tmp && tmp.length > 0;
+            if (tmp18) {
               let obj3 = { kind: "list", items: tmp };
               let arr3 = items.push(obj3);
             }
             items4 = [];
-            tmp16 = null;
+            tmp17 = null;
           }
         }
       } else {
@@ -106,17 +112,18 @@ export const splitMarkdownBlocks = function splitMarkdownBlocks(source) {
           num2 = 0;
         }
         items2[rounded] = num2 + 1;
-        let obj6 = { text: match[3], depth: rounded, marker: null };
+        let obj6 = { text: match[3], depth: rounded, marker: combined };
         let obj4 = /\d/;
+        let push = items6.push;
+        let tmp12 = items2[rounded];
         if (obj4.test(match[2])) {
           let _HermesInternal = HermesInternal;
-          let combined = "" + items2[rounded] + ".";
+          combined = "" + tmp12 + ".";
         } else {
           let _Math2 = Math;
           combined = length[Math.min(Math, rounded, length.length - 1)];
         }
-        obj6.marker = combined;
-        let arr5 = items6.push(obj6);
+        let arr5 = push(obj6);
         items3 = items2;
         diff = num;
       }
@@ -128,11 +135,13 @@ export const splitMarkdownBlocks = function splitMarkdownBlocks(source) {
       tmp2 = items6;
     } while (num < parts.length);
   }
-  if (tmp28) {
+  const tmp29 = null != tmp2 && tmp2.length > 0;
+  if (tmp29) {
     const obj7 = { kind: "list", items: tmp2 };
     items.push(obj7);
   }
-  const trimmed1 = obj.join("\n").trim();
+  const str5 = obj.join("\n");
+  const trimmed1 = str5.trim();
   if ("" !== trimmed1) {
     const obj8 = { kind: "text", text: trimmed1 };
     items.push(obj8);

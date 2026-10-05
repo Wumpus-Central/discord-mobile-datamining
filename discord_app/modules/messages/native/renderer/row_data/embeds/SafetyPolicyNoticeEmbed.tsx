@@ -1,21 +1,30 @@
 // === Module 13086: SafetyPolicyNoticeEmbed ===
 
 // Module 13086 (SafetyPolicyNoticeEmbed)
-import _mod17 from "module_17" /* 17 */;
+import react_native from "react-native" /* 17 */;
 import Constants from "Constants" /* 1085 */;
-import util from "util" /* 1126 */;
+import intl5 from "intl" /* 1126 */;
 import _modDef4461 from "module_4461" /* 4461 */;
-import _modDef4804 from "module_4804" /* 4804 */;
+import AssetRegistryDefault from "AssetRegistry" /* 4804 */;
 import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7605 */;
 import SafetyHubConstants from "SafetyHubConstants" /* 8093 */;
 import size from "module_2" /* 2 */;
 
-const Image = _mod17.Image;
+const Image = react_native.Image;
 const MessageEmbedTypes = Constants.MessageEmbedTypes;
 const SafetyHubPolicyNoticeKeys = SafetyHubConstants.SafetyHubPolicyNoticeKeys;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/SafetyPolicyNoticeEmbed.tsx");
 
 export const createSafetyPolicyNoticeEmbed = function createSafetyPolicyNoticeEmbed(message) {
+  let diff;
+  let eevFb6;
+  let formatToPlainString;
+  let intl;
+  let intl3;
+  let intl4;
+  let obj2;
+  let obj3;
+  let obj4;
   if (null != message.embeds) {
     const first = message.embeds[0];
     let fields;
@@ -29,6 +38,7 @@ export const createSafetyPolicyNoticeEmbed = function createSafetyPolicyNoticeEm
         type = first1.type;
       }
       if (type === MessageEmbedTypes.SAFETY_POLICY_NOTICE) {
+        let parsed;
         const first2 = message.embeds[0];
         const fields1 = first2.fields;
         let found;
@@ -47,25 +57,23 @@ export const createSafetyPolicyNoticeEmbed = function createSafetyPolicyNoticeEm
         if (null != found1) {
           if (null != found1.rawValue) {
             const _parseFloat = parseFloat;
-            const parsed = parseFloat(found1.rawValue);
+            parsed = parseFloat(found1.rawValue);
           }
         }
         if (null != rawValue) {
           if (null != parsed) {
-            const obj = { titleText: null, titleIcon: null, subtitleText: null, descriptionText: null, ctaText: null, classificationId: null };
-            const intl = util.intl;
-            obj.titleText = intl.string(util.t["4CxGXi"]);
-            obj.titleIcon = renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(_modDef4804));
-            const intl2 = util.intl;
-            const obj3 = { daysAgo: null };
-            const obj4 = _modDef4461();
-            obj3.daysAgo = obj4.diff(_modDef4461.unix(parsed), "days");
-            obj.subtitleText = intl2.formatToPlainString(util.t.eevFb6, obj3);
-            const intl3 = util.intl;
-            obj.descriptionText = intl3.string(util.t["5CLb0A"]);
-            const intl4 = util.intl;
-            obj.ctaText = intl4.string(util.t.zKnzwm);
-            obj.classificationId = rawValue;
+            const obj = { titleText: intl.string(intl5.t["4CxGXi"]), titleIcon: obj2.getAssetUriForEmbed(Image.resolveAssetSource(AssetRegistryDefault)), subtitleText: formatToPlainString(eevFb6, obj3), descriptionText: intl3.string(intl5.t["5CLb0A"]), ctaText: intl4.string(intl5.t.zKnzwm), classificationId: rawValue };
+            intl = intl5.intl;
+            obj2 = renderer_EmbedUtils;
+            const intl2 = intl5.intl;
+            formatToPlainString = intl2.formatToPlainString;
+            obj3 = { daysAgo: diff(obj4.unix(parsed), "days") };
+            eevFb6 = intl5.t.eevFb6;
+            diff = _modDef4461().diff;
+            _modDef4461();
+            obj4 = _modDef4461;
+            intl3 = intl5.intl;
+            intl4 = intl5.intl;
             return obj;
           }
         }

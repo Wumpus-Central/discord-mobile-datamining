@@ -2,46 +2,56 @@
 
 // Module 1253 (ImpressionStore)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import identity from "module_1254" /* 1254 */;
+import module_1254 from "module_1254" /* 1254 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, dependencyMap;
 
 let closure_2 = Object.freeze({ debugTrackedData: null, impressions: [] });
-const withEqualityFn = identity.createWithEqualityFn(() => closure_2);
+const withEqualityFn = module_1254.createWithEqualityFn(() => closure_2);
 const result = size.fileFinishedImporting("modules/app_analytics/ImpressionStore.tsx");
 
 export const setCurrentImpression = function setCurrentImpression(arg0) {
+  let closure_0;
   _require = arg0;
-  require("ReactBatchUpdates").batchUpdates(() => {
+  let obj = require("react-native");
+  obj.batchUpdates(() => {
     withEqualityFn.setState((impressions) => {
-      const obj = { impressions: null };
-      const items = [];
-      items[HermesBuiltin.arraySpread(impressions.impressions, 0)] = closure_1_0;
-      obj.impressions = items;
+      let items;
+      const obj = { impressions: items };
+      items = [];
+      items[HermesBuiltin.arraySpread(items, impressions.impressions, 0)] = closure_1_0;
       return obj;
     });
   });
 };
 export const cleanupImpression = function cleanupImpression(arg0) {
+  let closure_0;
   _require = arg0;
-  require("ReactBatchUpdates").batchUpdates(() => {
+  let obj = require("react-native");
+  obj.batchUpdates(() => {
     withEqualityFn.setState((impressions) => {
-      const obj = { impressions: null };
+      let sequenceId;
+      const obj = { impressions: impressions.filter((sequenceId) => sequenceId.sequenceId !== sequenceId.sequenceId) };
       impressions = impressions.impressions;
-      obj.impressions = impressions.filter((sequenceId) => sequenceId.sequenceId !== sequenceId.sequenceId);
       return obj;
     });
   });
 };
 export const setDebugTrackedData = function setDebugTrackedData(arg0, arg1) {
+  let closure_0;
+  let closure_1;
   _require = arg0;
   dependencyMap = arg1;
-  require("ReactBatchUpdates").batchUpdates(() => {
+  let obj = require("react-native");
+  obj.batchUpdates(() => {
+    let name;
     withEqualityFn.setState(() => {
-      const obj = { debugTrackedData: null };
+      let obj2;
+      const obj = { debugTrackedData: obj2 };
+      obj2 = { name };
       const merged = Object.assign(closure_1_1);
-      obj.debugTrackedData = { name };
       return obj;
     });
   });

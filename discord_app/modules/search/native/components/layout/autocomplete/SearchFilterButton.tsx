@@ -1,101 +1,117 @@
 // === Module 16799: SearchFilterButton ===
 
 // Module 16799 (SearchFilterButton)
+import Fragment from "Fragment" /* 21 */;
+import TrackingConstants from "TrackingConstants" /* 7512 */;
 import SearchFilterUtils from "SearchFilterUtils" /* 16795 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+let searchContext;
+
 let closure_2 = ["ref"];
-const SearchFilterAddLocations = fn(7512).SearchFilterAddLocations;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/search/native/components/layout/autocomplete/SearchFilterButton.tsx");
-
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
-  const cResult = searchContext(576).c(11);
+const SearchFilterAddLocations = TrackingConstants.SearchFilterAddLocations;
+const jsx = Fragment.jsx;
+let memo = react.memo;
+const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
+  let onClose;
+  let onOpen;
+  let tmp = searchContext;
+  let obj = searchContext(576);
+  const cResult = obj.c(11);
   searchContext = searchContext.searchContext;
   ({ onOpen, onClose } = searchContext);
-  let obj = searchContext(576);
-  const validOrderedFilterTokens = searchContext(16798).useValidOrderedFilterTokens(searchContext);
+  let obj2 = searchContext(16798);
+  const validOrderedFilterTokens = obj2.useValidOrderedFilterTokens(searchContext);
   if (cResult[0] === searchContext) {
+    let tmp4;
+    let tmp9;
     if (cResult[1] === validOrderedFilterTokens) {
-      const _Symbol = Symbol;
-      if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        let intl = tmp(1126).intl;
-        const stringResult = intl.string(tmp(1126).t.oYEmhB);
-        cResult[5] = stringResult;
-        let tmp9 = stringResult;
-      } else {
-        tmp9 = cResult[5];
-      }
-      const _Symbol2 = Symbol;
-      if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        class T {
-          constructor(arg0) {
-            tmp = closure_1_3(searchContext, closure_1_2);
-            obj = { ref: searchContext.ref };
-            merged = Object.assign(tmp);
-            obj.variant = "tertiary";
-            intl = searchContext(closure_1_1[8]).intl;
-            obj.accessibilityLabel = intl.string(searchContext(closure_1_1[8]).t.kP6oFy);
-            obj.size = "md";
-            obj.icon = closure_1_6(searchContext(closure_1_1[10]).FiltersHorizontalIcon, { size: "sm", color: "redesign-button-tertiary-text" });
-            return closure_1_6(searchContext(closure_1_1[9]).IconButton, obj);
-          }
-        }
-        cResult[6] = T;
-      } else {
-        class T {
-          constructor(arg0) {
-            tmp = closure_1_3(searchContext, closure_1_2);
-            obj = { ref: searchContext.ref };
-            merged = Object.assign(tmp);
-            obj.variant = "tertiary";
-            intl = searchContext(closure_1_1[8]).intl;
-            obj.accessibilityLabel = intl.string(searchContext(closure_1_1[8]).t.kP6oFy);
-            obj.size = "md";
-            obj.icon = closure_1_6(searchContext(closure_1_1[10]).FiltersHorizontalIcon, { size: "sm", color: "redesign-button-tertiary-text" });
-            return closure_1_6(searchContext(closure_1_1[9]).IconButton, obj);
-          }
-        }
-      }
-      if (cResult[7] === cResult[2]) {
-        class T {
-          constructor(arg0) {
-            tmp = closure_1_3(searchContext, closure_1_2);
-            obj = { ref: searchContext.ref };
-            merged = Object.assign(tmp);
-            obj.variant = "tertiary";
-            intl = searchContext(closure_1_1[8]).intl;
-            obj.accessibilityLabel = intl.string(searchContext(closure_1_1[8]).t.kP6oFy);
-            obj.size = "md";
-            obj.icon = closure_1_6(searchContext(closure_1_1[10]).FiltersHorizontalIcon, { size: "sm", color: "redesign-button-tertiary-text" });
-            return closure_1_6(searchContext(closure_1_1[9]).IconButton, obj);
-          }
-        }
-      }
-      let obj3 = { items: cResult[2], align: "below", title: tmp9, ignoreKeyboardHide: true, onOpen, onClose, children: T };
-      const tmp14 = jsx(tmp(7579).ContextMenu, { items: cResult[2], align: "below", title: tmp9, ignoreKeyboardHide: true, onOpen, onClose, children: T });
-      cResult[7] = cResult[2];
-      cResult[8] = onClose;
-      cResult[9] = onOpen;
-      cResult[10] = tmp14;
+      tmp4 = cResult[2];
     }
+    const _Symbol = Symbol;
+    if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+      let intl = tmp(1126).intl;
+      const stringResult = intl.string(tmp(1126).t.oYEmhB);
+      cResult[5] = stringResult;
+      tmp9 = stringResult;
+    } else {
+      tmp9 = cResult[5];
+    }
+    const _Symbol2 = Symbol;
+    if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+      class T {
+        constructor(arg0) {
+          ref = searchContext.ref;
+          tmp = closure_1_3(searchContext, closure_1_2);
+          obj = { ref };
+          IconButton = searchContext(closure_1_1[9]).IconButton;
+          merged = Object.assign(tmp);
+          obj.variant = "tertiary";
+          intl = searchContext(closure_1_1[8]).intl;
+          obj.accessibilityLabel = intl.string(searchContext(closure_1_1[8]).t.kP6oFy);
+          obj.size = "md";
+          obj.icon = closure_1_6(searchContext(closure_1_1[10]).FiltersHorizontalIcon, { size: "sm", color: "redesign-button-tertiary-text" });
+          return closure_1_6(IconButton, obj);
+        }
+      }
+      cResult[6] = T;
+    } else {
+      class T {
+        constructor(arg0) {
+          ref = searchContext.ref;
+          tmp = closure_1_3(searchContext, closure_1_2);
+          obj = { ref };
+          IconButton = searchContext(closure_1_1[9]).IconButton;
+          merged = Object.assign(tmp);
+          obj.variant = "tertiary";
+          intl = searchContext(closure_1_1[8]).intl;
+          obj.accessibilityLabel = intl.string(searchContext(closure_1_1[8]).t.kP6oFy);
+          obj.size = "md";
+          obj.icon = closure_1_6(searchContext(closure_1_1[10]).FiltersHorizontalIcon, { size: "sm", color: "redesign-button-tertiary-text" });
+          return closure_1_6(IconButton, obj);
+        }
+      }
+    }
+    if (cResult[7] === tmp4) {
+      class T {
+        constructor(arg0) {
+          ref = searchContext.ref;
+          tmp = closure_1_3(searchContext, closure_1_2);
+          obj = { ref };
+          IconButton = searchContext(closure_1_1[9]).IconButton;
+          merged = Object.assign(tmp);
+          obj.variant = "tertiary";
+          intl = searchContext(closure_1_1[8]).intl;
+          obj.accessibilityLabel = intl.string(searchContext(closure_1_1[8]).t.kP6oFy);
+          obj.size = "md";
+          obj.icon = closure_1_6(searchContext(closure_1_1[10]).FiltersHorizontalIcon, { size: "sm", color: "redesign-button-tertiary-text" });
+          return closure_1_6(IconButton, obj);
+        }
+      }
+    }
+    cResult[7] = tmp4;
+    cResult[8] = onClose;
+    cResult[9] = onOpen;
+    cResult[10] = jsx(tmp(7579).ContextMenu, { items: tmp4, align: "below", title: tmp9, ignoreKeyboardHide: true, onOpen, onClose, children: T });
+    const tmp14 = jsx(tmp(7579).ContextMenu, { items: tmp4, align: "below", title: tmp9, ignoreKeyboardHide: true, onOpen, onClose, children: T });
   }
   if (cResult[3] !== searchContext) {
     class T {
       constructor(arg0) {
+        ref = searchContext.ref;
         tmp = closure_1_3(searchContext, closure_1_2);
-        obj = { ref: searchContext.ref };
+        obj = { ref };
+        IconButton = searchContext(closure_1_1[9]).IconButton;
         merged = Object.assign(tmp);
         obj.variant = "tertiary";
         intl = searchContext(closure_1_1[8]).intl;
         obj.accessibilityLabel = intl.string(searchContext(closure_1_1[8]).t.kP6oFy);
         obj.size = "md";
         obj.icon = closure_1_6(searchContext(closure_1_1[10]).FiltersHorizontalIcon, { size: "sm", color: "redesign-button-tertiary-text" });
-        return closure_1_6(searchContext(closure_1_1[9]).IconButton, obj);
+        return closure_1_6(IconButton, obj);
       }
     }
     cResult[3] = searchContext;
@@ -103,15 +119,17 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
   } else {
     class T {
       constructor(arg0) {
+        ref = searchContext.ref;
         tmp = closure_1_3(searchContext, closure_1_2);
-        obj = { ref: searchContext.ref };
+        obj = { ref };
+        IconButton = searchContext(closure_1_1[9]).IconButton;
         merged = Object.assign(tmp);
         obj.variant = "tertiary";
         intl = searchContext(closure_1_1[8]).intl;
         obj.accessibilityLabel = intl.string(searchContext(closure_1_1[8]).t.kP6oFy);
         obj.size = "md";
         obj.icon = closure_1_6(searchContext(closure_1_1[10]).FiltersHorizontalIcon, { size: "sm", color: "redesign-button-tertiary-text" });
-        return closure_1_6(searchContext(closure_1_1[9]).IconButton, obj);
+        return closure_1_6(IconButton, obj);
       }
     }
   }
@@ -119,36 +137,36 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
   cResult[0] = searchContext;
   cResult[1] = validOrderedFilterTokens;
   cResult[2] = mapped;
-  let obj2 = searchContext(16798);
+  tmp4 = mapped;
 }) : ((searchContext) => {
+  let onClose;
+  let onOpen;
   searchContext = searchContext.searchContext;
   let validOrderedFilterTokens;
   ({ onOpen, onClose } = searchContext);
-  validOrderedFilterTokens = searchContext(validOrderedFilterTokens[6]).useValidOrderedFilterTokens(searchContext);
+  let obj = searchContext(validOrderedFilterTokens[6]);
+  validOrderedFilterTokens = obj.useValidOrderedFilterTokens(searchContext);
   const items = [searchContext, validOrderedFilterTokens];
-  const memo = noop.useMemo(() => validOrderedFilterTokens.map((item) => {
-    const obj = { label: searchContext(validOrderedFilterTokens[7]).getSearchTokenLabel(closure_1_0, item), IconComponent: null, action: null };
-    const obj2 = searchContext(validOrderedFilterTokens[7]);
-    obj.IconComponent = searchContext(validOrderedFilterTokens[7]).getSearchTokenIcon(item);
-    const obj3 = searchContext(validOrderedFilterTokens[7]);
-    obj.action = searchContext(validOrderedFilterTokens[7]).getSearchTokenPressHandler(closure_1_0, item, constants.CONTEXT_MENU);
+  const memo = react.useMemo(() => validOrderedFilterTokens.map((item) => {
+    let obj2;
+    let obj3;
+    let obj4;
+    const obj = { label: obj2.getSearchTokenLabel(closure_1_0, item), IconComponent: obj3.getSearchTokenIcon(item), action: obj4.getSearchTokenPressHandler(closure_1_0, item, constants.CONTEXT_MENU) };
+    obj2 = searchContext(validOrderedFilterTokens[7]);
+    obj3 = searchContext(validOrderedFilterTokens[7]);
+    obj4 = searchContext(validOrderedFilterTokens[7]);
     return obj;
   }), items);
-  let obj2 = { items: memo, align: "below", title: null, ignoreKeyboardHide: true, onOpen: null, onClose: null, children: null };
+  const ContextMenu = searchContext(validOrderedFilterTokens[11]).ContextMenu;
   let intl = searchContext(validOrderedFilterTokens[8]).intl;
-  obj2.title = intl.string(searchContext(validOrderedFilterTokens[8]).t.oYEmhB);
-  obj2.onOpen = onOpen;
-  obj2.onClose = onClose;
-  obj2.children = function children(ref) {
+  return <ContextMenu items={memo} align="below" title={intl.string(searchContext(validOrderedFilterTokens[8]).t.oYEmhB)} ignoreKeyboardHide onOpen={onOpen} onClose={onClose}>{function children(ref) {
     const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-    const obj = { ref: ref.ref };
+    const IconButton = searchContext(validOrderedFilterTokens[9]).IconButton;
     const merged1 = Object.assign(merged);
-    obj.variant = "tertiary";
     const intl = searchContext(validOrderedFilterTokens[8]).intl;
-    obj.accessibilityLabel = intl.string(searchContext(validOrderedFilterTokens[8]).t.kP6oFy);
-    obj.size = "md";
-    obj.icon = jsx(searchContext(validOrderedFilterTokens[10]).FiltersHorizontalIcon, { size: "sm", color: "redesign-button-tertiary-text" });
-    return jsx(searchContext(validOrderedFilterTokens[9]).IconButton, { ref: ref.ref });
-  };
-  return jsx(searchContext(validOrderedFilterTokens[11]).ContextMenu, { items: memo, align: "below", title: null, ignoreKeyboardHide: true, onOpen: null, onClose: null, children: null });
+    return <IconButton ref={ref.ref} variant="tertiary" accessibilityLabel={intl.string(searchContext(validOrderedFilterTokens[8]).t.kP6oFy)} size="md" icon={jsx(searchContext(validOrderedFilterTokens[10]).FiltersHorizontalIcon, { size: "sm", color: "redesign-button-tertiary-text" })} />;
+  }}</ContextMenu>;
 }));
+const result = size.fileFinishedImporting("modules/search/native/components/layout/autocomplete/SearchFilterButton.tsx");
+
+export default memoResult;

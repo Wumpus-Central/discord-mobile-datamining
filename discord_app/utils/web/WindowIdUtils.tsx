@@ -10,7 +10,8 @@ export const getWindowId = function getWindowId(defaultView) {
   return defaultView.__DISCORD_WINDOW_ID;
 };
 export const setupWindowId = function setupWindowId(arg0) {
-  const uniqueIdResult = _mod12.uniqueId("window-");
+  const obj = _mod12;
+  const uniqueIdResult = obj.uniqueId("window-");
   arg0.__DISCORD_WINDOW_ID = uniqueIdResult;
   return uniqueIdResult;
 };

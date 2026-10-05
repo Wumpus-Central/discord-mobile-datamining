@@ -5,9 +5,9 @@ import size from "module_2" /* 2 */;
 
 class SystemServiceNotAvailableError extends Error {
   constructor() {
-    tmp1 = new tmp("System service not available", new.target);
-    tmp1.name = "SystemServiceNotAvailableError";
-    return tmp1;
+    const tmp2 = new tmp("System service not available", new.target);
+    tmp2.name = "SystemServiceNotAvailableError";
+    return tmp2;
   }
 }
 const result = size.fileFinishedImporting("../discord_common/js/packages/discord-native-types/DiscordNative.tsx");

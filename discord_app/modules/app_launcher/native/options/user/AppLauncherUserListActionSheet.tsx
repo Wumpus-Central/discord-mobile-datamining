@@ -1,105 +1,56 @@
 // === Module 11811: AppLauncherUserListActionSheet ===
 
 // Module 11811 (AppLauncherUserListActionSheet)
+import Fragment from "Fragment" /* 21 */;
+import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1489 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import TableRow from "TableRow" /* 5993 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const DEFAULT_CONTENT_PADDING = fn(1489).DEFAULT_CONTENT_PADDING;
-const jsx = fn(21).jsx;
+let closure_0, dependencyMap, obj1, obj4, onUserPress, tmp;
+
+const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
+const jsx = Fragment.jsx;
 const AppLauncherUserListActionSheet = "AppLauncherUserListActionSheet";
-const createStyles = fn(4890);
-let closure_6 = createStyles.createStyles({ emptyState: { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingTop: DEFAULT_CONTENT_PADDING, flex: 1 } });
-fn(558);
-const ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = onPressRow(576).c(8);
-  ({ query, onPressRow } = arg0);
-  const tmp4 = closure_6();
-  if (cResult[0] !== query) {
-    const items = [query];
-    cResult[0] = query;
-    cResult[1] = items;
-    let tmp5 = items;
-  } else {
-    tmp5 = cResult[1];
-  }
-  if (cResult[2] !== onPressRow) {
-    const fn = function o(label) {
-      return jsx(TableRow.TableRow, { label: label.item, start: true, end: true, onPress: onPressRow });
-    };
-    cResult[2] = onPressRow;
-    cResult[3] = fn;
-    let tmp6 = fn;
-  } else {
-    tmp6 = cResult[3];
-  }
-  if (cResult[4] === tmp4.emptyState) {
-    if (cResult[5] === tmp5) {
-      if (cResult[6] === tmp6) {
-        let tmp7 = cResult[7];
-      }
-      return tmp7;
-    }
-  }
-  const tmp8 = jsx(onPressRow(11789).AppLauncherList, { contentContainerStyle: tmp4.emptyState, data: tmp5, renderItem: tmp6, keyboardShouldPersistTaps: "always", keyboardDismissMode: "on-drag" });
-  cResult[4] = tmp4.emptyState;
-  cResult[5] = tmp5;
-  cResult[6] = tmp6;
-  cResult[7] = tmp8;
-  tmp7 = tmp8;
-  const obj = onPressRow(576);
-  const obj2 = { contentContainerStyle: tmp4.emptyState, data: tmp5, renderItem: tmp6, keyboardShouldPersistTaps: "always", keyboardDismissMode: "on-drag" };
-}) : ((onPressRow) => {
-  onPressRow = onPressRow.onPressRow;
-  const obj = {
-    contentContainerStyle: closure_6().emptyState,
-    data: null,
-    renderItem(label) {
-      return jsx(TableRow.TableRow, { label: label.item, start: true, end: true, onPress: onPressRow });
-    },
-    keyboardShouldPersistTaps: "always",
-    keyboardDismissMode: "on-drag"
-  };
-  const items = [onPressRow.query];
-  obj.data = items;
-  return jsx(onPressRow(11789).AppLauncherList, {
-    contentContainerStyle: closure_6().emptyState,
-    data: null,
-    renderItem(label) {
-      return jsx(TableRow.TableRow, { label: label.item, start: true, end: true, onPress: onPressRow });
-    },
-    keyboardShouldPersistTaps: "always",
-    keyboardDismissMode: "on-drag"
-  });
-});
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/app_launcher/native/options/user/AppLauncherUserListActionSheet.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((onUserPress) => {
-  const cResult = onUserPress(576).c(18);
+let obj = { emptyState: { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingTop: DEFAULT_CONTENT_PADDING, flex: 1 } };
+let closure_6 = createStyles.createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onUserPress) => {
+  let channel;
+  let closure_2;
+  let guild_id;
+  let id;
+  let option;
+  let tmp3;
+  let obj = onUserPress(576);
+  const cResult = obj.c(18);
   onUserPress = onUserPress.onUserPress;
   const onActionSheetDismiss = onUserPress.onActionSheetDismiss;
   ({ channel, option } = onUserPress);
   ({ guild_id, id } = channel);
   if (cResult[0] !== onActionSheetDismiss) {
     const fn = function n() {
-      ActionSheetActionCreatorsDefault.hideActionSheet(AppLauncherUserListActionSheet);
+      const obj = ActionSheetActionCreatorsDefault;
+      obj.hideActionSheet(AppLauncherUserListActionSheet);
       onActionSheetDismiss();
     };
     cResult[0] = onActionSheetDismiss;
     cResult[1] = fn;
-    let tmp3 = fn;
+    tmp3 = fn;
   } else {
     tmp3 = cResult[1];
   }
   dependencyMap = tmp3;
   if (cResult[2] === tmp3) {
+    let tmp4;
+    let tmp10Result;
     if (cResult[3] === onUserPress) {
-      let tmp4 = cResult[4];
+      tmp4 = cResult[4];
     }
-    closure_3 = tmp4;
+    let closure_3 = tmp4;
     if (cResult[5] !== tmp4) {
       class U {
         constructor(arg0) {
@@ -113,20 +64,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onUserPress) => 
             obj1 = { query: null, onPressRow: null };
             obj1.query = onUserPress;
             obj1.onPressRow = function onPressRow() {
-              return closure_3({ user });
+              const obj = { user };
+              return closure_3(obj);
             };
             tmp3Result = tmp3(closure_1_7, obj1);
           } else {
             obj4 = { style: null, lightSource: null, darkSource: null, title: null, body: null };
             obj4.style = { paddingTop: 80 };
             tmp4 = onActionSheetDismiss;
+            EmptyState = tmp(tmp2[8]).EmptyState;
             obj4.lightSource = onActionSheetDismiss(tmp2[9]);
             obj4.darkSource = onActionSheetDismiss(tmp2[9]);
             intl = tmp(tmp2[10]).intl;
             obj4.title = intl.string(tmp(tmp2[10]).t.vYocDz);
             intl2 = tmp(tmp2[10]).intl;
             obj4.body = intl2.string(tmp(tmp2[10]).t.V6nAfF);
-            tmp3Result = tmp3(tmp(tmp2[8]).EmptyState, obj4);
+            tmp3Result = tmp3(EmptyState, obj4);
           }
           return tmp3Result;
         }
@@ -146,20 +99,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onUserPress) => 
             obj1 = { query: null, onPressRow: null };
             obj1.query = onUserPress;
             obj1.onPressRow = function onPressRow() {
-              return closure_3({ user });
+              const obj = { user };
+              return closure_3(obj);
             };
             tmp3Result = tmp3(closure_1_7, obj1);
           } else {
             obj4 = { style: null, lightSource: null, darkSource: null, title: null, body: null };
             obj4.style = { paddingTop: 80 };
             tmp4 = onActionSheetDismiss;
+            EmptyState = tmp(tmp2[8]).EmptyState;
             obj4.lightSource = onActionSheetDismiss(tmp2[9]);
             obj4.darkSource = onActionSheetDismiss(tmp2[9]);
             intl = tmp(tmp2[10]).intl;
             obj4.title = intl.string(tmp(tmp2[10]).t.vYocDz);
             intl2 = tmp(tmp2[10]).intl;
             obj4.body = intl2.string(tmp(tmp2[10]).t.V6nAfF);
-            tmp3Result = tmp3(tmp(tmp2[8]).EmptyState, obj4);
+            tmp3Result = tmp3(EmptyState, obj4);
           }
           return tmp3Result;
         }
@@ -179,20 +134,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onUserPress) => 
             obj1 = { query: null, onPressRow: null };
             obj1.query = onUserPress;
             obj1.onPressRow = function onPressRow() {
-              return closure_3({ user });
+              const obj = { user };
+              return closure_3(obj);
             };
             tmp3Result = tmp3(closure_1_7, obj1);
           } else {
             obj4 = { style: null, lightSource: null, darkSource: null, title: null, body: null };
             obj4.style = { paddingTop: 80 };
             tmp4 = onActionSheetDismiss;
+            EmptyState = tmp(tmp2[8]).EmptyState;
             obj4.lightSource = onActionSheetDismiss(tmp2[9]);
             obj4.darkSource = onActionSheetDismiss(tmp2[9]);
             intl = tmp(tmp2[10]).intl;
             obj4.title = intl.string(tmp(tmp2[10]).t.vYocDz);
             intl2 = tmp(tmp2[10]).intl;
             obj4.body = intl2.string(tmp(tmp2[10]).t.V6nAfF);
-            tmp3Result = tmp3(tmp(tmp2[8]).EmptyState, obj4);
+            tmp3Result = tmp3(EmptyState, obj4);
           }
           return tmp3Result;
         }
@@ -211,20 +168,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onUserPress) => 
             obj1 = { query: null, onPressRow: null };
             obj1.query = onUserPress;
             obj1.onPressRow = function onPressRow() {
-              return closure_3({ user });
+              const obj = { user };
+              return closure_3(obj);
             };
             tmp3Result = tmp3(closure_1_7, obj1);
           } else {
             obj4 = { style: null, lightSource: null, darkSource: null, title: null, body: null };
             obj4.style = { paddingTop: 80 };
             tmp4 = onActionSheetDismiss;
+            EmptyState = tmp(tmp2[8]).EmptyState;
             obj4.lightSource = onActionSheetDismiss(tmp2[9]);
             obj4.darkSource = onActionSheetDismiss(tmp2[9]);
             intl = tmp(tmp2[10]).intl;
             obj4.title = intl.string(tmp(tmp2[10]).t.vYocDz);
             intl2 = tmp(tmp2[10]).intl;
             obj4.body = intl2.string(tmp(tmp2[10]).t.V6nAfF);
-            tmp3Result = tmp3(tmp(tmp2[8]).EmptyState, obj4);
+            tmp3Result = tmp3(EmptyState, obj4);
           }
           return tmp3Result;
         }
@@ -243,20 +202,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onUserPress) => 
             obj1 = { query: null, onPressRow: null };
             obj1.query = onUserPress;
             obj1.onPressRow = function onPressRow() {
-              return closure_3({ user });
+              const obj = { user };
+              return closure_3(obj);
             };
             tmp3Result = tmp3(closure_1_7, obj1);
           } else {
             obj4 = { style: null, lightSource: null, darkSource: null, title: null, body: null };
             obj4.style = { paddingTop: 80 };
             tmp4 = onActionSheetDismiss;
+            EmptyState = tmp(tmp2[8]).EmptyState;
             obj4.lightSource = onActionSheetDismiss(tmp2[9]);
             obj4.darkSource = onActionSheetDismiss(tmp2[9]);
             intl = tmp(tmp2[10]).intl;
             obj4.title = intl.string(tmp(tmp2[10]).t.vYocDz);
             intl2 = tmp(tmp2[10]).intl;
             obj4.body = intl2.string(tmp(tmp2[10]).t.V6nAfF);
-            tmp3Result = tmp3(tmp(tmp2[8]).EmptyState, obj4);
+            tmp3Result = tmp3(EmptyState, obj4);
           }
           return tmp3Result;
         }
@@ -275,26 +236,29 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onUserPress) => 
             obj1 = { query: null, onPressRow: null };
             obj1.query = onUserPress;
             obj1.onPressRow = function onPressRow() {
-              return closure_3({ user });
+              const obj = { user };
+              return closure_3(obj);
             };
             tmp3Result = tmp3(closure_1_7, obj1);
           } else {
             obj4 = { style: null, lightSource: null, darkSource: null, title: null, body: null };
             obj4.style = { paddingTop: 80 };
             tmp4 = onActionSheetDismiss;
+            EmptyState = tmp(tmp2[8]).EmptyState;
             obj4.lightSource = onActionSheetDismiss(tmp2[9]);
             obj4.darkSource = onActionSheetDismiss(tmp2[9]);
             intl = tmp(tmp2[10]).intl;
             obj4.title = intl.string(tmp(tmp2[10]).t.vYocDz);
             intl2 = tmp(tmp2[10]).intl;
             obj4.body = intl2.string(tmp(tmp2[10]).t.V6nAfF);
-            tmp3Result = tmp3(tmp(tmp2[8]).EmptyState, obj4);
+            tmp3Result = tmp3(EmptyState, obj4);
           }
           return tmp3Result;
         }
       }
-      let obj2 = { channelId: id, disableStickySections: true, hideTitle: true, headerShown: false, inActionSheet: true, onUserPress: tmp4, opensUserProfileOnUserPress: false };
-      let tmp9Result = <tmp10 channelId={id} disableStickySections hideTitle headerShown={false} inActionSheet onUserPress={tmp4} opensUserProfileOnUserPress={false} />;
+      tmp14[0] = id;
+      tmp14[5] = tmp4;
+      tmp10Result = jsx(tmp11(11812), tmp14);
     } else {
       class U {
         constructor(arg0) {
@@ -308,94 +272,154 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onUserPress) => 
             obj1 = { query: null, onPressRow: null };
             obj1.query = onUserPress;
             obj1.onPressRow = function onPressRow() {
-              return closure_3({ user });
+              const obj = { user };
+              return closure_3(obj);
             };
             tmp3Result = tmp3(closure_1_7, obj1);
           } else {
             obj4 = { style: null, lightSource: null, darkSource: null, title: null, body: null };
             obj4.style = { paddingTop: 80 };
             tmp4 = onActionSheetDismiss;
+            EmptyState = tmp(tmp2[8]).EmptyState;
             obj4.lightSource = onActionSheetDismiss(tmp2[9]);
             obj4.darkSource = onActionSheetDismiss(tmp2[9]);
             intl = tmp(tmp2[10]).intl;
             obj4.title = intl.string(tmp(tmp2[10]).t.vYocDz);
             intl2 = tmp(tmp2[10]).intl;
             obj4.body = intl2.string(tmp(tmp2[10]).t.V6nAfF);
-            tmp3Result = tmp3(tmp(tmp2[8]).EmptyState, obj4);
+            tmp3Result = tmp3(EmptyState, obj4);
           }
           return tmp3Result;
         }
       }
-      tmp11[0] = id;
-      tmp11[1] = guild_id;
-      tmp11[3] = U;
-      tmp11[6] = tmp4;
-      tmp9Result = jsx(tmp10(11210), tmp11);
+      tmp12[0] = id;
+      tmp12[1] = guild_id;
+      tmp12[3] = U;
+      tmp12[6] = tmp4;
+      tmp10Result = jsx(tmp11(11210), tmp12);
     }
     cResult[8] = channel;
     cResult[9] = id;
     cResult[10] = guild_id;
     cResult[11] = tmp4;
     cResult[12] = U;
-    cResult[13] = tmp9Result;
+    cResult[13] = tmp10Result;
   }
   const fn2 = function b(user) {
-    onUserPress({ user: user.user });
-    dependencyMap();
+    const obj = { user: user.user };
+    onUserPress(obj);
+    closure_2();
   };
   cResult[2] = tmp3;
   cResult[3] = onUserPress;
   cResult[4] = fn2;
   tmp4 = fn2;
-  const obj = onUserPress(576);
 }) : ((onUserPress) => {
+  let tmp4Result;
   onUserPress = onUserPress.onUserPress;
   const onActionSheetDismiss = onUserPress.onActionSheetDismiss;
   const channel = onUserPress.channel;
   let callback1;
   const id = channel.id;
   const items = [onActionSheetDismiss];
+  const option = onUserPress.option;
+  const guild_id = channel.guild_id;
   const callback = callback1.useCallback(() => {
-    ActionSheetActionCreatorsDefault.hideActionSheet(AppLauncherUserListActionSheet);
+    const obj = ActionSheetActionCreatorsDefault;
+    obj.hideActionSheet(AppLauncherUserListActionSheet);
     onActionSheetDismiss();
   }, items);
   const items1 = [callback, onUserPress];
   callback1 = callback1.useCallback((user) => {
-    onUserPress({ user: user.user });
+    const obj = { user: user.user };
+    onUserPress(obj);
     callback();
   }, items1);
   const items2 = [callback1];
   const callback2 = callback1.useCallback((query) => {
+    let tmp3Result;
     const user = query;
+    let obj = onUserPress(callback[7]);
     if (obj.isSnowflake(query)) {
-      const obj2 = {
-        query,
-        onPressRow() {
-            return callback1({ user });
-          }
-      };
-      let tmp3Result = <closure_1_7 query={query} onPressRow={function onPressRow() {
-        return callback1({ user });
+      tmp3Result = <closure_1_7 query={query} onPressRow={function onPressRow() {
+        const obj = { user };
+        return callback1(obj);
       }} />;
     } else {
-      const obj3 = { style: { paddingTop: 80 }, lightSource: onActionSheetDismiss(callback[9]), darkSource: onActionSheetDismiss(callback[9]), title: null, body: null };
+      const EmptyState = onUserPress(callback[8]).EmptyState;
       const intl = onUserPress(callback[10]).intl;
-      obj3.title = intl.string(onUserPress(callback[10]).t.vYocDz);
       const intl2 = onUserPress(callback[10]).intl;
-      obj3.body = intl2.string(onUserPress(callback[10]).t.V6nAfF);
-      tmp3Result = jsx(onUserPress(callback[8]).EmptyState, { style: { paddingTop: 80 }, lightSource: onActionSheetDismiss(callback[9]), darkSource: onActionSheetDismiss(callback[9]), title: null, body: null });
+      tmp3Result = <EmptyState style={{ paddingTop: 80 }} lightSource={onActionSheetDismiss(callback[9])} darkSource={onActionSheetDismiss(callback[9])} title={intl.string(onUserPress(callback[10]).t.vYocDz)} body={intl2.string(onUserPress(callback[10]).t.V6nAfF)} />;
     }
     return tmp3Result;
   }, items2);
-  const obj = { onDismiss: onActionSheetDismiss, option: onUserPress.option, contentContainerStyles: { paddingHorizontal: 0 }, children: null };
+  const AppLauncherCommandOptionActionSheet = onUserPress(callback[13]).AppLauncherCommandOptionActionSheet;
   if (channel.isPrivate()) {
-    let obj2 = { channelId: id, disableStickySections: true, hideTitle: true, headerShown: false, inActionSheet: true, onUserPress: callback1, opensUserProfileOnUserPress: false };
-    let tmp4Result = jsx(tmp6(tmp5[11]), { channelId: id, disableStickySections: true, hideTitle: true, headerShown: false, inActionSheet: true, onUserPress: callback1, opensUserProfileOnUserPress: false });
+    tmp4Result = jsx(tmp6(tmp5[11]), { channelId: id, disableStickySections: true, hideTitle: true, headerShown: false, inActionSheet: true, onUserPress: callback1, opensUserProfileOnUserPress: false });
   } else {
-    let obj3 = { channelId: id, guildId: channel.guild_id, searchable: true, searchableEmptyState: callback2, headerShown: false, opensUserProfileOnUserPress: false, onUserPress: callback1, inActionSheet: true, disableThemedGradient: true };
-    tmp4Result = jsx(tmp6(tmp5[12]), { channelId: id, guildId: channel.guild_id, searchable: true, searchableEmptyState: callback2, headerShown: false, opensUserProfileOnUserPress: false, onUserPress: callback1, inActionSheet: true, disableThemedGradient: true });
+    tmp4Result = jsx(tmp6(tmp5[12]), { channelId: id, guildId: guild_id, searchable: true, searchableEmptyState: callback2, headerShown: false, opensUserProfileOnUserPress: false, onUserPress: callback1, inActionSheet: true, disableThemedGradient: true });
   }
-  obj.children = tmp4Result;
-  return jsx(onUserPress(callback[13]).AppLauncherCommandOptionActionSheet, { onDismiss: onActionSheetDismiss, option: onUserPress.option, contentContainerStyles: { paddingHorizontal: 0 }, children: null });
+  return <AppLauncherCommandOptionActionSheet onDismiss={onActionSheetDismiss} option={option} contentContainerStyles={{ paddingHorizontal: 0 }}>{tmp4Result}</AppLauncherCommandOptionActionSheet>;
 });
+ReactCompilerGating = ReactCompilerGating_mod;
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let onPressRow;
+  let query;
+  let tmp5;
+  let tmp6;
+  const obj = onPressRow(576);
+  const cResult = obj.c(8);
+  ({ query, onPressRow } = arg0);
+  const tmp4 = closure_6();
+  if (cResult[0] !== query) {
+    const items = [query];
+    cResult[0] = query;
+    cResult[1] = items;
+    tmp5 = items;
+  } else {
+    tmp5 = cResult[1];
+  }
+  if (cResult[2] !== onPressRow) {
+    const fn = function o(label) {
+      return jsx(TableRow.TableRow, { label: label.item, start: true, end: true, onPress: onPressRow });
+    };
+    cResult[2] = onPressRow;
+    cResult[3] = fn;
+    tmp6 = fn;
+  } else {
+    tmp6 = cResult[3];
+  }
+  if (cResult[4] === tmp4.emptyState) {
+    if (cResult[5] === tmp5) {
+      let tmp7;
+      if (cResult[6] === tmp6) {
+        tmp7 = cResult[7];
+      }
+      return tmp7;
+    }
+  }
+  const tmp8 = jsx(onPressRow(11789).AppLauncherList, { contentContainerStyle: tmp4.emptyState, data: tmp5, renderItem: tmp6, keyboardShouldPersistTaps: "always", keyboardDismissMode: "on-drag" });
+  cResult[4] = tmp4.emptyState;
+  cResult[5] = tmp5;
+  cResult[6] = tmp6;
+  cResult[7] = tmp8;
+  tmp7 = tmp8;
+}) : ((onPressRow) => {
+  onPressRow = onPressRow.onPressRow;
+  const query = onPressRow.query;
+  const items = [query];
+  closure_6();
+  return jsx(onPressRow(11789).AppLauncherList, {
+    contentContainerStyle: closure_6().emptyState,
+    data: items,
+    renderItem(label) {
+      return jsx(TableRow.TableRow, { label: label.item, start: true, end: true, onPress: onPressRow });
+    },
+    keyboardShouldPersistTaps: "always",
+    keyboardDismissMode: "on-drag"
+  });
+});
+const result = size.fileFinishedImporting("modules/app_launcher/native/options/user/AppLauncherUserListActionSheet.tsx");
+
+export default tmp2;
 export const APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY = "AppLauncherUserListActionSheet";

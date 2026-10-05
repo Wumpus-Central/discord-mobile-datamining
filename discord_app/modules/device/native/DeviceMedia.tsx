@@ -7,12 +7,15 @@ import getDeviceMediaPhotosDefault from "getDeviceMediaPhotos" /* 10376 */;
 import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
+let dependencyMap, page;
+
 const AnalyticEvents = Constants.AnalyticEvents;
 let state = module_570.create(() => ({ assets: null, page: 0, hasReachedEnd: false, lastAssetIndex: 0 }));
-const result = size.fileFinishedImporting("modules/device/native/DeviceMedia.tsx");
-
-export default {
+let obj = {
   getNextAssetPage(arg0) {
+    let batchSize;
+    let extensions;
+    let tmp2;
     dependencyMap = undefined;
     ({ batchSize, extensions } = arg0);
     state = state.getState();
@@ -20,23 +23,28 @@ export default {
     let lastAssetIndex = state.lastAssetIndex;
     if (null != assets) {
       if (!state.hasReachedEnd) {
+        let image;
+        let num = 1;
         if (assets.edges[assets.edges.length - 1] != null) {
           const node = tmp4.node;
           if (node != null) {
-            const image = node.image;
+            image = node.image;
           }
         }
+        let obj = assets(1369);
         if (!obj.isIOS()) {
           dependencyMap = tmp2 + 1;
-          const obj2 = {
+          let obj2 = {
             batchSize,
             endCursor: tmp3,
             lastAssetIndex,
             lastNodeImageUri: image.uri,
             extensions,
             onFetched(edges) {
+                    let closure_2;
                     assets = edges;
                     let num;
+                    const tmp2 = lastAssetIndex;
                     if (edges != null) {
                       edges = edges.edges;
                       if (edges != null) {
@@ -46,64 +54,70 @@ export default {
                     if (num == null) {
                       num = 0;
                     }
-                    lastAssetIndex = lastAssetIndex + num;
+                    lastAssetIndex = tmp2 + num;
                     if (null != assets) {
                       if (edges != null) {
                         const edges1 = edges.edges;
                         if (edges1 != null) {
                           const unshift = edges1.unshift;
                           const items = [];
-                          HermesBuiltin.arraySpread(tmp2.edges, 0);
-                          HermesBuiltin.apply(items, edges1);
+                          HermesBuiltin.arraySpread(items, tmp3.edges, 0);
+                          HermesBuiltin.apply(unshift, items, edges1);
                         }
                       }
                     }
-                    assets(page[3]).batchUpdates(() => {
-                      const obj = { assets, page, lastAssetIndex, endCursor: null };
+                    let obj = assets(page[3]);
+                    obj.batchUpdates(() => {
                       let end_cursor;
+                      const obj = { assets, page, lastAssetIndex, endCursor: end_cursor };
+                      end_cursor = undefined;
+                      const setState = state.setState;
                       if (assets != null) {
                         const page_info = assets.page_info;
                         if (page_info != null) {
                           end_cursor = page_info.end_cursor;
                         }
                       }
-                      obj.endCursor = end_cursor;
-                      closure_4.setState(obj);
+                      setState(obj);
                     });
-                    let tmp12 = null == edges;
-                    if (!tmp12) {
-                      tmp12 = 0 === edges.edges.length;
+                    let tmp13 = null == edges;
+                    const tmp10 = assets;
+                    if (!tmp13) {
+                      tmp13 = 0 === edges.edges.length;
                     }
-                    if (!tmp12) {
+                    if (!tmp13) {
                       let page_info = edges.page_info;
                       let has_next_page;
                       if (page_info != null) {
                         has_next_page = page_info.has_next_page;
                       }
-                      tmp12 = false === has_next_page;
+                      tmp13 = false === has_next_page;
                     }
-                    page = tmp12;
-                    if (tmp12) {
-                      tmp9(tmp10[3]).batchUpdates(() => closure_4.setState({ hasReachedEnd }));
-                      const tmp9Result = tmp9(tmp10[3]);
+                    page = tmp13;
+                    if (page) {
+                      const tmp10Result = tmp10(page[3]);
+                      tmp10Result.batchUpdates(() => {
+                        const obj = { hasReachedEnd };
+                        return state.setState(obj);
+                      });
                     }
-                    let obj = assets(page[3]);
-                    tmp9 = assets;
-                    lastAssetIndex(page[2]).track(constants.MEDIA_PICKER_INFINITE_SCROLL_PAGED, { page, has_reached_end: tmp12 });
+                    const obj2 = { page, has_reached_end: tmp13 };
+                    const obj3 = lastAssetIndex(page[2]);
+                    obj3.track(constants.MEDIA_PICKER_INFINITE_SCROLL_PAGED, obj2);
                   }
           };
           lastAssetIndex(10376)(obj2);
         }
-        obj = assets(1369);
       }
     }
   },
   refreshAssets(batchSize) {
     batchSize = batchSize.batchSize;
-    getDeviceMediaPhotosDefault({
+    let obj = {
       batchSize,
       extensions: batchSize.extensions,
       onFetched(edges) {
+        let length;
         const assets = edges;
         let num;
         if (edges != null) {
@@ -140,28 +154,33 @@ export default {
           num = 0;
         }
         if (num > 0) {
-          const obj2 = { num_broken_assets: num, num_assets: null, location: "DeviceMedia.applyStateUpdate" };
-          let length;
+          let obj = { num_broken_assets: num, num_assets: length, location: "DeviceMedia.applyStateUpdate" };
+          length = undefined;
+          const track = AnalyticsUtilsDefault.track;
+          const MEDIA_PICKER_ASSETS_DEBUG = constants.MEDIA_PICKER_ASSETS_DEBUG;
+          AnalyticsUtilsDefault;
           if (edges != null) {
             const edges1 = edges.edges;
             if (edges1 != null) {
               length = edges1.length;
             }
           }
-          obj2.num_assets = length;
-          AnalyticsUtilsDefault.track(constants.MEDIA_PICKER_ASSETS_DEBUG, obj2);
+          track(MEDIA_PICKER_ASSETS_DEBUG, obj);
         }
-        batchSize(1259).batchUpdates(() => {
-          const obj = { assets, page: 0, lastAssetIndex: batchSize, endCursor: null, hasReachedEnd: null };
+        const obj2 = batchSize(dependencyMap[3]);
+        obj2.batchUpdates(() => {
           let end_cursor;
+          let num;
+          const obj = { assets, page: 0, lastAssetIndex: batchSize, endCursor: end_cursor, hasReachedEnd: !num };
+          end_cursor = undefined;
+          setState = setState.setState;
           if (assets != null) {
             const page_info = assets.page_info;
             if (page_info != null) {
               end_cursor = page_info.end_cursor;
             }
           }
-          obj.endCursor = end_cursor;
-          let num;
+          num = undefined;
           if (assets != null) {
             const page_info2 = assets.page_info;
             if (page_info2 != null) {
@@ -171,12 +190,11 @@ export default {
           if (num == null) {
             num = 1;
           }
-          obj.hasReachedEnd = !num;
-          state.setState(obj);
+          setState(obj);
         });
-        const obj3 = batchSize(1259);
       }
-    });
+    };
+    getDeviceMediaPhotosDefault(obj);
   },
   useAssets() {
     return state((assets) => assets.assets);
@@ -185,3 +203,6 @@ export default {
     return state((hasReachedEnd) => hasReachedEnd.hasReachedEnd);
   }
 };
+const result = size.fileFinishedImporting("modules/device/native/DeviceMedia.tsx");
+
+export default obj;

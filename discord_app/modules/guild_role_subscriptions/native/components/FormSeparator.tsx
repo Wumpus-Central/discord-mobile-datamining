@@ -1,51 +1,53 @@
 // === Module 15035: FormSeparator ===
 
 // Module 15035 (FormSeparator)
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size_mod from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj2 = { container: { alignSelf: "stretch" }, margins: { marginTop: 16 }, separator: null };
-let size = { width: "100%", height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-obj2.separator = size;
-let closure_4 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormSeparator.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
-  const cResult = c.c(9);
+let size;
+const View = react_native.View;
+const jsx = Fragment.jsx;
+let obj = { container: { alignSelf: "stretch" }, margins: { marginTop: 16 }, separator: size };
+size = { width: "100%", height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+let closure_4 = createStyles.createStyles(obj);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+  const obj = react2;
+  const cResult = obj.c(9);
   style = style.style;
+  const withoutMargins = style.withoutMargins;
   const tmp2 = closure_4();
   let margins;
-  if (!style.withoutMargins) {
+  if (!withoutMargins) {
     margins = tmp2.margins;
   }
   if (cResult[0] === style) {
     if (cResult[1] === tmp2.container) {
+      let tmp4;
+      let tmp5;
       if (cResult[2] === margins) {
-        let tmp4 = cResult[3];
+        tmp4 = cResult[3];
       }
       if (cResult[4] !== tmp2.separator) {
-        const obj2 = { style: tmp2.separator };
         const tmp8 = <View style={tmp2.separator} />;
         cResult[4] = tmp2.separator;
         cResult[5] = tmp8;
-        let tmp5 = tmp8;
+        tmp5 = tmp8;
       } else {
         tmp5 = cResult[5];
       }
       if (cResult[6] === tmp4) {
+        let tmp9;
         if (cResult[7] === tmp5) {
-          let tmp9 = cResult[8];
+          tmp9 = cResult[8];
         }
         return tmp9;
       }
-      const obj3 = { style: tmp4, children: tmp5 };
       const tmp12 = <View style={tmp4}>{tmp5}</View>;
       cResult[6] = tmp4;
       cResult[7] = tmp5;
@@ -60,6 +62,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
   cResult[3] = items;
   tmp4 = items;
 }) : ((arg0) => {
+  let style;
+  let withoutMargins;
   ({ style, withoutMargins } = arg0);
   const tmp = closure_4();
   const items = [tmp.container, , ];
@@ -67,8 +71,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
   if (!withoutMargins) {
     margins = tmp.margins;
   }
-  const obj = { style: items, children: <View style={tmp.separator} /> };
   items[1] = margins;
   items[2] = style;
-  return <View style={items}><View style={tmp.separator} /></View>;
+  return <View style={items}>{null}</View>;
 });
+size = size_mod;
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormSeparator.tsx");
+
+export default tmp3;

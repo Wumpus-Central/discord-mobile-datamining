@@ -1,35 +1,42 @@
 // === Module 17935: GuildRoleSubscriptionTierCreationModal ===
 
 // Module 17935 (GuildRoleSubscriptionTierCreationModal)
-import util from "util" /* 1126 */;
+import Fragment from "Fragment" /* 21 */;
+import intl2 from "intl" /* 1126 */;
 import ToastUtils from "ToastUtils" /* 4567 */;
 import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15045 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import _slicedToArray_mod from "_slicedToArray" /* 32 */;
+import react_mod from "react" /* 19 */;
 import RoleTierEditStore from "RoleTierEditStore" /* 17926 */;
+import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants" /* 15023 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
+let _require, c1, c2, guildId;
 
-require = fn;
-const GuildRoleSubscriptionsConstants = fn(15023);
-({ GuildRoleSubscriptionsTierScenes: closure_8, GUILD_ROLE_SUBSCRIPTION_TIER_CREATION_KEY: closure_9 } = GuildRoleSubscriptionsConstants);
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierCreationModal.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
-  const cResult = require("c").c(22);
+let c9;
+let metroImportAll;
+let _slicedToArray = _slicedToArray_mod;
+let react = react_mod;
+({ GuildRoleSubscriptionsTierScenes: metroImportAll, GUILD_ROLE_SUBSCRIPTION_TIER_CREATION_KEY: c9 } = GuildRoleSubscriptionsConstants);
+const jsx = Fragment.jsx;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+  let closure_5;
+  let editStateId;
+  let handleCreateOrUpdateFromEditState;
+  let onAfterTierCreation;
+  const tmp2 = onAfterTierCreation;
+  let obj = guildId(onAfterTierCreation[7]);
+  const cResult = obj.c(22);
   guildId = guildId.guildId;
-  _require = guildId;
   let groupListingId = guildId.groupListingId;
   const onClose = guildId.onClose;
   onAfterTierCreation = guildId.onAfterTierCreation;
-  [editStateId, _slicedToArray] = handleCreateOrUpdateFromEditState.useState(guildId.editStateId);
-  let obj = require("c");
   let obj2 = handleCreateOrUpdateFromEditState;
-  const createOrUpdateListingFromEditState = onClose(onAfterTierCreation[8]).useCreateOrUpdateListingFromEditState();
+  [editStateId, _slicedToArray] = handleCreateOrUpdateFromEditState.useState(guildId.editStateId);
+  let obj3 = onClose(onAfterTierCreation[8]);
+  const createOrUpdateListingFromEditState = obj3.useCreateOrUpdateListingFromEditState();
   handleCreateOrUpdateFromEditState = createOrUpdateListingFromEditState.handleCreateOrUpdateFromEditState;
   const error = createOrUpdateListingFromEditState.error;
   if (cResult[0] === editStateId) {
@@ -37,48 +44,45 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       if (cResult[2] === guildId) {
         if (cResult[3] === handleCreateOrUpdateFromEditState) {
           if (cResult[4] === onAfterTierCreation) {
+            let tmp7;
+            let tmp9;
+            let tmp12;
             if (cResult[5] === onClose) {
-              let tmp7 = cResult[6];
+              tmp7 = cResult[6];
             }
             if (cResult[7] !== error) {
               class O {
                 constructor() {
-                  obj = error;
                   if (null != error) {
-                    tmp = closure_0;
-                    tmp2 = closure_3;
-                    obj2 = closure_0(closure_3[9]);
-                    anyErrorMessage = obj.getAnyErrorMessage();
+                    const presentError = ToastUtils.presentError;
+                    ToastUtils;
+                    let anyErrorMessage = error.getAnyErrorMessage();
                     if (anyErrorMessage == null) {
-                      intl = tmp(tmp2[10]).intl;
-                      anyErrorMessage = intl.string(tmp(tmp2[10]).t.R0RpRX);
+                      const intl = intl2.intl;
+                      anyErrorMessage = intl.string(intl2.t.R0RpRX);
                     }
-                    presentErrorResult = obj2.presentError(anyErrorMessage);
+                    presentError(anyErrorMessage);
                   }
-                  return;
                 }
               }
               const items = [error];
               cResult[7] = error;
               cResult[8] = O;
               cResult[9] = items;
-              let tmp9 = items;
+              tmp9 = items;
             } else {
               class O {
                 constructor() {
-                  obj = error;
                   if (null != error) {
-                    tmp = closure_0;
-                    tmp2 = closure_3;
-                    obj2 = closure_0(closure_3[9]);
-                    anyErrorMessage = obj.getAnyErrorMessage();
+                    const presentError = ToastUtils.presentError;
+                    ToastUtils;
+                    let anyErrorMessage = error.getAnyErrorMessage();
                     if (anyErrorMessage == null) {
-                      intl = tmp(tmp2[10]).intl;
-                      anyErrorMessage = intl.string(tmp(tmp2[10]).t.R0RpRX);
+                      const intl = intl2.intl;
+                      anyErrorMessage = intl.string(intl2.t.R0RpRX);
                     }
-                    presentErrorResult = obj2.presentError(anyErrorMessage);
+                    presentError(anyErrorMessage);
                   }
-                  return;
                 }
               }
               tmp9 = cResult[9];
@@ -88,128 +92,112 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
             if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
               class O {
                 constructor() {
-                  obj = error;
                   if (null != error) {
-                    tmp = closure_0;
-                    tmp2 = closure_3;
-                    obj2 = closure_0(closure_3[9]);
-                    anyErrorMessage = obj.getAnyErrorMessage();
+                    const presentError = ToastUtils.presentError;
+                    ToastUtils;
+                    let anyErrorMessage = error.getAnyErrorMessage();
                     if (anyErrorMessage == null) {
-                      intl = tmp(tmp2[10]).intl;
-                      anyErrorMessage = intl.string(tmp(tmp2[10]).t.R0RpRX);
+                      const intl = intl2.intl;
+                      anyErrorMessage = intl.string(intl2.t.R0RpRX);
                     }
-                    presentErrorResult = obj2.presentError(anyErrorMessage);
+                    presentError(anyErrorMessage);
                   }
-                  return;
                 }
               }
               const items1 = [, , , , ];
               ({ DETAILS: arr2[0], CHANNEL_BENEFITS: arr2[1], INTANGIBLE_BENEFITS: arr2[2], DESIGN: arr2[3], CONFIRMATION: arr2[4] } = closure_8);
               cResult[10] = items1;
-              const tmp12 = items1;
+              tmp12 = items1;
             } else {
               class O {
                 constructor() {
-                  obj = error;
                   if (null != error) {
-                    tmp = closure_0;
-                    tmp2 = closure_3;
-                    obj2 = closure_0(closure_3[9]);
-                    anyErrorMessage = obj.getAnyErrorMessage();
+                    const presentError = ToastUtils.presentError;
+                    ToastUtils;
+                    let anyErrorMessage = error.getAnyErrorMessage();
                     if (anyErrorMessage == null) {
-                      intl = tmp(tmp2[10]).intl;
-                      anyErrorMessage = intl.string(tmp(tmp2[10]).t.R0RpRX);
+                      const intl = intl2.intl;
+                      anyErrorMessage = intl.string(intl2.t.R0RpRX);
                     }
-                    presentErrorResult = obj2.presentError(anyErrorMessage);
+                    presentError(anyErrorMessage);
                   }
-                  return;
                 }
               }
             }
             if (cResult[11] === guildId) {
               class O {
                 constructor() {
-                  obj = error;
                   if (null != error) {
-                    tmp = closure_0;
-                    tmp2 = closure_3;
-                    obj2 = closure_0(closure_3[9]);
-                    anyErrorMessage = obj.getAnyErrorMessage();
+                    const presentError = ToastUtils.presentError;
+                    ToastUtils;
+                    let anyErrorMessage = error.getAnyErrorMessage();
                     if (anyErrorMessage == null) {
-                      intl = tmp(tmp2[10]).intl;
-                      anyErrorMessage = intl.string(tmp(tmp2[10]).t.R0RpRX);
+                      const intl = intl2.intl;
+                      anyErrorMessage = intl.string(intl2.t.R0RpRX);
                     }
-                    presentErrorResult = obj2.presentError(anyErrorMessage);
+                    presentError(anyErrorMessage);
                   }
-                  return;
                 }
               }
               if (cResult[14] === guildId) {
                 class O {
                   constructor() {
-                    obj = error;
                     if (null != error) {
-                      tmp = closure_0;
-                      tmp2 = closure_3;
-                      obj2 = closure_0(closure_3[9]);
-                      anyErrorMessage = obj.getAnyErrorMessage();
+                      const presentError = ToastUtils.presentError;
+                      ToastUtils;
+                      let anyErrorMessage = error.getAnyErrorMessage();
                       if (anyErrorMessage == null) {
-                        intl = tmp(tmp2[10]).intl;
-                        anyErrorMessage = intl.string(tmp(tmp2[10]).t.R0RpRX);
+                        const intl = intl2.intl;
+                        anyErrorMessage = intl.string(intl2.t.R0RpRX);
                       }
-                      presentErrorResult = obj2.presentError(anyErrorMessage);
+                      presentError(anyErrorMessage);
                     }
-                    return;
                   }
                 }
                 if (cResult[17] === editStateId) {
                   class O {
                     constructor() {
-                      obj = error;
                       if (null != error) {
-                        tmp = closure_0;
-                        tmp2 = closure_3;
-                        obj2 = closure_0(closure_3[9]);
-                        anyErrorMessage = obj.getAnyErrorMessage();
+                        const presentError = ToastUtils.presentError;
+                        ToastUtils;
+                        let anyErrorMessage = error.getAnyErrorMessage();
                         if (anyErrorMessage == null) {
-                          intl = tmp(tmp2[10]).intl;
-                          anyErrorMessage = intl.string(tmp(tmp2[10]).t.R0RpRX);
+                          const intl = intl2.intl;
+                          anyErrorMessage = intl.string(intl2.t.R0RpRX);
                         }
-                        presentErrorResult = obj2.presentError(anyErrorMessage);
+                        presentError(anyErrorMessage);
                       }
-                      return;
                     }
                   }
                 }
-                let obj4 = { guildId, editStateId, groupListingId, children: tmp18 };
-                const tmp23 = jsx(tmp(tmp2[13]).EditStateContextProvider, { guildId, editStateId, groupListingId, children: tmp18 });
                 cResult[17] = editStateId;
                 cResult[18] = groupListingId;
                 cResult[19] = guildId;
                 cResult[20] = tmp18;
-                cResult[21] = tmp23;
+                cResult[21] = jsx(guildId(tmp2[13]).EditStateContextProvider, { guildId, editStateId, groupListingId, children: tmp18 });
+                const tmp23 = jsx(guildId(tmp2[13]).EditStateContextProvider, { guildId, editStateId, groupListingId, children: tmp18 });
               }
-              let obj5 = { guildId, children: tmp13 };
-              const tmp20 = jsx(tmp(tmp2[12]).RoleSubscriptionSettingsDisabledContextProvider, { guildId, children: tmp13 });
               cResult[14] = guildId;
               cResult[15] = tmp13;
-              cResult[16] = tmp20;
+              cResult[16] = jsx(guildId(tmp2[12]).RoleSubscriptionSettingsDisabledContextProvider, { guildId, children: tmp13 });
+              const tmp20 = jsx(guildId(tmp2[12]).RoleSubscriptionSettingsDisabledContextProvider, { guildId, children: tmp13 });
             }
-            const obj6 = { guildId, modalKey, onDone: tmp7, steps: tmp12 };
-            const tmp17 = jsx(groupListingId(tmp2[11]), { guildId, modalKey, onDone: tmp7, steps: tmp12 });
+            const tmp15 = groupListingId;
             cResult[11] = guildId;
             cResult[12] = tmp7;
-            cResult[13] = tmp17;
+            cResult[13] = jsx(groupListingId(tmp2[11]), { guildId, modalKey, onDone: tmp7, steps: tmp12 });
+            const tmp17 = jsx(groupListingId(tmp2[11]), { guildId, modalKey, onDone: tmp7, steps: tmp12 });
           }
         }
       }
     }
   }
   _require = editStateId(function*() {
+    let v3;
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp2 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -230,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const guildId = tmp4;
+            guildId = tmp3;
             const obj4 = {
               guildId,
               editStateId,
@@ -260,21 +248,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
           v3 = 3;
           return { value: "IconComponent", done: null };
         }
-      } catch (tmp16) {
-        v3 = tmp;
-        throw tmp16;
+      } catch (tmp15) {
+        v3 = 3;
+        throw tmp15;
       }
     }
   });
   function handleCreate() {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
+    return closure_0(...arguments);
   }
   cResult[0] = editStateId;
   cResult[1] = groupListingId;
@@ -284,131 +265,118 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   cResult[5] = onClose;
   cResult[6] = handleCreate;
   tmp7 = handleCreate;
-  let obj3 = onClose(onAfterTierCreation[8]);
 }) : ((guildId) => {
+  let _undefined;
+  let c6;
+  let closure_5;
+  let editStateId;
+  let error;
   guildId = guildId.guildId;
   const groupListingId = guildId.groupListingId;
   ({ onClose: importAll, onAfterTierCreation: dependencyMap } = guildId);
   editStateId = undefined;
   _slicedToArray = undefined;
-  noop = undefined;
+  react = undefined;
   error = undefined;
-  closure_8 = async function _handleCreate2() {
-    if (c2 === 2) {
-      c2 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+  let obj = function _handleCreate2() {
+    obj = _asyncToGenerator(async () => {
+      if (c2 === 2) {
+        c2 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp2 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "IconComponent", done: null };
+        }
       } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c2 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
+        try {
+          c2 = 2;
+          if (0 === c1) {
+            if (arg0 === 1) {
+              c2 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c2 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              let closure_0 = tmp3;
+              const obj4 = {
+                guildId,
+                editStateId,
+                groupListingId,
+                onBeforeDispatchNewListing(id) {
+                          return closure_1_5(id.id);
+                        }
+              };
+              c1 = 1;
+              c2 = 1;
+              const obj5 = { value: _undefined(obj4), done: false };
+              return obj5;
+            }
+          } else if (arg0 === 1) {
             c2 = 3;
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            obj = { value, done: true };
+            return obj;
           } else {
-            closure_0 = tmp4;
-            const obj4 = {
-              guildId,
-              editStateId,
-              groupListingId,
-              onBeforeDispatchNewListing(id) {
-                        return closure_1_5(id.id);
-                      }
-            };
-            c1 = 1;
-            c2 = 1;
-            const obj5 = { value: noop(obj4), done: false };
-            return obj5;
+            if (value) {
+              error.resetImperatively();
+              closure_128_2();
+              closure_128_3();
+            }
+            c2 = 3;
+            return { value: "IconComponent", done: null };
           }
-        } else if (arg0 === 1) {
+        } catch (tmp15) {
           c2 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c2 = 3;
-          const obj = { value, done: true };
-          return obj;
-        } else {
-          if (value) {
-            error.resetImperatively();
-            closure_128_2();
-            closure_128_3();
-          }
-          c2 = 3;
-          return { value: "IconComponent", done: null };
+          throw tmp15;
         }
-      } catch (tmp16) {
-        c2 = tmp;
-        throw tmp16;
       }
-    }
+    });
+    return obj(...arguments);
   };
-  [editStateId, _slicedToArray] = noop.useState(guildId.editStateId);
-  const createOrUpdateListingFromEditState = GuildRoleSubscriptionListingEditStateUtilsAll.useCreateOrUpdateListingFromEditState();
+  [editStateId, _slicedToArray] = react.useState(guildId.editStateId);
+  obj = GuildRoleSubscriptionListingEditStateUtilsAll;
+  const createOrUpdateListingFromEditState = obj.useCreateOrUpdateListingFromEditState();
   ({ handleCreateOrUpdateFromEditState: c6, error } = createOrUpdateListingFromEditState);
   let items = [error];
-  const layoutEffect = noop.useLayoutEffect(() => {
+  const layoutEffect = react.useLayoutEffect(() => {
     if (null != error) {
+      const presentError = ToastUtils.presentError;
+      ToastUtils;
       let anyErrorMessage = error.getAnyErrorMessage();
       if (anyErrorMessage == null) {
-        const intl = util.intl;
-        anyErrorMessage = intl.string(util.t.R0RpRX);
+        const intl = intl2.intl;
+        anyErrorMessage = intl.string(intl2.t.R0RpRX);
       }
-      ToastUtils.presentError(anyErrorMessage);
+      presentError(anyErrorMessage);
     }
   }, items);
-  const memo = noop.useMemo(() => {
+  const memo = react.useMemo(() => {
     const items = [, , , , ];
-    ({ DETAILS: arr[0], CHANNEL_BENEFITS: arr[1], INTANGIBLE_BENEFITS: arr[2], DESIGN: arr[3], CONFIRMATION: arr[4] } = closure_8);
+    ({ DETAILS: arr[0], CHANNEL_BENEFITS: arr[1], INTANGIBLE_BENEFITS: arr[2], DESIGN: arr[3], CONFIRMATION: arr[4] } = obj);
     return items;
   }, []);
-  let obj2 = { guildId, editStateId, groupListingId, children: null };
-  let obj3 = {
+  const EditStateContextProvider = guildId(17944).EditStateContextProvider;
+  let obj3 = { guildId, children: null };
+  const RoleSubscriptionSettingsDisabledContextProvider = guildId(17921).RoleSubscriptionSettingsDisabledContextProvider;
+  let obj4 = {
     guildId,
-    children: jsx(groupListingId(17936), {
-      guildId,
-      modalKey,
-      onDone: function handleCreate() {
-        const self = this;
-        const apply = closure_8.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      },
-      steps: memo
-    })
+    modalKey,
+    onDone: function handleCreate() {
+      return obj(...arguments);
+    },
+    steps: memo
   };
-  obj2.children = jsx(guildId(17921).RoleSubscriptionSettingsDisabledContextProvider, {
-    guildId,
-    children: jsx(groupListingId(17936), {
-      guildId,
-      modalKey,
-      onDone: function handleCreate() {
-        const self = this;
-        const apply = closure_8.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      },
-      steps: memo
-    })
-  });
-  return jsx(guildId(17944).EditStateContextProvider, { guildId, editStateId, groupListingId, children: null });
+  return <EditStateContextProvider guildId={guildId} editStateId={editStateId} groupListingId={groupListingId}>{null}</EditStateContextProvider>;
 });
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierCreationModal.tsx");
+
+export default tmp3;

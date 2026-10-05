@@ -2,97 +2,98 @@
 
 // Module 13509 (requestReviewModal)
 import LoggerDefault from "Logger" /* 3 */;
-import NativeAppRatingRequestModuleDefault from "NativeAppRatingRequestModule" /* 13510 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import react_nativeDefault from "react-native" /* 13510 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import size from "module_2" /* 2 */;
 
-let closure_4 = async function _requestReviewModal() {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
+let c4, c5, closure_2;
+
+let obj = function _requestReviewModal() {
+  let logger;
+  obj = _asyncToGenerator(async () => {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
     } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
+      let c3;
+      try {
+        let closure_0;
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            let closure_1 = tmp;
+            closure_0 = tmp4;
+            c3 = 1;
+            const _HermesInternal2 = HermesInternal;
+            logger.info("Requesting Android rating (module linked: " + null != react_nativeDefault + ")");
+            const obj8 = react_nativeDefault;
+            let rating;
+            if (obj8 != null) {
+              rating = obj8.requestRating();
+            }
+            c4 = 2;
+            c5 = 1;
+            const obj4 = { value: rating, done: false };
+            return obj4;
+          }
+        } else if (1 === c4) {
+          c3 = 0;
+          closure_0 = closure_2;
+          const _HermesInternal = HermesInternal;
+          closure_129_3.error("Failed to show Android rating request: " + closure_0);
+          const obj5 = { ok: false, error: String(closure_0) };
+          const _String = String;
+          c5 = 3;
+          const obj6 = { value: obj5, done: true };
+          return obj6;
+        } else if (arg0 === 1) {
           c5 = 3;
           throw value;
         } else if (arg0 === 2) {
+          c3 = 0;
           c5 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
-          closure_1 = tmp3;
-          closure_0 = tmp7;
-          c3 = 1;
-          const _HermesInternal2 = HermesInternal;
-          logger.info("Requesting Android rating (module linked: " + null != NativeAppRatingRequestModuleDefault + ")");
-          const obj8 = NativeAppRatingRequestModuleDefault;
-          let rating;
-          if (obj8 != null) {
-            rating = obj8.requestRating();
-          }
-          c4 = 2;
-          c5 = 1;
-          const obj4 = { value: rating, done: false };
-          return obj4;
+          closure_129_3.info("Android rating request dispatched");
+          c3 = 0;
+          c5 = 3;
+          obj = { value: { ok: true }, done: true };
+          return obj;
         }
-      } else if (1 === tmp7) {
-        c3 = 0;
-        closure_128_0 = closure_2;
-        const _HermesInternal = HermesInternal;
-        closure_129_3.error("Failed to show Android rating request: " + closure_128_0);
-        const obj5 = { ok: false, error: null };
-        const _String = String;
-        obj5.error = String(closure_128_0);
-        c5 = 3;
-        const obj6 = { value: obj5, done: true };
-        return obj6;
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c3 = 0;
-        c5 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
-      } else {
-        closure_129_3.info("Android rating request dispatched");
-        c3 = 0;
-        c5 = 3;
-        const obj = { value: { ok: true }, done: true };
-        return obj;
-      }
-    } catch (tmp20) {
-      closure_2 = tmp20;
-      if (tmp4 === c3) {
-        c5 = tmp2;
-        throw tmp20;
-      } else {
-        c4 = tmp;
+      } catch (tmp17) {
+        closure_2 = tmp17;
+        if (0 === c3) {
+          c5 = 3;
+          throw tmp17;
+        } else {
+          c4 = 1;
+        }
       }
     }
-  }
+  });
+  return obj(...arguments);
 };
 let closure_3 = new LoggerDefault("requestReviewModal");
-const size = fn(2);
+new LoggerDefault("requestReviewModal");
 const result = size.fileFinishedImporting("modules/feedback/native/requestReviewModal.android.tsx");
 
 export default function requestReviewModal() {
-  const self = this;
-  const apply = closure_4.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };

@@ -2,54 +2,62 @@
 
 // Module 6479 (DiscordMd5)
 import _modDef6480 from "module_6480" /* 6480 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import size from "module_2" /* 2 */;
 
-const prototype = function DiscordMd5() {
-  return Object.create(new.target.prototype);
-}.prototype;
-prototype["fromBlob"] = function fromBlob(arg0) {
-  closure_0 = arg0;
-  return (async () => {
-    await closure_0.arrayBuffer();
-    return fromArrayBuffer(value);
-  })();
-};
-prototype["fromArrayBuffer"] = function fromArrayBuffer(value) {
-  const _ArrayBuffer = _modDef6480.ArrayBuffer;
-  return _ArrayBuffer.hash(value);
-};
-prototype["fromDataURI"] = function fromDataURI(arg0) {
-  closure_0 = arg0;
-  const resolved = Promise.resolve();
-  return resolved.then(() => {
-    let length;
-    const match = /^data:[^;]*;base64,(.*)$/.exec(closure_0);
-    if (null == match) {
-      const _Error = Error;
-      const error = new Error("Not a base64 data URI");
-      throw error;
-    } else {
-      const _atob = atob;
-      const atobResult = atob(match[1]);
-      const _ArrayBuffer2 = ArrayBuffer;
-      const arrayBuffer = new ArrayBuffer(atobResult.length);
-      const _Uint8Array = Uint8Array;
-      const uint8Array = new Uint8Array(arrayBuffer);
-      let num = 0;
-      if (0 < atobResult.length) {
-        do {
-          uint8Array[num] = atobResult.charCodeAt(num);
-          num = num + 1;
-          length = atobResult.length;
-        } while (num < length);
+class DiscordMd5 {
+  static fromBlob(arg0) {
+    let closure_0 = arg0;
+    return (async () => {
+      let c2;
+      let closure_1;
+      const fromArrayBuffer = fromArrayBuffer2.fromArrayBuffer;
+      await fromArrayBuffer.arrayBuffer();
+      return fromArrayBuffer(value);
+    })();
+  }
+  static fromArrayBuffer(value) {
+    const _ArrayBuffer = _modDef6480.ArrayBuffer;
+    return _ArrayBuffer.hash(value);
+  }
+  static fromDataURI(arg0) {
+    let closure_0 = arg0;
+    const resolved = Promise.resolve();
+    return resolved.then(function() {
+      let length;
+      const obj = /^data:[^;]*;base64,(.*)$/;
+      const match = obj.exec(closure_0);
+      if (null == match) {
+        const _Error = Error;
+        const self = this;
+        const self2 = this;
+        const error = new Error("Not a base64 data URI");
+        throw error;
+      } else {
+        const _atob = atob;
+        const atobResult = atob(match[1]);
+        const _ArrayBuffer2 = ArrayBuffer;
+        const self3 = this;
+        const self4 = this;
+        const arrayBuffer = new ArrayBuffer(atobResult.length);
+        const _Uint8Array = Uint8Array;
+        const self5 = this;
+        const self6 = this;
+        const uint8Array = new Uint8Array(arrayBuffer);
+        let num = 0;
+        if (0 < atobResult.length) {
+          do {
+            uint8Array[num] = atobResult.charCodeAt(num);
+            num = num + 1;
+            length = atobResult.length;
+          } while (num < length);
+        }
+        const _ArrayBuffer = _modDef6480.ArrayBuffer;
+        return _ArrayBuffer.hash(arrayBuffer);
       }
-      const _ArrayBuffer = _modDef6480.ArrayBuffer;
-      return _ArrayBuffer.hash(arrayBuffer);
-    }
-    const obj = /^data:[^;]*;base64,(.*)$/;
-  });
-};
-const size = fn(2);
+    });
+  }
+}
 const result = size.fileFinishedImporting("modules/discord_md5/DiscordMd5.tsx");
 
-export default prototype;
+export default DiscordMd5;

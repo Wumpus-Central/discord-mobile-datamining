@@ -1,24 +1,28 @@
 // === Module 12937: useUserProfileApplicationRoleConnections ===
 
 // Module 12937 (useUserProfileApplicationRoleConnections)
-import _mod19 from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import UserProfileStore from "UserProfileStore" /* 7111 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-const useMemo = _mod19.useMemo;
+const useMemo = react.useMemo;
 let closure_4 = [];
-const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfileApplicationRoleConnections.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let closure_0;
+  let first;
+  let tmp6;
   _require = arg0;
-  const cResult = require("c").c(3);
+  const obj = require("react");
+  const cResult = obj.c(3);
+  const tmp = _require;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserProfileStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -28,21 +32,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     };
     cResult[1] = arg0;
     cResult[2] = fn;
-    let tmp6 = fn;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
-  const obj = require("c");
-  const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
+  const tmpResult = tmp(504);
+  const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
   let prop;
   if (stateFromStores != null) {
     prop = stateFromStores.applicationRoleConnections;
   }
   return null != prop ? stateFromStores.applicationRoleConnections : closure_4;
 }) : ((arg0) => {
+  let closure_0;
+  let stateFromStores;
   _require = arg0;
   const items = [UserProfileStore];
-  stateFromStores = require("initialize").useStateFromStores(items, () => UserProfileStore.getUserProfile(closure_0));
+  const obj = require("get initialized");
+  stateFromStores = obj.useStateFromStores(items, () => UserProfileStore.getUserProfile(closure_0));
   let prop;
   if (stateFromStores != null) {
     prop = stateFromStores.applicationRoleConnections;
@@ -56,3 +63,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     return null == prop ? closure_4 : stateFromStores.applicationRoleConnections;
   }, items1);
 });
+const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfileApplicationRoleConnections.tsx");
+
+export default tmp2;

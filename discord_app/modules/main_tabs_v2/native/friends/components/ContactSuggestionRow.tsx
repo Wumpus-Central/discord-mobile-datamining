@@ -1,28 +1,39 @@
 // === Module 16941: ContactSuggestionRow ===
 
 // Module 16941 (ContactSuggestionRow)
-import util from "util" /* 1126 */;
+import Fragment from "Fragment" /* 21 */;
+import intl3 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import UserUtilsDefault from "UserUtils" /* 4722 */;
 import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 15971 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import Constants from "Constants" /* 1085 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, dependencyMap, importDefault, suggestedFriend;
 
-require = fn;
+let c9;
+let metroImportAll;
+let metroImportDefault;
 let closure_3 = ["suggestedFriend", "added", "onAddSuggestion"];
-const Constants = fn(1085);
-({ AnalyticEvents: closure_7, InstantInviteSources: closure_8, RelationshipTypes: closure_9 } = Constants);
-const jsx = fn(21).jsx;
+({ AnalyticEvents: metroImportDefault, InstantInviteSources: metroImportAll, RelationshipTypes: c9 } = Constants);
+const jsx = Fragment.jsx;
 const constants4 = { ADD: "add" };
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ContactSuggestionRow.tsx");
-
-export const ContactSuggestionRow = ReactCompilerGating.isReactCompilerEnabled() ? ((suggestedFriend) => {
-  const cResult = require("c").c(52);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((suggestedFriend) => {
+  let _location;
+  let closure_0;
+  let closure_1;
+  let intl;
+  let sharedValue;
+  let tmp11;
+  let useReducedMotion;
+  const tmp = _require;
+  let obj = require("react");
+  const cResult = obj.c(52);
   if (cResult[0] !== suggestedFriend) {
     suggestedFriend = suggestedFriend.suggestedFriend;
     closure_3 = suggestedFriend;
@@ -45,175 +56,186 @@ export const ContactSuggestionRow = ReactCompilerGating.isReactCompilerEnabled()
   }
   if (cResult[5] === tmp7.friendSuggestionName) {
     if (cResult[6] === tmp7.user) {
-      sharedValue = tmp(4612).useSharedValue(false);
-      if (cResult[8] === tmp4) {
-        if (cResult[9] === sharedValue) {
-          let tmp15 = cResult[10];
-          let tmp16 = cResult[11];
-        }
-        const effect = noop.useEffect(tmp15, tmp16);
-        if (cResult[12] !== tmp4) {
-          if (tmp4) {
-            const items = [];
-          } else {
-            const obj3 = { name: constants4.ADD, label: null };
-            const intl = tmp(1126).intl;
-            obj3.label = intl.string(tmp(1126).t["ed99+i"]);
-            class F {
-              constructor() {
-                result = closure_4.set(closure_0);
-                return;
-              }
-            }
-            items[0] = obj3;
-          }
-          cResult[12] = tmp4;
-          cResult[13] = items;
+      tmp11 = cResult[7];
+    }
+    const tmpResult = tmp(4612);
+    sharedValue = tmpResult.useSharedValue(false);
+    if (cResult[8] === tmp4) {
+      let tmp13;
+      let tmp14;
+      let tmp21;
+      let tmp20;
+      if (cResult[9] === sharedValue) {
+        tmp13 = cResult[10];
+        tmp14 = cResult[11];
+      }
+      const effect = react.useEffect(tmp13, tmp14);
+      if (cResult[12] !== tmp4) {
+        let items;
+        if (tmp4) {
+          items = [];
         } else {
-          const _Symbol = Symbol;
-          if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-            const items1 = [AccessibilityStore];
+          const obj3 = { name: constants4.ADD, label: intl.string(tmp(1126).t["ed99+i"]) };
+          intl = tmp(1126).intl;
+          class F {
+            constructor() {
+              const result = sharedValue.set(closure_0);
+            }
+          }
+          items[0] = obj3;
+        }
+        cResult[12] = tmp4;
+        cResult[13] = items;
+      }
+      const _Symbol = Symbol;
+      class F {
+        constructor() {
+          const result = sharedValue.set(closure_0);
+        }
+      }
+      if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
+        const items1 = [AccessibilityStore];
+        class T {
+          constructor() {
+            return useReducedMotion.useReducedMotion;
+          }
+        }
+        cResult[14] = items1;
+        class F {
+          constructor() {
+            const result = sharedValue.set(closure_0);
+          }
+        }
+        cResult[15] = T;
+        tmp21 = T;
+        tmp20 = items1;
+      } else {
+        tmp20 = cResult[14];
+        tmp21 = cResult[15];
+      }
+      const tmpResult3 = tmp(573);
+      const stateFromStores = tmpResult3.useStateFromStores(tmp20, tmp21);
+      if (cResult[16] === sharedValue) {
+        if (cResult[17] === tmp5) {
+          class T {
+            constructor() {
+              return useReducedMotion.useReducedMotion;
+            }
+          }
+          const tmp27 = null != undefined;
+          if (tmp27) {
+            if (tmp7 != null) {
+              const mutualFriendsCount = tmp7.mutualFriendsCount;
+            }
             class T {
               constructor() {
-                return closure_1_6.useReducedMotion;
+                return useReducedMotion.useReducedMotion;
               }
             }
-            cResult[14] = items1;
-            class F {
-              constructor() {
-                result = closure_4.set(closure_0);
-                return;
-              }
-            }
-            cResult[15] = T;
-            let tmp24 = T;
-            let tmp23 = items1;
-          } else {
-            tmp23 = cResult[14];
-            tmp24 = cResult[15];
           }
           class F {
             constructor() {
-              result = closure_4.set(closure_0);
-              return;
+              const result = sharedValue.set(closure_0);
             }
           }
-          const stateFromStores = obj5.useStateFromStores(tmp23, tmp24);
-          if (cResult[16] === sharedValue) {
-            if (cResult[17] === tmp5) {
-              class T {
-                constructor() {
-                  return closure_1_6.useReducedMotion;
-                }
-              }
-              if (tmp30) {
-                if (tmp7 != null) {
-                  const mutualFriendsCount = tmp7.mutualFriendsCount;
-                }
-                class T {
-                  constructor() {
-                    return closure_1_6.useReducedMotion;
-                  }
-                }
-              }
-              class F {
-                constructor() {
-                  result = closure_4.set(closure_0);
-                  return;
-                }
-              }
-              const suggestedContactNameForSuggestion = tmp(15970).getSuggestedContactNameForSuggestion(tmp11, tmp7);
-              cResult[20] = tmp7;
-              cResult[21] = tmp11;
-              cResult[22] = suggestedContactNameForSuggestion;
-              tmp30 = null != undefined;
-              const tmpResult2 = tmp(15970);
-            }
-          }
-          const fn = function h(nativeEvent) {
-            if (nativeEvent.nativeEvent.actionName === constants.ADD) {
-              const result = sharedValue.set(true);
-              closure_1(closure_3.user);
-              return AddFriendsScreenUtils.addContactSuggestion(closure_3.user);
-            }
-          };
-          cResult[16] = sharedValue;
-          cResult[17] = tmp5;
-          cResult[18] = tmp7.user;
-          cResult[19] = fn;
+          const tmpResult4 = tmp(15970);
+          const suggestedContactNameForSuggestion = tmpResult4.getSuggestedContactNameForSuggestion(tmp11, tmp7);
+          cResult[20] = tmp7;
+          cResult[21] = tmp11;
+          cResult[22] = suggestedContactNameForSuggestion;
         }
       }
-      class F {
-        constructor() {
-          result = closure_4.set(closure_0);
-          return;
+      const fn = function h(nativeEvent) {
+        if (nativeEvent.nativeEvent.actionName === constants.ADD) {
+          const result = sharedValue.set(true);
+          closure_1(closure_3.user);
+          const obj = AddFriendsScreenUtils;
+          return obj.addContactSuggestion(closure_3.user);
         }
-      }
-      const items2 = [tmp4, sharedValue];
-      cResult[8] = tmp4;
-      cResult[9] = sharedValue;
-      cResult[10] = F;
-      cResult[11] = items2;
-      tmp16 = items2;
-      tmp15 = F;
-      const tmpResult = tmp(4612);
+      };
+      cResult[16] = sharedValue;
+      cResult[17] = tmp5;
+      cResult[18] = tmp7.user;
+      cResult[19] = fn;
     }
-  }
-  if (null == tmp7.friendSuggestionName) {
-    let friendSuggestionName = UserUtilsDefault.getName(tmp7.user);
-    class T {
-      constructor() {
-        return closure_1_6.useReducedMotion;
-      }
-    }
-    cResult[5] = tmp7.friendSuggestionName;
     class F {
       constructor() {
-        result = closure_4.set(closure_0);
-        return;
+        const result = sharedValue.set(closure_0);
+      }
+    }
+    const items2 = [tmp4, sharedValue];
+    cResult[8] = tmp4;
+    cResult[9] = sharedValue;
+    cResult[10] = F;
+    cResult[11] = items2;
+    tmp14 = items2;
+    tmp13 = F;
+  }
+  if (null != tmp7.friendSuggestionName) {
+    let friendSuggestionName;
+    if (tmp7.friendSuggestionName.length > 0) {
+      friendSuggestionName = tmp7.friendSuggestionName;
+    }
+    class T {
+      constructor() {
+        return useReducedMotion.useReducedMotion;
+      }
+    }
+    cResult[6] = tmp7.user;
+    class F {
+      constructor() {
+        const result = sharedValue.set(closure_0);
       }
     }
     cResult[7] = friendSuggestionName;
+    tmp11 = friendSuggestionName;
   }
-  friendSuggestionName = tmp7.friendSuggestionName;
-  let obj = require("c");
+  const obj2 = UserUtilsDefault;
+  friendSuggestionName = obj2.getName(tmp7.user);
 }) : ((suggestedFriend) => {
+  let useReducedMotion;
   suggestedFriend = suggestedFriend.suggestedFriend;
   const added = suggestedFriend.added;
   const onAddSuggestion = suggestedFriend.onAddSuggestion;
   const merged = Object.assign(suggestedFriend, Object.assign({ suggestedFriend: 0, added: 0, onAddSuggestion: 0 }));
   let sharedValue;
   if (null != suggestedFriend.friendSuggestionName) {
+    let friendSuggestionName;
+    let combined;
+    let tmp15;
     if (suggestedFriend.friendSuggestionName.length > 0) {
-      let friendSuggestionName = suggestedFriend.friendSuggestionName;
+      friendSuggestionName = suggestedFriend.friendSuggestionName;
     }
-    sharedValue = suggestedFriend(onAddSuggestion[8]).useSharedValue(false);
+    const obj2 = suggestedFriend(onAddSuggestion[8]);
+    sharedValue = obj2.useSharedValue(false);
     let items = [added, sharedValue];
-    const effect = noop.useEffect(() => {
+    const effect = react.useEffect(() => {
       const result = sharedValue.set(added);
     }, items);
     const items1 = [added];
-    const memo = noop.useMemo(() => {
+    const memo = react.useMemo(() => {
+      let intl;
+      let items;
       if (added) {
-        let items = [];
+        items = [];
       } else {
-        const obj = { name: constants.ADD, label: null };
-        const intl = util.intl;
-        obj.label = intl.string(util.t["ed99+i"]);
+        const obj = { name: constants.ADD, label: intl.string(intl3.t["ed99+i"]) };
+        intl = intl3.intl;
         items = [obj];
       }
       return items;
     }, items1);
-    let obj2 = suggestedFriend(onAddSuggestion[8]);
     const items2 = [AccessibilityStore];
-    const stateFromStores = suggestedFriend(onAddSuggestion[10]).useStateFromStores(items2, () => useReducedMotion.useReducedMotion);
+    const obj3 = suggestedFriend(onAddSuggestion[10]);
+    const stateFromStores = obj3.useStateFromStores(items2, () => useReducedMotion.useReducedMotion);
     const items3 = [sharedValue, onAddSuggestion, suggestedFriend.user];
     let mutualFriendsCount;
-    const callback = noop.useCallback((nativeEvent) => {
+    const callback = react.useCallback((nativeEvent) => {
       if (nativeEvent.nativeEvent.actionName === constants.ADD) {
         const result = sharedValue.set(true);
         onAddSuggestion(suggestedFriend.user);
-        return AddFriendsScreenUtils.addContactSuggestion(suggestedFriend.user);
+        const obj = AddFriendsScreenUtils;
+        return obj.addContactSuggestion(suggestedFriend.user);
       }
     }, items3);
     if (suggestedFriend != null) {
@@ -227,33 +249,27 @@ export const ContactSuggestionRow = ReactCompilerGating.isReactCompilerEnabled()
       }
       tmp12 = mutualFriendsCount1 > 0;
     }
-    const obj3 = suggestedFriend(onAddSuggestion[10]);
-    const suggestedContactNameForSuggestion = suggestedFriend(onAddSuggestion[12]).getSuggestedContactNameForSuggestion(friendSuggestionName, suggestedFriend);
+    const tmp2Result = suggestedFriend(onAddSuggestion[12]);
+    const suggestedContactNameForSuggestion = tmp2Result.getSuggestedContactNameForSuggestion(friendSuggestionName, suggestedFriend);
     if (null != suggestedContactNameForSuggestion) {
       const _HermesInternal = HermesInternal;
-      let combined = "" + added(tmp3[7]).getUserTag(suggestedFriend.user) + " \u00B7 " + suggestedContactNameForSuggestion;
-      let tmp15 = added;
-      const obj6 = added(tmp3[7]);
+      const obj6 = added(onAddSuggestion[7]);
+      combined = "" + obj6.getUserTag(suggestedFriend.user) + " \u00B7 " + suggestedContactNameForSuggestion;
+      tmp15 = added;
     } else {
       tmp15 = added;
-      combined = added(tmp3[7]).getUserTag(suggestedFriend.user);
-      const obj5 = added(tmp3[7]);
+      const obj5 = added(onAddSuggestion[7]);
+      combined = obj5.getUserTag(suggestedFriend.user);
     }
-    const obj4 = {};
-    const tmp2Result = suggestedFriend(onAddSuggestion[12]);
+    tmp15(onAddSuggestion[16]);
     const merged1 = Object.assign(merged);
-    obj4.user = suggestedFriend.user;
-    obj4.type = constants3.SUGGESTION;
-    obj4.accessibilityActions = memo;
-    obj4.onAccessibilityAction = callback;
-    obj4.labelLineClamp = 1;
-    obj4.subLabelLineClamp = 1;
-    obj4.label = friendSuggestionName;
-    const obj7 = { actioned: sharedValue, label: combined, secondaryLabel: null, actionStatus: null, animate: null };
     let formatToPlainStringResult;
+    const ActionStatusSubLabel = tmp2(tmp3[13]).ActionStatusSubLabel;
     if (tmp12) {
       let intl = tmp2(tmp3[9]).intl;
+      const formatToPlainString = intl.formatToPlainString;
       let str3;
+      const z7y34b = tmp2(tmp3[9]).t.z7y34b;
       if (suggestedFriend != null) {
         str3 = suggestedFriend.mutualFriendsCount;
       }
@@ -261,45 +277,31 @@ export const ContactSuggestionRow = ReactCompilerGating.isReactCompilerEnabled()
         str3 = "";
       }
       const obj8 = { count: str3 };
-      formatToPlainStringResult = intl.formatToPlainString(tmp2(tmp3[9]).t.z7y34b, obj8);
+      formatToPlainStringResult = formatToPlainString(z7y34b, obj8);
     }
-    obj7.secondaryLabel = formatToPlainStringResult;
     const intl2 = tmp2(tmp3[9]).intl;
-    obj7.actionStatus = intl2.string(suggestedFriend(onAddSuggestion[9]).t.Kzyxm9);
-    obj7.animate = !stateFromStores;
-    obj4.subLabel = jsx(suggestedFriend(onAddSuggestion[13]).ActionStatusSubLabel, { actioned: sharedValue, label: combined, secondaryLabel: null, actionStatus: null, animate: null });
-    const obj9 = {
+    return <tmp15Result user={suggestedFriend.user} type={constants3.SUGGESTION} accessibilityActions={memo} onAccessibilityAction={callback} labelLineClamp={1} subLabelLineClamp={1} label={friendSuggestionName} subLabel={<ActionStatusSubLabel actioned={sharedValue} label={combined} secondaryLabel={formatToPlainStringResult} actionStatus={intl2.string(suggestedFriend(onAddSuggestion[9]).t.Kzyxm9)} animate={!stateFromStores} />} trailing={jsx(suggestedFriend(onAddSuggestion[15]).ContactSuggestionActions, {
       user: suggestedFriend.user,
       added: sharedValue,
       onAddSuggestion(id) {
-          const obj2 = { suggested_user_id: id.id, suggestion_source: suggestedFriend.source, location: null };
-          let ADD_FRIENDS_MODAL = merged.location;
+          let ADD_FRIENDS_MODAL;
+          const obj = { suggested_user_id: id.id, suggestion_source: suggestedFriend.source, location: ADD_FRIENDS_MODAL };
+          ADD_FRIENDS_MODAL = merged.location;
+          const track = AnalyticsUtilsDefault.track;
+          const FRIEND_SUGGESTION_ADDED = metroImportDefault.FRIEND_SUGGESTION_ADDED;
+          AnalyticsUtilsDefault;
           if (ADD_FRIENDS_MODAL == null) {
-            ADD_FRIENDS_MODAL = constants2.ADD_FRIENDS_MODAL;
+            ADD_FRIENDS_MODAL = metroImportAll.ADD_FRIENDS_MODAL;
           }
-          obj2.location = ADD_FRIENDS_MODAL;
-          AnalyticsUtilsDefault.track(constants.FRIEND_SUGGESTION_ADDED, obj2);
+          track(FRIEND_SUGGESTION_ADDED, obj);
           onAddSuggestion(id);
         },
       animate: !stateFromStores
-    };
-    obj4.trailing = jsx(suggestedFriend(onAddSuggestion[15]).ContactSuggestionActions, {
-      user: suggestedFriend.user,
-      added: sharedValue,
-      onAddSuggestion(id) {
-          const obj2 = { suggested_user_id: id.id, suggestion_source: suggestedFriend.source, location: null };
-          let ADD_FRIENDS_MODAL = merged.location;
-          if (ADD_FRIENDS_MODAL == null) {
-            ADD_FRIENDS_MODAL = constants2.ADD_FRIENDS_MODAL;
-          }
-          obj2.location = ADD_FRIENDS_MODAL;
-          AnalyticsUtilsDefault.track(constants.FRIEND_SUGGESTION_ADDED, obj2);
-          onAddSuggestion(id);
-        },
-      animate: !stateFromStores
-    });
-    return jsx(tmp15(onAddSuggestion[16]), {});
+    })} />;
   }
-  friendSuggestionName = added(onAddSuggestion[7]).getName(suggestedFriend.user);
   let obj = added(onAddSuggestion[7]);
+  friendSuggestionName = obj.getName(suggestedFriend.user);
 });
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ContactSuggestionRow.tsx");
+
+export const ContactSuggestionRow = tmp3;

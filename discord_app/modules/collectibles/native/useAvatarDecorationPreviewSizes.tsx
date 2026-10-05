@@ -1,22 +1,22 @@
 // === Module 10817: useAvatarDecorationPreviewSizes ===
 
 // Module 10817 (useAvatarDecorationPreviewSizes)
-import c from "c" /* 576 */;
+import react from "react" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
 import AvatarDecorationSampleV2 from "AvatarDecorationSampleV2" /* 8466 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import size_mod from "module_2" /* 2 */;
 
-let result = size.fileFinishedImporting("modules/collectibles/native/useAvatarDecorationPreviewSizes.tsx");
-
-export const useAvatarDecorationPreviewSizes = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(3);
-  const size = useWindowDimensionsDefault();
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const obj = react;
+  const cResult = obj.c(3);
+  size = useWindowDimensionsDefault();
   const result = 2 * Math.min(size.width, size.height) / 3;
   const result1 = result * AvatarDecorationSampleV2.avatarPlaceholderSizeRatio;
   if (cResult[0] === result) {
+    let tmp4;
     if (cResult[1] === result1) {
-      let tmp4 = cResult[2];
+      tmp4 = cResult[2];
     }
     return tmp4;
   }
@@ -26,7 +26,12 @@ export const useAvatarDecorationPreviewSizes = ReactCompilerGating.isReactCompil
   cResult[2] = obj2;
   tmp4 = obj2;
 }) : (() => {
-  const size = useWindowDimensionsDefault();
+  size = useWindowDimensionsDefault();
   const result = 2 * Math.min(size.width, size.height) / 3;
-  return { avatarDecorationSize: result, avatarSize: result * AvatarDecorationSampleV2.avatarPlaceholderSizeRatio };
+  const obj = { avatarDecorationSize: result, avatarSize: result * AvatarDecorationSampleV2.avatarPlaceholderSizeRatio };
+  return obj;
 });
+let size = size_mod;
+let result = size.fileFinishedImporting("modules/collectibles/native/useAvatarDecorationPreviewSizes.tsx");
+
+export const useAvatarDecorationPreviewSizes = tmp2;

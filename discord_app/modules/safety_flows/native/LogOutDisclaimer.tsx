@@ -1,48 +1,49 @@
 // === Module 18066: LogOutDisclaimer ===
 
 // Module 18066 (LogOutDisclaimer)
-import jsxProd from "jsxProd" /* 21 */;
-import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
+import Fragment from "Fragment" /* 21 */;
+import react from "react" /* 576 */;
+import intl2 from "intl" /* 1126 */;
 import _modDef2787 from "module_2787" /* 2787 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6082 */;
-import ModalDisclaimer from "ModalDisclaimer" /* 14274 */;
+import ModalDisclaimer2 from "ModalDisclaimer" /* 14274 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-const jsx = jsxProd.jsx;
-const result = size.fileFinishedImporting("modules/safety_flows/native/LogOutDisclaimer.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(1);
+const jsx = Fragment.jsx;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let first;
+  let intl;
+  let obj4;
+  let obj = react;
+  const cResult = obj.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { children: null };
-    const obj3 = { variant: "text-xs/medium", children: null };
-    const intl = util.intl;
-    const obj4 = {
+    const ModalDisclaimer = ModalDisclaimer2.ModalDisclaimer;
+    ({ variant: "text-xs/medium", children: intl.format(_modDef2787["0DHxym"], obj4) });
+    const Text = Text_Text.Text;
+    intl = intl2.intl;
+    const tmp7 = <ModalDisclaimer>{null}</ModalDisclaimer>;
+    obj4 = {
       handleLogOut() {
-          AuthenticationActionCreatorsDefault.logout("safety_flows_enter_email_screen");
+          const obj = AuthenticationActionCreatorsDefault;
+          obj.logout("safety_flows_enter_email_screen");
         }
     };
-    obj3.children = intl.format(_modDef2787["0DHxym"], obj4);
-    obj2.children = jsx(Text_Text.Text, { variant: "text-xs/medium", children: null });
-    const tmp7 = jsx(ModalDisclaimer.ModalDisclaimer, { children: null });
     cResult[0] = tmp7;
-    let first = tmp7;
+    first = tmp7;
   } else {
     first = cResult[0];
   }
   return first;
 }) : (() => {
-  const obj = { children: null };
-  const obj2 = { variant: "text-xs/medium", children: null };
-  const intl = util.intl;
-  obj2.children = intl.format(_modDef2787["0DHxym"], {
-    handleLogOut() {
-      AuthenticationActionCreatorsDefault.logout("safety_flows_enter_email_screen");
-    }
-  });
-  obj.children = jsx(Text_Text.Text, { variant: "text-xs/medium", children: null });
-  return jsx(ModalDisclaimer.ModalDisclaimer, { children: null });
+  let intl;
+  const ModalDisclaimer = ModalDisclaimer2.ModalDisclaimer;
+  ({ variant: "text-xs/medium", children: intl.format(_modDef2787["0DHxym"], obj3) });
+  const Text = Text_Text.Text;
+  intl = intl2.intl;
+  return <ModalDisclaimer>{null}</ModalDisclaimer>;
 });
+const result = size.fileFinishedImporting("modules/safety_flows/native/LogOutDisclaimer.tsx");
+
+export default tmp2;

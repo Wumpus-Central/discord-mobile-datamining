@@ -1,35 +1,37 @@
 // === Module 5681: TopSoundboardSoundStore ===
 
 // Module 5681 (TopSoundboardSoundStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
+import size from "module_2" /* 2 */;
+
+let closure_1, closure_2;
 
 const obj = { topSoundboardSoundsByGuildId: {} };
-let closure_1 = obj;
-let closure_2 = {};
-const PersistedStore = initializeDefault.PersistedStore;
+const React2 = {};
+const PersistedStore = get_initializedDefault.PersistedStore;
 class TopSoundboardSoundStore extends PersistedStore {
+  initialize(arg0) {
+    let tmp = arg0;
+    if (arg0 == null) {
+      tmp = obj;
+    }
+    closure_1 = tmp;
+  }
+  getState() {
+    return closure_1;
+  }
+  getTopSoundboardSoundIdsByGuildId(id) {
+    return closure_1.topSoundboardSoundsByGuildId[id];
+  }
+  getIsFetching(arg0) {
+    return closure_2[arg0];
+  }
 }
 const prototype = TopSoundboardSoundStore.prototype;
-prototype["initialize"] = function initialize(arg0) {
-  let tmp = arg0;
-  if (arg0 == null) {
-    tmp = obj;
-  }
-  closure_1 = tmp;
-};
-prototype["getState"] = function getState() {
-  return closure_1;
-};
-prototype["getTopSoundboardSoundIdsByGuildId"] = function getTopSoundboardSoundIdsByGuildId(id) {
-  return closure_1.topSoundboardSoundsByGuildId[id];
-};
-prototype["getIsFetching"] = function getIsFetching(arg0) {
-  return closure_2[arg0];
-};
 TopSoundboardSoundStore.displayName = "TopSoundboardSoundStore";
 TopSoundboardSoundStore.persistKey = "TopSoundboardSoundStore";
-const topSoundboardSoundStore = new TopSoundboardSoundStore(DispatcherDefault, {
+const obj2 = {
   LOGOUT: function handleLogout() {
     closure_1 = obj;
     closure_2 = {};
@@ -38,6 +40,8 @@ const topSoundboardSoundStore = new TopSoundboardSoundStore(DispatcherDefault, {
     closure_2[guildId.guildId] = true;
   },
   TOP_SOUNDBOARD_SOUNDS_FETCH_SUCCESS: function handleTopSoundboardSoundsLoaded(arg0) {
+    let guildId;
+    let topSoundsMetadata;
     ({ guildId, topSoundsMetadata } = arg0);
     closure_1.topSoundboardSoundsByGuildId[guildId] = topSoundsMetadata.map((soundId) => soundId.soundId);
     closure_2[guildId] = false;
@@ -45,8 +49,8 @@ const topSoundboardSoundStore = new TopSoundboardSoundStore(DispatcherDefault, {
   TOP_SOUNDBOARD_SOUNDS_FETCH_FAILURE: function handleTopSoundboardSoundsFetchFailure(guildId) {
     closure_2[guildId.guildId] = false;
   }
-});
-const size = fn(2);
+};
+const topSoundboardSoundStore = new TopSoundboardSoundStore(DispatcherDefault, obj2);
 const result = size.fileFinishedImporting("modules/soundboard/top_sounds/TopSoundboardSoundStore.tsx");
 
 export default topSoundboardSoundStore;

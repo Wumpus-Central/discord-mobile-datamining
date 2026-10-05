@@ -1,66 +1,27 @@
 // === Module 5022: RobloxSubgamePlatformUtils ===
 
 // Module 5022 (RobloxSubgamePlatformUtils)
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/roblox_subgame_detection/RobloxSubgamePlatformUtils.native.tsx");
-
-export default {
+let obj = {
   getRobloxSubgameURL(arg0) {
-    closure_0 = arg0;
+    let closure_0 = arg0;
     return (async () => {
-      if (c2 === 2) {
-        c2 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+      let ROBLOX_PROTOCOL_URLResult;
+      let c2;
+      const obj4 = tmp3(c1[1]);
+      await obj4.canOpenUrlScheme("roblox");
+      const obj = tmp3(c1[2]);
+      if (value) {
+        ROBLOX_PROTOCOL_URLResult = obj.ROBLOX_PROTOCOL_URL(closure_128_0);
       } else {
-        try {
-          c2 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c2 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c2 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              dependencyMap = 1;
-              c2 = 1;
-              const obj5 = { value: tmp4(5023).canOpenUrlScheme("roblox"), done: false };
-              return obj5;
-            }
-          } else if (arg0 === 1) {
-            c2 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            const obj6 = { value, done: true };
-            return obj6;
-          } else {
-            const obj = tmp4(5021);
-            if (value) {
-              obj.ROBLOX_PROTOCOL_URL(closure_128_0);
-            } else {
-              const result = obj.ROBLOX_DEFERRED_WEB_URL(closure_128_0);
-            }
-            c2 = 3;
-          }
-        } catch (tmp14) {
-          c2 = tmp;
-          throw tmp14;
-        }
+        ROBLOX_PROTOCOL_URLResult = obj.ROBLOX_DEFERRED_WEB_URL(closure_128_0);
       }
+      return ROBLOX_PROTOCOL_URLResult;
     })();
   }
 };
+const result = size.fileFinishedImporting("modules/roblox_subgame_detection/RobloxSubgamePlatformUtils.native.tsx");
+
+export default obj;

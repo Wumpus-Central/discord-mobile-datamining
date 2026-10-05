@@ -2,52 +2,68 @@
 
 // Module 13060 (validateBuildOverride)
 import _modDef12 from "module_12" /* 12 */;
-import util from "util" /* 1126 */;
-import _slicedToArray from "module_32" /* 32 */;
+import Constants from "Constants" /* 1085 */;
+import intl7 from "intl" /* 1126 */;
+import BuildOverrideConstants from "BuildOverrideConstants" /* 1367 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-let closure_5 = fn(1367).BUILD_OVERRIDE_TARGET_NAMES;
-const PublicReleaseChannels = fn(1085).PublicReleaseChannels;
-const size = fn(2);
+let closure_5 = BuildOverrideConstants.BUILD_OVERRIDE_TARGET_NAMES;
+const PublicReleaseChannels = Constants.PublicReleaseChannels;
 const result = size.fileFinishedImporting("modules/build_overrides/validateBuildOverride.tsx");
 
 export default function validateBuildOverride(targetBuildOverride, items3, Version) {
+  let GOEF0C;
+  let allowedVersions;
+  let expiresAt;
+  let formatToPlainString;
+  let formatToPlainString2;
+  let intl2;
+  let intl3;
+  let intl4;
+  let intl6;
+  let mapped;
+  let obj3;
+  let obj6;
+  let releaseChannel;
+  let validForUserIds;
+  let wySUzv;
   if (null != targetBuildOverride) {
     if (null != items3) {
       ({ releaseChannel, expiresAt, validForUserIds, allowedVersions } = targetBuildOverride);
       const _Object = Object;
       const keys = Object.keys(targetBuildOverride.targetBuildOverride);
+      const obj12 = _modDef12;
       if (0 === obj12.intersection(keys, items3).length) {
-        const obj2 = { valid: false, reason: null };
-        const intl5 = util.intl;
-        const obj3 = { requestedTargets: null };
-        const mapped = keys.map((item) => {
+        const obj2 = { valid: false, reason: formatToPlainString2(wySUzv, obj3) };
+        const intl5 = intl7.intl;
+        formatToPlainString2 = intl5.formatToPlainString;
+        obj3 = { requestedTargets: mapped.join(", ") };
+        wySUzv = intl7.t.wySUzv;
+        mapped = keys.map((item) => {
           let str = closure_1_5[item];
           if (str == null) {
             str = "unknown";
           }
           return str;
         });
-        obj3.requestedTargets = mapped.join(", ");
-        obj2.reason = intl5.formatToPlainString(util.t.wySUzv, obj3);
         return obj2;
       } else {
+        let obj8;
         if (null != releaseChannel) {
           const _window = window;
           if (releaseChannel !== window.GLOBAL_ENV.RELEASE_CHANNEL) {
             if (releaseChannel === PublicReleaseChannels.PTB) {
               let formatted = releaseChannel.toUpperCase();
             } else {
-              const formatted1 = releaseChannel.charAt(0).toUpperCase();
+              const str5 = releaseChannel.charAt(0);
+              const formatted1 = str5.toUpperCase();
               const _HermesInternal = HermesInternal;
               formatted = "" + formatted1 + releaseChannel.slice(1);
-              const str5 = releaseChannel.charAt(0);
             }
-            const obj4 = { valid: false, reason: null };
-            const intl4 = util.intl;
-            const obj5 = { releaseChannel: formatted };
-            obj4.reason = intl4.formatToPlainString(util.t.GOEF0C, obj5);
+            const obj4 = { valid: false, reason: intl4.formatToPlainString(intl7.t.GOEF0C, obj5) };
+            intl4 = intl7.intl;
             return obj4;
           }
         }
@@ -58,12 +74,15 @@ export default function validateBuildOverride(targetBuildOverride, items3, Versi
           } else if (allowedVersions.includes(Version)) {
             flag = true;
           } else {
+            let str = ".";
+            const first = _slicedToArray(Version.split("."), 1)[0];
             const iter = allowedVersions[Symbol.iterator]();
+            const str3 = iter.next();
             while (iter !== undefined) {
               let tmp7 = _slicedToArray(str3.split("."), 2);
-              let first = tmp7[0];
+              let first1 = tmp7[0];
               if ("*" === tmp7[1]) {
-                if (tmp2 === first) {
+                if (first === first1) {
                   flag = true;
                   iter.return();
                   break;
@@ -72,46 +91,44 @@ export default function validateBuildOverride(targetBuildOverride, items3, Versi
               }
               continue;
             }
-            str3 = iter.next();
           }
           if (!flag) {
-            const obj = { valid: false, reason: null };
-            const intl = util.intl;
-            const obj6 = { releaseChannel: allowedVersions.join(", ") };
-            obj.reason = intl.formatToPlainString(util.t.GOEF0C, obj6);
+            const obj = { valid: false, reason: formatToPlainString(GOEF0C, obj6) };
+            const intl = intl7.intl;
+            formatToPlainString = intl.formatToPlainString;
+            obj6 = { releaseChannel: allowedVersions.join(", ") };
+            GOEF0C = intl7.t.GOEF0C;
             return obj;
           }
         }
         let time = null;
         if (null != expiresAt) {
           const _Date = Date;
+          const self = this;
+          const self2 = this;
           const date = new Date(expiresAt);
           time = date.getTime();
         }
         if (null != time) {
           const _Date2 = Date;
           if (time < Date.now()) {
-            const obj7 = { valid: false, reason: null };
-            const intl3 = util.intl;
-            obj7.reason = intl3.string(util.t["8eRE6S"]);
-            let obj8 = obj7;
+            const obj7 = { valid: false, reason: intl3.string(intl7.t["8eRE6S"]) };
+            intl3 = intl7.intl;
+            obj8 = obj7;
           }
           return obj8;
         }
         if (validForUserIds.length > 0) {
           if (!validForUserIds.includes(AuthenticationStore.getId())) {
-            obj8 = { valid: false, reason: null };
-            const intl2 = util.intl;
-            obj8.reason = intl2.string(util.t.qZgV0a);
+            obj8 = { valid: false, reason: intl2.string(intl7.t.qZgV0a) };
+            intl2 = intl7.intl;
           }
         }
         obj8 = { valid: true };
       }
-      obj12 = _modDef12;
     }
   }
-  const obj9 = { valid: false, reason: null };
-  const intl6 = util.intl;
-  obj9.reason = intl6.string(util.t.d34xi4);
+  const obj9 = { valid: false, reason: intl6.string(intl7.t.d34xi4) };
+  intl6 = intl7.intl;
   return obj9;
 };

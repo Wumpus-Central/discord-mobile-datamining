@@ -4,10 +4,9 @@
 import DurationsDefault from "Durations" /* 1102 */;
 import WindowVisibilityVideoManager3 from "WindowVisibilityVideoManager" /* 9109 */;
 import MediaEngineStatsStore from "MediaEngineStatsStore" /* 4928 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
 let closure_3 = 10 * DurationsDefault.Millis.SECOND;
-const size = fn(2);
 let result = size.fileFinishedImporting("modules/errors/av_errors/AVErrorUtils.tsx");
 
 export const getReportInboundErrors = function getReportInboundErrors() {
@@ -15,9 +14,9 @@ export const getReportInboundErrors = function getReportInboundErrors() {
   let result = WindowVisibilityVideoManager.isIncomingVideoEnabled();
   if (result) {
     const _performance = performance;
-    const WindowVisibilityVideoManager2 = WindowVisibilityVideoManager3.WindowVisibilityVideoManager;
-    result = performance.now() - WindowVisibilityVideoManager2.lastIncomingVideoEnabledChangeTime() > closure_3;
     const nowResult = performance.now();
+    const WindowVisibilityVideoManager2 = WindowVisibilityVideoManager3.WindowVisibilityVideoManager;
+    result = nowResult - WindowVisibilityVideoManager2.lastIncomingVideoEnabledChangeTime() > closure_3;
   }
   return result;
 };
@@ -36,8 +35,8 @@ export const getAccumulatedStatsWithMinDatapoints = function getAccumulatedStats
       if (accumulatedPerformanceStats.numDatapoints >= num) {
         tmp3 = null;
         if (accumulatedPerformanceStats1.numDatapoints >= num) {
+          tmp3 = { short: accumulatedPerformanceStats, long: accumulatedPerformanceStats1 };
           const obj = { short: accumulatedPerformanceStats, long: accumulatedPerformanceStats1 };
-          tmp3 = obj;
         }
       }
     }

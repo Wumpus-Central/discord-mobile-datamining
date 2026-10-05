@@ -1,37 +1,42 @@
 // === Module 13024: SurveyIndication ===
 
 // Module 13024 (SurveyIndication)
-import util from "util" /* 1126 */;
+import intl2 from "intl" /* 1126 */;
 import PushNotificationConstants from "PushNotificationConstants" /* 6085 */;
-import _modDef13025 from "module_13025" /* 13025 */;
-import _modDef13026 from "module_13026" /* 13026 */;
+import AssetRegistryDefault from "AssetRegistry" /* 13025 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 13026 */;
 import size from "module_2" /* 2 */;
 
 const NotificationTypes = PushNotificationConstants.NotificationTypes;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/SurveyIndication.tsx");
 
 export const createSurveyIndication = function createSurveyIndication(message, forcedTheme, pushFeedbackType) {
+  let GwWhce;
+  let getAssetUriForEmbed;
+  let tmp2;
+  let tmp8Result;
   let TOP_MESSAGE_PUSH = pushFeedbackType;
   if (pushFeedbackType === NotificationTypes.TOP_MESSAGE_PUSH) {
-    let GwWhce = util.t.GwWhce;
-    let tmp2 = require;
+    GwWhce = intl2.t.GwWhce;
+    tmp2 = require;
   } else {
     tmp2 = require;
-    GwWhce = util.t["46+Iqc"];
+    GwWhce = intl2.t["46+Iqc"];
   }
   const intl = tmp2(1126).intl;
-  const obj = { action: "bindUserSurvey", message, notificationType: null };
+  const formatToParts = intl.formatToParts;
+  const obj = { action: "bindUserSurvey", message, notificationType: TOP_MESSAGE_PUSH };
   if (TOP_MESSAGE_PUSH == null) {
     TOP_MESSAGE_PUSH = NotificationTypes.TOP_MESSAGE_PUSH;
   }
-  const obj2 = { content: intl.formatToParts(GwWhce, { handleMessage: obj }), feedbackIconUrl: null };
-  obj.notificationType = TOP_MESSAGE_PUSH;
-  const tmp2Result = tmp2(7605);
+  const obj2 = { content: formatToParts(GwWhce, { handleMessage: obj }), feedbackIconUrl: getAssetUriForEmbed(tmp8Result) };
+  getAssetUriForEmbed = tmp2(7605).getAssetUriForEmbed;
+  tmp2(7605);
+  const tmp2Result2 = tmp2(4729);
   if (tmp2Result2.isThemeDark(forcedTheme)) {
-    let tmp7Result = _modDef13025;
+    tmp8Result = AssetRegistryDefault;
   } else {
-    tmp7Result = _modDef13026;
+    tmp8Result = AssetRegistryDefault2;
   }
-  obj2.feedbackIconUrl = tmp2Result.getAssetUriForEmbed(tmp7Result);
   return obj2;
 };

@@ -1,21 +1,22 @@
 // === Module 15010: useIsQuestDockContentVisible ===
 
 // Module 15010 (useIsQuestDockContentVisible)
-import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 14984 */;
-import noop from "module_19" /* 19 */;
+import get_initialized from "get initialized" /* 504 */;
+import react2 from "react" /* 576 */;
+import QuestConstants from "QuestConstants" /* 5623 */;
+import reactDefault from "react" /* 14984 */;
+import react from "react" /* 19 */;
 import QuestDockStore from "QuestDockStore" /* 14894 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const QuestDockMode = fn(5623).QuestDockMode;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/quests/native/QuestDock/useIsQuestDockContentVisible.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(2);
-  let isVisibleToUser = noop.useContext(QuestDockVisibilityContextDefault).isVisibleToUser;
+const QuestDockMode = QuestConstants.QuestDockMode;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let tmp4;
+  let tmp5;
+  const obj = react2;
+  const cResult = obj.c(2);
+  let isVisibleToUser = react.useContext(reactDefault).isVisibleToUser;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [QuestDockStore];
     const fn = function u() {
@@ -28,7 +29,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
+  const tmpResult = get_initialized;
+  const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
   if (isVisibleToUser) {
     isVisibleToUser = stateFromStores !== QuestDockMode.CLOSED;
   }
@@ -37,9 +39,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   return isVisibleToUser;
 }) : (() => {
-  let isVisibleToUser = noop.useContext(QuestDockVisibilityContextDefault).isVisibleToUser;
+  let isVisibleToUser = react.useContext(reactDefault).isVisibleToUser;
   const items = [QuestDockStore];
-  const stateFromStores = initialize.useStateFromStores(items, () => QuestDockStore.prevRestingQuestDockMode);
+  const obj = get_initialized;
+  const stateFromStores = obj.useStateFromStores(items, () => QuestDockStore.prevRestingQuestDockMode);
   if (isVisibleToUser) {
     isVisibleToUser = stateFromStores !== QuestDockMode.CLOSED;
   }
@@ -48,3 +51,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   return isVisibleToUser;
 });
+const result = size.fileFinishedImporting("modules/quests/native/QuestDock/useIsQuestDockContentVisible.tsx");
+
+export default tmp2;

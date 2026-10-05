@@ -1,29 +1,40 @@
 // === Module 16381: ChannelWrapper ===
 
 // Module 16381 (ChannelWrapper)
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
 import ChannelListLayout from "ChannelListLayout" /* 11698 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const size = fn(2);
+const View = react_native.View;
+const jsx = Fragment.jsx;
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelWrapper.tsx");
 
 export const renderChannelWrapper = function renderChannelWrapper(children, fontScale) {
+  let channel;
+  let launchpad;
+  let layout;
+  let paddingThread;
+  let panelVariant;
+  let result;
   ({ channel, layout, launchpad, panelVariant } = fontScale);
+  fontScale = fontScale.fontScale;
   if (panelVariant === undefined) {
     panelVariant = false;
   }
   let isThreadResult;
+  const getScaledChannelRowHeight = ChannelListLayout.getScaledChannelRowHeight;
+  ChannelListLayout;
   if (channel != null) {
     isThreadResult = channel.isThread();
   }
   if (isThreadResult) {
     isThreadResult = !launchpad;
   }
-  const scaledChannelRowHeight = ChannelListLayout.getScaledChannelRowHeight(fontScale.fontScale, layout, isThreadResult);
-  const layoutStyles = ChannelListLayout.getLayoutStyles(layout, launchpad);
+  const scaledChannelRowHeight = getScaledChannelRowHeight(fontScale, layout, isThreadResult);
+  const tmpResult = ChannelListLayout;
+  const layoutStyles = tmpResult.getLayoutStyles(layout, launchpad);
   const items = [{ flex: 1, flexDirection: "row", alignItems: "center", position: "relative" }, , ];
   let isThreadResult1;
   if (channel != null) {
@@ -31,7 +42,7 @@ export const renderChannelWrapper = function renderChannelWrapper(children, font
   }
   const layout2 = layoutStyles.layout;
   if (isThreadResult1) {
-    let result = 2 * layout2.marginThread.marginVertical;
+    result = 2 * layout2.marginThread.marginVertical;
   } else {
     result = 2 * layout2.margin.marginVertical;
   }
@@ -42,7 +53,7 @@ export const renderChannelWrapper = function renderChannelWrapper(children, font
   }
   const container = layoutStyles.container;
   if (isThreadResult2) {
-    let paddingThread = container.paddingThread;
+    paddingThread = container.paddingThread;
   } else {
     paddingThread = panelVariant ? container.paddingPanels : container.padding;
   }

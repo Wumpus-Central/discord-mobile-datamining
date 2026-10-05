@@ -1,11 +1,12 @@
 // === Module 5984: useInitialValue ===
 
 // Module 5984 (useInitialValue)
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const size = fn(2);
 const result1 = size.fileFinishedImporting("hooks/useInitialValue.tsx");
 
-export default (flag) => noop.useState(flag)[0];
+export default (flag) => react.useState(flag)[0];

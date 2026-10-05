@@ -3,14 +3,32 @@
 // Module 12886 (useBadgeDirectoryNuxPopoverVariant)
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7868 */;
 import BadgeDirectoryNuxGraphicUtils from "BadgeDirectoryNuxGraphicUtils" /* 12887 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7863 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
+import BadgeDirectoryStore_mod from "BadgeDirectoryStore" /* 7863 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-let ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((fetchCatalog) => {
-  const cResult = fetchCatalog(stateFromStores[4]).c(30);
+let failResult, fetchCatalog, succeedResult, tmp3;
+
+let BadgeDirectoryStore = BadgeDirectoryStore_mod;
+let ReactCompilerGating = ReactCompilerGating_mod;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((fetchCatalog) => {
+  let currentUserId;
+  let enabled;
+  let first;
+  let first1;
+  let ref;
+  let stateFromStores;
+  let tmp11;
+  let tmp13;
+  let tmp14;
+  let tmp8;
+  let tmp9;
+  let tmp = fetchCatalog;
+  let tmp2 = stateFromStores;
+  let obj = fetchCatalog(stateFromStores[4]);
+  const cResult = obj.c(30);
   fetchCatalog = fetchCatalog.fetchCatalog;
   let tmp4 = undefined === fetchCatalog;
   ({ currentUserId, enabled } = fetchCatalog);
@@ -25,75 +43,70 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((fetchCatalog) => {
   currentUserId = tmp5;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [BadgeDirectoryStore];
+    let num = 0;
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== tmp5) {
     const fn = function u() {
-      let hasCatalogForResult = null != currentUserId;
-      if (hasCatalogForResult) {
-        hasCatalogForResult = BadgeDirectoryStore.hasCatalogFor(tmp);
-      }
+      const hasCatalogForResult = null != currentUserId && BadgeDirectoryStore.hasCatalogFor(tmp);
       return hasCatalogForResult;
     };
     const items1 = [tmp5];
     cResult[1] = tmp5;
     cResult[2] = fn;
     cResult[3] = items1;
-    let tmp9 = items1;
-    let tmp8 = fn;
+    tmp9 = items1;
+    tmp8 = fn;
   } else {
     tmp8 = cResult[2];
     tmp9 = cResult[3];
   }
-  let obj = fetchCatalog(stateFromStores[4]);
-  stateFromStores = fetchCatalog(stateFromStores[5]).useStateFromStores(first, tmp8, tmp9);
+  const tmpResult = tmp(tmp2[5]);
+  stateFromStores = tmpResult.useStateFromStores(first, tmp8, tmp9);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [BadgeDirectoryStore];
     cResult[4] = items2;
-    let tmp11 = items2;
+    tmp11 = items2;
   } else {
     tmp11 = cResult[4];
   }
   if (cResult[5] !== tmp5) {
     const fn2 = function p() {
-      let result = null != currentUserId;
-      if (result) {
-        result = BadgeDirectoryStore.hasCatalogFetchErrorFor(tmp);
-      }
+      const result = null != currentUserId && BadgeDirectoryStore.hasCatalogFetchErrorFor(tmp);
       return result;
     };
     const items3 = [tmp5];
     cResult[5] = tmp5;
     cResult[6] = fn2;
     cResult[7] = items3;
-    let tmp14 = items3;
-    let tmp13 = fn2;
+    tmp14 = items3;
+    tmp13 = fn2;
   } else {
     tmp13 = cResult[6];
     tmp14 = cResult[7];
   }
-  const tmpResult = fetchCatalog(stateFromStores[5]);
-  const stateFromStores1 = fetchCatalog(stateFromStores[5]).useStateFromStores(tmp11, tmp13, tmp14);
+  const tmpResult2 = tmp(tmp2[5]);
+  const stateFromStores1 = tmpResult2.useStateFromStores(tmp11, tmp13, tmp14);
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
     class F {
       constructor() {
-        tmp = currentUserId(closure_2[6]);
-        result = 5 * currentUserId(closure_2[7]).Millis.SECOND;
-        tmp1 = new tmp(result, 5 * currentUserId(closure_2[7]).Millis.MINUTE);
-        return tmp1;
+        const tmp = currentUserId(stateFromStores[6]);
+        const result = 5 * currentUserId(stateFromStores[7]).Millis.SECOND;
+        const tmp2 = new tmp(result, 5 * currentUserId(stateFromStores[7]).Millis.MINUTE);
+        return tmp2;
       }
     }
     cResult[8] = F;
   } else {
     class F {
       constructor() {
-        tmp = currentUserId(closure_2[6]);
-        result = 5 * currentUserId(closure_2[7]).Millis.SECOND;
-        tmp1 = new tmp(result, 5 * currentUserId(closure_2[7]).Millis.MINUTE);
-        return tmp1;
+        const tmp = currentUserId(stateFromStores[6]);
+        const result = 5 * currentUserId(stateFromStores[7]).Millis.SECOND;
+        const tmp2 = new tmp(result, 5 * currentUserId(stateFromStores[7]).Millis.MINUTE);
+        return tmp2;
       }
     }
   }
@@ -102,10 +115,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((fetchCatalog) => {
   if (cResult[9] === tmp4) {
     class F {
       constructor() {
-        tmp = currentUserId(closure_2[6]);
-        result = 5 * currentUserId(closure_2[7]).Millis.SECOND;
-        tmp1 = new tmp(result, 5 * currentUserId(closure_2[7]).Millis.MINUTE);
-        return tmp1;
+        const tmp = currentUserId(stateFromStores[6]);
+        const result = 5 * currentUserId(stateFromStores[7]).Millis.SECOND;
+        const tmp2 = new tmp(result, 5 * currentUserId(stateFromStores[7]).Millis.MINUTE);
+        return tmp2;
       }
     }
   }
@@ -114,20 +127,23 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((fetchCatalog) => {
       tmp = currentUserId;
       if (null != currentUserId) {
         tmp10 = fetchCatalog;
-        if (fetchCatalog) {
+        if (tmp10) {
           tmp2 = closure_2;
-          if (closure_2) {
+          if (tmp2) {
             tmp8 = closure_4;
             succeedResult = closure_4.succeed();
           } else {
             tmp3 = closure_3;
-            if (closure_3) {
+            if (tmp3) {
               obj2 = closure_4;
               num = 3;
               if (closure_4.fails >= 3) {
                 return;
               } else {
-                failResult = obj2.fail(() => fetchCatalog(stateFromStores[8]).fetchBadgeDirectory(currentUserId, { isRetry: true }));
+                failResult = obj2.fail(() => {
+                  const obj = fetchCatalog(stateFromStores[8]);
+                  return obj.fetchBadgeDirectory(currentUserId, { isRetry: true });
+                });
                 return () => first1.cancel();
               }
             } else if (closure_5.current !== tmp) {
@@ -151,8 +167,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((fetchCatalog) => {
   cResult[13] = tmp5;
   cResult[14] = items4;
   cResult[15] = I;
-  const tmpResult2 = fetchCatalog(stateFromStores[5]);
 }) : ((fetchCatalog) => {
+  let currentUserId;
+  let enabled;
+  let tmp9;
   let flag = fetchCatalog.fetchCatalog;
   ({ currentUserId, enabled } = fetchCatalog);
   if (flag === undefined) {
@@ -170,29 +188,25 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((fetchCatalog) => {
     tmp = currentUserId;
   }
   currentUserId = tmp;
+  let obj = flag(stateFromStores[5]);
   const items = [ref];
   const items1 = [tmp];
-  stateFromStores = flag(stateFromStores[5]).useStateFromStores(items, () => {
-    let hasCatalogForResult = null != currentUserId;
-    if (hasCatalogForResult) {
-      hasCatalogForResult = BadgeDirectoryStore.hasCatalogFor(tmp);
-    }
+  stateFromStores = obj.useStateFromStores(items, () => {
+    const hasCatalogForResult = null != currentUserId && BadgeDirectoryStore.hasCatalogFor(tmp);
     return hasCatalogForResult;
   }, items1);
-  let obj = flag(stateFromStores[5]);
+  let obj2 = flag(stateFromStores[5]);
   const items2 = [ref];
   const items3 = [tmp];
-  stateFromStores1 = flag(stateFromStores[5]).useStateFromStores(items2, () => {
-    let result = null != currentUserId;
-    if (result) {
-      result = BadgeDirectoryStore.hasCatalogFetchErrorFor(tmp);
-    }
+  stateFromStores1 = obj2.useStateFromStores(items2, () => {
+    const result = null != currentUserId && BadgeDirectoryStore.hasCatalogFetchErrorFor(tmp);
     return result;
   }, items3);
   first = stateFromStores1(first.useState(() => {
-    const result = 5 * currentUserId(stateFromStores[7]).Millis.SECOND;
     const tmp = currentUserId(stateFromStores[6]);
-    return new currentUserId(stateFromStores[6])(result, 5 * currentUserId(stateFromStores[7]).Millis.MINUTE);
+    const result = 5 * currentUserId(stateFromStores[7]).Millis.SECOND;
+    const tmp2 = new tmp(result, 5 * currentUserId(stateFromStores[7]).Millis.MINUTE);
+    return tmp2;
   }), 1)[0];
   ref = first.useRef(null);
   const items4 = [tmp, flag, stateFromStores, stateFromStores1, first];
@@ -203,36 +217,44 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((fetchCatalog) => {
           first.succeed();
         } else if (stateFromStores1) {
           if (first.fails < 3) {
-            first.fail(() => flag(stateFromStores[8]).fetchBadgeDirectory(currentUserId, { isRetry: true }));
+            first.fail(() => {
+              const obj = flag(stateFromStores[8]);
+              return obj.fetchBadgeDirectory(currentUserId, { isRetry: true });
+            });
             return () => first.cancel();
           }
         } else if (ref.current !== currentUserId) {
           ref.current = currentUserId;
-          const badgeDirectory = BadgeDirectoryActionCreators.fetchBadgeDirectory(currentUserId);
+          let obj = BadgeDirectoryActionCreators;
+          const badgeDirectory = obj.fetchBadgeDirectory(currentUserId);
         }
       }
     }
   }, items4);
-  let obj2 = flag(stateFromStores[5]);
   const items5 = [ref];
   const items6 = [tmp];
-  stateFromStores2 = flag(stateFromStores[5]).useStateFromStores(items5, () => {
+  const obj3 = flag(stateFromStores[5]);
+  stateFromStores2 = obj3.useStateFromStores(items5, () => {
+    let tmp;
     let num = 0;
     if (null != currentUserId) {
       const badges = BadgeDirectoryStore.getBadges(tmp);
       num = badges.filter((badge_id) => {
         const BETA_BADGE_IDS = flag(stateFromStores[9]).BETA_BADGE_IDS;
-        return BETA_BADGE_IDS.has(badge_id.badge_id) && badge_id.owned;
+        const tmp = BETA_BADGE_IDS.has(badge_id.badge_id) && badge_id.owned;
+        return tmp;
       }).length;
     }
     return num;
   }, items6);
-  const obj3 = flag(stateFromStores[5]);
   const items7 = [ref];
   const items8 = [tmp];
-  stateFromStoresArray = flag(stateFromStores[5]).useStateFromStoresArray(items7, () => {
+  const obj4 = flag(stateFromStores[5]);
+  stateFromStoresArray = obj4.useStateFromStoresArray(items7, () => {
+    let badgeDirectoryNuxGraphicIconUrls;
     if (null != currentUserId) {
-      let badgeDirectoryNuxGraphicIconUrls = BadgeDirectoryNuxGraphicUtils.getBadgeDirectoryNuxGraphicIconUrls(BadgeDirectoryStore.getBadges(tmp));
+      const obj = BadgeDirectoryNuxGraphicUtils;
+      badgeDirectoryNuxGraphicIconUrls = obj.getBadgeDirectoryNuxGraphicIconUrls(BadgeDirectoryStore.getBadges(tmp));
     } else {
       badgeDirectoryNuxGraphicIconUrls = [];
     }
@@ -244,20 +266,24 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((fetchCatalog) => {
     if (null != currentUserId) {
       tmp = null;
       if (stateFromStores) {
+        let obj;
         if (stateFromStores2 > 0) {
+          obj = { variant: "progress", newBadgeCount: tmp3, badgeIconUrls: stateFromStoresArray };
           const obj2 = { variant: "progress", newBadgeCount: tmp3, badgeIconUrls: stateFromStoresArray };
         } else {
-          const obj = { variant: "no-progress" };
+          obj = { variant: "no-progress" };
         }
+        tmp = obj;
       }
     }
     return tmp;
   }, items9);
   if (flag) {
+    let num = 3;
     flag = first.fails < 3;
   }
-  const obj5 = { variantProps: memo, isPending: null };
-  let tmp9 = null != tmp && !stateFromStores;
+  const obj5 = { variantProps: memo, isPending: tmp9 };
+  tmp9 = null != tmp && !stateFromStores;
   if (tmp9) {
     let tmp10 = !stateFromStores1;
     if (stateFromStores1) {
@@ -265,13 +291,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((fetchCatalog) => {
     }
     tmp9 = tmp10;
   }
-  obj5.isPending = tmp9;
   return obj5;
 });
 let closure_6 = tmp2;
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/badges/useBadgeDirectoryNuxPopoverVariant.tsx");
 
 export const useBadgeDirectoryNuxPopoverState = tmp2;

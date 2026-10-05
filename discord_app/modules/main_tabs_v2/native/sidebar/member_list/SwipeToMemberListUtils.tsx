@@ -11,10 +11,12 @@ ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result1 = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/member_list/SwipeToMemberListUtils.tsx");
 
 export const useIsSwipeToMemberListEnabled = () => {
-  const swipeToReplySettingValue = ChatGestureSettings.useSwipeToReplySettingValue();
+  const obj = ChatGestureSettings;
+  const swipeToReplySettingValue = obj.useSwipeToReplySettingValue();
   return swipeToReplySettingValue === preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS;
 };
 export const isSwipeToMemberListEnabled = function isSwipeToMemberListEnabled() {
-  const swipeToReplySettingValue = ChatGestureSettings.getSwipeToReplySettingValue();
+  const obj = ChatGestureSettings;
+  const swipeToReplySettingValue = obj.getSwipeToReplySettingValue();
   return swipeToReplySettingValue === preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS;
 };

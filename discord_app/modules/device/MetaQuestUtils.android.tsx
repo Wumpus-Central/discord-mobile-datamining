@@ -1,19 +1,23 @@
 // === Module 1615: MetaQuestUtils ===
 
 // Module 1615 (MetaQuestUtils)
-import ClientInfoUtilsAll from "ClientInfoUtils" /* 1368 */;
-import NativeMetaQuestModule_mod from "NativeMetaQuestModule" /* 1352 */;
+import react_nativeAll from "react-native" /* 1368 */;
+import react_native_mod from "react-native" /* 1352 */;
+import size from "module_2" /* 2 */;
 
-let NativeMetaQuestModule = NativeMetaQuestModule_mod;
-NativeMetaQuestModule = NativeMetaQuestModule.isMetaQuest();
-const size = fn(2);
+let constants;
+
+let react_native = react_native_mod;
+react_native = react_native.isMetaQuest();
 const result = size.fileFinishedImporting("modules/device/MetaQuestUtils.android.tsx");
 
 export const isMetaQuest = function isMetaQuest() {
-  return NativeMetaQuestModule.isMetaQuest();
+  const obj = react_native;
+  return obj.isMetaQuest();
 };
 export const isQuestRelease = function isQuestRelease() {
-  constants = ClientInfoUtilsAll.getConstants();
+  const obj = react_nativeAll;
+  constants = obj.getConstants();
   let flag;
   if (constants != null) {
     const ReleaseChannel = constants.ReleaseChannel;
@@ -26,4 +30,4 @@ export const isQuestRelease = function isQuestRelease() {
   }
   return flag;
 };
-export const isThumbstickScrollDevice = NativeMetaQuestModule;
+export const isThumbstickScrollDevice = react_native;

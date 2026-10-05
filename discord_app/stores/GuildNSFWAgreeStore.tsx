@@ -1,44 +1,44 @@
 // === Module 5101: GuildNSFWAgreeStore ===
 
 // Module 5101 (GuildNSFWAgreeStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AgeGateUtils from "AgeGateUtils" /* 5100 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const GuildNSFWAgreeStore = "GuildNSFWAgreeStore";
+const GuildNSFWAgreeStore_str = "GuildNSFWAgreeStore";
 let c3 = {};
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class GuildNSFWAgreeStore extends Store {
+  initialize() {
+    const Storage = Storage2.Storage;
+    let c3 = Storage.get(GuildNSFWAgreeStore_str);
+  }
+  didAgree(arg0) {
+    let tmp = null != arg0;
+    if (tmp) {
+      const obj = AgeGateUtils;
+      const result = obj.shouldAgeVerifyForAgeGate();
+      let tmp5 = !result;
+      if (tmp5) {
+        tmp5 = value[arg0] || false;
+      }
+      tmp = tmp5;
+    }
+    return tmp;
+  }
 }
 const prototype = GuildNSFWAgreeStore.prototype;
-prototype["initialize"] = function initialize() {
-  const Storage = Storage2.Storage;
-  value = Storage.get(GuildNSFWAgreeStore);
-};
-prototype["didAgree"] = function didAgree(arg0) {
-  let tmp = null != arg0;
-  if (tmp) {
-    const result = AgeGateUtils.shouldAgeVerifyForAgeGate();
-    let tmp5 = !result;
-    if (!result) {
-      tmp5 = value[arg0] || false;
-      const tmp7 = value[arg0] || false;
-    }
-    tmp = tmp5;
-  }
-  return tmp;
-};
 GuildNSFWAgreeStore.displayName = "GuildNSFWAgreeStore";
-const guildNSFWAgreeStore = new GuildNSFWAgreeStore(DispatcherDefault, {
+let obj = {
   GUILD_NSFW_AGREE: function handleGuildNSFWAgree(guildId) {
-    value[guildId.guildId] = true;
+    c3[guildId.guildId] = true;
     const Storage = Storage2.Storage;
-    const result = Storage.set(GuildNSFWAgreeStore, value);
+    const result = Storage.set(GuildNSFWAgreeStore_str, c3);
   }
-});
-const size = fn(2);
+};
+const guildNSFWAgreeStore = new GuildNSFWAgreeStore(DispatcherDefault, obj);
 let result = size.fileFinishedImporting("stores/GuildNSFWAgreeStore.tsx");
 
 export default guildNSFWAgreeStore;

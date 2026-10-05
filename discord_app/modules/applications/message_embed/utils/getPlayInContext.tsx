@@ -4,17 +4,24 @@
 import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 9011 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, num;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/applications/message_embed/utils/getPlayInContext.tsx");
-
-export const usePlayInContext = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let channelId;
+  let closure_0;
+  let currentEmbeddedActivity;
+  let stateFromStores;
+  let tmp4;
+  let tmp5;
+  let tmp8;
   _require = arg0;
-  const cResult = require("c").c(14);
+  const tmp = _require;
+  const obj = require("react");
+  const cResult = obj.c(14);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SelectedChannelStore];
     const fn = function o() {
@@ -27,20 +34,24 @@ export const usePlayInContext = ReactCompilerGating.isReactCompilerEnabled() ? (
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const obj = require("c");
-  stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
+  const tmpResult = tmp(stateFromStores[4]);
+  stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [EmbeddedActivitiesStore];
     cResult[2] = items1;
-    let tmp8 = items1;
+    tmp8 = items1;
   } else {
     tmp8 = cResult[2];
   }
   if (cResult[3] === arg0) {
+    let tmp10;
+    let tmp16;
+    let tmp15;
     if (cResult[4] === stateFromStores) {
-      let tmp10 = cResult[5];
+      tmp10 = cResult[5];
     }
-    const stateFromStores1 = tmp(tmp2[4]).useStateFromStores(tmp8, tmp10);
+    const tmpResult4 = tmp(stateFromStores[4]);
+    const stateFromStores1 = tmpResult4.useStateFromStores(tmp8, tmp10);
     let compositeInstanceId;
     if (stateFromStores1 != null) {
       compositeInstanceId = stateFromStores1.compositeInstanceId;
@@ -57,17 +68,18 @@ export const usePlayInContext = ReactCompilerGating.isReactCompilerEnabled() ? (
       };
       cResult[6] = items2;
       cResult[7] = fn2;
-      let tmp16 = fn2;
-      let tmp15 = items2;
+      tmp16 = fn2;
+      tmp15 = items2;
     } else {
       tmp15 = cResult[6];
       tmp16 = cResult[7];
     }
-    const tmpResult4 = tmp(tmp2[4]);
-    const stateFromStores2 = tmp(tmp2[4]).useStateFromStores(tmp15, tmp16);
-    const tmpResult5 = tmp(tmp2[4]);
-    const embeddedActivityLaunchability = tmp(tmp2[5]).useEmbeddedActivityLaunchability(stateFromStores);
+    const tmpResult5 = tmp(stateFromStores[4]);
+    const stateFromStores2 = tmpResult5.useStateFromStores(tmp15, tmp16);
+    const tmpResult6 = tmp(stateFromStores[5]);
+    const embeddedActivityLaunchability = tmpResult6.useEmbeddedActivityLaunchability(stateFromStores);
     let tmp20 = null != compositeInstanceId;
+    const CAN_LAUNCH = tmp(tmp2[5]).EmbeddedActivityLaunchability.CAN_LAUNCH;
     if (tmp20) {
       let compositeInstanceId1;
       if (stateFromStores2 != null) {
@@ -75,13 +87,13 @@ export const usePlayInContext = ReactCompilerGating.isReactCompilerEnabled() ? (
       }
       tmp20 = compositeInstanceId1 === compositeInstanceId;
     }
-    const tmp22 = embeddedActivityLaunchability === tmp(tmp2[5]).EmbeddedActivityLaunchability.CAN_LAUNCH;
-    if (cResult[8] === tmp22) {
+    if (cResult[8] === embeddedActivityLaunchability === CAN_LAUNCH) {
       if (cResult[9] === compositeInstanceId) {
         if (cResult[10] === _location) {
           if (cResult[11] === stateFromStores) {
+            let tmp23;
             if (cResult[12] === tmp20) {
-              let tmp23 = cResult[13];
+              tmp23 = cResult[13];
             }
             return tmp23;
           }
@@ -109,15 +121,14 @@ export const usePlayInContext = ReactCompilerGating.isReactCompilerEnabled() ? (
     tmp24[1] = compositeInstanceId;
     tmp24[2] = _location;
     tmp24[3] = tmp20;
-    tmp24[4] = tmp22;
-    cResult[8] = tmp22;
+    tmp24[4] = embeddedActivityLaunchability === CAN_LAUNCH;
+    cResult[8] = embeddedActivityLaunchability === CAN_LAUNCH;
     cResult[9] = compositeInstanceId;
     cResult[10] = _location;
     cResult[11] = stateFromStores;
     cResult[12] = tmp20;
     cResult[13] = tmp24;
     tmp23 = tmp24;
-    const tmpResult6 = tmp(tmp2[5]);
   }
   class I {
     constructor() {
@@ -140,14 +151,21 @@ export const usePlayInContext = ReactCompilerGating.isReactCompilerEnabled() ? (
   cResult[4] = stateFromStores;
   cResult[5] = I;
   tmp10 = I;
-  const tmpResult = require("initialize");
 }) : ((arg0) => {
+  let CAN_LAUNCH;
+  let channelId;
+  let closure_0;
+  let currentEmbeddedActivity;
+  let stateFromStores;
+  let tmp10;
   _require = arg0;
+  const tmp = _require;
   const items = [SelectedChannelStore];
-  stateFromStores = require("initialize").useStateFromStores(items, () => channelId.getChannelId());
-  const obj = require("initialize");
+  const obj = require("get initialized");
+  stateFromStores = obj.useStateFromStores(items, () => channelId.getChannelId());
   const items1 = [EmbeddedActivitiesStore];
-  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
+  const obj2 = require("get initialized");
+  const stateFromStores1 = obj2.useStateFromStores(items1, () => {
     if (null == stateFromStores) {
       return null;
     } else {
@@ -168,13 +186,14 @@ export const usePlayInContext = ReactCompilerGating.isReactCompilerEnabled() ? (
   if (stateFromStores1 != null) {
     _location = stateFromStores1.location;
   }
-  const obj2 = require("initialize");
   const items2 = [EmbeddedActivitiesStore];
-  const stateFromStores2 = require("initialize").useStateFromStores(items2, () => currentEmbeddedActivity.getCurrentEmbeddedActivity());
-  const tmpResult = require("initialize");
-  const embeddedActivityLaunchability = require("getEmbeddedActivityLaunchability").useEmbeddedActivityLaunchability(stateFromStores);
-  const obj3 = { currentChannelId: stateFromStores, instanceId: compositeInstanceId, instanceLocation: _location, isCurrentlyInInstance: null, canLaunchInChannel: null };
-  let tmp10 = null != compositeInstanceId;
+  const tmpResult = tmp(stateFromStores[4]);
+  const stateFromStores2 = tmpResult.useStateFromStores(items2, () => currentEmbeddedActivity.getCurrentEmbeddedActivity());
+  const tmpResult2 = tmp(stateFromStores[5]);
+  const embeddedActivityLaunchability = tmpResult2.useEmbeddedActivityLaunchability(stateFromStores);
+  const obj3 = { currentChannelId: stateFromStores, instanceId: compositeInstanceId, instanceLocation: _location, isCurrentlyInInstance: tmp10, canLaunchInChannel: embeddedActivityLaunchability === CAN_LAUNCH };
+  tmp10 = null != compositeInstanceId;
+  CAN_LAUNCH = tmp(tmp2[5]).EmbeddedActivityLaunchability.CAN_LAUNCH;
   if (tmp10) {
     let compositeInstanceId1;
     if (stateFromStores2 != null) {
@@ -182,12 +201,14 @@ export const usePlayInContext = ReactCompilerGating.isReactCompilerEnabled() ? (
     }
     tmp10 = compositeInstanceId1 === compositeInstanceId;
   }
-  obj3.isCurrentlyInInstance = tmp10;
-  obj3.canLaunchInChannel = embeddedActivityLaunchability === require("getEmbeddedActivityLaunchability").EmbeddedActivityLaunchability.CAN_LAUNCH;
   return obj3;
 });
+const result = size.fileFinishedImporting("modules/applications/message_embed/utils/getPlayInContext.tsx");
+
+export const usePlayInContext = tmp2;
 export const getPlayInContext = function getPlayInContext(id, channel_id) {
-  closure_0 = id;
+  let tmp11;
+  let closure_0 = id;
   let channelId = channel_id;
   if (channel_id == null) {
     channelId = SelectedChannelStore.getChannelId();
@@ -195,13 +216,17 @@ export const getPlayInContext = function getPlayInContext(id, channel_id) {
   if (null == channelId) {
     return { currentChannelId: null, instanceId: null, instanceLocation: null, isCurrentlyInInstance: false, canLaunchInChannel: false };
   } else {
+    let NO_CHANNEL;
+    let tmp3;
     if (null != channelId) {
-      let NO_CHANNEL = getEmbeddedActivityLaunchability.getEmbeddedActivityLaunchabilityForChannel(channelId);
-      let tmp3 = require;
+      const obj = getEmbeddedActivityLaunchability;
+      NO_CHANNEL = obj.getEmbeddedActivityLaunchabilityForChannel(channelId);
+      tmp3 = require;
     } else {
       tmp3 = require;
       NO_CHANNEL = getEmbeddedActivityLaunchability.EmbeddedActivityLaunchability.NO_CHANNEL;
     }
+    const CAN_LAUNCH = tmp3(9011).EmbeddedActivityLaunchability.CAN_LAUNCH;
     const embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(channelId);
     const found = embeddedActivitiesForChannel.filter((applicationId) => applicationId.applicationId === closure_0);
     let first;
@@ -217,8 +242,8 @@ export const getPlayInContext = function getPlayInContext(id, channel_id) {
       _location = first.location;
     }
     const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
-    const obj3 = { currentChannelId: channelId, instanceId: compositeInstanceId, instanceLocation: _location, isCurrentlyInInstance: null, canLaunchInChannel: null };
-    let tmp11 = null != compositeInstanceId;
+    const obj3 = { currentChannelId: channelId, instanceId: compositeInstanceId, instanceLocation: _location, isCurrentlyInInstance: tmp11, canLaunchInChannel: NO_CHANNEL === CAN_LAUNCH };
+    tmp11 = null != compositeInstanceId;
     if (tmp11) {
       let compositeInstanceId1;
       if (currentEmbeddedActivity != null) {
@@ -226,8 +251,6 @@ export const getPlayInContext = function getPlayInContext(id, channel_id) {
       }
       tmp11 = compositeInstanceId1 === compositeInstanceId;
     }
-    obj3.isCurrentlyInInstance = tmp11;
-    obj3.canLaunchInChannel = NO_CHANNEL === tmp3(9011).EmbeddedActivityLaunchability.CAN_LAUNCH;
     return obj3;
   }
 };

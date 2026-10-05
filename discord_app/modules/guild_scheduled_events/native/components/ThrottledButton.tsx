@@ -1,32 +1,36 @@
 // === Module 9267: ThrottledButton ===
 
 // Module 9267 (ThrottledButton)
-import c from "c" /* 576 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
 import components_Button_Button from "components/Button/Button" /* 5594 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
 let closure_2 = ["onPress", "onPressIn", "onPressOut", "throttleMs"];
-const jsx = fn(21).jsx;
+const jsx = Fragment.jsx;
 let c6 = 500;
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let tmp3;
+  let tmp4;
+  let tmp5;
   let tmp = arg0;
-  const cResult = c.c(4);
+  const obj = react2;
+  const cResult = obj.c(4);
   if (undefined === arg0) {
     tmp = c6;
   }
-  closure_0 = tmp;
-  closure_1 = noop.useRef(null);
+  let closure_0 = tmp;
+  let closure_1 = react.useRef(null);
   if (cResult[0] !== tmp) {
     const fn = function t(arg0) {
+      let ref;
       closure_0 = arg0;
       return (arg0) => {
-        let tmp2 = null != closure_0;
-        if (tmp2) {
-          tmp2 = null === ref.current;
-        }
+        const tmp2 = null != closure_0 && null === ref.current;
         if (tmp2) {
           closure_0(arg0);
           const _setTimeout = setTimeout;
@@ -38,35 +42,41 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     };
     cResult[0] = tmp;
     cResult[1] = fn;
-    let tmp3 = fn;
+    tmp3 = fn;
   } else {
     tmp3 = cResult[1];
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function f() {
+      let ref;
       return () => clearTimeout(ref.current);
     };
     const items = [];
     cResult[2] = fn2;
     cResult[3] = items;
-    let tmp5 = items;
-    let tmp4 = fn2;
+    tmp5 = items;
+    tmp4 = fn2;
   } else {
     tmp4 = cResult[2];
     tmp5 = cResult[3];
   }
-  const effect = noop.useEffect(tmp4, tmp5);
+  const effect = react.useEffect(tmp4, tmp5);
   return tmp3;
 }) : (() => {
-  closure_1 = noop.useRef(null);
-  const effect = noop.useEffect(() => () => clearTimeout(ref.current), []);
+  let num = arg0;
+  if (arg0 === undefined) {
+    num = 500;
+  }
+  let closure_1 = react.useRef(null);
+  const effect = react.useEffect(() => {
+    let ref;
+    return () => clearTimeout(ref.current);
+  }, []);
   return (arg0) => {
-    closure_0 = arg0;
+    let ref;
+    let closure_0 = arg0;
     return (arg0) => {
-      let tmp2 = null != closure_0;
-      if (tmp2) {
-        tmp2 = null === ref.current;
-      }
+      const tmp2 = null != closure_0 && null === ref.current;
       if (tmp2) {
         closure_0(arg0);
         const _setTimeout = setTimeout;
@@ -78,12 +88,19 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   };
 });
 let closure_7 = tmp2;
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/ThrottledButton.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(20);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let onPress;
+  let onPressIn;
+  let onPressOut;
+  let throttleMs;
+  let tmp4;
+  let tmp5;
+  let tmp6;
+  let tmp7;
+  let tmp8;
+  const obj = react2;
+  const cResult = obj.c(20);
   if (cResult[0] !== arg0) {
     ({ onPress, onPressIn, onPressOut, throttleMs } = arg0);
     const tmp11 = _objectWithoutProperties(arg0, closure_2);
@@ -93,11 +110,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[3] = onPressOut;
     cResult[4] = tmp11;
     cResult[5] = throttleMs;
-    let tmp8 = throttleMs;
-    let tmp7 = tmp11;
-    let tmp6 = onPressOut;
-    let tmp5 = onPressIn;
-    let tmp4 = onPress;
+    tmp8 = throttleMs;
+    tmp7 = tmp11;
+    tmp6 = onPressOut;
+    tmp5 = onPressIn;
+    tmp4 = onPress;
   } else {
     tmp4 = cResult[1];
     tmp5 = cResult[2];
@@ -110,33 +127,34 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const tmp12Result = closure_7(tmp8);
   if (cResult[6] === tmp12Result) {
+    let tmp14;
     if (cResult[7] === tmp4) {
-      let tmp14 = cResult[8];
+      tmp14 = cResult[8];
     }
     if (cResult[9] === tmp12Result) {
+      let tmp16;
       if (cResult[10] === tmp5) {
-        let tmp16 = cResult[11];
+        tmp16 = cResult[11];
       }
       if (cResult[12] === tmp12Result) {
+        let tmp18;
         if (cResult[13] === tmp6) {
-          let tmp18 = cResult[14];
+          tmp18 = cResult[14];
         }
         if (cResult[15] === tmp7) {
           if (cResult[16] === tmp14) {
             if (cResult[17] === tmp16) {
+              let tmp20;
               if (cResult[18] === tmp18) {
-                let tmp20 = cResult[19];
+                tmp20 = cResult[19];
               }
               return tmp20;
             }
           }
         }
-        const obj2 = {};
+        const Button = components_Button_Button.Button;
         const merged = Object.assign(tmp7);
-        obj2.onPress = tmp14;
-        obj2.onPressIn = tmp16;
-        obj2.onPressOut = tmp18;
-        const tmp25 = jsx(components_Button_Button.Button, {});
+        const tmp25 = <Button onPress={tmp14} onPressIn={tmp16} onPressOut={tmp18} />;
         cResult[15] = tmp7;
         cResult[16] = tmp14;
         cResult[17] = tmp16;
@@ -162,6 +180,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[8] = tmp12ResultResult2;
   tmp14 = tmp12ResultResult2;
 }) : ((throttleMs) => {
+  let onPress;
+  let onPressIn;
+  let onPressOut;
   let num = throttleMs.throttleMs;
   ({ onPress, onPressIn, onPressOut } = throttleMs);
   if (num === undefined) {
@@ -169,11 +190,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const merged = Object.assign(throttleMs, Object.assign({ onPress: 0, onPressIn: 0, onPressOut: 0, throttleMs: 0 }));
   const tmp2 = closure_7(num);
-  const obj = {};
+  const Button = components_Button_Button.Button;
   const merged1 = Object.assign(merged);
-  obj.onPress = tmp2(onPress);
-  obj.onPressIn = tmp2(onPressIn);
-  obj.onPressOut = tmp2(onPressOut);
-  return jsx(components_Button_Button.Button, {});
+  return <Button onPress={tmp2(onPress)} onPressIn={tmp2(onPressIn)} onPressOut={tmp2(onPressOut)} />;
 });
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/ThrottledButton.tsx");
+
+export default tmp3;
 export const useThrottledActionHandler = tmp2;

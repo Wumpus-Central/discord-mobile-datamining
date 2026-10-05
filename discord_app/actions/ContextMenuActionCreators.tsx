@@ -3,9 +3,19 @@
 // Module 5943 (ContextMenuActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
+import size_mod from "module_2" /* 2 */;
+
+let importDefault;
 
 function openContextMenu(stopPropagation, render, enableSpellCheck, renderLazy) {
+  let bottom;
+  let closure_1;
+  let currentTarget2;
+  let dOMRect;
+  let left;
+  let obj2;
+  let pageX;
+  let pageY;
   stopPropagation.stopPropagation();
   if (null == stopPropagation.currentTarget.contains) {
     pageY = 0;
@@ -56,7 +66,7 @@ function openContextMenu(stopPropagation, render, enableSpellCheck, renderLazy) 
           sum1 = bottom;
           tmp3 = left;
           if (0 === bottom) {
-            let size;
+            size = undefined;
             if (target != null) {
               size = target.getBoundingClientRect();
             }
@@ -90,22 +100,22 @@ function openContextMenu(stopPropagation, render, enableSpellCheck, renderLazy) 
         }
       }
     }
-    let contextMenu = { render, renderLazy, target: null, rect: null, config: null };
-    let currentTarget2 = stopPropagation.target;
+    let contextMenu = { render, renderLazy, target: currentTarget2, rect: dOMRect, config: obj2 };
+    currentTarget2 = stopPropagation.target;
     if (currentTarget2 == null) {
       currentTarget2 = stopPropagation.currentTarget;
     }
-    contextMenu.target = currentTarget2;
     const _DOMRect = DOMRect;
-    const dOMRect = new DOMRect(tmp3, sum1, 0, 0);
-    contextMenu.rect = dOMRect;
-    let APP = contextMenu(5944).getCurrentlyInteractingAppContext();
+    const self = this;
+    const self2 = this;
+    dOMRect = new DOMRect(tmp3, sum1, 0, 0);
+    const obj3 = contextMenu(5944);
+    let APP = obj3.getCurrentlyInteractingAppContext();
     if (APP == null) {
       APP = AppContext.APP;
     }
-    const obj2 = { context: APP };
+    obj2 = { context: APP };
     const merged = Object.assign(enableSpellCheck);
-    contextMenu.config = obj2;
     let nativeEvent = stopPropagation;
     if ("nativeEvent" in stopPropagation) {
       nativeEvent = stopPropagation.nativeEvent;
@@ -115,27 +125,29 @@ function openContextMenu(stopPropagation, render, enableSpellCheck, renderLazy) 
       enableSpellCheck = enableSpellCheck.enableSpellCheck;
     }
     if (enableSpellCheck) {
-      if (tmp16Result.isDesktop()) {
+      const tmp14Result = contextMenu(1369);
+      if (tmp14Result.isDesktop()) {
         if (nativeEvent.isTrusted) {
-          importDefault = tmp16(5947).addResultListener(() => {
+          const tmp14Result2 = contextMenu(5947);
+          importDefault = tmp14Result2.addResultListener(() => {
             closure_1();
             contextMenu = DispatcherDefault;
-            contextMenu.dispatch({ type: "CONTEXT_MENU_OPEN", contextMenu });
+            const obj2 = { type: "CONTEXT_MENU_OPEN", contextMenu };
+            contextMenu.dispatch(obj2);
           });
-          const tmp16Result2 = tmp16(5947);
         }
       }
-      tmp16Result = tmp16(1369);
     }
     stopPropagation.preventDefault();
-    const obj3 = contextMenu(5944);
     const obj4 = { type: "CONTEXT_MENU_OPEN", contextMenu };
-    DispatcherDefault.dispatch(obj4);
+    const obj6 = DispatcherDefault;
+    obj6.dispatch(obj4);
   } else {
     const currentTarget = stopPropagation.currentTarget;
   }
 }
 const AppContext = Constants.AppContext;
+let size = size_mod;
 const result = size.fileFinishedImporting("actions/ContextMenuActionCreators.tsx");
 
 export function closeContextMenu() {

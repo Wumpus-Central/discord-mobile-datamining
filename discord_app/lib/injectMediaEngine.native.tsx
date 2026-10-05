@@ -6,7 +6,7 @@ import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-inject.inject({
+const obj = {
   supported() {
     return true;
   },
@@ -23,5 +23,6 @@ inject.inject({
   getOpenH264LibraryPath() {
 
   }
-});
+};
+inject.inject(obj);
 const result = size.fileFinishedImporting("lib/injectMediaEngine.native.tsx");

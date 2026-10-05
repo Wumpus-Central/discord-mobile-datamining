@@ -11,48 +11,52 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("design/tokens/native/SemanticColorContext.native.tsx");
 
 export const getSemanticColorContextFromThemeContext = function getSemanticColorContextFromThemeContext(primaryColor) {
+  let contrast;
+  let enabledExperiments;
+  let obj5;
+  let primaryColor2;
+  let saturation;
+  let secondaryColor;
   primaryColor = primaryColor.primaryColor;
-  const gradientThemeFromFlags = getGradientThemeFromFlags.getGradientThemeFromFlags(primaryColor);
+  const obj = getGradientThemeFromFlags;
+  const gradientThemeFromFlags = obj.getGradientThemeFromFlags(primaryColor);
   ({ contrast, saturation, enabledExperiments } = primaryColor);
-  let gradientThemeMetadata = client_themes_ClientThemesUtils.getGradientThemeMetadata(gradientThemeFromFlags, primaryColor.gradient);
+  const obj2 = client_themes_ClientThemesUtils;
+  let gradientThemeMetadata = obj2.getGradientThemeMetadata(gradientThemeFromFlags, primaryColor.gradient);
   if (null != primaryColor) {
     ({ primaryColor: primaryColor2, secondaryColor } = primaryColor);
-    let tmp9 = null;
+    let tmp10 = null;
     if (null != primaryColor2) {
-      const int2hexResult = utils_ColorUtils.int2hex(primaryColor2);
       const tmpResult = utils_ColorUtils;
+      const int2hexResult = tmpResult.int2hex(primaryColor2);
+      const int2hex = utils_ColorUtils.int2hex;
+      utils_ColorUtils;
       if (secondaryColor == null) {
         secondaryColor = primaryColor2;
       }
-      const int2hexResult1 = utils_ColorUtils.int2hex(secondaryColor);
-      const tmpResult3 = utils_ColorUtils;
-      const obj5 = _modDef683(int2hexResult);
-      const mixResult = _modDef683(int2hexResult).mix(int2hexResult1, 0.5);
-      const hexResult = _modDef683(int2hexResult).mix(int2hexResult1, 0.5).hex();
+      const int2hexResult1 = int2hex(secondaryColor);
+      const obj4 = _modDef683(int2hexResult);
+      const mixResult = obj4.mix(int2hexResult1, 0.5);
       let str = "dark";
-      if (tmpResult4.isThemeLight(tmp10)) {
+      const hexResult = mixResult.hex();
+      const tmpResult4 = native;
+      if (tmpResult4.isThemeLight(tmp11)) {
         str = "light";
       }
-      const obj3 = { theme: str, colors: null };
-      const obj4 = { "gradient.start": int2hexResult, "gradient.mid": hexResult, "gradient.end": int2hexResult1, "gradient.top": int2hexResult, "gradient.bottom": int2hexResult1, "gradient.primary": int2hexResult, "gradient.secondary": int2hexResult1 };
-      obj3.colors = obj4;
-      tmp9 = obj3;
-      tmpResult4 = native;
+      const obj3 = { theme: str, colors: obj5 };
+      tmp10 = obj3;
+      obj5 = { "gradient.start": int2hexResult, "gradient.mid": hexResult, "gradient.end": int2hexResult1, "gradient.top": int2hexResult, "gradient.bottom": int2hexResult1, "gradient.primary": int2hexResult, "gradient.secondary": int2hexResult1 };
     }
-    gradientThemeMetadata = tmp9;
+    gradientThemeMetadata = tmp10;
   }
   let num2 = 1;
   let num3 = 1;
   if (null == primaryColor) {
     num3 = contrast;
   }
-  const obj6 = { contrast: num3, saturation: null, gradient: null, isProfileTheme: null, enabledExperiments: null };
+  const obj6 = { contrast: num3, saturation: num2, gradient: gradientThemeMetadata, isProfileTheme: null != primaryColor, enabledExperiments };
   if (null == primaryColor) {
     num2 = saturation;
   }
-  obj6.saturation = num2;
-  obj6.gradient = gradientThemeMetadata;
-  obj6.isProfileTheme = null != primaryColor;
-  obj6.enabledExperiments = enabledExperiments;
   return obj6;
 };

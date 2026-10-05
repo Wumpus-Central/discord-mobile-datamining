@@ -1,24 +1,25 @@
 // === Module 4895: PlainTextExperimentContext ===
 
 // Module 4895 (PlainTextExperimentContext)
-import c from "c" /* 576 */;
-import noop from "module_19" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const jsx = fn(21).jsx;
-const context = noop.createContext(false);
-fn(558);
-let ReactCompilerGating = fn(558);
-ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const size = fn(2);
-const result1 = size.fileFinishedImporting("design/components/Text/native/PlainTextExperimentContext.tsx");
-
-export const PlainTextExperimentProvider = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(3);
+const jsx = Fragment.jsx;
+const context = react.createContext(false);
+let ReactCompilerGating = ReactCompilerGating_mod;
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let children;
+  let enabled;
+  const obj = react2;
+  const cResult = obj.c(3);
   ({ children, enabled } = arg0);
   if (cResult[0] === children) {
+    let tmp2;
     if (cResult[1] === enabled) {
-      let tmp2 = cResult[2];
+      tmp2 = cResult[2];
     }
     return tmp2;
   }
@@ -28,4 +29,9 @@ export const PlainTextExperimentProvider = ReactCompilerGating.isReactCompilerEn
   cResult[2] = tmp3;
   tmp2 = tmp3;
 }) : ((enabled) => <closure_4 value={enabled.enabled}>{enabled.children}</closure_4>);
-export const usePlainTextExperimentEnabled = () => noop.useContext(closure_4);
+ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
+const result1 = size.fileFinishedImporting("design/components/Text/native/PlainTextExperimentContext.tsx");
+
+export const PlainTextExperimentProvider = tmp2;
+export const usePlainTextExperimentEnabled = () => react.useContext(closure_4);

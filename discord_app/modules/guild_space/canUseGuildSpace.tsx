@@ -1,82 +1,79 @@
 // === Module 6725: canUseGuildSpace ===
 
 // Module 6725 (canUseGuildSpace)
+import Constants from "Constants" /* 1085 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import PermissionStore from "PermissionStore" /* 4509 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-const require = fn;
-const Permissions = fn(1085).Permissions;
-let ReactCompilerGating = fn(558);
+const Permissions = Constants.Permissions;
+let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let closure_0;
+  let first;
+  let tmp6;
+  let tmp7;
   _require = arg0;
-  const cResult = require("c").c(4);
+  const tmp = _require;
+  const obj = require("react");
+  const cResult = obj.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [PermissionStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== arg0) {
     const fn = function s() {
-      let canResult = null != closure_0;
-      if (canResult) {
-        canResult = PermissionStore.can(Permissions.MANAGE_GUILD, tmp);
-      }
+      const canResult = null != closure_0 && PermissionStore.can(Permissions.MANAGE_GUILD, tmp);
       return canResult;
     };
     const items1 = [arg0];
     cResult[1] = arg0;
     cResult[2] = fn;
     cResult[3] = items1;
-    let tmp7 = items1;
-    let tmp6 = fn;
+    tmp7 = items1;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[2];
     tmp7 = cResult[3];
   }
-  const obj = require("c");
-  return require("initialize").useStateFromStores(first, tmp6, tmp7);
+  const tmpResult = tmp(504);
+  return tmpResult.useStateFromStores(first, tmp6, tmp7);
 }) : ((arg0) => {
+  let closure_0;
   _require = arg0;
   const items = [PermissionStore];
   const items1 = [arg0];
-  return require("initialize").useStateFromStores(items, () => {
-    let canResult = null != closure_0;
-    if (canResult) {
-      canResult = PermissionStore.can(Permissions.MANAGE_GUILD, tmp);
-    }
+  const obj = require("get initialized");
+  return obj.useStateFromStores(items, () => {
+    const canResult = null != closure_0 && PermissionStore.can(Permissions.MANAGE_GUILD, tmp);
     return canResult;
   }, items1);
 });
 let closure_5 = tmp2;
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_space/canUseGuildSpace.tsx");
-
-export const isGuildSpaceAdmin = function isGuildSpaceAdmin(arg0) {
-  let canResult = null != arg0;
-  if (canResult) {
-    canResult = PermissionStore.can(Permissions.MANAGE_GUILD, arg0);
-  }
-  return canResult;
-};
-export const useIsGuildSpaceAdmin = tmp2;
-export function canUseGuildSpace(guild, getChannelIdForGuildTransition) {
-  return false;
-}
-export const useCanUseGuildSpace = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+  let closure_0;
+  let first;
+  let tmp10;
+  let tmp9;
   _require = arg0;
-  const cResult = require("c").c(7);
-  const obj = require("c");
+  const obj = require("react");
+  const cResult = obj.c(7);
+  const useGuildSpaceExperimentEnabled = require("GuildSpaceExperiment").useGuildSpaceExperimentEnabled;
+  require("GuildSpaceExperiment");
+  const guildSpaceExperimentEnabled = useGuildSpaceExperimentEnabled(arg0, arg1);
   const tmp = _require;
-  const guildSpaceExperimentEnabled = require("GuildSpaceExperiment").useGuildSpaceExperimentEnabled(arg0, arg1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -88,21 +85,35 @@ export const useCanUseGuildSpace = ReactCompilerGating.isReactCompilerEnabled() 
     cResult[1] = arg0;
     cResult[2] = fn;
     cResult[3] = items1;
-    let tmp9 = items1;
-    let tmp8 = fn;
+    tmp10 = items1;
+    tmp9 = fn;
   } else {
-    tmp8 = cResult[2];
-    tmp9 = cResult[3];
+    tmp9 = cResult[2];
+    tmp10 = cResult[3];
   }
-  const obj2 = require("GuildSpaceExperiment");
-  closure_5(tmp(504).useStateFromStores(first, tmp8, tmp9));
+  const tmpResult = tmp(504);
+  closure_5(tmpResult.useStateFromStores(first, tmp9, tmp10));
   return false;
 }) : ((arg0, arg1) => {
+  let closure_0;
   _require = arg0;
-  const guildSpaceExperimentEnabled = require("GuildSpaceExperiment").useGuildSpaceExperimentEnabled(arg0, arg1);
-  const obj = require("GuildSpaceExperiment");
+  const useGuildSpaceExperimentEnabled = require("GuildSpaceExperiment").useGuildSpaceExperimentEnabled;
+  require("GuildSpaceExperiment");
+  const guildSpaceExperimentEnabled = useGuildSpaceExperimentEnabled(arg0, arg1);
   const items = [GuildStore];
   const items1 = [arg0];
-  closure_5(require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0), items1));
+  const tmpResult = require("get initialized");
+  closure_5(tmpResult.useStateFromStores(items, () => GuildStore.getGuild(closure_0), items1));
   return false;
 });
+const result = size.fileFinishedImporting("modules/guild_space/canUseGuildSpace.tsx");
+
+export const isGuildSpaceAdmin = function isGuildSpaceAdmin(arg0) {
+  const canResult = null != arg0 && PermissionStore.can(Permissions.MANAGE_GUILD, arg0);
+  return canResult;
+};
+export const useIsGuildSpaceAdmin = tmp2;
+export function canUseGuildSpace(guild, getChannelIdForGuildTransition) {
+  return false;
+}
+export const useCanUseGuildSpace = tmp3;

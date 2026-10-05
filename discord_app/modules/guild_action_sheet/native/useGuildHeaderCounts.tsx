@@ -3,23 +3,33 @@
 // Module 13786 (useGuildHeaderCounts)
 import _mod12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import noop from "module_19" /* 19 */;
+import react_mod from "react" /* 19 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 4780 */;
 import GuildHeaderCountsStore from "GuildHeaderCountsStore" /* 13787 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, dependencyMap;
 
-require = fn;
-let ReactCompilerGating = fn(558);
+let react = react_mod;
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((type, guildId, arg2) => {
+  let closure_2;
+  let closure_3;
   _require = type;
   dependencyMap = arg2;
-  const cResult = require("c").c(10);
+  const tmp = _require;
+  let obj = require("react");
+  const cResult = obj.c(10);
   if (cResult[0] === guildId) {
+    let tmp4;
+    let tmp7;
+    let tmp6;
     if (cResult[1] === type) {
-      let tmp4 = cResult[2];
+      tmp4 = cResult[2];
     }
-    noop = tmp4;
+    react = tmp4;
     if (cResult[3] !== tmp4) {
       const fn = function l() {
         return () => closure_1_3.cancel();
@@ -28,17 +38,20 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((type, guildId, 
       cResult[3] = tmp4;
       cResult[4] = fn;
       cResult[5] = items;
-      let tmp7 = items;
-      let tmp6 = fn;
+      tmp7 = items;
+      tmp6 = fn;
     } else {
       tmp6 = cResult[4];
       tmp7 = cResult[5];
     }
-    const effect = noop.useEffect(tmp6, tmp7);
+    const effect = react.useEffect(tmp6, tmp7);
+    const obj3 = react;
     if (cResult[6] === tmp4) {
+      let tmp9;
+      let tmp10;
       if (cResult[7] === arg2) {
-        let tmp9 = cResult[8];
-        let tmp10 = cResult[9];
+        tmp9 = cResult[8];
+        tmp10 = cResult[9];
       }
       const effect1 = obj3.useEffect(tmp9, tmp10);
     }
@@ -54,24 +67,33 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((type, guildId, 
     cResult[9] = items1;
     tmp10 = items1;
     tmp9 = fn2;
-    obj3 = noop;
   }
-  const obj = require("c");
-  const throttleResult = require("module_12").throttle((count) => {
-    DispatcherDefault.dispatch({ type, count, guildId });
+  const tmpResult = tmp(12);
+  const throttleResult = tmpResult.throttle((count) => {
+    const obj = DispatcherDefault;
+    const obj2 = { type, count, guildId };
+    obj.dispatch(obj2);
   }, 3000);
   cResult[0] = guildId;
   cResult[1] = type;
   cResult[2] = throttleResult;
   tmp4 = throttleResult;
 }) : ((arg0, arg1, arg2) => {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  closure_2 = arg2;
+  let memo;
+  let closure_0 = arg0;
+  let closure_1 = arg1;
+  let closure_2 = arg2;
   const items = [arg0, arg1];
-  memo = memo.useMemo(() => _mod12.throttle((count) => {
-    guildId(closure_2[6]).dispatch({ type, count, guildId });
-  }, 3000), items);
+  memo = memo.useMemo(() => {
+    let guildId;
+    let type;
+    let obj = _mod12;
+    return obj.throttle((count) => {
+      const obj = guildId(closure_2[6]);
+      const obj2 = { type, count, guildId };
+      obj.dispatch(obj2);
+    }, 3000);
+  }, items);
   const items1 = [memo];
   const effect = memo.useEffect(() => () => memo.cancel(), items1);
   const items2 = [memo, arg2];
@@ -81,14 +103,21 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((type, guildId, 
     }
   }, items2);
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let closure_0;
+  let first;
+  let tmp10;
+  let tmp6;
+  let tmp8;
   _require = arg0;
-  const cResult = require("c").c(6);
+  const obj = require("react");
+  const cResult = obj.c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildMemberCountStore];
+    let num = 0;
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -102,16 +131,16 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     };
     cResult[1] = arg0;
     cResult[2] = fn;
-    let tmp6 = fn;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
-  const obj = require("c");
-  closure_6("GUILD_HEADER_MEMBER_COUNT", arg0, require("initialize").useStateFromStores(first, tmp6));
+  const tmpResult = require("get initialized");
+  closure_6("GUILD_HEADER_MEMBER_COUNT", arg0, tmpResult.useStateFromStores(first, tmp6));
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [GuildHeaderCountsStore];
     cResult[3] = items1;
-    let tmp8 = items1;
+    tmp8 = items1;
   } else {
     tmp8 = cResult[3];
   }
@@ -121,34 +150,43 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     };
     cResult[4] = arg0;
     cResult[5] = fn2;
-    let tmp10 = fn2;
+    tmp10 = fn2;
   } else {
     tmp10 = cResult[5];
   }
-  const tmpResult = require("initialize");
-  return require("initialize").useStateFromStores(tmp8, tmp10);
+  const tmpResult2 = require("get initialized");
+  return tmpResult2.useStateFromStores(tmp8, tmp10);
 }) : ((arg0) => {
+  let closure_0;
   _require = arg0;
   const items = [GuildMemberCountStore];
-  closure_6("GUILD_HEADER_MEMBER_COUNT", arg0, require("initialize").useStateFromStores(items, () => {
+  const obj = require("get initialized");
+  closure_6("GUILD_HEADER_MEMBER_COUNT", arg0, obj.useStateFromStores(items, () => {
     let num = GuildMemberCountStore.getMemberCount(closure_0);
     if (num == null) {
       num = 0;
     }
     return num;
   }));
-  const obj = require("initialize");
   const items1 = [GuildHeaderCountsStore];
-  return require("initialize").useStateFromStores(items1, () => GuildHeaderCountsStore.getMemberCount(closure_0));
+  const obj2 = require("get initialized");
+  return obj2.useStateFromStores(items1, () => GuildHeaderCountsStore.getMemberCount(closure_0));
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let closure_0;
+  let first;
+  let tmp10;
+  let tmp6;
+  let tmp8;
   _require = arg0;
-  const cResult = require("c").c(6);
+  const obj = require("react");
+  const cResult = obj.c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildMemberCountStore];
+    let num = 0;
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -162,16 +200,16 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     };
     cResult[1] = arg0;
     cResult[2] = fn;
-    let tmp6 = fn;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
-  const obj = require("c");
-  closure_6("GUILD_HEADER_ONLINE_COUNT", arg0, require("initialize").useStateFromStores(first, tmp6));
+  const tmpResult = require("get initialized");
+  closure_6("GUILD_HEADER_ONLINE_COUNT", arg0, tmpResult.useStateFromStores(first, tmp6));
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [GuildHeaderCountsStore];
     cResult[3] = items1;
-    let tmp8 = items1;
+    tmp8 = items1;
   } else {
     tmp8 = cResult[3];
   }
@@ -181,39 +219,43 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     };
     cResult[4] = arg0;
     cResult[5] = fn2;
-    let tmp10 = fn2;
+    tmp10 = fn2;
   } else {
     tmp10 = cResult[5];
   }
-  const tmpResult = require("initialize");
-  return require("initialize").useStateFromStores(tmp8, tmp10);
+  const tmpResult2 = require("get initialized");
+  return tmpResult2.useStateFromStores(tmp8, tmp10);
 }) : ((arg0) => {
+  let closure_0;
   _require = arg0;
   const items = [GuildMemberCountStore];
-  closure_6("GUILD_HEADER_ONLINE_COUNT", arg0, require("initialize").useStateFromStores(items, () => {
+  const obj = require("get initialized");
+  closure_6("GUILD_HEADER_ONLINE_COUNT", arg0, obj.useStateFromStores(items, () => {
     let num = GuildMemberCountStore.getOnlineCount(closure_0);
     if (num == null) {
       num = 0;
     }
     return num;
   }));
-  const obj = require("initialize");
   const items1 = [GuildHeaderCountsStore];
-  return require("initialize").useStateFromStores(items1, () => GuildHeaderCountsStore.getOnlineCount(closure_0));
+  const obj2 = require("get initialized");
+  return obj2.useStateFromStores(items1, () => GuildHeaderCountsStore.getOnlineCount(closure_0));
 });
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_action_sheet/native/useGuildHeaderCounts.tsx");
-
-export const useGuildHeaderCounts = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let closure_0;
+  let first;
+  let tmp8;
   _require = arg0;
-  const cResult = require("c").c(7);
+  const obj = require("react");
+  const cResult = obj.c(7);
   const tmp4 = closure_7(arg0);
   const tmp5 = closure_8(arg0);
+  const tmp = _require;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildHeaderCountsStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -223,16 +265,17 @@ export const useGuildHeaderCounts = ReactCompilerGating.isReactCompilerEnabled()
     };
     cResult[1] = arg0;
     cResult[2] = fn;
-    let tmp8 = fn;
+    tmp8 = fn;
   } else {
     tmp8 = cResult[2];
   }
-  const obj = require("c");
-  const stateFromStores = require("initialize").useStateFromStores(first, tmp8);
+  const tmpResult = tmp(504);
+  const stateFromStores = tmpResult.useStateFromStores(first, tmp8);
   if (cResult[3] === stateFromStores) {
     if (cResult[4] === tmp4) {
+      let tmp10;
       if (cResult[5] === tmp5) {
-        let tmp10 = cResult[6];
+        tmp10 = cResult[6];
       }
       return tmp10;
     }
@@ -243,11 +286,16 @@ export const useGuildHeaderCounts = ReactCompilerGating.isReactCompilerEnabled()
   cResult[5] = tmp5;
   cResult[6] = obj2;
   tmp10 = obj2;
-  const tmpResult = require("initialize");
 }) : ((arg0) => {
+  let closure_0;
+  let items;
+  let obj2;
   _require = arg0;
-  const obj = { memberCount: closure_7(arg0), onlineCount: closure_8(arg0), activeChannelsCount: null };
-  const items = [GuildHeaderCountsStore];
-  obj.activeChannelsCount = require("initialize").useStateFromStores(items, () => GuildHeaderCountsStore.getActiveChannelsCount(closure_0));
+  const obj = { memberCount: closure_7(arg0), onlineCount: closure_8(arg0), activeChannelsCount: obj2.useStateFromStores(items, () => GuildHeaderCountsStore.getActiveChannelsCount(closure_0)) };
+  items = [GuildHeaderCountsStore];
+  obj2 = require("get initialized");
   return obj;
 });
+const result = size.fileFinishedImporting("modules/guild_action_sheet/native/useGuildHeaderCounts.tsx");
+
+export const useGuildHeaderCounts = tmp2;

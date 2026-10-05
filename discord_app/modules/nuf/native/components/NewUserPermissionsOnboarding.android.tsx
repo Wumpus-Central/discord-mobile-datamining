@@ -1,228 +1,268 @@
 // === Module 12337: NewUserPermissionsOnboarding ===
 
 // Module 12337 (NewUserPermissionsOnboarding)
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
+import intl3 from "intl" /* 1126 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import components_Button_Button from "components/Button/Button" /* 5594 */;
-import noop from "module_19" /* 19 */;
+import NavigatorConstants from "NavigatorConstants" /* 6068 */;
+import react from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { scrollContainer: { minHeight: "100%" }, container: { flexGrow: 1, alignItems: "center", justifyContent: "center" }, alertContainer: { paddingTop: 80 + fn(6068).NAV_BAR_HEIGHT }, alert: null, alertContent: null, alertTitle: null, alertSubtitle: null, buttonWrapper: null, primaryButtonContainer: null, trailing: null };
-let obj3 = { paddingTop: 80 + fn(6068).NAV_BAR_HEIGHT };
+let c2;
+let c3;
+let closure_4;
+let hasOwnProperty;
+let obj2;
+let obj3;
+let obj4;
+let obj5;
+let obj6;
+({ View: c2, ScrollView: c3 } = react_native);
+({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { scrollContainer: { minHeight: "100%" }, container: { flexGrow: 1, alignItems: "center", justifyContent: "center" }, alertContainer: obj2, alert: obj3, alertContent: { paddingVertical: 24, paddingHorizontal: 24, alignItems: "center" }, alertTitle: { paddingBottom: 8, textAlign: "center" }, alertSubtitle: obj4, buttonWrapper: { flexDirection: "row" }, primaryButtonContainer: obj5, trailing: obj6 };
+obj2 = { paddingTop: 80 + NavigatorConstants.NAV_BAR_HEIGHT };
+createStyles = createStyles.createStyles;
+obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.xl, borderWidth: 1, borderColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE, alignItems: "center", maxWidth: 290 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
-obj2.alert = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.xl, borderWidth: 1, borderColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE, alignItems: "center", maxWidth: 290 };
-obj2.alertContent = { paddingVertical: 24, paddingHorizontal: 24, alignItems: "center" };
-obj2.alertTitle = { paddingBottom: 8, textAlign: "center" };
-let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.xl, borderWidth: 1, borderColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE, alignItems: "center", maxWidth: 290 };
-obj2.alertSubtitle = { paddingBottom: nativeDefault.space.PX_16, textAlign: "center" };
-obj2.buttonWrapper = { flexDirection: "row" };
-let obj5 = { paddingBottom: nativeDefault.space.PX_16, textAlign: "center" };
-obj2.primaryButtonContainer = { marginBottom: nativeDefault.space.PX_12 };
-let obj6 = { marginBottom: nativeDefault.space.PX_12 };
-obj2.trailing = { flexGrow: 0, padding: nativeDefault.space.PX_16 };
-let closure_6 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj7 = { flexGrow: 0, padding: nativeDefault.space.PX_16 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/nuf/native/components/NewUserPermissionsOnboarding.android.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(45);
+obj4 = { paddingBottom: nativeDefault.space.PX_16, textAlign: "center" };
+obj5 = { marginBottom: nativeDefault.space.PX_12 };
+obj6 = { flexGrow: 0, padding: nativeDefault.space.PX_16 };
+let closure_6 = createStyles(obj);
+const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let Button;
+  let header;
+  let intl2;
+  let items;
+  let items1;
+  let items2;
+  let loading;
+  let obj10;
+  let onAllow;
+  let onDontAllow;
+  let showSkip;
+  let subtitle;
+  let title;
+  let trailing;
+  const obj = react2;
+  const cResult = obj.c(45);
   ({ title, subtitle, header, trailing, loading, showSkip, onAllow, onDontAllow } = arg0);
   const tmp5 = closure_6();
   if (cResult[0] === tmp5.alertTitle) {
+    let tmp11;
     if (cResult[1] === title) {
-      let tmp11 = cResult[2];
+      tmp11 = cResult[2];
     }
     if (cResult[3] === tmp5.alertSubtitle) {
+      let tmp13;
       if (cResult[4] === subtitle) {
-        let tmp13 = cResult[5];
-      }
-      let primaryButtonContainer = tmp4;
-      if (tmp4) {
-        primaryButtonContainer = tmp5.primaryButtonContainer;
+        tmp13 = cResult[5];
       }
       if (cResult[6] === tmp5.buttonWrapper) {
-        if (cResult[7] === primaryButtonContainer) {
-          let tmp16 = cResult[8];
+        let tmp17;
+        let tmp19;
+        if (cResult[7] === ((undefined === showSkip || showSkip) && tmp5.primaryButtonContainer)) {
+          tmp17 = cResult[8];
         }
         const _Symbol = Symbol;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = util.intl;
-          const stringResult = intl.string(util.t["2nYlT2"]);
+          const intl = intl3.intl;
+          const stringResult = intl.string(intl3.t["2nYlT2"]);
           cResult[9] = stringResult;
-          let tmp18 = stringResult;
+          tmp19 = stringResult;
         } else {
-          tmp18 = cResult[9];
+          tmp19 = cResult[9];
         }
         if (cResult[10] === loading) {
+          let tmp21;
           if (cResult[11] === onAllow) {
-            let tmp20 = cResult[12];
+            tmp21 = cResult[12];
           }
-          if (cResult[13] === tmp16) {
-            if (cResult[14] === tmp20) {
-              let tmp23 = cResult[15];
+          if (cResult[13] === tmp17) {
+            let tmp24;
+            if (cResult[14] === tmp21) {
+              tmp24 = cResult[15];
             }
             if (cResult[16] === onDontAllow) {
-              if (cResult[17] === tmp4) {
+              if (cResult[17] === (undefined === showSkip || showSkip)) {
+                let tmp28;
                 if (cResult[18] === tmp5.buttonWrapper) {
-                  let tmp27 = cResult[19];
+                  tmp28 = cResult[19];
                 }
                 if (cResult[20] === tmp5.alertContent) {
-                  if (cResult[21] === tmp23) {
-                    if (cResult[22] === tmp27) {
+                  if (cResult[21] === tmp24) {
+                    if (cResult[22] === tmp28) {
                       if (cResult[23] === tmp11) {
+                        let tmp32;
                         if (cResult[24] === tmp13) {
-                          let tmp31 = cResult[25];
+                          tmp32 = cResult[25];
                         }
                         if (cResult[26] === tmp5.alert) {
-                          if (cResult[27] === tmp31) {
-                            let tmp35 = cResult[28];
+                          let tmp36;
+                          if (cResult[27] === tmp32) {
+                            tmp36 = cResult[28];
                           }
                           if (cResult[29] === header) {
-                            if (cResult[30] === tmp35) {
-                              let tmp39 = cResult[31];
+                            let tmp40;
+                            if (cResult[30] === tmp36) {
+                              tmp40 = cResult[31];
                             }
                             if (cResult[32] === tmp5.alertContainer) {
-                              if (cResult[33] === tmp39) {
-                                let tmp43 = cResult[34];
+                              let tmp44;
+                              if (cResult[33] === tmp40) {
+                                tmp44 = cResult[34];
                               }
                               if (cResult[35] === tmp5.container) {
-                                if (cResult[36] === tmp43) {
-                                  let tmp47 = cResult[37];
+                                let tmp48;
+                                if (cResult[36] === tmp44) {
+                                  tmp48 = cResult[37];
                                 }
                                 if (cResult[38] === tmp5.trailing) {
+                                  let tmp52;
                                   if (cResult[39] === trailing) {
-                                    let tmp51 = cResult[40];
+                                    tmp52 = cResult[40];
                                   }
                                   if (cResult[41] === tmp5.scrollContainer) {
-                                    if (cResult[42] === tmp47) {
-                                      if (cResult[43] === tmp51) {
-                                        let tmp55 = cResult[44];
+                                    if (cResult[42] === tmp48) {
+                                      let tmp56;
+                                      if (cResult[43] === tmp52) {
+                                        tmp56 = cResult[44];
                                       }
-                                      return tmp55;
+                                      return tmp56;
                                     }
                                   }
-                                  const obj2 = { contentContainerStyle: tmp6, children: null };
-                                  const items = [tmp47, tmp51];
-                                  obj2.children = items;
-                                  const tmp58 = hasOwnProperty(React3, obj2);
+                                  const obj2 = { contentContainerStyle: tmp6, children: items };
+                                  items = [tmp48, tmp52];
+                                  const tmp59 = hasOwnProperty(_false, obj2);
                                   cResult[41] = tmp5.scrollContainer;
-                                  cResult[42] = tmp47;
-                                  cResult[43] = tmp51;
-                                  cResult[44] = tmp58;
-                                  tmp55 = tmp58;
+                                  cResult[42] = tmp48;
+                                  cResult[43] = tmp52;
+                                  cResult[44] = tmp59;
+                                  tmp56 = tmp59;
                                 }
                                 const obj3 = { style: tmp5.trailing, children: trailing };
-                                const tmp54 = React4(React2, obj3);
+                                const tmp55 = React3(React2, obj3);
                                 cResult[38] = tmp5.trailing;
                                 cResult[39] = trailing;
-                                cResult[40] = tmp54;
-                                tmp51 = tmp54;
+                                cResult[40] = tmp55;
+                                tmp52 = tmp55;
                               }
-                              const obj4 = { style: tmp7, children: tmp43 };
-                              const tmp50 = React4(React2, obj4);
+                              const obj4 = { style: tmp7, children: tmp44 };
+                              const tmp51 = React3(React2, obj4);
                               cResult[35] = tmp5.container;
-                              cResult[36] = tmp43;
-                              cResult[37] = tmp50;
-                              tmp47 = tmp50;
+                              cResult[36] = tmp44;
+                              cResult[37] = tmp51;
+                              tmp48 = tmp51;
                             }
-                            const obj5 = { style: tmp8, children: tmp39 };
-                            const tmp46 = React4(React2, obj5);
+                            const obj5 = { style: tmp8, children: tmp40 };
+                            const tmp47 = React3(React2, obj5);
                             cResult[32] = tmp5.alertContainer;
-                            cResult[33] = tmp39;
-                            cResult[34] = tmp46;
-                            tmp43 = tmp46;
+                            cResult[33] = tmp40;
+                            cResult[34] = tmp47;
+                            tmp44 = tmp47;
                           }
-                          const obj6 = { children: null };
-                          const items1 = [header, tmp35];
-                          obj6.children = items1;
-                          const tmp42 = hasOwnProperty(React2, obj6);
+                          const obj6 = { children: items1 };
+                          items1 = [header, tmp36];
+                          const tmp43 = hasOwnProperty(React2, obj6);
                           cResult[29] = header;
-                          cResult[30] = tmp35;
-                          cResult[31] = tmp42;
-                          tmp39 = tmp42;
+                          cResult[30] = tmp36;
+                          cResult[31] = tmp43;
+                          tmp40 = tmp43;
                         }
-                        const obj7 = { style: tmp9, children: tmp31 };
-                        const tmp38 = React4(React2, obj7);
+                        const obj7 = { style: tmp9, children: tmp32 };
+                        const tmp39 = React3(React2, obj7);
                         cResult[26] = tmp5.alert;
-                        cResult[27] = tmp31;
-                        cResult[28] = tmp38;
-                        tmp35 = tmp38;
+                        cResult[27] = tmp32;
+                        cResult[28] = tmp39;
+                        tmp36 = tmp39;
                       }
                     }
                   }
                 }
-                const obj8 = { style: tmp10, children: null };
-                const items2 = [tmp11, tmp13, tmp23, tmp27];
-                obj8.children = items2;
-                const tmp34 = hasOwnProperty(React2, obj8);
+                const obj8 = { style: tmp10, children: items2 };
+                items2 = [tmp11, tmp13, tmp24, tmp28];
+                const tmp35 = hasOwnProperty(React2, obj8);
                 cResult[20] = tmp5.alertContent;
-                cResult[21] = tmp23;
-                cResult[22] = tmp27;
+                cResult[21] = tmp24;
+                cResult[22] = tmp28;
                 cResult[23] = tmp11;
                 cResult[24] = tmp13;
-                cResult[25] = tmp34;
-                tmp31 = tmp34;
+                cResult[25] = tmp35;
+                tmp32 = tmp35;
               }
             }
-            let tmp28 = tmp4;
-            if (tmp4) {
-              const obj9 = { style: tmp5.buttonWrapper, children: null };
-              const obj10 = { variant: "secondary", text: null, onPress: null, grow: true };
-              const intl2 = util.intl;
-              obj10.text = intl2.string(util.t["5Wxrcd"]);
-              obj10.onPress = onDontAllow;
-              obj9.children = React4(components_Button_Button.Button, obj10);
-              tmp28 = React4(React2, obj9);
+            let tmp29 = tmp4;
+            if (tmp29) {
+              const obj9 = { style: tmp5.buttonWrapper, children: React3(Button, obj10) };
+              obj10 = { variant: "secondary", text: intl2.string(intl3.t["5Wxrcd"]), onPress: onDontAllow, grow: true };
+              Button = components_Button_Button.Button;
+              intl2 = intl3.intl;
+              tmp29 = React3(React2, obj9);
             }
             cResult[16] = onDontAllow;
-            cResult[17] = tmp4;
+            cResult[17] = undefined === showSkip || showSkip;
             cResult[18] = tmp5.buttonWrapper;
-            cResult[19] = tmp28;
-            tmp27 = tmp28;
+            cResult[19] = tmp29;
+            tmp28 = tmp29;
           }
-          const obj11 = { style: tmp16, children: tmp20 };
-          const tmp26 = React4(React2, obj11);
-          cResult[13] = tmp16;
-          cResult[14] = tmp20;
-          cResult[15] = tmp26;
-          tmp23 = tmp26;
+          const obj11 = { style: tmp17, children: tmp21 };
+          const tmp27 = React3(React2, obj11);
+          cResult[13] = tmp17;
+          cResult[14] = tmp21;
+          cResult[15] = tmp27;
+          tmp24 = tmp27;
         }
-        const obj12 = { variant: "primary", size: "md", text: tmp18, onPress: onAllow, loading, grow: true };
-        const tmp22 = React4(components_Button_Button.Button, obj12);
+        const obj12 = { variant: "primary", size: "md", text: tmp19, onPress: onAllow, loading, grow: true };
+        const tmp23 = React3(components_Button_Button.Button, obj12);
         cResult[10] = loading;
         cResult[11] = onAllow;
-        cResult[12] = tmp22;
-        tmp20 = tmp22;
+        cResult[12] = tmp23;
+        tmp21 = tmp23;
       }
-      const items3 = [tmp5.buttonWrapper, primaryButtonContainer];
+      const items3 = [tmp5.buttonWrapper, (undefined === showSkip || showSkip) && tmp5.primaryButtonContainer];
       cResult[6] = tmp5.buttonWrapper;
-      cResult[7] = primaryButtonContainer;
+      cResult[7] = (undefined === showSkip || showSkip) && tmp5.primaryButtonContainer;
       cResult[8] = items3;
-      tmp16 = items3;
+      tmp17 = items3;
     }
     const obj13 = { style: tmp5.alertSubtitle, variant: "text-sm/medium", color: "text-default", children: subtitle };
-    const tmp15 = React4(Text_Text.Text, obj13);
+    const tmp15 = React3(Text_Text.Text, obj13);
     cResult[3] = tmp5.alertSubtitle;
     cResult[4] = subtitle;
     cResult[5] = tmp15;
     tmp13 = tmp15;
   }
-  const tmp12 = React4(Text_Text.Text, { style: tmp5.alertTitle, variant: "heading-lg/bold", color: "text-default", children: title });
+  const obj14 = { style: tmp5.alertTitle, variant: "heading-lg/bold", color: "text-default", children: title };
+  const tmp12 = React3(Text_Text.Text, obj14);
   cResult[0] = tmp5.alertTitle;
   cResult[1] = title;
   cResult[2] = tmp12;
   tmp11 = tmp12;
-  const obj14 = { style: tmp5.alertTitle, variant: "heading-lg/bold", color: "text-default", children: title };
 }) : ((showSkip) => {
+  let Button;
+  let Button2;
+  let header;
+  let intl;
+  let intl2;
+  let items1;
+  let items3;
+  let loading;
+  let obj11;
+  let obj12;
+  let obj3;
+  let obj5;
+  let obj9;
+  let onAllow;
+  let onDontAllow;
+  let subtitle;
+  let title;
+  let trailing;
   let flag = showSkip.showSkip;
   ({ title, subtitle, header, trailing, loading } = showSkip);
   if (flag === undefined) {
@@ -230,45 +270,40 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   ({ onAllow, onDontAllow } = showSkip);
   const tmp = closure_6();
-  const obj = { contentContainerStyle: tmp.scrollContainer, children: null };
-  const obj2 = { style: tmp.container, children: null };
-  const obj3 = { style: tmp.alertContainer, children: null };
+  const obj = { contentContainerStyle: tmp.scrollContainer, children: items3 };
+  const obj2 = { style: tmp.container, children: React3(React2, obj3) };
   const items = [header, ];
-  const obj4 = { style: tmp.alert, children: null };
-  const obj5 = { style: tmp.alertContent, children: null };
-  const items1 = [React4(Text_Text.Text, { style: tmp.alertTitle, variant: "heading-lg/bold", color: "text-default", children: title }), React4(Text_Text.Text, { style: tmp.alertSubtitle, variant: "text-sm/medium", color: "text-default", children: subtitle }), , ];
+  obj3 = { style: tmp.alertContainer, children: hasOwnProperty(React2, obj12) };
+  const obj4 = { style: tmp.alert, children: hasOwnProperty(React2, obj5) };
+  obj5 = { style: tmp.alertContent, children: items1 };
+  items1 = [, , , ];
+  const obj6 = { style: tmp.alertTitle, variant: "heading-lg/bold", color: "text-default", children: title };
+  items1[0] = React3(Text_Text.Text, obj6);
+  const obj7 = { style: tmp.alertSubtitle, variant: "text-sm/medium", color: "text-default", children: subtitle };
+  items1[1] = React3(Text_Text.Text, obj7);
   const items2 = [tmp.buttonWrapper, ];
-  let primaryButtonContainer = flag;
+  const tmp8 = flag && tmp.primaryButtonContainer;
+  items2[1] = tmp8;
+  const obj8 = { style: items2, children: React3(Button, obj9) };
+  obj9 = { variant: "primary", size: "md", text: intl.string(intl3.t["2nYlT2"]), onPress: onAllow, loading, grow: true };
+  Button = components_Button_Button.Button;
+  intl = intl3.intl;
+  items1[2] = React3(React2, obj8);
   if (flag) {
-    primaryButtonContainer = tmp.primaryButtonContainer;
+    const obj10 = { style: tmp.buttonWrapper, children: React3(Button2, obj11) };
+    obj11 = { variant: "secondary", text: intl2.string(intl3.t["5Wxrcd"]), onPress: onDontAllow, grow: true };
+    Button2 = components_Button_Button.Button;
+    intl2 = intl3.intl;
+    flag = React3(React2, obj10);
   }
-  const obj8 = { style: items2, children: null };
-  items2[1] = primaryButtonContainer;
-  const obj9 = { variant: "primary", size: "md", text: null, onPress: null, loading: null, grow: true };
-  const intl = util.intl;
-  obj9.text = intl.string(util.t["2nYlT2"]);
-  obj9.onPress = onAllow;
-  obj9.loading = loading;
-  obj8.children = React4(components_Button_Button.Button, obj9);
-  items1[2] = React4(React2, obj8);
-  if (flag) {
-    const obj10 = { style: tmp.buttonWrapper, children: null };
-    const obj11 = { variant: "secondary", text: null, onPress: null, grow: true };
-    const intl2 = util.intl;
-    obj11.text = intl2.string(util.t["5Wxrcd"]);
-    obj11.onPress = onDontAllow;
-    obj10.children = React4(components_Button_Button.Button, obj11);
-    flag = React4(React2, obj10);
-  }
-  const obj12 = { children: null };
+  obj12 = { children: items };
   items1[3] = flag;
-  obj5.children = items1;
-  obj4.children = hasOwnProperty(React2, obj5);
-  items[1] = React4(React2, obj4);
-  obj12.children = items;
-  obj3.children = hasOwnProperty(React2, obj12);
-  obj2.children = React4(React2, obj3);
-  const items3 = [React4(React2, obj2), React4(React2, { style: tmp.trailing, children: trailing })];
-  obj.children = items3;
-  return hasOwnProperty(React3, obj);
+  items[1] = React3(React2, obj4);
+  items3 = [React3(React2, obj2), ];
+  const obj13 = { style: tmp.trailing, children: trailing };
+  items3[1] = React3(React2, obj13);
+  return hasOwnProperty(_false, obj);
 });
+const result = size.fileFinishedImporting("modules/nuf/native/components/NewUserPermissionsOnboarding.android.tsx");
+
+export default tmp7;

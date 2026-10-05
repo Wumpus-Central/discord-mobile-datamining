@@ -5,30 +5,32 @@ import AutomodRemovedContentActionCreators from "AutomodRemovedContentActionCrea
 import MessageStore from "MessageStore" /* 5110 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
 function handleAutomodContentDeleted(message) {
   message = message.message;
   if (null == message.thread) {
     if (null != message) {
       if (null != MessageStore.getAutomodRemovalNotice(message.id)) {
         if (message.channel_id !== SelectedChannelStore.getCurrentlySelectedChannelId()) {
-          const result = AutomodRemovedContentActionCreators.showRemovedMessageToast(tmp, message.channel_id);
+          const obj = AutomodRemovedContentActionCreators;
+          const result = obj.showRemovedMessageToast(tmp, message.channel_id);
         }
       }
     }
   }
-  const result1 = AutomodRemovedContentActionCreators.openRemovedContentModal(message);
+  const obj2 = AutomodRemovedContentActionCreators;
+  const result1 = obj2.openRemovedContentModal(message);
 }
-const prototype = function AutomodRemovedContentManager() {
-  const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult.actions = { AUTO_MODERATION_CONTENT_DELETED: handleAutomodContentDeleted };
-  return applyArgumentsResult;
-}.prototype;
-class prototype extends tmp2 {
+class AutomodRemovedContentManager extends AutomaticLifecycleManager {
+  constructor() {
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    const obj = { AUTO_MODERATION_CONTENT_DELETED: handleAutomodContentDeleted };
+    applyArgumentsResult.actions = obj;
+    return applyArgumentsResult;
+  }
 }
-const prototype1 = new prototype();
-const size = fn(2);
+const automodRemovedContentManager = new AutomodRemovedContentManager();
 let result = size.fileFinishedImporting("modules/guild_automod/AutomodRemovedContentManager.tsx");
 
-export default prototype1;
+export default automodRemovedContentManager;

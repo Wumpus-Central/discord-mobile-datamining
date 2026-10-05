@@ -1,145 +1,169 @@
 // === Module 12488: ChannelRowPreview ===
 
 // Module 12488 (ChannelRowPreview)
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import react2 from "react" /* 576 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import useToken from "useToken" /* 4580 */;
-import LinkIcon from "LinkIcon" /* 4839 */;
+import LinkIcon2 from "LinkIcon" /* 4839 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import createStyles from "createStyles" /* 4890 */;
 import useFontScale from "useFontScale" /* 5602 */;
-import ImageIcon from "ImageIcon" /* 5871 */;
-import PhoneCallIcon from "PhoneCallIcon" /* 7523 */;
-import PhoneHangUpIcon from "PhoneHangUpIcon" /* 7525 */;
+import ImageIcon2 from "ImageIcon" /* 5871 */;
+import PhoneCallIcon2 from "PhoneCallIcon" /* 7523 */;
+import PhoneHangUpIcon2 from "PhoneHangUpIcon" /* 7525 */;
 import RowGeneratorDefault from "RowGenerator" /* 7591 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 7595 */;
+import react_native2 from "react-native" /* 7595 */;
 import RowGeneratorTypes from "RowGeneratorTypes" /* 7809 */;
-import MusicIcon from "MusicIcon" /* 9571 */;
-import AttachmentIcon from "AttachmentIcon" /* 10369 */;
+import MusicIcon2 from "MusicIcon" /* 9571 */;
+import AttachmentIcon2 from "AttachmentIcon" /* 10369 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10723 */;
-import VideoIcon from "VideoIcon" /* 11234 */;
+import VideoIcon2 from "VideoIcon" /* 11234 */;
 import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11695 */;
 import ChannelListLayout from "ChannelListLayout" /* 11698 */;
-import StickerIcon from "StickerIcon" /* 12190 */;
+import StickerIcon2 from "StickerIcon" /* 12190 */;
 import useFormattedMessagePreview from "useFormattedMessagePreview" /* 12476 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4519 */;
+import Fragment from "Fragment" /* 21 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, dependencyMap, icon, importDefault, obj1, tmp2, tmp3;
 
-require = fn;
+let c9;
+let metroImportAll;
 let closure_3 = ["icon"];
-const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let ReactCompilerGating = fn(558);
+const View = react_native.View;
+({ jsx: metroImportAll, jsxs: c9 } = Fragment);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((icon) => {
-  const cResult = c.c(19);
+  let tmp4;
+  let tmp5;
+  const obj = react2;
+  const cResult = obj.c(19);
   if (cResult[0] !== icon) {
     icon = icon.icon;
     const tmp8 = _objectWithoutProperties(icon, closure_3);
     cResult[0] = icon;
     cResult[1] = icon;
     cResult[2] = tmp8;
-    let tmp5 = tmp8;
-    let tmp4 = icon;
+    tmp5 = tmp8;
+    tmp4 = icon;
   } else {
     tmp4 = cResult[1];
     tmp5 = cResult[2];
   }
   if ("image" === tmp4) {
+    let tmp51;
     if (cResult[3] !== tmp5) {
       const obj2 = {};
+      const ImageIcon = ImageIcon2.ImageIcon;
       const merged = Object.assign(tmp5);
-      const tmp56 = closure_1_8(ImageIcon.ImageIcon, obj2);
+      const tmp56 = metroImportAll(ImageIcon, obj2);
       cResult[3] = tmp5;
       cResult[4] = tmp56;
-      let tmp51 = tmp56;
+      tmp51 = tmp56;
     } else {
       tmp51 = cResult[4];
     }
     return tmp51;
   } else if ("video" === tmp4) {
+    let tmp45;
     if (cResult[5] !== tmp5) {
       const obj3 = {};
+      const VideoIcon = VideoIcon2.VideoIcon;
       const merged1 = Object.assign(tmp5);
-      const tmp50 = closure_1_8(VideoIcon.VideoIcon, obj3);
+      const tmp50 = metroImportAll(VideoIcon, obj3);
       cResult[5] = tmp5;
       cResult[6] = tmp50;
-      let tmp45 = tmp50;
+      tmp45 = tmp50;
     } else {
       tmp45 = cResult[6];
     }
     return tmp45;
   } else if ("audio" === tmp4) {
+    let tmp39;
     if (cResult[7] !== tmp5) {
       const obj4 = {};
+      const MusicIcon = MusicIcon2.MusicIcon;
       const merged2 = Object.assign(tmp5);
-      const tmp44 = closure_1_8(MusicIcon.MusicIcon, obj4);
+      const tmp44 = metroImportAll(MusicIcon, obj4);
       cResult[7] = tmp5;
       cResult[8] = tmp44;
-      let tmp39 = tmp44;
+      tmp39 = tmp44;
     } else {
       tmp39 = cResult[8];
     }
     return tmp39;
   } else if ("attachment" === tmp4) {
+    let tmp33;
     if (cResult[9] !== tmp5) {
       const obj5 = {};
+      const AttachmentIcon = AttachmentIcon2.AttachmentIcon;
       const merged3 = Object.assign(tmp5);
-      const tmp38 = closure_1_8(AttachmentIcon.AttachmentIcon, obj5);
+      const tmp38 = metroImportAll(AttachmentIcon, obj5);
       cResult[9] = tmp5;
       cResult[10] = tmp38;
-      let tmp33 = tmp38;
+      tmp33 = tmp38;
     } else {
       tmp33 = cResult[10];
     }
     return tmp33;
   } else if ("link" === tmp4) {
+    let tmp27;
     if (cResult[11] !== tmp5) {
       const obj6 = {};
+      const LinkIcon = LinkIcon2.LinkIcon;
       const merged4 = Object.assign(tmp5);
-      const tmp32 = closure_1_8(LinkIcon.LinkIcon, obj6);
+      const tmp32 = metroImportAll(LinkIcon, obj6);
       cResult[11] = tmp5;
       cResult[12] = tmp32;
-      let tmp27 = tmp32;
+      tmp27 = tmp32;
     } else {
       tmp27 = cResult[12];
     }
     return tmp27;
   } else if ("sticker" === tmp4) {
+    let tmp21;
     if (cResult[13] !== tmp5) {
       const obj7 = {};
+      const StickerIcon = StickerIcon2.StickerIcon;
       const merged5 = Object.assign(tmp5);
-      const tmp26 = closure_1_8(StickerIcon.StickerIcon, obj7);
+      const tmp26 = metroImportAll(StickerIcon, obj7);
       cResult[13] = tmp5;
       cResult[14] = tmp26;
-      let tmp21 = tmp26;
+      tmp21 = tmp26;
     } else {
       tmp21 = cResult[14];
     }
     return tmp21;
   } else if ("call-active" === tmp4) {
+    let tmp15;
     if (cResult[15] !== tmp5) {
       const obj8 = {};
+      const PhoneCallIcon = PhoneCallIcon2.PhoneCallIcon;
       const merged6 = Object.assign(tmp5);
-      const tmp20 = closure_1_8(PhoneCallIcon.PhoneCallIcon, obj8);
+      const tmp20 = metroImportAll(PhoneCallIcon, obj8);
       cResult[15] = tmp5;
       cResult[16] = tmp20;
-      let tmp15 = tmp20;
+      tmp15 = tmp20;
     } else {
       tmp15 = cResult[16];
     }
     return tmp15;
   } else if ("call-ended" === tmp4) {
+    let tmp9;
     if (cResult[17] !== tmp5) {
       const obj9 = {};
+      const PhoneHangUpIcon = PhoneHangUpIcon2.PhoneHangUpIcon;
       const merged7 = Object.assign(tmp5);
-      const tmp14 = closure_1_8(PhoneHangUpIcon.PhoneHangUpIcon, obj9);
+      const tmp14 = metroImportAll(PhoneHangUpIcon, obj9);
       cResult[17] = tmp5;
       cResult[18] = tmp14;
-      let tmp9 = tmp14;
+      tmp9 = tmp14;
     } else {
       tmp9 = cResult[18];
     }
@@ -150,51 +174,69 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((icon) => {
   const merged = Object.assign(icon, Object.assign({ icon: 0 }));
   if ("image" === icon) {
     const obj2 = {};
+    const ImageIcon = ImageIcon2.ImageIcon;
     const merged1 = Object.assign(merged);
-    return closure_1_8(ImageIcon.ImageIcon, obj2);
+    return metroImportAll(ImageIcon, obj2);
   } else if ("video" === icon) {
     const obj3 = {};
+    const VideoIcon = VideoIcon2.VideoIcon;
     const merged2 = Object.assign(merged);
-    return closure_1_8(VideoIcon.VideoIcon, obj3);
+    return metroImportAll(VideoIcon, obj3);
   } else if ("audio" === icon) {
     const obj4 = {};
+    const MusicIcon = MusicIcon2.MusicIcon;
     const merged3 = Object.assign(merged);
-    return closure_1_8(MusicIcon.MusicIcon, obj4);
+    return metroImportAll(MusicIcon, obj4);
   } else if ("attachment" === icon) {
     const obj5 = {};
+    const AttachmentIcon = AttachmentIcon2.AttachmentIcon;
     const merged4 = Object.assign(merged);
-    return closure_1_8(AttachmentIcon.AttachmentIcon, obj5);
+    return metroImportAll(AttachmentIcon, obj5);
   } else if ("link" === icon) {
     const obj6 = {};
+    const LinkIcon = LinkIcon2.LinkIcon;
     const merged5 = Object.assign(merged);
-    return closure_1_8(LinkIcon.LinkIcon, obj6);
+    return metroImportAll(LinkIcon, obj6);
   } else if ("sticker" === icon) {
     const obj7 = {};
+    const StickerIcon = StickerIcon2.StickerIcon;
     const merged6 = Object.assign(merged);
-    return closure_1_8(StickerIcon.StickerIcon, obj7);
+    return metroImportAll(StickerIcon, obj7);
   } else if ("call-active" === icon) {
     const obj8 = {};
+    const PhoneCallIcon = PhoneCallIcon2.PhoneCallIcon;
     const merged7 = Object.assign(merged);
-    return closure_1_8(PhoneCallIcon.PhoneCallIcon, obj8);
+    return metroImportAll(PhoneCallIcon, obj8);
   } else if ("call-ended" === icon) {
     const obj = {};
+    const PhoneHangUpIcon = PhoneHangUpIcon2.PhoneHangUpIcon;
     const merged8 = Object.assign(merged);
-    return closure_1_8(PhoneHangUpIcon.PhoneHangUpIcon, obj);
+    return metroImportAll(PhoneHangUpIcon, obj);
   }
 });
-ReactCompilerGating = fn(558);
-let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(8);
+let memo = react.memo;
+ReactCompilerGating = ReactCompilerGating_mod;
+let closure_11 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let channelId;
+  let color;
+  let guildId;
+  let layout;
+  let markup;
+  let muted;
+  const obj = react2;
+  const cResult = obj.c(8);
   ({ markup, channelId, guildId, muted, layout, color } = arg0);
-  const fontScale = useFontScale.useFontScale();
+  const obj2 = useFontScale;
+  const fontScale = obj2.useFontScale();
   if (cResult[0] === channelId) {
     if (cResult[1] === color) {
       if (cResult[2] === fontScale) {
         if (cResult[3] === guildId) {
           if (cResult[4] === layout) {
             if (cResult[5] === markup) {
+              let tmp5;
               if (cResult[6] === muted) {
-                let tmp5 = cResult[7];
+                tmp5 = cResult[7];
               }
               return tmp5;
             }
@@ -203,7 +245,8 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
       }
     }
   }
-  const result = MessagePreviewMarkup.renderMessagePreviewMarkup({ content: markup, muted, guildId, channelId, layout, color, fontScale });
+  const tmpResult = MessagePreviewMarkup;
+  const result = tmpResult.renderMessagePreviewMarkup({ content: markup, muted, guildId, channelId, layout, color, fontScale });
   cResult[0] = channelId;
   cResult[1] = color;
   cResult[2] = fontScale;
@@ -213,41 +256,67 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   cResult[6] = muted;
   cResult[7] = result;
   tmp5 = result;
-  const tmpResult = MessagePreviewMarkup;
 }) : ((arg0) => {
+  let channelId;
+  let color;
+  let guildId;
+  let layout;
+  let markup;
+  let muted;
   ({ markup, channelId, guildId, muted, layout, color } = arg0);
-  const fontScale = useFontScale.useFontScale();
-  return MessagePreviewMarkup.renderMessagePreviewMarkup({ content, muted, guildId, channelId, layout, color, fontScale });
+  const obj = useFontScale;
+  const fontScale = obj.useFontScale();
+  const obj2 = MessagePreviewMarkup;
+  return obj2.renderMessagePreviewMarkup({ content, muted, guildId, channelId, layout, color, fontScale });
 }));
-ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(28);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let authorLabel;
+  let channel;
+  let color;
+  let items;
+  let items1;
+  let layout;
+  let lineClamp;
+  let message;
+  let muted;
+  let trailingIcon;
+  let variant;
+  const obj = react2;
+  const cResult = obj.c(28);
   ({ message, channel, layout, lineClamp, muted, variant, color } = arg0);
   let num = 1;
   if (undefined !== lineClamp) {
     num = lineClamp;
   }
-  const fontScale = useFontScale.useFontScale();
   const tmpResult = useFontScale;
-  const formattedMessagePreview = useFormattedMessagePreview.useFormattedMessagePreview(message, channel);
+  const fontScale = tmpResult.useFontScale();
+  const tmpResult4 = useFormattedMessagePreview;
+  const formattedMessagePreview = tmpResult4.useFormattedMessagePreview(message, channel);
   if (cResult[0] === fontScale) {
+    let tmp6;
+    let tmp7;
     if (cResult[1] === layout) {
-      let tmp6 = cResult[2];
-      let tmp7 = cResult[3];
+      tmp6 = cResult[2];
+      tmp7 = cResult[3];
     }
     if (null == formattedMessagePreview) {
       return null;
     } else {
+      let text;
+      let tmp15;
+      let tmp17;
       ({ authorLabel, trailingIcon } = formattedMessagePreview);
       if (color == null) {
         color = formattedMessagePreview.color;
       }
       const type = formattedMessagePreview.type;
       if ("text" === type) {
-        let text = formattedMessagePreview.text;
+        text = formattedMessagePreview.text;
       } else if ("markup" === type) {
+        let content;
         if ("markup" === formattedMessagePreview.type) {
-          let content = formattedMessagePreview.markup;
+          content = formattedMessagePreview.markup;
         } else {
           content = formattedMessagePreview.message.content;
         }
@@ -256,8 +325,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             if (cResult[6] === message.channel_id) {
               if (cResult[7] === muted) {
                 if (cResult[8] === color) {
+                  let tmp11;
                   if (cResult[9] === content) {
-                    let tmp11 = cResult[10];
+                    tmp11 = cResult[10];
                   }
                   text = tmp11;
                 }
@@ -266,7 +336,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
         }
         const obj2 = { markup: content, channelId: message.channel_id, guildId: channel.guild_id, muted, layout, color };
-        const tmp14 = closure_1_8(closure_11, obj2);
+        const tmp14 = metroImportAll(closure_11, obj2);
         cResult[4] = channel.guild_id;
         cResult[5] = layout;
         cResult[6] = message.channel_id;
@@ -280,7 +350,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         const obj3 = { flexDirection: "row", alignItems: "center", minHeight: tmp7 };
         cResult[11] = tmp7;
         cResult[12] = obj3;
-        let tmp15 = obj3;
+        tmp15 = obj3;
       } else {
         tmp15 = cResult[12];
       }
@@ -291,7 +361,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
         const obj4 = { paddingBottom: 2, flexShrink: 1 };
         cResult[13] = obj4;
-        let tmp17 = obj4;
+        tmp17 = obj4;
       } else {
         tmp17 = cResult[13];
       }
@@ -304,26 +374,28 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         if (cResult[15] === color) {
           if (cResult[16] === text) {
             if (cResult[17] === variant) {
+              let tmp19;
               if (cResult[18] === combined) {
-                let tmp19 = cResult[19];
+                tmp19 = cResult[19];
               }
               if (cResult[20] === tmp6) {
                 if (cResult[21] === color) {
+                  let tmp22;
                   if (cResult[22] === trailingIcon) {
-                    let tmp22 = cResult[23];
+                    tmp22 = cResult[23];
                   }
                   if (cResult[24] === tmp15) {
                     if (cResult[25] === tmp19) {
+                      let tmp26;
                       if (cResult[26] === tmp22) {
-                        let tmp26 = cResult[27];
+                        tmp26 = cResult[27];
                       }
                       return tmp26;
                     }
                   }
-                  const obj5 = { style: tmp15, children: null };
-                  const items = [tmp19, tmp22];
-                  obj5.children = items;
-                  const tmp29 = options(View, obj5);
+                  const obj5 = { style: tmp15, children: items };
+                  items = [tmp19, tmp22];
+                  const tmp29 = React4(View, obj5);
                   cResult[24] = tmp15;
                   cResult[25] = tmp19;
                   cResult[26] = tmp22;
@@ -334,7 +406,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               let tmp23 = null != trailingIcon;
               if (tmp23) {
                 const obj6 = { icon: trailingIcon, size: tmp6.messagePreview.messageTypeIconSizeNew, color, style: { marginLeft: 4 } };
-                tmp23 = closure_1_8(closure_10, obj6);
+                tmp23 = metroImportAll(closure_10, obj6);
               }
               cResult[20] = tmp6;
               cResult[21] = color;
@@ -345,10 +417,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
         }
       }
-      const obj7 = { lineClamp: num, variant, maxFontSizeMultiplier: 1.75, color, style: tmp17, children: null };
-      const items1 = [combined, text];
-      obj7.children = items1;
-      const tmp21 = options(Text_Text.Text, obj7);
+      const obj7 = { lineClamp: num, variant, maxFontSizeMultiplier: 1.75, color, style: tmp17, children: items1 };
+      items1 = [combined, text];
+      const tmp21 = React4(Text_Text.Text, obj7);
       cResult[14] = num;
       cResult[15] = color;
       cResult[16] = text;
@@ -358,158 +429,190 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       tmp19 = tmp21;
     }
   }
-  const tmpResult4 = useFormattedMessagePreview;
-  const layoutStyles = ChannelListLayout.getLayoutStyles(layout);
   const tmpResult5 = ChannelListLayout;
-  const scaleTextLineHeightResult = useScaledTextLineHeight.scaleTextLineHeight(layoutStyles.messagePreview.text.variant, fontScale);
+  const layoutStyles = tmpResult5.getLayoutStyles(layout);
+  const tmpResult6 = useScaledTextLineHeight;
+  const scaleTextLineHeightResult = tmpResult6.scaleTextLineHeight(layoutStyles.messagePreview.text.variant, fontScale);
   cResult[0] = fontScale;
   cResult[1] = layout;
   cResult[2] = layoutStyles;
   cResult[3] = scaleTextLineHeightResult;
   tmp7 = scaleTextLineHeightResult;
   tmp6 = layoutStyles;
-  const tmpResult6 = useScaledTextLineHeight;
 }) : ((arg0) => {
+  let authorLabel;
+  let channel;
+  let color;
+  let items;
+  let items1;
+  let layout;
+  let lineClamp;
+  let message;
+  let muted;
+  let obj6;
+  let trailingIcon;
+  let variant;
   ({ message, channel, layout, lineClamp } = arg0);
   if (lineClamp === undefined) {
     lineClamp = 1;
   }
   ({ variant, color, muted } = arg0);
-  const fontScale = useFontScale.useFontScale();
-  const formattedMessagePreview = useFormattedMessagePreview.useFormattedMessagePreview(message, channel);
-  const layoutStyles = ChannelListLayout.getLayoutStyles(layout);
+  const obj = useFontScale;
+  const fontScale = obj.useFontScale();
+  const obj2 = useFormattedMessagePreview;
+  const formattedMessagePreview = obj2.useFormattedMessagePreview(message, channel);
+  const obj3 = ChannelListLayout;
+  const layoutStyles = obj3.getLayoutStyles(layout);
   useScaledTextLineHeight;
   if (null == formattedMessagePreview) {
     return null;
   } else {
+    let text;
     ({ authorLabel, trailingIcon } = formattedMessagePreview);
     if (color == null) {
       color = formattedMessagePreview.color;
     }
     const type = formattedMessagePreview.type;
     if ("text" === type) {
-      let text = formattedMessagePreview.text;
+      text = formattedMessagePreview.text;
     } else if ("markup" === type) {
+      let content;
       if ("markup" === formattedMessagePreview.type) {
-        let content = formattedMessagePreview.markup;
+        content = formattedMessagePreview.markup;
       } else {
         content = formattedMessagePreview.message.content;
       }
       const obj4 = { markup: content, channelId: message.channel_id, guildId: channel.guild_id, muted, layout, color };
-      text = closure_1_8(closure_11, obj4);
+      text = metroImportAll(closure_11, obj4);
     }
-    const obj5 = { style: null, children: null };
-    const obj6 = { flexDirection: "row", alignItems: "center", minHeight: tmp7 };
-    obj5.style = obj6;
-    const obj7 = { lineClamp, variant: null, maxFontSizeMultiplier: 1.75, color: null, style: null, children: null };
+    const obj5 = { style: obj6, children: items1 };
+    obj6 = { flexDirection: "row", alignItems: "center", minHeight: tmp7 };
+    const obj7 = { lineClamp, variant, maxFontSizeMultiplier: 1.75, color, style: { paddingBottom: 2, flexShrink: 1 }, children: items };
+    const Text = Text_Text.Text;
     if (variant == null) {
       variant = "text-sm/normal";
     }
-    obj7.variant = variant;
-    obj7.color = color;
-    obj7.style = { paddingBottom: 2, flexShrink: 1 };
     let combined = null != authorLabel;
     if (combined) {
       const _HermesInternal = HermesInternal;
       combined = "" + authorLabel + ": ";
     }
-    const items = [combined, text];
-    obj7.children = items;
-    const items1 = [options(Text_Text.Text, obj7), ];
+    items = [combined, text];
+    items1 = [React4(Text, obj7), ];
     let tmp14 = null != trailingIcon;
     if (tmp14) {
       const obj8 = { icon: trailingIcon, size: layoutStyles.messagePreview.messageTypeIconSizeNew, color, style: { marginLeft: 4 } };
-      tmp14 = closure_1_8(closure_10, obj8);
+      tmp14 = metroImportAll(closure_10, obj8);
     }
     items1[1] = tmp14;
-    obj5.children = items1;
-    return options(View, obj5);
+    return React4(View, obj5);
   }
 });
-let closure_12 = tmp3;
-ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((textColor) => {
-  const cResult = lineClamp(token[6]).c(19);
+let closure_12 = tmp4;
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function(textColor) {
+  let gifAutoPlay;
+  let gradientColors;
+  let gradientStyles;
+  let lineClamp;
+  let maxHeight;
+  let message;
+  let messageSizeCacheRef;
+  let seeMoreLabelColor;
+  let tmp7;
+  let token;
+  let obj = lineClamp(token[6]);
+  const cResult = obj.c(19);
   ({ message, lineClamp } = textColor);
   ({ messageSizeCacheRef, maxHeight, gifAutoPlay, gradientStyles, gradientColors } = textColor);
   let tmp4 = undefined !== gifAutoPlay;
+  textColor = textColor.textColor;
   if (tmp4) {
     tmp4 = gifAutoPlay;
   }
   const tmp6 = require("useTheme")();
   if (cResult[0] !== tmp6) {
-    const obj2 = { seeMoreLabelColor: tmp5(tmp2[23]).colors.TEXT_DEFAULT };
-    const tmp8 = lineClamp(tmp2[22]).createNativeStyleProperties(obj2)(tmp6);
+    const obj2 = { seeMoreLabelColor: require("native").colors.TEXT_DEFAULT };
+    const createNativeStyleProperties = lineClamp(token[22]).createNativeStyleProperties;
+    lineClamp(token[22]);
+    const tmp9 = createNativeStyleProperties(obj2)(tmp6);
     cResult[0] = tmp6;
-    cResult[1] = tmp8;
-    let tmp7 = tmp8;
-    const tmpResult = lineClamp(tmp2[22]);
+    cResult[1] = tmp9;
+    tmp7 = tmp9;
   } else {
     tmp7 = cResult[1];
   }
   importDefault = tmp7;
-  let obj = lineClamp(token[6]);
-  token = lineClamp(token[24]).useToken(textColor.textColor);
+  const tmpResult2 = lineClamp(token[24]);
+  token = tmpResult2.useToken(textColor);
   if (cResult[2] === token) {
     if (cResult[3] === lineClamp) {
+      let tmp11;
+      let tmp13;
+      let tmp15;
+      let tmp17;
+      let tmp19;
       if (cResult[4] === tmp7) {
-        let tmp10 = cResult[5];
+        tmp11 = cResult[5];
       }
       const _Symbol = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const RenderEmbeds = lineClamp(tmp2[27]).RenderEmbeds;
         const setting = RenderEmbeds.getSetting();
         cResult[6] = setting;
-        let tmp12 = setting;
+        tmp13 = setting;
       } else {
-        tmp12 = cResult[6];
+        tmp13 = cResult[6];
       }
       const _Symbol2 = Symbol;
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
         const InlineEmbedMedia = lineClamp(tmp2[27]).InlineEmbedMedia;
         const setting1 = InlineEmbedMedia.getSetting();
         cResult[7] = setting1;
-        let tmp14 = setting1;
+        tmp15 = setting1;
       } else {
-        tmp14 = cResult[7];
+        tmp15 = cResult[7];
       }
       const _Symbol3 = Symbol;
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         const InlineAttachmentMedia = lineClamp(tmp2[27]).InlineAttachmentMedia;
         const setting2 = InlineAttachmentMedia.getSetting();
         cResult[8] = setting2;
-        let tmp16 = setting2;
+        tmp17 = setting2;
       } else {
-        tmp16 = cResult[8];
+        tmp17 = cResult[8];
       }
       if (cResult[9] !== tmp4) {
-        const obj5 = new tmp5(tmp2[28])();
-        const obj3 = { renderEmbeds: tmp12, inlineEmbedMedia: tmp14, inlineAttachmentMedia: tmp16, renderReactions: false, animateEmoji: false, gifAutoPlay: tmp4, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true };
-        obj5.setOptions(obj3);
+        const self = this;
+        const self2 = this;
+        const obj4 = new require("RowGenerator")();
+        const obj3 = { renderEmbeds: tmp13, inlineEmbedMedia: tmp15, inlineAttachmentMedia: tmp17, renderReactions: false, animateEmoji: false, gifAutoPlay: tmp4, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true };
+        obj4.setOptions(obj3);
         cResult[9] = tmp4;
-        cResult[10] = obj5;
-        let tmp18 = obj5;
+        cResult[10] = obj4;
+        tmp19 = obj4;
       } else {
-        tmp18 = cResult[10];
+        tmp19 = cResult[10];
       }
       if (cResult[11] === gradientColors) {
         if (cResult[12] === gradientStyles) {
           if (cResult[13] === maxHeight) {
             if (cResult[14] === message) {
               if (cResult[15] === messageSizeCacheRef) {
-                if (cResult[16] === tmp10) {
-                  if (cResult[17] === tmp18) {
-                    let tmp23 = cResult[18];
+                if (cResult[16] === tmp11) {
+                  let tmp22;
+                  if (cResult[17] === tmp19) {
+                    tmp22 = cResult[18];
                   }
-                  return tmp23;
+                  return tmp22;
                 }
               }
             }
           }
         }
       }
-      const obj4 = { pointerEvents: "none", horizontalOffset: 0, modifyRow: tmp10, message, rowGenerator: tmp18, messageSizeCacheRef, maxHeight, gradientStyles, gradientColors };
-      const tmp25 = closure_8(tmp5(tmp2[29]), obj4);
+      const obj5 = { pointerEvents: "none", horizontalOffset: 0, modifyRow: tmp11, message, rowGenerator: tmp19, messageSizeCacheRef, maxHeight, gradientStyles, gradientColors };
+      const tmp24 = closure_8(require("ChatItem"), obj5);
       cResult[11] = gradientColors;
       class I {
         constructor(arg0) {
@@ -545,10 +648,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((textColor) => {
       cResult[13] = maxHeight;
       cResult[14] = message;
       cResult[15] = messageSizeCacheRef;
-      cResult[16] = tmp10;
-      cResult[17] = tmp18;
-      cResult[18] = tmp25;
-      tmp23 = tmp25;
+      cResult[16] = tmp11;
+      cResult[17] = tmp19;
+      cResult[18] = tmp24;
+      tmp22 = tmp24;
     }
   }
   class I {
@@ -585,9 +688,17 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((textColor) => {
   cResult[3] = lineClamp;
   cResult[4] = tmp7;
   cResult[5] = I;
-  tmp10 = I;
-  const tmpResult2 = lineClamp(token[24]);
+  tmp11 = I;
 }) : ((arg0) => {
+  let gifAutoPlay;
+  let gradientColors;
+  let gradientStyles;
+  let maxHeight;
+  let message;
+  let messageSizeCacheRef;
+  let require;
+  let seeMoreLabelColor;
+  let textColor;
   ({ lineClamp: require, gifAutoPlay } = arg0);
   ({ message, messageSizeCacheRef, maxHeight } = arg0);
   if (gifAutoPlay === undefined) {
@@ -596,9 +707,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((textColor) => {
   ({ textColor, gradientStyles, gradientColors } = arg0);
   const tmp = gifAutoPlay(4791)();
   let obj = createStyles;
-  dependencyMap = obj.createNativeStyleProperties({ seeMoreLabelColor: gifAutoPlay(587).colors.TEXT_DEFAULT })(tmp);
-  const obj2 = { seeMoreLabelColor: gifAutoPlay(587).colors.TEXT_DEFAULT };
-  closure_3 = useToken.useToken(textColor);
+  let obj2 = { seeMoreLabelColor: gifAutoPlay(587).colors.TEXT_DEFAULT };
+  dependencyMap = obj.createNativeStyleProperties(obj2)(tmp);
+  const obj3 = useToken;
+  closure_3 = obj3.useToken(textColor);
   const RenderEmbeds = UserSettings.RenderEmbeds;
   const setting = RenderEmbeds.getSetting();
   const InlineEmbedMedia = UserSettings.InlineEmbedMedia;
@@ -608,10 +720,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((textColor) => {
   const items = [setting, setting1, setting2, gifAutoPlay];
   const memo = setting1.useMemo(() => {
     const obj = new RowGeneratorDefault();
-    obj.setOptions({ renderEmbeds: setting, inlineEmbedMedia: setting1, inlineAttachmentMedia: setting2, renderReactions: false, animateEmoji: false, gifAutoPlay, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true });
+    const obj2 = { renderEmbeds: setting, inlineEmbedMedia: setting1, inlineAttachmentMedia: setting2, renderReactions: false, animateEmoji: false, gifAutoPlay, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true };
+    obj.setOptions(obj2);
     return obj;
   }, items);
-  return closure_8(gifAutoPlay(8303), {
+  const obj4 = {
     pointerEvents: "none",
     horizontalOffset: 0,
     modifyRow(message) {
@@ -619,8 +732,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((textColor) => {
       message.contextType = RowGeneratorTypes.MessageContextType.SEARCH;
       if (null != closure_3) {
         try {
-          processColorOrThrowResult = RowGeneratorStyleSheet.processColorOrThrow(tmp4);
-          const tmp2Result = RowGeneratorStyleSheet;
+          const tmp2Result = react_native2;
+          processColorOrThrowResult = tmp2Result.processColorOrThrow(tmp4);
         } catch (err) {
         }
       }
@@ -628,11 +741,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((textColor) => {
         message.message.textColor = processColorOrThrowResult;
       }
       if (null != _require) {
-        const obj = { numberOfLines: tmp6, expandable: false, seeMoreLabel: "...", seeMoreLabelColor: null };
+        const obj = { numberOfLines: tmp6, expandable: false, seeMoreLabel: "...", seeMoreLabelColor: processColorOrThrowResult };
         if (processColorOrThrowResult == null) {
           processColorOrThrowResult = seeMoreLabelColor.seeMoreLabelColor;
         }
-        obj.seeMoreLabelColor = processColorOrThrowResult;
         message.truncation = obj;
       }
     },
@@ -642,22 +754,24 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((textColor) => {
     maxHeight,
     gradientStyles,
     gradientColors
-  });
+  };
+  return closure_8(gifAutoPlay(8303), obj4);
 });
-let closure_13 = tmp4;
-ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/ChannelRowPreview.tsx");
-
-export const ChannelRowPreview = tmp3;
-export const NativeChannelRowPreview = tmp4;
-export const NativeMessageChannelRowPreview = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
+let closure_13 = tmp5;
+const memo2 = react.memo;
+ReactCompilerGating = ReactCompilerGating_mod;
+const memo2Result = memo2(ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
+  let first;
+  let tmp16;
+  let tmp6;
+  let tmp7;
   _require = message;
-  const cResult = require("c").c(8);
+  const obj = require("react");
+  const cResult = obj.c(8);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [RelationshipStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -669,16 +783,17 @@ export const NativeMessageChannelRowPreview = noop.memo(ReactCompilerGating.isRe
     cResult[1] = message.message.author.id;
     cResult[2] = fn;
     cResult[3] = items1;
-    let tmp7 = items1;
-    let tmp6 = fn;
+    tmp7 = items1;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[2];
     tmp7 = cResult[3];
   }
-  const obj = require("c");
-  const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
-  const tmpResult = require("initialize");
+  const tmpResult = require("get initialized");
+  const stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
+  const tmpResult2 = require("useFormattedMessagePreview");
   if (tmpResult2.isMessageContentPreviewable(message.message)) {
+    let tmp9;
     if (!stateFromStores) {
       if (cResult[4] !== message) {
         const obj2 = {};
@@ -686,12 +801,12 @@ export const NativeMessageChannelRowPreview = noop.memo(ReactCompilerGating.isRe
         const tmp15 = closure_8(closure_13, obj2);
         cResult[4] = message;
         cResult[5] = tmp15;
-        let tmp9 = tmp15;
+        tmp9 = tmp15;
       } else {
         tmp9 = cResult[5];
       }
-      return tmp9;
     }
+    return tmp9;
   }
   if (cResult[6] !== message) {
     const obj3 = {};
@@ -699,24 +814,33 @@ export const NativeMessageChannelRowPreview = noop.memo(ReactCompilerGating.isRe
     const tmp22 = closure_8(closure_12, obj3);
     cResult[6] = message;
     cResult[7] = tmp22;
+    tmp16 = tmp22;
+  } else {
+    tmp16 = cResult[7];
   }
-  tmpResult2 = require("useFormattedMessagePreview");
+  tmp9 = tmp16;
 }) : ((message) => {
   _require = message;
   const items = [RelationshipStore];
   const items1 = [message.message.author.id];
-  const stateFromStores = require("initialize").useStateFromStores(items, () => RelationshipStore.isBlockedOrIgnored(message.message.author.id), items1);
-  const obj = require("initialize");
+  const obj = require("get initialized");
+  const stateFromStores = obj.useStateFromStores(items, () => RelationshipStore.isBlockedOrIgnored(message.message.author.id), items1);
+  const obj2 = require("useFormattedMessagePreview");
   if (obj2.isMessageContentPreviewable(message.message)) {
+    let tmp7;
     if (!stateFromStores) {
       const obj3 = {};
       const merged = Object.assign(message);
-      let tmp7 = closure_8(closure_13, obj3);
+      tmp7 = closure_8(closure_13, obj3);
     }
     return tmp7;
   }
-  const merged1 = Object.assign(message);
-  tmp7 = closure_8(closure_12, {});
-  obj2 = require("useFormattedMessagePreview");
   const obj4 = {};
+  const merged1 = Object.assign(message);
+  tmp7 = closure_8(closure_12, obj4);
 }));
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/ChannelRowPreview.tsx");
+
+export const ChannelRowPreview = tmp4;
+export const NativeChannelRowPreview = tmp5;
+export const NativeMessageChannelRowPreview = memo2Result;

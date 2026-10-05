@@ -1,33 +1,36 @@
 // === Module 12911: conjurePreviewClaims ===
 
 // Module 12911 (conjurePreviewClaims)
-import _slicedToArray from "module_32" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import size from "module_2" /* 2 */;
 
-const map = new Map();
-const size = fn(2);
+let map = new Map();
 let result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewClaims.tsx");
 
 export const awaitConjurePreviewClaim = function awaitConjurePreviewClaim(projectId, id) {
-  value = id.get(id);
+  map = id;
+  const value = map.get(id);
   if (null != value) {
     const _clearTimeout = clearTimeout;
     clearTimeout(value.timer);
     value.resolve(null);
   }
-  return new Promise((resolve) => {
+  const promise = new Promise((resolve) => {
     projectId = resolve;
-    const result = id.set(id, {
+    const obj = {
       resolve,
       timer: setTimeout(() => {
-        map.delete(closure_1);
-        closure_0(null);
+        map.delete(id);
+        resolve(null);
       }, 5000),
       projectId
-    });
+    };
+    const result = id.set(id, obj);
   });
+  return promise;
 };
 export const resolveConjurePreviewClaim = function resolveConjurePreviewClaim(id, upload_token) {
-  value = map.get(id);
+  const value = map.get(id);
   if (null != value) {
     map.delete(id);
     const _clearTimeout = clearTimeout;
@@ -37,7 +40,10 @@ export const resolveConjurePreviewClaim = function resolveConjurePreviewClaim(id
   }
 };
 export const clearConjurePreviewClaims = function clearConjurePreviewClaims(projectId) {
+  let tmp5;
+  let tmp6;
   const items = [...map];
+  const tmp = items[Symbol.iterator]();
   while (tmp !== undefined) {
     let tmp4 = _slicedToArray(tmp2, 2);
     [tmp5, tmp6] = tmp4;
@@ -49,5 +55,4 @@ export const clearConjurePreviewClaims = function clearConjurePreviewClaims(proj
     }
     continue;
   }
-  tmp = items[Symbol.iterator]();
 };

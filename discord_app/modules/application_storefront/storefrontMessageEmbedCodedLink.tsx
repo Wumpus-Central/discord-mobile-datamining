@@ -1,9 +1,9 @@
-// === Module 7175: storefrontMessageEmbedCodedLink ===
+// === Module 7175: _slicedToArray ===
 
-// Module 7175 (storefrontMessageEmbedCodedLink)
-import _slicedToArray from "module_32" /* 32 */;
+// Module 7175 (_slicedToArray)
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import size from "module_2" /* 2 */;
 
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_storefront/storefrontMessageEmbedCodedLink.tsx");
 
 export const makeStorefrontSKUCodedLink = function makeStorefrontSKUCodedLink(match7, match72) {
@@ -16,6 +16,7 @@ export const parseStorefrontSkuCodedLink = function parseStorefrontSkuCodedLink(
   } else {
     const obj = { applicationId: null, skuId: null };
     [obj.applicationId, obj.skuId] = parts;
+    _slicedToArray(parts, 2);
     return obj;
   }
 };

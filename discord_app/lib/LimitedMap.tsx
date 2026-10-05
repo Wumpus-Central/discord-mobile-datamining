@@ -4,18 +4,19 @@
 import size from "module_2" /* 2 */;
 
 class LimitedMap extends Map {
-  constructor(arg0) {
-    tmp = new LimitedMap(new.target);
-    tmp.maxSize = global;
+  constructor(maxSize) {
+    const tmp = new LimitedMap(new.target);
+    tmp.maxSize = maxSize;
     return tmp;
   }
   set(arg0, arg1) {
-    self = this;
+    const self = this;
     if (this.size >= this.maxSize) {
-      iter = self.keys();
-      deleteResult = self.delete(iter.next().value);
+      const _delete = self.delete;
+      const iter = self.keys();
+      _delete(iter.next().value);
     }
-    return super.set(global, require);
+    return super.set(arg0, arg1);
   }
 }
 let closure_0 = LimitedMap.prototype;

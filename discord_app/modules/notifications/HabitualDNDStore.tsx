@@ -1,46 +1,51 @@
 // === Module 13532: HabitualDNDStore ===
 
 // Module 13532 (HabitualDNDStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
+import Constants from "Constants" /* 1085 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 5438 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const StatusTypes = fn(1085).StatusTypes;
-let sessionStartsWithDND = [];
+const f114965 = (item) => {
+  const timestamp = Date.now();
+  return item < timestamp - 3 * DurationsDefault.Millis.DAY;
+};
+const StatusTypes = Constants.StatusTypes;
+const hasOwnProperty = [];
 let c6 = false;
-const PersistedStore = initializeDefault.PersistedStore;
+const PersistedStore = get_initializedDefault.PersistedStore;
 class HabitualDNDStore extends PersistedStore {
+  initialize(sessionStartsWithDND) {
+    this.waitFor(SelfPresenceStore);
+    let isArray = null != sessionStartsWithDND;
+    if (isArray) {
+      const _Array = Array;
+      isArray = Array.isArray(sessionStartsWithDND.sessionStartsWithDND);
+    }
+    if (isArray) {
+      sessionStartsWithDND = sessionStartsWithDND.sessionStartsWithDND;
+    }
+  }
+  showNagBar() {
+    return c6;
+  }
+  getState() {
+    return { sessionStartsWithDND };
+  }
+  getTemp() {
+    let StatusExpiresAtSetting;
+    const obj = { x: StatusExpiresAtSetting.getSetting() };
+    StatusExpiresAtSetting = UserSettings.StatusExpiresAtSetting;
+    return obj;
+  }
 }
 const prototype = HabitualDNDStore.prototype;
-prototype["initialize"] = function initialize(sessionStartsWithDND) {
-  this.waitFor(SelfPresenceStore);
-  let isArray = null != sessionStartsWithDND;
-  if (isArray) {
-    const _Array = Array;
-    isArray = Array.isArray(sessionStartsWithDND.sessionStartsWithDND);
-  }
-  if (isArray) {
-    sessionStartsWithDND = sessionStartsWithDND.sessionStartsWithDND;
-  }
-};
-prototype["showNagBar"] = function showNagBar() {
-  return c6;
-};
-prototype["getState"] = function getState() {
-  return { sessionStartsWithDND };
-};
-prototype["getTemp"] = function getTemp() {
-  const obj = { x: null };
-  const StatusExpiresAtSetting = UserSettings.StatusExpiresAtSetting;
-  obj.x = StatusExpiresAtSetting.getSetting();
-  return obj;
-};
 HabitualDNDStore.displayName = "HabitualDNDStore";
 HabitualDNDStore.persistKey = "habitualDND";
-const habitualDNDStore = new HabitualDNDStore(DispatcherDefault, {
+let obj = {
   POST_CONNECTION_OPEN: function handleConnect() {
     if (SelfPresenceStore.getStatus() === StatusTypes.DND) {
       const StatusExpiresAtSetting = UserSettings.StatusExpiresAtSetting;
@@ -52,17 +57,12 @@ const habitualDNDStore = new HabitualDNDStore(DispatcherDefault, {
           return item > timestamp - 5 * DurationsDefault.Millis.DAY;
         });
         sessionStartsWithDND = found;
-        let someResult = found.length >= 4;
-        if (someResult) {
-          someResult = sessionStartsWithDND.some((item) => {
-            const timestamp = Date.now();
-            return item < timestamp - 3 * DurationsDefault.Millis.DAY;
-          });
-        }
+        const someResult = found.length >= 4 && sessionStartsWithDND.some(f114965);
         if (someResult) {
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => {
-            DispatcherDefault.dispatch({ type: "HABITUAL_DND_CLEAR" });
+            const obj = DispatcherDefault;
+            obj.dispatch({ type: "HABITUAL_DND_CLEAR" });
           }, 15 * DurationsDefault.Millis.SECOND);
         }
       }
@@ -70,18 +70,12 @@ const habitualDNDStore = new HabitualDNDStore(DispatcherDefault, {
     sessionStartsWithDND = [];
   },
   HABITUAL_DND_CLEAR: function handleDNDClear() {
-    let someResult = sessionStartsWithDND.length >= 4;
-    if (someResult) {
-      someResult = sessionStartsWithDND.some((item) => {
-        const timestamp = Date.now();
-        return item < timestamp - 3 * DurationsDefault.Millis.DAY;
-      });
-    }
-    c6 = someResult;
+    c6 = sessionStartsWithDND.length >= 4 && sessionStartsWithDND.some(f114965);
+    const someResult = sessionStartsWithDND.length >= 4 && sessionStartsWithDND.some(f114965);
     sessionStartsWithDND = [];
   }
-});
-const size = fn(2);
+};
+const habitualDNDStore = new HabitualDNDStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/notifications/HabitualDNDStore.tsx");
 
 export default habitualDNDStore;

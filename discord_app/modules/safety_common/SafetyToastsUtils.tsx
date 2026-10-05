@@ -1,23 +1,25 @@
 // === Module 8081: SafetyToastsUtils ===
 
 // Module 8081 (SafetyToastsUtils)
-import util from "util" /* 1126 */;
+import intl19 from "intl" /* 1126 */;
 import _modDef2625 from "module_2625" /* 2625 */;
 import _modDef3045 from "module_3045" /* 3045 */;
 import UserUtilsDefault from "UserUtils" /* 4722 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 5042 */;
+import Constants from "Constants" /* 8075 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import UserStore from "UserStore" /* 1377 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const SafetyToastType = fn(8075).SafetyToastType;
-const size = fn(2);
+const SafetyToastType = Constants.SafetyToastType;
 const result = size.fileFinishedImporting("modules/safety_common/SafetyToastsUtils.tsx");
 
 export const getSafetyToastTypeContent = function getSafetyToastTypeContent(BLOCK_SUCCESS, id, c1) {
   const user = UserStore.getUser(id);
   const channel = ChannelStore.getChannel(c1);
   let guild_id;
+  const getName = NicknameUtilsDefault.getName;
+  NicknameUtilsDefault;
   if (channel != null) {
     guild_id = channel.guild_id;
   }
@@ -25,71 +27,71 @@ export const getSafetyToastTypeContent = function getSafetyToastTypeContent(BLOC
   if (channel != null) {
     id = channel.id;
   }
-  let name = NicknameUtilsDefault.getName(guild_id, id, user);
+  let name = getName(guild_id, id, user);
   if (name == null) {
-    name = UserUtilsDefault.getGlobalName(user);
     const tmp3Result = UserUtilsDefault;
+    name = tmp3Result.getGlobalName(user);
   }
   if (SafetyToastType.IGNORE_SUCCESS === BLOCK_SUCCESS) {
-    const intl18 = util.intl;
-    const obj2 = { username: name };
-    return intl18.formatToPlainString(util.t["+joqrP"], obj2);
+    const intl18 = intl19.intl;
+    const obj = { username: name };
+    return intl18.formatToPlainString(intl19.t["+joqrP"], obj);
   } else if (SafetyToastType.UNIGNORE_SUCCESS === BLOCK_SUCCESS) {
-    const intl17 = util.intl;
-    const obj3 = { username: name };
-    return intl17.formatToPlainString(util.t.THExKa, obj3);
+    const intl17 = intl19.intl;
+    const obj2 = { username: name };
+    return intl17.formatToPlainString(intl19.t.THExKa, obj2);
   } else if (SafetyToastType.BLOCK_SUCCESS === BLOCK_SUCCESS) {
-    const intl16 = util.intl;
-    const obj4 = { username: name };
-    return intl16.formatToPlainString(util.t.XXPrIs, obj4);
+    const intl16 = intl19.intl;
+    const obj3 = { username: name };
+    return intl16.formatToPlainString(intl19.t.XXPrIs, obj3);
   } else if (SafetyToastType.UNBLOCK_SUCCESS === BLOCK_SUCCESS) {
-    const intl15 = util.intl;
-    const obj5 = { username: name };
-    return intl15.formatToPlainString(util.t.uExcGX, obj5);
+    const intl15 = intl19.intl;
+    const obj4 = { username: name };
+    return intl15.formatToPlainString(intl19.t.uExcGX, obj4);
   } else if (SafetyToastType.MUTE_SUCCESS === BLOCK_SUCCESS) {
-    const intl14 = util.intl;
-    const obj6 = { username: name };
-    return intl14.formatToPlainString(util.t.X4NtYb, obj6);
+    const intl14 = intl19.intl;
+    const obj5 = { username: name };
+    return intl14.formatToPlainString(intl19.t.X4NtYb, obj5);
   } else if (SafetyToastType.UNMUTE_SUCCESS === BLOCK_SUCCESS) {
-    const intl13 = util.intl;
-    const obj7 = { username: name };
-    return intl13.formatToPlainString(util.t.tRaBfY, obj7);
+    const intl13 = intl19.intl;
+    const obj6 = { username: name };
+    return intl13.formatToPlainString(intl19.t.tRaBfY, obj6);
   } else if (SafetyToastType.REPORT_SUCCESS === BLOCK_SUCCESS) {
-    const intl12 = util.intl;
-    const obj8 = { username: name };
-    return intl12.formatToPlainString(util.t.FOptFU, obj8);
+    const intl12 = intl19.intl;
+    const obj7 = { username: name };
+    return intl12.formatToPlainString(intl19.t.FOptFU, obj7);
   } else if (SafetyToastType.TIGGER_PAWTECT_ERROR === BLOCK_SUCCESS) {
-    const intl11 = util.intl;
-    return intl11.string(util.t.c6kn6F);
+    const intl11 = intl19.intl;
+    return intl11.string(intl19.t.c6kn6F);
   } else if (SafetyToastType.AGE_VERIFICATION_FAE_FAILED === BLOCK_SUCCESS) {
-    const intl10 = util.intl;
+    const intl10 = intl19.intl;
     return intl10.string(_modDef3045["9F2y52"]);
   } else if (SafetyToastType.AGE_VERIFICATION_ID_FAILED === BLOCK_SUCCESS) {
-    const intl9 = util.intl;
+    const intl9 = intl19.intl;
     return intl9.string(_modDef3045["40UKek"]);
   } else if (SafetyToastType.AGE_VERIFICATION_UNDERAGE === BLOCK_SUCCESS) {
-    const intl8 = util.intl;
+    const intl8 = intl19.intl;
     return intl8.string(_modDef3045.XBGt7g);
   } else if (SafetyToastType.TIGGER_PAWTECT_VERIFIED === BLOCK_SUCCESS) {
-    const intl7 = util.intl;
-    return intl7.string(util.t["7nKAXx"]);
+    const intl7 = intl19.intl;
+    return intl7.string(intl19.t["7nKAXx"]);
   } else if (SafetyToastType.GENERIC_ERROR === BLOCK_SUCCESS) {
-    const intl6 = util.intl;
-    return intl6.string(util.t.zBpoc7);
+    const intl6 = intl19.intl;
+    return intl6.string(intl19.t.zBpoc7);
   } else if (SafetyToastType.REPORT_TO_MOD_SUCCESS === BLOCK_SUCCESS) {
-    const intl5 = util.intl;
+    const intl5 = intl19.intl;
     return intl5.string(_modDef2625.iBypeZ);
   } else if (SafetyToastType.SAFETY_FEEDBACK_SUCCESS === BLOCK_SUCCESS) {
-    const intl4 = util.intl;
-    return intl4.string(util.t.TcFR5k);
+    const intl4 = intl19.intl;
+    return intl4.string(intl19.t.TcFR5k);
   } else if (SafetyToastType.EXISTING_USER_AGE_GATE_SUCCESS === BLOCK_SUCCESS) {
-    const intl3 = util.intl;
-    return intl3.string(util.t["susqq/"]);
+    const intl3 = intl19.intl;
+    return intl3.string(intl19.t["susqq/"]);
   } else if (SafetyToastType.AGE_VERIFICATION_METHOD_UNAVAILABLE === BLOCK_SUCCESS) {
-    const intl2 = util.intl;
+    const intl2 = intl19.intl;
     return intl2.string(_modDef3045.vVwFCK);
   } else {
-    const intl = util.intl;
-    return intl.string(util.t["+c5xtT"]);
+    const intl = intl19.intl;
+    return intl.string(intl19.t["+c5xtT"]);
   }
 };

@@ -1,48 +1,49 @@
 // === Module 8906: FormText ===
 
 // Module 8906 (FormText)
-import c from "c" /* 576 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import LegacyTokens from "LegacyTokens" /* 5620 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
+let obj2;
+let obj3;
+const jsx = Fragment.jsx;
 let closure_3 = createStyles.createStyles((arg0) => {
-  const obj = { primary: { color: LegacyTokens.DARK_PRIMARY_100_LIGHT_PRIMARY_500 }, text: null };
+  let num2;
+  let obj3;
   let num = 16;
+  const obj = { primary: { color: LegacyTokens.DARK_PRIMARY_100_LIGHT_PRIMARY_500 }, text: obj3 };
+  ({ color: LegacyTokens.DARK_PRIMARY_100_LIGHT_PRIMARY_500 });
   if ("small" === arg0) {
     num = 12;
   }
-  const obj3 = { fontSize: num, lineHeight: null };
-  let num2 = 22;
+  obj3 = { fontSize: num, lineHeight: num2 };
+  num2 = 22;
   if ("small" === arg0) {
     num2 = 16;
   }
-  obj3.lineHeight = num2;
-  obj.text = obj3;
   return obj;
 });
-let obj = { BRAND: { color: nativeDefault.unsafe_rawColors.BRAND_500 }, RED: null, GREEN: null, YELLOW: null, LINK: null, WHITE: null };
-let obj3 = { color: nativeDefault.unsafe_rawColors.BRAND_500 };
-obj.RED = { color: nativeDefault.unsafe_rawColors.RED_400 };
-const obj4 = { color: nativeDefault.unsafe_rawColors.RED_400 };
-obj.GREEN = { color: nativeDefault.unsafe_rawColors.GREEN_360 };
-const obj5 = { color: nativeDefault.unsafe_rawColors.GREEN_360 };
-obj.YELLOW = { color: nativeDefault.unsafe_rawColors.YELLOW_300 };
-const obj6 = { color: nativeDefault.unsafe_rawColors.YELLOW_300 };
-obj.LINK = { color: nativeDefault.unsafe_rawColors.BLUE_345 };
-const obj7 = { color: nativeDefault.unsafe_rawColors.BLUE_345 };
-obj.WHITE = { color: nativeDefault.unsafe_rawColors.WHITE };
-const ReactCompilerGating = fn(558);
-const obj8 = { color: nativeDefault.unsafe_rawColors.WHITE };
-const size = fn(2);
-const result = size.fileFinishedImporting("design/void/Form/native/FormText.tsx");
-
-export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
-  const cResult = c.c(8);
+let obj = { BRAND: obj2, RED: obj3, GREEN: { color: nativeDefault.unsafe_rawColors.GREEN_360 }, YELLOW: { color: nativeDefault.unsafe_rawColors.YELLOW_300 }, LINK: { color: nativeDefault.unsafe_rawColors.BLUE_345 }, WHITE: { color: nativeDefault.unsafe_rawColors.WHITE } };
+obj2 = { color: nativeDefault.unsafe_rawColors.BRAND_500 };
+obj3 = { color: nativeDefault.unsafe_rawColors.RED_400 };
+({ color: nativeDefault.unsafe_rawColors.GREEN_360 });
+({ color: nativeDefault.unsafe_rawColors.YELLOW_300 });
+({ color: nativeDefault.unsafe_rawColors.BLUE_345 });
+const forwardRef = react.forwardRef;
+({ color: nativeDefault.unsafe_rawColors.WHITE });
+const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
+  let children;
+  let color;
+  let style;
+  const obj = react2;
+  const cResult = obj.c(8);
   ({ children, size, color, style } = arg0);
   let str = "medium";
   if (undefined !== size) {
@@ -54,18 +55,19 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   }
   if (cResult[0] === style) {
     if (cResult[1] === tmp4Result.text) {
+      let tmp6;
       if (cResult[2] === color) {
-        let tmp6 = cResult[3];
+        tmp6 = cResult[3];
       }
       if (cResult[4] === children) {
         if (cResult[5] === ref) {
+          let tmp8;
           if (cResult[6] === tmp6) {
-            let tmp8 = cResult[7];
+            tmp8 = cResult[7];
           }
           return tmp8;
         }
       }
-      const obj2 = { ref, style: tmp6, children };
       const tmp10 = jsx(native.LegacyText, { ref, style: tmp6, children });
       cResult[4] = children;
       cResult[5] = ref;
@@ -82,20 +84,23 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((
   tmp6 = items;
 }) : ((size, ref) => {
   let str = size.size;
+  const children = size.children;
   if (str === undefined) {
     str = "medium";
   }
   let primary = size.color;
+  const style = size.style;
   const tmp = closure_3(str);
-  const obj = { ref, style: null, children: null };
   const items = [tmp.text, , ];
+  const LegacyText = native.LegacyText;
   if (primary == null) {
     primary = tmp.primary;
   }
   items[1] = primary;
-  items[2] = size.style;
-  obj.style = items;
-  obj.children = size.children;
-  return jsx(native.LegacyText, { ref, style: null, children: null });
+  items[2] = style;
+  return <LegacyText ref={ref} style={items}>{children}</LegacyText>;
 }));
+const result = size.fileFinishedImporting("design/void/Form/native/FormText.tsx");
+
+export default forwardRefResult;
 export const FormTextColors = obj;

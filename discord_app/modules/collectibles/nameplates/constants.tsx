@@ -1,33 +1,46 @@
-// === Module 1981: constants ===
+// === Module 1981: nameplates/constants ===
 
-// Module 1981 (constants)
+// Module 1981 (nameplates/constants)
 import types from "types" /* 1982 */;
 import size from "module_2" /* 2 */;
 
 const obj = {};
-obj[types.PaletteKeys.Crimson] = { darkBackground: "#900007", lightBackground: "#E7040F", name: types.PaletteKeys.Crimson };
 const obj2 = { darkBackground: "#900007", lightBackground: "#E7040F", name: types.PaletteKeys.Crimson };
-obj[types.PaletteKeys.Berry] = { darkBackground: "#893A99", lightBackground: "#B11FCF", name: types.PaletteKeys.Berry };
+const Crimson = types.PaletteKeys.Crimson;
+obj[Crimson] = obj2;
 const obj3 = { darkBackground: "#893A99", lightBackground: "#B11FCF", name: types.PaletteKeys.Berry };
-obj[types.PaletteKeys.Sky] = { darkBackground: "#0080B7", lightBackground: "#56CCFF", name: types.PaletteKeys.Sky };
+const Berry = types.PaletteKeys.Berry;
+obj[Berry] = obj3;
 const obj4 = { darkBackground: "#0080B7", lightBackground: "#56CCFF", name: types.PaletteKeys.Sky };
-obj[types.PaletteKeys.Teal] = { darkBackground: "#086460", lightBackground: "#7DEED7", name: types.PaletteKeys.Teal };
+const Sky = types.PaletteKeys.Sky;
+obj[Sky] = obj4;
 const obj5 = { darkBackground: "#086460", lightBackground: "#7DEED7", name: types.PaletteKeys.Teal };
-obj[types.PaletteKeys.Forest] = { darkBackground: "#2D5401", lightBackground: "#6AA624", name: types.PaletteKeys.Forest };
+const Teal = types.PaletteKeys.Teal;
+obj[Teal] = obj5;
 const obj6 = { darkBackground: "#2D5401", lightBackground: "#6AA624", name: types.PaletteKeys.Forest };
-obj[types.PaletteKeys.BubbleGum] = { darkBackground: "#DC3E97", lightBackground: "#F957B3", name: types.PaletteKeys.BubbleGum };
+const Forest = types.PaletteKeys.Forest;
+obj[Forest] = obj6;
 const obj7 = { darkBackground: "#DC3E97", lightBackground: "#F957B3", name: types.PaletteKeys.BubbleGum };
-obj[types.PaletteKeys.Violet] = { darkBackground: "#730BC8", lightBackground: "#972FED", name: types.PaletteKeys.Violet };
+const BubbleGum = types.PaletteKeys.BubbleGum;
+obj[BubbleGum] = obj7;
 const obj8 = { darkBackground: "#730BC8", lightBackground: "#972FED", name: types.PaletteKeys.Violet };
-obj[types.PaletteKeys.Cobalt] = { darkBackground: "#0131C2", lightBackground: "#4278FF", name: types.PaletteKeys.Cobalt };
+const Violet = types.PaletteKeys.Violet;
+obj[Violet] = obj8;
 const obj9 = { darkBackground: "#0131C2", lightBackground: "#4278FF", name: types.PaletteKeys.Cobalt };
-obj[types.PaletteKeys.Clover] = { darkBackground: "#047B20", lightBackground: "#63CD5A", name: types.PaletteKeys.Clover };
+const Cobalt = types.PaletteKeys.Cobalt;
+obj[Cobalt] = obj9;
 const obj10 = { darkBackground: "#047B20", lightBackground: "#63CD5A", name: types.PaletteKeys.Clover };
-obj[types.PaletteKeys.Lemon] = { darkBackground: "#F6CD12", lightBackground: "#FED400", name: types.PaletteKeys.Lemon };
+const Clover = types.PaletteKeys.Clover;
+obj[Clover] = obj10;
 const obj11 = { darkBackground: "#F6CD12", lightBackground: "#FED400", name: types.PaletteKeys.Lemon };
-obj[types.PaletteKeys.White] = { darkBackground: "#FFFFFF", lightBackground: "#FFFFFF", name: types.PaletteKeys.White };
+const Lemon = types.PaletteKeys.Lemon;
+obj[Lemon] = obj11;
 const obj12 = { darkBackground: "#FFFFFF", lightBackground: "#FFFFFF", name: types.PaletteKeys.White };
-obj[types.PaletteKeys.Black] = { darkBackground: "#000000", lightBackground: "#000000", name: types.PaletteKeys.Black };
+const White = types.PaletteKeys.White;
+obj[White] = obj12;
+const obj13 = { darkBackground: "#000000", lightBackground: "#000000", name: types.PaletteKeys.Black };
+const Black = types.PaletteKeys.Black;
+obj[Black] = obj13;
 const values = Object.values(obj);
 const result = size.fileFinishedImporting("modules/collectibles/nameplates/constants.tsx");
 

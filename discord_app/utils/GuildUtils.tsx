@@ -2,23 +2,25 @@
 
 // Module 5704 (GuildUtils)
 import DurationsDefault from "Durations" /* 1102 */;
-import util from "util" /* 1126 */;
+import intl2 from "intl" /* 1126 */;
 import UserUtilsAll from "UserUtils" /* 4722 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5705 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import UserStore from "UserStore" /* 1377 */;
-import priv from "priv" /* 1444 */;
+import LRUCache from "LRUCache" /* 1444 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
 function getGuildNameSuggestion(truncateUsername) {
   const currentUser = UserStore.getCurrentUser();
-  const name = UserUtilsAll.getName(currentUser);
+  const obj = UserUtilsAll;
+  const name = obj.getName(currentUser);
   let str = "";
   if (null != name) {
     str = "";
     if (0 !== name.length) {
-      const intl = util.intl;
+      const intl = intl2.intl;
+      const formatToPlainString = intl.formatToPlainString;
       truncateUsername = undefined;
+      const Y6Qfju = intl2.t.Y6Qfju;
       if (truncateUsername != null) {
         truncateUsername = truncateUsername.truncateUsername;
       }
@@ -27,21 +29,48 @@ function getGuildNameSuggestion(truncateUsername) {
         substr = name.slice(0, 20);
       }
       const obj2 = { username: substr };
-      str = intl.formatToPlainString(util.t.Y6Qfju, obj2);
+      str = formatToPlainString(Y6Qfju, obj2);
     }
   }
   return str;
 }
-let obj = { maxAge: null };
-obj.maxAge = DurationsDefault.Millis.MINUTE;
-const importDefaultResult1 = new priv(obj);
-const size = fn(2);
-let result = size.fileFinishedImporting("utils/GuildUtils.tsx");
-
-export default {
+let obj = { maxAge: DurationsDefault.Millis.MINUTE };
+const importDefaultResult1 = new LRUCache(obj);
+let obj2 = {
   getGuildNameSuggestion,
   requestMembers(arr, arg1) {
-    closure_0 = arg1;
+    let closure_4;
+    let flag2;
+    let timeout;
+    const f90782 = () => {
+      items = [];
+      if (null == items) {
+        const push = items.push;
+        const items1 = [];
+        HermesBuiltin.arraySpread(items1, GuildStore.getGuildIds(), 0);
+        HermesBuiltin.apply(push, items1, items);
+      } else {
+        const _Array = Array;
+        if (Array.isArray(items)) {
+          const item = arr2.forEach((item) => {
+            guild = guild.getGuild(item);
+            if (null != guild) {
+              items.push(guild.id);
+            }
+          });
+        } else {
+          let guild = GuildStore.getGuild(arr2);
+          if (null != guild) {
+            items.push(guild.id);
+          }
+        }
+      }
+      if (items.length > 0) {
+        const obj = items(dependencyMap[4]);
+        const members = obj.requestMembers(items, closure_1.toLocaleLowerCase(), num);
+      }
+    };
+    let closure_0 = arg1;
     let num = arg2;
     if (arg2 === undefined) {
       num = 10;
@@ -55,7 +84,7 @@ export default {
           str = "";
         }
         const combined = "" + str + ":" + closure_0;
-        value = importDefaultResult1.get(combined);
+        const value = importDefaultResult1.get(combined);
         if (null == value) {
           const result = importDefaultResult1.set(combined, true);
         }
@@ -63,7 +92,7 @@ export default {
           items.push(item);
         }
       });
-      let flag2 = false;
+      flag2 = false;
     } else {
       let str = arr;
       if (arr == null) {
@@ -71,7 +100,7 @@ export default {
       }
       const _HermesInternal = HermesInternal;
       let combined = "" + str + ":" + arg1;
-      value = importDefaultResult1.get(combined);
+      let value = importDefaultResult1.get(combined);
       if (null == value) {
         let result = importDefaultResult1.set(combined, true);
       }
@@ -82,80 +111,28 @@ export default {
     }
     if (items.length > 0) {
       if (isArray) {
-        closure_130_0 = items;
-        closure_130_1 = arg1;
-        closure_130_2 = num;
+        let closure_1 = arg1;
         if (null != timeout) {
           const _clearTimeout2 = clearTimeout;
           clearTimeout(timeout);
         }
         const _setTimeout2 = setTimeout;
-        timeout = setTimeout(() => {
-          items = [];
-          if (null == closure_0) {
-            const push = items.push;
-            const items1 = [];
-            HermesBuiltin.arraySpread(GuildStore.getGuildIds(), 0);
-            HermesBuiltin.apply(items1, items);
-          } else {
-            const _Array = Array;
-            if (Array.isArray(closure_0)) {
-              const item = closure_0.forEach((item) => {
-                guild = guild.getGuild(item);
-                if (null != guild) {
-                  items.push(guild.id);
-                }
-              });
-            } else {
-              guild = GuildStore.getGuild(closure_0);
-              if (null != guild) {
-                items.push(guild.id);
-              }
-            }
-          }
-          if (items.length > 0) {
-            const members = GuildActionCreatorsDefault.requestMembers(items, items.toLocaleLowerCase(), importAll);
-          }
-        }, 200);
+        timeout = setTimeout(f90782, 200);
       }
     }
     if (flag2) {
-      closure_129_0 = arr;
-      closure_129_1 = arg1;
-      closure_129_2 = num;
+      closure_0 = arr;
+      closure_1 = arg1;
       if (null != timeout) {
         const _clearTimeout = clearTimeout;
         clearTimeout(timeout);
       }
       const _setTimeout = setTimeout;
-      timeout = setTimeout(() => {
-        items = [];
-        if (null == closure_0) {
-          const push = items.push;
-          const items1 = [];
-          HermesBuiltin.arraySpread(GuildStore.getGuildIds(), 0);
-          HermesBuiltin.apply(items1, items);
-        } else {
-          const _Array = Array;
-          if (Array.isArray(closure_0)) {
-            const item = closure_0.forEach((item) => {
-              guild = guild.getGuild(item);
-              if (null != guild) {
-                items.push(guild.id);
-              }
-            });
-          } else {
-            guild = GuildStore.getGuild(closure_0);
-            if (null != guild) {
-              items.push(guild.id);
-            }
-          }
-        }
-        if (items.length > 0) {
-          const members = GuildActionCreatorsDefault.requestMembers(items, items.toLocaleLowerCase(), importAll);
-        }
-      }, 200);
+      timeout = setTimeout(f90782, 200);
     }
   }
 };
+let result = size.fileFinishedImporting("utils/GuildUtils.tsx");
+
+export default obj2;
 export { getGuildNameSuggestion };

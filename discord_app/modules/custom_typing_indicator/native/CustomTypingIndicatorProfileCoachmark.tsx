@@ -1,73 +1,44 @@
 // === Module 16968: CustomTypingIndicatorProfileCoachmark ===
 
 // Module 16968 (CustomTypingIndicatorProfileCoachmark)
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
+import Constants from "Constants" /* 1085 */;
+import intl4 from "intl" /* 1126 */;
 import user from "user" /* 1385 */;
+import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
 import _modDef3725 from "module_3725" /* 3725 */;
 import openUserSettings from "openUserSettings" /* 6885 */;
 import CustomTypingIndicatorDynamicAssetDefault from "CustomTypingIndicatorDynamicAsset" /* 11586 */;
 import _modDef11588 from "module_11588" /* 11588 */;
 import _modDef11589 from "module_11589" /* 11589 */;
-import noop from "module_19" /* 19 */;
+import react_mod from "react" /* 19 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const UserSettingsSections = fn(1085).UserSettingsSections;
-const ContentDismissActionType = fn(2048).ContentDismissActionType;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj2 = { coachmarkImageContainer: { alignItems: "center", justifyContent: "center", paddingTop: nativeDefault.space.PX_10 }, typingText: { maxWidth: 100 } };
-let closure_8 = createStyles.createStyles(obj2);
-fn(558);
-let obj3 = { alignItems: "center", justifyContent: "center", paddingTop: nativeDefault.space.PX_10 };
-const ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(6);
-  const tmp4 = closure_8();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [_modDef11588, _modDef11589, _modDef11588];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== tmp4.typingText) {
-    const obj2 = { name: "Locke", suggestion: user.TypingSuggestion.YAPPING, emojiSize: 16, spacing: 8, emojiGap: 4, textVariant: "text-xs/medium", textColor: "text-subtle", textStyle: tmp4.typingText, emojiSource: first };
-    const tmp11 = jsx(CustomTypingIndicatorDynamicAssetDefault, { name: "Locke", suggestion: user.TypingSuggestion.YAPPING, emojiSize: 16, spacing: 8, emojiGap: 4, textVariant: "text-xs/medium", textColor: "text-subtle", textStyle: tmp4.typingText, emojiSource: first });
-    cResult[1] = tmp4.typingText;
-    cResult[2] = tmp11;
-    let tmp7 = tmp11;
-  } else {
-    tmp7 = cResult[2];
-  }
-  if (cResult[3] === tmp4.coachmarkImageContainer) {
-    if (cResult[4] === tmp7) {
-      let tmp12 = cResult[5];
-    }
-    return tmp12;
-  }
-  const tmp13 = <View style={tmp4.coachmarkImageContainer}>{tmp7}</View>;
-  cResult[3] = tmp4.coachmarkImageContainer;
-  cResult[4] = tmp7;
-  cResult[5] = tmp13;
-  tmp12 = tmp13;
-  const obj3 = { style: tmp4.coachmarkImageContainer, children: tmp7 };
-}) : (() => {
-  const tmp = closure_8();
-  const obj = { style: tmp.coachmarkImageContainer, children: null };
-  const obj2 = { name: "Locke", suggestion: user.TypingSuggestion.YAPPING, emojiSize: 16, spacing: 8, emojiGap: 4, textVariant: "text-xs/medium", textColor: "text-subtle", textStyle: tmp.typingText, emojiSource: null };
-  const items = [_modDef11588, _modDef11589, _modDef11588];
-  obj2.emojiSource = items;
-  obj.children = jsx(CustomTypingIndicatorDynamicAssetDefault, { name: "Locke", suggestion: user.TypingSuggestion.YAPPING, emojiSize: 16, spacing: 8, emojiGap: 4, textVariant: "text-xs/medium", textColor: "text-subtle", textStyle: tmp.typingText, emojiSource: null });
-  return <View style={tmp.coachmarkImageContainer}>{null}</View>;
-});
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorProfileCoachmark.tsx");
+let openUserSettingsResult, position;
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((position) => {
-  const cResult = markAsDismissed(576).c(14);
+let obj2;
+let react = react_mod;
+const View = react_native.View;
+const UserSettingsSections = Constants.UserSettingsSections;
+const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
+const jsx = Fragment.jsx;
+let obj = { coachmarkImageContainer: obj2, typingText: { maxWidth: 100 } };
+obj2 = { alignItems: "center", justifyContent: "center", paddingTop: nativeDefault.space.PX_10 };
+let closure_8 = createStyles.createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((position) => {
+  let first;
+  let markAsDismissed;
+  let tmp13;
+  let tmp7;
+  let visible;
+  let obj = markAsDismissed(576);
+  const cResult = obj.c(14);
   ({ visible, markAsDismissed } = position);
   position = position.position;
   let str = "bottom";
@@ -78,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((position) => {
     const intl = markAsDismissed(1126).intl;
     const stringResult = intl.string(_modDef3725.Eq5jIA);
     cResult[0] = stringResult;
-    let first = stringResult;
+    first = stringResult;
   } else {
     first = cResult[0];
   }
@@ -86,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((position) => {
     const intl2 = markAsDismissed(1126).intl;
     const stringResult1 = intl2.string(_modDef3725.lSBp2M);
     cResult[1] = stringResult1;
-    let tmp7 = stringResult1;
+    tmp7 = stringResult1;
   } else {
     tmp7 = cResult[1];
   }
@@ -128,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((position) => {
     const stringResult2 = intl3.string(_modDef3725["6NP6ic"]);
     cResult[4] = tmp14;
     cResult[5] = stringResult2;
-    let tmp13 = stringResult2;
+    tmp13 = stringResult2;
   } else {
     class C {
       constructor() {
@@ -143,7 +114,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((position) => {
       constructor() {
         obj = closure_0(closure_2[11]);
         obj1 = { screen: UserSettingsSections.TYPING_INDICATOR, params: { source: "profile_coachmark" } };
-        openUserSettingsResult = obj.openUserSettings(obj1, () => { ... });
+        openUserSettingsResult = obj.openUserSettings(obj1, () => { /* body not rendered: F147754 */ });
         return;
       }
     }
@@ -154,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((position) => {
       constructor() {
         obj = closure_0(closure_2[11]);
         obj1 = { screen: UserSettingsSections.TYPING_INDICATOR, params: { source: "profile_coachmark" } };
-        openUserSettingsResult = obj.openUserSettings(obj1, () => { ... });
+        openUserSettingsResult = obj.openUserSettings(obj1, () => { /* body not rendered: F147754 */ });
         return;
       }
     }
@@ -164,56 +135,114 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((position) => {
       constructor() {
         obj = closure_0(closure_2[11]);
         obj1 = { screen: UserSettingsSections.TYPING_INDICATOR, params: { source: "profile_coachmark" } };
-        openUserSettingsResult = obj.openUserSettings(obj1, () => { ... });
+        openUserSettingsResult = obj.openUserSettings(obj1, () => { /* body not rendered: F147754 */ });
         return;
       }
     }
   }
+  let obj2 = { title: first, description: tmp7, visible, position: str, offsetY: PX_12, onDismiss: C, renderImgComponent: tmp14, buttonLabel: tmp13, buttonVariant: "primary", onButtonPress: T };
   cResult[8] = C;
   cResult[9] = str;
   cResult[10] = PX_12;
   cResult[11] = T;
   cResult[12] = visible;
-  cResult[13] = { title: first, description: tmp7, visible, position: str, offsetY: PX_12, onDismiss: C, renderImgComponent: tmp14, buttonLabel: tmp13, buttonVariant: "primary", onButtonPress: T };
-  const obj = markAsDismissed(576);
-  const obj2 = { title: first, description: tmp7, visible, position: str, offsetY: PX_12, onDismiss: C, renderImgComponent: tmp14, buttonLabel: tmp13, buttonVariant: "primary", onButtonPress: T };
+  cResult[13] = obj2;
 }) : ((visible) => {
+  let title;
   visible = visible.visible;
   const markAsDismissed = visible.markAsDismissed;
   let str = visible.position;
+  const targetRef = visible.targetRef;
   if (str === undefined) {
     str = "bottom";
   }
   let intl = visible(str[9]).intl;
   const stringResult = intl.string(markAsDismissed(str[10]).Eq5jIA);
-  noop = stringResult;
+  react = stringResult;
   const intl2 = visible(str[9]).intl;
   const stringResult1 = intl2.string(markAsDismissed(str[10]).lSBp2M);
   const items = [markAsDismissed];
-  const onDismiss = noop.useCallback(() => {
+  const onDismiss = react.useCallback(() => {
     markAsDismissed(ContentDismissActionType.USER_DISMISS);
   }, items);
   const items1 = [stringResult, stringResult1, visible, str, onDismiss, markAsDismissed];
-  const memo = noop.useMemo(() => {
-    const obj = { title, description: stringResult1, visible, position: str, offsetY: null, onDismiss: null, renderImgComponent: null, buttonLabel: null, buttonVariant: "primary", onButtonPress: null };
+  const memo = react.useMemo(() => {
     let PX_12;
+    let intl;
+    let obj = {
+      title,
+      description: stringResult1,
+      visible,
+      position: str,
+      offsetY: PX_12,
+      onDismiss,
+      renderImgComponent() {
+        return closure_1_7(closure_1_9, {});
+      },
+      buttonLabel: intl.string(_modDef3725["6NP6ic"]),
+      buttonVariant: "primary",
+      onButtonPress() {
+        const obj = visible(str[11]);
+        const obj2 = { screen: callback.TYPING_INDICATOR, params: { source: "profile_coachmark" } };
+        obj.openUserSettings(obj2, () => {
+          closure_1_1(constants.TAKE_ACTION);
+        });
+      }
+    };
+    PX_12 = undefined;
     if ("top" === str) {
       PX_12 = nativeDefault.space.PX_12;
     }
-    obj.offsetY = PX_12;
-    obj.onDismiss = onDismiss;
-    obj.renderImgComponent = function renderImgComponent() {
-      return closure_1_7(closure_1_9, {});
-    };
-    const intl = util.intl;
-    obj.buttonLabel = intl.string(_modDef3725["6NP6ic"]);
-    obj.onButtonPress = function onButtonPress() {
-      visible(str[11]).openUserSettings({ screen: callback.TYPING_INDICATOR, params: { source: "profile_coachmark" } }, () => {
-        closure_1_1(constants.TAKE_ACTION);
-      });
-    };
+    intl = intl4.intl;
     return obj;
   }, items1);
-  const coachmark = visible(str[12]).useCoachmark(visible.targetRef, memo);
+  let obj = visible(str[12]);
+  const coachmark = obj.useCoachmark(targetRef, memo);
   return null;
 });
+ReactCompilerGating = ReactCompilerGating_mod;
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let first;
+  let tmp7;
+  const obj = react2;
+  const cResult = obj.c(6);
+  const tmp4 = closure_8();
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [_modDef11588, _modDef11589, _modDef11588];
+    cResult[0] = items;
+    first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== tmp4.typingText) {
+    CustomTypingIndicatorDynamicAssetDefault;
+    const tmp11 = <tmp10 name="Locke" suggestion={user.TypingSuggestion.YAPPING} emojiSize={16} spacing={8} emojiGap={4} textVariant="text-xs/medium" textColor="text-subtle" textStyle={tmp4.typingText} emojiSource={first} />;
+    cResult[1] = tmp4.typingText;
+    cResult[2] = tmp11;
+    tmp7 = tmp11;
+  } else {
+    tmp7 = cResult[2];
+  }
+  if (cResult[3] === tmp4.coachmarkImageContainer) {
+    let tmp12;
+    if (cResult[4] === tmp7) {
+      tmp12 = cResult[5];
+    }
+    return tmp12;
+  }
+  const tmp13 = <View style={tmp4.coachmarkImageContainer}>{tmp7}</View>;
+  cResult[3] = tmp4.coachmarkImageContainer;
+  cResult[4] = tmp7;
+  cResult[5] = tmp13;
+  tmp12 = tmp13;
+}) : (() => {
+  let items;
+  const tmp = closure_8();
+  ({ name: "Locke", suggestion: user.TypingSuggestion.YAPPING, emojiSize: 16, spacing: 8, emojiGap: 4, textVariant: "text-xs/medium", textColor: "text-subtle", textStyle: tmp.typingText, emojiSource: items });
+  CustomTypingIndicatorDynamicAssetDefault;
+  items = [_modDef11588, _modDef11589, _modDef11588];
+  return <View style={tmp.coachmarkImageContainer}>{null}</View>;
+});
+const result = size.fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorProfileCoachmark.tsx");
+
+export default tmp2;

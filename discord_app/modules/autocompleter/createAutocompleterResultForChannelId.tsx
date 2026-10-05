@@ -1,15 +1,16 @@
 // === Module 9505: createAutocompleterResultForChannelId ===
 
 // Module 9505 (createAutocompleterResultForChannelId)
+import Constants from "Constants" /* 1085 */;
 import useChannelName from "useChannelName" /* 5043 */;
+import autocompleter_AutocompleterConstants from "autocompleter/AutocompleterConstants" /* 5700 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import RelationshipStore from "RelationshipStore" /* 4519 */;
 import UserStore from "UserStore" /* 1377 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-fn(5700).AutocompleterResultTypes;
-const ChannelTypes = fn(1085).ChannelTypes;
-const size = fn(2);
+const AutocompleterResultTypes = autocompleter_AutocompleterConstants.AutocompleterResultTypes;
+const ChannelTypes = Constants.ChannelTypes;
 const result = size.fileFinishedImporting("modules/autocompleter/createAutocompleterResultForChannelId.tsx");
 
 export default function createAutocompleterResultForChannelId(arg0, arg1) {
@@ -29,28 +30,26 @@ export default function createAutocompleterResultForChannelId(arg0, arg1) {
   if (null == channel) {
     return null;
   } else {
-    const channelName = useChannelName.computeChannelName(channel, obj2, tmp);
+    const obj8 = useChannelName;
+    const channelName = obj8.computeChannelName(channel, obj2, tmp);
     const type = channel.type;
     if (ChannelTypes.DM === type) {
       const user = obj2.getUser(channel.getRecipientId());
       let tmp6 = null;
       if (null != user) {
+        tmp6 = { type: AutocompleterResultTypes.USER, record: user, score: 0, comparator: channelName };
         const obj3 = { type: AutocompleterResultTypes.USER, record: user, score: 0, comparator: channelName };
-        tmp6 = obj3;
       }
       return tmp6;
     } else if (ChannelTypes.GROUP_DM === type) {
-      const obj4 = { type: AutocompleterResultTypes.GROUP_DM, record: channel, score: 0, comparator: channelName };
-      return obj4;
+      return { type: AutocompleterResultTypes.GROUP_DM, record: channel, score: 0, comparator: channelName };
     } else {
       if (ChannelTypes.GUILD_VOICE !== type) {
         if (ChannelTypes.GUILD_STAGE_VOICE !== type) {
-          const obj5 = { type: AutocompleterResultTypes.TEXT_CHANNEL, record: channel, score: 0, comparator: channelName };
-          return obj5;
+          return { type: AutocompleterResultTypes.TEXT_CHANNEL, record: channel, score: 0, comparator: channelName };
         }
       }
-      const obj6 = { type: AutocompleterResultTypes.VOICE_CHANNEL, record: channel, score: 0, comparator: channelName };
-      return obj6;
+      return { type: AutocompleterResultTypes.VOICE_CHANNEL, record: channel, score: 0, comparator: channelName };
     }
   }
 };

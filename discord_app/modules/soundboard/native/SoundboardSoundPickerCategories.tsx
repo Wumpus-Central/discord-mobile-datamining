@@ -1,9 +1,9 @@
 // === Module 17246: SoundboardSoundPickerCategories ===
 
 // Module 17246 (SoundboardSoundPickerCategories)
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
+import intl6 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import ClockIcon from "ClockIcon" /* 4849 */;
 import HapticUtils from "HapticUtils" /* 4855 */;
@@ -14,284 +14,341 @@ import Pressables from "Pressables" /* 5909 */;
 import GuildIconDefault from "GuildIcon" /* 5971 */;
 import TrophyIcon from "TrophyIcon" /* 8364 */;
 import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9644 */;
-import _modDef10116 from "module_10116" /* 10116 */;
-import _modDef17244 from "module_17244" /* 17244 */;
-import noop from "module_19" /* 19 */;
+import AssetRegistryDefault from "AssetRegistry" /* 10116 */;
+import ExpressionPickerStore from "ExpressionPickerStore" /* 17228 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 17244 */;
+import react_mod from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
 import UserStore from "UserStore" /* 1377 */;
+import Constants from "Constants" /* 1085 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size_mod from "module_2" /* 2 */;
 
-require = fn;
+let closure_0, guildId, setImmediateResult;
+
+let CATEGORY_ICON_SIZE;
+let NODE_MARGIN;
+let NODE_SIZE;
+let c10;
+let c9;
+let forwardRef;
+let hasOwnProperty;
+let memo;
+let metroRequire;
+let obj2;
+let obj3;
+let size;
+let size1;
+let size2;
+let unpackModuleId;
 function getItemLayout(arg0, index) {
-  return { length: options, offset: options * index, index };
+  return { length: React4, offset: React4 * index, index };
 }
-get_ActivityIndicator = fn(17);
-const StyleSheet = get_ActivityIndicator.StyleSheet;
-({ View: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
-const setSearchQuery = fn(17228).setSearchQuery;
-const Constants = fn(1085);
-({ CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT: closure_9, NODE_SIZE, NODE_MARGIN } = Constants);
-const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4890);
-let obj = { container: { borderTopWidth: StyleSheet.hairlineWidth, paddingHorizontal: 8, flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, item: null, fadedItem: { opacity: 0.5 }, activeItem: null, guildItem: null, keyboardItem: null, lockContainer: null, lock: null };
-let size = { margin: NODE_MARGIN, height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2, alignItems: "center", justifyContent: "center" };
-obj.item = size;
-let obj3 = { borderTopWidth: StyleSheet.hairlineWidth, paddingHorizontal: 8, flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
-obj.activeItem = { opacity: 1, backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
-obj.guildItem = { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE, borderRadius: CATEGORY_ICON_SIZE / 2 };
-obj.keyboardItem = { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE };
-const size1 = { width: 12, height: 12, position: "absolute", bottom: 0, end: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center" };
-obj.lockContainer = size1;
-const size2 = { width: 7.5, height: 7.5, tintColor: nativeDefault.colors.TEXT_DEFAULT };
-obj.lock = size2;
-let closure_12 = createStyles.createStyles(obj);
-let ReactCompilerGating = fn(558);
+let react = react_mod;
+const StyleSheet = react_native.StyleSheet;
+({ View: hasOwnProperty, FlatList: metroRequire } = react_native);
+const setSearchQuery = ExpressionPickerStore.setSearchQuery;
+({ CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT: c9, NODE_SIZE, NODE_MARGIN } = Constants);
+({ jsx: c10, jsxs: unpackModuleId } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { container: obj2, item: size, fadedItem: { opacity: 0.5 }, activeItem: obj3, guildItem: { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE, borderRadius: CATEGORY_ICON_SIZE / 2 }, keyboardItem: { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE }, lockContainer: size1, lock: size2 };
+obj2 = { borderTopWidth: StyleSheet.hairlineWidth, paddingHorizontal: 8, flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+createStyles = createStyles.createStyles;
+size = { margin: NODE_MARGIN, height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2, alignItems: "center", justifyContent: "center" };
+obj3 = { opacity: 1, backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
+size1 = { width: 12, height: 12, position: "absolute", bottom: 0, end: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center" };
+size2 = { width: 7.5, height: 7.5, tintColor: nativeDefault.colors.TEXT_DEFAULT };
+let closure_12 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((index) => {
-  const cResult = c.c(36);
+  let category;
+  let items;
+  let locked;
+  let obj9;
+  let style;
+  let tmp11;
+  let tmp12;
+  let tmp13;
+  let tmp14;
+  const obj = react2;
+  const cResult = obj.c(36);
   ({ category, handlePressCategory } = index);
   index = index.index;
   ({ style, locked } = index);
   const tmp5 = closure_12();
   const type = category.categoryInfo.type;
   if (SoundboardTypes.SoundboardSoundGridSectionType.GUILD === type) {
-    let guildItem = category.categoryInfo.guild;
-    if (cResult[0] === guildItem) {
+    const guild = category.categoryInfo.guild;
+    if (cResult[0] === guild) {
+      let tmp34;
+      if (cResult[1] === tmp5.guildItem) {
+        tmp34 = cResult[2];
+      }
+      tmp12 = null;
+      tmp13 = tmp34;
+      tmp11 = null;
+      tmp14 = tmp33;
     }
-    const obj2 = { guild: guildItem, style: tmp5.guildItem };
-    const tmp37 = v65535(GuildIconDefault, obj2);
-    cResult[0] = guildItem;
-    guildItem = tmp5.guildItem;
-    cResult[1] = guildItem;
+    const obj2 = { guild, style: tmp5.guildItem };
+    const tmp37 = authStore(GuildIconDefault, obj2);
+    cResult[0] = guild;
+    cResult[1] = tmp5.guildItem;
     cResult[2] = tmp37;
-  } else {
-    if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
-      const _Symbol4 = Symbol;
-      if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl5 = util.intl;
-        const stringResult = intl5.string(util.t.y3LQCG);
-        cResult[3] = stringResult;
-        let tmp30 = stringResult;
-      } else {
-        tmp30 = cResult[3];
-      }
-      let tmp12 = _modDef10116;
-      let tmp11 = null;
-      let tmp14 = tmp30;
-      let tmp13 = null;
-    } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
-      const _Symbol3 = Symbol;
-      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl4 = util.intl;
-        const stringResult1 = intl4.string(util.t["+cGVV6"]);
-        cResult[4] = stringResult1;
-        let tmp24 = stringResult1;
-      } else {
-        tmp24 = cResult[4];
-      }
-      if (cResult[5] !== tmp5.keyboardItem) {
-        const obj3 = { style: tmp5.keyboardItem };
-        const tmp28 = v65535(ClockIcon.ClockIcon, obj3);
-        cResult[5] = tmp5.keyboardItem;
-        cResult[6] = tmp28;
-        let tmp26 = tmp28;
-      } else {
-        tmp26 = cResult[6];
-      }
-      tmp12 = null;
-      tmp11 = tmp26;
-      tmp13 = null;
-      tmp14 = tmp24;
-    } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
-      const _Symbol2 = Symbol;
-      if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl3 = util.intl;
-        const stringResult2 = intl3.string(util.t.Rtvk9X);
-        cResult[7] = stringResult2;
-        let tmp20 = stringResult2;
-      } else {
-        tmp20 = cResult[7];
-      }
-      tmp12 = _modDef17244;
-      tmp11 = null;
-      tmp14 = tmp20;
-      tmp13 = null;
-    } else if (SoundboardTypes.SoundboardSoundGridSectionType.SEARCH === type) {
-      const _Symbol = Symbol;
-      if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl2 = util.intl;
-        const stringResult3 = intl2.string(util.t.sKt3xS);
-        cResult[8] = stringResult3;
-        let tmp16 = stringResult3;
-      } else {
-        tmp16 = cResult[8];
-      }
-      tmp12 = _modDef17244;
-      tmp11 = null;
-      tmp14 = tmp16;
-      tmp13 = null;
+    tmp34 = tmp37;
+  } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
+    let tmp30;
+    const _Symbol4 = Symbol;
+    if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+      const intl5 = intl6.intl;
+      const stringResult = intl5.string(intl6.t.y3LQCG);
+      cResult[3] = stringResult;
+      tmp30 = stringResult;
     } else {
-      tmp12 = null;
-      tmp11 = null;
-      tmp13 = null;
-      tmp14 = null;
-      if (SoundboardTypes.SoundboardSoundGridSectionType.TOP_SOUNDS === type) {
-        if (cResult[9] !== category.categoryInfo.guild.name) {
-          const intl = util.intl;
-          const obj4 = { guildName: category.categoryInfo.guild.name };
-          const formatToPlainStringResult = intl.formatToPlainString(util.t.GXs41w, obj4);
-          cResult[9] = category.categoryInfo.guild.name;
-          cResult[10] = formatToPlainStringResult;
-          let tmp6 = formatToPlainStringResult;
-        } else {
-          tmp6 = cResult[10];
-        }
-        if (cResult[11] !== tmp5.keyboardItem) {
-          const obj5 = { style: tmp5.keyboardItem };
-          const tmp10 = v65535(TrophyIcon.TrophyIcon, obj5);
-          cResult[11] = tmp5.keyboardItem;
-          cResult[12] = tmp10;
-          let tmp8 = tmp10;
-        } else {
-          tmp8 = cResult[12];
-        }
-        tmp11 = tmp8;
-        tmp12 = null;
-        tmp13 = null;
-        tmp14 = tmp6;
-      }
+      tmp30 = cResult[3];
     }
-    if (cResult[13] === handlePressCategory) {
-      if (cResult[14] === index) {
-        let tmp42 = cResult[15];
+    tmp12 = AssetRegistryDefault;
+    tmp11 = null;
+    tmp14 = tmp30;
+    tmp13 = null;
+  } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
+    let tmp24;
+    let tmp26;
+    const _Symbol3 = Symbol;
+    if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+      const intl4 = intl6.intl;
+      const stringResult1 = intl4.string(intl6.t["+cGVV6"]);
+      cResult[4] = stringResult1;
+      tmp24 = stringResult1;
+    } else {
+      tmp24 = cResult[4];
+    }
+    if (cResult[5] !== tmp5.keyboardItem) {
+      const obj3 = { style: tmp5.keyboardItem };
+      const tmp28 = authStore(ClockIcon.ClockIcon, obj3);
+      cResult[5] = tmp5.keyboardItem;
+      cResult[6] = tmp28;
+      tmp26 = tmp28;
+    } else {
+      tmp26 = cResult[6];
+    }
+    tmp12 = null;
+    tmp11 = tmp26;
+    tmp13 = null;
+    tmp14 = tmp24;
+  } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
+    let tmp20;
+    const _Symbol2 = Symbol;
+    if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+      const intl3 = intl6.intl;
+      const stringResult2 = intl3.string(intl6.t.Rtvk9X);
+      cResult[7] = stringResult2;
+      tmp20 = stringResult2;
+    } else {
+      tmp20 = cResult[7];
+    }
+    tmp12 = AssetRegistryDefault2;
+    tmp11 = null;
+    tmp14 = tmp20;
+    tmp13 = null;
+  } else if (SoundboardTypes.SoundboardSoundGridSectionType.SEARCH === type) {
+    let tmp16;
+    const _Symbol = Symbol;
+    if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+      const intl2 = intl6.intl;
+      const stringResult3 = intl2.string(intl6.t.sKt3xS);
+      cResult[8] = stringResult3;
+      tmp16 = stringResult3;
+    } else {
+      tmp16 = cResult[8];
+    }
+    tmp12 = AssetRegistryDefault2;
+    tmp11 = null;
+    tmp14 = tmp16;
+    tmp13 = null;
+  } else {
+    tmp12 = null;
+    tmp11 = null;
+    tmp13 = null;
+    tmp14 = null;
+    if (SoundboardTypes.SoundboardSoundGridSectionType.TOP_SOUNDS === type) {
+      let tmp6;
+      let tmp8;
+      if (cResult[9] !== category.categoryInfo.guild.name) {
+        const intl = intl6.intl;
+        const obj4 = { guildName: category.categoryInfo.guild.name };
+        const formatToPlainStringResult = intl.formatToPlainString(intl6.t.GXs41w, obj4);
+        cResult[9] = category.categoryInfo.guild.name;
+        cResult[10] = formatToPlainStringResult;
+        tmp6 = formatToPlainStringResult;
+      } else {
+        tmp6 = cResult[10];
       }
-      if (cResult[16] === style) {
-        if (cResult[17] === tmp5.item) {
-          let tmp43 = cResult[18];
-        }
-        if (cResult[19] === tmp11) {
-          if (cResult[20] === tmp13) {
-            if (cResult[21] === tmp12) {
-              if (cResult[22] === tmp5.keyboardItem) {
-                let tmp44 = cResult[23];
-              }
-              if (cResult[24] === tmp4) {
-                if (cResult[25] === tmp5.lock) {
-                  if (cResult[26] === tmp5.lockContainer) {
-                    let tmp48 = cResult[27];
-                  }
-                  if (cResult[28] === tmp43) {
-                    if (cResult[29] === tmp44) {
-                      if (cResult[30] === tmp48) {
-                        let tmp52 = cResult[31];
-                      }
-                      if (cResult[32] === tmp14) {
-                        if (cResult[33] === tmp42) {
-                          if (cResult[34] === tmp52) {
-                            let tmp56 = cResult[35];
-                          }
-                          return tmp56;
-                        }
-                      }
-                      const obj6 = { onPress: tmp42, accessibilityRole: "button", accessibilityLabel: tmp14, children: tmp52 };
-                      const tmp58 = v65535(Pressables.PressableOpacity, obj6, tmp14);
-                      cResult[32] = tmp14;
-                      cResult[33] = tmp42;
-                      cResult[34] = tmp52;
-                      cResult[35] = tmp58;
-                      tmp56 = tmp58;
-                    }
-                  }
-                  const obj7 = { style: tmp43, children: null };
-                  const items = [tmp44, tmp48];
-                  obj7.children = items;
-                  const tmp55 = closure_1_11(hasOwnProperty, obj7);
-                  cResult[28] = tmp43;
-                  cResult[29] = tmp44;
-                  cResult[30] = tmp48;
-                  cResult[31] = tmp55;
-                  tmp52 = tmp55;
-                }
-              }
-              let tmp49 = tmp4;
-              if (tmp4) {
-                const obj8 = { style: tmp5.lockContainer, children: null };
-                const obj9 = { style: tmp5.lock };
-                obj8.children = v65535(LockIcon.LockIcon, obj9);
-                tmp49 = v65535(hasOwnProperty, obj8);
-              }
-              cResult[24] = tmp4;
-              cResult[25] = tmp5.lock;
-              cResult[26] = tmp5.lockContainer;
-              cResult[27] = tmp49;
-              tmp48 = tmp49;
+      if (cResult[11] !== tmp5.keyboardItem) {
+        const obj5 = { style: tmp5.keyboardItem };
+        const tmp10 = authStore(TrophyIcon.TrophyIcon, obj5);
+        cResult[11] = tmp5.keyboardItem;
+        cResult[12] = tmp10;
+        tmp8 = tmp10;
+      } else {
+        tmp8 = cResult[12];
+      }
+      tmp11 = tmp8;
+      tmp12 = null;
+      tmp13 = null;
+      tmp14 = tmp6;
+    }
+  }
+  if (cResult[13] === handlePressCategory) {
+    let tmp38;
+    if (cResult[14] === index) {
+      tmp38 = cResult[15];
+    }
+    if (cResult[16] === style) {
+      let tmp39;
+      if (cResult[17] === tmp5.item) {
+        tmp39 = cResult[18];
+      }
+      if (cResult[19] === tmp11) {
+        if (cResult[20] === tmp13) {
+          if (cResult[21] === tmp12) {
+            let tmp40;
+            if (cResult[22] === tmp5.keyboardItem) {
+              tmp40 = cResult[23];
             }
+            if (cResult[24] === (undefined !== locked && locked)) {
+              if (cResult[25] === tmp5.lock) {
+                let tmp44;
+                if (cResult[26] === tmp5.lockContainer) {
+                  tmp44 = cResult[27];
+                }
+                if (cResult[28] === tmp39) {
+                  if (cResult[29] === tmp40) {
+                    let tmp48;
+                    if (cResult[30] === tmp44) {
+                      tmp48 = cResult[31];
+                    }
+                    if (cResult[32] === tmp14) {
+                      if (cResult[33] === tmp38) {
+                        let tmp52;
+                        if (cResult[34] === tmp48) {
+                          tmp52 = cResult[35];
+                        }
+                        return tmp52;
+                      }
+                    }
+                    const obj6 = { onPress: tmp38, accessibilityRole: "button", accessibilityLabel: tmp14, children: tmp48 };
+                    const tmp54 = authStore(Pressables.PressableOpacity, obj6, tmp14);
+                    cResult[32] = tmp14;
+                    cResult[33] = tmp38;
+                    cResult[34] = tmp48;
+                    cResult[35] = tmp54;
+                    tmp52 = tmp54;
+                  }
+                }
+                const obj7 = { style: tmp39, children: items };
+                items = [tmp40, tmp44];
+                const tmp51 = unpackModuleId(hasOwnProperty, obj7);
+                cResult[28] = tmp39;
+                cResult[29] = tmp40;
+                cResult[30] = tmp44;
+                cResult[31] = tmp51;
+                tmp48 = tmp51;
+              }
+            }
+            let tmp45 = tmp4;
+            if (tmp45) {
+              const obj8 = { style: tmp5.lockContainer, children: authStore(LockIcon.LockIcon, obj9) };
+              obj9 = { style: tmp5.lock };
+              tmp45 = authStore(hasOwnProperty, obj8);
+            }
+            cResult[24] = undefined !== locked && locked;
+            cResult[25] = tmp5.lock;
+            cResult[26] = tmp5.lockContainer;
+            cResult[27] = tmp45;
+            tmp44 = tmp45;
           }
         }
-        let tmp46 = tmp13;
-        if (tmp13 == null) {
-          tmp46 = tmp11;
-        }
-        if (tmp46 == null) {
-          const obj10 = { style: tmp5.keyboardItem, source: tmp12 };
-          tmp46 = v65535(native.Icon, obj10);
-        }
-        cResult[19] = tmp11;
-        cResult[20] = tmp13;
-        cResult[21] = tmp12;
-        cResult[22] = tmp5.keyboardItem;
-        cResult[23] = tmp46;
-        tmp44 = tmp46;
       }
-      const items1 = [tmp5.item, style];
-      cResult[16] = style;
-      cResult[17] = tmp5.item;
-      cResult[18] = items1;
-      tmp43 = items1;
+      let tmp42 = tmp13;
+      if (tmp13 == null) {
+        tmp42 = tmp11;
+      }
+      if (tmp42 == null) {
+        const obj10 = { style: tmp5.keyboardItem, source: tmp12 };
+        tmp42 = authStore(native.Icon, obj10);
+      }
+      cResult[19] = tmp11;
+      cResult[20] = tmp13;
+      cResult[21] = tmp12;
+      cResult[22] = tmp5.keyboardItem;
+      cResult[23] = tmp42;
+      tmp40 = tmp42;
     }
-    const fn = function o() {
-      return handlePressCategory(index);
-    };
-    cResult[13] = handlePressCategory;
-    cResult[14] = index;
-    cResult[15] = fn;
-    tmp42 = fn;
+    const items1 = [tmp5.item, style];
+    cResult[16] = style;
+    cResult[17] = tmp5.item;
+    cResult[18] = items1;
+    tmp39 = items1;
   }
+  const fn = function o() {
+    return handlePressCategory(index);
+  };
+  cResult[13] = handlePressCategory;
+  cResult[14] = index;
+  cResult[15] = fn;
+  tmp38 = fn;
 }) : ((style) => {
-  ({ category, handlePressCategory: require, index: importDefault, locked } = style);
+  let category;
+  let closure_129_0;
+  let closure_129_1;
+  let items;
+  let items1;
+  let locked;
+  let name;
+  let obj6;
+  let obj9;
+  let tmp14Result;
+  let tmp6;
+  let tmp7;
+  ({ category, handlePressCategory: closure_129_0, index: closure_129_1, locked } = style);
+  style = style.style;
   if (locked === undefined) {
     locked = false;
   }
   const tmp = closure_12();
   const type = category.categoryInfo.type;
   if (SoundboardTypes.SoundboardSoundGridSectionType.GUILD === type) {
-    guild = category.categoryInfo.guild;
-    let name = guild.name;
+    const guild = category.categoryInfo.guild;
+    name = guild.name;
     const obj2 = { guild, style: tmp.guildItem };
-    let tmp14Result = v65535(GuildIconDefault, obj2);
-    let tmp6 = null;
-    let tmp7 = null;
+    tmp14Result = authStore(GuildIconDefault, obj2);
+    tmp6 = null;
+    tmp7 = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
-    const intl4 = util.intl;
-    name = intl4.string(util.t.y3LQCG);
-    tmp6 = _modDef10116;
+    const intl4 = intl6.intl;
+    name = intl4.string(intl6.t.y3LQCG);
+    tmp6 = AssetRegistryDefault;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
-    const intl3 = util.intl;
-    name = intl3.string(util.t["+cGVV6"]);
+    const intl3 = intl6.intl;
+    name = intl3.string(intl6.t["+cGVV6"]);
     const obj = { style: tmp.keyboardItem };
-    tmp7 = v65535(ClockIcon.ClockIcon, obj);
+    tmp7 = authStore(ClockIcon.ClockIcon, obj);
     tmp6 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
-    const intl2 = util.intl;
-    name = intl2.string(util.t.Rtvk9X);
-    tmp6 = _modDef17244;
+    const intl2 = intl6.intl;
+    name = intl2.string(intl6.t.Rtvk9X);
+    tmp6 = AssetRegistryDefault2;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.SEARCH === type) {
-    const intl = util.intl;
-    name = intl.string(util.t.sKt3xS);
-    tmp6 = _modDef17244;
+    const intl = intl6.intl;
+    name = intl.string(intl6.t.sKt3xS);
+    tmp6 = AssetRegistryDefault2;
     tmp7 = null;
     tmp14Result = null;
   } else {
@@ -300,96 +357,102 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((index) => {
     tmp14Result = null;
     name = null;
     if (SoundboardTypes.SoundboardSoundGridSectionType.TOP_SOUNDS === type) {
-      const intl5 = util.intl;
+      const intl5 = intl6.intl;
       const obj3 = { guildName: category.categoryInfo.guild.name };
-      name = intl5.formatToPlainString(util.t.GXs41w, obj3);
+      name = intl5.formatToPlainString(intl6.t.GXs41w, obj3);
       const obj4 = { style: tmp.keyboardItem };
-      tmp7 = v65535(TrophyIcon.TrophyIcon, obj4);
+      tmp7 = authStore(TrophyIcon.TrophyIcon, obj4);
       tmp6 = null;
       tmp14Result = null;
     }
   }
   const obj5 = {
     onPress() {
-      return _require(importDefault);
+      return closure_1_0(closure_1_1);
     },
     accessibilityRole: "button",
     accessibilityLabel: name,
-    children: null
+    children: unpackModuleId(hasOwnProperty, obj6)
   };
-  const obj6 = { style: null, children: null };
-  const items = [tmp.item, style.style];
-  obj6.style = items;
+  obj6 = { style: items, children: items1 };
+  items = [tmp.item, style];
+  const PressableOpacity = Pressables.PressableOpacity;
   if (tmp14Result == null) {
     tmp14Result = tmp7;
   }
   if (tmp14Result == null) {
     const obj7 = { style: tmp.keyboardItem, source: tmp6 };
-    tmp14Result = v65535(native.Icon, obj7);
+    tmp14Result = authStore(native.Icon, obj7);
   }
-  const items1 = [tmp14Result, ];
+  items1 = [tmp14Result, ];
   if (locked) {
-    const obj8 = { style: tmp.lockContainer, children: null };
-    const obj9 = { style: tmp.lock };
-    obj8.children = v65535(LockIcon.LockIcon, obj9);
-    locked = v65535(hasOwnProperty, obj8);
+    const obj8 = { style: tmp.lockContainer, children: authStore(LockIcon.LockIcon, obj9) };
+    obj9 = { style: tmp.lock };
+    locked = authStore(hasOwnProperty, obj8);
   }
   items1[1] = locked;
-  obj6.children = items1;
-  obj5.children = closure_1_11(hasOwnProperty, obj6);
-  return v65535(Pressables.PressableOpacity, obj5, name);
+  return authStore(PressableOpacity, obj5, name);
 });
-({ memo, forwardRef } = noop);
-ReactCompilerGating = fn(558);
+({ memo, forwardRef } = react);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_14 = memo(forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
-  const cResult = c.c(3);
+  const obj = react2;
+  const cResult = obj.c(3);
   if (cResult[0] === arg0) {
+    let tmp2;
     if (cResult[1] === ref) {
-      let tmp2 = cResult[2];
+      tmp2 = cResult[2];
     }
     return tmp2;
   }
-  const obj2 = {};
+  const obj2 = { ref };
   const merged = Object.assign(arg0);
-  obj2.ref = ref;
-  const tmp4 = v65535(timestampProducer, obj2);
+  const tmp4 = authStore(metroRequire, obj2);
   cResult[0] = arg0;
   cResult[1] = ref;
   cResult[2] = tmp4;
   tmp2 = tmp4;
 }) : ((arg0, ref) => {
-  const obj = {};
+  const obj = { ref };
   const merged = Object.assign(arg0);
-  obj.ref = ref;
-  return v65535(timestampProducer, obj);
+  return authStore(metroRequire, obj);
 })));
-ReactCompilerGating = fn(558);
-let obj4 = { opacity: 1, backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
-size = fn(2);
-let result = size.fileFinishedImporting("modules/soundboard/native/SoundboardSoundPickerCategories.tsx");
-
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
-  const cResult = guildId(listRef[9]).c(31);
+ReactCompilerGating = ReactCompilerGating_mod;
+const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+  let categories;
+  let categoryIndex;
+  let closure_3;
+  let listRef;
+  let stateFromStores;
+  let style;
+  let tmp12;
+  let tmp13;
+  let tmp6;
+  let tmp7;
+  const tmp = guildId;
+  let obj = guildId(listRef[9]);
+  const cResult = obj.c(31);
   guildId = guildId.guildId;
   ({ categories, categoryIndex } = guildId);
   ({ style, listRef } = guildId);
   const tmp4 = closure_12();
-  noop = tmp4;
-  noop.useRef(null);
-  noop.useRef(null);
-  noop.useRef(null);
+  react = tmp4;
+  let obj2 = react;
+  react.useRef(null);
+  const ref = react.useRef(null);
+  const ref2 = react.useRef(null);
   if (cResult[0] !== categoryIndex) {
     const fn = function c() {
       if (null != ref.current) {
         if (null != ref2.current) {
           if (null != ref.current) {
-            const result = categoryIndex * options;
+            const result = categoryIndex * React4;
+            const tmp7 = result > tmp2.current || result < tmp.current;
             if (tmp7) {
               const current = tmp3.current;
               const obj = { offset: result };
               current.scrollToOffset(obj);
             }
-            tmp7 = result > tmp2.current || result < tmp.current;
           }
         }
       }
@@ -398,50 +461,46 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
     cResult[0] = categoryIndex;
     cResult[1] = fn;
     cResult[2] = items;
-    let tmp7 = items;
-    let tmp6 = fn;
+    tmp7 = items;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[1];
     tmp7 = cResult[2];
   }
-  const effect = noop.useEffect(tmp6, tmp7);
+  const effect = obj2.useEffect(tmp6, tmp7);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     class S {
-      constructor(arg0) {
-        closure_5.current = 0;
-        closure_6.current = guildId.nativeEvent.layout.width;
-        return;
+      constructor(nativeEvent) {
+        ref.current = 0;
+        ref2.current = nativeEvent.nativeEvent.layout.width;
       }
     }
     cResult[3] = S;
   } else {
     class S {
-      constructor(arg0) {
-        closure_5.current = 0;
-        closure_6.current = guildId.nativeEvent.layout.width;
-        return;
+      constructor(nativeEvent) {
+        ref.current = 0;
+        ref2.current = nativeEvent.nativeEvent.layout.width;
       }
     }
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     class N {
-      constructor(arg0) {
-        nativeEvent = guildId.nativeEvent;
-        contentOffset = nativeEvent.contentOffset;
-        closure_5.current = contentOffset.x;
-        closure_6.current = contentOffset.x + nativeEvent.layoutMeasurement.width;
-        return;
+      constructor(nativeEvent) {
+        nativeEvent = nativeEvent.nativeEvent;
+        const contentOffset = nativeEvent.contentOffset;
+        ref.current = contentOffset.x;
+        ref2.current = contentOffset.x + nativeEvent.layoutMeasurement.width;
       }
     }
     cResult[4] = N;
   } else {
     class N {
-      constructor(arg0) {
-        nativeEvent = guildId.nativeEvent;
-        contentOffset = nativeEvent.contentOffset;
-        closure_5.current = contentOffset.x;
-        closure_6.current = contentOffset.x + nativeEvent.layoutMeasurement.width;
-        return;
+      constructor(nativeEvent) {
+        nativeEvent = nativeEvent.nativeEvent;
+        const contentOffset = nativeEvent.contentOffset;
+        ref.current = contentOffset.x;
+        ref2.current = contentOffset.x + nativeEvent.layoutMeasurement.width;
       }
     }
   }
@@ -459,7 +518,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
             const current = listRef.current;
             const obj = { section, item: 0 };
             current.scrollToLocation(obj);
-            const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+            const obj2 = HapticUtils;
+            const result = obj2.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
           }
         });
         return;
@@ -481,14 +541,15 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
             const current = listRef.current;
             const obj = { section, item: 0 };
             current.scrollToLocation(obj);
-            const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+            const obj2 = HapticUtils;
+            const result = obj2.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
           }
         });
         return;
       }
     }
   }
-  handlePressCategory = P;
+  P = tmp11;
   if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
     class P {
       constructor(arg0) {
@@ -503,7 +564,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
             const current = listRef.current;
             const obj = { section, item: 0 };
             current.scrollToLocation(obj);
-            const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+            const obj2 = HapticUtils;
+            const result = obj2.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
           }
         });
         return;
@@ -512,14 +574,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
     const items1 = [stateFromStores];
     class D {
       constructor() {
-        obj = categoryIndex(listRef[22]);
-        return obj.canUseSoundboardEverywhere(closure_8.getCurrentUser());
+        const obj = categoryIndex(listRef[22]);
+        return obj.canUseSoundboardEverywhere(stateFromStores.getCurrentUser());
       }
     }
     cResult[7] = items1;
     cResult[8] = D;
-    let tmp13 = D;
-    const tmp12 = items1;
+    tmp13 = D;
+    tmp12 = items1;
   } else {
     class P {
       constructor(arg0) {
@@ -534,7 +596,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
             const current = listRef.current;
             const obj = { section, item: 0 };
             current.scrollToLocation(obj);
-            const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+            const obj2 = HapticUtils;
+            const result = obj2.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
           }
         });
         return;
@@ -542,8 +605,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
     }
     tmp13 = cResult[8];
   }
-  let obj = guildId(listRef[9]);
-  stateFromStores = guildId(listRef[23]).useStateFromStores(tmp12, tmp13);
+  const tmpResult = tmp(listRef[23]);
+  stateFromStores = tmpResult.useStateFromStores(tmp12, tmp13);
   if (cResult[9] === stateFromStores) {
     class P {
       constructor(arg0) {
@@ -558,7 +621,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
             const current = listRef.current;
             const obj = { section, item: 0 };
             current.scrollToLocation(obj);
-            const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+            const obj2 = HapticUtils;
+            const result = obj2.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
           }
         });
         return;
@@ -567,78 +631,81 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
   }
   class H {
     constructor(arg0) {
-      ({ item, index } = guildId);
-      result = !closure_8;
-      if (!closure_8) {
-        tmp2 = closure_0;
-        tmp3 = closure_2;
-        obj = closure_0(closure_2[24]);
-        tmp4 = guildId;
+      let index;
+      let item;
+      ({ item, index } = arg0);
+      let result = !stateFromStores;
+      if (result) {
+        const obj = PremiumFeatureUpsellUtils;
         result = obj.isSoundboardSectionNitroLocked(guildId, item.categoryInfo);
       }
-      obj1 = { category: item, index, style: null, handlePressCategory: null, locked: null };
+      const obj2 = { category: item, index, style: null, handlePressCategory: null, locked: null };
       if (null != categoryIndex) {
+        let fadedItem;
         if (index === categoryIndex) {
-          tmp7 = closure_3;
           fadedItem = closure_3.activeItem;
         }
-        obj1.style = fadedItem;
-        tmp8 = closure_7;
-        obj1.handlePressCategory = closure_7;
-        obj1.locked = result;
-        return tmp5(tmp6, obj1);
+        obj2.style = fadedItem;
+        obj2.handlePressCategory = P;
+        obj2.locked = result;
+        return tmp5(tmp6, obj2);
       }
       fadedItem = closure_3.fadedItem;
-      return;
     }
   }
   cResult[9] = stateFromStores;
   cResult[10] = categoryIndex;
   cResult[11] = guildId;
-  cResult[12] = P;
+  cResult[12] = tmp11;
   cResult[13] = tmp4.activeItem;
   cResult[14] = tmp4.fadedItem;
   cResult[15] = H;
-  const tmpResult = guildId(listRef[23]);
 }) : ((guildId) => {
+  let categories;
+  let closure_3;
+  let items4;
+  let items5;
+  let obj3;
+  let obj6;
+  let style;
   guildId = guildId.guildId;
   const categoryIndex = guildId.categoryIndex;
   const listRef = guildId.listRef;
   let stateFromStores;
   ({ categories, style } = guildId);
   const tmp = closure_12();
-  noop = tmp;
-  noop.useRef(null);
-  const ref = noop.useRef(null);
-  noop.useRef(null);
+  react = tmp;
+  react.useRef(null);
+  const ref = react.useRef(null);
+  const ref2 = react.useRef(null);
   const items = [categoryIndex];
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(() => {
     if (null != ref.current) {
       if (null != ref2.current) {
         if (null != ref.current) {
-          const result = categoryIndex * options;
+          const result = categoryIndex * React4;
+          const tmp7 = result > tmp2.current || result < tmp.current;
           if (tmp7) {
             const current = tmp3.current;
             const obj = { offset: result };
             current.scrollToOffset(obj);
           }
-          tmp7 = result > tmp2.current || result < tmp.current;
         }
       }
     }
   }, items);
-  const callback = noop.useCallback((nativeEvent) => {
-    closure_5.current = 0;
-    closure_6.current = nativeEvent.nativeEvent.layout.width;
+  const callback = react.useCallback((nativeEvent) => {
+    ref.current = 0;
+    ref2.current = nativeEvent.nativeEvent.layout.width;
   }, []);
   const items1 = [listRef];
-  const callback1 = noop.useCallback((nativeEvent) => {
+  const callback1 = react.useCallback((nativeEvent) => {
     nativeEvent = nativeEvent.nativeEvent;
     const contentOffset = nativeEvent.contentOffset;
-    closure_5.current = contentOffset.x;
-    closure_6.current = contentOffset.x + nativeEvent.layoutMeasurement.width;
+    ref.current = contentOffset.x;
+    ref2.current = contentOffset.x + nativeEvent.layoutMeasurement.width;
   }, []);
-  const callback2 = noop.useCallback((section) => {
+  const callback2 = react.useCallback((section) => {
     callback2("");
     setImmediate(() => {
       let current1;
@@ -649,24 +716,33 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
         const current = listRef.current;
         const obj = { section, item: 0 };
         current.scrollToLocation(obj);
-        const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+        const obj2 = HapticUtils;
+        const result = obj2.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
       }
     });
   }, items1);
+  let obj = guildId(listRef[23]);
   const items2 = [stateFromStores];
-  stateFromStores = guildId(listRef[23]).useStateFromStores(items2, () => categoryIndex(listRef[22]).canUseSoundboardEverywhere(stateFromStores.getCurrentUser()));
+  stateFromStores = obj.useStateFromStores(items2, () => {
+    const obj = categoryIndex(listRef[22]);
+    return obj.canUseSoundboardEverywhere(stateFromStores.getCurrentUser());
+  });
   const items3 = [stateFromStores, guildId, callback2, categoryIndex, , ];
   ({ activeItem: arr4[4], fadedItem: arr4[5] } = tmp);
-  const callback3 = noop.useCallback((arg0) => {
+  const callback3 = react.useCallback((arg0) => {
+    let index;
+    let item;
     ({ item, index } = arg0);
     let result = !stateFromStores;
-    if (!stateFromStores) {
-      result = PremiumFeatureUpsellUtils.isSoundboardSectionNitroLocked(guildId, item.categoryInfo);
+    if (result) {
+      const obj = PremiumFeatureUpsellUtils;
+      result = obj.isSoundboardSectionNitroLocked(guildId, item.categoryInfo);
     }
     const obj2 = { category: item, index, style: null, handlePressCategory: null, locked: null };
     if (null != categoryIndex) {
+      let fadedItem;
       if (index === categoryIndex) {
-        let fadedItem = closure_3.activeItem;
+        fadedItem = closure_3.activeItem;
       }
       obj2.style = fadedItem;
       obj2.handlePressCategory = callback2;
@@ -675,34 +751,39 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
     }
     fadedItem = closure_3.fadedItem;
   }, items3);
-  const memo = noop.useMemo(() => {
+  const bottom = categoryIndex(listRef[25])().bottom;
+  const memo = react.useMemo(() => {
     const Gesture = guildId(listRef[26]).Gesture;
-    return Gesture.Native().disallowInterruption(true);
+    const NativeResult = Gesture.Native();
+    return NativeResult.disallowInterruption(true);
   }, []);
-  let obj2 = { hostName: "soundboard-footer", children: null };
-  const obj3 = { style: null, children: null };
-  const items4 = [tmp.container, { paddingBottom: categoryIndex(listRef[25])().bottom }, style];
-  obj3.style = items4;
-  const items5 = [closure_10(categoryIndex(listRef[27]), { style: ref.absoluteFill }), ];
-  const obj5 = {
-    gesture: memo,
-    children: closure_10(closure_14, {
-      ref,
-      getItemLayout,
-      onLayout: callback,
-      onScroll: callback1,
-      data: categories,
-      keyboardShouldPersistTaps: "always",
-      horizontal: true,
-      keyExtractor(key) {
-        return String(key.key);
-      },
-      renderItem: callback3,
-      showsHorizontalScrollIndicator: false
-    })
+  let obj2 = { hostName: "soundboard-footer", children: closure_11(ref, obj3) };
+  obj3 = { style: items4, children: items5 };
+  items4 = [tmp.container, { paddingBottom: bottom }, style];
+  const Portal = guildId(listRef[28]).Portal;
+  items5 = [, ];
+  const obj4 = { style: ref.absoluteFill };
+  items5[0] = closure_10(categoryIndex(listRef[27]), obj4);
+  const obj5 = { gesture: memo, children: closure_10(closure_14, obj6) };
+  obj6 = {
+    ref,
+    getItemLayout,
+    onLayout: callback,
+    onScroll: callback1,
+    data: categories,
+    keyboardShouldPersistTaps: "always",
+    horizontal: true,
+    keyExtractor(key) {
+      return String(key.key);
+    },
+    renderItem: callback3,
+    showsHorizontalScrollIndicator: false
   };
-  items5[1] = closure_10(guildId(listRef[26]).GestureDetector, obj5);
-  obj3.children = items5;
-  obj2.children = closure_11(ref, obj3);
-  return closure_10(guildId(listRef[28]).Portal, obj2);
+  const GestureDetector = guildId(listRef[26]).GestureDetector;
+  items5[1] = closure_10(GestureDetector, obj5);
+  return closure_10(Portal, obj2);
 }));
+size = size_mod;
+let result = size.fileFinishedImporting("modules/soundboard/native/SoundboardSoundPickerCategories.tsx");
+
+export default memoResult;

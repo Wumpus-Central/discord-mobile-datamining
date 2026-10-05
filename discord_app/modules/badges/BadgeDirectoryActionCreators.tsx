@@ -2,300 +2,332 @@
 
 // Module 7868 (BadgeDirectoryActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import UserStore from "UserStore" /* 1377 */;
+import Constants from "Constants" /* 1085 */;
 import Dispatcher from "Dispatcher" /* 584 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-function urlUserId(arg0) {
+let backoff, set;
+
+let hasOwnProperty;
+let metroRequire;
+function urlUserId(body) {
   const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
-  let tmp3 = arg0;
-  if (arg0 === id) {
-    tmp3 = timestampProducer;
+  let tmp3 = body;
+  if (body === id) {
+    tmp3 = metroRequire;
   }
   return tmp3;
 }
-let closure_10 = async function _fetchBadgeDirectory(arg0) {
-  if (c8 === 2) {
-    c8 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
+let obj = function _fetchBadgeDirectory() {
+  obj = _asyncToGenerator(async (arg0) => {
+    let closure_3;
+    let closure_4;
+    let closure_5;
+    let closure_6;
+    let items;
+    let obj5;
+    let userId;
+    let closure_0 = arg0;
+    let closure_1 = arg1;
+    if (1 === c7) {
+      if (arg0 === 1) {
+        let c8 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c8 = 3;
+        const obj7 = { value, done: true };
+        return obj7;
+      } else {
+        let id = closure_0;
+        if (closure_0 == null) {
+          const currentUser = closure_132_4.getCurrentUser();
+          id = undefined;
+          if (currentUser != null) {
+            id = currentUser.id;
+          }
+        }
+        userId = id;
+        if (null != userId) {
+          const currentUser1 = closure_132_4.getCurrentUser();
+          let id1;
+          if (currentUser1 != null) {
+            id1 = currentUser1.id;
+          }
+          let str2 = "other";
+          if (null != id1) {
+            str2 = "other";
+            if (userId === id1) {
+              str2 = "self";
+            }
+          }
+          closure_4 = "viewed_user:" + str2;
+          let str3 = "initial";
+          if (true === obj5.isRetry) {
+            str3 = "retry";
+          }
+          closure_5 = "attempt:" + str3;
+          const _Date3 = Date;
+          closure_6 = Date.now();
+          const obj10 = { type: "BADGE_DIRECTORY_FETCH_START", userId };
+          const obj9 = closure_132_1(closure_132_2[3]);
+          obj9.dispatch(obj10);
+          let c6 = 1;
+          const HTTP = closure_132_0(closure_132_2[4]).HTTP;
+          const obj11 = { url: closure_132_5.USER_BADGES(closure_132_9(userId)), rejectWithError: true };
+          const get = HTTP.get;
+          c7 = 3;
+          c8 = 1;
+          const obj12 = { value: get(obj11), done: false };
+          return obj12;
+        }
+      }
+    } else if (2 === c7) {
+      c6 = 0;
+      let closure_9 = closure_5;
+      const obj13 = { name: closure_132_0(closure_132_2[6]).MetricEvents.BADGE_DIRECTORY_CATALOG_FETCH, tags: items };
+      const distribution2 = closure_132_1(closure_132_2[5]).distribution;
+      const tmp27 = closure_132_1(closure_132_2[5]);
+      items = [closure_4, "result:failure", "catalog_state:unknown", closure_5];
+      const _Date2 = Date;
+      distribution2(obj13, Date.now() - closure_6);
+      const obj14 = { type: "BADGE_DIRECTORY_FETCH_FAILURE", userId };
+      const obj6 = closure_132_1(closure_132_2[3]);
+      obj6.dispatch(obj14);
+      const obj8 = closure_132_1(closure_132_2[7]);
+      obj8.captureException(closure_9);
+    } else if (arg0 === 1) {
+      c8 = 3;
       throw value;
     } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
+      c6 = 0;
+      c8 = 3;
+      const obj15 = { value, done: true };
+      return obj15;
     } else {
-      return { value: "IconComponent", done: null };
+      const body = value.body;
+      const items1 = [closure_4, "result:success", , ];
+      let str = "non_empty";
+      if (0 === body.badges.length) {
+        str = "empty";
+      }
+      items1[2] = "catalog_state:" + str;
+      items1[3] = closure_5;
+      obj = { name: closure_132_0(closure_132_2[6]).MetricEvents.BADGE_DIRECTORY_CATALOG_FETCH, tags: items1 };
+      const distribution = closure_132_1(closure_132_2[5]).distribution;
+      const tmp10 = closure_132_1(closure_132_2[5]);
+      const _Date = Date;
+      distribution(obj, Date.now() - closure_6);
+      const obj16 = { type: "BADGE_DIRECTORY_FETCH_SUCCESS", userId, badges: body.badges };
+      const obj2 = closure_132_1(closure_132_2[3]);
+      obj2.dispatch(obj16);
+      c6 = 0;
     }
-  } else {
-    try {
-      c8 = 2;
-      if (0 === c7) {
+    await "IconComponent";
+    closure_4 = tmp;
+    obj5 = closure_1;
+    if (closure_1 === undefined) {
+      obj5 = {};
+    }
+    return "Set";
+  });
+  return obj(...arguments);
+};
+obj = function _fetchBadge() {
+  obj = _asyncToGenerator(async (userId, arg1) => {
+    let body = arg1;
+    let c7 = 0;
+    let c8 = 0;
+    let c6 = 0;
+    return (async (arg0, value) => {
+      if (c8 === 2) {
+        c8 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          c8 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c8 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          return { value, done: true };
         } else {
-          closure_4 = tmp3;
-          closure_3 = tmp7;
-          closure_131_1 = undefined;
-          closure_131_0 = closure_0;
-          let obj5 = closure_1;
-          if (closure_1 === undefined) {
-            obj5 = {};
-          }
-          closure_131_1 = obj5;
-          closure_131_2 = undefined;
-          closure_131_3 = undefined;
-          closure_131_4 = undefined;
-          closure_131_5 = undefined;
-          closure_131_6 = undefined;
-          let body;
-          closure_131_8 = undefined;
-          c7 = 1;
-          c8 = 1;
-          return { value: "Set", done: true };
+          return { value: "IconComponent", done: null };
         }
       } else {
-        if (1 === tmp7) {
-          if (arg0 === 1) {
-            c8 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c8 = 3;
-            const obj7 = { value, done: true };
-            return obj7;
-          } else {
-            let id = closure_131_0;
-            if (closure_131_0 == null) {
-              const currentUser = closure_132_4.getCurrentUser();
-              id = undefined;
-              if (currentUser != null) {
-                id = currentUser.id;
-              }
-            }
-            closure_131_2 = id;
-            if (null != closure_131_2) {
-              const currentUser1 = closure_132_4.getCurrentUser();
-              let id1;
-              if (currentUser1 != null) {
-                id1 = currentUser1.id;
-              }
-              closure_131_3 = id1;
-              let str2 = "other";
-              if (null != closure_131_3) {
-                str2 = "other";
-                if (closure_131_2 === closure_131_3) {
-                  str2 = "self";
+        try {
+          c8 = 2;
+          if (0 === c7) {
+            if (arg0 === 1) {
+              c8 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c8 = 3;
+              return { value, done: true };
+            } else {
+              closure_4 = tmp;
+              closure_3 = tmp4;
+              userId = undefined;
+              body = undefined;
+              id = body;
+              const tmp35 = userId;
+              if (body == null) {
+                currentUser = currentUser.getCurrentUser();
+                id = undefined;
+                if (currentUser != null) {
+                  id = currentUser.id;
                 }
               }
-              closure_131_4 = "viewed_user:" + str2;
-              let str3 = "initial";
-              if (true === closure_131_1.isRetry) {
-                str3 = "retry";
+              userId = id;
+              if (null != id) {
+                c6 = 1;
+                const HTTP = HTTPUtils.HTTP;
+                const get = HTTP.get;
+                c7 = 2;
+                c8 = 1;
+                const obj5 = { url: closure_2_5.USER_BADGE(urlUserId(tmp23), tmp35), rejectWithError: true };
+                const obj6 = { value: get(obj5), done: false };
+                return obj6;
               }
-              closure_131_5 = "attempt:" + str3;
-              const _Date3 = Date;
-              closure_131_6 = Date.now();
-              const obj9 = { type: "BADGE_DIRECTORY_FETCH_START", userId: closure_131_2 };
-              closure_132_1(closure_132_2[3]).dispatch(obj9);
-              c6 = 1;
-              const HTTP = closure_132_0(closure_132_2[4]).HTTP;
-              const obj12 = { url: closure_132_5.USER_BADGES(closure_132_9(closure_131_2)), rejectWithError: true };
-              c7 = 3;
-              c8 = 1;
-              const obj13 = { value: HTTP.get(obj12), done: false };
-              return obj13;
             }
-          }
-        } else {
-          if (2 === tmp7) {
+          } else if (1 === c7) {
             c6 = 0;
-            closure_131_9 = closure_5;
-            const obj14 = { name: closure_132_0(closure_132_2[6]).MetricEvents.BADGE_DIRECTORY_CATALOG_FETCH, tags: null };
-            const items = [closure_131_4, "result:failure", "catalog_state:unknown", closure_131_5];
-            obj14.tags = items;
-            const _Date2 = Date;
-            closure_132_1(closure_132_2[5]).distribution(obj14, Date.now() - closure_131_6);
-            const obj6 = closure_132_1(closure_132_2[5]);
-            const obj15 = { type: "BADGE_DIRECTORY_FETCH_FAILURE", userId: closure_131_2 };
-            closure_132_1(closure_132_2[3]).dispatch(obj15);
-            const obj8 = closure_132_1(closure_132_2[3]);
-            closure_132_1(closure_132_2[7]).captureException(closure_131_9);
-            const obj10 = closure_132_1(closure_132_2[7]);
+            let closure_2 = closure_5;
+            const obj4 = closure_132_1(closure_132_2[7]);
+            obj4.captureException(closure_2);
           } else if (arg0 === 1) {
             c8 = 3;
             throw value;
-          } else if (arg0 !== 2) {
-            body = value.body;
-            const items1 = [closure_131_4, "result:success", , ];
-            let str = "non_empty";
-            if (0 === body.badges.length) {
-              str = "empty";
-            }
-            items1[2] = "catalog_state:" + str;
-            items1[3] = closure_131_5;
-            closure_131_8 = items1;
-            const obj16 = { name: closure_132_0(closure_132_2[6]).MetricEvents.BADGE_DIRECTORY_CATALOG_FETCH, tags: closure_131_8 };
-            const _Date = Date;
-            closure_132_1(closure_132_2[5]).distribution(obj16, Date.now() - closure_131_6);
-            const obj = closure_132_1(closure_132_2[5]);
-            const obj17 = { type: "BADGE_DIRECTORY_FETCH_SUCCESS", userId: closure_131_2, badges: body.badges };
-            closure_132_1(closure_132_2[3]).dispatch(obj17);
+          } else if (arg0 === 2) {
             c6 = 0;
-            const obj3 = closure_132_1(closure_132_2[3]);
+            c8 = 3;
+            return { value, done: true };
+          } else {
+            body = value;
+            const obj8 = { type: "BADGE_FETCH_SUCCESS", userId, badge: body.body };
+            obj = closure_132_1(closure_132_2[3]);
+            obj.dispatch(obj8);
+            c6 = 0;
           }
-          c6 = 0;
           c8 = 3;
-          const obj18 = { value, done: true };
-          return obj18;
+          return { value: "IconComponent", done: null };
+        } catch (tmp28) {
+          closure_5 = tmp28;
+          if (0 === c6) {
+            c8 = 3;
+            throw tmp28;
+          } else {
+            c7 = 1;
+          }
         }
-        c8 = 3;
       }
-    } catch (tmp75) {
-      closure_5 = tmp75;
-      if (tmp4 === c6) {
-        c8 = tmp2;
-        throw tmp75;
-      } else {
-        c7 = tmp;
-      }
-    }
-  }
+    })();
+  });
+  return obj(...arguments);
 };
-let closure_11 = async function _fetchBadge(arg0) {
-  if (c8 === 2) {
-    c8 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c8 = 2;
-      if (0 === c7) {
+obj = function _requestBadgeSummary() {
+  obj = _asyncToGenerator(async (arg0, userId, arg2) => {
+    let closure_0 = arg0;
+    let body = arg2;
+    let c8 = 0;
+    let c9 = 0;
+    let c7 = 0;
+    return (async function(arg0, value, arg2) {
+      let timestamp;
+      if (c9 === 2) {
+        c9 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          c8 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c8 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          return { value, done: true };
         } else {
-          closure_4 = tmp3;
-          closure_3 = tmp7;
-          closure_131_0 = undefined;
-          closure_131_1 = undefined;
-          let id = closure_1;
-          if (closure_1 == null) {
-            currentUser = currentUser.getCurrentUser();
-            id = undefined;
-            if (currentUser != null) {
-              id = currentUser.id;
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          c9 = 2;
+          if (0 === c8) {
+            if (arg0 === 1) {
+              c9 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c9 = 3;
+              return { value, done: true };
+            } else {
+              closure_5 = tmp;
+              closure_4 = tmp4;
+              userId = body;
+              body = undefined;
+              backoff = undefined;
+              c7 = 1;
+              const HTTP = HTTPUtils.HTTP;
+              const request = { url: closure_2_5.USER_BADGE(urlUserId(body), userId), query: { with_progress: false }, rejectWithError: true };
+              const get = HTTP.get;
+              c8 = 2;
+              c9 = 1;
+              const obj4 = { value: get(request), done: false };
+              return obj4;
             }
+          } else {
+            if (1 === c8) {
+              c7 = 0;
+              closure_4 = closure_6;
+              value = closure_133_8.get(closure_0);
+              backoff = undefined;
+              if (value != null) {
+                backoff = value.backoff;
+              }
+              if (backoff == null) {
+                const tmp26 = closure_133_1(closure_133_2[8]);
+                const MINUTE = closure_133_1(closure_133_2[9]).Millis.MINUTE;
+                const self = this;
+                const self2 = this;
+                backoff = new tmp26(MINUTE, closure_133_1(closure_133_2[9]).Millis.HOUR, true);
+                const tmp262 = new tmp26(MINUTE, closure_133_1(closure_133_2[9]).Millis.HOUR, true);
+              }
+              const _Date = Date;
+              const obj6 = { backoff, gateUntil: timestamp + backoff.fail() };
+              set = closure_133_8.set;
+              timestamp = Date.now();
+              const result = set(closure_0, obj6);
+              const obj5 = closure_133_1(closure_133_2[7]);
+              obj5.captureException(closure_4);
+            } else if (arg0 === 1) {
+              c9 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c7 = 0;
+              c9 = 3;
+              return { value, done: true };
+            } else {
+              body = value;
+              closure_133_8.delete(closure_0);
+              const obj8 = { type: "BADGE_SUMMARY_FETCH_SUCCESS", userId, badge: body.body };
+              obj = closure_133_1(closure_133_2[3]);
+              obj.dispatch(obj8);
+              c7 = 0;
+            }
+            c9 = 3;
+            return { value: "IconComponent", done: null };
           }
-          closure_131_0 = id;
-          if (null != id) {
-            c6 = 1;
-            const HTTP = HTTPUtils.HTTP;
-            const obj5 = { url: hasOwnProperty.USER_BADGE(urlUserId(tmp26), closure_0), rejectWithError: true };
-            c7 = 2;
+        } catch (tmp47) {
+          closure_6 = tmp47;
+          if (0 === c7) {
+            c9 = 3;
+            throw tmp47;
+          } else {
             c8 = 1;
-            const obj6 = { value: HTTP.get(obj5), done: false };
-            return obj6;
           }
         }
-      } else {
-        if (1 === tmp7) {
-          c6 = 0;
-          closure_131_2 = closure_5;
-          closure_132_1(closure_132_2[7]).captureException(closure_131_2);
-          const obj4 = closure_132_1(closure_132_2[7]);
-        } else if (arg0 === 1) {
-          c8 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          closure_131_1 = value;
-          const obj7 = { type: "BADGE_FETCH_SUCCESS", userId: closure_131_0, badge: closure_131_1.body };
-          closure_132_1(closure_132_2[3]).dispatch(obj7);
-          c6 = 0;
-          const obj = closure_132_1(closure_132_2[3]);
-        }
-        c6 = 0;
-        c8 = 3;
-        const obj8 = { value, done: true };
-        return obj8;
       }
-      c8 = 3;
-    } catch (tmp31) {
-      closure_5 = tmp31;
-      if (tmp4 === c6) {
-        c8 = tmp2;
-        throw tmp31;
-      } else {
-        c7 = tmp;
-      }
-    }
-  }
+    })();
+  });
+  return obj(...arguments);
 };
-let closure_12 = async function _requestBadgeSummary(arg0) {
-  closure_5 = tmp3;
-  closure_132_0 = closure_0;
-  closure_132_1 = closure_2;
-  const HTTP = HTTPUtils.HTTP;
-  const request = { url: hasOwnProperty.USER_BADGE(urlUserId(closure_2), closure_1), query: { with_progress: false }, rejectWithError: true };
-  await HTTP.get(request);
-  if (1 === tmp7) {
-    c7 = 0;
-    closure_132_4 = closure_6;
-    value = closure_133_8.get(closure_132_0);
-    let backoff;
-    if (value != null) {
-      backoff = value.backoff;
-    }
-    closure_3 = backoff;
-    if (backoff == null) {
-      const MINUTE = closure_133_1(closure_133_2[9]).Millis.MINUTE;
-      closure_3 = new closure_133_1(closure_133_2[8])(MINUTE, closure_133_1(closure_133_2[9]).Millis.HOUR, true);
-      closure_133_1(closure_133_2[8]);
-      new closure_133_1(closure_133_2[8])(MINUTE, closure_133_1(closure_133_2[9]).Millis.HOUR, true);
-    }
-    closure_132_3 = closure_3;
-    const obj6 = { backoff: closure_132_3, gateUntil: null };
-    const _Date = Date;
-    const timestamp = Date.now();
-    obj6.gateUntil = timestamp + closure_132_3.fail();
-    const result = closure_133_8.set(closure_132_0, obj6);
-    closure_133_1(closure_133_2[7]).captureException(closure_132_4);
-    c9 = 3;
-    closure_133_1(closure_133_2[7]);
-  } else if (arg0 === 1) {
-    c9 = 3;
-    throw value;
-  } else if (arg0 !== 2) {
-    closure_132_2 = value;
-    closure_133_8.delete(closure_132_0);
-    closure_133_1(closure_133_2[3]).dispatch({ type: "BADGE_SUMMARY_FETCH_SUCCESS", userId: closure_132_1, badge: closure_132_2.body });
-    c7 = 0;
-    closure_133_1(closure_133_2[3]);
-  }
-  return value;
-};
-const Constants = fn(1085);
 ({ Endpoints: hasOwnProperty, ME: metroRequire } = Constants);
 const map = new Map();
 const map1 = new Map();
@@ -303,30 +335,18 @@ const subscription = Dispatcher.subscribe("LOGOUT", () => {
   map.clear();
   map1.clear();
 });
-const size = fn(2);
 let result = size.fileFinishedImporting("modules/badges/BadgeDirectoryActionCreators.tsx");
 
 export const fetchBadgeDirectory = function fetchBadgeDirectory() {
-  const self = this;
-  const apply = closure_10.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const fetchBadge = function fetchBadge() {
-  const self = this;
-  const apply = closure_11.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };
 export const fetchBadgeSummary = function fetchBadgeSummary(GIFTING, id) {
+  function requestBadgeSummary() {
+    return obj(...arguments);
+  }
   let tmp = id;
   if (id == null) {
     const currentUser = UserStore.getCurrentUser();
@@ -341,11 +361,11 @@ export const fetchBadgeSummary = function fetchBadgeSummary(GIFTING, id) {
   } else {
     const _HermesInternal = HermesInternal;
     const combined = "" + tmp + "#" + GIFTING;
-    value = map.get(combined);
+    const value = map.get(combined);
     if (null != value) {
       return value;
     } else {
-      value2 = map1.get(combined);
+      const value2 = map1.get(combined);
       let num;
       if (value2 != null) {
         num = value2.gateUntil;
@@ -357,16 +377,8 @@ export const fetchBadgeSummary = function fetchBadgeSummary(GIFTING, id) {
       if (Date.now() < num) {
         return Promise.resolve();
       } else {
-        const cleanupPromise = (function requestBadgeSummary() {
-          const self = this;
-          const apply = closure_1_12.apply;
-          if (typeof apply === "unknown") {
-            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-          } else {
-            applyArgumentsResult = apply(self, arguments);
-          }
-          return applyArgumentsResult;
-        })(combined, GIFTING, tmp).finally(() => {
+        const promise = requestBadgeSummary(combined, GIFTING, tmp);
+        const cleanupPromise = promise.finally(() => {
           if (map.get(combined) === cleanupPromise) {
             map.delete(combined);
           }
@@ -378,5 +390,7 @@ export const fetchBadgeSummary = function fetchBadgeSummary(GIFTING, id) {
   }
 };
 export const markBadgeDirectoryBadgeIndicatorSeen = function markBadgeDirectoryBadgeIndicatorSeen(badgeId) {
-  Dispatcher.dispatch({ type: "BADGE_DIRECTORY_MARK_BADGE_INDICATOR_SEEN", badgeId });
+  obj = Dispatcher;
+  const obj2 = { type: "BADGE_DIRECTORY_MARK_BADGE_INDICATOR_SEEN", badgeId };
+  obj.dispatch(obj2);
 };

@@ -3,24 +3,33 @@
 // Module 7208 (QuestTaskUtils)
 import _mod12 from "module_12" /* 12 */;
 import DurationsDefault from "Durations" /* 1102 */;
+import GlobalUtils from "GlobalUtils" /* 1375 */;
 import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5631 */;
 import QuestDataUtils from "QuestDataUtils" /* 7183 */;
 import QuestStore from "QuestStore" /* 7187 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+let set;
+
+const f94504 = (arg0) => {
+  closure_0 = arg0;
+  return closure_0.some((item) => null != config.config.taskConfigV2.tasks[item]);
+};
 function getApplicationIdsByTaskTypes(nextResult, items) {
   if (null != nextResult) {
     const _Set = Set;
-    const set = new Set();
-    const tmp7 = items[Symbol.iterator]();
-    while (tmp7 !== undefined) {
-      let tmp11 = nextResult.config.taskConfigV2.tasks[tmp9];
-      let tmp12 = tmp11;
-      if (null != tmp11) {
-        if ("applications" in tmp12) {
+    const self = this;
+    const self2 = this;
+    set = new Set();
+    const tmp5 = items[Symbol.iterator]();
+    while (tmp5 !== undefined) {
+      let tmp9 = nextResult.config.taskConfigV2.tasks[tmp7];
+      let tmp10 = tmp9;
+      if (null != tmp9) {
+        if ("applications" in tmp10) {
           let _Array = Array;
-          if (Array.isArray(tmp12.applications)) {
-            let applications = tmp12.applications;
+          if (Array.isArray(tmp10.applications)) {
+            let applications = tmp10.applications;
             for (const item10034 of applications) {
               let addResult = set.add(item10034.id);
               continue;
@@ -54,23 +63,25 @@ function isQuestProgressingOnConsole(quest) {
     let flag = false;
     if (null != expiresAt) {
       const _Date = Date;
+      const self = this;
+      const self2 = this;
       const date = new Date(expiresAt);
       const valueOfResult = date.valueOf();
       const _isNaN = isNaN;
-      const isNaNResult = isNaN(valueOfResult);
-      let tmp14 = !isNaNResult;
-      if (!isNaNResult) {
+      let tmp12 = !isNaN(valueOfResult);
+      isNaN(valueOfResult);
+      if (tmp12) {
         const _Date2 = Date;
-        tmp14 = valueOfResult > Date.now();
+        tmp12 = valueOfResult > Date.now();
       }
-      flag = tmp14;
+      flag = tmp12;
     }
     if (!flag) {
       const userStatus2 = quest.userStatus;
       let expiresAt1;
       if (userStatus2 != null) {
-        if (userStatus2.progress[tmp15] != null) {
-          const heartbeat2 = tmp17.heartbeat;
+        if (userStatus2.progress[tmp13] != null) {
+          const heartbeat2 = tmp15.heartbeat;
           if (heartbeat2 != null) {
             expiresAt1 = heartbeat2.expiresAt;
           }
@@ -79,16 +90,18 @@ function isQuestProgressingOnConsole(quest) {
       let flag2 = false;
       if (null != expiresAt1) {
         const _Date3 = Date;
+        const self3 = this;
+        const self4 = this;
         const date1 = new Date(expiresAt1);
         const valueOfResult2 = date1.valueOf();
         const _isNaN2 = isNaN;
-        const isNaNResult1 = isNaN(valueOfResult2);
-        let tmp25 = !isNaNResult1;
-        if (!isNaNResult1) {
+        let tmp21 = !isNaN(valueOfResult2);
+        isNaN(valueOfResult2);
+        if (tmp21) {
           const _Date4 = Date;
-          tmp25 = valueOfResult2 > Date.now();
+          tmp21 = valueOfResult2 > Date.now();
         }
-        flag2 = tmp25;
+        flag2 = tmp21;
       }
       flag = flag2;
     }
@@ -104,77 +117,66 @@ function _isPlayOnDesktopTaskType(type) {
   return type === FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP;
 }
 function _getTaskDetailsForType(arg0) {
+  let from;
+  let includeTaskTypes;
+  let num7;
+  let obj4;
+  let quest;
+  let target;
+  let target2;
+  let taskType;
   ({ quest, taskType, includeTaskTypes } = arg0);
   if (includeTaskTypes === undefined) {
     includeTaskTypes = FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypesSets.ALL;
   }
-  quest = includeTaskTypes;
   const taskConfigV2 = quest.config.taskConfigV2;
   let tmp3 = taskType;
   if (taskType == null) {
     const _Object = Object;
     const values = Object.values(taskConfigV2.tasks);
-    const first = values.filter((type) => quest.has(type.type))[0];
+    const first = values.filter((type) => includeTaskTypes.has(type.type))[0];
     let type;
     if (first != null) {
       type = first.type;
     }
     tmp3 = type;
   }
-  let floorResult = taskConfigV2.tasks[tmp3];
-  if (floorResult == null) {
-    floorResult = taskConfigV2.tasks[FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
+  let tmp7 = taskConfigV2.tasks[tmp3];
+  if (tmp7 == null) {
+    tmp7 = taskConfigV2.tasks[FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
   }
-  if (null == floorResult) {
+  if (null == tmp7) {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
+    const captureQuestsException = QuestDataUtils.captureQuestsException;
+    const self3 = this;
+    const self4 = this;
+    QuestDataUtils;
     const error = new Error("Quest " + quest.id + " has no task matching the include filters");
-    const obj = { tags: { source: "_getTaskDetailsForType" }, extra: null };
-    const obj4 = { questId: quest.id, taskType, includeTaskTypes: null };
+    const obj = { tags: { source: "_getTaskDetailsForType" }, extra: obj4 };
+    const _Array = Array;
+    obj4 = { questId: quest.id, taskType, includeTaskTypes: from(includeTaskTypes) };
+    from = Array.from;
     if (includeTaskTypes == null) {
       includeTaskTypes = [];
     }
-    obj4.includeTaskTypes = Array.from(includeTaskTypes);
-    obj.extra = obj4;
-    const result = QuestDataUtils.captureQuestsException(error, obj);
+    const result = captureQuestsException(error, obj);
     return null;
   } else {
-    ({ target: target2, target } = floorResult);
+    ({ target, target: target2 } = tmp7);
     const userStatus3 = quest.userStatus;
     let completedAt;
     if (userStatus3 != null) {
       completedAt = userStatus3.completedAt;
     }
-    if (null != completedAt) {
-      const _Object2 = Object;
-      const values2 = Object.values(taskConfigV2.tasks);
-      const found = values2.find(_isPlayOnDesktopTaskType);
-      let mapped;
-      if (found != null) {
-        const applications = found.applications;
-        if (applications != null) {
-          mapped = applications.map((id) => id.id);
-        }
-      }
-      const obj7 = { progressSeconds: target, targetSeconds: target2, targetMinutes: null, percentComplete: null, taskType: null, applications: null };
-      const _Math3 = Math;
-      obj7.targetMinutes = Math.ceil(target2 / DurationsDefault.Seconds.MINUTE);
-      let num7 = 0;
-      if (target2 > 0) {
-        const _Math4 = Math;
-        num7 = _mod12.floor(Math.min(target / target2, 1), 4);
-      }
-      obj7.percentComplete = num7;
-      obj7.taskType = tmp3;
-      obj7.applications = mapped;
-      return obj7;
-    } else {
+    let maxResult = target2;
+    if (null == completedAt) {
       const userStatus4 = quest.userStatus;
       let tmp12;
       if (userStatus4 != null) {
         const progress = userStatus4.progress;
         if (progress != null) {
-          tmp12 = progress[floorResult.type];
+          tmp12 = progress[tmp7.type];
         }
       }
       let num;
@@ -193,19 +195,17 @@ function _getTaskDetailsForType(arg0) {
         num = 0;
       }
       if (typeof fn4 === "function") {
+        let sum;
         if (closure_136_0.some((item) => null != config.config.taskConfigV2.tasks[item])) {
-          let optimisticProgress = QuestStore.getOptimisticProgress(quest.id, floorResult.type);
-          if (null == optimisticProgress) {
-            optimisticProgress = num;
-          }
-          let sum = optimisticProgress;
+          const optimisticProgress = QuestStore.getOptimisticProgress(quest.id, tmp7.type) ?? num;
+          sum = optimisticProgress;
         } else {
           const userStatus2 = quest.userStatus;
           let lastBeatAt;
           if (userStatus2 != null) {
             const progress2 = userStatus2.progress;
             if (progress2 != null) {
-              if (progress2[floorResult.type] != null) {
+              if (progress2[tmp7.type] != null) {
                 const heartbeat = tmp17.heartbeat;
                 if (heartbeat != null) {
                   lastBeatAt = heartbeat.lastBeatAt;
@@ -215,32 +215,50 @@ function _getTaskDetailsForType(arg0) {
           }
           let num2 = 0;
           if (null != lastBeatAt) {
-            let result1 = isQuestProgressingOnConsole(quest);
-            if (!result1) {
-              result1 = QuestStore.isProgressingOnDesktop(quest.id);
-            }
+            const result1 = isQuestProgressingOnConsole(quest) || QuestStore.isProgressingOnDesktop(quest.id);
             num2 = 0;
             if (result1) {
               const _Date = Date;
               const _Date2 = Date;
+              const self = this;
+              const self2 = this;
               const timestamp = Date.now();
               const date = new Date(lastBeatAt);
               const diff = timestamp - date.valueOf();
-              num2 = _mod12.floor(diff / DurationsDefault.Millis.SECOND, 2);
+              const obj2 = _mod12;
+              num2 = obj2.floor(diff / DurationsDefault.Millis.SECOND, 2);
             }
           }
           sum = num + num2;
         }
         const _Math = Math;
-        target = Math.min(0.99 * target, sum);
         const _Math2 = Math;
-        num = Math.max;
-        floorResult = _mod12.floor(target, 2);
-        num(floorResult, 0);
+        const bound = Math.min(0.99 * target2, sum);
+        const obj3 = _mod12;
+        maxResult = max(obj3.floor(bound, 2), 0);
       } else {
         throw new TypeError("Trying to call a non-function");
       }
     }
+    const _Object2 = Object;
+    const values2 = Object.values(taskConfigV2.tasks);
+    const found = values2.find(_isPlayOnDesktopTaskType);
+    let mapped;
+    if (found != null) {
+      const applications = found.applications;
+      if (applications != null) {
+        mapped = applications.map((id) => id.id);
+      }
+    }
+    const _Math3 = Math;
+    const obj6 = { progressSeconds: maxResult, targetSeconds: target, targetMinutes: Math.ceil(target / DurationsDefault.Seconds.MINUTE), percentComplete: num7, taskType: tmp3, applications: mapped };
+    num7 = 0;
+    if (target > 0) {
+      const _Math4 = Math;
+      const obj5 = _mod12;
+      num7 = obj5.floor(Math.min(maxResult / target, 1), 4);
+    }
+    return obj6;
   }
 }
 function _parseFirstPartyTaskType(eventName) {
@@ -268,47 +286,30 @@ function formatWatchTaskTimeFromSeconds(arg0, arg1) {
       const bound1 = Math.max(0, Math.floor(truncate % 60));
       const _String2 = String;
       const StringResult = String(bound);
-      const padStartResult = String(bound).padStart(2, "0");
       const _HermesInternal = HermesInternal;
       const _HermesInternal2 = HermesInternal;
-      return "" + "" + padStartResult + ":" + String(bound1).padStart(2, "0") + "+";
+      const padStartResult = StringResult.padStart(2, "0");
+      const StringResult1 = String(bound1);
+      return "" + "" + padStartResult + ":" + StringResult1.padStart(2, "0") + "+";
     }
   }
   const bound2 = Math.max(0, Math.floor(arg0 / 60));
   const bound3 = Math.max(0, Math.floor(arg0 % 60));
   const StringResult2 = String(bound2);
-  const padStartResult1 = String(bound2).padStart(2, "0");
-  return "" + padStartResult1 + ":" + String(bound3).padStart(2, "0");
+  const padStartResult1 = StringResult2.padStart(2, "0");
+  const StringResult3 = String(bound3);
+  return "" + padStartResult1 + ":" + StringResult3.padStart(2, "0");
 }
-let items = [fn(5631).FirstPartyQuestTaskTypes.PLAY_ON_XBOX, fn(5631).FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION];
-let closure_129_0 = items;
-const hasSomeConsoleTasks = (arg0) => {
-  const config = arg0;
-  return config.some((item) => null != config.config.taskConfigV2.tasks[item]);
-};
-const items1 = [fn(5631).FirstPartyQuestTaskTypes.WATCH_VIDEO];
-let closure_130_0 = items1;
-const fn2 = (arg0) => {
-  const config = arg0;
-  return config.some((item) => null != config.config.taskConfigV2.tasks[item]);
-};
-const items2 = [fn(5631).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
-let closure_131_0 = items2;
-const fn3 = (arg0) => {
-  const config = arg0;
-  return config.some((item) => null != config.config.taskConfigV2.tasks[item]);
-};
-const items3 = [fn(5631).FirstPartyQuestTaskTypes.WATCH_VIDEO, fn(5631).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
-let closure_132_0 = items3;
-const fn4 = (arg0) => {
-  const config = arg0;
-  return config.some((item) => null != config.config.taskConfigV2.tasks[item]);
-};
-const items4 = [fn(5631).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP, fn(5631).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP, fn(5631).FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION, fn(5631).FirstPartyQuestTaskTypes.PLAY_ON_XBOX, fn(5631).FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_GAME];
-let closure_133_0 = items4;
-const items5 = [fn(5631).FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_ACTIVITY, fn(5631).FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
-let closure_134_0 = items5;
-const size = fn(2);
+let items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_XBOX, FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION];
+const hasSomeConsoleTasks = f94504;
+const items1 = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO];
+const fn2 = f94504;
+const items2 = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
+const fn3 = f94504;
+const items3 = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO, FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
+const fn4 = f94504;
+const items4 = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP, FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP, FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION, FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_XBOX, FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_GAME];
+const items5 = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_ACTIVITY, FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
 let result = size.fileFinishedImporting("modules/quests/utils/QuestTaskUtils.tsx");
 
 export const getAllApplicationIds = function getAllApplicationIds(quest) {
@@ -382,38 +383,27 @@ export const hasPlayActivityTask = function hasPlayActivityTask(quest) {
   return null != quest.config.taskConfigV2.tasks[FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
 };
 export const shouldUsePlayOnDesktopTask = function shouldUsePlayOnDesktopTask(quest) {
-  let tmp = null != quest;
-  if (tmp) {
-    tmp = null != quest.config.taskConfigV2.tasks[FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
-  }
+  const tmp = null != quest && null != quest.config.taskConfigV2.tasks[FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
   return tmp;
 };
 export function hasSomeFirstPartyTasks(arg0) {
-  closure_0 = arg0;
-  return (arg0) => {
-    const config = arg0;
-    return config.some((item) => null != config.config.taskConfigV2.tasks[item]);
-  };
+  let closure_0 = arg0;
+  return f94504;
 }
 export const isInGameQuest = function isInGameQuest(quest) {
-  closure_0 = quest;
-  return Array.from(FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypesSets.IN_GAME).some((item) => null != value.config.taskConfigV2.tasks[item]);
+  let closure_0 = quest;
+  const arr = Array.from(FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypesSets.IN_GAME);
+  return arr.some((item) => null != config.config.taskConfigV2.tasks[item]);
 };
 export { hasSomeConsoleTasks };
 export const hasWatchVideoOnDesktopTasks = fn2;
 export const hasWatchVideoOnMobileTasks = fn3;
 export const hasWatchVideoTasks = fn4;
-export const hasStandaloneGameplayTasks = (arg0) => {
-  const config = arg0;
-  return config.some((item) => null != config.config.taskConfigV2.tasks[item]);
-};
-export const hasActivityTasks = (arg0) => {
-  const config = arg0;
-  return config.some((item) => null != config.config.taskConfigV2.tasks[item]);
-};
+export const hasStandaloneGameplayTasks = f94504;
+export const hasActivityTasks = f94504;
 export const isVideoQuestForMobilePlatformOnly = function isVideoQuestForMobilePlatformOnly(id) {
   if (typeof fn3 === "function") {
-    closure_0 = id;
+    let closure_0 = id;
     let someResult = closure_135_0.some((item) => null != config.config.taskConfigV2.tasks[item]);
     if (someResult) {
       if (typeof fn2 === "function") {
@@ -430,7 +420,7 @@ export const isVideoQuestForMobilePlatformOnly = function isVideoQuestForMobileP
 };
 export const isConsoleQuest = function isConsoleQuest(quest) {
   if (typeof fn === "function") {
-    closure_0 = quest;
+    let closure_0 = quest;
     return closure_133_0.some((item) => null != config.config.taskConfigV2.tasks[item]);
   } else {
     throw new TypeError("Trying to call a non-function");
@@ -438,10 +428,10 @@ export const isConsoleQuest = function isConsoleQuest(quest) {
 };
 export const isDesktopOnlyPlayQuest = function isDesktopOnlyPlayQuest(arg0) {
   if (typeof fn === "function") {
-    closure_0 = arg0;
-    const someResult = closure_133_0.some((item) => null != config.config.taskConfigV2.tasks[item]);
-    let tmp4 = !someResult;
-    if (!someResult) {
+    let closure_0 = arg0;
+    let tmp4 = !closure_133_0.some((item) => null != config.config.taskConfigV2.tasks[item]);
+    closure_133_0.some((item) => null != config.config.taskConfigV2.tasks[item]);
+    if (tmp4) {
       tmp4 = null != arg0.config.taskConfigV2.tasks[FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
     }
     return tmp4;
@@ -451,9 +441,11 @@ export const isDesktopOnlyPlayQuest = function isDesktopOnlyPlayQuest(arg0) {
 };
 export { isQuestProgressingOnConsole };
 export const getQuestTaskTypes = function getQuestTaskTypes(config) {
-  return new Set(Object.keys(config.config.taskConfigV2.tasks));
+  set = new Set(Object.keys(config.config.taskConfigV2.tasks));
+  return set;
 };
 export const getDefaultWatchVideoTask = function getDefaultWatchVideoTask(config) {
+  let tmp3;
   const tmp = config.taskConfigV2.tasks[FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO];
   const tmp2 = config.taskConfigV2.tasks[FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
   if (null == tmp) {
@@ -464,130 +456,149 @@ export const getDefaultWatchVideoTask = function getDefaultWatchVideoTask(config
     if (tmp4 == null) {
       tmp4 = null;
     }
-    let tmp3 = tmp4;
+    tmp3 = tmp4;
   } else {
     tmp3 = tmp2;
   }
   return tmp3;
 };
 export const getQuestTaskDetails = function getQuestTaskDetails(value, DESKTOP) {
-  if (arr.some((item) => null != value.config.taskConfigV2.tasks[item])) {
-    let obj = { progressSeconds: 0, targetSeconds: 1, targetMinutes: 1, percentComplete: 0, taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP };
-    let tmp13Result = obj;
-  } else if (typeof fn === "function") {
-    if (closure_133_0.some((item) => null != config.config.taskConfigV2.tasks[item])) {
-      const obj2 = { quest: value, includeTaskTypes: null };
-      if (DESKTOP != null) {
-        obj2.includeTaskTypes = DESKTOP;
-        tmp13Result = (function _getLatestTaskDetails(arg0) {
-          ({ quest, includeTaskTypes } = arg0);
-          if (includeTaskTypes === undefined) {
-            includeTaskTypes = value(5631).FirstPartyQuestTaskTypesSets.ALL;
-          }
-          const userStatus = quest.userStatus;
-          let progress;
-          if (userStatus != null) {
-            progress = userStatus.progress;
-          }
-          if (progress == null) {
-            progress = {};
-          }
-          const values = Object.values(progress);
-          const sorted = values.sort((heartbeat, heartbeat2) => {
-            let lastBeatAt1;
-            if (heartbeat != null) {
-              heartbeat = heartbeat.heartbeat;
-              if (heartbeat != null) {
-                lastBeatAt1 = heartbeat.lastBeatAt;
-              }
-            }
-            if (heartbeat2 != null) {
-              heartbeat2 = heartbeat2.heartbeat;
-              if (heartbeat2 != null) {
-                const lastBeatAt = heartbeat2.lastBeatAt;
-              }
-            }
-            if (null != lastBeatAt1) {
-              if (null != lastBeatAt) {
-                const _Date3 = Date;
-                const date = new Date(lastBeatAt1);
-                const _Date4 = Date;
-                const date1 = new Date(lastBeatAt);
-                let num3 = 1;
-                if (valueOfResult > date1.valueOf()) {
-                  num3 = -1;
-                }
-                let num = num3;
-                valueOfResult = date.valueOf();
-              }
-              return num;
-            }
-            if (null == lastBeatAt1) {
-              if (null == lastBeatAt) {
-                let updatedAt;
-                if (heartbeat != null) {
-                  updatedAt = heartbeat.updatedAt;
-                }
-                if (null != updatedAt) {
-                  let updatedAt1;
-                  if (heartbeat2 != null) {
-                    updatedAt1 = heartbeat2.updatedAt;
-                  }
-                  if (null != updatedAt1) {
-                    const _Date = Date;
-                    const date2 = new Date(heartbeat.updatedAt);
-                    const _Date2 = Date;
-                    const date3 = new Date(heartbeat2.updatedAt);
-                    let num2 = 1;
-                    if (valueOfResult2 > date3.valueOf()) {
-                      num2 = -1;
-                    }
-                    num = num2;
-                    valueOfResult2 = date2.valueOf();
-                  }
-                }
-              }
-            }
-            num = 1;
-            if (null != lastBeatAt1) {
-              num = 1;
-              if (null == lastBeatAt) {
-                num = -1;
-              }
-            }
-          });
-          const found = sorted.filter(value(1375).isNotNullish);
-          const obj3 = found[Symbol.iterator]();
-          while (obj3 !== undefined) {
-            let tmp6 = _parseFirstPartyTaskType(tmp4.eventName);
-            let tmp7 = tmp6;
-            if (null != tmp6) {
-              let hasItem;
-              if (includeTaskTypes != null) {
-                hasItem = includeTaskTypes.has(tmp7);
-              }
-              if (hasItem) {
-                let obj = { quest, taskType: null, includeTaskTypes: null };
-                obj.taskType = tmp7;
-                obj.includeTaskTypes = includeTaskTypes;
-                let tmp12 = _getTaskDetailsForType(obj);
-                if (null != tmp12) {
-                  obj3.return();
-                  return tmp12;
-                }
-              }
-            }
-            continue;
-          }
-          return _getTaskDetailsForType({ quest, includeTaskTypes });
-        })(obj2);
-      } else {
-        const FirstPartyQuestTaskTypesSets = FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypesSets;
-        const tmp23 = isQuestProgressingOnConsole(value);
+  let tmp13Result;
+  let type;
+  function _getLatestTaskDetails(arg0) {
+    let includeTaskTypes;
+    let quest;
+    ({ quest, includeTaskTypes } = arg0);
+    if (includeTaskTypes === undefined) {
+      includeTaskTypes = FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypesSets.ALL;
+    }
+    const userStatus = quest.userStatus;
+    let progress;
+    const _Object = Object;
+    if (userStatus != null) {
+      progress = userStatus.progress;
+    }
+    if (progress == null) {
+      progress = {};
+    }
+    const values2 = values(progress);
+    const sorted = values2.sort(function(heartbeat, heartbeat2) {
+      let lastBeatAt;
+      let num;
+      let lastBeatAt1;
+      if (heartbeat != null) {
+        heartbeat = heartbeat.heartbeat;
+        if (heartbeat != null) {
+          lastBeatAt1 = heartbeat.lastBeatAt;
+        }
       }
+      if (heartbeat2 != null) {
+        heartbeat2 = heartbeat2.heartbeat;
+        if (heartbeat2 != null) {
+          lastBeatAt = heartbeat2.lastBeatAt;
+        }
+      }
+      if (null != lastBeatAt1) {
+        if (null != lastBeatAt) {
+          const _Date3 = Date;
+          const self5 = this;
+          const self6 = this;
+          const _Date4 = Date;
+          const self7 = this;
+          const self8 = this;
+          const date = new Date(lastBeatAt1);
+          const valueOfResult = date.valueOf();
+          let num3 = 1;
+          const date1 = new Date(lastBeatAt);
+          if (valueOfResult > date1.valueOf()) {
+            num3 = -1;
+          }
+          num = num3;
+        }
+        return num;
+      }
+      if (null == lastBeatAt1) {
+        if (null == lastBeatAt) {
+          let updatedAt;
+          if (heartbeat != null) {
+            updatedAt = heartbeat.updatedAt;
+          }
+          if (null != updatedAt) {
+            let updatedAt1;
+            if (heartbeat2 != null) {
+              updatedAt1 = heartbeat2.updatedAt;
+            }
+            if (null != updatedAt1) {
+              const _Date = Date;
+              const self = this;
+              const self2 = this;
+              const _Date2 = Date;
+              const self3 = this;
+              const self4 = this;
+              const date2 = new Date(heartbeat.updatedAt);
+              const valueOfResult2 = date2.valueOf();
+              let num2 = 1;
+              const date3 = new Date(heartbeat2.updatedAt);
+              if (valueOfResult2 > date3.valueOf()) {
+                num2 = -1;
+              }
+              num = num2;
+            }
+          }
+        }
+      }
+      num = 1;
+      if (null != lastBeatAt1) {
+        num = 1;
+        if (null == lastBeatAt) {
+          num = -1;
+        }
+      }
+    });
+    const found = sorted.filter(GlobalUtils.isNotNullish);
+    const obj3 = found[Symbol.iterator]();
+    while (obj3 !== undefined) {
+      let tmp6 = _parseFirstPartyTaskType(tmp4.eventName);
+      let tmp7 = tmp6;
+      if (null != tmp6) {
+        let hasItem;
+        if (includeTaskTypes != null) {
+          hasItem = includeTaskTypes.has(tmp7);
+        }
+        if (hasItem) {
+          let obj = { quest, taskType: tmp7, includeTaskTypes };
+          let tmp12 = _getTaskDetailsForType(obj);
+          if (null != tmp12) {
+            obj3.return();
+            return tmp12;
+          }
+        }
+      }
+      continue;
+    }
+    return _getTaskDetailsForType({ quest, includeTaskTypes });
+  }
+  let closure_0 = value;
+  const arr = Array.from(FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypesSets.IN_GAME);
+  if (arr.some((item) => null != config.config.taskConfigV2.tasks[item])) {
+    let obj = { progressSeconds: 0, targetSeconds: 1, targetMinutes: 1, percentComplete: 0, taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP };
+    tmp13Result = obj;
+  } else if (typeof fn === "function") {
+    closure_0 = value;
+    if (closure_133_0.some((item) => null != config.config.taskConfigV2.tasks[item])) {
+      let tmp20 = DESKTOP;
+      const obj2 = { quest: value, includeTaskTypes: tmp20 };
+      if (DESKTOP == null) {
+        const tmp23 = isQuestProgressingOnConsole(value);
+        const FirstPartyQuestTaskTypesSets = FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypesSets;
+        tmp20 = tmp23 ? FirstPartyQuestTaskTypesSets.CONSOLE : FirstPartyQuestTaskTypesSets.ALL;
+      }
+      tmp13Result = _getLatestTaskDetails(obj2);
     } else if (typeof fn4 === "function") {
+      closure_0 = value;
       if (closure_136_0.some((item) => null != config.config.taskConfigV2.tasks[item])) {
-        let obj3 = { quest: value, taskType: null };
+        let tmp17;
+        let obj3 = { quest: value, taskType: type };
         const config = value.config;
         let tmp14 = config.taskConfigV2.tasks[FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO];
         const tmp15 = config.taskConfigV2.tasks[FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
@@ -599,28 +610,28 @@ export const getQuestTaskDetails = function getQuestTaskDetails(value, DESKTOP) 
           if (tmp18 == null) {
             tmp18 = null;
           }
-          let tmp17 = tmp18;
+          tmp17 = tmp18;
         } else {
           tmp17 = tmp15;
         }
-        let type;
+        type = undefined;
         if (tmp17 != null) {
           type = tmp17.type;
         }
-        obj3.taskType = type;
         tmp13Result = _getTaskDetailsForType(obj3);
       } else {
-        let tmp8 = null != value;
+        let tmp7 = null;
+        const tmp8 = null != value && null != value.config.taskConfigV2.tasks[FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
         if (tmp8) {
-          tmp8 = null != value.config.taskConfigV2.tasks[FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
-        }
-        if (tmp8) {
+          let num3 = 0;
           const obj4 = { quest: value, taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP };
           tmp13Result = _getTaskDetailsForType(obj4);
         } else if (null != value.config.taskConfigV2.tasks[FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY]) {
+          let num2 = 0;
           const obj5 = { quest: value, taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY };
           tmp13Result = _getTaskDetailsForType(obj5);
         } else {
+          let num = 0;
           const obj6 = { quest: value, taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP };
           tmp13Result = _getTaskDetailsForType(obj6);
         }
@@ -635,14 +646,13 @@ export const getQuestTaskDetails = function getQuestTaskDetails(value, DESKTOP) 
     return tmp13Result;
   } else {
     const obj7 = { quest: value };
-    let tmp26 = _getTaskDetailsForType(obj7);
-    if (null == tmp26) {
+    let tmp25 = _getTaskDetailsForType(obj7);
+    if (null == tmp25) {
+      tmp25 = { progressSeconds: 0, targetSeconds: 1, targetMinutes: 1, percentComplete: 0, taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP };
       const obj8 = { progressSeconds: 0, targetSeconds: 1, targetMinutes: 1, percentComplete: 0, taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP };
-      tmp26 = obj8;
     }
-    return tmp26;
+    return tmp25;
   }
-  arr = Array.from(FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypesSets.IN_GAME);
 };
 export const getDefaultInGameTask = function getDefaultInGameTask(config) {
   const tasks = config.taskConfigV2.tasks;
@@ -684,11 +694,10 @@ export const getThirdPartyTaskDetails = function getThirdPartyTaskDetails(config
     let num2 = 0;
     if (target > 0) {
       const _Math = Math;
-      num2 = _mod12.floor(Math.min(num / target, 1), 4);
       const tmpResult = _mod12;
+      num2 = tmpResult.floor(Math.min(num / target, 1), 4);
     }
-    const obj = { title: tmp3.messages.taskTitle, description: tmp3.messages.taskDescription, target: tmp3.target, progress: num, percentComplete: num2 };
-    return obj;
+    return { title: tmp3.messages.taskTitle, description: tmp3.messages.taskDescription, target: tmp3.target, progress: num, percentComplete: num2 };
   }
 };
 export const getRemainingTaskTime = function getRemainingTaskTime(targetSeconds) {
@@ -705,19 +714,22 @@ export const formatWatchTaskRemainingTime = function formatWatchTaskRemainingTim
 };
 export const formatWatchTaskTime = function formatWatchTaskTime(minutes, seconds) {
   const StringResult = String(minutes);
-  const padStartResult = String(minutes).padStart(2, "0");
-  return "" + padStartResult + ":" + String(seconds).padStart(2, "0");
+  const padStartResult = StringResult.padStart(2, "0");
+  const StringResult1 = String(seconds);
+  return "" + padStartResult + ":" + StringResult1.padStart(2, "0");
 };
 export { formatWatchTaskTimeFromSeconds };
 export const getWatchVideoTaskDetailsFromProgress = function getWatchVideoTaskDetailsFromProgress(arg0) {
+  let num;
+  let progressSeconds;
+  let targetSeconds;
   ({ progressSeconds, targetSeconds } = arg0);
-  const obj = { progressSeconds, targetSeconds, targetMinutes: Math.ceil(targetSeconds / DurationsDefault.Seconds.MINUTE), percentComplete: null, taskType: null };
-  let num = 0;
+  const obj = { progressSeconds, targetSeconds, targetMinutes: Math.ceil(targetSeconds / DurationsDefault.Seconds.MINUTE), percentComplete: num, taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE };
+  num = 0;
   if (targetSeconds > 0) {
     const _Math = Math;
-    num = _mod12.floor(Math.min(progressSeconds / targetSeconds, 1), 4);
+    const obj2 = _mod12;
+    num = obj2.floor(Math.min(progressSeconds / targetSeconds, 1), 4);
   }
-  obj.percentComplete = num;
-  obj.taskType = FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE;
   return obj;
 };

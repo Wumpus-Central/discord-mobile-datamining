@@ -3,8 +3,8 @@
 // Module 15570 (DevSettingsActions)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DevSettingsStore from "DevSettingsStore" /* 4889 */;
+import size from "module_2" /* 2 */;
 
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/dev_settings/DevSettingsActions.tsx");
 
 export const toggle = function toggle(toggle, flag) {
@@ -12,8 +12,9 @@ export const toggle = function toggle(toggle, flag) {
   if (typeof flag !== "boolean") {
     tmp = !DevSettingsStore.get(toggle);
   }
-  DispatcherDefault.dispatch({ type: "DEV_TOOLS_DEV_SETTING_SET", toggle, value: tmp });
+  const obj = DispatcherDefault;
   const obj2 = { type: "DEV_TOOLS_DEV_SETTING_SET", toggle, value: tmp };
+  obj.dispatch(obj2);
 };
 export const clearAll = function clearAll() {
   for (const key10005 in DevSettingsStore.enabled()) {

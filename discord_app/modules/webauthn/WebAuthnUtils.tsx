@@ -14,6 +14,7 @@ export const encodeUserIdForWebAuthn = function encodeUserIdForWebAuthn(id) {
   dataView.setBigUint64(8, BigInt(id));
   const items = [...uint8Array];
   const str = btoa(String.fromCharCode.apply(items));
-  const str2 = btoa(String.fromCharCode.apply(items)).replace(/\+/g, "-");
-  return btoa(String.fromCharCode.apply(items)).replace(/\+/g, "-").replace(/\//g, "_").replace(/=/g, "");
+  const str2 = str.replace(/\+/g, "-");
+  const str3 = str2.replace(/\//g, "_");
+  return str3.replace(/=/g, "");
 };

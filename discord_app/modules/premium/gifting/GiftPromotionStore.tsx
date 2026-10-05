@@ -1,27 +1,30 @@
 // === Module 6926: GiftPromotionStore ===
 
 // Module 6926 (GiftPromotionStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
+import size from "module_2" /* 2 */;
 
-let closure_0 = { giftOptionsReceiptMap: {} };
-const PersistedStore = initializeDefault.PersistedStore;
+let closure_0;
+
+const React = { giftOptionsReceiptMap: {} };
+const PersistedStore = get_initializedDefault.PersistedStore;
 class GiftPromotionStore extends PersistedStore {
+  initialize(giftOptionsReceiptMap) {
+    if (null != giftOptionsReceiptMap) {
+      const obj = {};
+      const merged = Object.assign(giftOptionsReceiptMap.giftOptionsReceiptMap);
+      closure_0.giftOptionsReceiptMap = obj;
+    }
+  }
+  getState() {
+    return closure_0;
+  }
+  getGiftOptionsForKey(v3Result) {
+    return closure_0.giftOptionsReceiptMap[v3Result];
+  }
 }
 const prototype = GiftPromotionStore.prototype;
-prototype["initialize"] = function initialize(giftOptionsReceiptMap) {
-  if (null != giftOptionsReceiptMap) {
-    const obj = {};
-    const merged = Object.assign(giftOptionsReceiptMap.giftOptionsReceiptMap);
-    closure_0.giftOptionsReceiptMap = obj;
-  }
-};
-prototype["getState"] = function getState() {
-  return closure_0;
-};
-prototype["getGiftOptionsForKey"] = function getGiftOptionsForKey(v3Result) {
-  return closure_0.giftOptionsReceiptMap[v3Result];
-};
 GiftPromotionStore.displayName = "GiftPromotionStore";
 GiftPromotionStore.persistKey = "GiftPromotionStore";
 const items = [
@@ -32,14 +35,14 @@ const items = [
       if (prop == null) {
         prop = null;
       }
+      tmp = { giftOptionsReceiptMap: prop };
       const obj = { giftOptionsReceiptMap: prop };
-      tmp = obj;
     }
     return tmp;
   }
 ];
 GiftPromotionStore.migrations = items;
-const giftPromotionStore = new GiftPromotionStore(DispatcherDefault, {
+let obj = {
   LOGOUT: function handleLogout() {
     closure_0 = { giftOptionsReceiptMap: {} };
   },
@@ -47,10 +50,10 @@ const giftPromotionStore = new GiftPromotionStore(DispatcherDefault, {
     closure_0.giftOptionsReceiptMap[key.key] = key.giftOptions;
   },
   GIFT_PROMOTION_GIFT_OPTIONS_CLEAR_CACHE_ACTION: function handleClearCachedGiftOptions(arg0) {
-    delete tmp[tmp2];
+    delete closure_0.giftOptionsReceiptMap[arg0.key];
   }
-});
-const size = fn(2);
+};
+const giftPromotionStore = new GiftPromotionStore(DispatcherDefault, obj);
 const result = size.fileFinishedImporting("modules/premium/gifting/GiftPromotionStore.tsx");
 
 export default giftPromotionStore;

@@ -1,65 +1,84 @@
 // === Module 17170: ActivityPanelPIPView ===
 
 // Module 17170 (ActivityPanelPIPView)
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
+import Constants from "Constants" /* 1085 */;
+import intl2 from "intl" /* 1126 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
+import Constants2 from "Constants" /* 2011 */;
 import native2 from "native" /* 4589 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
 import timing from "timing" /* 4891 */;
 import spring from "spring" /* 5597 */;
-import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 9134 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 9774 */;
+import MorphablePanelConstants from "MorphablePanelConstants" /* 11903 */;
 import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17168 */;
+import ActivityPanelNativeConstants from "ActivityPanelNativeConstants" /* 17171 */;
 import MorphablePanelUtils from "MorphablePanelUtils" /* 17172 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;
 import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 9156 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 8705 */;
+import native from "native" /* 1188 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size_mod from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const ActivityLayoutMode = fn(2011).ActivityLayoutMode;
-const ActivityPanelConstants = fn(8705);
+let dependencyMap, num2, obj1, obj11, obj9, str, tmp14, tmp17, tmpResult1;
+
+let closure_12;
+let closure_14;
+let map1;
+let obj2;
+let obj3;
+let unpackModuleId;
+let View = react_native.View;
+const ActivityLayoutMode = Constants2.ActivityLayoutMode;
 let ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
-({ ActivityPanelModes: closure_11, ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_12, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: map1, LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_14 } = ActivityPanelConstants);
-const portraitSafeAreasConfig = fn(17171).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
-const ThemeTypes = fn(1085).ThemeTypes;
-const PIP_WINDOW_OFFSET = fn(11903).PIP_WINDOW_OFFSET;
-const jsx = fn(21).jsx;
+({ ActivityPanelModes: unpackModuleId, ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_12, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: map1, LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_14 } = ActivityPanelConstants);
+const portraitSafeAreasConfig = ActivityPanelNativeConstants.DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+const ThemeTypes = Constants.ThemeTypes;
+const PIP_WINDOW_OFFSET = MorphablePanelConstants.PIP_WINDOW_OFFSET;
+const jsx = Fragment.jsx;
 const REDUCED_MOTION_TIMING = { duration: 300 };
-const native = fn(1188);
-const boxShadowStyle = native.generateBoxShadowStyle(fn(1188).EXPERIMENTAL_HIGH_ELEVATION_SHADOW_PARAMS);
-const createStyles = fn(4890);
-let obj = { wrapper: null, mask: null };
+const boxShadowStyle = native.generateBoxShadowStyle(native.EXPERIMENTAL_HIGH_ELEVATION_SHADOW_PARAMS);
+let createStyles = createStyles_mod;
+let obj = { wrapper: obj2, mask: obj3 };
+obj2 = { borderRadius: nativeDefault.radii.lg };
+createStyles = createStyles.createStyles;
 let merged = Object.assign(ACTIVITY_PIP_SIZE);
 const merged1 = Object.assign(boxShadowStyle);
-obj.wrapper = { borderRadius: nativeDefault.radii.lg };
-let obj4 = { borderRadius: nativeDefault.radii.lg };
+obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "center", overflow: "hidden", borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 const merged2 = Object.assign(ACTIVITY_PIP_SIZE);
-obj.mask = { flexDirection: "row", alignItems: "center", justifyContent: "center", overflow: "hidden", borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-let closure_20 = createStyles.createStyles(obj);
-let ReactCompilerGating = fn(558);
-const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(4);
+let closure_20 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
+let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let obj3;
+  let tmp5;
+  let tmp6;
+  const obj = react2;
+  const cResult = obj.c(4);
   const tmp2 = useSafeAreaInsetsDefault();
   let num;
+  const _Math = Math;
   if (tmp2 != null) {
     num = tmp2.right;
   }
   if (num == null) {
     num = 0;
   }
-  const bound = Math.max(state, num);
-  if (cResult[0] !== bound) {
-    const obj2 = { right: null };
-    const obj3 = { disable: false, override: bound };
-    obj2.right = obj3;
-    cResult[0] = bound;
+  const maxResult = max(authStore2, num);
+  if (cResult[0] !== maxResult) {
+    const obj2 = { right: obj3 };
+    obj3 = { disable: false, override: maxResult };
+    cResult[0] = maxResult;
     cResult[1] = obj2;
-    let tmp5 = obj2;
+    tmp5 = obj2;
   } else {
     tmp5 = cResult[1];
   }
@@ -67,42 +86,58 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const obj4 = { landscapeSafeAreasConfig: tmp5 };
     cResult[2] = tmp5;
     cResult[3] = obj4;
-    let tmp6 = obj4;
+    tmp6 = obj4;
   } else {
     tmp6 = cResult[3];
   }
   return tmp6;
 }) : (() => {
+  let items;
   const tmp = useSafeAreaInsetsDefault();
   const right = tmp;
-  let obj = { landscapeSafeAreasConfig: null };
-  const items = [tmp.right];
-  obj.landscapeSafeAreasConfig = noop.useMemo(() => {
-    let num;
-    if (right != null) {
-      num = right.right;
-    }
-    if (num == null) {
-      num = 0;
-    }
-    const obj = { right: { disable: false, override: Math.max(state, num) } };
-    return obj;
-  }, items);
+  let obj = {
+    landscapeSafeAreasConfig: react.useMemo(() => {
+      let num;
+      const _Math = Math;
+      if (right != null) {
+        num = right.right;
+      }
+      if (num == null) {
+        num = 0;
+      }
+      const obj = { right: { disable: false, override: max(authStore2, num) } };
+      ({ disable: false, override: max(authStore2, num) });
+      return obj;
+    }, items)
+  };
+  items = [tmp.right];
   return obj;
 });
-let closure_21 = tmp7;
+let closure_21 = tmp9;
 const __initData = { code: "function ActivityPanelPIPViewTsx1(){const{pipState,getClampedPIPPosition,ACTIVITY_PIP_SIZE,windowDimensions,safeArea,pipAvoidanceSpecs,wrapperOffset,disableHorizontalSafeAreas,shown,reduceMotion,PIP_WINDOW_OFFSET,transitionState,TransitionStates,runOnJS,transitionCleanUp,withTiming,REDUCED_MOTION_TIMING,withSpring,ACTIVITY_LAYOUT_PHYSICS_GESTURE,ACTIVITY_LAYOUT_PHYSICS_DEFAULT}=this.__closure;const{x:pipX,y:pipY}=pipState.get();let{x:x,y:y}=getClampedPIPPosition({pipX:pipX,pipY:pipY,width:ACTIVITY_PIP_SIZE.width,height:ACTIVITY_PIP_SIZE.height,windowDimensions:windowDimensions,safeArea:safeArea,bottomAvoidanceRegion:pipAvoidanceSpecs.get().bottom,topAvoidanceRegion:pipAvoidanceSpecs.get().top,positionOffset:wrapperOffset.get().gestureActive?wrapperOffset.get():undefined,disableHorizontalSafeAreas:disableHorizontalSafeAreas});if(!shown.get()&&!reduceMotion){if(pipX<0.5&&pipX>=0){x=-(ACTIVITY_PIP_SIZE.width+Math.max(safeArea.right,PIP_WINDOW_OFFSET));}else{x=windowDimensions.width+Math.max(safeArea.right,PIP_WINDOW_OFFSET);}}const transitionComplete=function transitionComplete(t6){const finished=t6===undefined?false:t6;if(finished&&transitionState===TransitionStates.YEETED){runOnJS(transitionCleanUp)();}};return{opacity:reduceMotion?withTiming(shown.get()?1:0,REDUCED_MOTION_TIMING,\"animate-always\",transitionComplete):1,transform:[{translateY:withSpring(y,wrapperOffset.get().gestureActive?ACTIVITY_LAYOUT_PHYSICS_GESTURE:ACTIVITY_LAYOUT_PHYSICS_DEFAULT,\"animate-always\")},{translateX:withSpring(x,wrapperOffset.get().gestureActive?ACTIVITY_LAYOUT_PHYSICS_GESTURE:ACTIVITY_LAYOUT_PHYSICS_DEFAULT,\"animate-always\",!reduceMotion?transitionComplete:undefined)}]};}" };
 const __initData2 = { code: "function transitionComplete_ActivityPanelPIPViewTsx2(t6){const{transitionState,TransitionStates,runOnJS,transitionCleanUp}=this.__closure;var finished=t6===undefined?false:t6;if(finished&&transitionState===TransitionStates.YEETED){runOnJS(transitionCleanUp)();}}" };
 const __initData3 = { code: "function ActivityPanelPIPViewTsx3(){const{runOnJS,setMode,ActivityPanelModes}=this.__closure;runOnJS(setMode)(ActivityPanelModes.PANEL);}" };
 const __initData4 = { code: "function ActivityPanelPIPViewTsx4(){const{pipState,getClampedPIPPosition,ACTIVITY_PIP_SIZE,windowDimensions,safeArea,pipAvoidanceSpecs,wrapperOffset,disableHorizontalSafeAreas,shown,reduceMotion,PIP_WINDOW_OFFSET,transitionState,TransitionStates,runOnJS,transitionCleanUp,withTiming,REDUCED_MOTION_TIMING,withSpring,ACTIVITY_LAYOUT_PHYSICS_GESTURE,ACTIVITY_LAYOUT_PHYSICS_DEFAULT}=this.__closure;const{x:pipX,y:pipY}=pipState.get();let{x:x,y:y}=getClampedPIPPosition({pipX:pipX,pipY:pipY,width:ACTIVITY_PIP_SIZE.width,height:ACTIVITY_PIP_SIZE.height,windowDimensions:windowDimensions,safeArea:safeArea,bottomAvoidanceRegion:pipAvoidanceSpecs.get().bottom,topAvoidanceRegion:pipAvoidanceSpecs.get().top,positionOffset:wrapperOffset.get().gestureActive?wrapperOffset.get():undefined,disableHorizontalSafeAreas:disableHorizontalSafeAreas});if(!shown.get()&&!reduceMotion){if(pipX<0.5&&pipX>=0){x=-(ACTIVITY_PIP_SIZE.width+Math.max(safeArea.right,PIP_WINDOW_OFFSET));}else{x=windowDimensions.width+Math.max(safeArea.right,PIP_WINDOW_OFFSET);}}function transitionComplete(finished=false){if(finished&&transitionState===TransitionStates.YEETED){runOnJS(transitionCleanUp)();}}return{opacity:reduceMotion?withTiming(shown.get()?1:0,REDUCED_MOTION_TIMING,'animate-always',transitionComplete):1,transform:[{translateY:withSpring(y,wrapperOffset.get().gestureActive?ACTIVITY_LAYOUT_PHYSICS_GESTURE:ACTIVITY_LAYOUT_PHYSICS_DEFAULT,'animate-always')},{translateX:withSpring(x,wrapperOffset.get().gestureActive?ACTIVITY_LAYOUT_PHYSICS_GESTURE:ACTIVITY_LAYOUT_PHYSICS_DEFAULT,'animate-always',!reduceMotion?transitionComplete:undefined)}]};}" };
 const __initData5 = { code: "function transitionComplete_ActivityPanelPIPViewTsx5(finished=false){const{transitionState,TransitionStates,runOnJS,transitionCleanUp}=this.__closure;if(finished&&transitionState===TransitionStates.YEETED){runOnJS(transitionCleanUp)();}}" };
 const __initData6 = { code: "function ActivityPanelPIPViewTsx6(){const{runOnJS,setMode,ActivityPanelModes}=this.__closure;runOnJS(setMode)(ActivityPanelModes.PANEL);}" };
-ReactCompilerGating = fn(558);
-let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionCleanUp) => {
-  const cResult = transitionState(stateFromStores[16]).c(41);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionCleanUp) => {
+  let children;
+  let context;
+  let height;
+  let pipOrientationLockState;
+  let stateFromStores;
+  let tmp5;
+  let tmp6;
+  let transitionState;
+  let width;
+  let wrapperOffset;
+  let obj = transitionState(stateFromStores[16]);
+  const cResult = obj.c(41);
   ({ children, transitionState } = transitionCleanUp);
   transitionCleanUp = transitionCleanUp.transitionCleanUp;
   ({ pipOrientationLockState, context } = transitionCleanUp);
+  const hasActivity = transitionCleanUp.hasActivity;
   const tmp4 = closure_20();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [wrapperOffset];
@@ -116,8 +151,8 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionCleanUp) =
   } else {
     [tmp5, tmp6] = cResult;
   }
-  let obj = transitionState(stateFromStores[16]);
-  stateFromStores = transitionState(stateFromStores[18]).useStateFromStores(tmp5, tmp6);
+  let tmpResult = transitionState(tmp2[18]);
+  stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
   const tmp10 = transitionCleanUp(stateFromStores[19])();
   windowDimensions = tmp10;
   const tmp11 = transitionCleanUp(stateFromStores[17])();
@@ -128,11 +163,16 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionCleanUp) =
   const pipState = context1.pipState;
   const pipAvoidanceSpecs = context1.pipAvoidanceSpecs;
   const wrapperDimensions = context1.wrapperDimensions;
+  const obj3 = windowDimensions;
   if (cResult[2] === context) {
+    let tmp13;
+    let tmp16;
+    let tmp15;
     if (cResult[3] === transitionState) {
-      let tmp13 = cResult[4];
+      tmp13 = cResult[4];
     }
-    const lockedWebView = transitionState(tmp2[20]).useLockedWebView(tmp13);
+    let tmpResult3 = transitionState(tmp2[20]);
+    const lockedWebView = tmpResult3.useLockedWebView(tmp13);
     const shown = lockedWebView.shown;
     const renderWebView = lockedWebView.renderWebView;
     if (cResult[5] !== wrapperOffset) {
@@ -140,11 +180,13 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionCleanUp) =
         updateSharedValueIfChangedDefault(wrapperOffset, { gestureActive: false });
       };
       const items1 = [wrapperOffset];
+      let num3 = 5;
       cResult[5] = wrapperOffset;
+      let num4 = 6;
       cResult[6] = fn2;
       cResult[7] = items1;
-      let tmp16 = items1;
-      let tmp15 = fn2;
+      tmp16 = items1;
+      tmp15 = fn2;
     } else {
       tmp15 = cResult[6];
       tmp16 = cResult[7];
@@ -152,132 +194,119 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionCleanUp) =
     const effect = obj3.useEffect(tmp15, tmp16);
     const tmp19 = setMode((shouldDisableSafeAreas) => shouldDisableSafeAreas.shouldDisableSafeAreas());
     const ACTIVITY_PIP_SIZE = tmp19;
-    const tmpResult3 = transitionState(tmp2[20]);
+    const tmpResult4 = transitionState(tmp2[22]);
     class B {
       constructor() {
         point = pipState.get();
         x = point.x;
         tmp = closure_0;
         tmp2 = closure_2;
-        obj = closure_0(closure_2[23]);
-        size = { pipX: x, pipY: point.y, width: ACTIVITY_PIP_SIZE.width, height: ACTIVITY_PIP_SIZE.height, windowDimensions: closure_3, safeArea: closure_4, bottomAvoidanceRegion: pipAvoidanceSpecs.get().bottom, topAvoidanceRegion: pipAvoidanceSpecs.get().top, positionOffset: null, disableHorizontalSafeAreas: null };
-        width = ACTIVITY_PIP_SIZE;
-        sum1 = closure_4;
-        tmp3 = closure_3;
-        obj3 = wrapperOffset;
+        y = point.y;
+        tmp3 = closure_0(closure_2[23]);
+        size = { pipX: x, pipY: y, width: ACTIVITY_PIP_SIZE.width, height: ACTIVITY_PIP_SIZE.height, windowDimensions: closure_3, safeArea: closure_4, bottomAvoidanceRegion: pipAvoidanceSpecs.get().bottom, topAvoidanceRegion: pipAvoidanceSpecs.get().top, positionOffset: null, disableHorizontalSafeAreas: null };
+        tmp6 = closure_4;
+        getClampedPIPPosition = tmp3.getClampedPIPPosition;
+        tmp4 = ACTIVITY_PIP_SIZE;
+        tmp5 = closure_3;
+        obj2 = wrapperOffset;
         value = undefined;
         if (wrapperOffset.get().gestureActive) {
-          value = obj3.get();
+          value = obj2.get();
         }
         size.positionOffset = value;
         size.disableHorizontalSafeAreas = closure_10;
-        point2 = obj.getClampedPIPPosition(size);
+        point2 = getClampedPIPPosition(size);
         x2 = point2.x;
-        obj4 = shown;
-        tmp6 = shown.get() || closure_2;
-        if (tmp6) {
-          transitionComplete = function transitionComplete(arg0) {
-            let tmp = undefined !== arg0 && arg0;
-            if (tmp) {
-              tmp = closure_1_0 === transitionState(stateFromStores[24]).TransitionStates.YEETED;
-            }
-            if (tmp) {
-              transitionState(stateFromStores[22]).runOnJS(transitionCleanUp)();
-              const obj = transitionState(stateFromStores[22]);
-            }
-          };
-          obj1 = { transitionState: null, TransitionStates: null, runOnJS: null, transitionCleanUp: null };
-          tmp13 = transitionState;
-          obj1.transitionState = transitionState;
-          obj1.TransitionStates = tmp(tmp2[24]).TransitionStates;
-          obj1.runOnJS = tmp(tmp2[22]).runOnJS;
-          tmp14 = transitionCleanUp;
-          obj1.transitionCleanUp = transitionCleanUp;
-          transitionComplete.__closure = obj1;
-          num3 = 11561549591243;
-          transitionComplete.__workletHash = 11561549591243;
-          tmp15 = closure_23;
-          transitionComplete.__initData = closure_23;
-          num4 = 1;
-          num5 = 1;
-          tmp16 = closure_2;
-          if (closure_2) {
-            tmpResult = tmp(tmp2[25]);
-            num6 = 0;
-            if (obj4.get()) {
-              num6 = 1;
-            }
-            tmp17 = closure_19;
-            str = "animate-always";
-            tmp18 = tmpResult;
-            tmp19 = num6;
-            tmp20 = transitionComplete;
-            num5 = tmpResult.withTiming(num6, closure_19, "animate-always", transitionComplete);
-          }
-          obj12 = { opacity: null, transform: null };
-          obj12.opacity = num5;
-          tmpResult1 = tmp(tmp2[26]);
-          obj13 = { translateY: null };
-          str2 = "animate-always";
-          obj13.translateY = tmpResult1.withSpring(point2.y, obj3.get().gestureActive ? closure_12 : closure_13, "animate-always");
-          items = [, ];
-          items[0] = obj13;
-          tmpResult2 = tmp(tmp2[26]);
-          tmp21 = obj3.get().gestureActive ? closure_12 : closure_13;
-          tmp22 = undefined;
-          if (!tmp16) {
-            tmp22 = transitionComplete;
-          }
-          obj14 = { translateX: null };
-          tmp23 = tmpResult2;
-          tmp24 = x2;
-          tmp25 = tmp21;
-          str3 = "animate-always";
-          tmp26 = tmp22;
-          obj14.translateX = tmpResult2.withSpring(x2, tmp21, "animate-always", tmp22);
-          items[1] = obj14;
-          obj12.transform = items;
-          return obj12;
-        } else {
+        obj3 = shown;
+        y2 = point2.y;
+        tmp8 = shown.get() || closure_2;
+        if (!tmp8) {
           num = 0.5;
-          if (x >= 0.5) {
-            tmp7 = globalThis;
-            _Math = Math;
-            tmp8 = PIP_WINDOW_OFFSET;
-            sum = tmp3.width + Math.max(sum1.right, PIP_WINDOW_OFFSET);
-            tmp12 = sum;
-          } else {
+          if (x < 0.5) {
             num2 = 0;
+            if (x >= 0) {
+              tmp12 = globalThis;
+              _Math2 = Math;
+              tmp13 = PIP_WINDOW_OFFSET;
+              sum = -tmp4.width + Math.max(tmp6.right, PIP_WINDOW_OFFSET);
+            }
+            x2 = sum;
           }
-          width = width.width;
-          tmp10 = globalThis;
-          _Math2 = Math;
-          tmp11 = PIP_WINDOW_OFFSET;
-          sum1 = width + Math.max(sum1.right, PIP_WINDOW_OFFSET);
-          sum = -sum1;
+          tmp9 = globalThis;
+          _Math = Math;
+          tmp10 = PIP_WINDOW_OFFSET;
+          sum = tmp5.width + Math.max(tmp6.right, PIP_WINDOW_OFFSET);
         }
-        return;
+        transitionComplete = function transitionComplete(arg0) {
+          const tmp = undefined !== arg0 && arg0 && closure_1_0 === transitionState(stateFromStores[24]).TransitionStates.YEETED;
+          if (tmp) {
+            const obj = transitionState(stateFromStores[22]);
+            obj.runOnJS(transitionCleanUp)();
+          }
+        };
+        obj1 = { transitionState, TransitionStates: tmp(tmp2[24]).TransitionStates, runOnJS: tmp(tmp2[22]).runOnJS, transitionCleanUp };
+        transitionComplete.__closure = obj1;
+        transitionComplete.__workletHash = 11561549591243;
+        transitionComplete.__initData = closure_23;
+        num3 = 1;
+        tmp14 = closure_2;
+        if (tmp14) {
+          tmpResult = tmp(tmp2[25]);
+          withTiming = tmpResult.withTiming;
+          num4 = 0;
+          if (obj3.get()) {
+            num4 = 1;
+          }
+          tmp16 = closure_19;
+          str = "animate-always";
+          tmp17 = tmpResult;
+          tmp18 = num4;
+          tmp19 = transitionComplete;
+          num3 = withTiming(num4, closure_19, "animate-always", transitionComplete);
+        }
+        obj9 = { opacity: num3, transform: null };
+        tmpResult1 = tmp(tmp2[26]);
+        obj10 = { translateY: tmpResult1.withSpring(y2, obj2.get().gestureActive ? closure_12 : closure_13, "animate-always") };
+        items = [, ];
+        items[0] = obj10;
+        tmpResult2 = tmp(tmp2[26]);
+        withSpring = tmpResult2.withSpring;
+        tmp21 = obj2.get().gestureActive ? closure_12 : closure_13;
+        tmp22 = undefined;
+        if (!tmp14) {
+          tmp22 = transitionComplete;
+        }
+        obj11 = { translateX: withSpring(x2, tmp21, "animate-always", tmp22) };
+        items[1] = obj11;
+        obj9.transform = items;
+        return obj9;
       }
     }
-    let obj2 = { pipState, getClampedPIPPosition: transitionState(tmp2[23]).getClampedPIPPosition, ACTIVITY_PIP_SIZE, windowDimensions: tmp10, safeArea: tmp11, pipAvoidanceSpecs, wrapperOffset, disableHorizontalSafeAreas: tmp19, shown, reduceMotion: stateFromStores, PIP_WINDOW_OFFSET, transitionState, TransitionStates: transitionState(tmp2[24]).TransitionStates, runOnJS: transitionState(tmp2[22]).runOnJS, transitionCleanUp, withTiming: transitionState(tmp2[25]).withTiming, REDUCED_MOTION_TIMING, withSpring: transitionState(tmp2[26]).withSpring, ACTIVITY_LAYOUT_PHYSICS_GESTURE, ACTIVITY_LAYOUT_PHYSICS_DEFAULT };
-    B.__closure = obj2;
+    const useAnimatedStyle = tmpResult4.useAnimatedStyle;
+    let tmp21 = ACTIVITY_PIP_SIZE;
+    B.__closure = { pipState, getClampedPIPPosition: transitionState(stateFromStores[23]).getClampedPIPPosition, ACTIVITY_PIP_SIZE, windowDimensions: tmp10, safeArea: tmp11, pipAvoidanceSpecs, wrapperOffset, disableHorizontalSafeAreas: tmp19, shown, reduceMotion: stateFromStores, PIP_WINDOW_OFFSET, transitionState, TransitionStates: transitionState(stateFromStores[24]).TransitionStates, runOnJS: transitionState(stateFromStores[22]).runOnJS, transitionCleanUp, withTiming: transitionState(stateFromStores[25]).withTiming, REDUCED_MOTION_TIMING, withSpring: transitionState(stateFromStores[26]).withSpring, ACTIVITY_LAYOUT_PHYSICS_GESTURE, ACTIVITY_LAYOUT_PHYSICS_DEFAULT };
     B.__workletHash = 6614930197456;
     B.__initData = __initData;
-    const animatedStyle = transitionState(tmp2[22]).useAnimatedStyle(B);
+    const obj2 = { pipState, getClampedPIPPosition: transitionState(stateFromStores[23]).getClampedPIPPosition, ACTIVITY_PIP_SIZE, windowDimensions: tmp10, safeArea: tmp11, pipAvoidanceSpecs, wrapperOffset, disableHorizontalSafeAreas: tmp19, shown, reduceMotion: stateFromStores, PIP_WINDOW_OFFSET, transitionState, TransitionStates: transitionState(stateFromStores[24]).TransitionStates, runOnJS: transitionState(stateFromStores[22]).runOnJS, transitionCleanUp, withTiming: transitionState(stateFromStores[25]).withTiming, REDUCED_MOTION_TIMING, withSpring: transitionState(stateFromStores[26]).withSpring, ACTIVITY_LAYOUT_PHYSICS_GESTURE, ACTIVITY_LAYOUT_PHYSICS_DEFAULT };
+    const animatedStyle = useAnimatedStyle(B);
     if (cResult[8] === pipOrientationLockState) {
+      let tmp28;
       if (cResult[9] === wrapperDimensions.isLandscape) {
-        let tmp27 = cResult[10];
+        tmp28 = cResult[10];
       }
-      ({ width, height } = tmp27);
+      ({ width, height } = tmp28);
       if (cResult[11] === height) {
+        let tmp30;
+        let tmp31;
         if (cResult[12] === width) {
-          let tmp29 = cResult[13];
+          tmp30 = cResult[13];
         }
         if (cResult[14] !== setMode) {
           function ae() {
-            ReanimatedRexport.runOnJS(setMode)(ActivityPanelModes.PANEL);
+            const obj = ReanimatedRexport;
+            obj.runOnJS(setMode)(unpackModuleId.PANEL);
           }
-          const obj4 = { runOnJS: transitionState(tmp2[22]).runOnJS, setMode, ActivityPanelModes };
+          let obj4 = { runOnJS: transitionState(stateFromStores[22]).runOnJS, setMode, ActivityPanelModes };
           ae.__closure = obj4;
           ae.__workletHash = 2951177166574;
           ae.__initData = __initData3;
@@ -287,632 +316,537 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionCleanUp) =
               x = point.x;
               tmp = closure_0;
               tmp2 = closure_2;
-              obj = closure_0(closure_2[23]);
-              size = { pipX: x, pipY: point.y, width: ACTIVITY_PIP_SIZE.width, height: ACTIVITY_PIP_SIZE.height, windowDimensions: closure_3, safeArea: closure_4, bottomAvoidanceRegion: pipAvoidanceSpecs.get().bottom, topAvoidanceRegion: pipAvoidanceSpecs.get().top, positionOffset: null, disableHorizontalSafeAreas: null };
-              width = ACTIVITY_PIP_SIZE;
-              sum1 = closure_4;
-              tmp3 = closure_3;
-              obj3 = wrapperOffset;
+              y = point.y;
+              tmp3 = closure_0(closure_2[23]);
+              size = { pipX: x, pipY: y, width: ACTIVITY_PIP_SIZE.width, height: ACTIVITY_PIP_SIZE.height, windowDimensions: closure_3, safeArea: closure_4, bottomAvoidanceRegion: pipAvoidanceSpecs.get().bottom, topAvoidanceRegion: pipAvoidanceSpecs.get().top, positionOffset: null, disableHorizontalSafeAreas: null };
+              tmp6 = closure_4;
+              getClampedPIPPosition = tmp3.getClampedPIPPosition;
+              tmp4 = ACTIVITY_PIP_SIZE;
+              tmp5 = closure_3;
+              obj2 = wrapperOffset;
               value = undefined;
               if (wrapperOffset.get().gestureActive) {
-                value = obj3.get();
+                value = obj2.get();
               }
               size.positionOffset = value;
               size.disableHorizontalSafeAreas = closure_10;
-              point2 = obj.getClampedPIPPosition(size);
+              point2 = getClampedPIPPosition(size);
               x2 = point2.x;
-              obj4 = shown;
-              tmp6 = shown.get() || closure_2;
-              if (tmp6) {
-                transitionComplete = function transitionComplete(arg0) {
-                  let tmp = undefined !== arg0 && arg0;
-                  if (tmp) {
-                    tmp = closure_1_0 === transitionState(stateFromStores[24]).TransitionStates.YEETED;
-                  }
-                  if (tmp) {
-                    transitionState(stateFromStores[22]).runOnJS(transitionCleanUp)();
-                    const obj = transitionState(stateFromStores[22]);
-                  }
-                };
-                obj1 = { transitionState: null, TransitionStates: null, runOnJS: null, transitionCleanUp: null };
-                tmp13 = transitionState;
-                obj1.transitionState = transitionState;
-                obj1.TransitionStates = tmp(tmp2[24]).TransitionStates;
-                obj1.runOnJS = tmp(tmp2[22]).runOnJS;
-                tmp14 = transitionCleanUp;
-                obj1.transitionCleanUp = transitionCleanUp;
-                transitionComplete.__closure = obj1;
-                num3 = 11561549591243;
-                transitionComplete.__workletHash = 11561549591243;
-                tmp15 = closure_23;
-                transitionComplete.__initData = closure_23;
-                num4 = 1;
-                num5 = 1;
-                tmp16 = closure_2;
-                if (closure_2) {
-                  tmpResult = tmp(tmp2[25]);
-                  num6 = 0;
-                  if (obj4.get()) {
-                    num6 = 1;
-                  }
-                  tmp17 = closure_19;
-                  str = "animate-always";
-                  tmp18 = tmpResult;
-                  tmp19 = num6;
-                  tmp20 = transitionComplete;
-                  num5 = tmpResult.withTiming(num6, closure_19, "animate-always", transitionComplete);
-                }
-                obj12 = { opacity: null, transform: null };
-                obj12.opacity = num5;
-                tmpResult1 = tmp(tmp2[26]);
-                obj13 = { translateY: null };
-                str2 = "animate-always";
-                obj13.translateY = tmpResult1.withSpring(point2.y, obj3.get().gestureActive ? closure_12 : closure_13, "animate-always");
-                items = [, ];
-                items[0] = obj13;
-                tmpResult2 = tmp(tmp2[26]);
-                tmp21 = obj3.get().gestureActive ? closure_12 : closure_13;
-                tmp22 = undefined;
-                if (!tmp16) {
-                  tmp22 = transitionComplete;
-                }
-                obj14 = { translateX: null };
-                tmp23 = tmpResult2;
-                tmp24 = x2;
-                tmp25 = tmp21;
-                str3 = "animate-always";
-                tmp26 = tmp22;
-                obj14.translateX = tmpResult2.withSpring(x2, tmp21, "animate-always", tmp22);
-                items[1] = obj14;
-                obj12.transform = items;
-                return obj12;
-              } else {
+              obj3 = shown;
+              y2 = point2.y;
+              tmp8 = shown.get() || closure_2;
+              if (!tmp8) {
                 num = 0.5;
-                if (x >= 0.5) {
-                  tmp7 = globalThis;
-                  _Math = Math;
-                  tmp8 = PIP_WINDOW_OFFSET;
-                  sum = tmp3.width + Math.max(sum1.right, PIP_WINDOW_OFFSET);
-                  tmp12 = sum;
-                } else {
+                if (x < 0.5) {
                   num2 = 0;
+                  if (x >= 0) {
+                    tmp12 = globalThis;
+                    _Math2 = Math;
+                    tmp13 = PIP_WINDOW_OFFSET;
+                    sum = -tmp4.width + Math.max(tmp6.right, PIP_WINDOW_OFFSET);
+                  }
+                  x2 = sum;
                 }
-                width = width.width;
-                tmp10 = globalThis;
-                _Math2 = Math;
-                tmp11 = PIP_WINDOW_OFFSET;
-                sum1 = width + Math.max(sum1.right, PIP_WINDOW_OFFSET);
-                sum = -sum1;
+                tmp9 = globalThis;
+                _Math = Math;
+                tmp10 = PIP_WINDOW_OFFSET;
+                sum = tmp5.width + Math.max(tmp6.right, PIP_WINDOW_OFFSET);
               }
-              return;
+              transitionComplete = function transitionComplete(arg0) {
+                const tmp = undefined !== arg0 && arg0 && closure_1_0 === transitionState(stateFromStores[24]).TransitionStates.YEETED;
+                if (tmp) {
+                  const obj = transitionState(stateFromStores[22]);
+                  obj.runOnJS(transitionCleanUp)();
+                }
+              };
+              obj1 = { transitionState, TransitionStates: tmp(tmp2[24]).TransitionStates, runOnJS: tmp(tmp2[22]).runOnJS, transitionCleanUp };
+              transitionComplete.__closure = obj1;
+              transitionComplete.__workletHash = 11561549591243;
+              transitionComplete.__initData = closure_23;
+              num3 = 1;
+              tmp14 = closure_2;
+              if (tmp14) {
+                tmpResult = tmp(tmp2[25]);
+                withTiming = tmpResult.withTiming;
+                num4 = 0;
+                if (obj3.get()) {
+                  num4 = 1;
+                }
+                tmp16 = closure_19;
+                str = "animate-always";
+                tmp17 = tmpResult;
+                tmp18 = num4;
+                tmp19 = transitionComplete;
+                num3 = withTiming(num4, closure_19, "animate-always", transitionComplete);
+              }
+              obj9 = { opacity: num3, transform: null };
+              tmpResult1 = tmp(tmp2[26]);
+              obj10 = { translateY: tmpResult1.withSpring(y2, obj2.get().gestureActive ? closure_12 : closure_13, "animate-always") };
+              items = [, ];
+              items[0] = obj10;
+              tmpResult2 = tmp(tmp2[26]);
+              withSpring = tmpResult2.withSpring;
+              tmp21 = obj2.get().gestureActive ? closure_12 : closure_13;
+              tmp22 = undefined;
+              if (!tmp14) {
+                tmp22 = transitionComplete;
+              }
+              obj11 = { translateX: withSpring(x2, tmp21, "animate-always", tmp22) };
+              items[1] = obj11;
+              obj9.transform = items;
+              return obj9;
             }
           }
           cResult[15] = ae;
-          let tmp30 = ae;
+          tmp31 = ae;
         } else {
-          tmp30 = cResult[15];
+          tmp31 = cResult[15];
         }
-        if (cResult[16] === tmp30) {
+        if (cResult[16] === tmp31) {
           if (cResult[17] === pipState) {
+            let tmp34;
+            let tmp37;
+            let tmp39;
+            let tmp40;
             if (cResult[18] === wrapperOffset) {
-              let tmp33 = cResult[19];
+              tmp34 = cResult[19];
             }
-            const tmp34 = tmp9(tmp2[28])(tmp33);
-            let tmp35 = !renderWebView;
+            const tmp35 = transitionCleanUp(stateFromStores[28])(tmp34);
+            let tmp36 = !renderWebView;
             if (renderWebView) {
-              tmp35 = !transitionCleanUp.hasActivity;
+              tmp36 = !hasActivity;
             }
             const _Symbol = Symbol;
             if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
               const intl = transitionState(tmp2[29]).intl;
-              const stringResult = intl.string(transitionState(tmp2[29]).t["3ejJer"]);
+              const stringResult = intl.string(transitionState(stateFromStores[29]).t["3ejJer"]);
               cResult[20] = stringResult;
-              let tmp36 = stringResult;
+              tmp37 = stringResult;
             } else {
-              tmp36 = cResult[20];
+              tmp37 = cResult[20];
             }
             const _Symbol2 = Symbol;
             if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
               const items2 = [{ name: "activate" }];
               cResult[21] = items2;
-              let tmp38 = items2;
+              tmp39 = items2;
             } else {
-              tmp38 = cResult[21];
+              tmp39 = cResult[21];
             }
             if (cResult[22] !== setMode) {
-              let obj5 = {
+              const obj5 = {
                 accessible: true,
-                accessibilityLabel: tmp36,
+                accessibilityLabel: tmp37,
                 accessibilityRole: "button",
-                accessibilityActions: tmp38,
+                accessibilityActions: tmp39,
                 onAccessibilityAction() {
-                              setMode(ActivityPanelModes.PANEL);
+                              setMode(unpackModuleId.PANEL);
                             }
               };
               cResult[22] = setMode;
               cResult[23] = obj5;
-              let tmp39 = obj5;
+              tmp40 = obj5;
             } else {
-              tmp39 = cResult[23];
+              tmp40 = cResult[23];
             }
             if (cResult[24] === tmp4.wrapper) {
+              let tmp41;
               if (cResult[25] === animatedStyle) {
-                let tmp40 = cResult[26];
+                tmp41 = cResult[26];
               }
-              if (cResult[27] === tmp29) {
+              if (cResult[27] === tmp30) {
                 if (cResult[28] === children) {
                   if (cResult[31] === tmp4.mask) {
-                    if (cResult[32] === tmp42) {
-                      let tmp46 = cResult[33];
+                    let tmp47;
+                    if (cResult[32] === tmp43) {
+                      tmp47 = cResult[33];
                     }
-                    if (cResult[34] === tmp34) {
-                      if (cResult[35] === tmp46) {
-                        let tmp50 = cResult[36];
+                    if (cResult[34] === tmp35) {
+                      let tmp51;
+                      if (cResult[35] === tmp47) {
+                        tmp51 = cResult[36];
                       }
-                      if (cResult[37] === tmp39) {
-                        if (cResult[38] === tmp40) {
-                          if (cResult[39] === tmp50) {
-                            let tmp53 = cResult[40];
+                      if (cResult[37] === tmp40) {
+                        if (cResult[38] === tmp41) {
+                          let tmp54;
+                          if (cResult[39] === tmp51) {
+                            tmp54 = cResult[40];
                           }
-                          return tmp53;
+                          return tmp54;
                         }
                       }
-                      let obj6 = { theme: ThemeTypes.DARK, children: null };
-                      let obj7 = { style: tmp40 };
+                      const ThemeContextProvider = transitionState(tmp2[24]).ThemeContextProvider;
+                      const View = tmp9(tmp2[22]).View;
                       class B {
                         constructor() {
                           point = pipState.get();
                           x = point.x;
                           tmp = closure_0;
                           tmp2 = closure_2;
-                          obj = closure_0(closure_2[23]);
-                          size = { pipX: x, pipY: point.y, width: ACTIVITY_PIP_SIZE.width, height: ACTIVITY_PIP_SIZE.height, windowDimensions: closure_3, safeArea: closure_4, bottomAvoidanceRegion: pipAvoidanceSpecs.get().bottom, topAvoidanceRegion: pipAvoidanceSpecs.get().top, positionOffset: null, disableHorizontalSafeAreas: null };
-                          width = ACTIVITY_PIP_SIZE;
-                          sum1 = closure_4;
-                          tmp3 = closure_3;
-                          obj3 = wrapperOffset;
+                          y = point.y;
+                          tmp3 = closure_0(closure_2[23]);
+                          size = { pipX: x, pipY: y, width: ACTIVITY_PIP_SIZE.width, height: ACTIVITY_PIP_SIZE.height, windowDimensions: closure_3, safeArea: closure_4, bottomAvoidanceRegion: pipAvoidanceSpecs.get().bottom, topAvoidanceRegion: pipAvoidanceSpecs.get().top, positionOffset: null, disableHorizontalSafeAreas: null };
+                          tmp6 = closure_4;
+                          getClampedPIPPosition = tmp3.getClampedPIPPosition;
+                          tmp4 = ACTIVITY_PIP_SIZE;
+                          tmp5 = closure_3;
+                          obj2 = wrapperOffset;
                           value = undefined;
                           if (wrapperOffset.get().gestureActive) {
-                            value = obj3.get();
+                            value = obj2.get();
                           }
                           size.positionOffset = value;
                           size.disableHorizontalSafeAreas = closure_10;
-                          point2 = obj.getClampedPIPPosition(size);
+                          point2 = getClampedPIPPosition(size);
                           x2 = point2.x;
-                          obj4 = shown;
-                          tmp6 = shown.get() || closure_2;
-                          if (tmp6) {
-                            transitionComplete = function transitionComplete(arg0) {
-                              let tmp = undefined !== arg0 && arg0;
-                              if (tmp) {
-                                tmp = closure_1_0 === transitionState(stateFromStores[24]).TransitionStates.YEETED;
-                              }
-                              if (tmp) {
-                                transitionState(stateFromStores[22]).runOnJS(transitionCleanUp)();
-                                const obj = transitionState(stateFromStores[22]);
-                              }
-                            };
-                            obj1 = { transitionState: null, TransitionStates: null, runOnJS: null, transitionCleanUp: null };
-                            tmp13 = transitionState;
-                            obj1.transitionState = transitionState;
-                            obj1.TransitionStates = tmp(tmp2[24]).TransitionStates;
-                            obj1.runOnJS = tmp(tmp2[22]).runOnJS;
-                            tmp14 = transitionCleanUp;
-                            obj1.transitionCleanUp = transitionCleanUp;
-                            transitionComplete.__closure = obj1;
-                            num3 = 11561549591243;
-                            transitionComplete.__workletHash = 11561549591243;
-                            tmp15 = closure_23;
-                            transitionComplete.__initData = closure_23;
-                            num4 = 1;
-                            num5 = 1;
-                            tmp16 = closure_2;
-                            if (closure_2) {
-                              tmpResult = tmp(tmp2[25]);
-                              num6 = 0;
-                              if (obj4.get()) {
-                                num6 = 1;
-                              }
-                              tmp17 = closure_19;
-                              str = "animate-always";
-                              tmp18 = tmpResult;
-                              tmp19 = num6;
-                              tmp20 = transitionComplete;
-                              num5 = tmpResult.withTiming(num6, closure_19, "animate-always", transitionComplete);
-                            }
-                            obj12 = { opacity: null, transform: null };
-                            obj12.opacity = num5;
-                            tmpResult1 = tmp(tmp2[26]);
-                            obj13 = { translateY: null };
-                            str2 = "animate-always";
-                            obj13.translateY = tmpResult1.withSpring(point2.y, obj3.get().gestureActive ? closure_12 : closure_13, "animate-always");
-                            items = [, ];
-                            items[0] = obj13;
-                            tmpResult2 = tmp(tmp2[26]);
-                            tmp21 = obj3.get().gestureActive ? closure_12 : closure_13;
-                            tmp22 = undefined;
-                            if (!tmp16) {
-                              tmp22 = transitionComplete;
-                            }
-                            obj14 = { translateX: null };
-                            tmp23 = tmpResult2;
-                            tmp24 = x2;
-                            tmp25 = tmp21;
-                            str3 = "animate-always";
-                            tmp26 = tmp22;
-                            obj14.translateX = tmpResult2.withSpring(x2, tmp21, "animate-always", tmp22);
-                            items[1] = obj14;
-                            obj12.transform = items;
-                            return obj12;
-                          } else {
+                          obj3 = shown;
+                          y2 = point2.y;
+                          tmp8 = shown.get() || closure_2;
+                          if (!tmp8) {
                             num = 0.5;
-                            if (x >= 0.5) {
-                              tmp7 = globalThis;
-                              _Math = Math;
-                              tmp8 = PIP_WINDOW_OFFSET;
-                              sum = tmp3.width + Math.max(sum1.right, PIP_WINDOW_OFFSET);
-                              tmp12 = sum;
-                            } else {
+                            if (x < 0.5) {
                               num2 = 0;
+                              if (x >= 0) {
+                                tmp12 = globalThis;
+                                _Math2 = Math;
+                                tmp13 = PIP_WINDOW_OFFSET;
+                                sum = -tmp4.width + Math.max(tmp6.right, PIP_WINDOW_OFFSET);
+                              }
+                              x2 = sum;
                             }
-                            width = width.width;
-                            tmp10 = globalThis;
-                            _Math2 = Math;
-                            tmp11 = PIP_WINDOW_OFFSET;
-                            sum1 = width + Math.max(sum1.right, PIP_WINDOW_OFFSET);
-                            sum = -sum1;
+                            tmp9 = globalThis;
+                            _Math = Math;
+                            tmp10 = PIP_WINDOW_OFFSET;
+                            sum = tmp5.width + Math.max(tmp6.right, PIP_WINDOW_OFFSET);
                           }
-                          return;
+                          transitionComplete = function transitionComplete(arg0) {
+                            const tmp = undefined !== arg0 && arg0 && closure_1_0 === transitionState(stateFromStores[24]).TransitionStates.YEETED;
+                            if (tmp) {
+                              const obj = transitionState(stateFromStores[22]);
+                              obj.runOnJS(transitionCleanUp)();
+                            }
+                          };
+                          obj1 = { transitionState, TransitionStates: tmp(tmp2[24]).TransitionStates, runOnJS: tmp(tmp2[22]).runOnJS, transitionCleanUp };
+                          transitionComplete.__closure = obj1;
+                          transitionComplete.__workletHash = 11561549591243;
+                          transitionComplete.__initData = closure_23;
+                          num3 = 1;
+                          tmp14 = closure_2;
+                          if (tmp14) {
+                            tmpResult = tmp(tmp2[25]);
+                            withTiming = tmpResult.withTiming;
+                            num4 = 0;
+                            if (obj3.get()) {
+                              num4 = 1;
+                            }
+                            tmp16 = closure_19;
+                            str = "animate-always";
+                            tmp17 = tmpResult;
+                            tmp18 = num4;
+                            tmp19 = transitionComplete;
+                            num3 = withTiming(num4, closure_19, "animate-always", transitionComplete);
+                          }
+                          obj9 = { opacity: num3, transform: null };
+                          tmpResult1 = tmp(tmp2[26]);
+                          obj10 = { translateY: tmpResult1.withSpring(y2, obj2.get().gestureActive ? closure_12 : closure_13, "animate-always") };
+                          items = [, ];
+                          items[0] = obj10;
+                          tmpResult2 = tmp(tmp2[26]);
+                          withSpring = tmpResult2.withSpring;
+                          tmp21 = obj2.get().gestureActive ? closure_12 : closure_13;
+                          tmp22 = undefined;
+                          if (!tmp14) {
+                            tmp22 = transitionComplete;
+                          }
+                          obj11 = { translateX: withSpring(x2, tmp21, "animate-always", tmp22) };
+                          items[1] = obj11;
+                          obj9.transform = items;
+                          return obj9;
                         }
                       }
-                      obj7.children = tmp50;
-                      obj6.children = jsx(tmp9(tmp2[22]).View, { style: tmp40 });
-                      const tmp58 = jsx(transitionState(tmp2[24]).ThemeContextProvider, { theme: ThemeTypes.DARK, children: null });
-                      cResult[37] = tmp39;
-                      cResult[38] = tmp40;
-                      cResult[39] = tmp50;
-                      cResult[40] = tmp58;
-                      tmp53 = tmp58;
+                      const tmp59 = <ThemeContextProvider theme={ThemeTypes.DARK}>{null}</ThemeContextProvider>;
+                      cResult[37] = tmp40;
+                      cResult[38] = tmp41;
+                      cResult[39] = tmp51;
+                      cResult[40] = tmp59;
+                      tmp54 = tmp59;
                     }
-                    const obj9 = { gesture: tmp34, children: tmp46 };
-                    cResult[34] = tmp34;
-                    cResult[35] = tmp46;
+                    cResult[34] = tmp35;
+                    cResult[35] = tmp47;
+                    const tmp53 = jsx(transitionState(stateFromStores[30]).GestureDetector, { gesture: tmp35, children: tmp47 });
                     class B {
                       constructor() {
                         point = pipState.get();
                         x = point.x;
                         tmp = closure_0;
                         tmp2 = closure_2;
-                        obj = closure_0(closure_2[23]);
-                        size = { pipX: x, pipY: point.y, width: ACTIVITY_PIP_SIZE.width, height: ACTIVITY_PIP_SIZE.height, windowDimensions: closure_3, safeArea: closure_4, bottomAvoidanceRegion: pipAvoidanceSpecs.get().bottom, topAvoidanceRegion: pipAvoidanceSpecs.get().top, positionOffset: null, disableHorizontalSafeAreas: null };
-                        width = ACTIVITY_PIP_SIZE;
-                        sum1 = closure_4;
-                        tmp3 = closure_3;
-                        obj3 = wrapperOffset;
+                        y = point.y;
+                        tmp3 = closure_0(closure_2[23]);
+                        size = { pipX: x, pipY: y, width: ACTIVITY_PIP_SIZE.width, height: ACTIVITY_PIP_SIZE.height, windowDimensions: closure_3, safeArea: closure_4, bottomAvoidanceRegion: pipAvoidanceSpecs.get().bottom, topAvoidanceRegion: pipAvoidanceSpecs.get().top, positionOffset: null, disableHorizontalSafeAreas: null };
+                        tmp6 = closure_4;
+                        getClampedPIPPosition = tmp3.getClampedPIPPosition;
+                        tmp4 = ACTIVITY_PIP_SIZE;
+                        tmp5 = closure_3;
+                        obj2 = wrapperOffset;
                         value = undefined;
                         if (wrapperOffset.get().gestureActive) {
-                          value = obj3.get();
+                          value = obj2.get();
                         }
                         size.positionOffset = value;
                         size.disableHorizontalSafeAreas = closure_10;
-                        point2 = obj.getClampedPIPPosition(size);
+                        point2 = getClampedPIPPosition(size);
                         x2 = point2.x;
-                        obj4 = shown;
-                        tmp6 = shown.get() || closure_2;
-                        if (tmp6) {
-                          transitionComplete = function transitionComplete(arg0) {
-                            let tmp = undefined !== arg0 && arg0;
-                            if (tmp) {
-                              tmp = closure_1_0 === transitionState(stateFromStores[24]).TransitionStates.YEETED;
-                            }
-                            if (tmp) {
-                              transitionState(stateFromStores[22]).runOnJS(transitionCleanUp)();
-                              const obj = transitionState(stateFromStores[22]);
-                            }
-                          };
-                          obj1 = { transitionState: null, TransitionStates: null, runOnJS: null, transitionCleanUp: null };
-                          tmp13 = transitionState;
-                          obj1.transitionState = transitionState;
-                          obj1.TransitionStates = tmp(tmp2[24]).TransitionStates;
-                          obj1.runOnJS = tmp(tmp2[22]).runOnJS;
-                          tmp14 = transitionCleanUp;
-                          obj1.transitionCleanUp = transitionCleanUp;
-                          transitionComplete.__closure = obj1;
-                          num3 = 11561549591243;
-                          transitionComplete.__workletHash = 11561549591243;
-                          tmp15 = closure_23;
-                          transitionComplete.__initData = closure_23;
-                          num4 = 1;
-                          num5 = 1;
-                          tmp16 = closure_2;
-                          if (closure_2) {
-                            tmpResult = tmp(tmp2[25]);
-                            num6 = 0;
-                            if (obj4.get()) {
-                              num6 = 1;
-                            }
-                            tmp17 = closure_19;
-                            str = "animate-always";
-                            tmp18 = tmpResult;
-                            tmp19 = num6;
-                            tmp20 = transitionComplete;
-                            num5 = tmpResult.withTiming(num6, closure_19, "animate-always", transitionComplete);
-                          }
-                          obj12 = { opacity: null, transform: null };
-                          obj12.opacity = num5;
-                          tmpResult1 = tmp(tmp2[26]);
-                          obj13 = { translateY: null };
-                          str2 = "animate-always";
-                          obj13.translateY = tmpResult1.withSpring(point2.y, obj3.get().gestureActive ? closure_12 : closure_13, "animate-always");
-                          items = [, ];
-                          items[0] = obj13;
-                          tmpResult2 = tmp(tmp2[26]);
-                          tmp21 = obj3.get().gestureActive ? closure_12 : closure_13;
-                          tmp22 = undefined;
-                          if (!tmp16) {
-                            tmp22 = transitionComplete;
-                          }
-                          obj14 = { translateX: null };
-                          tmp23 = tmpResult2;
-                          tmp24 = x2;
-                          tmp25 = tmp21;
-                          str3 = "animate-always";
-                          tmp26 = tmp22;
-                          obj14.translateX = tmpResult2.withSpring(x2, tmp21, "animate-always", tmp22);
-                          items[1] = obj14;
-                          obj12.transform = items;
-                          return obj12;
-                        } else {
+                        obj3 = shown;
+                        y2 = point2.y;
+                        tmp8 = shown.get() || closure_2;
+                        if (!tmp8) {
                           num = 0.5;
-                          if (x >= 0.5) {
-                            tmp7 = globalThis;
-                            _Math = Math;
-                            tmp8 = PIP_WINDOW_OFFSET;
-                            sum = tmp3.width + Math.max(sum1.right, PIP_WINDOW_OFFSET);
-                            tmp12 = sum;
-                          } else {
+                          if (x < 0.5) {
                             num2 = 0;
+                            if (x >= 0) {
+                              tmp12 = globalThis;
+                              _Math2 = Math;
+                              tmp13 = PIP_WINDOW_OFFSET;
+                              sum = -tmp4.width + Math.max(tmp6.right, PIP_WINDOW_OFFSET);
+                            }
+                            x2 = sum;
                           }
-                          width = width.width;
-                          tmp10 = globalThis;
-                          _Math2 = Math;
-                          tmp11 = PIP_WINDOW_OFFSET;
-                          sum1 = width + Math.max(sum1.right, PIP_WINDOW_OFFSET);
-                          sum = -sum1;
+                          tmp9 = globalThis;
+                          _Math = Math;
+                          tmp10 = PIP_WINDOW_OFFSET;
+                          sum = tmp5.width + Math.max(tmp6.right, PIP_WINDOW_OFFSET);
                         }
-                        return;
+                        transitionComplete = function transitionComplete(arg0) {
+                          const tmp = undefined !== arg0 && arg0 && closure_1_0 === transitionState(stateFromStores[24]).TransitionStates.YEETED;
+                          if (tmp) {
+                            const obj = transitionState(stateFromStores[22]);
+                            obj.runOnJS(transitionCleanUp)();
+                          }
+                        };
+                        obj1 = { transitionState, TransitionStates: tmp(tmp2[24]).TransitionStates, runOnJS: tmp(tmp2[22]).runOnJS, transitionCleanUp };
+                        transitionComplete.__closure = obj1;
+                        transitionComplete.__workletHash = 11561549591243;
+                        transitionComplete.__initData = closure_23;
+                        num3 = 1;
+                        tmp14 = closure_2;
+                        if (tmp14) {
+                          tmpResult = tmp(tmp2[25]);
+                          withTiming = tmpResult.withTiming;
+                          num4 = 0;
+                          if (obj3.get()) {
+                            num4 = 1;
+                          }
+                          tmp16 = closure_19;
+                          str = "animate-always";
+                          tmp17 = tmpResult;
+                          tmp18 = num4;
+                          tmp19 = transitionComplete;
+                          num3 = withTiming(num4, closure_19, "animate-always", transitionComplete);
+                        }
+                        obj9 = { opacity: num3, transform: null };
+                        tmpResult1 = tmp(tmp2[26]);
+                        obj10 = { translateY: tmpResult1.withSpring(y2, obj2.get().gestureActive ? closure_12 : closure_13, "animate-always") };
+                        items = [, ];
+                        items[0] = obj10;
+                        tmpResult2 = tmp(tmp2[26]);
+                        withSpring = tmpResult2.withSpring;
+                        tmp21 = obj2.get().gestureActive ? closure_12 : closure_13;
+                        tmp22 = undefined;
+                        if (!tmp14) {
+                          tmp22 = transitionComplete;
+                        }
+                        obj11 = { translateX: withSpring(x2, tmp21, "animate-always", tmp22) };
+                        items[1] = obj11;
+                        obj9.transform = items;
+                        return obj9;
                       }
                     }
-                    tmp50 = jsx(transitionState(tmp2[30]).GestureDetector, { gesture: tmp34, children: tmp46 });
-                    const tmp52 = jsx(transitionState(tmp2[30]).GestureDetector, { gesture: tmp34, children: tmp46 });
+                    tmp51 = tmp53;
                   }
-                  const obj10 = { style: tmp4.mask, children: tmp42 };
-                  const tmp49 = <safeArea style={tmp4.mask}>{tmp42}</safeArea>;
+                  const tmp50 = <safeArea style={tmp4.mask}>{tmp43}</safeArea>;
                   cResult[31] = tmp4.mask;
-                  cResult[32] = tmp42;
+                  cResult[32] = tmp43;
                   class B {
                     constructor() {
                       point = pipState.get();
                       x = point.x;
                       tmp = closure_0;
                       tmp2 = closure_2;
-                      obj = closure_0(closure_2[23]);
-                      size = { pipX: x, pipY: point.y, width: ACTIVITY_PIP_SIZE.width, height: ACTIVITY_PIP_SIZE.height, windowDimensions: closure_3, safeArea: closure_4, bottomAvoidanceRegion: pipAvoidanceSpecs.get().bottom, topAvoidanceRegion: pipAvoidanceSpecs.get().top, positionOffset: null, disableHorizontalSafeAreas: null };
-                      width = ACTIVITY_PIP_SIZE;
-                      sum1 = closure_4;
-                      tmp3 = closure_3;
-                      obj3 = wrapperOffset;
+                      y = point.y;
+                      tmp3 = closure_0(closure_2[23]);
+                      size = { pipX: x, pipY: y, width: ACTIVITY_PIP_SIZE.width, height: ACTIVITY_PIP_SIZE.height, windowDimensions: closure_3, safeArea: closure_4, bottomAvoidanceRegion: pipAvoidanceSpecs.get().bottom, topAvoidanceRegion: pipAvoidanceSpecs.get().top, positionOffset: null, disableHorizontalSafeAreas: null };
+                      tmp6 = closure_4;
+                      getClampedPIPPosition = tmp3.getClampedPIPPosition;
+                      tmp4 = ACTIVITY_PIP_SIZE;
+                      tmp5 = closure_3;
+                      obj2 = wrapperOffset;
                       value = undefined;
                       if (wrapperOffset.get().gestureActive) {
-                        value = obj3.get();
+                        value = obj2.get();
                       }
                       size.positionOffset = value;
                       size.disableHorizontalSafeAreas = closure_10;
-                      point2 = obj.getClampedPIPPosition(size);
+                      point2 = getClampedPIPPosition(size);
                       x2 = point2.x;
-                      obj4 = shown;
-                      tmp6 = shown.get() || closure_2;
-                      if (tmp6) {
-                        transitionComplete = function transitionComplete(arg0) {
-                          let tmp = undefined !== arg0 && arg0;
-                          if (tmp) {
-                            tmp = closure_1_0 === transitionState(stateFromStores[24]).TransitionStates.YEETED;
-                          }
-                          if (tmp) {
-                            transitionState(stateFromStores[22]).runOnJS(transitionCleanUp)();
-                            const obj = transitionState(stateFromStores[22]);
-                          }
-                        };
-                        obj1 = { transitionState: null, TransitionStates: null, runOnJS: null, transitionCleanUp: null };
-                        tmp13 = transitionState;
-                        obj1.transitionState = transitionState;
-                        obj1.TransitionStates = tmp(tmp2[24]).TransitionStates;
-                        obj1.runOnJS = tmp(tmp2[22]).runOnJS;
-                        tmp14 = transitionCleanUp;
-                        obj1.transitionCleanUp = transitionCleanUp;
-                        transitionComplete.__closure = obj1;
-                        num3 = 11561549591243;
-                        transitionComplete.__workletHash = 11561549591243;
-                        tmp15 = closure_23;
-                        transitionComplete.__initData = closure_23;
-                        num4 = 1;
-                        num5 = 1;
-                        tmp16 = closure_2;
-                        if (closure_2) {
-                          tmpResult = tmp(tmp2[25]);
-                          num6 = 0;
-                          if (obj4.get()) {
-                            num6 = 1;
-                          }
-                          tmp17 = closure_19;
-                          str = "animate-always";
-                          tmp18 = tmpResult;
-                          tmp19 = num6;
-                          tmp20 = transitionComplete;
-                          num5 = tmpResult.withTiming(num6, closure_19, "animate-always", transitionComplete);
-                        }
-                        obj12 = { opacity: null, transform: null };
-                        obj12.opacity = num5;
-                        tmpResult1 = tmp(tmp2[26]);
-                        obj13 = { translateY: null };
-                        str2 = "animate-always";
-                        obj13.translateY = tmpResult1.withSpring(point2.y, obj3.get().gestureActive ? closure_12 : closure_13, "animate-always");
-                        items = [, ];
-                        items[0] = obj13;
-                        tmpResult2 = tmp(tmp2[26]);
-                        tmp21 = obj3.get().gestureActive ? closure_12 : closure_13;
-                        tmp22 = undefined;
-                        if (!tmp16) {
-                          tmp22 = transitionComplete;
-                        }
-                        obj14 = { translateX: null };
-                        tmp23 = tmpResult2;
-                        tmp24 = x2;
-                        tmp25 = tmp21;
-                        str3 = "animate-always";
-                        tmp26 = tmp22;
-                        obj14.translateX = tmpResult2.withSpring(x2, tmp21, "animate-always", tmp22);
-                        items[1] = obj14;
-                        obj12.transform = items;
-                        return obj12;
-                      } else {
+                      obj3 = shown;
+                      y2 = point2.y;
+                      tmp8 = shown.get() || closure_2;
+                      if (!tmp8) {
                         num = 0.5;
-                        if (x >= 0.5) {
-                          tmp7 = globalThis;
-                          _Math = Math;
-                          tmp8 = PIP_WINDOW_OFFSET;
-                          sum = tmp3.width + Math.max(sum1.right, PIP_WINDOW_OFFSET);
-                          tmp12 = sum;
-                        } else {
+                        if (x < 0.5) {
                           num2 = 0;
+                          if (x >= 0) {
+                            tmp12 = globalThis;
+                            _Math2 = Math;
+                            tmp13 = PIP_WINDOW_OFFSET;
+                            sum = -tmp4.width + Math.max(tmp6.right, PIP_WINDOW_OFFSET);
+                          }
+                          x2 = sum;
                         }
-                        width = width.width;
-                        tmp10 = globalThis;
-                        _Math2 = Math;
-                        tmp11 = PIP_WINDOW_OFFSET;
-                        sum1 = width + Math.max(sum1.right, PIP_WINDOW_OFFSET);
-                        sum = -sum1;
+                        tmp9 = globalThis;
+                        _Math = Math;
+                        tmp10 = PIP_WINDOW_OFFSET;
+                        sum = tmp5.width + Math.max(tmp6.right, PIP_WINDOW_OFFSET);
                       }
-                      return;
+                      transitionComplete = function transitionComplete(arg0) {
+                        const tmp = undefined !== arg0 && arg0 && closure_1_0 === transitionState(stateFromStores[24]).TransitionStates.YEETED;
+                        if (tmp) {
+                          const obj = transitionState(stateFromStores[22]);
+                          obj.runOnJS(transitionCleanUp)();
+                        }
+                      };
+                      obj1 = { transitionState, TransitionStates: tmp(tmp2[24]).TransitionStates, runOnJS: tmp(tmp2[22]).runOnJS, transitionCleanUp };
+                      transitionComplete.__closure = obj1;
+                      transitionComplete.__workletHash = 11561549591243;
+                      transitionComplete.__initData = closure_23;
+                      num3 = 1;
+                      tmp14 = closure_2;
+                      if (tmp14) {
+                        tmpResult = tmp(tmp2[25]);
+                        withTiming = tmpResult.withTiming;
+                        num4 = 0;
+                        if (obj3.get()) {
+                          num4 = 1;
+                        }
+                        tmp16 = closure_19;
+                        str = "animate-always";
+                        tmp17 = tmpResult;
+                        tmp18 = num4;
+                        tmp19 = transitionComplete;
+                        num3 = withTiming(num4, closure_19, "animate-always", transitionComplete);
+                      }
+                      obj9 = { opacity: num3, transform: null };
+                      tmpResult1 = tmp(tmp2[26]);
+                      obj10 = { translateY: tmpResult1.withSpring(y2, obj2.get().gestureActive ? closure_12 : closure_13, "animate-always") };
+                      items = [, ];
+                      items[0] = obj10;
+                      tmpResult2 = tmp(tmp2[26]);
+                      withSpring = tmpResult2.withSpring;
+                      tmp21 = obj2.get().gestureActive ? closure_12 : closure_13;
+                      tmp22 = undefined;
+                      if (!tmp14) {
+                        tmp22 = transitionComplete;
+                      }
+                      obj11 = { translateX: withSpring(x2, tmp21, "animate-always", tmp22) };
+                      items[1] = obj11;
+                      obj9.transform = items;
+                      return obj9;
                     }
                   }
-                  cResult[33] = tmp49;
-                  tmp46 = tmp49;
+                  cResult[33] = tmp50;
+                  tmp47 = tmp50;
                 }
               }
-              let tmp43 = !tmp35;
-              if (!tmp35) {
-                const obj11 = { style: tmp29, children };
-                tmp43 = <safeArea style={tmp29}>{children}</safeArea>;
-              }
-              cResult[27] = tmp29;
+              const tmp44 = !tmp36 && <safeArea style={tmp30}>{children}</safeArea>;
+              cResult[27] = tmp30;
               cResult[28] = children;
-              cResult[29] = tmp35;
-              cResult[30] = tmp43;
+              cResult[29] = tmp36;
+              cResult[30] = tmp44;
               class B {
                 constructor() {
                   point = pipState.get();
                   x = point.x;
                   tmp = closure_0;
                   tmp2 = closure_2;
-                  obj = closure_0(closure_2[23]);
-                  size = { pipX: x, pipY: point.y, width: ACTIVITY_PIP_SIZE.width, height: ACTIVITY_PIP_SIZE.height, windowDimensions: closure_3, safeArea: closure_4, bottomAvoidanceRegion: pipAvoidanceSpecs.get().bottom, topAvoidanceRegion: pipAvoidanceSpecs.get().top, positionOffset: null, disableHorizontalSafeAreas: null };
-                  width = ACTIVITY_PIP_SIZE;
-                  sum1 = closure_4;
-                  tmp3 = closure_3;
-                  obj3 = wrapperOffset;
+                  y = point.y;
+                  tmp3 = closure_0(closure_2[23]);
+                  size = { pipX: x, pipY: y, width: ACTIVITY_PIP_SIZE.width, height: ACTIVITY_PIP_SIZE.height, windowDimensions: closure_3, safeArea: closure_4, bottomAvoidanceRegion: pipAvoidanceSpecs.get().bottom, topAvoidanceRegion: pipAvoidanceSpecs.get().top, positionOffset: null, disableHorizontalSafeAreas: null };
+                  tmp6 = closure_4;
+                  getClampedPIPPosition = tmp3.getClampedPIPPosition;
+                  tmp4 = ACTIVITY_PIP_SIZE;
+                  tmp5 = closure_3;
+                  obj2 = wrapperOffset;
                   value = undefined;
                   if (wrapperOffset.get().gestureActive) {
-                    value = obj3.get();
+                    value = obj2.get();
                   }
                   size.positionOffset = value;
                   size.disableHorizontalSafeAreas = closure_10;
-                  point2 = obj.getClampedPIPPosition(size);
+                  point2 = getClampedPIPPosition(size);
                   x2 = point2.x;
-                  obj4 = shown;
-                  tmp6 = shown.get() || closure_2;
-                  if (tmp6) {
-                    transitionComplete = function transitionComplete(arg0) {
-                      let tmp = undefined !== arg0 && arg0;
-                      if (tmp) {
-                        tmp = closure_1_0 === transitionState(stateFromStores[24]).TransitionStates.YEETED;
-                      }
-                      if (tmp) {
-                        transitionState(stateFromStores[22]).runOnJS(transitionCleanUp)();
-                        const obj = transitionState(stateFromStores[22]);
-                      }
-                    };
-                    obj1 = { transitionState: null, TransitionStates: null, runOnJS: null, transitionCleanUp: null };
-                    tmp13 = transitionState;
-                    obj1.transitionState = transitionState;
-                    obj1.TransitionStates = tmp(tmp2[24]).TransitionStates;
-                    obj1.runOnJS = tmp(tmp2[22]).runOnJS;
-                    tmp14 = transitionCleanUp;
-                    obj1.transitionCleanUp = transitionCleanUp;
-                    transitionComplete.__closure = obj1;
-                    num3 = 11561549591243;
-                    transitionComplete.__workletHash = 11561549591243;
-                    tmp15 = closure_23;
-                    transitionComplete.__initData = closure_23;
-                    num4 = 1;
-                    num5 = 1;
-                    tmp16 = closure_2;
-                    if (closure_2) {
-                      tmpResult = tmp(tmp2[25]);
-                      num6 = 0;
-                      if (obj4.get()) {
-                        num6 = 1;
-                      }
-                      tmp17 = closure_19;
-                      str = "animate-always";
-                      tmp18 = tmpResult;
-                      tmp19 = num6;
-                      tmp20 = transitionComplete;
-                      num5 = tmpResult.withTiming(num6, closure_19, "animate-always", transitionComplete);
-                    }
-                    obj12 = { opacity: null, transform: null };
-                    obj12.opacity = num5;
-                    tmpResult1 = tmp(tmp2[26]);
-                    obj13 = { translateY: null };
-                    str2 = "animate-always";
-                    obj13.translateY = tmpResult1.withSpring(point2.y, obj3.get().gestureActive ? closure_12 : closure_13, "animate-always");
-                    items = [, ];
-                    items[0] = obj13;
-                    tmpResult2 = tmp(tmp2[26]);
-                    tmp21 = obj3.get().gestureActive ? closure_12 : closure_13;
-                    tmp22 = undefined;
-                    if (!tmp16) {
-                      tmp22 = transitionComplete;
-                    }
-                    obj14 = { translateX: null };
-                    tmp23 = tmpResult2;
-                    tmp24 = x2;
-                    tmp25 = tmp21;
-                    str3 = "animate-always";
-                    tmp26 = tmp22;
-                    obj14.translateX = tmpResult2.withSpring(x2, tmp21, "animate-always", tmp22);
-                    items[1] = obj14;
-                    obj12.transform = items;
-                    return obj12;
-                  } else {
+                  obj3 = shown;
+                  y2 = point2.y;
+                  tmp8 = shown.get() || closure_2;
+                  if (!tmp8) {
                     num = 0.5;
-                    if (x >= 0.5) {
-                      tmp7 = globalThis;
-                      _Math = Math;
-                      tmp8 = PIP_WINDOW_OFFSET;
-                      sum = tmp3.width + Math.max(sum1.right, PIP_WINDOW_OFFSET);
-                      tmp12 = sum;
-                    } else {
+                    if (x < 0.5) {
                       num2 = 0;
+                      if (x >= 0) {
+                        tmp12 = globalThis;
+                        _Math2 = Math;
+                        tmp13 = PIP_WINDOW_OFFSET;
+                        sum = -tmp4.width + Math.max(tmp6.right, PIP_WINDOW_OFFSET);
+                      }
+                      x2 = sum;
                     }
-                    width = width.width;
-                    tmp10 = globalThis;
-                    _Math2 = Math;
-                    tmp11 = PIP_WINDOW_OFFSET;
-                    sum1 = width + Math.max(sum1.right, PIP_WINDOW_OFFSET);
-                    sum = -sum1;
+                    tmp9 = globalThis;
+                    _Math = Math;
+                    tmp10 = PIP_WINDOW_OFFSET;
+                    sum = tmp5.width + Math.max(tmp6.right, PIP_WINDOW_OFFSET);
                   }
-                  return;
+                  transitionComplete = function transitionComplete(arg0) {
+                    const tmp = undefined !== arg0 && arg0 && closure_1_0 === transitionState(stateFromStores[24]).TransitionStates.YEETED;
+                    if (tmp) {
+                      const obj = transitionState(stateFromStores[22]);
+                      obj.runOnJS(transitionCleanUp)();
+                    }
+                  };
+                  obj1 = { transitionState, TransitionStates: tmp(tmp2[24]).TransitionStates, runOnJS: tmp(tmp2[22]).runOnJS, transitionCleanUp };
+                  transitionComplete.__closure = obj1;
+                  transitionComplete.__workletHash = 11561549591243;
+                  transitionComplete.__initData = closure_23;
+                  num3 = 1;
+                  tmp14 = closure_2;
+                  if (tmp14) {
+                    tmpResult = tmp(tmp2[25]);
+                    withTiming = tmpResult.withTiming;
+                    num4 = 0;
+                    if (obj3.get()) {
+                      num4 = 1;
+                    }
+                    tmp16 = closure_19;
+                    str = "animate-always";
+                    tmp17 = tmpResult;
+                    tmp18 = num4;
+                    tmp19 = transitionComplete;
+                    num3 = withTiming(num4, closure_19, "animate-always", transitionComplete);
+                  }
+                  obj9 = { opacity: num3, transform: null };
+                  tmpResult1 = tmp(tmp2[26]);
+                  obj10 = { translateY: tmpResult1.withSpring(y2, obj2.get().gestureActive ? closure_12 : closure_13, "animate-always") };
+                  items = [, ];
+                  items[0] = obj10;
+                  tmpResult2 = tmp(tmp2[26]);
+                  withSpring = tmpResult2.withSpring;
+                  tmp21 = obj2.get().gestureActive ? closure_12 : closure_13;
+                  tmp22 = undefined;
+                  if (!tmp14) {
+                    tmp22 = transitionComplete;
+                  }
+                  obj11 = { translateX: withSpring(x2, tmp21, "animate-always", tmp22) };
+                  items[1] = obj11;
+                  obj9.transform = items;
+                  return obj9;
                 }
               }
             }
@@ -922,116 +856,97 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionCleanUp) =
                 x = point.x;
                 tmp = closure_0;
                 tmp2 = closure_2;
-                obj = closure_0(closure_2[23]);
-                size = { pipX: x, pipY: point.y, width: ACTIVITY_PIP_SIZE.width, height: ACTIVITY_PIP_SIZE.height, windowDimensions: closure_3, safeArea: closure_4, bottomAvoidanceRegion: pipAvoidanceSpecs.get().bottom, topAvoidanceRegion: pipAvoidanceSpecs.get().top, positionOffset: null, disableHorizontalSafeAreas: null };
-                width = ACTIVITY_PIP_SIZE;
-                sum1 = closure_4;
-                tmp3 = closure_3;
-                obj3 = wrapperOffset;
+                y = point.y;
+                tmp3 = closure_0(closure_2[23]);
+                size = { pipX: x, pipY: y, width: ACTIVITY_PIP_SIZE.width, height: ACTIVITY_PIP_SIZE.height, windowDimensions: closure_3, safeArea: closure_4, bottomAvoidanceRegion: pipAvoidanceSpecs.get().bottom, topAvoidanceRegion: pipAvoidanceSpecs.get().top, positionOffset: null, disableHorizontalSafeAreas: null };
+                tmp6 = closure_4;
+                getClampedPIPPosition = tmp3.getClampedPIPPosition;
+                tmp4 = ACTIVITY_PIP_SIZE;
+                tmp5 = closure_3;
+                obj2 = wrapperOffset;
                 value = undefined;
                 if (wrapperOffset.get().gestureActive) {
-                  value = obj3.get();
+                  value = obj2.get();
                 }
                 size.positionOffset = value;
                 size.disableHorizontalSafeAreas = closure_10;
-                point2 = obj.getClampedPIPPosition(size);
+                point2 = getClampedPIPPosition(size);
                 x2 = point2.x;
-                obj4 = shown;
-                tmp6 = shown.get() || closure_2;
-                if (tmp6) {
-                  transitionComplete = function transitionComplete(arg0) {
-                    let tmp = undefined !== arg0 && arg0;
-                    if (tmp) {
-                      tmp = closure_1_0 === transitionState(stateFromStores[24]).TransitionStates.YEETED;
-                    }
-                    if (tmp) {
-                      transitionState(stateFromStores[22]).runOnJS(transitionCleanUp)();
-                      const obj = transitionState(stateFromStores[22]);
-                    }
-                  };
-                  obj1 = { transitionState: null, TransitionStates: null, runOnJS: null, transitionCleanUp: null };
-                  tmp13 = transitionState;
-                  obj1.transitionState = transitionState;
-                  obj1.TransitionStates = tmp(tmp2[24]).TransitionStates;
-                  obj1.runOnJS = tmp(tmp2[22]).runOnJS;
-                  tmp14 = transitionCleanUp;
-                  obj1.transitionCleanUp = transitionCleanUp;
-                  transitionComplete.__closure = obj1;
-                  num3 = 11561549591243;
-                  transitionComplete.__workletHash = 11561549591243;
-                  tmp15 = closure_23;
-                  transitionComplete.__initData = closure_23;
-                  num4 = 1;
-                  num5 = 1;
-                  tmp16 = closure_2;
-                  if (closure_2) {
-                    tmpResult = tmp(tmp2[25]);
-                    num6 = 0;
-                    if (obj4.get()) {
-                      num6 = 1;
-                    }
-                    tmp17 = closure_19;
-                    str = "animate-always";
-                    tmp18 = tmpResult;
-                    tmp19 = num6;
-                    tmp20 = transitionComplete;
-                    num5 = tmpResult.withTiming(num6, closure_19, "animate-always", transitionComplete);
-                  }
-                  obj12 = { opacity: null, transform: null };
-                  obj12.opacity = num5;
-                  tmpResult1 = tmp(tmp2[26]);
-                  obj13 = { translateY: null };
-                  str2 = "animate-always";
-                  obj13.translateY = tmpResult1.withSpring(point2.y, obj3.get().gestureActive ? closure_12 : closure_13, "animate-always");
-                  items = [, ];
-                  items[0] = obj13;
-                  tmpResult2 = tmp(tmp2[26]);
-                  tmp21 = obj3.get().gestureActive ? closure_12 : closure_13;
-                  tmp22 = undefined;
-                  if (!tmp16) {
-                    tmp22 = transitionComplete;
-                  }
-                  obj14 = { translateX: null };
-                  tmp23 = tmpResult2;
-                  tmp24 = x2;
-                  tmp25 = tmp21;
-                  str3 = "animate-always";
-                  tmp26 = tmp22;
-                  obj14.translateX = tmpResult2.withSpring(x2, tmp21, "animate-always", tmp22);
-                  items[1] = obj14;
-                  obj12.transform = items;
-                  return obj12;
-                } else {
+                obj3 = shown;
+                y2 = point2.y;
+                tmp8 = shown.get() || closure_2;
+                if (!tmp8) {
                   num = 0.5;
-                  if (x >= 0.5) {
-                    tmp7 = globalThis;
-                    _Math = Math;
-                    tmp8 = PIP_WINDOW_OFFSET;
-                    sum = tmp3.width + Math.max(sum1.right, PIP_WINDOW_OFFSET);
-                    tmp12 = sum;
-                  } else {
+                  if (x < 0.5) {
                     num2 = 0;
+                    if (x >= 0) {
+                      tmp12 = globalThis;
+                      _Math2 = Math;
+                      tmp13 = PIP_WINDOW_OFFSET;
+                      sum = -tmp4.width + Math.max(tmp6.right, PIP_WINDOW_OFFSET);
+                    }
+                    x2 = sum;
                   }
-                  width = width.width;
-                  tmp10 = globalThis;
-                  _Math2 = Math;
-                  tmp11 = PIP_WINDOW_OFFSET;
-                  sum1 = width + Math.max(sum1.right, PIP_WINDOW_OFFSET);
-                  sum = -sum1;
+                  tmp9 = globalThis;
+                  _Math = Math;
+                  tmp10 = PIP_WINDOW_OFFSET;
+                  sum = tmp5.width + Math.max(tmp6.right, PIP_WINDOW_OFFSET);
                 }
-                return;
+                transitionComplete = function transitionComplete(arg0) {
+                  const tmp = undefined !== arg0 && arg0 && closure_1_0 === transitionState(stateFromStores[24]).TransitionStates.YEETED;
+                  if (tmp) {
+                    const obj = transitionState(stateFromStores[22]);
+                    obj.runOnJS(transitionCleanUp)();
+                  }
+                };
+                obj1 = { transitionState, TransitionStates: tmp(tmp2[24]).TransitionStates, runOnJS: tmp(tmp2[22]).runOnJS, transitionCleanUp };
+                transitionComplete.__closure = obj1;
+                transitionComplete.__workletHash = 11561549591243;
+                transitionComplete.__initData = closure_23;
+                num3 = 1;
+                tmp14 = closure_2;
+                if (tmp14) {
+                  tmpResult = tmp(tmp2[25]);
+                  withTiming = tmpResult.withTiming;
+                  num4 = 0;
+                  if (obj3.get()) {
+                    num4 = 1;
+                  }
+                  tmp16 = closure_19;
+                  str = "animate-always";
+                  tmp17 = tmpResult;
+                  tmp18 = num4;
+                  tmp19 = transitionComplete;
+                  num3 = withTiming(num4, closure_19, "animate-always", transitionComplete);
+                }
+                obj9 = { opacity: num3, transform: null };
+                tmpResult1 = tmp(tmp2[26]);
+                obj10 = { translateY: tmpResult1.withSpring(y2, obj2.get().gestureActive ? closure_12 : closure_13, "animate-always") };
+                items = [, ];
+                items[0] = obj10;
+                tmpResult2 = tmp(tmp2[26]);
+                withSpring = tmpResult2.withSpring;
+                tmp21 = obj2.get().gestureActive ? closure_12 : closure_13;
+                tmp22 = undefined;
+                if (!tmp14) {
+                  tmp22 = transitionComplete;
+                }
+                obj11 = { translateX: withSpring(x2, tmp21, "animate-always", tmp22) };
+                items[1] = obj11;
+                obj9.transform = items;
+                return obj9;
               }
             }
-            tmp41[0] = tmp4.wrapper;
-            tmp41[1] = animatedStyle;
+            tmp42[0] = tmp4.wrapper;
+            tmp42[1] = animatedStyle;
             cResult[24] = tmp4.wrapper;
             cResult[25] = animatedStyle;
-            cResult[26] = tmp41;
-            tmp40 = tmp41;
+            cResult[26] = tmp42;
+            tmp41 = tmp42;
           }
         }
-        const obj12 = { panGestureEnabled: true, onTapGestureStart: tmp30, mode: transitionState(tmp2[28]).MorphablePanelModes.PIP, pipState, wrapperOffset, disableHorizontalSafeAreas: false };
-        cResult[16] = tmp30;
+        const obj12 = { panGestureEnabled: true, onTapGestureStart: tmp31, mode: transitionState(stateFromStores[28]).MorphablePanelModes.PIP, pipState, wrapperOffset, disableHorizontalSafeAreas: false };
+        cResult[16] = tmp31;
         cResult[17] = pipState;
         class B {
           constructor() {
@@ -1039,111 +954,92 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionCleanUp) =
             x = point.x;
             tmp = closure_0;
             tmp2 = closure_2;
-            obj = closure_0(closure_2[23]);
-            size = { pipX: x, pipY: point.y, width: ACTIVITY_PIP_SIZE.width, height: ACTIVITY_PIP_SIZE.height, windowDimensions: closure_3, safeArea: closure_4, bottomAvoidanceRegion: pipAvoidanceSpecs.get().bottom, topAvoidanceRegion: pipAvoidanceSpecs.get().top, positionOffset: null, disableHorizontalSafeAreas: null };
-            width = ACTIVITY_PIP_SIZE;
-            sum1 = closure_4;
-            tmp3 = closure_3;
-            obj3 = wrapperOffset;
+            y = point.y;
+            tmp3 = closure_0(closure_2[23]);
+            size = { pipX: x, pipY: y, width: ACTIVITY_PIP_SIZE.width, height: ACTIVITY_PIP_SIZE.height, windowDimensions: closure_3, safeArea: closure_4, bottomAvoidanceRegion: pipAvoidanceSpecs.get().bottom, topAvoidanceRegion: pipAvoidanceSpecs.get().top, positionOffset: null, disableHorizontalSafeAreas: null };
+            tmp6 = closure_4;
+            getClampedPIPPosition = tmp3.getClampedPIPPosition;
+            tmp4 = ACTIVITY_PIP_SIZE;
+            tmp5 = closure_3;
+            obj2 = wrapperOffset;
             value = undefined;
             if (wrapperOffset.get().gestureActive) {
-              value = obj3.get();
+              value = obj2.get();
             }
             size.positionOffset = value;
             size.disableHorizontalSafeAreas = closure_10;
-            point2 = obj.getClampedPIPPosition(size);
+            point2 = getClampedPIPPosition(size);
             x2 = point2.x;
-            obj4 = shown;
-            tmp6 = shown.get() || closure_2;
-            if (tmp6) {
-              transitionComplete = function transitionComplete(arg0) {
-                let tmp = undefined !== arg0 && arg0;
-                if (tmp) {
-                  tmp = closure_1_0 === transitionState(stateFromStores[24]).TransitionStates.YEETED;
-                }
-                if (tmp) {
-                  transitionState(stateFromStores[22]).runOnJS(transitionCleanUp)();
-                  const obj = transitionState(stateFromStores[22]);
-                }
-              };
-              obj1 = { transitionState: null, TransitionStates: null, runOnJS: null, transitionCleanUp: null };
-              tmp13 = transitionState;
-              obj1.transitionState = transitionState;
-              obj1.TransitionStates = tmp(tmp2[24]).TransitionStates;
-              obj1.runOnJS = tmp(tmp2[22]).runOnJS;
-              tmp14 = transitionCleanUp;
-              obj1.transitionCleanUp = transitionCleanUp;
-              transitionComplete.__closure = obj1;
-              num3 = 11561549591243;
-              transitionComplete.__workletHash = 11561549591243;
-              tmp15 = closure_23;
-              transitionComplete.__initData = closure_23;
-              num4 = 1;
-              num5 = 1;
-              tmp16 = closure_2;
-              if (closure_2) {
-                tmpResult = tmp(tmp2[25]);
-                num6 = 0;
-                if (obj4.get()) {
-                  num6 = 1;
-                }
-                tmp17 = closure_19;
-                str = "animate-always";
-                tmp18 = tmpResult;
-                tmp19 = num6;
-                tmp20 = transitionComplete;
-                num5 = tmpResult.withTiming(num6, closure_19, "animate-always", transitionComplete);
-              }
-              obj12 = { opacity: null, transform: null };
-              obj12.opacity = num5;
-              tmpResult1 = tmp(tmp2[26]);
-              obj13 = { translateY: null };
-              str2 = "animate-always";
-              obj13.translateY = tmpResult1.withSpring(point2.y, obj3.get().gestureActive ? closure_12 : closure_13, "animate-always");
-              items = [, ];
-              items[0] = obj13;
-              tmpResult2 = tmp(tmp2[26]);
-              tmp21 = obj3.get().gestureActive ? closure_12 : closure_13;
-              tmp22 = undefined;
-              if (!tmp16) {
-                tmp22 = transitionComplete;
-              }
-              obj14 = { translateX: null };
-              tmp23 = tmpResult2;
-              tmp24 = x2;
-              tmp25 = tmp21;
-              str3 = "animate-always";
-              tmp26 = tmp22;
-              obj14.translateX = tmpResult2.withSpring(x2, tmp21, "animate-always", tmp22);
-              items[1] = obj14;
-              obj12.transform = items;
-              return obj12;
-            } else {
+            obj3 = shown;
+            y2 = point2.y;
+            tmp8 = shown.get() || closure_2;
+            if (!tmp8) {
               num = 0.5;
-              if (x >= 0.5) {
-                tmp7 = globalThis;
-                _Math = Math;
-                tmp8 = PIP_WINDOW_OFFSET;
-                sum = tmp3.width + Math.max(sum1.right, PIP_WINDOW_OFFSET);
-                tmp12 = sum;
-              } else {
+              if (x < 0.5) {
                 num2 = 0;
+                if (x >= 0) {
+                  tmp12 = globalThis;
+                  _Math2 = Math;
+                  tmp13 = PIP_WINDOW_OFFSET;
+                  sum = -tmp4.width + Math.max(tmp6.right, PIP_WINDOW_OFFSET);
+                }
+                x2 = sum;
               }
-              width = width.width;
-              tmp10 = globalThis;
-              _Math2 = Math;
-              tmp11 = PIP_WINDOW_OFFSET;
-              sum1 = width + Math.max(sum1.right, PIP_WINDOW_OFFSET);
-              sum = -sum1;
+              tmp9 = globalThis;
+              _Math = Math;
+              tmp10 = PIP_WINDOW_OFFSET;
+              sum = tmp5.width + Math.max(tmp6.right, PIP_WINDOW_OFFSET);
             }
-            return;
+            transitionComplete = function transitionComplete(arg0) {
+              const tmp = undefined !== arg0 && arg0 && closure_1_0 === transitionState(stateFromStores[24]).TransitionStates.YEETED;
+              if (tmp) {
+                const obj = transitionState(stateFromStores[22]);
+                obj.runOnJS(transitionCleanUp)();
+              }
+            };
+            obj1 = { transitionState, TransitionStates: tmp(tmp2[24]).TransitionStates, runOnJS: tmp(tmp2[22]).runOnJS, transitionCleanUp };
+            transitionComplete.__closure = obj1;
+            transitionComplete.__workletHash = 11561549591243;
+            transitionComplete.__initData = closure_23;
+            num3 = 1;
+            tmp14 = closure_2;
+            if (tmp14) {
+              tmpResult = tmp(tmp2[25]);
+              withTiming = tmpResult.withTiming;
+              num4 = 0;
+              if (obj3.get()) {
+                num4 = 1;
+              }
+              tmp16 = closure_19;
+              str = "animate-always";
+              tmp17 = tmpResult;
+              tmp18 = num4;
+              tmp19 = transitionComplete;
+              num3 = withTiming(num4, closure_19, "animate-always", transitionComplete);
+            }
+            obj9 = { opacity: num3, transform: null };
+            tmpResult1 = tmp(tmp2[26]);
+            obj10 = { translateY: tmpResult1.withSpring(y2, obj2.get().gestureActive ? closure_12 : closure_13, "animate-always") };
+            items = [, ];
+            items[0] = obj10;
+            tmpResult2 = tmp(tmp2[26]);
+            withSpring = tmpResult2.withSpring;
+            tmp21 = obj2.get().gestureActive ? closure_12 : closure_13;
+            tmp22 = undefined;
+            if (!tmp14) {
+              tmp22 = transitionComplete;
+            }
+            obj11 = { translateX: withSpring(x2, tmp21, "animate-always", tmp22) };
+            items[1] = obj11;
+            obj9.transform = items;
+            return obj9;
           }
         }
         cResult[18] = wrapperOffset;
         cResult[19] = obj12;
-        tmp33 = obj12;
+        tmp34 = obj12;
       }
-      let size = { width, height, pointerEvents: "none" };
+      size = { width, height, pointerEvents: "none" };
       cResult[11] = height;
       cResult[12] = width;
       class B {
@@ -1152,127 +1048,106 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionCleanUp) =
           x = point.x;
           tmp = closure_0;
           tmp2 = closure_2;
-          obj = closure_0(closure_2[23]);
-          size = { pipX: x, pipY: point.y, width: ACTIVITY_PIP_SIZE.width, height: ACTIVITY_PIP_SIZE.height, windowDimensions: closure_3, safeArea: closure_4, bottomAvoidanceRegion: pipAvoidanceSpecs.get().bottom, topAvoidanceRegion: pipAvoidanceSpecs.get().top, positionOffset: null, disableHorizontalSafeAreas: null };
-          width = ACTIVITY_PIP_SIZE;
-          sum1 = closure_4;
-          tmp3 = closure_3;
-          obj3 = wrapperOffset;
+          y = point.y;
+          tmp3 = closure_0(closure_2[23]);
+          size = { pipX: x, pipY: y, width: ACTIVITY_PIP_SIZE.width, height: ACTIVITY_PIP_SIZE.height, windowDimensions: closure_3, safeArea: closure_4, bottomAvoidanceRegion: pipAvoidanceSpecs.get().bottom, topAvoidanceRegion: pipAvoidanceSpecs.get().top, positionOffset: null, disableHorizontalSafeAreas: null };
+          tmp6 = closure_4;
+          getClampedPIPPosition = tmp3.getClampedPIPPosition;
+          tmp4 = ACTIVITY_PIP_SIZE;
+          tmp5 = closure_3;
+          obj2 = wrapperOffset;
           value = undefined;
           if (wrapperOffset.get().gestureActive) {
-            value = obj3.get();
+            value = obj2.get();
           }
           size.positionOffset = value;
           size.disableHorizontalSafeAreas = closure_10;
-          point2 = obj.getClampedPIPPosition(size);
+          point2 = getClampedPIPPosition(size);
           x2 = point2.x;
-          obj4 = shown;
-          tmp6 = shown.get() || closure_2;
-          if (tmp6) {
-            transitionComplete = function transitionComplete(arg0) {
-              let tmp = undefined !== arg0 && arg0;
-              if (tmp) {
-                tmp = closure_1_0 === transitionState(stateFromStores[24]).TransitionStates.YEETED;
-              }
-              if (tmp) {
-                transitionState(stateFromStores[22]).runOnJS(transitionCleanUp)();
-                const obj = transitionState(stateFromStores[22]);
-              }
-            };
-            obj1 = { transitionState: null, TransitionStates: null, runOnJS: null, transitionCleanUp: null };
-            tmp13 = transitionState;
-            obj1.transitionState = transitionState;
-            obj1.TransitionStates = tmp(tmp2[24]).TransitionStates;
-            obj1.runOnJS = tmp(tmp2[22]).runOnJS;
-            tmp14 = transitionCleanUp;
-            obj1.transitionCleanUp = transitionCleanUp;
-            transitionComplete.__closure = obj1;
-            num3 = 11561549591243;
-            transitionComplete.__workletHash = 11561549591243;
-            tmp15 = closure_23;
-            transitionComplete.__initData = closure_23;
-            num4 = 1;
-            num5 = 1;
-            tmp16 = closure_2;
-            if (closure_2) {
-              tmpResult = tmp(tmp2[25]);
-              num6 = 0;
-              if (obj4.get()) {
-                num6 = 1;
-              }
-              tmp17 = closure_19;
-              str = "animate-always";
-              tmp18 = tmpResult;
-              tmp19 = num6;
-              tmp20 = transitionComplete;
-              num5 = tmpResult.withTiming(num6, closure_19, "animate-always", transitionComplete);
-            }
-            obj12 = { opacity: null, transform: null };
-            obj12.opacity = num5;
-            tmpResult1 = tmp(tmp2[26]);
-            obj13 = { translateY: null };
-            str2 = "animate-always";
-            obj13.translateY = tmpResult1.withSpring(point2.y, obj3.get().gestureActive ? closure_12 : closure_13, "animate-always");
-            items = [, ];
-            items[0] = obj13;
-            tmpResult2 = tmp(tmp2[26]);
-            tmp21 = obj3.get().gestureActive ? closure_12 : closure_13;
-            tmp22 = undefined;
-            if (!tmp16) {
-              tmp22 = transitionComplete;
-            }
-            obj14 = { translateX: null };
-            tmp23 = tmpResult2;
-            tmp24 = x2;
-            tmp25 = tmp21;
-            str3 = "animate-always";
-            tmp26 = tmp22;
-            obj14.translateX = tmpResult2.withSpring(x2, tmp21, "animate-always", tmp22);
-            items[1] = obj14;
-            obj12.transform = items;
-            return obj12;
-          } else {
+          obj3 = shown;
+          y2 = point2.y;
+          tmp8 = shown.get() || closure_2;
+          if (!tmp8) {
             num = 0.5;
-            if (x >= 0.5) {
-              tmp7 = globalThis;
-              _Math = Math;
-              tmp8 = PIP_WINDOW_OFFSET;
-              sum = tmp3.width + Math.max(sum1.right, PIP_WINDOW_OFFSET);
-              tmp12 = sum;
-            } else {
+            if (x < 0.5) {
               num2 = 0;
+              if (x >= 0) {
+                tmp12 = globalThis;
+                _Math2 = Math;
+                tmp13 = PIP_WINDOW_OFFSET;
+                sum = -tmp4.width + Math.max(tmp6.right, PIP_WINDOW_OFFSET);
+              }
+              x2 = sum;
             }
-            width = width.width;
-            tmp10 = globalThis;
-            _Math2 = Math;
-            tmp11 = PIP_WINDOW_OFFSET;
-            sum1 = width + Math.max(sum1.right, PIP_WINDOW_OFFSET);
-            sum = -sum1;
+            tmp9 = globalThis;
+            _Math = Math;
+            tmp10 = PIP_WINDOW_OFFSET;
+            sum = tmp5.width + Math.max(tmp6.right, PIP_WINDOW_OFFSET);
           }
-          return;
+          transitionComplete = function transitionComplete(arg0) {
+            const tmp = undefined !== arg0 && arg0 && closure_1_0 === transitionState(stateFromStores[24]).TransitionStates.YEETED;
+            if (tmp) {
+              const obj = transitionState(stateFromStores[22]);
+              obj.runOnJS(transitionCleanUp)();
+            }
+          };
+          obj1 = { transitionState, TransitionStates: tmp(tmp2[24]).TransitionStates, runOnJS: tmp(tmp2[22]).runOnJS, transitionCleanUp };
+          transitionComplete.__closure = obj1;
+          transitionComplete.__workletHash = 11561549591243;
+          transitionComplete.__initData = closure_23;
+          num3 = 1;
+          tmp14 = closure_2;
+          if (tmp14) {
+            tmpResult = tmp(tmp2[25]);
+            withTiming = tmpResult.withTiming;
+            num4 = 0;
+            if (obj3.get()) {
+              num4 = 1;
+            }
+            tmp16 = closure_19;
+            str = "animate-always";
+            tmp17 = tmpResult;
+            tmp18 = num4;
+            tmp19 = transitionComplete;
+            num3 = withTiming(num4, closure_19, "animate-always", transitionComplete);
+          }
+          obj9 = { opacity: num3, transform: null };
+          tmpResult1 = tmp(tmp2[26]);
+          obj10 = { translateY: tmpResult1.withSpring(y2, obj2.get().gestureActive ? closure_12 : closure_13, "animate-always") };
+          items = [, ];
+          items[0] = obj10;
+          tmpResult2 = tmp(tmp2[26]);
+          withSpring = tmpResult2.withSpring;
+          tmp21 = obj2.get().gestureActive ? closure_12 : closure_13;
+          tmp22 = undefined;
+          if (!tmp14) {
+            tmp22 = transitionComplete;
+          }
+          obj11 = { translateX: withSpring(x2, tmp21, "animate-always", tmp22) };
+          items[1] = obj11;
+          obj9.transform = items;
+          return obj9;
         }
       }
-      tmp29 = size;
+      tmp30 = size;
     }
-    const obj13 = { pipWidth: null, pipHeight: null, pipOrientationLockState: null, isLandscape: null };
-    ({ width: obj8.pipWidth, height: obj8.pipHeight } = ACTIVITY_PIP_SIZE);
-    obj13.pipOrientationLockState = pipOrientationLockState;
-    obj13.isLandscape = wrapperDimensions.isLandscape;
-    const tmp28 = tmp9(tmp2[27])(obj13);
+    const obj13 = { pipWidth: null, pipHeight: null, pipOrientationLockState, isLandscape: wrapperDimensions.isLandscape };
+    ({ width: obj7.pipWidth, height: obj7.pipHeight } = tmp21);
+    const tmp29 = transitionCleanUp(stateFromStores[27])(obj13);
     cResult[8] = pipOrientationLockState;
     cResult[9] = wrapperDimensions.isLandscape;
-    cResult[10] = tmp28;
-    tmp27 = tmp28;
-    let tmpResult4 = transitionState(tmp2[22]);
+    cResult[10] = tmp29;
+    tmp28 = tmp29;
   }
   const obj14 = { transitionState, context };
   cResult[2] = context;
   cResult[3] = transitionState;
   cResult[4] = obj14;
   tmp13 = obj14;
-  obj3 = windowDimensions;
-  let tmpResult = transitionState(stateFromStores[18]);
 }) : ((transitionState) => {
+  let children;
+  let hasActivity;
+  let pipOrientationLockState;
   transitionState = transitionState.transitionState;
   const transitionCleanUp = transitionState.transitionCleanUp;
   const context = transitionState.context;
@@ -1282,9 +1157,10 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionCleanUp) =
   let height;
   ({ children, pipOrientationLockState, hasActivity } = transitionState);
   const tmp = closure_20();
+  let obj = transitionState(stateFromStores[18]);
   let items = [wrapperOffset];
-  stateFromStores = transitionState(stateFromStores[18]).useStateFromStores(items, () => wrapperOffset.useReducedMotion);
-  const tmp3 = transitionCleanUp(stateFromStores[19])();
+  stateFromStores = obj.useStateFromStores(items, () => wrapperOffset.useReducedMotion);
+  let tmp3 = transitionCleanUp(stateFromStores[19])();
   windowDimensions = tmp3;
   const tmp4 = transitionCleanUp(stateFromStores[17])();
   safeArea = tmp4;
@@ -1293,210 +1169,173 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionCleanUp) =
   const setMode = context1.setMode;
   const pipState = context1.pipState;
   const pipAvoidanceSpecs = context1.pipAvoidanceSpecs;
-  let obj = transitionState(stateFromStores[18]);
-  const lockedWebView = transitionState(stateFromStores[20]).useLockedWebView({ transitionState, context });
+  const wrapperDimensions = context1.wrapperDimensions;
+  const obj2 = transitionState(stateFromStores[20]);
+  const lockedWebView = obj2.useLockedWebView({ transitionState, context });
   const shown = lockedWebView.shown;
   const renderWebView = lockedWebView.renderWebView;
   const items1 = [wrapperOffset];
   const effect = windowDimensions.useEffect(() => {
     updateSharedValueIfChangedDefault(wrapperOffset, { gestureActive: false });
   }, items1);
-  const tmp8 = setMode((shouldDisableSafeAreas) => shouldDisableSafeAreas.shouldDisableSafeAreas());
+  let tmp8 = setMode((shouldDisableSafeAreas) => shouldDisableSafeAreas.shouldDisableSafeAreas());
   const ACTIVITY_PIP_SIZE = tmp8;
-  let obj2 = transitionState(stateFromStores[20]);
+  const obj3 = transitionState(stateFromStores[22]);
   class W {
     constructor() {
-      point = pipState.get();
-      x = point.x;
-      tmp = closure_0;
-      tmp2 = closure_2;
-      obj = closure_0(closure_2[23]);
-      size = { pipX: x, pipY: point.y, width: ACTIVITY_PIP_SIZE.width, height: ACTIVITY_PIP_SIZE.height, windowDimensions: closure_3, safeArea: closure_4, bottomAvoidanceRegion: pipAvoidanceSpecs.get().bottom, topAvoidanceRegion: pipAvoidanceSpecs.get().top, positionOffset: null, disableHorizontalSafeAreas: null };
-      width = ACTIVITY_PIP_SIZE;
-      sum1 = closure_4;
-      tmp3 = closure_3;
-      obj3 = wrapperOffset;
+      let items;
+      let value;
+      const point = pipState.get();
+      const x = point.x;
+      const y = point.y;
+      const tmp3 = MorphablePanelUtils;
+      size = { pipX: x, pipY: y, width: ACTIVITY_PIP_SIZE.width, height: ACTIVITY_PIP_SIZE.height, windowDimensions, safeArea, bottomAvoidanceRegion: pipAvoidanceSpecs.get().bottom, topAvoidanceRegion: pipAvoidanceSpecs.get().top, positionOffset: value, disableHorizontalSafeAreas };
+      const getClampedPIPPosition = tmp3.getClampedPIPPosition;
       value = undefined;
       if (wrapperOffset.get().gestureActive) {
-        value = obj3.get();
+        value = wrapperOffset.get();
       }
-      size.positionOffset = value;
-      size.disableHorizontalSafeAreas = closure_10;
-      point2 = obj.getClampedPIPPosition(size);
-      x2 = point2.x;
-      obj4 = shown;
-      tmp6 = shown.get() || closure_2;
-      if (tmp6) {
-        transitionComplete = function transitionComplete() {
-          let flag = arg0;
-          if (arg0 === undefined) {
-            flag = false;
+      const point2 = getClampedPIPPosition(size);
+      let x2 = point2.x;
+      const y2 = point2.y;
+      const tmp8 = shown.get() || stateFromStores;
+      if (!tmp8) {
+        if (x < 0.5) {
+          let sum;
+          if (x >= 0) {
+            const _Math2 = Math;
+            sum = -ACTIVITY_PIP_SIZE.width + Math.max(safeArea.right, PIP_WINDOW_OFFSET);
           }
-          if (flag) {
-            flag = closure_1_0 === transitionState(stateFromStores[24]).TransitionStates.YEETED;
-          }
-          if (flag) {
-            transitionState(stateFromStores[22]).runOnJS(transitionCleanUp)();
-            const obj = transitionState(stateFromStores[22]);
-          }
-        };
-        obj1 = { transitionState: null, TransitionStates: null, runOnJS: null, transitionCleanUp: null };
-        tmp13 = transitionState;
-        obj1.transitionState = transitionState;
-        obj1.TransitionStates = tmp(tmp2[24]).TransitionStates;
-        obj1.runOnJS = tmp(tmp2[22]).runOnJS;
-        tmp14 = transitionCleanUp;
-        obj1.transitionCleanUp = transitionCleanUp;
-        transitionComplete.__closure = obj1;
-        num3 = 1100699381874;
-        transitionComplete.__workletHash = 1100699381874;
-        tmp15 = closure_26;
-        transitionComplete.__initData = closure_26;
-        num4 = 1;
-        num5 = 1;
-        tmp16 = closure_2;
-        if (closure_2) {
-          tmpResult = tmp(tmp2[25]);
-          num6 = 0;
-          if (obj4.get()) {
-            num6 = 1;
-          }
-          tmp17 = closure_19;
-          str = "animate-always";
-          tmp18 = tmpResult;
-          tmp19 = num6;
-          tmp20 = transitionComplete;
-          num5 = tmpResult.withTiming(num6, closure_19, "animate-always", transitionComplete);
+          x2 = sum;
         }
-        obj12 = { opacity: null, transform: null };
-        obj12.opacity = num5;
-        tmpResult1 = tmp(tmp2[26]);
-        obj13 = { translateY: null };
-        str2 = "animate-always";
-        obj13.translateY = tmpResult1.withSpring(point2.y, obj3.get().gestureActive ? closure_12 : closure_13, "animate-always");
-        items = [, ];
-        items[0] = obj13;
-        tmpResult2 = tmp(tmp2[26]);
-        tmp21 = obj3.get().gestureActive ? closure_12 : closure_13;
-        tmp22 = undefined;
-        if (!tmp16) {
-          tmp22 = transitionComplete;
-        }
-        obj14 = { translateX: null };
-        tmp23 = tmpResult2;
-        tmp24 = x2;
-        tmp25 = tmp21;
-        str3 = "animate-always";
-        tmp26 = tmp22;
-        obj14.translateX = tmpResult2.withSpring(x2, tmp21, "animate-always", tmp22);
-        items[1] = obj14;
-        obj12.transform = items;
-        return obj12;
-      } else {
-        num = 0.5;
-        if (x >= 0.5) {
-          tmp7 = globalThis;
-          _Math = Math;
-          tmp8 = PIP_WINDOW_OFFSET;
-          sum = tmp3.width + Math.max(sum1.right, PIP_WINDOW_OFFSET);
-          tmp12 = sum;
-        } else {
-          num2 = 0;
-        }
-        width = width.width;
-        tmp10 = globalThis;
-        _Math2 = Math;
-        tmp11 = PIP_WINDOW_OFFSET;
-        sum1 = width + Math.max(sum1.right, PIP_WINDOW_OFFSET);
-        sum = -sum1;
+        const _Math = Math;
+        sum = windowDimensions.width + Math.max(safeArea.right, PIP_WINDOW_OFFSET);
       }
-      return;
+      function transitionComplete() {
+        let flag = arg0;
+        if (arg0 === undefined) {
+          flag = false;
+        }
+        if (flag) {
+          flag = closure_1_0 === transitionState(stateFromStores[24]).TransitionStates.YEETED;
+        }
+        if (flag) {
+          const obj = transitionState(stateFromStores[22]);
+          obj.runOnJS(transitionCleanUp)();
+        }
+      }
+      let obj = { transitionState, TransitionStates: native2.TransitionStates, runOnJS: ReanimatedRexport.runOnJS, transitionCleanUp };
+      transitionComplete.__closure = obj;
+      transitionComplete.__workletHash = 1100699381874;
+      transitionComplete.__initData = __initData;
+      let num3 = 1;
+      if (stateFromStores) {
+        const withTiming = timing.withTiming;
+        let num4 = 0;
+        const tmpResult = timing;
+        if (shown.get()) {
+          num4 = 1;
+        }
+        num3 = withTiming(num4, REDUCED_MOTION_TIMING, "animate-always", transitionComplete);
+      }
+      const obj4 = { opacity: num3, transform: items };
+      const tmpResult3 = spring;
+      items = [{ translateY: tmpResult3.withSpring(y2, wrapperOffset.get().gestureActive ? closure_12 : map1, "animate-always") }, ];
+      ({ translateY: tmpResult3.withSpring(y2, wrapperOffset.get().gestureActive ? closure_12 : map1, "animate-always") });
+      const withSpring = spring.withSpring;
+      spring;
+      let tmp22;
+      const tmp21 = wrapperOffset.get().gestureActive ? closure_12 : map1;
+      if (!stateFromStores) {
+        tmp22 = transitionComplete;
+      }
+      items[1] = { translateX: withSpring(x2, tmp21, "animate-always", tmp22) };
+      ({ translateX: withSpring(x2, tmp21, "animate-always", tmp22) });
+      return obj4;
     }
   }
-  const obj3 = transitionState(stateFromStores[22]);
-  W.__closure = { pipState, getClampedPIPPosition: transitionState(stateFromStores[23]).getClampedPIPPosition, ACTIVITY_PIP_SIZE, windowDimensions: tmp3, safeArea: tmp4, pipAvoidanceSpecs, wrapperOffset, disableHorizontalSafeAreas: tmp8, shown, reduceMotion: stateFromStores, PIP_WINDOW_OFFSET, transitionState, TransitionStates: transitionState(stateFromStores[24]).TransitionStates, runOnJS: transitionState(stateFromStores[22]).runOnJS, transitionCleanUp, withTiming: transitionState(stateFromStores[25]).withTiming, REDUCED_MOTION_TIMING, withSpring: transitionState(stateFromStores[26]).withSpring, ACTIVITY_LAYOUT_PHYSICS_GESTURE: height, ACTIVITY_LAYOUT_PHYSICS_DEFAULT };
+  let obj4 = { pipState, getClampedPIPPosition: transitionState(stateFromStores[23]).getClampedPIPPosition, ACTIVITY_PIP_SIZE, windowDimensions: tmp3, safeArea: tmp4, pipAvoidanceSpecs, wrapperOffset, disableHorizontalSafeAreas: tmp8, shown, reduceMotion: stateFromStores, PIP_WINDOW_OFFSET, transitionState, TransitionStates: transitionState(stateFromStores[24]).TransitionStates, runOnJS: transitionState(stateFromStores[22]).runOnJS, transitionCleanUp, withTiming: transitionState(stateFromStores[25]).withTiming, REDUCED_MOTION_TIMING, withSpring: transitionState(stateFromStores[26]).withSpring, ACTIVITY_LAYOUT_PHYSICS_GESTURE: height, ACTIVITY_LAYOUT_PHYSICS_DEFAULT };
+  W.__closure = obj4;
   W.__workletHash = 17034982412398;
   W.__initData = __initData4;
   const animatedStyle = obj3.useAnimatedStyle(W);
-  let size = transitionCleanUp(stateFromStores[27])({ pipWidth: ACTIVITY_PIP_SIZE.width, pipHeight: ACTIVITY_PIP_SIZE.height, pipOrientationLockState, isLandscape: context1.wrapperDimensions.isLandscape });
+  const obj5 = { pipWidth: ACTIVITY_PIP_SIZE.width, pipHeight: ACTIVITY_PIP_SIZE.height, pipOrientationLockState, isLandscape: wrapperDimensions.isLandscape };
+  size = transitionCleanUp(stateFromStores[27])(obj5);
   width = size.width;
   height = size.height;
   const items2 = [width, height];
   class G {
     constructor() {
-      obj = closure_0(closure_2[22]);
-      tmp = obj.runOnJS(setMode)(ActivityPanelModes.PANEL);
-      return;
+      const obj = ReanimatedRexport;
+      obj.runOnJS(setMode)(unpackModuleId.PANEL);
     }
   }
-  let obj6 = { runOnJS: null, setMode: null, ActivityPanelModes: null };
+  const obj6 = { runOnJS: transitionState(stateFromStores[22]).runOnJS, setMode, ActivityPanelModes: width };
   const memo = windowDimensions.useMemo(() => {
-    const size = { width, height, pointerEvents: "none" };
+    size = { width, height, pointerEvents: "none" };
     return size;
   }, items2);
-  obj6.runOnJS = transitionState(stateFromStores[22]).runOnJS;
-  obj6.setMode = setMode;
-  obj6.ActivityPanelModes = width;
+  const useCallback = windowDimensions.useCallback;
   G.__closure = obj6;
   G.__workletHash = 1507841633451;
   G.__initData = __initData6;
   const items3 = [setMode];
-  const callback = windowDimensions.useCallback(G, items3);
-  let obj7 = { panGestureEnabled: true, onTapGestureStart: callback, mode: null, pipState: null, wrapperOffset: null, disableHorizontalSafeAreas: false };
-  const obj4 = { pipState, getClampedPIPPosition: transitionState(stateFromStores[23]).getClampedPIPPosition, ACTIVITY_PIP_SIZE, windowDimensions: tmp3, safeArea: tmp4, pipAvoidanceSpecs, wrapperOffset, disableHorizontalSafeAreas: tmp8, shown, reduceMotion: stateFromStores, PIP_WINDOW_OFFSET, transitionState, TransitionStates: transitionState(stateFromStores[24]).TransitionStates, runOnJS: transitionState(stateFromStores[22]).runOnJS, transitionCleanUp, withTiming: transitionState(stateFromStores[25]).withTiming, REDUCED_MOTION_TIMING, withSpring: transitionState(stateFromStores[26]).withSpring, ACTIVITY_LAYOUT_PHYSICS_GESTURE: height, ACTIVITY_LAYOUT_PHYSICS_DEFAULT };
-  let obj5 = { pipWidth: ACTIVITY_PIP_SIZE.width, pipHeight: ACTIVITY_PIP_SIZE.height, pipOrientationLockState, isLandscape: context1.wrapperDimensions.isLandscape };
-  obj7.mode = transitionState(stateFromStores[28]).MorphablePanelModes.PIP;
-  obj7.pipState = pipState;
-  obj7.wrapperOffset = wrapperOffset;
+  const callback = useCallback(G, items3);
+  const obj7 = { panGestureEnabled: true, onTapGestureStart: callback, mode: transitionState(stateFromStores[28]).MorphablePanelModes.PIP, pipState, wrapperOffset, disableHorizontalSafeAreas: false };
   const items4 = [setMode];
   const tmp12 = transitionCleanUp(stateFromStores[28]);
+  const tmp12Result = tmp12(obj7);
   const memo1 = windowDimensions.useMemo(() => {
-    const obj = { accessible: true, accessibilityLabel: null, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null };
-    const intl = util.intl;
-    obj.accessibilityLabel = intl.string(util.t["3ejJer"]);
-    const items = [{ name: "activate" }];
-    obj.accessibilityActions = items;
-    obj.onAccessibilityAction = function onAccessibilityAction() {
-      setMode(width.PANEL);
+    let intl;
+    let items;
+    const obj = {
+      accessible: true,
+      accessibilityLabel: intl.string(intl2.t["3ejJer"]),
+      accessibilityRole: "button",
+      accessibilityActions: items,
+      onAccessibilityAction() {
+        setMode(width.PANEL);
+      }
     };
+    intl = intl2.intl;
+    items = [{ name: "activate" }];
     return obj;
   }, items4);
-  const obj8 = { theme: ThemeTypes.DARK, children: null };
-  const obj9 = { style: null };
+  const ThemeContextProvider = transitionState(stateFromStores[24]).ThemeContextProvider;
   const items5 = [tmp.wrapper, animatedStyle];
-  obj9.style = items5;
+  const View = transitionCleanUp(stateFromStores[22]).View;
   const merged = Object.assign(memo1);
-  const obj10 = { gesture: transitionCleanUp(stateFromStores[28])(obj7), children: null };
-  const obj11 = { style: tmp.mask, children: null };
   let tmp18 = !renderWebView;
+  const obj10 = { gesture: tmp12Result, children: null };
+  const GestureDetector = transitionState(stateFromStores[30]).GestureDetector;
   if (renderWebView) {
     tmp18 = !hasActivity;
   }
-  let tmp15Result = !tmp18;
-  if (!tmp18) {
-    const obj12 = { style: memo, children };
-    tmp15Result = <tmp17 style={memo}>{children}</tmp17>;
-  }
-  obj11.children = tmp15Result;
-  obj10.children = <safeArea style={tmp.mask}>{null}</safeArea>;
-  obj9.children = jsx(transitionState(stateFromStores[30]).GestureDetector, { gesture: transitionCleanUp(stateFromStores[28])(obj7), children: null });
-  obj8.children = jsx(transitionCleanUp(stateFromStores[22]).View, { style: null });
-  return jsx(transitionState(stateFromStores[24]).ThemeContextProvider, { theme: ThemeTypes.DARK, children: null });
+  return <ThemeContextProvider theme={ThemeTypes.DARK}>{null}</ThemeContextProvider>;
 });
-let closure_28 = tmp8;
-ReactCompilerGating = fn(558);
-let obj5 = { flexDirection: "row", alignItems: "center", justifyContent: "center", overflow: "hidden", borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-let size = fn(2);
-const result = size.fileFinishedImporting("modules/activities/panel/native/ActivityPanelPIPView.tsx");
-
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = channelId(576).c(17);
+let closure_28 = tmp10;
+let memo = react.memo;
+ReactCompilerGating = ReactCompilerGating_mod;
+const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let channelId;
+  let tmp11;
+  let tmp13;
+  let tmp4;
+  let tmp5;
+  let tmp9;
+  let transitionCleanUp;
+  let transitionState;
+  const tmp = channelId;
+  let obj = channelId(576);
+  const cResult = obj.c(17);
   ({ transitionState, transitionCleanUp } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [EmbeddedActivitiesStore];
     const fn = function o() {
+      let obj2;
       const connectedActivityLocation = EmbeddedActivitiesStore.getConnectedActivityLocation();
-      const obj = { channelId: channelId(dependencyMap[31]).getEmbeddedActivityLocationChannelId(connectedActivityLocation), activity: EmbeddedActivitiesStore.getSelfEmbeddedActivityForLocation(connectedActivityLocation) };
+      const obj = { channelId: obj2.getEmbeddedActivityLocationChannelId(connectedActivityLocation), activity: EmbeddedActivitiesStore.getSelfEmbeddedActivityForLocation(connectedActivityLocation) };
+      obj2 = channelId(dependencyMap[31]);
       return obj;
     };
     cResult[0] = items;
@@ -1506,8 +1345,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   } else {
     [tmp4, tmp5] = cResult;
   }
-  let obj = channelId(576);
-  const stateFromStoresObject = channelId(504).useStateFromStoresObject(tmp4, tmp5);
+  const tmpResult = tmp(504);
+  const stateFromStoresObject = tmpResult.useStateFromStoresObject(tmp4, tmp5);
   channelId = stateFromStoresObject.channelId;
   const activity = stateFromStoresObject.activity;
   let applicationId;
@@ -1517,7 +1356,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [EmbeddedActivitiesStore];
     cResult[2] = items1;
-    let tmp9 = items1;
+    tmp9 = items1;
   } else {
     tmp9 = cResult[2];
   }
@@ -1531,23 +1370,23 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     };
     cResult[3] = applicationId;
     cResult[4] = fn2;
-    let tmp11 = fn2;
+    tmp11 = fn2;
   } else {
     tmp11 = cResult[4];
   }
-  const tmpResult = channelId(504);
-  const stateFromStores = channelId(504).useStateFromStores(tmp9, tmp11);
+  const tmpResult3 = tmp(504);
+  const stateFromStores = tmpResult3.useStateFromStores(tmp9, tmp11);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [ChannelStore];
     cResult[5] = items2;
-    let tmp13 = items2;
+    tmp13 = items2;
   } else {
     tmp13 = cResult[5];
   }
   if (cResult[6] !== channelId) {
     class O {
       constructor() {
-        return closure_7.getChannel(channelId);
+        return ChannelStore.getChannel(channelId);
       }
     }
     cResult[6] = channelId;
@@ -1555,42 +1394,42 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   } else {
     class O {
       constructor() {
-        return closure_7.getChannel(channelId);
+        return ChannelStore.getChannel(channelId);
       }
     }
   }
-  const tmpResult3 = channelId(504);
-  const stateFromStores1 = channelId(504).useStateFromStores(tmp13, O);
+  const tmpResult4 = tmp(504);
+  const stateFromStores1 = tmpResult4.useStateFromStores(tmp13, O);
   const landscapeSafeAreasConfig = closure_21().landscapeSafeAreasConfig;
   if (cResult[8] === stateFromStores1) {
     class O {
       constructor() {
-        return closure_7.getChannel(channelId);
+        return ChannelStore.getChannel(channelId);
       }
     }
     if (cResult[11] === stateFromStores) {
       class O {
         constructor() {
-          return closure_7.getChannel(channelId);
+          return ChannelStore.getChannel(channelId);
         }
       }
     }
-    const obj2 = { transitionState, transitionCleanUp, pipOrientationLockState: stateFromStores, hasActivity: tmp17, context: applicationId(17168), children: tmp18 };
-    const tmp24 = <closure_28 transitionState={transitionState} transitionCleanUp={transitionCleanUp} pipOrientationLockState={stateFromStores} hasActivity={tmp17} context={applicationId(17168)}>{tmp18}</closure_28>;
+    const tmp24 = <closure_28 transitionState={transitionState} transitionCleanUp={transitionCleanUp} pipOrientationLockState={stateFromStores} hasActivity={null != activity} context={applicationId(17168)}>{tmp18}</closure_28>;
     cResult[11] = stateFromStores;
-    cResult[12] = tmp17;
+    cResult[12] = null != activity;
     cResult[13] = tmp18;
     cResult[14] = transitionCleanUp;
     cResult[15] = transitionState;
     cResult[16] = tmp24;
   }
-  const tmp19 = jsx(applicationId(9134), { channel: stateFromStores1, layoutMode: ActivityLayoutMode.PIP, portraitSafeAreasConfig, landscapeSafeAreasConfig });
   cResult[8] = stateFromStores1;
   cResult[9] = landscapeSafeAreasConfig;
-  cResult[10] = tmp19;
-  const obj3 = { channel: stateFromStores1, layoutMode: ActivityLayoutMode.PIP, portraitSafeAreasConfig, landscapeSafeAreasConfig };
-  const tmpResult4 = channelId(504);
+  cResult[10] = jsx(applicationId(9134), { channel: stateFromStores1, layoutMode: ActivityLayoutMode.PIP, portraitSafeAreasConfig, landscapeSafeAreasConfig });
+  const tmp19 = jsx(applicationId(9134), { channel: stateFromStores1, layoutMode: ActivityLayoutMode.PIP, portraitSafeAreasConfig, landscapeSafeAreasConfig });
 }) : ((transitionState) => {
+  let _undefined;
+  let activity;
+  let c2;
   transitionState = transitionState.transitionState;
   const transitionCleanUp = transitionState.transitionCleanUp;
   dependencyMap = undefined;
@@ -1598,10 +1437,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   let stateFromStores;
   let stateFromStores1;
   let landscapeSafeAreasConfig;
+  const tmp = transitionState;
+  let obj = transitionState(504);
   const items = [EmbeddedActivitiesStore];
-  const stateFromStoresObject = transitionState(504).useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
+    let obj2;
     const connectedActivityLocation = EmbeddedActivitiesStore.getConnectedActivityLocation();
-    const obj = { channelId: transitionState(_undefined[31]).getEmbeddedActivityLocationChannelId(connectedActivityLocation), activity: EmbeddedActivitiesStore.getSelfEmbeddedActivityForLocation(connectedActivityLocation) };
+    const obj = { channelId: obj2.getEmbeddedActivityLocationChannelId(connectedActivityLocation), activity: EmbeddedActivitiesStore.getSelfEmbeddedActivityForLocation(connectedActivityLocation) };
+    obj2 = transitionState(c2[31]);
     return obj;
   });
   ({ channelId: c2, activity } = stateFromStoresObject);
@@ -1609,24 +1452,25 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   if (activity != null) {
     applicationId = activity.applicationId;
   }
-  let obj = transitionState(504);
   const items1 = [EmbeddedActivitiesStore];
-  stateFromStores = transitionState(504).useStateFromStores(items1, () => {
+  const tmpResult = tmp(504);
+  stateFromStores = tmpResult.useStateFromStores(items1, () => {
     let pipOrientationLockStateForApp;
     if (null != applicationId) {
       pipOrientationLockStateForApp = EmbeddedActivitiesStore.getPipOrientationLockStateForApp(tmp);
     }
     return pipOrientationLockStateForApp;
   });
-  const tmpResult = transitionState(504);
   const items2 = [landscapeSafeAreasConfig];
-  stateFromStores1 = transitionState(504).useStateFromStores(items2, () => ChannelStore.getChannel(c2));
+  const tmpResult2 = tmp(504);
+  stateFromStores1 = tmpResult2.useStateFromStores(items2, () => ChannelStore.getChannel(c2));
   landscapeSafeAreasConfig = closure_21().landscapeSafeAreasConfig;
   const items3 = [activity, stateFromStores1, landscapeSafeAreasConfig, stateFromStores, transitionCleanUp, transitionState];
-  return activity.useMemo(() => {
-    const obj = { transitionState, transitionCleanUp, pipOrientationLockState: stateFromStores, hasActivity: null != activity, context: ActivityPanelStateContextDefault, children: jsx(EmbeddedActivityViewDefault, { channel: stateFromStores1, layoutMode: ActivityLayoutMode.PIP, portraitSafeAreasConfig, landscapeSafeAreasConfig }) };
-    return <closure_28 transitionState={transitionState} transitionCleanUp={transitionCleanUp} pipOrientationLockState={stateFromStores} hasActivity={null != activity} context={ActivityPanelStateContextDefault}>{jsx(EmbeddedActivityViewDefault, { channel: stateFromStores1, layoutMode: ActivityLayoutMode.PIP, portraitSafeAreasConfig, landscapeSafeAreasConfig })}</closure_28>;
-  }, items3);
+  return activity.useMemo(() => <closure_28 transitionState={transitionState} transitionCleanUp={transitionCleanUp} pipOrientationLockState={stateFromStores} hasActivity={null != activity} context={ActivityPanelStateContextDefault}>{null}</closure_28>, items3);
 }));
-export const useBaseActivityPanelPIPView = tmp7;
-export const BaseActivityPanelPIPView = tmp8;
+let size = size_mod;
+const result = size.fileFinishedImporting("modules/activities/panel/native/ActivityPanelPIPView.tsx");
+
+export default memoResult;
+export const useBaseActivityPanelPIPView = tmp9;
+export const BaseActivityPanelPIPView = tmp10;

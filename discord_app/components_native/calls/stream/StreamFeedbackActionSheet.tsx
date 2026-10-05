@@ -1,129 +1,140 @@
 // === Module 16638: StreamFeedbackActionSheet ===
 
 // Module 16638 (StreamFeedbackActionSheet)
+import Fragment from "Fragment" /* 21 */;
+import Constants2 from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import asyncRequire from "asyncRequire" /* 1987 */;
 import ToastUtils from "ToastUtils" /* 4567 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import FeedbackUtils from "FeedbackUtils" /* 11252 */;
 import trackStreamProblemDefault from "trackStreamProblem" /* 16640 */;
 import shouldShowLogUploadForCategory from "shouldShowLogUploadForCategory" /* 16641 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import Constants from "Constants" /* 11249 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
-const Constants = fn(11249);
-({ FeedbackCategory: hasOwnProperty, FeedbackType: metroRequire, StreamFeedbackOption: closure_7 } = Constants);
-const jsx = fn(21).jsx;
-const size = fn(2);
+let dependencyMap;
+
+let hasOwnProperty;
+let metroImportDefault;
+let metroRequire;
+const AnalyticEvents = Constants2.AnalyticEvents;
+({ FeedbackCategory: hasOwnProperty, FeedbackType: metroRequire, StreamFeedbackOption: metroImportDefault } = Constants);
+const jsx = Fragment.jsx;
 const result = size.fileFinishedImporting("components_native/calls/stream/StreamFeedbackActionSheet.tsx");
 
 export default function StreamFeedbackActionSheet(stream) {
+  let TVTIT1;
+  let intl5;
+  let intl6;
+  let obj4;
+  let streamApplication;
+  let string;
+  let tmp10;
+  let tmpResult;
   stream = stream.stream;
   const analyticsData = stream.analyticsData;
-  dependencyMap = stream(7228).useGetStreamApplication(stream);
+  const tmp = stream;
   let obj = stream(7228);
-  const items = [AuthenticationStore];
-  const stateFromStores = stream(504).useStateFromStores(items, () => AuthenticationStore.getId() === stream.ownerId);
-  const intl = stream(1126).intl;
+  dependencyMap = obj.useGetStreamApplication(stream);
   let obj2 = stream(504);
-  const intl2 = stream(1126).intl;
+  const items = [AuthenticationStore];
+  const stateFromStores = obj2.useStateFromStores(items, () => AuthenticationStore.getId() === stream.ownerId);
+  const intl = stream(1126).intl;
   const stringResult = intl.string(stream(1126).t["5smP3R"]);
+  const intl2 = stream(1126).intl;
+  const stringResult1 = intl2.string(stream(1126).t["0uxA2V"]);
   const intl3 = stream(1126).intl;
   let stringResult2 = intl3.string(stream(1126).t.CqjnLN);
-  let obj3 = { value: stateFromStores ? constants.STREAMING : constants.STREAM_WATCHING, label: null, problemsHeader: null, problemOptions: null, freeformConfig: null };
+  let obj3 = { value: stateFromStores ? constants.STREAMING : constants.STREAM_WATCHING, label: string(TVTIT1), problemsHeader: intl5.string(tmp(1126).t["6Y1t5P"]), problemOptions: tmpResult.getStreamFeedbackOptions({ isStreamer: stateFromStores }), freeformConfig: obj4 };
   const intl4 = tmp(1126).intl;
+  string = intl4.string;
   const tmp9 = analyticsData(2755);
   if (stateFromStores) {
-    let TVTIT1 = tmp9["0ZBLiZ"];
-    let tmp10 = tmp8;
+    TVTIT1 = tmp9["0ZBLiZ"];
+    tmp10 = tmp8;
   } else {
     TVTIT1 = tmp9.TVTIT1;
     tmp10 = tmp8;
   }
-  obj3.label = intl4.string(TVTIT1);
-  const intl5 = tmp(1126).intl;
-  obj3.problemsHeader = intl5.string(stream(1126).t["6Y1t5P"]);
-  const stringResult1 = intl2.string(stream(1126).t["0uxA2V"]);
-  obj3.problemOptions = stream(11252).getStreamFeedbackOptions({ isStreamer: stateFromStores });
-  let obj4 = { value: constants2.FREEFORM, label: null };
-  const intl6 = tmp(1126).intl;
-  obj4.label = intl6.string(stream(1126).t.emlT91);
-  obj3.freeformConfig = obj4;
-  let obj5 = { headerLabel: stringResult, showHeaderCloseButton: true, ratingBody: null, categoriesHeader: null, optionsTree: null, trackOpen: null, trackReport: null };
-  const tmpResult = stream(11252);
+  intl5 = tmp(1126).intl;
+  tmpResult = tmp(11252);
+  obj4 = { value: constants2.FREEFORM, label: intl6.string(tmp(1126).t.emlT91) };
+  intl6 = tmp(1126).intl;
+  tmp10(16639);
   if (stateFromStores) {
     stringResult2 = stringResult1;
   }
-  obj5.ratingBody = stringResult2;
   const intl7 = tmp(1126).intl;
-  obj5.categoriesHeader = intl7.string(tmp10(2755).tq8598);
   const items1 = [obj3];
-  obj5.optionsTree = items1;
-  obj5.trackOpen = function trackOpen() {
-    const obj2 = { type: "Stream Feedback Sheet", other_user_id: stream.ownerId, application_id: null, application_name: null, game_id: null };
-    let id = null;
+  return <tmp10Result headerLabel={stringResult} showHeaderCloseButton ratingBody={stringResult2} categoriesHeader={intl7.string(tmp10(2755).tq8598)} optionsTree={items1} trackOpen={function trackOpen() {
+    let id;
+    let id1;
+    let name;
+    const obj = { type: "Stream Feedback Sheet", other_user_id: stream.ownerId, application_id: id, application_name: name, game_id: id1 };
+    id = null;
+    const track = AnalyticsUtilsDefault.track;
+    const OPEN_POPOUT = AnalyticEvents.OPEN_POPOUT;
+    AnalyticsUtilsDefault;
     if (null != streamApplication) {
       id = streamApplication.id;
     }
-    obj2.application_id = id;
-    let name = null;
+    name = null;
     if (null != streamApplication) {
       name = streamApplication.name;
     }
-    obj2.application_name = name;
-    let id1 = null;
+    id1 = null;
     if (null != streamApplication) {
       id1 = streamApplication.id;
     }
-    obj2.game_id = id1;
-    AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, obj2);
-  };
-  obj5.trackReport = function trackReport(dontShowAgain) {
+    track(OPEN_POPOUT, obj);
+  }} trackReport={function trackReport(dontShowAgain) {
+    let category;
+    let feedback;
+    let rating;
+    let reason;
+    let value;
+    let variant;
     ({ rating, category, reason, feedback } = dontShowAgain);
     if (dontShowAgain.dontShowAgain) {
-      const obj2 = { feedbackType: constants.STREAM, location: "StreamFeedbackActionSheet" };
-      FeedbackUtils.processOptOut(obj2);
+      const obj2 = { feedbackType: metroRequire.STREAM, location: "StreamFeedbackActionSheet" };
+      const obj = FeedbackUtils;
+      obj.processOptOut(obj2);
     }
     if (null != rating) {
-      const obj5 = { category, problem: null, variant: null, stream: null, feedback: null, streamApplication: null, analyticsData: null, location: "Stream End", rating: null };
+      const obj5 = { category, problem: value, variant, stream, feedback, streamApplication, analyticsData, location: "Stream End", rating };
       value = undefined;
+      const tmp24 = trackStreamProblemDefault;
       if (reason != null) {
         value = reason.value;
       }
       if (value == null) {
         value = null;
       }
-      obj5.problem = value;
-      let variant;
+      variant = undefined;
       if (reason != null) {
         variant = reason.variant;
       }
       if (variant == null) {
         variant = null;
       }
-      obj5.variant = variant;
-      obj5.stream = stream;
       if (feedback == null) {
         feedback = "";
       }
-      obj5.feedback = feedback;
-      obj5.streamApplication = streamApplication;
-      obj5.analyticsData = analyticsData;
-      obj5.rating = rating;
-      trackStreamProblemDefault(obj5);
+      tmp24(obj5);
       if (null != reason) {
+        const obj3 = shouldShowLogUploadForCategory;
         if (obj3.shouldShowLogUploadForCategory(rating, category, reason)) {
-          ({ media_session_id: obj6.mediaSessionId, rtc_connection_id: obj6.rtcConnectionId } = analyticsData);
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16642, dependencyMap.paths), "UploadLogs", { mediaSessionId: null, rtcConnectionId: null });
           const obj7 = { mediaSessionId: null, rtcConnectionId: null };
+          ({ media_session_id: obj6.mediaSessionId, rtc_connection_id: obj6.rtcConnectionId } = analyticsData);
           const tmp22Result = ActionSheetActionCreatorsDefault;
+          tmp22Result.openLazy(asyncRequire(16642, dependencyMap.paths), "UploadLogs", obj7);
         }
-        obj3 = shouldShowLogUploadForCategory;
       }
-      ToastUtils.presentFeedbackSent();
+      const obj4 = ToastUtils;
+      obj4.presentFeedbackSent();
     }
-  };
-  return jsx(tmp10(16639), { headerLabel: stringResult, showHeaderCloseButton: true, ratingBody: null, categoriesHeader: null, optionsTree: null, trackOpen: null, trackReport: null });
+  }} />;
 };

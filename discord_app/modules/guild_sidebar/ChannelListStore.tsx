@@ -3,8 +3,9 @@
 // Module 7036 (ChannelListStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
+import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4498 */;
 import ChannelListStateDefault from "ChannelListState" /* 7039 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
@@ -21,8 +22,11 @@ import PermissionStore from "PermissionStore" /* 4509 */;
 import ReadStateStore from "ReadStateStore" /* 4905 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5071 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+const require = globalThis.__r;
+let _require, closure_1, importDefault, set;
+
 function handleReset() {
   channelId = SelectedChannelStore.getChannelId();
   voiceChannelId = SelectedChannelStore.getVoiceChannelId();
@@ -49,29 +53,27 @@ function handleThreadMemberUpdate(id) {
 function handleChannelSelect() {
   channelId = SelectedChannelStore.getChannelId();
   voiceChannelId = SelectedChannelStore.getVoiceChannelId();
-  let tmp3 = channelId !== channelId;
-  if (!tmp3) {
-    tmp3 = voiceChannelId !== voiceChannelId;
-  }
-  let flag = tmp3;
+  let flag = channelId !== channelId || voiceChannelId !== voiceChannelId;
+  const tmp3 = channelId !== channelId || voiceChannelId !== voiceChannelId;
   if (flag) {
     const items = [channelId, voiceChannelId, channelId, voiceChannelId];
     const obj = _modDef12(items);
-    const item = _modDef12(items).uniq().forEach((item) => {
+    const uniqResult = obj.uniq();
+    const item = uniqResult.forEach((item) => {
       if (null != item) {
         const result = closure_1_20.nonPositionalChannelIdUpdate(item);
       }
     });
     flag = true;
-    const uniqResult = _modDef12(items).uniq();
   }
   return flag;
 }
 function handleCategoryChange(id) {
+  let clearGuildIdResult;
   id = id.id;
   const channel = ChannelStore.getChannel(id);
   if (null == channel) {
-    let clearGuildIdResult = closure_20.clearGuildId(id);
+    clearGuildIdResult = closure_20.clearGuildId(id);
   } else {
     clearGuildIdResult = closure_20.clearGuildId(channel.guild_id);
   }
@@ -86,50 +88,52 @@ function handleRecomputeAllSubtitles() {
 function handleGuildScheduledEventUpdate(guildScheduledEvent) {
   return closure_20.updateSubtitles(guildScheduledEvent.guildScheduledEvent.guild_id);
 }
-const UserSettingsTypes = fn(1095).UserSettingsTypes;
+const UserSettingsTypes = UserSettingsConstants.UserSettingsTypes;
 let channelId = null;
 let voiceChannelId = null;
-let closure_20 = new ChannelListStateDefault();
-const Store = initializeDefault.Store;
+let tmp2 = new ChannelListStateDefault();
+let closure_20 = tmp2;
+const Store = get_initializedDefault.Store;
 class ChannelListStore extends Store {
+  initialize() {
+    this.waitFor(ActiveJoinedThreadsStore, AuthenticationStore, CategoryCollapseStore, ChannelStore, CollapsedVoiceChannelStore, EmbeddedActivitiesStore, GatedChannelStore, GuildScheduledEventStore, JoinedThreadsStore, PermissionStore, ReadStateStore, SelectedChannelStore, UserGuildSettingsStore, UserSettingsProtoStore);
+  }
+  getGuild(arg0, guildActionRows) {
+    guildActionRows = undefined;
+    const getGuild = closure_20.getGuild;
+    if (guildActionRows != null) {
+      guildActionRows = guildActionRows.guildActionRows;
+    }
+    if (guildActionRows == null) {
+      guildActionRows = [];
+    }
+    let channelNoticeRows;
+    if (guildActionRows != null) {
+      channelNoticeRows = guildActionRows.channelNoticeRows;
+    }
+    if (channelNoticeRows == null) {
+      channelNoticeRows = [];
+    }
+    const guild = getGuild(arg0, guildActionRows, channelNoticeRows);
+    return { guildChannelsVersion: guild.version, guildChannels: guild };
+  }
+  getGuildWithoutChangingGuildActionRows(id) {
+    const guildChannelRowsOnly = closure_20.getGuildChannelRowsOnly(id);
+    return { guildChannelsVersion: guildChannelRowsOnly.version, guildChannels: guildChannelRowsOnly };
+  }
+  recentsChannelCount(id) {
+    if (null == id) {
+      return 0;
+    } else {
+      const guildChannelRowsOnly = closure_20.getGuildChannelRowsOnly(id);
+      const categoryFromSection = guildChannelRowsOnly.getCategoryFromSection(guildChannelRowsOnly.recentsSectionNumber);
+      return categoryFromSection.getShownChannelIds().length;
+    }
+  }
 }
 const prototype = ChannelListStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(ActiveJoinedThreadsStore, AuthenticationStore, CategoryCollapseStore, ChannelStore, CollapsedVoiceChannelStore, EmbeddedActivitiesStore, GatedChannelStore, GuildScheduledEventStore, JoinedThreadsStore, PermissionStore, ReadStateStore, SelectedChannelStore, UserGuildSettingsStore, UserSettingsProtoStore);
-};
-prototype["getGuild"] = function getGuild(arg0, guildActionRows) {
-  guildActionRows = undefined;
-  if (guildActionRows != null) {
-    guildActionRows = guildActionRows.guildActionRows;
-  }
-  if (guildActionRows == null) {
-    guildActionRows = [];
-  }
-  let channelNoticeRows;
-  if (guildActionRows != null) {
-    channelNoticeRows = guildActionRows.channelNoticeRows;
-  }
-  if (channelNoticeRows == null) {
-    channelNoticeRows = [];
-  }
-  guild = closure_20.getGuild(arg0, guildActionRows, channelNoticeRows);
-  return { guildChannelsVersion: guild.version, guildChannels: guild };
-};
-prototype["getGuildWithoutChangingGuildActionRows"] = function getGuildWithoutChangingGuildActionRows(id) {
-  const guildChannelRowsOnly = closure_20.getGuildChannelRowsOnly(id);
-  return { guildChannelsVersion: guildChannelRowsOnly.version, guildChannels: guildChannelRowsOnly };
-};
-prototype["recentsChannelCount"] = function recentsChannelCount(id) {
-  if (null == id) {
-    return 0;
-  } else {
-    const guildChannelRowsOnly = closure_20.getGuildChannelRowsOnly(id);
-    const categoryFromSection = guildChannelRowsOnly.getCategoryFromSection(guildChannelRowsOnly.recentsSectionNumber);
-    return categoryFromSection.getShownChannelIds().length;
-  }
-};
 ChannelListStore.displayName = "ChannelListStore";
-const channelListStore = new ChannelListStore(DispatcherDefault, {
+let obj = {
   APPLICATION_FETCH_FAIL: handleRecomputeAllSubtitles,
   APPLICATION_FETCH_SUCCESS: handleRecomputeAllSubtitles,
   APPLICATION_FETCH: handleRecomputeAllSubtitles,
@@ -139,7 +143,8 @@ const channelListStore = new ChannelListStore(DispatcherDefault, {
   BACKGROUND_SYNC: handleReset,
   BULK_ACK: function handleBulkAck(channels) {
     _require = false;
-    const mapped = _modDef12(channels.channels).map((channelId) => {
+    const arr = _modDef12(channels.channels);
+    const mapped = arr.map((channelId) => {
       channel = channel.getChannel(channelId.channelId);
       let guild_id;
       if (channel != null) {
@@ -148,8 +153,8 @@ const channelListStore = new ChannelListStore(DispatcherDefault, {
       return guild_id;
     });
     const found = mapped.filter(require("GlobalUtils").isNotNullish);
-    const arr = _modDef12(channels.channels);
-    const item = found.uniq().forEach((item) => {
+    const uniqResult = found.uniq();
+    const item = uniqResult.forEach((item) => {
       if (closure_20.clearGuildId(item)) {
         c0 = true;
       }
@@ -164,12 +169,13 @@ const channelListStore = new ChannelListStore(DispatcherDefault, {
   CATEGORY_EXPAND: handleCategoryChange,
   CHANNEL_ACK: handleReadStateChange,
   CHANNEL_COLLAPSE: function handleChannelCollapse(channelId) {
+    const clearGuildId = closure_20.clearGuildId;
     const channel = ChannelStore.getChannel(channelId.channelId);
     let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
     }
-    return closure_20.clearGuildId(guild_id);
+    return clearGuildId(guild_id);
   },
   CHANNEL_CREATE: handleChannelAction,
   CHANNEL_DELETE: handleChannelAction,
@@ -181,10 +187,11 @@ const channelListStore = new ChannelListStore(DispatcherDefault, {
     return closure_20.clearGuildId(guildId.guildId);
   },
   CHANNEL_UPDATES: function handleChannelUpdates(channels) {
-    c0 = false;
-    const mapped = _modDef12(channels.channels).map((guild_id) => guild_id.guild_id);
+    let c0 = false;
     const arr = _modDef12(channels.channels);
-    const item = mapped.uniq().forEach((item) => {
+    const mapped = arr.map((guild_id) => guild_id.guild_id);
+    const uniqResult = mapped.uniq();
+    const item = uniqResult.forEach((item) => {
       if (closure_20.clearGuildId(item)) {
         c0 = true;
       }
@@ -202,8 +209,11 @@ const channelListStore = new ChannelListStore(DispatcherDefault, {
   },
   EMBEDDED_ACTIVITY_UPDATE_V2: function handleEmbeddedActivityUpdateV2(instance) {
     instance = instance.instance;
-    const embeddedActivityLocationGuildId = embeddedActivityLocationUtils.getEmbeddedActivityLocationGuildId(instance.location);
-    return closure_20.updateSubtitles(embeddedActivityLocationGuildId, embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(instance.location));
+    const updateSubtitles = closure_20.updateSubtitles;
+    const obj = embeddedActivityLocationUtils;
+    const embeddedActivityLocationGuildId = obj.getEmbeddedActivityLocationGuildId(instance.location);
+    const obj2 = embeddedActivityLocationUtils;
+    return updateSubtitles(embeddedActivityLocationGuildId, obj2.getEmbeddedActivityLocationChannelId(instance.location));
   },
   EMBEDDED_ACTIVITY_LAUNCH_START: function handleEmbeddedActivityLaunchStart() {
     closure_20.updateSubtitles();
@@ -220,11 +230,10 @@ const channelListStore = new ChannelListStore(DispatcherDefault, {
   GUILD_CREATE: handleGuildAction,
   GUILD_DELETE: handleGuildAction,
   GUILD_MEMBER_UPDATE: function handleGuildMemberUpdate(arg0) {
+    let guildId;
+    let user;
     ({ guildId, user } = arg0);
-    let clearGuildIdResult = AuthenticationStore.getId() === user.id;
-    if (clearGuildIdResult) {
-      clearGuildIdResult = closure_20.clearGuildId(guildId);
-    }
+    const clearGuildIdResult = AuthenticationStore.getId() === user.id && closure_20.clearGuildId(guildId);
     return clearGuildIdResult;
   },
   GUILD_MUTE_EXPIRED: handleRebuildGuildId,
@@ -282,23 +291,25 @@ const channelListStore = new ChannelListStore(DispatcherDefault, {
   USER_GUILD_SETTINGS_GUILD_UPDATE: handleRebuildGuildId,
   USER_SETTINGS_PROTO_UPDATE: function handleSettingsProtoUpdate(settings) {
     settings = settings.settings;
-    let guilds1;
+    let guilds;
     importDefault = undefined;
     if (settings.type !== UserSettingsTypes.PRELOADED_USER_SETTINGS) {
       return false;
     } else {
-      const guilds = settings.proto.guilds;
-      guilds1 = undefined;
+      guilds = settings.proto.guilds;
+      let tmp2;
       if (guilds != null) {
-        guilds1 = guilds.guilds;
+        tmp2 = guilds.guilds;
       }
+      guilds = tmp2;
       importDefault = false;
-      if (null != guilds1) {
-        const keys = SnowflakeUtilsDefault.keys(guilds1);
+      if (null != tmp2) {
+        const obj = SnowflakeUtilsDefault;
+        const keys = obj.keys(tmp2);
         const item = keys.forEach((item) => {
-          if (null != guilds1[item].guildRecentsDismissedAt) {
-            closure_1 = closure_20.updateRecentsCategory(item) || closure_1;
+          if (null != guilds[item].guildRecentsDismissedAt) {
             const tmp2 = closure_20.updateRecentsCategory(item) || closure_1;
+            closure_1 = tmp2;
           }
         });
       }
@@ -311,26 +322,23 @@ const channelListStore = new ChannelListStore(DispatcherDefault, {
   VOICE_CHANNEL_STATUS_UPDATE: function handleVoiceChannelStatusUpdate(id) {
     return closure_20.nonPositionalChannelIdUpdate(id.id);
   },
-  VOICE_STATE_UPDATES: function handleVoiceStateUpdates(arg0) {
+  VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
+    let oldChannelId;
+    voiceStates = voiceStates.voiceStates;
     let flag = handleChannelSelect();
-    const set = new Set();
-    const iter = arg0.voiceStates[Symbol.iterator]();
+    set = new Set();
+    const iter = voiceStates[Symbol.iterator]();
+    const nextResult = iter.next();
     while (iter !== undefined) {
       ({ channelId, oldChannelId } = nextResult);
-      let hasItem = null == oldChannelId;
-      if (!hasItem) {
-        hasItem = set.has(oldChannelId);
-      }
+      let hasItem = null == oldChannelId || set.has(oldChannelId);
       if (!hasItem) {
         if (closure_20.nonPositionalChannelIdUpdate(oldChannelId)) {
           flag = true;
         }
         let addResult = set.add(oldChannelId);
       }
-      let hasItem1 = null == channelId;
-      if (!hasItem1) {
-        hasItem1 = set.has(channelId);
-      }
+      let hasItem1 = null == channelId || set.has(channelId);
       if (!hasItem1) {
         if (closure_20.nonPositionalChannelIdUpdate(channelId)) {
           flag = true;
@@ -342,14 +350,11 @@ const channelListStore = new ChannelListStore(DispatcherDefault, {
     return flag;
   },
   WINDOW_FOCUS: function handleCurrentChannelReadStateChange() {
-    let result = null != channelId;
-    if (result) {
-      result = closure_20.nonPositionalChannelIdUpdate(channelId);
-    }
+    const result = null != channelId && closure_20.nonPositionalChannelIdUpdate(channelId);
     return result;
   }
-});
-const size = fn(2);
+};
+const channelListStore = new ChannelListStore(DispatcherDefault, obj);
 let result = size.fileFinishedImporting("modules/guild_sidebar/ChannelListStore.tsx");
 
 export default channelListStore;

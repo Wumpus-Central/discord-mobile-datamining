@@ -1,66 +1,77 @@
 // === Module 14302: validateEmbeddedAppFrame ===
 
 // Module 14302 (validateEmbeddedAppFrame)
+import Constants from "Constants" /* 1085 */;
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2016 */;
+import Constants2 from "Constants" /* 5316 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8514 */;
+import FramesConstants from "FramesConstants" /* 8704 */;
 import RPCErrorDefault from "RPCError" /* 9026 */;
 import RPCHelpers from "RPCHelpers" /* 9031 */;
 import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 14303 */;
 import FramesStore from "FramesStore" /* 8703 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
 function validateEmbeddedAppFrame(transport) {
-  const result = RPCHelpers.validatePostMessageTransport(transport.transport);
-  const validateApplicationResult = RPCHelpers.validateApplication(transport.application);
+  const obj = RPCHelpers;
+  const result = obj.validatePostMessageTransport(transport.transport);
+  const obj2 = RPCHelpers;
+  const validateApplicationResult = obj2.validateApplication(transport.application);
+  const obj3 = EmbeddedSurfaceUtils;
   if (obj3.isEmbeddedApplication(transport.application)) {
     if (transport.source.type !== TransportTypes.POST_MESSAGE) {
+      const self5 = this;
+      const self6 = this;
       const obj4 = { errorCode: RPCErrors.INVALID_COMMAND };
-      const tmp31 = new RPCErrorDefault(obj4, "command requires an embedded app frame");
-      throw tmp31;
+      const tmp25 = new RPCErrorDefault(obj4, "command requires an embedded app frame");
+      throw tmp25;
     } else {
-      const tmp35 = asLaunched(FramesStore.getFrameByIframeId(transport.source.iframeId));
-      let tmp13 = null;
-      if (null != tmp35) {
-        const type = tmp35.surface.type;
+      const tmp29 = asLaunched(FramesStore.getFrameByIframeId(transport.source.iframeId));
+      let tmp11 = null;
+      if (null != tmp29) {
+        const type = tmp29.surface.type;
         if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL !== type) {
           if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL !== type) {
             if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
-              if (tmp35.applicationId === ConjureBuilderPreviewStore.getBuilderPreviewApplicationId()) {
-                let obj5 = { channelId: "Array", guildId: "Set" };
+              let obj5;
+              if (tmp29.applicationId === ConjureBuilderPreviewStore.getBuilderPreviewApplicationId()) {
+                obj5 = { channelId: "Array", guildId: "Set" };
               } else {
                 obj5 = null;
               }
-              tmp13 = obj5;
+              tmp11 = obj5;
             } else {
-              const surface = tmp35.surface;
-              tmp13 = null;
+              const surface = tmp29.surface;
+              tmp11 = null;
             }
           }
         }
-        const obj6 = { channelId: tmp35.surface.channelId, guildId: tmp35.surface.guildId };
-        tmp13 = obj6;
+        tmp11 = { channelId: tmp29.surface.channelId, guildId: tmp29.surface.guildId };
+        const obj6 = { channelId: tmp29.surface.channelId, guildId: tmp29.surface.guildId };
       }
-      if (null == tmp13) {
+      if (null == tmp11) {
+        const self3 = this;
+        const self4 = this;
         const obj7 = { errorCode: RPCErrors.UNAUTHORIZED_FOR_APPLICATION };
-        const tmp24 = new RPCErrorDefault(obj7, "Command not available for this application");
-        throw tmp24;
+        const tmp20 = new RPCErrorDefault(obj7, "Command not available for this application");
+        throw tmp20;
       } else {
         const obj8 = { applicationId: validateApplicationResult, iframeId: transport.source.iframeId };
-        const merged = Object.assign(tmp13);
+        const merged = Object.assign(tmp11);
         return obj8;
       }
     }
   } else {
+    const self = this;
+    const self2 = this;
     const obj14 = { errorCode: RPCErrors.UNAUTHORIZED_FOR_APPLICATION };
-    const tmp10 = new RPCErrorDefault(obj14, "This application cannot access this API");
-    throw tmp10;
+    const tmp8 = new RPCErrorDefault(obj14, "This application cannot access this API");
+    throw tmp8;
   }
-  obj3 = EmbeddedSurfaceUtils;
 }
-const TransportTypes = fn(5316).TransportTypes;
-const RPCErrors = fn(1085).RPCErrors;
-const asLaunched = fn(8704).asLaunched;
-const size = fn(2);
+const TransportTypes = Constants2.TransportTypes;
+const RPCErrors = Constants.RPCErrors;
+const asLaunched = FramesConstants.asLaunched;
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");
 
 export default validateEmbeddedAppFrame;

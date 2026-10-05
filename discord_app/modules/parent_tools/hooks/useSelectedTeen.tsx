@@ -2,15 +2,26 @@
 
 // Module 8297 (useSelectedTeen)
 import useStateFromStores from "useStateFromStores" /* 573 */;
-import c from "c" /* 576 */;
+import react from "react" /* 576 */;
 import UserStore from "UserStore" /* 1377 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7048 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-fn(558);
-const ReactCompilerGating = fn(558);
+const require = globalThis.__r;
+let _require;
+
+let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = stateFromStores(576).c(5);
+  let selectedTeenId;
+  let stateFromStores;
+  let tmp10;
+  let tmp4;
+  let tmp5;
+  let tmp8;
+  const tmp = stateFromStores;
+  const obj = stateFromStores(576);
+  const cResult = obj.c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [FamilyCenterStore];
     const fn = function s() {
@@ -23,12 +34,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const obj = stateFromStores(576);
-  stateFromStores = stateFromStores(573).useStateFromStores(tmp4, tmp5);
+  const tmpResult = tmp(573);
+  stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [UserStore];
     cResult[2] = items1;
-    let tmp8 = items1;
+    tmp8 = items1;
   } else {
     tmp8 = cResult[2];
   }
@@ -42,18 +53,21 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     };
     cResult[3] = stateFromStores;
     cResult[4] = fn2;
-    let tmp10 = fn2;
+    tmp10 = fn2;
   } else {
     tmp10 = cResult[4];
   }
-  const tmpResult = stateFromStores(573);
-  return stateFromStores(573).useStateFromStores(tmp8, tmp10);
+  const tmpResult2 = tmp(573);
+  return tmpResult2.useStateFromStores(tmp8, tmp10);
 }) : (() => {
+  let closure_0;
+  let selectedTeenId;
   const items = [FamilyCenterStore];
-  _require = require("useStateFromStores").useStateFromStores(items, () => selectedTeenId.getSelectedTeenId());
   const obj = require("useStateFromStores");
+  _require = obj.useStateFromStores(items, () => selectedTeenId.getSelectedTeenId());
   const items1 = [UserStore];
-  return require("useStateFromStores").useStateFromStores(items1, () => {
+  const obj2 = require("useStateFromStores");
+  return obj2.useStateFromStores(items1, () => {
     let user;
     if (null !== closure_0) {
       user = UserStore.getUser(tmp);
@@ -61,12 +75,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     return user;
   });
 });
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeen.tsx");
-
-export const useSelectedTeen = tmp2;
-export const useSelectedTeenId = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(2);
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let selectedTeenId;
+  let tmp4;
+  let tmp5;
+  const obj = react;
+  const cResult = obj.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [FamilyCenterStore];
     const fn = function n() {
@@ -79,8 +94,15 @@ export const useSelectedTeenId = ReactCompilerGating.isReactCompilerEnabled() ? 
   } else {
     [tmp4, tmp5] = cResult;
   }
-  return useStateFromStores.useStateFromStores(tmp4, tmp5);
+  const tmpResult = useStateFromStores;
+  return tmpResult.useStateFromStores(tmp4, tmp5);
 }) : (() => {
+  let selectedTeenId;
   const items = [FamilyCenterStore];
-  return useStateFromStores.useStateFromStores(items, () => selectedTeenId.getSelectedTeenId());
+  const obj = useStateFromStores;
+  return obj.useStateFromStores(items, () => selectedTeenId.getSelectedTeenId());
 });
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeen.tsx");
+
+export const useSelectedTeen = tmp2;
+export const useSelectedTeenId = tmp3;

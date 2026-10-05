@@ -13,12 +13,14 @@ Logger.setLogFn((name, arg1, arg2) => {
   const result1 = (timestamp - timestamp) / 1000;
   const toFixedResult = result.toFixed(3);
   const toFixedResult1 = result1.toFixed(3);
-  const tmp5 = LogAggregatorAll;
+  const report = LogAggregatorAll.report;
+  LogAggregatorAll;
   const items = [{ name, timing: "\u03A3:" + toFixedResult + "s, \u0394:" + toFixedResult1 + "s" }, arg2, ...substr];
-  tmp5.report.apply(items);
-  const obj = { name, timing: "\u03A3:" + toFixedResult + "s, \u0394:" + toFixedResult1 + "s" };
+  ({ name, timing: "\u03A3:" + toFixedResult + "s, \u0394:" + toFixedResult1 + "s" });
+  report.apply(items);
   const items1 = [name, arg1, arg2, ...substr];
-  Logger.defaultLogFn.apply(items1);
+  const tmp7 = Logger;
+  tmp7.defaultLogFn.apply(items1);
 });
 let result = size.fileFinishedImporting("modules/debug/Logger.tsx");
 

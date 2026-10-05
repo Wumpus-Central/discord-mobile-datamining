@@ -1,28 +1,36 @@
 // === Module 16532: PrunePreviewStore ===
 
 // Module 16532 (PrunePreviewStore)
-import _slicedToArray from "module_32" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import module_570 from "module_570" /* 570 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require, args, dependencyMap;
 
-const require = fn;
 let c3 = 3600000;
-const module_570 = fn(570);
-const obj4 = module_570.create((arg0) => {
-  closure_0 = arg0;
-  return {
+const usePrunePreviewStore = module_570.create((arg0) => {
+  let closure_0 = arg0;
+  let obj = {
     entries: {},
-    setPreview(arg0, arg1, arg2, count, isFinished) {
+    setPreview(arg0, arg1, arg2, arg3, arg4) {
+      closure_0 = arg3;
+      let closure_1 = arg4;
       const items = [...arg2];
       const sorted = items.sort();
-      closure_2 = "" + arg0 + ":" + arg1 + ":" + sorted.join(",");
-      count((arg0) => {
+      let closure_2 = "" + arg0 + ":" + arg1 + ":" + sorted.join(",");
+      closure_0((arg0) => {
+        let tmp8;
+        let tmp9;
+        const obj = {};
         const merged = Object.assign(arg0.entries);
         const obj2 = {};
         const timestamp = Date.now();
-        const entries = Object.entries({});
+        const entries = Object.entries(obj);
+        const tmp4 = entries[Symbol.iterator]();
         while (tmp4 !== undefined) {
-          let tmp7 = args(tmp5, 2);
+          let tmp7 = closure_2_2(tmp5, 2);
           [tmp8, tmp9] = tmp7;
           if (timestamp - tmp9.cachedAt < closure_2_3) {
             obj2[tmp8] = tmp10;
@@ -31,14 +39,12 @@ const obj4 = module_570.create((arg0) => {
         }
         let tmp16 = null == tmp15;
         if (!tmp16) {
-          tmp16 = tmp15.count <= count && !tmp15.isFinished;
-          const tmp18 = tmp15.count <= count && !tmp15.isFinished;
+          tmp16 = obj2[closure_2].count <= count && !obj2[closure_2].isFinished;
         }
         if (tmp16) {
-          const obj3 = { count, isFinished, cachedAt: null };
           const _Date = Date;
-          obj3.cachedAt = Date.now();
-          obj2[closure_2] = obj3;
+          obj2[closure_2] = { count, isFinished, cachedAt: Date.now() };
+          const obj3 = { count, isFinished, cachedAt: Date.now() };
         }
         return { entries: obj2 };
       });
@@ -47,38 +53,28 @@ const obj4 = module_570.create((arg0) => {
       closure_0({ entries: {} });
     }
   };
+  return obj;
 });
-const ReactCompilerGating = fn(558);
 function getPrunePreviewKey(arg0, arg1, arg2) {
   const items = [...arg2];
   const sorted = items.sort();
   return "" + arg0 + ":" + arg1 + ":" + sorted.join(",");
 }
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/PrunePreviewStore.tsx");
-
-export const CACHE_TTL_MS = 3600000;
-export { getPrunePreviewKey };
-export const usePrunePreviewStore = obj4;
-export const setPrunePreview = function setPrunePreview(arg0, arg1, arg2, arg3, arg4) {
-  state = obj4.getState();
-  state.setPreview(arg0, arg1, arg2, arg3, arg4);
-};
-export const clearAllPrunePreviews = function clearAllPrunePreviews() {
-  state = obj4.getState();
-  state.clear();
-};
-export const usePrunePreview = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
+  let closure_0;
+  let closure_1;
   _require = arg0;
   dependencyMap = arg1;
   args = arg2;
-  const cResult = require("c").c(7);
+  const obj = require("react");
+  const cResult = obj.c(7);
   if (cResult[0] === arg1) {
     if (cResult[1] === arg0) {
+      let tmp2;
       if (cResult[2] === arg2) {
-        let tmp2 = cResult[3];
+        tmp2 = cResult[3];
       }
-      const tmp4 = obj4(tmp2);
+      const tmp4 = obj(tmp2);
       let count;
       if (tmp4 != null) {
         count = tmp4.count;
@@ -88,8 +84,9 @@ export const usePrunePreview = ReactCompilerGating.isReactCompilerEnabled() ? ((
         isFinished = tmp4.isFinished;
       }
       if (cResult[4] === count) {
-        if (cResult[5] === tmp8) {
-          let tmp9 = cResult[6];
+        let tmp9;
+        if (cResult[5] === false === isFinished) {
+          tmp9 = cResult[6];
         }
         return tmp9;
       }
@@ -139,12 +136,13 @@ export const usePrunePreview = ReactCompilerGating.isReactCompilerEnabled() ? ((
   cResult[2] = arg2;
   cResult[3] = P;
   tmp2 = P;
-  const obj = require("c");
 }) : ((arg0, arg1, arg2) => {
-  closure_0 = arg0;
-  closure_1 = arg1;
+  let isFinished;
+  let obj;
+  let closure_0 = arg0;
+  let closure_1 = arg1;
   args = arg2;
-  let tmp = obj4((arg0) => {
+  let tmp = obj((arg0) => {
     const items = [...closure_2];
     const sorted = items.sort();
     const tmp = arg0.entries["" + closure_0 + ":" + closure_1 + ":" + sorted.join(sorted, ",")];
@@ -162,26 +160,39 @@ export const usePrunePreview = ReactCompilerGating.isReactCompilerEnabled() ? ((
   if (tmp != null) {
     count = tmp.count;
   }
-  const obj = { count, isLoading: null };
-  let isFinished;
+  obj = { count, isLoading: false === isFinished };
+  isFinished = undefined;
   if (tmp != null) {
     isFinished = tmp.isFinished;
   }
-  obj.isLoading = false === isFinished;
   return obj;
 });
+const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/PrunePreviewStore.tsx");
+
+export const CACHE_TTL_MS = 3600000;
+export { getPrunePreviewKey };
+export { usePrunePreviewStore };
+export const setPrunePreview = function setPrunePreview(arg0, arg1, arg2, arg3, arg4) {
+  const state = obj.getState();
+  state.setPreview(arg0, arg1, arg2, arg3, arg4);
+};
+export const clearAllPrunePreviews = function clearAllPrunePreviews() {
+  const state = obj.getState();
+  state.clear();
+};
+export const usePrunePreview = tmp3;
 export const getPrunePreview = function getPrunePreview(arg0, arg1, arg2) {
   const items = [];
-  state = obj4.getState();
-  HermesBuiltin.arraySpread(arg2, 0);
+  const state = obj.getState();
+  HermesBuiltin.arraySpread(items, arg2, 0);
   const sorted = items.sort();
-  const tmp3 = state.entries["" + arg0 + ":" + arg1 + ":" + sorted.join(sorted, ",")];
+  const tmp4 = state.entries["" + arg0 + ":" + arg1 + ":" + sorted.join(sorted, ",")];
   let count = null;
-  if (null != tmp3) {
+  if (null != tmp4) {
     const _Date = Date;
     count = null;
-    if (Date.now() - tmp3.cachedAt < c3) {
-      count = tmp3.count;
+    if (Date.now() - tmp4.cachedAt < c3) {
+      count = tmp4.count;
     }
   }
   return count;

@@ -1,17 +1,23 @@
 // === Module 12102: openChannelPicker ===
 
 // Module 12102 (openChannelPicker)
-import util from "util" /* 1126 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import intl2 from "intl" /* 1126 */;
+import asyncRequire from "asyncRequire" /* 1987 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import GuildChannelStore from "GuildChannelStore" /* 4507 */;
 import GuildStore from "GuildStore" /* 2074 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/native/openChannelPicker.tsx");
 
 export default function openChannelPicker(onClose) {
+  let channelType;
+  let filterFn;
+  let found;
+  let guildId;
+  let intl;
+  let obj2;
+  let selectedChannel;
   ({ guildId, filterFn } = onClose);
   ({ selectedChannel, channelType } = onClose);
   if (filterFn === undefined) {
@@ -19,23 +25,20 @@ export default function openChannelPicker(onClose) {
       return true;
     };
   }
+  onClose = onClose.onClose;
   const merged = Object.assign(onClose, Object.assign({ selectedChannel: 0, guildId: 0, channelType: 0, filterFn: 0, onClose: 0 }));
-  guild = GuildStore.getGuild(guildId);
+  const guild = GuildStore.getGuild(guildId);
   let items = GuildChannelStore.getChannels(guildId)[channelType];
   if (items == null) {
     items = [];
   }
-  const obj2 = { header: null, guild: null, channels: null, selectedChannel: null };
-  const obj3 = { title: null, onClose: null };
-  const obj = ActionSheetActionCreatorsDefault;
-  const intl = util.intl;
-  obj3.title = intl.string(util.t.r2ptsz);
-  obj3.onClose = onClose.onClose;
-  obj2.header = obj3;
-  obj2.guild = guild;
-  const found = items.filter(filterFn);
-  obj2.channels = found.map((channel) => channel.channel);
-  obj2.selectedChannel = selectedChannel;
+  const openLazy = ActionSheetActionCreatorsDefault.openLazy;
+  const obj = { header: obj2, guild, channels: found.map((channel) => channel.channel), selectedChannel };
+  obj2 = { title: intl.string(intl2.t.r2ptsz), onClose };
+  ActionSheetActionCreatorsDefault;
+  const tmp4 = asyncRequire(12103, dependencyMap.paths);
+  intl = intl2.intl;
+  found = items.filter(filterFn);
   const merged1 = Object.assign(merged);
-  obj.openLazy(asyncRequireImpl(12103, dependencyMap.paths), "ChannelPicker", obj2);
+  openLazy(tmp4, "ChannelPicker", obj);
 };

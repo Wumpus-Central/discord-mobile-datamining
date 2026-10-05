@@ -1,51 +1,48 @@
 // === Module 4722: UserUtils ===
 
 // Module 4722 (UserUtils)
-import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
+import get_initialized from "get initialized" /* 504 */;
+import react from "react" /* 576 */;
+import intl7 from "intl" /* 1126 */;
 import StreamerModeStore from "StreamerModeStore" /* 4723 */;
 import UserStore from "UserStore" /* 1377 */;
+import Constants from "Constants" /* 1085 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+const require = globalThis.__r;
+let _require;
+
+let closure_4;
+let hasOwnProperty;
 function nameFromUser(primary1) {
+  let globalName;
   const global_name = primary1.global_name;
-  let tmp = null != global_name;
+  const tmp = null != global_name && global_name.length > 0;
   if (tmp) {
-    tmp = global_name.length > 0;
-  }
-  if (tmp) {
-    let globalName = primary1.global_name;
+    globalName = primary1.global_name;
   } else {
     const globalName1 = primary1.globalName;
-    let tmp2 = null != globalName1;
-    if (tmp2) {
-      tmp2 = globalName1.length > 0;
-    }
+    const tmp2 = null != globalName1 && globalName1.length > 0;
     if (tmp2) {
       globalName = primary1.globalName;
     } else {
       const username = primary1.username;
-      let tmp3 = null != username;
-      if (tmp3) {
-        tmp3 = username.length > 0;
-      }
-      globalName = tmp3 ? primary1.username : c7;
+      globalName = null != username && username.length > 0 ? primary1.username : c7;
+      const tmp3 = null != username && username.length > 0;
     }
   }
   return globalName;
 }
 function presentUserTag(username, identifiable, tmpResult) {
   if (null == username) {
-    const intl = util.intl;
-    return intl.string(util.t.sKdZ6U);
+    const intl = intl7.intl;
+    return intl.string(intl7.t.sKdZ6U);
   } else {
     const username1 = username.username;
-    let tmp = null != username1;
+    const tmp = null != username1 && username1.length > 0;
     if (tmp) {
-      tmp = username1.length > 0;
-    }
-    if (tmp) {
+      let combined;
       let flag = false;
       if ("always" !== identifiable.identifiable) {
         flag = tmpResult;
@@ -54,11 +51,12 @@ function presentUserTag(username, identifiable, tmpResult) {
         }
       }
       if ("0" !== username.discriminator) {
-        if (username.discriminator !== React4) {
+        if (username.discriminator !== React3) {
           if ("username" !== identifiable.mode) {
+            let username2;
             if (!flag) {
               const _HermesInternal3 = HermesInternal;
-              let username2 = "" + username.username + "#" + username.discriminator;
+              username2 = "" + username.username + "#" + username.discriminator;
             }
             return username2;
           }
@@ -68,7 +66,7 @@ function presentUserTag(username, identifiable, tmpResult) {
       username = username.username;
       if (flag) {
         const _HermesInternal = HermesInternal;
-        let combined = "" + username[0] + "\u2026";
+        combined = "" + username[0] + "\u2026";
       } else {
         combined = username;
       }
@@ -83,16 +81,19 @@ function presentUserTag(username, identifiable, tmpResult) {
     }
   }
 }
-const Constants = fn(1085);
 ({ NON_USER_BOT_DISCRIMINATOR: closure_4, StatusTypes: hasOwnProperty } = Constants);
 let c6 = 86400000;
 let c7 = "???";
 let closure_8 = { mode: "full", decoration: "never", identifiable: "auto" };
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled();
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((username, arg1) => {
-  const cResult = c.c(2);
+  let tmp6;
+  let tmp7;
+  const obj = react;
+  const cResult = obj.c(2);
+  const obj2 = {};
   const merged = Object.assign(closure_8);
   const merged1 = Object.assign(arg1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -107,22 +108,29 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((username, arg1) => {
   } else {
     [tmp6, tmp7] = cResult;
   }
-  const obj2 = {};
-  return presentUserTag(username, obj2, initialize.useStateFromStores(tmp6, tmp7));
+  const tmpResult = get_initialized;
+  return presentUserTag(username, obj2, tmpResult.useStateFromStores(tmp6, tmp7));
 }) : ((username, arg1) => {
+  const obj = {};
   const merged = Object.assign(closure_8);
   const merged1 = Object.assign(arg1);
   const items = [StreamerModeStore];
-  return presentUserTag(username, {}, initialize.useStateFromStores(items, () => StreamerModeStore.hidePersonalInformation));
+  const obj2 = get_initialized;
+  return presentUserTag(username, obj, obj2.useStateFromStores(items, () => StreamerModeStore.hidePersonalInformation));
 });
-ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+ReactCompilerGating = ReactCompilerGating_mod;
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let closure_0;
+  let first;
+  let tmp6;
   _require = arg0;
-  const cResult = require("c").c(3);
+  const obj = require("react");
+  const cResult = obj.c(3);
+  const tmp = _require;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -141,16 +149,18 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     };
     cResult[1] = arg0;
     cResult[2] = fn;
-    let tmp6 = fn;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
-  const obj = require("c");
-  return require("initialize").useStateFromStores(first, tmp6);
+  const tmpResult = tmp(504);
+  return tmpResult.useStateFromStores(first, tmp6);
 }) : ((arg0) => {
+  let closure_0;
   _require = arg0;
   const items = [UserStore];
-  return require("initialize").useStateFromStores(items, () => {
+  const obj = require("get initialized");
+  return obj.useStateFromStores(items, () => {
     if (null != closure_0) {
       let user = null;
       if (closure_0.isPrivate()) {
@@ -170,11 +180,11 @@ function getName(username) {
     if (hidePersonalInformation) {
       username = username.username;
       let toLocaleLowerCaseResult1;
+      const toLocaleLowerCaseResult = obj.toLocaleLowerCase();
       if (username != null) {
         toLocaleLowerCaseResult1 = username.toLocaleLowerCase();
       }
-      hidePersonalInformation = obj.toLocaleLowerCase() === toLocaleLowerCaseResult1;
-      const toLocaleLowerCaseResult = obj.toLocaleLowerCase();
+      hidePersonalInformation = toLocaleLowerCaseResult === toLocaleLowerCaseResult1;
     }
     if (hidePersonalInformation) {
       hidePersonalInformation = "0" === username.discriminator;
@@ -188,9 +198,12 @@ function getName(username) {
   }
 }
 function useName(guildId) {
+  let tmp15;
+  let tmp16;
+  let tmp6;
   if (closure_10) {
-    const cResult = c.c(5);
-    let str4 = globalThis;
+    const tmpResult = react;
+    const cResult = tmpResult.c(5);
     const _Symbol = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [StreamerModeStore];
@@ -199,56 +212,62 @@ function useName(guildId) {
       };
       cResult[0] = items;
       cResult[1] = fn;
-      tmp14 = items;
-      tmp15 = fn;
+      tmp15 = items;
+      tmp16 = fn;
     } else {
-      [tmp14, tmp15] = cResult;
+      [tmp15, tmp16] = cResult;
     }
-    const tmpResult = c;
-    const stateFromStores = initialize.useStateFromStores(tmp14, tmp15);
-    let tmp18 = null;
+    const tmpResult3 = get_initialized;
+    const stateFromStores = tmpResult3.useStateFromStores(tmp15, tmp16);
+    let tmp20;
     if (null != guildId) {
       if (cResult[2] === stateFromStores) {
+        let tmp21;
+        if (cResult[3] === guildId) {
+          tmp21 = cResult[4];
+        }
+        tmp20 = tmp21;
       }
       const obj5 = nameFromUser(guildId);
-      let tmp21 = stateFromStores;
-      if (stateFromStores) {
+      let tmp23 = stateFromStores;
+      if (tmp23) {
         const username2 = guildId.username;
-        tmp18 = username2 == tmp18;
         let toLocaleLowerCaseResult1;
-        if (!tmp18) {
+        const toLocaleLowerCaseResult = obj5.toLocaleLowerCase();
+        if (username2 != null) {
           toLocaleLowerCaseResult1 = username2.toLocaleLowerCase();
         }
-        tmp21 = obj5.toLocaleLowerCase() === toLocaleLowerCaseResult1;
-        const toLocaleLowerCaseResult = obj5.toLocaleLowerCase();
+        tmp23 = toLocaleLowerCaseResult === toLocaleLowerCaseResult1;
       }
-      if (tmp21) {
-        tmp21 = "0" === guildId.discriminator;
+      if (tmp23) {
+        tmp23 = "0" === guildId.discriminator;
       }
       let combined = obj5;
-      if (tmp21) {
-        str4 = "";
+      if (tmp23) {
+        const _HermesInternal2 = HermesInternal;
         combined = "" + obj5[0] + "\u2026";
       }
       cResult[2] = stateFromStores;
       cResult[3] = guildId;
       cResult[4] = combined;
+      tmp21 = combined;
     }
-    const tmpResult3 = initialize;
+    tmp6 = tmp20;
   } else {
     const items1 = [StreamerModeStore];
-    const stateFromStores1 = initialize.useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
+    const tmpResult4 = get_initialized;
+    const stateFromStores1 = tmpResult4.useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
     if (null != guildId) {
       const obj2 = nameFromUser(guildId);
       let tmp8 = stateFromStores1;
-      if (stateFromStores1) {
+      if (tmp8) {
         const username = guildId.username;
         let toLocaleLowerCaseResult3;
+        const toLocaleLowerCaseResult2 = obj2.toLocaleLowerCase();
         if (username != null) {
           toLocaleLowerCaseResult3 = username.toLocaleLowerCase();
         }
-        tmp8 = obj2.toLocaleLowerCase() === toLocaleLowerCaseResult3;
-        const toLocaleLowerCaseResult2 = obj2.toLocaleLowerCase();
+        tmp8 = toLocaleLowerCaseResult2 === toLocaleLowerCaseResult3;
       }
       if (tmp8) {
         tmp8 = "0" === guildId.discriminator;
@@ -258,27 +277,21 @@ function useName(guildId) {
         const _HermesInternal = HermesInternal;
         combined1 = "" + obj2[0] + "\u2026";
       }
-      const tmp6 = combined1;
+      tmp6 = combined1;
     }
-    const tmpResult4 = initialize;
   }
   return tmp6;
 }
 function getGlobalName(user) {
   if (null != user) {
+    let global_name;
     const globalName = user.globalName;
-    let tmp = null != globalName;
+    const tmp = null != globalName && globalName.length > 0;
     if (tmp) {
-      tmp = globalName.length > 0;
-    }
-    if (tmp) {
-      let global_name = user.globalName;
+      global_name = user.globalName;
     } else {
       const global_name1 = user.global_name;
-      let tmp2 = null != global_name1;
-      if (tmp2) {
-        tmp2 = global_name1.length > 0;
-      }
+      const tmp2 = null != global_name1 && global_name1.length > 0;
       if (tmp2) {
         global_name = user.global_name;
       }
@@ -293,50 +306,46 @@ function getFormattedName(inviter, arg1) {
   }
   if (null == inviter) {
     return c7;
-  } else if (null == inviter) {
+  } else {
+    let username;
+    let tmp3;
+    if (null != inviter) {
+      let global_name;
+      const globalName = inviter.globalName;
+      const tmp = null != globalName && globalName.length > 0;
+      if (tmp) {
+        global_name = inviter.globalName;
+      } else {
+        const global_name1 = inviter.global_name;
+        const tmp2 = null != global_name1 && global_name1.length > 0;
+        if (tmp2) {
+          global_name = inviter.global_name;
+        }
+      }
+      tmp3 = global_name;
+    }
     if (flag) {
       const obj = {};
       const merged = Object.assign(closure_8);
       const merged1 = Object.assign(undefined);
-      let hidePersonalInformation = "auto" !== obj.identifiable;
-      if (!hidePersonalInformation) {
-        hidePersonalInformation = StreamerModeStore.hidePersonalInformation;
-      }
-      let username = presentUserTag(inviter, obj, hidePersonalInformation);
+      const hidePersonalInformation = "auto" !== obj.identifiable || StreamerModeStore.hidePersonalInformation;
+      username = presentUserTag(inviter, obj, hidePersonalInformation);
     } else {
       username = inviter.username;
       if (username == null) {
         username = c7;
       }
     }
-    let tmp11;
-    if (undefined !== username) {
+    let tmp11 = tmp3;
+    if (tmp3 !== username) {
       let combined = username;
-      if (null != undefined) {
+      if (null != tmp3) {
         const _HermesInternal = HermesInternal;
-        combined = "" + undefined + " (" + username + ")";
+        combined = "" + tmp3 + " (" + username + ")";
       }
       tmp11 = combined;
     }
     return tmp11;
-  } else {
-    const globalName = inviter.globalName;
-    let tmp = null != globalName;
-    if (tmp) {
-      tmp = globalName.length > 0;
-    }
-    if (tmp) {
-      let global_name = inviter.globalName;
-    } else {
-      const global_name1 = inviter.global_name;
-      let tmp2 = null != global_name1;
-      if (tmp2) {
-        tmp2 = global_name1.length > 0;
-      }
-      if (tmp2) {
-        global_name = inviter.global_name;
-      }
-    }
   }
 }
 function humanizeStatus(status, arg1) {
@@ -346,55 +355,71 @@ function humanizeStatus(status, arg1) {
   }
   const isMobile = obj.isMobile;
   const isVR = obj.isVR;
-  if (constants.ONLINE === status) {
-    const intl6 = util.intl;
+  const tmp = undefined !== isMobile && isMobile;
+  const tmp2 = undefined !== isVR && isVR;
+  if (hasOwnProperty.ONLINE === status) {
+    let stringResult;
+    const intl6 = intl7.intl;
     const string = intl6.string;
-    const t = util.t;
+    const t = intl7.t;
     if (tmp2) {
-      let stringResult = string(t.SWnU0R);
+      stringResult = string(t.SWnU0R);
     } else if (tmp) {
       stringResult = string(t["9hghLD"]);
     } else {
       stringResult = string(t.WbGtnH);
     }
     return stringResult;
-  } else if (constants.OFFLINE === status) {
-    const intl5 = util.intl;
-    return intl5.string(util.t.Vv0abJ);
-  } else if (constants.IDLE === status) {
-    const intl4 = util.intl;
-    return intl4.string(util.t.qWbtVU);
-  } else if (constants.DND === status) {
-    const intl3 = util.intl;
-    return intl3.string(util.t.jaNpQH);
-  } else if (constants.INVISIBLE === status) {
-    const intl2 = util.intl;
-    return intl2.string(util.t.bg24HO);
-  } else if (constants.STREAMING === status) {
-    const intl = util.intl;
-    return intl.string(util.t.XKYej5);
+  } else if (hasOwnProperty.OFFLINE === status) {
+    const intl5 = intl7.intl;
+    return intl5.string(intl7.t.Vv0abJ);
+  } else if (hasOwnProperty.IDLE === status) {
+    const intl4 = intl7.intl;
+    return intl4.string(intl7.t.qWbtVU);
+  } else if (hasOwnProperty.DND === status) {
+    const intl3 = intl7.intl;
+    return intl3.string(intl7.t.jaNpQH);
+  } else if (hasOwnProperty.INVISIBLE === status) {
+    const intl2 = intl7.intl;
+    return intl2.string(intl7.t.bg24HO);
+  } else if (hasOwnProperty.STREAMING === status) {
+    const intl = intl7.intl;
+    return intl.string(intl7.t.XKYej5);
   } else {
-    const UNKNOWN = constants.UNKNOWN;
+    const UNKNOWN = hasOwnProperty.UNKNOWN;
     return null;
   }
-  tmp = undefined !== isMobile && isMobile;
-  tmp2 = undefined !== isVR && isVR;
 }
 function getUserTag(user, arg1) {
   const obj = {};
   const merged = Object.assign(closure_8);
   const merged1 = Object.assign(arg1);
-  let hidePersonalInformation = "auto" !== obj.identifiable;
-  if (!hidePersonalInformation) {
-    hidePersonalInformation = StreamerModeStore.hidePersonalInformation;
-  }
+  const hidePersonalInformation = "auto" !== obj.identifiable || StreamerModeStore.hidePersonalInformation;
   return presentUserTag(user, obj, hidePersonalInformation);
 }
 function getUserIsStaff() {
   const currentUser = UserStore.getCurrentUser();
-  return null != currentUser && currentUser.isStaff();
+  const tmp = null != currentUser && currentUser.isStaff();
+  return tmp;
 }
+let obj = {
+  getName,
+  useName,
+  isNameConcealed(str) {
+    const endsWithResult = 2 === str.length && str.endsWith("\u2026");
+    return endsWithResult;
+  },
+  getUserTag,
+  useUserTag: tmp3,
+  getUserIsStaff,
+  getFormattedName,
+  getGlobalName,
+  humanizeStatus,
+  useDirectMessageRecipient: tmp4
+};
 function accountAgeInRange(createdAt, arg1) {
+  let maxDaysOld;
+  let minDaysOld;
   ({ maxDaysOld, minDaysOld } = arg1);
   if (minDaysOld === undefined) {
     minDaysOld = 0;
@@ -406,37 +431,12 @@ function accountAgeInRange(createdAt, arg1) {
     createdAt = createdAt.createdAt;
     const timestamp = Date.now();
     const diff = timestamp - createdAt.getTime();
-    let tmp4 = null == maxDaysOld;
-    if (!tmp4) {
-      tmp4 = diff <= c6 * maxDaysOld;
-    }
-    if (tmp4) {
-      tmp4 = diff >= c6 * minDaysOld;
-    }
-    return tmp4;
+    return (null == maxDaysOld || diff <= c6 * maxDaysOld) && diff >= c6 * minDaysOld;
   }
 }
-const size = fn(2);
 const result = size.fileFinishedImporting("utils/UserUtils.tsx");
 
-export default {
-  getName,
-  useName,
-  isNameConcealed(str) {
-    let endsWithResult = 2 === str.length;
-    if (endsWithResult) {
-      endsWithResult = str.endsWith("\u2026");
-    }
-    return endsWithResult;
-  },
-  getUserTag,
-  useUserTag: tmp3,
-  getUserIsStaff,
-  getFormattedName,
-  getGlobalName,
-  humanizeStatus,
-  useDirectMessageRecipient: tmp4
-};
+export default obj;
 export { nameFromUser };
 export { getName };
 export { useName };
@@ -451,11 +451,8 @@ export const ageEligibleForPremiumUpsell = function ageEligibleForPremiumUpsell(
     const createdAt = stateFromStores.createdAt;
     const timestamp = Date.now();
     const diff = timestamp - createdAt.getTime();
-    let tmp5 = diff <= c6 * 30;
-    if (tmp5) {
-      tmp5 = diff >= 0;
-    }
-    flag = tmp5;
+    flag = diff <= c6 * 30 && diff >= 0;
+    const tmp5 = diff <= c6 * 30 && diff >= 0;
   }
   return !flag;
 };
@@ -466,11 +463,8 @@ export const isNewUser = function isNewUser(createdAt) {
     createdAt = createdAt.createdAt;
     const timestamp = Date.now();
     const diff = timestamp - createdAt.getTime();
-    let tmp5 = diff <= c6 * 7;
-    if (tmp5) {
-      tmp5 = diff >= 0;
-    }
-    flag = tmp5;
+    flag = diff <= c6 * 7 && diff >= 0;
+    const tmp5 = diff <= c6 * 7 && diff >= 0;
   }
   return flag;
 };

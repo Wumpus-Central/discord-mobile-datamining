@@ -1,72 +1,93 @@
 // === Module 11513: AppealIngestionCollectSignal ===
 
 // Module 11513 (AppealIngestionCollectSignal)
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import react2 from "react" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4594 */;
+import asyncRequire from "asyncRequire" /* 1987 */;
+import react_native2 from "react-native" /* 4594 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import SafetyHubUtils from "SafetyHubUtils" /* 8092 */;
-import Form from "Form" /* 8895 */;
-import noop from "module_19" /* 19 */;
+import Form2 from "Form" /* 8895 */;
+import react from "react" /* 19 */;
+import SafetyHubConstants from "SafetyHubConstants" /* 8093 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const SafetyHubConstants = fn(8093);
+let dependencyMap;
+
+let closure_4;
+let hasOwnProperty;
+let metroImportDefault;
+let metroRequire;
+let obj2;
+let obj3;
+const View = react_native.View;
 ({ AppealIngestionSignal: closure_4, AppealIngestionSignalOrder: hasOwnProperty } = SafetyHubConstants);
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { container: { flex: 1, paddingHorizontal: 16 }, form: { marginBottom: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, formRow: null, formSection: null, disclaimer: null };
-let obj3 = { marginBottom: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj2.formRow = { paddingVertical: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
-obj2.formSection = { gap: 8 };
-obj2.disclaimer = { marginTop: 24 };
-let closure_8 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
+({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
+let createStyles = createStyles_mod;
+let obj = { container: { flex: 1, paddingHorizontal: 16 }, form: obj2, formRow: obj3, formSection: { gap: 8 }, disclaimer: { marginTop: 24 } };
+obj2 = { marginBottom: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+createStyles = createStyles.createStyles;
+obj3 = { paddingVertical: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+let closure_8 = createStyles(obj);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((signal) => {
-  const cResult = c.c(18);
+  let accessibilityRole;
+  let accessibilityState;
+  let onSelect;
+  let rowStyle;
+  let selected;
+  let tmp4;
+  let tmp6;
+  let tmp8;
+  const obj = react2;
+  const cResult = obj.c(18);
   signal = signal.signal;
   ({ selected, rowStyle, onSelect } = signal);
   if (cResult[0] !== selected) {
     const obj2 = { selected };
     cResult[0] = selected;
     cResult[1] = obj2;
-    let tmp4 = obj2;
+    tmp4 = obj2;
   } else {
     tmp4 = cResult[1];
   }
-  const radioA11yNative = useA11yRolesNative.useRadioA11yNative(tmp4);
+  const tmpResult = react_native2;
+  const radioA11yNative = tmpResult.useRadioA11yNative(tmp4);
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   if (cResult[2] !== signal) {
-    const appealSignalDisplayText = SafetyHubUtils.getAppealSignalDisplayText(signal);
+    const tmpResult2 = SafetyHubUtils;
+    const appealSignalDisplayText = tmpResult2.getAppealSignalDisplayText(signal);
     cResult[2] = signal;
     cResult[3] = appealSignalDisplayText;
-    let tmp6 = appealSignalDisplayText;
-    const tmpResult2 = SafetyHubUtils;
+    tmp6 = appealSignalDisplayText;
   } else {
     tmp6 = cResult[3];
   }
   if (cResult[4] !== tmp6) {
     const obj3 = { text: tmp6 };
-    const tmp10 = timestampProducer(Form.FormRow.Label, obj3);
+    const tmp10 = metroRequire(Form2.FormRow.Label, obj3);
     cResult[4] = tmp6;
     cResult[5] = tmp10;
-    let tmp8 = tmp10;
+    tmp8 = tmp10;
   } else {
     tmp8 = cResult[5];
   }
   if (cResult[6] === onSelect) {
+    let tmp11;
+    let tmp12;
     if (cResult[7] === signal) {
-      let tmp11 = cResult[8];
+      tmp11 = cResult[8];
     }
     if (cResult[9] !== selected) {
       const obj4 = { selected };
-      const tmp14 = timestampProducer(Form.FormRow.Radio, obj4);
+      const tmp14 = metroRequire(Form2.FormRow.Radio, obj4);
       cResult[9] = selected;
       cResult[10] = tmp14;
-      let tmp12 = tmp14;
+      tmp12 = tmp14;
     } else {
       tmp12 = cResult[10];
     }
@@ -75,8 +96,9 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((signal) => {
         if (cResult[13] === rowStyle) {
           if (cResult[14] === tmp8) {
             if (cResult[15] === tmp11) {
+              let tmp15;
               if (cResult[16] === tmp12) {
-                let tmp15 = cResult[17];
+                tmp15 = cResult[17];
               }
               return tmp15;
             }
@@ -85,7 +107,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((signal) => {
       }
     }
     const obj5 = { style: rowStyle, label: tmp8, onPress: tmp11, trailing: tmp12, accessibilityRole, accessibilityState };
-    const tmp17 = timestampProducer(Form.FormRow, obj5);
+    const tmp17 = metroRequire(Form2.FormRow, obj5);
     cResult[11] = accessibilityRole;
     cResult[12] = accessibilityState;
     cResult[13] = rowStyle;
@@ -102,74 +124,100 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((signal) => {
   cResult[7] = signal;
   cResult[8] = fn;
   tmp11 = fn;
-  const tmpResult = useA11yRolesNative;
 }) : ((signal) => {
+  let Label;
+  let accessibilityRole;
+  let accessibilityState;
+  let closure_129_1;
+  let obj3;
+  let obj4;
+  let selected;
   signal = signal.signal;
-  ({ selected, onSelect: importDefault } = signal);
-  const radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected });
+  ({ selected, onSelect: closure_129_1 } = signal);
+  const rowStyle = signal.rowStyle;
+  const obj = react_native2;
+  const radioA11yNative = obj.useRadioA11yNative({ selected });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
-  const obj2 = { style: signal.rowStyle, label: null, onPress: null, trailing: null, accessibilityRole: null, accessibilityState: null };
-  const obj3 = { text: null };
-  obj3.text = SafetyHubUtils.getAppealSignalDisplayText(signal);
-  obj2.label = timestampProducer(Form.FormRow.Label, obj3);
-  obj2.onPress = function onPress() {
-    return importDefault(signal);
+  const obj2 = {
+    style: rowStyle,
+    label: metroRequire(Label, obj3),
+    onPress() {
+      return closure_1_1(signal);
+    },
+    trailing: metroRequire(Form2.FormRow.Radio, { selected }),
+    accessibilityRole,
+    accessibilityState
   };
-  obj2.trailing = timestampProducer(Form.FormRow.Radio, { selected });
-  obj2.accessibilityRole = accessibilityRole;
-  obj2.accessibilityState = accessibilityState;
-  return timestampProducer(Form.FormRow, obj2);
+  const FormRow = Form2.FormRow;
+  obj3 = { text: obj4.getAppealSignalDisplayText(signal) };
+  Label = Form2.FormRow.Label;
+  obj4 = SafetyHubUtils;
+  return metroRequire(FormRow, obj2);
 });
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionCollectSignal.tsx");
 
 export default function AppealIngestionCollectSignal(isDsaEligible) {
+  let Form;
+  let Text;
+  let closure_2;
+  let intl3;
+  let items;
+  let items1;
+  let obj4;
+  let obj7;
   isDsaEligible = isDsaEligible.isDsaEligible;
   function handleAppealSignalSelect(signal) {
-    DispatcherDefault.dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_SELECT", signal });
-    let tmp4 = isDsaEligible;
-    if (isDsaEligible) {
-      tmp4 = signal === constants.SOMETHING_ELSE;
-    }
+    let obj = DispatcherDefault;
+    let obj2 = { type: "SAFETY_HUB_APPEAL_SIGNAL_SELECT", signal };
+    obj.dispatch(obj2);
+    const tmp4 = isDsaEligible && signal === constants.SOMETHING_ELSE;
     if (tmp4) {
-      const obj3 = {
+      let obj3 = {
         onSave(userInput) {
-            formRow(584).dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput });
-            const obj = formRow(584);
+            const obj = formRow(closure_1_2[12]);
             const obj2 = { type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput };
-            formRow(4854).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+            obj.dispatch(obj2);
+            const obj3 = formRow(closure_1_2[13]);
+            obj3.hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
           },
         onClose() {
-            return formRow(4854).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+            const obj = formRow(closure_1_2[13]);
+            return obj.hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
           }
       };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11514, dependencyMap.paths), "AppealIngestionFreeTextAppealReasonActionSheet", obj3);
       const tmpResult = ActionSheetActionCreatorsDefault;
+      tmpResult.openLazy(asyncRequire(11514, dependencyMap.paths), "AppealIngestionFreeTextAppealReasonActionSheet", obj3);
     }
-    let obj2 = { type: "SAFETY_HUB_APPEAL_SIGNAL_SELECT", signal };
   }
   const tmp = closure_8();
   const formRow = tmp;
-  dependencyMap = isDsaEligible(11492).useSafetyHubAppealSignal();
-  const intl = isDsaEligible(1126).intl;
   let obj = isDsaEligible(11492);
-  const intl2 = isDsaEligible(1126).intl;
+  dependencyMap = obj.useSafetyHubAppealSignal();
+  const intl = isDsaEligible(1126).intl;
   const stringResult = intl.string(isDsaEligible(1126).t["C5q+pW"]);
-  let obj2 = { children: null };
-  const items = [closure_6(isDsaEligible(11498).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(isDsaEligible(1126).t.VEcRhw) }), ];
-  let obj3 = { style: tmp.container, children: null };
-  const obj4 = { style: tmp.form, children: null };
+  const intl2 = isDsaEligible(1126).intl;
+  let obj2 = { children: items };
   const stringResult1 = intl2.string(isDsaEligible(1126).t.VEcRhw);
-  const items1 = [closure_6(isDsaEligible(8895).FormSection, { sectionBodyStyle: tmp.formSection, accessibilityRole: "radiogroup", children: closure_5.map((signal, index) => timestampProducer(closure_9, { signal, selected: signal === closure_2, rowStyle: formRow.formRow, onSelect: handleAppealSignalSelect }, "formrow-" + index)) }), ];
-  const obj6 = { style: tmp.disclaimer, children: null };
-  const obj7 = { variant: "text-sm/normal", children: null };
-  const intl3 = isDsaEligible(1126).intl;
-  obj7.children = intl3.format(isDsaEligible(1126).t["8k9GCW"], {});
-  obj6.children = closure_6(isDsaEligible(4886).Text, obj7);
+  const AppealIngestionModalScreen = isDsaEligible(11498).AppealIngestionModalScreen;
+  items = [closure_6(isDsaEligible(11498).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), ];
+  let obj3 = { style: tmp.container, children: closure_7(Form, obj4) };
+  obj4 = { style: tmp.form, children: items1 };
+  Form = isDsaEligible(8895).Form;
+  const obj5 = {
+    sectionBodyStyle: tmp.formSection,
+    accessibilityRole: "radiogroup",
+    children: closure_5.map((signal, index) => {
+      const obj = { signal, selected: signal === closure_2, rowStyle: formRow.formRow, onSelect: handleAppealSignalSelect };
+      return metroRequire(closure_9, obj, "formrow-" + index);
+    })
+  };
+  const FormSection = isDsaEligible(8895).FormSection;
+  items1 = [closure_6(FormSection, obj5), ];
+  const obj6 = { style: tmp.disclaimer, children: closure_6(Text, obj7) };
+  obj7 = { variant: "text-sm/normal", children: intl3.format(isDsaEligible(1126).t["8k9GCW"], {}) };
+  Text = isDsaEligible(4886).Text;
+  intl3 = isDsaEligible(1126).intl;
   items1[1] = closure_6(handleAppealSignalSelect, obj6);
-  obj4.children = items1;
-  obj3.children = closure_7(isDsaEligible(8895).Form, obj4);
   items[1] = closure_6(handleAppealSignalSelect, obj3);
-  obj2.children = items;
-  return closure_7(isDsaEligible(11498).AppealIngestionModalScreen, obj2);
+  return closure_7(AppealIngestionModalScreen, obj2);
 };

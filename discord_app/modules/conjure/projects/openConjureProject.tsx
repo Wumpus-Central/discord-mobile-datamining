@@ -11,10 +11,13 @@ const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
 const result = size.fileFinishedImporting("modules/conjure/projects/openConjureProject.tsx");
 
 export const openConjureProject = function openConjureProject(id, projectId) {
+  let CHANNELResult;
+  const transitionTo = router_utils.transitionTo;
+  router_utils;
   if (null == projectId) {
-    let CHANNELResult = Routes.CHANNEL(id, StaticChannelRoute.CONJURE);
+    CHANNELResult = Routes.CHANNEL(id, StaticChannelRoute.CONJURE);
   } else {
     CHANNELResult = Routes.CHANNEL(id, StaticChannelRoute.CONJURE, projectId);
   }
-  router_utils.transitionTo(CHANNELResult);
+  transitionTo(CHANNELResult);
 };

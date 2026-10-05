@@ -1,70 +1,80 @@
 // === Module 7631: DoubleTapErrorToast ===
 
 // Module 7631 (DoubleTapErrorToast)
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
+import intl4 from "intl" /* 1126 */;
+import EmojiConstants from "EmojiConstants" /* 1380 */;
 import Text_Text from "Text/Text" /* 4886 */;
-import XSmallBoldIcon from "XSmallBoldIcon" /* 7632 */;
-import noop from "module_19" /* 19 */;
+import XSmallBoldIcon2 from "XSmallBoldIcon" /* 7632 */;
+import react from "react" /* 19 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const EmojiDisabledReasons = fn(1380).EmojiDisabledReasons;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj2 = { icon: { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, borderRadius: nativeDefault.radii.round, padding: nativeDefault.space.PX_4, marginLeft: nativeDefault.space.PX_4 } };
-let closure_6 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
+let obj2;
+const View = react_native.View;
+const EmojiDisabledReasons = EmojiConstants.EmojiDisabledReasons;
+const jsx = Fragment.jsx;
+let obj = { icon: obj2 };
+obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, borderRadius: nativeDefault.radii.round, padding: nativeDefault.space.PX_4, marginLeft: nativeDefault.space.PX_4 };
+let closure_6 = createStyles.createStyles(obj);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(3);
+  let first;
+  let tmp9;
+  const obj = react2;
+  const cResult = obj.c(3);
   const tmp4 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { color: nativeDefault.colors.WHITE, size: "xs" };
-    const tmp8 = jsx(XSmallBoldIcon.XSmallBoldIcon, { color: nativeDefault.colors.WHITE, size: "xs" });
+    const XSmallBoldIcon = XSmallBoldIcon2.XSmallBoldIcon;
+    const tmp8 = <XSmallBoldIcon color={nativeDefault.colors.WHITE} size="xs" />;
     cResult[0] = tmp8;
-    let first = tmp8;
+    first = tmp8;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== tmp4.icon) {
-    const obj3 = { style: tmp4.icon, "aria-hidden": true, children: first };
     const tmp12 = <View style={tmp4.icon} aria-hidden>{first}</View>;
     cResult[1] = tmp4.icon;
     cResult[2] = tmp12;
-    let tmp9 = tmp12;
+    tmp9 = tmp12;
   } else {
     tmp9 = cResult[2];
   }
   return tmp9;
 }) : (() => {
-  const obj = { style: closure_6().icon, "aria-hidden": true, children: jsx(XSmallBoldIcon.XSmallBoldIcon, { color: nativeDefault.colors.WHITE, size: "xs" }) };
-  return <View style={closure_6().icon} aria-hidden>{jsx(XSmallBoldIcon.XSmallBoldIcon, { color: nativeDefault.colors.WHITE, size: "xs" })}</View>;
+  ({ color: nativeDefault.colors.WHITE, size: "xs" });
+  const XSmallBoldIcon = XSmallBoldIcon2.XSmallBoldIcon;
+  return <View style={closure_6().icon} aria-hidden>{null}</View>;
 });
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapErrorToast.tsx");
 
 export const showDoubleTapErrorToast = function showDoubleTapErrorToast(emojiName) {
   emojiName = emojiName.emojiName;
   const reason = emojiName.reason;
-  let obj = dependencyMap;
-  const designSystemsNotificationComponents = emojiName(4574).getDesignSystemsNotificationComponents("showDoubleTapErrorToast");
-  let obj3 = reason(4568);
+  const tmp = emojiName;
+  let obj = emojiName(4574);
+  const designSystemsNotificationComponents = obj.getDesignSystemsNotificationComponents("showDoubleTapErrorToast");
+  const obj2 = reason(4568);
   if (designSystemsNotificationComponents) {
+    let stringResult;
+    const openMana = obj2.openMana;
     if (null == emojiName) {
       let intl3 = tmp(1126).intl;
-      let stringResult = intl3.string(tmp(1126).t.CL5mWi);
+      stringResult = intl3.string(tmp(1126).t.CL5mWi);
     } else if (reason === EmojiDisabledReasons.DISALLOW_EXTERNAL) {
       let intl2 = tmp(1126).intl;
-      const obj4 = { emojiName };
-      stringResult = intl2.formatToPlainString(tmp(1126).t.Dz4vkv, obj4);
+      let obj3 = { emojiName };
+      stringResult = intl2.formatToPlainString(tmp(1126).t.Dz4vkv, obj3);
     } else {
       let intl = tmp(1126).intl;
-      const obj5 = { emojiName };
-      stringResult = intl.formatToPlainString(tmp(1126).t.WZGLFq, obj5);
+      const obj4 = { emojiName };
+      stringResult = intl.formatToPlainString(tmp(1126).t.WZGLFq, obj4);
     }
-    obj = { text: stringResult, variant: "critical" };
-    obj3.openMana("EMOJI_DOUBLE_TAP_ERROR", obj);
+    const obj5 = { text: stringResult, variant: "critical" };
+    openMana("EMOJI_DOUBLE_TAP_ERROR", obj5);
   } else {
     const obj6 = {
       key: "EMOJI_DOUBLE_TAP_ERROR",
@@ -72,29 +82,30 @@ export const showDoubleTapErrorToast = function showDoubleTapErrorToast(emojiNam
           return <closure_1_7 />;
         },
       content() {
+          let formatResult;
           if (reason === EmojiDisabledReasons.DISALLOW_EXTERNAL) {
+            let tmp3Result;
             if (null != emojiName) {
-              const obj2 = { variant: "text-sm/normal", children: null };
-              const intl3 = util.intl;
+              const Text2 = Text_Text.Text;
+              const intl3 = intl4.intl;
               const obj3 = { emojiName: tmp };
-              obj2.children = intl3.format(util.t.Dz4vkv, obj3);
-              let tmp3Result = jsx(Text_Text.Text, { variant: "text-sm/normal", children: null });
+              tmp3Result = <Text2 variant="text-sm/normal">{intl3.format(intl4.t.Dz4vkv, obj3)}</Text2>;
             }
             return tmp3Result;
           }
+          const Text = Text_Text.Text;
           if (null != emojiName) {
-            const intl2 = util.intl;
+            const intl2 = intl4.intl;
             const obj = { emojiName: tmp6 };
-            let formatResult = intl2.format(util.t.WZGLFq, obj);
+            formatResult = intl2.format(intl4.t.WZGLFq, obj);
           } else {
-            const intl = util.intl;
-            formatResult = intl.string(util.t.CL5mWi);
+            const intl = intl4.intl;
+            formatResult = intl.string(intl4.t.CL5mWi);
           }
-          tmp3Result = jsx(Text_Text.Text, { variant: "text-sm/normal", children: formatResult });
+          tmp3Result = <Text variant="text-sm/normal">{formatResult}</Text>;
         },
       toastDurationMs: 3000
     };
-    obj3.open(obj6);
+    obj2.open(obj6);
   }
-  let obj2 = emojiName(4574);
 };

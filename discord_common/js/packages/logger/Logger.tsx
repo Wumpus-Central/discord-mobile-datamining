@@ -2,160 +2,156 @@
 
 // Module 4 (logger/Logger)
 import LoggerPIIRestrictedObjects from "LoggerPIIRestrictedObjects" /* 6 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-let global = function log() {
+function log() {
 
-};
-global = function nativeLog() {
+}
+function nativeLog() {
 
-};
-const size = fn(2);
+}
 const result = size.fileFinishedImporting("../discord_common/js/packages/logger/Logger.tsx");
 class Logger {
   constructor() {
-    str = global;
-    if (global === undefined) {
+    let str = Flux;
+    if (Flux === undefined) {
       str = "default";
     }
-    obj = Object.create(new.target.prototype);
-    closure_0 = obj;
-    obj.logDangerously = function logDangerously(syncChannels) {
+    const obj = Object.create(new.target.prototype);
+    obj.logDangerously = function logDangerously(arg0) {
       const substr = [...arguments].slice();
-      global("log", syncChannels, ...substr);
-      if (logger.nativeLoggerEnabled) {
-        if (global != null) {
-          const items = [logger.name, "log", syncChannels];
-          HermesBuiltin.arraySpread(substr, 3);
-          HermesBuiltin.apply(items, undefined);
+      log("log", arg0, ...substr);
+      if (obj.nativeLoggerEnabled) {
+        if (nativeLog != null) {
+          const items = [obj.name, "log", arg0];
+          HermesBuiltin.arraySpread(items, substr, 3);
+          HermesBuiltin.apply(nativeLog, items, undefined);
         }
       }
     };
-    obj.log = function log(syncChannels) {
+    obj.log = function log(arg0) {
       const substr = [...arguments].slice();
-      const items = [syncChannels, ...substr];
-      LoggerPIIRestrictedObjects.checkLogForPII.apply(items);
-      global("log", syncChannels, ...substr);
-      if (logger.nativeLoggerEnabled) {
-        if (global != null) {
-          const items1 = [logger.name, "log", syncChannels];
-          HermesBuiltin.arraySpread(substr, 3);
-          HermesBuiltin.apply(items1, undefined);
+      const items = [arg0, ...substr];
+      const tmp3 = LoggerPIIRestrictedObjects;
+      tmp3.checkLogForPII.apply(items);
+      log("log", arg0, ...substr);
+      if (obj.nativeLoggerEnabled) {
+        if (nativeLog != null) {
+          const items1 = [obj.name, "log", arg0];
+          HermesBuiltin.arraySpread(items1, substr, 3);
+          HermesBuiltin.apply(nativeLog, items1, undefined);
         }
       }
     };
-    obj.verboseDangerously = function verboseDangerously(syncChannels) {
+    obj.verboseDangerously = function verboseDangerously(arg0) {
       const substr = [...arguments].slice();
-      global("debug", syncChannels, ...substr);
-      if (logger.nativeLoggerEnabled) {
-        if (global != null) {
-          const items = [logger.name, "debug", syncChannels];
-          HermesBuiltin.arraySpread(substr, 3);
-          HermesBuiltin.apply(items, undefined);
+      log("debug", arg0, ...substr);
+      if (obj.nativeLoggerEnabled) {
+        if (nativeLog != null) {
+          const items = [obj.name, "debug", arg0];
+          HermesBuiltin.arraySpread(items, substr, 3);
+          HermesBuiltin.apply(nativeLog, items, undefined);
         }
       }
     };
     obj.verbose = function verbose(handleBackPress) {
       const substr = [...arguments].slice();
       const items = [handleBackPress, ...substr];
-      LoggerPIIRestrictedObjects.checkLogForPII.apply(items);
-      global("debug", handleBackPress, ...substr);
-      if (logger.nativeLoggerEnabled) {
-        if (global != null) {
-          const items1 = [logger.name, "debug", handleBackPress];
-          HermesBuiltin.arraySpread(substr, 3);
-          HermesBuiltin.apply(items1, undefined);
+      const tmp3 = LoggerPIIRestrictedObjects;
+      tmp3.checkLogForPII.apply(items);
+      log("debug", handleBackPress, ...substr);
+      if (obj.nativeLoggerEnabled) {
+        if (nativeLog != null) {
+          const items1 = [obj.name, "debug", handleBackPress];
+          HermesBuiltin.arraySpread(items1, substr, 3);
+          HermesBuiltin.apply(nativeLog, items1, undefined);
         }
       }
     };
-    obj.info = function info(syncChannels) {
+    obj.info = function info(arg0) {
       const substr = [...arguments].slice();
-      const items = [syncChannels, ...substr];
-      LoggerPIIRestrictedObjects.checkLogForPII.apply(items);
-      global("info", syncChannels, ...substr);
-      if (logger.nativeLoggerEnabled) {
-        if (global != null) {
-          const items1 = [logger.name, "info", syncChannels];
-          HermesBuiltin.arraySpread(substr, 3);
-          HermesBuiltin.apply(items1, undefined);
+      const items = [arg0, ...substr];
+      const tmp3 = LoggerPIIRestrictedObjects;
+      tmp3.checkLogForPII.apply(items);
+      log("info", arg0, ...substr);
+      if (obj.nativeLoggerEnabled) {
+        if (nativeLog != null) {
+          const items1 = [obj.name, "info", arg0];
+          HermesBuiltin.arraySpread(items1, substr, 3);
+          HermesBuiltin.apply(nativeLog, items1, undefined);
         }
       }
     };
-    obj.warn = function warn(syncChannels) {
+    obj.warn = function warn(arg0) {
       const substr = [...arguments].slice();
-      const items = [syncChannels, ...substr];
-      LoggerPIIRestrictedObjects.checkLogForPII.apply(items);
-      global("warn", syncChannels, ...substr);
-      if (logger.nativeLoggerEnabled) {
-        if (global != null) {
-          const items1 = [logger.name, "warn", syncChannels];
-          HermesBuiltin.arraySpread(substr, 3);
-          HermesBuiltin.apply(items1, undefined);
+      const items = [arg0, ...substr];
+      const tmp3 = LoggerPIIRestrictedObjects;
+      tmp3.checkLogForPII.apply(items);
+      log("warn", arg0, ...substr);
+      if (obj.nativeLoggerEnabled) {
+        if (nativeLog != null) {
+          const items1 = [obj.name, "warn", arg0];
+          HermesBuiltin.arraySpread(items1, substr, 3);
+          HermesBuiltin.apply(nativeLog, items1, undefined);
         }
       }
     };
-    obj.error = function error(syncChannels) {
+    obj.error = function error(arg0) {
       const substr = [...arguments].slice();
-      const items = [syncChannels, ...substr];
-      LoggerPIIRestrictedObjects.checkLogForPII.apply(items);
-      global("error", syncChannels, ...substr);
-      if (logger.nativeLoggerEnabled) {
-        if (global != null) {
-          const items1 = [logger.name, "error", syncChannels];
-          HermesBuiltin.arraySpread(substr, 3);
-          HermesBuiltin.apply(items1, undefined);
+      const items = [arg0, ...substr];
+      const tmp3 = LoggerPIIRestrictedObjects;
+      tmp3.checkLogForPII.apply(items);
+      log("error", arg0, ...substr);
+      if (obj.nativeLoggerEnabled) {
+        if (nativeLog != null) {
+          const items1 = [obj.name, "error", arg0];
+          HermesBuiltin.arraySpread(items1, substr, 3);
+          HermesBuiltin.apply(nativeLog, items1, undefined);
         }
       }
     };
-    obj.trace = function trace(syncChannels) {
+    obj.trace = function trace(arg0) {
       const substr = [...arguments].slice();
-      global("trace", syncChannels, ...substr);
-      if (logger.nativeLoggerEnabled) {
-        if (global != null) {
-          const items = [logger.name, "trace", syncChannels];
-          HermesBuiltin.arraySpread(substr, 3);
-          HermesBuiltin.apply(items, undefined);
+      log("trace", arg0, ...substr);
+      if (obj.nativeLoggerEnabled) {
+        if (nativeLog != null) {
+          const items = [obj.name, "trace", arg0];
+          HermesBuiltin.arraySpread(items, substr, 3);
+          HermesBuiltin.apply(nativeLog, items, undefined);
         }
       }
     };
     obj.time = function time(arg0, fn) {
       const timestamp = Date.now();
-      logger.log(arg0, Date.now() - timestamp);
-      return fn();
+      const tmp2 = fn();
+      obj.log(arg0, Date.now() - timestamp);
+      return tmp2;
     };
-    closure_0 = undefined;
-    closure_1 = obj;
-    closure_0 = closure_2(async (arg0, arg1) => {
-      closure_3 = tmp5;
-      closure_2 = tmp2;
-      closure_130_0 = closure_0;
+    let closure_0 = _asyncToGenerator(async (arg0, arg1) => {
+      let c4;
+      let c5;
+      let closure_3;
+      closure_0 = arg0;
+      const value = tmp;
       const _Date2 = Date;
-      closure_130_1 = Date.now();
+      let closure_1 = Date.now();
       await closure_1();
-      closure_130_2 = value;
       const _Date = Date;
-      closure_131_1.log(closure_130_0, Date.now() - closure_130_1 + "ms");
-      return closure_130_2;
+      closure_131_1.log(closure_0, Date.now() - closure_1 + "ms");
+      return value;
     });
     obj.timeAsync = function() {
-      const self = this;
-      const apply = closure_0.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
+      return closure_0(...arguments);
     };
     obj.fileOnly = function fileOnly(syncChannels) {
       const substr = [...arguments].slice();
-      global("file-only", syncChannels, ...substr);
-      if (logger.nativeLoggerEnabled) {
-        if (global != null) {
-          const items = [logger.name, "file-only", syncChannels];
-          HermesBuiltin.arraySpread(substr, 3);
-          HermesBuiltin.apply(items, undefined);
+      log("file-only", syncChannels, ...substr);
+      if (obj.nativeLoggerEnabled) {
+        if (nativeLog != null) {
+          const items = [obj.name, "file-only", syncChannels];
+          HermesBuiltin.arraySpread(items, substr, 3);
+          HermesBuiltin.apply(nativeLog, items, undefined);
         }
       }
     };
@@ -163,16 +159,17 @@ class Logger {
     obj.nativeLoggerEnabled = false;
     return obj;
   }
+  enableNativeLogger(nativeLoggerEnabled) {
+    this.nativeLoggerEnabled = nativeLoggerEnabled;
+  }
 }
-Logger.prototype["enableNativeLogger"] = function enableNativeLogger(nativeLoggerEnabled) {
-  this.nativeLoggerEnabled = nativeLoggerEnabled;
-};
+const prototype = Logger.prototype;
 
 export function setLogFn(arg0) {
-  global = arg0;
+  log = arg0;
 }
 export function setNativeLogFn(arg0) {
-  global = arg0;
+  nativeLog = arg0;
 }
 export const defaultLogFn = function defaultLogFn(arg0, arg1, arg2) {
   const substr = [...arguments].slice();

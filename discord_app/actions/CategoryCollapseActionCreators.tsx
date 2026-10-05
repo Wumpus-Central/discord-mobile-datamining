@@ -7,14 +7,22 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("actions/CategoryCollapseActionCreators.tsx");
 
 export const categoryCollapse = function categoryCollapse(id) {
-  DispatcherDefault.dispatch({ type: "CATEGORY_COLLAPSE", id });
+  const obj = DispatcherDefault;
+  const obj2 = { type: "CATEGORY_COLLAPSE", id };
+  obj.dispatch(obj2);
 };
 export const categoryExpand = function categoryExpand(id) {
-  DispatcherDefault.dispatch({ type: "CATEGORY_EXPAND", id });
+  const obj = DispatcherDefault;
+  const obj2 = { type: "CATEGORY_EXPAND", id };
+  obj.dispatch(obj2);
 };
 export const categoryCollapseAll = function categoryCollapseAll(guildId) {
-  DispatcherDefault.dispatch({ type: "CATEGORY_COLLAPSE_ALL", guildId });
+  const obj = DispatcherDefault;
+  const obj2 = { type: "CATEGORY_COLLAPSE_ALL", guildId };
+  obj.dispatch(obj2);
 };
 export const categoryExpandAll = function categoryExpandAll(guildId) {
-  DispatcherDefault.dispatch({ type: "CATEGORY_EXPAND_ALL", guildId });
+  const obj = DispatcherDefault;
+  const obj2 = { type: "CATEGORY_EXPAND_ALL", guildId };
+  obj.dispatch(obj2);
 };

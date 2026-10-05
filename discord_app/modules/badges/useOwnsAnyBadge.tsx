@@ -1,17 +1,24 @@
 // === Module 16976: useOwnsAnyBadge ===
 
 // Module 16976 (useOwnsAnyBadge)
+import useDisplayProfileDefault from "useDisplayProfile" /* 7857 */;
 import useBadgesDefault from "useBadges" /* 7914 */;
 import UserStore from "UserStore" /* 1377 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7863 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/badges/useOwnsAnyBadge.tsx");
+let currentUser;
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = stateFromStores(576).c(6);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let stateFromStores;
+  let tmp10;
+  let tmp11;
+  let tmp4;
+  let tmp5;
+  let tmp8;
+  const obj = stateFromStores(576);
+  const cResult = obj.c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
     const fn = function s() {
@@ -29,12 +36,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const obj = stateFromStores(576);
-  stateFromStores = stateFromStores(504).useStateFromStores(tmp4, tmp5);
+  const tmpResult = stateFromStores(504);
+  stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [BadgeDirectoryStore];
     cResult[2] = items1;
-    let tmp8 = items1;
+    tmp8 = items1;
   } else {
     tmp8 = cResult[2];
   }
@@ -54,22 +61,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     cResult[3] = stateFromStores;
     cResult[4] = fn2;
     cResult[5] = items2;
-    let tmp11 = items2;
-    let tmp10 = fn2;
+    tmp11 = items2;
+    tmp10 = fn2;
   } else {
     tmp10 = cResult[4];
     tmp11 = cResult[5];
   }
-  const tmpResult = stateFromStores(504);
-  let stateFromStores1 = stateFromStores(504).useStateFromStores(tmp8, tmp10, tmp11);
   const tmpResult2 = stateFromStores(504);
+  let stateFromStores1 = tmpResult2.useStateFromStores(tmp8, tmp10, tmp11);
+  const tmp13 = useDisplayProfileDefault(stateFromStores);
   if (stateFromStores1 == null) {
     stateFromStores1 = useBadgesDefault(tmp13).length > 0;
   }
   return stateFromStores1;
 }) : (() => {
+  let stateFromStores;
   const items = [UserStore];
-  stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
+  const obj = stateFromStores(504);
+  stateFromStores = obj.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let id;
     if (currentUser != null) {
@@ -77,10 +86,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     return id;
   });
-  const obj = stateFromStores(504);
   const items1 = [BadgeDirectoryStore];
   const items2 = [stateFromStores];
-  let stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () => {
+  const obj2 = stateFromStores(504);
+  let stateFromStores1 = obj2.useStateFromStores(items1, () => {
     let someResult = null;
     if (null != stateFromStores) {
       someResult = null;
@@ -91,9 +100,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     return someResult;
   }, items2);
-  const obj2 = stateFromStores(504);
+  const tmp3 = useDisplayProfileDefault(stateFromStores);
   if (stateFromStores1 == null) {
     stateFromStores1 = useBadgesDefault(tmp3).length > 0;
   }
   return stateFromStores1;
 });
+const result = size.fileFinishedImporting("modules/badges/useOwnsAnyBadge.tsx");
+
+export default tmp2;

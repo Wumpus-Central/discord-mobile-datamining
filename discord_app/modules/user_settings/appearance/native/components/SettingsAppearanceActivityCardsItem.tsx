@@ -1,34 +1,40 @@
 // === Module 15112: SettingsAppearanceActivityCardsItem ===
 
 // Module 15112 (SettingsAppearanceActivityCardsItem)
+import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import SettingsAppearanceActivityCardItemDefault from "SettingsAppearanceActivityCardItem" /* 15113 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceActivityCardsItem.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = animatedStyles(576).c(7);
+const jsx = Fragment.jsx;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let animatedStyles;
+  let cards;
+  let first;
+  let tmp6;
+  let tmp7;
+  const obj = animatedStyles(576);
+  const cResult = obj.c(7);
   ({ cards, animatedStyles } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
     cResult[0] = obj2;
-    let first = obj2;
+    first = obj2;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== animatedStyles) {
     const fn = function s(item) {
-      const merged = Object.assign(item.item);
-      return jsx(SettingsAppearanceActivityCardItemDefault, { animatedStyles });
+      item = item.item;
+      SettingsAppearanceActivityCardItemDefault;
+      const merged = Object.assign(item);
+      return <tmp animatedStyles={animatedStyles} />;
     };
     cResult[1] = animatedStyles;
     cResult[2] = fn;
-    let tmp6 = fn;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
@@ -37,13 +43,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       return title.title;
     };
     cResult[3] = fn2;
-    let tmp7 = fn2;
+    tmp7 = fn2;
   } else {
     tmp7 = cResult[3];
   }
   if (cResult[4] === cards) {
+    let tmp8;
     if (cResult[5] === tmp6) {
-      let tmp8 = cResult[6];
+      tmp8 = cResult[6];
     }
     return tmp8;
   }
@@ -52,33 +59,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = tmp6;
   cResult[6] = tmp9;
   tmp8 = tmp9;
-  const obj = animatedStyles(576);
 }) : ((animatedStyles) => {
   animatedStyles = animatedStyles.animatedStyles;
-  const obj = {
-    contentContainerStyle: { paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 },
-    data: animatedStyles.cards,
-    renderItem(item) {
-      const merged = Object.assign(item.item);
-      return jsx(SettingsAppearanceActivityCardItemDefault, { animatedStyles });
-    },
-    keyExtractor(title) {
-      return title.title;
-    },
-    showsHorizontalScrollIndicator: false,
-    horizontal: true
-  };
-  return jsx(animatedStyles(8371).FlashList, {
-    contentContainerStyle: { paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 },
-    data: animatedStyles.cards,
-    renderItem(item) {
-      const merged = Object.assign(item.item);
-      return jsx(SettingsAppearanceActivityCardItemDefault, { animatedStyles });
-    },
-    keyExtractor(title) {
-      return title.title;
-    },
-    showsHorizontalScrollIndicator: false,
-    horizontal: true
-  });
+  const cards = animatedStyles.cards;
+  const obj2 = { paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
+  const FlashList = animatedStyles(8371).FlashList;
+  return <FlashList contentContainerStyle={obj2} data={cards} renderItem={function renderItem(item) {
+    item = item.item;
+    SettingsAppearanceActivityCardItemDefault;
+    const merged = Object.assign(item);
+    return <tmp animatedStyles={animatedStyles} />;
+  }} keyExtractor={function keyExtractor(title) {
+    return title.title;
+  }} showsHorizontalScrollIndicator={false} horizontal />;
 });
+const result = size.fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceActivityCardsItem.tsx");
+
+export default tmp3;

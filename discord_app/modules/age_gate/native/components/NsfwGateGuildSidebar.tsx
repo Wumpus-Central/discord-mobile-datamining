@@ -1,37 +1,51 @@
 // === Module 16219: NsfwGateGuildSidebar ===
 
 // Module 16219 (NsfwGateGuildSidebar)
+import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 8801 */;
-import noop from "module_19" /* 19 */;
+import Constants2 from "Constants" /* 9423 */;
+import react from "react" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import UserStore from "UserStore" /* 1377 */;
+import Constants from "Constants" /* 1085 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const NsfwGateSource = fn(9423).NsfwGateSource;
-const Constants = fn(1085);
-({ AnalyticEvents: closure_9, HelpdeskArticles: c10, Fonts: closure_11 } = Constants);
-const jsxProd = fn(21);
-({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.PANEL_BG }, emptyStateContainer: { flex: 1 } };
-let closure_14 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.PANEL_BG };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/age_gate/native/components/NsfwGateGuildSidebar.tsx");
+let tmp10, tmp11, tmp3, tmp5, tmp6, tmp8, tmp9, trackResult;
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = guildId(currentUser[11]).c(24);
+let c10;
+let c9;
+let closure_12;
+let map1;
+let obj2;
+let unpackModuleId;
+const View = react_native.View;
+const NsfwGateSource = Constants2.NsfwGateSource;
+({ AnalyticEvents: c9, HelpdeskArticles: c10, Fonts: unpackModuleId } = Constants);
+({ jsx: closure_12, jsxs: map1 } = Fragment);
+let obj = { container: obj2, emptyStateContainer: { flex: 1 } };
+obj2 = { flex: 1, backgroundColor: nativeDefault.colors.PANEL_BG };
+let closure_14 = createStyles.createStyles(obj);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let currentUser;
+  let first;
+  let guildId;
+  let items2;
+  let style;
+  let tmp2 = currentUser;
+  let obj = guildId(currentUser[11]);
+  const cResult = obj.c(24);
   ({ style, guildId } = arg0);
   const tmp4 = closure_14();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -50,8 +64,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
   }
-  let obj = guildId(currentUser[11]);
-  const stateFromStores = guildId(currentUser[12]).useStateFromStores(first, L);
+  const tmpResult = guildId(tmp2[12]);
+  const stateFromStores = tmpResult.useStateFromStores(first, L);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     class L {
       constructor() {
@@ -74,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         return closure_6.getGuild(guildId);
       }
     }
-    const effect = noop.useEffect(N, items2);
+    const effect = react.useEffect(N, items2);
     if (null == stateFromStores) {
       class L {
         constructor() {
@@ -104,24 +118,26 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       if (tmp2) {
         tmp4 = closure_1;
         tmp5 = closure_2;
-        obj = closure_1(closure_2[13]);
-        tmp6 = AnalyticEvents;
-        obj1 = { guild_id: null, user_id: null, is_member: null, is_user_opted_in_to_age_restricted_servers: null, source: null };
-        tmp7 = guildId;
-        obj1.guild_id = guildId;
-        obj1.user_id = tmp.id;
-        tmp8 = closure_5;
-        obj1.is_member = closure_5.isMember(guildId, tmp.id);
+        tmp6 = closure_1(closure_2[13]);
+        tmp7 = AnalyticEvents;
+        obj = { guild_id: null, user_id: null, is_member: null, is_user_opted_in_to_age_restricted_servers: null, source: null };
+        tmp8 = guildId;
+        obj.guild_id = guildId;
+        obj.user_id = tmp.id;
+        tmp9 = closure_5;
+        track = tmp6.track;
+        GUILD_NSFW_GATE_VIEWED = AnalyticEvents.GUILD_NSFW_GATE_VIEWED;
+        obj.is_member = closure_5.isMember(guildId, tmp.id);
         nsfwAllowed = tmp.nsfwAllowed;
         if (nsfwAllowed) {
-          tmp9 = closure_0;
-          obj3 = closure_0(tmp5[14]);
-          nsfwAllowed = obj3.getViewNsfwGuildsOrDefault();
+          tmp10 = closure_0;
+          obj2 = closure_0(tmp5[14]);
+          nsfwAllowed = obj2.getViewNsfwGuildsOrDefault();
         }
-        obj1.is_user_opted_in_to_age_restricted_servers = nsfwAllowed;
-        tmp10 = NsfwGateSource;
-        obj1.source = NsfwGateSource.GUILD_SIDEBAR;
-        trackResult = obj.track(AnalyticEvents.GUILD_NSFW_GATE_VIEWED, obj1);
+        obj.is_user_opted_in_to_age_restricted_servers = nsfwAllowed;
+        tmp11 = NsfwGateSource;
+        obj.source = NsfwGateSource.GUILD_SIDEBAR;
+        trackResult = track(GUILD_NSFW_GATE_VIEWED, obj);
       }
       return;
     }
@@ -131,48 +147,59 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = stateFromStores;
   cResult[6] = N;
   cResult[7] = items2;
-  const tmpResult = guildId(currentUser[12]);
 }) : ((guildId) => {
+  let NQuXf0;
+  let format;
+  let intl;
+  let items2;
+  let items3;
+  let obj5;
+  let obj6;
   guildId = guildId.guildId;
   let currentUser;
+  const style = guildId.style;
   const tmp = closure_14();
+  let tmp2 = guildId;
+  let obj = guildId(currentUser[12]);
   const items = [GuildStore];
-  const stateFromStores = guildId(currentUser[12]).useStateFromStores(items, () => GuildStore.getGuild(guildId));
+  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(guildId));
   currentUser = UserStore.getCurrentUser();
   const items1 = [guildId, stateFromStores, currentUser];
-  const effect = noop.useEffect(() => {
-    let tmp2 = null != currentUser;
+  const effect = react.useEffect(() => {
+    let nsfwAllowed;
+    const tmp2 = null != currentUser && null != stateFromStores;
     if (tmp2) {
-      tmp2 = null != stateFromStores;
-    }
-    if (tmp2) {
-      const obj2 = { guild_id: guildId, user_id: currentUser.id, is_member: GuildMemberStore.isMember(guildId, currentUser.id), is_user_opted_in_to_age_restricted_servers: null, source: null };
-      let nsfwAllowed = currentUser.nsfwAllowed;
+      const obj = { guild_id: guildId, user_id: currentUser.id, is_member: GuildMemberStore.isMember(guildId, currentUser.id), is_user_opted_in_to_age_restricted_servers: nsfwAllowed, source: NsfwGateSource.GUILD_SIDEBAR };
+      const track = AnalyticsUtilsDefault.track;
+      const GUILD_NSFW_GATE_VIEWED = constants.GUILD_NSFW_GATE_VIEWED;
+      AnalyticsUtilsDefault;
+      nsfwAllowed = currentUser.nsfwAllowed;
       if (nsfwAllowed) {
-        nsfwAllowed = AgeRestrictedContentSettingsUtils.getViewNsfwGuildsOrDefault();
+        const obj2 = AgeRestrictedContentSettingsUtils;
+        nsfwAllowed = obj2.getViewNsfwGuildsOrDefault();
       }
-      obj2.is_user_opted_in_to_age_restricted_servers = nsfwAllowed;
-      obj2.source = NsfwGateSource.GUILD_SIDEBAR;
-      AnalyticsUtilsDefault.track(constants.GUILD_NSFW_GATE_VIEWED, obj2);
+      track(GUILD_NSFW_GATE_VIEWED, obj);
     }
   }, items1);
   let tmp7 = null;
   if (null != stateFromStores) {
-    let obj2 = { style: null, children: null };
-    const items2 = [tmp.container, guildId.style];
-    obj2.style = items2;
-    let obj3 = { guild: stateFromStores, showExtraButtons: false };
-    const items3 = [closure_12(stateFromStores(tmp3[15]), obj3), ];
-    const obj4 = { titleStyle: stateFromStores(tmp3[16])(constants3.DISPLAY_SEMIBOLD, undefined, 20), bodyStyle: stateFromStores(tmp3[16])(constants3.PRIMARY_NORMAL, undefined, 14), containerStyle: tmp.emptyStateContainer, title: null, body: null };
-    const intl = tmp2(tmp3[17]).intl;
-    obj4.title = intl.string(tmp2(tmp3[17]).t.bAVpRR);
+    let obj2 = { style: items2, children: items3 };
+    items2 = [tmp.container, style];
+    const obj3 = { guild: stateFromStores, showExtraButtons: false };
+    items3 = [closure_12(stateFromStores(currentUser[15]), obj3), ];
+    const obj4 = { titleStyle: stateFromStores(currentUser[16])(constants3.DISPLAY_SEMIBOLD, undefined, 20), bodyStyle: stateFromStores(currentUser[16])(constants3.PRIMARY_NORMAL, undefined, 14), containerStyle: tmp.emptyStateContainer, title: intl.string(tmp2(currentUser[17]).t.bAVpRR), body: format(NQuXf0, obj5) };
+    const RefreshEmptyState = tmp2(tmp3[19]).RefreshEmptyState;
+    intl = tmp2(tmp3[17]).intl;
     const intl2 = tmp2(tmp3[17]).intl;
-    const obj5 = { helpURL: stateFromStores(tmp3[18]).getArticleURL(constants2.NSFW_GUILD_GUIDELINES) };
-    obj4.body = intl2.format(tmp2(tmp3[17]).t.NQuXf0, obj5);
-    items3[1] = closure_12(tmp2(tmp3[19]).RefreshEmptyState, obj4);
-    obj2.children = items3;
+    format = intl2.format;
+    obj5 = { helpURL: obj6.getArticleURL(constants2.NSFW_GUILD_GUIDELINES) };
+    NQuXf0 = tmp2(tmp3[17]).t.NQuXf0;
+    obj6 = stateFromStores(currentUser[18]);
+    items3[1] = closure_12(RefreshEmptyState, obj4);
     tmp7 = closure_13(View, obj2);
-    const obj6 = stateFromStores(tmp3[18]);
   }
   return tmp7;
 });
+const result = size.fileFinishedImporting("modules/age_gate/native/components/NsfwGateGuildSidebar.tsx");
+
+export default tmp4;

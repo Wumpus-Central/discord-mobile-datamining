@@ -1,67 +1,75 @@
 // === Module 15933: JankChatPanelReporter ===
 
 // Module 15933 (JankChatPanelReporter)
+import Fragment from "Fragment" /* 21 */;
 import getJankScreenName from "getJankScreenName" /* 15934 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/jank_stats/native/JankChatPanelReporter.native.tsx");
+let dependencyMap;
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((showCreateThread) => {
-  const cResult = channelId(576).c(11);
+const jsx = Fragment.jsx;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((showCreateThread) => {
+  let channelId;
+  let maxWidth;
+  let ref;
+  let translateX;
+  let obj = channelId(576);
+  const cResult = obj.c(11);
   ({ translateX, maxWidth, channelId } = showCreateThread);
   showCreateThread = showCreateThread.showCreateThread;
   if (cResult[0] === channelId) {
+    let tmp4;
     if (cResult[1] === showCreateThread) {
-      let tmp4 = cResult[2];
+      tmp4 = cResult[2];
     }
-    dependencyMap = noop.useRef(tmp4);
+    dependencyMap = react.useRef(tmp4);
     if (cResult[3] === channelId) {
+      let tmp5;
+      let tmp6;
+      let tmp9;
       if (cResult[4] === showCreateThread) {
-        let tmp5 = cResult[5];
-        let tmp6 = cResult[6];
+        tmp5 = cResult[5];
+        tmp6 = cResult[6];
       }
-      const effect = noop.useEffect(tmp5, tmp6);
+      const effect = react.useEffect(tmp5, tmp6);
       const _Symbol = Symbol;
       class C {
         constructor() {
-          obj = { channelId, showCreateThread };
-          closure_2.current = obj;
-          return;
+          const obj = { channelId, showCreateThread };
+          ref.current = obj;
         }
       }
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function p() {
           ({ channelId, showCreateThread } = ref.current);
-          return getJankScreenName.getChatPanelScreenName(channelId, showCreateThread);
+          const obj = getJankScreenName;
+          return obj.getChatPanelScreenName(channelId, showCreateThread);
         };
         cResult[7] = fn;
-        let tmp9 = fn;
+        tmp9 = fn;
       } else {
         tmp9 = cResult[7];
       }
       if (cResult[8] === maxWidth) {
+        let tmp10;
         if (cResult[9] === translateX) {
-          let tmp10 = cResult[10];
+          tmp10 = cResult[10];
         }
         return tmp10;
       }
-      const obj2 = { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: tmp9, resolveClosedName: channelId(15934).getPanelListScreenName };
-      const tmp14 = jsx(showCreateThread(15937), { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: tmp9, resolveClosedName: channelId(15934).getPanelListScreenName });
+      showCreateThread(15937);
+      const tmp14 = <tmp13 position={translateX} openAt={0} closedAt={maxWidth} resolveOpenName={tmp9} resolveClosedName={channelId(15934).getPanelListScreenName} />;
       cResult[8] = maxWidth;
       cResult[9] = translateX;
       cResult[10] = tmp14;
       tmp10 = tmp14;
-      const tmp13 = showCreateThread(15937);
     }
     class C {
       constructor() {
-        obj = { channelId, showCreateThread };
-        closure_2.current = obj;
-        return;
+        const obj = { channelId, showCreateThread };
+        ref.current = obj;
       }
     }
     const items = [channelId, showCreateThread];
@@ -77,20 +85,27 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((showCreateThread
   cResult[1] = showCreateThread;
   cResult[2] = obj4;
   tmp4 = obj4;
-  const obj = channelId(576);
 }) : ((channelId) => {
+  let maxWidth;
+  let ref;
+  let translateX;
   channelId = channelId.channelId;
   const showCreateThread = channelId.showCreateThread;
   ({ translateX, maxWidth } = channelId);
-  dependencyMap = noop.useRef({ channelId, showCreateThread });
+  dependencyMap = react.useRef({ channelId, showCreateThread });
   const items = [channelId, showCreateThread];
-  const effect = noop.useEffect(() => {
-    closure_2.current = { channelId, showCreateThread };
+  const effect = react.useEffect(() => {
+    const obj = { channelId, showCreateThread };
+    ref.current = obj;
   }, items);
-  const callback = noop.useCallback(() => {
+  const callback = react.useCallback(() => {
     ({ channelId, showCreateThread } = ref.current);
-    return getJankScreenName.getChatPanelScreenName(channelId, showCreateThread);
+    const obj = getJankScreenName;
+    return obj.getChatPanelScreenName(channelId, showCreateThread);
   }, []);
-  const obj = { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: callback, resolveClosedName: channelId(15934).getPanelListScreenName };
-  return jsx(showCreateThread(15937), { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: callback, resolveClosedName: channelId(15934).getPanelListScreenName });
+  showCreateThread(15937);
+  return <tmp3 position={translateX} openAt={0} closedAt={maxWidth} resolveOpenName={callback} resolveClosedName={channelId(15934).getPanelListScreenName} />;
 });
+const result = size.fileFinishedImporting("modules/jank_stats/native/JankChatPanelReporter.native.tsx");
+
+export default tmp2;

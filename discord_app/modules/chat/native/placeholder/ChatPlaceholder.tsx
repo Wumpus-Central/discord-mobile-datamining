@@ -1,40 +1,50 @@
 // === Module 12304: ChatPlaceholder ===
 
 // Module 12304 (ChatPlaceholder)
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6471 */;
+import useChatBottomManagerUIStore from "useChatBottomManagerUIStore" /* 9064 */;
 import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 12305 */;
 import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight" /* 12306 */;
 import ChatPlaceholderRowDefault from "ChatPlaceholderRow" /* 12307 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
+let screenIndex;
+
+let obj2;
+let tmp14;
 const ReanimatedRexportDefault = tmp14(4612);
-require = fn;
-let closure_4 = fn(9064).useChatInputContainerHeight;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj = { placeholder: null };
-let obj3 = {};
-const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
-obj3.paddingBottom = nativeDefault.space.PX_24;
-obj3.flexDirection = "column-reverse";
-obj3.overflow = "hidden";
-obj.placeholder = obj3;
-let closure_6 = createStyles.createStyles(obj);
-let ReactCompilerGating = fn(558);
+const StyleSheet = react_native.StyleSheet;
+let closure_4 = useChatBottomManagerUIStore.useChatInputContainerHeight;
+const jsx = Fragment.jsx;
+let createStyles = createStyles_mod;
+let obj = { placeholder: obj2 };
+obj2 = { paddingBottom: nativeDefault.space.PX_24, flexDirection: "column-reverse", overflow: "hidden" };
+createStyles = createStyles.createStyles;
+const merged = Object.assign(StyleSheet.absoluteFillObject);
+let closure_6 = createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(2);
+  let first;
+  let tmp3;
+  const obj = react2;
+  const cResult = obj.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
-  noop.useRef(first);
+  let closure_0 = react.useRef(first);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function l(arg0) {
       let tmp2 = ref.current[arg0];
@@ -48,14 +58,14 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       return tmp2;
     };
     cResult[1] = fn;
-    let tmp3 = fn;
+    tmp3 = fn;
   } else {
     tmp3 = cResult[1];
   }
   return tmp3;
 }) : (() => {
-  noop.useRef([]);
-  return noop.useCallback((arg0) => {
+  let closure_0 = react.useRef([]);
+  return react.useCallback((arg0) => {
     let tmp2 = ref.current[arg0];
     if (null == tmp2) {
       const _Math = Math;
@@ -67,14 +77,16 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     return tmp2;
   }, []);
 });
-ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating_mod;
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(4);
+  let first;
+  const obj = react2;
+  const cResult = obj.c(4);
   const rect = useSafeAreaInsetsDefault();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { isKeyboardAwareOnAndroid: false, includeKeyboardHeight: true };
     cResult[0] = obj2;
-    let first = obj2;
+    first = obj2;
   } else {
     first = cResult[0];
   }
@@ -82,8 +94,9 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const diff = insets.bottom - rect.bottom;
   const sum = rect.top + insets.bottom;
   if (cResult[1] === diff) {
+    let tmp7;
     if (cResult[2] === sum) {
-      let tmp7 = cResult[3];
+      tmp7 = cResult[3];
     }
     return tmp7;
   }
@@ -97,17 +110,18 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const insets = useSafeAreaInsetsKeyboardAwareDefault({ isKeyboardAwareOnAndroid: false, includeKeyboardHeight: true }).insets;
   return { containerBottomInset: insets.bottom - rect.bottom, windowVerticalInset: rect.top + insets.bottom };
 });
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/chat/native/placeholder/ChatPlaceholder.tsx");
-
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((screenIndex) => {
+ReactCompilerGating = ReactCompilerGating_mod;
+const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((screenIndex) => {
   let diff;
   let sum1;
   let sum2;
-  const cResult = c.c(18);
+  let tmp10;
+  let tmp8;
+  const obj = react2;
+  const cResult = obj.c(18);
+  screenIndex = screenIndex.screenIndex;
   const tmp3 = closure_6();
-  const tmp4 = closure_4(screenIndex.screenIndex);
+  const tmp4 = closure_4(screenIndex);
   const height = useWindowDimensionsDefault().height;
   const tmp6 = closure_8();
   const windowVerticalInset = tmp6.windowVerticalInset;
@@ -116,7 +130,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((screen
     const obj2 = { marginBottom: sum };
     cResult[0] = sum;
     cResult[1] = obj2;
-    let tmp8 = obj2;
+    tmp8 = obj2;
   } else {
     tmp8 = cResult[1];
   }
@@ -124,7 +138,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((screen
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { visible: true, animated: true };
     cResult[2] = obj3;
-    let tmp10 = obj3;
+    tmp10 = obj3;
   } else {
     tmp10 = cResult[2];
   }
@@ -134,21 +148,23 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((screen
       if (cResult[5] === 0) {
         if (cResult[6] === 0) {
           if (cResult[7] === height) {
+            let tmp12;
             if (cResult[8] === windowVerticalInset) {
-              let tmp12 = cResult[9];
+              tmp12 = cResult[9];
             }
             if (cResult[11] === tmp8) {
               if (cResult[12] === tmp11) {
+                let tmp23;
                 if (cResult[13] === tmp3.placeholder) {
-                  let tmp23 = cResult[14];
+                  tmp23 = cResult[14];
                 }
                 if (cResult[15] === tmp12) {
+                  let tmp24;
                   if (cResult[16] === tmp23) {
-                    let tmp24 = cResult[17];
+                    tmp24 = cResult[17];
                   }
                   return tmp24;
                 }
-                const obj4 = { style: tmp23, pointerEvents: "none", children: tmp12 };
                 const tmp26 = jsx(ReanimatedRexportDefault.View, { style: tmp23, pointerEvents: "none", children: tmp12 });
                 cResult[15] = tmp12;
                 cResult[16] = tmp23;
@@ -173,7 +189,6 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((screen
   do {
     let tmp9Result = tmp9(num5);
     sum1 = num6 + getChatPlaceholderRowHeightDefault(tmp9Result);
-    let obj5 = { lines: tmp9Result };
     sum2 = num5 + 1;
     let arr = items1.push(jsx(ChatPlaceholderRowDefault, { lines: tmp9Result }, num5));
     num5 = sum2;
@@ -193,8 +208,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((screen
   let height;
   let containerBottomInset;
   closure_4 = undefined;
-  let tmp2 = closure_4(screenIndex.screenIndex);
-  closure_0 = tmp2;
+  screenIndex = screenIndex.screenIndex;
+  const tmp = closure_6();
+  let tmp2 = closure_4(screenIndex);
+  let closure_0 = tmp2;
   height = height(containerBottomInset[10])().height;
   const tmp3 = closure_8();
   containerBottomInset = tmp3.containerBottomInset;
@@ -204,7 +221,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((screen
   const tmp5 = closure_7();
   closure_4 = tmp5;
   const items1 = [height, windowVerticalInset, tmp2, tmp5];
-  const tmp = closure_6();
+  const tmp6 = height(containerBottomInset[11])({ visible: true, animated: true });
   const memo1 = windowVerticalInset.useMemo(() => {
     let diff;
     const items = [];
@@ -213,7 +230,6 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((screen
     do {
       let tmp2 = closure_4(num);
       num2 = num2 + getChatPlaceholderRowHeightDefault(tmp2);
-      let obj = { lines: tmp2 };
       let sum = num + 1;
       let arr = items.push(jsx(ChatPlaceholderRowDefault, { lines: tmp2 }, num));
       num = sum;
@@ -221,8 +237,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((screen
     } while (num2 < diff);
     return items;
   }, items1);
-  let obj = { style: null, pointerEvents: "none", children: memo1 };
-  const items2 = [tmp.placeholder, memo, height(containerBottomInset[11])({ visible: true, animated: true })];
-  obj.style = items2;
-  return jsx(height(containerBottomInset[14]).View, { style: null, pointerEvents: "none", children: memo1 });
+  const items2 = [tmp.placeholder, memo, tmp6];
+  return jsx(height(containerBottomInset[14]).View, { style: items2, pointerEvents: "none", children: memo1 });
 }));
+const result = size.fileFinishedImporting("modules/chat/native/placeholder/ChatPlaceholder.tsx");
+
+export default memoResult;

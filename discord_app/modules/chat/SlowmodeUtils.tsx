@@ -1,33 +1,33 @@
 // === Module 7172: SlowmodeUtils ===
 
 // Module 7172 (SlowmodeUtils)
+import Constants from "Constants" /* 1085 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import util from "util" /* 1126 */;
+import intl4 from "intl" /* 1126 */;
 import _modDef4461 from "module_4461" /* 4461 */;
 import PermissionStore from "PermissionStore" /* 4509 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-require = fn;
-const Permissions = fn(1085).Permissions;
-const ReactCompilerGating = fn(558);
+const Permissions = Constants.Permissions;
 function canBypassSlowmodeHelper(rateLimitPerUser, can) {
   return can.can(Permissions.BYPASS_SLOWMODE, rateLimitPerUser);
 }
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/chat/SlowmodeUtils.tsx");
-
-export { canBypassSlowmodeHelper };
-export const canBypassSlowmode = function canBypassSlowmode(channel) {
-  return PermissionStore.can(Permissions.BYPASS_SLOWMODE, channel);
-};
-export const useCanBypassSlowmode = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let closure_0;
+  let first;
+  let tmp6;
   _require = arg0;
-  const cResult = require("c").c(3);
+  const obj = require("react");
+  const cResult = obj.c(3);
+  const tmp = _require;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [PermissionStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -37,41 +37,53 @@ export const useCanBypassSlowmode = ReactCompilerGating.isReactCompilerEnabled()
     };
     cResult[1] = arg0;
     cResult[2] = fn;
-    let tmp6 = fn;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
-  const obj = require("c");
-  return require("initialize").useStateFromStores(first, tmp6);
+  const tmpResult = tmp(504);
+  return tmpResult.useStateFromStores(first, tmp6);
 }) : ((arg0) => {
+  let closure_0;
   _require = arg0;
   const items = [PermissionStore];
-  return require("initialize").useStateFromStores(items, () => PermissionStore.can(Permissions.BYPASS_SLOWMODE, closure_0));
+  const obj = require("get initialized");
+  return obj.useStateFromStores(items, () => PermissionStore.can(Permissions.BYPASS_SLOWMODE, closure_0));
 });
+const result = size.fileFinishedImporting("modules/chat/SlowmodeUtils.tsx");
+
+export { canBypassSlowmodeHelper };
+export const canBypassSlowmode = function canBypassSlowmode(channel) {
+  return PermissionStore.can(Permissions.BYPASS_SLOWMODE, channel);
+};
+export const useCanBypassSlowmode = tmp2;
 export const getSlowmodeIndicatorText = function getSlowmodeIndicatorText(stateFromStores, canBypassSlowmode) {
-  if (canBypassSlowmode) {
-    const intl2 = util.intl;
-    return intl2.string(util.t["8+NidX"]);
+  const tmp = canBypassSlowmode;
+  if (tmp) {
+    const intl2 = intl4.intl;
+    return intl2.string(intl4.t["8+NidX"]);
   } else if (stateFromStores >= DurationsDefault.Millis.HOUR) {
-    const time2 = _modDef4461.duration(stateFromStores);
+    const tmp3Result = _modDef4461;
+    const time2 = tmp3Result.duration(stateFromStores);
     const _HermesInternal3 = HermesInternal;
     const combined = "" + time2.minutes();
-    const tmp2Result = _modDef4461;
     const _HermesInternal4 = HermesInternal;
-    const combined1 = "" + time2.seconds();
     const padStartResult = combined.padStart(2, "0");
+    const combined1 = "" + time2.seconds();
     const _HermesInternal5 = HermesInternal;
-    return "" + time2.hours() + ":" + padStartResult + ":" + combined1.padStart(2, "0");
+    const padStartResult1 = combined1.padStart(2, "0");
+    return "" + time2.hours() + ":" + padStartResult + ":" + padStartResult1;
   } else if (stateFromStores > 0) {
-    const time = _modDef4461.duration(stateFromStores);
+    const tmp3Result2 = _modDef4461;
+    const time = tmp3Result2.duration(stateFromStores);
     const _HermesInternal = HermesInternal;
     const combined2 = "" + time.seconds();
-    const tmp2Result2 = _modDef4461;
     const _HermesInternal2 = HermesInternal;
-    return "" + time.minutes() + ":" + combined2.padStart(2, "0");
+    const padStartResult2 = combined2.padStart(2, "0");
+    return "" + time.minutes() + ":" + padStartResult2;
   } else {
-    const intl = util.intl;
-    return intl.string(util.t.Icu3bf);
+    const intl = intl4.intl;
+    return intl.string(intl4.t.Icu3bf);
   }
 };
 export const getSlowmodeDescription = function getSlowmodeDescription(rateLimitPerUser) {
@@ -84,24 +96,27 @@ export const getSlowmodeDescription = function getSlowmodeDescription(rateLimitP
     const rounded = Math.floor(rateLimitPerUser / DurationsDefault.Seconds.HOUR);
     const _Math3 = Math;
     const diff = rateLimitPerUser - rounded * DurationsDefault.Seconds.HOUR;
-    const rounded1 = Math.floor(diff / DurationsDefault.Seconds.MINUTE);
+    const floorResult = floor(diff / DurationsDefault.Seconds.MINUTE);
     const diff1 = rateLimitPerUser - rounded * DurationsDefault.Seconds.HOUR;
-    const diff2 = diff1 - rounded1 * DurationsDefault.Seconds.MINUTE;
-    const intl3 = util.intl;
-    const t3 = util.t;
-    const time = { hours: rounded, minutes: rounded1, seconds: diff2 };
-    return intl3.formatToPlainString(flag ? t3.oEwLez : t3["3hz51F"], time);
+    const diff2 = diff1 - floorResult * DurationsDefault.Seconds.MINUTE;
+    const intl3 = intl4.intl;
+    const formatToPlainString3 = intl3.formatToPlainString;
+    const t3 = intl4.t;
+    const time = { hours: rounded, minutes: floorResult, seconds: diff2 };
+    return formatToPlainString3(flag ? t3.oEwLez : t3["3hz51F"], time);
   } else if (rateLimitPerUser >= 60) {
     const _Math = Math;
-    const rounded2 = Math.floor(rateLimitPerUser / 60);
-    const intl2 = util.intl;
-    const t2 = util.t;
-    const time1 = { minutes: rounded2, seconds: rateLimitPerUser - 60 * rounded2 };
-    return intl2.formatToPlainString(flag ? t2.DARKYm : t2.sY3wlG, time1);
+    const rounded1 = Math.floor(rateLimitPerUser / 60);
+    const intl2 = intl4.intl;
+    const formatToPlainString2 = intl2.formatToPlainString;
+    const t2 = intl4.t;
+    const time1 = { minutes: rounded1, seconds: rateLimitPerUser - 60 * rounded1 };
+    return formatToPlainString2(flag ? t2.DARKYm : t2.sY3wlG, time1);
   } else {
-    const intl = util.intl;
-    const t = util.t;
+    const intl = intl4.intl;
+    const formatToPlainString = intl.formatToPlainString;
+    const t = intl4.t;
     const obj = { seconds: rateLimitPerUser };
-    return intl.formatToPlainString(flag ? t["9yE8Ga"] : t.IWntYg, obj);
+    return formatToPlainString(flag ? t["9yE8Ga"] : t.IWntYg, obj);
   }
 };

@@ -1,42 +1,59 @@
 // === Module 16889: ThreadsScreen ===
 
 // Module 16889 (ThreadsScreen)
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
+import Constants from "Constants" /* 1085 */;
+import ThreadConstants from "ThreadConstants" /* 1125 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6471 */;
 import navigateToThreadCreation from "navigateToThreadCreation" /* 11019 */;
 import ThreadListDefault from "ThreadList" /* 16890 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const SearchTypes = fn(1085).SearchTypes;
-let closure_7 = fn(1125).OpenThreadAnalyticsLocations;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj = { container: { flex: 1 }, screen: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
+let searchContext;
+
+let obj2;
+const View = react_native.View;
+const SearchTypes = Constants.SearchTypes;
+let closure_7 = ThreadConstants.OpenThreadAnalyticsLocations;
+const jsx = Fragment.jsx;
+let obj = { container: { flex: 1 }, screen: obj2 };
+obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 let closure_9 = createStyles.createStyles(obj);
-let ReactCompilerGating = fn(558);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = channel(576).c(16);
+  let channel;
+  let first;
+  let style;
+  let tmp7;
+  let tmp8;
+  let obj = channel(576);
+  const cResult = obj.c(16);
   ({ style, channel } = arg0);
   const tmp3 = closure_9();
-  let obj = channel(576);
-  const canStartThread = channel(6772).useCanStartThread(channel);
+  let obj2 = channel(6772);
+  const canStartThread = obj2.useCanStartThread(channel);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { includeKeyboardHeight: true };
     cResult[0] = obj3;
-    let first = obj3;
+    first = obj3;
   } else {
     first = cResult[0];
   }
+  const insets = useSafeAreaInsetsKeyboardAwareDefault(first).insets;
   if (cResult[1] !== channel) {
     const fn = function p() {
-      const result = navigateToThreadCreation.navigateToThreadCreation(channel, "Thread Browser Empty State");
+      const obj = navigateToThreadCreation;
+      const result = obj.navigateToThreadCreation(channel, "Thread Browser Empty State");
     };
     cResult[1] = channel;
     cResult[2] = fn;
-    let tmp7 = fn;
+    tmp7 = fn;
   } else {
     tmp7 = cResult[2];
   }
@@ -45,44 +62,47 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       channel = channel.getChannel(arg0);
       if (null != channel) {
         const obj2 = { source: constants.BROWSER };
-        channel(dependencyMap[13]).transitionToThread(channel, obj2);
         const obj = channel(dependencyMap[13]);
+        obj.transitionToThread(channel, obj2);
       }
     };
     cResult[3] = fn2;
-    let tmp8 = fn2;
+    tmp8 = fn2;
   } else {
     tmp8 = cResult[3];
   }
   if (cResult[4] === style) {
+    let tmp9;
+    let tmp12;
     if (cResult[5] === tmp3.container) {
-      let tmp9 = cResult[6];
+      tmp9 = cResult[6];
     }
     let tmp10;
     if (canStartThread) {
       tmp10 = tmp7;
     }
-    const sum = useSafeAreaInsetsKeyboardAwareDefault(first).insets.bottom + nativeDefault.space.PX_16;
+    const sum = insets.bottom + nativeDefault.space.PX_16;
     if (cResult[7] !== sum) {
       const obj4 = { paddingBottom: sum, paddingHorizontal: 16 };
       cResult[7] = sum;
       cResult[8] = obj4;
-      let tmp12 = obj4;
+      tmp12 = obj4;
     } else {
       tmp12 = cResult[8];
     }
     if (cResult[9] === channel) {
       if (cResult[10] === tmp10) {
+        let tmp13;
         if (cResult[11] === tmp12) {
-          let tmp13 = cResult[12];
+          tmp13 = cResult[12];
         }
         if (cResult[13] === tmp9) {
+          let tmp16;
           if (cResult[14] === tmp13) {
-            let tmp16 = cResult[15];
+            tmp16 = cResult[15];
           }
           return tmp16;
         }
-        const obj5 = { style: tmp9, children: tmp13 };
         const tmp19 = <View style={tmp9}>{tmp13}</View>;
         cResult[13] = tmp9;
         cResult[14] = tmp13;
@@ -90,7 +110,6 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         tmp16 = tmp19;
       }
     }
-    const obj6 = { channel, onCreateThreadPress: tmp10, onThreadPress: tmp8, contentContainerStyle: tmp12 };
     const tmp15 = jsx(ThreadListDefault, { channel, onCreateThreadPress: tmp10, onThreadPress: tmp8, contentContainerStyle: tmp12 });
     cResult[9] = channel;
     cResult[10] = tmp10;
@@ -103,44 +122,48 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = tmp3.container;
   cResult[6] = items;
   tmp9 = items;
-  let obj2 = channel(6772);
 }) : ((channel) => {
+  let tmp10;
   channel = channel.channel;
+  const style = channel.style;
   const tmp = closure_9();
-  const canStartThread = channel(6772).useCanStartThread(channel);
+  let obj = channel(6772);
+  const canStartThread = obj.useCanStartThread(channel);
   const items = [channel];
-  const callback = noop.useCallback(() => {
-    const result = navigateToThreadCreation.navigateToThreadCreation(channel, "Thread Browser Empty State");
+  const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets;
+  const callback = react.useCallback(() => {
+    const obj = navigateToThreadCreation;
+    const result = obj.navigateToThreadCreation(channel, "Thread Browser Empty State");
   }, items);
-  let obj2 = { style: null, children: null };
-  const items1 = [tmp.container, channel.style];
-  obj2.style = items1;
-  const callback1 = noop.useCallback((arg0) => {
+  const items1 = [tmp.container, style];
+  const callback1 = react.useCallback((arg0) => {
     channel = channel.getChannel(arg0);
     if (null != channel) {
       const obj2 = { source: constants.BROWSER };
-      channel(dependencyMap[13]).transitionToThread(channel, obj2);
       const obj = channel(dependencyMap[13]);
+      obj.transitionToThread(channel, obj2);
     }
   }, []);
-  const obj3 = { channel, onCreateThreadPress: null, onThreadPress: null, contentContainerStyle: null };
-  let tmp10;
-  let obj = channel(6772);
+  ({ channel, onCreateThreadPress: tmp10, onThreadPress: callback1, contentContainerStyle: { paddingBottom: insets.bottom + nativeDefault.space.PX_16, paddingHorizontal: 16 } });
+  tmp10 = undefined;
+  ThreadListDefault;
   if (canStartThread) {
     tmp10 = callback;
   }
-  obj3.onCreateThreadPress = tmp10;
-  obj3.onThreadPress = callback1;
-  obj3.contentContainerStyle = { paddingBottom: useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom + nativeDefault.space.PX_16, paddingHorizontal: 16 };
-  obj2.children = <tmp9 channel={channel} onCreateThreadPress={null} onThreadPress={null} contentContainerStyle={null} />;
-  return <View style={null}>{null}</View>;
+  ({ paddingBottom: insets.bottom + nativeDefault.space.PX_16, paddingHorizontal: 16 });
+  return <View style={items1}>{null}</View>;
 });
-fn(558);
-let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
-ReactCompilerGating = fn(558);
-const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
-  const cResult = channelId(576).c(5);
+const memo = react.memo;
+ReactCompilerGating = ReactCompilerGating_mod;
+const memo2 = react.memo;
+const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
+  let channelId;
+  let first;
+  let tmp8;
+  const obj = channelId(576);
+  const cResult = obj.c(5);
   searchContext = searchContext.searchContext;
+  const tmp = channelId;
   if (searchContext.type === SearchTypes.CHANNEL) {
     channelId = searchContext.channelId;
   } else {
@@ -149,7 +172,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((se
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -159,21 +182,26 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((se
     };
     cResult[1] = channelId;
     cResult[2] = fn;
-    let tmp8 = fn;
+    tmp8 = fn;
   } else {
     tmp8 = cResult[2];
   }
-  const obj = channelId(576);
-  const stateFromStores = channelId(573).useStateFromStores(first, tmp8);
-  if (null == stateFromStores) {
-    return null;
-  } else if (cResult[3] !== stateFromStores) {
-    const obj2 = { channel: stateFromStores };
-    const tmp13 = <closure_10 channel={stateFromStores} />;
-    cResult[3] = stateFromStores;
-    cResult[4] = tmp13;
+  const tmpResult = tmp(573);
+  const stateFromStores = tmpResult.useStateFromStores(first, tmp8);
+  let tmp10 = null;
+  if (null != stateFromStores) {
+    let tmp11;
+    if (cResult[3] !== stateFromStores) {
+      const tmp14 = <closure_10 channel={stateFromStores} />;
+      cResult[3] = stateFromStores;
+      cResult[4] = tmp14;
+      tmp11 = tmp14;
+    } else {
+      tmp11 = cResult[4];
+    }
+    tmp10 = tmp11;
   }
-  const tmpResult = channelId(573);
+  return tmp10;
 }) : ((searchContext) => {
   searchContext = searchContext.searchContext;
   let channelId;
@@ -183,26 +211,28 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((se
     channelId = null;
   }
   const items = [ChannelStore];
-  const stateFromStores = channelId(573).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  const obj = channelId(573);
+  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let tmp4 = null;
   if (null != stateFromStores) {
-    const obj2 = { channel: stateFromStores };
     tmp4 = <closure_10 channel={stateFromStores} />;
   }
   return tmp4;
 }));
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/ThreadsScreen.tsx");
-
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = channelId(576).c(6);
+ReactCompilerGating = ReactCompilerGating_mod;
+const memo2Result = memo2(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let channelId;
+  let first;
+  let tmp6;
   const obj = channelId(576);
+  const cResult = obj.c(6);
+  const obj2 = channelId(1491);
   const tmp = channelId;
-  channelId = channelId(1491).useRoute().params.channelId;
+  channelId = obj2.useRoute().params.channelId;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -212,36 +242,43 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     };
     cResult[1] = channelId;
     cResult[2] = fn;
-    let tmp6 = fn;
+    tmp6 = fn;
   } else {
     tmp6 = cResult[2];
   }
-  const obj2 = channelId(1491);
-  const stateFromStores = tmp(573).useStateFromStores(first, tmp6);
-  let screen = closure_9();
-  if (null == stateFromStores) {
-    return null;
-  } else {
-    if (cResult[3] === stateFromStores) {
-    }
-    const obj3 = { style: screen.screen, channel: stateFromStores };
-    const tmp11 = <closure_10 style={screen.screen} channel={stateFromStores} />;
-    cResult[3] = stateFromStores;
-    screen = screen.screen;
-    cResult[4] = screen;
-    cResult[5] = tmp11;
-  }
   const tmpResult = tmp(573);
+  const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
+  const tmp8 = closure_9();
+  let tmp9 = null;
+  if (null != stateFromStores) {
+    if (cResult[3] === stateFromStores) {
+      let tmp10;
+      if (cResult[4] === tmp8.screen) {
+        tmp10 = cResult[5];
+      }
+      tmp9 = tmp10;
+    }
+    const tmp13 = <closure_10 style={tmp8.screen} channel={stateFromStores} />;
+    cResult[3] = stateFromStores;
+    cResult[4] = tmp8.screen;
+    cResult[5] = tmp13;
+    tmp10 = tmp13;
+  }
+  return tmp9;
 }) : (() => {
-  channelId = channelId(1491).useRoute().params.channelId;
+  let channelId;
   const obj = channelId(1491);
+  channelId = obj.useRoute().params.channelId;
   const items = [ChannelStore];
-  const stateFromStores = channelId(573).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  const obj2 = channelId(573);
+  const stateFromStores = obj2.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let tmp3 = null;
   if (null != stateFromStores) {
-    const obj3 = { style: tmp2.screen, channel: stateFromStores };
     tmp3 = <closure_10 style={tmp2.screen} channel={stateFromStores} />;
   }
   return tmp3;
 }));
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/ThreadsScreen.tsx");
+
+export default memo2Result;
 export const SearchTabsThreadScreen = memoResult;

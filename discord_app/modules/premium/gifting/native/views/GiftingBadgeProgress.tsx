@@ -1,40 +1,59 @@
 // === Module 10767: GiftingBadgeProgress ===
 
 // Module 10767 (GiftingBadgeProgress)
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
+import intl2 from "intl" /* 1126 */;
 import _modDef2589 from "module_2589" /* 2589 */;
 import Text_Text from "Text/Text" /* 4886 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7863 */;
 import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10475 */;
 import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10481 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-let closure_4 = fn(7863).getSingleRequirementThreshold;
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let ReactCompilerGating = fn(558);
+let percent;
+
+let hasOwnProperty;
+let metroRequire;
+let obj2;
+let obj3;
+let obj4;
+let obj5;
+let obj6;
+const View = react_native.View;
+let closure_4 = BadgeDirectoryStore.getSingleRequirementThreshold;
+({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((percent) => {
-  const cResult = c.c(8);
+  let items;
+  let tmp4;
+  const obj = react2;
+  const cResult = obj.c(8);
+  percent = percent.percent;
   const tmp2 = closure_8();
-  const combined = "" + Math.min(Math.max(percent.percent, 0), 100) + "%";
+  const combined = "" + Math.min(Math.max(percent, 0), 100) + "%";
   if (cResult[0] !== combined) {
     const obj2 = { width: combined };
     cResult[0] = combined;
     cResult[1] = obj2;
-    let tmp4 = obj2;
+    tmp4 = obj2;
   } else {
     tmp4 = cResult[1];
   }
   if (cResult[2] === tmp2.progressBarFill) {
+    let tmp5;
     if (cResult[3] === tmp4) {
-      let tmp5 = cResult[4];
+      tmp5 = cResult[4];
     }
     if (cResult[5] === tmp2.progressBarTrack) {
+      let tmp7;
       if (cResult[6] === tmp5) {
-        let tmp7 = cResult[7];
+        tmp7 = cResult[7];
       }
       return tmp7;
     }
@@ -45,55 +64,73 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((percent) => {
     cResult[7] = tmp10;
     tmp7 = tmp10;
   }
-  const obj4 = { style: null };
-  const items = [tmp2.progressBarFill, tmp4];
-  obj4.style = items;
+  const obj4 = { style: items };
+  items = [tmp2.progressBarFill, tmp4];
   const tmp6 = hasOwnProperty(View, obj4);
   cResult[2] = tmp2.progressBarFill;
   cResult[3] = tmp4;
   cResult[4] = tmp6;
   tmp5 = tmp6;
 }) : ((percent) => {
+  let items;
+  let obj2;
+  percent = percent.percent;
   const tmp = closure_8();
-  const obj = { style: tmp.progressBarTrack, children: null };
-  const obj2 = { style: null };
-  const items = [tmp.progressBarFill, { width: "" + Math.min(Math.max(percent.percent, 0), 100) + "%" }];
-  obj2.style = items;
-  obj.children = hasOwnProperty(View, obj2);
+  const obj = { style: tmp.progressBarTrack, children: hasOwnProperty(View, obj2) };
+  obj2 = { style: items };
+  items = [tmp.progressBarFill, { width: "" + Math.min(Math.max(percent, 0), 100) + "%" }];
+  ({ width: "" + Math.min(Math.max(percent, 0), 100) + "%" });
   return hasOwnProperty(View, obj);
 });
-const createStyles = fn(4890);
-let obj3 = { container: { flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_16 }, content: null, progressBarTrack: null, progressBarFill: null, labels: null };
-let obj4 = { flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_16 };
-obj3.content = { flex: 1, paddingHorizontal: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_4 };
-let obj5 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_4 };
-obj3.progressBarTrack = { height: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, overflow: "hidden" };
-let obj6 = { height: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, overflow: "hidden" };
-obj3.progressBarFill = { height: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
-let obj7 = { height: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
-obj3.labels = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", minHeight: nativeDefault.space.PX_16 };
-let closure_8 = createStyles.createStyles(obj3);
-ReactCompilerGating = fn(558);
-let obj8 = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", minHeight: nativeDefault.space.PX_16 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/gifting/native/views/GiftingBadgeProgress.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(50);
+let createStyles = createStyles_mod;
+let obj = { container: obj2, content: obj3, progressBarTrack: obj4, progressBarFill: obj5, labels: obj6 };
+obj2 = { flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_16 };
+createStyles = createStyles.createStyles;
+obj3 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_4 };
+obj4 = { height: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, overflow: "hidden" };
+obj5 = { height: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
+obj6 = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", minHeight: nativeDefault.space.PX_16 };
+let closure_8 = createStyles(obj);
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let currentTier;
+  let iconSize;
+  let intl;
+  let items;
+  let items1;
+  let nextTier;
+  let obj9;
+  let progress;
+  let title;
+  const obj = react2;
+  const cResult = obj.c(50);
   ({ progress, currentTier, nextTier, iconSize, title } = arg0);
   let num = 24;
   if (undefined !== iconSize) {
     num = iconSize;
   }
   const tmp4 = closure_8();
-  const isGiftingBadgeComplexArtEnabled = GiftingBadgesUtils.useIsGiftingBadgeComplexArtEnabled("GiftingBadgeProgress");
+  const tmpResult = GiftingBadgesUtils;
+  const isGiftingBadgeComplexArtEnabled = tmpResult.useIsGiftingBadgeComplexArtEnabled("GiftingBadgeProgress");
   if (cResult[0] === currentTier) {
+    let tmp6;
     if (cResult[1] === isGiftingBadgeComplexArtEnabled) {
-      let tmp6 = cResult[2];
+      tmp6 = cResult[2];
     }
     if (cResult[3] === isGiftingBadgeComplexArtEnabled) {
+      let tmp8;
+      let tmp15;
+      let tmp19;
+      let tmp18;
+      let tmp17;
+      let tmp16;
+      let tmp14;
+      let tmp13;
+      let tmp12;
+      let tmp11;
+      let tmp10;
       if (cResult[4] === nextTier) {
-        let tmp8 = cResult[5];
+        tmp8 = cResult[5];
       }
       if (cResult[6] === tmp6) {
         if (cResult[7] === num) {
@@ -103,49 +140,52 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 if (cResult[11] === tmp4.content) {
                   if (cResult[12] === tmp4.labels) {
                     if (cResult[13] === title) {
-                      let tmp10 = cResult[14];
-                      let tmp11 = cResult[15];
-                      let tmp12 = cResult[16];
-                      let tmp13 = cResult[17];
-                      let tmp14 = cResult[18];
-                      let tmp15 = cResult[19];
-                      let tmp16 = cResult[20];
-                      let tmp17 = cResult[21];
-                      let tmp18 = cResult[22];
-                      let tmp19 = cResult[23];
+                      tmp10 = cResult[14];
+                      tmp11 = cResult[15];
+                      tmp12 = cResult[16];
+                      tmp13 = cResult[17];
+                      tmp14 = cResult[18];
+                      tmp15 = cResult[19];
+                      tmp16 = cResult[20];
+                      tmp17 = cResult[21];
+                      tmp18 = cResult[22];
+                      tmp19 = cResult[23];
                     }
                     if (cResult[31] === tmp10) {
                       if (cResult[32] === tmp14) {
+                        let tmp40;
                         if (cResult[33] === tmp15) {
-                          let tmp40 = cResult[34];
+                          tmp40 = cResult[34];
                         }
                         if (cResult[35] === tmp11) {
                           if (cResult[36] === tmp40) {
                             if (cResult[37] === tmp16) {
                               if (cResult[38] === tmp17) {
+                                let tmp43;
                                 if (cResult[39] === tmp18) {
-                                  let tmp43 = cResult[40];
+                                  tmp43 = cResult[40];
                                 }
                                 if (cResult[41] === num) {
+                                  let tmp46;
                                   if (cResult[42] === tmp8) {
-                                    let tmp46 = cResult[43];
+                                    tmp46 = cResult[43];
                                   }
                                   if (cResult[44] === tmp12) {
                                     if (cResult[45] === tmp13) {
                                       if (cResult[46] === tmp43) {
                                         if (cResult[47] === tmp46) {
+                                          let tmp51;
                                           if (cResult[48] === tmp19) {
-                                            let tmp51 = cResult[49];
+                                            tmp51 = cResult[49];
                                           }
                                           return tmp51;
                                         }
                                       }
                                     }
                                   }
-                                  const obj2 = { style: tmp19, children: null };
-                                  const items = [tmp13, tmp43, tmp46];
-                                  obj2.children = items;
-                                  const tmp53 = timestampProducer(tmp12, obj2);
+                                  const obj2 = { style: tmp19, children: items };
+                                  items = [tmp13, tmp43, tmp46];
+                                  const tmp53 = metroRequire(tmp12, obj2);
                                   cResult[44] = tmp12;
                                   cResult[45] = tmp13;
                                   cResult[46] = tmp43;
@@ -167,10 +207,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                             }
                           }
                         }
-                        const obj4 = { style: tmp16, children: null };
-                        const items1 = [tmp17, tmp18, tmp40];
-                        obj4.children = items1;
-                        const tmp45 = timestampProducer(tmp11, obj4);
+                        const obj4 = { style: tmp16, children: items1 };
+                        items1 = [tmp17, tmp18, tmp40];
+                        const tmp45 = metroRequire(tmp11, obj4);
                         cResult[35] = tmp11;
                         cResult[36] = tmp40;
                         cResult[37] = tmp16;
@@ -195,11 +234,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
       }
       const tmp21 = closure_4(nextTier);
-      let tmp23 = null != nextTier;
-      if (tmp23) {
-        tmp23 = tmp21 > 0;
-      }
       let num7 = 100;
+      const tmp23 = null != nextTier && tmp21 > 0;
       if (tmp23) {
         const _Math = Math;
         const _Math2 = Math;
@@ -207,8 +243,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
       const container = tmp4.container;
       if (cResult[24] === tmp6) {
+        let tmp26;
+        let tmp30;
+        let tmp33;
         if (cResult[25] === num) {
-          let tmp26 = cResult[26];
+          tmp26 = cResult[26];
         }
         const content = tmp4.content;
         if (cResult[27] !== title) {
@@ -219,7 +258,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
           cResult[27] = title;
           cResult[28] = tmp31;
-          let tmp30 = tmp31;
+          tmp30 = tmp31;
         } else {
           tmp30 = cResult[28];
         }
@@ -228,18 +267,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           const tmp36 = hasOwnProperty(closure_7, obj7);
           cResult[29] = num7;
           cResult[30] = tmp36;
-          let tmp33 = tmp36;
+          tmp33 = tmp36;
         } else {
           tmp33 = cResult[30];
         }
         const labels = tmp4.labels;
         let tmp37 = null != nextTier;
         if (tmp37) {
-          const obj8 = { variant: "text-xs/normal", color: "text-muted", children: null };
-          const intl = util.intl;
-          const obj9 = { count: progress, threshold: tmp21 };
-          obj8.children = intl.format(_modDef2589.iIpfQe, obj9);
-          tmp37 = hasOwnProperty(Text_Text.Text, obj8);
+          const obj8 = { variant: "text-xs/normal", color: "text-muted", children: intl.format(_modDef2589.iIpfQe, obj9) };
+          const Text = Text_Text.Text;
+          intl = intl2.intl;
+          obj9 = { count: progress, threshold: tmp21 };
+          tmp37 = hasOwnProperty(Text, obj8);
         }
         cResult[6] = tmp6;
         cResult[7] = num;
@@ -280,74 +319,82 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       cResult[26] = tmp27;
       tmp26 = tmp27;
     }
-    const giftingBadgeTierIconUrl = GiftingBadgesUtils.getGiftingBadgeTierIconUrl(nextTier, isGiftingBadgeComplexArtEnabled);
+    const tmpResult3 = GiftingBadgesUtils;
+    const giftingBadgeTierIconUrl = tmpResult3.getGiftingBadgeTierIconUrl(nextTier, isGiftingBadgeComplexArtEnabled);
     cResult[3] = isGiftingBadgeComplexArtEnabled;
     cResult[4] = nextTier;
     cResult[5] = giftingBadgeTierIconUrl;
     tmp8 = giftingBadgeTierIconUrl;
-    const tmpResult3 = GiftingBadgesUtils;
   }
-  const tmpResult = GiftingBadgesUtils;
-  const giftingBadgeTierIconUrl1 = GiftingBadgesUtils.getGiftingBadgeTierIconUrl(currentTier, isGiftingBadgeComplexArtEnabled);
+  const tmpResult4 = GiftingBadgesUtils;
+  const giftingBadgeTierIconUrl1 = tmpResult4.getGiftingBadgeTierIconUrl(currentTier, isGiftingBadgeComplexArtEnabled);
   cResult[0] = currentTier;
   cResult[1] = isGiftingBadgeComplexArtEnabled;
   cResult[2] = giftingBadgeTierIconUrl1;
   tmp6 = giftingBadgeTierIconUrl1;
-  const tmpResult4 = GiftingBadgesUtils;
-}) : ((title) => {
-  ({ progress, nextTier, iconSize } = title);
+}) : ((currentTier) => {
+  let iconSize;
+  let intl;
+  let items;
+  let items1;
+  let nextTier;
+  let obj10;
+  let progress;
+  let tmp17Result;
+  ({ progress, nextTier, iconSize } = currentTier);
+  currentTier = currentTier.currentTier;
   if (iconSize === undefined) {
     iconSize = 24;
   }
-  title = title.title;
+  const title = currentTier.title;
   const tmp = closure_8();
-  const isGiftingBadgeComplexArtEnabled = GiftingBadgesUtils.useIsGiftingBadgeComplexArtEnabled("GiftingBadgeProgress");
-  const giftingBadgeTierIconUrl = GiftingBadgesUtils.getGiftingBadgeTierIconUrl(title.currentTier, isGiftingBadgeComplexArtEnabled);
-  const giftingBadgeTierIconUrl1 = GiftingBadgesUtils.getGiftingBadgeTierIconUrl(nextTier, isGiftingBadgeComplexArtEnabled);
+  const obj = GiftingBadgesUtils;
+  const isGiftingBadgeComplexArtEnabled = obj.useIsGiftingBadgeComplexArtEnabled("GiftingBadgeProgress");
+  const obj2 = GiftingBadgesUtils;
+  const giftingBadgeTierIconUrl = obj2.getGiftingBadgeTierIconUrl(currentTier, isGiftingBadgeComplexArtEnabled);
+  const obj3 = GiftingBadgesUtils;
+  const giftingBadgeTierIconUrl1 = obj3.getGiftingBadgeTierIconUrl(nextTier, isGiftingBadgeComplexArtEnabled);
   const tmp7 = closure_4(nextTier);
-  let tmp8 = null != nextTier;
-  if (tmp8) {
-    tmp8 = tmp7 > 0;
-  }
   let num2 = 100;
+  const tmp8 = null != nextTier && tmp7 > 0;
   if (tmp8) {
     const _Math = Math;
     const _Math2 = Math;
     num2 = Math.min(Math.max(progress / tmp7 * 100, 0), 100);
   }
-  const obj4 = { style: tmp.container, children: null };
   let tmp12 = null != giftingBadgeTierIconUrl;
+  const obj4 = { style: tmp.container, children: items };
   if (tmp12) {
     const obj5 = { icon: giftingBadgeTierIconUrl, size: iconSize };
     tmp12 = hasOwnProperty(GiftingBadgeIconDefault, obj5);
   }
-  const items = [tmp12, , ];
-  const obj6 = { style: tmp.content, children: null };
+  items = [tmp12, , ];
   let tmp15 = null != title;
+  const obj6 = { style: tmp.content, children: items1 };
   if (tmp15) {
     const obj7 = { variant: "text-md/semibold", children: title };
     tmp15 = hasOwnProperty(Text_Text.Text, obj7);
   }
-  const items1 = [tmp15, hasOwnProperty(closure_7, { percent: num2 }), ];
-  const obj8 = { style: tmp.labels, children: null };
-  let tmp17Result = null != nextTier;
+  items1 = [tmp15, hasOwnProperty(closure_7, { percent: num2 }), ];
+  const obj8 = { style: tmp.labels, children: tmp17Result };
+  tmp17Result = null != nextTier;
   if (tmp17Result) {
-    const obj9 = { variant: "text-xs/normal", color: "text-muted", children: null };
-    const intl = util.intl;
-    const obj10 = { count: progress, threshold: tmp7 };
-    obj9.children = intl.format(_modDef2589.iIpfQe, obj10);
-    tmp17Result = hasOwnProperty(Text_Text.Text, obj9);
+    const obj9 = { variant: "text-xs/normal", color: "text-muted", children: intl.format(_modDef2589.iIpfQe, obj10) };
+    const Text = Text_Text.Text;
+    intl = intl2.intl;
+    obj10 = { count: progress, threshold: tmp7 };
+    tmp17Result = hasOwnProperty(Text, obj9);
   }
-  obj8.children = tmp17Result;
   items1[2] = hasOwnProperty(View, obj8);
-  obj6.children = items1;
-  items[1] = timestampProducer(View, obj6);
+  items[1] = metroRequire(View, obj6);
   let tmp17Result2 = null != giftingBadgeTierIconUrl1;
   if (tmp17Result2) {
     const obj11 = { icon: giftingBadgeTierIconUrl1, size: iconSize };
     tmp17Result2 = hasOwnProperty(GiftingBadgeIconDefault, obj11);
   }
   items[2] = tmp17Result2;
-  obj4.children = items;
-  return timestampProducer(View, obj4);
+  return metroRequire(View, obj4);
 });
+const result = size.fileFinishedImporting("modules/premium/gifting/native/views/GiftingBadgeProgress.tsx");
+
+export default tmp5;

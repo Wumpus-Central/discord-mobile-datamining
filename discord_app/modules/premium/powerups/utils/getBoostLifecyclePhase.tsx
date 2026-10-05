@@ -17,16 +17,14 @@ export const getBoostLifecycleInfo = function getBoostLifecycleInfo(ended, first
     }
     if (null != ended.endsAt) {
       const endsAt2 = ended.endsAt;
-      if (endsAt2.getTime() - first1 <= c2) {
-        const obj2 = { phase: "expiring", endsAt: ended.endsAt };
-      }
     }
   }
 };
 export const getBoostLifecycleTimestamp = function getBoostLifecycleTimestamp(id, boostLifecycleInfo) {
   const phase = boostLifecycleInfo.phase;
   if ("gave" === phase) {
-    return SnowflakeUtilsDefault.extractTimestamp(id.id);
+    const obj2 = SnowflakeUtilsDefault;
+    return obj2.extractTimestamp(id.id);
   } else if ("expiring" === phase) {
     const endsAt2 = boostLifecycleInfo.endsAt;
     return endsAt2.getTime() - c2;
@@ -37,7 +35,8 @@ export const getBoostLifecycleTimestamp = function getBoostLifecycleTimestamp(id
       time = endsAt.getTime();
     }
     if (time == null) {
-      time = SnowflakeUtilsDefault.extractTimestamp(id.id);
+      const obj = SnowflakeUtilsDefault;
+      time = obj.extractTimestamp(id.id);
     }
     return time;
   }

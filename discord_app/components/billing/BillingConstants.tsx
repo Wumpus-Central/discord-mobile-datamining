@@ -3,11 +3,12 @@
 // Module 4539 (BillingConstants)
 import size from "module_2" /* 2 */;
 
+let items;
 const obj = { UNKNOWN: 0, [0]: "UNKNOWN", ADMIN: 1, [1]: "ADMIN", USER: 2, [2]: "USER", FRACTIONAL_PREMIUM: 3, [3]: "FRACTIONAL_PREMIUM", DEFERRED_START: 4, [4]: "DEFERRED_START", USER_TEMPORARY_BAN: 5, [5]: "USER_TEMPORARY_BAN" };
-const obj2 = { CAN_MAKE_SUBSCRIPTION_UPDATES: null };
-const items = [, ];
+const obj2 = { CAN_MAKE_SUBSCRIPTION_UPDATES: new Set(items) };
+items = [, ];
 ({ FRACTIONAL_PREMIUM: arr[0], DEFERRED_START: arr[1] } = obj);
-obj2.CAN_MAKE_SUBSCRIPTION_UPDATES = new Set(items);
+new Set(items);
 const result = size.fileFinishedImporting("components/billing/BillingConstants.tsx");
 
 export const RefundReason = { OTHER: 0, [0]: "OTHER", GIFTING_REFUND: 1, [1]: "GIFTING_REFUND", BUYERS_REMORSE: 2, [2]: "BUYERS_REMORSE", WRONG_PURCHASE: 3, [3]: "WRONG_PURCHASE", FORGOT_TO_CANCEL: 4, [4]: "FORGOT_TO_CANCEL", SERVER_BOOSTING_COOLDOWN: 5, [5]: "SERVER_BOOSTING_COOLDOWN", USER_CONFUSION: 6, [6]: "USER_CONFUSION", WANT_TO_SWITCH_TIERS: 7, [7]: "WANT_TO_SWITCH_TIERS", DONT_NEED: 8, [8]: "DONT_NEED" };

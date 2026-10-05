@@ -1,7 +1,7 @@
 // === Module 8408: useFormattedExpirationLabel ===
 
 // Module 8408 (useFormattedExpirationLabel)
-import util from "util" /* 1126 */;
+import intl4 from "intl" /* 1126 */;
 import _modDef4461 from "module_4461" /* 4461 */;
 import size from "module_2" /* 2 */;
 
@@ -10,19 +10,20 @@ function formatExpirationLabel(expiry) {
   if (expiry > tmp2) {
     const diffResult = expiry.diff(tmp2, "days");
     if (diffResult > 1) {
-      const intl3 = util.intl;
+      const intl3 = intl4.intl;
       const obj2 = { days: diffResult };
-      return intl3.formatToPlainString(util.t.dex68a, obj2);
+      return intl3.formatToPlainString(intl4.t.dex68a, obj2);
     } else {
       const diffResult1 = expiry.diff(tmp2, "hours");
       if (diffResult1 > 1) {
-        const intl2 = util.intl;
+        const intl2 = intl4.intl;
         const obj3 = { hours: diffResult1 };
-        return intl2.formatToPlainString(util.t.BWqf0c, obj3);
+        return intl2.formatToPlainString(intl4.t.BWqf0c, obj3);
       } else {
-        const intl = util.intl;
-        const obj = { minutes: expiry.diff(tmp2, "minutes") };
-        return intl.formatToPlainString(util.t["3SLXAz"], obj);
+        const diffResult2 = expiry.diff(tmp2, "minutes");
+        const intl = intl4.intl;
+        const obj = { minutes: diffResult2 };
+        return intl.formatToPlainString(intl4.t["3SLXAz"], obj);
       }
     }
   }

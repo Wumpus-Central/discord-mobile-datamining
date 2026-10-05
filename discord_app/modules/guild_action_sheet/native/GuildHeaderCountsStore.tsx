@@ -1,81 +1,87 @@
 // === Module 13787: GuildHeaderCountsStore ===
 
 // Module 13787 (GuildHeaderCountsStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ChannelMemberStore from "ChannelMemberStore" /* 6782 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 4780 */;
 import UserStore from "UserStore" /* 1377 */;
 import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import size from "module_2" /* 2 */;
+
+let closure_6;
 
 const obj = {};
-const dependencyMap = obj;
-const PersistedStore = initializeDefault.PersistedStore;
+const metroRequire = obj;
+const PersistedStore = get_initializedDefault.PersistedStore;
 class GuildHeaderCountsStore extends PersistedStore {
+  initialize() {
+    let tmp = arg0;
+    if (arg0 === undefined) {
+      tmp = obj;
+    }
+    this.waitFor(GuildMemberCountStore, ChannelMemberStore, UserStore, ChannelStore, VoiceStateStore, ChannelMemberStore);
+    if (tmp == null) {
+      tmp = obj;
+    }
+    closure_6 = tmp;
+  }
+  getState() {
+    return closure_6;
+  }
+  getActiveChannelsCount(arg0) {
+    let activeChannelsCount;
+    if (closure_6[arg0] != null) {
+      activeChannelsCount = tmp.activeChannelsCount;
+    }
+    return activeChannelsCount;
+  }
+  getOnlineCount(arg0) {
+    let onlineCount;
+    if (closure_6[arg0] != null) {
+      onlineCount = tmp.onlineCount;
+    }
+    return onlineCount;
+  }
+  getMemberCount(arg0) {
+    let memberCount;
+    if (closure_6[arg0] != null) {
+      memberCount = tmp.memberCount;
+    }
+    return memberCount;
+  }
 }
 const prototype = GuildHeaderCountsStore.prototype;
-prototype["initialize"] = function initialize() {
-  let tmp = arg0;
-  if (arg0 === undefined) {
-    tmp = obj;
-  }
-  this.waitFor(GuildMemberCountStore, ChannelMemberStore, UserStore, ChannelStore, VoiceStateStore, ChannelMemberStore);
-  if (tmp == null) {
-    tmp = obj;
-  }
-  closure_6 = tmp;
-};
-prototype["getState"] = function getState() {
-  return closure_6;
-};
-prototype["getActiveChannelsCount"] = function getActiveChannelsCount(arg0) {
-  let activeChannelsCount;
-  if (dependencyMap[arg0] != null) {
-    activeChannelsCount = tmp.activeChannelsCount;
-  }
-  return activeChannelsCount;
-};
-prototype["getOnlineCount"] = function getOnlineCount(arg0) {
-  let onlineCount;
-  if (dependencyMap[arg0] != null) {
-    onlineCount = tmp.onlineCount;
-  }
-  return onlineCount;
-};
-prototype["getMemberCount"] = function getMemberCount(arg0) {
-  let memberCount;
-  if (dependencyMap[arg0] != null) {
-    memberCount = tmp.memberCount;
-  }
-  return memberCount;
-};
 GuildHeaderCountsStore.displayName = "GuildHeaderCountsStore";
 GuildHeaderCountsStore.persistKey = "GuildHeaderCountsStore";
-const guildHeaderCountsStore = new GuildHeaderCountsStore(DispatcherDefault, {
+const obj2 = {
   GUILD_HEADER_MEMBER_COUNT: function handleMemberCount(guildId) {
     guildId = guildId.guildId;
-    if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "marginBottom", onlineCount: "unicodeVersion", memberCount: "Reflect" };
+    const count = guildId.count;
+    if (null == closure_6[guildId]) {
+      closure_6[guildId] = { activeChannelsCount: "marginBottom", onlineCount: "unicodeVersion", memberCount: "Reflect" };
     }
-    dependencyMap[guildId].memberCount = guildId.count;
+    closure_6[guildId].memberCount = count;
   },
   GUILD_HEADER_ONLINE_COUNT: function handleOnlineCount(guildId) {
     guildId = guildId.guildId;
-    if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "marginBottom", onlineCount: "unicodeVersion", memberCount: "Reflect" };
+    const count = guildId.count;
+    if (null == closure_6[guildId]) {
+      closure_6[guildId] = { activeChannelsCount: "marginBottom", onlineCount: "unicodeVersion", memberCount: "Reflect" };
     }
-    dependencyMap[guildId].onlineCount = guildId.count;
+    closure_6[guildId].onlineCount = count;
   },
   GUILD_HEADER_ACTIVE_CHANNELS_COUNT: function handleActiveChannelsCount(guildId) {
     guildId = guildId.guildId;
-    if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "marginBottom", onlineCount: "unicodeVersion", memberCount: "Reflect" };
+    const count = guildId.count;
+    if (null == closure_6[guildId]) {
+      closure_6[guildId] = { activeChannelsCount: "marginBottom", onlineCount: "unicodeVersion", memberCount: "Reflect" };
     }
-    dependencyMap[guildId].activeChannelsCount = guildId.count;
+    closure_6[guildId].activeChannelsCount = count;
   }
-});
-const size = fn(2);
+};
+const guildHeaderCountsStore = new GuildHeaderCountsStore(DispatcherDefault, obj2);
 const result = size.fileFinishedImporting("modules/guild_action_sheet/native/GuildHeaderCountsStore.tsx");
 
 export default guildHeaderCountsStore;

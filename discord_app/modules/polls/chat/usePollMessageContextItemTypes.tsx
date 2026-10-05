@@ -1,19 +1,21 @@
 // === Module 11286: usePollMessageContextItemTypes ===
 
 // Module 11286 (usePollMessageContextItemTypes)
-import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
+import get_initialized from "get initialized" /* 504 */;
+import react from "react" /* 576 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
+let poll;
+
 const PollMessageContextItemTypes = { END_EARLY: 0, [0]: "END_EARLY" };
 let closure_4 = [];
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/polls/chat/usePollMessageContextItemTypes.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((poll) => {
-  const obj = c;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((poll) => {
+  let id;
+  let tmp4;
+  let tmp5;
+  const obj = react;
   const cResult = obj.c(6);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AuthenticationStore];
@@ -27,26 +29,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((poll) => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
+  const tmpResult = get_initialized;
+  const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
   poll = poll.poll;
   if (poll.isPoll()) {
     if (null != poll) {
       if (cResult[2] === poll.author) {
         if (cResult[3] === stateFromStores) {
+          let tmp9;
           if (cResult[4] === poll.expiry) {
-            let tmp9 = cResult[5];
+            tmp9 = cResult[5];
           }
           return tmp9;
         }
       }
       const expiry = poll.expiry;
       const _Date = Date;
-      const isSameOrBeforeResult = expiry.isSameOrBefore(Date.now());
-      let tmp11 = !isSameOrBeforeResult;
-      if (!isSameOrBeforeResult) {
-        tmp11 = poll.author.id === stateFromStores;
-      }
       const items1 = [];
+      const tmp11 = !expiry.isSameOrBefore(Date.now()) && poll.author.id === stateFromStores;
       if (tmp11) {
         items1.push(obj.END_EARLY);
       }
@@ -59,7 +59,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((poll) => {
   }
   return closure_4;
 }) : ((poll) => {
-  const obj = initialize;
+  let id;
+  const obj = get_initialized;
   const items = [AuthenticationStore];
   poll = poll.poll;
   const stateFromStores = obj.useStateFromStores(items, () => id.getId());
@@ -67,12 +68,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((poll) => {
     if (null != poll) {
       const expiry = poll.expiry;
       const _Date = Date;
-      const isSameOrBeforeResult = expiry.isSameOrBefore(Date.now());
-      let tmp5 = !isSameOrBeforeResult;
-      if (!isSameOrBeforeResult) {
-        tmp5 = poll.author.id === stateFromStores;
-      }
       const items1 = [];
+      const tmp5 = !expiry.isSameOrBefore(Date.now()) && poll.author.id === stateFromStores;
       if (tmp5) {
         items1.push(obj.END_EARLY);
       }
@@ -81,4 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((poll) => {
   }
   return closure_4;
 });
+const result = size.fileFinishedImporting("modules/polls/chat/usePollMessageContextItemTypes.tsx");
+
+export default tmp2;
 export { PollMessageContextItemTypes };

@@ -1,99 +1,106 @@
 // === Module 17503: GuildOnboardingManager ===
 
 // Module 17503 (GuildOnboardingManager)
-import doGuildOnboardingDefault from "doGuildOnboarding" /* 6590 */;
+import Constants from "Constants" /* 1085 */;
+import FlagUtils from "FlagUtils" /* 1390 */;
+import GuildMemberConstants from "GuildMemberConstants" /* 4495 */;
+import doGuildOnboarding from "doGuildOnboarding" /* 6590 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import size from "module_2" /* 2 */;
 
-let require = fn;
-const GuildFeatures = fn(1085).GuildFeatures;
-const GuildMemberFlags = fn(4495).GuildMemberFlags;
+const doGuildOnboardingDefault = doGuildOnboarding;
+let selfMember;
+
+const GuildFeatures = Constants.GuildFeatures;
+const GuildMemberFlags = GuildMemberConstants.GuildMemberFlags;
 let guildId = null;
-const channelId = null;
-const prototype = function GuildOnboardingManager() {
-  const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  require = applyArgumentsResult;
-  applyArgumentsResult.actions = {
-    CHANNEL_SELECT(arg0) {
-      return applyArgumentsResult.handleChannelSelect(arg0);
-    },
-    GUILD_DELETE(arg0) {
-      return applyArgumentsResult.handleGuildDelete(arg0);
-    },
-    POST_CONNECTION_OPEN() {
-      return applyArgumentsResult.handleConnectionOpen();
-    }
-  };
-  applyArgumentsResult.handleConnectionOpen = function handleConnectionOpen() {
-    if (guildId == null) {
-      guildId = SelectedGuildStore.getGuildId();
-    }
-    if (guildId == null) {
-      guildId = null;
-    }
-    if (null != guildId) {
-      const result = applyArgumentsResult._openOnboardingIfIncomplete(guildId);
-    }
-  };
-  applyArgumentsResult.handleChannelSelect = function handleChannelSelect(arg0) {
-    ({ guildId, channelId } = arg0);
-    let tmp = guildId === guildId;
-    if (tmp) {
-      tmp = channelId === channelId;
-    }
-    if (!tmp) {
-      if (channelId == null) {
-        channelId = null;
+let channelId = null;
+class GuildOnboardingManager extends AutomaticLifecycleManager {
+  constructor() {
+    let constants2;
+    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    require = applyArgumentsResult;
+    applyArgumentsResult.actions = {
+      CHANNEL_SELECT(arg0) {
+        return require.handleChannelSelect(arg0);
+      },
+      GUILD_DELETE(arg0) {
+        return require.handleGuildDelete(arg0);
+      },
+      POST_CONNECTION_OPEN() {
+        return require.handleConnectionOpen();
+      }
+    };
+    applyArgumentsResult.handleConnectionOpen = function handleConnectionOpen() {
+      if (guildId == null) {
+        guildId = SelectedGuildStore.getGuildId();
       }
       if (guildId == null) {
         guildId = null;
       }
       if (null != guildId) {
-        const result = applyArgumentsResult._openOnboardingIfIncomplete(guildId);
+        const result = require._openOnboardingIfIncomplete(guildId);
       }
-    }
-  };
-  applyArgumentsResult.handleGuildDelete = function handleGuildDelete(guild) {
-    const result = applyArgumentsResult(6590).discardOnboardingPromise(guild.guild.id);
-  };
-  applyArgumentsResult._openOnboardingIfIncomplete = function _openOnboardingIfIncomplete(guildId) {
-    guild = guild.getGuild(guildId);
-    if (null != guild) {
-      const features = guild.features;
-      if (features.has(constants.GUILD_ONBOARDING)) {
-        selfMember = selfMember.getSelfMember(guildId);
-        let hasFlagResult = null != selfMember;
-        if (hasFlagResult) {
-          let num = selfMember.flags;
-          if (num == null) {
-            num = 0;
-          }
-          hasFlagResult = !applyArgumentsResult(1390).hasFlag(num, constants2.COMPLETED_ONBOARDING);
-          const obj = applyArgumentsResult(1390);
+    };
+    applyArgumentsResult.handleChannelSelect = function handleChannelSelect(arg0) {
+      ({ guildId, channelId } = arg0);
+      const tmp = guildId === guildId && channelId === channelId;
+      if (!tmp) {
+        if (channelId == null) {
+          channelId = null;
         }
-        if (hasFlagResult) {
-          let num2 = selfMember.flags;
-          if (num2 == null) {
-            num2 = 0;
-          }
-          hasFlagResult = applyArgumentsResult(1390).hasFlag(num2, constants2.STARTED_ONBOARDING);
-          const obj2 = applyArgumentsResult(1390);
+        if (guildId == null) {
+          guildId = null;
         }
-        if (hasFlagResult) {
-          const obj3 = { guildId };
-          doGuildOnboardingDefault(obj3);
+        if (null != guildId) {
+          const result = require._openOnboardingIfIncomplete(guildId);
         }
       }
-    }
-  };
-  return applyArgumentsResult;
-}.prototype;
-class prototype extends tmp2 {
+    };
+    applyArgumentsResult.handleGuildDelete = function handleGuildDelete(guild) {
+      guild = guild.guild;
+      const obj = doGuildOnboarding;
+      const result = obj.discardOnboardingPromise(guild.id);
+    };
+    applyArgumentsResult._openOnboardingIfIncomplete = function _openOnboardingIfIncomplete(guildId) {
+      guild = guild.getGuild(guildId);
+      if (null != guild) {
+        const features = guild.features;
+        if (features.has(constants.GUILD_ONBOARDING)) {
+          selfMember = selfMember.getSelfMember(guildId);
+          let hasFlag2Result = null != selfMember;
+          if (hasFlag2Result) {
+            let num = selfMember.flags;
+            const hasFlag = FlagUtils.hasFlag;
+            FlagUtils;
+            if (num == null) {
+              num = 0;
+            }
+            hasFlag2Result = !hasFlag(num, constants2.COMPLETED_ONBOARDING);
+          }
+          if (hasFlag2Result) {
+            let num2 = selfMember.flags;
+            const hasFlag2 = FlagUtils.hasFlag;
+            FlagUtils;
+            if (num2 == null) {
+              num2 = 0;
+            }
+            hasFlag2Result = hasFlag2(num2, constants2.STARTED_ONBOARDING);
+          }
+          if (hasFlag2Result) {
+            const obj = { guildId };
+            doGuildOnboardingDefault(obj);
+          }
+        }
+      }
+    };
+    return applyArgumentsResult;
+  }
 }
-const prototype1 = new prototype();
-const size = fn(2);
+const guildOnboardingManager = new GuildOnboardingManager();
 let result = size.fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingManager.tsx");
 
-export default prototype1;
+export default guildOnboardingManager;

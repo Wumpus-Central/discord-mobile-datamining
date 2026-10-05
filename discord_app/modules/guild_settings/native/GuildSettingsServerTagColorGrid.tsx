@@ -1,33 +1,49 @@
 // === Module 17765: GuildSettingsServerTagColorGrid ===
 
 // Module 17765 (GuildSettingsServerTagColorGrid)
+import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import GuildTagConstants from "GuildTagConstants" /* 7603 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size_mod from "module_2" /* 2 */;
 
-const require = fn;
-const View = fn(17).View;
-const GuildTagConstants = fn(7603);
+let badge;
+
+let closure_4;
+let hasOwnProperty;
+let metroImportAll;
+let metroImportDefault;
+let metroRequire;
+let rect;
+const View = react_native.View;
 ({ GUILD_TAG_BADGE_PALETTE_PRESETS: closure_4, GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: hasOwnProperty, GuildTagBadgeSize: metroRequire } = GuildTagConstants);
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4890);
-let obj2 = { grid: { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 }, defaultIcon: null };
-const rect = { position: "absolute", right: nativeDefault.space.PX_4, bottom: nativeDefault.space.PX_4 };
-obj2.defaultIcon = rect;
-let closure_9 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagColorGrid.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
-  const cResult = badge(secondaryColor[7]).c(41);
+({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
+const PX_8 = nativeDefault.space.PX_8;
+let obj = { grid: { flexDirection: "row", flexWrap: "wrap", gap: PX_8 }, defaultIcon: rect };
+rect = { position: "absolute", right: nativeDefault.space.PX_4, bottom: nativeDefault.space.PX_4 };
+let closure_9 = createStyles.createStyles(obj);
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
+  let cellSize;
+  let intl2;
+  let items;
+  let onPressEyedropper;
+  let secondary;
+  let secondaryColor;
+  let tmp = badge;
+  let tmp2 = secondaryColor;
+  let obj = badge(secondaryColor[7]);
+  const cResult = obj.c(41);
   badge = badge.badge;
   const primaryColor = badge.primaryColor;
   secondaryColor = badge.secondaryColor;
   const onSelectColor = badge.onSelectColor;
   ({ onPressEyedropper, cellSize } = badge);
-  const tmp4 = closure_9();
-  dependencyMap = tmp5;
+  let tmp4 = closure_9();
+  let tmp5 = closure_5[badge] >= 2;
+  closure_5 = tmp5;
   let tmp6 = null == primaryColor;
   if (tmp6) {
     let tmp7 = !tmp5;
@@ -36,170 +52,180 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
     }
     tmp6 = tmp7;
   }
-  if (cResult[0] === dependencyMap[badge] >= 2) {
+  if (cResult[0] === tmp5) {
     if (cResult[1] === tmp6) {
       if (cResult[2] === primaryColor) {
+        let formatToPlainStringResult;
         if (cResult[5] === tmp5) {
           if (cResult[6] === primaryColor) {
-            if (cResult[7] === secondaryColor) {
-              const _Symbol = Symbol;
-              if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-                let obj2 = { variant: "text-md/medium", color: "text-subtle", accessibilityRole: "header", children: null };
-                const intl2 = tmp(tmp2[8]).intl;
-                obj2.children = intl2.string(tmp(tmp2[8]).t["Fg/TNW"]);
-                const tmp16 = closure_7(tmp(tmp2[9]).Text, obj2);
-                cResult[9] = tmp16;
-              }
-              if (cResult[10] === badge) {
-                if (cResult[11] === cellSize) {
-                  if (cResult[12] === tmp5) {
-                    if (cResult[13] === onSelectColor) {
-                      if (cResult[14] === primaryColor) {
-                        const _Symbol2 = Symbol;
-                        if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-                          const intl3 = tmp(tmp2[8]).intl;
-                          const stringResult = intl3.string(tmp(tmp2[8]).t.S6N0gC);
-                          cResult[17] = stringResult;
-                          let tmp20 = stringResult;
-                        } else {
-                          tmp20 = cResult[17];
-                        }
-                        if (cResult[18] !== onSelectColor) {
-                          class D {
-                            constructor() {
-                              return onSelectColor(null, null);
-                            }
-                          }
-                          cResult[18] = onSelectColor;
-                          cResult[19] = D;
-                        } else {
-                          class D {
-                            constructor() {
-                              return onSelectColor(null, null);
-                            }
-                          }
-                        }
-                        if (cResult[20] !== badge) {
-                          class D {
-                            constructor() {
-                              return onSelectColor(null, null);
-                            }
-                          }
-                          let size = { badge, width: null, height: null };
-                          ({ SIZE_32: obj5.width, SIZE_32: obj5.height } = closure_6);
-                          const tmp25 = closure_7(tmp(tmp2[12]).GuildBadge, size);
-                          cResult[20] = badge;
-                          cResult[21] = tmp25;
-                        } else {
-                          class D {
-                            constructor() {
-                              return onSelectColor(null, null);
-                            }
-                          }
-                        }
-                        if (cResult[22] !== tmp4.defaultIcon) {
-                          class D {
-                            constructor() {
-                              return onSelectColor(null, null);
-                            }
-                          }
-                          const obj3 = { size: "xs", color: primaryColor(tmp2[4]).colors.ICON_DEFAULT, style: tmp4.defaultIcon };
-                          const tmp28 = closure_7(tmp(tmp2[13]).RefreshIcon, obj3);
-                          cResult[22] = tmp4.defaultIcon;
-                          cResult[23] = tmp28;
-                        } else {
-                          class D {
-                            constructor() {
-                              return onSelectColor(null, null);
-                            }
-                          }
-                        }
-                        if (cResult[24] === cellSize) {
-                          class D {
-                            constructor() {
-                              return onSelectColor(null, null);
-                            }
-                          }
-                        }
-                        const obj4 = { size: cellSize, selected: tmp6, accessibilityLabel: tmp20, onPress: D, children: null };
-                        const items = [tmp23, tmp26];
-                        obj4.children = items;
-                        const tmp32 = closure_8(primaryColor(tmp2[10]), obj4);
-                        cResult[24] = cellSize;
-                        cResult[25] = tmp6;
-                        cResult[26] = D;
-                        cResult[27] = tmp23;
-                        cResult[28] = tmp26;
-                        cResult[29] = tmp32;
+            const _Symbol = Symbol;
+            if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+              let obj2 = { variant: "text-md/medium", color: "text-subtle", accessibilityRole: "header", children: intl2.string(tmp(tmp2[8]).t["Fg/TNW"]) };
+              const Text = tmp(tmp2[9]).Text;
+              intl2 = tmp(tmp2[8]).intl;
+              cResult[9] = closure_7(Text, obj2);
+              const tmp16 = closure_7(Text, obj2);
+            }
+            if (cResult[10] === badge) {
+              if (cResult[11] === cellSize) {
+                if (cResult[12] === tmp5) {
+                  if (cResult[13] === onSelectColor) {
+                    if (cResult[14] === primaryColor) {
+                      let tmp20;
+                      const _Symbol2 = Symbol;
+                      if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
+                        const intl3 = tmp(tmp2[8]).intl;
+                        const stringResult = intl3.string(tmp(tmp2[8]).t.S6N0gC);
+                        cResult[17] = stringResult;
+                        tmp20 = stringResult;
+                      } else {
+                        tmp20 = cResult[17];
                       }
+                      if (cResult[18] !== onSelectColor) {
+                        class D {
+                          constructor() {
+                            return onSelectColor(null, null);
+                          }
+                        }
+                        cResult[18] = onSelectColor;
+                        cResult[19] = D;
+                      } else {
+                        class D {
+                          constructor() {
+                            return onSelectColor(null, null);
+                          }
+                        }
+                      }
+                      if (cResult[20] !== badge) {
+                        class D {
+                          constructor() {
+                            return onSelectColor(null, null);
+                          }
+                        }
+                        size = { badge, width: null, height: null };
+                        ({ SIZE_32: obj5.width, SIZE_32: obj5.height } = closure_6);
+                        cResult[20] = badge;
+                        cResult[21] = closure_7(tmp(tmp2[12]).GuildBadge, size);
+                        const tmp25 = closure_7(tmp(tmp2[12]).GuildBadge, size);
+                      } else {
+                        class D {
+                          constructor() {
+                            return onSelectColor(null, null);
+                          }
+                        }
+                      }
+                      if (cResult[22] !== tmp4.defaultIcon) {
+                        class D {
+                          constructor() {
+                            return onSelectColor(null, null);
+                          }
+                        }
+                        const obj3 = { size: "xs", color: primaryColor(tmp2[4]).colors.ICON_DEFAULT, style: tmp4.defaultIcon };
+                        const RefreshIcon = tmp(tmp2[13]).RefreshIcon;
+                        cResult[22] = tmp4.defaultIcon;
+                        cResult[23] = closure_7(RefreshIcon, obj3);
+                        const tmp28 = closure_7(RefreshIcon, obj3);
+                      } else {
+                        class D {
+                          constructor() {
+                            return onSelectColor(null, null);
+                          }
+                        }
+                      }
+                      if (cResult[24] === cellSize) {
+                        class D {
+                          constructor() {
+                            return onSelectColor(null, null);
+                          }
+                        }
+                      }
+                      const obj4 = { size: cellSize, selected: tmp6, accessibilityLabel: tmp20, onPress: D, children: items };
+                      items = [tmp23, tmp26];
+                      cResult[24] = cellSize;
+                      cResult[25] = tmp6;
+                      cResult[26] = D;
+                      cResult[27] = tmp23;
+                      cResult[28] = tmp26;
+                      cResult[29] = closure_8(primaryColor(tmp2[10]), obj4);
+                      const tmp32 = closure_8(primaryColor(tmp2[10]), obj4);
                     }
                   }
                 }
               }
-              const mapped = cellSize.map((primary) => {
-                badge = primary;
-                const obj = { size: cellSize, selected: null, accessibilityLabel: null, onPress: null, children: null };
-                let tmp5 = primary.primary === primaryColor;
-                if (tmp5) {
-                  let tmp7 = !closure_5;
-                  if (closure_5) {
-                    tmp7 = primary.secondary === secondaryColor;
-                  }
-                  tmp5 = tmp7;
-                }
-                obj.selected = tmp5;
-                if (closure_5) {
-                  let guildTagPalettePresetColorLabel = primaryColor(secondaryColor[11])(primary.primary, primary.secondary);
-                } else {
-                  guildTagPalettePresetColorLabel = badge(secondaryColor[11]).getGuildTagPalettePresetColorLabel(primary.primary);
-                  const obj2 = badge(secondaryColor[11]);
-                }
-                obj.accessibilityLabel = guildTagPalettePresetColorLabel;
-                obj.onPress = function onPress() {
+            }
+            const mapped = cellSize.map((primary) => {
+              let GuildBadge;
+              let guildTagPalettePresetColorLabel;
+              let secondary;
+              let tmp5;
+              badge = primary;
+              const obj = {
+                size: cellSize,
+                selected: tmp5,
+                accessibilityLabel: guildTagPalettePresetColorLabel,
+                onPress() {
                   let secondary = null;
+                  primary = primary.primary;
                   if (closure_5) {
                     secondary = primary.secondary;
                   }
-                  return onSelectColor(primary.primary, secondary);
-                };
-                const size = { badge, width: closure_1_6.SIZE_32, height: closure_1_6.SIZE_32, primaryTintColor: primary.primary, secondaryTintColor: null };
-                let secondary;
+                  return onSelectColor(primary, secondary);
+                },
+                children: closure_1_7(GuildBadge, size)
+              };
+              tmp5 = primary.primary === primaryColor;
+              const tmp4 = primaryColor(secondaryColor[10]);
+              if (tmp5) {
+                let tmp7 = !closure_5;
                 if (closure_5) {
-                  secondary = primary.secondary;
+                  tmp7 = primary.secondary === secondaryColor;
                 }
-                size.secondaryTintColor = secondary;
-                obj.children = closure_1_7(badge(secondaryColor[12]).GuildBadge, size);
-                return closure_1_7(primaryColor(secondaryColor[10]), obj, "" + primary.primary + primary.secondary);
-              });
-              cResult[10] = badge;
-              cResult[11] = cellSize;
-              cResult[12] = tmp5;
-              cResult[13] = onSelectColor;
-              cResult[14] = primaryColor;
-              cResult[15] = secondaryColor;
-              cResult[16] = mapped;
-            }
+                tmp5 = tmp7;
+              }
+              if (closure_5) {
+                guildTagPalettePresetColorLabel = primaryColor(secondaryColor[11])(primary.primary, primary.secondary);
+              } else {
+                const obj2 = badge(secondaryColor[11]);
+                guildTagPalettePresetColorLabel = obj2.getGuildTagPalettePresetColorLabel(primary.primary);
+              }
+              size = { badge, width: closure_1_6.SIZE_32, height: closure_1_6.SIZE_32, primaryTintColor: primary.primary, secondaryTintColor: secondary };
+              secondary = undefined;
+              GuildBadge = badge(secondaryColor[12]).GuildBadge;
+              if (closure_5) {
+                secondary = primary.secondary;
+              }
+              return closure_1_7(tmp4, obj, "" + primary.primary + primary.secondary);
+            });
+            cResult[10] = badge;
+            cResult[11] = cellSize;
+            cResult[12] = tmp5;
+            cResult[13] = onSelectColor;
+            cResult[14] = primaryColor;
+            cResult[15] = secondaryColor;
+            cResult[16] = mapped;
           }
         }
         const intl = tmp(tmp2[8]).intl;
         const formatToPlainString = intl.formatToPlainString;
-        let t = tmp(tmp2[8]).t;
+        const t = tmp(tmp2[8]).t;
         if (tmp5) {
+          let primary2;
           class D {
             constructor() {
               return onSelectColor(null, null);
             }
           }
+          const hr4D2X = t.hr4D2X;
           if (primaryColor == null) {
             class D {
               constructor() {
                 return onSelectColor(null, null);
               }
             }
-            const primary2 = cellSize[0].primary;
+            primary2 = cellSize[0].primary;
           }
-          t = { primaryColor: primary2, secondaryColor: null };
-          let secondary = secondaryColor;
+          const obj6 = { primaryColor: primary2, secondaryColor: secondary };
+          secondary = secondaryColor;
           if (secondaryColor == null) {
             class D {
               constructor() {
@@ -208,24 +234,25 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
             }
             secondary = cellSize[0].secondary;
           }
-          t.secondaryColor = secondary;
-          let formatToPlainStringResult = formatToPlainString(t.hr4D2X, t);
+          formatToPlainStringResult = formatToPlainString(hr4D2X, obj6);
         } else {
+          let primary;
           class D {
             constructor() {
               return onSelectColor(null, null);
             }
           }
+          const v7BFCRR = t["7BFCRR"];
           if (primaryColor == null) {
             class D {
               constructor() {
                 return onSelectColor(null, null);
               }
             }
-            const primary = cellSize[0].primary;
+            primary = cellSize[0].primary;
           }
-          const obj6 = { color: primary };
-          formatToPlainStringResult = formatToPlainString(t["7BFCRR"], obj6);
+          const obj7 = { color: primary };
+          formatToPlainStringResult = formatToPlainString(v7BFCRR, obj7);
         }
         cResult[5] = tmp5;
         cResult[6] = primaryColor;
@@ -235,7 +262,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
     }
   }
   let everyResult = !tmp6;
-  if (!tmp6) {
+  if (everyResult) {
     class D {
       constructor() {
         return onSelectColor(null, null);
@@ -244,28 +271,38 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
     everyResult = cellSize.every((primary) => {
       let tmp = primary.primary !== primaryColor;
       if (!tmp) {
-        let tmp2 = closure_5;
-        if (closure_5) {
-          tmp2 = primary.secondary !== secondaryColor;
-        }
-        tmp = tmp2;
+        tmp = closure_5 && primary.secondary !== secondaryColor;
+        const tmp2 = closure_5 && primary.secondary !== secondaryColor;
       }
       return tmp;
     });
   }
-  cResult[0] = dependencyMap[badge] >= 2;
+  cResult[0] = tmp5;
   cResult[1] = tmp6;
   cResult[2] = primaryColor;
   cResult[3] = secondaryColor;
   cResult[4] = everyResult;
-  let obj = badge(secondaryColor[7]);
 }) : ((badge) => {
+  let EyeDropperIcon;
+  let cellSize;
+  let formatToPlainStringResult;
+  let intl2;
+  let intl3;
+  let items;
+  let items1;
+  let items2;
+  let obj9;
+  let tmp12;
+  let tmp13;
   badge = badge.badge;
   let primary = badge.primaryColor;
   let secondary = badge.secondaryColor;
   ({ onSelectColor: View, cellSize } = badge);
+  let closure_5;
+  const onPressEyedropper = badge.onPressEyedropper;
   let tmp = closure_9();
-  dependencyMap = tmp2;
+  let tmp2 = closure_5[badge] >= 2;
+  closure_5 = tmp2;
   let tmp3 = null == primary;
   if (tmp3) {
     let tmp4 = !tmp2;
@@ -274,56 +311,70 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
     }
     tmp3 = tmp4;
   }
-  let everyResult = !tmp3;
-  if (!tmp3) {
-    everyResult = cellSize.every((primary) => {
-      let tmp = primary.primary !== primary;
-      if (!tmp) {
-        let tmp2 = closure_5;
-        if (closure_5) {
-          tmp2 = primary.secondary !== secondary;
-        }
-        tmp = tmp2;
-      }
-      return tmp;
-    });
-  }
+  let tmp7 = badge;
+  const everyResult = !tmp3 && cellSize.every((primary) => {
+    let tmp = primary.primary !== primary;
+    if (!tmp) {
+      tmp = closure_5 && primary.secondary !== secondary;
+      const tmp2 = closure_5 && primary.secondary !== secondary;
+    }
+    return tmp;
+  });
   const intl = badge(secondary[8]).intl;
   const formatToPlainString = intl.formatToPlainString;
   const t = badge(secondary[8]).t;
-  if (dependencyMap[badge] >= 2) {
+  if (tmp2) {
+    const hr4D2X = t.hr4D2X;
     if (primary == null) {
       primary = cellSize[0].primary;
     }
-    let obj2 = { primaryColor: primary, secondaryColor: null };
+    let obj2 = { primaryColor: primary, secondaryColor: secondary };
     if (secondary == null) {
       secondary = cellSize[0].secondary;
     }
-    obj2.secondaryColor = secondary;
-    let formatToPlainStringResult = formatToPlainString(t.hr4D2X, obj2);
-    let tmp11 = tmp8;
-    let tmp12 = tmp7;
+    formatToPlainStringResult = formatToPlainString(hr4D2X, obj2);
+    tmp12 = tmp8;
+    tmp13 = tmp7;
   } else {
     let primary2 = primary;
+    const v7BFCRR = t["7BFCRR"];
     if (primary == null) {
       primary2 = cellSize[0].primary;
     }
     let obj = { color: primary2 };
-    formatToPlainStringResult = formatToPlainString(t["7BFCRR"], obj);
-    tmp11 = tmp8;
-    tmp12 = tmp7;
+    formatToPlainStringResult = formatToPlainString(v7BFCRR, obj);
+    tmp12 = tmp8;
+    tmp13 = tmp7;
   }
-  const obj3 = { spacing: primary(tmp11[4]).space.PX_8, children: null };
-  const obj4 = { variant: "text-md/medium", color: "text-subtle", accessibilityRole: "header", children: null };
-  const intl2 = tmp12(tmp11[8]).intl;
-  obj4.children = intl2.string(tmp12(tmp11[8]).t["Fg/TNW"]);
-  const items = [closure_7(tmp12(tmp11[9]).Text, obj4), ];
-  const obj5 = { accessibilityRole: "radiogroup", style: tmp.grid, children: null };
-  const items1 = [
+  const obj3 = { spacing: primary(tmp12[4]).space.PX_8, children: items };
+  const Stack = tmp13(tmp12[15]).Stack;
+  const obj4 = { variant: "text-md/medium", color: "text-subtle", accessibilityRole: "header", children: intl2.string(tmp13(tmp12[8]).t["Fg/TNW"]) };
+  const Text = tmp13(tmp12[9]).Text;
+  intl2 = tmp13(tmp12[8]).intl;
+  items = [closure_7(Text, obj4), ];
+  const obj5 = { accessibilityRole: "radiogroup", style: tmp.grid, children: items1 };
+  items1 = [
     cellSize.map((primary) => {
+      let GuildBadge;
+      let guildTagPalettePresetColorLabel;
+      let tmp5;
       badge = primary;
-      const obj = { size: cellSize, selected: null, accessibilityLabel: null, onPress: null, children: null };
-      let tmp5 = primary.primary === primary;
+      const obj = {
+        size: cellSize,
+        selected: tmp5,
+        accessibilityLabel: guildTagPalettePresetColorLabel,
+        onPress() {
+          secondary = null;
+          primary = primary.primary;
+          if (closure_5) {
+            secondary = primary.secondary;
+          }
+          return View(primary, secondary);
+        },
+        children: closure_1_7(GuildBadge, size)
+      };
+      tmp5 = primary.primary === primary;
+      const tmp4 = primary(secondary[10]);
       if (tmp5) {
         let tmp7 = !closure_5;
         if (closure_5) {
@@ -331,52 +382,49 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
         }
         tmp5 = tmp7;
       }
-      obj.selected = tmp5;
       if (closure_5) {
-        let guildTagPalettePresetColorLabel = primary(tmp3[11])(primary.primary, primary.secondary);
+        guildTagPalettePresetColorLabel = primary(tmp3[11])(primary.primary, primary.secondary);
       } else {
-        guildTagPalettePresetColorLabel = badge(tmp3[11]).getGuildTagPalettePresetColorLabel(primary.primary);
-        const obj2 = badge(tmp3[11]);
+        const obj2 = badge(secondary[11]);
+        guildTagPalettePresetColorLabel = obj2.getGuildTagPalettePresetColorLabel(primary.primary);
       }
-      obj.accessibilityLabel = guildTagPalettePresetColorLabel;
-      obj.onPress = function onPress() {
-        secondary = null;
-        if (closure_5) {
-          secondary = primary.secondary;
-        }
-        return View(primary.primary, secondary);
-      };
-      const size = { badge, width: closure_1_6.SIZE_32, height: closure_1_6.SIZE_32, primaryTintColor: primary.primary, secondaryTintColor: null };
+      size = { badge, width: closure_1_6.SIZE_32, height: closure_1_6.SIZE_32, primaryTintColor: primary.primary, secondaryTintColor: secondary };
       secondary = undefined;
+      GuildBadge = badge(tmp3[12]).GuildBadge;
       if (closure_5) {
         secondary = primary.secondary;
       }
-      size.secondaryTintColor = secondary;
-      obj.children = closure_1_7(badge(secondary[12]).GuildBadge, size);
-      return closure_1_7(primary(secondary[10]), obj, "" + primary.primary + primary.secondary);
+      return closure_1_7(tmp4, obj, "" + primary.primary + primary.secondary);
     }),
   ,
 
   ];
-  const obj6 = { size: cellSize, selected: tmp3, accessibilityLabel: null, onPress: null, children: null };
-  const intl3 = tmp12(tmp11[8]).intl;
-  obj6.accessibilityLabel = intl3.string(tmp12(tmp11[8]).t.S6N0gC);
-  obj6.onPress = function onPress() {
-    return View(null, null);
+  const obj6 = {
+    size: cellSize,
+    selected: tmp3,
+    accessibilityLabel: intl3.string(tmp13(tmp12[8]).t.S6N0gC),
+    onPress() {
+      return View(null, null);
+    },
+    children: items2
   };
-  let size = { badge, width: closure_6.SIZE_32, height: closure_6.SIZE_32 };
-  const items2 = [closure_7(tmp12(tmp11[12]).GuildBadge, size), ];
-  const tmp15 = primary(tmp11[10]);
-  items2[1] = closure_7(tmp12(tmp11[13]).RefreshIcon, { size: "xs", color: primary(tmp11[4]).colors.ICON_DEFAULT, style: tmp.defaultIcon });
-  obj6.children = items2;
-  items1[1] = closure_8(tmp15, obj6);
-  const obj8 = { size: cellSize, selected: everyResult, accessibilityRole: "button", accessibilityLabel: formatToPlainStringResult, onPress: badge.onPressEyedropper, children: null };
-  const obj7 = { size: "xs", color: primary(tmp11[4]).colors.ICON_DEFAULT, style: tmp.defaultIcon };
-  const tmp16 = primary(tmp11[10]);
-  obj8.children = closure_7(tmp12(tmp11[14]).EyeDropperIcon, { size: "sm", color: primary(tmp11[4]).colors.ICON_DEFAULT });
-  items1[2] = closure_7(tmp16, obj8);
-  obj5.children = items1;
+  const tmp16 = primary(tmp12[10]);
+  intl3 = tmp13(tmp12[8]).intl;
+  size = { badge, width: closure_6.SIZE_32, height: closure_6.SIZE_32 };
+  items2 = [closure_7(tmp13(tmp12[12]).GuildBadge, size), ];
+  const obj7 = { size: "xs", color: primary(tmp12[4]).colors.ICON_DEFAULT, style: tmp.defaultIcon };
+  const RefreshIcon = tmp13(tmp12[13]).RefreshIcon;
+  items2[1] = closure_7(RefreshIcon, obj7);
+  items1[1] = closure_8(tmp16, obj6);
+  const obj8 = { size: cellSize, selected: everyResult, accessibilityRole: "button", accessibilityLabel: formatToPlainStringResult, onPress: onPressEyedropper, children: closure_7(EyeDropperIcon, obj9) };
+  obj9 = { size: "sm", color: primary(tmp12[4]).colors.ICON_DEFAULT };
+  const tmp17 = primary(tmp12[10]);
+  EyeDropperIcon = tmp13(tmp12[14]).EyeDropperIcon;
+  items1[2] = closure_7(tmp17, obj8);
   items[1] = closure_8(View, obj5);
-  obj3.children = items;
-  return closure_8(tmp12(tmp11[15]).Stack, obj3);
+  return closure_8(Stack, obj3);
 });
+let size = size_mod;
+const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagColorGrid.tsx");
+
+export default tmp5;

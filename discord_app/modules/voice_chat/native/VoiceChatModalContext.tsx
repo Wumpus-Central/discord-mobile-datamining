@@ -1,13 +1,14 @@
 // === Module 9087: VoiceChatModalContext ===
 
 // Module 9087 (VoiceChatModalContext)
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-const context = noop.createContext(null);
-let ReactCompilerGating = fn(558);
+const context = react.createContext(null);
+let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/voice_chat/native/VoiceChatModalContext.tsx");
 
 export const VoiceChatNavigationContext = context;
-export const useVoiceChatNavigationContext = () => noop.useContext(context);
+export const useVoiceChatNavigationContext = () => react.useContext(context);

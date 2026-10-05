@@ -1,17 +1,28 @@
 // === Module 15757: EncryptionSetting ===
 
 // Module 15757 (EncryptionSetting)
-import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import util from "util" /* 1126 */;
+import get_initialized from "get initialized" /* 504 */;
+import react from "react" /* 576 */;
+import Constants from "Constants" /* 1085 */;
+import intl2 from "intl" /* 1126 */;
+import SettingsConstants from "SettingsConstants" /* 7634 */;
 import useSecureFramesVerifiedUsers from "useSecureFramesVerifiedUsers" /* 15758 */;
 import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 9365 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import SettingBuilders from "SettingBuilders" /* 11129 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-fn(558);
-const ReactCompilerGating = fn(558);
+const require = globalThis.__r;
+
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+const UserSettingsSections = Constants.UserSettingsSections;
+let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(2);
+  let persistentCodesEnabled;
+  let tmp4;
+  let tmp5;
+  const obj = react;
+  const cResult = obj.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SecureFramesPersistedStore];
     const fn = function s() {
@@ -24,65 +35,55 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp4, tmp5] = cResult;
   }
-  return initialize.useStateFromStores(tmp4, tmp5);
+  const tmpResult = get_initialized;
+  return tmpResult.useStateFromStores(tmp4, tmp5);
 }) : (() => {
+  let persistentCodesEnabled;
   const items = [SecureFramesPersistedStore];
-  return initialize.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());
+  const obj = get_initialized;
+  return obj.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());
 });
-const SettingBuilders = fn(11129);
+ReactCompilerGating = ReactCompilerGating_mod;
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(2);
-  const secureFramesVerifiedUserIds = useSecureFramesVerifiedUsers.useSecureFramesVerifiedUserIds();
+  let tmp4;
+  const obj = react;
+  const cResult = obj.c(2);
+  const obj2 = useSecureFramesVerifiedUsers;
+  const secureFramesVerifiedUserIds = obj2.useSecureFramesVerifiedUserIds();
   if (cResult[0] !== secureFramesVerifiedUserIds.length) {
-    const intl = util.intl;
+    const intl = intl2.intl;
     const obj3 = { count: secureFramesVerifiedUserIds.length };
-    const formatToPlainStringResult = intl.formatToPlainString(util.t["6vrePS"], obj3);
+    const formatToPlainStringResult = intl.formatToPlainString(intl2.t["6vrePS"], obj3);
     cResult[0] = secureFramesVerifiedUserIds.length;
     cResult[1] = formatToPlainStringResult;
-    let tmp4 = formatToPlainStringResult;
+    tmp4 = formatToPlainStringResult;
   } else {
     tmp4 = cResult[1];
   }
   return tmp4;
 }) : (() => {
-  const secureFramesVerifiedUserIds = useSecureFramesVerifiedUsers.useSecureFramesVerifiedUserIds();
-  const intl = util.intl;
-  return intl.formatToPlainString(util.t["6vrePS"], { count: secureFramesVerifiedUserIds.length });
+  const obj = useSecureFramesVerifiedUsers;
+  const secureFramesVerifiedUserIds = obj.useSecureFramesVerifiedUserIds();
+  const intl = intl2.intl;
+  const obj2 = { count: secureFramesVerifiedUserIds.length };
+  return intl.formatToPlainString(intl2.t["6vrePS"], obj2);
 });
-const route = SettingBuilders.createRoute({
+let obj = {
   useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t.x8U2eC);
+    const intl = intl2.intl;
+    return intl.string(intl2.t.x8U2eC);
   },
-  useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-    const cResult = c.c(2);
-    const secureFramesVerifiedUserIds = useSecureFramesVerifiedUsers.useSecureFramesVerifiedUserIds();
-    if (cResult[0] !== secureFramesVerifiedUserIds.length) {
-      const intl = util.intl;
-      const obj3 = { count: secureFramesVerifiedUserIds.length };
-      const formatToPlainStringResult = intl.formatToPlainString(util.t["6vrePS"], obj3);
-      cResult[0] = secureFramesVerifiedUserIds.length;
-      cResult[1] = formatToPlainStringResult;
-      let tmp4 = formatToPlainStringResult;
-    } else {
-      tmp4 = cResult[1];
-    }
-    return tmp4;
-  }) : (() => {
-    const secureFramesVerifiedUserIds = useSecureFramesVerifiedUsers.useSecureFramesVerifiedUserIds();
-    const intl = util.intl;
-    return intl.formatToPlainString(util.t["6vrePS"], { count: secureFramesVerifiedUserIds.length });
-  }),
-  parent: fn(7634).MobileUserSettings.DATA_AND_PRIVACY,
+  useDescription: tmp3,
+  parent: MobileUserSettings.DATA_AND_PRIVACY,
   usePredicate: tmp2,
   screen: {
-    route: fn(1085).UserSettingsSections.SECURE_FRAMES,
+    route: UserSettingsSections.SECURE_FRAMES,
     getComponent() {
       return require("SettingsSecureFramesScreen").default;
     }
   }
-});
-const size = fn(2);
+};
+const route = SettingBuilders.createRoute(obj);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/EncryptionSetting.tsx");
 
 export default route;

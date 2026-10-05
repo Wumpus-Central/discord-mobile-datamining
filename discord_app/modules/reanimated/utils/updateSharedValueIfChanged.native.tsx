@@ -6,7 +6,7 @@ import size from "module_2" /* 2 */;
 
 const fn = function u(get, arg1) {
   if (globalThis._WORKLET) {
-    value = get.get();
+    const value = get.get();
     const obj2 = {};
     const merged = Object.assign(value);
     const merged1 = Object.assign(arg1);
@@ -14,26 +14,28 @@ const fn = function u(get, arg1) {
       if (value[key10024] === obj2[key10024]) {
         continue;
       } else {
-        let result = arg0.set(obj2);
+        let result = get.set(obj2);
         break;
       }
       break;
     }
   } else {
-    fn2(4612).runOnUI(fn)(get, arg1);
-    const obj = fn2(4612);
+    const obj = ReanimatedRexport;
+    obj.runOnUI(fn)(get, arg1);
   }
 };
-fn.__closure = { runOnUI: ReanimatedRexport.runOnUI, updateSharedValueIfChanged: "r" };
+let obj = { runOnUI: ReanimatedRexport.runOnUI, updateSharedValueIfChanged: "r" };
+fn.__closure = obj;
 fn.__workletHash = 6367316923455;
 fn.__initData = { code: "function updateSharedValueIfChangedNativeTsx2(sharedValue,value){const{runOnUI,updateSharedValueIfChanged}=this.__closure;if(!_WORKLET){runOnUI(updateSharedValueIfChanged)(sharedValue,value);}else{const _sharedValue=sharedValue.get();const newValue={..._sharedValue,...value};for(const key in newValue){if(_sharedValue[key]!==newValue[key]){sharedValue.set(newValue);break;}}}}" };
-let obj = { runOnUI: ReanimatedRexport.runOnUI, updateSharedValueIfChanged: "r" };
-fn.__closure = { runOnUI: ReanimatedRexport.runOnUI };
+let obj2 = { runOnUI: ReanimatedRexport.runOnUI };
+fn.__closure = obj2;
 fn.__workletHash = 13662114226774;
 fn.__initData = { code: "function updateSharedValueIfChanged_updateSharedValueIfChangedNativeTsx1(sharedValue,value){const updateSharedValueIfChanged_updateSharedValueIfChangedNativeTsx1=this._recur;const{runOnUI}=this.__closure;if(!_WORKLET){runOnUI(updateSharedValueIfChanged_updateSharedValueIfChangedNativeTsx1)(sharedValue,value);}else{const _sharedValue=sharedValue.get();const newValue={..._sharedValue,...value};for(const key in newValue){if(_sharedValue[key]!==newValue[key]){sharedValue.set(newValue);break;}}}}" };
 const fn2 = function u(get, arg1) {
   if (globalThis._WORKLET) {
-    value = get.get();
+    let num;
+    const value = get.get();
     if (value.length !== arg1.length) {
       const result = get.set(arg1);
     }
@@ -43,18 +45,18 @@ const fn2 = function u(get, arg1) {
       }
     }
   } else {
-    closure_0(4612).runOnUI(fn2)(get, arg1);
-    const obj = closure_0(4612);
+    const obj = ReanimatedRexport;
+    obj.runOnUI(fn2)(get, arg1);
   }
 };
-let obj2 = { runOnUI: ReanimatedRexport.runOnUI };
 fn2.__closure = { runOnUI: ReanimatedRexport.runOnUI, updateSharedValueArrayIfChanged: "r" };
 fn2.__workletHash = 10682766507787;
 fn2.__initData = { code: "function updateSharedValueIfChangedNativeTsx4(sharedValue,value){const{runOnUI,updateSharedValueArrayIfChanged}=this.__closure;if(!_WORKLET){runOnUI(updateSharedValueArrayIfChanged)(sharedValue,value);}else{const _sharedValue=sharedValue.get();if(_sharedValue.length!==value.length){sharedValue.set(value);}for(let i=0;i<value.length;i++){if(_sharedValue[i]!==value[i]){sharedValue.set(value);}}}}" };
-const obj3 = { runOnUI: ReanimatedRexport.runOnUI, updateSharedValueArrayIfChanged: "r" };
+({ runOnUI: ReanimatedRexport.runOnUI, updateSharedValueArrayIfChanged: "r" });
 fn2.__closure = { runOnUI: ReanimatedRexport.runOnUI };
 fn2.__workletHash = 13887777879519;
 fn2.__initData = { code: "function updateSharedValueArrayIfChanged_updateSharedValueIfChangedNativeTsx3(sharedValue,value){const updateSharedValueArrayIfChanged_updateSharedValueIfChangedNativeTsx3=this._recur;const{runOnUI}=this.__closure;if(!_WORKLET){runOnUI(updateSharedValueArrayIfChanged_updateSharedValueIfChangedNativeTsx3)(sharedValue,value);}else{const _sharedValue=sharedValue.get();if(_sharedValue.length!==value.length){sharedValue.set(value);}for(let i=0;i<value.length;i++){if(_sharedValue[i]!==value[i]){sharedValue.set(value);}}}}" };
+({ runOnUI: ReanimatedRexport.runOnUI });
 let result = size.fileFinishedImporting("modules/reanimated/utils/updateSharedValueIfChanged.native.tsx");
 
 export default fn;

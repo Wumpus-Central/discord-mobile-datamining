@@ -1,12 +1,12 @@
 // === Module 9914: EmojiPickerListRowView ===
 
 // Module 9914 (EmojiPickerListRowView)
-import _mod17 from "module_17" /* 17 */;
+import react_native from "react-native" /* 17 */;
 import EmojiPickerRowViewNativeComponentDefault from "EmojiPickerRowViewNativeComponent" /* 9915 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import size from "module_2" /* 2 */;
 
-let View = _mod17.View;
+let View = react_native.View;
 if (PlatformUtils.isAndroid()) {
   View = EmojiPickerRowViewNativeComponentDefault;
 }

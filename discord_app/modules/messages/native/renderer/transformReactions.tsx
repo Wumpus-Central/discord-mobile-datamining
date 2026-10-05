@@ -4,17 +4,22 @@
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import ReactionUtils from "ReactionUtils" /* 4521 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 4527 */;
-import getAccessibilityLabelOrCheapFallbackUnsafe from "getAccessibilityLabelOrCheapFallbackUnsafe" /* 7610 */;
+import getAccessibilityLabelOrCheapFallbackUnsafe2 from "getAccessibilityLabelOrCheapFallbackUnsafe" /* 7610 */;
 import EmojiColorUtils from "EmojiColorUtils" /* 7616 */;
 import size from "module_2" /* 2 */;
+
+let burst_count, emoji;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/transformReactions.tsx");
 
 export default function transformReactions(arg0) {
+  let reactions;
   ({ reactions, animateEmoji: require } = arg0);
-  return reactions.flatMap((emoji) => {
+  const flatMapResult = reactions.flatMap((emoji) => {
+    let obj6;
+    let str;
+    let tmp9Result;
     emoji = emoji.emoji;
     const merged = Object.assign(emoji, Object.assign({ emoji: 0 }));
     const count_details = merged.count_details;
@@ -25,66 +30,65 @@ export default function transformReactions(arg0) {
     if (null != vote) {
       return [];
     } else {
-      let animated = closure_1_0;
-      if (closure_1_0) {
-        animated = emoji.animated;
-      }
+      let uRL;
       if (null == emoji.id) {
-        let uRL = EmojiUtilsDefault.getURL(emoji.name);
+        const obj3 = EmojiUtilsDefault;
+        uRL = obj3.getURL(emoji.name);
       } else {
-        const obj2 = { id: emoji.id, animated, size: 48 };
-        uRL = AvatarUtilsDefault.getEmojiURL(obj2);
+        let obj = AvatarUtilsDefault;
+        const obj2 = { id: emoji.id, animated: require && emoji.animated, size: 48 };
+        uRL = obj.getEmojiURL(obj2);
       }
-      const obj5 = {
+      const obj4 = {
         expensive() {
-            return ReactionUtils.getAccessibleEmojiDisplayName(merged.me, merged.count, emoji, merged.burst_count > 0);
+            const obj = closure_2_0(closure_2_2[3]);
+            return obj.getAccessibleEmojiDisplayName(merged.me, merged.count, emoji, merged.burst_count > 0);
           },
-        cheap: null
+        cheap: str
       };
-      let str = emoji.name;
+      str = emoji.name;
+      const getAccessibilityLabelOrCheapFallbackUnsafe = getAccessibilityLabelOrCheapFallbackUnsafe2.getAccessibilityLabelOrCheapFallbackUnsafe;
+      getAccessibilityLabelOrCheapFallbackUnsafe2;
       if (str == null) {
         str = "";
       }
-      obj5.cheap = str;
       let combined = null;
-      const accessibilityLabelOrCheapFallbackUnsafe = getAccessibilityLabelOrCheapFallbackUnsafe.getAccessibilityLabelOrCheapFallbackUnsafe(obj5);
+      const accessibilityLabelOrCheapFallbackUnsafe = getAccessibilityLabelOrCheapFallbackUnsafe(obj4);
       if (null != emoji.id) {
         const _HermesInternal = HermesInternal;
         combined = "" + emoji.id;
       }
-      const obj6 = {};
+      const obj5 = { emoji: obj6 };
       const merged1 = Object.assign(merged);
-      const obj7 = {};
+      obj6 = { id: combined, src: uRL, displayName: accessibilityLabelOrCheapFallbackUnsafe, animated: require && emoji.animated };
       const merged2 = Object.assign(emoji);
-      obj7.id = combined;
-      obj7.src = uRL;
-      obj7.displayName = accessibilityLabelOrCheapFallbackUnsafe;
-      obj7.animated = animated;
-      obj6.emoji = obj7;
       const _Array = Array;
-      if (Array.isArray(obj6.burst_colors)) {
-        if (obj6.burst_colors.length > 0) {
-          const obj8 = { colors: obj6.burst_colors, shouldProcessMobileColors: PlatformUtils.isIOS() };
-          obj6.themedBurstColors = EmojiColorUtils.buildPlatformedThemedEmojiColorPalette(obj8);
-          const tmp8Result = PlatformUtils;
+      if (Array.isArray(obj5.burst_colors)) {
+        if (obj5.burst_colors.length > 0) {
+          const obj7 = { colors: obj5.burst_colors, shouldProcessMobileColors: tmp9Result.isIOS() };
+          const buildPlatformedThemedEmojiColorPalette = EmojiColorUtils.buildPlatformedThemedEmojiColorPalette;
+          tmp9Result = PlatformUtils;
+          obj5.themedBurstColors = buildPlatformedThemedEmojiColorPalette(obj7);
         }
       }
-      return obj6;
+      return obj5;
     }
-  }).map((burst_count) => {
+  });
+  return flatMapResult.map((burst_count) => {
     burst_count = burst_count.burst_count;
     const merged = Object.assign(burst_count, Object.assign({ burst_count: 0 }));
     let num = burst_count;
     if (null === burst_count) {
-      const obj2 = { burst_count };
+      const obj = { burst_count };
+      const captureMessage = SentryUtilsDefault.captureMessage;
+      SentryUtilsDefault;
       const merged1 = Object.assign(merged);
       const _HermesInternal = HermesInternal;
-      SentryUtilsDefault.captureMessage("Null burst_count while transforming reaction: " + obj2);
+      captureMessage("Null burst_count while transforming reaction: " + obj);
       num = 0;
     }
-    const obj3 = {};
+    const obj2 = { burst_count: num };
     const merged2 = Object.assign(merged);
-    obj3.burst_count = num;
-    return obj3;
+    return obj2;
   });
 };

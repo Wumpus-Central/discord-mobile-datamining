@@ -6,24 +6,35 @@ import ImageIcon from "ImageIcon" /* 5871 */;
 import VideoIcon from "VideoIcon" /* 11234 */;
 import FileIcon from "FileIcon" /* 11800 */;
 import SearchMediaImage from "SearchMediaImage" /* 16839 */;
-import noop from "module_19" /* 19 */;
+import react_mod from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
+import SearchConstants from "SearchConstants" /* 7513 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size_mod from "module_2" /* 2 */;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ View: closure_4, useWindowDimensions: hasOwnProperty } = get_ActivityIndicator);
-const SearchConstants = fn(7513);
-({ FILE_OR_LINK_IMAGE_BUFFER: closure_7, SearchFileTypes: closure_8 } = SearchConstants);
-const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4890);
+let data;
+
+let c10;
+let c9;
+let closure_4;
+let hasOwnProperty;
+let metroImportAll;
+let metroImportDefault;
+let react = react_mod;
+({ View: closure_4, useWindowDimensions: hasOwnProperty } = react_native);
+({ FILE_OR_LINK_IMAGE_BUFFER: metroImportDefault, SearchFileTypes: metroImportAll } = SearchConstants);
+({ jsx: c9, jsxs: c10 } = Fragment);
 let closure_11 = createStyles.createStyles({ icon: { alignItems: "center", justifyContent: "center" } });
-const ReactCompilerGating = fn(558);
-let size = fn(2);
-const result = size.fileFinishedImporting("modules/search/native/components/list/rows/FileGridItem.tsx");
-
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((data) => {
-  const cResult = data(imageStyle[11]).c(47);
+const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((data) => {
+  let first;
+  let imageStyle;
+  let items1;
+  let tmp7;
+  let obj = data(imageStyle[11]);
+  const cResult = obj.c(47);
   data = data.data;
   const onPress = data.onPress;
   imageStyle = data.imageStyle;
@@ -34,7 +45,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((data) 
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [ChannelStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
@@ -44,40 +55,44 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((data) 
     };
     cResult[1] = data.channelId;
     cResult[2] = fn;
-    let tmp7 = fn;
+    tmp7 = fn;
   } else {
     tmp7 = cResult[2];
   }
-  let obj = data(imageStyle[11]);
-  const stateFromStores = data(imageStyle[12]).useStateFromStores(first, tmp7);
+  let tmpResult = tmp(tmp2[12]);
+  const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
   let guild_id;
+  const tmp9 = cResult[3];
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
   }
-  if (cResult[3] === guild_id) {
+  if (tmp9 === guild_id) {
+    let tmp11;
+    let tmp15;
     if (cResult[4] === data.author) {
-      let tmp10 = cResult[5];
+      tmp11 = cResult[5];
     }
     if (cResult[6] !== data.attachment) {
-      const tmp16 = onPress(tmp2[13])(data.attachment);
+      const tmp17 = onPress(imageStyle[13])(data.attachment);
       cResult[6] = data.attachment;
       class E {
         constructor() {
-          obj = { channelId: data.channelId, messageId: data.messageId };
-          tmp = onPress(obj);
-          return;
+          const obj = { channelId: data.channelId, messageId: data.messageId };
+          onPress(obj);
         }
       }
-      cResult[7] = tmp16;
-      let tmp14 = tmp16;
+      cResult[7] = tmp17;
+      tmp15 = tmp17;
     } else {
-      tmp14 = cResult[7];
+      tmp15 = cResult[7];
     }
-    const size = data.attachment.size;
+    size = data.attachment.size;
     if (cResult[8] === data.channelId) {
       if (cResult[9] === data.messageId) {
+        let tmp18;
+        let tmp36;
         if (cResult[10] === onPress) {
-          let tmp17 = cResult[11];
+          tmp18 = cResult[11];
         }
         const type = data.type;
         if (constants.MEDIA_ATTACHMENT === type) {
@@ -85,38 +100,19 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((data) 
           const sum1 = imageStyle.width + closure_7;
           if (cResult[12] === data.attachment.filename) {
             if (cResult[13] === imageStyle) {
+              let tmp30;
               if (cResult[14] === tmp4.icon) {
-                let tmp29 = cResult[15];
+                tmp30 = cResult[15];
               }
-              if (cResult[16] === data.attachment) {
-                if (cResult[17] === data.author.id) {
-                  if (cResult[18] === data.channelId) {
-                    if (cResult[19] === imageStyle) {
-                      if (cResult[20] === scale) {
-                        if (cResult[21] === sum) {
-                          if (cResult[22] === sum1) {
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-              const obj2 = { containerStyle: null, attachment: null, channelId: null, authorId: null, scale: null, containerHeight: null, containerWidth: null, renderFallback: null };
+              let obj2 = { containerStyle: null, attachment: null, channelId: null, authorId: data.author.id, scale, containerHeight: sum, containerWidth: sum1, renderFallback: tmp30 };
               class E {
                 constructor() {
-                  obj = { channelId: data.channelId, messageId: data.messageId };
-                  tmp = onPress(obj);
-                  return;
+                  const obj = { channelId: data.channelId, messageId: data.messageId };
+                  onPress(obj);
                 }
               }
               ({ attachment: obj5.attachment, channelId: obj5.channelId } = data);
-              obj2.authorId = data.author.id;
-              obj2.scale = scale;
-              obj2.containerHeight = sum;
-              obj2.containerWidth = sum1;
-              obj2.renderFallback = tmp29;
-              const tmp33 = closure_9(tmp(tmp2[14]).SearchAttachmentMediaImage, obj2);
+              const tmp34 = closure_9(data(imageStyle[14]).SearchAttachmentMediaImage, obj2);
               cResult[16] = data.attachment;
               cResult[17] = data.author.id;
               cResult[18] = data.channelId;
@@ -124,191 +120,154 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((data) 
               cResult[20] = scale;
               cResult[21] = sum;
               cResult[22] = sum1;
-              cResult[23] = tmp29;
-              cResult[24] = tmp33;
+              cResult[23] = tmp30;
+              cResult[24] = tmp34;
             }
           }
           class E {
             constructor() {
-              obj = { channelId: data.channelId, messageId: data.messageId };
-              tmp = onPress(obj);
-              return;
+              const obj = { channelId: data.channelId, messageId: data.messageId };
+              onPress(obj);
             }
           }
           cResult[12] = data.attachment.filename;
           cResult[13] = imageStyle;
           cResult[14] = tmp4.icon;
-          cResult[15] = tmp30;
-          tmp29 = tmp30;
-        } else {
-          if (constants.ATTACHMENT === type) {
-            if (cResult[25] === tmp14) {
-              if (cResult[26] === imageStyle) {
-                let tmp23 = cResult[27];
-              }
-              let tmp19 = tmp23;
+          cResult[15] = tmp31;
+          tmp30 = tmp31;
+        } else if (constants.ATTACHMENT === type) {
+          const size1 = { fileName: tmp15, containerStyle: null, height: null, width: null };
+          class E {
+            constructor() {
+              const obj = { channelId: data.channelId, messageId: data.messageId };
+              onPress(obj);
             }
-            const size1 = { fileName: tmp14, containerStyle: null, height: null, width: null };
-            class E {
-              constructor() {
-                obj = { channelId: data.channelId, messageId: data.messageId };
-                tmp = onPress(obj);
-                return;
-              }
-            }
-            ({ height: obj4.height, width: obj4.width } = imageStyle);
-            const tmp25 = closure_9(tmp(tmp2[14]).SearchFileMediaImage, size1);
-            cResult[25] = tmp14;
-            cResult[26] = imageStyle;
-            cResult[27] = tmp25;
-            tmp23 = tmp25;
-          } else if (constants.AUDIO === type) {
-            if (cResult[28] !== imageStyle) {
-              const size2 = { containerStyle: imageStyle, height: imageStyle.height, width: null };
-              class E {
-                constructor() {
-                  obj = { channelId: data.channelId, messageId: data.messageId };
-                  tmp = onPress(obj);
-                  return;
-                }
-              }
-              const tmp22 = closure_9(tmp(tmp2[14]).SearchSoundMediaImage, size2);
-              cResult[28] = imageStyle;
-              cResult[29] = tmp22;
-              let tmp20 = tmp22;
-            } else {
-              tmp20 = cResult[29];
-            }
-            tmp19 = tmp20;
           }
-          if (cResult[30] !== tmp19) {
-            const obj3 = { thumbnail: tmp19 };
-            const tmp37 = closure_9(tmp(tmp2[15]).SearchListCardThumbnail, obj3);
+          ({ height: obj4.height, width: obj4.width } = imageStyle);
+          const tmp26 = closure_9(data(imageStyle[14]).SearchFileMediaImage, size1);
+          cResult[25] = tmp15;
+          cResult[26] = imageStyle;
+          cResult[27] = tmp26;
+        } else if (constants.AUDIO === type) {
+          if (cResult[28] !== imageStyle) {
+            const size2 = { containerStyle: imageStyle, height: imageStyle.height, width: null };
             class E {
               constructor() {
-                obj = { channelId: data.channelId, messageId: data.messageId };
-                tmp = onPress(obj);
-                return;
+                const obj = { channelId: data.channelId, messageId: data.messageId };
+                onPress(obj);
               }
             }
-            cResult[30] = tmp19;
-            cResult[31] = tmp37;
-            let tmp35 = tmp37;
-          } else {
-            tmp35 = cResult[31];
+            const tmp23 = closure_9(data(imageStyle[14]).SearchSoundMediaImage, size2);
+            cResult[28] = imageStyle;
+            cResult[29] = tmp23;
           }
-          if (cResult[32] !== size) {
-            let sizeStringResult;
-            if (size > 0) {
-              sizeStringResult = tmp(tmp2[16]).sizeString(size);
-              const tmpResult2 = tmp(tmp2[16]);
-            }
-            class E {
-              constructor() {
-                obj = { channelId: data.channelId, messageId: data.messageId };
-                tmp = onPress(obj);
-                return;
-              }
-            }
-            cResult[33] = sizeStringResult;
-            let tmp38 = sizeStringResult;
-          } else {
-            tmp38 = cResult[33];
+        }
+        class E {
+          constructor() {
+            const obj = { channelId: data.channelId, messageId: data.messageId };
+            onPress(obj);
           }
-          if (cResult[34] === tmp14) {
-            if (cResult[35] === tmp38) {
-              let tmp40 = cResult[36];
-            }
-            if (cResult[37] === tmp10) {
-              if (cResult[38] === stateFromStores) {
-                if (cResult[39] === data.author) {
-                  let tmp42 = cResult[40];
-                }
-                if (cResult[41] === containerStyle) {
-                  if (cResult[42] === tmp17) {
-                    if (cResult[43] === tmp42) {
-                      if (cResult[44] === tmp35) {
-                        if (cResult[45] === tmp40) {
-                          let tmp45 = cResult[46];
-                        }
-                        return tmp45;
-                      }
-                    }
-                  }
-                }
-                const obj6 = { containerStyle: null, onPress: null, children: null };
-                class E {
-                  constructor() {
-                    obj = { channelId: data.channelId, messageId: data.messageId };
-                    tmp = onPress(obj);
-                    return;
-                  }
-                }
-                obj6.onPress = tmp17;
-                const items1 = [tmp35, tmp40, tmp42];
-                obj6.children = items1;
-                const tmp47 = closure_10(tmp(tmp2[15]).SearchListCardContainer, obj6);
-                cResult[41] = containerStyle;
-                cResult[42] = tmp17;
-                cResult[43] = tmp42;
-                cResult[44] = tmp35;
-                cResult[45] = tmp40;
-                cResult[46] = tmp47;
-                tmp45 = tmp47;
-              }
-            }
-            const obj7 = { author: null, avatarSource: null, channel: null };
-            class E {
-              constructor() {
-                obj = { channelId: data.channelId, messageId: data.messageId };
-                tmp = onPress(obj);
-                return;
-              }
-            }
-            obj7.avatarSource = tmp10;
-            obj7.channel = stateFromStores;
-            const tmp44 = closure_9(tmp(tmp2[15]).SearchListCardFooter, obj7);
-            cResult[37] = tmp10;
-            cResult[38] = stateFromStores;
-            cResult[39] = data.author;
-            cResult[40] = tmp44;
-            tmp42 = tmp44;
+        }
+        if (cResult[32] !== size) {
+          let sizeStringResult;
+          if (size > 0) {
+            const tmpResult2 = data(imageStyle[16]);
+            sizeStringResult = tmpResult2.sizeString(size);
           }
           class E {
             constructor() {
-              obj = { channelId: data.channelId, messageId: data.messageId };
-              tmp = onPress(obj);
-              return;
+              const obj = { channelId: data.channelId, messageId: data.messageId };
+              onPress(obj);
             }
           }
-          const obj8 = { label: tmp14, subLabel: tmp38 };
-          const tmp41 = closure_9(tmp(tmp2[15]).SearchListCardContent, obj8);
-          cResult[34] = tmp14;
-          cResult[35] = tmp38;
-          cResult[36] = tmp41;
-          tmp40 = tmp41;
+          cResult[33] = sizeStringResult;
+          tmp36 = sizeStringResult;
+        } else {
+          tmp36 = cResult[33];
         }
+        if (cResult[34] === tmp15) {
+          let tmp38;
+          if (cResult[35] === tmp36) {
+            tmp38 = cResult[36];
+          }
+          if (cResult[37] === tmp11) {
+            if (cResult[38] === stateFromStores) {
+              let tmp41;
+              if (cResult[39] === data.author) {
+                tmp41 = cResult[40];
+              }
+              if (cResult[41] === containerStyle) {
+                if (cResult[42] === tmp18) {
+                  if (cResult[43] === tmp41) {
+                    if (cResult[44] === tmp35) {
+                      let tmp44;
+                      if (cResult[45] === tmp38) {
+                        tmp44 = cResult[46];
+                      }
+                      return tmp44;
+                    }
+                  }
+                }
+              }
+              const obj3 = { containerStyle: null, onPress: tmp18, children: items1 };
+              class E {
+                constructor() {
+                  const obj = { channelId: data.channelId, messageId: data.messageId };
+                  onPress(obj);
+                }
+              }
+              items1 = [tmp35, tmp38, tmp41];
+              const tmp46 = closure_10(data(imageStyle[15]).SearchListCardContainer, obj3);
+              cResult[41] = containerStyle;
+              cResult[42] = tmp18;
+              cResult[43] = tmp41;
+              cResult[44] = tmp35;
+              cResult[45] = tmp38;
+              cResult[46] = tmp46;
+              tmp44 = tmp46;
+            }
+          }
+          const obj6 = { author: null, avatarSource: tmp11, channel: stateFromStores };
+          class E {
+            constructor() {
+              const obj = { channelId: data.channelId, messageId: data.messageId };
+              onPress(obj);
+            }
+          }
+          const tmp43 = closure_9(data(imageStyle[15]).SearchListCardFooter, obj6);
+          cResult[37] = tmp11;
+          cResult[38] = stateFromStores;
+          cResult[39] = data.author;
+          cResult[40] = tmp43;
+          tmp41 = tmp43;
+        }
+        const obj7 = { label: tmp15, subLabel: tmp36 };
+        const tmp40 = closure_9(data(imageStyle[15]).SearchListCardContent, obj7);
+        cResult[34] = tmp15;
+        cResult[35] = tmp36;
+        cResult[36] = tmp40;
+        tmp38 = tmp40;
       }
     }
     class E {
       constructor() {
-        obj = { channelId: data.channelId, messageId: data.messageId };
-        tmp = onPress(obj);
-        return;
+        const obj = { channelId: data.channelId, messageId: data.messageId };
+        onPress(obj);
       }
     }
     cResult[8] = data.channelId;
     cResult[9] = data.messageId;
     cResult[10] = onPress;
     cResult[11] = E;
-    tmp17 = E;
+    tmp18 = E;
   }
   const author = data.author;
   let guild_id1;
+  const getAvatarSource = author.getAvatarSource;
   if (stateFromStores != null) {
     guild_id1 = stateFromStores.guild_id;
   }
-  const avatarSource = author.getAvatarSource(guild_id1);
+  const avatarSource = getAvatarSource(guild_id1);
   let guild_id2;
   if (stateFromStores != null) {
     guild_id2 = stateFromStores.guild_id;
@@ -316,92 +275,112 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((data) 
   cResult[3] = guild_id2;
   cResult[4] = data.author;
   cResult[5] = avatarSource;
-  tmp10 = avatarSource;
-  let tmpResult = data(imageStyle[12]);
-}) : ((containerStyle) => {
-  const data = containerStyle.data;
-  const onPress = containerStyle.onPress;
-  const imageStyle = containerStyle.imageStyle;
+  tmp11 = avatarSource;
+}) : ((data) => {
+  let closure_3;
+  let items4;
+  let sizeStringResult;
+  data = data.data;
+  const onPress = data.onPress;
+  const imageStyle = data.imageStyle;
   let stateFromStores;
   let fileName;
+  const containerStyle = data.containerStyle;
   const tmp = closure_11();
-  noop = tmp;
+  react = tmp;
   const scale = stateFromStores().scale;
+  let obj = data(imageStyle[12]);
   let items = [fileName];
-  stateFromStores = data(imageStyle[12]).useStateFromStores(items, () => ChannelStore.getChannel(data.channelId));
+  stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(data.channelId));
+  let obj2 = react;
   const items1 = [data.author, ];
   let guild_id;
+  const useMemo = react.useMemo;
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
   }
   items1[1] = guild_id;
-  const memo = noop.useMemo(() => {
+  const memo = useMemo(() => {
     const author = data.author;
     let guild_id;
+    const getAvatarSource = author.getAvatarSource;
     if (stateFromStores != null) {
       guild_id = stateFromStores.guild_id;
     }
-    return author.getAvatarSource(guild_id);
+    return getAvatarSource(guild_id);
   }, items1);
   const tmp7 = onPress(imageStyle[13])(data.attachment);
   fileName = tmp7;
-  let size = data.attachment.size;
+  size = data.attachment.size;
   const items2 = [, , ];
   ({ channelId: arr3[0], messageId: arr3[1] } = data);
   items2[2] = onPress;
   const items3 = [data, tmp7, imageStyle, scale, tmp.icon];
   const callback = obj2.useCallback(() => {
-    onPress({ channelId: data.channelId, messageId: data.messageId });
+    const obj = { channelId: data.channelId, messageId: data.messageId };
+    onPress(obj);
   }, items2);
   const memo1 = obj2.useMemo(() => {
+    let attachment;
+    let icon;
     const type = data.type;
-    if (constants.MEDIA_ATTACHMENT === type) {
-      const obj4 = { containerStyle: imageStyle, attachment: null, channelId: null, authorId: null, scale: null, containerHeight: null, containerWidth: null, renderFallback: null };
-      ({ attachment: obj3.attachment, channelId: obj3.channelId } = data);
-      obj4.authorId = data.author.id;
-      obj4.scale = scale;
-      obj4.containerHeight = imageStyle.height + React5;
-      obj4.containerWidth = imageStyle.width + React5;
-      obj4.renderFallback = function renderFallback() {
-        const obj = { style: null, children: null };
-        const items = [icon.icon, closure_1_2];
-        obj.style = items;
-        const filename = attachment.attachment.filename;
-        if (obj2.isImageFile(filename)) {
-          let tmpResult = closure_2_9(data(imageStyle[7]).ImageIcon, { size: "lg", color: "interactive-text-default" });
-        } else {
-          if (tmp3Result.isVideoFile(filename)) {
-            tmpResult = closure_2_9(data(imageStyle[8]).VideoIcon, { size: "lg", color: "interactive-text-default" });
-          } else {
-            tmpResult = closure_2_9(data(imageStyle[9]).FileIcon, { size: "lg", color: "interactive-text-default" });
+    if (metroImportAll.MEDIA_ATTACHMENT === type) {
+      const obj4 = {
+        containerStyle: imageStyle,
+        attachment: null,
+        channelId: null,
+        authorId: data.author.id,
+        scale,
+        containerHeight: imageStyle.height + metroImportDefault,
+        containerWidth: imageStyle.width + metroImportDefault,
+        renderFallback() {
+            let items;
+            let tmpResult;
+            const obj = { style: items, children: tmpResult };
+            items = [icon.icon, closure_1_2];
+            const filename = attachment.attachment.filename;
+            const obj2 = data(imageStyle[6]);
+            if (obj2.isImageFile(filename)) {
+              tmpResult = closure_2_9(data(imageStyle[7]).ImageIcon, { size: "lg", color: "interactive-text-default" });
+            } else {
+              const tmp3Result = data(imageStyle[6]);
+              if (tmp3Result.isVideoFile(filename)) {
+                tmpResult = closure_2_9(data(imageStyle[8]).VideoIcon, { size: "lg", color: "interactive-text-default" });
+              } else {
+                tmpResult = closure_2_9(data(imageStyle[9]).FileIcon, { size: "lg", color: "interactive-text-default" });
+              }
+            }
+            return closure_2_9(scale, obj);
           }
-          tmp3Result = data(imageStyle[6]);
-        }
-        obj.children = tmpResult;
-        return closure_2_9(scale, obj);
       };
-      return options(SearchMediaImage.SearchAttachmentMediaImage, obj4);
-    } else if (constants.ATTACHMENT === type) {
-      const size = { fileName, containerStyle: imageStyle, height: null, width: null };
+      ({ attachment: obj3.attachment, channelId: obj3.channelId } = data);
+      return React4(SearchMediaImage.SearchAttachmentMediaImage, obj4);
+    } else if (metroImportAll.ATTACHMENT === type) {
+      size = { fileName, containerStyle: imageStyle, height: null, width: null };
       ({ height: obj2.height, width: obj2.width } = imageStyle);
-      return options(SearchMediaImage.SearchFileMediaImage, size);
-    } else if (constants.AUDIO === type) {
+      return React4(SearchMediaImage.SearchFileMediaImage, size);
+    } else if (metroImportAll.AUDIO === type) {
       const size1 = { containerStyle: imageStyle, height: null, width: null };
       ({ height: obj.height, width: obj.width } = imageStyle);
-      return options(SearchMediaImage.SearchSoundMediaImage, size1);
+      return React4(SearchMediaImage.SearchSoundMediaImage, size1);
     }
   }, items3);
-  const obj3 = { containerStyle: containerStyle.containerStyle, onPress: callback, children: null };
-  const items4 = [closure_9(data(imageStyle[15]).SearchListCardThumbnail, { thumbnail: memo1 }), , ];
-  let obj4 = { label: tmp7, subLabel: null };
-  let sizeStringResult;
+  const obj3 = { containerStyle, onPress: callback, children: items4 };
+  const SearchListCardContainer = tmp2(tmp3[15]).SearchListCardContainer;
+  items4 = [closure_9(data(imageStyle[15]).SearchListCardThumbnail, { thumbnail: memo1 }), , ];
+  let obj4 = { label: tmp7, subLabel: sizeStringResult };
+  sizeStringResult = undefined;
+  const SearchListCardContent = tmp2(tmp3[15]).SearchListCardContent;
   if (size > 0) {
-    sizeStringResult = tmp2(tmp3[16]).sizeString(size);
-    const tmp2Result = tmp2(tmp3[16]);
+    const tmp2Result = data(imageStyle[16]);
+    sizeStringResult = tmp2Result.sizeString(size);
   }
-  obj4.subLabel = sizeStringResult;
-  items4[1] = closure_9(data(imageStyle[15]).SearchListCardContent, obj4);
-  items4[2] = closure_9(data(imageStyle[15]).SearchListCardFooter, { author: data.author, avatarSource: memo, channel: stateFromStores });
-  obj3.children = items4;
-  return closure_10(data(imageStyle[15]).SearchListCardContainer, obj3);
+  items4[1] = closure_9(SearchListCardContent, obj4);
+  const obj5 = { author: data.author, avatarSource: memo, channel: stateFromStores };
+  items4[2] = closure_9(data(imageStyle[15]).SearchListCardFooter, obj5);
+  return closure_10(SearchListCardContainer, obj3);
 }));
+let size = size_mod;
+const result = size.fileFinishedImporting("modules/search/native/components/list/rows/FileGridItem.tsx");
+
+export default memoResult;

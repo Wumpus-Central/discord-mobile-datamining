@@ -5,71 +5,81 @@ import DispatcherDefault from "Dispatcher" /* 584 */;
 import toastUtils from "toastUtils" /* 4569 */;
 import size from "module_2" /* 2 */;
 
-require = null;
-let global = null;
-const result = size.fileFinishedImporting("modules/toast/native/ToastActionCreators.tsx");
+const require = globalThis.__r;
+let _require;
 
-export default {
+let c3 = null;
+let c4 = null;
+let obj = {
   open(key) {
+    let toastProps;
     _require = key;
+    let obj = require("DesignSystemsNotificationComponentsExperiment");
     let flag = false;
     if (obj.getDesignSystemsNotificationComponents("ToastActionCreators")) {
-      const toManaToastResult = tmp(4575).toManaToast(key);
+      const tmpResult = require("toastMapping");
+      const toManaToastResult = tmpResult.toManaToast(key);
       let flag2 = null != toManaToastResult;
       if (flag2) {
-        let tmp6 = key === key;
-        if (tmp6) {
-          tmp6 = null != require;
-        }
+        let tmp6 = key === key && null != c3;
         if (tmp6) {
           const useToastStore = tmp(4569).useToastStore;
           const currentToastMap = useToastStore.getState().currentToastMap;
-          value = currentToastMap.get("app");
+          const value = currentToastMap.get("app");
           let toast;
           if (value != null) {
             toast = value.toast;
           }
-          tmp6 = toast === require;
+          tmp6 = toast === c3;
         }
         flag2 = true;
         if (!tmp6) {
-          require = toManaToastResult;
-          tmp(4569).showToast(toManaToastResult);
+          c3 = toManaToastResult;
+          const tmpResult2 = require("toastUtils");
+          tmpResult2.showToast(toManaToastResult);
           flag2 = true;
-          const tmpResult2 = tmp(4569);
         }
       }
       flag = flag2;
-      const tmpResult = tmp(4575);
     }
     if (!flag) {
-      DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "TOAST_OPEN", toastProps }));
+      const obj4 = DispatcherDefault;
+      obj4.wait(() => {
+        const obj = DispatcherDefault;
+        const obj2 = { type: "TOAST_OPEN", toastProps };
+        return obj.dispatch(obj2);
+      });
     }
-    obj = require("DesignSystemsNotificationComponentsExperiment");
   },
   openMana(DEV_IN_APP_NOTIF_TEST_ERROR, toManaToastResult) {
-    let tmp = global === DEV_IN_APP_NOTIF_TEST_ERROR;
-    if (tmp) {
-      tmp = null != require;
-    }
+    let tmp = c4 === DEV_IN_APP_NOTIF_TEST_ERROR && null != c3;
     if (tmp) {
       const useToastStore = toastUtils.useToastStore;
       const currentToastMap = useToastStore.getState().currentToastMap;
-      value = currentToastMap.get("app");
+      const value = currentToastMap.get("app");
       let toast;
       if (value != null) {
         toast = value.toast;
       }
-      tmp = toast === require;
+      tmp = toast === c3;
     }
     if (!tmp) {
-      require = toManaToastResult;
-      global = DEV_IN_APP_NOTIF_TEST_ERROR;
-      toastUtils.showToast(toManaToastResult);
+      c3 = toManaToastResult;
+      c4 = DEV_IN_APP_NOTIF_TEST_ERROR;
+      const obj = toastUtils;
+      obj.showToast(toManaToastResult);
     }
   },
   close() {
-    toastUtils.popToast();
-    DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "TOAST_CLOSE" }));
+    let obj = toastUtils;
+    obj.popToast();
+    const obj2 = DispatcherDefault;
+    obj2.wait(() => {
+      const obj = DispatcherDefault;
+      return obj.dispatch({ type: "TOAST_CLOSE" });
+    });
   }
 };
+const result = size.fileFinishedImporting("modules/toast/native/ToastActionCreators.tsx");
+
+export default obj;

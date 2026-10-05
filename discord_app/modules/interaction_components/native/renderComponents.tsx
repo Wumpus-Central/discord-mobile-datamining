@@ -1,6 +1,7 @@
 // === Module 17521: renderComponents ===
 
 // Module 17521 (renderComponents)
+import Fragment from "Fragment" /* 21 */;
 import Server from "Server" /* 1985 */;
 import StringSelectActionComponentDefault from "StringSelectActionComponent" /* 15591 */;
 import SearchableSelectActionComponentDefault from "SearchableSelectActionComponent" /* 15594 */;
@@ -12,69 +13,66 @@ import FileUploadActionComponentDefault from "FileUploadActionComponent" /* 1752
 import RadioGroupActionComponentDefault from "RadioGroupActionComponent" /* 17527 */;
 import CheckboxGroupActionComponentDefault from "CheckboxGroupActionComponent" /* 17528 */;
 import CheckboxActionComponentDefault from "CheckboxActionComponent" /* 17529 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
 function renderComponents(components) {
   return components.map((item, index) => renderComponent(item, index.toString()));
 }
 function renderComponent(component, key) {
   const type = component.type;
   if (Server.ComponentType.ACTION_ROW === type) {
-    const obj2 = {};
+    ActionRowLayoutComponentDefault;
     const merged = Object.assign(component);
-    obj2.renderComponents = renderComponents;
-    return jsx(ActionRowLayoutComponentDefault, {}, key);
+    return <tmp60 key={key} renderComponents={renderComponents} />;
   } else if (Server.ComponentType.STRING_SELECT === type) {
-    const obj3 = {};
+    StringSelectActionComponentDefault;
     const merged1 = Object.assign(component);
-    return jsx(StringSelectActionComponentDefault, {}, key);
+    return <tmp54 key={key} />;
   } else if (Server.ComponentType.TEXT_INPUT === type) {
-    const obj4 = {};
+    TextInputActionComponentDefault;
     const merged2 = Object.assign(component);
-    return jsx(TextInputActionComponentDefault, {}, key);
+    return <tmp48 key={key} />;
   } else {
     if (Server.ComponentType.USER_SELECT !== type) {
       if (Server.ComponentType.ROLE_SELECT !== type) {
         if (Server.ComponentType.MENTIONABLE_SELECT !== type) {
           if (Server.ComponentType.CHANNEL_SELECT !== type) {
             if (Server.ComponentType.TEXT_DISPLAY === type) {
-              const obj5 = {};
+              TextDisplayComponentDefault;
               const merged3 = Object.assign(component);
-              return jsx(TextDisplayComponentDefault, {}, key);
+              return <tmp36 key={key} />;
             } else if (Server.ComponentType.LABEL === type) {
-              const obj6 = {};
+              LabelLayoutComponentDefault;
               const merged4 = Object.assign(component);
-              obj6.renderComponent = renderComponent;
-              return jsx(LabelLayoutComponentDefault, {}, key);
+              return <tmp29 key={key} renderComponent={renderComponent} />;
             } else if (Server.ComponentType.FILE_UPLOAD === type) {
-              const obj7 = {};
+              FileUploadActionComponentDefault;
               const merged5 = Object.assign(component);
-              return jsx(FileUploadActionComponentDefault, {}, key);
+              return <tmp23 key={key} />;
             } else if (Server.ComponentType.RADIO_GROUP === type) {
-              const obj8 = {};
+              RadioGroupActionComponentDefault;
               const merged6 = Object.assign(component);
-              return jsx(RadioGroupActionComponentDefault, {}, key);
+              return <tmp17 key={key} />;
             } else if (Server.ComponentType.CHECKBOX_GROUP === type) {
-              const obj9 = {};
+              CheckboxGroupActionComponentDefault;
               const merged7 = Object.assign(component);
-              return jsx(CheckboxGroupActionComponentDefault, {}, key);
+              return <tmp11 key={key} />;
             } else if (Server.ComponentType.CHECKBOX === type) {
-              const obj = {};
+              CheckboxActionComponentDefault;
               const merged8 = Object.assign(component);
-              return jsx(CheckboxActionComponentDefault, {}, key);
+              return <tmp5 key={key} />;
             }
           }
         }
       }
     }
-    const obj10 = {};
+    SearchableSelectActionComponentDefault;
     const merged9 = Object.assign(component);
-    return jsx(SearchableSelectActionComponentDefault, {}, key);
+    return <tmp42 key={key} />;
   }
 }
-const jsx = fn(21).jsx;
-const size = fn(2);
+const jsx = Fragment.jsx;
 const result = size.fileFinishedImporting("modules/interaction_components/native/renderComponents.tsx");
 
 export { renderComponents };

@@ -12,11 +12,10 @@ let result = size.fileFinishedImporting("modules/nuf/native/NewUserAnalyticsUtil
 export const trackNUFStep = function trackNUFStep(STEP_GUILD_TEMPLATE, STEP_FRIEND_LIST, arg2) {
   timestamp = Date.now();
   const result = (timestamp - timestamp) / 1000;
-  const obj2 = {};
+  const obj = { flow_type: "Mobile NUX Post Reg", from_step: STEP_GUILD_TEMPLATE, to_step: STEP_FRIEND_LIST, seconds_on_from_step: result };
+  const track = AnalyticsUtilsDefault.track;
+  const NUO_TRANSITION = AnalyticEvents.NUO_TRANSITION;
+  AnalyticsUtilsDefault;
   const merged = Object.assign(arg2);
-  obj2.flow_type = "Mobile NUX Post Reg";
-  obj2.from_step = STEP_GUILD_TEMPLATE;
-  obj2.to_step = STEP_FRIEND_LIST;
-  obj2.seconds_on_from_step = result;
-  AnalyticsUtilsDefault.track(AnalyticEvents.NUO_TRANSITION, obj2);
+  track(NUO_TRANSITION, obj);
 };

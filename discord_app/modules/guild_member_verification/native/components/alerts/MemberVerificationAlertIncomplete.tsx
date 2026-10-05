@@ -1,26 +1,36 @@
 // === Module 6587: MemberVerificationAlertIncomplete ===
 
 // Module 6587 (MemberVerificationAlertIncomplete)
-import util from "util" /* 1126 */;
+import intl5 from "intl" /* 1126 */;
 import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5917 */;
 import MemberVerificationAlertDefault from "MemberVerificationAlert" /* 5927 */;
 import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5960 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4700 */;
+import Fragment from "Fragment" /* 21 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let guildId, importDefault;
 
-require = fn;
+let c9;
+let metroImportAll;
+let metroImportDefault;
 let closure_3 = ["guildId", "onClose"];
-const jsxProd = fn(21);
-({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertIncomplete.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
-  const cResult = require("c").c(29);
+({ jsx: metroImportDefault, Fragment: metroImportAll, jsxs: c9 } = Fragment);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+  let _require;
+  let closure_1;
+  let items2;
+  let tmp10;
+  let tmp12;
+  let tmp13;
+  let tmp6;
+  const tmp = _require;
+  let obj = require("react");
+  const cResult = obj.c(29);
   if (cResult[0] !== guildId) {
     guildId = guildId.guildId;
     _require = guildId;
@@ -31,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     cResult[1] = guildId;
     cResult[2] = onClose;
     cResult[3] = tmp9;
-    let tmp6 = tmp9;
+    tmp6 = tmp9;
   } else {
     _require = cResult[1];
     importDefault = cResult[2];
@@ -40,257 +50,262 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserGuildJoinRequestStore];
     cResult[4] = items;
-    let tmp10 = items;
+    tmp10 = items;
   } else {
     tmp10 = cResult[4];
   }
   if (cResult[5] !== tmp4) {
     const fn = function _() {
-      return UserGuildJoinRequestStore.getJoinRequestGuild(closure_0);
+      return UserGuildJoinRequestStore.getJoinRequestGuild(guildId);
     };
     const items1 = [tmp4];
     cResult[5] = tmp4;
     cResult[6] = fn;
     cResult[7] = items1;
-    let tmp13 = items1;
-    let tmp12 = fn;
+    tmp13 = items1;
+    tmp12 = fn;
   } else {
     tmp12 = cResult[6];
     tmp13 = cResult[7];
   }
-  const obj = require("c");
-  const stateFromStores = require("useStateFromStores").useStateFromStores(tmp10, tmp12, tmp13);
+  const tmpResult = tmp(573);
+  const stateFromStores = tmpResult.useStateFromStores(tmp10, tmp12, tmp13);
   if (cResult[8] === tmp4) {
+    let tmp15;
     if (cResult[9] === tmp5) {
-      let tmp15 = cResult[10];
+      tmp15 = cResult[10];
     }
     if (cResult[11] === tmp4) {
+      let tmp16;
+      let tmp17;
+      let tmp24;
+      let tmp29;
       if (cResult[12] === tmp5) {
-        let tmp16 = cResult[13];
+        tmp16 = cResult[13];
       }
       if (cResult[14] !== stateFromStores) {
+        let formatToPlainStringResult;
         class P {
           constructor() {
+            let intl;
+            let intl2;
             if (closure_1 != null) {
-              tmpResult = tmp();
+              tmp();
             }
-            obj = closure_0(closure_2[8]);
-            obj1 = { guildId: closure_0, subtitleText: null, confirmText: null };
-            intl = closure_0(closure_2[9]).intl;
-            obj1.subtitleText = intl.string(closure_0(closure_2[9]).t.fJwWVt);
-            intl2 = closure_0(closure_2[9]).intl;
-            obj1.confirmText = intl2.string(closure_0(closure_2[9]).t.OQFlFD);
-            result = obj.openMemberVerificationCancelPendingAlert(obj1);
-            return;
+            const obj = { guildId, subtitleText: intl.string(intl5.t.fJwWVt), confirmText: intl2.string(intl5.t.OQFlFD) };
+            const openMemberVerificationCancelPendingAlert = MemberVerificationAlertActionCreators.openMemberVerificationCancelPendingAlert;
+            MemberVerificationAlertActionCreators;
+            intl = intl5.intl;
+            intl2 = intl5.intl;
+            const result = openMemberVerificationCancelPendingAlert(obj);
           }
         }
         if (null != undefined) {
           let intl = tmp(1126).intl;
+          const formatToPlainString = intl.formatToPlainString;
           class P {
             constructor() {
+              let intl;
+              let intl2;
               if (closure_1 != null) {
-                tmpResult = tmp();
+                tmp();
               }
-              obj = closure_0(closure_2[8]);
-              obj1 = { guildId: closure_0, subtitleText: null, confirmText: null };
-              intl = closure_0(closure_2[9]).intl;
-              obj1.subtitleText = intl.string(closure_0(closure_2[9]).t.fJwWVt);
-              intl2 = closure_0(closure_2[9]).intl;
-              obj1.confirmText = intl2.string(closure_0(closure_2[9]).t.OQFlFD);
-              result = obj.openMemberVerificationCancelPendingAlert(obj1);
-              return;
+              const obj = { guildId, subtitleText: intl.string(intl5.t.fJwWVt), confirmText: intl2.string(intl5.t.OQFlFD) };
+              const openMemberVerificationCancelPendingAlert = MemberVerificationAlertActionCreators.openMemberVerificationCancelPendingAlert;
+              MemberVerificationAlertActionCreators;
+              intl = intl5.intl;
+              intl2 = intl5.intl;
+              const result = openMemberVerificationCancelPendingAlert(obj);
             }
           }
           tmp21[0] = stateFromStores.name;
-          const formatToPlainStringResult = intl.formatToPlainString(tmp(1126).t.f5Jaw7, tmp21);
+          formatToPlainStringResult = formatToPlainString(tmp(1126).t.f5Jaw7, tmp21);
         } else {
           const string = tmp(1126).intl.string;
           class P {
             constructor() {
+              let intl;
+              let intl2;
               if (closure_1 != null) {
-                tmpResult = tmp();
+                tmp();
               }
-              obj = closure_0(closure_2[8]);
-              obj1 = { guildId: closure_0, subtitleText: null, confirmText: null };
-              intl = closure_0(closure_2[9]).intl;
-              obj1.subtitleText = intl.string(closure_0(closure_2[9]).t.fJwWVt);
-              intl2 = closure_0(closure_2[9]).intl;
-              obj1.confirmText = intl2.string(closure_0(closure_2[9]).t.OQFlFD);
-              result = obj.openMemberVerificationCancelPendingAlert(obj1);
-              return;
+              const obj = { guildId, subtitleText: intl.string(intl5.t.fJwWVt), confirmText: intl2.string(intl5.t.OQFlFD) };
+              const openMemberVerificationCancelPendingAlert = MemberVerificationAlertActionCreators.openMemberVerificationCancelPendingAlert;
+              MemberVerificationAlertActionCreators;
+              intl = intl5.intl;
+              intl2 = intl5.intl;
+              const result = openMemberVerificationCancelPendingAlert(obj);
             }
           }
         }
         cResult[14] = stateFromStores;
         cResult[15] = formatToPlainStringResult;
+        tmp17 = formatToPlainStringResult;
       } else {
-        const _Symbol = Symbol;
+        tmp17 = cResult[15];
+      }
+      class P {
+        constructor() {
+          let intl;
+          let intl2;
+          if (closure_1 != null) {
+            tmp();
+          }
+          const obj = { guildId, subtitleText: intl.string(intl5.t.fJwWVt), confirmText: intl2.string(intl5.t.OQFlFD) };
+          const openMemberVerificationCancelPendingAlert = MemberVerificationAlertActionCreators.openMemberVerificationCancelPendingAlert;
+          MemberVerificationAlertActionCreators;
+          intl = intl5.intl;
+          intl2 = intl5.intl;
+          const result = openMemberVerificationCancelPendingAlert(obj);
+        }
+      }
+      if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
+        const string2 = tmp(1126).intl.string;
         class P {
           constructor() {
+            let intl;
+            let intl2;
             if (closure_1 != null) {
-              tmpResult = tmp();
+              tmp();
             }
-            obj = closure_0(closure_2[8]);
-            obj1 = { guildId: closure_0, subtitleText: null, confirmText: null };
-            intl = closure_0(closure_2[9]).intl;
-            obj1.subtitleText = intl.string(closure_0(closure_2[9]).t.fJwWVt);
-            intl2 = closure_0(closure_2[9]).intl;
-            obj1.confirmText = intl2.string(closure_0(closure_2[9]).t.OQFlFD);
-            result = obj.openMemberVerificationCancelPendingAlert(obj1);
-            return;
+            const obj = { guildId, subtitleText: intl.string(intl5.t.fJwWVt), confirmText: intl2.string(intl5.t.OQFlFD) };
+            const openMemberVerificationCancelPendingAlert = MemberVerificationAlertActionCreators.openMemberVerificationCancelPendingAlert;
+            MemberVerificationAlertActionCreators;
+            intl = intl5.intl;
+            intl2 = intl5.intl;
+            const result = openMemberVerificationCancelPendingAlert(obj);
           }
         }
-        if (tmp23 === Symbol.for("react.memo_cache_sentinel")) {
-          const string2 = tmp(1126).intl.string;
-          class P {
-            constructor() {
-              if (closure_1 != null) {
-                tmpResult = tmp();
-              }
-              obj = closure_0(closure_2[8]);
-              obj1 = { guildId: closure_0, subtitleText: null, confirmText: null };
-              intl = closure_0(closure_2[9]).intl;
-              obj1.subtitleText = intl.string(closure_0(closure_2[9]).t.fJwWVt);
-              intl2 = closure_0(closure_2[9]).intl;
-              obj1.confirmText = intl2.string(closure_0(closure_2[9]).t.OQFlFD);
-              result = obj.openMemberVerificationCancelPendingAlert(obj1);
-              return;
-            }
-          }
-          cResult[16] = tmp25;
-        }
-        if (cResult[17] !== tmp15) {
-          let obj2 = { variant: "secondary", text: null, onPress: null };
-          class P {
-            constructor() {
-              if (closure_1 != null) {
-                tmpResult = tmp();
-              }
-              obj = closure_0(closure_2[8]);
-              obj1 = { guildId: closure_0, subtitleText: null, confirmText: null };
-              intl = closure_0(closure_2[9]).intl;
-              obj1.subtitleText = intl.string(closure_0(closure_2[9]).t.fJwWVt);
-              intl2 = closure_0(closure_2[9]).intl;
-              obj1.confirmText = intl2.string(closure_0(closure_2[9]).t.OQFlFD);
-              result = obj.openMemberVerificationCancelPendingAlert(obj1);
-              return;
-            }
-          }
-          obj2.onPress = tmp15;
-          const tmp28 = closure_7(tmp(5594).Button, obj2);
-          cResult[17] = tmp15;
-          cResult[18] = tmp28;
-          let tmp26 = tmp28;
-        } else {
-          tmp26 = cResult[18];
-        }
-        const _Symbol2 = Symbol;
-        if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
-          const string3 = tmp(1126).intl.string;
-          class P {
-            constructor() {
-              if (closure_1 != null) {
-                tmpResult = tmp();
-              }
-              obj = closure_0(closure_2[8]);
-              obj1 = { guildId: closure_0, subtitleText: null, confirmText: null };
-              intl = closure_0(closure_2[9]).intl;
-              obj1.subtitleText = intl.string(closure_0(closure_2[9]).t.fJwWVt);
-              intl2 = closure_0(closure_2[9]).intl;
-              obj1.confirmText = intl2.string(closure_0(closure_2[9]).t.OQFlFD);
-              result = obj.openMemberVerificationCancelPendingAlert(obj1);
-              return;
-            }
-          }
-          cResult[19] = tmp30;
-        }
-        if (cResult[20] !== tmp16) {
-          const obj3 = { text: null, variant: "destructive", onPress: null };
-          class P {
-            constructor() {
-              if (closure_1 != null) {
-                tmpResult = tmp();
-              }
-              obj = closure_0(closure_2[8]);
-              obj1 = { guildId: closure_0, subtitleText: null, confirmText: null };
-              intl = closure_0(closure_2[9]).intl;
-              obj1.subtitleText = intl.string(closure_0(closure_2[9]).t.fJwWVt);
-              intl2 = closure_0(closure_2[9]).intl;
-              obj1.confirmText = intl2.string(closure_0(closure_2[9]).t.OQFlFD);
-              result = obj.openMemberVerificationCancelPendingAlert(obj1);
-              return;
-            }
-          }
-          obj3.onPress = tmp16;
-          const tmp33 = closure_7(tmp(5594).Button, obj3);
-          cResult[20] = tmp16;
-          cResult[21] = tmp33;
-          let tmp31 = tmp33;
-        } else {
-          tmp31 = cResult[21];
-        }
-        if (cResult[22] === tmp31) {
-          if (cResult[23] === tmp26) {
-            let tmp34 = cResult[24];
-          }
-          if (cResult[25] === tmp17) {
-            if (cResult[26] === tmp6) {
-              if (cResult[27] === tmp34) {
-                let tmp38 = cResult[28];
-              }
-              return tmp38;
-            }
-          }
-          class P {
-            constructor() {
-              if (closure_1 != null) {
-                tmpResult = tmp();
-              }
-              obj = closure_0(closure_2[8]);
-              obj1 = { guildId: closure_0, subtitleText: null, confirmText: null };
-              intl = closure_0(closure_2[9]).intl;
-              obj1.subtitleText = intl.string(closure_0(closure_2[9]).t.fJwWVt);
-              intl2 = closure_0(closure_2[9]).intl;
-              obj1.confirmText = intl2.string(closure_0(closure_2[9]).t.OQFlFD);
-              result = obj.openMemberVerificationCancelPendingAlert(obj1);
-              return;
-            }
-          }
-          const obj4 = {};
-          const merged = Object.assign(tmp6);
-          obj4.icon = tmp(6588).ListViewIcon;
-          obj4.header = tmp17;
-          obj4.buttons = tmp34;
-          const tmp44 = closure_7(MemberVerificationAlertDefault, obj4);
-          cResult[25] = tmp17;
-          cResult[26] = tmp6;
-          cResult[27] = tmp34;
-          cResult[28] = tmp44;
-          tmp38 = tmp44;
-        }
-        const obj5 = { children: null };
-        const items2 = [tmp26, tmp31];
-        obj5.children = items2;
-        const tmp37 = closure_9(closure_8, obj5);
-        cResult[22] = tmp31;
-        cResult[23] = tmp26;
-        cResult[24] = tmp37;
-        tmp34 = tmp37;
+        cResult[16] = tmp23;
       }
+      if (cResult[17] !== tmp15) {
+        const obj2 = { variant: "secondary", text: null, onPress: tmp15 };
+        class P {
+          constructor() {
+            let intl;
+            let intl2;
+            if (closure_1 != null) {
+              tmp();
+            }
+            const obj = { guildId, subtitleText: intl.string(intl5.t.fJwWVt), confirmText: intl2.string(intl5.t.OQFlFD) };
+            const openMemberVerificationCancelPendingAlert = MemberVerificationAlertActionCreators.openMemberVerificationCancelPendingAlert;
+            MemberVerificationAlertActionCreators;
+            intl = intl5.intl;
+            intl2 = intl5.intl;
+            const result = openMemberVerificationCancelPendingAlert(obj);
+          }
+        }
+        const tmp26 = closure_7(tmp(5594).Button, obj2);
+        cResult[17] = tmp15;
+        cResult[18] = tmp26;
+        tmp24 = tmp26;
+      } else {
+        tmp24 = cResult[18];
+      }
+      const _Symbol = Symbol;
+      if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
+        const string3 = tmp(1126).intl.string;
+        class P {
+          constructor() {
+            let intl;
+            let intl2;
+            if (closure_1 != null) {
+              tmp();
+            }
+            const obj = { guildId, subtitleText: intl.string(intl5.t.fJwWVt), confirmText: intl2.string(intl5.t.OQFlFD) };
+            const openMemberVerificationCancelPendingAlert = MemberVerificationAlertActionCreators.openMemberVerificationCancelPendingAlert;
+            MemberVerificationAlertActionCreators;
+            intl = intl5.intl;
+            intl2 = intl5.intl;
+            const result = openMemberVerificationCancelPendingAlert(obj);
+          }
+        }
+        cResult[19] = tmp28;
+      }
+      if (cResult[20] !== tmp16) {
+        const obj3 = { text: null, variant: "destructive", onPress: tmp16 };
+        class P {
+          constructor() {
+            let intl;
+            let intl2;
+            if (closure_1 != null) {
+              tmp();
+            }
+            const obj = { guildId, subtitleText: intl.string(intl5.t.fJwWVt), confirmText: intl2.string(intl5.t.OQFlFD) };
+            const openMemberVerificationCancelPendingAlert = MemberVerificationAlertActionCreators.openMemberVerificationCancelPendingAlert;
+            MemberVerificationAlertActionCreators;
+            intl = intl5.intl;
+            intl2 = intl5.intl;
+            const result = openMemberVerificationCancelPendingAlert(obj);
+          }
+        }
+        const tmp31 = closure_7(tmp(5594).Button, obj3);
+        cResult[20] = tmp16;
+        cResult[21] = tmp31;
+        tmp29 = tmp31;
+      } else {
+        tmp29 = cResult[21];
+      }
+      if (cResult[22] === tmp29) {
+        let tmp32;
+        if (cResult[23] === tmp24) {
+          tmp32 = cResult[24];
+        }
+        if (cResult[25] === tmp17) {
+          if (cResult[26] === tmp6) {
+            let tmp36;
+            if (cResult[27] === tmp32) {
+              tmp36 = cResult[28];
+            }
+            return tmp36;
+          }
+        }
+        class P {
+          constructor() {
+            let intl;
+            let intl2;
+            if (closure_1 != null) {
+              tmp();
+            }
+            const obj = { guildId, subtitleText: intl.string(intl5.t.fJwWVt), confirmText: intl2.string(intl5.t.OQFlFD) };
+            const openMemberVerificationCancelPendingAlert = MemberVerificationAlertActionCreators.openMemberVerificationCancelPendingAlert;
+            MemberVerificationAlertActionCreators;
+            intl = intl5.intl;
+            intl2 = intl5.intl;
+            const result = openMemberVerificationCancelPendingAlert(obj);
+          }
+        }
+        const obj4 = { icon: tmp(6588).ListViewIcon, header: tmp17, buttons: tmp32 };
+        const tmp38 = MemberVerificationAlertDefault;
+        const merged = Object.assign(tmp6);
+        const tmp42 = closure_7(tmp38, obj4);
+        cResult[25] = tmp17;
+        cResult[26] = tmp6;
+        cResult[27] = tmp32;
+        cResult[28] = tmp42;
+        tmp36 = tmp42;
+      }
+      const obj5 = { children: items2 };
+      items2 = [tmp24, tmp29];
+      const tmp35 = closure_9(closure_8, obj5);
+      cResult[22] = tmp29;
+      cResult[23] = tmp24;
+      cResult[24] = tmp35;
+      tmp32 = tmp35;
     }
     class P {
       constructor() {
+        let intl;
+        let intl2;
         if (closure_1 != null) {
-          tmpResult = tmp();
+          tmp();
         }
-        obj = closure_0(closure_2[8]);
-        obj1 = { guildId: closure_0, subtitleText: null, confirmText: null };
-        intl = closure_0(closure_2[9]).intl;
-        obj1.subtitleText = intl.string(closure_0(closure_2[9]).t.fJwWVt);
-        intl2 = closure_0(closure_2[9]).intl;
-        obj1.confirmText = intl2.string(closure_0(closure_2[9]).t.OQFlFD);
-        result = obj.openMemberVerificationCancelPendingAlert(obj1);
-        return;
+        const obj = { guildId, subtitleText: intl.string(intl5.t.fJwWVt), confirmText: intl2.string(intl5.t.OQFlFD) };
+        const openMemberVerificationCancelPendingAlert = MemberVerificationAlertActionCreators.openMemberVerificationCancelPendingAlert;
+        MemberVerificationAlertActionCreators;
+        intl = intl5.intl;
+        intl2 = intl5.intl;
+        const result = openMemberVerificationCancelPendingAlert(obj);
       }
     }
     cResult[11] = tmp4;
@@ -302,68 +317,74 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     if (closure_1 != null) {
       tmp();
     }
-    const result = MemberVerificationModalActionCreators.openMemberVerificationModal(closure_0);
+    const obj = MemberVerificationModalActionCreators;
+    const result = obj.openMemberVerificationModal(guildId);
   };
   cResult[8] = tmp4;
   cResult[9] = tmp5;
   cResult[10] = fn2;
   tmp15 = fn2;
-  const tmpResult = require("useStateFromStores");
 }) : ((guildId) => {
+  let formatToPlainStringResult;
+  let intl3;
+  let intl4;
+  let items4;
+  let obj4;
   guildId = guildId.guildId;
   const onClose = guildId.onClose;
   const merged = Object.assign(guildId, Object.assign({ guildId: 0, onClose: 0 }));
+  let obj = guildId(573);
   const items = [UserGuildJoinRequestStore];
   const items1 = [guildId];
-  const stateFromStores = guildId(573).useStateFromStores(items, () => UserGuildJoinRequestStore.getJoinRequestGuild(guildId), items1);
+  const stateFromStores = obj.useStateFromStores(items, () => UserGuildJoinRequestStore.getJoinRequestGuild(guildId), items1);
   const items2 = [guildId, onClose];
   const items3 = [guildId, onClose];
-  const callback = noop.useCallback(() => {
+  const callback = react.useCallback(() => {
     if (onClose != null) {
       tmp();
     }
-    const result = MemberVerificationModalActionCreators.openMemberVerificationModal(guildId);
+    const obj = MemberVerificationModalActionCreators;
+    const result = obj.openMemberVerificationModal(guildId);
   }, items2);
   let name;
-  const callback1 = noop.useCallback(() => {
+  const callback1 = react.useCallback(() => {
+    let intl;
+    let intl2;
     if (onClose != null) {
       tmp();
     }
-    const obj2 = { guildId, subtitleText: null, confirmText: null };
-    const intl = util.intl;
-    obj2.subtitleText = intl.string(util.t.fJwWVt);
-    const intl2 = util.intl;
-    obj2.confirmText = intl2.string(util.t.OQFlFD);
-    const result = MemberVerificationAlertActionCreators.openMemberVerificationCancelPendingAlert(obj2);
+    const obj = { guildId, subtitleText: intl.string(intl5.t.fJwWVt), confirmText: intl2.string(intl5.t.OQFlFD) };
+    const openMemberVerificationCancelPendingAlert = MemberVerificationAlertActionCreators.openMemberVerificationCancelPendingAlert;
+    MemberVerificationAlertActionCreators;
+    intl = intl5.intl;
+    intl2 = intl5.intl;
+    const result = openMemberVerificationCancelPendingAlert(obj);
   }, items3);
   if (stateFromStores != null) {
     name = stateFromStores.name;
   }
   if (null != name) {
     let intl2 = tmp2(1126).intl;
-    let obj2 = { guildName: stateFromStores.name };
-    let formatToPlainStringResult = intl2.formatToPlainString(tmp2(1126).t.f5Jaw7, obj2);
+    const obj2 = { guildName: stateFromStores.name };
+    formatToPlainStringResult = intl2.formatToPlainString(tmp2(1126).t.f5Jaw7, obj2);
   } else {
     let intl = tmp2(1126).intl;
     formatToPlainStringResult = intl.string(tmp2(1126).t["0sTyEb"]);
   }
-  const obj3 = {};
-  const obj = guildId(573);
+  const obj3 = { icon: guildId(6588).ListViewIcon, header: formatToPlainStringResult, buttons: closure_9(closure_8, obj4) };
+  const tmp9 = onClose(5927);
   const merged1 = Object.assign(merged);
-  obj3.icon = guildId(6588).ListViewIcon;
-  obj3.header = formatToPlainStringResult;
-  const obj4 = { children: null };
-  const obj5 = { variant: "secondary", text: null, onPress: null };
-  const intl3 = tmp2(1126).intl;
-  obj5.text = intl3.string(guildId(1126).t.h3aGmv);
-  obj5.onPress = callback;
-  const items4 = [closure_7(guildId(5594).Button, obj5), ];
-  const obj6 = { text: null, variant: "destructive", onPress: null };
-  const intl4 = tmp2(1126).intl;
-  obj6.text = intl4.string(guildId(1126).t.OQFlFD);
-  obj6.onPress = callback1;
-  items4[1] = closure_7(guildId(5594).Button, obj6);
-  obj4.children = items4;
-  obj3.buttons = closure_9(closure_8, obj4);
-  return closure_7(onClose(5927), obj3);
+  obj4 = { children: items4 };
+  const obj5 = { variant: "secondary", text: intl3.string(guildId(1126).t.h3aGmv), onPress: callback };
+  const Button = tmp2(5594).Button;
+  intl3 = tmp2(1126).intl;
+  items4 = [closure_7(Button, obj5), ];
+  const obj6 = { text: intl4.string(guildId(1126).t.OQFlFD), variant: "destructive", onPress: callback1 };
+  const Button2 = tmp2(5594).Button;
+  intl4 = tmp2(1126).intl;
+  items4[1] = closure_7(Button2, obj6);
+  return closure_7(tmp9, obj3);
 });
+let result = size.fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertIncomplete.tsx");
+
+export default tmp3;

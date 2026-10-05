@@ -1,15 +1,23 @@
 // === Module 2113: useCommunicationDisabledNoticeStore ===
 
 // Module 2113 (useCommunicationDisabledNoticeStore)
-import c from "c" /* 576 */;
+import Storage2 from "Storage" /* 510 */;
+import react from "react" /* 576 */;
 import _mod1254 from "module_1254" /* 1254 */;
-import _mod4492 from "module_4492" /* 4492 */;
-import _slicedToArray from "module_32" /* 32 */;
+import GuildDisableCommunicationConstants from "GuildDisableCommunicationConstants" /* 2114 */;
+import _slicedToArray2 from "_slicedToArray" /* 4492 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import module_571 from "module_571" /* 571 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY = fn(2114).DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY;
-const module_571 = fn(571);
+const require = globalThis.__r;
+let _require, dependencyMap, setState;
+
+const DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY = GuildDisableCommunicationConstants.DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY;
 let state = module_571.createStore((arg0, arg1) => {
+  let closure_0;
+  let closure_1;
   _require = arg0;
   dependencyMap = arg1;
   let Storage = require("Storage").Storage;
@@ -20,39 +28,51 @@ let state = module_571.createStore((arg0, arg1) => {
   let obj = {
     notificationDismissedInGuilds: new Set(items),
     dismissNotification(arg0) {
-      const notificationDismissedInGuilds = dependencyMap().notificationDismissedInGuilds;
+      const notificationDismissedInGuilds = closure_1().notificationDismissedInGuilds;
       notificationDismissedInGuilds.add(arg0);
-      const Storage = notificationDismissedInGuilds(510).Storage;
+      const Storage = notificationDismissedInGuilds(closure_1[2]).Storage;
       const result = Storage.set(DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY, notificationDismissedInGuilds);
-      notificationDismissedInGuilds(1259).batchUpdates(() => notificationDismissedInGuilds({ notificationDismissedInGuilds }));
+      let obj = notificationDismissedInGuilds(closure_1[4]);
+      obj.batchUpdates(() => {
+        const obj = { notificationDismissedInGuilds };
+        return notificationDismissedInGuilds(obj);
+      });
     },
     resetNotification(arg0) {
-      const notificationDismissedInGuilds = dependencyMap().notificationDismissedInGuilds;
+      const notificationDismissedInGuilds = closure_1().notificationDismissedInGuilds;
       if (notificationDismissedInGuilds.has(arg0)) {
         notificationDismissedInGuilds.delete(arg0);
-        const Storage = notificationDismissedInGuilds(510).Storage;
+        const Storage = notificationDismissedInGuilds(closure_1[2]).Storage;
         const result = Storage.set(DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY, notificationDismissedInGuilds);
-        notificationDismissedInGuilds(1259).batchUpdates(() => notificationDismissedInGuilds({ notificationDismissedInGuilds }));
-        const obj = notificationDismissedInGuilds(1259);
+        let obj = notificationDismissedInGuilds(closure_1[4]);
+        obj.batchUpdates(() => {
+          const obj = { notificationDismissedInGuilds };
+          return notificationDismissedInGuilds(obj);
+        });
       }
     }
   };
+  new Set(items);
   return obj;
 });
-let Storage = fn(510).Storage;
+let Storage = Storage2.Storage;
 Storage.asyncGet(DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY, async (arg0) => {
+  let closure_0;
   _require = arg0;
-  require("ReactBatchUpdates").batchUpdates(() => {
+  let obj = require("react-native");
+  obj.batchUpdates(() => {
+    setState = setState.setState;
     const obj = { notificationDismissedInGuilds: new Set(closure_0) };
-    return state.setState(obj);
+    new Set(closure_0);
+    return setState(obj);
   });
 });
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx");
-
-export const useCommunicationDisabledNoticeStore = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(7);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let first;
+  let obj3;
+  let tmp6;
+  const obj = react;
+  const cResult = obj.c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function n(arg0) {
       const items = [, ];
@@ -60,19 +80,22 @@ export const useCommunicationDisabledNoticeStore = ReactCompilerGating.isReactCo
       return items;
     };
     cResult[0] = fn;
-    let first = fn;
+    first = fn;
   } else {
     first = cResult[0];
   }
   const tmpResult = _mod1254;
-  [obj3, tmp6] = _mod1254.useStoreWithEqualityFn(closure_4, first, _mod4492.shallow);
+  [obj3, tmp6] = tmpResult.useStoreWithEqualityFn(state, first, _slicedToArray2.shallow);
+  _slicedToArray(tmpResult.useStoreWithEqualityFn(state, first, _slicedToArray2.shallow), 2);
   if (cResult[1] === arg0) {
+    let tmp7;
     if (cResult[2] === obj3) {
-      let tmp7 = cResult[3];
+      tmp7 = cResult[3];
     }
     if (cResult[4] === tmp6) {
-      if (cResult[5] === tmp9) {
-        let tmp10 = cResult[6];
+      let tmp10;
+      if (cResult[5] === !tmp7) {
+        tmp10 = cResult[6];
       }
       return tmp10;
     }
@@ -87,17 +110,23 @@ export const useCommunicationDisabledNoticeStore = ReactCompilerGating.isReactCo
   cResult[2] = obj3;
   cResult[3] = hasItem;
   tmp7 = hasItem;
-  const tmp5 = _slicedToArray(_mod1254.useStoreWithEqualityFn(closure_4, first, _mod4492.shallow), 2);
 }) : ((arg0) => {
-  const tmp = _slicedToArray(_mod1254.useStoreWithEqualityFn(closure_4, (arg0) => {
+  let first;
+  let tmp2;
+  const obj = _mod1254;
+  [first, tmp2] = obj.useStoreWithEqualityFn(state, (arg0) => {
     const items = [, ];
     ({ notificationDismissedInGuilds: arr[0], dismissNotification: arr[1] } = arg0);
     return items;
-  }, _mod4492.shallow), 2);
-  const first = tmp[0];
-  let items = [!first.has(arg0), tmp[1]];
+  }, _slicedToArray2.shallow);
+  let items = [, ];
+  items[0] = !first.has(arg0);
+  items[1] = tmp2;
   return items;
 });
+let result = size.fileFinishedImporting("modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx");
+
+export const useCommunicationDisabledNoticeStore = tmp3;
 export const clearCommunicationDisabledNotice = function clearCommunicationDisabledNotice(arg0) {
   state = state.getState();
   return state.resetNotification(arg0);

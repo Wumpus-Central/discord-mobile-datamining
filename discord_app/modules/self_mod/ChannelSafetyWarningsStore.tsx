@@ -1,41 +1,43 @@
 // === Module 9786: ChannelSafetyWarningsStore ===
 
 // Module 9786 (ChannelSafetyWarningsStore)
-import initializeDefault from "initialize" /* 504 */;
+import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
+import size from "module_2" /* 2 */;
 
+let closure_4;
+
+const f101655 = function(type) {
+  let tmp2 = (type.type === closure_1_2.INAPPROPRIATE_CONVERSATION_TIER_1 || type.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2) && null != type.dismiss_timestamp;
+  if (tmp2) {
+    const _Date = Date;
+    const self = this;
+    const self2 = this;
+    const _Date2 = Date;
+    const date = new Date(type.dismiss_timestamp);
+    const time = date.getTime();
+    tmp2 = time <= Date.now() - closure_1_1;
+  }
+  return tmp2;
+};
 function handleConnectionOpen() {
   closure_4 = {};
   const values = Object.values(ChannelStore.getMutablePrivateChannels());
   const item = values.forEach((safetyWarnings) => {
     safetyWarnings = safetyWarnings.safetyWarnings;
     if (null != safetyWarnings) {
-      dependencyMap[safetyWarnings.id] = safetyWarnings;
-      if (safetyWarnings.some((type) => {
-        let tmp2 = type.type === closure_1_2.INAPPROPRIATE_CONVERSATION_TIER_1 || type.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2;
-        if (tmp2) {
-          tmp2 = null != type.dismiss_timestamp;
-        }
-        if (tmp2) {
-          const _Date = Date;
-          const date = new Date(type.dismiss_timestamp);
-          const _Date2 = Date;
-          const time = date.getTime();
-          tmp2 = time <= Date.now() - closure_1_1;
-        }
-        return tmp2;
-      })) {
+      closure_1_4[safetyWarnings.id] = safetyWarnings;
+      if (safetyWarnings.some(f101655)) {
         set.add(safetyWarnings.id);
       } else {
         set.delete(safetyWarnings.id);
       }
     }
     if (null == safetyWarnings) {
-      if (null != dependencyMap[safetyWarnings.id]) {
-        const id = safetyWarnings.id;
-        delete tmp2[tmp];
+      if (null != closure_1_4[safetyWarnings.id]) {
+        delete closure_1_4[safetyWarnings.id];
       }
       set.delete(safetyWarnings.id);
     }
@@ -44,71 +46,56 @@ function handleConnectionOpen() {
 let closure_1 = 5 * DurationsDefault.Millis.SECOND;
 const SafetyWarningTypes = { STRANGER_DANGER: 1, [1]: "STRANGER_DANGER", INAPPROPRIATE_CONVERSATION_TIER_1: 2, [2]: "INAPPROPRIATE_CONVERSATION_TIER_1", INAPPROPRIATE_CONVERSATION_TIER_2: 3, [3]: "INAPPROPRIATE_CONVERSATION_TIER_2", LIKELY_ATO: 4, [4]: "LIKELY_ATO" };
 let closure_3 = [];
-const dependencyMap = {};
+const React3 = {};
 const set = new Set();
-const Store = initializeDefault.Store;
+const Store = get_initializedDefault.Store;
 class ChannelSafetyWarningsStore extends Store {
+  initialize() {
+    this.waitFor(ChannelStore);
+  }
+  getChannelSafetyWarning(channelId, warningId) {
+    let closure_0 = warningId;
+    let found;
+    if (closure_4[channelId] != null) {
+      found = arr.find((id) => id.id === closure_0);
+    }
+    return found;
+  }
+  getChannelSafetyWarnings(channelId) {
+    let tmp = closure_4[channelId];
+    if (tmp == null) {
+      tmp = closure_3;
+    }
+    return tmp;
+  }
+  hasShownInitialTooltipForChannel(arg0) {
+    return set.has(arg0);
+  }
 }
 const prototype = ChannelSafetyWarningsStore.prototype;
-prototype["initialize"] = function initialize() {
-  this.waitFor(ChannelStore);
-};
-prototype["getChannelSafetyWarning"] = function getChannelSafetyWarning(channelId, warningId) {
-  closure_0 = warningId;
-  let found;
-  if (dependencyMap[channelId] != null) {
-    found = arr.find((id) => id.id === closure_0);
-  }
-  return found;
-};
-prototype["getChannelSafetyWarnings"] = function getChannelSafetyWarnings(channelId) {
-  let tmp = dependencyMap[channelId];
-  if (tmp == null) {
-    tmp = closure_3;
-  }
-  return tmp;
-};
-prototype["hasShownInitialTooltipForChannel"] = function hasShownInitialTooltipForChannel(arg0) {
-  return set.has(arg0);
-};
-const channelSafetyWarningsStore = new ChannelSafetyWarningsStore(DispatcherDefault, {
+const obj2 = {
   CHANNEL_CREATE: function handleChannelCreate(channel) {
     channel = channel.channel;
     const safetyWarnings = channel.safetyWarnings;
     if (null != safetyWarnings) {
-      dependencyMap[channel.id] = safetyWarnings;
-      if (safetyWarnings.some((type) => {
-        let tmp2 = type.type === closure_1_2.INAPPROPRIATE_CONVERSATION_TIER_1 || type.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2;
-        if (tmp2) {
-          tmp2 = null != type.dismiss_timestamp;
-        }
-        if (tmp2) {
-          const _Date = Date;
-          const date = new Date(type.dismiss_timestamp);
-          const _Date2 = Date;
-          const time = date.getTime();
-          tmp2 = time <= Date.now() - closure_1_1;
-        }
-        return tmp2;
-      })) {
+      closure_4[channel.id] = safetyWarnings;
+      if (safetyWarnings.some(f101655)) {
         set.add(channel.id);
       } else {
         set.delete(channel.id);
       }
     }
     if (null == safetyWarnings) {
-      if (null != dependencyMap[channel.id]) {
-        const id = channel.id;
-        delete tmp2[tmp];
+      if (null != closure_4[channel.id]) {
+        delete closure_4[channel.id];
       }
       set.delete(channel.id);
     }
   },
   CHANNEL_DELETE: function handleChannelDelete(channel) {
     channel = channel.channel;
-    if (null != dependencyMap[channel.id]) {
-      const id = channel.id;
-      delete tmp2[tmp];
+    if (null != closure_4[channel.id]) {
+      delete closure_4[channel.id];
     }
     set.delete(channel.id);
   },
@@ -117,30 +104,16 @@ const channelSafetyWarningsStore = new ChannelSafetyWarningsStore(DispatcherDefa
     const item = channels.forEach((safetyWarnings) => {
       safetyWarnings = safetyWarnings.safetyWarnings;
       if (null != safetyWarnings) {
-        dependencyMap[safetyWarnings.id] = safetyWarnings;
-        if (safetyWarnings.some((type) => {
-          let tmp2 = type.type === closure_1_2.INAPPROPRIATE_CONVERSATION_TIER_1 || type.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2;
-          if (tmp2) {
-            tmp2 = null != type.dismiss_timestamp;
-          }
-          if (tmp2) {
-            const _Date = Date;
-            const date = new Date(type.dismiss_timestamp);
-            const _Date2 = Date;
-            const time = date.getTime();
-            tmp2 = time <= Date.now() - closure_1_1;
-          }
-          return tmp2;
-        })) {
+        closure_1_4[safetyWarnings.id] = safetyWarnings;
+        if (safetyWarnings.some(f101655)) {
           set.add(safetyWarnings.id);
         } else {
           set.delete(safetyWarnings.id);
         }
       }
       if (null == safetyWarnings) {
-        if (null != dependencyMap[safetyWarnings.id]) {
-          const id = safetyWarnings.id;
-          delete tmp2[tmp];
+        if (null != closure_1_4[safetyWarnings.id]) {
+          delete closure_1_4[safetyWarnings.id];
         }
         set.delete(safetyWarnings.id);
       }
@@ -149,14 +122,16 @@ const channelSafetyWarningsStore = new ChannelSafetyWarningsStore(DispatcherDefa
   CONNECTION_OPEN: handleConnectionOpen,
   CONNECTION_OPEN_SUPPLEMENTAL: handleConnectionOpen,
   CHANNEL_SAFETY_WARNING_FEEDBACK: function handleChannelSafetyWarningFeedback(arg0) {
-    ({ channelId, warningId: ChannelStore, feedbackType: closure_1 } = arg0);
-    if (null != dependencyMap[channelId]) {
-      dependencyMap[channelId] = arr.map((id) => {
+    let channelId;
+    let closure_129_0;
+    let closure_129_1;
+    ({ channelId, warningId: closure_129_0, feedbackType: closure_129_1 } = arg0);
+    if (null != closure_4[channelId]) {
+      closure_4[channelId] = closure_4[channelId].map((id) => {
         let tmp = id;
-        if (id.id === ChannelStore) {
-          const obj = {};
+        if (id.id === closure_1_0) {
+          const obj = { feedback_type };
           const merged = Object.assign(id);
-          obj.feedback_type = feedback_type;
           tmp = obj;
         }
         return tmp;
@@ -166,28 +141,31 @@ const channelSafetyWarningsStore = new ChannelSafetyWarningsStore(DispatcherDefa
   CLEAR_CHANNEL_SAFETY_WARNINGS: function handleClearChannelSafetyWarnings(channelId) {
     channelId = channelId.channelId;
     set.delete(channelId);
-    if (null != dependencyMap[channelId]) {
-      dependencyMap[channelId] = arr.map((item) => {
-        const obj = {};
+    if (null != closure_4[channelId]) {
+      closure_4[channelId] = closure_4[channelId].map((item) => {
+        const obj = { dismiss_timestamp: undefined };
         const merged = Object.assign(item);
-        obj.dismiss_timestamp = undefined;
         return obj;
       });
     }
   },
   DISMISS_CHANNEL_SAFETY_WARNINGS: function handleDismissChannelSafetyWarnings(arg0) {
-    ({ channelId, warningIds: ChannelStore } = arg0);
-    let dismiss_timestamp;
-    if (null != dependencyMap[channelId]) {
+    let channelId;
+    let closure_129_0;
+    ({ channelId, warningIds: closure_129_0 } = arg0);
+    closure_1 = undefined;
+    if (null != closure_4[channelId]) {
+      let tmp = globalThis;
       const _Date = Date;
+      const self = this;
+      const self2 = this;
       const date = new Date();
-      dismiss_timestamp = date.toISOString();
-      dependencyMap[channelId] = arr.map((id) => {
+      closure_1 = date.toISOString();
+      closure_4[channelId] = closure_4[channelId].map((id) => {
         let tmp = id;
-        if (ChannelStore.includes(id.id)) {
-          const obj = {};
+        if (closure_1_0.includes(id.id)) {
+          const obj = { dismiss_timestamp };
           const merged = Object.assign(id);
-          obj.dismiss_timestamp = dismiss_timestamp;
           tmp = obj;
         }
         return tmp;
@@ -197,8 +175,8 @@ const channelSafetyWarningsStore = new ChannelSafetyWarningsStore(DispatcherDefa
   ACKNOWLEDGE_CHANNEL_SAFETY_WARNING_TOOLTIP: function handleAcknowledgeChannelSafetyWarningTooltip(channelId) {
     set.add(channelId.channelId);
   }
-});
-const size = fn(2);
+};
+const channelSafetyWarningsStore = new ChannelSafetyWarningsStore(DispatcherDefault, obj2);
 const result = size.fileFinishedImporting("modules/self_mod/ChannelSafetyWarningsStore.tsx");
 
 export default channelSafetyWarningsStore;

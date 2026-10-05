@@ -3,138 +3,83 @@
 // Module 10920 (AppStoreOverlayContent)
 import openURL from "openURL" /* 4559 */;
 import LinkingDefault from "Linking" /* 4565 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import AppStoreMetadataActionCreators from "AppStoreMetadataActionCreators" /* 10921 */;
+import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-let closure_4 = async function _getAppStoreOverlayContent(arg0) {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp5 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          dependencyMap = tmp6;
-          closure_130_0 = closure_0;
-          closure_130_1 = closure_1;
-          closure_130_2 = undefined;
-          c4 = 1;
-          c3 = 2;
-          c5 = 1;
-          const obj5 = { value: require("AppStoreMetadataActionCreators").fetchAppStoreMetadata(closure_0), done: false };
-          return obj5;
-        }
-      } else if (1 === tmp6) {
-        c4 = 0;
-        c5 = 3;
-        return { value: null, done: true };
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 0;
-        c5 = 3;
-        const obj6 = { value, done: true };
-        return obj6;
-      } else {
-        closure_130_2 = value;
-        let tmp9 = null;
-        if (null != closure_130_2) {
-          tmp9 = (function toOverlayContent(rating, os, storeUrl) {
-            let tmp = null != rating.rating;
-            if (tmp) {
-              tmp = rating.rating > 0;
-            }
-            const items = [];
-            if (tmp) {
-              const obj = { type: "rating", label: null, rating: null, ratingCount: null };
-              const intl = closure_1_0(1126).intl;
-              obj.label = intl.string(closure_1_0(1126).t["9bEWZJ"]);
-              ({ rating: obj.rating, rating_count } = rating);
-              obj.ratingCount = rating_count;
-              items.push(obj);
-            }
-            let tmp5 = null != rating.age_rating;
-            if (tmp5) {
-              tmp5 = "" !== rating.age_rating;
-            }
-            if (tmp5) {
-              const obj2 = { type: "age", label: null, ageRating: null, ageRatingLabel: null };
-              const intl2 = closure_1_0(1126).intl;
-              obj2.label = intl2.string(closure_1_0(1126).t.ncrlHJ);
-              obj2.ageRating = rating.age_rating;
-              const intl3 = closure_1_0(1126).intl;
-              obj2.ageRatingLabel = intl3.string(closure_1_0(1126).t.wK1svU);
-              items.push(obj2);
-            }
-            if (null != rating.chart_rank) {
-              const obj7 = { type: "chart", label: null, rank: null, category: null };
-              const intl4 = closure_1_0(1126).intl;
-              obj7.label = intl4.string(closure_1_0(1126).t["x/ERbV"]);
-              ({ chart_rank: obj3.rank, category } = rating);
-              obj7.category = category;
-              items.push(obj7);
-            }
-            const screenshots = rating.screenshots;
-            const found = screenshots.filter((item) => "" !== item);
-            if (null != rating.app_id) {
-              if ("" !== rating.app_id) {
-                let storeAppId = rating.app_id;
-              }
-              const obj8 = { title: null, subtitle: null, description: null, iconUrl: null, headerUrl: null, stats: null, media: null, storeUrl: null, appId: null, platform: null };
-              ({ name: obj4.title, category: obj4.subtitle, description: obj4.description, icon: obj4.iconUrl, header_image } = rating);
-              obj8.headerUrl = header_image;
-              let tmp12;
-              if (items.length > 0) {
-                tmp12 = items;
-              }
-              obj8.stats = tmp12;
-              let mapped;
-              if (found.length > 0) {
-                mapped = found.map((url) => ({ type: "screenshot", url }));
-              }
-              obj8.media = mapped;
-              obj8.storeUrl = storeUrl;
-              obj8.appId = storeAppId;
-              obj8.platform = os.os;
-              return obj8;
-            }
-            storeAppId = os.storeAppId;
-          })(closure_130_2, closure_130_0, closure_130_1);
-        }
-        c4 = 0;
-        c5 = 3;
-        let obj = { value: tmp9, done: true };
-        return obj;
+let obj = function _getAppStoreOverlayContent() {
+  obj = _asyncToGenerator(async (arg0, arg1) => {
+    let c3;
+    let c4;
+    let c5;
+    function toOverlayContent(rating, os, storeUrl) {
+      let category;
+      let header_image;
+      let intl;
+      let intl2;
+      let intl3;
+      let intl4;
+      let mapped;
+      let rating_count;
+      let tmp12;
+      const items = [];
+      const tmp = null != rating.rating && rating.rating > 0;
+      if (tmp) {
+        obj = { type: "rating", label: intl.string(closure_1_0(closure_1_2[3]).t["9bEWZJ"]), rating: null, ratingCount: rating_count };
+        const push = items.push;
+        intl = closure_1_0(closure_1_2[3]).intl;
+        ({ rating: obj.rating, rating_count } = rating);
+        push(obj);
       }
-    } catch (tmp18) {
-      if (tmp3 === c4) {
-        c5 = tmp2;
-        throw tmp18;
-      } else {
-        c3 = tmp;
+      const tmp5 = null != rating.age_rating && "" !== rating.age_rating;
+      if (tmp5) {
+        const push2 = items.push;
+        const obj2 = { type: "age", label: intl2.string(closure_1_0(closure_1_2[3]).t.ncrlHJ), ageRating: rating.age_rating, ageRatingLabel: intl3.string(closure_1_0(closure_1_2[3]).t.wK1svU) };
+        intl2 = closure_1_0(closure_1_2[3]).intl;
+        intl3 = closure_1_0(closure_1_2[3]).intl;
+        push2(obj2);
       }
+      if (null != rating.chart_rank) {
+        const push3 = items.push;
+        const obj7 = { type: "chart", label: intl4.string(closure_1_0(closure_1_2[3]).t["x/ERbV"]), rank: null, category };
+        intl4 = closure_1_0(closure_1_2[3]).intl;
+        ({ chart_rank: obj3.rank, category } = rating);
+        push3(obj7);
+      }
+      const screenshots = rating.screenshots;
+      const found = screenshots.filter((item) => "" !== item);
+      if (null != rating.app_id) {
+        let storeAppId;
+        if ("" !== rating.app_id) {
+          storeAppId = rating.app_id;
+        }
+        const obj8 = { title: null, subtitle: null, description: null, iconUrl: null, headerUrl: header_image, stats: tmp12, media: mapped, storeUrl, appId: storeAppId, platform: os.os };
+        ({ name: obj4.title, category: obj4.subtitle, description: obj4.description, icon: obj4.iconUrl, header_image } = rating);
+        tmp12 = undefined;
+        if (items.length > 0) {
+          tmp12 = items;
+        }
+        mapped = undefined;
+        if (found.length > 0) {
+          mapped = found.map((url) => ({ type: "screenshot", url }));
+        }
+        return obj8;
+      }
+      storeAppId = os.storeAppId;
     }
-  }
+    let closure_0 = arg0;
+    let closure_1 = arg1;
+    const obj3 = AppStoreMetadataActionCreators;
+    await obj3.fetchAppStoreMetadata(closure_0);
+    let closure_2 = value;
+    let tmp6 = null;
+    if (null != closure_2) {
+      tmp6 = toOverlayContent(closure_2, closure_0, closure_1);
+    }
+    return tmp6;
+  });
+  return obj(...arguments);
 };
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayContent.tsx");
 
 export const getIosAppStoreReviewsUrl = function getIosAppStoreReviewsUrl(arg0) {
@@ -145,19 +90,13 @@ export const openAppStoreReviews = function openAppStoreReviews(storeUrl, platfo
     if (null != appId) {
       if ("" !== appId) {
         const _HermesInternal = HermesInternal;
-        LinkingDefault.performURLNavigation("itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=" + appId + "&onlyLatestVersion=true&pageNumber=0&sortOrdering=1&type=Purple+Software");
+        obj = LinkingDefault;
+        obj.performURLNavigation("itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=" + appId + "&onlyLatestVersion=true&pageNumber=0&sortOrdering=1&type=Purple+Software");
       }
     }
   }
   openURL.default(storeUrl);
 };
 export const getAppStoreOverlayContent = function getAppStoreOverlayContent() {
-  const self = this;
-  const apply = closure_4.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+  return obj(...arguments);
 };

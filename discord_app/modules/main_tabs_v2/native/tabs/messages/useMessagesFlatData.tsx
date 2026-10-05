@@ -1,28 +1,33 @@
 // === Module 15981: useMessagesFlatData ===
 
 // Module 15981 (useMessagesFlatData)
-import c from "c" /* 576 */;
+import react2 from "react" /* 576 */;
 import useMessagesData from "useMessagesData" /* 15972 */;
 import MessagesItemHappeningNow from "MessagesItemHappeningNow" /* 15982 */;
 import MessagesItemEmptyState from "MessagesItemEmptyState" /* 16019 */;
 import MessagesItemSeparator from "MessagesItemSeparator" /* 16020 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesFlatData.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, listItemHeight) => {
-  const cResult = c.c(10);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, listItemHeight) => {
+  let channelFavorites;
+  let channels;
+  let num9;
+  let renderHeader;
+  let sections;
+  let tmp5;
+  const obj = react2;
+  const cResult = obj.c(10);
   listItemHeight = listItemHeight.listItemHeight;
   ({ channels, channelFavorites, renderHeader, sections } = arg0);
   if (cResult[0] === channelFavorites) {
     if (cResult[1] === channels) {
       if (cResult[2] === listItemHeight) {
         if (cResult[3] === renderHeader) {
+          let tmp4;
           if (cResult[4] === sections) {
-            let tmp4 = cResult[5];
+            tmp4 = cResult[5];
           }
           return tmp4;
         }
@@ -30,9 +35,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, listItemHe
     }
   }
   if (cResult[6] !== renderHeader) {
+    let num;
     if (renderHeader === useMessagesData.MessagesDataHeader.HappeningNow) {
-      let num = MessagesItemHappeningNow.getMessagesItemHappeningNowHeight();
       const tmpResult = MessagesItemHappeningNow;
+      num = tmpResult.getMessagesItemHappeningNowHeight();
     } else {
       num = 0;
       if (renderHeader === useMessagesData.MessagesDataHeader.EmptyState) {
@@ -41,87 +47,91 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, listItemHe
     }
     cResult[6] = renderHeader;
     cResult[7] = num;
+    tmp5 = num;
   } else {
-    const items = [];
-    const tmp7 = sections[useMessagesData.MessagesDataSections.FavoriteChannels];
-    let num6 = 0;
-    let sum = tmp5;
-    let tmp9 = tmp5;
-    if (0 < tmp7) {
-      do {
-        let obj2 = { kind: "favorite", channelId: channelFavorites[num6].channelId, row: num6 };
-        let arr = items.push(obj2);
-        sum = sum + listItemHeight;
-        num6 = num6 + 1;
-        tmp9 = sum;
-      } while (num6 < tmp7);
-    }
-    const tmp13 = sections[useMessagesData.MessagesDataSections.Channels];
-    let sum1 = tmp9;
-    let num7 = 0;
-    let tmp15 = tmp9;
-    if (0 < tmp13) {
-      do {
-        let obj3 = { kind: "channel", channelId: channels[num7].channelId, row: num7 };
-        let arr7 = items.push(obj3);
-        sum1 = sum1 + listItemHeight;
-        num7 = num7 + 1;
-        tmp15 = sum1;
-      } while (num7 < tmp13);
-    }
-    if (sections[useMessagesData.MessagesDataSections.Separator] <= 0) {
-      const tmp24 = sections[useMessagesData.MessagesDataSections.SuggestedFriends];
-      let tmp25;
-      let tmp26;
-      if (tmp24 > 0) {
-        const _Symbol2 = Symbol;
-        if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj4 = { kind: "friendsHeader" };
-          cResult[9] = obj4;
-          let tmp28 = obj4;
-        } else {
-          tmp28 = cResult[9];
-        }
-        items.push(tmp28);
-        let num10 = 0;
-        tmp25 = tmp15;
-        tmp26 = length;
-        if (0 < tmp24) {
-          do {
-            let obj5 = { kind: "suggestedFriend", row: num10 };
-            let arr9 = items.push(obj5);
-            num10 = num10 + 1;
-            tmp25 = tmp15;
-            tmp26 = length;
-          } while (num10 < tmp24);
-        }
-      }
-      for (let num11 = 0; num11 < tmp33; num11 = num11 + 1) {
-        let obj6 = { kind: "placeholder", row: num11 };
-        let arr10 = items.push(obj6);
-      }
-      const obj7 = { listData: items, friendsHeaderIndex: tmp26, friendsHeaderOffset: tmp25, listHeaderHeight: tmp5 };
-      cResult[0] = channelFavorites;
-      cResult[1] = channels;
-      cResult[2] = listItemHeight;
-      cResult[3] = renderHeader;
-      cResult[4] = sections;
-      cResult[5] = obj7;
-      tmp4 = obj7;
-      tmp33 = sections[useMessagesData.MessagesDataSections.Placeholders];
+    tmp5 = cResult[7];
+  }
+  const items = [];
+  const tmp6 = sections[useMessagesData.MessagesDataSections.FavoriteChannels];
+  let num4 = 0;
+  let sum = tmp5;
+  let tmp8 = tmp5;
+  if (0 < tmp6) {
+    do {
+      let obj2 = { kind: "favorite", channelId: channelFavorites[num4].channelId, row: num4 };
+      let arr = items.push(obj2);
+      sum = sum + listItemHeight;
+      num4 = num4 + 1;
+      tmp8 = sum;
+    } while (num4 < tmp6);
+  }
+  const tmp10 = sections[useMessagesData.MessagesDataSections.Channels];
+  let sum1 = tmp8;
+  let num5 = 0;
+  let tmp12 = tmp8;
+  if (0 < tmp10) {
+    do {
+      let obj3 = { kind: "channel", channelId: channels[num5].channelId, row: num5 };
+      let arr7 = items.push(obj3);
+      sum1 = sum1 + listItemHeight;
+      num5 = num5 + 1;
+      tmp12 = sum1;
+    } while (num5 < tmp10);
+  }
+  let sum2 = tmp12;
+  if (sections[useMessagesData.MessagesDataSections.Separator] > 0) {
+    let tmp18;
+    const _Symbol = Symbol;
+    if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+      const obj4 = { kind: "separator" };
+      cResult[8] = obj4;
+      tmp18 = obj4;
     } else {
-      const _Symbol = Symbol;
-      if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj8 = { kind: "separator" };
-        cResult[8] = obj8;
-        let tmp21 = obj8;
-      } else {
-        tmp21 = cResult[8];
-      }
-      items.push(tmp21);
-      const sum2 = tmp15 + MessagesItemSeparator.MESSAGES_ITEM_SEPERATOR_HEIGHT;
+      tmp18 = cResult[8];
+    }
+    items.push(tmp18);
+    sum2 = tmp12 + MessagesItemSeparator.MESSAGES_ITEM_SEPERATOR_HEIGHT;
+  }
+  const tmp20 = sections[useMessagesData.MessagesDataSections.SuggestedFriends];
+  let tmp21;
+  let tmp22;
+  if (tmp20 > 0) {
+    let tmp24;
+    const _Symbol2 = Symbol;
+    if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+      const obj5 = { kind: "friendsHeader" };
+      cResult[9] = obj5;
+      tmp24 = obj5;
+    } else {
+      tmp24 = cResult[9];
+    }
+    items.push(tmp24);
+    let num8 = 0;
+    tmp21 = sum2;
+    tmp22 = length;
+    if (0 < tmp20) {
+      do {
+        let obj6 = { kind: "suggestedFriend", row: num8 };
+        let arr10 = items.push(obj6);
+        num8 = num8 + 1;
+        tmp21 = sum2;
+        tmp22 = length;
+      } while (num8 < tmp20);
     }
   }
+  const tmp27 = sections[useMessagesData.MessagesDataSections.Placeholders];
+  for (let num9 = 0; num9 < tmp27; num9 = num9 + 1) {
+    let obj7 = { kind: "placeholder", row: num9 };
+    let arr11 = items.push(obj7);
+  }
+  const obj8 = { listData: items, friendsHeaderIndex: tmp22, friendsHeaderOffset: tmp21, listHeaderHeight: tmp5 };
+  cResult[0] = channelFavorites;
+  cResult[1] = channels;
+  cResult[2] = listItemHeight;
+  cResult[3] = renderHeader;
+  cResult[4] = sections;
+  cResult[5] = obj8;
+  tmp4 = obj8;
 }) : ((channels, listItemHeight) => {
   listItemHeight = listItemHeight.listItemHeight;
   channels = undefined;
@@ -131,9 +141,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, listItemHe
   const sections = channels.sections;
   const items = [channels, channelFavorites, renderHeader, sections, listItemHeight];
   return channelFavorites.useMemo(() => {
+    let listHeaderHeight;
+    let num5;
     if (renderHeader === useMessagesData.MessagesDataHeader.HappeningNow) {
-      let listHeaderHeight = MessagesItemHappeningNow.getMessagesItemHappeningNowHeight();
       const tmp2Result = MessagesItemHappeningNow;
+      listHeaderHeight = tmp2Result.getMessagesItemHappeningNowHeight();
     } else {
       listHeaderHeight = 0;
       if (renderHeader === useMessagesData.MessagesDataHeader.EmptyState) {
@@ -190,6 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, listItemHe
         } while (num4 < tmp21);
       }
     }
+    const tmp26 = sections[useMessagesData.MessagesDataSections.Placeholders];
     for (let num5 = 0; num5 < tmp26; num5 = num5 + 1) {
       let obj4 = { kind: "placeholder", row: num5 };
       let arr11 = listData.push(obj4);
@@ -197,3 +210,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, listItemHe
     return { listData, friendsHeaderIndex, friendsHeaderOffset, listHeaderHeight };
   }, items);
 });
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesFlatData.tsx");
+
+export default tmp2;

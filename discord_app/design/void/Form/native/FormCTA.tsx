@@ -1,36 +1,52 @@
 // === Module 8896: FormCTA ===
 
 // Module 8896 (FormCTA)
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
+import Constants from "Constants" /* 1096 */;
 import native from "native" /* 1188 */;
-import FormCheckbox2 from "FormCheckbox" /* 5991 */;
+import FormCheckbox from "FormCheckbox" /* 5991 */;
 import FormRowDefault from "FormRow" /* 6633 */;
-import RowButton from "RowButton" /* 8897 */;
-import noop from "module_19" /* 19 */;
+import RowButton2 from "RowButton" /* 8897 */;
+import react from "react" /* 19 */;
+import createStyles_mod from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size_mod from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const Fonts = fn(1096).Fonts;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj2 = { form: { borderRadius: nativeDefault.radii.xs, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12 }, title: null, description: null, icon: null, completedIcon: null, completedText: null };
-let obj3 = { borderRadius: nativeDefault.radii.xs, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12 };
-obj2.title = { fontSize: nativeDefault.space.PX_16, lineHeight: 18, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontFamily: Fonts.PRIMARY_SEMIBOLD };
-let obj4 = { fontSize: nativeDefault.space.PX_16, lineHeight: 18, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontFamily: Fonts.PRIMARY_SEMIBOLD };
-obj2.description = { fontSize: 12, lineHeight: 18, color: nativeDefault.colors.TEXT_SUBTLE, fontFamily: Fonts.PRIMARY_MEDIUM };
-let size = { width: nativeDefault.space.PX_40, height: nativeDefault.space.PX_40 };
-obj2.icon = size;
-obj2.completedIcon = { opacity: 0.3 };
-let obj5 = { fontSize: 12, lineHeight: 18, color: nativeDefault.colors.TEXT_SUBTLE, fontFamily: Fonts.PRIMARY_MEDIUM };
-obj2.completedText = { color: nativeDefault.colors.TEXT_MUTED };
-let closure_5 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj6 = { color: nativeDefault.colors.TEXT_MUTED };
-size = fn(2);
-const result = size.fileFinishedImporting("design/void/Form/native/FormCTA.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = completed(576).c(58);
+let obj2;
+let obj3;
+let obj4;
+let obj5;
+let size;
+const View = react_native.View;
+const Fonts = Constants.Fonts;
+const jsx = Fragment.jsx;
+let createStyles = createStyles_mod;
+let obj = { form: obj2, title: obj3, description: obj4, icon: size, completedIcon: { opacity: 0.3 }, completedText: obj5 };
+obj2 = { borderRadius: nativeDefault.radii.xs, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12 };
+createStyles = createStyles.createStyles;
+obj3 = { fontSize: nativeDefault.space.PX_16, lineHeight: 18, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontFamily: Fonts.PRIMARY_SEMIBOLD };
+obj4 = { fontSize: 12, lineHeight: 18, color: nativeDefault.colors.TEXT_SUBTLE, fontFamily: Fonts.PRIMARY_MEDIUM };
+size = { width: nativeDefault.space.PX_40, height: nativeDefault.space.PX_40 };
+obj5 = { color: nativeDefault.colors.TEXT_MUTED };
+let closure_5 = createStyles(obj);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let completed;
+  let iconContainerStyle;
+  let iconSource;
+  let iconStyle;
+  let items5;
+  let onLongPress;
+  let onPress;
+  let style;
+  let subtitle;
+  let title;
+  let titleStyle;
+  let trailing;
+  let variant;
+  const obj = completed(576);
+  const cResult = obj.c(58);
   ({ style, title, titleStyle, subtitle, completed } = arg0);
   ({ iconSource, iconStyle, iconContainerStyle, trailing } = arg0);
   ({ onPress, onLongPress, variant } = arg0);
@@ -40,25 +56,29 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       if (cResult[2] === iconSource) {
         if (cResult[3] === iconStyle) {
           if (cResult[4] === tmp4.completedIcon) {
+            let tmp5;
             if (cResult[5] === tmp4.icon) {
-              let tmp5 = cResult[6];
+              tmp5 = cResult[6];
             }
             if (cResult[7] === completed) {
+              let tmp10;
               if (cResult[8] === trailing) {
-                let tmp10 = cResult[9];
+                tmp10 = cResult[9];
               }
               if (cResult[10] === completed) {
                 if (cResult[11] === tmp4.completedText) {
                   if (cResult[12] === tmp4.description) {
+                    let tmp11;
                     if (cResult[13] === subtitle) {
-                      let tmp11 = cResult[14];
+                      tmp11 = cResult[14];
                     }
                     if ("row-button" === variant) {
+                      let tmp30;
                       if (cResult[15] !== completed) {
                         const obj2 = { checked: completed };
                         cResult[15] = completed;
                         cResult[16] = obj2;
-                        let tmp30 = obj2;
+                        tmp30 = obj2;
                       } else {
                         tmp30 = cResult[16];
                       }
@@ -68,18 +88,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                       }
                       if (cResult[17] === tmp4.title) {
                         if (cResult[18] === completedText) {
+                          let tmp32;
                           if (cResult[19] === titleStyle) {
-                            let tmp32 = cResult[20];
+                            tmp32 = cResult[20];
                           }
                           if (cResult[21] === tmp32) {
+                            let tmp33;
+                            let tmp37;
                             if (cResult[22] === title) {
-                              let tmp33 = cResult[23];
+                              tmp33 = cResult[23];
                             }
                             if (cResult[24] !== tmp10) {
                               const tmp10Result = tmp10();
                               cResult[24] = tmp10;
                               cResult[25] = tmp10Result;
-                              let tmp37 = tmp10Result;
+                              tmp37 = tmp10Result;
                             } else {
                               tmp37 = cResult[25];
                             }
@@ -89,8 +112,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                   if (cResult[29] === tmp11) {
                                     if (cResult[30] === tmp30) {
                                       if (cResult[31] === tmp33) {
+                                        let tmp39;
                                         if (cResult[32] === tmp37) {
-                                          let tmp39 = cResult[33];
+                                          tmp39 = cResult[33];
                                         }
                                         return tmp39;
                                       }
@@ -99,7 +123,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                 }
                               }
                             }
-                            const obj3 = { arrow: false, onPress, onLongPress, accessibilityState: tmp30, label: tmp33, subLabel: tmp11, trailing: tmp37, icon: tmp5 };
                             const tmp41 = jsx(completed(8897).RowButton, { arrow: false, onPress, onLongPress, accessibilityState: tmp30, label: tmp33, subLabel: tmp11, trailing: tmp37, icon: tmp5 });
                             cResult[26] = tmp5;
                             cResult[27] = onLongPress;
@@ -111,7 +134,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                             cResult[33] = tmp41;
                             tmp39 = tmp41;
                           }
-                          const obj4 = { style: tmp32, text: title };
                           const tmp36 = jsx(trailing(6633).Label, { style: tmp32, text: title });
                           cResult[21] = tmp32;
                           cResult[22] = title;
@@ -127,14 +149,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                       tmp32 = items;
                     } else {
                       if (cResult[34] === style) {
+                        let tmp16;
+                        let tmp17;
                         if (cResult[35] === tmp4.form) {
-                          let tmp16 = cResult[36];
+                          tmp16 = cResult[36];
                         }
                         if (cResult[37] !== completed) {
                           const obj5 = { checked: completed };
                           cResult[37] = completed;
                           cResult[38] = obj5;
-                          let tmp17 = obj5;
+                          tmp17 = obj5;
                         } else {
                           tmp17 = cResult[38];
                         }
@@ -144,18 +168,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                         }
                         if (cResult[39] === tmp4.title) {
                           if (cResult[40] === completedText1) {
+                            let tmp19;
                             if (cResult[41] === titleStyle) {
-                              let tmp19 = cResult[42];
+                              tmp19 = cResult[42];
                             }
                             if (cResult[43] === tmp19) {
+                              let tmp20;
+                              let tmp24;
                               if (cResult[44] === title) {
-                                let tmp20 = cResult[45];
+                                tmp20 = cResult[45];
                               }
                               if (cResult[46] !== tmp10) {
                                 const tmp10Result2 = tmp10();
                                 cResult[46] = tmp10;
                                 cResult[47] = tmp10Result2;
-                                let tmp24 = tmp10Result2;
+                                tmp24 = tmp10Result2;
                               } else {
                                 tmp24 = cResult[47];
                               }
@@ -167,8 +194,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                         if (cResult[53] === tmp17) {
                                           if (cResult[54] === tmp20) {
                                             if (cResult[55] === tmp24) {
+                                              let tmp26;
                                               if (cResult[56] === variant) {
-                                                let tmp26 = cResult[57];
+                                                tmp26 = cResult[57];
                                               }
                                               return tmp26;
                                             }
@@ -179,7 +207,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                   }
                                 }
                               }
-                              const obj6 = { start: true, end: true, variant, onPress, onLongPress, DEPRECATED_style: tmp16, accessibilityState: tmp17, label: tmp20, subLabel: tmp11, trailing: tmp24, leading: tmp5 };
                               const tmp29 = jsx(trailing(6633), { start: true, end: true, variant, onPress, onLongPress, DEPRECATED_style: tmp16, accessibilityState: tmp17, label: tmp20, subLabel: tmp11, trailing: tmp24, leading: tmp5 });
                               cResult[48] = tmp5;
                               cResult[49] = onLongPress;
@@ -193,7 +220,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                               cResult[57] = tmp29;
                               tmp26 = tmp29;
                             }
-                            const obj7 = { style: tmp19, text: title };
                             const tmp23 = jsx(trailing(6633).Label, { style: tmp19, text: title });
                             cResult[43] = tmp19;
                             cResult[44] = title;
@@ -221,14 +247,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               if (undefined !== subtitle) {
                 const items3 = [tmp4.description, ];
                 let completedText2 = null;
+                const SubLabel = trailing(6633).SubLabel;
                 if (completed) {
                   completedText2 = tmp4.completedText;
                 }
-                const obj8 = { style: null, text: null };
                 items3[1] = completedText2;
-                obj8.style = items3;
-                obj8.text = subtitle;
-                tmp13Result = jsx(trailing(6633).SubLabel, { style: null, text: null });
+                tmp13Result = <SubLabel style={items3} text={subtitle} />;
               }
               cResult[10] = completed;
               cResult[11] = tmp4.completedText;
@@ -238,15 +262,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               tmp11 = tmp13Result;
             }
             const fn = function h() {
+              let tmp2;
               if (completed) {
-                let tmp = jsx(FormCheckbox2.FormCheckbox, { checked: true });
+                tmp2 = jsx(FormCheckbox.FormCheckbox, { checked: true });
               } else {
-                tmp = trailing;
+                tmp2 = trailing;
                 if (trailing == null) {
-                  tmp = jsx(FormRowDefault.Arrow, {});
+                  tmp2 = jsx(FormRowDefault.Arrow, {});
                 }
               }
-              return tmp;
+              return tmp2;
             };
             cResult[7] = completed;
             cResult[8] = trailing;
@@ -264,16 +289,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     if (completed) {
       completedIcon = tmp4.completedIcon;
     }
-    const obj9 = { style: null, children: null };
     items4[1] = completedIcon;
-    obj9.style = items4;
-    const obj10 = { style: null, source: null, size: null, disableColor: true };
-    const items5 = [tmp4.icon, iconStyle];
-    obj10.style = items5;
-    obj10.source = iconSource;
-    obj10.size = completed(1188).Icon.Sizes.CUSTOM;
-    obj9.children = jsx(completed(1188).Icon, { style: null, source: null, size: null, disableColor: true });
-    tmp7Result = <View style={null}>{null}</View>;
+    ({ style: items5, source: iconSource, size: completed(1188).Icon.Sizes.CUSTOM, disableColor: true });
+    items5 = [tmp4.icon, iconStyle];
+    const Icon = completed(1188).Icon;
+    tmp7Result = <View style={items4}>{null}</View>;
   }
   cResult[0] = completed;
   cResult[1] = iconContainerStyle;
@@ -283,8 +303,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[5] = tmp4.icon;
   cResult[6] = tmp7Result;
   tmp5 = tmp7Result;
-  const obj = completed(576);
 }) : ((arg0) => {
+  let completed;
+  let iconContainerStyle;
+  let iconSource;
+  let iconStyle;
+  let items1;
+  let onLongPress;
+  let onPress;
+  let style;
+  let subtitle;
+  let title;
+  let titleStyle;
+  let tmp22Result1;
+  let trailing;
+  let variant;
   ({ title, titleStyle, subtitle, completed, iconSource, trailing, onPress, onLongPress, variant } = arg0);
   ({ style, iconStyle, iconContainerStyle } = arg0);
   const tmp = closure_5();
@@ -295,85 +328,66 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     if (completed) {
       completedIcon = tmp.completedIcon;
     }
-    const obj = { style: null, children: null };
     items[1] = completedIcon;
-    obj.style = items;
-    const obj2 = { style: null, source: null, size: null, disableColor: true };
-    const items1 = [tmp.icon, iconStyle];
-    obj2.style = items1;
-    obj2.source = iconSource;
-    obj2.size = native.Icon.Sizes.CUSTOM;
-    obj.children = jsx(native.Icon, { style: null, source: null, size: null, disableColor: true });
-    tmp3Result = <View style={null}>{null}</View>;
+    ({ style: items1, source: iconSource, size: native.Icon.Sizes.CUSTOM, disableColor: true });
+    items1 = [tmp.icon, iconStyle];
+    const Icon = native.Icon;
+    tmp3Result = <View style={items}>{null}</View>;
   }
   let tmp9Result = null;
   if (undefined !== subtitle) {
     const items2 = [tmp.description, ];
     let completedText = null;
+    const SubLabel = FormRowDefault.SubLabel;
     if (completed) {
       completedText = tmp.completedText;
     }
-    const obj3 = { style: null, text: null };
     items2[1] = completedText;
-    obj3.style = items2;
-    obj3.text = subtitle;
-    tmp9Result = jsx(FormRowDefault.SubLabel, { style: null, text: null });
+    tmp9Result = <SubLabel style={items2} text={subtitle} />;
   }
   if ("row-button" === variant) {
-    let FormCheckbox = require;
-    const obj4 = { arrow: false, onPress, onLongPress, accessibilityState: null, label: null, subLabel: null, trailing: null, icon: null };
     const obj5 = { checked: completed };
-    obj4.accessibilityState = obj5;
+    const RowButton = RowButton2.RowButton;
     const items3 = [tmp.title, , ];
     let completedText1;
+    const Label = FormRowDefault.Label;
     if (completed) {
       completedText1 = tmp.completedText;
     }
-    const obj6 = { style: null, text: null };
     items3[1] = completedText1;
     items3[2] = titleStyle;
-    obj6.style = items3;
-    obj6.text = title;
-    obj4.label = jsx(FormRowDefault.Label, { style: null, text: null });
-    obj4.subLabel = tmp9Result;
     if (completed) {
-      FormCheckbox = FormCheckbox(5991).FormCheckbox;
-      const obj7 = { checked: true };
-      trailing = <FormCheckbox checked />;
+      trailing = jsx(FormCheckbox.FormCheckbox, { checked: true });
     } else if (trailing == null) {
       trailing = jsx(FormRowDefault.Arrow, {});
     }
-    obj4.trailing = trailing;
-    obj4.icon = tmp3Result;
-    jsx(RowButton.RowButton, { arrow: false, onPress, onLongPress, accessibilityState: null, label: null, subLabel: null, trailing: null, icon: null });
+    tmp22Result1 = <RowButton arrow={false} onPress={onPress} onLongPress={onLongPress} accessibilityState={obj5} label={null} subLabel={tmp9Result} trailing={trailing} icon={tmp3Result} />;
   } else {
-    const obj8 = { start: true, end: true, variant, onPress, onLongPress, DEPRECATED_style: null, accessibilityState: null, label: null, subLabel: null, trailing: null, leading: null };
+    let tmp22Result;
     const items4 = [tmp.form, style];
-    obj8.DEPRECATED_style = items4;
-    const obj9 = { checked: completed };
-    obj8.accessibilityState = obj9;
     const items5 = [tmp.title, , ];
     let completedText2;
+    const obj8 = { checked: completed };
+    FormRowDefault;
+    const Label2 = FormRowDefault.Label;
     if (completed) {
       completedText2 = tmp.completedText;
     }
-    const obj10 = { style: null, text: null };
     items5[1] = completedText2;
     items5[2] = titleStyle;
-    obj10.style = items5;
-    obj10.text = title;
-    obj8.label = jsx(FormRowDefault.Label, { style: null, text: null });
-    obj8.subLabel = tmp9Result;
     if (completed) {
-      let tmp20Result = jsx(FormCheckbox2.FormCheckbox, { checked: true });
+      tmp22Result = jsx(FormCheckbox.FormCheckbox, { checked: true });
     } else {
-      tmp20Result = trailing;
+      tmp22Result = trailing;
       if (trailing == null) {
-        tmp20Result = jsx(FormRowDefault.Arrow, {});
+        tmp22Result = jsx(FormRowDefault.Arrow, {});
       }
     }
-    obj8.trailing = tmp20Result;
-    obj8.leading = tmp3Result;
-    return jsx(FormRowDefault, { start: true, end: true, variant, onPress, onLongPress, DEPRECATED_style: null, accessibilityState: null, label: null, subLabel: null, trailing: null, leading: null });
+    tmp22Result1 = <tmp25 start end variant={variant} onPress={onPress} onLongPress={onLongPress} DEPRECATED_style={items4} accessibilityState={obj8} label={null} subLabel={tmp9Result} trailing={tmp22Result} leading={tmp3Result} />;
   }
+  return tmp22Result1;
 });
+size = size_mod;
+const result = size.fileFinishedImporting("design/void/Form/native/FormCTA.tsx");
+
+export default tmp4;

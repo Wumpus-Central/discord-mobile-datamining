@@ -12,13 +12,9 @@ export const canViewInviteModal = function canViewInviteModal(PermissionStore, g
   if (defaultChannel == null) {
     tmp = guild;
   }
-  let canResult = null != tmp;
-  if (canResult) {
-    canResult = PermissionStore.can(Permissions.CREATE_INSTANT_INVITE, tmp);
-  }
+  let canResult = null != tmp && PermissionStore.can(Permissions.CREATE_INSTANT_INVITE, tmp);
   if (!canResult) {
     canResult = null != guild && null != guild.vanityURLCode;
-    const tmp5 = null != guild && null != guild.vanityURLCode;
   }
   if (!canResult) {
     let invite_code;

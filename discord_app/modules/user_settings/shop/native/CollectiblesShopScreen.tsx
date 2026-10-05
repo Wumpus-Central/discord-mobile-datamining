@@ -1,26 +1,29 @@
 // === Module 15702: CollectiblesShopScreen ===
 
 // Module 15702 (CollectiblesShopScreen)
-import c from "c" /* 576 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
+import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1087 */;
 import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6490 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6681 */;
 import useGiftCardMobileConsumptionHalfsheet from "useGiftCardMobileConsumptionHalfsheet" /* 6888 */;
 import useShopOrientationLock from "useShopOrientationLock" /* 15703 */;
-import CollectiblesShopV2 from "CollectiblesShopV2" /* 15704 */;
-import noop from "module_19" /* 19 */;
+import CollectiblesShopV22 from "CollectiblesShopV2" /* 15704 */;
+import react from "react" /* 19 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const constants = fn(1087).CollectiblesMobileShopScreen;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/shop/native/CollectiblesShopScreen.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(4);
-  const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
-  const shopOrientationLock = useShopOrientationLock.useShopOrientationLock();
-  const giftCardMobileConsumptionHalfsheet = useGiftCardMobileConsumptionHalfsheet.useGiftCardMobileConsumptionHalfsheet();
+const constants = CollectiblesShopConstants.CollectiblesMobileShopScreen;
+const jsx = Fragment.jsx;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const obj = react2;
+  const cResult = obj.c(4);
+  const obj2 = useSettingNavigationRoute;
+  const settingNavigationRoute = obj2.useSettingNavigationRoute();
+  const obj3 = useShopOrientationLock;
+  const shopOrientationLock = obj3.useShopOrientationLock();
+  const obj4 = useGiftCardMobileConsumptionHalfsheet;
+  const giftCardMobileConsumptionHalfsheet = obj4.useGiftCardMobileConsumptionHalfsheet();
   const params = settingNavigationRoute.params;
   let screen;
   if (params != null) {
@@ -44,22 +47,26 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   if (cResult[0] === analyticsSource) {
     if (cResult[1] === onNavigateAway) {
+      let tmp12;
       if (cResult[2] === screen) {
-        let tmp12 = cResult[3];
+        tmp12 = cResult[3];
       }
       return tmp12;
     }
   }
-  const tmp13 = jsx(CollectiblesShopV2.CollectiblesShopV2, { analyticsSource, screen, onNavigateAway });
+  const tmp13 = jsx(CollectiblesShopV22.CollectiblesShopV2, { analyticsSource, screen, onNavigateAway });
   cResult[0] = analyticsSource;
   cResult[1] = onNavigateAway;
   cResult[2] = screen;
   cResult[3] = tmp13;
   tmp12 = tmp13;
 }) : (() => {
-  const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
-  const shopOrientationLock = useShopOrientationLock.useShopOrientationLock();
-  const giftCardMobileConsumptionHalfsheet = useGiftCardMobileConsumptionHalfsheet.useGiftCardMobileConsumptionHalfsheet();
+  const obj = useSettingNavigationRoute;
+  const settingNavigationRoute = obj.useSettingNavigationRoute();
+  const obj2 = useShopOrientationLock;
+  const shopOrientationLock = obj2.useShopOrientationLock();
+  const obj3 = useGiftCardMobileConsumptionHalfsheet;
+  const giftCardMobileConsumptionHalfsheet = obj3.useGiftCardMobileConsumptionHalfsheet();
   const params = settingNavigationRoute.params;
   let screen;
   if (params != null) {
@@ -70,18 +77,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   const params2 = settingNavigationRoute.params;
   let analyticsSource;
+  const CollectiblesShopV2 = CollectiblesShopV22.CollectiblesShopV2;
   if (params2 != null) {
     analyticsSource = params2.analyticsSource;
   }
   if (analyticsSource == null) {
     analyticsSource = AnalyticsLocationDefault.COLLECTIBLES_SHOP;
   }
-  const obj4 = { analyticsSource, screen, onNavigateAway: null };
   const params3 = settingNavigationRoute.params;
   let onNavigateAway;
   if (params3 != null) {
     onNavigateAway = params3.onNavigateAway;
   }
-  obj4.onNavigateAway = onNavigateAway;
-  return jsx(CollectiblesShopV2.CollectiblesShopV2, { analyticsSource, screen, onNavigateAway: null });
+  return <CollectiblesShopV2 analyticsSource={analyticsSource} screen={screen} onNavigateAway={onNavigateAway} />;
 });
+const result = size.fileFinishedImporting("modules/user_settings/shop/native/CollectiblesShopScreen.tsx");
+
+export default tmp3;

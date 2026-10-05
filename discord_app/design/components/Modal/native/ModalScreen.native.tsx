@@ -1,24 +1,27 @@
 // === Module 8095: ModalScreen ===
 
 // Module 8095 (ModalScreen)
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6471 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const createStyles = fn(4890);
-let obj2 = { container: { flex: 1, flexDirection: "column", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
-let closure_5 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj3 = { flex: 1, flexDirection: "column", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-const size = fn(2);
-const result = size.fileFinishedImporting("design/components/Modal/native/ModalScreen.native.tsx");
-
-export const ModalScreen = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
-  const cResult = c.c(11);
+let obj2;
+const View = react_native.View;
+const jsx = Fragment.jsx;
+let obj = { container: obj2 };
+obj2 = { flex: 1, flexDirection: "column", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+let closure_5 = createStyles.createStyles(obj);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let backgroundColor;
+  let children;
+  const obj = react2;
+  const cResult = obj.c(11);
   ({ backgroundColor, children } = arg0);
   const tmp2 = closure_5();
   const insets = useSafeAreaInsetsKeyboardAwareDefault().insets;
@@ -28,20 +31,22 @@ export const ModalScreen = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   if (cResult[0] === insets.bottom) {
     if (cResult[1] === insets.left) {
       if (cResult[2] === insets.right) {
+        let tmp3;
         if (cResult[3] === backgroundColor) {
-          let tmp3 = cResult[4];
+          tmp3 = cResult[4];
         }
         if (cResult[5] === tmp2.container) {
+          let tmp4;
           if (cResult[6] === tmp3) {
-            let tmp4 = cResult[7];
+            tmp4 = cResult[7];
           }
           if (cResult[8] === children) {
+            let tmp5;
             if (cResult[9] === tmp4) {
-              let tmp5 = cResult[10];
+              tmp5 = cResult[10];
             }
             return tmp5;
           }
-          const obj2 = { style: tmp4, children };
           const tmp8 = <View style={tmp4}>{children}</View>;
           cResult[8] = children;
           cResult[9] = tmp4;
@@ -63,8 +68,9 @@ export const ModalScreen = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   cResult[3] = backgroundColor;
   cResult[4] = obj3;
   tmp3 = obj3;
-}) : ((children) => {
-  let backgroundColor = children.backgroundColor;
+}) : ((backgroundColor) => {
+  backgroundColor = backgroundColor.backgroundColor;
+  const children = backgroundColor.children;
   const tmp = closure_5();
   const insets = useSafeAreaInsetsKeyboardAwareDefault().insets;
   const style = [tmp.container, ];
@@ -72,5 +78,8 @@ export const ModalScreen = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
     backgroundColor = tmp.container.backgroundColor;
   }
   style[1] = { backgroundColor, paddingLeft: insets.left, paddingRight: insets.right, paddingBottom: insets.bottom };
-  return <View style={style}>{children.children}</View>;
+  return <View style={style}>{children}</View>;
 });
+const result = size.fileFinishedImporting("design/components/Modal/native/ModalScreen.native.tsx");
+
+export const ModalScreen = tmp3;

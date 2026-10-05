@@ -1,62 +1,116 @@
 // === Module 11899: VoicePanelChatView ===
 
 // Module 11899 (VoicePanelChatView)
-import c from "c" /* 576 */;
+import react_native from "react-native" /* 17 */;
+import react2 from "react" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import util from "util" /* 1126 */;
+import intl2 from "intl" /* 1126 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import _modDef4796 from "module_4796" /* 4796 */;
+import AssetRegistryDefault from "AssetRegistry" /* 4796 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4903 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5091 */;
 import ThemedGradientDefault from "ThemedGradient" /* 5911 */;
 import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 6570 */;
 import ChatFloatingNavButtonDefault from "ChatFloatingNavButton" /* 11897 */;
+import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11900 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11901 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import Constants from "Constants" /* 1085 */;
+import Fragment from "Fragment" /* 21 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import size_mod from "module_2" /* 2 */;
 
-require = fn;
-const Platform = fn(17).Platform;
-const CONTROLS_DRAWER_HEADER_SIZE = fn(11900).CONTROLS_DRAWER_HEADER_SIZE;
-const Constants = fn(1085);
+let blurResult, preloadResult, shown, updateChatOpenResult;
+
+let closure_4;
+let hasOwnProperty;
+let metroImportDefault;
+let metroRequire;
+const Platform = react_native.Platform;
+const CONTROLS_DRAWER_HEADER_SIZE = VoicePanelControlsConstants.CONTROLS_DRAWER_HEADER_SIZE;
 ({ ComponentActions: closure_4, ME: hasOwnProperty } = Constants);
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4890);
-let closure_8 = createStyles.createStyles({ container: { flex: 1, overflow: "hidden", paddingTop: CONTROLS_DRAWER_HEADER_SIZE }, gradientWrapper: { position: "absolute", top: CONTROLS_DRAWER_HEADER_SIZE, left: 0 }, titleBlur: { opacity: 0 } });
-fn(558);
+({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
+let obj = { container: { flex: 1, overflow: "hidden", paddingTop: CONTROLS_DRAWER_HEADER_SIZE }, gradientWrapper: { position: "absolute", top: CONTROLS_DRAWER_HEADER_SIZE, left: 0 }, titleBlur: { opacity: 0 } };
+let closure_8 = createStyles.createStyles(obj);
+let ReactCompilerGating = ReactCompilerGating_mod;
 const __initData = { code: "function VoicePanelChatViewTsx1(){const{windowDimensions}=this.__closure;return{width:windowDimensions.get().width,height:windowDimensions.get().height};}" };
 const __initData2 = { code: "function VoicePanelChatViewTsx2(){const{windowDimensions}=this.__closure;return{width:windowDimensions.get().width,height:windowDimensions.get().height};}" };
-let ReactCompilerGating = fn(558);
-let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(6);
-  const windowDimensions = noop.useContext(VoicePanelStateContextDefault).windowDimensions;
+const memo = react.memo;
+const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let first;
+  let intl;
+  let tmp5;
+  const obj = react2;
+  const cResult = obj.c(2);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function t() {
+      const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
+      ComponentDispatch.dispatch(constants.VOICE_PANEL_TIV_CLOSE);
+    };
+    cResult[0] = fn;
+    first = fn;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj2 = { accessibilityLabel: intl.string(intl2.t["5MstTl"]), icon: AssetRegistryDefault, onPress: first };
+    const tmp8 = ChatFloatingNavButtonDefault;
+    intl = intl2.intl;
+    const tmp9 = metroRequire(tmp8, obj2);
+    cResult[1] = tmp9;
+    tmp5 = tmp9;
+  } else {
+    tmp5 = cResult[1];
+  }
+  return tmp5;
+}) : (() => {
+  let intl;
+  const callback = react.useCallback(() => {
+    const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
+    ComponentDispatch.dispatch(constants.VOICE_PANEL_TIV_CLOSE);
+  }, []);
+  const obj = { accessibilityLabel: intl.string(intl2.t["5MstTl"]), icon: AssetRegistryDefault, onPress: callback };
+  const tmp2 = ChatFloatingNavButtonDefault;
+  intl = intl2.intl;
+  return metroRequire(tmp2, obj);
+}));
+ReactCompilerGating = ReactCompilerGating_mod;
+let closure_11 = memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const obj = react2;
+  const cResult = obj.c(6);
+  const windowDimensions = react.useContext(VoicePanelStateContextDefault).windowDimensions;
   const tmp4 = closure_8();
   const fn = function n() {
-    const size = { width: windowDimensions.get().width, height: windowDimensions.get().height };
+    size = { width: windowDimensions.get().width, height: windowDimensions.get().height };
     return size;
   };
   fn.__closure = { windowDimensions };
   fn.__workletHash = 16775846409623;
   fn.__initData = __initData;
-  const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
+  const obj2 = ReanimatedRexport;
+  const animatedStyle = obj2.useAnimatedStyle(fn);
   if (cResult[0] === animatedStyle) {
+    let tmp6;
+    let tmp8;
+    let tmp11;
     if (cResult[1] === tmp4.gradientWrapper) {
-      let tmp6 = cResult[2];
+      tmp6 = cResult[2];
     }
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp10 = timestampProducer(ThemedGradientDefault, { absolute: true });
+      const tmp10 = metroRequire(ThemedGradientDefault, { absolute: true });
       cResult[3] = tmp10;
-      let tmp8 = tmp10;
+      tmp8 = tmp10;
     } else {
       tmp8 = cResult[3];
     }
     if (cResult[4] !== tmp6) {
       const obj3 = { style: tmp6, children: tmp8 };
-      const tmp13 = timestampProducer(ReanimatedNativeViewDefault, obj3);
+      const tmp13 = metroRequire(ReanimatedNativeViewDefault, obj3);
       cResult[4] = tmp6;
       cResult[5] = tmp13;
-      let tmp11 = tmp13;
+      tmp11 = tmp13;
     } else {
       tmp11 = cResult[5];
     }
@@ -68,96 +122,62 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() =>
   cResult[2] = items;
   tmp6 = items;
 }) : (() => {
-  const windowDimensions = noop.useContext(VoicePanelStateContextDefault).windowDimensions;
-  const tmp = closure_8();
+  let items;
+  const windowDimensions = react.useContext(VoicePanelStateContextDefault).windowDimensions;
   const fn = function n() {
-    const size = { width: windowDimensions.get().width, height: windowDimensions.get().height };
+    size = { width: windowDimensions.get().width, height: windowDimensions.get().height };
     return size;
   };
   fn.__closure = { windowDimensions };
   fn.__workletHash = 8873787995284;
   fn.__initData = __initData2;
-  const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
-  const obj2 = { style: null, children: null };
-  const items = [tmp.gradientWrapper, animatedStyle];
-  obj2.style = items;
-  obj2.children = timestampProducer(ThemedGradientDefault, { absolute: true });
-  return timestampProducer(ReanimatedNativeViewDefault, obj2);
+  const tmp = closure_8();
+  const obj = ReanimatedRexport;
+  const animatedStyle = obj.useAnimatedStyle(fn);
+  const obj2 = { style: items, children: metroRequire(ThemedGradientDefault, { absolute: true }) };
+  items = [tmp.gradientWrapper, animatedStyle];
+  const tmp3 = ReanimatedNativeViewDefault;
+  return metroRequire(tmp3, obj2);
 }));
-ReactCompilerGating = fn(558);
-const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = c.c(2);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function t() {
-      const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-      ComponentDispatch.dispatch(constants.VOICE_PANEL_TIV_CLOSE);
-    };
-    cResult[0] = fn;
-    let first = fn;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { accessibilityLabel: null, icon: null, onPress: null };
-    const intl = util.intl;
-    obj2.accessibilityLabel = intl.string(util.t["5MstTl"]);
-    obj2.icon = _modDef4796;
-    obj2.onPress = first;
-    const tmp9 = timestampProducer(ChatFloatingNavButtonDefault, obj2);
-    cResult[1] = tmp9;
-    let tmp5 = tmp9;
-  } else {
-    tmp5 = cResult[1];
-  }
-  return tmp5;
-}) : (() => {
-  const callback = noop.useCallback(() => {
-    const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-    ComponentDispatch.dispatch(constants.VOICE_PANEL_TIV_CLOSE);
-  }, []);
-  const obj = { accessibilityLabel: null, icon: null, onPress: null };
-  const intl = util.intl;
-  obj.accessibilityLabel = intl.string(util.t["5MstTl"]);
-  obj.icon = _modDef4796;
-  obj.onPress = callback;
-  return timestampProducer(ChatFloatingNavButtonDefault, obj);
-}));
-let obj = { container: { flex: 1, overflow: "hidden", paddingTop: CONTROLS_DRAWER_HEADER_SIZE }, gradientWrapper: { position: "absolute", top: CONTROLS_DRAWER_HEADER_SIZE, left: 0 }, titleBlur: { opacity: 0 } };
-let size = fn(2);
-let result = size.fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelChatView.tsx");
-
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((shown) => {
-  const cResult = shown(guildId[8]).c(34);
+ReactCompilerGating = ReactCompilerGating_mod;
+const memoResult1 = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((shown) => {
+  let channelId;
+  let guildId;
+  const tmp = shown;
+  let tmp2 = guildId;
+  let obj = shown(guildId[8]);
+  const cResult = obj.c(34);
   shown = shown.shown;
   closure_8();
   const ref = channelId.useRef(null);
   const context = channelId.useContext(ref(guildId[13]));
   guildId = context.guildId;
-  channelId = context.channelId;
-  const obj = shown(guildId[8]);
   const obj2 = channelId;
-  let tmp = shown;
-  const tmp2 = guildId;
-  const gradientTop = shown(guildId[17]).useGradientTop();
+  channelId = context.channelId;
+  const obj3 = shown(guildId[17]);
+  const gradientTop = obj3.useGradientTop();
   const width = ref(guildId[18])().width;
   const rect = ref(guildId[19])();
   if (cResult[0] === rect.left) {
     if (cResult[1] === rect.right) {
       if (cResult[4] === channelId) {
+        let tmp10;
+        let tmp11;
         if (cResult[5] === guildId) {
-          let tmp10 = cResult[6];
-          let tmp11 = cResult[7];
+          tmp10 = cResult[6];
+          tmp11 = cResult[7];
         }
         const effect = obj2.useEffect(tmp10, tmp11);
         class V {
           constructor() {
-            obj = closure_1(closure_2[21]);
-            tmp = guildId;
+            tmp = closure_1(closure_2[21]);
+            tmp2 = guildId;
+            preload = tmp.preload;
             if (guildId == null) {
-              tmp = ME;
+              tmp2 = ME;
             }
-            preloadResult = obj.preload(tmp, channelId);
-            return () => { ... };
+            preloadResult = preload(tmp2, channelId);
+            return () => { /* body not rendered: F141959 */ };
           }
         }
         class O {
@@ -189,13 +209,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((shown)
       }
       class V {
         constructor() {
-          obj = closure_1(closure_2[21]);
-          tmp = guildId;
+          tmp = closure_1(closure_2[21]);
+          tmp2 = guildId;
+          preload = tmp.preload;
           if (guildId == null) {
-            tmp = ME;
+            tmp2 = ME;
           }
-          preloadResult = obj.preload(tmp, channelId);
-          return () => { ... };
+          preloadResult = preload(tmp2, channelId);
+          return () => { /* body not rendered: F141959 */ };
         }
       }
       tmp12[0] = guildId;
@@ -208,40 +229,52 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((shown)
       tmp10 = V;
     }
   }
-  const obj3 = shown(guildId[17]);
-  const controlsDrawerOpenWidth = tmp(tmp2[20]).getControlsDrawerOpenWidth(width, rect.left, rect.right);
+  const tmpResult = tmp(tmp2[20]);
+  const controlsDrawerOpenWidth = tmpResult.getControlsDrawerOpenWidth(width, rect.left, rect.right);
   cResult[0] = rect.left;
   cResult[1] = rect.right;
   cResult[2] = width;
   cResult[3] = controlsDrawerOpenWidth;
-  const tmpResult = tmp(tmp2[20]);
 }) : ((shown) => {
+  let AccessibilityView;
+  let ThemeContextProvider;
+  let intl;
+  let items2;
+  let items3;
+  let obj4;
+  let obj5;
   shown = shown.shown;
   let guildId;
   let channelId;
-  let tmp = closure_8();
+  const tmp = closure_8();
   const ref = channelId.useRef(null);
   const context = channelId.useContext(ref(guildId[13]));
   guildId = context.guildId;
   channelId = context.channelId;
-  const gradientTop = shown(guildId[17]).useGradientTop();
+  let obj = shown(guildId[17]);
+  const gradientTop = obj.useGradientTop();
+  const width = ref(guildId[18])().width;
   const rect = ref(guildId[19])();
-  const obj = shown(guildId[17]);
   const items = [guildId, channelId];
-  const controlsDrawerOpenWidth = shown(guildId[20]).getControlsDrawerOpenWidth(ref(guildId[18])().width, rect.left, rect.right);
+  const obj2 = shown(guildId[20]);
+  const controlsDrawerOpenWidth = obj2.getControlsDrawerOpenWidth(width, rect.left, rect.right);
   const effect = channelId.useEffect(() => {
-    let tmp = guildId;
+    let tmp2 = guildId;
+    const preload = ChannelActionCreatorsDefault.preload;
+    ChannelActionCreatorsDefault;
     if (guildId == null) {
-      tmp = hasOwnProperty;
+      tmp2 = hasOwnProperty;
     }
-    ChannelActionCreatorsDefault.preload(tmp, channelId);
+    preload(tmp2, channelId);
     return () => {
-      ref(guildId[6]).updateChatOpen(channelId, false);
+      const obj = ref(guildId[6]);
+      obj.updateChatOpen(channelId, false);
     };
   }, items);
   const items1 = [channelId, shown];
   const effect1 = channelId.useEffect(() => {
-    ChannelRTCActionCreatorsDefault.updateChatOpen(channelId, shown);
+    const obj = ChannelRTCActionCreatorsDefault;
+    obj.updateChatOpen(channelId, shown);
     const current = ref.current;
     if (shown) {
       if (current != null) {
@@ -261,27 +294,28 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((shown)
     const ComponentDispatch = shown(guildId[9]).ComponentDispatch;
     ComponentDispatch.dispatch(constants.VOICE_PANEL_TIV_CLOSE);
   }, []);
-  const obj2 = shown(guildId[20]);
-  const obj3 = { value: controlsDrawerOpenWidth, children: null };
-  const obj4 = { gradient: ref(guildId[22])(), children: null };
-  const obj5 = { nativeID: "voice-panel-chat-view", accessibilityViewIsModal: shown, onAccessibilityEscape: callback, style: null, children: null };
-  const items2 = [tmp.container, gradientTop];
-  obj5.style = items2;
-  const items3 = [closure_6(closure_11, {}), , ];
-  const obj6 = { title: null, disablePill: true, blurStyle: null };
+  const obj3 = { value: controlsDrawerOpenWidth, children: closure_6(ThemeContextProvider, obj4) };
   const tmp9 = ref(guildId[22])();
-  const intl = shown(guildId[11]).intl;
-  obj6.title = intl.string(shown(guildId[11]).t["/VQax8"]);
-  obj6.blurStyle = tmp.titleBlur;
-  items3[1] = closure_6(ref(guildId[23]), obj6);
+  const Provider = ref(guildId[27]).Provider;
+  obj4 = { gradient: tmp9, children: closure_7(AccessibilityView, obj5) };
+  ThemeContextProvider = shown(guildId[26]).ThemeContextProvider;
+  obj5 = { nativeID: "voice-panel-chat-view", accessibilityViewIsModal: shown, onAccessibilityEscape: callback, style: items2, children: items3 };
+  items2 = [tmp.container, gradientTop];
+  AccessibilityView = shown(guildId[25]).AccessibilityView;
+  items3 = [closure_6(closure_11, {}), , ];
+  const obj6 = { title: intl.string(shown(guildId[11]).t["/VQax8"]), disablePill: true, blurStyle: tmp.titleBlur };
   const tmp12 = ref(guildId[23]);
+  intl = shown(guildId[11]).intl;
+  items3[1] = closure_6(tmp12, obj6);
+  const tmp13 = ref(guildId[24]);
   if (guildId == null) {
     guildId = closure_5;
   }
-  items3[2] = closure_6(ref(guildId[24]), { disableGradient: true, alwaysRespectKeyboard: false, setNoExtractUI: false, guildId, channelId, chatInputRef: ref, screenIndex: "voice-panel" });
-  obj5.children = items3;
-  obj4.children = closure_7(shown(guildId[25]).AccessibilityView, obj5);
-  obj3.children = closure_6(shown(guildId[26]).ThemeContextProvider, obj4);
-  return closure_6(ref(guildId[27]).Provider, obj3);
+  items3[2] = closure_6(tmp13, { disableGradient: true, alwaysRespectKeyboard: false, setNoExtractUI: false, guildId, channelId, chatInputRef: ref, screenIndex: "voice-panel" });
+  return closure_6(Provider, obj3);
 }));
+let size = size_mod;
+let result = size.fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelChatView.tsx");
+
+export default memoResult1;
 export const MemoedVoicePanelDismissChatButton = memoResult;

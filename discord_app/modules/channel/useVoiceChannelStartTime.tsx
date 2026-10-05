@@ -1,34 +1,42 @@
 // === Module 16161: useVoiceChannelStartTime ===
 
 // Module 16161 (useVoiceChannelStartTime)
+import Constants from "Constants" /* 1085 */;
 import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11136 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5436 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5618 */;
+import GuildAvailabilityStore_mod from "GuildAvailabilityStore" /* 5618 */;
 import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10023 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
+let _require;
 
-require = fn;
-const ChannelTypes = fn(1085).ChannelTypes;
-const ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/channel/useVoiceChannelStartTime.tsx");
-
-export const useStartTime = ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
+let GuildAvailabilityStore = GuildAvailabilityStore_mod;
+const ChannelTypes = Constants.ChannelTypes;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
+  let closure_4;
+  let first;
+  let hasRequestedStartTimes;
+  let stateFromStores;
+  let tmp10;
+  let tmp9;
   _require = type;
-  const cResult = require("c").c(12);
+  let tmp = _require;
+  let obj = require("react");
+  const cResult = obj.c(12);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [VoiceChannelStartTimeStore, GuildAvailabilityStore];
     cResult[0] = items;
-    let first = items;
+    first = items;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== type) {
     class S {
       constructor() {
-        obj = { hasRequestedStartTimes: closure_5.hasRequestedStartTimes(closure_0.guild_id), startTime: closure_5.getStartTime(closure_0), isGuildUnavailable: closure_4.isUnavailable(closure_0.guild_id) };
+        const obj = { hasRequestedStartTimes: VoiceChannelStartTimeStore.hasRequestedStartTimes(type.guild_id), startTime: VoiceChannelStartTimeStore.getStartTime(type), isGuildUnavailable: GuildAvailabilityStore.isUnavailable(type.guild_id) };
         return obj;
       }
     }
@@ -37,19 +45,19 @@ export const useStartTime = ReactCompilerGating.isReactCompilerEnabled() ? ((typ
   } else {
     class S {
       constructor() {
-        obj = { hasRequestedStartTimes: closure_5.hasRequestedStartTimes(closure_0.guild_id), startTime: closure_5.getStartTime(closure_0), isGuildUnavailable: closure_4.isUnavailable(closure_0.guild_id) };
+        const obj = { hasRequestedStartTimes: VoiceChannelStartTimeStore.hasRequestedStartTimes(type.guild_id), startTime: VoiceChannelStartTimeStore.getStartTime(type), isGuildUnavailable: GuildAvailabilityStore.isUnavailable(type.guild_id) };
         return obj;
       }
     }
   }
-  let obj = require("c");
-  const stateFromStoresObject = require("initialize").useStateFromStoresObject(first, S);
+  const tmpResult = tmp(hasRequestedStartTimes[7]);
+  const stateFromStoresObject = tmpResult.useStateFromStoresObject(first, S);
   hasRequestedStartTimes = stateFromStoresObject.hasRequestedStartTimes;
   const isGuildUnavailable = stateFromStoresObject.isGuildUnavailable;
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     class S {
       constructor() {
-        obj = { hasRequestedStartTimes: closure_5.hasRequestedStartTimes(closure_0.guild_id), startTime: closure_5.getStartTime(closure_0), isGuildUnavailable: closure_4.isUnavailable(closure_0.guild_id) };
+        const obj = { hasRequestedStartTimes: VoiceChannelStartTimeStore.hasRequestedStartTimes(type.guild_id), startTime: VoiceChannelStartTimeStore.getStartTime(type), isGuildUnavailable: GuildAvailabilityStore.isUnavailable(type.guild_id) };
         return obj;
       }
     }
@@ -59,49 +67,35 @@ export const useStartTime = ReactCompilerGating.isReactCompilerEnabled() ? ((typ
     };
     cResult[3] = items1;
     cResult[4] = fn;
-    let tmp10 = fn;
-    const tmp9 = items1;
+    tmp10 = fn;
+    tmp9 = items1;
   } else {
     class S {
       constructor() {
-        obj = { hasRequestedStartTimes: closure_5.hasRequestedStartTimes(closure_0.guild_id), startTime: closure_5.getStartTime(closure_0), isGuildUnavailable: closure_4.isUnavailable(closure_0.guild_id) };
+        const obj = { hasRequestedStartTimes: VoiceChannelStartTimeStore.hasRequestedStartTimes(type.guild_id), startTime: VoiceChannelStartTimeStore.getStartTime(type), isGuildUnavailable: GuildAvailabilityStore.isUnavailable(type.guild_id) };
         return obj;
       }
     }
     tmp10 = cResult[4];
   }
-  const tmpResult = require("initialize");
-  stateFromStores = require("initialize").useStateFromStores(tmp9, tmp10);
+  const tmpResult2 = tmp(hasRequestedStartTimes[7]);
+  stateFromStores = tmpResult2.useStateFromStores(tmp9, tmp10);
   GuildAvailabilityStore = tmp12;
   if (cResult[5] === type.type === ChannelTypes.GUILD_VOICE) {
     class S {
       constructor() {
-        obj = { hasRequestedStartTimes: closure_5.hasRequestedStartTimes(closure_0.guild_id), startTime: closure_5.getStartTime(closure_0), isGuildUnavailable: closure_4.isUnavailable(closure_0.guild_id) };
+        const obj = { hasRequestedStartTimes: VoiceChannelStartTimeStore.hasRequestedStartTimes(type.guild_id), startTime: VoiceChannelStartTimeStore.getStartTime(type), isGuildUnavailable: GuildAvailabilityStore.isUnavailable(type.guild_id) };
         return obj;
       }
     }
   }
   class U {
     constructor() {
-      tmp = !hasRequestedStartTimes;
-      if (!hasRequestedStartTimes) {
-        tmp = closure_4;
-      }
+      const tmp = !hasRequestedStartTimes && closure_4 && !isGuildUnavailable && stateFromStores;
       if (tmp) {
-        tmp2 = isGuildUnavailable;
-        tmp = !isGuildUnavailable;
+        const obj = ChannelInfoActionCreators;
+        const channelInfo = obj.fetchChannelInfo(type.guild_id);
       }
-      if (tmp) {
-        tmp = closure_3;
-      }
-      if (tmp) {
-        tmp3 = closure_0;
-        tmp4 = closure_1;
-        obj = closure_0(closure_1[8]);
-        tmp5 = closure_0;
-        channelInfo = obj.fetchChannelInfo(closure_0.guild_id);
-      }
-      return;
     }
   }
   const items2 = [type.type === ChannelTypes.GUILD_VOICE, type.guild_id, hasRequestedStartTimes, isGuildUnavailable, stateFromStores];
@@ -112,32 +106,33 @@ export const useStartTime = ReactCompilerGating.isReactCompilerEnabled() ? ((typ
   cResult[9] = isGuildUnavailable;
   cResult[10] = U;
   cResult[11] = items2;
-  const tmpResult2 = require("initialize");
 }) : ((type) => {
+  let hasRequestedStartTimes;
+  let stateFromStores;
   _require = type;
+  let obj = require("get initialized");
   const items = [VoiceChannelStartTimeStore, closure_4];
-  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({ hasRequestedStartTimes: VoiceChannelStartTimeStore.hasRequestedStartTimes(type.guild_id), startTime: VoiceChannelStartTimeStore.getStartTime(type), isGuildUnavailable: GuildAvailabilityStore.isUnavailable(type.guild_id) }));
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
+    const obj = { hasRequestedStartTimes: VoiceChannelStartTimeStore.hasRequestedStartTimes(type.guild_id), startTime: VoiceChannelStartTimeStore.getStartTime(type), isGuildUnavailable: GuildAvailabilityStore.isUnavailable(type.guild_id) };
+    return obj;
+  });
   hasRequestedStartTimes = stateFromStoresObject.hasRequestedStartTimes;
   const isGuildUnavailable = stateFromStoresObject.isGuildUnavailable;
-  let obj = require("initialize");
+  const startTime = stateFromStoresObject.startTime;
   const items1 = [stateFromStores];
-  stateFromStores = require("initialize").useStateFromStores(items1, () => stateFromStores.isConnected());
+  const obj2 = require("get initialized");
+  stateFromStores = obj2.useStateFromStores(items1, () => stateFromStores.isConnected());
   closure_4 = tmp3;
   const items2 = [type.type === ChannelTypes.GUILD_VOICE, type.guild_id, hasRequestedStartTimes, isGuildUnavailable, stateFromStores];
   const effect = isGuildUnavailable.useEffect(() => {
-    let tmp = !hasRequestedStartTimes;
-    if (!hasRequestedStartTimes) {
-      tmp = closure_4;
-    }
+    const tmp = !hasRequestedStartTimes && closure_4 && !isGuildUnavailable && stateFromStores;
     if (tmp) {
-      tmp = !isGuildUnavailable;
-    }
-    if (tmp) {
-      tmp = stateFromStores;
-    }
-    if (tmp) {
-      const channelInfo = ChannelInfoActionCreators.fetchChannelInfo(type.guild_id);
+      const obj = ChannelInfoActionCreators;
+      const channelInfo = obj.fetchChannelInfo(type.guild_id);
     }
   }, items2);
-  return stateFromStoresObject.startTime;
+  return startTime;
 });
+const result = size.fileFinishedImporting("modules/channel/useVoiceChannelStartTime.tsx");
+
+export const useStartTime = tmp2;
