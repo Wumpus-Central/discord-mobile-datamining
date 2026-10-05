@@ -1,6 +1,6 @@
-// === Module 16341: BackIconWithBadge ===
+// === Module 16345: BackIconWithBadge ===
 
-// Module 16341 (BackIconWithBadge)
+// Module 16345 (BackIconWithBadge)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,7 +10,7 @@ import XLargeIcon from "XLargeIcon" /* 4795 */;
 import ArrowLargeLeftIcon2 from "ArrowLargeLeftIcon" /* 6014 */;
 import XSmallIcon from "XSmallIcon" /* 6017 */;
 import ClipView from "ClipView" /* 8469 */;
-import useNotificationsTabBadgeDefault from "useNotificationsTabBadge" /* 16332 */;
+import useNotificationsTabBadgeDefault from "useNotificationsTabBadge" /* 16336 */;
 import noop from "module_19" /* 19 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 7121 */;
 
@@ -116,7 +116,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   let num2 = 0;
   if (flag) {
-    num2 = memo(16332)().value;
+    num2 = memo(16336)().value;
   }
   const sum = num + num2;
   _require = sum;

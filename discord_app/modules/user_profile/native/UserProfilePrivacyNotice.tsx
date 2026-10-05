@@ -1,6 +1,6 @@
-// === Module 12929: UserProfilePrivacyNotice ===
+// === Module 12931: UserProfilePrivacyNotice ===
 
-// Module 12929 (UserProfilePrivacyNotice)
+// Module 12931 (UserProfilePrivacyNotice)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;

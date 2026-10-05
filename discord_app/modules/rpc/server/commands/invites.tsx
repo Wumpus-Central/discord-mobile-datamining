@@ -1,6 +1,6 @@
-// === Module 14314: invites ===
+// === Module 14316: invites ===
 
-// Module 14314 (invites)
+// Module 14316 (invites)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
@@ -10,7 +10,7 @@ const InstantInviteSources = fn(1085).InstantInviteSources;
 const Constants = fn(1096);
 ({ RPCCommands, RPCErrors: metroRequire } = Constants);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(14315);
+const CONTEXT_MENU_ICON_NAMES = fn(14317);
 let obj3 = { scope: null, handler: null };
 let obj4 = {};
 const items = [fn(8015).OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE, fn(8015).OAuth2Scopes.ACTIVITIES_INVITES_WRITE];
@@ -30,7 +30,7 @@ obj3.handler = function handler(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -86,8 +86,8 @@ obj3.handler = function handler(arg0) {
                   const obj13 = { value: tmp3(8993).sendEmbeddedActivityInviteUser(obj11), done: false };
                   return obj13;
                 }
-                channel = tmp3(14319).validateOpenInviteDialog(tmp68).channel;
-                const obj5 = tmp3(14319);
+                channel = tmp3(14321).validateOpenInviteDialog(tmp68).channel;
+                const obj5 = tmp3(14321);
               }
             }
           }
@@ -107,7 +107,7 @@ obj3.handler = function handler(arg0) {
         } else {
           c2 = 0;
           connectedActivityLocation = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp61) {
         if (tmp4 === c2) {

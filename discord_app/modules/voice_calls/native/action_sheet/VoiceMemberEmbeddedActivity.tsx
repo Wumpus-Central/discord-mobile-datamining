@@ -1,6 +1,6 @@
-// === Module 13594: VoiceMemberEmbeddedActivity ===
+// === Module 13596: VoiceMemberEmbeddedActivity ===
 
-// Module 13594 (VoiceMemberEmbeddedActivity)
+// Module 13596 (VoiceMemberEmbeddedActivity)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 9045 */;

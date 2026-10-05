@@ -1,6 +1,6 @@
-// === Module 16332: useNotificationsTabBadge ===
+// === Module 16336: useNotificationsTabBadge ===
 
-// Module 16332 (useNotificationsTabBadge)
+// Module 16336 (useNotificationsTabBadge)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7125 */;

@@ -1,6 +1,6 @@
-// === Module 13906: IconPill ===
+// === Module 13908: IconPill ===
 
-// Module 13906 (IconPill)
+// Module 13908 (IconPill)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import IconDefault from "Icon" /* 5596 */;

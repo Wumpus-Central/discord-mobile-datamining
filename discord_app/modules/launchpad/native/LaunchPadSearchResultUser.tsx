@@ -1,19 +1,19 @@
-// === Module 17385: LaunchPadSearchResultUser ===
+// === Module 17409: LaunchPadSearchResultUser ===
 
-// Module 17385 (LaunchPadSearchResultUser)
+// Module 17409 (LaunchPadSearchResultUser)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import UserUtilsDefault from "UserUtils" /* 4722 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4903 */;
 import isStreamingDefault from "isStreaming" /* 7931 */;
-import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 16281 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 16813 */;
-import renderChannelWrapperDefault from "renderChannelWrapper" /* 16814 */;
-import renderChannelContentDefault from "renderChannelContent" /* 16816 */;
-import UnreadBadgeDefault from "UnreadBadge" /* 17374 */;
-import shared_renderChannelBadgeDefault from "shared/renderChannelBadge" /* 17375 */;
-import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 17376 */;
+import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 16285 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 16832 */;
+import renderChannelWrapperDefault from "renderChannelWrapper" /* 16833 */;
+import renderChannelContentDefault from "renderChannelContent" /* 16835 */;
+import UnreadBadgeDefault from "UnreadBadge" /* 17398 */;
+import shared_renderChannelBadgeDefault from "shared/renderChannelBadge" /* 17399 */;
+import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 17400 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
@@ -459,7 +459,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   obj5.style = items4;
   const tmp2Result5 = renderChannelPressableWrapperDefault;
   const items5 = [closure_12(UnreadBadgeDefault, { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES }), , ];
-  const obj7 = { user, guildId: "e", isMobileOnline, isVROnline, status: null, streaming: "c5b76680866e63df9cbd5b736b904808", style: "el.messages.c5b76680866e63df9cbd5b736b904808.compiled.messages", size: "jsona", animate: "Mobile NUX Post Reg", typing: "Skip avatar modal", autoStatusCutout: true };
+  const obj7 = { user, guildId: "e", isMobileOnline, isVROnline, status: null, streaming: "07f98cc97271330c0c0aaae9329559a5", style: "es-ES.messages.07f98cc97271330c0c0aaae9329559a5.compiled.messages", size: "jsona", animate: "Mobile NUX Post Reg", typing: "Skip avatar modal", autoStatusCutout: true };
   let tmp19 = null;
   if (!user.isSystemUser()) {
     tmp19 = null;
@@ -534,7 +534,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   const obj = user(576);
   const stateFromStores = user(504).useStateFromStores(first, tmp6);
   const tmpResult = user(504);
-  const baseChannelUnreadBadgeState = user(16281).useBaseChannelUnreadBadgeState(channel, stateFromStores);
+  const baseChannelUnreadBadgeState = user(16285).useBaseChannelUnreadBadgeState(channel, stateFromStores);
   ({ unread, mentionCount } = baseChannelUnreadBadgeState);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [TypingStore];
@@ -556,7 +556,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
     } else {
       tmp13 = cResult[8];
     }
-    const tmp15 = channel(15133)(channel, tmp13);
+    const tmp15 = channel(15137)(channel, tmp13);
     if (cResult[9] === channel) {
       if (cResult[10] === stateFromStores1) {
         if (cResult[11] === tmp15) {
@@ -600,7 +600,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   cResult[5] = user.id;
   cResult[6] = fn2;
   tmp11 = fn2;
-  const tmpResult3 = user(16281);
+  const tmpResult3 = user(16285);
 }) : ((arg0) => {
   ({ user: require, channel } = arg0);
   const items = [UserGuildSettingsStore];
@@ -612,7 +612,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   const obj4 = {};
   const merged = Object.assign(arg0);
   obj4.channel = channel;
-  obj4.lastMessage = channel(15133)(channel, { unread });
+  obj4.lastMessage = channel(15137)(channel, { unread });
   obj4.unread = unread;
   obj4.mentionCount = mentionCount;
   obj4.muted = stateFromStores;

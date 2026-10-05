@@ -1,6 +1,6 @@
-// === Module 15767: ManageSponsoredContentScreen ===
+// === Module 15771: ManageSponsoredContentScreen ===
 
-// Module 15767 (ManageSponsoredContentScreen)
+// Module 15771 (ManageSponsoredContentScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;

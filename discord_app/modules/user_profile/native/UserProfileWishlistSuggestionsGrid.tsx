@@ -1,6 +1,6 @@
-// === Module 12941: UserProfileWishlistSuggestionsGrid ===
+// === Module 12943: UserProfileWishlistSuggestionsGrid ===
 
-// Module 12941 (UserProfileWishlistSuggestionsGrid)
+// Module 12943 (UserProfileWishlistSuggestionsGrid)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -11,9 +11,9 @@ import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6657 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6681 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7052 */;
 import useCardGridLayoutDefault from "useCardGridLayout" /* 12805 */;
-import MobileWishlistSuggestionsExperiment from "MobileWishlistSuggestionsExperiment" /* 12937 */;
-import useWishlistSuggestionsDismissibleContentDefault from "useWishlistSuggestionsDismissibleContent" /* 12942 */;
-import AddToWishlistGridDefault from "AddToWishlistGrid" /* 12944 */;
+import MobileWishlistSuggestionsExperiment from "MobileWishlistSuggestionsExperiment" /* 12939 */;
+import useWishlistSuggestionsDismissibleContentDefault from "useWishlistSuggestionsDismissibleContent" /* 12944 */;
+import AddToWishlistGridDefault from "AddToWishlistGrid" /* 12946 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;
 import WishlistStore from "WishlistStore" /* 8431 */;
@@ -416,7 +416,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         cResult[19] = wishlistId;
         cResult[20] = obj5;
       }
-      tmpResult = tmp(12943);
+      tmpResult = tmp(12945);
     }
     const obj6 = { userId, wishlist, numWishlistItemsToRecommend: 15, maxWishlistItemsToShow: 9, source: tmp(8437).WishlistFetchSource.USER_PROFILE };
     cResult[4] = userId;
@@ -441,7 +441,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let obj2 = { minCardSize: 80, maxCardSize: 120, containerWidth, maxWidth, sidePadding: closure_8 + PX_16 + 1, gap };
   const tmp4 = closure_18();
   const tmp6 = useInitialValueDefault(() => trackUserProfileWishlistAction(dependencyMap[19]).v4());
-  const obj3 = trackUserProfileWishlistAction(12943);
+  const obj3 = trackUserProfileWishlistAction(12945);
   let items = obj3.useAddToWishlistGridItems({ userId, wishlist, numWishlistItemsToRecommend: 15, maxWishlistItemsToShow: 9, source: trackUserProfileWishlistAction(8437).WishlistFetchSource.USER_PROFILE }).items;
   let items1 = [trackUserProfileWishlistAction];
   const callback = noop.useCallback(() => {
@@ -516,7 +516,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     items4[2] = closure_12(View, obj17);
     obj9.children = items4;
     obj7.children = closure_13(ReanimatedRexportDefault.View, obj9);
-    tmp11Result = closure_12(tmp(12945).WishlistAnalyticsProvider, obj7);
+    tmp11Result = closure_12(tmp(12947).WishlistAnalyticsProvider, obj7);
   }
   return tmp11Result;
 });

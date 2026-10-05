@@ -1,6 +1,6 @@
-// === Module 15666: UserSettingsDesignSystemTooltip ===
+// === Module 15670: UserSettingsDesignSystemTooltip ===
 
-// Module 15666 (UserSettingsDesignSystemTooltip)
+// Module 15670 (UserSettingsDesignSystemTooltip)
 import c from "c" /* 576 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import components_Button_Button from "components/Button/Button" /* 5594 */;

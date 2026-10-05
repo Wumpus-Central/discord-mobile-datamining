@@ -1,6 +1,6 @@
-// === Module 14354: AuthCommandsFactory ===
+// === Module 14358: AuthCommandsFactory ===
 
-// Module 14354 (AuthCommandsFactory)
+// Module 14358 (AuthCommandsFactory)
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
@@ -36,7 +36,7 @@ let closure_18 = async function _authorizeWithPrompt(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -94,7 +94,7 @@ let closure_18 = async function _authorizeWithPrompt(arg0) {
           closure_135_31 = undefined;
           c11 = 1;
           c12 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp10) {

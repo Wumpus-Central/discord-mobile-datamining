@@ -1,6 +1,6 @@
-// === Module 15795: DoubleTapEmojiSetting ===
+// === Module 15799: DoubleTapEmojiSetting ===
 
-// Module 15795 (DoubleTapEmojiSetting)
+// Module 15799 (DoubleTapEmojiSetting)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -204,7 +204,7 @@ const pressable = SettingBuilders.createPressable({
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -241,7 +241,7 @@ const pressable = SettingBuilders.createPressable({
             const obj17 = { emoji: closure_129_0 };
             const result = closure_0(tmp5[17]).showDoubleTapEmojiUpdatedToast(obj17);
             constants = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp12) {
           constants = tmp;

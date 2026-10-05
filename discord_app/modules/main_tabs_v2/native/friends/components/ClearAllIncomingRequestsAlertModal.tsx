@@ -1,6 +1,6 @@
-// === Module 16929: ClearAllIncomingRequestsAlertModal ===
+// === Module 16948: ClearAllIncomingRequestsAlertModal ===
 
-// Module 16929 (ClearAllIncomingRequestsAlertModal)
+// Module 16948 (ClearAllIncomingRequestsAlertModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import AlertModal from "AlertModal" /* 5713 */;
@@ -30,7 +30,7 @@ let closure_7 = async function _handleConfirm() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -58,7 +58,7 @@ let closure_7 = async function _handleConfirm() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp7) {
       c0 = tmp;

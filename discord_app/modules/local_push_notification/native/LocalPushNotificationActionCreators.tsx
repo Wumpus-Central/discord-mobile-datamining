@@ -1,6 +1,6 @@
-// === Module 18074: LocalPushNotificationActionCreators ===
+// === Module 18096: LocalPushNotificationActionCreators ===
 
-// Module 18074 (LocalPushNotificationActionCreators)
+// Module 18096 (LocalPushNotificationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -45,10 +45,10 @@ export const receiveLocalNotification = function receiveLocalNotification(getDat
           return transitionToMessage.transitionToMessage(channelId, messageId, { jumpType: data(4787).JumpType.INSTANT });
         });
         const promise = data(1987)(4901, dependencyMap.paths);
-      } else if (constants.VIBEGRATIONS === type) {
+      } else if (constants.CONJURE === type) {
         if (null != data.guildId) {
           ({ guildId: data, projectId: closure_1 } = data);
-          data(1987)(1112, dependencyMap.paths).then((transitionTo) => transitionTo.transitionTo(hasOwnProperty.CHANNEL(channelId, StaticChannelRoute.VIBEGRATIONS, closure_1_1)));
+          data(1987)(1112, dependencyMap.paths).then((transitionTo) => transitionTo.transitionTo(hasOwnProperty.CHANNEL(channelId, StaticChannelRoute.CONJURE, closure_1_1)));
           const promise3 = data(1987)(1112, dependencyMap.paths);
         }
       }

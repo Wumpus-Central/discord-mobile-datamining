@@ -1,6 +1,6 @@
-// === Module 17066: PictureInPictureGlobal ===
+// === Module 17090: PictureInPictureGlobal ===
 
-// Module 17066 (PictureInPictureGlobal)
+// Module 17090 (PictureInPictureGlobal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native2 from "native" /* 1188 */;
@@ -12,7 +12,7 @@ import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9016 */;
 import transitionToActivityDefault from "transitionToActivity" /* 9049 */;
 import PictureInPictureDefault from "PictureInPicture" /* 9067 */;
 import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 9069 */;
-import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 17067 */;
+import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 17091 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;

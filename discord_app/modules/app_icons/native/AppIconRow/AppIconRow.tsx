@@ -1,6 +1,6 @@
-// === Module 15349: AppIconRow ===
+// === Module 15353: AppIconRow ===
 
-// Module 15349 (AppIconRow)
+// Module 15353 (AppIconRow)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,7 +9,7 @@ import useA11yRolesNative from "useA11yRolesNative" /* 4594 */;
 import TableRow from "TableRow" /* 5993 */;
 import FormRadio from "FormRadio" /* 6075 */;
 import AppIconTypes from "AppIconTypes" /* 8829 */;
-import AppIconDefault from "AppIcon" /* 15346 */;
+import AppIconDefault from "AppIcon" /* 15350 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

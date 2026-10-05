@@ -1,6 +1,6 @@
-// === Module 14291: VoiceNotificationManager ===
+// === Module 14293: VoiceNotificationManager ===
 
-// Module 14291 (VoiceNotificationManager)
+// Module 14293 (VoiceNotificationManager)
 import nativeDefault from "native" /* 587 */;
 import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 7252 */;
 import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 9724 */;
@@ -25,7 +25,7 @@ class VoiceNotificationManager {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.voiceServiceHandlerId = 9000;
-    obj.state = { channelId: "Symbol", connectionState: "current", selfMute: false, deafened: "onRequestClose", isPushToTalk: true, embeddedActivity: true, isStreaming: true };
+    obj.state = { channelId: "T", connectionState: "cursor", selfMute: false, deafened: "increasedFileUploadSize", isPushToTalk: null, embeddedActivity: "webcode", isStreaming: "text" };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = RTCConnectionStore.getChannelId();
       state = RTCConnectionStore.getState();
@@ -216,7 +216,7 @@ prototype["terminate"] = function terminate() {
 };
 obj2 = Object.create(VoiceNotificationManager.prototype);
 obj2.voiceServiceHandlerId = 9000;
-obj2.state = { channelId: "Symbol", connectionState: "current", selfMute: false, deafened: "onRequestClose", isPushToTalk: true, embeddedActivity: true, isStreaming: true };
+obj2.state = { channelId: "T", connectionState: "cursor", selfMute: false, deafened: "increasedFileUploadSize", isPushToTalk: null, embeddedActivity: "webcode", isStreaming: "text" };
 obj2.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = RTCConnectionStore.getChannelId();
   state = RTCConnectionStore.getState();

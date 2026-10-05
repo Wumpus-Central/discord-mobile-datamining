@@ -1,6 +1,6 @@
-// === Module 16980: ChannelSettingsPermissionsOverview ===
+// === Module 17004: ChannelSettingsPermissionsOverview ===
 
-// Module 16980 (ChannelSettingsPermissionsOverview)
+// Module 17004 (ChannelSettingsPermissionsOverview)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -12,8 +12,8 @@ import TableRow from "TableRow" /* 5993 */;
 import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6473 */;
 import RoleLabel from "RoleLabel" /* 10079 */;
 import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10680 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 15128 */;
-import useGetOrFetchChannelOverwriteUsersDefault from "useGetOrFetchChannelOverwriteUsers" /* 16981 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 15132 */;
+import useGetOrFetchChannelOverwriteUsersDefault from "useGetOrFetchChannelOverwriteUsers" /* 17005 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -51,7 +51,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
         if (cResult[5] === tableRowGroupContainer.tableRowGroupContainer) {
           const _Symbol = Symbol;
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp22 = closure_16(tmp(14774).RefreshIcon, {});
+            const tmp22 = closure_16(tmp(14778).RefreshIcon, {});
             let intl2 = tmp(1126).intl;
             const stringResult = intl2.string(tmp(1126).t.NVwuHq);
             cResult[10] = tmp22;
@@ -152,7 +152,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -193,7 +193,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
               const obj3 = category(12);
             }
             c3 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp15) {
           c3 = tmp;
@@ -248,7 +248,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -289,7 +289,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
               const obj3 = category(12);
             }
             c3 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp15) {
           c3 = tmp;
@@ -323,7 +323,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     formatToPlainStringResult = formatToPlainString(t.OIhm0M, obj4);
   }
   let obj5 = { title: formatToPlainStringResult, hasIcons: true, children: null };
-  let obj6 = { icon: closure_16(channel(14774).RefreshIcon, {}), label: null, onPress: null };
+  let obj6 = { icon: closure_16(channel(14778).RefreshIcon, {}), label: null, onPress: null };
   let intl2 = tmp3(1126).intl;
   obj6.label = intl2.string(channel(1126).t.NVwuHq);
   obj6.onPress = callback;

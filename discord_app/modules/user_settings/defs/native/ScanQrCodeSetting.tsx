@@ -1,6 +1,6 @@
-// === Module 14784: ScanQrCodeSetting ===
+// === Module 14788: ScanQrCodeSetting ===
 
-// Module 14784 (ScanQrCodeSetting)
+// Module 14788 (ScanQrCodeSetting)
 import util from "util" /* 1126 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1615 */;
 import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7275 */;
@@ -21,7 +21,7 @@ const debounceResult = apply.debounce(asyncGeneratorStep(async () => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -84,7 +84,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.RC0kJz);
   },
   parent: null,
-  IconComponent: fn(14686).QrCodeIcon,
+  IconComponent: fn(14690).QrCodeIcon,
   onPress: apply.debounce(asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
@@ -96,7 +96,7 @@ const pressable = SettingBuilders.createPressable({
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

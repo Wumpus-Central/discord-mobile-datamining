@@ -1,6 +1,6 @@
-// === Module 16256: HomeDrawerGuildVoiceState ===
+// === Module 16260: HomeDrawerGuildVoiceState ===
 
-// Module 16256 (HomeDrawerGuildVoiceState)
+// Module 16260 (HomeDrawerGuildVoiceState)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -11,7 +11,7 @@ import LinearGradientDefault from "LinearGradient" /* 5605 */;
 import FastImageDefault from "FastImage" /* 5974 */;
 import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 9746 */;
 import AvatarPile from "AvatarPile" /* 12850 */;
-import BlockedUserUtils from "BlockedUserUtils" /* 13520 */;
+import BlockedUserUtils from "BlockedUserUtils" /* 13522 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 4507 */;
 import RelationshipStore from "RelationshipStore" /* 4519 */;

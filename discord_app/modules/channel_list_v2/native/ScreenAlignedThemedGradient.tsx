@@ -1,6 +1,6 @@
-// === Module 16024: ScreenAlignedThemedGradient ===
+// === Module 16028: ScreenAlignedThemedGradient ===
 
-// Module 16024 (ScreenAlignedThemedGradient)
+// Module 16028 (ScreenAlignedThemedGradient)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import ThemedGradientDefault from "ThemedGradient" /* 5911 */;

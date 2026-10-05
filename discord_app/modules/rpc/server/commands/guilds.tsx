@@ -1,6 +1,6 @@
-// === Module 14312: guilds ===
+// === Module 14314: guilds ===
 
-// Module 14312 (guilds)
+// Module 14314 (guilds)
 import GuildRecord from "GuildRecord" /* 2070 */;
 import OAuth2Scopes from "OAuth2Scopes" /* 8015 */;
 import RPCErrorDefault from "RPCError" /* 9026 */;

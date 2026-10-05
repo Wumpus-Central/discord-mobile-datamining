@@ -1,6 +1,6 @@
-// === Module 15390: UserSettingsStartupTimings ===
+// === Module 15394: UserSettingsStartupTimings ===
 
-// Module 15390 (UserSettingsStartupTimings)
+// Module 15394 (UserSettingsStartupTimings)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 4886 */;
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -160,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 const obj7 = { message: closure_128_1 };
                 tmp2(8038).showShareActionSheet(obj7, "Startup Timing");
                 c3 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp17) {
               c3 = tmp;
@@ -196,7 +196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             obj = { color: "text-brand", children: null };
             result = arg0 / 1000;
             obj.children = "" + result + "s (" + Math.round(arg0 / c12 * 100) + "%)";
-            return jsx(f70433, obj);
+            return jsx(f70483, obj);
           }
         }
         cResult[8] = V;
@@ -211,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             obj = { color: "text-brand", children: null };
             result = arg0 / 1000;
             obj.children = "" + result + "s (" + Math.round(arg0 / c12 * 100) + "%)";
-            return jsx(f70433, obj);
+            return jsx(f70483, obj);
           }
         }
       }
@@ -222,7 +222,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             obj = { color: "text-brand", children: null };
             result = arg0 / 1000;
             obj.children = "" + result + "s (" + Math.round(arg0 / c12 * 100) + "%)";
-            return jsx(f70433, obj);
+            return jsx(f70483, obj);
           }
         }
         cResult[9] = tmp27;
@@ -237,7 +237,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             obj = { color: "text-brand", children: null };
             result = arg0 / 1000;
             obj.children = "" + result + "s (" + Math.round(arg0 / c12 * 100) + "%)";
-            return jsx(f70433, obj);
+            return jsx(f70483, obj);
           }
         }
       }
@@ -248,7 +248,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             obj = { color: "text-brand", children: null };
             result = arg0 / 1000;
             obj.children = "" + result + "s (" + Math.round(arg0 / c12 * 100) + "%)";
-            return jsx(f70433, obj);
+            return jsx(f70483, obj);
           }
         }
         tmp30[0] = sum;
@@ -264,7 +264,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             obj = { color: "text-brand", children: null };
             result = arg0 / 1000;
             obj.children = "" + result + "s (" + Math.round(arg0 / c12 * 100) + "%)";
-            return jsx(f70433, obj);
+            return jsx(f70483, obj);
           }
         }
       }
@@ -274,7 +274,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             obj = { color: "text-brand", children: null };
             result = arg0 / 1000;
             obj.children = "" + result + "s (" + Math.round(arg0 / c12 * 100) + "%)";
-            return jsx(f70433, obj);
+            return jsx(f70483, obj);
           }
         }
       }
@@ -297,39 +297,39 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           obj1.children = jsx(closure_0(closure_2[21]).TableCheckboxRow, obj25);
           items = [, , , , ];
           items[0] = jsx(closure_0(closure_2[20]).TableRowGroup, obj1);
-          tmp6 = f70433;
+          tmp6 = f70483;
           obj26 = { children: null };
           items1 = ["Native: "];
           items1[1] = closure_14(closure_6);
           obj26.children = items1;
           items2 = [, , , , , , , ];
-          items2[0] = jsxs(f70433, obj26);
+          items2[0] = jsxs(f70483, obj26);
           obj27 = { children: null };
           items3 = ["JS Imports: "];
           items3[1] = closure_14(closure_10);
           obj27.children = items3;
-          items2[1] = jsxs(f70433, obj27);
+          items2[1] = jsxs(f70483, obj27);
           obj28 = { children: null };
           items4 = ["Mini Cache: "];
           items4[1] = closure_14(closure_7);
           obj28.children = items4;
-          items2[2] = jsxs(f70433, obj28);
+          items2[2] = jsxs(f70483, obj28);
           obj29 = { children: null };
           items5 = ["Lazy Cache: "];
           items5[1] = closure_14(closure_8);
           obj29.children = items5;
-          items2[3] = jsxs(f70433, obj29);
+          items2[3] = jsxs(f70483, obj29);
           obj30 = { children: null };
           items6 = ["Ready: "];
           items6[1] = closure_14(closure_9);
           obj30.children = items6;
-          items2[4] = jsxs(f70433, obj30);
+          items2[4] = jsxs(f70483, obj30);
           obj31 = { children: null };
           tmp7 = closure_15;
           items7 = ["TTI (first contentful paint): "];
           items7[1] = closure_15(c12);
           obj31.children = items7;
-          items2[5] = jsxs(f70433, obj31);
+          items2[5] = jsxs(f70483, obj31);
           tmp8 = closure_11;
           prop = undefined;
           if (closure_11 != null) {
@@ -460,7 +460,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -494,7 +494,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           const obj7 = { message: closure_128_1 };
           tmp2(8038).showShareActionSheet(obj7, "Startup Timing");
           c3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp17) {
         c3 = tmp;

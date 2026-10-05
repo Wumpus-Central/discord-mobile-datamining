@@ -1,6 +1,6 @@
-// === Module 13000: ProductDetailsActionSheetSkeleton ===
+// === Module 13002: ProductDetailsActionSheetSkeleton ===
 
-// Module 13000 (ProductDetailsActionSheetSkeleton)
+// Module 13002 (ProductDetailsActionSheetSkeleton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;

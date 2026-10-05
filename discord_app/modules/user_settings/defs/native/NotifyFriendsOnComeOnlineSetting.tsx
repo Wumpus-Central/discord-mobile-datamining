@@ -1,11 +1,11 @@
-// === Module 15816: NotifyFriendsOnComeOnlineSetting ===
+// === Module 15820: NotifyFriendsOnComeOnlineSetting ===
 
-// Module 15816 (NotifyFriendsOnComeOnlineSetting)
+// Module 15820 (NotifyFriendsOnComeOnlineSetting)
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import _modDef2659 from "module_2659" /* 2659 */;
 import SettingsConstants from "SettingsConstants" /* 7634 */;
-import FriendOnlineNotificationUtils from "FriendOnlineNotificationUtils" /* 15324 */;
+import FriendOnlineNotificationUtils from "FriendOnlineNotificationUtils" /* 15328 */;
 import SettingBuilders from "SettingBuilders" /* 11129 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 17977: clips/ClipsManager ===
+// === Module 17999: clips/ClipsManager ===
 
-// Module 17977 (clips/ClipsManager)
+// Module 17999 (clips/ClipsManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
@@ -8,9 +8,9 @@ import UserSettings from "UserSettings" /* 2028 */;
 import DiscordNativeDefault from "DiscordNative" /* 4490 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4942 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4945 */;
-import isClipsEnabled from "isClipsEnabled" /* 13483 */;
-import ClipsExperiment from "ClipsExperiment" /* 13484 */;
-import isClientClipsCapableDefault from "isClientClipsCapable" /* 13485 */;
+import isClipsEnabled from "isClipsEnabled" /* 13485 */;
+import ClipsExperiment from "ClipsExperiment" /* 13486 */;
+import isClientClipsCapableDefault from "isClientClipsCapable" /* 13487 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
@@ -216,7 +216,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

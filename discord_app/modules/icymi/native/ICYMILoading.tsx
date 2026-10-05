@@ -1,18 +1,18 @@
-// === Module 16451: ICYMILoading ===
+// === Module 16455: ICYMILoading ===
 
-// Module 16451 (ICYMILoading)
+// Module 16455 (ICYMILoading)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4612 */;
 import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 12305 */;
-import ICYMIShared from "ICYMIShared" /* 16431 */;
+import ICYMIShared from "ICYMIShared" /* 16435 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createICYMIStyles = fn(16390);
+const createICYMIStyles = fn(16394);
 let closure_8 = createICYMIStyles.createICYMIStyles((marginBottom) => {
   const obj = { backgroundColor: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, container: { padding: marginBottom.margin }, avatarRow: { flexDirection: "row", alignItems: "center", marginBottom: marginBottom.margin }, avatar: null, avatarTitle: null, title: null, subtitle: null, image: null, separator: null };
   const size = { width: 40, height: 40, borderRadius: nativeDefault.radii.md, marginRight: nativeDefault.space.PX_12 };

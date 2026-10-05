@@ -1,6 +1,6 @@
-// === Module 16890: ChannelDetailsNavigationBar ===
+// === Module 16909: ChannelDetailsNavigationBar ===
 
-// Module 16890 (ChannelDetailsNavigationBar)
+// Module 16909 (ChannelDetailsNavigationBar)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useToken from "useToken" /* 4580 */;
@@ -13,7 +13,7 @@ import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /*
 import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11233 */;
 import useSearchContext from "useSearchContext" /* 11927 */;
 import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 11982 */;
-import ChannelDetailsMoreButtonDefault from "ChannelDetailsMoreButton" /* 16891 */;
+import ChannelDetailsMoreButtonDefault from "ChannelDetailsMoreButton" /* 16910 */;
 import noop from "module_19" /* 19 */;
 import LurkingStore from "LurkingStore" /* 4510 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4511 */;
@@ -429,7 +429,7 @@ let closure_27 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? 
     }
     const obj8 = { ref, channelId: null, guildId: null, showBackButton: true };
     ({ id: obj4.channelId, guild_id: obj4.guildId } = channel);
-    const tmp11 = closure_15(cleanUp(16771), obj8);
+    const tmp11 = closure_15(cleanUp(16790), obj8);
     cResult[3] = channel.guild_id;
     cResult[4] = channel.id;
     cResult[5] = ref;
@@ -480,7 +480,7 @@ let closure_27 = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? 
   fn.__workletHash = 14243423616139;
   fn.__initData = __initData2;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj3 = { style: null, children: closure_15(cleanUp(16771), { ref, channelId: channel.id, guildId: channel.guild_id, showBackButton: true }) };
+  let obj3 = { style: null, children: closure_15(cleanUp(16790), { ref, channelId: channel.id, guildId: channel.guild_id, showBackButton: true }) };
   const items = [tmp.searchHeader, animatedStyle];
   obj3.style = items;
   return closure_15(cleanUp(4612).View, obj3);
@@ -782,7 +782,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
               constructor(arg0, arg1, arg2, arg3) {
                 if (closure_18.BUTTONS === ref) {
                   tmp7 = jsx;
-                  tmp8 = f75489;
+                  tmp8 = f75615;
                   obj1 = { channel: null, onBackPress: null, transitionState: null, width: null, cleanUp: null };
                   tmp9 = channel;
                   obj1.channel = channel;
@@ -792,7 +792,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
                   tmp11 = componentWidth;
                   obj1.width = componentWidth;
                   obj1.cleanUp = arg3;
-                  return jsx(f75489, obj1, channel);
+                  return jsx(f75615, obj1, channel);
                 } else if (tmp.SEARCH === ref) {
                   tmp2 = jsx;
                   tmp3 = closure_27;
@@ -822,7 +822,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
             constructor(arg0, arg1, arg2, arg3) {
               if (closure_18.BUTTONS === ref) {
                 tmp7 = jsx;
-                tmp8 = f75489;
+                tmp8 = f75615;
                 obj1 = { channel: null, onBackPress: null, transitionState: null, width: null, cleanUp: null };
                 tmp9 = channel;
                 obj1.channel = channel;
@@ -832,7 +832,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
                 tmp11 = componentWidth;
                 obj1.width = componentWidth;
                 obj1.cleanUp = arg3;
-                return jsx(f75489, obj1, channel);
+                return jsx(f75615, obj1, channel);
               } else if (tmp.SEARCH === ref) {
                 tmp2 = jsx;
                 tmp3 = closure_27;
@@ -864,7 +864,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
       constructor(arg0, arg1, arg2, arg3) {
         if (closure_18.BUTTONS === ref) {
           tmp7 = jsx;
-          tmp8 = f75489;
+          tmp8 = f75615;
           obj1 = { channel: null, onBackPress: null, transitionState: null, width: null, cleanUp: null };
           tmp9 = channel;
           obj1.channel = channel;
@@ -874,7 +874,7 @@ export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnab
           tmp11 = componentWidth;
           obj1.width = componentWidth;
           obj1.cleanUp = arg3;
-          return jsx(f75489, obj1, channel);
+          return jsx(f75615, obj1, channel);
         } else if (tmp.SEARCH === ref) {
           tmp2 = jsx;
           tmp3 = closure_27;

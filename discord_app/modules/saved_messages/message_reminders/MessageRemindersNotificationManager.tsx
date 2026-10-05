@@ -1,6 +1,6 @@
-// === Module 17596: MessageRemindersNotificationManager ===
+// === Module 17620: MessageRemindersNotificationManager ===
 
-// Module 17596 (MessageRemindersNotificationManager)
+// Module 17620 (MessageRemindersNotificationManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import ForLaterExperiment from "ForLaterExperiment" /* 7485 */;

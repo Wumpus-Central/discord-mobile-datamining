@@ -1,10 +1,10 @@
-// === Module 16337: ConnectionFineIcon ===
+// === Module 16341: ConnectionFineIcon ===
 
-// Module 16337 (ConnectionFineIcon)
+// Module 16341 (ConnectionFineIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 4579 */;
-import _mod16338 from "module_16338" /* 16338 */;
+import _mod16342 from "module_16342" /* 16342 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ConnectionFineIcon = ReactCompilerGating.isReactCompilerEnabled() ?
     ICON_FEEDBACK_POSITIVE = nativeDefault.colors.ICON_FEEDBACK_POSITIVE;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod16338;
+    const tmpResult = _mod16342;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ConnectionFineIcon = ReactCompilerGating.isReactCompilerEnabled() ?
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16338, color: ICON_FEEDBACK_POSITIVE, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16342, color: ICON_FEEDBACK_POSITIVE, style: color.style });
 });

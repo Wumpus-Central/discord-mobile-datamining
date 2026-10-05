@@ -1,6 +1,6 @@
-// === Module 15873: useIdentityRegistrationStep ===
+// === Module 15877: useIdentityRegistrationStep ===
 
-// Module 15873 (useIdentityRegistrationStep)
+// Module 15877 (useIdentityRegistrationStep)
 import util from "util" /* 1126 */;
 import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 6451 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -10,9 +10,9 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-const RegistrationUIStore = fn(15863);
+const RegistrationUIStore = fn(15867);
 ({ setRegistrationErrors: metroRequire, updateRegistrationOptions: closure_7, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
-const RegistrationConstants = fn(15864);
+const RegistrationConstants = fn(15868);
 ({ authStateToRegisterTransitionStep: closure_9, RegisterTransitionSteps: c10, RegistrationTransitionActionTypes: closure_11 } = RegistrationConstants);
 const AbortCodes = fn(1085).AbortCodes;
 const ReactCompilerGating = fn(558);
@@ -91,7 +91,7 @@ export const useIdentityRegistrationStep = ReactCompilerGating.isReactCompilerEn
               let obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -129,7 +129,7 @@ export const useIdentityRegistrationStep = ReactCompilerGating.isReactCompilerEn
                 closure_130_3 = tmp55;
                 if (closure_130_3 instanceof sourceState(context[12]).CaptchaCancelError) {
                   c7 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 } else {
                   authenticationErrorsFromAPIError = sourceState(context[13]).getAuthenticationErrorsFromAPIError(closure_130_3);
                   v2(authenticationErrorsFromAPIError);
@@ -201,7 +201,7 @@ export const useIdentityRegistrationStep = ReactCompilerGating.isReactCompilerEn
                 };
                 phone.push(sourceState(context[15]).AuthStates.VERIFY_PHONE, obj13);
                 c7 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp55) {
               if (tmp4 === c5) {
@@ -284,7 +284,7 @@ export const useIdentityRegistrationStep = ReactCompilerGating.isReactCompilerEn
           let obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -320,7 +320,7 @@ export const useIdentityRegistrationStep = ReactCompilerGating.isReactCompilerEn
             closure_130_5 = closure_4;
             if (closure_130_5 instanceof sourceState(navigation[12]).CaptchaCancelError) {
               c7 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             } else {
               authenticationErrorsFromAPIError = sourceState(navigation[13]).getAuthenticationErrorsFromAPIError(closure_130_5);
               first1(authenticationErrorsFromAPIError);
@@ -392,7 +392,7 @@ export const useIdentityRegistrationStep = ReactCompilerGating.isReactCompilerEn
             };
             tmp5.push(sourceState(navigation[15]).AuthStates.VERIFY_PHONE, obj13);
             c7 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp55) {
           closure_4 = tmp55;

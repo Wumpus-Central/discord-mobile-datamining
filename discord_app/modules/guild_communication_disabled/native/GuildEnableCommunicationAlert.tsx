@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -152,7 +152,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
           obj7.icon = v1(4805);
           v1(4568).open(obj7);
           dependencyMap = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp9) {
         dependencyMap = tmp;

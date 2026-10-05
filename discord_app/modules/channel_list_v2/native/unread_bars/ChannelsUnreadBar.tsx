@@ -1,6 +1,6 @@
-// === Module 16103: ChannelsUnreadBar ===
+// === Module 16107: ChannelsUnreadBar ===
 
-// Module 16103 (ChannelsUnreadBar)
+// Module 16107 (ChannelsUnreadBar)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4612 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5070 */;

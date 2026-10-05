@@ -1,6 +1,6 @@
-// === Module 16356: ForYouItems ===
+// === Module 16360: ForYouItems ===
 
-// Module 16356 (ForYouItems)
+// Module 16360 (ForYouItems)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _mod686 from "module_686" /* 686 */;
@@ -16,16 +16,16 @@ import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7125 
 import PollsUtils from "PollsUtils" /* 7257 */;
 import parsePollResultSystemMessageEmbedDefault from "parsePollResultSystemMessageEmbed" /* 7713 */;
 import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12294 */;
-import handleSupportedURLDefault from "handleSupportedURL" /* 13661 */;
-import NotificationCenterStoreActions from "NotificationCenterStoreActions" /* 16354 */;
-import ForYouReadSectionHeader from "ForYouReadSectionHeader" /* 16371 */;
-import ForYouRecentActivitySectionHeader from "ForYouRecentActivitySectionHeader" /* 16372 */;
-import ForYouHoistedItemsHeader from "ForYouHoistedItemsHeader" /* 16373 */;
-import ForYouSuggestedFriendsSectionHeaderDefault from "ForYouSuggestedFriendsSectionHeader" /* 16374 */;
-import ForYouSuggestedFriendRowDefault from "ForYouSuggestedFriendRow" /* 16375 */;
-import ForYouShowAllRow from "ForYouShowAllRow" /* 16381 */;
-import ForYouUnreadClearedState from "ForYouUnreadClearedState" /* 16382 */;
-import ForYouLoadMore from "ForYouLoadMore" /* 16383 */;
+import handleSupportedURLDefault from "handleSupportedURL" /* 13663 */;
+import NotificationCenterStoreActions from "NotificationCenterStoreActions" /* 16358 */;
+import ForYouReadSectionHeader from "ForYouReadSectionHeader" /* 16375 */;
+import ForYouRecentActivitySectionHeader from "ForYouRecentActivitySectionHeader" /* 16376 */;
+import ForYouHoistedItemsHeader from "ForYouHoistedItemsHeader" /* 16377 */;
+import ForYouSuggestedFriendsSectionHeaderDefault from "ForYouSuggestedFriendsSectionHeader" /* 16378 */;
+import ForYouSuggestedFriendRowDefault from "ForYouSuggestedFriendRow" /* 16379 */;
+import ForYouShowAllRow from "ForYouShowAllRow" /* 16385 */;
+import ForYouUnreadClearedState from "ForYouUnreadClearedState" /* 16386 */;
+import ForYouLoadMore from "ForYouLoadMore" /* 16387 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -34,9 +34,9 @@ import ApplicationStore from "ApplicationStore" /* 5118 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import UserStore from "UserStore" /* 1377 */;
-import NotificationCenterStore from "NotificationCenterStore" /* 16350 */;
+import NotificationCenterStore from "NotificationCenterStore" /* 16354 */;
 
-const ForYouMentionPlaceholder2 = ForYouMentionPlaceholder(16355);
+const ForYouMentionPlaceholder2 = ForYouMentionPlaceholder(16359);
 require = fn;
 function getMessageContentPreviewV2(item) {
   item = item.item;
@@ -182,17 +182,17 @@ let closure_27 = createStyles.createStyles(obj10);
 let closure_28 = { channelMentionText: "redesign/message-preview/medium" };
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-const f73486 = () => {
+const f73536 = () => {
 
 };
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-const f73487 = () => {
+const f73537 = () => {
 
 };
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-const f73488 = () => {
+const f73538 = () => {
 
 };
 createStyles = fn(4890);
@@ -270,7 +270,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled() ? ((item) => {
   item = item.item;
   ({ acked, compactMode } = item);
   const tmp4 = closure_32();
-  if (typeof f73486 === "function") {
+  if (typeof f73536 === "function") {
     const parser = CustomMarkupAll.getParser(closure_26());
     if (cResult[0] !== tmp4.messagePreviewBarV2) {
       const obj3 = { style: tmp4.messagePreviewBarV2 };
@@ -341,7 +341,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled() ? ((item) => {
 }) : ((arg0) => {
   ({ item, acked, compactMode } = arg0);
   const tmp = closure_32();
-  if (typeof f73486 === "function") {
+  if (typeof f73536 === "function") {
     const obj2 = { style: tmp.calloutContainer, pointerEvents: "none", children: null };
     const obj3 = { style: tmp.messagePreviewBarV2 };
     const parser = CustomMarkupAll.getParser(closure_26());
@@ -840,7 +840,7 @@ let closure_39 = noop.memo((item) => {
       obj3.icon = tmp6(notificationCenterItemAcked[44]);
       obj3.IconComponent = tmp2(notificationCenterItemAcked[45]).TrashIcon;
       item = navigation(function*() {
-        yield tmp3(16352).deleteNotificationCenterItem(tmp3);
+        yield tmp3(16356).deleteNotificationCenterItem(tmp3);
         if (1 === tmp7) {
           c3 = 0;
           const obj7 = { key: "REMOVE_NOTIFICATION_ERROR", content: null };
@@ -877,9 +877,9 @@ let closure_39 = noop.memo((item) => {
   [tmp10, tmp11] = callback(str.useState(undefined), 2);
   const tmp9 = callback(str.useState(undefined), 2);
   const itemActionButtonPropsV2 = item(notificationCenterItemAcked[48]).useItemActionButtonPropsV2(item, callback, navigation, forceHoistItem, isForceHoisted, onSoftAckItem, tmp11, compactMode);
-  if (typeof f73487 === "function") {
+  if (typeof f73537 === "function") {
     const getParserWithoutLinks = onSoftAckItem(tmp3[17]).getParserWithoutLinks;
-    if (typeof f73488 === "function") {
+    if (typeof f73538 === "function") {
       const parserWithoutLinks = onSoftAckItem(tmp3[17]).getParserWithoutLinks(closure_24());
       let tmp24 = item.type === tmp2(tmp3[35]).NotificationCenterItems.FRIEND_REQUEST_ACCEPTED;
       if (!tmp24) {

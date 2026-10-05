@@ -1,6 +1,6 @@
-// === Module 16111: GameClaimCoachmark ===
+// === Module 16115: GameClaimCoachmark ===
 
-// Module 16111 (GameClaimCoachmark)
+// Module 16115 (GameClaimCoachmark)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 4886 */;
@@ -12,8 +12,8 @@ import XSmallIcon from "XSmallIcon" /* 6017 */;
 import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8263 */;
 import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 8584 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10723 */;
-import GameClaimCardStack from "GameClaimCardStack" /* 16112 */;
-import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 16113 */;
+import GameClaimCardStack from "GameClaimCardStack" /* 16116 */;
+import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 16117 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -50,7 +50,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   ({ guild, markAsDismissed } = arg0);
   const tmp4 = closure_13();
   let obj = markAsDismissed(576);
-  let first = markAsDismissed(16113).useUnclaimedGameIdsForGuild(guild.id)[0];
+  let first = markAsDismissed(16117).useUnclaimedGameIdsForGuild(guild.id)[0];
   if (first == null) {
     first = null;
   }
@@ -62,7 +62,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   } else {
     first1 = cResult[0];
   }
-  const obj2 = markAsDismissed(16113);
+  const obj2 = markAsDismissed(16117);
   ({ coverImageUrl, gameName } = useGameNameAndCoverImageDefault(first, first1));
   if (null == coverImageUrl) {
     return null;
@@ -166,7 +166,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
                                   const obj3 = { value, done: true };
                                   return obj3;
                                 } else {
-                                  return { value: "IconComponent", done: "IconComponent" };
+                                  return { value: "IconComponent", done: null };
                                 }
                               } else {
                                 try {
@@ -195,7 +195,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
                                     return obj;
                                   } else {
                                     v3 = 3;
-                                    return { value: "IconComponent", done: "IconComponent" };
+                                    return { value: "IconComponent", done: null };
                                   }
                                 } catch (tmp12) {
                                   v3 = tmp;
@@ -339,7 +339,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -368,7 +368,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
             return obj;
           } else {
             v3 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp12) {
           v3 = tmp;

@@ -1,6 +1,6 @@
-// === Module 17562: NewUserUtils ===
+// === Module 17586: NewUserUtils ===
 
-// Module 17562 (NewUserUtils)
+// Module 17586 (NewUserUtils)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import router_utils from "router_utils" /* 1112 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
@@ -9,9 +9,9 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
 import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7282 */;
 import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12332 */;
 import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 12415 */;
-import NewUserModalTypes from "NewUserModalTypes" /* 17561 */;
+import NewUserModalTypes from "NewUserModalTypes" /* 17585 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ParentalConsentStore from "ParentalConsentStore" /* 15875 */;
+import ParentalConsentStore from "ParentalConsentStore" /* 15879 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5440 */;
 import UserStore from "UserStore" /* 1377 */;
 
@@ -29,7 +29,7 @@ let closure_11 = async function _shouldSkipContactSyncStep() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -100,7 +100,7 @@ let closure_17 = async function _getNextOnboardingStep() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -133,7 +133,7 @@ let closure_17 = async function _getNextOnboardingStep() {
           let transitionStep2;
           c6 = 1;
           c7 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -239,7 +239,7 @@ let closure_12 = asyncGeneratorStep(async () => {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -299,7 +299,7 @@ let closure_13 = asyncGeneratorStep(async () => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

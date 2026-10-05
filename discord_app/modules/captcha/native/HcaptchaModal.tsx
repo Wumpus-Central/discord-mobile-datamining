@@ -1,6 +1,6 @@
-// === Module 17406: HcaptchaModal ===
+// === Module 17430: HcaptchaModal ===
 
-// Module 17406 (HcaptchaModal)
+// Module 17430 (HcaptchaModal)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
 import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5407 */;
 import useBackPressHandlerDefault from "useBackPressHandler" /* 5780 */;
@@ -303,12 +303,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const merged = Object.assign(tmp4);
     obj8.languageCode = LocaleStore.locale;
     obj8.onMessage = onMessage;
-    obj7.children = closure_12(tmp18(17405), obj8);
+    obj7.children = closure_12(tmp18(17429), obj8);
     const tmp40 = closure_12(closure_8, obj7);
     cResult[15] = tmp4;
     cResult[16] = onMessage;
     cResult[17] = tmp40;
-    const tmp18Result = tmp18(17405);
+    const tmp18Result = tmp18(17429);
   }
   let tmp28Result = !tmp16;
   if (!tmp16) {
@@ -403,11 +403,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const merged = Object.assign(tmp);
   obj8.languageCode = LocaleStore.locale;
   obj8.onMessage = onMessage;
-  obj7.children = closure_12(onPress(17405), obj8);
+  obj7.children = closure_12(onPress(17429), obj8);
   items3[1] = closure_12(closure_8, obj7);
   const obj9 = { style: null, pointerEvents: "box-none", children: null };
   const items4 = [tmp2.closeButtonContainer, ];
-  const tmp9Result = onPress(17405);
+  const tmp9Result = onPress(17429);
   items4[1] = { paddingTop: rect.top + onPress(587).space.PX_8, paddingLeft: rect.left + onPress(587).space.PX_16 };
   obj9.style = items4;
   const obj11 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };

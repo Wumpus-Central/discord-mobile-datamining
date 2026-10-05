@@ -638,7 +638,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
             class Z {
               constructor(arg0, arg1) {
                 obj = { participant: closure_4[arg1], guildId: channel.getGuildId(), channelId: channel.id };
-                return jsx(f46633, obj);
+                return jsx(f46656, obj);
               }
             }
             if (tmp29 === Symbol.for("react.memo_cache_sentinel")) {
@@ -652,7 +652,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
               class Z {
                 constructor(arg0, arg1) {
                   obj = { participant: closure_4[arg1], guildId: channel.getGuildId(), channelId: channel.id };
-                  return jsx(f46633, obj);
+                  return jsx(f46656, obj);
                 }
               }
               cResult[22] = stringResult1;
@@ -676,7 +676,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
               class Z {
                 constructor(arg0, arg1) {
                   obj = { participant: closure_4[arg1], guildId: channel.getGuildId(), channelId: channel.id };
-                  return jsx(f46633, obj);
+                  return jsx(f46656, obj);
                 }
               }
               cResult[24] = tmp33;
@@ -706,7 +706,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
           class Z {
             constructor(arg0, arg1) {
               obj = { participant: closure_4[arg1], guildId: channel.getGuildId(), channelId: channel.id };
-              return jsx(f46633, obj);
+              return jsx(f46656, obj);
             }
           }
           const obj6 = { blockedUserCount: length, ignoredUserCount: length2 };
@@ -718,7 +718,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
         class Z {
           constructor(arg0, arg1) {
             obj = { participant: closure_4[arg1], guildId: channel.getGuildId(), channelId: channel.id };
-            return jsx(f46633, obj);
+            return jsx(f46656, obj);
           }
         }
         cResult[16] = channel;

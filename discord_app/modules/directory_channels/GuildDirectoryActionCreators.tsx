@@ -26,7 +26,7 @@ let closure_7 = async function _addDirectoryGuildEntry() {
     UNCATEGORIZED = constants.UNCATEGORIZED;
   }
   closure_132_3 = UNCATEGORIZED;
-  return "Reflect";
+  return "Set";
 };
 let closure_8 = async function _updateDirectoryEntry() {
   const HTTP = closure_133_0(closure_133_2[6]).HTTP;
@@ -45,7 +45,7 @@ let closure_8 = async function _updateDirectoryEntry() {
     UNCATEGORIZED = constants.UNCATEGORIZED;
   }
   closure_132_3 = UNCATEGORIZED;
-  return "Reflect";
+  return "Set";
 };
 let closure_9 = async function _fetchGuildEntriesForIds(arg0) {
   closure_0 = arg0;
@@ -149,7 +149,7 @@ let closure_0 = asyncGeneratorStep(async (channelId, query) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

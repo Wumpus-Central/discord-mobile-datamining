@@ -1,32 +1,32 @@
-// === Module 14348: activities ===
+// === Module 14352: activities ===
 
-// Module 14348 (activities)
+// Module 14352 (activities)
 import RPCHelpers from "RPCHelpers" /* 9031 */;
-import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 14302 */;
+import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 14304 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
 const Constants = fn(1085);
 ({ RPCCommands, RPCErrors: closure_4 } = Constants);
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(14315);
+let CONTEXT_MENU_ICON_NAMES = fn(14317);
 obj[RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS, {
-  scope: fn(14302).activityInstanceConnectedParticipantsScope,
+  scope: fn(14304).activityInstanceConnectedParticipantsScope,
   handler(socket) {
     const result = RPCHelpers.validatePostMessageTransport(socket.socket.transport);
     return activityInstanceConnectedParticipants.activityInstanceConnectedParticipants();
   }
 });
-CONTEXT_MENU_ICON_NAMES = fn(14315);
+CONTEXT_MENU_ICON_NAMES = fn(14317);
 let obj3 = {
-  scope: fn(14302).activityInstanceConnectedParticipantsScope,
+  scope: fn(14304).activityInstanceConnectedParticipantsScope,
   handler(socket) {
     const result = RPCHelpers.validatePostMessageTransport(socket.socket.transport);
     return activityInstanceConnectedParticipants.activityInstanceConnectedParticipants();
   }
 };
 obj[RPCCommands.REQUEST_PROXY_TICKET_REFRESH] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.REQUEST_PROXY_TICKET_REFRESH, {
-  scope: fn(14302).activityInstanceConnectedParticipantsScope,
+  scope: fn(14304).activityInstanceConnectedParticipantsScope,
   handler(socket) {
     socket = socket.socket;
     return (async () => {
@@ -40,7 +40,7 @@ obj[RPCCommands.REQUEST_PROXY_TICKET_REFRESH] = CONTEXT_MENU_ICON_NAMES.createRP
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

@@ -1,6 +1,6 @@
-// === Module 14320: links ===
+// === Module 14322: links ===
 
-// Module 14320 (links)
+// Module 14322 (links)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2016 */;
@@ -11,10 +11,10 @@ import RPCErrorDefault from "RPCError" /* 9026 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9029 */;
 import RPCHelpers from "RPCHelpers" /* 9031 */;
 import ActivityPopoutUtils from "ActivityPopoutUtils" /* 9048 */;
-import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 14300 */;
-import internalDeepLinks from "internalDeepLinks" /* 14321 */;
-import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 14322 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 14324 */;
+import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 14302 */;
+import internalDeepLinks from "internalDeepLinks" /* 14323 */;
+import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 14324 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 14326 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
 import ApplicationStore from "ApplicationStore" /* 5118 */;
@@ -36,7 +36,7 @@ let closure_12 = async function _openExternalLink(arg0) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -174,7 +174,7 @@ let closure_12 = async function _openExternalLink(arg0) {
                   closure_0({ opened: false });
                 }
               };
-              return obj.handleClick(obj2, undefined, undefined, closure_1_0(14323).getActivitiesModalContextKey({ application, channelId }));
+              return obj.handleClick(obj2, undefined, undefined, closure_1_0(14325).getActivitiesModalContextKey({ application, channelId }));
             });
           }
           c5 = 0;
@@ -225,7 +225,7 @@ obj2 = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -338,7 +338,7 @@ obj3 = {
 };
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
-const CONTEXT_MENU_ICON_NAMES = fn(14315);
+const CONTEXT_MENU_ICON_NAMES = fn(14317);
 let obj5 = {
   scope: null,
   handler(arg0) {

@@ -1,10 +1,10 @@
-// === Module 16681: SpiderIllocon ===
+// === Module 16692: SpiderIllocon ===
 
-// Module 16681 (SpiderIllocon)
+// Module 16692 (SpiderIllocon)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5974 */;
-import _modDef16682 from "module_16682" /* 16682 */;
+import _modDef16693 from "module_16693" /* 16693 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -19,7 +19,7 @@ export const SpiderIllocon = ReactCompilerGating.isReactCompilerEnabled() ? ((ar
     num = size;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef16682 };
+    const obj2 = { uri: _modDef16693 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -58,7 +58,7 @@ export const SpiderIllocon = ReactCompilerGating.isReactCompilerEnabled() ? ((ar
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef16682 };
+  const obj2 = { uri: _modDef16693 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

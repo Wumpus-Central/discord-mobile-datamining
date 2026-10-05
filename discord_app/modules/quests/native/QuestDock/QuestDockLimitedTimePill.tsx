@@ -1,6 +1,6 @@
-// === Module 15013: QuestDockLimitedTimePill ===
+// === Module 15017: QuestDockLimitedTimePill ===
 
-// Module 15013 (QuestDockLimitedTimePill)
+// Module 15017 (QuestDockLimitedTimePill)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;

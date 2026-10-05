@@ -57,7 +57,7 @@ let closure_21 = async function _transitionToEventDetailsFromInvite(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -98,7 +98,7 @@ let closure_21 = async function _transitionToEventDetailsFromInvite(arg0) {
           const obj = closure_131_0(closure_131_2[35]);
         }
         c5 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp23) {
       c5 = tmp;
@@ -373,7 +373,7 @@ export const showGuildEventModeratorActionSheet = function showGuildEventModerat
                 openRsvpPicker(guildScheduledEvent, recurrenceId) {
                   guildId(guild_id[15]).openLazy(id(guild_id[14])(guild_id[29], guild_id.paths), "GuildEventRsvpPickerActionSheet", { event: guildScheduledEvent, recurrenceId, guildId, onRsvp }, "stack");
                 },
-                onRsvp: "application"
+                onRsvp: "applicationId"
               });
             }
       };
@@ -397,7 +397,7 @@ export const showGuildEventModeratorActionSheet = function showGuildEventModerat
             obj2.label = intl2.string(tmp3(tmp4[24]).t.cK1GGY);
             obj2.onPress = function onPress() {
               ActionSheetActionCreatorsDefault.hideAllActionSheets();
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9470, dependencyMap.paths), { event, recurrenceId, onCloseActionSheet: "Array" }, closure_2_15);
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9470, dependencyMap.paths), { event, recurrenceId, onCloseActionSheet: "r" }, closure_2_15);
             };
             items.push(obj2);
           }
@@ -469,7 +469,7 @@ export const showGuildEventModeratorActionSheet = function showGuildEventModerat
               onPress() {
                           ({ id, guild_id } = closure_0);
                           const lazyResult = noop.lazy(() => event(paths[14])(paths[19], paths.paths));
-                          useAlertStore.openAlert("DeleteEventAlert", <lazyResult eventId={id} guildId={guild_id} recurrenceId="Array" />);
+                          useAlertStore.openAlert("DeleteEventAlert", <lazyResult eventId={id} guildId={guild_id} recurrenceId="r" />);
                         }
             };
             items.push(obj7);

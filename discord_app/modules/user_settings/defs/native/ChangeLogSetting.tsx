@@ -1,10 +1,10 @@
-// === Module 15364: ChangeLogSetting ===
+// === Module 15368: ChangeLogSetting ===
 
-// Module 15364 (ChangeLogSetting)
+// Module 15368 (ChangeLogSetting)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 4812 */;
-import ChangeLogModal from "ChangeLogModal" /* 15365 */;
+import ChangeLogModal from "ChangeLogModal" /* 15369 */;
 import SettingBuilders from "SettingBuilders" /* 11129 */;
 import size from "module_2" /* 2 */;
 

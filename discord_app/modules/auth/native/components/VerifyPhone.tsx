@@ -1,7 +1,7 @@
-// === Module 15890: components/VerifyPhone ===
+// === Module 15894: components/VerifyPhone ===
 
-// Module 15890 (components/VerifyPhone)
-import RegistrationBailoutButtonDefault from "RegistrationBailoutButton" /* 15891 */;
+// Module 15894 (components/VerifyPhone)
+import RegistrationBailoutButtonDefault from "RegistrationBailoutButton" /* 15895 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -9,8 +9,8 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 const require = fn;
-let closure_6 = fn(15863).doesRegistrationHaveIdentityType;
-const RegistrationConstants = fn(15864);
+let closure_6 = fn(15867).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(15868);
 ({ authStateToRegisterTransitionStep: closure_7, RegisterTransitionSteps: closure_8, RegistrationTransitionActionTypes: closure_9 } = RegistrationConstants);
 const Links = fn(1085).Links;
 const jsx = fn(21).jsx;
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPhoneTokenRece
   closure_7 = noop.useRef(false);
   const context = noop.useContext(require("Auth").TrackRegistrationContext);
   const tmp4 = _slicedToArray(noop.useState(false), 2);
-  onPhoneTokenReceived(15879)(closure_7(sourceState));
+  onPhoneTokenReceived(15883)(closure_7(sourceState));
   const items = [context];
   const effect = noop.useEffect(() => {
     if (_undefined()) {
@@ -245,7 +245,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPhoneTokenRece
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -276,7 +276,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPhoneTokenRece
         } else {
           _undefined(false);
           c3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp12) {
         c3 = tmp;
@@ -306,7 +306,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPhoneTokenRece
     return tmp2;
   }, items3);
   let obj = { title, description, error: tmp3, onCodeEntered, codeType: null, footer: null, disabled: null, loading: null, disableKeyboardAvoidingView: true };
-  const tmp7 = onPhoneTokenReceived(15879);
+  const tmp7 = onPhoneTokenReceived(15883);
   obj.codeType = require("CodeField").CodeType.NUMERIC;
   obj.footer = memo;
   obj.disabled = tmp5;

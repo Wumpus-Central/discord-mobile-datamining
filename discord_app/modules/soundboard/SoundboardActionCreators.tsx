@@ -133,7 +133,7 @@ let closure_15 = async function _uploadSound(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -159,7 +159,7 @@ let closure_15 = async function _uploadSound(arg0) {
           closure_129_6 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -210,7 +210,7 @@ let closure_16 = async function _updateSound(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -236,7 +236,7 @@ let closure_16 = async function _updateSound(arg0) {
           closure_129_6 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -287,7 +287,7 @@ let closure_17 = async function _deleteSound(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -317,7 +317,7 @@ let closure_17 = async function _deleteSound(arg0) {
         return obj;
       } else {
         c2 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp5) {
       c2 = tmp;
@@ -336,7 +336,7 @@ let closure_18 = async function _fetchSoundGuildData(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

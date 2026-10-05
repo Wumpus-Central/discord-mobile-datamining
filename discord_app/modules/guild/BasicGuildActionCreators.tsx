@@ -1,6 +1,6 @@
-// === Module 17998: BasicGuildActionCreators ===
+// === Module 18020: BasicGuildActionCreators ===
 
-// Module 17998 (BasicGuildActionCreators)
+// Module 18020 (BasicGuildActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -23,7 +23,7 @@ let closure_8 = async function _fetchBasicGuild() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

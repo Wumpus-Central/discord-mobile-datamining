@@ -1,6 +1,6 @@
-// === Module 15038: GuildRoleSubscriptionsCancelSetting ===
+// === Module 15042: GuildRoleSubscriptionsCancelSetting ===
 
-// Module 15038 (GuildRoleSubscriptionsCancelSetting)
+// Module 15042 (GuildRoleSubscriptionsCancelSetting)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
 import SettingsConstants from "SettingsConstants" /* 7634 */;

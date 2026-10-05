@@ -1,6 +1,6 @@
-// === Module 16158: FavoritesGuildCoachmarkMenuItem ===
+// === Module 16162: FavoritesGuildCoachmarkMenuItem ===
 
-// Module 16158 (FavoritesGuildCoachmarkMenuItem)
+// Module 16162 (FavoritesGuildCoachmarkMenuItem)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import _modDef3367 from "module_3367" /* 3367 */;
@@ -166,7 +166,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelType) =>
   }, items2);
   const items3 = [shouldShowPopover, stateFromStores, onDismiss, callback1];
   const memo = onDismiss.useMemo(() => {
-    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "good", onButtonPress: 0 };
+    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "next", onButtonPress: "Moves focus to the previous field" };
     const intl = util.intl;
     const tmp4 = _modDef3367;
     if (stateFromStores) {

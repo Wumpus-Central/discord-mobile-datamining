@@ -1,6 +1,6 @@
-// === Module 16042: VoiceUserItem ===
+// === Module 16046: VoiceUserItem ===
 
-// Module 16042 (VoiceUserItem)
+// Module 16046 (VoiceUserItem)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -14,7 +14,7 @@ import GameActivityIconDefault from "GameActivityIcon" /* 9443 */;
 import getConsoleIcon from "getConsoleIcon" /* 9463 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10723 */;
 import VideoIcon from "VideoIcon" /* 11234 */;
-import VoiceUserNameItemDefault from "VoiceUserNameItem" /* 16043 */;
+import VoiceUserNameItemDefault from "VoiceUserNameItem" /* 16047 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

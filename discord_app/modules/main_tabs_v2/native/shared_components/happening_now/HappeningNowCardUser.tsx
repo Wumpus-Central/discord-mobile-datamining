@@ -1,6 +1,6 @@
-// === Module 16010: HappeningNowCardUser ===
+// === Module 16014: HappeningNowCardUser ===
 
-// Module 16010 (HappeningNowCardUser)
+// Module 16014 (HappeningNowCardUser)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import noop from "module_19" /* 19 */;
@@ -9,7 +9,7 @@ import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(15110).HappeningNowCardTrackingType;
+let closure_7 = fn(15114).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsx = fn(21).jsx;
 const LARGE = fn(1188).AvatarSizes.LARGE;

@@ -1,6 +1,6 @@
-// === Module 16082: GuildThemeNuxUtils ===
+// === Module 16086: GuildThemeNuxUtils ===
 
-// Module 16082 (GuildThemeNuxUtils)
+// Module 16086 (GuildThemeNuxUtils)
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2033 */;
 import Client from "Client" /* 4787 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -18,7 +18,7 @@ let closure_4 = async function _saveGuildThemeNuxPreference(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -69,7 +69,7 @@ let closure_4 = async function _saveGuildThemeNuxPreference(arg0) {
         return obj;
       } else {
         c5 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp14) {
       c5 = tmp;

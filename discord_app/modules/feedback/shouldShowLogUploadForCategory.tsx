@@ -1,6 +1,6 @@
-// === Module 16630: shouldShowLogUploadForCategory ===
+// === Module 16641: shouldShowLogUploadForCategory ===
 
-// Module 16630 (shouldShowLogUploadForCategory)
+// Module 16641 (shouldShowLogUploadForCategory)
 import Constants from "Constants" /* 11249 */;
 import size from "module_2" /* 2 */;
 

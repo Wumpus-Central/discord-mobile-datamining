@@ -1,6 +1,6 @@
-// === Module 16961: UserProfileYourFriendsCard ===
+// === Module 16980: UserProfileYourFriendsCard ===
 
-// Module 16961 (UserProfileYourFriendsCard)
+// Module 16980 (UserProfileYourFriendsCard)
 import _modDef12 from "module_12" /* 12 */;
 import native from "native" /* 1188 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
@@ -191,13 +191,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         const items = [{ translateX: 4 * (first.length - 1 - index) }];
         obj2.transform = items;
         obj.style = obj2;
-        const obj4 = { user, guildId: "r", size: closure_0(1188).AvatarSizes.XSMALL, cutout: null };
+        const obj4 = { user, guildId: "r", size: closure_0(1188).AvatarSizes.XSMALL, cutout: 956302470 };
         let tmp3;
         if (index < first.length - 1) {
           tmp3 = closure_2_11;
         }
         obj4.cutout = tmp3;
-        obj.children = jsx(closure_0(1188).CutoutableAvatarImage, { user, guildId: "r", size: closure_0(1188).AvatarSizes.XSMALL, cutout: null });
+        obj.children = jsx(closure_0(1188).CutoutableAvatarImage, { user, guildId: "r", size: closure_0(1188).AvatarSizes.XSMALL, cutout: 956302470 });
         return <gameRelationshipsByType key={user.id} style={null}>{null}</gameRelationshipsByType>;
       })}</View>
     };
@@ -207,13 +207,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       const items = [{ translateX: 4 * (first.length - 1 - index) }];
       obj2.transform = items;
       obj.style = obj2;
-      const obj4 = { user, guildId: "r", size: closure_0(1188).AvatarSizes.XSMALL, cutout: null };
+      const obj4 = { user, guildId: "r", size: closure_0(1188).AvatarSizes.XSMALL, cutout: 956302470 };
       let tmp3;
       if (index < first.length - 1) {
         tmp3 = closure_2_11;
       }
       obj4.cutout = tmp3;
-      obj.children = jsx(closure_0(1188).CutoutableAvatarImage, { user, guildId: "r", size: closure_0(1188).AvatarSizes.XSMALL, cutout: null });
+      obj.children = jsx(closure_0(1188).CutoutableAvatarImage, { user, guildId: "r", size: closure_0(1188).AvatarSizes.XSMALL, cutout: 956302470 });
       return <gameRelationshipsByType key={user.id} style={null}>{null}</gameRelationshipsByType>;
     })}</View></View>;
   }, items3);

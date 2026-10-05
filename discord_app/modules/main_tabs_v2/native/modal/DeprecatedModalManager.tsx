@@ -1,13 +1,13 @@
-// === Module 17620: DeprecatedModalManager ===
+// === Module 17644: DeprecatedModalManager ===
 
-// Module 17620 (DeprecatedModalManager)
+// Module 17644 (DeprecatedModalManager)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4736 */;
 import RootNavigationRef from "RootNavigationRef" /* 4737 */;
 import getDeprecatedModalDataDefault from "getDeprecatedModalData" /* 5095 */;
-import isFullScreenVerificationModalRequiredDefault from "isFullScreenVerificationModalRequired" /* 17558 */;
+import isFullScreenVerificationModalRequiredDefault from "isFullScreenVerificationModalRequired" /* 17582 */;
 import GuildSettingsStore from "GuildSettingsStore" /* 9248 */;
 import CreateInviteModalStore from "CreateInviteModalStore" /* 9482 */;
-import NotificationSettingsModalStore from "NotificationSettingsModalStore" /* 17621 */;
+import NotificationSettingsModalStore from "NotificationSettingsModalStore" /* 17645 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 2044 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
 

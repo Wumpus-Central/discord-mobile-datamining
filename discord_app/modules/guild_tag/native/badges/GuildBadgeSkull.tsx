@@ -1,9 +1,9 @@
-// === Module 13731: GuildBadgeSkull ===
+// === Module 13733: GuildBadgeSkull ===
 
-// Module 13731 (GuildBadgeSkull)
+// Module 13733 (GuildBadgeSkull)
 import c from "c" /* 576 */;
 import inlineStyles from "inlineStyles" /* 8136 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13728 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13730 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

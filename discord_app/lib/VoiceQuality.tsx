@@ -1,12 +1,12 @@
-// === Module 13627: VoiceQuality ===
+// === Module 13629: VoiceQuality ===
 
-// Module 13627 (VoiceQuality)
+// Module 13629 (VoiceQuality)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4945 */;
 import Histogram from "Histogram" /* 7233 */;
 import SystemResourcesDefault from "SystemResources" /* 7239 */;
-import NetworkQualityDefault from "NetworkQuality" /* 13628 */;
+import NetworkQualityDefault from "NetworkQuality" /* 13630 */;
 import _slicedToArray from "module_32" /* 32 */;
 import TypedEventEmitter from "TypedEventEmitter" /* 4948 */;
 

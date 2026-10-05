@@ -1,9 +1,9 @@
-// === Module 16083: GuildThemeNuxPreviewGraphic ===
+// === Module 16087: GuildThemeNuxPreviewGraphic ===
 
-// Module 16083 (GuildThemeNuxPreviewGraphic)
+// Module 16087 (GuildThemeNuxPreviewGraphic)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import GuildThemePreviewArtDefault from "GuildThemePreviewArt" /* 16084 */;
+import GuildThemePreviewArtDefault from "GuildThemePreviewArt" /* 16088 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

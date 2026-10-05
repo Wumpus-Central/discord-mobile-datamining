@@ -48,7 +48,7 @@ let closure_9 = async function _authorize(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -81,7 +81,7 @@ let closure_9 = async function _authorize(arg0) {
           ({ authorize: closure_129_0, clientId: closure_129_1, scopes: closure_129_2, responseType: closure_129_3, redirectUri: closure_129_4, codeChallenge: closure_129_5, codeChallengeMethod: closure_129_6, state: closure_129_7, permissions: closure_129_8, guildId: closure_129_9, channelId: closure_129_10, integrationType: closure_129_11, connectedAccountProvider: closure_129_12, nonce: closure_129_13 } = closure_0);
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -152,7 +152,7 @@ let closure_10 = async function _fetchAuthorization(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -182,7 +182,7 @@ let closure_10 = async function _fetchAuthorization(arg0) {
           ({ clientId: closure_129_0, scopes: closure_129_1, responseType: closure_129_2, redirectUri: closure_129_3, codeChallenge: closure_129_4, codeChallengeMethod: closure_129_5, state: closure_129_6, integrationType: closure_129_7, connectedAccountProvider: closure_129_8, nonce: closure_129_9, signal: closure_129_10 } = closure_0);
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -237,7 +237,7 @@ let closure_11 = async function _startSamsungAuthorization() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -270,7 +270,7 @@ let closure_11 = async function _startSamsungAuthorization() {
           return obj;
         } else {
           c5 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp5) {
         c5 = tmp;

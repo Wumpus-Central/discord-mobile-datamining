@@ -1,9 +1,9 @@
-// === Module 16878: messages/PinsScreen ===
+// === Module 16897: messages/PinsScreen ===
 
-// Module 16878 (messages/PinsScreen)
+// Module 16897 (messages/PinsScreen)
 import ChannelPinActionCreatorsDefault from "ChannelPinActionCreators" /* 11298 */;
 import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 11982 */;
-import MessagesScreenDefault from "MessagesScreen" /* 16876 */;
+import MessagesScreenDefault from "MessagesScreen" /* 16895 */;
 import noop from "module_19" /* 19 */;
 import ChannelPinsStore from "ChannelPinsStore" /* 11299 */;
 import SearchMessageStore from "SearchMessageStore" /* 6784 */;

@@ -12,7 +12,7 @@ const require = globalThis.__r;
 
 ({ VoiceMessageAnimationState: c2, WAVEFORM_WAVE_MAX_VALUE: c3 } = VoiceMessageConstants);
 let obj = module_570.create(() => {
-  obj = { voiceMessageAnimationState: null, recordingStatus: null, recordingId: null, currWaveHeight: "Reflect", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "Set", showVoiceMessagesTooltip: "M10 2H9v1h1V2Z", savedVoiceMessageUploadData: null, isVoiceMessageButtonMounted: 0.75, isUsingHoldGesture: null };
+  obj = { voiceMessageAnimationState: null, recordingStatus: null, recordingId: null, currWaveHeight: "Set", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "Symbol", showVoiceMessagesTooltip: "M6 2v1h1V2H6ZM5 3v1h1V3H5ZM6 4v1h1V4H6ZM4 4v1h1V4H4ZM3 5v1h1V5H3ZM2 6v2h1V6H2ZM1 8v2h1V8H1Z", savedVoiceMessageUploadData: null, isVoiceMessageButtonMounted: 0.75, isUsingHoldGesture: null };
   const items = [, ];
   ({ SENDING: arr[0], SENDING: arr[1] } = React2);
   obj.voiceMessageAnimationState = ReanimatedRexport.makeMutable(items);
@@ -88,7 +88,7 @@ export const hideVoiceMessagesTooltip = function hideVoiceMessagesTooltip() {
 export const resetVoiceMessageState = function resetVoiceMessageState() {
   obj = ReactBatchUpdates;
   obj.batchUpdates(() => {
-    state.setState({ waveform: [], waveformVersion: 0, showRecordingOverlay: false, startTimeMillis: "Boolean", savedVoiceMessageUploadData: "application" });
+    state.setState({ waveform: [], waveformVersion: 0, showRecordingOverlay: false, startTimeMillis: "Boolean", savedVoiceMessageUploadData: "unicodeVersion" });
   });
   const currWaveHeight = obj.getState().currWaveHeight;
   if (null != currWaveHeight) {

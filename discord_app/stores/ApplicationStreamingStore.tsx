@@ -7,9 +7,9 @@ import DurationsDefault from "Durations" /* 1102 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4942 */;
 import StreamPermissionUtils from "StreamPermissionUtils" /* 7210 */;
-import canSpectateDefault from "canSpectate" /* 13610 */;
-import windowSourceMatchesDefault from "windowSourceMatches" /* 13639 */;
-import getTitleFromPickedStreamContentDefault from "getTitleFromPickedStreamContent" /* 13640 */;
+import canSpectateDefault from "canSpectate" /* 13612 */;
+import windowSourceMatchesDefault from "windowSourceMatches" /* 13641 */;
+import getTitleFromPickedStreamContentDefault from "getTitleFromPickedStreamContent" /* 13642 */;
 import GameConsoleStore from "GameConsoleStore" /* 4907 */;
 import RunningGameStore from "RunningGameStore" /* 2006 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -752,11 +752,11 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
         FAILED = constants.FAILED;
       } else if (reason === constants3.SAFETY_GUILD_RATE_LIMITED) {
         guildId = StreamKeyUtils.decodeStreamKey(streamKey).guildId;
-        asyncRequireImpl(13641, dependencyMap.paths).then((result) => {
+        asyncRequireImpl(13643, dependencyMap.paths).then((result) => {
           result.default(guildId);
         });
         FAILED = constants.ENDED;
-        const promise = asyncRequireImpl(13641, dependencyMap.paths);
+        const promise = asyncRequireImpl(13643, dependencyMap.paths);
       } else {
         if (tmp9) {
           FAILED = constants.FAILED;

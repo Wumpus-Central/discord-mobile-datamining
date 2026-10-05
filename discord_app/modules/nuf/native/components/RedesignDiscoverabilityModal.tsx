@@ -1,6 +1,6 @@
-// === Module 17566: RedesignDiscoverabilityModal ===
+// === Module 17590: RedesignDiscoverabilityModal ===
 
-// Module 17566 (RedesignDiscoverabilityModal)
+// Module 17590 (RedesignDiscoverabilityModal)
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;

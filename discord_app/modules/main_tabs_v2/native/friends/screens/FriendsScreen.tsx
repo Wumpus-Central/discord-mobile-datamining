@@ -1,6 +1,6 @@
-// === Module 16906: FriendsScreen ===
+// === Module 16925: FriendsScreen ===
 
-// Module 16906 (FriendsScreen)
+// Module 16925 (FriendsScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1881 */;
@@ -9,8 +9,8 @@ import components_Button_Button from "components/Button/Button" /* 5594 */;
 import TableRow from "TableRow" /* 5993 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7850 */;
 import NoResultsDefault from "NoResults" /* 10726 */;
-import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 14913 */;
-import _modDef16380 from "module_16380" /* 16380 */;
+import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 14917 */;
+import _modDef16384 from "module_16384" /* 16384 */;
 import noop from "module_19" /* 19 */;
 import GameRelationshipStore from "GameRelationshipStore" /* 7142 */;
 import RelationshipStore from "RelationshipStore" /* 4519 */;
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     const items = [];
     if (tmp2) {
-      const obj = { icon: _modDef16380, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
+      const obj = { icon: _modDef16384, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
       const intl = util.intl;
       obj.label = intl.string(util.t.fyA115);
       const intl2 = util.intl;
@@ -337,7 +337,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       let v1IEawz = require;
       let obj9 = dependencyMap;
       let obj7 = { start: true, end: true, icon: null, trailing: null, label: null, subLabel: null, onPress: null };
-      const obj8 = { source: _modDef16380 };
+      const obj8 = { source: _modDef16384 };
       obj7.icon = React5(TableRow.TableRow.Icon, obj8);
       obj7.trailing = React5(TableRow.TableRow.Arrow, {});
       const intl5 = util.intl;

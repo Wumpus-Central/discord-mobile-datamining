@@ -1,18 +1,18 @@
-// === Module 17020: SearchNavigator ===
+// === Module 17044: SearchNavigator ===
 
-// Module 17020 (SearchNavigator)
+// Module 17044 (SearchNavigator)
 import nativeDefault from "native" /* 587 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1370 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
 import ConversationNavigatorHeader from "ConversationNavigatorHeader" /* 7569 */;
 import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 11982 */;
-import SearchNavigatorPreviewHeaderDefault from "SearchNavigatorPreviewHeader" /* 17015 */;
+import SearchNavigatorPreviewHeaderDefault from "SearchNavigatorPreviewHeader" /* 17039 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 let closure_5 = fn(7512).SearchEntrypointAnalyticsLocations;
-const SearchNavigatorScreens = fn(16794).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(16813).SearchNavigatorScreens;
 const SearchTypes = fn(1085).SearchTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -137,7 +137,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((route)
                   return obj;
                 },
           getComponent() {
-                  return searchContext(17016).default;
+                  return searchContext(17040).default;
                 }
         };
         const tmp27 = closure_8(closure_11.Screen, obj7);
@@ -282,7 +282,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((route)
       name: SearchNavigatorScreens.SEARCH_TABS,
       options: { headerShown: false, fullScreenGestureEnabled: true },
       getComponent() {
-        return searchContext(17021).default;
+        return searchContext(17045).default;
       }
     }),
     closure_8(closure_11.Screen, {
@@ -301,7 +301,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((route)
         return obj;
       },
       getComponent() {
-        return searchContext(17016).default;
+        return searchContext(17040).default;
       }
     }),
 
@@ -312,7 +312,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((route)
     name: SearchNavigatorScreens.SEARCH_TABS,
     options: { headerShown: false, fullScreenGestureEnabled: true },
     getComponent() {
-      return searchContext(17021).default;
+      return searchContext(17045).default;
     }
   };
   const obj6 = {
@@ -331,7 +331,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((route)
       return obj;
     },
     getComponent() {
-      return searchContext(17016).default;
+      return searchContext(17040).default;
     }
   };
   const tmp3 = closure_10();
@@ -347,7 +347,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((route)
       return obj.conversationNavigatorFocusHeaderOptions(route, navigation, { shouldHandleSafeArea });
     },
     getComponent() {
-      return searchContext(17017).default;
+      return searchContext(17041).default;
     }
   });
   obj3.children = items2;

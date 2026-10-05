@@ -1,6 +1,6 @@
-// === Module 17266: ActivityShelfItem ===
+// === Module 17290: ActivityShelfItem ===
 
-// Module 17266 (ActivityShelfItem)
+// Module 17290 (ActivityShelfItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
@@ -17,10 +17,10 @@ import useActivityShelfItem from "useActivityShelfItem" /* 11671 */;
 import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 11710 */;
 import useLaunchingActivityButtonStateDefault from "useLaunchingActivityButtonState" /* 11765 */;
 import _modDef12460 from "module_12460" /* 12460 */;
-import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground" /* 17263 */;
-import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary" /* 17264 */;
-import useActivityUsersDefault from "useActivityUsers" /* 17265 */;
-import _modDef17267 from "module_17267" /* 17267 */;
+import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground" /* 17287 */;
+import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary" /* 17288 */;
+import useActivityUsersDefault from "useActivityUsers" /* 17289 */;
+import _modDef17291 from "module_17291" /* 17291 */;
 import noop from "module_19" /* 19 */;
 
 const useActivityShelfItemDefault = useActivityShelfItem;
@@ -479,7 +479,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                       let tmp36 = null;
                                       if (isTestModeForApplication) {
                                         const obj5 = { style: tmp5.developerIconContainer, children: null };
-                                        const obj6 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef17267, color: tmp5.developerIconColor.color };
+                                        const obj6 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef17291, color: tmp5.developerIconColor.color };
                                         obj5.children = timestampProducer(native.Icon, obj6);
                                         tmp36 = timestampProducer(NativeViewDefault, obj5);
                                         const tmp7Result = NativeViewDefault;
@@ -627,7 +627,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp15Result3 = null;
     if (isTestModeForApplication) {
       const obj9 = { style: tmp.developerIconContainer, children: null };
-      const obj10 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef17267, color: tmp.developerIconColor.color };
+      const obj10 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef17291, color: tmp.developerIconColor.color };
       obj9.children = timestampProducer(native.Icon, obj10);
       tmp15Result3 = timestampProducer(NativeViewDefault, obj9);
       const tmp3Result4 = NativeViewDefault;

@@ -1,6 +1,6 @@
-// === Module 16003: HappeningNowAvatarStack ===
+// === Module 16007: HappeningNowAvatarStack ===
 
-// Module 16003 (HappeningNowAvatarStack)
+// Module 16007 (HappeningNowAvatarStack)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;

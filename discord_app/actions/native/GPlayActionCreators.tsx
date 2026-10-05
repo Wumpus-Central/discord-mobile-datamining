@@ -48,7 +48,7 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     while (true) {
@@ -98,7 +98,7 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
           closure_145_20 = undefined;
           c21 = 1;
           c22 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp4) {
         if (arg0 === 1) {
@@ -323,7 +323,7 @@ let closure_32 = async function _loadUserCountry() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -357,7 +357,7 @@ let closure_32 = async function _loadUserCountry() {
         const obj6 = { type: "GPLAY_SET_USER_COUNTRY", countryCode: closure_128_0 };
         closure_129_1(closure_129_2[14]).dispatch(obj6);
         c3 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp13) {
       c3 = tmp;
@@ -417,7 +417,7 @@ let closure_34 = async function _verifyPurchase(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -618,7 +618,7 @@ asyncGeneratorStep(async () => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -643,7 +643,7 @@ asyncGeneratorStep(async () => {
           closure_129_1 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -742,7 +742,7 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -761,7 +761,7 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
             closure_129_0 = closure_0;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -794,7 +794,7 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
             throw closure_129_1;
           } else {
             c6 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -835,7 +835,7 @@ asyncGeneratorStep(async () => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -860,7 +860,7 @@ asyncGeneratorStep(async () => {
           closure_129_1 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -981,7 +981,7 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1000,7 +1000,7 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
             closure_129_0 = closure_0;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -1033,7 +1033,7 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
             throw closure_129_1;
           } else {
             c6 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1074,7 +1074,7 @@ asyncGeneratorStep(async () => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -1103,7 +1103,7 @@ asyncGeneratorStep(async () => {
         return obj;
       } else {
         c0 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp8) {
       c0 = tmp;
@@ -1128,7 +1128,7 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1147,7 +1147,7 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
             closure_129_0 = closure_0;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -1180,7 +1180,7 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
             throw closure_129_1;
           } else {
             c6 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1225,7 +1225,7 @@ asyncGeneratorStep(async (arg0, arg1) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -1284,7 +1284,7 @@ asyncGeneratorStep(async (arg0, arg1) => {
       } else {
         c6 = 0;
         c8 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp39) {
       closure_5 = tmp39;
@@ -1308,7 +1308,7 @@ let closure_0 = asyncGeneratorStep(async () => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -1418,7 +1418,7 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1437,7 +1437,7 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
             closure_129_0 = closure_0;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -1470,7 +1470,7 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
             throw closure_129_1;
           } else {
             c6 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1543,7 +1543,7 @@ export const ensureSkusLoaded = function ensureSkusLoaded(items) {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {

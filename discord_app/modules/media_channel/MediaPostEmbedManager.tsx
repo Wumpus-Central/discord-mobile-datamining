@@ -1,10 +1,10 @@
-// === Module 17975: MediaPostEmbedManager ===
+// === Module 17997: MediaPostEmbedManager ===
 
-// Module 17975 (MediaPostEmbedManager)
+// Module 17997 (MediaPostEmbedManager)
 import FlagUtils from "FlagUtils" /* 1390 */;
 import MediaPostEmbedUtils from "MediaPostEmbedUtils" /* 5038 */;
 import MediaChannelActionCreators from "MediaChannelActionCreators" /* 11487 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17535 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17559 */;
 import GatedChannelStore from "GatedChannelStore" /* 2104 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;

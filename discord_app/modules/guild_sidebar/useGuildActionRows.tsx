@@ -1,11 +1,11 @@
-// === Module 16185: useGuildActionRows ===
+// === Module 16189: useGuildActionRows ===
 
-// Module 16185 (useGuildActionRows)
+// Module 16189 (useGuildActionRows)
 import useIsNewMemberDefault from "useIsNewMember" /* 6724 */;
 import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 12009 */;
 import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12170 */;
-import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 16149 */;
-import useIsEligibleForServerOnboardingSetupProgressDefault from "useIsEligibleForServerOnboardingSetupProgress" /* 16186 */;
+import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 16153 */;
+import useIsEligibleForServerOnboardingSetupProgressDefault from "useIsEligibleForServerOnboardingSetupProgress" /* 16190 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 5077 */;
 
@@ -56,8 +56,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
   const obj6 = require("OnboardingHomeUtils");
   const stateFromStores = require("useStateFromStores").useStateFromStores(first, tmp13, tmp14);
   const tmpResult = require("useStateFromStores");
-  const canAccessVibegrations = require("VibegrationsUtils").useCanAccessVibegrations(id, "useGuildActionRows");
-  const tmpResult10 = require("VibegrationsUtils");
+  const canAccessConjure = require("ConjureUtils").useCanAccessConjure(id, "useGuildActionRows");
+  const tmpResult10 = require("ConjureUtils");
   const tmp16 = useIsNewMemberDefault(id.id);
   const allActionsCompleted = require("MemberActionUtils").useAllActionsCompleted(id.id);
   const tmp18 = useIsEligibleForServerOnboardingSetupProgressDefault(id.id);
@@ -152,8 +152,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
               items2.push(ChannelListGuildActionRow.GAME_SERVERS_EMPTY);
             }
           }
-          if (canAccessVibegrations) {
-            items2.push(ChannelListGuildActionRow.GUILD_VIBEGRATIONS);
+          if (canAccessConjure) {
+            items2.push(ChannelListGuildActionRow.GUILD_CONJURE);
           }
           return items2;
         }
@@ -209,8 +209,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
   const items1 = [id.id];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => GuildOnboardingHomeSettingsStore.getNewMemberActions(id.id), items1);
   const obj6 = require("useStateFromStores");
-  const canAccessVibegrations = require("VibegrationsUtils").useCanAccessVibegrations(id, "useGuildActionRows");
-  const obj7 = require("VibegrationsUtils");
+  const canAccessConjure = require("ConjureUtils").useCanAccessConjure(id, "useGuildActionRows");
+  const obj7 = require("ConjureUtils");
   const tmp11 = useIsNewMemberDefault(id.id);
   const allActionsCompleted = require("MemberActionUtils").useAllActionsCompleted(id.id);
   const tmp13 = useIsEligibleForServerOnboardingSetupProgressDefault(id.id);
@@ -301,8 +301,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
             items3.push(ChannelListGuildActionRow.GAME_SERVERS_EMPTY);
           }
         }
-        if (canAccessVibegrations) {
-          items3.push(ChannelListGuildActionRow.GUILD_VIBEGRATIONS);
+        if (canAccessConjure) {
+          items3.push(ChannelListGuildActionRow.GUILD_CONJURE);
         }
         return items3;
       }

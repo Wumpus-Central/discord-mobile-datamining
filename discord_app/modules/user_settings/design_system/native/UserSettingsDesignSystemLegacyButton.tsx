@@ -1,6 +1,6 @@
-// === Module 15639: UserSettingsDesignSystemLegacyButton ===
+// === Module 15643: UserSettingsDesignSystemLegacyButton ===
 
-// Module 15639 (UserSettingsDesignSystemLegacyButton)
+// Module 15643 (UserSettingsDesignSystemLegacyButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Stack_Stack from "Stack/Stack" /* 5593 */;

@@ -1,6 +1,6 @@
-// === Module 16007: HappeningNowCardVoice ===
+// === Module 16011: HappeningNowCardVoice ===
 
-// Module 16007 (HappeningNowCardVoice)
+// Module 16011 (HappeningNowCardVoice)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -32,7 +32,7 @@ function formatVoiceActivityTitle(arr, guildId) {
   }
 }
 const View = fn(17).View;
-let closure_8 = fn(15110).HappeningNowCardTrackingType;
+let closure_8 = fn(15114).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);

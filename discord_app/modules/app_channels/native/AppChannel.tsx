@@ -1,12 +1,12 @@
-// === Module 16753: AppChannel ===
+// === Module 16772: AppChannel ===
 
-// Module 16753 (AppChannel)
+// Module 16772 (AppChannel)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import AppChannelChat from "AppChannelChat" /* 7515 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8514 */;
-import FrameSurfaceState from "FrameSurfaceState" /* 16760 */;
-import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 16761 */;
+import FrameSurfaceState from "FrameSurfaceState" /* 16779 */;
+import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 16780 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,24 +32,24 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       if (cResult[4] === tmp6) {
         let tmp7 = cResult[5];
       }
-      ({ frame, state } = tmp4(16754)(tmp7));
-      const tmp8 = tmp4(16754)(tmp7);
-      tmp4(16586)(state === tmp(16754).FrameLifecycleState.Launched);
-      const tmp4Result = tmp4(16586);
+      ({ frame, state } = tmp4(16773)(tmp7));
+      const tmp8 = tmp4(16773)(tmp7);
+      tmp4(16592)(state === tmp(16773).FrameLifecycleState.Launched);
+      const tmp4Result = tmp4(16592);
       let tmp12 = null;
-      if (state === tmp(16754).FrameLifecycleState.Launched) {
+      if (state === tmp(16773).FrameLifecycleState.Launched) {
         tmp12 = applicationId;
       }
-      tmp4(16587)(tmp12);
-      const tmp4Result3 = tmp4(16587);
-      const isVibegrationsChannelCandidate = tmp(6746).useIsVibegrationsChannelCandidate(channel, "AppChannel");
+      tmp4(16593)(tmp12);
+      const tmp4Result3 = tmp4(16593);
+      const isConjureChannelCandidate = tmp(6746).useIsConjureChannelCandidate(channel, "AppChannel");
       id = channel.id;
       guild_id = channel.guild_id;
       if (cResult[6] === id) {
         if (cResult[7] === guild_id) {
           let tmp15 = cResult[8];
         }
-        if (tmp(16754).FrameLifecycleState.Launched === state) {
+        if (tmp(16773).FrameLifecycleState.Launched === state) {
           const _Symbol6 = Symbol;
           if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
             const obj2 = { layoutMode: FrameLayoutModes.FOCUSED };
@@ -59,18 +59,18 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             tmp37 = cResult[9];
           }
           if (cResult[10] !== frame.id) {
-            const obj3 = { frameId: frame.id, level: tmp(16592).FrameStackLevel.WithinAppContent, presentation: tmp37 };
-            const tmp42 = closure_6(tmp4(16588), obj3);
+            const obj3 = { frameId: frame.id, level: tmp(16598).FrameStackLevel.WithinAppContent, presentation: tmp37 };
+            const tmp42 = closure_6(tmp4(16594), obj3);
             cResult[10] = frame.id;
             cResult[11] = tmp42;
             let tmp39 = tmp42;
-            const tmp4Result4 = tmp4(16588);
+            const tmp4Result4 = tmp4(16594);
           } else {
             tmp39 = cResult[11];
           }
           if (cResult[12] === id) {
             if (cResult[13] === tmp15) {
-              if (cResult[14] === isVibegrationsChannelCandidate) {
+              if (cResult[14] === isConjureChannelCandidate) {
                 let tmp43 = cResult[15];
               }
               if (cResult[16] === tmp5.container) {
@@ -84,70 +84,64 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               const obj4 = { style: tmp5.container, children: null };
               const items = [tmp39, tmp43];
               obj4.children = items;
+              const tmp49 = closure_7(View, obj4);
               cResult[16] = tmp5.container;
               cResult[17] = tmp39;
               cResult[18] = tmp43;
-              class C {
-                constructor(arg0) {
-                  obj = closure_0(closure_2[13]);
-                  openAppChannelChatResult = obj.openAppChannelChat(guild_id, id, arg0.id);
-                  return;
-                }
-              }
-              tmp46 = closure_7(View, obj4);
-              const tmp49 = closure_7(View, obj4);
+              cResult[19] = tmp49;
+              tmp46 = tmp49;
             }
           }
           let tmp44 = null;
-          if (isVibegrationsChannelCandidate) {
+          if (isConjureChannelCandidate) {
             const obj5 = { channelId: id, onOpenChat: tmp15 };
-            tmp44 = closure_6(tmp4(16757), obj5);
+            tmp44 = closure_6(tmp4(16776), obj5);
           }
           cResult[12] = id;
           cResult[13] = tmp15;
-          cResult[14] = isVibegrationsChannelCandidate;
+          cResult[14] = isConjureChannelCandidate;
           cResult[15] = tmp44;
           tmp43 = tmp44;
-        } else if (tmp(16754).FrameLifecycleState.RenderingElsewhere === state) {
+        } else if (tmp(16773).FrameLifecycleState.RenderingElsewhere === state) {
           const _Symbol5 = Symbol;
           if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
             const obj6 = { description: null };
             const intl5 = tmp(1126).intl;
             obj6.description = intl5.string(tmp(1126).t["2KIDX+"]);
-            const tmp35 = closure_6(tmp(16760).FrameSurfaceExplanation, obj6);
+            const tmp35 = closure_6(tmp(16779).FrameSurfaceExplanation, obj6);
             cResult[20] = tmp35;
             let tmp33 = tmp35;
           } else {
             tmp33 = cResult[20];
           }
           return tmp33;
-        } else if (tmp(16754).FrameLifecycleState.NoApplication === state) {
+        } else if (tmp(16773).FrameLifecycleState.NoApplication === state) {
           const _Symbol4 = Symbol;
           if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
             const obj7 = { description: null };
             const intl4 = tmp(1126).intl;
             obj7.description = intl4.string(tmp(1126).t.izggZO);
-            const tmp31 = closure_6(tmp(16760).FrameSurfaceExplanation, obj7);
+            const tmp31 = closure_6(tmp(16779).FrameSurfaceExplanation, obj7);
             cResult[21] = tmp31;
             let tmp29 = tmp31;
           } else {
             tmp29 = cResult[21];
           }
           return tmp29;
-        } else if (tmp(16754).FrameLifecycleState.DoesNotSupportSurface === state) {
+        } else if (tmp(16773).FrameLifecycleState.DoesNotSupportSurface === state) {
           const _Symbol3 = Symbol;
           if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
             const obj8 = { description: null };
             const intl3 = tmp(1126).intl;
             obj8.description = intl3.string(tmp(1126).t["iUWcU/"]);
-            const tmp27 = closure_6(tmp(16760).FrameSurfaceExplanation, obj8);
+            const tmp27 = closure_6(tmp(16779).FrameSurfaceExplanation, obj8);
             cResult[22] = tmp27;
             let tmp25 = tmp27;
           } else {
             tmp25 = cResult[22];
           }
           return tmp25;
-        } else if (tmp(16754).FrameLifecycleState.Error === state) {
+        } else if (tmp(16773).FrameLifecycleState.Error === state) {
           const _Symbol2 = Symbol;
           if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
             const obj9 = { heading: null, error: null };
@@ -155,7 +149,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             obj9.heading = intl.string(tmp(1126).t.VquUff);
             const intl2 = tmp(1126).intl;
             obj9.error = intl2.string(tmp(1126).t["Sd9D/R"]);
-            const tmp23 = closure_6(tmp(16760).FrameSurfaceExplanation, obj9);
+            const tmp23 = closure_6(tmp(16779).FrameSurfaceExplanation, obj9);
             cResult[23] = tmp23;
             let tmp21 = tmp23;
           } else {
@@ -165,7 +159,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         } else {
           const _Symbol = Symbol;
           if (cResult[24] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp19 = closure_6(tmp(16760).FrameSurfaceLoading, {});
+            const tmp19 = closure_6(tmp(16779).FrameSurfaceLoading, {});
             cResult[24] = tmp19;
             let tmp17 = tmp19;
           } else {
@@ -174,17 +168,13 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           return tmp17;
         }
       }
-      class C {
-        constructor(arg0) {
-          obj = closure_0(closure_2[13]);
-          openAppChannelChatResult = obj.openAppChannelChat(guild_id, id, arg0.id);
-          return;
-        }
-      }
+      const fn = function v(id) {
+        AppChannelChat.openAppChannelChat(guild_id, id, id.id);
+      };
       cResult[6] = id;
       cResult[7] = guild_id;
-      cResult[8] = C;
-      tmp15 = C;
+      cResult[8] = fn;
+      tmp15 = fn;
       const tmpResult = tmp(6746);
     }
     const obj10 = { applicationId, surface: tmp6 };
@@ -194,6 +184,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp7 = obj10;
   }
   const obj11 = { type: id(8514).EmbeddedSurfaceType.APP_CHANNEL, channelId: channel.id, guildId: channel.guild_id };
+  cResult[0] = channel.guild_id;
   cResult[1] = channel.id;
   cResult[2] = obj11;
   tmp6 = obj11;
@@ -219,7 +210,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   id = channel.id;
   guild_id = channel.guild_id;
   const items1 = [guild_id, id];
-  const isVibegrationsChannelCandidate = channel(guild_id[12]).useIsVibegrationsChannelCandidate(channel, "AppChannel");
+  const isConjureChannelCandidate = channel(guild_id[12]).useIsConjureChannelCandidate(channel, "AppChannel");
   const callback = noop.useCallback((id) => {
     AppChannelChat.openAppChannelChat(guild_id, id, id.id);
   }, items1);
@@ -230,7 +221,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     obj3.presentation = obj4;
     const items2 = [closure_6(tmp(tmp2[14]), obj3), ];
     let tmp21Result = null;
-    if (isVibegrationsChannelCandidate) {
+    if (isConjureChannelCandidate) {
       const obj5 = { channelId: id, onOpenChat: callback };
       tmp21Result = closure_6(tmp(tmp2[16]), obj5);
     }

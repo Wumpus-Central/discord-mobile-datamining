@@ -1,8 +1,8 @@
-// === Module 13507: requestReviewModal ===
+// === Module 13509: requestReviewModal ===
 
-// Module 13507 (requestReviewModal)
+// Module 13509 (requestReviewModal)
 import LoggerDefault from "Logger" /* 3 */;
-import NativeAppRatingRequestModuleDefault from "NativeAppRatingRequestModule" /* 13508 */;
+import NativeAppRatingRequestModuleDefault from "NativeAppRatingRequestModule" /* 13510 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_4 = async function _requestReviewModal() {
@@ -16,7 +16,7 @@ let closure_4 = async function _requestReviewModal() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

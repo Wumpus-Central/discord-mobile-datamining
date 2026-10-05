@@ -1,9 +1,9 @@
-// === Module 14670: useParentalConsentWarning ===
+// === Module 14674: useParentalConsentWarning ===
 
-// Module 14670 (useParentalConsentWarning)
+// Module 14674 (useParentalConsentWarning)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import ParentalConsentWarningStore from "ParentalConsentWarningStore" /* 14671 */;
+import ParentalConsentWarningStore from "ParentalConsentWarningStore" /* 14675 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

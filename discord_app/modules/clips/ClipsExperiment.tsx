@@ -1,10 +1,10 @@
-// === Module 13484: ClipsExperiment ===
+// === Module 13486: ClipsExperiment ===
 
-// Module 13484 (ClipsExperiment)
+// Module 13486 (ClipsExperiment)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
-import isClientClipsCapableDefault from "isClientClipsCapable" /* 13485 */;
+import isClientClipsCapableDefault from "isClientClipsCapable" /* 13487 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
 import UserStore from "UserStore" /* 1377 */;
 

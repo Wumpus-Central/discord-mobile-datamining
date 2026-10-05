@@ -1,6 +1,6 @@
-// === Module 15060: VoiceSetting ===
+// === Module 15064: VoiceSetting ===
 
-// Module 15060 (VoiceSetting)
+// Module 15064 (VoiceSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;

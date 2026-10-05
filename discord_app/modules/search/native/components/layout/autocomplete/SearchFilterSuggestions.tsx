@@ -1,6 +1,6 @@
-// === Module 16775: SearchFilterSuggestions ===
+// === Module 16794: SearchFilterSuggestions ===
 
-// Module 16775 (SearchFilterSuggestions)
+// Module 16794 (SearchFilterSuggestions)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 4589 */;
@@ -10,7 +10,7 @@ import spring from "spring" /* 5597 */;
 import springPresets from "springPresets" /* 5598 */;
 import TableRow from "TableRow" /* 5993 */;
 import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11966 */;
-import SearchFilterUtils from "SearchFilterUtils" /* 16776 */;
+import SearchFilterUtils from "SearchFilterUtils" /* 16795 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -396,7 +396,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
                   obj = { state: arg2, cleanUp: arg3, children: null };
                   obj1 = { ref: suggestionsRef, style: closure_7, collapsable: false, children: arg1.map(() => { ... }) };
                   obj.children = jsx(View, obj1);
-                  return jsx(f75071, obj, searchContext);
+                  return jsx(f75197, obj, searchContext);
                 }
               }
               class A {
@@ -431,7 +431,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
                 obj = { state: arg2, cleanUp: arg3, children: null };
                 obj1 = { ref: suggestionsRef, style: closure_7, collapsable: false, children: arg1.map(() => { ... }) };
                 obj.children = jsx(View, obj1);
-                return jsx(f75071, obj, searchContext);
+                return jsx(f75197, obj, searchContext);
               }
             }
             class A {
@@ -523,12 +523,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
   const containerStyle = searchContext.containerStyle;
   const tmp = closure_10();
   dependencyMap = tmp;
-  const searchSuggestionsContext = searchContext(16770).useSearchSuggestionsContext();
+  const searchSuggestionsContext = searchContext(16789).useSearchSuggestionsContext();
   const suggestionsRef = searchSuggestionsContext.suggestionsRef;
   const suggestionsMounted = searchSuggestionsContext.suggestionsMounted;
   const dismissed = searchSuggestionsContext.dismissed;
-  let obj = searchContext(16770);
-  const validFilterTokens = searchContext(16779).useValidFilterTokens(searchContext);
+  let obj = searchContext(16789);
+  const validFilterTokens = searchContext(16798).useValidFilterTokens(searchContext);
   const tmp4 = suggestionsMounted(validFilterTokens.useState([]), 2);
   const first = tmp4[0];
   closure_8 = tmp6;
@@ -566,7 +566,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
     }
     constants(closure_1_18);
   }), items);
-  let obj2 = searchContext(16779);
+  let obj2 = searchContext(16798);
   const fn = function _() {
     return dismissed.get();
   };

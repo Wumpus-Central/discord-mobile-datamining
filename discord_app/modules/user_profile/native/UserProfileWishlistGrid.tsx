@@ -1,6 +1,6 @@
-// === Module 12936: UserProfileWishlistGrid ===
+// === Module 12938: UserProfileWishlistGrid ===
 
-// Module 12936 (UserProfileWishlistGrid)
+// Module 12938 (UserProfileWishlistGrid)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
@@ -64,9 +64,9 @@ const ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const cResult = trackUserProfileWishlistAction(576).c(17);
   let obj = trackUserProfileWishlistAction(576);
-  const isMobileWishlistSuggestionsEnabled = trackUserProfileWishlistAction(12937).useIsMobileWishlistSuggestionsEnabled("WishlistEmptyState");
+  const isMobileWishlistSuggestionsEnabled = trackUserProfileWishlistAction(12939).useIsMobileWishlistSuggestionsEnabled("WishlistEmptyState");
   const tmp5 = closure_26(isMobileWishlistSuggestionsEnabled);
-  let obj2 = trackUserProfileWishlistAction(12937);
+  let obj2 = trackUserProfileWishlistAction(12939);
   const obj3 = trackUserProfileWishlistAction(4589);
   let str = "mobile-text-heading-primary";
   if (obj4.isThemeDark(obj3.useThemeContext().theme)) {
@@ -172,9 +172,9 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   tmp17 = tmp18;
   const tmpResult = trackUserProfileWishlistAction(7861);
 }) : (() => {
-  const isMobileWishlistSuggestionsEnabled = trackUserProfileWishlistAction(12937).useIsMobileWishlistSuggestionsEnabled("WishlistEmptyState");
+  const isMobileWishlistSuggestionsEnabled = trackUserProfileWishlistAction(12939).useIsMobileWishlistSuggestionsEnabled("WishlistEmptyState");
   const tmp4 = closure_26(isMobileWishlistSuggestionsEnabled);
-  let obj = trackUserProfileWishlistAction(12937);
+  let obj = trackUserProfileWishlistAction(12939);
   let obj2 = trackUserProfileWishlistAction(4589);
   let str = "mobile-text-heading-primary";
   if (obj3.isThemeDark(obj2.useThemeContext().theme)) {
@@ -379,7 +379,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -679,7 +679,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
     }
     obj.productLines = tmp4;
     trackUserProfileWishlistAction(obj);
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12940, dependencyMap.paths), "EditWishlistActionSheet", { wishlistId, analyticsContext: context, analyticsLocations }, "stack");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12942, dependencyMap.paths), "EditWishlistActionSheet", { wishlistId, analyticsContext: context, analyticsLocations }, "stack");
     const obj3 = { wishlistId, analyticsContext: context, analyticsLocations };
   }, items14);
   const callback1 = obj12.useCallback(() => {

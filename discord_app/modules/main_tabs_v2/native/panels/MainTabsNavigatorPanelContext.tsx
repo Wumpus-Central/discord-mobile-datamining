@@ -1,6 +1,6 @@
-// === Module 16320: MainTabsNavigatorPanelContext ===
+// === Module 16324: MainTabsNavigatorPanelContext ===
 
-// Module 16320 (MainTabsNavigatorPanelContext)
+// Module 16324 (MainTabsNavigatorPanelContext)
 import noop from "module_19" /* 19 */;
 
 const obj = { gesture: null, disallowGesture: null, translateX: null };

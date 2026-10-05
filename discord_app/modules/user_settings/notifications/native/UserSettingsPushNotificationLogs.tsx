@@ -1,6 +1,6 @@
-// === Module 15391: UserSettingsPushNotificationLogs ===
+// === Module 15395: UserSettingsPushNotificationLogs ===
 
-// Module 15391 (UserSettingsPushNotificationLogs)
+// Module 15395 (UserSettingsPushNotificationLogs)
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 closure_128_0 = value;
                 v1(closure_128_0);
                 c3 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp13) {
               c3 = tmp;
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -182,7 +182,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 closure_128_0 = value;
                 v1(closure_128_0);
                 c3 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp13) {
               c3 = tmp;
@@ -220,7 +220,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -253,7 +253,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 closure_128_0 = value;
                 v1(closure_128_0);
                 c3 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp13) {
               c3 = tmp;
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -326,7 +326,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                   closure_128_0 = value;
                   v1(closure_128_0);
                   c3 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp13) {
                 c3 = tmp;
@@ -365,7 +365,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -398,7 +398,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                   closure_128_0 = value;
                   v1(closure_128_0);
                   c3 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp13) {
                 c3 = tmp;
@@ -435,7 +435,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -468,7 +468,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                   closure_128_0 = value;
                   v1(closure_128_0);
                   c3 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp13) {
                 c3 = tmp;
@@ -501,7 +501,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -533,7 +533,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               const obj6 = { message: tmp5(12532)(closure_128_0, false) };
               tmp2(8038).showShareActionSheet(obj6, "push-notification-logs");
               c3 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp16) {
             c3 = tmp;
@@ -572,7 +572,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -605,7 +605,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                   closure_128_0 = value;
                   v1(closure_128_0);
                   c3 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp13) {
                 c3 = tmp;
@@ -643,7 +643,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -676,7 +676,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                   closure_128_0 = value;
                   v1(closure_128_0);
                   c3 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp13) {
                 c3 = tmp;
@@ -715,7 +715,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -748,7 +748,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                   closure_128_0 = value;
                   v1(closure_128_0);
                   c3 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp13) {
                 c3 = tmp;
@@ -784,7 +784,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -817,7 +817,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                   closure_128_0 = value;
                   v1(closure_128_0);
                   c3 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp13) {
                 c3 = tmp;
@@ -908,7 +908,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -941,7 +941,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             closure_128_0 = value;
             v1(closure_128_0);
             c3 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp13) {
           c3 = tmp;
@@ -1013,7 +1013,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1045,7 +1045,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           const obj6 = { message: tmp5(12532)(closure_128_0, false) };
           tmp2(8038).showShareActionSheet(obj6, "push-notification-logs");
           c3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp16) {
         c3 = tmp;

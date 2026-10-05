@@ -1,10 +1,10 @@
-// === Module 15668: UserSettingsDesignSystemCoachmark ===
+// === Module 15672: UserSettingsDesignSystemCoachmark ===
 
-// Module 15668 (UserSettingsDesignSystemCoachmark)
+// Module 15672 (UserSettingsDesignSystemCoachmark)
 import c from "c" /* 576 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 6619 */;
 import LayerScope from "LayerScope" /* 6651 */;
-import _modDef15669 from "module_15669" /* 15669 */;
+import _modDef15673 from "module_15673" /* 15673 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,9 +25,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const tmp6 = _slicedToArray(noop.useState(false), 2);
   [tmp9, r10029] = noop.useState(false);
   const tmp8 = _slicedToArray(noop.useState(false), 2);
-  const obj3 = visible(15666);
-  [r10035, r10036] = visible(15666).useCanRotate();
-  const tmp10 = _slicedToArray(visible(15666).useCanRotate(), 2);
+  const obj3 = visible(15670);
+  [r10035, r10036] = visible(15670).useCanRotate();
+  const tmp10 = _slicedToArray(visible(15670).useCanRotate(), 2);
   const tmp11 = _slicedToArray(noop.useState(false), 2);
   const first1 = _slicedToArray(noop.useState("primary"), 2)[0];
   const tmp12 = _slicedToArray(noop.useState("primary"), 2);
@@ -65,7 +65,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         return closure_1(false);
       }
     }
-    tmp21[0] = _modDef15669;
+    tmp21[0] = _modDef15673;
     cResult[2] = tmp21;
   } else {
     class Y {
@@ -181,7 +181,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       buttonVariant: null,
       gradientColor: null
     };
-    const obj2 = { type: "image", src: { uri: _modDef15669 }, aspectRatio: first5 };
+    const obj2 = { type: "image", src: { uri: _modDef15673 }, aspectRatio: first5 };
     obj.graphic = obj2;
     obj.experimental_withBlurBackground = first1;
     let str2;

@@ -1,13 +1,13 @@
-// === Module 14198: AccessibilityManager ===
+// === Module 14200: AccessibilityManager ===
 
-// Module 14198 (AccessibilityManager)
+// Module 14200 (AccessibilityManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import ThemeActionCreators from "ThemeActionCreators" /* 4726 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 9774 */;
-import AccessibilitySystemFeaturesDefault from "AccessibilitySystemFeatures" /* 14199 */;
-import AccessibilityPreferencesSharedValue from "AccessibilityPreferencesSharedValue" /* 14200 */;
-import updateSaturation from "updateSaturation" /* 14276 */;
+import AccessibilitySystemFeaturesDefault from "AccessibilitySystemFeatures" /* 14201 */;
+import AccessibilityPreferencesSharedValue from "AccessibilityPreferencesSharedValue" /* 14202 */;
+import updateSaturation from "updateSaturation" /* 14278 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;
 
@@ -56,7 +56,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -89,7 +89,7 @@ export default {
             closure_128_0 = value;
             const result = closure_129_0.updateScreenReaderEnabled(closure_128_0);
             c3 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp12) {
           c3 = tmp;

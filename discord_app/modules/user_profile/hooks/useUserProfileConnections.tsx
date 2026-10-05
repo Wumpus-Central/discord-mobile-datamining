@@ -1,6 +1,6 @@
-// === Module 12934: useUserProfileConnections ===
+// === Module 12936: useUserProfileConnections ===
 
-// Module 12934 (useUserProfileConnections)
+// Module 12936 (useUserProfileConnections)
 import _mod19 from "module_19" /* 19 */;
 import UserProfileStore from "UserProfileStore" /* 7111 */;
 import size from "module_2" /* 2 */;

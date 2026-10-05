@@ -1,12 +1,12 @@
-// === Module 17082: AppIconsCoachmark ===
+// === Module 17106: AppIconsCoachmark ===
 
-// Module 17082 (AppIconsCoachmark)
+// Module 17106 (AppIconsCoachmark)
 import nativeDefault from "native" /* 587 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import _modDef9642 from "module_9642" /* 9642 */;
-import AppIconUtils from "AppIconUtils" /* 13259 */;
-import _modDef17083 from "module_17083" /* 17083 */;
+import AppIconUtils from "AppIconUtils" /* 13261 */;
+import _modDef17107 from "module_17107" /* 17107 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
         return markAsDismissed(ContentDismissActionType.DISMISS);
       }
     }
-    let obj2 = { source: _modDef17083, style: tmp4.image };
+    let obj2 = { source: _modDef17107, style: tmp4.image };
     const tmp18 = closure_8(closure_4, obj2);
     cResult[10] = tmp4.image;
     cResult[11] = tmp18;
@@ -252,9 +252,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
   };
   const obj4 = { style: tmp.info, children: null };
   const isPremiumResult = PremiumUtilsDefault.isPremium(stateFromStores);
-  const items2 = [closure_8(closure_4, { source: _modDef17083, style: tmp.image }), , ];
+  const items2 = [closure_8(closure_4, { source: _modDef17107, style: tmp.image }), , ];
   const obj6 = { style: tmp.titleContainer, children: null };
-  const obj5 = { source: _modDef17083, style: tmp.image };
+  const obj5 = { source: _modDef17107, style: tmp.image };
   const items3 = [closure_8(markAsDismissed(1188).Icon, { source: _modDef9642, size: markAsDismissed(1188).IconSizes.MEDIUM, style: tmp.nitroWheel, disableColor: true }), ];
   const obj8 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = markAsDismissed(1126).intl;

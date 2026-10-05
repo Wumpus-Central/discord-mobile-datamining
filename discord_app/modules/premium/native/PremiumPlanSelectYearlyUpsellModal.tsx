@@ -1,9 +1,9 @@
-// === Module 13357: PremiumPlanSelectYearlyUpsellModal ===
+// === Module 13359: PremiumPlanSelectYearlyUpsellModal ===
 
-// Module 13357 (PremiumPlanSelectYearlyUpsellModal)
+// Module 13359 (PremiumPlanSelectYearlyUpsellModal)
 import common_AlertDefault from "common/Alert" /* 5783 */;
 import TextStylesDefault from "TextStyles" /* 5915 */;
-import _modDef13358 from "module_13358" /* 13358 */;
+import _modDef13360 from "module_13360" /* 13360 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
@@ -12,7 +12,7 @@ import IAPStore from "IAPStore" /* 6739 */;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const usePremiumPlanSelectStore = fn(13346).usePremiumPlanSelectStore;
+const usePremiumPlanSelectStore = fn(13348).usePremiumPlanSelectStore;
 let closure_10 = fn(1379).PREMIUM_YEARLY_DISCOUNT_PERCENT;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -268,7 +268,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((continueWithDefa
     const obj6 = { style: tmp.container, children: null };
     const obj7 = { style: tmp.image, source: null };
     const tmp5Result = productId(1888);
-    obj7.source = _modDef13358;
+    obj7.source = _modDef13360;
     const items2 = [closure_11(closure_5, obj7), , , , , ];
     const obj8 = { style: tmp.header, accessibilityRole: "header", children: null };
     const intl = productId(1126).intl;

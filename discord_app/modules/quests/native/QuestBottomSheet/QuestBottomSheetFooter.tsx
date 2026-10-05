@@ -1,6 +1,6 @@
-// === Module 14922: QuestBottomSheetFooter ===
+// === Module 14926: QuestBottomSheetFooter ===
 
-// Module 14922 (QuestBottomSheetFooter)
+// Module 14926 (QuestBottomSheetFooter)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -25,11 +25,11 @@ import QuestPlatformUtils from "QuestPlatformUtils" /* 10918 */;
 import MobileQuestVideoWatchCtaCopy from "MobileQuestVideoWatchCtaCopy" /* 10941 */;
 import AnalyticsHooks from "AnalyticsHooks" /* 10954 */;
 import QuestCopyHooks from "QuestCopyHooks" /* 10955 */;
-import RefreshIcon from "RefreshIcon" /* 14774 */;
-import QuestHooks from "QuestHooks" /* 14888 */;
-import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 14917 */;
-import QuestBottomSheet from "QuestBottomSheet" /* 14919 */;
-import QuestBottomSheetHooks from "QuestBottomSheetHooks" /* 14923 */;
+import RefreshIcon from "RefreshIcon" /* 14778 */;
+import QuestHooks from "QuestHooks" /* 14892 */;
+import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 14921 */;
+import QuestBottomSheet from "QuestBottomSheet" /* 14923 */;
+import QuestBottomSheetHooks from "QuestBottomSheetHooks" /* 14927 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;
@@ -1058,16 +1058,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     return null != xboxAndPlaystationAccounts.find((type) => type.type === closure_0);
   }), items);
   const obj4 = quest(10911);
-  const hasWatchVideoOnMobileTasks = quest(14888).useHasWatchVideoOnMobileTasks(quest.config);
-  const obj5 = quest(14888);
-  const mobileActivityQuest = quest(14888).useMobileActivityQuest(quest);
+  const hasWatchVideoOnMobileTasks = quest(14892).useHasWatchVideoOnMobileTasks(quest.config);
+  const obj5 = quest(14892);
+  const mobileActivityQuest = quest(14892).useMobileActivityQuest(quest);
   ({ isMobileActivityQuest, launchMobileActivity, questApplication } = mobileActivityQuest);
-  const obj6 = quest(14888);
+  const obj6 = quest(14892);
   const primaryCtaCopy = quest(10955).usePrimaryCtaCopy({ quest, application: questApplication });
   const obj7 = quest(10955);
   const userStatus = quest.userStatus;
   let completedAt;
-  const obj8 = quest(14923);
+  const obj8 = quest(14927);
   const obj9 = { questId: quest.id, sourceQuestContent, launchMobileActivity };
   if (userStatus != null) {
     completedAt = userStatus.completedAt;
@@ -1077,19 +1077,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (userStatus2 != null) {
     claimedAt = userStatus2.claimedAt;
   }
-  const mobileActivityPressHandler = quest(14923).useMobileActivityPressHandler({ questId: quest.id, sourceQuestContent, launchMobileActivity });
+  const mobileActivityPressHandler = quest(14927).useMobileActivityPressHandler({ questId: quest.id, sourceQuestContent, launchMobileActivity });
   const tmp11 = null != completedAt;
   const isQuestAccessSuspended = quest(10911).useIsQuestAccessSuspended();
-  const obj10 = { disabled: true, onPressDisabled: xboxAndPlaystationAccounts(14917) };
+  const obj10 = { disabled: true, onPressDisabled: xboxAndPlaystationAccounts(14921) };
   let tmp40Result6 = null;
-  if (step !== quest(14919).QuestBottomSheetStep.TASK_SELECT) {
+  if (step !== quest(14923).QuestBottomSheetStep.TASK_SELECT) {
     const obj11 = { onLayout: quest.onLayout, ctaButton: null, backButton: null, style: null, withSafeArea: null };
-    if (tmp2(14919).QuestBottomSheetStep.CONSOLE_CONNECT === step) {
+    if (tmp2(14923).QuestBottomSheetStep.CONSOLE_CONNECT === step) {
       const obj12 = { onPress: onConnectConsoleNext, disabled: 0 === memo.length };
       let tmp40Result = closure_10(closure_16, obj12);
     } else {
       tmp40Result = null;
-      if (tmp2(14919).QuestBottomSheetStep.TASK_STATUS === step) {
+      if (tmp2(14923).QuestBottomSheetStep.TASK_STATUS === step) {
         if (tmp11) {
           const obj13 = { questId: quest.id, onPress: tmp.claim, disabled: tmp13, loading: null, sourceQuestContent: null };
           let isClaiming = tmp.isLoading;

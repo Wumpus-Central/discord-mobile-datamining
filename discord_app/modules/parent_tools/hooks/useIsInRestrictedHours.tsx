@@ -1,6 +1,6 @@
-// === Module 17414: useIsInRestrictedHours ===
+// === Module 17438: useIsInRestrictedHours ===
 
-// Module 17414 (useIsInRestrictedHours)
+// Module 17438 (useIsInRestrictedHours)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import UserStore from "UserStore" /* 1377 */;

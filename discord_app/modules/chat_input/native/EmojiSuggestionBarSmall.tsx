@@ -199,7 +199,7 @@ export const EmojiSuggestionBarSmall = noop.forwardRef(ReactCompilerGating.isRea
             obj.onOccupiedHeightChange = closure_1;
             obj.transitionState = arg2;
             obj.cleanUp = arg3;
-            return jsx(f60114, obj, anchorTop);
+            return jsx(f60142, obj, anchorTop);
           }
         }
         const obj2 = { item: undefined, renderItem: tmp14 };
@@ -216,7 +216,7 @@ export const EmojiSuggestionBarSmall = noop.forwardRef(ReactCompilerGating.isRea
           obj.onOccupiedHeightChange = closure_1;
           obj.transitionState = arg2;
           obj.cleanUp = arg3;
-          return jsx(f60114, obj, anchorTop);
+          return jsx(f60142, obj, anchorTop);
         }
       }
       cResult[12] = tmp4;
@@ -237,7 +237,7 @@ export const EmojiSuggestionBarSmall = noop.forwardRef(ReactCompilerGating.isRea
         obj.onOccupiedHeightChange = closure_1;
         obj.transitionState = arg2;
         obj.cleanUp = arg3;
-        return jsx(f60114, obj, anchorTop);
+        return jsx(f60142, obj, anchorTop);
       }
     }
     const obj3 = { displayEmojis: tmp11, reducedMotion, handlePress, handlePressEmojiUnavailable };

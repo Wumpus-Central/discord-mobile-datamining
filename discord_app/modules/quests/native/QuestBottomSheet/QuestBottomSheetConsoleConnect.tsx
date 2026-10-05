@@ -1,6 +1,6 @@
-// === Module 14961: QuestBottomSheetConsoleConnect ===
+// === Module 14965: QuestBottomSheetConsoleConnect ===
 
-// Module 14961 (QuestBottomSheetConsoleConnect)
+// Module 14965 (QuestBottomSheetConsoleConnect)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -262,7 +262,7 @@ export default function QuestBottomSheetConsoleConnect(quest) {
   quest = quest.quest;
   ({ step: importDefault, sourceQuestContent: dependencyMap } = quest);
   function openQuestBottomSheet() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14919, dependencyMap.paths), "QuestBottomSheet", { questId: quest.id, initialStep, sourceQuestContent });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14923, dependencyMap.paths), "QuestBottomSheet", { questId: quest.id, initialStep, sourceQuestContent });
   }
   const xboxAndPlaystationAccounts = quest(10911).useConnectedAccounts().xboxAndPlaystationAccounts;
   let obj = quest(10911);

@@ -1,9 +1,9 @@
-// === Module 15294: SwipeRightToLeftScreen ===
+// === Module 15298: SwipeRightToLeftScreen ===
 
-// Module 15294 (SwipeRightToLeftScreen)
+// Module 15298 (SwipeRightToLeftScreen)
 import c from "c" /* 576 */;
 import SettingBuilders from "SettingBuilders" /* 11129 */;
-import SettingLayoutDefault from "SettingLayout" /* 14495 */;
+import SettingLayoutDefault from "SettingLayout" /* 14499 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

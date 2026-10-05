@@ -1,10 +1,10 @@
-// === Module 14471: UserProfilePremiumTryItOutUpsell ===
+// === Module 14475: UserProfilePremiumTryItOutUpsell ===
 
-// Module 14471 (UserProfilePremiumTryItOutUpsell)
+// Module 14475 (UserProfilePremiumTryItOutUpsell)
 import spring from "spring" /* 5597 */;
 import PremiumFeaturesCards from "PremiumFeaturesCards" /* 8867 */;
 import openPremiumModalDefault from "openPremiumModal" /* 8914 */;
-import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 14470 */;
+import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 14474 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -147,7 +147,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isVisible) => {
       }
     }
     const obj5 = { style: tmp6.card, text: tmp11, buttonText: tmp14, onButtonPress: onPreviewPremium, buttonVariant: "primary" };
-    const tmp18 = jsx(tmp4(14470), { style: tmp6.card, text: tmp11, buttonText: tmp14, onButtonPress: onPreviewPremium, buttonVariant: "primary" });
+    const tmp18 = jsx(tmp4(14474), { style: tmp6.card, text: tmp11, buttonText: tmp14, onButtonPress: onPreviewPremium, buttonVariant: "primary" });
     cResult[8] = onPreviewPremium;
     class P {
       constructor() {
@@ -261,6 +261,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isVisible) => {
   const intl2 = isVisible(1126).intl;
   obj5.buttonText = intl2.string(isVisible(1126).t.PxUx8e);
   obj5.onButtonPress = isVisible.onPreviewPremium;
-  obj4.children = jsx(analyticsLocations(14470), { style: tmp2.card, text: null, buttonText: null, onButtonPress: null, buttonVariant: "primary" });
+  obj4.children = jsx(analyticsLocations(14474), { style: tmp2.card, text: null, buttonText: null, onButtonPress: null, buttonVariant: "primary" });
   return jsx(analyticsLocations(4612).View, { animatedProps, style: null, children: null });
 });

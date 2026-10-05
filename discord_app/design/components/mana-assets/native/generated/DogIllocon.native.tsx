@@ -1,10 +1,10 @@
-// === Module 16679: DogIllocon ===
+// === Module 16690: DogIllocon ===
 
-// Module 16679 (DogIllocon)
+// Module 16690 (DogIllocon)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5974 */;
-import _modDef16680 from "module_16680" /* 16680 */;
+import _modDef16691 from "module_16691" /* 16691 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -19,7 +19,7 @@ export const DogIllocon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0)
     num = size;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef16680 };
+    const obj2 = { uri: _modDef16691 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -58,7 +58,7 @@ export const DogIllocon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0)
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef16680 };
+  const obj2 = { uri: _modDef16691 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

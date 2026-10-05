@@ -140,7 +140,7 @@ prototype2["load"] = function load(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -335,7 +335,7 @@ prototype2["updateOne"] = function updateOne(guildId, channel_id, message, datab
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

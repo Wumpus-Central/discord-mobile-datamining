@@ -18,7 +18,7 @@ let closure_9 = async function _uploadDebugLogFiles(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -93,7 +93,7 @@ let closure_9 = async function _uploadDebugLogFiles(arg0) {
       } else {
         c5 = 0;
         c7 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp38) {
       closure_4 = tmp38;
@@ -127,7 +127,7 @@ let closure_11 = async function _uploadAppLogFiles(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

@@ -92,7 +92,7 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -157,7 +157,7 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
           c4 = 0;
           closure_130_21.current = false;
           c6 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
         closure_130_20(closure_129_1);
         c4 = 0;
@@ -347,7 +347,7 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -374,7 +374,7 @@ function PremiumPlanSelectionActionSheet(premiumItems) {
             let paymentFlowStepAnalyticsFields;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else {
           if (1 === tmp7) {
@@ -1079,7 +1079,7 @@ let closure_42 = ReactCompilerGating.isReactCompilerEnabled() ? ((premiumItem) =
   const obj = premiumItem(576);
   const stateFromStores = premiumItem(504).useStateFromStores(first1, tmp10);
   const tmpResult = premiumItem(504);
-  const checkoutPlanPriceString = premiumItem(13141).useCheckoutPlanPriceString(premiumItem.productId, stateFromStores);
+  const checkoutPlanPriceString = premiumItem(13143).useCheckoutPlanPriceString(premiumItem.productId, stateFromStores);
   let priceString;
   if (stateFromStores != null) {
     priceString = stateFromStores.priceString;
@@ -1088,7 +1088,7 @@ let closure_42 = ReactCompilerGating.isReactCompilerEnabled() ? ((premiumItem) =
     if (cResult[4] === priceString) {
       let tmp14 = cResult[5];
     }
-    const checkoutPlanDiscountPrices = tmp(13141).useCheckoutPlanDiscountPrices(premiumItem.productId, tmp14);
+    const checkoutPlanDiscountPrices = tmp(13143).useCheckoutPlanDiscountPrices(premiumItem.productId, tmp14);
     const _Symbol = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
       class W {
@@ -1106,7 +1106,7 @@ let closure_42 = ReactCompilerGating.isReactCompilerEnabled() ? ((premiumItem) =
         }
       }
     }
-    const tmpResult6 = tmp(13141);
+    const tmpResult6 = tmp(13143);
     ({ orderRequired, orderRecord } = useNativeCheckoutStore(W));
     if (cResult[7] === customBadgeComponent) {
       class W {
@@ -1410,7 +1410,7 @@ let closure_42 = ReactCompilerGating.isReactCompilerEnabled() ? ((premiumItem) =
   cResult[4] = priceString;
   cResult[5] = obj5;
   tmp14 = obj5;
-  const tmpResult5 = premiumItem(13141);
+  const tmpResult5 = premiumItem(13143);
 }) : ((premiumItem) => {
   premiumItem = premiumItem.premiumItem;
   ({ trialOffer, discountOffer, userIsEligibleForBogoPromotion } = premiumItem);
@@ -1425,16 +1425,16 @@ let closure_42 = ReactCompilerGating.isReactCompilerEnabled() ? ((premiumItem) =
   const items = [IAPStore];
   const stateFromStores = premiumItem(504).useStateFromStores(items, () => IAPStore.getProduct(premiumItem.productId));
   const obj = premiumItem(504);
-  let checkoutPlanPriceString = premiumItem(13141).useCheckoutPlanPriceString(premiumItem.productId, stateFromStores);
-  const obj2 = premiumItem(13141);
+  let checkoutPlanPriceString = premiumItem(13143).useCheckoutPlanPriceString(premiumItem.productId, stateFromStores);
+  const obj2 = premiumItem(13143);
   const obj4 = { discountedPriceString, regularPriceString: null };
   let priceString;
   if (stateFromStores != null) {
     priceString = stateFromStores.priceString;
   }
   obj4.regularPriceString = priceString;
-  const checkoutPlanDiscountPrices = premiumItem(13141).useCheckoutPlanDiscountPrices(premiumItem.productId, obj4);
-  const obj3 = premiumItem(13141);
+  const checkoutPlanDiscountPrices = premiumItem(13143).useCheckoutPlanDiscountPrices(premiumItem.productId, obj4);
+  const obj3 = premiumItem(13143);
   ({ orderRequired, orderRecord } = useNativeCheckoutStore((orderRequired) => ({ orderRequired: orderRequired.orderRequired, orderRecord: orderRequired.orderRecord })));
   const premiumTier = premiumItem.premiumTier;
   let tmp11 = null != trialOffer && null != premiumTier;

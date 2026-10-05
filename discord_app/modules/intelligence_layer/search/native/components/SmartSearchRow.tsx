@@ -1,9 +1,9 @@
-// === Module 16837: SmartSearchRow ===
+// === Module 16856: SmartSearchRow ===
 
-// Module 16837 (SmartSearchRow)
+// Module 16856 (SmartSearchRow)
 import nativeDefault from "native" /* 587 */;
 import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 11987 */;
-import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 16838 */;
+import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 16857 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -72,7 +72,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((hasKeywordResu
         arr2 = cResult[10];
       }
       if (cResult[11] !== entry.queryText) {
-        const tmp20 = new onPressConversationCitation(16838)(entry.queryText, lineClamp);
+        const tmp20 = new onPressConversationCitation(16857)(entry.queryText, lineClamp);
         cResult[11] = entry.queryText;
         cResult[12] = tmp20;
         let tmp15 = tmp20;
@@ -86,7 +86,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((hasKeywordResu
       } else if (tmp(11989).SmartSearchStatus.LOADING === status) {
         if (cResult[13] !== isCollapsed) {
           let obj4 = { isCollapsed };
-          const tmp41 = closure_11(onPressConversationCitation(16844), obj4);
+          const tmp41 = closure_11(onPressConversationCitation(16863), obj4);
           cResult[13] = isCollapsed;
           cResult[14] = tmp41;
           let tmp38 = tmp41;
@@ -204,7 +204,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((hasKeywordResu
         tmp29[0] = entry.answerText;
         tmp29[1] = citations;
         tmp29[2] = guildId;
-        const tmp30 = closure_11(onPressConversationCitation(16845), tmp29);
+        const tmp30 = closure_11(onPressConversationCitation(16864), tmp29);
         cResult[15] = citations;
         cResult[16] = entry.answerText;
         cResult[17] = guildId;
@@ -237,7 +237,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((hasKeywordResu
               return closure_1_11(HeaderlessMessageRow, obj, citation.messageId);
             }
           }
-          const tmp25 = closure_11(onPressConversationCitation(16785), { smartSearchQuery: null, source: "smart_search_row" });
+          const tmp25 = closure_11(onPressConversationCitation(16804), { smartSearchQuery: null, source: "smart_search_row" });
           cResult[29] = smartSearchQuery;
           cResult[30] = tmp25;
           let tmp22 = tmp25;
@@ -286,7 +286,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((hasKeywordResu
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -382,7 +382,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((hasKeywordResu
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

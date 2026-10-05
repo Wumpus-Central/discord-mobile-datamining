@@ -1,6 +1,6 @@
-// === Module 15290: InlineEmojiSuggestionsSetting ===
+// === Module 15294: InlineEmojiSuggestionsSetting ===
 
-// Module 15290 (InlineEmojiSuggestionsSetting)
+// Module 15294 (InlineEmojiSuggestionsSetting)
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import SettingsConstants from "SettingsConstants" /* 7634 */;

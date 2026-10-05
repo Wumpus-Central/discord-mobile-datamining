@@ -1,6 +1,6 @@
-// === Module 13508: NativeAppRatingRequestModule ===
+// === Module 13510: NativeAppRatingRequestModule ===
 
-// Module 13508 (NativeAppRatingRequestModule)
+// Module 13510 (NativeAppRatingRequestModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

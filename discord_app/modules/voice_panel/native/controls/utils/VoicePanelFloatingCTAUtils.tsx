@@ -1,6 +1,6 @@
-// === Module 17198: VoicePanelFloatingCTAUtils ===
+// === Module 17222: VoicePanelFloatingCTAUtils ===
 
-// Module 17198 (VoicePanelFloatingCTAUtils)
+// Module 17222 (VoicePanelFloatingCTAUtils)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
@@ -12,14 +12,14 @@ import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 7941 */;
 import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9174 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11901 */;
 import SoundboardIcon from "SoundboardIcon" /* 12185 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17166 */;
-import GuildScheduledEventsNoticesActionCreators from "GuildScheduledEventsNoticesActionCreators" /* 17200 */;
-import useChannelFloatingCTAContentDefault from "useChannelFloatingCTAContent" /* 17201 */;
-import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 17202 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17190 */;
+import GuildScheduledEventsNoticesActionCreators from "GuildScheduledEventsNoticesActionCreators" /* 17224 */;
+import useChannelFloatingCTAContentDefault from "useChannelFloatingCTAContent" /* 17225 */;
+import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 17226 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
-import EventBannerStore from "EventBannerStore" /* 17199 */;
+import EventBannerStore from "EventBannerStore" /* 17223 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 
 const require = globalThis.__r;
@@ -93,7 +93,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
   stateFromStores(4791)();
   let obj = imminentUpcomingGuildEvents(576);
   const tmp4 = stateFromStores;
-  const tmp6 = stateFromStores(17166)(noop.useContext(stateFromStores(11901)).channelId);
+  const tmp6 = stateFromStores(17190)(noop.useContext(stateFromStores(11901)).channelId);
   id = undefined;
   if (id != null) {
     id = id.id;

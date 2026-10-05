@@ -1,6 +1,6 @@
-// === Module 17477: GuildOnboardingHomeManager ===
+// === Module 17501: GuildOnboardingHomeManager ===
 
-// Module 17477 (GuildOnboardingHomeManager)
+// Module 17501 (GuildOnboardingHomeManager)
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import FlagUtils from "FlagUtils" /* 1390 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
@@ -91,7 +91,7 @@ const prototype = function GuildOnboardingHomeManager() {
           }
           if (0 !== num) {
             const obj2 = ModalActionCreatorsDefault;
-            const tmp9 = asyncRequireImpl(17478, dependencyMap.paths);
+            const tmp9 = asyncRequireImpl(17502, dependencyMap.paths);
             const obj3 = { initialPercent: (num - 1) / num, numActions: num };
             const obj4 = { animation: ConstantsIOS.ModalAnimation.FADE };
             obj2.pushLazy(tmp9, obj3, GuildOnboardingHomeTypes.NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY, obj4);
@@ -117,7 +117,7 @@ const prototype = function GuildOnboardingHomeManager() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -142,7 +142,7 @@ const prototype = function GuildOnboardingHomeManager() {
             closure_129_5 = undefined;
             c3 = 1;
             c4 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else {
           if (1 === tmp5) {
@@ -275,7 +275,7 @@ const prototype = function GuildOnboardingHomeManager() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -333,7 +333,7 @@ const prototype = function GuildOnboardingHomeManager() {
             const obj = applyArgumentsResult(tmp2[18]);
           }
           c5 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp31) {
         c5 = tmp;
@@ -363,7 +363,7 @@ const prototype = function GuildOnboardingHomeManager() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -445,7 +445,7 @@ const prototype = function GuildOnboardingHomeManager() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -527,7 +527,7 @@ const prototype = function GuildOnboardingHomeManager() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

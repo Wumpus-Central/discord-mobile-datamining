@@ -17,7 +17,7 @@ import showForLaterModal from "showForLaterModal" /* 7494 */;
 import SavedMessagesTypes from "SavedMessagesTypes" /* 7495 */;
 import APNGPlayer from "APNGPlayer" /* 8464 */;
 import _modDef11849 from "module_11849" /* 11849 */;
-import _modDef13135 from "module_13135" /* 13135 */;
+import _modDef13137 from "module_13137" /* 13137 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
@@ -70,7 +70,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         if (cResult[3] === premiumType) {
           if (cResult[4] === subfeatureName) {
             _require = tmp7;
-            const tmp4Result = importDefault(cResult[5] ? 13131 : 13132);
+            const tmp4Result = importDefault(cResult[5] ? 13133 : 13134);
             if (cResult[46] === cResult[6]) {
               if (cResult[47] === tmp4Result) {
                 if (cResult[48] === tmp18) {
@@ -195,7 +195,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                     cResult[75] = obj9;
                     tmp105 = obj9;
                   }
-                  const obj10 = { title: tmp97, description: tmp98, analyticsPage: constants3.PREMIUM_UPSELL_STREAM_HIGH_QUALITY, upsellType: constants.STREAM_QUALITY_UPSELL, image: _modDef13135, imageGradientBackground: null };
+                  const obj10 = { title: tmp97, description: tmp98, analyticsPage: constants3.PREMIUM_UPSELL_STREAM_HIGH_QUALITY, upsellType: constants.STREAM_QUALITY_UPSELL, image: _modDef13137, imageGradientBackground: null };
                   const obj11 = { colors: null, start: null, end: null };
                   const items = [token, token1];
                   obj11.colors = items;
@@ -587,7 +587,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   obj17.description = stringResult1;
   obj17.analyticsPage = constants3.PREMIUM_UPSELL_FOR_LATER;
   obj17.upsellType = constants.FOR_LATER_MODAL_UPSELL;
-  obj17.image = importDefault(tmp8 ? 13131 : 13132);
+  obj17.image = importDefault(tmp8 ? 13133 : 13134);
   obj3[tmp(7483).EntitlementFeatureNames.SAVED_MESSAGES] = obj17;
   const obj20 = { title: null, showBetaBadge: true, description: null, analyticsPage: null, upsellType: null, image: null };
   const intl18 = tmp(1126).intl;
@@ -613,7 +613,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   obj24.description = intl21.formatToPlainString(tmp(1126).t["4nlpei"], { fps: ApplicationStreamFPS.FPS_60 });
   obj24.analyticsPage = constants3.PREMIUM_UPSELL_STREAM_HIGH_QUALITY;
   obj24.upsellType = constants.STREAM_QUALITY_UPSELL;
-  obj24.image = _modDef13135;
+  obj24.image = _modDef13137;
   const obj26 = { colors: null, start: tmp(1105).HorizontalGradient.START, end: tmp(1105).HorizontalGradient.END };
   const items = [token, token1];
   obj26.colors = items;

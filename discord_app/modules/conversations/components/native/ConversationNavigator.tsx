@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
             }
           }
           const fn4 = function b() {
-            return closure_0(13089).default;
+            return closure_0(13091).default;
           };
           cResult[13] = T;
           cResult[14] = fn4;
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
     return obj.conversationNavigatorFocusHeaderOptions(route, navigation, { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND });
   };
   obj4.getComponent = function getComponent() {
-    return closure_0(13089).default;
+    return closure_0(13091).default;
   };
   items[1] = closure_6(closure_8.Screen, obj4);
   obj2.children = items;

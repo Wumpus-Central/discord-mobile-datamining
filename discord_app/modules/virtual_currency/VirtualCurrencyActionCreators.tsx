@@ -29,7 +29,7 @@ let closure_8 = async function _fetchVirtualCurrencyBalance() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -112,7 +112,7 @@ let closure_9 = async function _fetchVirtualCurrencyTotalRedeemed() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -195,7 +195,7 @@ let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -232,7 +232,7 @@ let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
           closure_129_13 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -292,7 +292,7 @@ let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
           tmp69(closure_129_13);
         }
         c6 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;

@@ -37,7 +37,7 @@ let closure_10 = async function _savePersistentCodesEnabled() {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -125,7 +125,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -198,7 +198,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -233,7 +233,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
                     return obj;
                   } else {
                     c0 = 3;
-                    return { value: "IconComponent", done: "IconComponent" };
+                    return { value: "IconComponent", done: null };
                   }
                 } catch (tmp7) {
                   c0 = tmp;
@@ -264,7 +264,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
         throw value;
       } else if (arg0 !== 2) {
         c1 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       } else {
         c1 = 3;
         let obj = { value, done: true };

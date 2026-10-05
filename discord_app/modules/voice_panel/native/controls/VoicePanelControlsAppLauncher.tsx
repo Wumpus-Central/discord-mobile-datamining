@@ -1,6 +1,6 @@
-// === Module 17338: VoicePanelControlsAppLauncher ===
+// === Module 17362: VoicePanelControlsAppLauncher ===
 
-// Module 17338 (VoicePanelControlsAppLauncher)
+// Module 17362 (VoicePanelControlsAppLauncher)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;

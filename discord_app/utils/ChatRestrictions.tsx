@@ -51,7 +51,7 @@ const items = [
       }
     },
     analyticsType: "@Everyone Warning",
-    animation: "applicationId"
+    animation: "unicodeVersion"
   },
   {
     check(arg0) {

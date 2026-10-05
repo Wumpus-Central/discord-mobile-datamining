@@ -1,6 +1,6 @@
-// === Module 17340: useTransitionToConnectedActivityInVoice ===
+// === Module 17364: useTransitionToConnectedActivityInVoice ===
 
-// Module 17340 (useTransitionToConnectedActivityInVoice)
+// Module 17364 (useTransitionToConnectedActivityInVoice)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onTransition) =>
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onTransition) =>
                     }
                   }
                   c4 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } else if (arg0 === 1) {
                 c4 = 3;
@@ -156,7 +156,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onTransition) =>
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onTransition) =>
                 closure_129_3 = undefined;
                 c3 = 1;
                 c4 = 1;
-                return { value: "Reflect", done: true };
+                return { value: "Set", done: true };
               }
             } else {
               if (1 === tmp5) {
@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onTransition) =>
                     }
                   }
                   c4 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } else if (arg0 === 1) {
                 c4 = 3;

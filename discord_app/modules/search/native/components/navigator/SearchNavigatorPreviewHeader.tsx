@@ -1,8 +1,8 @@
-// === Module 17015: SearchNavigatorPreviewHeader ===
+// === Module 17039: SearchNavigatorPreviewHeader ===
 
-// Module 17015 (SearchNavigatorPreviewHeader)
+// Module 17039 (SearchNavigatorPreviewHeader)
 import c from "c" /* 576 */;
-import ChannelHeaderDefault from "ChannelHeader" /* 13102 */;
+import ChannelHeaderDefault from "ChannelHeader" /* 13104 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

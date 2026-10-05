@@ -1,6 +1,6 @@
-// === Module 16915: NewGroupDMScreen ===
+// === Module 16934: NewGroupDMScreen ===
 
-// Module 16915 (NewGroupDMScreen)
+// Module 16934 (NewGroupDMScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -8,12 +8,12 @@ import ToastUtils from "ToastUtils" /* 4567 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4903 */;
 import HeaderShared from "HeaderShared" /* 7498 */;
 import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 11217 */;
-import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 16914 */;
+import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 16933 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 13563 */;
+import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 13565 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
 import UserStore from "UserStore" /* 1377 */;
 
@@ -55,7 +55,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -84,7 +84,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
           closure_131_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -127,7 +127,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "IconComponent", done: "IconComponent" };
+                        return { value: "IconComponent", done: null };
                       }
                     } else {
                       try {
@@ -385,7 +385,7 @@ export default function NewGroupDMScreen(navigation) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -740,7 +740,7 @@ export default function NewGroupDMScreen(navigation) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

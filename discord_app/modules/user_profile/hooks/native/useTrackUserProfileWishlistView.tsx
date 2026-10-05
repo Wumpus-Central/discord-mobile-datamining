@@ -1,6 +1,6 @@
-// === Module 12939: useTrackUserProfileWishlistView ===
+// === Module 12941: useTrackUserProfileWishlistView ===
 
-// Module 12939 (useTrackUserProfileWishlistView)
+// Module 12941 (useTrackUserProfileWishlistView)
 import noop from "module_19" /* 19 */;
 import WishlistStore from "WishlistStore" /* 8431 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

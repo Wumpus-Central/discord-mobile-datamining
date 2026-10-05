@@ -25,7 +25,7 @@ let closure_4 = async function _updatePermission(arg0, arg1, arg2, arg3) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -69,7 +69,7 @@ let closure_4 = async function _updatePermission(arg0, arg1, arg2, arg3) {
         const obj7 = { type: "CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION", id: closure_132_0, allow: closure_132_1, deny: closure_132_2 };
         closure_133_1(closure_133_2[2]).dispatch(obj7);
         c7 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       } catch (tmp16) {
         c7 = tmp;
         throw tmp16;

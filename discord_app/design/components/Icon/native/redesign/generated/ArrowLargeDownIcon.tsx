@@ -1,6 +1,6 @@
-// === Module 17850: ArrowLargeDownIcon ===
+// === Module 17874: ArrowLargeDownIcon ===
 
-// Module 17850 (ArrowLargeDownIcon)
+// Module 17874 (ArrowLargeDownIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 4579 */;

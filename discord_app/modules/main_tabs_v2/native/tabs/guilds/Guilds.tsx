@@ -1,15 +1,15 @@
-// === Module 15937: guilds/Guilds ===
+// === Module 15941: guilds/Guilds ===
 
-// Module 15937 (guilds/Guilds)
+// Module 15941 (guilds/Guilds)
 import c from "c" /* 576 */;
 import native from "native" /* 4589 */;
 import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4732 */;
 import QuestsEligibility from "QuestsEligibility" /* 10912 */;
-import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 14896 */;
-import QuestDockDefault from "QuestDock" /* 14981 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 15938 */;
-import MainChannelsDefault from "MainChannels" /* 15939 */;
-import YouBarDefault from "YouBar" /* 16300 */;
+import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 14900 */;
+import QuestDockDefault from "QuestDock" /* 14985 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 15942 */;
+import MainChannelsDefault from "MainChannels" /* 15943 */;
+import YouBarDefault from "YouBar" /* 16304 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

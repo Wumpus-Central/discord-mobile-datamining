@@ -15,7 +15,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4890);
-let obj2 = { drawerContainer: { overflow: "hidden", backgroundColor: "filter" }, drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 }, drawerHeader: { backgroundColor: "r" }, messagePreviewContainer: { marginLeft: 6 }, thumbnailsContainer: { paddingTop: 8 } };
+let obj2 = { drawerContainer: { overflow: "hidden", backgroundColor: "Boolean" }, drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 }, drawerHeader: { backgroundColor: "r" }, messagePreviewContainer: { marginLeft: 6 }, thumbnailsContainer: { paddingTop: 8 } };
 let closure_8 = createStyles.createStyles(obj2);
 let c9 = -1;
 function clamp(arg0, arg1, arg2) {

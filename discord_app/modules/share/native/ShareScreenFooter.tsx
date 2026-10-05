@@ -1,6 +1,6 @@
-// === Module 13716: ShareScreenFooter ===
+// === Module 13718: ShareScreenFooter ===
 
-// Module 13716 (ShareScreenFooter)
+// Module 13718 (ShareScreenFooter)
 import c from "c" /* 576 */;
 import components_Button_Button from "components/Button/Button" /* 5594 */;
 import useShareChatInputActions from "useShareChatInputActions" /* 11319 */;

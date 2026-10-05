@@ -1,7 +1,7 @@
-// === Module 15637: UserSettingsDesignSystemButtonActionSheet ===
+// === Module 15641: UserSettingsDesignSystemButtonActionSheet ===
 
-// Module 15637 (UserSettingsDesignSystemButtonActionSheet)
-import useDesignSystemSettingsStateDefault from "useDesignSystemSettingsState" /* 15635 */;
+// Module 15641 (UserSettingsDesignSystemButtonActionSheet)
+import useDesignSystemSettingsStateDefault from "useDesignSystemSettingsState" /* 15639 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/user_settings/design_system/n
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const cResult = require("c").c(37);
-  const tmp4 = first(15635)();
+  const tmp4 = first(15639)();
   _require = tmp4;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function o(buttonSize) {

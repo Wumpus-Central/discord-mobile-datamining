@@ -1,12 +1,12 @@
-// === Module 16964: ChannelSettingsOverview ===
+// === Module 16983: ChannelSettingsOverview ===
 
-// Module 16964 (ChannelSettingsOverview)
+// Module 16983 (ChannelSettingsOverview)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import FlagUtils from "FlagUtils" /* 1390 */;
-import vibegrationsTopicChannel from "vibegrationsTopicChannel" /* 2059 */;
+import conjureTopicChannel from "conjureTopicChannel" /* 2059 */;
 import ThreadSortOrder from "ThreadSortOrder" /* 2061 */;
 import ThreadSearchTagSetting from "ThreadSearchTagSetting" /* 2063 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
@@ -46,12 +46,13 @@ import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators"
 import ChannelActionSheetUtils from "ChannelActionSheetUtils" /* 10694 */;
 import AvailableForumTagDefault from "AvailableForumTag" /* 11061 */;
 import threadActionSheets from "threadActionSheets" /* 11067 */;
-import Slider from "Slider" /* 14274 */;
-import RegionActionCreatorsDefault from "RegionActionCreators" /* 16967 */;
-import SecondsSliderUtils from "SecondsSliderUtils" /* 16968 */;
-import ChannelSettingsUtils from "ChannelSettingsUtils" /* 16969 */;
-import ThreadAutoArchiveBottomSheet from "ThreadAutoArchiveBottomSheet" /* 16970 */;
-import getCannotSwapApplicationTextDefault from "getCannotSwapApplicationText" /* 16971 */;
+import Slider from "Slider" /* 14276 */;
+import RegionActionCreatorsDefault from "RegionActionCreators" /* 16986 */;
+import SecondsSliderUtils from "SecondsSliderUtils" /* 16987 */;
+import ChannelSettingsUtils from "ChannelSettingsUtils" /* 16988 */;
+import ThreadAutoArchiveBottomSheet from "ThreadAutoArchiveBottomSheet" /* 16989 */;
+import getCannotSwapApplicationTextDefault from "getCannotSwapApplicationText" /* 16990 */;
+import VoiceChannelAppSettingDefault from "VoiceChannelAppSetting" /* 16991 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4511 */;
@@ -61,7 +62,7 @@ import GuildChannelStore from "GuildChannelStore" /* 4507 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import PermissionStore from "PermissionStore" /* 4509 */;
 import ReadStateStore from "ReadStateStore" /* 4905 */;
-import RegionStore from "RegionStore" /* 16965 */;
+import RegionStore from "RegionStore" /* 16984 */;
 import RelationshipStore from "RelationshipStore" /* 4519 */;
 import UserStore from "UserStore" /* 1377 */;
 
@@ -72,7 +73,7 @@ const View = fn(17).View;
 const ChannelRecord = fn(2055);
 ({ EDITABLE_VOICE_SETTINGS_TYPES: closure_7, isGuildTextChannelType: closure_8, THREADED_CHANNEL_TYPES: closure_9, THREAD_CHANNEL_TYPES: c10, SLOWMODE_CHANNEL_TYPES: closure_11, NSFW_CHANNEL_TYPES: closure_12, TOGGLE_ANNOUNCEMENT_CHANNEL_TYPES: map1, GUILD_WEBHOOK_CHANNEL_TYPES: closure_14 } = ChannelRecord);
 const isGuildNSFW = fn(2070).isGuildNSFW;
-let closure_25 = fn(16966).ChannelSettingsAutoFocusElement;
+let closure_25 = fn(16985).ChannelSettingsAutoFocusElement;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_26, BITRATE_DEFAULT: closure_27, BITRATE_MIN: closure_28, ChannelSettingsSections: closure_29, ChannelTypes: closure_30, ChannelTypesSets: items, GuildFeatures: closure_32, GuildSettingsSections: closure_33, HelpdeskArticles: closure_34, MAX_CHANNEL_NAME_LENGTH: closure_35, MAX_VOICE_USER_LIMIT: closure_36, MAX_STAGE_VOICE_USER_LIMIT: closure_37, Permissions: closure_38, SettingsPaneTypes: closure_39, SLOWMODE_VALUES: closure_40, VideoQualityMode: closure_41 } = Constants);
 const ChannelConstants = fn(2058);
@@ -354,7 +355,7 @@ class ChannelSettingsOverview extends PureComponent {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -639,7 +640,7 @@ prototype["renderChannelInfo"] = function renderChannelInfo() {
     hasItem = GUILD_THREADS_ONLY.has(channel.type);
   }
   if (hasItem) {
-    hasItem = !vibegrationsTopicChannel.isVibegrationsLegacyTopicChannel(channel.type, channel.topic_);
+    hasItem = !conjureTopicChannel.isConjureLegacyTopicChannel(channel.type, channel.topic_);
   }
   const isChannelNameSettingEditable = ChannelSettingsUtils.getIsChannelNameSettingEditable({ canManageThread, canManageChannels, canSendMessages, isForumPost, isThread, isChannelOwner });
   if (channel.isForumPost()) {
@@ -831,7 +832,7 @@ prototype["renderAutoArchiveDuration"] = function renderAutoArchiveDuration() {
       obj.selected = autoArchiveDuration;
       obj.channel = channel;
       obj.onSelectDuration = this.handleAutoArchiveDurationChange;
-      return closure_1_47(tmp5(16970).AutoArchiveDurationOptions, obj);
+      return closure_1_47(tmp5(16989).AutoArchiveDurationOptions, obj);
     }
   }
   return null;
@@ -889,7 +890,7 @@ prototype["renderApplication"] = function renderApplication() {
   ({ channel, guild, canManageChannels } = this.props);
   if (channel.type === constants3.GUILD_APP) {
     if (null != guild) {
-      if (!obj2.isVibegrationsLegacyTopicChannel(channel.type, channel.topic_)) {
+      if (!obj2.isConjureLegacyTopicChannel(channel.type, channel.topic_)) {
         if (canManageChannels) {
           canManageChannels = PermissionStore.can(AppChannelPermissions.SWAP_APP_CHANNEL_APPLICATION_PERMISSIONS, channel);
         }
@@ -904,10 +905,19 @@ prototype["renderApplication"] = function renderApplication() {
         obj.description = tmp6;
         return closure_1_47(AppChannelApplicationSelectorDefault, obj);
       }
-      obj2 = vibegrationsTopicChannel;
+      obj2 = conjureTopicChannel;
     }
   }
   return null;
+};
+prototype["renderVoiceChannelApp"] = function renderVoiceChannelApp() {
+  guild = this.props.guild;
+  let tmp3 = null;
+  if (null != guild) {
+    const obj = { channel: tmp2, guildId: guild.id, onChange: tmp.handleApplicationChange };
+    tmp3 = closure_1_47(VoiceChannelAppSettingDefault, obj);
+  }
+  return tmp3;
 };
 prototype["renderDefaultSortOrder"] = function renderDefaultSortOrder() {
   const props = this.props;
@@ -1127,7 +1137,7 @@ prototype["renderUserLimitSettings"] = function renderUserLimitSettings() {
       obj7.value = Math.min(channel.userLimit, tmp10);
       obj7.maximumValue = tmp10;
       obj7.onValueChange = this.handleUserLimitChange;
-      items2[1] = closure_1_47(tmp7(14274).Slider, obj7);
+      items2[1] = closure_1_47(tmp7(14276).Slider, obj7);
       obj3.children = items2;
       obj2.children = __V(tmp7(5995).Card, obj3);
       items.push(closure_1_47(tmp7(6074).TableRowGroup, obj2, "channel-user-limit"));
@@ -1312,7 +1322,7 @@ prototype["renderDefaultForumLayout"] = function renderDefaultForumLayout() {
     const obj4 = { text: stringResult };
     obj3.trailing = closure_47(self(5993).TableRow.TrailingText, obj4);
     if (channel.defaultForumLayout === GridSquareIcon(2062).ForumLayout.GRID) {
-      GridSquareIcon = GridSquareIcon(16972).GridSquareIcon;
+      GridSquareIcon = GridSquareIcon(16996).GridSquareIcon;
       obj = {};
       let tmpResult = closure_47(GridSquareIcon, obj);
     } else {
@@ -1342,11 +1352,11 @@ prototype["renderUncommonSettingsSection"] = function renderUncommonSettingsSect
     const obj2 = { label: null, arrow: true, icon: null, onPress: null };
     const intl = tmp2(tmp3[32]).intl;
     obj2.label = intl.string(tmp2(tmp3[32]).t.CIsNZw);
-    obj2.icon = closure_47(tmp2(tmp3[83]).PuzzlePieceIcon, {});
+    obj2.icon = closure_47(tmp2(tmp3[84]).PuzzlePieceIcon, {});
     obj2.onPress = function onPress() {
       return self.pushScreen(constants2.INTEGRATIONS, { canManageWebhooks, canUnlinkLobby: result });
     };
-    items.push(closure_47(tmp2(tmp3[73]).TableRow, obj2, "rowIntegrations"));
+    items.push(closure_47(tmp2(tmp3[74]).TableRow, obj2, "rowIntegrations"));
   }
   return self.renderSettingsSection(items);
 };
@@ -1656,7 +1666,7 @@ prototype["renderCategory"] = function renderCategory() {
         tmp7 = self;
         const obj = self(5043);
       }
-      const obj2 = { icon: closure_47(tmp7(16075).FolderPlusIcon, {}), label: null, trailing: null, arrow: null, onPress: null };
+      const obj2 = { icon: closure_47(tmp7(16079).FolderPlusIcon, {}), label: null, trailing: null, arrow: null, onPress: null };
       const intl2 = tmp7(1126).intl;
       obj2.label = intl2.string(tmp7(1126).t.vHCZwr);
       const obj3 = { text: stringResult };
@@ -1685,7 +1695,7 @@ prototype["renderThreadSettings"] = function renderThreadSettings() {
 prototype["renderChannelSettings"] = function renderChannelSettings() {
   const obj = { children: null };
   const obj2 = { spacing: nativeDefault.space.PX_24, style: closure_52(this.context).stackPadding, children: null };
-  const items = [this.renderChannelInfo(), this.renderForumTags(), this.renderCategory(), this.renderPermissions(), this.renderCommonSettingsSection(), this.renderDefaultForumLayout(), this.renderDefaultSortOrder(), this.renderDefaultTagSetting(), this.renderAnnouncement(), this.renderNsfwConfig(), this.renderSlowmode(), this.renderDefaultAutoArchiveDuration(), this.renderBitrateSettings(), this.renderVideoQualityModeSettings(), this.renderUserLimitSettings(), this.renderRegionOverride(), this.renderUncommonSettingsSection(), this.renderShowMediaDownloadOptions(), this.renderDeleteButton()];
+  const items = [this.renderChannelInfo(), this.renderForumTags(), this.renderCategory(), this.renderPermissions(), this.renderCommonSettingsSection(), this.renderDefaultForumLayout(), this.renderDefaultSortOrder(), this.renderDefaultTagSetting(), this.renderAnnouncement(), this.renderNsfwConfig(), this.renderVoiceChannelApp(), this.renderSlowmode(), this.renderDefaultAutoArchiveDuration(), this.renderBitrateSettings(), this.renderVideoQualityModeSettings(), this.renderUserLimitSettings(), this.renderRegionOverride(), this.renderUncommonSettingsSection(), this.renderShowMediaDownloadOptions(), this.renderDeleteButton()];
   obj2.children = items;
   obj.children = __V(Stack_Stack.Stack, obj2);
   return closure_1_47(Form.Form, obj);
@@ -1711,7 +1721,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   channelId = channelId.channelId;
   const autoFocusElement = channelId.autoFocusElement;
   let obj = channelId(navigation[25]);
-  navigation = channelId(navigation[99]).useNavigation();
+  navigation = channelId(navigation[100]).useNavigation();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelStore];
     cResult[0] = items;
@@ -1729,7 +1739,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   } else {
     tmp7 = cResult[2];
   }
-  let obj2 = channelId(navigation[99]);
+  let obj2 = channelId(navigation[100]);
   const stateFromStores = channelId(navigation[26]).useStateFromStores(first, tmp7);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [ChannelSettingsStore];
@@ -1749,7 +1759,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   const tmpResult = channelId(navigation[26]);
   const stateFromStores1 = channelId(navigation[26]).useStateFromStores(tmp9, tmp10);
   const tmpResult7 = channelId(navigation[26]);
-  const isThreadModerator = channelId(navigation[74]).useIsThreadModerator(stateFromStores);
+  const isThreadModerator = channelId(navigation[75]).useIsThreadModerator(stateFromStores);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [JoinedThreadsStore];
     class C {
@@ -1808,12 +1818,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
       }
     }
   }
-  const tmpResult8 = channelId(navigation[74]);
+  const tmpResult8 = channelId(navigation[75]);
   const stateFromStoresObject = channelId(navigation[26]).useStateFromStoresObject(tmp14, L);
   ({ isMutedThread, hasJoinedThread } = stateFromStoresObject);
   const tmpResult9 = channelId(navigation[26]);
-  const canManageThread = channelId(navigation[74]).useCanManageThread(stateFromStores);
-  const tmpResult10 = channelId(navigation[74]);
+  const canManageThread = channelId(navigation[75]).useCanManageThread(stateFromStores);
+  const tmpResult10 = channelId(navigation[75]);
   const shouldHideChannelContent = channelId(navigation[59]).useShouldHideChannelContent(stateFromStores);
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
     class L {
@@ -2147,7 +2157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
         obj6.canManageWebhooks = tmp4;
         tmp5 = closure_0;
         tmp6 = closure_2;
-        obj2 = closure_0(closure_2[74]);
+        obj2 = closure_0(closure_2[75]);
         obj6.canUnarchiveThread = obj2.canUnarchiveThread(obj);
         obj6.regions = regions;
         obj6.submitting = submitting;

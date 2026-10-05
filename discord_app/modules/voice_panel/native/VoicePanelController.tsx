@@ -1,6 +1,6 @@
-// === Module 17339: VoicePanelController ===
+// === Module 17363: VoicePanelController ===
 
-// Module 17339 (VoicePanelController)
+// Module 17363 (VoicePanelController)
 import DurationsDefault from "Durations" /* 1102 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
 import util from "util" /* 1126 */;
@@ -22,11 +22,11 @@ import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9074 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 9306 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 9774 */;
 import VoicePanelCardLayoutManagerDefault from "VoicePanelCardLayoutManager" /* 11904 */;
-import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 17138 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17183 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 17198 */;
-import useIsVoicePanelParticipantFocusable from "useIsVoicePanelParticipantFocusable" /* 17276 */;
-import useTransitionToConnectedActivityInVoiceDefault from "useTransitionToConnectedActivityInVoice" /* 17340 */;
+import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 17162 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17207 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 17222 */;
+import useIsVoicePanelParticipantFocusable from "useIsVoicePanelParticipantFocusable" /* 17300 */;
+import useTransitionToConnectedActivityInVoiceDefault from "useTransitionToConnectedActivityInVoice" /* 17364 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;
@@ -859,7 +859,7 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
                 obj5.content = intl.string(obj(1126).t.O2IlPT);
                 obj3.open(obj5);
               }
-              obj = obj(17341);
+              obj = obj(17365);
               result3 = obj.trackActivityThermalStateNoticeShown();
             }
           }
@@ -1032,7 +1032,7 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
               obj5.content = intl.string(obj(1126).t.O2IlPT);
               obj3.open(obj5);
             }
-            obj = obj(17341);
+            obj = obj(17365);
             result3 = obj.trackActivityThermalStateNoticeShown();
           }
         }

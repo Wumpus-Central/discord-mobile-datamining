@@ -1,6 +1,6 @@
-// === Module 16223: GuildsBarFolderMenuItems ===
+// === Module 16227: GuildsBarFolderMenuItems ===
 
-// Module 16223 (GuildsBarFolderMenuItems)
+// Module 16227 (GuildsBarFolderMenuItems)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SortedGuildStore from "SortedGuildStore" /* 5616 */;
 
@@ -28,7 +28,7 @@ export const getGuildFolderMenuItems = function getGuildFolderMenuItems(id) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -86,7 +86,7 @@ export const getGuildFolderMenuItems = function getGuildFolderMenuItems(id) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -115,7 +115,7 @@ export const getGuildFolderMenuItems = function getGuildFolderMenuItems(id) {
           } else {
             const result = value.showGuildsBarFolderModal(closure_128_0);
             c2 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp10) {
           c2 = tmp;

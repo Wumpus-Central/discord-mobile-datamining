@@ -29,7 +29,7 @@ let closure_10 = async function _updateEmoji(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -52,7 +52,7 @@ let closure_10 = async function _updateEmoji(arg0) {
           ({ guildId: closure_129_0, emojiId: closure_129_1, name: closure_129_2, roles: closure_129_3 } = closure_0);
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {

@@ -1,6 +1,6 @@
-// === Module 16093: useGuildPowerupsBoostAction ===
+// === Module 16097: useGuildPowerupsBoostAction ===
 
-// Module 16093 (useGuildPowerupsBoostAction)
+// Module 16097 (useGuildPowerupsBoostAction)
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6657 */;
 import useGuildBoostPurchaseHandlerDefault from "useGuildBoostPurchaseHandler" /* 12197 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

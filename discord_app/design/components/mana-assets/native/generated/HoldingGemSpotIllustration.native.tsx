@@ -1,10 +1,10 @@
-// === Module 13432: HoldingGemSpotIllustration ===
+// === Module 13434: HoldingGemSpotIllustration ===
 
-// Module 13432 (HoldingGemSpotIllustration)
+// Module 13434 (HoldingGemSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5974 */;
-import _modDef13433 from "module_13433" /* 13433 */;
+import _modDef13435 from "module_13435" /* 13435 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -27,7 +27,7 @@ export const HoldingGemSpotIllustration = ReactCompilerGating.isReactCompilerEna
     num3 = scale;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef13433 };
+    const obj2 = { uri: _modDef13435 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -78,7 +78,7 @@ export const HoldingGemSpotIllustration = ReactCompilerGating.isReactCompilerEna
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef13433 };
+  const obj2 = { uri: _modDef13435 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

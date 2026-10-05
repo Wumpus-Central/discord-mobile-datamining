@@ -1,6 +1,6 @@
-// === Module 16285: GuildsBarGeoRestrictedBadge ===
+// === Module 16289: GuildsBarGeoRestrictedBadge ===
 
-// Module 16285 (GuildsBarGeoRestrictedBadge)
+// Module 16289 (GuildsBarGeoRestrictedBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef4810 from "module_4810" /* 4810 */;

@@ -1,6 +1,6 @@
-// === Module 17496: InteractionModalUtils ===
+// === Module 17520: InteractionModalUtils ===
 
-// Module 17496 (InteractionModalUtils)
+// Module 17520 (InteractionModalUtils)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -19,7 +19,7 @@ import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 7267 */;
-import InteractionModalStore from "InteractionModalStore" /* 14160 */;
+import InteractionModalStore from "InteractionModalStore" /* 14162 */;
 import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 7796 */;
 
 require = fn;
@@ -2093,7 +2093,7 @@ let closure_21 = async function _submitModal(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -2187,7 +2187,7 @@ let closure_21 = async function _submitModal(arg0) {
         closure_131_7 = send;
         send();
         c6 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp10) {
       c6 = tmp;
@@ -2196,7 +2196,7 @@ let closure_21 = async function _submitModal(arg0) {
   }
 };
 const DraftType = fn(7031).DraftType;
-const InteractionModalState = fn(14160).InteractionModalState;
+const InteractionModalState = fn(14162).InteractionModalState;
 const Endpoints = fn(1085).Endpoints;
 fn(558);
 let ReactCompilerGating = fn(558);
@@ -2437,7 +2437,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((customId, arg1) => {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -2472,7 +2472,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((customId, arg1) => {
           return obj;
         }
         c0 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       } catch (tmp13) {
         c0 = tmp;
         throw tmp13;
@@ -2524,7 +2524,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((customId, arg1) => {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -2559,7 +2559,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((customId, arg1) => {
           return obj;
         }
         c0 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       } catch (tmp13) {
         c0 = tmp;
         throw tmp13;

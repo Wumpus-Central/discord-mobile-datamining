@@ -1,10 +1,10 @@
-// === Module 15927: ChannelScreenAnimatedFrame ===
+// === Module 15931: ChannelScreenAnimatedFrame ===
 
-// Module 15927 (ChannelScreenAnimatedFrame)
+// Module 15931 (ChannelScreenAnimatedFrame)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import timing from "timing" /* 4891 */;
-import PanelsConfig from "PanelsConfig" /* 15925 */;
+import PanelsConfig from "PanelsConfig" /* 15929 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

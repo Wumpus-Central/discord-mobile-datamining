@@ -1,6 +1,6 @@
-// === Module 17288: VoicePanelControls ===
+// === Module 17312: VoicePanelControls ===
 
-// Module 17288 (VoicePanelControls)
+// Module 17312 (VoicePanelControls)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
@@ -15,14 +15,14 @@ import roundToNearestPixelDefault from "roundToNearestPixel" /* 10725 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11901 */;
 import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11906 */;
 import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 11909 */;
-import useControlsLockDefault from "useControlsLock" /* 17179 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 17198 */;
-import useDrawerToggleDefault from "useDrawerToggle" /* 17289 */;
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17290 */;
-import VoicePanelControlUtils from "VoicePanelControlUtils" /* 17291 */;
-import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 17292 */;
-import VoicePanelFloatingCTAContainer from "VoicePanelFloatingCTAContainer" /* 17296 */;
-import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 17298 */;
+import useControlsLockDefault from "useControlsLock" /* 17203 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 17222 */;
+import useDrawerToggleDefault from "useDrawerToggle" /* 17313 */;
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17314 */;
+import VoicePanelControlUtils from "VoicePanelControlUtils" /* 17315 */;
+import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 17316 */;
+import VoicePanelFloatingCTAContainer from "VoicePanelFloatingCTAContainer" /* 17320 */;
+import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 17322 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
@@ -1039,7 +1039,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((gestur
                       obj = gestureState(channelId[40]);
                       batchUpdatesResult = obj.batchUpdates(() => {
                         closure_0 = false;
-                        chatOpen(/* F153360 */ function() { ... });
+                        chatOpen(/* F153667 */ function() { ... });
                         if (!closure_3) {
                           const obj = { mode: constants.DRAWER };
                           const merged = Object.assign(closure_2);
@@ -1114,7 +1114,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((gestur
                     obj = gestureState(channelId[40]);
                     batchUpdatesResult = obj.batchUpdates(() => {
                       closure_0 = false;
-                      chatOpen(/* F153360 */ function() { ... });
+                      chatOpen(/* F153667 */ function() { ... });
                       if (!closure_3) {
                         const obj = { mode: constants.DRAWER };
                         const merged = Object.assign(closure_2);
@@ -1380,7 +1380,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((gestur
                       obj = gestureState(channelId[40]);
                       batchUpdatesResult = obj.batchUpdates(() => {
                         closure_0 = false;
-                        chatOpen(/* F153360 */ function() { ... });
+                        chatOpen(/* F153667 */ function() { ... });
                         if (!closure_3) {
                           const obj = { mode: constants.DRAWER };
                           const merged = Object.assign(closure_2);
@@ -1480,7 +1480,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((gestur
               obj = gestureState(channelId[40]);
               batchUpdatesResult = obj.batchUpdates(() => {
                 closure_0 = false;
-                chatOpen(/* F153360 */ function() { ... });
+                chatOpen(/* F153667 */ function() { ... });
                 if (!closure_3) {
                   const obj = { mode: constants.DRAWER };
                   const merged = Object.assign(closure_2);
@@ -1542,7 +1542,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((gestur
             obj = gestureState(channelId[40]);
             batchUpdatesResult = obj.batchUpdates(() => {
               closure_0 = false;
-              chatOpen(/* F153360 */ function() { ... });
+              chatOpen(/* F153667 */ function() { ... });
               if (!closure_3) {
                 const obj = { mode: constants.DRAWER };
                 const merged = Object.assign(closure_2);
@@ -1571,7 +1571,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((gestur
         obj = gestureState(channelId[40]);
         batchUpdatesResult = obj.batchUpdates(() => {
           closure_0 = false;
-          chatOpen(/* F153360 */ function() { ... });
+          chatOpen(/* F153667 */ function() { ... });
           if (!closure_3) {
             const obj = { mode: constants.DRAWER };
             const merged = Object.assign(closure_2);

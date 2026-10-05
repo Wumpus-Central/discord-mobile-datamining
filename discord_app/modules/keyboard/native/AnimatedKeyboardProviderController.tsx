@@ -1,6 +1,6 @@
-// === Module 15844: AnimatedKeyboardProviderController ===
+// === Module 15848: AnimatedKeyboardProviderController ===
 
-// Module 15844 (AnimatedKeyboardProviderController)
+// Module 15848 (AnimatedKeyboardProviderController)
 import c from "c" /* 576 */;
 import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1632 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4612 */;

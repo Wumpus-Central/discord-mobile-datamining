@@ -1,6 +1,6 @@
-// === Module 14992: QuestDockBackgroundBlurHeader ===
+// === Module 14996: QuestDockBackgroundBlurHeader ===
 
-// Module 14992 (QuestDockBackgroundBlurHeader)
+// Module 14996 (QuestDockBackgroundBlurHeader)
 import nativeDefault from "native" /* 587 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1370 */;
 import spring from "spring" /* 5597 */;
@@ -11,7 +11,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ AccessibilityInfo: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const QuestDockMode = fn(5623).QuestDockMode;
-const QuestDockConstants = fn(14892);
+const QuestDockConstants = fn(14896);
 const QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED = QuestDockConstants.QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED;
 ({ QUEST_DOCK_CONTENT_BORDER_RADII: closure_9, QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED: c10, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_11, QUEST_DOCK_COLLAPSED_HEADER_PADDING_RIGHT, QUEST_DOCK_COLLAPSED_HEIGHT, QUEST_DOCK_COLLAPSED_HEADER_PADDING_LEFT } = QuestDockConstants);
 const jsxProd = fn(21);
@@ -62,7 +62,7 @@ let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDo
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const cResult = activeQuestDockMode(576).c(66);
   ({ blurHash, children, collapsedContent, secondaryContentWidth, withPressableDisclosure, promotedLabelLeading, hideBlurWhenCollapsed, onDisclosurePress: tertiaryContent, onSubmenuPress } = arg0);
-  const context = noop.useContext(tmp(14893).QuestDockGestureContext);
+  const context = noop.useContext(tmp(14897).QuestDockGestureContext);
   activeQuestDockMode = context.activeQuestDockMode;
   let num = 2;
   let obj = activeQuestDockMode(576);
@@ -90,7 +90,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   const effect = obj2.useEffect(tmp10, tmp11);
   const tmp8 = token(noop.useState(false), 2);
   token = activeQuestDockMode(4580).useToken(questDockWrapperSpecs(587).modules.mobile.QUEST_DOCK_BORDER_RADIUS);
-  const tmp15 = context.questDockWrapperSpecs(14982)(token);
+  const tmp15 = context.questDockWrapperSpecs(14986)(token);
   noop = tmp15;
   const tmpResult = activeQuestDockMode(4580);
   class J {
@@ -422,7 +422,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
                                         let tmp61 = !tmp5;
                                         if (!tmp5) {
                                           const obj15 = { children: null };
-                                          const items4 = [tmp25, closure_12(tmp13(14995), {})];
+                                          const items4 = [tmp25, closure_12(tmp13(14999), {})];
                                           obj15.children = items4;
                                           tmp61 = closure_14(closure_13, obj15);
                                         }
@@ -499,7 +499,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
               if (tmpResult18.isAndroid()) {
                 if (null != blurHash) {
                   const obj20 = { placeholder: blurHash, layoutAnimatedStyle: animatedStyle5, opacityAnimatedStyle: animatedStyle6, layoutAnimation: questDockHeaderLayoutAnimation };
-                  let tmp36 = closure_12(tmp13(14993), obj20);
+                  let tmp36 = closure_12(tmp13(14997), obj20);
                 }
                 cResult[11] = blurHash;
                 cResult[12] = animatedStyle5;
@@ -508,7 +508,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
                 cResult[15] = tmp36;
               }
               const obj21 = { layoutAnimatedStyle: animatedStyle5, opacityAnimatedStyle: animatedStyle6, layoutAnimation: questDockHeaderLayoutAnimation };
-              tmp36 = closure_12(tmp13(14959), obj21);
+              tmp36 = closure_12(tmp13(14963), obj21);
               tmpResult18 = tmp(1370);
             }
             const items10 = [tmp24.header, animatedStyle];
@@ -573,7 +573,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   let token;
   noop = undefined;
   ({ onDisclosurePress, onSubmenuPress } = promotedLabelLeading);
-  const context = noop.useContext(activeQuestDockMode(14893).QuestDockGestureContext);
+  const context = noop.useContext(activeQuestDockMode(14897).QuestDockGestureContext);
   activeQuestDockMode = context.activeQuestDockMode;
   const questDockWrapperSpecs = context.questDockWrapperSpecs;
   [tmp5, c2] = token(noop.useState(false), 2);
@@ -588,7 +588,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   }, []);
   const tmp4 = token(noop.useState(false), 2);
   token = activeQuestDockMode(4580).useToken(questDockWrapperSpecs(587).modules.mobile.QUEST_DOCK_BORDER_RADIUS);
-  const tmp9 = questDockWrapperSpecs(14982)(token);
+  const tmp9 = questDockWrapperSpecs(14986)(token);
   noop = tmp9;
   let obj = activeQuestDockMode(4580);
   const fn = function q() {
@@ -788,7 +788,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   if (tmpResult.isAndroid()) {
     if (null != blurHash) {
       const obj23 = { placeholder: blurHash, layoutAnimatedStyle: animatedStyle5, opacityAnimatedStyle: animatedStyle6, layoutAnimation: questDockHeaderLayoutAnimation };
-      let tmp22Result = tmp22(tmp7(14993), obj23);
+      let tmp22Result = tmp22(tmp7(14997), obj23);
     }
     const items4 = [tmp22Result, , ];
     let tmp22Result2 = children;
@@ -831,7 +831,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     const tmp7Result5 = tmp7(6570);
     if (!flag) {
       const obj31 = { children: null };
-      const items11 = [tmp19Result, tmp22(tmp7(14995), {})];
+      const items11 = [tmp19Result, tmp22(tmp7(14999), {})];
       obj31.children = items11;
       tmp25Result = closure_14(closure_13, obj31);
     }
@@ -862,6 +862,6 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     }
     return closure_14(tmp7Result, obj22);
   }
-  tmp22Result = tmp22(tmp7(14959), { layoutAnimatedStyle: animatedStyle5, opacityAnimatedStyle: animatedStyle6, layoutAnimation: questDockHeaderLayoutAnimation });
+  tmp22Result = tmp22(tmp7(14963), { layoutAnimatedStyle: animatedStyle5, opacityAnimatedStyle: animatedStyle6, layoutAnimation: questDockHeaderLayoutAnimation });
   tmpResult = activeQuestDockMode(1370);
 }));

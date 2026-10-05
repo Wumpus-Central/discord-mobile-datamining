@@ -1,6 +1,6 @@
-// === Module 15980: HappeningNowAnalytics ===
+// === Module 15984: HappeningNowAnalytics ===
 
-// Module 15980 (HappeningNowAnalytics)
+// Module 15984 (HappeningNowAnalytics)
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 

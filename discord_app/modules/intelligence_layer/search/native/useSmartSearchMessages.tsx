@@ -1,6 +1,6 @@
-// === Module 16877: useSmartSearchMessages ===
+// === Module 16896: useSmartSearchMessages ===
 
-// Module 16877 (useSmartSearchMessages)
+// Module 16896 (useSmartSearchMessages)
 import SmartSearchTypes from "SmartSearchTypes" /* 11989 */;
 import SmartSearchUtils from "SmartSearchUtils" /* 11997 */;
 import noop from "module_19" /* 19 */;
@@ -22,8 +22,8 @@ export const useSmartSearchMessages = ReactCompilerGating.isReactCompilerEnabled
       let tmp5 = cResult[2];
     }
     _require = tmp5;
-    const smartSearchStatus = tmp(16783).useSmartSearchStatus(tmp5);
-    const tmpResult = tmp(16783);
+    const smartSearchStatus = tmp(16802).useSmartSearchStatus(tmp5);
+    const tmpResult = tmp(16802);
     let guildId;
     if (tmp5 != null) {
       guildId = tmp5.guildId;

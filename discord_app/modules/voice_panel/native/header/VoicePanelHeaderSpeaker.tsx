@@ -1,6 +1,6 @@
-// === Module 17234: VoicePanelHeaderSpeaker ===
+// === Module 17258: VoicePanelHeaderSpeaker ===
 
-// Module 17234 (VoicePanelHeaderSpeaker)
+// Module 17258 (VoicePanelHeaderSpeaker)
 import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
@@ -9,13 +9,13 @@ import NativeViewDefault from "NativeView" /* 5976 */;
 import showAudioOutputSelector from "showAudioOutputSelector" /* 9330 */;
 import useOnConnectToConsole from "useOnConnectToConsole" /* 9446 */;
 import getConsoleIconDefault from "getConsoleIcon" /* 9463 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17164 */;
-import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 17237 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17188 */;
+import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 17261 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import GameConsoleStore from "GameConsoleStore" /* 4907 */;
 import AudioRouteStore from "AudioRouteStore" /* 9300 */;
-import AudioRouteSwitchingStore from "AudioRouteSwitchingStore" /* 17236 */;
+import AudioRouteSwitchingStore from "AudioRouteSwitchingStore" /* 17260 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import SessionsStore from "SessionsStore" /* 4908 */;
 
@@ -23,7 +23,7 @@ require = fn;
 let closure_3 = ["ref"];
 let closure_4 = ["ref"];
 const NativeModules = fn(17).NativeModules;
-const setVoiceUpsellDismissed = fn(17235).setVoiceUpsellDismissed;
+const setVoiceUpsellDismissed = fn(17259).setVoiceUpsellDismissed;
 const PlatformTypes = fn(1085).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
@@ -371,7 +371,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((isConn
           function renderButton(arg0) {
             let tmp = arg0;
             if (arg0 == null) {
-              const obj = { onPress, ref: "a" };
+              const obj = { onPress, ref: "r" };
               tmp = obj;
             }
             const obj2 = { targetRef: ref, canShowTooltip: null };
@@ -670,7 +670,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((isConn
     function renderButton(arg0) {
       let tmp = arg0;
       if (arg0 == null) {
-        const obj = { onPress, ref: "a" };
+        const obj = { onPress, ref: "r" };
         tmp = obj;
       }
       const obj2 = { targetRef: ref, canShowTooltip: null };

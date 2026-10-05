@@ -1,10 +1,10 @@
-// === Module 16926: FriendRequestsSettingsScreen ===
+// === Module 16945: FriendRequestsSettingsScreen ===
 
-// Module 16926 (FriendRequestsSettingsScreen)
+// Module 16945 (FriendRequestsSettingsScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ThemedGradientDefault from "ThemedGradient" /* 5911 */;
-import UserSettingsFriendRequestsDefault from "UserSettingsFriendRequests" /* 16927 */;
+import UserSettingsFriendRequestsDefault from "UserSettingsFriendRequests" /* 16946 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

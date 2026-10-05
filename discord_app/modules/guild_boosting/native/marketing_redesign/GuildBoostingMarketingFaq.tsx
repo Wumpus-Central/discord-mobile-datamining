@@ -1,10 +1,10 @@
-// === Module 13410: GuildBoostingMarketingFaq ===
+// === Module 13412: GuildBoostingMarketingFaq ===
 
-// Module 13410 (GuildBoostingMarketingFaq)
+// Module 13412 (GuildBoostingMarketingFaq)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import _modDef13411 from "module_13411" /* 13411 */;
+import _modDef13413 from "module_13413" /* 13413 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -325,7 +325,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         str = "interactive-text-active";
       }
       items1 = [closure_1_7(closure_0(4886).Text, { color: str, style: closure_0.question, variant: "text-md/normal", children: getQuestion.getQuestion() }), ];
-      const obj4 = { source: _modDef13411, style: null };
+      const obj4 = { source: _modDef13413, style: null };
       const items2 = [closure_0.questionIcon, ];
       let questionIconExpanded = tmp;
       if (tmp) {

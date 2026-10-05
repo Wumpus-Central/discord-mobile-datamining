@@ -1,6 +1,6 @@
-// === Module 12988: OrbCheckoutModalContext ===
+// === Module 12990: OrbCheckoutModalContext ===
 
-// Module 12988 (OrbCheckoutModalContext)
+// Module 12990 (OrbCheckoutModalContext)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7064 */;
@@ -14,7 +14,7 @@ import size from "module_2" /* 2 */;
 
 ({ useContext: c3, useCallback: closure_4, useMemo: hasOwnProperty, createContext } = noop);
 const jsx = jsxProd.jsx;
-let obj = { skuId: "123", skuProductLine: null, skuApplicationId: "r", loadId: "Reflect", analyticsLocations: null, analyticsSourceLocation: null, isRedeeming: null, orbRedemptionError: "lg", orbProductContext: null, onRedeemVirtualCurrency: true };
+let obj = { skuId: "123", skuProductLine: null, skuApplicationId: "r", loadId: "Set", analyticsLocations: null, analyticsSourceLocation: null, isRedeeming: null, orbRedemptionError: "lg", orbProductContext: null, onRedeemVirtualCurrency: true };
 obj.loadId = v1.v4();
 obj.analyticsLocations = [];
 obj.onRedeemVirtualCurrency = function onRedeemVirtualCurrency() {

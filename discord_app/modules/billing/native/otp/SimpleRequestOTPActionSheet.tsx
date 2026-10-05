@@ -1,6 +1,6 @@
-// === Module 15569: SimpleRequestOTPActionSheet ===
+// === Module 15573: SimpleRequestOTPActionSheet ===
 
-// Module 15569 (SimpleRequestOTPActionSheet)
+// Module 15573 (SimpleRequestOTPActionSheet)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import v1 from "v1" /* 1266 */;
@@ -37,7 +37,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -180,7 +180,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

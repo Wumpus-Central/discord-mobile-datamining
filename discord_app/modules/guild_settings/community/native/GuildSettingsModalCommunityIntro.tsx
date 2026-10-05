@@ -1,6 +1,6 @@
-// === Module 17806: GuildSettingsModalCommunityIntro ===
+// === Module 17830: GuildSettingsModalCommunityIntro ===
 
-// Module 17806 (GuildSettingsModalCommunityIntro)
+// Module 17830 (GuildSettingsModalCommunityIntro)
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,7 +10,7 @@ import CircleInformationIcon from "CircleInformationIcon" /* 4812 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import LightbulbIcon from "LightbulbIcon" /* 9957 */;
 import AnalyticsIcon from "AnalyticsIcon" /* 10108 */;
-import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 17811 */;
+import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 17835 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import PermissionStore from "PermissionStore" /* 4509 */;

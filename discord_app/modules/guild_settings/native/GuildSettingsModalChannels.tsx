@@ -1,6 +1,6 @@
-// === Module 16067: GuildSettingsModalChannels ===
+// === Module 16071: GuildSettingsModalChannels ===
 
-// Module 16067 (GuildSettingsModalChannels)
+// Module 16071 (GuildSettingsModalChannels)
 import _modDef38 from "module_38" /* 38 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
@@ -25,17 +25,17 @@ import FavoritesActionCreators from "FavoritesActionCreators" /* 10035 */;
 import ChannelSettingsActionCreators from "ChannelSettingsActionCreators" /* 10062 */;
 import ChannelSortingUtils from "ChannelSortingUtils" /* 10734 */;
 import _modDef11415 from "module_11415" /* 11415 */;
-import _modDef15113 from "module_15113" /* 15113 */;
-import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 16066 */;
-import _modDef16068 from "module_16068" /* 16068 */;
-import _modDef16070 from "module_16070" /* 16070 */;
+import _modDef15117 from "module_15117" /* 15117 */;
+import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 16070 */;
+import _modDef16072 from "module_16072" /* 16072 */;
+import _modDef16074 from "module_16074" /* 16074 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import PermissionStore from "PermissionStore" /* 4509 */;
 import RelationshipStore from "RelationshipStore" /* 4519 */;
 import UserStore from "UserStore" /* 1377 */;
-import GuildSettingsModalChannelsStore from "GuildSettingsModalChannelsStore" /* 16065 */;
+import GuildSettingsModalChannelsStore from "GuildSettingsModalChannelsStore" /* 16069 */;
 import TextStyles_mod from "TextStyles" /* 5915 */;
 
 require = fn;
@@ -132,7 +132,7 @@ Category.prototype["render"] = function render() {
   } else {
     tmp3Result = null;
     if (null != sortHandlers) {
-      const obj6 = { source: tmp11(16068), style: actionIconStyle };
+      const obj6 = { source: tmp11(16072), style: actionIconStyle };
       tmp3Result = value2(native.Icon, obj6);
     }
   }
@@ -676,7 +676,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   if (stateFromStores) {
     tmp7Result2 = null;
     if (sortingEnabled) {
-      const obj10 = { source: tmp13(16068), style: actionIconStyle };
+      const obj10 = { source: tmp13(16072), style: actionIconStyle };
       tmp7Result2 = closure_16(channel(8895).FormRow.Icon, obj10);
     }
   }
@@ -946,9 +946,9 @@ class GuildSettingsModalChannels extends PureComponent3 {
         const obj = { label: null, icon: null, onPress: null };
         const intl = util.intl;
         obj.label = intl.string(util.t.ffgJrs);
-        obj.icon = _modDef16070;
+        obj.icon = _modDef16074;
         obj.onPress = function onPress() {
-          closure_1_1(16066).startReordering(constants.GUILD_CATEGORY);
+          closure_1_1(16070).startReordering(constants.GUILD_CATEGORY);
         };
         items.push(obj);
       }
@@ -957,15 +957,15 @@ class GuildSettingsModalChannels extends PureComponent3 {
       obj2.label = intl2.string(util.t.nIfr0Y);
       obj2.icon = _modDef11415;
       obj2.onPress = function onPress() {
-        closure_1_1(16066).startReordering(constants.GUILD_TEXT, constants.GUILD_ANNOUNCEMENT, constants.GUILD_FORUM, constants.GUILD_MEDIA, constants.GUILD_APP);
+        closure_1_1(16070).startReordering(constants.GUILD_TEXT, constants.GUILD_ANNOUNCEMENT, constants.GUILD_FORUM, constants.GUILD_MEDIA, constants.GUILD_APP);
       };
       items.push(obj2);
       const obj3 = { label: null, icon: null, onPress: null };
       const intl3 = util.intl;
       obj3.label = intl3.string(util.t.CYnO4s);
-      obj3.icon = _modDef15113;
+      obj3.icon = _modDef15117;
       obj3.onPress = function onPress() {
-        closure_1_1(16066).startReordering(constants.GUILD_VOICE, constants.GUILD_STAGE_VOICE);
+        closure_1_1(16070).startReordering(constants.GUILD_VOICE, constants.GUILD_STAGE_VOICE);
       };
       items.push(obj3);
       const obj5 = { key: "GuildSettingsChannelsSort", header: null, options: null, hasIcons: true };

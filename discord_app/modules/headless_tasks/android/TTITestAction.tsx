@@ -1,10 +1,10 @@
-// === Module 18101: TTITestAction ===
+// === Module 18123: TTITestAction ===
 
-// Module 18101 (TTITestAction)
+// Module 18123 (TTITestAction)
 import LoggerDefault from "Logger" /* 3 */;
 import ProcessUtilsDefault from "ProcessUtils" /* 1363 */;
 import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 4743 */;
-import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 15934 */;
+import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 15938 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ExperimentStore from "ExperimentStore" /* 4776 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -57,7 +57,7 @@ let closure_20 = async function _captureNavigationTTI(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -181,7 +181,7 @@ let closure_20 = async function _captureNavigationTTI(arg0) {
           }
           closure_132_18("error", "Artificial content delay requires a cold message cache");
           c6 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
         c6 = 3;
       }
@@ -270,7 +270,7 @@ let closure_25 = async function _setupTTITest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -308,7 +308,7 @@ let closure_25 = async function _setupTTITest(arg0) {
             closure_130_13 = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         break;
         case 1:
@@ -385,7 +385,7 @@ let closure_25 = async function _setupTTITest(arg0) {
           } else {
             closure_131_18("error", tmp143.message);
             c7 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         break;
         case 3:
@@ -502,7 +502,7 @@ let closure_25 = async function _setupTTITest(arg0) {
                 } else {
                   closure_131_18("error", closure_130_8.message);
                   c7 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 if (!closure_130_1) {
@@ -552,7 +552,7 @@ let closure_25 = async function _setupTTITest(arg0) {
               } else {
                 closure_131_18("error", closure_130_13.message);
                 c7 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               if (!closure_130_1) {
@@ -653,7 +653,7 @@ let closure_25 = async function _setupTTITest(arg0) {
             } else {
               closure_131_18("error", closure_130_12.message);
               c7 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           }
         break;
@@ -687,7 +687,7 @@ let closure_25 = async function _setupTTITest(arg0) {
               closure_131_18("success", "Setup Complete");
             }
             c7 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
       }
     } catch (tmp191) {
@@ -722,7 +722,7 @@ let closure_27 = async function _apiLogin(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -866,13 +866,13 @@ let closure_27 = async function _apiLogin(arg0) {
         const items = ["LOGIN_FAILURE", "PASSWORDLESS_FAILURE", "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION", "LOGIN_ACCOUNT_DISABLED", "LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED"];
         function _loop(iter) {
           obj = password(584);
-          const f155283 = () => {
+          const f155585 = () => {
             const error = new Error("Unable to login " + login + ". Login failed with action '" + obj + "'");
             iter(error);
           };
           function handler(arg0) {
             obj.unsubscribe(closure_1, handler);
-            return f155283(arg0);
+            return f155585(arg0);
           }
           const subscription = obj.subscribe(iter, handler);
         }
@@ -900,11 +900,11 @@ function subscribeOnce(subscribe, arg1, arg2) {
   closure_2 = arg2;
   function handler(arg0) {
     obj.unsubscribe(closure_1, handler);
-    return f155283(arg0);
+    return f155585(arg0);
   }
   return subscribe.subscribe("LOGIN_SUCCESS", handler);
 }
-const applicationReady = fn(17391).applicationReady;
+const applicationReady = fn(17415).applicationReady;
 fn(5948).addPostConnectionCallback;
 const Constants = fn(1085);
 ({ ME: closure_11, Routes: closure_12 } = Constants);
@@ -1068,7 +1068,7 @@ let closure_16 = asyncGeneratorStep(async (arg0) => {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -1112,7 +1112,7 @@ let closure_16 = asyncGeneratorStep(async (arg0) => {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -1126,7 +1126,7 @@ let closure_16 = asyncGeneratorStep(async (arg0) => {
                   return obj;
                 } else {
                   c0 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp4) {
                 c0 = tmp;

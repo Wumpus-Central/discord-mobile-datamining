@@ -1,13 +1,13 @@
-// === Module 16222: getGuildsBarGuildMenuItems ===
+// === Module 16226: getGuildsBarGuildMenuItems ===
 
-// Module 16222 (getGuildsBarGuildMenuItems)
+// Module 16226 (getGuildsBarGuildMenuItems)
 import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6609 */;
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6614 */;
 import _modDef12014 from "module_12014" /* 12014 */;
 import _modDef12015 from "module_12015" /* 12015 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 13718 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 13720 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5071 */;
@@ -39,7 +39,7 @@ export default function getGuildsBarGuildMenuItems(guildId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -69,7 +69,7 @@ export default function getGuildsBarGuildMenuItems(guildId) {
             const items = [closure_128_0];
             value.default(items, constants.GUILD_LIST);
             paths = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp11) {
           paths = tmp;

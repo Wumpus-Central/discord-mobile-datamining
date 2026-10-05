@@ -1,6 +1,6 @@
-// === Module 15286: EmojiReactionsOnMessagesSetting ===
+// === Module 15290: EmojiReactionsOnMessagesSetting ===
 
-// Module 15286 (EmojiReactionsOnMessagesSetting)
+// Module 15290 (EmojiReactionsOnMessagesSetting)
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import SettingsConstants from "SettingsConstants" /* 7634 */;

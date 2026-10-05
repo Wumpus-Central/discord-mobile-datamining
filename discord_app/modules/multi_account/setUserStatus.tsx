@@ -85,7 +85,7 @@ let closure_7 = async function _setUserStatus() {
     disableTracking = false;
   }
   closure_129_4 = disableTracking;
-  return "Reflect";
+  return "Set";
 };
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);

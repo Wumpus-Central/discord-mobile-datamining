@@ -1,12 +1,12 @@
-// === Module 13006: EditAvatarDecorationSection ===
+// === Module 13008: EditAvatarDecorationSection ===
 
-// Module 13006 (EditAvatarDecorationSection)
+// Module 13008 (EditAvatarDecorationSection)
 import c from "c" /* 576 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6681 */;
 import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 8468 */;
-import useAvatarDecorationSections from "useAvatarDecorationSections" /* 13001 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 13007 */;
-import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 13008 */;
+import useAvatarDecorationSections from "useAvatarDecorationSections" /* 13003 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 13009 */;
+import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 13010 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,9 +16,9 @@ const AVATAR_DECORATION_SIZE = fn(1403).AVATAR_DECORATION_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4890);
-let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13007).GUTTER_SIZE }, rowSpacer: null };
-let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13007).GUTTER_SIZE };
-obj.rowSpacer = { height: fn(13007).GUTTER_SIZE };
+let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13009).GUTTER_SIZE }, rowSpacer: null };
+let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13009).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(13009).GUTTER_SIZE };
 let closure_10 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((setSelectedAvatarDecoration) => {

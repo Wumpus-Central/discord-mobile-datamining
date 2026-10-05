@@ -1,6 +1,6 @@
-// === Module 15997: HappeningNowCustomStatus ===
+// === Module 16001: HappeningNowCustomStatus ===
 
-// Module 15997 (HappeningNowCustomStatus)
+// Module 16001 (HappeningNowCustomStatus)
 import nativeDefault from "native" /* 587 */;
 import ActivityEmojiDefault from "ActivityEmoji" /* 10629 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -11,7 +11,7 @@ import PresenceStore from "PresenceStore" /* 4930 */;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Image: closure_7 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15110);
+const HappeningNowConstants = fn(15114);
 const HAPPENING_NOW_CONTENT_HEIGHT = HappeningNowConstants.HAPPENING_NOW_CONTENT_HEIGHT;
 const STATUS_CUTOUT_SMALL = HappeningNowConstants.STATUS_CUTOUT_SMALL;
 const StatusTypes = fn(1096).StatusTypes;
@@ -131,7 +131,7 @@ export const CustomStatusActivityCard = ReactCompilerGating.isReactCompilerEnabl
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -153,7 +153,7 @@ export const CustomStatusActivityCard = ReactCompilerGating.isReactCompilerEnabl
                     if (null != c1.emoji) {
                       c2 = 1;
                       v3 = 1;
-                      const obj5 = { value: closure_0(15998).getEmojiSource(c1.emoji), done: false };
+                      const obj5 = { value: closure_0(16002).getEmojiSource(c1.emoji), done: false };
                       return obj5;
                     } else {
                       v3 = 3;
@@ -172,7 +172,7 @@ export const CustomStatusActivityCard = ReactCompilerGating.isReactCompilerEnabl
                     const obj8 = { emoji: c1.emoji, emojiSource: closure_128_0 };
                     c2 = 2;
                     v3 = 1;
-                    const obj9 = { value: closure_0(15999).getEmojiDominantColors(obj8), done: false };
+                    const obj9 = { value: closure_0(16003).getEmojiDominantColors(obj8), done: false };
                     return obj9;
                   }
                 } else if (arg0 === 1) {
@@ -228,7 +228,7 @@ export const CustomStatusActivityCard = ReactCompilerGating.isReactCompilerEnabl
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -250,7 +250,7 @@ export const CustomStatusActivityCard = ReactCompilerGating.isReactCompilerEnabl
                     if (null != c1.emoji) {
                       c2 = 1;
                       v3 = 1;
-                      const obj5 = { value: closure_0(15998).getEmojiSource(c1.emoji), done: false };
+                      const obj5 = { value: closure_0(16002).getEmojiSource(c1.emoji), done: false };
                       return obj5;
                     } else {
                       v3 = 3;
@@ -269,7 +269,7 @@ export const CustomStatusActivityCard = ReactCompilerGating.isReactCompilerEnabl
                     const obj8 = { emoji: c1.emoji, emojiSource: closure_128_0 };
                     c2 = 2;
                     v3 = 1;
-                    const obj9 = { value: closure_0(15999).getEmojiDominantColors(obj8), done: false };
+                    const obj9 = { value: closure_0(16003).getEmojiDominantColors(obj8), done: false };
                     return obj9;
                   }
                 } else if (arg0 === 1) {
@@ -323,7 +323,7 @@ export const CustomStatusActivityCard = ReactCompilerGating.isReactCompilerEnabl
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -345,7 +345,7 @@ export const CustomStatusActivityCard = ReactCompilerGating.isReactCompilerEnabl
                     if (null != c1.emoji) {
                       c2 = 1;
                       v3 = 1;
-                      const obj5 = { value: closure_0(15998).getEmojiSource(c1.emoji), done: false };
+                      const obj5 = { value: closure_0(16002).getEmojiSource(c1.emoji), done: false };
                       return obj5;
                     } else {
                       v3 = 3;
@@ -364,7 +364,7 @@ export const CustomStatusActivityCard = ReactCompilerGating.isReactCompilerEnabl
                     const obj8 = { emoji: c1.emoji, emojiSource: closure_128_0 };
                     c2 = 2;
                     v3 = 1;
-                    const obj9 = { value: closure_0(15999).getEmojiDominantColors(obj8), done: false };
+                    const obj9 = { value: closure_0(16003).getEmojiDominantColors(obj8), done: false };
                     return obj9;
                   }
                 } else if (arg0 === 1) {
@@ -418,7 +418,7 @@ export const CustomStatusActivityCard = ReactCompilerGating.isReactCompilerEnabl
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -440,7 +440,7 @@ export const CustomStatusActivityCard = ReactCompilerGating.isReactCompilerEnabl
                     if (null != c1.emoji) {
                       c2 = 1;
                       v3 = 1;
-                      const obj5 = { value: closure_0(15998).getEmojiSource(c1.emoji), done: false };
+                      const obj5 = { value: closure_0(16002).getEmojiSource(c1.emoji), done: false };
                       return obj5;
                     } else {
                       v3 = 3;
@@ -459,7 +459,7 @@ export const CustomStatusActivityCard = ReactCompilerGating.isReactCompilerEnabl
                     const obj8 = { emoji: c1.emoji, emojiSource: closure_128_0 };
                     c2 = 2;
                     v3 = 1;
-                    const obj9 = { value: closure_0(15999).getEmojiDominantColors(obj8), done: false };
+                    const obj9 = { value: closure_0(16003).getEmojiDominantColors(obj8), done: false };
                     return obj9;
                   }
                 } else if (arg0 === 1) {
@@ -513,7 +513,7 @@ export const CustomStatusActivityCard = ReactCompilerGating.isReactCompilerEnabl
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -535,7 +535,7 @@ export const CustomStatusActivityCard = ReactCompilerGating.isReactCompilerEnabl
                     if (null != c1.emoji) {
                       c2 = 1;
                       v3 = 1;
-                      const obj5 = { value: closure_0(15998).getEmojiSource(c1.emoji), done: false };
+                      const obj5 = { value: closure_0(16002).getEmojiSource(c1.emoji), done: false };
                       return obj5;
                     } else {
                       v3 = 3;
@@ -554,7 +554,7 @@ export const CustomStatusActivityCard = ReactCompilerGating.isReactCompilerEnabl
                     const obj8 = { emoji: c1.emoji, emojiSource: closure_128_0 };
                     c2 = 2;
                     v3 = 1;
-                    const obj9 = { value: closure_0(15999).getEmojiDominantColors(obj8), done: false };
+                    const obj9 = { value: closure_0(16003).getEmojiDominantColors(obj8), done: false };
                     return obj9;
                   }
                 } else if (arg0 === 1) {
@@ -606,7 +606,7 @@ export const CustomStatusActivityCard = ReactCompilerGating.isReactCompilerEnabl
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -628,7 +628,7 @@ export const CustomStatusActivityCard = ReactCompilerGating.isReactCompilerEnabl
                     if (null != c1.emoji) {
                       c2 = 1;
                       v3 = 1;
-                      const obj5 = { value: closure_0(15998).getEmojiSource(c1.emoji), done: false };
+                      const obj5 = { value: closure_0(16002).getEmojiSource(c1.emoji), done: false };
                       return obj5;
                     } else {
                       v3 = 3;
@@ -647,7 +647,7 @@ export const CustomStatusActivityCard = ReactCompilerGating.isReactCompilerEnabl
                     const obj8 = { emoji: c1.emoji, emojiSource: closure_128_0 };
                     c2 = 2;
                     v3 = 1;
-                    const obj9 = { value: closure_0(15999).getEmojiDominantColors(obj8), done: false };
+                    const obj9 = { value: closure_0(16003).getEmojiDominantColors(obj8), done: false };
                     return obj9;
                   }
                 } else if (arg0 === 1) {
@@ -744,7 +744,7 @@ export const CustomStatusActivityCard = ReactCompilerGating.isReactCompilerEnabl
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -766,7 +766,7 @@ export const CustomStatusActivityCard = ReactCompilerGating.isReactCompilerEnabl
               if (null != c1.emoji) {
                 c2 = 1;
                 v3 = 1;
-                const obj5 = { value: user(15998).getEmojiSource(c1.emoji), done: false };
+                const obj5 = { value: user(16002).getEmojiSource(c1.emoji), done: false };
                 return obj5;
               } else {
                 v3 = 3;
@@ -785,7 +785,7 @@ export const CustomStatusActivityCard = ReactCompilerGating.isReactCompilerEnabl
               const obj8 = { emoji: c1.emoji, emojiSource: closure_128_0 };
               c2 = 2;
               v3 = 1;
-              const obj9 = { value: user(15999).getEmojiDominantColors(obj8), done: false };
+              const obj9 = { value: user(16003).getEmojiDominantColors(obj8), done: false };
               return obj9;
             }
           } else if (arg0 === 1) {
@@ -885,7 +885,7 @@ export const CustomStatusActivityCard = ReactCompilerGating.isReactCompilerEnabl
     const obj11 = { user, avatarDecoration: user.avatarDecoration, size: tmp6(1188).AvatarSizes.XSMALL, guildId, status, isMobileOnline, isVROnline, style: tmp.statusAvatar, autoStatusCutout: STATUS_CUTOUT_SMALL };
     const items6 = [closure_12(tmp6(1188).Avatar, obj11), , ];
     const obj12 = { noMargin: true, displayNameFont: displayNameStylesFont, children: userTitle };
-    items6[1] = closure_12(tmp6(15111).HappeningNowCardHeader, obj12);
+    items6[1] = closure_12(tmp6(15115).HappeningNowCardHeader, obj12);
     state = activity.state;
     let num2;
     if (state != null) {
@@ -912,7 +912,7 @@ export const CustomStatusActivityCard = ReactCompilerGating.isReactCompilerEnabl
     const items7 = [closure_12(tmp6(1188).Avatar, obj16), ];
     const obj17 = { style: tmp.customStatusContextContainer, children: null };
     const obj18 = { noMargin: true, displayNameFont: displayNameStylesFont, children: userTitle };
-    const items8 = [closure_12(tmp6(15111).HappeningNowCardHeader, obj18), ];
+    const items8 = [closure_12(tmp6(15115).HappeningNowCardHeader, obj18), ];
     const obj19 = { ellipsizeMode: "tail", variant: "text-xs/medium", color: "text-default", lineClamp: num, maxFontSizeMultiplier: 2, children: gameMentionsAsPlainText };
     items8[1] = closure_12(tmp6(4886).Text, obj19);
     obj17.children = items8;
@@ -922,5 +922,5 @@ export const CustomStatusActivityCard = ReactCompilerGating.isReactCompilerEnabl
   }
   obj5.children = tmp18Result;
   obj4.children = closure_12(closure_6, obj5);
-  return closure_12(activity(15111), obj4);
+  return closure_12(activity(15115), obj4);
 });

@@ -1,6 +1,6 @@
-// === Module 15865: Welcome ===
+// === Module 15869: Welcome ===
 
-// Module 15865 (Welcome)
+// Module 15869 (Welcome)
 import _modDef38 from "module_38" /* 38 */;
 import Storage2 from "Storage" /* 510 */;
 import c from "c" /* 576 */;
@@ -15,11 +15,11 @@ import useIsWindowLargeDefault from "useIsWindowLarge" /* 6433 */;
 import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6469 */;
 import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 6984 */;
 import GuildInviteIconDefault from "GuildInviteIcon" /* 12386 */;
-import _modDef13056 from "module_13056" /* 13056 */;
-import _mod13673 from "module_13673" /* 13673 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 15862 */;
+import _modDef13058 from "module_13058" /* 13058 */;
+import _mod13675 from "module_13675" /* 13675 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 15866 */;
 import noop from "module_19" /* 19 */;
-import AgeGateStore from "AgeGateStore" /* 15866 */;
+import AgeGateStore from "AgeGateStore" /* 15870 */;
 import ExperimentStore from "ExperimentStore" /* 4776 */;
 import GuildTemplateStore from "GuildTemplateStore" /* 6966 */;
 import MultiAccountStore from "MultiAccountStore" /* 12056 */;
@@ -88,7 +88,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         tmp24 = cResult[4];
       }
       if (cResult[5] !== tmp24) {
-        const obj4 = { user: tmp24, guildId: "a" };
+        const obj4 = { user: tmp24, guildId: "r" };
         const tmp33 = closure_1_21(native.Avatar, obj4);
         cResult[5] = tmp24;
         cResult[6] = tmp33;
@@ -129,7 +129,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         tmp6 = cResult[11];
       }
       if (cResult[12] !== tmp6) {
-        const obj5 = { user: tmp6, guildId: "a" };
+        const obj5 = { user: tmp6, guildId: "r" };
         const tmp15 = closure_1_21(native.Avatar, obj5);
         cResult[12] = tmp6;
         cResult[13] = tmp15;
@@ -234,7 +234,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       let tmp18 = closure_1_21;
     } else if (null != tmp2) {
       _modDef38(null != inviter, "Null inviter");
-      const obj = { user: null, guildId: "a" };
+      const obj = { user: null, guildId: "r" };
       const tmp12 = new UserRecord(inviter);
       obj.user = tmp12;
       tmp14 = closure_1_21(native.Avatar, obj);
@@ -246,7 +246,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     } else if (null == inviter) {
       return null;
     } else {
-      const obj4 = { user: null, guildId: "a" };
+      const obj4 = { user: null, guildId: "r" };
       const tmp33 = new UserRecord(inviter);
       obj4.user = tmp33;
       const intl3 = util.intl;
@@ -283,7 +283,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { source: _modDef13056 };
+      const obj2 = { source: _modDef13058 };
       const tmp11 = guild(hasOwnProperty, obj2);
       cResult[3] = tmp11;
       let tmp7 = tmp11;
@@ -349,7 +349,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const obj = { style: null, children: null };
   const items = [tmp.container, style];
   obj.style = items;
-  const items1 = [guild(hasOwnProperty, { source: _modDef13056 }), ];
+  const items1 = [guild(hasOwnProperty, { source: _modDef13058 }), ];
   const obj3 = { style: tmp.text, children: null };
   const obj4 = { variant: "text-sm/medium", color: "text-subtle", children: null };
   const intl = util.intl;
@@ -368,7 +368,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const tmp5 = closure_23(tmp4);
   const typeConsolidationTextTransform = useTypeConsolidationTextTransform.useTypeConsolidationTextTransform("Welcome");
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod13673;
+    const tmpResult = _mod13675;
     cResult[0] = tmpResult;
     let first = tmpResult;
   } else {
@@ -553,7 +553,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const items = [tmp3.centerpieceContainer];
   obj2.style = items;
   const obj3 = { alwaysBounceVertical: false, contentContainerStyle: tmp3.scrollViewContainer, children: null };
-  const items1 = [guild(hasOwnProperty, { style: tmp3.logo, source: _mod13673 }), , ];
+  const items1 = [guild(hasOwnProperty, { style: tmp3.logo, source: _mod13675 }), , ];
   const obj5 = { style: null, lineClamp: null, variant: "display-md", color: "text-overlay-light", maxFontSizeMultiplier: 1, children: null };
   const items2 = [tmp3.header, typeConsolidationTextTransform];
   obj5.style = items2;

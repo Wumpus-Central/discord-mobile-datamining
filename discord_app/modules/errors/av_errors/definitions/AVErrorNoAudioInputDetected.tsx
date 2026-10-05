@@ -1,8 +1,8 @@
-// === Module 18006: AVErrorNoAudioInputDetected ===
+// === Module 18028: AVErrorNoAudioInputDetected ===
 
-// Module 18006 (AVErrorNoAudioInputDetected)
+// Module 18028 (AVErrorNoAudioInputDetected)
 import AVError from "AVError" /* 9095 */;
-import AVErrorContext from "AVErrorContext" /* 18007 */;
+import AVErrorContext from "AVErrorContext" /* 18029 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;

@@ -57,7 +57,7 @@ let closure_18 = async function _openInviteModal() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -71,7 +71,7 @@ let closure_18 = async function _openInviteModal() {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            const obj5 = { type: "DISPLAYED_INVITE_SHOW", code, username: "Array", deeplinkAttemptId: "application", invite_instance_id };
+            const obj5 = { type: "DISPLAYED_INVITE_SHOW", code, username: "Array", deeplinkAttemptId: "applicationId", invite_instance_id };
             c3 = 1;
             c2 = 1;
             const obj6 = { value: DispatcherDefault.dispatch(obj5), done: false };
@@ -86,7 +86,7 @@ let closure_18 = async function _openInviteModal() {
           return obj;
         } else {
           c2 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp9) {
         c2 = tmp;
@@ -111,7 +111,7 @@ let closure_19 = async function _handleInviteCodedLink(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -247,7 +247,7 @@ let closure_19 = async function _handleInviteCodedLink(arg0, arg1) {
           return obj;
         }
         c7 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       } catch (tmp66) {
         c7 = tmp;
         throw tmp66;
@@ -304,7 +304,7 @@ export default function getOnClick(url) {
         if (_undefined.type !== CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT) {
           let result = storefrontMessageEmbedCodedLink.parseStorefrontSkuCodedLink(code);
           if (result == null) {
-            result = { applicationId: "Symbol", skuId: "current" };
+            result = { applicationId: "Array", skuId: "Set" };
           }
           const tmp3Result = storefrontMessageEmbedCodedLink;
         }
@@ -317,7 +317,7 @@ export default function getOnClick(url) {
         openURLDefault(closure_0);
         return true;
       }
-      result = { applicationId: code, skuId: "a" };
+      result = { applicationId: code, skuId: "r" };
     };
   }
   if (null != findCodedLinkResult) {
@@ -352,7 +352,7 @@ export default function getOnClick(url) {
               yield "IconComponent";
               closure_1 = tmp2;
               customId = applicationId.customId;
-              return "Reflect";
+              return "Set";
             });
             const tmp7Result = tmp7(paths[31]);
             customActivityLinkParams.then(function() {
@@ -406,7 +406,7 @@ export default function getOnClick(url) {
                     obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "IconComponent", done: "IconComponent" };
+                    return { value: "IconComponent", done: null };
                   }
                 } else {
                   try {
@@ -443,7 +443,7 @@ export default function getOnClick(url) {
                       const obj5 = { targetApplicationId, channelId: closure_129_0, analyticsLocations: uRL, customId, referrerId };
                       analyticsLocations(paths[34])(obj5);
                       c4 = 3;
-                      return { value: "IconComponent", done: "IconComponent" };
+                      return { value: "IconComponent", done: null };
                     }
                   } catch (tmp6) {
                     c4 = tmp;

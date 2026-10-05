@@ -150,7 +150,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
         if (cResult[6] !== displayNameStylesFont) {
           let tmp18;
           if (null != displayNameStylesFont) {
-            const obj4 = { fontFamily: displayNameStylesFont, lineHeight: "a" };
+            const obj4 = { fontFamily: displayNameStylesFont, lineHeight: "r" };
             tmp18 = obj4;
           }
           cResult[6] = displayNameStylesFont;
@@ -710,7 +710,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   const displayNameStylesFont = userName(9389).useDisplayNameStylesFont({ displayNameStyles: result, ignoreDisabledStylesSetting });
   let tmp12;
   if (null != displayNameStylesFont) {
-    const obj5 = { fontFamily: displayNameStylesFont, lineHeight: "a" };
+    const obj5 = { fontFamily: displayNameStylesFont, lineHeight: "r" };
     tmp12 = obj5;
   }
   let num = merged.lineClamp;

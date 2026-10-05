@@ -1,6 +1,6 @@
-// === Module 17375: shared/renderChannelBadge ===
+// === Module 17399: shared/renderChannelBadge ===
 
-// Module 17375 (shared/renderChannelBadge)
+// Module 17399 (shared/renderChannelBadge)
 import util from "util" /* 1126 */;
 import native from "native" /* 1188 */;
 import NumberUtils from "NumberUtils" /* 1888 */;

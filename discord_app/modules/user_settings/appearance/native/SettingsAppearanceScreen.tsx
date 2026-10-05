@@ -1,6 +1,6 @@
-// === Module 15078: SettingsAppearanceScreen ===
+// === Module 15082: SettingsAppearanceScreen ===
 
-// Module 15078 (SettingsAppearanceScreen)
+// Module 15082 (SettingsAppearanceScreen)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
@@ -10,7 +10,7 @@ import _modDef3367 from "module_3367" /* 3367 */;
 import useMountEffectDefault from "useMountEffect" /* 5590 */;
 import HeaderShared from "HeaderShared" /* 7498 */;
 import SettingBuilders from "SettingBuilders" /* 11129 */;
-import SettingLayoutDefault from "SettingLayout" /* 14495 */;
+import SettingLayoutDefault from "SettingLayout" /* 14499 */;
 import noop from "module_19" /* 19 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4697 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1194 */;
@@ -71,7 +71,7 @@ function getAppearanceSettings() {
   items1[8] = obj11;
   return items1;
 }
-const FontScaleStore = fn(15079);
+const FontScaleStore = fn(15083);
 ({ DEFAULT_FONT_SCALE_STORE_STATE: closure_7, useFontScaleStore: closure_8 } = FontScaleStore);
 const MobileUserSettings = fn(7634).MobileUserSettings;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;

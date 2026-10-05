@@ -1,6 +1,6 @@
-// === Module 15886: usePasswordScore ===
+// === Module 15890: usePasswordScore ===
 
-// Module 15886 (usePasswordScore)
+// Module 15890 (usePasswordScore)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -34,7 +34,7 @@ export const usePasswordScore = ReactCompilerGating.isReactCompilerEnabled() ? (
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -173,7 +173,7 @@ export const usePasswordScore = ReactCompilerGating.isReactCompilerEnabled() ? (
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

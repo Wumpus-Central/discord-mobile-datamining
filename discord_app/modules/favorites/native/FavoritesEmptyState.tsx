@@ -1,6 +1,6 @@
-// === Module 16897: FavoritesEmptyState ===
+// === Module 16916: FavoritesEmptyState ===
 
-// Module 16897 (FavoritesEmptyState)
+// Module 16916 (FavoritesEmptyState)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef3367 from "module_3367" /* 3367 */;

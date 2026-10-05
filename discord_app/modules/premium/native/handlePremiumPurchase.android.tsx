@@ -32,7 +32,7 @@ let closure_15 = async function _validatePurchase(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -57,7 +57,7 @@ let closure_15 = async function _validatePurchase(arg0) {
           ({ productId: closure_129_0, premiumSubscription: closure_129_1, offerId: closure_129_2, currency: closure_129_3, price: closure_129_4, isGift: closure_129_5 } = closure_0);
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -102,7 +102,7 @@ let closure_15 = async function _validatePurchase(arg0) {
       } else {
         c4 = 0;
         c6 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp25) {
       closure_3 = tmp25;
@@ -403,7 +403,7 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
     }
     closure_130_8 = flag2;
     ({ applicationId: closure_130_9, giftInfoOptions: closure_130_10, onPurchaseComplete: closure_130_11, onPurchaseError: closure_130_12 } = premiumSubscription);
-    return "Reflect";
+    return "Set";
   });
   const items1 = [null != stateFromStores, paymentGatewayPlanId, prop, id, premiumTrialOffer, premiumDiscountOffer, stateFromStores, isEligibleForBogoOffer];
   return paymentGatewayPlanId.useCallback(function() {

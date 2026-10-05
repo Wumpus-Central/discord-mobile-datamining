@@ -1,6 +1,6 @@
-// === Module 15675: UserSettingsDesignSystemModal ===
+// === Module 15679: UserSettingsDesignSystemModal ===
 
-// Module 15675 (UserSettingsDesignSystemModal)
+// Module 15679 (UserSettingsDesignSystemModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 4886 */;
@@ -12,8 +12,8 @@ import ModalContent from "ModalContent" /* 8096 */;
 import ModalActionButton from "ModalActionButton" /* 10729 */;
 import Modal from "Modal" /* 10976 */;
 import ModalFooter from "ModalFooter" /* 11536 */;
-import StepModal from "StepModal" /* 14270 */;
-import ModalDisclaimer from "ModalDisclaimer" /* 14272 */;
+import StepModal from "StepModal" /* 14272 */;
+import ModalDisclaimer from "ModalDisclaimer" /* 14274 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

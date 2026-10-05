@@ -54,7 +54,7 @@ function updateEmbeddedActivities(content_classification) {
     if (found1 != null) {
       const sessionId = found1.sessionId;
     }
-    mapped.some((item) => application_id(13800).isActivityParticipantCurrentUserCurrentSession(item));
+    mapped.some((item) => application_id(13802).isActivityParticipantCurrentUserCurrentSession(item));
     const value9 = map.get(application_id);
     let tmp12 = embeddedActivityLocationChannelId;
     if (embeddedActivityLocationChannelId == null) {

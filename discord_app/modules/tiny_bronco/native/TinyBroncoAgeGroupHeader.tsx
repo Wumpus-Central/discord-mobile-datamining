@@ -1,6 +1,6 @@
-// === Module 14532: TinyBroncoAgeGroupHeader ===
+// === Module 14536: TinyBroncoAgeGroupHeader ===
 
-// Module 14532 (TinyBroncoAgeGroupHeader)
+// Module 14536 (TinyBroncoAgeGroupHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -9,7 +9,7 @@ import Text_Text from "Text/Text" /* 4886 */;
 import components_Button_Button from "components/Button/Button" /* 5594 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8084 */;
 import useAgeGroupPresentation from "useAgeGroupPresentation" /* 9428 */;
-import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 14533 */;
+import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 14537 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

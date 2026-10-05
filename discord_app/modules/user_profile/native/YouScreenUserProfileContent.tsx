@@ -1,6 +1,6 @@
-// === Module 16952: YouScreenUserProfileContent ===
+// === Module 16971: YouScreenUserProfileContent ===
 
-// Module 16952 (YouScreenUserProfileContent)
+// Module 16971 (YouScreenUserProfileContent)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
@@ -22,18 +22,18 @@ import useBadgeDirectoryNuxCoachmarkVariant from "useBadgeDirectoryNuxCoachmarkV
 import useBadgeDirectoryNuxEntryPoint from "useBadgeDirectoryNuxEntryPoint" /* 12888 */;
 import BadgeDirectoryNuxCoachmarkDefault from "BadgeDirectoryNuxCoachmark" /* 12889 */;
 import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 12900 */;
-import VibegrationsCustomWidgetAddOptionDefault from "VibegrationsCustomWidgetAddOption" /* 12901 */;
-import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 12913 */;
-import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 12928 */;
-import UserProfileConnections from "UserProfileConnections" /* 12931 */;
-import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 12936 */;
-import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 12941 */;
-import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 15571 */;
-import showYouAccountActionSheet from "showYouAccountActionSheet" /* 16306 */;
-import you_tracking_Tracking from "you/tracking/Tracking" /* 16938 */;
-import useOwnsAnyBadgeDefault from "useOwnsAnyBadge" /* 16957 */;
-import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 16959 */;
-import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard" /* 16961 */;
+import ConjureCustomWidgetAddOptionDefault from "ConjureCustomWidgetAddOption" /* 12901 */;
+import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 12915 */;
+import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 12930 */;
+import UserProfileConnections from "UserProfileConnections" /* 12933 */;
+import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 12938 */;
+import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 12943 */;
+import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 15575 */;
+import showYouAccountActionSheet from "showYouAccountActionSheet" /* 16310 */;
+import you_tracking_Tracking from "you/tracking/Tracking" /* 16957 */;
+import useOwnsAnyBadgeDefault from "useOwnsAnyBadge" /* 16976 */;
+import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 16978 */;
+import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard" /* 16980 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 5438 */;
@@ -48,7 +48,7 @@ const useIsContentShown = fn(2042).useIsContentShown;
 let UserProfileSections = fn(7854).UserProfileSections;
 let UserProfileThemeTypes = fn(6707).UserProfileThemeTypes;
 const ContentDismissActionType = fn(2048).ContentDismissActionType;
-const constants = fn(14410).UserProfileEditAutoFocusElement;
+const constants = fn(14414).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -142,7 +142,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   const tmp5 = closure_18(containerBackground, containerBorderColor);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const tmp9 = state(UserProfileWidgetsBoardEditNoticeDefault, {});
-    const tmp10 = state(VibegrationsCustomWidgetAddOptionDefault, {});
+    const tmp10 = state(ConjureCustomWidgetAddOptionDefault, {});
     cResult[0] = tmp9;
     cResult[1] = tmp10;
     tmp6 = tmp9;
@@ -181,7 +181,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   ({ userId, activeSection, containerBackground, containerBorderColor } = arg0);
   const obj = { style: UserProfileSharedStylesDefault().profileContent, children: null };
   const tmp = UserProfileSharedStylesDefault();
-  const items = [state(UserProfileWidgetsBoardEditNoticeDefault, {}), state(VibegrationsCustomWidgetAddOptionDefault, {}), ];
+  const items = [state(UserProfileWidgetsBoardEditNoticeDefault, {}), state(ConjureCustomWidgetAddOptionDefault, {}), ];
   const tmp2 = closure_18(containerBackground, containerBorderColor);
   items[2] = state(UserProfileWidgetsBoardDefault, { userId, isVisible: activeSection === UserProfileSections.WIDGETS, cardStyle: closure_18(containerBackground, containerBorderColor) });
   obj.children = items;
@@ -849,7 +849,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
         const tmpResult19 = tmp(tmp2[47]);
         const displayableBoardWidgets = tmp(tmp2[52]).useDisplayableBoardWidgets(user.id);
         const tmpResult20 = tmp(tmp2[52]);
-        const tmp31 = displayableBoardWidgets.length > 0 || tmp(tmp2[53]).useCanConjureVibegrationsCustomWidget("YouScreenUserProfileContent");
+        const tmp31 = displayableBoardWidgets.length > 0 || tmp(tmp2[53]).useCanConjureCustomWidget("YouScreenUserProfileContent");
         const tmpResult21 = tmp(tmp2[53]);
         const isRecentActivityMobileEnabled = tmp(tmp2[54]).useIsRecentActivityMobileEnabled("YouScreenUserProfileContent");
         const tmpResult22 = tmp(tmp2[54]);
@@ -1021,7 +1021,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   const obj10 = user(navigateToPremium[47]);
   const displayableBoardWidgets = user(navigateToPremium[52]).useDisplayableBoardWidgets(user.id);
   const obj11 = user(navigateToPremium[52]);
-  const tmp20 = displayableBoardWidgets.length > 0 || user(navigateToPremium[53]).useCanConjureVibegrationsCustomWidget("YouScreenUserProfileContent");
+  const tmp20 = displayableBoardWidgets.length > 0 || user(navigateToPremium[53]).useCanConjureCustomWidget("YouScreenUserProfileContent");
   closure_17 = tmp20;
   const obj12 = user(navigateToPremium[53]);
   const isRecentActivityMobileEnabled = user(navigateToPremium[54]).useIsRecentActivityMobileEnabled("YouScreenUserProfileContent");

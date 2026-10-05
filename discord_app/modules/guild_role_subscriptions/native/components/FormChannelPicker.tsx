@@ -1,6 +1,6 @@
-// === Module 17927: FormChannelPicker ===
+// === Module 17949: FormChannelPicker ===
 
-// Module 17927 (FormChannelPicker)
+// Module 17949 (FormChannelPicker)
 import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import noop from "module_19" /* 19 */;
@@ -44,7 +44,7 @@ export default function FormChannelPicker(channelId) {
       }
       obj2.selectedChannelId = id;
       obj2.onChannelSelected = onChange;
-      obj.openLazy(asyncRequireImpl(17928, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
+      obj.openLazy(asyncRequireImpl(17950, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
     },
     children: null
   };

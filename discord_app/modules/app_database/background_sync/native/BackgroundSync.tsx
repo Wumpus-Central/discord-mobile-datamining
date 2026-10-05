@@ -1,6 +1,6 @@
-// === Module 17441: background_sync/BackgroundSync ===
+// === Module 17465: background_sync/BackgroundSync ===
 
-// Module 17441 (background_sync/BackgroundSync)
+// Module 17465 (background_sync/BackgroundSync)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import Storage4 from "Storage" /* 510 */;
@@ -35,7 +35,7 @@ let closure_17 = async function _backgroundSync(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -76,7 +76,7 @@ let closure_17 = async function _backgroundSync(arg0) {
             closure_130_7 = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -272,7 +272,7 @@ let closure_20 = async function _backgroundSyncPrivateChannels(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -394,7 +394,7 @@ let closure_22 = async function _backgroundSyncGuildData(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -610,7 +610,7 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     while (true) {
@@ -904,7 +904,7 @@ let closure_26 = async function _processChannelChanges(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     while (true) {
@@ -963,7 +963,7 @@ let closure_26 = async function _processChannelChanges(arg0) {
             }
           }
           c12 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else if (1 === tmp4) {
         if (arg0 === 1) {

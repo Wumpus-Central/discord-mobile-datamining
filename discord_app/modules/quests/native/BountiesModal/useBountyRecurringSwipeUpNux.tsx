@@ -1,6 +1,6 @@
-// === Module 14815: useBountyRecurringSwipeUpNux ===
+// === Module 14819: useBountyRecurringSwipeUpNux ===
 
-// Module 14815 (useBountyRecurringSwipeUpNux)
+// Module 14819 (useBountyRecurringSwipeUpNux)
 import c from "c" /* 576 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
 import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 6891 */;

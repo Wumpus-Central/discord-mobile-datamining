@@ -14,7 +14,7 @@ import _mod6019 from "module_6019" /* 6019 */;
 import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 7500 */;
 import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 7505 */;
 import ChannelActionsDefault from "ChannelActions" /* 7510 */;
-import ChannelHeaderDefault from "ChannelHeader" /* 13102 */;
+import ChannelHeaderDefault from "ChannelHeader" /* 13104 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

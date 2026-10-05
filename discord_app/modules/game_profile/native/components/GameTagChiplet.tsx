@@ -1,6 +1,6 @@
-// === Module 17275: GameTagChiplet ===
+// === Module 17299: GameTagChiplet ===
 
-// Module 17275 (GameTagChiplet)
+// Module 17299 (GameTagChiplet)
 import c from "c" /* 576 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8319 */;
 import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8320 */;

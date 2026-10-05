@@ -1,6 +1,6 @@
-// === Module 12954: UserProfileContactButtons ===
+// === Module 12956: UserProfileContactButtons ===
 
-// Module 12954 (UserProfileContactButtons)
+// Module 12956 (UserProfileContactButtons)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
@@ -10,7 +10,7 @@ import components_Button_Button from "components/Button/Button" /* 5594 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9434 */;
 import navigateToLastChannelDefault from "navigateToLastChannel" /* 10996 */;
 import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12286 */;
-import ConfirmStartCall from "ConfirmStartCall" /* 12958 */;
+import ConfirmStartCall from "ConfirmStartCall" /* 12960 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4519 */;
@@ -155,7 +155,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
         return null;
       } else {
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp(12955).UserClockIcon;
+          let UserPlusIcon = tmp(12957).UserClockIcon;
         } else {
           UserPlusIcon = tmp(4833).UserPlusIcon;
         }
@@ -322,7 +322,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
         return null;
       } else {
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(12955).UserClockIcon;
+          let UserPlusIcon = tmp3(12957).UserClockIcon;
         } else {
           UserPlusIcon = tmp3(4833).UserPlusIcon;
         }
@@ -440,7 +440,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
         }
       }
     }
-    const tmp14 = trackUserProfileAction(12957)(user.id, false, O);
+    const tmp14 = trackUserProfileAction(12959)(user.id, false, O);
     const handlePress = tmp14.handlePress;
     ({ text, inCall, accessibilityHint } = tmp14);
     if (hasCustomProfileTheme) {

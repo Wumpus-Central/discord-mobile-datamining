@@ -22,7 +22,7 @@ let closure_11 = async function _requestPushNotificationPermission(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -91,7 +91,7 @@ let closure_12 = async function _enableProvisionalPushNotification() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -140,7 +140,7 @@ let closure_12 = async function _enableProvisionalPushNotification() {
           });
         }
         c3 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp13) {
       c3 = tmp;
@@ -266,7 +266,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -297,7 +297,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 tmp4(true);
               }
               c2 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp12) {
             c2 = tmp;
@@ -340,7 +340,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -371,7 +371,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               tmp4(true);
             }
             c2 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp12) {
           c2 = tmp;

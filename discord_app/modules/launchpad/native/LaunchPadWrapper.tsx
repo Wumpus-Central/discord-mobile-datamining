@@ -1,12 +1,12 @@
-// === Module 17361: LaunchPadWrapper ===
+// === Module 17385: LaunchPadWrapper ===
 
-// Module 17361 (LaunchPadWrapper)
+// Module 17385 (LaunchPadWrapper)
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HapticUtils from "HapticUtils" /* 4855 */;
 import RouteManagerDefault from "RouteManager" /* 12557 */;
-import LaunchPadPullTabCache from "LaunchPadPullTabCache" /* 17359 */;
+import LaunchPadPullTabCache from "LaunchPadPullTabCache" /* 17383 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

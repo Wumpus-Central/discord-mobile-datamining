@@ -1,6 +1,6 @@
-// === Module 14645: StaffOnlyFindYourFriendsDeletionSetting ===
+// === Module 14649: StaffOnlyFindYourFriendsDeletionSetting ===
 
-// Module 14645 (StaffOnlyFindYourFriendsDeletionSetting)
+// Module 14649 (StaffOnlyFindYourFriendsDeletionSetting)
 import c from "c" /* 576 */;
 import _mod4492 from "module_4492" /* 4492 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -21,7 +21,7 @@ let closure_9 = async function _onFindYourFriendsDeletionPress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -154,7 +154,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(14646).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(14650).useStaffOrDeveloperSettingPredicate,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const cResult = c.c(2);
     const tmp2 = closure_8();

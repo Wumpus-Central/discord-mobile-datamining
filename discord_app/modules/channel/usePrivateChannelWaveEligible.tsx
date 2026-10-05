@@ -1,6 +1,6 @@
-// === Module 15961: usePrivateChannelWaveEligible ===
+// === Module 15965: usePrivateChannelWaveEligible ===
 
-// Module 15961 (usePrivateChannelWaveEligible)
+// Module 15965 (usePrivateChannelWaveEligible)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef4461 from "module_4461" /* 4461 */;
 import MessageStore from "MessageStore" /* 5110 */;

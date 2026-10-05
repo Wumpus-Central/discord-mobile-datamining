@@ -1,6 +1,6 @@
-// === Module 17755: GuildSettingsRoleCreateModal ===
+// === Module 17779: GuildSettingsRoleCreateModal ===
 
-// Module 17755 (GuildSettingsRoleCreateModal)
+// Module 17779 (GuildSettingsRoleCreateModal)
 import _modDef38 from "module_38" /* 38 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
@@ -17,7 +17,7 @@ import GuildActionCreatorsDefault from "GuildActionCreators" /* 5705 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 5779 */;
 import NavigatorHeader from "NavigatorHeader" /* 6010 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9247 */;
-import GuildSettingsRoleCreateModalActionCreatorsDefault from "GuildSettingsRoleCreateModalActionCreators" /* 17754 */;
+import GuildSettingsRoleCreateModalActionCreatorsDefault from "GuildSettingsRoleCreateModalActionCreators" /* 17778 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -91,13 +91,13 @@ function RoleCreateScene() {
             if (null != guild) {
               closure_0(4567).roleCreatedToast();
               const obj5 = closure_0(4567);
-              closure_0(17753).setRoleJustCreated(true);
+              closure_0(17777).setRoleJustCreated(true);
               let STEP_MEMBERS = constants4.STEP_PERMISSIONS;
               const guild2 = closure_2_12.getProps().guild;
               closure_1(38)(null != guild2, "shouldSkipPermissions: Guild cannot be null");
               currentUser = currentUser.getCurrentUser();
               const tmp23 = closure_2_9(guild2, currentUser);
-              const obj6 = closure_0(17753);
+              const obj6 = closure_0(17777);
               const obj2 = { permission: constants3.ADMINISTRATOR, user: currentUser, context: guild2 };
               let tmp4 = !tmp23;
               if (!tmp23) {
@@ -125,7 +125,7 @@ function RoleCreateScene() {
   let obj2 = { title: null, subtitle: null, children: null };
   const callback2 = onSelect.useCallback(() => {
     closure_2_8.dismiss();
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16227, dependencyMap.paths), "RoleColorPicker", { color, onSelect });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16231, dependencyMap.paths), "RoleColorPicker", { color, onSelect });
   }, items2);
   const intl2 = navigation(color[18]).intl;
   obj2.title = intl2.string(navigation(color[18]).t["8pxAPp"]);
@@ -183,7 +183,7 @@ function RoleCreateScene() {
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, Keyboard: closure_8 } = get_ActivityIndicator);
 const isGuildOwner = fn(2070).isGuildOwner;
-const GuildSettingsRoleConstants = fn(17756);
+const GuildSettingsRoleConstants = fn(17780);
 ({ PermissionTemplates: map1, DEFAULT_TEMPLATE_TYPE: closure_14, MAX_BULK_ROLE_MEMBERS_ADD: closure_15 } = GuildSettingsRoleConstants);
 const Constants = fn(1085);
 ({ MAX_ROLE_LENGTH: closure_16, DEFAULT_ROLE_COLOR: closure_17, AnalyticEvents: closure_18, AnalyticsSections: closure_19, Permissions: closure_20 } = Constants);
@@ -488,7 +488,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           cResult[20] = tmp30;
         }
         const obj8 = { onSelect: tmp11, location: constants2.GUILD_ROLE_CREATION_MODAL, guildId: guild.id };
-        const tmp22 = closure_21(role(17760), obj8);
+        const tmp22 = closure_21(role(17784), obj8);
         cResult[12] = guild.id;
         cResult[13] = tmp11;
         cResult[14] = tmp22;
@@ -516,7 +516,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         const merged = Object.assign(navigation(5070).collectGuildAnalyticsMetadata(id.id));
         obj.track(constants.USER_FLOW_TRANSITION, obj2);
         const obj3 = navigation(5070);
-        role(17754).close();
+        role(17778).close();
       }),
       headerTitle() {
         return closure_1_21(closure_1_27, { step: constants.STEP_PERMISSIONS });

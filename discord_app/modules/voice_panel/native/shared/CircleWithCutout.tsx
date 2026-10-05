@@ -1,6 +1,6 @@
-// === Module 17312: CircleWithCutout ===
+// === Module 17336: CircleWithCutout ===
 
-// Module 17312 (CircleWithCutout)
+// Module 17336 (CircleWithCutout)
 import c from "c" /* 576 */;
 import inlineStyles from "inlineStyles" /* 8136 */;
 import CircleWithCutoutUtils from "CircleWithCutoutUtils" /* 9078 */;

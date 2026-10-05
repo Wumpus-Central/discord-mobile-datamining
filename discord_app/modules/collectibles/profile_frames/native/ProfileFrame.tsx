@@ -528,7 +528,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((frame) => {
                                             class O {
                                               constructor(arg0) {
                                                 obj = { skuId: frame.skuId, layer: frame, overflowTop, overflowBottom, overflowHorizontal, containerWidth, containerHeight, fade: !closure_6 };
-                                                return jsx(f45485, obj, frame.id);
+                                                return jsx(f45508, obj, frame.id);
                                               }
                                             }
                                             const obj4 = { style: tmp20, children: null };
@@ -572,7 +572,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((frame) => {
                                         class O {
                                           constructor(arg0) {
                                             obj = { skuId: frame.skuId, layer: frame, overflowTop, overflowBottom, overflowHorizontal, containerWidth, containerHeight, fade: !closure_6 };
-                                            return jsx(f45485, obj, frame.id);
+                                            return jsx(f45508, obj, frame.id);
                                           }
                                         }
                                         cResult[27] = containerWidth;
@@ -606,7 +606,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((frame) => {
                             class O {
                               constructor(arg0) {
                                 obj = { skuId: frame.skuId, layer: frame, overflowTop, overflowBottom, overflowHorizontal, containerWidth, containerHeight, fade: !closure_6 };
-                                return jsx(f45485, obj, frame.id);
+                                return jsx(f45508, obj, frame.id);
                               }
                             }
                             cResult[35] = containerHeight;
@@ -692,7 +692,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((frame) => {
             class O {
               constructor(arg0) {
                 obj = { skuId: frame.skuId, layer: frame, overflowTop, overflowBottom, overflowHorizontal, containerWidth, containerHeight, fade: !closure_6 };
-                return jsx(f45485, obj, frame.id);
+                return jsx(f45508, obj, frame.id);
               }
             }
             cResult[5] = layers;

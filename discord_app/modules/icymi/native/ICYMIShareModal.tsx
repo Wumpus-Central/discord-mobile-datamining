@@ -1,6 +1,6 @@
-// === Module 16442: ICYMIShareModal ===
+// === Module 16446: ICYMIShareModal ===
 
-// Module 16442 (ICYMIShareModal)
+// Module 16446 (ICYMIShareModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -331,7 +331,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((title) => {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -375,7 +375,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((title) => {
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -418,7 +418,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((title) => {
                     return obj;
                   }
                   c1 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 } catch (tmp17) {
                   c1 = tmp;
                   throw tmp17;
@@ -438,7 +438,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((title) => {
           })());
           linkText(forwardToChannel[21]).pop();
           v3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp7) {
         v3 = tmp;
@@ -477,7 +477,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((title) => {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -520,7 +520,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((title) => {
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -563,7 +563,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((title) => {
                     return obj;
                   }
                   c1 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 } catch (tmp17) {
                   c1 = tmp;
                   throw tmp17;
@@ -583,7 +583,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((title) => {
           })());
           tmp3(tmp2[21]).pop();
           c4 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp7) {
         c4 = tmp;
@@ -687,7 +687,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled() ? ((c
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -709,7 +709,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled() ? ((c
               const obj5 = { channel: entry, content: "", entry, whenReady: false, doNotNotifyOnError: true, location: constants2.ICYMI };
               c5 = 2;
               c6 = 1;
-              const obj6 = { value: entry(16443).sendMessageWithEmbed(obj5), done: false };
+              const obj6 = { value: entry(16447).sendMessageWithEmbed(obj5), done: false };
               return obj6;
             }
           } else if (1 === tmp7) {
@@ -788,7 +788,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled() ? ((c
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -809,7 +809,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled() ? ((c
             const obj6 = { channel: entry, content: "", entry, whenReady: false, doNotNotifyOnError: true, location: constants2.ICYMI };
             c5 = 2;
             c6 = 1;
-            const obj7 = { value: entry(16443).sendMessageWithEmbed(obj6), done: false };
+            const obj7 = { value: entry(16447).sendMessageWithEmbed(obj6), done: false };
             return obj7;
           }
         } else if (1 === tmp7) {

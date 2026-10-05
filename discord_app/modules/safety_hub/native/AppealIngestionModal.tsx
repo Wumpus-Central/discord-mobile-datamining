@@ -24,7 +24,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   const obj2 = {
     headerLeft: require("NavigatorHeader").getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close),
     headerTitle() {
-      return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "application" });
+      return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "applicationId" });
     },
     render() {
       return __initData(AppealIngestionSpeedBumpDefault, { isDsaEligible, isSpam, isCoppa, isDeveloperClassification });
@@ -37,7 +37,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   const obj3 = require("NavigatorHeader");
   obj4.headerLeft = require("NavigatorHeader").getHeaderBackButton();
   obj4.headerTitle = function headerTitle() {
-    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "application" });
+    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "applicationId" });
   };
   obj4.render = function render() {
     return __initData(AppealIngestionCollectSignalDefault, { isDsaEligible });
@@ -49,7 +49,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   const obj5 = require("NavigatorHeader");
   obj6.headerLeft = require("NavigatorHeader").getHeaderBackButton();
   obj6.headerTitle = function headerTitle() {
-    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "application" });
+    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "applicationId" });
   };
   obj6.render = function render() {
     return __initData(AppealIngestionConfirmSubmissionDefault, { isDsaEligible });
@@ -61,7 +61,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   const obj7 = require("NavigatorHeader");
   obj8.headerLeft = require("NavigatorHeader").getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close);
   obj8.headerTitle = function headerTitle() {
-    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "application" });
+    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "applicationId" });
   };
   obj8.render = function render() {
     return closure_1_12(isSpam(isDeveloperClassification[28]), {});
@@ -73,7 +73,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   const obj9 = require("NavigatorHeader");
   obj10.headerLeft = require("NavigatorHeader").getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close);
   obj10.headerTitle = function headerTitle() {
-    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "application" });
+    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "applicationId" });
   };
   obj10.render = function render() {
     return closure_1_12(isSpam(isDeveloperClassification[29]), {});
@@ -85,7 +85,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   const obj11 = require("NavigatorHeader");
   obj12.headerLeft = require("NavigatorHeader").getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close);
   obj12.headerTitle = function headerTitle() {
-    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "application" });
+    return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, { variant: "text-md/normal", children: "applicationId" });
   };
   obj12.render = function render() {
     return closure_1_12(isSpam(isDeveloperClassification[30]), {});
@@ -358,7 +358,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -550,7 +550,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

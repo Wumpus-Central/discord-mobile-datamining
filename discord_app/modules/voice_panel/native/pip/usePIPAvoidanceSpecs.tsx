@@ -1,14 +1,14 @@
-// === Module 17342: usePIPAvoidanceSpecs ===
+// === Module 17366: usePIPAvoidanceSpecs ===
 
-// Module 17342 (usePIPAvoidanceSpecs)
+// Module 17366 (usePIPAvoidanceSpecs)
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9074 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 9774 */;
 import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11900 */;
 import VoicePanelConstants from "VoicePanelConstants" /* 11902 */;
 import MorphablePanelConstants from "MorphablePanelConstants" /* 11903 */;
 import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11906 */;
-import getPIPBottomOffsetForPIPModeDefault from "getPIPBottomOffsetForPIPMode" /* 17067 */;
-import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 17141 */;
+import getPIPBottomOffsetForPIPModeDefault from "getPIPBottomOffsetForPIPMode" /* 17091 */;
+import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 17165 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 17779: GuildSettingsRoleEditPermissions ===
+// === Module 17803: GuildSettingsRoleEditPermissions ===
 
-// Module 17779 (GuildSettingsRoleEditPermissions)
+// Module 17803 (GuildSettingsRoleEditPermissions)
 import nativeDefault from "native" /* 587 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -78,7 +78,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
       onClick() {
           React5.dismiss();
           const obj = ActionSheetActionCreatorsDefault;
-          obj.openLazy(asyncRequireImpl(17780, dependencyMap.paths), "role-permission-templates-" + guild.id + "-" + role.id, { permissionsEdited, onPermissionsChanged, guildId: guild.id });
+          obj.openLazy(asyncRequireImpl(17804, dependencyMap.paths), "role-permission-templates-" + guild.id + "-" + role.id, { permissionsEdited, onPermissionsChanged, guildId: guild.id });
         },
       accessibilityRole: "button"
     };
@@ -88,7 +88,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
   }
   canResult = PermissionUtilsAll.can({ permission: constants2.ADMINISTRATOR, user: currentUser, context: guild });
   const tmp18Result3 = closure_14(closure_6, { children: tmp18Result });
-  const guildPermissionSpec = role(16985).generateGuildPermissionSpec(guild);
+  const guildPermissionSpec = role(17009).generateGuildPermissionSpec(guild);
   const mapped = guildPermissionSpec.map((permissions) => {
     const obj = {};
     const merged = Object.assign(permissions);
@@ -101,7 +101,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
   });
   const found = mapped.filter((permissions) => permissions.permissions.length > 0);
   const mapped1 = found.map((title) => ({ title: title.title, data: title.permissions }));
-  const children = [closure_14(role(17777), { role }), , , ];
+  const children = [closure_14(role(17801), { role }), , , ];
   const obj7 = {
     children: closure_14(guild(6547).SearchField, {
       size: "md",

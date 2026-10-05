@@ -1,6 +1,6 @@
-// === Module 17761: GuildSettingsRolesUtils ===
+// === Module 17785: GuildSettingsRolesUtils ===
 
-// Module 17761 (GuildSettingsRolesUtils)
+// Module 17785 (GuildSettingsRolesUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import UserUtilsDefault from "UserUtils" /* 4722 */;
@@ -14,7 +14,7 @@ import UserStore from "UserStore" /* 1377 */;
 const require = globalThis.__r;
 
 require = fn;
-const constants = fn(17752).GuildSettingsRoleEditSections;
+const constants = fn(17776).GuildSettingsRoleEditSections;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {

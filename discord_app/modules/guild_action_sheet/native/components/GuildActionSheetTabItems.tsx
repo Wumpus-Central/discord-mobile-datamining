@@ -1,6 +1,6 @@
-// === Module 13787: GuildActionSheetTabItems ===
+// === Module 13789: GuildActionSheetTabItems ===
 
-// Module 13787 (GuildActionSheetTabItems)
+// Module 13789 (GuildActionSheetTabItems)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5070 */;
 import BoostingActionCreatorsAll from "BoostingActionCreators" /* 5612 */;
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   const cResult = guild(576).c(32);
   guild = guild.guild;
   let obj = guild(576);
-  const canAccessSettings = guild(13772).useGuildActionSheetPermissions(guild).canAccessSettings;
+  const canAccessSettings = guild(13774).useGuildActionSheetPermissions(guild).canAccessSettings;
   const total = stateFromStores(7671)(guild.id).total;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildChannelStore];
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   } else {
     tmp7 = cResult[2];
   }
-  let obj2 = guild(13772);
+  let obj2 = guild(13774);
   stateFromStores = guild(504).useStateFromStores(first, tmp7);
   if (cResult[3] === stateFromStores) {
     if (cResult[4] === guild) {
@@ -361,9 +361,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
 }) : ((guild) => {
   guild = guild.guild;
   let stateFromStores;
-  let canAccessSettings = guild(13772).useGuildActionSheetPermissions(guild).canAccessSettings;
+  let canAccessSettings = guild(13774).useGuildActionSheetPermissions(guild).canAccessSettings;
   const total = stateFromStores(7671)(guild.id).total;
-  let obj = guild(13772);
+  let obj = guild(13774);
   const items = [GuildChannelStore];
   stateFromStores = guild(504).useStateFromStores(items, () => GuildChannelStore.getChannels(guild.id));
   let obj2 = guild(504);

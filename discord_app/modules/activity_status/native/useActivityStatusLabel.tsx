@@ -1,6 +1,6 @@
-// === Module 13106: useActivityStatusLabel ===
+// === Module 13108: useActivityStatusLabel ===
 
-// Module 13106 (useActivityStatusLabel)
+// Module 13108 (useActivityStatusLabel)
 import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10611 */;
 import useUserVoiceActivity from "useUserVoiceActivity" /* 10612 */;
 import isGameActivityDefault from "isGameActivity" /* 10619 */;

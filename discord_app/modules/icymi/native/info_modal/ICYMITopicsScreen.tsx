@@ -1,6 +1,6 @@
-// === Module 16416: ICYMITopicsScreen ===
+// === Module 16420: ICYMITopicsScreen ===
 
-// Module 16416 (ICYMITopicsScreen)
+// Module 16420 (ICYMITopicsScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
@@ -16,15 +16,15 @@ import BicycleIcon from "BicycleIcon" /* 9963 */;
 import TvIcon from "TvIcon" /* 10616 */;
 import PencilSparkleIcon from "PencilSparkleIcon" /* 11040 */;
 import PiggyBankIcon from "PiggyBankIcon" /* 11534 */;
-import ICYMIAnalytics2 from "ICYMIAnalytics" /* 14163 */;
-import PaintPaletteIcon from "PaintPaletteIcon" /* 15076 */;
-import ScienceIcon from "ScienceIcon" /* 16418 */;
-import MedalIcon from "MedalIcon" /* 16419 */;
-import PaintbrushThinIcon from "PaintbrushThinIcon" /* 16421 */;
+import ICYMIAnalytics2 from "ICYMIAnalytics" /* 14165 */;
+import PaintPaletteIcon from "PaintPaletteIcon" /* 15080 */;
+import ScienceIcon from "ScienceIcon" /* 16422 */;
+import MedalIcon from "MedalIcon" /* 16423 */;
+import PaintbrushThinIcon from "PaintbrushThinIcon" /* 16425 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 16410 */;
+import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 16414 */;
 
 require = fn;
 function primaryCategoryToEmojiIcon(categoryid) {
@@ -60,7 +60,7 @@ function primaryCategoryToEmojiIcon(categoryid) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
-const GuildPrimaryCategory = fn(16417).GuildPrimaryCategory;
+const GuildPrimaryCategory = fn(16421).GuildPrimaryCategory;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(4890);
@@ -191,7 +191,7 @@ export default function ICYMITopicsScreen() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

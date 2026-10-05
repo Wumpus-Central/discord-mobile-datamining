@@ -1,12 +1,12 @@
-// === Module 13145: NitroOrbsDeliveredModal ===
+// === Module 13147: NitroOrbsDeliveredModal ===
 
-// Module 13145 (NitroOrbsDeliveredModal)
+// Module 13147 (NitroOrbsDeliveredModal)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6681 */;
 import openUserSettings from "openUserSettings" /* 6885 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7052 */;
 import useTrackImpressionDefault from "useTrackImpression" /* 8422 */;
-import _modDef13146 from "module_13146" /* 13146 */;
+import _modDef13148 from "module_13148" /* 13148 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -163,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       obj6.children = closure_11(onClose(6696).ActionSheetCloseButton, obj7);
       const items = [closure_11(View, obj6), , ];
       const obj8 = { style: tmp4.body, children: null };
-      const obj9 = { source: _modDef13146, style: tmp4.orbGraphic, resizeMode: "contain" };
+      const obj9 = { source: _modDef13148, style: tmp4.orbGraphic, resizeMode: "contain" };
       const items1 = [closure_11(closure_6, obj9), ];
       const obj10 = { children: null };
       const obj11 = { variant: "heading-lg/bold", color: "text-overlay-light", style: tmp4.title, children: null };
@@ -260,7 +260,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     obj6.children = closure_11(onClose(6696).ActionSheetCloseButton, obj7);
     const items3 = [closure_11(View, obj6), , ];
     const obj8 = { style: tmp.body, children: null };
-    const obj9 = { source: _modDef13146, style: tmp.orbGraphic, resizeMode: "contain" };
+    const obj9 = { source: _modDef13148, style: tmp.orbGraphic, resizeMode: "contain" };
     const items4 = [closure_11(closure_6, obj9), ];
     const obj10 = { children: null };
     const obj11 = { variant: "heading-lg/bold", color: "text-overlay-light", style: tmp.title, children: null };

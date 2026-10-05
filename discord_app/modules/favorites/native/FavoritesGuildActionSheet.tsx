@@ -1,10 +1,10 @@
-// === Module 16059: FavoritesGuildActionSheet ===
+// === Module 16063: FavoritesGuildActionSheet ===
 
-// Module 16059 (FavoritesGuildActionSheet)
-import useFavoritesGuildHideActionDefault from "useFavoritesGuildHideAction" /* 16060 */;
-import useFavoritesGuildResetActionDefault from "useFavoritesGuildResetAction" /* 16061 */;
-import useFavoritesGuildAutoAddedThreadsActionDefault from "useFavoritesGuildAutoAddedThreadsAction" /* 16062 */;
-import openFavoritesGuildChannelSortModalDefault from "openFavoritesGuildChannelSortModal" /* 16063 */;
+// Module 16063 (FavoritesGuildActionSheet)
+import useFavoritesGuildHideActionDefault from "useFavoritesGuildHideAction" /* 16064 */;
+import useFavoritesGuildResetActionDefault from "useFavoritesGuildResetAction" /* 16065 */;
+import useFavoritesGuildAutoAddedThreadsActionDefault from "useFavoritesGuildAutoAddedThreadsAction" /* 16066 */;
+import openFavoritesGuildChannelSortModalDefault from "openFavoritesGuildChannelSortModal" /* 16067 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 2054 */;
 

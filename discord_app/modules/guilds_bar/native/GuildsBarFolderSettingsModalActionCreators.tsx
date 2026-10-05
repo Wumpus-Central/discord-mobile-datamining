@@ -1,6 +1,6 @@
-// === Module 16224: GuildsBarFolderSettingsModalActionCreators ===
+// === Module 16228: GuildsBarFolderSettingsModalActionCreators ===
 
-// Module 16224 (GuildsBarFolderSettingsModalActionCreators)
+// Module 16228 (GuildsBarFolderSettingsModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
 import size from "module_2" /* 2 */;
@@ -9,7 +9,7 @@ const GUILD_FOLDER_SETTINGS_MODAL_KEY = "GUILD_FOLDER_SETTINGS_MODAL_KEY";
 const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarFolderSettingsModalActionCreators.tsx");
 
 export const showGuildsBarFolderModal = function showGuildsBarFolderModal(folderId) {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16225, dependencyMap.paths), { folderId }, GUILD_FOLDER_SETTINGS_MODAL_KEY);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16229, dependencyMap.paths), { folderId }, GUILD_FOLDER_SETTINGS_MODAL_KEY);
 };
 export const hideGuildsBarFolderModal = function hideGuildsBarFolderModal() {
   ModalActionCreatorsDefault.popWithKey(GUILD_FOLDER_SETTINGS_MODAL_KEY);

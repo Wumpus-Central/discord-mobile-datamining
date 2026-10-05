@@ -1,6 +1,6 @@
-// === Module 16884: useAutoSearchPeopleTab ===
+// === Module 16903: useAutoSearchPeopleTab ===
 
-// Module 16884 (useAutoSearchPeopleTab)
+// Module 16903 (useAutoSearchPeopleTab)
 import _mod12 from "module_12" /* 12 */;
 import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 9509 */;
 import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11966 */;

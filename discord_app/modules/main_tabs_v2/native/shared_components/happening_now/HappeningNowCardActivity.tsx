@@ -1,6 +1,6 @@
-// === Module 15994: HappeningNowCardActivity ===
+// === Module 15998: HappeningNowCardActivity ===
 
-// Module 15994 (HappeningNowCardActivity)
+// Module 15998 (HappeningNowCardActivity)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -16,15 +16,15 @@ import StreamPreviewDefault from "StreamPreview" /* 9743 */;
 import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 9746 */;
 import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10625 */;
 import isOnXboxDefault from "isOnXbox" /* 12825 */;
-import useLiveStageData from "useLiveStageData" /* 15992 */;
-import _modDef15995 from "module_15995" /* 15995 */;
-import _modDef15996 from "module_15996" /* 15996 */;
-import HappeningNowAvatarStack from "HappeningNowAvatarStack" /* 16003 */;
+import useLiveStageData from "useLiveStageData" /* 15996 */;
+import _modDef15999 from "module_15999" /* 15999 */;
+import _modDef16000 from "module_16000" /* 16000 */;
+import HappeningNowAvatarStack from "HappeningNowAvatarStack" /* 16007 */;
 import noop from "module_19" /* 19 */;
 import StageInstanceStore from "StageInstanceStore" /* 2056 */;
 import UserStore from "UserStore" /* 1377 */;
 
-const _modDef16005 = tmp4(16005);
+const _modDef16009 = tmp4(16009);
 require = fn;
 function getActivityA11yLabel(activity) {
   if (isListeningOnSpotifyDefault(activity)) {
@@ -56,14 +56,14 @@ function getActivityA11yLabel(activity) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio, View: closure_4 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15110);
+const HappeningNowConstants = fn(15114);
 ({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: closure_7, STATUS_CUTOUT_SMALL: closure_8, HAPPENING_NOW_STAGE_PREVIEW_HEIGHT } = HappeningNowConstants);
 const Constants = fn(1085);
 ({ ActivityTypes: closure_9, AnalyticEvents: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const pixelSizeForLayoutSize = PixelRatio.getPixelSizeForLayoutSize(HAPPENING_NOW_CONTENT_HEIGHT);
-let items = [_modDef15995, _modDef15996];
+let items = [_modDef15999, _modDef16000];
 let c16 = 0.32;
 const createStyles = fn(4890);
 let obj = { content: { flexShrink: 1, gap: 2 }, avatarStackContainer: { backgroundColor: nativeDefault.colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: nativeDefault.radii.xl, position: "absolute", alignSelf: "center", bottom: 0 }, cardAvatar: { marginBottom: 2 }, cardImage: { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: 12, position: "relative" }, cardImageStream: { height: HAPPENING_NOW_STAGE_PREVIEW_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, position: "relative" }, cardImageAsset: null, cardImageAssetContainer: null, cardImageAssetBackground: null, cardImageStreamPreview: null, cardImageStreamLive: null, stageStreamLiveText: null, stagePreviewWrapper: null };
@@ -491,7 +491,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         const substr = userId.slice(-1);
         let tmp4Result = items[substr.charCodeAt(substr, 0) % items.length];
       } else {
-        tmp4Result = _modDef16005;
+        tmp4Result = _modDef16009;
       }
       tmp6 = activity == tmp6;
       let type2;
@@ -597,7 +597,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       userId = substr.charCodeAt(0);
       let tmpResult = items[userId % items.length];
     } else {
-      tmpResult = _modDef16005;
+      tmpResult = _modDef16009;
     }
   }
 });

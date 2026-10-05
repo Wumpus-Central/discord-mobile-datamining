@@ -1,12 +1,12 @@
-// === Module 15770: DataAndPrivacyScreen ===
+// === Module 15774: DataAndPrivacyScreen ===
 
-// Module 15770 (DataAndPrivacyScreen)
+// Module 15774 (DataAndPrivacyScreen)
 import util from "util" /* 1126 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
 import SecureFramesUtils from "SecureFramesUtils" /* 9364 */;
 import SettingBuilders from "SettingBuilders" /* 11129 */;
-import SettingLayoutDefault from "SettingLayout" /* 14495 */;
-import SettingsScreenNoticesDefault from "SettingsScreenNotices" /* 14617 */;
+import SettingLayoutDefault from "SettingLayout" /* 14499 */;
+import SettingsScreenNoticesDefault from "SettingsScreenNotices" /* 14621 */;
 import noop from "module_19" /* 19 */;
 import ConsentStore from "ConsentStore" /* 6084 */;
 
@@ -87,11 +87,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function n() {
       if (!fetchedConsents.fetchedConsents) {
-        const consents = stackNavigation(14659).fetchConsents();
-        const obj = stackNavigation(14659);
+        const consents = stackNavigation(14663).fetchConsents();
+        const obj = stackNavigation(14663);
       }
-      const harvestStatus = stackNavigation(14662).fetchHarvestStatus();
-      const obj2 = stackNavigation(14662);
+      const harvestStatus = stackNavigation(14666).fetchHarvestStatus();
+      const obj2 = stackNavigation(14666);
     };
     const items = [];
     cResult[0] = fn;
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj3 = { screen: tmp(14617).SettingsScreen.DATA_AND_PRIVACY };
+      const obj3 = { screen: tmp(14621).SettingsScreen.DATA_AND_PRIVACY };
       const tmp18 = closure_8(SettingsScreenNoticesDefault, obj3);
       cResult[5] = tmp18;
       let tmp14 = tmp18;
@@ -178,11 +178,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   importDefault = tmp2;
   const effect = noop.useEffect(() => {
     if (!fetchedConsents.fetchedConsents) {
-      const consents = stackNavigation(14659).fetchConsents();
-      const obj = stackNavigation(14659);
+      const consents = stackNavigation(14663).fetchConsents();
+      const obj = stackNavigation(14663);
     }
-    const harvestStatus = stackNavigation(14662).fetchHarvestStatus();
-    const obj2 = stackNavigation(14662);
+    const harvestStatus = stackNavigation(14666).fetchHarvestStatus();
+    const obj2 = stackNavigation(14666);
   }, []);
   let items = [stackNavigation, tmp2];
   let obj2 = { children: null };
@@ -221,7 +221,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }, items);
   let obj3 = { screen: null };
   let obj = stackNavigation(1490);
-  obj3.screen = stackNavigation(14617).SettingsScreen.DATA_AND_PRIVACY;
+  obj3.screen = stackNavigation(14621).SettingsScreen.DATA_AND_PRIVACY;
   let items1 = [closure_8(SettingsScreenNoticesDefault, obj3), closure_8(SettingLayoutDefault, { node: memo })];
   obj2.children = items1;
   return closure_10(closure_9, obj2);

@@ -1,6 +1,6 @@
-// === Module 17682: TimeoutDurationActionSheet ===
+// === Module 17706: TimeoutDurationActionSheet ===
 
-// Module 17682 (TimeoutDurationActionSheet)
+// Module 17706 (TimeoutDurationActionSheet)
 import util from "util" /* 1126 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import Text_Text from "Text/Text" /* 4886 */;
@@ -8,7 +8,7 @@ import TableRadioRow from "TableRadioRow" /* 6071 */;
 import TableRadioGroup from "TableRadioGroup" /* 6072 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6644 */;
 import ActionSheet2 from "ActionSheet" /* 6701 */;
-import getActionInfo from "getActionInfo" /* 17661 */;
+import getActionInfo from "getActionInfo" /* 17685 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -313,12 +313,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onRemove) => {
     arr = closure_4();
   }
   let obj = onSelectDuration(576);
-  const actionInfo = onSelectDuration(17661).getActionInfo(AutomodActionType.USER_COMMUNICATION_DISABLED, action, triggerType);
+  const actionInfo = onSelectDuration(17685).getActionInfo(AutomodActionType.USER_COMMUNICATION_DISABLED, action, triggerType);
   cResult[0] = action;
   cResult[1] = triggerType;
   cResult[2] = actionInfo;
   tmp4 = actionInfo;
-  const tmpResult = onSelectDuration(17661);
+  const tmpResult = onSelectDuration(17685);
 }) : ((triggerType) => {
   ({ action, onSelectDuration: require, onRemove: importDefault } = triggerType);
   const actionInfo = getActionInfo.getActionInfo(AutomodActionType.USER_COMMUNICATION_DISABLED, action, triggerType.triggerType);

@@ -33,7 +33,7 @@ let closure_10 = async function _executeMessageComponentInteraction(arg0) {
   } else if (2 === tmp7) {
     c3 = 0;
     c5 = 3;
-    return { value: "IconComponent", done: "IconComponent" };
+    return { value: "IconComponent", done: null };
   } else if (3 === tmp7) {
     if (arg0 === 1) {
       c5 = 3;
@@ -89,7 +89,7 @@ let closure_10 = async function _executeMessageComponentInteraction(arg0) {
   await "IconComponent";
   closure_2 = tmp3;
   ({ componentType: closure_129_0, messageId: closure_129_1, messageFlags: closure_129_2, customId: closure_129_3, componentId: closure_129_4, applicationId: closure_129_5, channelId: closure_129_6, guildId: closure_129_7, localState: closure_129_8 } = closure_0);
-  return "Reflect";
+  return "Set";
 };
 function mapMessageComponentLocalStateForAPI(type) {
   if (null == type) {

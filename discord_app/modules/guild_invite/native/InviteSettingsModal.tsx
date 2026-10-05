@@ -1,6 +1,6 @@
-// === Module 17967: InviteSettingsModal ===
+// === Module 17989: InviteSettingsModal ===
 
-// Module 17967 (InviteSettingsModal)
+// Module 17989 (InviteSettingsModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -9,7 +9,7 @@ import AlertActionCreatorsDefault from "AlertActionCreators" /* 5707 */;
 import NavigatorHeader from "NavigatorHeader" /* 6010 */;
 import Navigator from "Navigator" /* 6496 */;
 import CreateInviteModalActionCreatorsDefault from "CreateInviteModalActionCreators" /* 9487 */;
-import CreateInstantInviteUtils from "CreateInstantInviteUtils" /* 17968 */;
+import CreateInstantInviteUtils from "CreateInstantInviteUtils" /* 17990 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
@@ -414,7 +414,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   obj5.onChangeTemporary = callback3;
   obj5.onChangeFlags = callback4;
   obj5.onChangeRoleIds = callback5;
-  obj4.children = jsx(channel(17969), { style: tmp.formContent, channel: first, guild, maxAge: settings.maxAge, maxUses: settings.maxUses, maxUsesOptions: null, temporary: null, flags: null, roleIds: null, onChangeMaxAge: null, onChangeMaxUses: null, onChangeTemporary: null, onChangeFlags: null, onChangeRoleIds: null });
+  obj4.children = jsx(channel(17991), { style: tmp.formContent, channel: first, guild, maxAge: settings.maxAge, maxUses: settings.maxUses, maxUsesOptions: null, temporary: null, flags: null, roleIds: null, onChangeMaxAge: null, onChangeMaxUses: null, onChangeTemporary: null, onChangeFlags: null, onChangeRoleIds: null });
   return jsx(navigation(8895).Form, { contentContainerStyle: tmp.formContainer, children: null });
 });
 ReactCompilerGating = fn(558);

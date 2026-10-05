@@ -1,6 +1,6 @@
-// === Module 13714: ShareAttachments ===
+// === Module 13716: ShareAttachments ===
 
-// Module 13714 (ShareAttachments)
+// Module 13716 (ShareAttachments)
 import nativeDefault from "native" /* 587 */;
 import ColorUtils from "ColorUtils" /* 4727 */;
 import timing from "timing" /* 4891 */;

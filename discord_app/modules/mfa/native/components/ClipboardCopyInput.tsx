@@ -1,6 +1,6 @@
-// === Module 15505: ClipboardCopyInput ===
+// === Module 15509: ClipboardCopyInput ===
 
-// Module 15505 (ClipboardCopyInput)
+// Module 15509 (ClipboardCopyInput)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 1986 */;
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isValidClipboard
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -192,7 +192,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isValidClipboard
                 }
               }
               v3 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp31) {
             v3 = tmp;
@@ -245,7 +245,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isValidClipboard
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -314,7 +314,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isValidClipboard
               }
             }
             v3 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp31) {
           v3 = tmp;

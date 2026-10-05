@@ -1,6 +1,6 @@
-// === Module 17956: GuildRoleSubscriptionTierTemplatePreviewCard ===
+// === Module 17978: GuildRoleSubscriptionTierTemplatePreviewCard ===
 
-// Module 17956 (GuildRoleSubscriptionTierTemplatePreviewCard)
+// Module 17978 (GuildRoleSubscriptionTierTemplatePreviewCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -12,8 +12,8 @@ import Text_Text from "Text/Text" /* 4886 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5070 */;
 import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6469 */;
 import _modDef6653 from "module_6653" /* 6653 */;
-import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 17960 */;
-import GuildRoleSubscriptionTierTemplateActionCreators from "GuildRoleSubscriptionTierTemplateActionCreators" /* 17962 */;
+import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 17982 */;
+import GuildRoleSubscriptionTierTemplateActionCreators from "GuildRoleSubscriptionTierTemplateActionCreators" /* 17984 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -572,7 +572,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((template) => {
                                 }
                               }
                               function handleViewEntireTemplate() {
-                                ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17957, dependencyMap.paths), "TierTemplateCard", { template, guildId, handleSelectTemplateInPreview });
+                                ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17979, dependencyMap.paths), "TierTemplateCard", { template, guildId, handleSelectTemplateInPreview });
                               }
                               if (cResult[46] === handleViewEntireTemplate) {
                                 class W {
@@ -925,7 +925,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((template) => {
   callback1 = obj3.useCallback((selectedTemplate, arg1) => {
     if (closure_7) {
       const obj2 = { selectedTemplate, handleCreateFromTemplate, newPricesToPick: suggestedUnusedPrices };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17961, dependencyMap.paths), "TierTemplatePriceReselectionCard", obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17983, dependencyMap.paths), "TierTemplatePriceReselectionCard", obj2);
     } else {
       handleCreateFromTemplate(selectedTemplate, arg1);
     }
@@ -935,7 +935,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((template) => {
   const obj7 = {
     style: tmp.contentContainer,
     onPress() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17957, dependencyMap.paths), "TierTemplateCard", { template, guildId, handleSelectTemplateInPreview: callback1 });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17979, dependencyMap.paths), "TierTemplateCard", { template, guildId, handleSelectTemplateInPreview: callback1 });
     },
     children: null
   };

@@ -1,6 +1,6 @@
-// === Module 17185: useControlsHoverGesture ===
+// === Module 17209: useControlsHoverGesture ===
 
-// Module 17185 (useControlsHoverGesture)
+// Module 17209 (useControlsHoverGesture)
 import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
 import noop from "module_19" /* 19 */;

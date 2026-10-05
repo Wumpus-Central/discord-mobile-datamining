@@ -1,6 +1,6 @@
-// === Module 14732: FamilyCenterSettingParentalControlsSetting ===
+// === Module 14736: FamilyCenterSettingParentalControlsSetting ===
 
-// Module 14732 (FamilyCenterSettingParentalControlsSetting)
+// Module 14736 (FamilyCenterSettingParentalControlsSetting)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
 import _modDef2493 from "module_2493" /* 2493 */;

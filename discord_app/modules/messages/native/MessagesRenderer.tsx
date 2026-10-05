@@ -95,7 +95,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -128,7 +128,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
                   const tmp26 = findMessageIndex(tmp11(tmp12[20]).castChannelIdAsMessageId(channel.id));
                   if (null == tmp26) {
                     hasJumpedToOriginalPost = 3;
-                    return { value: "IconComponent", done: "IconComponent" };
+                    return { value: "IconComponent", done: null };
                   } else {
                     const obj8 = { animated: !useReducedMotion };
                     tmp11(tmp12[17]).scrollTo(ref.current, tmp26, obj8);

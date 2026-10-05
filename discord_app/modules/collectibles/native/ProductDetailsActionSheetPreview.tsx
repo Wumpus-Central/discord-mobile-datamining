@@ -1,11 +1,11 @@
-// === Module 12966: ProductDetailsActionSheetPreview ===
+// === Module 12968: ProductDetailsActionSheetPreview ===
 
-// Module 12966 (ProductDetailsActionSheetPreview)
+// Module 12968 (ProductDetailsActionSheetPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
-import BundleProductDetailsActionSheetPreviewDefault from "BundleProductDetailsActionSheetPreview" /* 12967 */;
-import IndividualProductPreview from "IndividualProductPreview" /* 12969 */;
+import BundleProductDetailsActionSheetPreviewDefault from "BundleProductDetailsActionSheetPreview" /* 12969 */;
+import IndividualProductPreview from "IndividualProductPreview" /* 12971 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;

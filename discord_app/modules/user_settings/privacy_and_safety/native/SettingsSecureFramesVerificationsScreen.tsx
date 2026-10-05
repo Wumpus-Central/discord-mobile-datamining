@@ -1,6 +1,6 @@
-// === Module 15759: SettingsSecureFramesVerificationsScreen ===
+// === Module 15763: SettingsSecureFramesVerificationsScreen ===
 
-// Module 15759 (SettingsSecureFramesVerificationsScreen)
+// Module 15763 (SettingsSecureFramesVerificationsScreen)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 4886 */;
@@ -268,7 +268,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       let tmp13 = cResult[7];
     }
     const layoutEffect = items1.useLayoutEffect(tmp13);
-    const secureFramesUserVerifiedKeys = tmp(15756).useSecureFramesUserVerifiedKeys(userId);
+    const secureFramesUserVerifiedKeys = tmp(15760).useSecureFramesUserVerifiedKeys(userId);
     if (cResult[8] === userId) {
       if (cResult[9] === secureFramesUserVerifiedKeys) {
         items1 = cResult[10];
@@ -390,7 +390,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     cResult[9] = secureFramesUserVerifiedKeys;
     cResult[10] = items1;
     obj6 = items1;
-    const tmpResult2 = tmp(15756);
+    const tmpResult2 = tmp(15760);
   }
   const fn2 = function x() {
     let obj = { title: null, headerTitle: null };
@@ -434,7 +434,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     navigation.setOptions(obj);
   });
   const obj4 = navigation(4722);
-  secureFramesUserVerifiedKeys = userId(15756).useSecureFramesUserVerifiedKeys(userId);
+  secureFramesUserVerifiedKeys = userId(15760).useSecureFramesUserVerifiedKeys(userId);
   const items1 = [userId, secureFramesUserVerifiedKeys];
   const items2 = [navigation, secureFramesUserVerifiedKeys];
   const memo = secureFramesUserVerifiedKeys.useMemo(() => {
@@ -455,7 +455,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }, items2);
   const obj6 = { style: tmp.list, children: null };
   const obj7 = { keyExtractor, getItemType, renderItem, data: memo, contentContainerStyle: tmp.listContent, ListFooterComponent: null };
-  const obj5 = userId(15756);
+  const obj5 = userId(15760);
   obj7.ListFooterComponent = <View style={tmp.listFooter}><closure_16 userId={userId} /></View>;
   obj6.children = jsx(userId(8371).FlashList, { keyExtractor, getItemType, renderItem, data: memo, contentContainerStyle: tmp.listContent, ListFooterComponent: null });
   return <View style={tmp.list}>{null}</View>;

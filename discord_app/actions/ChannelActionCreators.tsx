@@ -52,7 +52,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -171,7 +171,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -305,7 +305,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -399,13 +399,13 @@ export default {
       AnalyticsUtilsDefault.track(constants.CHANGE_LOG_DM_REMOVED, obj);
       const tmpResult = AnalyticsUtilsDefault;
     }
-    DispatcherDefault.dispatch({ type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "cursor" }, silent: flag2 });
+    DispatcherDefault.dispatch({ type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "toCharArray$esjava$1" }, silent: flag2 });
     if (flag) {
       router_utils.transitionTo(constants2.FRIENDS);
     }
     const HTTP = HTTPUtils.HTTP;
     const request = { url: closure_1_11.CHANNEL(id), query: { silent: flag2 }, oldFormErrors: true, rejectWithError: null };
-    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "cursor" }, silent: flag2 };
+    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "toCharArray$esjava$1" }, silent: flag2 };
     const tmpResult2 = DispatcherDefault;
     request.rejectWithError = HTTPUtils.rejectWithMigratedError();
     const delResult = HTTP.del(request);
@@ -539,7 +539,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -677,7 +677,7 @@ export default {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

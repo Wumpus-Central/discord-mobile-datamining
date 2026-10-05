@@ -1,9 +1,9 @@
-// === Module 13765: GuildBadgeButterfly ===
+// === Module 13767: GuildBadgeButterfly ===
 
-// Module 13765 (GuildBadgeButterfly)
+// Module 13767 (GuildBadgeButterfly)
 import c from "c" /* 576 */;
 import inlineStyles from "inlineStyles" /* 8136 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13728 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13730 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

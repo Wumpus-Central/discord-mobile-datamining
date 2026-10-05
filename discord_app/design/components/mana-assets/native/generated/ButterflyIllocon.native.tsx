@@ -1,10 +1,10 @@
-// === Module 16677: ButterflyIllocon ===
+// === Module 16688: ButterflyIllocon ===
 
-// Module 16677 (ButterflyIllocon)
+// Module 16688 (ButterflyIllocon)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5974 */;
-import _modDef16678 from "module_16678" /* 16678 */;
+import _modDef16689 from "module_16689" /* 16689 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -19,7 +19,7 @@ export const ButterflyIllocon = ReactCompilerGating.isReactCompilerEnabled() ? (
     num = size;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef16678 };
+    const obj2 = { uri: _modDef16689 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -58,7 +58,7 @@ export const ButterflyIllocon = ReactCompilerGating.isReactCompilerEnabled() ? (
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef16678 };
+  const obj2 = { uri: _modDef16689 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

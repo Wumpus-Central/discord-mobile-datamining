@@ -1,6 +1,6 @@
-// === Module 16331: YouBarNotificationsButton ===
+// === Module 16335: YouBarNotificationsButton ===
 
-// Module 16331 (YouBarNotificationsButton)
+// Module 16335 (YouBarNotificationsButton)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -17,7 +17,7 @@ import SavedMessagesStore from "SavedMessagesStore" /* 11283 */;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(14895);
+const YouBarConstants = fn(14899);
 ({ YOU_BAR_SPRING_CONFIG: metroRequire, YOU_BAR_BUTTON_HIT_SLOP: closure_7, YOU_BAR_BUTTON_ICON_SIZE } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -34,7 +34,7 @@ let result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/You
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((hasNameplate) => {
   const cResult = c.c(39);
   const tmp4 = closure_10();
-  value = isForLaterExperimentOn(16332)().value;
+  value = isForLaterExperimentOn(16336)().value;
   const require = value;
   const fn = function s() {
     let num = 0;

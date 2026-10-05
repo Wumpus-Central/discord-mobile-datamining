@@ -1,6 +1,6 @@
-// === Module 13564: RTCConnectionDesyncStore ===
+// === Module 13566: RTCConnectionDesyncStore ===
 
-// Module 13564 (RTCConnectionDesyncStore)
+// Module 13566 (RTCConnectionDesyncStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import CachedEntriesMapDefault from "CachedEntriesMap" /* 2025 */;

@@ -1,6 +1,6 @@
-// === Module 18109: DirectReply ===
+// === Module 18131: DirectReply ===
 
-// Module 18109 (DirectReply)
+// Module 18131 (DirectReply)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -29,7 +29,7 @@ export default (arg0) => {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -75,7 +75,7 @@ export default (arg0) => {
               }
               closure_0(true);
               c4 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp20) {
             c4 = tmp;

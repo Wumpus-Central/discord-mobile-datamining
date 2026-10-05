@@ -1,6 +1,6 @@
-// === Module 13270: IconButton/IconButton ===
+// === Module 13272: IconButton/IconButton ===
 
-// Module 13270 (IconButton/IconButton)
+// Module 13272 (IconButton/IconButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;

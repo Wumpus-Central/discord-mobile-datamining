@@ -1,6 +1,6 @@
-// === Module 15602: DevToolsAccountLinkingScreen ===
+// === Module 15606: DevToolsAccountLinkingScreen ===
 
-// Module 15602 (DevToolsAccountLinkingScreen)
+// Module 15606 (DevToolsAccountLinkingScreen)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
 import useStartAuthorizeDefault from "useStartAuthorize" /* 6660 */;

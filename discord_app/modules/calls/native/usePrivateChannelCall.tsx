@@ -1,6 +1,6 @@
-// === Module 12957: usePrivateChannelCall ===
+// === Module 12959: usePrivateChannelCall ===
 
-// Module 12957 (usePrivateChannelCall)
+// Module 12959 (usePrivateChannelCall)
 import util from "util" /* 1126 */;
 import getPrivateChannelCallDefault from "getPrivateChannelCall" /* 10603 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
             dependencyMap();
           }
           c3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         } catch (tmp25) {
           c3 = tmp;
           throw tmp25;
@@ -229,7 +229,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
         const obj5 = { value, done: true };
         return obj5;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -278,7 +278,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
           closure_129_2();
         }
         c3 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       } catch (tmp25) {
         c3 = tmp;
         throw tmp25;

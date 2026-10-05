@@ -1,7 +1,7 @@
-// === Module 13728: GuildBadgeUtils ===
+// === Module 13730: GuildBadgeUtils ===
 
-// Module 13728 (GuildBadgeUtils)
-import getTransformedBadgeColors from "getTransformedBadgeColors" /* 13729 */;
+// Module 13730 (GuildBadgeUtils)
+import getTransformedBadgeColors from "getTransformedBadgeColors" /* 13731 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeUtils.tsx");

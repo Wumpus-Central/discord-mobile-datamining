@@ -1,6 +1,6 @@
-// === Module 14788: PremiumSettingScreen ===
+// === Module 14792: PremiumSettingScreen ===
 
-// Module 14788 (PremiumSettingScreen)
+// Module 14792 (PremiumSettingScreen)
 import c from "c" /* 576 */;
 import useNavigation from "useNavigation" /* 1490 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6487 */;

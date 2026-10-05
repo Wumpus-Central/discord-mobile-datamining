@@ -1,10 +1,10 @@
-// === Module 13249: FistBumpSpotIllustration ===
+// === Module 13251: FistBumpSpotIllustration ===
 
-// Module 13249 (FistBumpSpotIllustration)
+// Module 13251 (FistBumpSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5974 */;
-import _modDef13250 from "module_13250" /* 13250 */;
+import _modDef13252 from "module_13252" /* 13252 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -27,7 +27,7 @@ export const FistBumpSpotIllustration = ReactCompilerGating.isReactCompilerEnabl
     num3 = scale;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef13250 };
+    const obj2 = { uri: _modDef13252 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -78,7 +78,7 @@ export const FistBumpSpotIllustration = ReactCompilerGating.isReactCompilerEnabl
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef13250 };
+  const obj2 = { uri: _modDef13252 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

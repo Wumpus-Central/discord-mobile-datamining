@@ -1,6 +1,6 @@
-// === Module 13519: DontBadgeMutedVcsExperiment ===
+// === Module 13521: DontBadgeMutedVcsExperiment ===
 
-// Module 13519 (DontBadgeMutedVcsExperiment)
+// Module 13521 (DontBadgeMutedVcsExperiment)
 import c from "c" /* 576 */;
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1441 */;
 

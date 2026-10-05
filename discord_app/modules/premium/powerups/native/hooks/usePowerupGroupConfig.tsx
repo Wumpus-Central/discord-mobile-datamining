@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, group) => 
       tmp14 = cResult[7];
     }
     if (cResult[8] !== tmp14) {
-      const obj3 = { title: tmp8, description: tmp9, image: tmp10, disabledReason: tmp14, badge: "IconComponent", forceStaticImages: "/assets/.cache/intl/bW9kdWxlcy9jaGVja291dC9tZXNzYWdlcw==" };
+      const obj3 = { title: tmp8, description: tmp9, image: tmp10, disabledReason: tmp14, badge: "IconComponent", forceStaticImages: "/assets/modules/copy_experiments/registry" };
       cResult[8] = tmp14;
       cResult[9] = obj3;
       let tmp17 = obj3;
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, group) => 
   const items1 = [arg1, stateFromStores];
   return noop.useMemo(() => {
     if ("guildTagsBadgePacks" === group.group) {
-      const obj2 = { title: null, description: null, image: null, disabledReason: null, badge: "IconComponent", forceStaticImages: "/assets/.cache/intl/bW9kdWxlcy9jaGVja291dC9tZXNzYWdlcw==" };
+      const obj2 = { title: null, description: null, image: null, disabledReason: null, badge: "IconComponent", forceStaticImages: "/assets/modules/copy_experiments/registry" };
       const intl = util.intl;
       obj2.title = intl.string(_modDef2525.KC9HRW);
       const intl2 = util.intl;

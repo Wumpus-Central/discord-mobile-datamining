@@ -1,6 +1,6 @@
-// === Module 17106: NitroFileUploadAnnouncementPromoSheet ===
+// === Module 17130: NitroFileUploadAnnouncementPromoSheet ===
 
-// Module 17106 (NitroFileUploadAnnouncementPromoSheet)
+// Module 17130 (NitroFileUploadAnnouncementPromoSheet)
 import nativeDefault from "native" /* 587 */;
 import _modDef2593 from "module_2593" /* 2593 */;
 import noop from "module_19" /* 19 */;
@@ -81,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
         return;
       }
     }
-    const tmp11 = jsx(tmp(17107).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
+    const tmp11 = jsx(tmp(17131).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
     cResult[6] = tmp11;
     const tmp10 = tmp11;
   } else {

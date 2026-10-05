@@ -1,6 +1,6 @@
-// === Module 15598: InappropriateConversationModal ===
+// === Module 15602: InappropriateConversationModal ===
 
-// Module 15598 (InappropriateConversationModal)
+// Module 15602 (InappropriateConversationModal)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -15,7 +15,7 @@ import TrafficConeSpotIllustration from "TrafficConeSpotIllustration" /* 6078 */
 import SafetyWarningUtils from "SafetyWarningUtils" /* 9798 */;
 import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 9799 */;
 import SafetyTipsSectionDefault from "SafetyTipsSection" /* 9806 */;
-import TakeActionScreenDefault from "TakeActionScreen" /* 15599 */;
+import TakeActionScreenDefault from "TakeActionScreen" /* 15603 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
@@ -476,7 +476,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((trackAnalytics
   trackAnalyticsEvent = trackAnalyticsEvent.trackAnalyticsEvent;
   const tmp4 = closure_15();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp7 = closure_13(tmp(15600).SafetyChatSpotIllustration, {});
+    const tmp7 = closure_13(tmp(15604).SafetyChatSpotIllustration, {});
     cResult[0] = tmp7;
     let first = tmp7;
   } else {
@@ -625,7 +625,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((trackAnalytics
   trackAnalyticsEvent = trackAnalyticsEvent.trackAnalyticsEvent;
   const tmp = closure_15();
   const obj = { style: tmp.container, children: null };
-  const items = [closure_13(trackAnalyticsEvent(15600).SafetyChatSpotIllustration, {}), , ];
+  const items = [closure_13(trackAnalyticsEvent(15604).SafetyChatSpotIllustration, {}), , ];
   const obj2 = { style: tmp.warningText, children: null };
   const obj3 = { variant: "heading-xl/semibold", style: tmp.takeoverHeader, accessibilityRole: "header", children: null };
   const intl = trackAnalyticsEvent(1126).intl;

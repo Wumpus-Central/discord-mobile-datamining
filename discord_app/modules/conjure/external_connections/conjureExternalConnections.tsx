@@ -1,0 +1,124 @@
+// === Module 12914: conjureExternalConnections ===
+
+// Module 12914 (conjureExternalConnections)
+import size from "module_2" /* 2 */;
+
+function externalConnectionOffer(nextResult) {
+  let tmp = null;
+  if (typeof nextResult.type === "string") {
+    tmp = null;
+    if ("" !== nextResult.type) {
+      tmp = null;
+      if (typeof nextResult.label === "string") {
+        tmp = null;
+        if ("" !== str3.trim()) {
+          let str = "finish-setup";
+          if (nextResult.configured) {
+            str = "authorize";
+          }
+          tmp = str;
+        }
+        str3 = nextResult.label;
+      }
+    }
+  }
+  return tmp;
+}
+let set = new Set(["bad_request", "bad_connection_type", "unknown_project", "not_declared", "not_configured", "not_deployed", "child_error", "child_malformed", "child_unavailable"]);
+const result = size.fileFinishedImporting("modules/conjure/external_connections/conjureExternalConnections.tsx");
+
+export { externalConnectionOffer };
+export const externalConnectionOffers = function externalConnectionOffers(stateFromStores) {
+  const items = [];
+  set = new Set();
+  const iter = stateFromStores[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp2 = nextResult;
+    let tmp4 = externalConnectionOffer(nextResult);
+    let hasItem = null == tmp4;
+    let tmp5 = tmp4;
+    if (!hasItem) {
+      hasItem = set.has(tmp2.type);
+    }
+    if (!hasItem) {
+      let addResult = set.add(tmp2.type);
+      let obj = { connection: tmp2, offer: null };
+      obj.offer = tmp5;
+      let arr = items.push(obj);
+    }
+    continue;
+  }
+  return items;
+};
+export const beginExternalAuthorization = function beginExternalAuthorization(current, type) {
+  if (current.has(type)) {
+    return null;
+  } else {
+    const _Set = Set;
+    set = new Set(current);
+    set.add(type);
+    return set;
+  }
+};
+export const endExternalAuthorization = function endExternalAuthorization(current, arg1) {
+  if (current.has(arg1)) {
+    const _Set = Set;
+    set = new Set(current);
+    set.delete(arg1);
+    return set;
+  } else {
+    return current;
+  }
+};
+export const externalAuthErrorCode = function externalAuthErrorCode(error) {
+  let tmp = null;
+  if (typeof error === "string") {
+    tmp = null;
+    if (set.has(error)) {
+      tmp = error;
+    }
+  }
+  return tmp;
+};
+export const externalAuthErrorFor = function externalAuthErrorFor(status, arg1) {
+  if ("not_configured" === arg1) {
+    return "not_configured";
+  } else if ("not_deployed" === arg1) {
+    return "not_deployed";
+  } else {
+    if ("not_declared" !== arg1) {
+      if ("unknown_project" !== arg1) {
+        if ("child_error" !== arg1) {
+          if ("child_malformed" !== arg1) {
+            if ("child_unavailable" !== arg1) {
+              if ("bad_request" !== arg1) {
+                if ("bad_connection_type" !== arg1) {
+                  let str7 = "not_declared";
+                  if (404 !== status) {
+                    let str8 = "unknown";
+                    if (status >= 500) {
+                      str8 = "unavailable";
+                    }
+                    str7 = str8;
+                  }
+                  return str7;
+                }
+              }
+              return "unknown";
+            }
+          }
+        }
+        return "unavailable";
+      }
+    }
+    return "not_declared";
+  }
+};
+export function externalAuthErrorCopy(error) {
+  let str = "generic";
+  if ("not_configured" === error) {
+    str = "setup";
+  }
+  return str;
+}

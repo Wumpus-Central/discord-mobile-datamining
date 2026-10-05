@@ -1,6 +1,6 @@
-// === Module 16601: MediaKeyboard ===
+// === Module 16607: MediaKeyboard ===
 
-// Module 16601 (MediaKeyboard)
+// Module 16607 (MediaKeyboard)
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
@@ -17,8 +17,8 @@ import AttachmentIcon from "AttachmentIcon" /* 10369 */;
 import MediaKeyboardBottomSheetHeaderSimpleDefault from "MediaKeyboardBottomSheetHeaderSimple" /* 10371 */;
 import MediaKeyboardBottomSheetActionsDefault from "MediaKeyboardBottomSheetActions" /* 10373 */;
 import PollCreationModalActionCreators from "PollCreationModalActionCreators" /* 11827 */;
-import MediaKeyboardAccessoriesContainerDefault from "MediaKeyboardAccessoriesContainer" /* 16604 */;
-import MediaKeyboardFloatingSendDefault from "MediaKeyboardFloatingSend" /* 16605 */;
+import MediaKeyboardAccessoriesContainerDefault from "MediaKeyboardAccessoriesContainer" /* 16610 */;
+import MediaKeyboardFloatingSendDefault from "MediaKeyboardFloatingSend" /* 16611 */;
 import noop from "module_19" /* 19 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 7267 */;
 

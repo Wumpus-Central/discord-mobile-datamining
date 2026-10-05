@@ -1,6 +1,6 @@
-// === Module 16787: SuggestedSearchRow ===
+// === Module 16806: SuggestedSearchRow ===
 
-// Module 16787 (SuggestedSearchRow)
+// Module 16806 (SuggestedSearchRow)
 import nativeDefault from "native" /* 587 */;
 import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11966 */;
 import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 11985 */;
@@ -88,7 +88,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sugges
                 }
               }
               const obj3 = { onPress: tmp5, accessibilityLabel: suggestedSearch.suggestedSearchText, label: tmp11, icon: tmp20 };
-              const tmp26 = jsx(tmp(16788).SearchListRow, { onPress: tmp5, accessibilityLabel: suggestedSearch.suggestedSearchText, label: tmp11, icon: tmp20 });
+              const tmp26 = jsx(tmp(16807).SearchListRow, { onPress: tmp5, accessibilityLabel: suggestedSearch.suggestedSearchText, label: tmp11, icon: tmp20 });
               cResult[15] = tmp5;
               cResult[16] = suggestedSearch.suggestedSearchText;
               cResult[17] = tmp11;
@@ -161,5 +161,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((sugges
   let obj = { lineClamp: 2, variant: str2, color: "redesign-channel-name-muted-text", style: tmp.text, children: suggestedSearch.suggestedSearchText };
   const tmp3Result = jsx(suggestedSearch(4886).Text, { lineClamp: 2, variant: str2, color: "redesign-channel-name-muted-text", style: tmp.text, children: suggestedSearch.suggestedSearchText });
   obj2.icon = <View style={iconCircle}>{jsx(suggestedSearch(6548).MagnifyingGlassIcon, { size: "sm", color: "icon-muted" })}</View>;
-  return jsx(suggestedSearch(16788).SearchListRow, { onPress: callback, accessibilityLabel: suggestedSearch.suggestedSearchText, label: null, icon: null });
+  return jsx(suggestedSearch(16807).SearchListRow, { onPress: callback, accessibilityLabel: suggestedSearch.suggestedSearchText, label: null, icon: null });
 }));

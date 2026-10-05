@@ -1,8 +1,8 @@
-// === Module 17656: guild_automod/ExperimentUtils ===
+// === Module 17680: guild_automod/ExperimentUtils ===
 
-// Module 17656 (guild_automod/ExperimentUtils)
+// Module 17680 (guild_automod/ExperimentUtils)
 import c from "c" /* 576 */;
-import AutomodExperiment from "AutomodExperiment" /* 17657 */;
+import AutomodExperiment from "AutomodExperiment" /* 17681 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -29,14 +29,14 @@ export const useIsApplicationRuleEnabled = ReactCompilerGating.isReactCompilerEn
     tmp5 = cResult[3];
   }
   if (!enabled) {
-    enabled = tmpResult.useIsVibegrationsGuildEnabled(tmp5);
+    enabled = tmpResult.useIsConjureGuildEnabled(tmp5);
   }
   return enabled;
 }) : ((guildId) => {
   const AutomodApplicationRules = AutomodExperiment.AutomodApplicationRules;
   let enabled = AutomodApplicationRules.useConfig({ guildId, location: "automod_settings" }).enabled;
   if (!enabled) {
-    enabled = obj2.useIsVibegrationsGuildEnabled(obj3);
+    enabled = obj2.useIsConjureGuildEnabled(obj3);
   }
   return enabled;
 });

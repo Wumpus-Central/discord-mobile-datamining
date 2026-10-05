@@ -1,6 +1,6 @@
-// === Module 15066: StreamOutputVolumeSetting ===
+// === Module 15070: StreamOutputVolumeSetting ===
 
-// Module 15066 (StreamOutputVolumeSetting)
+// Module 15070 (StreamOutputVolumeSetting)
 import _modDef38 from "module_38" /* 38 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;

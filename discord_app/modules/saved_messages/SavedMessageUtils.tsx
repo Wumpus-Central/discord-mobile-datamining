@@ -28,7 +28,7 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -77,11 +77,11 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
             if (null == closure_130_2.recipients) {
               c5 = 0;
               c7 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             } else if (closure_130_2.recipients.length > 1) {
               c5 = 0;
               c7 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             } else {
               const recipients = closure_130_2.recipients;
               c6 = 3;
@@ -107,7 +107,7 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
         }
         closure_131_1(closure_131_2[11])(closure_131_8.CHANNEL(guildId, closure_130_0.saveData.channelId, closure_130_0.saveData.messageId), { openChannel: true });
         c7 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       } catch (tmp30) {
         closure_4 = tmp30;
         if (tmp4 === c5) {

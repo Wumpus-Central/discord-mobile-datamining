@@ -1,12 +1,12 @@
-// === Module 17439: AudioSettingsManager ===
+// === Module 17463: AudioSettingsManager ===
 
-// Module 17439 (AudioSettingsManager)
+// Module 17463 (AudioSettingsManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import Storage2 from "Storage" /* 510 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2033 */;
 import AudioSettingsUtils from "AudioSettingsUtils" /* 9309 */;
 import AudioSettingsDefaultVolumes from "AudioSettingsDefaultVolumes" /* 9310 */;
-import AudioSettingsPending from "AudioSettingsPending" /* 13884 */;
+import AudioSettingsPending from "AudioSettingsPending" /* 13886 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GameConsoleStore from "GameConsoleStore" /* 4907 */;
 import SoundboardStore from "SoundboardStore" /* 5680 */;
@@ -115,7 +115,7 @@ function handleSetLocalMute(arg0) {
     const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", async (arg0) => {
       closure_0 = arg0;
-      let result = closure_0(13884).drainPendingAudioSettings((arg0, arg1, arg2) => {
+      let result = closure_0(13886).drainPendingAudioSettings((arg0, arg1, arg2) => {
         let diff;
         const result = AudioSettingsUtils.coerceAudioContextForProto(arg0);
         flag = false;
@@ -187,7 +187,7 @@ function handleSetLocalSoundboardMute(userId) {
     const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", async (arg0) => {
       closure_0 = arg0;
-      let result = closure_0(13884).drainPendingAudioSettings((arg0, arg1, arg2) => {
+      let result = closure_0(13886).drainPendingAudioSettings((arg0, arg1, arg2) => {
         let diff;
         const result = AudioSettingsUtils.coerceAudioContextForProto(arg0);
         flag = false;
@@ -277,7 +277,7 @@ let closure_12 = apply.debounce(() => {
   const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
   PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", async (arg0) => {
     closure_0 = arg0;
-    let result = closure_0(13884).drainPendingAudioSettings((arg0, arg1, arg2) => {
+    let result = closure_0(13886).drainPendingAudioSettings((arg0, arg1, arg2) => {
       let diff;
       const result = AudioSettingsUtils.coerceAudioContextForProto(arg0);
       flag = false;

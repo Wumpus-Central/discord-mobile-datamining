@@ -192,7 +192,7 @@ let closure_23 = async function _optimisticallySetAnswers(arg0) {
   await "IconComponent";
   closure_2 = tmp2;
   ({ channelId: closure_130_0, messageId: closure_130_1, answerIds: closure_130_2 } = channelId);
-  return "Reflect";
+  return "Set";
 };
 function handlePollSubmitVote() {
   const self = this;
@@ -215,7 +215,7 @@ let closure_25 = async function _handlePollSubmitVote(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -240,7 +240,7 @@ let closure_25 = async function _handlePollSubmitVote(arg0) {
           closure_132_5 = undefined;
           c8 = 1;
           c9 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -404,7 +404,7 @@ let closure_26 = async function _handleClearPollVote(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -426,7 +426,7 @@ let closure_26 = async function _handleClearPollVote(arg0) {
           let channel;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp4) {
         if (arg0 === 1) {
@@ -467,7 +467,7 @@ let closure_26 = async function _handleClearPollVote(arg0) {
             }
           }
           c4 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else if (arg0 === 1) {
         c4 = 3;
@@ -498,7 +498,7 @@ let closure_27 = async function _handlePollActionTapped(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -520,7 +520,7 @@ let closure_27 = async function _handlePollActionTapped(arg0) {
           ({ channelId: closure_129_0, messageId: closure_129_1, type: closure_129_2 } = closure_0);
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -649,7 +649,7 @@ let closure_28 = async function _createPoll(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -679,7 +679,7 @@ let closure_28 = async function _createPoll(arg0) {
           closure_129_10 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -826,7 +826,7 @@ let closure_29 = async function _endPollEarly(arg0) {
   await "IconComponent";
   closure_1 = tmp2;
   ({ channelId: closure_129_0, messageId: closure_129_1 } = closure_0);
-  return "Reflect";
+  return "Set";
 };
 const DraftType = fn(7031).DraftType;
 const PollsInteractionStore = fn(11086);

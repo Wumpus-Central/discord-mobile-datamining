@@ -1,9 +1,9 @@
-// === Module 15538: CheckpointVoiceStatsScreen ===
+// === Module 15542: CheckpointVoiceStatsScreen ===
 
-// Module 15538 (CheckpointVoiceStatsScreen)
+// Module 15542 (CheckpointVoiceStatsScreen)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
-import CheckpointStatsScreenDefault from "CheckpointStatsScreen" /* 15539 */;
+import CheckpointStatsScreenDefault from "CheckpointStatsScreen" /* 15543 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

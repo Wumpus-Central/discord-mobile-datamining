@@ -1,6 +1,6 @@
-// === Module 13712: resolveShareSendOutcome ===
+// === Module 13714: resolveShareSendOutcome ===
 
-// Module 13712 (resolveShareSendOutcome)
+// Module 13714 (resolveShareSendOutcome)
 import formatResults from "formatResults" /* 10711 */;
 import size from "module_2" /* 2 */;
 

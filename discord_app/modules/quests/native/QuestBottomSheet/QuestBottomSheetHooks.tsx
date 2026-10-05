@@ -1,6 +1,6 @@
-// === Module 14923: QuestBottomSheetHooks ===
+// === Module 14927: QuestBottomSheetHooks ===
 
-// Module 14923 (QuestBottomSheetHooks)
+// Module 14927 (QuestBottomSheetHooks)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import QuestTypes from "QuestTypes" /* 5626 */;
 import AdCreativeType from "AdCreativeType" /* 5630 */;
@@ -9,7 +9,7 @@ import AnalyticsTypes from "AnalyticsTypes" /* 7212 */;
 import captureAdUserAction2 from "captureAdUserAction" /* 7213 */;
 import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7223 */;
 import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7224 */;
-import openVideoQuestModalDefault from "openVideoQuestModal" /* 14924 */;
+import openVideoQuestModalDefault from "openVideoQuestModal" /* 14928 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,8 +20,8 @@ const QuestDockMode = fn(5623).QuestDockMode;
 let ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const cResult = setRestingQuestDockMode(576).c(3);
-  setRestingQuestDockMode = noop.useContext(setRestingQuestDockMode(14896).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
-  const isInQuestBottomSheet = noop.useContext(setRestingQuestDockMode(14919).QuestBottomSheetContext).isInQuestBottomSheet;
+  setRestingQuestDockMode = noop.useContext(setRestingQuestDockMode(14900).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
+  const isInQuestBottomSheet = noop.useContext(setRestingQuestDockMode(14923).QuestBottomSheetContext).isInQuestBottomSheet;
   if (cResult[0] === isInQuestBottomSheet) {
     if (cResult[1] === setRestingQuestDockMode) {
       let tmp2 = cResult[2];
@@ -40,8 +40,8 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[2] = fn;
   tmp2 = fn;
 }) : (() => {
-  setRestingQuestDockMode = noop.useContext(setRestingQuestDockMode(14896).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
-  const isInQuestBottomSheet = noop.useContext(setRestingQuestDockMode(14919).QuestBottomSheetContext).isInQuestBottomSheet;
+  setRestingQuestDockMode = noop.useContext(setRestingQuestDockMode(14900).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
+  const isInQuestBottomSheet = noop.useContext(setRestingQuestDockMode(14923).QuestBottomSheetContext).isInQuestBottomSheet;
   const items = [isInQuestBottomSheet, setRestingQuestDockMode];
   return noop.useCallback(() => {
     if (isInQuestBottomSheet) {
@@ -206,7 +206,7 @@ export const useMobileActivityPressHandler = ReactCompilerGating.isReactCompiler
         const obj = { value, done: true };
         return obj;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -312,7 +312,7 @@ export const useMobileActivityPressHandler = ReactCompilerGating.isReactCompiler
         const obj = { value, done: true };
         return obj;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

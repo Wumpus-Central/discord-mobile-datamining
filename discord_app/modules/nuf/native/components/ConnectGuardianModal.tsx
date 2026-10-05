@@ -1,6 +1,6 @@
-// === Module 17568: ConnectGuardianModal ===
+// === Module 17592: ConnectGuardianModal ===
 
-// Module 17568 (ConnectGuardianModal)
+// Module 17592 (ConnectGuardianModal)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import noop from "module_19" /* 19 */;
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
   onComplete = route.route.params.onComplete;
   const tmp4 = closure_9();
   let obj = onComplete(576);
-  const connectGuardianGate = onComplete(17569).useConnectGuardianGate();
+  const connectGuardianGate = onComplete(17593).useConnectGuardianGate();
   dependencyMap = noop.useRef(false);
   if (cResult[0] === connectGuardianGate.state) {
     if (cResult[1] === onComplete) {
@@ -248,7 +248,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
               }
             }
             ({ linkCode: obj8.linkCode, expiresAt: obj8.expiresAt, refresh: obj8.onRefresh } = connectGuardianGate);
-            const tmp31 = closure_7(tmp(14685).ConnectGuardianCard, { shareActions: "compact", linkCode: null, expiresAt: null, onRefresh: null });
+            const tmp31 = closure_7(tmp(14689).ConnectGuardianCard, { shareActions: "compact", linkCode: null, expiresAt: null, onRefresh: null });
             cResult[24] = connectGuardianGate.expiresAt;
             cResult[25] = connectGuardianGate.linkCode;
             cResult[26] = connectGuardianGate.refresh;
@@ -296,11 +296,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
   cResult[3] = items5;
   tmp8 = items5;
   tmp7 = fn;
-  let obj2 = onComplete(17569);
+  let obj2 = onComplete(17593);
 }) : ((route) => {
   const onComplete = route.route.params.onComplete;
   const tmp = closure_9();
-  const connectGuardianGate = onComplete(17569).useConnectGuardianGate();
+  const connectGuardianGate = onComplete(17593).useConnectGuardianGate();
   dependencyMap = noop.useRef(false);
   const items = [connectGuardianGate.state, onComplete];
   const effect = noop.useEffect(() => {
@@ -343,7 +343,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
     obj8.children = intl3.string(tmp2(2493).Mi60fm);
     const items4 = [closure_7(tmp4(4886).Text, obj8), ];
     ({ linkCode: obj9.linkCode, expiresAt: obj9.expiresAt, refresh: obj9.onRefresh } = connectGuardianGate);
-    items4[1] = closure_7(tmp4(14685).ConnectGuardianCard, { shareActions: "compact", linkCode: null, expiresAt: null, onRefresh: null });
+    items4[1] = closure_7(tmp4(14689).ConnectGuardianCard, { shareActions: "compact", linkCode: null, expiresAt: null, onRefresh: null });
     obj7.children = items4;
     items3[1] = closure_8(View, obj7);
     const obj11 = { style: tmp.grow };

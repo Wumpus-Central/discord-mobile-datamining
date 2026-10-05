@@ -1,6 +1,6 @@
-// === Module 13300: PremiumManagePlan ===
+// === Module 13302: PremiumManagePlan ===
 
-// Module 13300 (PremiumManagePlan)
+// Module 13302 (PremiumManagePlan)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -24,11 +24,11 @@ import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 6898 *
 import PremiumManagementUtils from "PremiumManagementUtils" /* 6910 */;
 import _modDef7722 from "module_7722" /* 7722 */;
 import PremiumFeaturesCardDefault from "PremiumFeaturesCard" /* 8868 */;
-import PremiumSubscriptionDetails from "PremiumSubscriptionDetails" /* 13155 */;
-import PremiumAccountCreditDefault from "PremiumAccountCredit" /* 13197 */;
-import PremiumNitroHomeUtils from "PremiumNitroHomeUtils" /* 13228 */;
-import useFPDurationLeftDefault from "useFPDurationLeft" /* 13265 */;
-import PremiumFeaturesTableDefault from "PremiumFeaturesTable" /* 13279 */;
+import PremiumSubscriptionDetails from "PremiumSubscriptionDetails" /* 13157 */;
+import PremiumAccountCreditDefault from "PremiumAccountCredit" /* 13199 */;
+import PremiumNitroHomeUtils from "PremiumNitroHomeUtils" /* 13230 */;
+import useFPDurationLeftDefault from "useFPDurationLeft" /* 13267 */;
+import PremiumFeaturesTableDefault from "PremiumFeaturesTable" /* 13281 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -331,7 +331,7 @@ function SubscriptionAndBillingInfo(subscription) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -369,7 +369,7 @@ function SubscriptionAndBillingInfo(subscription) {
               c3 = 0;
               closure_128_8(false);
               c4 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp24) {
             if (tmp4 === c3) {
@@ -1007,8 +1007,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let obj = navigation(576);
   ({ top, bottom } = useSafeAreaInsetsDefault());
   const tmp6 = useSafeAreaInsetsDefault();
-  const youBarSettingsOutsideSafeAreaTop = navigation(13263).useYouBarSettingsOutsideSafeAreaTop();
-  let obj2 = navigation(13263);
+  const youBarSettingsOutsideSafeAreaTop = navigation(13265).useYouBarSettingsOutsideSafeAreaTop();
+  let obj2 = navigation(13265);
   navigation = navigation(1490).useNavigation();
   if (cResult[0] !== navigation) {
     const fn = function t() {
@@ -1151,7 +1151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const tmpResult7 = navigation(504);
   const isInReverseTrial = navigation(7736).useIsInReverseTrial();
   const tmpResult8 = navigation(7736);
-  useFPDurationLeftDefault(tmp26.endsAt, navigation(13265).CountDownMessageTypes.SHORT_TIME);
+  useFPDurationLeftDefault(tmp26.endsAt, navigation(13267).CountDownMessageTypes.SHORT_TIME);
   if (cResult[11] !== tmp26) {
     class X {
       constructor() {
@@ -1565,8 +1565,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const tmp = closure_32();
   const rect = useSafeAreaInsetsDefault();
   const top = rect.top;
-  const youBarSettingsOutsideSafeAreaTop = navigation(13263).useYouBarSettingsOutsideSafeAreaTop();
-  let obj = navigation(13263);
+  const youBarSettingsOutsideSafeAreaTop = navigation(13265).useYouBarSettingsOutsideSafeAreaTop();
+  let obj = navigation(13265);
   navigation = navigation(1490).useNavigation();
   let items = [navigation];
   const layoutEffect = noop.useLayoutEffect(() => {
@@ -1607,7 +1607,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj6 = navigation(504);
   let isInReverseTrial = navigation(7736).useIsInReverseTrial();
   const obj8 = navigation(7736);
-  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(13265).CountDownMessageTypes.SHORT_TIME);
+  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(13267).CountDownMessageTypes.SHORT_TIME);
   const unactivatedFractionalPremiumDurationString = navigation(4528).getUnactivatedFractionalPremiumDurationString(tmp12);
   if (null !== tmp10) {
     if (!tmp10.isPurchasedExternally) {
@@ -1718,9 +1718,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         },
       subscription: tmp10
     };
-    const items10 = [closure_29(tmp2(13155), obj17), ];
+    const items10 = [closure_29(tmp2(13157), obj17), ];
     const obj18 = { style: tmp.billingInfo, subscription: tmp10 };
-    items10[1] = closure_29(tmp2(13195), obj18);
+    items10[1] = closure_29(tmp2(13197), obj18);
     obj16.children = items10;
     tmp27Result = closure_30(closure_8, obj16);
   }

@@ -1,6 +1,6 @@
-// === Module 15597: DevToolsActionSheetsScreen ===
+// === Module 15601: DevToolsActionSheetsScreen ===
 
-// Module 15597 (DevToolsActionSheetsScreen)
+// Module 15601 (DevToolsActionSheetsScreen)
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
@@ -45,7 +45,7 @@ let items = [
     label: "Inappropriate Conversation",
     description: "Shows safety warning for inappropriate conversations",
     show() {
-      return ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15598, dependencyMap.paths), { warningId: "test-warning-123", warningType: "inappropriate_conversation", senderId: "123456789", channelId: "987654321" }, "INAPPROPRIATE_CONVERSATION_TAKEOVER_MODAL");
+      return ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15602, dependencyMap.paths), { warningId: "test-warning-123", warningType: "inappropriate_conversation", senderId: "123456789", channelId: "987654321" }, "INAPPROPRIATE_CONVERSATION_TAKEOVER_MODAL");
     }
   }
 ];
@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     class T {
       constructor() {
         obj = closure_1(closure_2[13]);
-        obj1 = { default: f71011 };
+        obj1 = { default: f71061 };
         obj4 = { selectedType: closure_0, onSelect: closure_1 };
         openLazyResult = obj.openLazy(Promise.resolve(obj1), "action-sheet-selector", obj4);
         return;
@@ -214,7 +214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     class T {
       constructor() {
         obj = closure_1(closure_2[13]);
-        obj1 = { default: f71011 };
+        obj1 = { default: f71061 };
         obj4 = { selectedType: closure_0, onSelect: closure_1 };
         openLazyResult = obj.openLazy(Promise.resolve(obj1), "action-sheet-selector", obj4);
         return;
@@ -225,7 +225,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     class T {
       constructor() {
         obj = closure_1(closure_2[13]);
-        obj1 = { default: f71011 };
+        obj1 = { default: f71061 };
         obj4 = { selectedType: closure_0, onSelect: closure_1 };
         openLazyResult = obj.openLazy(Promise.resolve(obj1), "action-sheet-selector", obj4);
         return;
@@ -238,7 +238,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     class T {
       constructor() {
         obj = closure_1(closure_2[13]);
-        obj1 = { default: f71011 };
+        obj1 = { default: f71061 };
         obj4 = { selectedType: closure_0, onSelect: closure_1 };
         openLazyResult = obj.openLazy(Promise.resolve(obj1), "action-sheet-selector", obj4);
         return;
@@ -249,7 +249,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     class T {
       constructor() {
         obj = closure_1(closure_2[13]);
-        obj1 = { default: f71011 };
+        obj1 = { default: f71061 };
         obj4 = { selectedType: closure_0, onSelect: closure_1 };
         openLazyResult = obj.openLazy(Promise.resolve(obj1), "action-sheet-selector", obj4);
         return;

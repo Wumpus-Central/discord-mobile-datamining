@@ -1,12 +1,12 @@
-// === Module 16516: GuildHomeResources ===
+// === Module 16520: GuildHomeResources ===
 
-// Module 16516 (GuildHomeResources)
+// Module 16520 (GuildHomeResources)
 import nativeDefault from "native" /* 587 */;
 import router_utils from "router_utils" /* 1112 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 6965 */;
 import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 7521 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 16510 */;
-import _modDef16518 from "module_16518" /* 16518 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 16514 */;
+import _modDef16522 from "module_16522" /* 16522 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildChannelStore from "GuildChannelStore" /* 4507 */;
@@ -159,7 +159,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
       }
     }
     const shouldObscure = tmp(11623).useSharedMediaProps(obj2).shouldObscure;
-    stateFromStores(16517)(tmp15);
+    stateFromStores(16521)(tmp15);
     if (cResult[14] === stateFromStores) {
       class R {
         constructor() {
@@ -272,7 +272,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
   }
   const obj6 = channelId(7540);
   let flag = channelId(11623).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
-  const tmp11 = stateFromStores(16517)(firstResult);
+  const tmp11 = stateFromStores(16521)(firstResult);
   const tmp12 = null != stateFromStores && null == stateFromStores2.first() && !stateFromStores2.loadingMore && !stateFromStores2.ready && !stateFromStores2.hasFetched;
   dependencyMap = tmp12;
   const items3 = [channelId, tmp12];
@@ -400,7 +400,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       tmp17 = cResult[2];
     }
     if (cResult[3] !== tmp4.emptyStateImage) {
-      const obj3 = { style: tmp4.emptyStateImage, source: _modDef16518 };
+      const obj3 = { style: tmp4.emptyStateImage, source: _modDef16522 };
       const tmp23 = closure_12(closure_5, obj3);
       cResult[3] = tmp4.emptyStateImage;
       cResult[4] = tmp23;
@@ -498,7 +498,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     const intl = guildId(1126).intl;
     obj3.children = intl.string(guildId(1126).t.owvC9U);
     const items = [closure_12(guildId(4886).Text, obj3), , ];
-    const obj4 = { style: tmp.emptyStateImage, source: _modDef16518 };
+    const obj4 = { style: tmp.emptyStateImage, source: _modDef16522 };
     items[1] = closure_12(closure_5, obj4);
     const obj5 = {
       onPress() {

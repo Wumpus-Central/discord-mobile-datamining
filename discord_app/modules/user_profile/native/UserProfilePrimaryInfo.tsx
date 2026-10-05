@@ -1086,7 +1086,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
                                                   obj.badgeSize = badgeSize;
                                                   obj.themeType = themeType;
                                                   obj.showToastOnPress = showToastOnPress;
-                                                  return jsx(f55955, obj, userId.id);
+                                                  return jsx(f55983, obj, userId.id);
                                                 }
                                               }
                                               const tmp78 = closure_14(tmp(tmp2[44]).PlusMediumIcon, obj5);
@@ -1111,7 +1111,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
                                                   obj.badgeSize = badgeSize;
                                                   obj.themeType = themeType;
                                                   obj.showToastOnPress = showToastOnPress;
-                                                  return jsx(f55955, obj, userId.id);
+                                                  return jsx(f55983, obj, userId.id);
                                                 }
                                               }
                                               cResult[52] = tmp81;
@@ -1131,7 +1131,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
                                                 obj.badgeSize = badgeSize;
                                                 obj.themeType = themeType;
                                                 obj.showToastOnPress = showToastOnPress;
-                                                return jsx(f55955, obj, userId.id);
+                                                return jsx(f55983, obj, userId.id);
                                               }
                                             }
                                             const obj7 = { ref: badgeDirectoryEntryPointRef, accessibilityRole: "button", accessibilityLabel: tmp70, onPress: tmp17, style: tmp74, children: null };
@@ -1156,7 +1156,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
                                             obj.badgeSize = badgeSize;
                                             obj.themeType = themeType;
                                             obj.showToastOnPress = showToastOnPress;
-                                            return jsx(f55955, obj, userId.id);
+                                            return jsx(f55983, obj, userId.id);
                                           }
                                         }
                                         tmp75[0] = tmp6.addBadgesChip;
@@ -1228,7 +1228,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
                                                         obj.badgeSize = badgeSize;
                                                         obj.themeType = themeType;
                                                         obj.showToastOnPress = showToastOnPress;
-                                                        return jsx(f55955, obj, userId.id);
+                                                        return jsx(f55983, obj, userId.id);
                                                       }
                                                     }
                                                     const tmp69 = closure_14(badgeSize, obj9);
@@ -1257,7 +1257,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
                                                       obj.badgeSize = badgeSize;
                                                       obj.themeType = themeType;
                                                       obj.showToastOnPress = showToastOnPress;
-                                                      return jsx(f55955, obj, userId.id);
+                                                      return jsx(f55983, obj, userId.id);
                                                     }
                                                   }
                                                   tmp64 = closure_14(tmp(tmp2[17]).PressableOpacity, obj10);
@@ -1275,7 +1275,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
                                                     obj.badgeSize = badgeSize;
                                                     obj.themeType = themeType;
                                                     obj.showToastOnPress = showToastOnPress;
-                                                    return jsx(f55955, obj, userId.id);
+                                                    return jsx(f55983, obj, userId.id);
                                                   }
                                                 }
                                                 cResult[74] = tmp17;
@@ -1298,7 +1298,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
                                                 obj.badgeSize = badgeSize;
                                                 obj.themeType = themeType;
                                                 obj.showToastOnPress = showToastOnPress;
-                                                return jsx(f55955, obj, userId.id);
+                                                return jsx(f55983, obj, userId.id);
                                               }
                                             }
                                             items3[1] = tmp55;
@@ -1326,7 +1326,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
                                                 obj.badgeSize = badgeSize;
                                                 obj.themeType = themeType;
                                                 obj.showToastOnPress = showToastOnPress;
-                                                return jsx(f55955, obj, userId.id);
+                                                return jsx(f55983, obj, userId.id);
                                               }
                                             }
                                             obj12.accessibilityLabel = intl2.formatToPlainString(tmp(tmp2[35]).t.eIHfGZ, { overflow_count: null });
@@ -1348,7 +1348,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
                                               obj.badgeSize = badgeSize;
                                               obj.themeType = themeType;
                                               obj.showToastOnPress = showToastOnPress;
-                                              return jsx(f55955, obj, userId.id);
+                                              return jsx(f55983, obj, userId.id);
                                             }
                                           }
                                           cResult[66] = tmp56;
@@ -1372,7 +1372,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
                                         obj.badgeSize = badgeSize;
                                         obj.themeType = themeType;
                                         obj.showToastOnPress = showToastOnPress;
-                                        return jsx(f55955, obj, userId.id);
+                                        return jsx(f55983, obj, userId.id);
                                       }
                                     }
                                     cResult[59] = style;
@@ -1400,7 +1400,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
                                     obj.badgeSize = badgeSize;
                                     obj.themeType = themeType;
                                     obj.showToastOnPress = showToastOnPress;
-                                    return jsx(f55955, obj, userId.id);
+                                    return jsx(f55983, obj, userId.id);
                                   }
                                 }
                                 cResult[43] = substr;
@@ -1448,7 +1448,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
                         obj.badgeSize = badgeSize;
                         obj.themeType = themeType;
                         obj.showToastOnPress = showToastOnPress;
-                        return jsx(f55955, obj, userId.id);
+                        return jsx(f55983, obj, userId.id);
                       }
                     }
                     cResult[35] = catalogBadges;
@@ -1492,7 +1492,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
                               obj.badgeSize = badgeSize;
                               obj.themeType = themeType;
                               obj.showToastOnPress = showToastOnPress;
-                              return jsx(f55955, obj, userId.id);
+                              return jsx(f55983, obj, userId.id);
                             }
                           }
                           cResult[88] = tmp41;
@@ -1522,7 +1522,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
                         obj.badgeSize = badgeSize;
                         obj.themeType = themeType;
                         obj.showToastOnPress = showToastOnPress;
-                        return jsx(f55955, obj, userId.id);
+                        return jsx(f55983, obj, userId.id);
                       }
                     }
                     cResult[85] = style;
@@ -1543,7 +1543,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
                     obj.badgeSize = badgeSize;
                     obj.themeType = themeType;
                     obj.showToastOnPress = showToastOnPress;
-                    return jsx(f55955, obj, userId.id);
+                    return jsx(f55983, obj, userId.id);
                   }
                 }
                 const obj15 = { length: null };
@@ -1586,7 +1586,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
                     obj.badgeSize = badgeSize;
                     obj.themeType = themeType;
                     obj.showToastOnPress = showToastOnPress;
-                    return jsx(f55955, obj, userId.id);
+                    return jsx(f55983, obj, userId.id);
                   }
                 }
                 obj16.date = tmp26;
@@ -1619,7 +1619,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
                   obj.badgeSize = badgeSize;
                   obj.themeType = themeType;
                   obj.showToastOnPress = showToastOnPress;
-                  return jsx(f55955, obj, userId.id);
+                  return jsx(f55983, obj, userId.id);
                 }
               }
               obj17.source = onOpenBadgeDirectory(tmp2[42]);
@@ -1649,7 +1649,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
               obj.badgeSize = badgeSize;
               obj.themeType = themeType;
               obj.showToastOnPress = showToastOnPress;
-              return jsx(f55955, obj, userId.id);
+              return jsx(f55983, obj, userId.id);
             }
           }
           cResult[13] = badges;
@@ -1672,7 +1672,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
         obj.badgeSize = badgeSize;
         obj.themeType = themeType;
         obj.showToastOnPress = showToastOnPress;
-        return jsx(f55955, obj, userId.id);
+        return jsx(f55983, obj, userId.id);
       }
     }
     cResult[18] = tmp15;

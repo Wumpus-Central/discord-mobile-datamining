@@ -1,13 +1,13 @@
-// === Module 15936: YouBarStackNavigator ===
+// === Module 15940: YouBarStackNavigator ===
 
-// Module 15936 (YouBarStackNavigator)
+// Module 15940 (YouBarStackNavigator)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import Navigator from "Navigator" /* 6496 */;
 import LayerScope from "LayerScope" /* 6651 */;
 import ICYMIExperiment from "ICYMIExperiment" /* 8030 */;
-import notifications_Notifications from "notifications/Notifications" /* 16339 */;
-import useNotificationPermissionPromptDefault from "useNotificationPermissionPrompt" /* 16461 */;
+import notifications_Notifications from "notifications/Notifications" /* 16343 */;
+import useNotificationPermissionPromptDefault from "useNotificationPermissionPrompt" /* 16465 */;
 import noop from "module_19" /* 19 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;

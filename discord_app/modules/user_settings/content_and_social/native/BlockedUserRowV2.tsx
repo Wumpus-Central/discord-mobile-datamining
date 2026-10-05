@@ -1,6 +1,6 @@
-// === Module 14607: BlockedUserRowV2 ===
+// === Module 14611: BlockedUserRowV2 ===
 
-// Module 14607 (BlockedUserRowV2)
+// Module 14611 (BlockedUserRowV2)
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7850 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9434 */;
 import noop from "module_19" /* 19 */;
@@ -119,7 +119,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userRecord) => 
           }
         }
         const obj7 = { userRecord, accessibilityActions: tmp13, onAccessibilityAction: tmp7 };
-        const tmp16 = jsx(tmp(14608).RestrictedUserRowLabel, { userRecord, accessibilityActions: tmp13, onAccessibilityAction: tmp7 });
+        const tmp16 = jsx(tmp(14612).RestrictedUserRowLabel, { userRecord, accessibilityActions: tmp13, onAccessibilityAction: tmp7 });
         cResult[14] = tmp7;
         cResult[15] = tmp13;
         cResult[16] = userRecord;
@@ -195,7 +195,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userRecord) => 
   };
   const items = [{ name: "activate" }, { name: "unblock", label: formatToPlainStringResult }];
   obj3.accessibilityActions = items;
-  obj.label = jsx(userRecord(14608).RestrictedUserRowLabel, {
+  obj.label = jsx(userRecord(14612).RestrictedUserRowLabel, {
     userRecord,
     accessibilityActions: null,
     onAccessibilityAction(nativeEvent) {

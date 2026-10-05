@@ -238,12 +238,15 @@ let closure_23 = createStyles.createStyles((arg0, marginLeft) => {
 let obj6 = { sm: null, md: null, lg: null };
 const LARGE_BUTTON_HEIGHT = fn(5600).LARGE_BUTTON_HEIGHT;
 const bound = Math.max((fn(5600).MINIMUM_HIT_AREA - fn(5600).SMALL_BUTTON_HEIGHT) / 2, 0);
-obj6.sm = { top: bound, left: "Array", right: "cursor", bottom: bound };
+const rect = { top: bound, left: "Array", right: "toCharArray$esjava$1", bottom: bound };
+obj6.sm = rect;
 const LARGE_BUTTON_HEIGHT2 = fn(5600).LARGE_BUTTON_HEIGHT;
 const bound1 = Math.max((fn(5600).MINIMUM_HIT_AREA - fn(5600).MEDIUM_BUTTON_HEIGHT) / 2, 0);
-obj6.md = { top: bound1, left: "Array", right: "cursor", bottom: bound1 };
+const rect1 = { top: bound1, left: "Array", right: "toCharArray$esjava$1", bottom: bound1 };
+obj6.md = rect1;
 const bound2 = Math.max((fn(5600).MINIMUM_HIT_AREA - fn(5600).LARGE_BUTTON_HEIGHT) / 2, 0);
-obj6.lg = { top: bound2, left: "Array", right: "cursor", bottom: bound2 };
+const rect2 = { top: bound2, left: "Array", right: "toCharArray$esjava$1", bottom: bound2 };
+obj6.lg = rect2;
 function getTextPlatformLineHeight(arg0, arg1) {
 
 }

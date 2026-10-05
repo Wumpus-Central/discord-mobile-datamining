@@ -1,6 +1,6 @@
-// === Module 13055: GuildTemplateEmbed ===
+// === Module 13057: GuildTemplateEmbed ===
 
-// Module 13055 (GuildTemplateEmbed)
+// Module 13057 (GuildTemplateEmbed)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -10,7 +10,7 @@ import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 7595 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7604 */;
 import _modDef11418 from "module_11418" /* 11418 */;
 import _modDef11419 from "module_11419" /* 11419 */;
-import _modDef13056 from "module_13056" /* 13056 */;
+import _modDef13058 from "module_13058" /* 13058 */;
 import GuildTemplateStore from "GuildTemplateStore" /* 6966 */;
 import size from "module_2" /* 2 */;
 
@@ -63,7 +63,7 @@ export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, 
     obj10.titleColor = colors.titleColor;
     obj10.subtitle = formatToPlainStringResult;
     obj10.subtitleColor = colors.subtitleColor;
-    obj10.thumbnailUrl = Image.resolveAssetSource(_modDef13056).uri;
+    obj10.thumbnailUrl = Image.resolveAssetSource(_modDef13058).uri;
     ({ acceptLabelGreenColor: obj6.acceptLabelColor, acceptLabelGreenBackgroundColor: obj6.acceptLabelBackgroundColor } = colors);
     const intl6 = util.intl;
     obj10.acceptLabelText = intl6.string(util.t["a3Gl+e"]);

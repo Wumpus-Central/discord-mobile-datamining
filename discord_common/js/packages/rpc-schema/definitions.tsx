@@ -1,9 +1,9 @@
-// === Module 14316: definitions ===
+// === Module 14318: definitions ===
 
-// Module 14316 (definitions)
+// Module 14318 (definitions)
 import OAuth2Scopes from "OAuth2Scopes" /* 8015 */;
-import helpers from "helpers" /* 14317 */;
-import contextMenuIcons from "contextMenuIcons" /* 14318 */;
+import helpers from "helpers" /* 14319 */;
+import contextMenuIcons from "contextMenuIcons" /* 14320 */;
 import size from "module_2" /* 2 */;
 
 function VoiceCapabilities(boolean) {
@@ -99,13 +99,13 @@ let obj6 = {
     return obj;
   }
 };
-let obj7 = {
+let obj8 = {
   request: "Array",
   response(boolean) {
     return VoiceCapabilities(boolean);
   }
 };
-let obj9 = {
+let obj10 = {
   request: "Array",
   response(string) {
     const obj = { session_id: string.string().required(), channel_id: null, capabilities: null, participants: null };
@@ -139,7 +139,7 @@ let obj9 = {
     return obj;
   }
 };
-const obj11 = {
+let obj12 = {
   request: "Array",
   response(boolean) {
     const obj = { available: boolean.boolean().required(), transport: null, requires_existing_watch: null };
@@ -151,7 +151,7 @@ const obj11 = {
     return obj;
   }
 };
-let obj12 = {
+const obj13 = {
   request: "Array",
   response(boolean) {
     const obj = { available: boolean.boolean().required(), transport: null };
@@ -161,14 +161,14 @@ let obj12 = {
     return obj;
   }
 };
-const obj21 = {
+const obj22 = {
   request: "Array",
   response(boolean) {
     const obj = { hidden: boolean.boolean().required() };
     return obj;
   }
 };
-const obj24 = {
+const obj25 = {
   request: "Array",
   response(array) {
     const arrayResult = array.array();
@@ -285,7 +285,7 @@ const obj24 = {
     const stringResult = array.string();
   }
 };
-const obj29 = {
+const obj30 = {
   request: "Array",
   response(string) {
     const obj = { quest_id: string.string().required(), enrolled_at: null, completed_at: null, external_cta_url: null };
@@ -300,7 +300,7 @@ const obj29 = {
     return obj;
   }
 };
-const obj30 = {
+const obj31 = {
   request: "Array",
   response(string) {
     const obj = { ticket: string.string().required() };
@@ -452,7 +452,19 @@ export const RPCCommandSchemas = {
     }
   },
   [helpers.RPCCommand.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: obj6,
-  [helpers.RPCCommand.GET_VOICE_CAPABILITIES]: obj7,
+  [helpers.RPCCommand.RELAUNCH_FRAME]: {
+    request(string) {
+      const obj = { build: null };
+      const stringResult = string.string();
+      obj.build = string.string().max(64).required();
+      return obj;
+    },
+    response(boolean) {
+      const obj = { relaunched: boolean.boolean().required() };
+      return obj;
+    }
+  },
+  [helpers.RPCCommand.GET_VOICE_CAPABILITIES]: obj8,
   [helpers.RPCCommand.GET_VOICE_SESSION_PARTICIPANTS]: {
     request(string) {
       const obj = { session_id: string.string().required() };
@@ -485,7 +497,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.START_VOICE_SESSION]: obj9,
+  [helpers.RPCCommand.START_VOICE_SESSION]: obj10,
   [helpers.RPCCommand.UPDATE_VOICE_SPATIAL]: {
     request(string) {
       const obj = { session_id: string.string().required(), listener: null, sources: null };
@@ -560,13 +572,13 @@ export const RPCCommandSchemas = {
   [helpers.RPCCommand.ENABLE_VOICE_SPATIAL]: obj,
   [helpers.RPCCommand.DISABLE_VOICE_SPATIAL]: obj,
   [helpers.RPCCommand.STOP_VOICE_SESSION]: obj,
-  [helpers.RPCCommand.GET_APPLICATION_STREAMING_VIEW_CAPABILITIES]: obj11,
+  [helpers.RPCCommand.GET_APPLICATION_STREAMING_VIEW_CAPABILITIES]: obj12,
   [helpers.RPCCommand.START_APPLICATION_STREAMING_VIEW]: obj2,
   [helpers.RPCCommand.SUSPEND_APPLICATION_STREAMING_VIEW]: obj,
   [helpers.RPCCommand.RESUME_APPLICATION_STREAMING_VIEW]: obj,
   [helpers.RPCCommand.WATCH_APPLICATION_STREAMING_VIEW_ON_DISCORD]: obj,
   [helpers.RPCCommand.STOP_APPLICATION_STREAMING_VIEW]: obj,
-  [helpers.RPCCommand.GET_CAMERA_VIEW_CAPABILITIES]: obj12,
+  [helpers.RPCCommand.GET_CAMERA_VIEW_CAPABILITIES]: obj13,
   [helpers.RPCCommand.START_CAMERA_VIEW]: obj2,
   [helpers.RPCCommand.SUSPEND_CAMERA_VIEW]: obj,
   [helpers.RPCCommand.RESUME_CAMERA_VIEW]: obj,
@@ -812,7 +824,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.HIDE_TOOLTIP]: obj21,
+  [helpers.RPCCommand.HIDE_TOOLTIP]: obj22,
   [helpers.RPCCommand.SHOW_TOAST]: {
     request(string) {
       const obj = { message: null, type: null };
@@ -849,7 +861,7 @@ export const RPCCommandSchemas = {
       return { confirmed: boolean.boolean(), acknowledged: boolean.boolean() };
     }
   },
-  [helpers.RPCCommand.GET_RELATIONSHIPS]: obj24,
+  [helpers.RPCCommand.GET_RELATIONSHIPS]: obj25,
   [helpers.RPCCommand.INVITE_USER_EMBEDDED]: {
     request(string) {
       const obj = { user_id: string.string().required(), content: null };
@@ -858,7 +870,7 @@ export const RPCCommandSchemas = {
       obj.content = string.string().min(0).max(1024);
       return obj;
     },
-    response: "a"
+    response: "r"
   },
   [helpers.RPCCommand.GET_USER]: {
     request(string) {
@@ -896,8 +908,8 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.GET_QUEST]: obj29,
-  [helpers.RPCCommand.REQUEST_PROXY_TICKET_REFRESH]: obj30,
+  [helpers.RPCCommand.GET_QUEST]: obj30,
+  [helpers.RPCCommand.REQUEST_PROXY_TICKET_REFRESH]: obj31,
   [helpers.RPCCommand.SET_PREFERS_PICTURE_IN_PICTURE_ON_NAVIGATE_AWAY]: {
     request(boolean) {
       const obj = { enabled: boolean.boolean().required() };

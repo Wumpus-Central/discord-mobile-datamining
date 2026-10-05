@@ -1,11 +1,11 @@
-// === Module 15790: ContentAndSocialDiscordRouteSetting ===
+// === Module 15794: ContentAndSocialDiscordRouteSetting ===
 
-// Module 15790 (ContentAndSocialDiscordRouteSetting)
+// Module 15794 (ContentAndSocialDiscordRouteSetting)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
 import FriendsIcon from "FriendsIcon" /* 4831 */;
 import SettingsConstants from "SettingsConstants" /* 7634 */;
-import ContentAndSocialScreen from "ContentAndSocialScreen" /* 15772 */;
+import ContentAndSocialScreen from "ContentAndSocialScreen" /* 15776 */;
 import SettingBuilders from "SettingBuilders" /* 11129 */;
 import size from "module_2" /* 2 */;
 

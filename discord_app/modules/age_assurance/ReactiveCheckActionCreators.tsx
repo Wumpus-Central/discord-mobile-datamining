@@ -1,6 +1,6 @@
-// === Module 13573: ReactiveCheckActionCreators ===
+// === Module 13575: ReactiveCheckActionCreators ===
 
-// Module 13573 (ReactiveCheckActionCreators)
+// Module 13575 (ReactiveCheckActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -16,7 +16,7 @@ let closure_5 = async function _fetchReactiveCheckResult() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -84,7 +84,7 @@ let closure_6 = async function _resetAgeVerification() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -116,7 +116,7 @@ let closure_6 = async function _resetAgeVerification() {
       } else {
         closure_128_1(closure_128_2[3]).dispatch({ type: "AGE_VERIFICATION_RESET" });
         c2 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp13) {
       c2 = tmp;

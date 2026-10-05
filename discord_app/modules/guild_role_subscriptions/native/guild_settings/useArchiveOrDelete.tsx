@@ -1,9 +1,9 @@
-// === Module 17910: useArchiveOrDelete ===
+// === Module 17932: useArchiveOrDelete ===
 
-// Module 17910 (useArchiveOrDelete)
+// Module 17932 (useArchiveOrDelete)
 import util from "util" /* 1126 */;
 import ToastUtilsAll from "ToastUtils" /* 4567 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15041 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15045 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -163,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, guil
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -467,7 +467,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, guil
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

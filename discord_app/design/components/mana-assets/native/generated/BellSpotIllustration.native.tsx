@@ -1,10 +1,10 @@
-// === Module 16464: BellSpotIllustration ===
+// === Module 16468: BellSpotIllustration ===
 
-// Module 16464 (BellSpotIllustration)
+// Module 16468 (BellSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5974 */;
-import _modDef16465 from "module_16465" /* 16465 */;
+import _modDef16469 from "module_16469" /* 16469 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -27,7 +27,7 @@ export const BellSpotIllustration = ReactCompilerGating.isReactCompilerEnabled()
     num3 = scale;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef16465 };
+    const obj2 = { uri: _modDef16469 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -78,7 +78,7 @@ export const BellSpotIllustration = ReactCompilerGating.isReactCompilerEnabled()
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef16465 };
+  const obj2 = { uri: _modDef16469 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

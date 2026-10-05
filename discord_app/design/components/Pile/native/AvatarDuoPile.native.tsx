@@ -1,6 +1,6 @@
-// === Module 14273: AvatarDuoPile ===
+// === Module 14275: AvatarDuoPile ===
 
-// Module 14273 (AvatarDuoPile)
+// Module 14275 (AvatarDuoPile)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import ClipView from "ClipView" /* 8469 */;

@@ -1,6 +1,6 @@
-// === Module 17101: CollectiblesMobileAnnouncementActionSheet ===
+// === Module 17125: CollectiblesMobileAnnouncementActionSheet ===
 
-// Module 17101 (CollectiblesMobileAnnouncementActionSheet)
+// Module 17125 (CollectiblesMobileAnnouncementActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
@@ -10,8 +10,8 @@ import Text_Text from "Text/Text" /* 4886 */;
 import BottomSheetModal from "BottomSheetModal" /* 6112 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6681 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7052 */;
-import _modDef17102 from "module_17102" /* 17102 */;
-import _modDef17103 from "module_17103" /* 17103 */;
+import _modDef17126 from "module_17126" /* 17126 */;
+import _modDef17127 from "module_17127" /* 17127 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -91,7 +91,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             }
             const _Symbol = Symbol;
             if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-              const obj4 = { uri: _modDef17102 };
+              const obj4 = { uri: _modDef17126 };
               cResult[13] = obj4;
               let tmp15 = obj4;
             } else {
@@ -178,7 +178,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   items1[1] = rect;
   obj4.style = items1;
   const obj5 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
-  obj5.source = { uri: _modDef17102 };
+  obj5.source = { uri: _modDef17126 };
   obj5.style = tmp.mascotImage;
   obj4.children = options(React4, obj5);
   obj3.children = options(hasOwnProperty, obj4);
@@ -340,7 +340,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
         return;
       }
     }
-    tmp17[0] = _modDef17103;
+    tmp17[0] = _modDef17127;
     cResult[10] = tmp17;
   } else {
     class P {
@@ -473,7 +473,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
     }
     const obj10 = { icon: null, text: null };
     const obj11 = { size };
-    obj10.icon = closure_9(tmp(17104).ShopIllocon, obj11);
+    obj10.icon = closure_9(tmp(17128).ShopIllocon, obj11);
     const intl3 = tmp(1126).intl;
     obj10.text = intl3.string(tmp(1126).t["/4bQuG"]);
     const tmp37 = closure_9(closure_16, obj10);
@@ -601,7 +601,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
   const memo = noop.useMemo(() => closure_1_9(closure_1_15, {}), []);
   let obj = { onDismiss: callback1, backdropChildren: memo, children: null };
   const obj2 = { style: tmp.container, children: null };
-  const obj3 = { source: { uri: _modDef17103 }, style: tmp.framePreviewImage, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
+  const obj3 = { source: { uri: _modDef17127 }, style: tmp.framePreviewImage, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
   const items3 = [closure_9(closure_4, obj3), , , ];
   const obj5 = { variant: "heading-xl/bold", color: "text-strong", accessibilityRole: "header", style: tmp.headerText, children: null };
   const intl = markAsDismissed(1126).intl;
@@ -616,7 +616,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed)
   const intl3 = markAsDismissed(1126).intl;
   obj9.text = intl3.string(markAsDismissed(1126).t.MkVbBY);
   items4[1] = closure_9(closure_16, obj9);
-  const obj11 = { icon: closure_9(markAsDismissed(17104).ShopIllocon, { size }), text: null };
+  const obj11 = { icon: closure_9(markAsDismissed(17128).ShopIllocon, { size }), text: null };
   const intl4 = markAsDismissed(1126).intl;
   obj11.text = intl4.string(markAsDismissed(1126).t["/4bQuG"]);
   items4[2] = closure_9(closure_16, obj11);

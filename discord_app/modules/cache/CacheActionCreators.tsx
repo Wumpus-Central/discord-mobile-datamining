@@ -1,6 +1,6 @@
-// === Module 15396: CacheActionCreators ===
+// === Module 15400: CacheActionCreators ===
 
-// Module 15396 (CacheActionCreators)
+// Module 15400 (CacheActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import CacheStore from "CacheStore" /* 6985 */;
@@ -46,7 +46,7 @@ let closure_5 = async function _writeCaches() {
     flag = false;
   }
   closure_129_0 = flag;
-  return "Reflect";
+  return "Set";
 };
 const ChannelLoader = fn(2051).ChannelLoader;
 const size = fn(2);

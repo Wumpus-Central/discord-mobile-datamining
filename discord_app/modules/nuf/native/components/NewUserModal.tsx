@@ -1,8 +1,8 @@
-// === Module 17563: NewUserModal ===
+// === Module 17587: NewUserModal ===
 
-// Module 17563 (NewUserModal)
+// Module 17587 (NewUserModal)
 import nativeDefault from "native" /* 587 */;
-import NewUserUtils from "NewUserUtils" /* 17562 */;
+import NewUserUtils from "NewUserUtils" /* 17586 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       const obj3 = {
         name: "enable-notification",
         getComponent() {
-              return closure_0(15917).RedesignNotificationScreen;
+              return closure_0(15921).RedesignNotificationScreen;
             },
         initialParams: null
       };
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       const obj5 = {
         name: "choose-avatar",
         getComponent() {
-              return closure_0(17565).default;
+              return closure_0(17589).default;
             },
         options() {
               return {
@@ -223,7 +223,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         name: "discoverability",
         options: { headerShown: false },
         getComponent() {
-              return closure_0(17566).default;
+              return closure_0(17590).default;
             },
         initialParams: null
       };
@@ -253,7 +253,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       const obj11 = {
         name: "connect-guardian",
         getComponent() {
-              return closure_0(17568).default;
+              return closure_0(17592).default;
             },
         initialParams: null
       };
@@ -388,14 +388,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     closure_5(closure_7.Screen, {
       name: "enable-notification",
       getComponent() {
-        return closure_0(15917).RedesignNotificationScreen;
+        return closure_0(15921).RedesignNotificationScreen;
       },
       initialParams: { onComplete }
     }),
     closure_5(closure_7.Screen, {
       name: "choose-avatar",
       getComponent() {
-        return closure_0(17565).default;
+        return closure_0(17589).default;
       },
       options() {
         return {
@@ -429,14 +429,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       name: "discoverability",
       options: { headerShown: false },
       getComponent() {
-        return closure_0(17566).default;
+        return closure_0(17590).default;
       },
       initialParams: { onComplete }
     }),
     closure_5(closure_7.Screen, {
       name: "connect-guardian",
       getComponent() {
-        return closure_0(17568).default;
+        return closure_0(17592).default;
       },
       initialParams: { onComplete }
     })

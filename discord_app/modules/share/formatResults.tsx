@@ -36,7 +36,7 @@ let closure_12 = async function _getOrResolveChannelIdFromDestinationId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -63,13 +63,13 @@ let closure_12 = async function _getOrResolveChannelIdFromDestinationId(arg0) {
             return obj6;
           } else {
             c1 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         }
       } else if (1 === tmp6) {
         c4 = 0;
         c1 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       } else if (arg0 === 1) {
         c1 = 3;
         throw value;

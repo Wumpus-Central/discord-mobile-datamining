@@ -1,6 +1,6 @@
-// === Module 16174: GuildRoleSubscriptionTierTemplateUpsellActionSheet ===
+// === Module 16178: GuildRoleSubscriptionTierTemplateUpsellActionSheet ===
 
-// Module 16174 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
+// Module 16178 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;

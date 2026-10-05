@@ -1,13 +1,13 @@
-// === Module 17513: JankSessionManager ===
+// === Module 17537: JankSessionManager ===
 
-// Module 17513 (JankSessionManager)
+// Module 17537 (JankSessionManager)
 import LoggerDefault from "Logger" /* 3 */;
 import clientLaunchId from "clientLaunchId" /* 1350 */;
-import isJankScreenReportingEnabled from "isJankScreenReportingEnabled" /* 15928 */;
-import getJankSurfaceName from "getJankSurfaceName" /* 15935 */;
-import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 17514 */;
-import JankNavigationReporterDefault from "JankNavigationReporter" /* 17515 */;
-import attachJankPanelReportersDefault from "attachJankPanelReporters" /* 17516 */;
+import isJankScreenReportingEnabled from "isJankScreenReportingEnabled" /* 15932 */;
+import getJankSurfaceName from "getJankSurfaceName" /* 15939 */;
+import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 17538 */;
+import JankNavigationReporterDefault from "JankNavigationReporter" /* 17539 */;
+import attachJankPanelReportersDefault from "attachJankPanelReporters" /* 17540 */;
 import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 6969 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
 
@@ -57,8 +57,8 @@ prototype["deliverPendingSessions"] = function deliverPendingSessions() {
   const self = this;
   if (!this._isDelivering) {
     tmp._isDelivering = true;
-    const pendingReports = self(17514).getPendingReports();
-    let obj = self(17514);
+    const pendingReports = self(17538).getPendingReports();
+    let obj = self(17538);
     const nextPromise = pendingReports.then((arr) => {
       closure_0 = arr;
       if (0 !== arr.length) {

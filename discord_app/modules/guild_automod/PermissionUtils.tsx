@@ -1,6 +1,6 @@
-// === Module 16988: guild_automod/PermissionUtils ===
+// === Module 17012: guild_automod/PermissionUtils ===
 
-// Module 16988 (guild_automod/PermissionUtils)
+// Module 17012 (guild_automod/PermissionUtils)
 import GuildStore from "GuildStore" /* 2074 */;
 import PermissionStore from "PermissionStore" /* 4509 */;
 

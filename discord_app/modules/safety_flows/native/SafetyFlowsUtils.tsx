@@ -1,13 +1,13 @@
-// === Module 18043: SafetyFlowsUtils ===
+// === Module 18065: SafetyFlowsUtils ===
 
-// Module 18043 (SafetyFlowsUtils)
+// Module 18065 (SafetyFlowsUtils)
 import util from "util" /* 1126 */;
 import _modDef2787 from "module_2787" /* 2787 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4568 */;
 import _modDef4805 from "module_4805" /* 4805 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import types from "types" /* 18037 */;
-import constants from "constants" /* 18038 */;
+import types from "types" /* 18059 */;
+import constants from "constants" /* 18060 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
@@ -130,7 +130,7 @@ export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled() ? 
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -178,7 +178,7 @@ export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled() ? 
             closure_129_0 = value;
             navigateToScreenForTask(data, closure_129_0);
             c4 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp15) {
           c4 = tmp;
@@ -224,7 +224,7 @@ export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled() ? 
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -272,7 +272,7 @@ export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled() ? 
             closure_129_0 = value;
             navigateToScreenForTask(data, closure_129_0);
             c4 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp15) {
           c4 = tmp;

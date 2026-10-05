@@ -228,7 +228,7 @@ export const optimisticallyMarkGameServerResizing = function optimisticallyMarkG
   const gameServers = OwnedGameServersStore.getGameServers();
   const found = gameServers.find((subscription_id) => subscription_id.subscription_id === closure_0);
   if (null != found) {
-    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: 720 };
+    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "thead" };
     const obj3 = {};
     const merged = Object.assign(found);
     obj3.status = GameServerStatus.GameServerStatus.STARTING;
@@ -243,7 +243,7 @@ export const updateMyGameServerName = function updateMyGameServerName(arg0, name
   if (null == found) {
     let resolved = Promise.resolve();
   } else {
-    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: 720 };
+    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "thead" };
     const obj3 = {};
     const merged = Object.assign(found);
     obj3.name = name;
@@ -304,7 +304,7 @@ export const wakeMyGameServer = function wakeMyGameServer(arg0) {
   const gameServers = OwnedGameServersStore.getGameServers();
   const found = gameServers.find((id) => id.id === closure_0);
   if (null != found) {
-    let obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: 720 };
+    let obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "thead" };
     let obj3 = {};
     let merged = Object.assign(found);
     obj3.status = require("GameServerStatus").GameServerStatus.STARTING;

@@ -1,6 +1,6 @@
-// === Module 16793: useOnPressSearchItem ===
+// === Module 16812: useOnPressSearchItem ===
 
-// Module 16793 (useOnPressSearchItem)
+// Module 16812 (useOnPressSearchItem)
 import util from "util" /* 1126 */;
 import URLUtilsDefault from "URLUtils" /* 1371 */;
 import LinkingDefault from "Linking" /* 4565 */;
@@ -50,7 +50,7 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -81,7 +81,7 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
       } else {
         value.openGuildVoiceModal(closure_129_0, "Channel List");
         c3 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp12) {
       c3 = tmp;
@@ -91,7 +91,7 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
 };
 const SearchConstants = fn(7513);
 ({ SearchMediaTypes: closure_8, SearchHistoryItemTypes: closure_9, SearchQueryTagTypes: c10 } = SearchConstants);
-const SearchNavigatorScreens = fn(16794).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(16813).SearchNavigatorScreens;
 const SearchFilterAddLocations = fn(7512).SearchFilterAddLocations;
 const Constants = fn(1085);
 ({ Routes: map1, ComponentActions: closure_14, ME: closure_15, SearchTypes: closure_16 } = Constants);
@@ -307,7 +307,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -375,7 +375,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
               }
             });
             c5 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
           const obj6 = closure_0(context[23]);
         }
@@ -417,7 +417,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -485,7 +485,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
               }
             });
             c5 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
           const obj6 = closure_0(context[23]);
         }

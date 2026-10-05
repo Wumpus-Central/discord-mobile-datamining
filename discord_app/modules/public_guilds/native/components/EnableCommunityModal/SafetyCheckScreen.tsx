@@ -1,6 +1,6 @@
-// === Module 17814: SafetyCheckScreen ===
+// === Module 17838: SafetyCheckScreen ===
 
-// Module 17814 (SafetyCheckScreen)
+// Module 17838 (SafetyCheckScreen)
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9247 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

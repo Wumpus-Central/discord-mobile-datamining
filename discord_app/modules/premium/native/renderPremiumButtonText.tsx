@@ -1,6 +1,6 @@
-// === Module 13374: renderPremiumButtonText ===
+// === Module 13376: renderPremiumButtonText ===
 
-// Module 13374 (renderPremiumButtonText)
+// Module 13376 (renderPremiumButtonText)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1188 */;

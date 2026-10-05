@@ -1,6 +1,6 @@
-// === Module 17500: LabelLayoutComponent ===
+// === Module 17524: LabelLayoutComponent ===
 
-// Module 17500 (LabelLayoutComponent)
+// Module 17524 (LabelLayoutComponent)
 import c from "c" /* 576 */;
 import Server from "Server" /* 1985 */;
 import Input from "Input" /* 6423 */;

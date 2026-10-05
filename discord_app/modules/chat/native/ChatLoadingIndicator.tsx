@@ -1,6 +1,6 @@
-// === Module 13107: ChatLoadingIndicator ===
+// === Module 13109: ChatLoadingIndicator ===
 
-// Module 13107 (ChatLoadingIndicator)
+// Module 13109 (ChatLoadingIndicator)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;

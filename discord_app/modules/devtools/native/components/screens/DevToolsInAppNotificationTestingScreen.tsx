@@ -1,6 +1,6 @@
-// === Module 15604: DevToolsInAppNotificationTestingScreen ===
+// === Module 15608: DevToolsInAppNotificationTestingScreen ===
 
-// Module 15604 (DevToolsInAppNotificationTestingScreen)
+// Module 15608 (DevToolsInAppNotificationTestingScreen)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
@@ -757,7 +757,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           return closure_1_14(first(5993).TableRow, {
             label: label.label,
             subLabel: label.subLabel,
-            icon: closure_1_14(first(15409).BeakerIcon, {}),
+            icon: closure_1_14(first(15413).BeakerIcon, {}),
             onPress() {
               return first(closure_0);
             },
@@ -786,7 +786,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               return closure_1_14(first(5993).TableRow, {
                 label: label.label,
                 subLabel: label.subLabel,
-                icon: closure_1_14(first(15409).BeakerIcon, {}),
+                icon: closure_1_14(first(15413).BeakerIcon, {}),
                 onPress() {
                   return first(closure_0);
                 },
@@ -844,7 +844,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         return closure_1_14(closure_1_0(5993).TableRow, {
           label: label.label,
           subLabel: label.subLabel,
-          icon: closure_1_14(closure_1_0(15409).BeakerIcon, {}),
+          icon: closure_1_14(closure_1_0(15413).BeakerIcon, {}),
           onPress() {
             return closure_2_0(closure_0);
           },
@@ -864,7 +864,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     children: items3.map((label) => closure_1_14(label(5993).TableRow, {
       label: label.label,
       subLabel: label.subLabel,
-      icon: closure_1_14(label(15409).BeakerIcon, {}),
+      icon: closure_1_14(label(15413).BeakerIcon, {}),
       onPress() {
         return label(label);
       },

@@ -1,11 +1,11 @@
-// === Module 16243: GuildsBarPendingGuildFolder ===
+// === Module 16247: GuildsBarPendingGuildFolder ===
 
-// Module 16243 (GuildsBarPendingGuildFolder)
+// Module 16247 (GuildsBarPendingGuildFolder)
 import HapticUtils from "HapticUtils" /* 4855 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5705 */;
 import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 9415 */;
-import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 16223 */;
-import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 16230 */;
+import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 16227 */;
+import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 16234 */;
 import noop from "module_19" /* 19 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
 
@@ -206,9 +206,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((id) =>
 }) : ((id) => {
   id = id.id;
   ({ expanded, childNodes } = id);
-  let obj = id(16230);
+  let obj = id(16234);
   importDefault = usePendingFolderGuildIdsDefault();
-  const guildsBarAnimatedWrapperStyles = id(16230).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: false });
+  const guildsBarAnimatedWrapperStyles = id(16234).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: false });
   const items = [SelectedGuildStore];
   const items1 = [id];
   const stateFromStores = id(504).useStateFromStores(items, () => {
@@ -245,7 +245,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((id) =>
       const result1 = closure_1(5705).toggleGuildFolderExpand(closure_1_0);
     }
   }), items2);
-  const obj4 = { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "IconComponent", overState: "a", preventClipping: "statue_of_liberty", config: "tokyo_tower", externalChildren: "japanese_castle", children: "stadium" };
+  const obj4 = { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "IconComponent", overState: "a", preventClipping: "bracket", config: "text-lg/normal", externalChildren: "text-default", children: null };
   const obj3 = id(4612);
   obj4.id = "" + id;
   obj4.accessibilityActions = accessibilityActions;
@@ -259,9 +259,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((id) =>
   let tmp8Result = null;
   if (expanded) {
     const obj5 = { folderId: id, totalItems: childNodes.length };
-    tmp8Result = jsx(tmp(16229).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
+    tmp8Result = jsx(tmp(16233).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
   }
   obj4.externalChildren = tmp8Result;
   obj4.children = jsx(id(12702).HourglassIcon, {});
-  return jsx(GuildsBarAnimatedItemWrapperDefault, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "IconComponent", overState: "a", preventClipping: "statue_of_liberty", config: "tokyo_tower", externalChildren: "japanese_castle", children: "stadium" });
+  return jsx(GuildsBarAnimatedItemWrapperDefault, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "IconComponent", overState: "a", preventClipping: "bracket", config: "text-lg/normal", externalChildren: "text-default", children: null });
 }));

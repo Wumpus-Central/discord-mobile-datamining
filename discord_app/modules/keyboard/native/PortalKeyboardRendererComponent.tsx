@@ -1,13 +1,13 @@
-// === Module 16600: PortalKeyboardRendererComponent ===
+// === Module 16606: PortalKeyboardRendererComponent ===
 
-// Module 16600 (PortalKeyboardRendererComponent)
+// Module 16606 (PortalKeyboardRendererComponent)
 import c from "c" /* 576 */;
 import KeyboardTypes from "KeyboardTypes" /* 1616 */;
 import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6722 */;
 import AppLauncherTypes from "AppLauncherTypes" /* 8932 */;
 import AppLauncherKeyboardDefault from "AppLauncherKeyboard" /* 11649 */;
-import MediaKeyboardDefault from "MediaKeyboard" /* 16601 */;
-import ExpressionPickerKeyboardDefault from "ExpressionPickerKeyboard" /* 16607 */;
+import MediaKeyboardDefault from "MediaKeyboard" /* 16607 */;
+import ExpressionPickerKeyboardDefault from "ExpressionPickerKeyboard" /* 16613 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 

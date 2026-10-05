@@ -24,7 +24,7 @@ let closure_9 = async function _handleURL(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -124,7 +124,7 @@ let closure_9 = async function _handleURL(arg0) {
           };
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp8) {
@@ -185,7 +185,7 @@ let closure_9 = async function _handleURL(arg0) {
         } else if (2 === tmp8) {
           c6 = 0;
           c8 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         } else {
           if (3 === tmp8) {
             if (arg0 === 1) {

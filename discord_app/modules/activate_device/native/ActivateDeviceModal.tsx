@@ -1,6 +1,6 @@
-// === Module 13684: ActivateDeviceModal ===
+// === Module 13686: ActivateDeviceModal ===
 
-// Module 13684 (ActivateDeviceModal)
+// Module 13686 (ActivateDeviceModal)
 import _modDef4809 from "module_4809" /* 4809 */;
 import noop from "module_19" /* 19 */;
 
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userCode) => {
           return null;
         },
       render() {
-          return jsx(userCode(13685).ActivateDevice, { onClose, prefilledUserCode });
+          return jsx(userCode(13687).ActivateDevice, { onClose, prefilledUserCode });
         }
     };
     obj2[constants.ACTIVATE_DEVICE] = obj3;
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((userCode) => {
           return null;
         },
         render() {
-          return jsx(userCode(13685).ActivateDevice, { onClose, prefilledUserCode });
+          return jsx(userCode(13687).ActivateDevice, { onClose, prefilledUserCode });
         }
       }
     };

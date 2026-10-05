@@ -80,7 +80,7 @@ let closure_7 = async function _openMediaModal() {
   }
   closure_129_6 = openAs;
   closure_129_7 = Object.assign(closure_0, Object.assign({ originViewOrOriginLayout: 0, initialIndex: 0, initialSources: 0, analyticsSource: 0, channelId: 0, onClose: 0, openAs: 0 }));
-  return "Reflect";
+  return "Set";
 };
 const MEDIA_MODAL_KEY = fn(1085).MEDIA_MODAL_KEY;
 let size = fn(2);

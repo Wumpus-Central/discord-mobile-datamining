@@ -1,9 +1,9 @@
-// === Module 14223: NotificationsTabLottie ===
+// === Module 14225: NotificationsTabLottie ===
 
-// Module 14223 (NotificationsTabLottie)
+// Module 14225 (NotificationsTabLottie)
 import c from "c" /* 576 */;
 import LottieIcon from "LottieIcon" /* 9629 */;
-import _mod14224 from "module_14224" /* 14224 */;
+import _mod14226 from "module_14226" /* 14226 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("design/components/LottieIcon/native/g
 export const NotificationsTabLottie = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod14224;
+    const tmpResult = _mod14226;
     cResult[0] = tmpResult;
     let first = tmpResult;
   } else {
@@ -38,5 +38,5 @@ export const NotificationsTabLottie = noop.forwardRef(ReactCompilerGating.isReac
   const obj2 = { dotLottie: first, animation: "all", ref, layers, markers: items };
 }) : ((arg0, ref) => {
   const merged = Object.assign(arg0);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod14224, animation: "all", ref, layers, markers: items });
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod14226, animation: "all", ref, layers, markers: items });
 }));

@@ -1,10 +1,10 @@
-// === Module 12980: DiscountsMegaphoneSpotIllustration ===
+// === Module 12982: DiscountsMegaphoneSpotIllustration ===
 
-// Module 12980 (DiscountsMegaphoneSpotIllustration)
+// Module 12982 (DiscountsMegaphoneSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5974 */;
-import _modDef12981 from "module_12981" /* 12981 */;
+import _modDef12983 from "module_12983" /* 12983 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -27,7 +27,7 @@ export const DiscountsMegaphoneSpotIllustration = ReactCompilerGating.isReactCom
     num3 = scale;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef12981 };
+    const obj2 = { uri: _modDef12983 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -78,7 +78,7 @@ export const DiscountsMegaphoneSpotIllustration = ReactCompilerGating.isReactCom
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef12981 };
+  const obj2 = { uri: _modDef12983 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

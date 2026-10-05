@@ -1,6 +1,6 @@
-// === Module 18039: SafetyFlowsActionCreators ===
+// === Module 18061: SafetyFlowsActionCreators ===
 
-// Module 18039 (SafetyFlowsActionCreators)
+// Module 18061 (SafetyFlowsActionCreators)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5083 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -40,7 +40,7 @@ let closure_7 = async function _resendVerificationCode() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

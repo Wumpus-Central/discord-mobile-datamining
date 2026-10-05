@@ -1,6 +1,6 @@
-// === Module 15281: UserSettingsText ===
+// === Module 15285: UserSettingsText ===
 
-// Module 15281 (UserSettingsText)
+// Module 15285 (UserSettingsText)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1188 */;

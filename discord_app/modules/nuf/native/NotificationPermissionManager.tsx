@@ -1,6 +1,6 @@
-// === Module 17570: NotificationPermissionManager ===
+// === Module 17594: NotificationPermissionManager ===
 
-// Module 17570 (NotificationPermissionManager)
+// Module 17594 (NotificationPermissionManager)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import _modDef4461 from "module_4461" /* 4461 */;
@@ -89,7 +89,7 @@ function showPrompt(arg0, arg1, arg2) {
     obj3.impressionName = discord_common_AnalyticsUtils.ImpressionNames.PUSH_NOTIFICATION_REACTIVATION_PROMPT;
     obj3.impressionProperties = { action_location: location };
     obj3.location = location;
-    obj2.openLazy(asyncRequireImpl(17571, dependencyMap.paths), v65535, obj3);
+    obj2.openLazy(asyncRequireImpl(17595, dependencyMap.paths), v65535, obj3);
   }, arg2);
 }
 function _logNotificationPermissionStatus() {
@@ -113,7 +113,7 @@ let closure_25 = async function _logNotificationPermissionStatus2() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -156,7 +156,7 @@ let closure_25 = async function _logNotificationPermissionStatus2() {
         obj8.notification_authorization_status = tmp7;
         obj7.track(closure_129_14.NOTIFICATION_PERMISSION_STATUS, obj8);
         c3 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp11) {
       c3 = tmp;
@@ -211,7 +211,7 @@ class NotificationPermissionManager extends tmp4 {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -254,7 +254,7 @@ class NotificationPermissionManager extends tmp4 {
             return obj;
           } else {
             c2 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp8) {
           c2 = tmp;
@@ -273,7 +273,7 @@ class NotificationPermissionManager extends tmp4 {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -296,7 +296,7 @@ class NotificationPermissionManager extends tmp4 {
               ({ message: closure_129_0, optimistic: closure_129_1, isPushNotification: closure_129_2, sendMessageOptions: closure_129_3 } = closure_0);
               c3 = 1;
               c4 = 1;
-              return { value: "Reflect", done: true };
+              return { value: "Set", done: true };
             }
           } else {
             if (1 === tmp5) {
@@ -378,7 +378,7 @@ class NotificationPermissionManager extends tmp4 {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -397,7 +397,7 @@ class NotificationPermissionManager extends tmp4 {
                 invite2 = invite.invite;
                 c4 = 1;
                 c5 = 1;
-                return { value: "Reflect", done: true };
+                return { value: "Set", done: true };
               }
             } else {
               if (1 === tmp5) {
@@ -530,7 +530,7 @@ class NotificationPermissionManager extends tmp4 {
         await "IconComponent";
         closure_1 = tmp2;
         relationship2 = relationship.relationship;
-        return "Reflect";
+        return "Set";
       })();
       iter.next();
       return iter;
@@ -558,7 +558,7 @@ class NotificationPermissionManager extends tmp4 {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -580,7 +580,7 @@ class NotificationPermissionManager extends tmp4 {
               closure_129_2 = undefined;
               c3 = 1;
               c4 = 1;
-              return { value: "Reflect", done: true };
+              return { value: "Set", done: true };
             }
           } else {
             if (1 === tmp5) {
@@ -625,7 +625,7 @@ class NotificationPermissionManager extends tmp4 {
               }
               closure_130_1.previousAppState = state;
               c4 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
             if (state === applyArgumentsResult(1105).AppStates.ACTIVE) {
               c3 = 3;
@@ -661,7 +661,7 @@ class NotificationPermissionManager extends tmp4 {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -692,7 +692,7 @@ class NotificationPermissionManager extends tmp4 {
             closure_128_0 = value;
             const result = tmp2(12055).updateNotificationAuthorizationStatus(closure_128_0);
             c3 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp14) {
           c3 = tmp;

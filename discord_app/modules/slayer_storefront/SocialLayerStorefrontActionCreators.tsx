@@ -32,7 +32,7 @@ let closure_13 = async function _fetchSocialLayerStorefront2(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -73,7 +73,7 @@ let closure_13 = async function _fetchSocialLayerStorefront2(arg0) {
           closure_132_17 = undefined;
           c8 = 1;
           c9 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -268,7 +268,7 @@ let closure_15 = async function _fetchSocialLayerStorefrontSkuWithUrl2(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -303,7 +303,7 @@ let closure_15 = async function _fetchSocialLayerStorefrontSkuWithUrl2(arg0) {
           let storefront_metadata;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -428,7 +428,7 @@ let closure_22 = async function _fetchSocialLayerStorefrontEntries() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -533,7 +533,7 @@ let closure_23 = async function _fetchSocialLayerStorefrontById(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -710,7 +710,7 @@ let closure_26 = async function _fetchSocialLayerStorefrontConfig() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

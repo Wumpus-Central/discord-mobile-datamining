@@ -1,6 +1,6 @@
-// === Module 17047: SpamMessageList ===
+// === Module 17071: SpamMessageList ===
 
-// Module 17047 (SpamMessageList)
+// Module 17071 (SpamMessageList)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
@@ -9,12 +9,12 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
 import MonitoringAgentDefault from "MonitoringAgent" /* 5409 */;
 import MetricEvents from "MetricEvents" /* 5414 */;
 import useMountEffectDefault from "useMountEffect" /* 5590 */;
-import useSortedSpamMessageRequestsDefault from "useSortedSpamMessageRequests" /* 17048 */;
+import useSortedSpamMessageRequestsDefault from "useSortedSpamMessageRequests" /* 17072 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const MessageRequestEmptyDefault = tmp2(17042);
+const MessageRequestEmptyDefault = tmp2(17066);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
@@ -733,10 +733,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((goToMessageReque
   const tmp = closure_11();
   importDefault = tmp;
   const bottom = useSafeAreaInsetsDefault().bottom;
-  dependencyMap = goToMessageRequestPreview(17041).useSpamMessageRequestCount();
+  dependencyMap = goToMessageRequestPreview(17065).useSpamMessageRequestCount();
   const arr = useSortedSpamMessageRequestsDefault();
-  let obj = goToMessageRequestPreview(17041);
-  hasSingleMessageRequest = goToMessageRequestPreview(17039).useListHasSingleSpamMessageRequest();
+  let obj = goToMessageRequestPreview(17065);
+  hasSingleMessageRequest = goToMessageRequestPreview(17063).useListHasSingleSpamMessageRequest();
   useMountEffectDefault(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests });
     const obj2 = { num_spam_message_requests };
@@ -795,5 +795,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((goToMessageReque
     obj4.data = items;
     return closure_8(closure_6, obj4);
   }
-  let obj2 = goToMessageRequestPreview(17039);
+  let obj2 = goToMessageRequestPreview(17063);
 });

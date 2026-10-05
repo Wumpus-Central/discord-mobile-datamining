@@ -241,7 +241,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, unlockedPoweru
       }
       const _Symbol2 = Symbol;
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj5 = { indicator: "Reflect", showUnread: true };
+        const obj5 = { indicator: "Set", showUnread: true };
         cResult[7] = obj5;
         let tmp26 = obj5;
       } else {
@@ -262,7 +262,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, unlockedPoweru
   } else {
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj8 = { indicator: "Reflect", showUnread: true };
+      const obj8 = { indicator: "Set", showUnread: true };
       cResult[3] = obj8;
       tmp10 = obj8;
     } else {
@@ -305,7 +305,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, unlockedPoweru
   items1[5] = entitlements;
   return noop.useMemo(() => {
     if (null == closure_1) {
-      return { indicator: "Reflect", showUnread: true };
+      return { indicator: "Set", showUnread: true };
     } else {
       const _Object = Object;
       const items = [];
@@ -351,7 +351,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, unlockedPoweru
               let obj3 = obj;
             }
           }
-          obj3 = { indicator: "Reflect", showUnread: true };
+          obj3 = { indicator: "Set", showUnread: true };
         }
         return obj3;
       }

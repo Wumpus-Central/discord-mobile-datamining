@@ -1,6 +1,6 @@
-// === Module 12992: FractionalNitroCollectedActionSheet ===
+// === Module 12994: FractionalNitroCollectedActionSheet ===
 
-// Module 12992 (FractionalNitroCollectedActionSheet)
+// Module 12994 (FractionalNitroCollectedActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -21,7 +21,7 @@ import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration" /*
 import _modDef10455 from "module_10455" /* 10455 */;
 import _modDef10456 from "module_10456" /* 10456 */;
 import CircleQuestionIcon from "CircleQuestionIcon" /* 11015 */;
-import _modDef12993 from "module_12993" /* 12993 */;
+import _modDef12995 from "module_12995" /* 12995 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -57,7 +57,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((skuId) => {
   skuId = skuId.skuId;
   const tmp4 = closure_12();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { source: _modDef12993 };
+    const obj2 = { source: _modDef12995 };
     const tmp9 = options(FastImageDefault, obj2);
     cResult[0] = tmp9;
     let first = tmp9;
@@ -101,7 +101,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((skuId) => {
 }) : ((skuId) => {
   const tmp = closure_12();
   const obj = { style: tmp.header, children: null };
-  const obj2 = { source: _modDef12993 };
+  const obj2 = { source: _modDef12995 };
   const items = [options(FastImageDefault, obj2), ];
   const obj3 = { style: tmp.fractionNitroIcon, children: null };
   const size = { skuId: skuId.skuId, width: FractionalNitroCoinIllustration.FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET, height: FractionalNitroCoinIllustration.FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET };

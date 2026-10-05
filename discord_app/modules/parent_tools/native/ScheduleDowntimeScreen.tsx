@@ -1,6 +1,6 @@
-// === Module 14738: ScheduleDowntimeScreen ===
+// === Module 14742: ScheduleDowntimeScreen ===
 
-// Module 14738 (ScheduleDowntimeScreen)
+// Module 14742 (ScheduleDowntimeScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -131,7 +131,7 @@ export default function ScheduleDowntimeScreen() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -347,7 +347,7 @@ export default function ScheduleDowntimeScreen() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -449,7 +449,7 @@ export default function ScheduleDowntimeScreen() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -579,7 +579,7 @@ export default function ScheduleDowntimeScreen() {
     obj13.trailing = closure_11(tmp2(stringResult[14]).Text, obj14);
     obj13.onPress = function handleStartTimePress() {
       const intl = util.intl;
-      const f143846 = (first1) => {
+      const f144092 = (first1) => {
         closure_1_11(first1);
         const result = (closure_0(rule[21]).timeToMinutes(first1) + 540) % 1440;
         const time = { hours: Math.floor(result / 60), minutes: result % 60 };

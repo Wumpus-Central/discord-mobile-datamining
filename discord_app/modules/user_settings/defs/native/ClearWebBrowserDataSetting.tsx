@@ -1,6 +1,6 @@
-// === Module 15298: ClearWebBrowserDataSetting ===
+// === Module 15302: ClearWebBrowserDataSetting ===
 
-// Module 15298 (ClearWebBrowserDataSetting)
+// Module 15302 (ClearWebBrowserDataSetting)
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
@@ -35,7 +35,7 @@ const pressable = SettingBuilders.createPressable({
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -67,7 +67,7 @@ const pressable = SettingBuilders.createPressable({
             obj7.content = intl.string(tmp4(1126).t["zaEQz+"]);
             v1(4568).open(obj7);
             dependencyMap = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp7) {
           dependencyMap = tmp;

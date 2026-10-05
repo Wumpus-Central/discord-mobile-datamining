@@ -1,6 +1,6 @@
-// === Module 18049: UpdateAppScreen ===
+// === Module 18071: UpdateAppScreen ===
 
-// Module 18049 (UpdateAppScreen)
+// Module 18071 (UpdateAppScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;

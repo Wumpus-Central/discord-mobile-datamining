@@ -1,6 +1,6 @@
-// === Module 17163: QuestProgressBottomSheet ===
+// === Module 17187: QuestProgressBottomSheet ===
 
-// Module 17163 (QuestProgressBottomSheet)
+// Module 17187 (QuestProgressBottomSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
@@ -160,7 +160,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
       tmp22 = cResult[11];
     }
     const tmpResult9 = tmp(10911);
-    const questRewardClaimHandler = tmp(14922).useQuestRewardClaimHandler(tmp22);
+    const questRewardClaimHandler = tmp(14926).useQuestRewardClaimHandler(tmp22);
     ({ isClaiming, claim } = questRewardClaimHandler);
     const isLoading = questRewardClaimHandler.isLoading;
     if (cResult[12] !== claim) {
@@ -175,7 +175,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -212,7 +212,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
                 }
               }
               c3 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp19) {
             c3 = tmp;
@@ -429,7 +429,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
     cResult[19] = url;
     cResult[20] = tmp5.heroImg;
     cResult[21] = tmp31;
-    const tmpResult10 = tmp(14922);
+    const tmpResult10 = tmp(14926);
   }
   const obj9 = { quest, taskDetails: questTaskDetails, location: QuestsExperimentLocations.QUEST_ACTIVITY_BOTTOM_SHEET, sourceQuestContent: require("QuestTypes").QuestContent.RUNNING_ACTIVITY };
   cResult[7] = quest;
@@ -476,7 +476,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
   let obj5 = { quest, taskDetails: questTaskDetails, location: QuestsExperimentLocations.QUEST_ACTIVITY_BOTTOM_SHEET, sourceQuestContent: quest(5626).QuestContent.RUNNING_ACTIVITY };
   const isQuestAccessSuspended = quest(10911).useIsQuestAccessSuspended();
   const tmpResult5 = quest(10911);
-  const tmpResult6 = quest(14922);
+  const tmpResult6 = quest(14926);
   const questRewardClaimHandler = tmpResult6.useQuestRewardClaimHandler({ quest, questContent: quest(5626).QuestContent.RUNNING_ACTIVITY, sourceQuestContent: quest(5626).QuestContent.RUNNING_ACTIVITY });
   ({ isClaiming, claim } = questRewardClaimHandler);
   const items = [claim];
@@ -492,7 +492,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -529,7 +529,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
             }
           }
           c3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp19) {
         c3 = tmp;
@@ -600,7 +600,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
   const tmp6Result4 = claim(10950);
   obj14.sourceQuestContent = quest(5626).QuestContent.RUNNING_ACTIVITY;
   obj14.children = contextMenuButton;
-  items5[1] = closure_11(claim(14951), obj14);
+  items5[1] = closure_11(claim(14955), obj14);
   obj12.children = items5;
   items3[3] = closure_12(closure_5, obj12);
   obj7.children = items3;
@@ -642,7 +642,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
   let tmp6Result6;
   if (isQuestAccessSuspended) {
     if (tmp14) {
-      tmp6Result6 = tmp6(14917);
+      tmp6Result6 = tmp6(14921);
     }
   }
   const obj20 = { handleDisabled: true, startExpanded: true, children: null };

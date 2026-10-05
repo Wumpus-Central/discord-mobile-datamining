@@ -1,10 +1,10 @@
-// === Module 14825: bountyError ===
+// === Module 14829: bountyError ===
 
-// Module 14825 (bountyError)
+// Module 14829 (bountyError)
 import util from "util" /* 1126 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4568 */;
 import _modDef4807 from "module_4807" /* 4807 */;
-import BountiesModalConstants from "BountiesModalConstants" /* 14811 */;
+import BountiesModalConstants from "BountiesModalConstants" /* 14815 */;
 import size from "module_2" /* 2 */;
 
 const toastDurationMs = BountiesModalConstants.BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS;

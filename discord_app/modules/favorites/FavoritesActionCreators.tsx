@@ -246,7 +246,7 @@ let closure_28 = async function _addFavoriteChannelsToParent(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -279,7 +279,7 @@ let closure_28 = async function _addFavoriteChannelsToParent(arg0) {
           closure_132_5 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -423,7 +423,7 @@ let closure_29 = async function _addFavoriteChannels() {
   await "IconComponent";
   closure_2 = tmp2;
   ({ channelIds: closure_130_0, parentId: closure_130_1, source: closure_130_2 } = closure_0);
-  return "Reflect";
+  return "Set";
 };
 function removeFavoriteChannel(id, arg1) {
   _require = id;
@@ -501,7 +501,7 @@ let closure_31 = async function _addFavoriteCategory(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -605,7 +605,7 @@ let closure_32 = async function _addFavoriteChannelsToCategory() {
   await "IconComponent";
   closure_1 = tmp2;
   ({ channelIds: closure_129_0, categoryName: closure_129_1, source: closure_129_2 } = closure_0);
-  return "Reflect";
+  return "Set";
 };
 let closure_33 = async function _autoAddJoinedThreadToFavorites(arg0) {
   if (c1 === 2) {
@@ -618,7 +618,7 @@ let closure_33 = async function _autoAddJoinedThreadToFavorites(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -665,7 +665,7 @@ let closure_33 = async function _autoAddJoinedThreadToFavorites(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     } catch (tmp15) {
       c1 = tmp;
       throw tmp15;

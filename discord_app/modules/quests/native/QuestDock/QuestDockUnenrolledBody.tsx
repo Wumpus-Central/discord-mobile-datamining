@@ -1,6 +1,6 @@
-// === Module 14997: QuestDockUnenrolledBody ===
+// === Module 15001: QuestDockUnenrolledBody ===
 
-// Module 14997 (QuestDockUnenrolledBody)
+// Module 15001 (QuestDockUnenrolledBody)
 import QuestTypes from "QuestTypes" /* 5626 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7212 */;
 import QuestUtils from "QuestUtils" /* 10908 */;
@@ -195,7 +195,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const v0 = 0;
     if (isQuestAccessSuspended) {
       trackQuestContentClickedWithImpression({ questId: questDockQuest.id, questContent: v0(5626).QuestContent.QUEST_BAR_MOBILE, questContentCTA: v0(7212).QuestContentCTA.QUEST_ACCESS_SUSPENDED, sourceQuestContent: v0(5626).QuestContent.QUEST_BAR_MOBILE });
-      v2(14917)();
+      v2(14921)();
     }
     yield v0(9994).enrollInQuest(questDockQuest.id, { questContentCTA: v0(7212).QuestContentCTA.ACCEPT_QUEST, questContent: v0(5626).QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: v0(5626).QuestContent.QUEST_BAR_MOBILE });
     if (1 === tmp4) {
@@ -211,9 +211,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         return { value: closure_128_3(), done: false };
       } else {
         if (closure_128_1) {
-          v2(14924)({ questId: closure_128_0.id, sourceQuestContent: v0(5626).QuestContent.QUEST_BAR_MOBILE });
+          v2(14928)({ questId: closure_128_0.id, sourceQuestContent: v0(5626).QuestContent.QUEST_BAR_MOBILE });
           closure_128_5(constants.COLLAPSED);
-          v2(14924);
+          v2(14928);
           { questId: closure_128_0.id, sourceQuestContent: v0(5626).QuestContent.QUEST_BAR_MOBILE };
         }
         dependencyMap = 3;

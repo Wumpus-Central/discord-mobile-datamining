@@ -1,6 +1,6 @@
-// === Module 14650: SyncContactsNameSetting ===
+// === Module 14654: SyncContactsNameSetting ===
 
-// Module 14650 (SyncContactsNameSetting)
+// Module 14654 (SyncContactsNameSetting)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -23,7 +23,7 @@ const pressable = SettingBuilders.createPressable({
   parent: SettingsConstants.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onContactSyncNamePress() {
     AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type: "Change Name", location: { page: "User Settings" } });
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14649, dependencyMap.paths), "Contact Sync Name Update Modal");
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14653, dependencyMap.paths), "Contact Sync Name Update Modal");
   },
   withArrow: true,
   usePredicate: () => null != ContactSyncUtils.useContactSyncAccount()

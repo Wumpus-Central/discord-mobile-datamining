@@ -1,14 +1,14 @@
-// === Module 15551: CheckpointNavigationControls ===
+// === Module 15555: CheckpointNavigationControls ===
 
-// Module 15551 (CheckpointNavigationControls)
+// Module 15555 (CheckpointNavigationControls)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
 import _modDef3043 from "module_3043" /* 3043 */;
 import CheckpointConstants from "CheckpointConstants" /* 5115 */;
-import CheckpointTextDefault from "CheckpointText" /* 15535 */;
-import CheckpointButtonDefault from "CheckpointButton" /* 15552 */;
-import CheckpointPressableDefault from "CheckpointPressable" /* 15553 */;
+import CheckpointTextDefault from "CheckpointText" /* 15539 */;
+import CheckpointButtonDefault from "CheckpointButton" /* 15556 */;
+import CheckpointPressableDefault from "CheckpointPressable" /* 15557 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4890 */;
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isHome) => {
                   const _Symbol2 = Symbol;
                   if (cResult[34] === Symbol.for("react.memo_cache_sentinel")) {
                     const obj7 = { color: CHECKPOINT_PRIMARY };
-                    const tmp27 = closure_7(tmp(15554).ArrowLargeRightIcon, obj7);
+                    const tmp27 = closure_7(tmp(15558).ArrowLargeRightIcon, obj7);
                     cResult[34] = tmp27;
                     let tmp24 = tmp27;
                   } else {

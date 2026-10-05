@@ -1,6 +1,6 @@
-// === Module 16924: UsernameSearchScreen ===
+// === Module 16943: UsernameSearchScreen ===
 
-// Module 16924 (UsernameSearchScreen)
+// Module 16943 (UsernameSearchScreen)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 
@@ -229,7 +229,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((navigation) => {
   obj7.headerText = intl.string(navigation(1126).t.YEOwDM);
   obj7.headerTextStyle = tmp.headerText;
   obj7.ref = ref;
-  obj5.children = closure_8(ref(13666), obj7);
+  obj5.children = closure_8(ref(13668), obj7);
   items2[1] = closure_8(closure_4, obj5);
   obj4.children = items2;
   obj3.children = closure_9(tmp3Result, obj4);

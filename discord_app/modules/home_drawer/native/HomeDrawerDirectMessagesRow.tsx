@@ -1,13 +1,13 @@
-// === Module 16246: HomeDrawerDirectMessagesRow ===
+// === Module 16250: HomeDrawerDirectMessagesRow ===
 
-// Module 16246 (HomeDrawerDirectMessagesRow)
+// Module 16250 (HomeDrawerDirectMessagesRow)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4742 */;
 import Text_Text from "Text/Text" /* 4886 */;
-import HomeDrawerShared from "HomeDrawerShared" /* 16242 */;
+import HomeDrawerShared from "HomeDrawerShared" /* 16246 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 4930 */;
 import RelationshipStore from "RelationshipStore" /* 4519 */;

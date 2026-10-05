@@ -37,7 +37,7 @@ let closure_20 = async function _maybeStartLurking(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -96,7 +96,7 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -132,7 +132,7 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
           let role;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -160,7 +160,7 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
                 if (obj7.isStaticRouteIconType(channelId)) {
                   if (null == guild) {
                     c4 = 3;
-                    return { value: "IconComponent", done: "IconComponent" };
+                    return { value: "IconComponent", done: null };
                   } else if ("browse" === channelId) {
                     const features3 = guild.features;
                     if (features3.has(closure_130_13.COMMUNITY)) {
@@ -169,7 +169,7 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
                       const obj27 = closure_130_1(closure_130_3[15]);
                     } else {
                       c4 = 3;
-                      return { value: "IconComponent", done: "IconComponent" };
+                      return { value: "IconComponent", done: null };
                     }
                   } else if ("customize" === tmp273) {
                     const features2 = guild.features;
@@ -179,7 +179,7 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
                       const obj25 = closure_130_1(closure_130_3[15]);
                     } else {
                       c4 = 3;
-                      return { value: "IconComponent", done: "IconComponent" };
+                      return { value: "IconComponent", done: null };
                     }
                   } else {
                     if ("home" !== tmp273) {
@@ -190,7 +190,7 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
                             selfMember = closure_130_8.getSelfMember(guildId);
                             if (null == selfMember) {
                               c4 = 3;
-                              return { value: "IconComponent", done: "IconComponent" };
+                              return { value: "IconComponent", done: null };
                             } else {
                               role = closure_130_9.getRole(guildId, closure_129_9);
                               if (null != role) {
@@ -225,13 +225,13 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
                       const tmp225 = closure_130_1(closure_130_3[18]);
                     } else {
                       c4 = 3;
-                      return { value: "IconComponent", done: "IconComponent" };
+                      return { value: "IconComponent", done: null };
                     }
                   }
                 }
                 c4 = 3;
                 c4 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             }
             if (null != messageId) {
@@ -252,7 +252,7 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
                       if (closure_129_7.type === closure_130_12.GUILD_STAGE_VOICE) {
                         if (!closure_130_11.can(closure_130_14.CONNECT, closure_129_7)) {
                           c4 = 3;
-                          return { value: "IconComponent", done: "IconComponent" };
+                          return { value: "IconComponent", done: null };
                         }
                       }
                       if (closure_129_3 != null) {
@@ -324,7 +324,7 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
             return obj28;
           } else if (value) {
             c4 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else if (3 === tmp5) {
           if (arg0 === 1) {
@@ -336,7 +336,7 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
             return obj29;
           } else if (value) {
             c4 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else if (arg0 === 1) {
           c4 = 3;

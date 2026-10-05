@@ -1,6 +1,6 @@
-// === Module 14987: QuestBarRenderedTriggerPoint ===
+// === Module 14991: QuestBarRenderedTriggerPoint ===
 
-// Module 14987 (QuestBarRenderedTriggerPoint)
+// Module 14991 (QuestBarRenderedTriggerPoint)
 import ExperimentConstants from "ExperimentConstants" /* 4777 */;
 import Helpers from "Helpers" /* 10540 */;
 import size from "module_2" /* 2 */;

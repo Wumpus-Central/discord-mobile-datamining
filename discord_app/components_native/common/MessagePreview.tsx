@@ -1,10 +1,10 @@
-// === Module 16973: MessagePreview ===
+// === Module 16997: MessagePreview ===
 
-// Module 16973 (MessagePreview)
+// Module 16997 (MessagePreview)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ChatPreview from "ChatPreview" /* 13091 */;
+import ChatPreview from "ChatPreview" /* 13093 */;
 import noop from "module_19" /* 19 */;
 import MessagePreviewStore from "MessagePreviewStore" /* 8037 */;
 
@@ -109,5 +109,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const effect = noop.useEffect(() => () => {
     jumpTargetId(closure_1_2[8]).clearMessages();
   }, []);
-  return jsx(onBeforeJumpToMessage(13091).ChatPreview, { channelId: channelId.channelId, messages: stateFromStoresObject.messages, jumpToChatProps: memo, analyticsLocation });
+  return jsx(onBeforeJumpToMessage(13093).ChatPreview, { channelId: channelId.channelId, messages: stateFromStoresObject.messages, jumpToChatProps: memo, analyticsLocation });
 });

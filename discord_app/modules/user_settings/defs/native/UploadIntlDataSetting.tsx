@@ -1,6 +1,6 @@
-// === Module 15360: UploadIntlDataSetting ===
+// === Module 15364: UploadIntlDataSetting ===
 
-// Module 15360 (UploadIntlDataSetting)
+// Module 15364 (UploadIntlDataSetting)
 import c from "c" /* 576 */;
 import AssetJsonUtils from "AssetJsonUtils" /* 1130 */;
 import _mod1164 from "module_1164" /* 1164 */;
@@ -19,7 +19,7 @@ let closure_11 = async function _serializeIntlData() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -132,7 +132,7 @@ let closure_12 = async function _handleUploadIntlDataSettingPress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -256,7 +256,7 @@ const module_570 = fn(570);
 let closure_9 = module_570.create(() => ({ isDisabled: false, isUploading: false }));
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-const f70357 = () => {
+const f70407 = () => {
 
 };
 ReactCompilerGating = fn(558);
@@ -266,7 +266,7 @@ fn = () => closure_9().isDisabled;
 const SettingBuilders = fn(11129);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const cResult = c.c(2);
-  if (typeof f70357 === "function") {
+  if (typeof f70407 === "function") {
     const isUploading = closure_9().isUploading;
     if (cResult[0] !== isUploading) {
       let tmp4 = null;
@@ -284,7 +284,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     throw new TypeError("Trying to call a non-function");
   }
 }) : (() => {
-  if (typeof f70357 === "function") {
+  if (typeof f70407 === "function") {
     let tmp2 = null;
     if (closure_9().isUploading) {
       tmp2 = <ActivityIndicator />;
@@ -299,7 +299,7 @@ const pressable = SettingBuilders.createPressable({
     return "Upload i18n data";
   },
   parent: null,
-  IconComponent: fn(15361).FileUpIcon,
+  IconComponent: fn(15365).FileUpIcon,
   onPress: function handleUploadIntlDataSettingPress() {
     const self = this;
     const apply = closure_12.apply;
@@ -310,10 +310,10 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(14646).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(14650).useStaffOrDeveloperSettingPredicate,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const cResult = c.c(2);
-    if (typeof f70357 === "function") {
+    if (typeof f70407 === "function") {
       const isUploading = closure_9().isUploading;
       if (cResult[0] !== isUploading) {
         let tmp4 = null;
@@ -331,7 +331,7 @@ const pressable = SettingBuilders.createPressable({
       throw new TypeError("Trying to call a non-function");
     }
   }) : (() => {
-    if (typeof f70357 === "function") {
+    if (typeof f70407 === "function") {
       let tmp2 = null;
       if (closure_9().isUploading) {
         tmp2 = <ActivityIndicator />;

@@ -1,8 +1,8 @@
-// === Module 16867: FilesScreen ===
+// === Module 16886: FilesScreen ===
 
-// Module 16867 (FilesScreen)
+// Module 16886 (FilesScreen)
 import SearchPlatformUtils from "SearchPlatformUtils" /* 11966 */;
-import BaseMessagesScreen from "BaseMessagesScreen" /* 16862 */;
+import BaseMessagesScreen from "BaseMessagesScreen" /* 16881 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

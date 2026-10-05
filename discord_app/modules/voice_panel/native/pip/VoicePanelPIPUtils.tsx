@@ -1,9 +1,9 @@
-// === Module 17181: VoicePanelPIPUtils ===
+// === Module 17205: VoicePanelPIPUtils ===
 
-// Module 17181 (VoicePanelPIPUtils)
+// Module 17205 (VoicePanelPIPUtils)
 import nativeDefault from "native" /* 587 */;
 import participantHasVideo from "participantHasVideo" /* 9119 */;
-import isActivityParticipantCurrentUserCurrentSession from "isActivityParticipantCurrentUserCurrentSession" /* 13800 */;
+import isActivityParticipantCurrentUserCurrentSession from "isActivityParticipantCurrentUserCurrentSession" /* 13802 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -12,7 +12,7 @@ require = fn;
 const VoicePanelConstants = fn(11902);
 const SECONDARY_PIP_TOP_MARGIN = VoicePanelConstants.SECONDARY_PIP_TOP_MARGIN;
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
-const VoicePanelPIPConstants = fn(17182);
+const VoicePanelPIPConstants = fn(17206);
 ({ VoicePanelPIPModes: closure_7, PIPReferenceDimensions } = VoicePanelPIPConstants);
 const SquarePIPReferenceDimensions = VoicePanelPIPConstants.SquarePIPReferenceDimensions;
 const SquareActivityPIPReferenceDimensions = VoicePanelPIPConstants.SquareActivityPIPReferenceDimensions;

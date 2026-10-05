@@ -86,7 +86,7 @@ let closure_7 = async function _openAppStoreOverlayMediaModal() {
   closure_129_1 = initialIndex;
   ({ initialSources: closure_129_2, analyticsSource: closure_129_3, channelId: closure_129_4, onGetGamePress: closure_129_5, onClose: closure_129_6 } = closure_0);
   closure_129_7 = Object.assign(closure_0, Object.assign({ originViewOrOriginLayout: 0, initialIndex: 0, initialSources: 0, analyticsSource: 0, channelId: 0, onGetGamePress: 0, onClose: 0 }));
-  return "Reflect";
+  return "Set";
 };
 const MEDIA_MODAL_KEY = fn(1085).MEDIA_MODAL_KEY;
 let size = fn(2);

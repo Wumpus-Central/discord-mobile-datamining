@@ -1,11 +1,11 @@
-// === Module 17311: VoicePanelChatButton ===
+// === Module 17335: VoicePanelChatButton ===
 
-// Module 17311 (VoicePanelChatButton)
+// Module 17335 (VoicePanelChatButton)
 import nativeDefault from "native" /* 587 */;
 import ChatIcon from "ChatIcon" /* 5855 */;
 import NativeViewDefault from "NativeView" /* 5976 */;
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17290 */;
-import CircleWithCutoutDefault from "CircleWithCutout" /* 17312 */;
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17314 */;
+import CircleWithCutoutDefault from "CircleWithCutout" /* 17336 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,8 +29,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((wrapperSpecs) =>
   connected = context.connected;
   const tmp6 = closure_7();
   let obj = openTab(576);
-  const voicePanelButtonStyles = openTab(17303).useVoicePanelButtonStyles(wrapperSpecs.wrapperSpecs);
-  const tmp8 = connected(17245)(context.channelId);
+  const voicePanelButtonStyles = openTab(17327).useVoicePanelButtonStyles(wrapperSpecs.wrapperSpecs);
+  const tmp8 = connected(17269)(context.channelId);
   const backgroundColor = voicePanelButtonStyles.iconBg.backgroundColor;
   if (cResult[0] === connected) {
     if (cResult[1] === openTab) {
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((wrapperSpecs) =>
                     }
                   }
                   const element = { onPress: tmp9, props, accessibilityLabel: tmp11, children: tmp28 };
-                  const tmp34 = closure_4(tmp4(17304), element);
+                  const tmp34 = closure_4(tmp4(17328), element);
                   cResult[21] = tmp9;
                   cResult[22] = props;
                   cResult[23] = tmp28;
@@ -125,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((wrapperSpecs) =>
       }
     }
     const obj7 = { fill: backgroundColor, circleRadius: result, cutoutRadius: 8, enableCutout: null != tmp8, cutoutPositionInDegrees: 45, alignBadgeEdgeWithCircleEdge: true, badgeRadius: 5, scaleToPixelDensity: true };
-    const tmp18 = closure_4(tmp4(17312), obj7);
+    const tmp18 = closure_4(tmp4(17336), obj7);
     cResult[4] = backgroundColor;
     cResult[5] = result;
     cResult[6] = null != tmp8;
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((wrapperSpecs) =>
   cResult[1] = openTab;
   cResult[2] = fn;
   tmp9 = fn;
-  const obj2 = openTab(17303);
+  const obj2 = openTab(17327);
 }) : ((props) => {
   props = props.props;
   const openTab = props.openTab;

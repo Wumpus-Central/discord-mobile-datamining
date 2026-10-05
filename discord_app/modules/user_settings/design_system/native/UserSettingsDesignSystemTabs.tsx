@@ -1,6 +1,6 @@
-// === Module 15655: UserSettingsDesignSystemTabs ===
+// === Module 15659: UserSettingsDesignSystemTabs ===
 
-// Module 15655 (UserSettingsDesignSystemTabs)
+// Module 15659 (UserSettingsDesignSystemTabs)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useToken from "useToken" /* 4580 */;

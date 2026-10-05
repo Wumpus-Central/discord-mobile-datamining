@@ -1,6 +1,6 @@
-// === Module 15681: UserSettingsDesignSystemSheets ===
+// === Module 15685: UserSettingsDesignSystemSheets ===
 
-// Module 15681 (UserSettingsDesignSystemSheets)
+// Module 15685 (UserSettingsDesignSystemSheets)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
@@ -13,7 +13,7 @@ import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6644 */;
 import ActionSheetRow from "ActionSheetRow" /* 6697 */;
 import ActionSheet from "ActionSheet" /* 6701 */;
 import PromoSheet from "PromoSheet" /* 10045 */;
-import _modDef15682 from "module_15682" /* 15682 */;
+import _modDef15686 from "module_15686" /* 15686 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -288,7 +288,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { graphic: null, gradientColor: "purple", title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: null };
     const obj4 = { type: "image", src: null, aspectRatio: "16/9" };
-    const obj5 = { uri: _modDef15682 };
+    const obj5 = { uri: _modDef15686 };
     obj4.src = obj5;
     obj3.graphic = obj4;
     obj3.actions = first;
@@ -312,7 +312,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj2 = { graphic: null, gradientColor: "purple", title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: null };
   const obj3 = { type: "image", src: null, aspectRatio: "16/9" };
   const tmp = React5(components_Button_Button.Button, obj);
-  obj3.src = { uri: _modDef15682 };
+  obj3.src = { uri: _modDef15686 };
   obj2.graphic = obj3;
   obj2.actions = tmp;
   return React5(PromoSheet.PromoSheet, obj2);

@@ -1,6 +1,6 @@
-// === Module 16132: HubSidebar ===
+// === Module 16136: HubSidebar ===
 
-// Module 16132 (HubSidebar)
+// Module 16136 (HubSidebar)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
@@ -341,7 +341,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
     }
     return tmp2;
   });
-  guild(16133);
+  guild(16137);
   let tmp9Result = null;
   if (null != stateFromStores) {
     let row = null;
@@ -350,8 +350,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
     }
     const obj4 = { style: row, children: null };
     const obj5 = { guild };
-    const items4 = [closure_7(stateFromStores(16134), obj5), , , ];
-    const obj6 = { active: stateFromStores1, IconComponent: tmp(15419).CompassIcon, label: null, handleItemClick: null, unreadCount: null };
+    const items4 = [closure_7(stateFromStores(16138), obj5), , , ];
+    const obj6 = { active: stateFromStores1, IconComponent: tmp(15423).CompassIcon, label: null, handleItemClick: null, unreadCount: null };
     const intl = tmp(1126).intl;
     obj6.label = intl.string(tmp(1126).t.K50GHd);
     obj6.handleItemClick = function handleItemClick() {

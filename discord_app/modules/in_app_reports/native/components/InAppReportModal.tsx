@@ -72,7 +72,7 @@ export default function InAppReportModal(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -123,7 +123,7 @@ export default function InAppReportModal(arg0) {
               addOnCloseCallback(closure_2);
             }
             c4 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp32) {
           c4 = tmp;

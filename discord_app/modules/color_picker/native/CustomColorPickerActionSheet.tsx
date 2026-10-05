@@ -1,13 +1,13 @@
-// === Module 14418: CustomColorPickerActionSheet ===
+// === Module 14422: CustomColorPickerActionSheet ===
 
-// Module 14418 (CustomColorPickerActionSheet)
+// Module 14422 (CustomColorPickerActionSheet)
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
 import ColorUtils from "ColorUtils" /* 4727 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import ColorPickerUtils from "ColorPickerUtils" /* 14420 */;
+import ColorPickerUtils from "ColorPickerUtils" /* 14424 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -259,7 +259,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                       }
                                     }
                                     const obj4 = { hue: sharedValue, saturation: sharedValue1, value: sharedValue2, onPanFinalize: tmp28 };
-                                    const tmp78 = sharedValue2(value(14421), obj4);
+                                    const tmp78 = sharedValue2(value(14425), obj4);
                                     cResult[69] = sharedValue;
                                     cResult[70] = tmp28;
                                     cResult[71] = sharedValue1;
@@ -630,7 +630,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   obj12.color = memo;
   items3[1] = sharedValue2(closure_10, obj12);
-  items3[2] = sharedValue2(tmp16(14421), {
+  items3[2] = sharedValue2(tmp16(14425), {
     hue: sharedValue,
     saturation: sharedValue1,
     value: sharedValue2,

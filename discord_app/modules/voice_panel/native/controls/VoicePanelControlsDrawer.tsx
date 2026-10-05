@@ -1,6 +1,6 @@
-// === Module 17327: VoicePanelControlsDrawer ===
+// === Module 17351: VoicePanelControlsDrawer ===
 
-// Module 17327 (VoicePanelControlsDrawer)
+// Module 17351 (VoicePanelControlsDrawer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
@@ -10,8 +10,8 @@ import useRefValueDefault from "useRefValue" /* 5973 */;
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9074 */;
 import VoicePanelChatViewDefault from "VoicePanelChatView" /* 11899 */;
 import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 11909 */;
-import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 17328 */;
-import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 17338 */;
+import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 17352 */;
+import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 17362 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

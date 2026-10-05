@@ -1,10 +1,10 @@
-// === Module 16287: GuildsBarItemUnavailableGuilds ===
+// === Module 16291: GuildsBarItemUnavailableGuilds ===
 
-// Module 16287 (GuildsBarItemUnavailableGuilds)
+// Module 16291 (GuildsBarItemUnavailableGuilds)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5707 */;
-import _modDef16278 from "module_16278" /* 16278 */;
+import _modDef16282 from "module_16282" /* 16282 */;
 import noop from "module_19" /* 19 */;
 import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5618 */;
 
@@ -97,8 +97,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           return;
         }
       }
-      const obj3 = { style: unavailableGuilds.unavailableGuildsIcon, source: _modDef16278 };
-      const tmp14 = <closure_3 style={unavailableGuilds.unavailableGuildsIcon} source={_modDef16278} />;
+      const obj3 = { style: unavailableGuilds.unavailableGuildsIcon, source: _modDef16282 };
+      const tmp14 = <closure_3 style={unavailableGuilds.unavailableGuildsIcon} source={_modDef16282} />;
       cResult[6] = unavailableGuilds.unavailableGuildsIcon;
       cResult[7] = tmp14;
     } else {
@@ -160,8 +160,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       AlertActionCreatorsDefault.show(obj2);
     };
     obj2.style = tmp.unavailableGuilds;
-    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef16278 };
-    obj2.children = <closure_3 style={tmp.unavailableGuildsIcon} source={_modDef16278} />;
+    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef16282 };
+    obj2.children = <closure_3 style={tmp.unavailableGuildsIcon} source={_modDef16282} />;
     tmp5 = <closure_4 accessibilityRole="button" accessibilityLabel={null} onPress={null} style={null}>{null}</closure_4>;
   }
   return tmp5;

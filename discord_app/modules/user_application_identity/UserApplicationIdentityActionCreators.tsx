@@ -22,7 +22,7 @@ let obj = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -69,7 +69,7 @@ let obj = {
             signal(tmp24[3]).dispatch(obj10);
             c3 = 0;
             c5 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp24) {
           if (tmp4 === c3) {
@@ -97,7 +97,7 @@ let obj = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -127,7 +127,7 @@ let obj = {
             return obj;
           } else {
             v3 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp11) {
           v3 = tmp;

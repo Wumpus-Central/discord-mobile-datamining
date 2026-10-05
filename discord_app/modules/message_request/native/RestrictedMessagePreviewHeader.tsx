@@ -1,6 +1,6 @@
-// === Module 17052: RestrictedMessagePreviewHeader ===
+// === Module 17076: RestrictedMessagePreviewHeader ===
 
-// Module 17052 (RestrictedMessagePreviewHeader)
+// Module 17076 (RestrictedMessagePreviewHeader)
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import ToastUtils from "ToastUtils" /* 4567 */;

@@ -1,6 +1,6 @@
-// === Module 16923: AddFriendsContactSyncEmptyState ===
+// === Module 16942: AddFriendsContactSyncEmptyState ===
 
-// Module 16923 (AddFriendsContactSyncEmptyState)
+// Module 16942 (AddFriendsContactSyncEmptyState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;

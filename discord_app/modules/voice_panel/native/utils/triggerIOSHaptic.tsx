@@ -1,6 +1,6 @@
-// === Module 17180: utils/triggerIOSHaptic ===
+// === Module 17204: utils/triggerIOSHaptic ===
 
-// Module 17180 (utils/triggerIOSHaptic)
+// Module 17204 (utils/triggerIOSHaptic)
 import HapticUtils from "HapticUtils" /* 4855 */;
 import VoicePanelConstants from "VoicePanelConstants" /* 11902 */;
 import size from "module_2" /* 2 */;

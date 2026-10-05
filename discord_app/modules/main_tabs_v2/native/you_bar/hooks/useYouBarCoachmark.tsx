@@ -1,6 +1,6 @@
-// === Module 16301: useYouBarCoachmark ===
+// === Module 16305: useYouBarCoachmark ===
 
-// Module 16301 (useYouBarCoachmark)
+// Module 16305 (useYouBarCoachmark)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
@@ -9,8 +9,8 @@ import dismissible_content from "dismissible_content" /* 2036 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
 import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 6891 */;
 import useCoachmark from "useCoachmark" /* 9882 */;
-import TinyBroncoLazy from "TinyBroncoLazy" /* 14522 */;
-import usePrivateProfileCoachmarkProps from "usePrivateProfileCoachmarkProps" /* 16302 */;
+import TinyBroncoLazy from "TinyBroncoLazy" /* 14526 */;
+import usePrivateProfileCoachmarkProps from "usePrivateProfileCoachmarkProps" /* 16306 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;

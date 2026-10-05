@@ -1,19 +1,19 @@
-// === Module 17937: GuildRoleSubscriptionTierConfirmationModal ===
+// === Module 17959: GuildRoleSubscriptionTierConfirmationModal ===
 
-// Module 17937 (GuildRoleSubscriptionTierConfirmationModal)
+// Module 17959 (GuildRoleSubscriptionTierConfirmationModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import FastImageDefault from "FastImage" /* 5974 */;
 import FormHeaderDefault from "FormHeader" /* 9477 */;
-import FormStylesDefault from "FormStyles" /* 13708 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17906 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 17922 */;
-import GuildRoleSubscriptionListingPreview from "GuildRoleSubscriptionListingPreview" /* 17938 */;
+import FormStylesDefault from "FormStyles" /* 13710 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17928 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 17944 */;
+import GuildRoleSubscriptionListingPreview from "GuildRoleSubscriptionListingPreview" /* 17960 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 17902 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 17926 */;
 
 require = fn;
 const View = fn(17).View;
@@ -53,7 +53,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -92,7 +92,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
           c3 = 0;
           closure_128_1(false);
           c4 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp22) {
         closure_2 = tmp22;

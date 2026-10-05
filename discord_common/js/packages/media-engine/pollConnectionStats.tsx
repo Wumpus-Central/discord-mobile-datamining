@@ -32,7 +32,7 @@ export default function pollConnectionStats(on) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       while (true) {
@@ -60,7 +60,7 @@ export default function pollConnectionStats(on) {
               on = items[Symbol.iterator]();
             }
             c7 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else if (1 === tmp5) {
           c5 = 0;

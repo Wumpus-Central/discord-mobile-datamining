@@ -1,6 +1,6 @@
-// === Module 15012: QuestDockBountyBody ===
+// === Module 15016: QuestDockBountyBody ===
 
-// Module 15012 (QuestDockBountyBody)
+// Module 15016 (QuestDockBountyBody)
 import util from "util" /* 1126 */;
 import QuestTypes from "QuestTypes" /* 5626 */;
 import AdCreativeType from "AdCreativeType" /* 5630 */;
@@ -10,8 +10,8 @@ import captureAdUserAction from "captureAdUserAction" /* 7213 */;
 import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7223 */;
 import QuestPlatformUtils from "QuestPlatformUtils" /* 10918 */;
 import MobileQuestVideoWatchCtaCopy from "MobileQuestVideoWatchCtaCopy" /* 10941 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 14807 */;
-import BountiesModalTypes from "BountiesModalTypes" /* 14809 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 14811 */;
+import BountiesModalTypes from "BountiesModalTypes" /* 14813 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

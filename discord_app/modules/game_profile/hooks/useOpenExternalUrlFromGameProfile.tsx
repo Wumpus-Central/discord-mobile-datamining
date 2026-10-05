@@ -35,7 +35,7 @@ let closure_10 = async function _getDeepLinkUrl(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         } else if (1 === tmp7) {
           c3 = 0;
           c5 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         } else if (arg0 === 1) {
           c5 = 3;
           throw value;
@@ -253,7 +253,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -286,7 +286,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         } else if (1 === tmp7) {
           c3 = 0;
           c5 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         } else if (arg0 === 1) {
           c5 = 3;
           throw value;

@@ -1,6 +1,6 @@
-// === Module 14465: UserProfilePrimaryGuildEditButton ===
+// === Module 14469: UserProfilePrimaryGuildEditButton ===
 
-// Module 14465 (UserProfilePrimaryGuildEditButton)
+// Module 14469 (UserProfilePrimaryGuildEditButton)
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
@@ -110,7 +110,7 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
     const obj5 = { text: combined };
     obj4.accessibilityValue = obj5;
     obj4.onPress = function onPress() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14467, dependencyMap.paths), "UserPrimaryGuildListBottomSheet", { availableGuilds: userAvailableGuildsWithTags, selectedGuildId: pendingPrimaryGuildId, onSelectGuild: handleSelectPrimaryGuild });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14471, dependencyMap.paths), "UserPrimaryGuildListBottomSheet", { availableGuilds: userAvailableGuildsWithTags, selectedGuildId: pendingPrimaryGuildId, onSelectGuild: handleSelectPrimaryGuild });
     };
     let tmp23Result = null;
     if (null != stateFromStores) {

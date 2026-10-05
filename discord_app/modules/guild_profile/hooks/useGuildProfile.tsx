@@ -113,7 +113,7 @@ export const useGuildProfile = ReactCompilerGating.isReactCompilerEnabled() ? ((
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -136,7 +136,7 @@ export const useGuildProfile = ReactCompilerGating.isReactCompilerEnabled() ? ((
             closure_129_0 = flag;
             c3 = 1;
             c4 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {

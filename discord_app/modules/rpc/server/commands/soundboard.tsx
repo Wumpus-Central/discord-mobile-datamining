@@ -1,6 +1,6 @@
-// === Module 14346: soundboard ===
+// === Module 14348: soundboard ===
 
-// Module 14346 (soundboard)
+// Module 14348 (soundboard)
 import SoundboardActionCreators from "SoundboardActionCreators" /* 6841 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9029 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -53,7 +53,7 @@ obj4.handler = function handler(args) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -108,7 +108,7 @@ obj4.handler = function handler(args) {
                 const obj4 = tmp2(6847);
               }
               c3 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             } else {
               const obj9 = { errorCode: constants.INVALID_PERMISSIONS };
               const tmp32 = new tmp5(9026)(obj9, "Invalid Permissions.");

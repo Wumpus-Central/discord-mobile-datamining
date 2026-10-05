@@ -27,7 +27,7 @@ let closure_18 = async function _resolveGiftCode(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -59,7 +59,7 @@ let closure_18 = async function _resolveGiftCode(arg0) {
           let body;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

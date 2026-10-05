@@ -1,6 +1,6 @@
-// === Module 12923: UserProfileRecentActivityMobileExperiment ===
+// === Module 12925: UserProfileRecentActivityMobileExperiment ===
 
-// Module 12923 (UserProfileRecentActivityMobileExperiment)
+// Module 12925 (UserProfileRecentActivityMobileExperiment)
 import c from "c" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1440 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

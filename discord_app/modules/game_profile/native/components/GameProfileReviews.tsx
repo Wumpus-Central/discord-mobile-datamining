@@ -396,7 +396,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((trackAction) =
       opencritic1 = reviews2.opencritic;
     }
     if (opencritic1 == null) {
-      opencritic1 = { topCriticRating: "done", topCriticRatingCount: "toCharArray$esjava$1", tier: "toCharArray$esjava$1" };
+      opencritic1 = { topCriticRating: "marginBottom", topCriticRatingCount: "unicodeVersion", tier: "Reflect" };
     }
     const reviews3 = game.reviews;
     let opencritic2;
@@ -612,7 +612,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((trackAction) =
     opencritic = reviews.opencritic;
   }
   if (opencritic == null) {
-    opencritic = { topCriticRating: "done", topCriticRatingCount: "toCharArray$esjava$1", tier: "toCharArray$esjava$1" };
+    opencritic = { topCriticRating: "marginBottom", topCriticRatingCount: "unicodeVersion", tier: "Reflect" };
   }
   ({ tier, topCriticRating } = opencritic);
   if (topCriticRating == null) {

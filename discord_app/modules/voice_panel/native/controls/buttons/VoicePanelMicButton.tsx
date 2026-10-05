@@ -1,6 +1,6 @@
-// === Module 17302: VoicePanelMicButton ===
+// === Module 17326: VoicePanelMicButton ===
 
-// Module 17302 (VoicePanelMicButton)
+// Module 17326 (VoicePanelMicButton)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
@@ -14,8 +14,8 @@ import VoiceActionUtils from "VoiceActionUtils" /* 9687 */;
 import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 9688 */;
 import useDeafStates from "useDeafStates" /* 9702 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11901 */;
-import VoicePanelStyles from "VoicePanelStyles" /* 17303 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 17304 */;
+import VoicePanelStyles from "VoicePanelStyles" /* 17327 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 17328 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GameConsoleStore from "GameConsoleStore" /* 4907 */;

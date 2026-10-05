@@ -108,7 +108,7 @@ let closure_15 = async function _getReactors(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -136,7 +136,7 @@ let closure_15 = async function _getReactors(arg0) {
           closure_129_8 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -218,7 +218,7 @@ let closure_17 = async function _addReaction(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -250,7 +250,7 @@ let closure_17 = async function _addReaction(arg0) {
           closure_133_7 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -282,7 +282,7 @@ let closure_17 = async function _addReaction(arg0) {
               obj5.confirmText = intl3.string(closure_134_0(closure_134_2[7]).t["NX+WJN"]);
               closure_134_1(closure_134_2[6]).show(obj5);
               c8 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           }
           c7 = 2;
@@ -455,7 +455,7 @@ let closure_19 = async function _removeAllReactions(arg0, arg1, arg2) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -499,7 +499,7 @@ let closure_19 = async function _removeAllReactions(arg0, arg1, arg2) {
             closure_2_12(error, () => closure_2_18(closure_1_0, closure_1_1, { isRetry: true }), { isRetry });
           });
           c6 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp9) {
         c6 = tmp;
@@ -536,7 +536,7 @@ let closure_21 = async function _removeEmojiReactions(arg0, arg1, arg2, arg3) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -619,7 +619,7 @@ let closure_23 = async function _removeReaction(arg0) {
       obj = { value, done: true };
       return obj;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -651,7 +651,7 @@ let closure_23 = async function _removeReaction(arg0) {
           closure_130_7 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -742,7 +742,7 @@ let closure_23 = async function _removeReaction(arg0) {
                 obj = { value, done: true };
                 return obj;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -841,7 +841,7 @@ let closure_25 = async function _getOptimisticEmojiColors(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

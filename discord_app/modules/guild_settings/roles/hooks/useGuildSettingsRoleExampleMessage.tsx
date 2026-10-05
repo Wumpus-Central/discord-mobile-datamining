@@ -1,6 +1,6 @@
-// === Module 17776: useGuildSettingsRoleExampleMessage ===
+// === Module 17800: useGuildSettingsRoleExampleMessage ===
 
-// Module 17776 (useGuildSettingsRoleExampleMessage)
+// Module 17800 (useGuildSettingsRoleExampleMessage)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 5112 */;
@@ -35,7 +35,7 @@ export const useGuildSettingsRoleExampleMessage = ReactCompilerGating.isReactCom
     const insertStaticUserResult = UserActionCreatorsAll.insertStaticUser(tmp14);
     if (null != insertStaticUserResult) {
       messageRecord.author = insertStaticUserResult;
-      messageRecord.author.getAvatarURL = () => require("module_13133");
+      messageRecord.author.getAvatarURL = () => require("module_13135");
     }
     cResult[0] = content;
     cResult[1] = messageRecord;

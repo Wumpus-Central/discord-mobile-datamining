@@ -1,6 +1,6 @@
-// === Module 13604: CallStateHooks ===
+// === Module 13606: CallStateHooks ===
 
-// Module 13604 (CallStateHooks)
+// Module 13606 (CallStateHooks)
 import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import CallStore from "CallStore" /* 5437 */;

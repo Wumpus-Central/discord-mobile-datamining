@@ -1,6 +1,6 @@
-// === Module 16427: useICYMIReloadHandler ===
+// === Module 16431: useICYMIReloadHandler ===
 
-// Module 16427 (useICYMIReloadHandler)
+// Module 16431 (useICYMIReloadHandler)
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8029 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -27,7 +27,7 @@ export const useICYMIReloadHandler = ReactCompilerGating.isReactCompilerEnabled(
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -41,7 +41,7 @@ export const useICYMIReloadHandler = ReactCompilerGating.isReactCompilerEnabled(
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              const ICYMIAnalytics = tmp2(14163).ICYMIAnalytics;
+              const ICYMIAnalytics = tmp2(14165).ICYMIAnalytics;
               let str = "NoDotShown";
               if (tmp2) {
                 str = "DotShown";
@@ -91,7 +91,7 @@ export const useICYMIReloadHandler = ReactCompilerGating.isReactCompilerEnabled(
           } else {
             const recommendedGuilds = ICYMIActionCreatorsDefault.getRecommendedGuilds();
             c2 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp19) {
           c2 = tmp;
@@ -130,7 +130,7 @@ export const useICYMIReloadHandler = ReactCompilerGating.isReactCompilerEnabled(
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -144,7 +144,7 @@ export const useICYMIReloadHandler = ReactCompilerGating.isReactCompilerEnabled(
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            const ICYMIAnalytics = tmp2(14163).ICYMIAnalytics;
+            const ICYMIAnalytics = tmp2(14165).ICYMIAnalytics;
             let str = "NoDotShown";
             if (tmp2) {
               str = "DotShown";
@@ -194,7 +194,7 @@ export const useICYMIReloadHandler = ReactCompilerGating.isReactCompilerEnabled(
         } else {
           const recommendedGuilds = v3(8029).getRecommendedGuilds();
           dependencyMap = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp19) {
         dependencyMap = tmp;

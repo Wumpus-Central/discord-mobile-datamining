@@ -1,6 +1,6 @@
-// === Module 16774: SearchBarActivityIcon ===
+// === Module 16793: SearchBarActivityIcon ===
 
-// Module 16774 (SearchBarActivityIcon)
+// Module 16793 (SearchBarActivityIcon)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
 import timing from "timing" /* 4891 */;

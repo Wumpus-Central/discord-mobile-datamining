@@ -1,6 +1,6 @@
-// === Module 16092: useGuildPowerupsCoachmark ===
+// === Module 16096: useGuildPowerupsCoachmark ===
 
-// Module 16092 (useGuildPowerupsCoachmark)
+// Module 16096 (useGuildPowerupsCoachmark)
 import nativeDefault from "native" /* 587 */;
 import useThemeDefault from "useTheme" /* 4791 */;
 import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12138 */;
@@ -9,12 +9,12 @@ import useGetGuildPowerupBannerImage from "useGetGuildPowerupBannerImage" /* 121
 import GuildPowerupsBoostGemDefault from "GuildPowerupsBoostGem" /* 12178 */;
 import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12180 */;
 import _modDef12210 from "module_12210" /* 12210 */;
-import _modDef16090 from "module_16090" /* 16090 */;
-import useGuildPowerupsBoostActionDefault from "useGuildPowerupsBoostAction" /* 16093 */;
 import _modDef16094 from "module_16094" /* 16094 */;
-import _modDef16095 from "module_16095" /* 16095 */;
-import _modDef16096 from "module_16096" /* 16096 */;
-import _modDef16097 from "module_16097" /* 16097 */;
+import useGuildPowerupsBoostActionDefault from "useGuildPowerupsBoostAction" /* 16097 */;
+import _modDef16098 from "module_16098" /* 16098 */;
+import _modDef16099 from "module_16099" /* 16099 */;
+import _modDef16100 from "module_16100" /* 16100 */;
+import _modDef16101 from "module_16101" /* 16101 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;
 import GuildStore from "GuildStore" /* 2074 */;
@@ -351,7 +351,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, guildId, t
           obj9.visible = true;
           obj9.renderImgComponent = function renderImgComponent() {
             if (powerups.length > 1) {
-              let str = _modDef16094;
+              let str = _modDef16098;
             } else {
               str = useGetGuildPowerupBannerImage.getGuildPowerupBannerImage(powerups[0], stateFromStores1, true);
               if (str == null) {
@@ -412,7 +412,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, guildId, t
           obj12.renderImgComponent = function renderImgComponent() {
             guildPowerupBannerImage = useGetGuildPowerupBannerImage.getGuildPowerupBannerImage(found1, stateFromStores1, true);
             if (guildPowerupBannerImage == null) {
-              guildPowerupBannerImage = _modDef16090;
+              guildPowerupBannerImage = _modDef16094;
             }
             const obj2 = { imageUrl: guildPowerupBannerImage, isAnimated: !stateFromStores1, style: null };
             const items = [, ];

@@ -1,6 +1,6 @@
-// === Module 16325: YouBarAvatar ===
+// === Module 16329: YouBarAvatar ===
 
-// Module 16325 (YouBarAvatar)
+// Module 16329 (YouBarAvatar)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import native2 from "native" /* 4589 */;
@@ -18,7 +18,7 @@ import UserStore from "UserStore" /* 1377 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
-const YouBarConstants = fn(14895);
+const YouBarConstants = fn(14899);
 ({ YOU_BAR_AVATAR_LARGE_SIZE: closure_11, YOU_BAR_AVATAR_PLACEHOLDER_SIZE: closure_12, YOU_BAR_AVATAR_SIZE: map1, YOU_BAR_STATUS_INSET: closure_14, YOU_BAR_HEIGHT: closure_15, YOU_BAR_LARGE_STATUS_SIZE: closure_16, YOU_BAR_PADDING: closure_17, YOU_BAR_SPRING_CONFIG: closure_18, YOU_BAR_STATUS_OFFSET: closure_19, YOU_BAR_AVATAR_LARGE_PX: closure_20 } = YouBarConstants);
 const StatusTypes = fn(1085).StatusTypes;
 const jsxProd = fn(21);
@@ -449,7 +449,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionStat
     obj6.style = size2;
     obj5.children = closure_22(sharedValue1, obj6);
     const items6 = [closure_22(tmp23(tmp3[19]), obj5), , , ];
-    const obj7 = { user: stateFromStores, guildId: "Array", size, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "AUDIO_SET_SIDECHAIN_COMPRESSION_STRENGTH" };
+    const obj7 = { user: stateFromStores, guildId: "Array", size, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "rtc_participants" };
     if (OFFLINE === StatusTypes.UNKNOWN) {
       OFFLINE = StatusTypes.OFFLINE;
     }
@@ -655,7 +655,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionStat
           tmp23 = tmp25;
         }
       }
-      const obj4 = { user: stateFromStores, guildId: "Array", size, animate: true, needsOffscreenAlphaCompositing: null, avatarDecoration, status: OFFLINE, autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZlL3dlYi9tb2RhbA==" };
+      const obj4 = { user: stateFromStores, guildId: "Array", size, animate: true, needsOffscreenAlphaCompositing: null, avatarDecoration, status: OFFLINE, autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9jbGlwcw==" };
       const tmp22 = closure_22(tmp(tmp2[15]).Avatar, obj4);
       cResult[11] = avatarDecoration;
       cResult[12] = OFFLINE;
@@ -738,7 +738,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? ((transitionStat
     const rect = { position: "absolute", top: -result, left: -result };
     const items3 = [rect, animatedStyle];
     obj6.style = items3;
-    const obj7 = { user: stateFromStores, guildId: "Array", size: size2, animate: true, needsOffscreenAlphaCompositing: null, avatarDecoration, status: true, autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZlL3dlYi9tb2RhbA==" };
+    const obj7 = { user: stateFromStores, guildId: "Array", size: size2, animate: true, needsOffscreenAlphaCompositing: null, avatarDecoration, status: true, autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9jbGlwcw==" };
     if (OFFLINE === StatusTypes.UNKNOWN) {
       OFFLINE = StatusTypes.OFFLINE;
     }
@@ -799,7 +799,7 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -830,7 +830,7 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
           value.openUserSettings();
           closure_128_3(false);
           paths = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp12) {
         paths = tmp;

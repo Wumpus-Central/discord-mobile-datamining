@@ -1,12 +1,12 @@
-// === Module 15883: RegisterDisplayName ===
+// === Module 15887: RegisterDisplayName ===
 
-// Module 15883 (RegisterDisplayName)
+// Module 15887 (RegisterDisplayName)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14515 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14519 */;
 
 const require = globalThis.__r;
 
@@ -28,9 +28,9 @@ function getGlobalNameError(first1) {
   }
 }
 const View = fn(17).View;
-const RegistrationUIStore = fn(15863);
+const RegistrationUIStore = fn(15867);
 ({ updateRegistrationOptions: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
-const RegistrationConstants = fn(15864);
+const RegistrationConstants = fn(15868);
 ({ RegisterTransitionSteps: c10, RegistrationTransitionActionTypes: closure_11 } = RegistrationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
@@ -401,7 +401,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -435,7 +435,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               }
               const result = globalName(first1[16]).handleNextOrSubmitRegistration(globalName(first1[17]).AuthStates.REGISTER_DISPLAY_NAME, globalName, context);
               c3 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else if (arg0 === 1) {
             c3 = 3;
@@ -511,7 +511,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -545,7 +545,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               }
               const result = globalName(str[16]).handleNextOrSubmitRegistration(globalName(str[17]).AuthStates.REGISTER_DISPLAY_NAME, globalName, context);
               c3 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else if (arg0 === 1) {
             c3 = 3;

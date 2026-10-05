@@ -1,6 +1,6 @@
-// === Module 17807: IntroHeader ===
+// === Module 17831: IntroHeader ===
 
-// Module 17807 (IntroHeader)
+// Module 17831 (IntroHeader)
 import c from "c" /* 576 */;
 import shared from "shared" /* 4729 */;
 import _mod7905 from "module_7905" /* 7905 */;
@@ -16,13 +16,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_17808");
+          return require("module_17832");
         },
       darker() {
-          return require("module_17809");
+          return require("module_17833");
         },
       light() {
-          return require("module_17810");
+          return require("module_17834");
         }
     };
     const illustrationSource = _mod7905.getIllustrationSource(theme, obj3);
@@ -38,13 +38,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj = shared;
   return _mod7905.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_17808");
+      return require("module_17832");
     },
     darker() {
-      return require("module_17809");
+      return require("module_17833");
     },
     light() {
-      return require("module_17810");
+      return require("module_17834");
     }
   });
 });
@@ -53,13 +53,13 @@ ReactCompilerGating = fn(558);
 function getIntroHeaderSource(theme) {
   return _mod7905.getIllustrationSource(theme, {
     dark() {
-      return require("module_17808");
+      return require("module_17832");
     },
     darker() {
-      return require("module_17809");
+      return require("module_17833");
     },
     light() {
-      return require("module_17810");
+      return require("module_17834");
     }
   });
 }

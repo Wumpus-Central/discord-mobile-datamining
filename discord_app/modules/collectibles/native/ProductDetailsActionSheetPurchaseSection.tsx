@@ -1,6 +1,6 @@
-// === Module 12986: ProductDetailsActionSheetPurchaseSection ===
+// === Module 12988: ProductDetailsActionSheetPurchaseSection ===
 
-// Module 12986 (ProductDetailsActionSheetPurchaseSection)
+// Module 12988 (ProductDetailsActionSheetPurchaseSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -13,7 +13,7 @@ import components_Button_Button from "components/Button/Button" /* 5594 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6657 */;
 import OrbsIcon from "OrbsIcon" /* 8491 */;
 import openGiftModal from "openGiftModal" /* 10743 */;
-import UnlockWithNitroButton from "UnlockWithNitroButton" /* 12996 */;
+import UnlockWithNitroButton from "UnlockWithNitroButton" /* 12998 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7068 */;
@@ -34,9 +34,9 @@ function VCButton(balance) {
   let color;
   const tmp = closure_17();
   noop = tmp;
-  const virtualCurrencyData = balance(12984).useVirtualCurrencyData(product, flag);
+  const virtualCurrencyData = balance(12986).useVirtualCurrencyData(product, flag);
   ({ price, canAfford } = virtualCurrencyData);
-  let obj = balance(12984);
+  let obj = balance(12986);
   let isPartiallyOwnedBundle = balance(8531).useProductDisableState(product.skuId).isDisabled;
   let obj2 = balance(8531);
   if (!isPartiallyOwnedBundle) {
@@ -51,7 +51,7 @@ function VCButton(balance) {
   const items = [navigation, product, balance, analyticsLocations, stageCollectibleChangeForEditProfile];
   closure_7 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12987, dependencyMap.paths), {
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12989, dependencyMap.paths), {
       skuId: product.skuId,
       analyticsLocations,
       onCheckoutSuccess(arg0) {
@@ -66,7 +66,7 @@ function VCButton(balance) {
               },
             orbBalancePriorToPurchase
           };
-          product(5093).pushLazy(balance(1987)(12991, dependencyMap.paths), obj3, modalKey);
+          product(5093).pushLazy(balance(1987)(12993, dependencyMap.paths), obj3, modalKey);
           const tmp4Result = product(5093);
         } else {
           const ALL = balance(1088).FractionalPremiumSKUsSets.ALL;
@@ -90,8 +90,8 @@ function VCButton(balance) {
               navigation.navigate(constants2.PREMIUM_MANAGE_PLAN);
               product(4854).hideActionSheet();
             };
-            tmp4Result3.openLazy(balance(1987)(12992, dependencyMap.paths), "FractionalNitroCollectedActionSheet", obj4);
-            const tmp10 = balance(1987)(12992, dependencyMap.paths);
+            tmp4Result3.openLazy(balance(1987)(12994, dependencyMap.paths), "FractionalNitroCollectedActionSheet", obj4);
+            const tmp10 = balance(1987)(12994, dependencyMap.paths);
           } else {
             const obj5 = { product, useCategoryImage: true, showOrbBalancePill: true, orbBalancePriorToPurchase, stageCollectibleChangeForEditProfile };
             product(10813).open(obj5);

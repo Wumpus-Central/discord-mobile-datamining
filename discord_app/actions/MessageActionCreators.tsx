@@ -527,7 +527,7 @@ let obj17 = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -569,7 +569,7 @@ let obj17 = {
               return obj7;
             } else {
               dependencyMap = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           }
         } catch (tmp11) {
@@ -751,7 +751,7 @@ let obj17 = {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -851,7 +851,7 @@ let obj17 = {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -1064,7 +1064,7 @@ let obj17 = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -1316,7 +1316,7 @@ let obj17 = {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -1634,14 +1634,14 @@ let obj17 = {
               if (null == closure_131_18) {
                 c6 = 0;
                 c8 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               } else {
                 attachments2 = closure_131_18.attachments;
                 uploader = closure_131_18.uploader;
                 if (closure_131_11) {
                   c6 = 0;
                   c8 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
                 if (null != attachments2) {
                   closure_131_17.message.attachments = attachments2.map((item, index) => channelId(inviteAnalyticsMetadata[45]).getAttachmentPayload(item, index));
@@ -2151,7 +2151,7 @@ let obj17 = {
           let obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -2258,7 +2258,7 @@ let obj17 = {
               const obj6 = { channelId, messageId };
             });
             dependencyMap = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp13) {
           dependencyMap = tmp;
@@ -2281,7 +2281,7 @@ let obj17 = {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -2321,7 +2321,7 @@ let obj17 = {
               const obj9 = tmp2(1282);
             }
             dependencyMap = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp9) {
           dependencyMap = tmp;
@@ -2345,7 +2345,7 @@ let obj17 = {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -2385,7 +2385,7 @@ let obj17 = {
               const obj9 = tmp2(1282);
             }
             dependencyMap = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp9) {
           dependencyMap = tmp;
@@ -2423,7 +2423,7 @@ let obj17 = {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -2509,7 +2509,7 @@ let obj17 = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

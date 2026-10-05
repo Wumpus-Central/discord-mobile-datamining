@@ -1,6 +1,6 @@
-// === Module 16845: SmartSearchTip ===
+// === Module 16864: SmartSearchTip ===
 
-// Module 16845 (SmartSearchTip)
+// Module 16864 (SmartSearchTip)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import _modDef3919 from "module_3919" /* 3919 */;

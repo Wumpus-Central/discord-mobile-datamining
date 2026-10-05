@@ -1,6 +1,6 @@
-// === Module 17687: ExemptChannelsActionSheet ===
+// === Module 17711: ExemptChannelsActionSheet ===
 
-// Module 17687 (ExemptChannelsActionSheet)
+// Module 17711 (ExemptChannelsActionSheet)
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5812 */;
 import TableRow from "TableRow" /* 5993 */;
 import getFlattedChannelListDefault from "getFlattedChannelList" /* 6607 */;
@@ -189,7 +189,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       }
     }
   }
-  const tmp16 = jsx(stateFromStores(17686), { title: tmp11, searchPlaceholder: tmp12, listId: "automod-exempt-channels", items: tmp9, initialSelected: exemptChannels, getId: getChannelOptionId, getSearchText: getChannelOptionName, renderLabel: getChannelOptionName, renderIcon: tmp10, onSave });
+  const tmp16 = jsx(stateFromStores(17710), { title: tmp11, searchPlaceholder: tmp12, listId: "automod-exempt-channels", items: tmp9, initialSelected: exemptChannels, getId: getChannelOptionId, getSearchText: getChannelOptionName, renderLabel: getChannelOptionName, renderIcon: tmp10, onSave });
   cResult[8] = exemptChannels;
   cResult[9] = onSave;
   cResult[10] = tmp9;
@@ -228,5 +228,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   obj2.renderLabel = getChannelOptionName;
   obj2.renderIcon = callback;
   obj2.onSave = onSave;
-  return jsx(stateFromStores(17686), { title: null, searchPlaceholder: null, listId: "automod-exempt-channels", items: null, initialSelected: null, getId: null, getSearchText: null, renderLabel: null, renderIcon: null, onSave: null });
+  return jsx(stateFromStores(17710), { title: null, searchPlaceholder: null, listId: "automod-exempt-channels", items: null, initialSelected: null, getId: null, getSearchText: null, renderLabel: null, renderIcon: null, onSave: null });
 });

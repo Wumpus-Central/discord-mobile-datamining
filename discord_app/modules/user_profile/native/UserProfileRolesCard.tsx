@@ -262,7 +262,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((role) => {
                               } else {
                                 tmp5 = colorString;
                                 tmp6 = null;
-                                tmp4 = f38694;
+                                tmp4 = f38717;
                                 obj = { color: null };
                                 obj.color = tmp5;
                                 tmp3Result = tmp3(tmp4, obj);
@@ -355,7 +355,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((role) => {
                               } else {
                                 tmp5 = colorString;
                                 tmp6 = null;
-                                tmp4 = f38694;
+                                tmp4 = f38717;
                                 obj = { color: null };
                                 obj.color = tmp5;
                                 tmp3Result = tmp3(tmp4, obj);
@@ -409,7 +409,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((role) => {
                             } else {
                               tmp5 = colorString;
                               tmp6 = null;
-                              tmp4 = f38694;
+                              tmp4 = f38717;
                               obj = { color: null };
                               obj.color = tmp5;
                               tmp3Result = tmp3(tmp4, obj);
@@ -485,7 +485,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((role) => {
                 } else {
                   tmp5 = colorString;
                   tmp6 = null;
-                  tmp4 = f38694;
+                  tmp4 = f38717;
                   obj = { color: null };
                   obj.color = tmp5;
                   tmp3Result = tmp3(tmp4, obj);
@@ -714,7 +714,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildMemberRol
         class C {
           constructor(arg0) {
             obj = { role: guildMemberRoleIds, guildId };
-            return jsx(f38696, obj, guildMemberRoleIds.id);
+            return jsx(f38719, obj, guildMemberRoleIds.id);
           }
         }
         cResult[8] = guildId;
@@ -723,7 +723,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildMemberRol
         class C {
           constructor(arg0) {
             obj = { role: guildMemberRoleIds, guildId };
-            return jsx(f38696, obj, guildMemberRoleIds.id);
+            return jsx(f38719, obj, guildMemberRoleIds.id);
           }
         }
       }

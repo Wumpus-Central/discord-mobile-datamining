@@ -1,26 +1,26 @@
-// === Module 14303: NativeRPCImplementation ===
+// === Module 14305: NativeRPCImplementation ===
 
-// Module 14303 (NativeRPCImplementation)
+// Module 14305 (NativeRPCImplementation)
 import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 9022 */;
-import commands_activitiesDefault from "commands/activities" /* 14352 */;
-import authDefault from "auth" /* 14353 */;
-import voiceSettingsDefault from "voiceSettings" /* 14355 */;
-import unsupportedDefault from "unsupported" /* 14356 */;
-import crossPlatformRPCEventHandlersDefault from "crossPlatformRPCEventHandlers" /* 14358 */;
-import NativeRPCServerDefault from "NativeRPCServer" /* 14364 */;
+import commands_activitiesDefault from "commands/activities" /* 14356 */;
+import authDefault from "auth" /* 14357 */;
+import voiceSettingsDefault from "voiceSettings" /* 14359 */;
+import unsupportedDefault from "unsupported" /* 14360 */;
+import crossPlatformRPCEventHandlersDefault from "crossPlatformRPCEventHandlers" /* 14362 */;
+import NativeRPCServerDefault from "NativeRPCServer" /* 14368 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 
-const merged = Object.assign(fn(14304).crossPlatformCommands);
+const merged = Object.assign(fn(14306).crossPlatformCommands);
 const activities = Object.assign(commands_activitiesDefault);
 const auth = Object.assign(authDefault);
 const voiceSettings = Object.assign(voiceSettingsDefault);
 const unsupported = Object.assign(unsupportedDefault);
 Object.assign(crossPlatformRPCEventHandlersDefault);
-const discordEnvironmentEvents = fn(14361);
+const discordEnvironmentEvents = fn(14365);
 const merged6 = Object.assign(discordEnvironmentEvents.createDiscordEnvironmentEvents(true));
-const merged7 = Object.assign(fn(14362).voiceSettingsEventHandlers);
+const merged7 = Object.assign(fn(14366).voiceSettingsEventHandlers);
 const obj4 = { server: NativeRPCServerDefault, commands: {}, events: {}, stores: null, transports: null, registerTransportsForEmbeddedPlatform: null };
 const items = [ThemeStore, AccessibilityStore, UserSettingsProtoStore];
 obj4.stores = items;

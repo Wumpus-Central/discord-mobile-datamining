@@ -1,6 +1,6 @@
-// === Module 17010: ChannelSettingsEditForumTag ===
+// === Module 17034: ChannelSettingsEditForumTag ===
 
-// Module 17010 (ChannelSettingsEditForumTag)
+// Module 17034 (ChannelSettingsEditForumTag)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;

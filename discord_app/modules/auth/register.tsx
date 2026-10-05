@@ -1,6 +1,6 @@
-// === Module 15874: auth/register ===
+// === Module 15878: auth/register ===
 
-// Module 15874 (auth/register)
+// Module 15878 (auth/register)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
@@ -8,8 +8,8 @@ import _modDef4461 from "module_4461" /* 4461 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5083 */;
 import APIErrorDefault from "APIError" /* 5313 */;
 import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5407 */;
-import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 15876 */;
-import AgeGateActionCreatorsAll from "AgeGateActionCreators" /* 15877 */;
+import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 15880 */;
+import AgeGateActionCreatorsAll from "AgeGateActionCreators" /* 15881 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -29,7 +29,7 @@ let closure_11 = async function _scorePassword() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -103,7 +103,7 @@ let closure_12 = async function _registerPhone(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -123,7 +123,7 @@ let closure_12 = async function _registerPhone(arg0) {
             phone2 = phone.phone;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -276,7 +276,7 @@ function registerFull(giftCodeSKUId) {
     }
   });
 }
-const ParentalConsentStore = fn(15875);
+const ParentalConsentStore = fn(15879);
 const Constants = fn(1085);
 ({ AnalyticEvents: metroRequire, AnalyticsSections: closure_7, Endpoints: closure_8 } = Constants);
 const AgeGateConstants = fn(1110);

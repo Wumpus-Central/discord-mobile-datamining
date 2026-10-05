@@ -28,7 +28,7 @@ function handleSetActiveCommand() {
   obj.initialState = undefined;
   obj.activeChannelId = null;
 }
-const obj = { show: false, entrypoint: fn(8932).AppLauncherEntrypoint.NONE, lastShownEntrypoint: fn(8932).AppLauncherEntrypoint.NONE, activeViewType: null, activeChannelId: null, closeReason: fn(8932).AppLauncherCloseReason.DISMISSED, initialState: "application" };
+const obj = { show: false, entrypoint: fn(8932).AppLauncherEntrypoint.NONE, lastShownEntrypoint: fn(8932).AppLauncherEntrypoint.NONE, activeViewType: null, activeChannelId: null, closeReason: fn(8932).AppLauncherCloseReason.DISMISSED, initialState: "applicationId" };
 const Store = initializeDefault.Store;
 class AppLauncherStore extends Store {
 }

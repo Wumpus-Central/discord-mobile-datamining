@@ -1,14 +1,14 @@
-// === Module 14621: useParentalControlSettings ===
+// === Module 14625: useParentalControlSettings ===
 
-// Module 14621 (useParentalControlSettings)
+// Module 14625 (useParentalControlSettings)
 import c from "c" /* 576 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 6491 */;
 import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 6804 */;
 import useUserLinks from "useUserLinks" /* 8295 */;
 import useSelectedTeen from "useSelectedTeen" /* 8297 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14622 */;
-import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 14625 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14626 */;
+import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 14629 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7051 */;
@@ -314,7 +314,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -404,7 +404,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -500,7 +500,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return tmp7.mutualGuilds && !tmp7.all;
 }) : (() => {
   const selectedTeen = controlledSetting(8297).useSelectedTeen();
-  const ParentalControlledFriendSourceFlags = controlledSetting(14622).ParentalControlledFriendSourceFlags;
+  const ParentalControlledFriendSourceFlags = controlledSetting(14626).ParentalControlledFriendSourceFlags;
   let id;
   if (selectedTeen != null) {
     id = selectedTeen.id;

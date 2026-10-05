@@ -1,6 +1,6 @@
-// === Module 17113: useGiftingPromotionAssetsReady ===
+// === Module 17137: useGiftingPromotionAssetsReady ===
 
-// Module 17113 (useGiftingPromotionAssetsReady)
+// Module 17137 (useGiftingPromotionAssetsReady)
 import c from "c" /* 576 */;
 import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 1886 */;
 import _slicedToArray from "module_32" /* 32 */;

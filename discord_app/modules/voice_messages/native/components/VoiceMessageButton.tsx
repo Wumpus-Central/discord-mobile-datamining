@@ -183,7 +183,7 @@ export default noop.memo((disabled) => {
       cancelReason = closure_0(11485).VoiceMessageRecordingResult.CANCELLED_USER_REQUESTED;
     }
     closure_129_1 = cancelReason;
-    return "Reflect";
+    return "Set";
   });
   let items = [channelId, tmp3[2]];
   const callback = noop.useCallback(function() {
@@ -298,7 +298,7 @@ export default noop.memo((disabled) => {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -391,7 +391,7 @@ export default noop.memo((disabled) => {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -562,7 +562,7 @@ export default noop.memo((disabled) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -595,7 +595,7 @@ export default noop.memo((disabled) => {
           ({ LOCKED: arr[0], LOCKED: arr[1] } = constants);
           const result = closure_128_2.set(items);
           c2 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp12) {
         c2 = tmp;
@@ -617,7 +617,7 @@ export default noop.memo((disabled) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -650,7 +650,7 @@ export default noop.memo((disabled) => {
           ({ LOCKED: arr[0], LOCKED: arr[1] } = constants);
           const result = closure_128_2.set(items);
           c2 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp12) {
         c2 = tmp;
@@ -723,7 +723,7 @@ export default noop.memo((disabled) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -756,7 +756,7 @@ export default noop.memo((disabled) => {
           ({ LOCKED: arr[0], LOCKED: arr[1] } = constants);
           const result = closure_128_2.set(items);
           c2 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp12) {
         c2 = tmp;

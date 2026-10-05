@@ -1,6 +1,6 @@
-// === Module 14832: BountyConstants ===
+// === Module 14836: BountyConstants ===
 
-// Module 14832 (BountyConstants)
+// Module 14836 (BountyConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountyConstants.tsx");

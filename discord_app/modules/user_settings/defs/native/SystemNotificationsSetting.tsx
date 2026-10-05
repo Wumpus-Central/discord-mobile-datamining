@@ -1,6 +1,6 @@
-// === Module 15308: SystemNotificationsSetting ===
+// === Module 15312: SystemNotificationsSetting ===
 
-// Module 15308 (SystemNotificationsSetting)
+// Module 15312 (SystemNotificationsSetting)
 import util from "util" /* 1126 */;
 import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -17,7 +17,7 @@ let closure_8 = async function _handleEnableSystemNotification() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

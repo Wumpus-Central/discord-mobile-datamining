@@ -1,6 +1,6 @@
-// === Module 16127: GuildRoleSubscriptionsChannelLongPressActionSheet ===
+// === Module 16131: GuildRoleSubscriptionsChannelLongPressActionSheet ===
 
-// Module 16127 (GuildRoleSubscriptionsChannelLongPressActionSheet)
+// Module 16131 (GuildRoleSubscriptionsChannelLongPressActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1188 */;
@@ -9,7 +9,7 @@ import ActionSheet from "ActionSheet" /* 6701 */;
 import Form from "Form" /* 8895 */;
 import ChannelActionSheetUtils from "ChannelActionSheetUtils" /* 10694 */;
 import _modDef12461 from "module_12461" /* 12461 */;
-import _modDef16019 from "module_16019" /* 16019 */;
+import _modDef16023 from "module_16023" /* 16023 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     tmp15 = cResult[5];
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj5 = { source: onClose(16019) };
+    const obj5 = { source: onClose(16023) };
     const tmp21 = closure_5(tmp(1188).Icon, obj5);
     cResult[6] = tmp21;
     let tmp18 = tmp21;
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   const items = [closure_5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2), ];
   const obj5 = { leading: null, label: null, onPress: null };
   const obj4 = { disableColor: true, source: _modDef12461 };
-  obj5.leading = closure_5(native.Icon, { source: _modDef16019 });
+  obj5.leading = closure_5(native.Icon, { source: _modDef16023 });
   const obj7 = { text: null };
   const intl2 = util.intl;
   obj7.text = intl2.string(util.t.WqhZss);

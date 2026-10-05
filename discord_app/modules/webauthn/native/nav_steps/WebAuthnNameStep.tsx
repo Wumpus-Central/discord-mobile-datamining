@@ -1,6 +1,6 @@
-// === Module 14596: WebAuthnNameStep ===
+// === Module 14600: WebAuthnNameStep ===
 
-// Module 14596 (WebAuthnNameStep)
+// Module 14600 (WebAuthnNameStep)
 import util from "util" /* 1126 */;
 import native from "native" /* 1188 */;
 import useNavigation from "useNavigation" /* 1490 */;
@@ -33,7 +33,7 @@ export default function WebAuthnNameStep() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -86,7 +86,7 @@ export default function WebAuthnNameStep() {
           v3(tmp32[10]).open(obj8);
           const replaced = closure_128_2.replace(constants.WEBAUTHN_SUCCESS);
           c4 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp32) {
         if (tmp5 === c3) {

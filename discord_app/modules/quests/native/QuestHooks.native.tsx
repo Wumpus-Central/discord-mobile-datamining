@@ -1,6 +1,6 @@
-// === Module 14888: QuestHooks ===
+// === Module 14892: QuestHooks ===
 
-// Module 14888 (QuestHooks)
+// Module 14892 (QuestHooks)
 import c from "c" /* 576 */;
 import QuestTypes from "QuestTypes" /* 5626 */;
 import AdCreativeType from "AdCreativeType" /* 5630 */;
@@ -8,7 +8,7 @@ import useIsWindowLargeDefault from "useIsWindowLarge" /* 6433 */;
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6658 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 7208 */;
 import AssetUtils from "AssetUtils" /* 10000 */;
-import useQuestForPlacement from "useQuestForPlacement" /* 14915 */;
+import useQuestForPlacement from "useQuestForPlacement" /* 14919 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 4561 */;
@@ -27,7 +27,7 @@ const ThemeTypes = fn(1096).ThemeTypes;
 fn(558);
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-const f68856 = () => {
+const f68906 = () => {
 
 };
 ReactCompilerGating = fn(558);
@@ -95,11 +95,11 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
     const tmpResult9 = tmp(10912);
   }
   if (cResult[4] !== bounty) {
-    const questDockAdCreativeId = tmp(14899).getQuestDockAdCreativeId(bounty);
+    const questDockAdCreativeId = tmp(14903).getQuestDockAdCreativeId(bounty);
     cResult[4] = bounty;
     cResult[5] = questDockAdCreativeId;
     let tmp16 = questDockAdCreativeId;
-    const tmpResult10 = tmp(14899);
+    const tmpResult10 = tmp(14903);
   } else {
     tmp16 = cResult[5];
   }
@@ -325,13 +325,13 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
 let closure_15 = tmp7;
 ReactCompilerGating = fn(558);
 let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  if (typeof f68856 === "function") {
+  if (typeof f68906 === "function") {
     return closure_15(useQuestForPlacement.useDeliveredCreativeForPlacement(QuestTypes.AdPlacement.MOBILE_HOME_DOCK_AREA, QuestTypes.QuestContent.QUEST_BAR_MOBILE));
   } else {
     throw new TypeError("Trying to call a non-function");
   }
 }) : (() => {
-  if (typeof f68856 === "function") {
+  if (typeof f68906 === "function") {
     return closure_15(useQuestForPlacement.useDeliveredCreativeForPlacement(QuestTypes.AdPlacement.MOBILE_HOME_DOCK_AREA, QuestTypes.QuestContent.QUEST_BAR_MOBILE));
   } else {
     throw new TypeError("Trying to call a non-function");
@@ -563,7 +563,7 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled() ? ((config) => {
 });
 fn = () => {
   const adRefreshLoop = useQuestForPlacement.useAdRefreshLoop(QuestTypes.AdPlacement.MOBILE_HOME_DOCK_AREA);
-  if (typeof f68856 === "function") {
+  if (typeof f68906 === "function") {
     return useQuestForPlacement.useDeliveredCreativeForPlacement(QuestTypes.AdPlacement.MOBILE_HOME_DOCK_AREA, QuestTypes.QuestContent.QUEST_BAR_MOBILE);
   } else {
     throw new TypeError("Trying to call a non-function");
@@ -712,7 +712,7 @@ export const useMobileActivityQuest = ReactCompilerGating.isReactCompilerEnabled
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -769,7 +769,7 @@ export const useMobileActivityQuest = ReactCompilerGating.isReactCompilerEnabled
                     return obj;
                   }
                   c0 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 } catch (tmp16) {
                   c0 = tmp;
                   throw tmp16;
@@ -974,7 +974,7 @@ export const useMobileActivityQuest = ReactCompilerGating.isReactCompilerEnabled
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -1031,7 +1031,7 @@ export const useMobileActivityQuest = ReactCompilerGating.isReactCompilerEnabled
             return obj;
           }
           v3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         } catch (tmp16) {
           v3 = tmp;
           throw tmp16;

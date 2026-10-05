@@ -1,7 +1,7 @@
-// === Module 17585: PromotionsManager ===
+// === Module 17609: PromotionsManager ===
 
-// Module 17585 (PromotionsManager)
-import PromotionsActionCreators from "PromotionsActionCreators" /* 13224 */;
+// Module 17609 (PromotionsManager)
+import PromotionsActionCreators from "PromotionsActionCreators" /* 13226 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
 import SubscriptionStore from "SubscriptionStore" /* 4534 */;
 import PromotionsStore from "PromotionsStore" /* 10396 */;

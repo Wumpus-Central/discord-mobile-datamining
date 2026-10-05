@@ -85,7 +85,7 @@ let closure_9 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -123,7 +123,7 @@ let closure_9 = asyncGeneratorStep(async (arg0) => {
         throw error;
       }
       c4 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     } catch (tmp22) {
       c4 = tmp;
       throw tmp22;

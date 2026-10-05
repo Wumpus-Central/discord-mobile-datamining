@@ -1,6 +1,6 @@
-// === Module 14951: QuestContextMenu ===
+// === Module 14955: QuestContextMenu ===
 
-// Module 14951 (QuestContextMenu)
+// Module 14955 (QuestContextMenu)
 import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import CheckmarkLargeIcon2 from "CheckmarkLargeIcon" /* 4577 */;
@@ -21,8 +21,8 @@ import QuestActionCreators from "QuestActionCreators" /* 9994 */;
 import QuestCopyUtils from "QuestCopyUtils" /* 10010 */;
 import QuestUtils from "QuestUtils" /* 10908 */;
 import QuestPlatformUtils from "QuestPlatformUtils" /* 10918 */;
-import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 14910 */;
-import _modDef14952 from "module_14952" /* 14952 */;
+import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 14914 */;
+import _modDef14956 from "module_14956" /* 14956 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import QuestStore from "QuestStore" /* 7187 */;
@@ -377,7 +377,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
     const intl = util.intl;
     obj2.label = intl.string(util.t.GcsZKJ);
     obj2.action = callback2;
-    obj2.iconSource = _modDef14952;
+    obj2.iconSource = _modDef14956;
     items[1] = obj2;
     if (flag) {
       const obj3 = { label: null, IconComponent: null, action: null };

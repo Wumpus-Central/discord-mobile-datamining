@@ -1,6 +1,6 @@
-// === Module 17988: QuestMobileEmbedVisibilityManager ===
+// === Module 18010: QuestMobileEmbedVisibilityManager ===
 
-// Module 17988 (QuestMobileEmbedVisibilityManager)
+// Module 18010 (QuestMobileEmbedVisibilityManager)
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import ChannelTypes from "ChannelTypes" /* 1106 */;
 import privDefault from "priv" /* 1444 */;

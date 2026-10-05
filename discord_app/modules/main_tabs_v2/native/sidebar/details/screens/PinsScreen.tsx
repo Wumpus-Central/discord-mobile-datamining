@@ -1,8 +1,8 @@
-// === Module 17018: PinsScreen ===
+// === Module 17042: PinsScreen ===
 
-// Module 17018 (PinsScreen)
+// Module 17042 (PinsScreen)
 import nativeDefault from "native" /* 587 */;
-import messages_PinsScreenDefault from "messages/PinsScreen" /* 16878 */;
+import messages_PinsScreenDefault from "messages/PinsScreen" /* 16897 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 

@@ -1,6 +1,6 @@
-// === Module 17211: SoundboardSoundPickerList ===
+// === Module 17235: SoundboardSoundPickerList ===
 
-// Module 17211 (SoundboardSoundPickerList)
+// Module 17235 (SoundboardSoundPickerList)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1188 */;
@@ -16,8 +16,8 @@ import PremiumUpsellSectionDivider from "PremiumUpsellSectionDivider" /* 9908 */
 import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 9909 */;
 import chunkDefault from "chunk" /* 9951 */;
 import _modDef10116 from "module_10116" /* 10116 */;
-import SoundButton from "SoundButton" /* 17212 */;
-import _modDef17220 from "module_17220" /* 17220 */;
+import SoundButton from "SoundButton" /* 17236 */;
+import _modDef17244 from "module_17244" /* 17244 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 
@@ -69,7 +69,7 @@ function getFastListSectionsFromCategories(categories, arr, fontScale) {
   return items;
 }
 const View = fn(17).View;
-const SoundboardStyleConstants = fn(17205);
+const SoundboardStyleConstants = fn(17229);
 ({ SOUND_ROW_HORIZONTAL_PADDING, SOUNDS_PER_ROW: metroRequire, SOUND_BUTTON_HEIGHT, SOUND_ROW_SPACING } = SoundboardStyleConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -367,7 +367,7 @@ export const SoundboardSoundPickerList = noop.memo(ReactCompilerGating.isReactCo
           class O {
             constructor(arg0, arg1) {
               obj = { row: arg1, sectionIndex: channel, section: closure_6[channel], channel };
-              return jsx(f76594, obj);
+              return jsx(f76739, obj);
             }
           }
           cResult[12] = C;
@@ -407,7 +407,7 @@ export const SoundboardSoundPickerList = noop.memo(ReactCompilerGating.isReactCo
         class O {
           constructor(arg0, arg1) {
             obj = { row: arg1, sectionIndex: channel, section: closure_6[channel], channel };
-            return jsx(f76594, obj);
+            return jsx(f76739, obj);
           }
         }
         const debounceResult = tmp(12).debounce((arg0) => {
@@ -421,7 +421,7 @@ export const SoundboardSoundPickerList = noop.memo(ReactCompilerGating.isReactCo
       class O {
         constructor(arg0, arg1) {
           obj = { row: arg1, sectionIndex: channel, section: closure_6[channel], channel };
-          return jsx(f76594, obj);
+          return jsx(f76739, obj);
         }
       }
       cResult[8] = channel;
@@ -609,7 +609,7 @@ export const SoundboardSoundPickerList = noop.memo(ReactCompilerGating.isReactCo
         const obj3 = { size: GuildIcon.GuildIconSizes.XXSMALL_12, guild: tmp2.category.categoryInfo.guild, style: currentUser.sectionIcon };
         let tmp8Result = React5(GuildIconDefault, obj3);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
-        const obj4 = { source: _modDef17220, style: currentUser.sectionIcon };
+        const obj4 = { source: _modDef17244, style: currentUser.sectionIcon };
         tmp8Result = React5(native.Icon, obj4);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
         const obj5 = { source: _modDef10116, style: currentUser.sectionIcon };

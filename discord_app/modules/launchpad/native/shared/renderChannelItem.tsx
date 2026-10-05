@@ -1,6 +1,6 @@
-// === Module 16812: renderChannelItem ===
+// === Module 16831: renderChannelItem ===
 
-// Module 16812 (renderChannelItem)
+// Module 16831 (renderChannelItem)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import useChannelName from "useChannelName" /* 5043 */;
@@ -8,9 +8,9 @@ import GuildIconDefault from "GuildIcon" /* 5971 */;
 import NotificationCenterUtils from "NotificationCenterUtils" /* 7126 */;
 import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9260 */;
 import GroupDMAvatarDefault from "GroupDMAvatar" /* 10648 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 16813 */;
-import renderChannelWrapperDefault from "renderChannelWrapper" /* 16814 */;
-import renderChannelContentDefault from "renderChannelContent" /* 16816 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 16832 */;
+import renderChannelWrapperDefault from "renderChannelWrapper" /* 16833 */;
+import renderChannelContentDefault from "renderChannelContent" /* 16835 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import RelationshipStore from "RelationshipStore" /* 4519 */;

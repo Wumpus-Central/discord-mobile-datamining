@@ -1,6 +1,6 @@
-// === Module 14400: SafeAreaProvider ===
+// === Module 14404: SafeAreaProvider ===
 
-// Module 14400 (SafeAreaProvider)
+// Module 14404 (SafeAreaProvider)
 import c from "c" /* 576 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
 import SafeAreaConstants from "SafeAreaConstants" /* 1620 */;

@@ -1,6 +1,6 @@
-// === Module 14329: providers ===
+// === Module 14331: providers ===
 
-// Module 14329 (providers)
+// Module 14331 (providers)
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9029 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5440 */;
@@ -58,7 +58,7 @@ obj2 = {
             let obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -122,7 +122,7 @@ obj2 = {
                   if (closure_0.aborted) {
                     const result = handleSocketDisconnected();
                     c7 = 3;
-                    return { value: "IconComponent", done: "IconComponent" };
+                    return { value: "IconComponent", done: null };
                   } else {
                     const subscription = provider(connection_redirect[10]).subscribe("USER_CONNECTIONS_UPDATE", handleConnectionsUpdate);
                     let ComponentDispatch = closure_0(connection_redirect[11]).ComponentDispatch;
@@ -221,7 +221,7 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -247,7 +247,7 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
           closure_129_5 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

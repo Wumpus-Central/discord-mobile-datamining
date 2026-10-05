@@ -1,9 +1,9 @@
-// === Module 15297: SettingsWebBrowserScreen ===
+// === Module 15301: SettingsWebBrowserScreen ===
 
-// Module 15297 (SettingsWebBrowserScreen)
+// Module 15301 (SettingsWebBrowserScreen)
 import c from "c" /* 576 */;
 import SettingBuilders from "SettingBuilders" /* 11129 */;
-import SettingLayoutDefault from "SettingLayout" /* 14495 */;
+import SettingLayoutDefault from "SettingLayout" /* 14499 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

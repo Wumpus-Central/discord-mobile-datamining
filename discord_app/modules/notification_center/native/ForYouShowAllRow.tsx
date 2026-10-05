@@ -1,6 +1,6 @@
-// === Module 16381: ForYouShowAllRow ===
+// === Module 16385: ForYouShowAllRow ===
 
-// Module 16381 (ForYouShowAllRow)
+// Module 16385 (ForYouShowAllRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -12,9 +12,9 @@ import useFontScale from "useFontScale" /* 5602 */;
 import Pressables from "Pressables" /* 5909 */;
 import _modDef6638 from "module_6638" /* 6638 */;
 import ChannelListLayout from "ChannelListLayout" /* 11698 */;
-import AvatarDuoPile from "AvatarDuoPile" /* 14273 */;
-import ChannelPressableWrapper from "ChannelPressableWrapper" /* 16376 */;
-import ChannelWrapper from "ChannelWrapper" /* 16377 */;
+import AvatarDuoPile from "AvatarDuoPile" /* 14275 */;
+import ChannelPressableWrapper from "ChannelPressableWrapper" /* 16380 */;
+import ChannelWrapper from "ChannelWrapper" /* 16381 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -298,7 +298,7 @@ export const ForYouSuggestedFriendShowAllRow = ReactCompilerGating.isReactCompil
       class C {
         constructor(arg0) {
           tmp = jsx;
-          obj = { user: suggestedFriends.user, guildId: "Array", size: -1 };
+          obj = { user: suggestedFriends.user, guildId: "Array", size: 2 };
           obj2 = closure_0(closure_2[6]);
           isLayoutCompactResult = obj2.isLayoutCompact(closure_2);
           AvatarSizes = closure_0(closure_2[13]).AvatarSizes;
@@ -312,7 +312,7 @@ export const ForYouSuggestedFriendShowAllRow = ReactCompilerGating.isReactCompil
       class C {
         constructor(arg0) {
           tmp = jsx;
-          obj = { user: suggestedFriends.user, guildId: "Array", size: -1 };
+          obj = { user: suggestedFriends.user, guildId: "Array", size: 2 };
           obj2 = closure_0(closure_2[6]);
           isLayoutCompactResult = obj2.isLayoutCompact(closure_2);
           AvatarSizes = closure_0(closure_2[13]).AvatarSizes;
@@ -357,7 +357,7 @@ export const ForYouSuggestedFriendShowAllRow = ReactCompilerGating.isReactCompil
     children: noop.useMemo(() => {
       const substr = suggestedFriends.slice(2, 4);
       return substr.map((user) => {
-        const obj = { user: user.user, guildId: "Array", size: -1 };
+        const obj = { user: user.user, guildId: "Array", size: 2 };
         const obj2 = suggestedFriends(messagesTabLayout[6]);
         const AvatarSizes = suggestedFriends(messagesTabLayout[13]).AvatarSizes;
         obj.size = suggestedFriends(messagesTabLayout[6]).isLayoutCompact(closure_1_2) ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL;

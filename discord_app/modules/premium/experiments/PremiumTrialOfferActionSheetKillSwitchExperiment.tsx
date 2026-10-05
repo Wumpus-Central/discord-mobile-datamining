@@ -1,6 +1,6 @@
-// === Module 17112: PremiumTrialOfferActionSheetKillSwitchExperiment ===
+// === Module 17136: PremiumTrialOfferActionSheetKillSwitchExperiment ===
 
-// Module 17112 (PremiumTrialOfferActionSheetKillSwitchExperiment)
+// Module 17136 (PremiumTrialOfferActionSheetKillSwitchExperiment)
 import ApexExperiment from "ApexExperiment" /* 1440 */;
 import size from "module_2" /* 2 */;
 

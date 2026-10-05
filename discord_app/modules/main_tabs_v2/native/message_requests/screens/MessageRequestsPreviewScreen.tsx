@@ -1,12 +1,12 @@
-// === Module 17050: MessageRequestsPreviewScreen ===
+// === Module 17074: MessageRequestsPreviewScreen ===
 
-// Module 17050 (MessageRequestsPreviewScreen)
+// Module 17074 (MessageRequestsPreviewScreen)
 import MessageManagerDefault from "MessageManager" /* 7517 */;
 import noop from "module_19" /* 19 */;
 import ReadStateStore from "ReadStateStore" /* 4905 */;
 
 const ChatViewDefault = tmp11(9760);
-const RestrictedMessageRequestPreviewDefault = tmp11(17051);
+const RestrictedMessageRequestPreviewDefault = tmp11(17075);
 const require = fn;
 const ME = fn(1085).ME;
 const jsx = fn(21).jsx;

@@ -1,6 +1,6 @@
-// === Module 14358: crossPlatformRPCEventHandlers ===
+// === Module 14362: crossPlatformRPCEventHandlers ===
 
-// Module 14358 (crossPlatformRPCEventHandlers)
+// Module 14362 (crossPlatformRPCEventHandlers)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
@@ -9,9 +9,9 @@ import RPCErrorDefault from "RPCError" /* 9026 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9029 */;
 import RPCHelpers from "RPCHelpers" /* 9031 */;
 import transformUserDefault from "transformUser" /* 9032 */;
-import VibegrationsVoiceSessionCoordinatorDefault from "VibegrationsVoiceSessionCoordinator" /* 14297 */;
-import transformGuildMemberDefault from "transformGuildMember" /* 14359 */;
-import transformApplicationDefault from "transformApplication" /* 14360 */;
+import ConjureVoiceSessionCoordinatorDefault from "ConjureVoiceSessionCoordinator" /* 14299 */;
+import transformGuildMemberDefault from "transformGuildMember" /* 14363 */;
+import transformApplicationDefault from "transformApplication" /* 14364 */;
 import ApplicationStore from "ApplicationStore" /* 5118 */;
 import RunningGameStore from "RunningGameStore" /* 2006 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
@@ -75,7 +75,7 @@ function voiceSessionEventValidation(string) {
   return requiredResult.keys(obj2);
 }
 function voiceSessionEvent(socket) {
-  const result = VibegrationsVoiceSessionCoordinatorDefault.validateEventSubscription(socket.socket, socket.args.session_id);
+  const result = ConjureVoiceSessionCoordinatorDefault.validateEventSubscription(socket.socket, socket.args.session_id);
 }
 const getGuildIconURL = fn(2070).getGuildIconURL;
 let Constants = fn(5316);
@@ -321,10 +321,10 @@ obj2[RPCEvents.VOICE_SESSION_PARTICIPANTS_UPDATE] = {
   handler(args) {
     const session_id = args.args.session_id;
     const socket = args.socket;
-    const result = socket(14297).validateEventSubscription(socket, session_id);
+    const result = socket(14299).validateEventSubscription(socket, session_id);
     return (prevState) => {
       prevState = prevState.prevState;
-      const participantsForEventSubscription = VibegrationsVoiceSessionCoordinatorDefault.getParticipantsForEventSubscription(socket, session_id);
+      const participantsForEventSubscription = ConjureVoiceSessionCoordinatorDefault.getParticipantsForEventSubscription(socket, session_id);
       let tmp5 = prevState;
       if (null != participantsForEventSubscription) {
         let isEqualResult = null == prevState;
@@ -439,7 +439,7 @@ const obj35 = {
   }
 };
 obj2[RPCEvents.FRAME_LAYOUT_MODE_UPDATE] = obj35;
-obj2[RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE] = fn(14302).activityInstanceConnectedParticipantsUpdateEvent;
+obj2[RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE] = fn(14304).activityInstanceConnectedParticipantsUpdateEvent;
 const obj36 = {
   scope: null,
   handler() {

@@ -1,9 +1,9 @@
-// === Module 14720: FamilyCenterEmpty ===
+// === Module 14724: FamilyCenterEmpty ===
 
-// Module 14720 (FamilyCenterEmpty)
+// Module 14724 (FamilyCenterEmpty)
 import c from "c" /* 576 */;
 import Text_Text from "Text/Text" /* 4886 */;
-import _modDef14721 from "module_14721" /* 14721 */;
+import _modDef14725 from "module_14725" /* 14725 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
   text = text.text;
   const tmp4 = closure_7();
   if (cResult[0] !== tmp4.art) {
-    const obj2 = { source: _modDef14721, style: tmp4.art, resizeMethod: "scale" };
+    const obj2 = { source: _modDef14725, style: tmp4.art, resizeMethod: "scale" };
     const tmp9 = hasOwnProperty(React4, obj2);
     cResult[0] = tmp4.art;
     cResult[1] = tmp9;
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
 }) : ((children) => {
   const tmp = closure_7();
   const obj = { style: tmp.empty, children: null };
-  const items = [hasOwnProperty(React4, { source: _modDef14721, style: tmp.art, resizeMethod: "scale" }), hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: children.text })];
+  const items = [hasOwnProperty(React4, { source: _modDef14725, style: tmp.art, resizeMethod: "scale" }), hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: children.text })];
   obj.children = items;
   return timestampProducer(React3, obj);
 });

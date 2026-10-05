@@ -52,7 +52,7 @@ class BurstReactionButton {
     obj1 = { backgroundColor: str, borderColor: null, borderWidth: null };
     backgroundColor1 = undefined;
     tmp5 = jsx;
-    tmp6 = f53650;
+    tmp6 = f53678;
     if (emojiColorPalette != null) {
       backgroundColor1 = emojiColorPalette.backgroundColor;
     }

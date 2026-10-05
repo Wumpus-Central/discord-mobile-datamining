@@ -1,6 +1,6 @@
-// === Module 13054: GuildProfileInvite ===
+// === Module 13056: GuildProfileInvite ===
 
-// Module 13054 (GuildProfileInvite)
+// Module 13056 (GuildProfileInvite)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;

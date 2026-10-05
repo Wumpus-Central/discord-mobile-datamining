@@ -1,9 +1,9 @@
-// === Module 13883: queryAudioEffects ===
+// === Module 13885: queryAudioEffects ===
 
-// Module 13883 (queryAudioEffects)
+// Module 13885 (queryAudioEffects)
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1370 */;
 import DiscordNativeDefault from "DiscordNative" /* 4490 */;
-import _modDef13827 from "module_13827" /* 13827 */;
+import _modDef13829 from "module_13829" /* 13829 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -25,7 +25,7 @@ let closure_6 = async function _queryAudioEffects(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -57,7 +57,7 @@ let closure_6 = async function _queryAudioEffects(arg0, arg1, arg2) {
                 const obj7 = { value: Promise.reject(error), done: true };
                 return obj7;
               }
-              obj5 = _modDef13827;
+              obj5 = _modDef13829;
             } else {
               const _Error = Error;
               const error1 = new Error("Audio effects querying not supported on non-Windows platforms");
@@ -73,7 +73,7 @@ let closure_6 = async function _queryAudioEffects(arg0, arg1, arg2) {
           closure_132_5.error("Failed to probe audio effects for device", closure_131_2);
           closure_132_1(closure_132_2[7]).track(closure_132_4.AUDIO_EFFECTS_PROBE_COMPLETED, { succeeded: false });
           c8 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         } else if (arg0 === 1) {
           c8 = 3;
           throw value;

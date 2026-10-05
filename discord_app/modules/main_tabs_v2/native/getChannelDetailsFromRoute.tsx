@@ -1,6 +1,6 @@
-// === Module 14396: getChannelDetailsFromRoute ===
+// === Module 14400: getChannelDetailsFromRoute ===
 
-// Module 14396 (getChannelDetailsFromRoute)
+// Module 14400 (getChannelDetailsFromRoute)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4736 */;
 import size from "module_2" /* 2 */;
 

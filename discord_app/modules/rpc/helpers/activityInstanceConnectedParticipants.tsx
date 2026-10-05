@@ -1,6 +1,6 @@
-// === Module 14302: activityInstanceConnectedParticipants ===
+// === Module 14304: activityInstanceConnectedParticipants ===
 
-// Module 14302 (activityInstanceConnectedParticipants)
+// Module 14304 (activityInstanceConnectedParticipants)
 import transformUserDefault from "transformUser" /* 9032 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
 import UserStore from "UserStore" /* 1377 */;

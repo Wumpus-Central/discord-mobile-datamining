@@ -1,14 +1,14 @@
-// === Module 17196: VoicePanelHeaderUserState ===
+// === Module 17220: VoicePanelHeaderUserState ===
 
-// Module 17196 (VoicePanelHeaderUserState)
+// Module 17220 (VoicePanelHeaderUserState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import timing from "timing" /* 4891 */;
 import NativeViewDefault from "NativeView" /* 5976 */;
 import native from "native" /* 8567 */;
 import VoiceStateIcons from "VoiceStateIcons" /* 9335 */;
-import useStableParticipant from "useStableParticipant" /* 17195 */;
-import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 17197 */;
+import useStableParticipant from "useStableParticipant" /* 17219 */;
+import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 17221 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
@@ -194,7 +194,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((isHead
   let obj = isHeaderHidden(576);
   const tmp4 = channelId;
   const stateFromStores = isHeaderHidden(504).useStateFromStores(first, tmp9);
-  const tmp11 = closure_9(tmp4(17195)(stateFromStores, channelId, guildId), guildId);
+  const tmp11 = closure_9(tmp4(17219)(stateFromStores, channelId, guildId), guildId);
   const tmpResult = isHeaderHidden(504);
   const fn2 = function w() {
     let num = 0;
@@ -246,7 +246,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((isHead
     }
     return id;
   });
-  const tmp4 = closure_9(channelId(17195)(stateFromStores, channelId, guildId), guildId);
+  const tmp4 = closure_9(channelId(17219)(stateFromStores, channelId, guildId), guildId);
   isHeaderHidden(4612);
   const fn = function f() {
     let num = 0;

@@ -1,15 +1,15 @@
-// === Module 17301: useControlsButtons ===
+// === Module 17325: useControlsButtons ===
 
-// Module 17301 (useControlsButtons)
+// Module 17325 (useControlsButtons)
 import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 11909 */;
-import VoicePanelMicButton from "VoicePanelMicButton" /* 17302 */;
-import VoicePanelConnectButtonDefault from "VoicePanelConnectButton" /* 17305 */;
-import VoicePanelChatButtonDefault from "VoicePanelChatButton" /* 17311 */;
-import VoicePanelDisconnectCancelButtonDefault from "VoicePanelDisconnectCancelButton" /* 17313 */;
-import VoicePanelVideoButtonDefault from "VoicePanelVideoButton" /* 17315 */;
-import VoicePanelSoundboardButtonDefault from "VoicePanelSoundboardButton" /* 17317 */;
-import VoicePanelScreenshareButtonDefault from "VoicePanelScreenshareButton" /* 17319 */;
-import VoicePanelDrawerToggleButtonDefault from "VoicePanelDrawerToggleButton" /* 17324 */;
+import VoicePanelMicButton from "VoicePanelMicButton" /* 17326 */;
+import VoicePanelConnectButtonDefault from "VoicePanelConnectButton" /* 17329 */;
+import VoicePanelChatButtonDefault from "VoicePanelChatButton" /* 17335 */;
+import VoicePanelDisconnectCancelButtonDefault from "VoicePanelDisconnectCancelButton" /* 17337 */;
+import VoicePanelVideoButtonDefault from "VoicePanelVideoButton" /* 17339 */;
+import VoicePanelSoundboardButtonDefault from "VoicePanelSoundboardButton" /* 17341 */;
+import VoicePanelScreenshareButtonDefault from "VoicePanelScreenshareButton" /* 17343 */;
+import VoicePanelDrawerToggleButtonDefault from "VoicePanelDrawerToggleButton" /* 17348 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
 
@@ -68,10 +68,10 @@ export default function useControlsButtons() {
   const context = treatment.useContext(safeArea(11901));
   const windowDimensions = context.windowDimensions;
   safeArea = context.safeArea;
-  const tmp2 = safeArea(17166)(context.channelId);
+  const tmp2 = safeArea(17190)(context.channelId);
   dependencyMap = tmp2;
-  treatment = safeArea(17191).useConfig({ location: "VoicePanelControlButtons" }).treatment;
-  let obj = safeArea(17191);
+  treatment = safeArea(17215).useConfig({ location: "VoicePanelControlButtons" }).treatment;
+  let obj = safeArea(17215);
   let items = [stateFromStores];
   stateFromStores = windowDimensions(504).useStateFromStores(items, () => stateFromStores.getMode() === constants.PUSH_TO_TALK);
   let obj2 = windowDimensions(504);
@@ -99,7 +99,7 @@ export default function useControlsButtons() {
           const obj3 = { type: "icon-normal", key: "connected-mic", render: redux.micConnected };
           items.push(obj3);
         }
-        if (treatment === _true(17191).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
+        if (treatment === _true(17215).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
           const obj4 = { type: "icon-normal", key: "connected-screenshare", render: redux.screenshare };
           items.push(obj4);
         } else {
@@ -110,7 +110,7 @@ export default function useControlsButtons() {
           const obj6 = { type: "icon-large", key: "connected-ptt", render: redux.ptt };
           items.push(obj6);
         }
-        if (treatment === _true(17191).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
+        if (treatment === _true(17215).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
           const obj7 = { type: "icon-normal", key: "connected-screenshare", render: redux.screenshare };
           items.push(obj7);
         } else {

@@ -1,6 +1,6 @@
-// === Module 16312: ManageAccountsModal ===
+// === Module 16316: ManageAccountsModal ===
 
-// Module 16312 (ManageAccountsModal)
+// Module 16316 (ManageAccountsModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -25,7 +25,7 @@ const View = fn(17).View;
 const MultiAccountTokenStatus = fn(12056).MultiAccountTokenStatus;
 let Constants = fn(12057);
 ({ MANAGE_EDIT_TRANSITION_DURATION: closure_14, MAX_ACCOUNTS: closure_15, MultiAccountSwitchLocation: closure_16 } = Constants);
-const ManageAccountsScreens = fn(16313).ManageAccountsScreens;
+const ManageAccountsScreens = fn(16317).ManageAccountsScreens;
 Constants = fn(1085);
 ({ AnalyticEvents: closure_18, AuthStates: closure_19 } = Constants);
 const jsxProd = fn(21);
@@ -111,7 +111,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
           const _Symbol2 = Symbol;
           if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
             let obj2 = { color: username(587).colors.ICON_FEEDBACK_CRITICAL };
-            const tmp24 = closure_20(tmp(15128).CircleMinusIcon, obj2);
+            const tmp24 = closure_20(tmp(15132).CircleMinusIcon, obj2);
             cResult[13] = tmp24;
             let tmp21 = tmp24;
           } else {
@@ -139,7 +139,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -181,7 +181,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
                   MultiAccountActionCreatorsAll.removeAccount(tmp2.id);
                 }
                 c2 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp11) {
               c2 = tmp;
@@ -237,7 +237,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -280,7 +280,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
             const obj = v3(12059);
           }
           v3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp11) {
         v3 = tmp;
@@ -323,7 +323,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
       return applyArgumentsResult;
     };
     let obj4 = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-    obj3.children = closure_20(tmp(15128).CircleMinusIcon, obj4);
+    obj3.children = closure_20(tmp(15132).CircleMinusIcon, obj4);
     return closure_20(tmp(5909).PressableOpacity, obj3);
   }
   let obj2 = user(504);
@@ -772,7 +772,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               return obj;
             },
         children() {
-              return closure_1_20(first(15893), {
+              return closure_1_20(first(15897), {
                 handleLogin(login, password, undelete) {
                   isEditing(6082).login({ login, password, undelete });
                 },
@@ -813,7 +813,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               return { headerShown: false };
             },
         children() {
-              return closure_1_20(first(15892), { isMultiAccount: true });
+              return closure_1_20(first(15896), { isMultiAccount: true });
             }
       };
       const tmp29 = closure_20(closure_22.Screen, obj5);
@@ -929,7 +929,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         return obj;
       },
       children() {
-        return closure_1_20(isEditing(15893), {
+        return closure_1_20(isEditing(15897), {
           handleLogin(login, password, undelete) {
             isEditing(6082).login({ login, password, undelete });
           },
@@ -954,7 +954,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         return { headerShown: false };
       },
       children() {
-        return closure_1_20(isEditing(15892), { isMultiAccount: true });
+        return closure_1_20(isEditing(15896), { isMultiAccount: true });
       }
     })
   ];

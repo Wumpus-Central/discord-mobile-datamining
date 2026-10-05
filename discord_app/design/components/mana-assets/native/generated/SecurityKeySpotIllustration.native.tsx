@@ -1,10 +1,10 @@
-// === Module 14593: SecurityKeySpotIllustration ===
+// === Module 14597: SecurityKeySpotIllustration ===
 
-// Module 14593 (SecurityKeySpotIllustration)
+// Module 14597 (SecurityKeySpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5974 */;
-import _modDef14594 from "module_14594" /* 14594 */;
+import _modDef14598 from "module_14598" /* 14598 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -27,7 +27,7 @@ export const SecurityKeySpotIllustration = ReactCompilerGating.isReactCompilerEn
     num3 = scale;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef14594 };
+    const obj2 = { uri: _modDef14598 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -78,7 +78,7 @@ export const SecurityKeySpotIllustration = ReactCompilerGating.isReactCompilerEn
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef14594 };
+  const obj2 = { uri: _modDef14598 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

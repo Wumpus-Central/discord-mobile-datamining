@@ -1,16 +1,16 @@
-// === Module 15860: Auth ===
+// === Module 15864: Auth ===
 
-// Module 15860 (Auth)
+// Module 15864 (Auth)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useWideAuthViewDefault from "useWideAuthView" /* 6432 */;
 import BackgroundImageDefault from "BackgroundImage" /* 6463 */;
 import StackNavigator from "StackNavigator" /* 6498 */;
-import RegistrationHandoff from "RegistrationHandoff" /* 15861 */;
-import RegistrationUtils from "RegistrationUtils" /* 15871 */;
-import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 15913 */;
-import AuthManagerDefault from "AuthManager" /* 15915 */;
-import useOrientationLockDefault from "useOrientationLock" /* 15919 */;
+import RegistrationHandoff from "RegistrationHandoff" /* 15865 */;
+import RegistrationUtils from "RegistrationUtils" /* 15875 */;
+import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 15917 */;
+import AuthManagerDefault from "AuthManager" /* 15919 */;
+import useOrientationLockDefault from "useOrientationLock" /* 15923 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import MultiAccountStore from "MultiAccountStore" /* 12056 */;
@@ -20,7 +20,7 @@ const utils_PlatformUtils = PX_24(1370);
 const KeyboardChatScrollView = PX_24(1632);
 const WideAuthScrollContext = PX_24(6461);
 const Navigator = PX_24(6496);
-const _mod15914 = PX_24(15914);
+const _mod15918 = PX_24(15918);
 require = fn;
 function getInitialAuthRouteStack() {
   if (!obj.hasRegistrationHandoff()) {
@@ -40,7 +40,7 @@ get_ActivityIndicator = fn(17);
 const AuthStates = fn(1085).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-let RegistrationStepsUtils = fn(15862);
+let RegistrationStepsUtils = fn(15866);
 RegistrationStepsUtils = RegistrationStepsUtils.getAllAuthScreens();
 RegistrationStepsUtils = Object.entries(RegistrationStepsUtils);
 const screens = Object.fromEntries(RegistrationStepsUtils.map((item) => {
@@ -171,7 +171,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         return arg0.height;
       }
     }
-    const obj4 = { backgroundImageSource: _mod15914, backgroundImageCover: true };
+    const obj4 = { backgroundImageSource: _mod15918, backgroundImageCover: true };
     const tmp19 = closure_9(tmp3(6463), obj4);
     cResult[4] = tmp19;
     const tmp17 = tmp19;
@@ -333,7 +333,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     closure_1(false);
   }, []);
   const obj3 = { backgroundImageSource: null, backgroundImageCover: true };
-  obj3.backgroundImageSource = _mod15914;
+  obj3.backgroundImageSource = _mod15918;
   const children = [closure_9(BackgroundImageDefault, obj3), ];
   if (tmp5) {
     const obj5 = { value: tmp11, children: null };

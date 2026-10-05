@@ -47,8 +47,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((notification) =>
       tmp8 = cResult[5];
     }
     if (cResult[6] !== author) {
-      const obj3 = { user: author, size: native.AvatarSizes.NORMAL, guildId: "Array" };
-      const tmp11 = jsx(native.Avatar, { user: author, size: native.AvatarSizes.NORMAL, guildId: "Array" });
+      const obj3 = { user: author, size: native.AvatarSizes.NORMAL, guildId: "r" };
+      const tmp11 = jsx(native.Avatar, { user: author, size: native.AvatarSizes.NORMAL, guildId: "r" });
       cResult[6] = author;
       cResult[7] = tmp11;
       let tmp9 = tmp11;
@@ -108,12 +108,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((notification) =>
       rootNavigationRef.navigate("message-requests");
     }
   }, []);
-  let obj = { icon: jsx(author(1188).Avatar, { user: author, size: author(1188).AvatarSizes.NORMAL, guildId: "Array" }), header: memo, children: null, onPress: null, notification: null };
+  let obj = { icon: jsx(author(1188).Avatar, { user: author, size: author(1188).AvatarSizes.NORMAL, guildId: "r" }), header: memo, children: null, onPress: null, notification: null };
   const obj3 = { text: null };
   let intl = author(1126).intl;
   obj3.text = intl.string(author(1126).t["Bx4/Lf"]);
   obj.children = jsx(author(12486).SystemMessageText, { text: null });
   obj.onPress = callback;
   obj.notification = notification;
-  return jsx(author(12516).NotificationPressable, { icon: jsx(author(1188).Avatar, { user: author, size: author(1188).AvatarSizes.NORMAL, guildId: "Array" }), header: memo, children: null, onPress: null, notification: null });
+  return jsx(author(12516).NotificationPressable, { icon: jsx(author(1188).Avatar, { user: author, size: author(1188).AvatarSizes.NORMAL, guildId: "r" }), header: memo, children: null, onPress: null, notification: null });
 });

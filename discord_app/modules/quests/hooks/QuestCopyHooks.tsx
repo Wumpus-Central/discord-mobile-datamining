@@ -1787,7 +1787,7 @@ export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? 
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1827,7 +1827,7 @@ export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? 
           obj6.sourceQuestContent = sourceQuestContent;
           tmp4(preCtaClick[27]).openGameLinkDirectly(tmp4, obj6);
           v3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp11) {
         v3 = tmp;
@@ -1867,7 +1867,7 @@ export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? 
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1907,7 +1907,7 @@ export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? 
           obj6.sourceQuestContent = closure_128_4;
           tmp4(10918).openGameLinkDirectly(closure_128_0, obj6);
           dependencyMap = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp11) {
         dependencyMap = tmp;

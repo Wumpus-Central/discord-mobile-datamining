@@ -1,6 +1,6 @@
-// === Module 12946: AddToWishlistItemCard ===
+// === Module 12948: AddToWishlistItemCard ===
 
-// Module 12946 (AddToWishlistItemCard)
+// Module 12948 (AddToWishlistItemCard)
 import nativeDefault from "native" /* 587 */;
 import SKUPreviewDefault from "SKUPreview" /* 8426 */;
 import HeartOutlineIcon from "HeartOutlineIcon" /* 8494 */;
@@ -56,7 +56,7 @@ export default function AddToWishlistItemCard(sku) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

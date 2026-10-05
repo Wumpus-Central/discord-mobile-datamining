@@ -130,7 +130,7 @@ const guildThemePreviewStore = new GuildThemePreviewStore(DispatcherDefault, {
     if (null == closure_5.guildId) {
       return false;
     } else {
-      const obj2 = { presetId: tmp, customUserThemeSettings: "a" };
+      const obj2 = { presetId: tmp, customUserThemeSettings: "r" };
       const isEqualResult = _mod12.isEqual(closure_5.draft, obj2);
       let flag = !isEqualResult;
       if (isEqualResult) {

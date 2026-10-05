@@ -1,6 +1,6 @@
-// === Module 15649: UserSettingsDesignSystemAlertModal ===
+// === Module 15653: UserSettingsDesignSystemAlertModal ===
 
-// Module 15649 (UserSettingsDesignSystemAlertModal)
+// Module 15653 (UserSettingsDesignSystemAlertModal)
 import c from "c" /* 576 */;
 import components_Button_Button from "components/Button/Button" /* 5594 */;
 import useAlertStore from "useAlertStore" /* 5709 */;
@@ -30,7 +30,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -59,7 +59,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             return obj;
           } else {
             c0 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp10) {
           c0 = tmp;
@@ -108,7 +108,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -137,7 +137,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           return obj;
         } else {
           c0 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp10) {
         c0 = tmp;

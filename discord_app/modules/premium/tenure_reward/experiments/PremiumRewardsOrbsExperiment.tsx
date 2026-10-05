@@ -1,6 +1,6 @@
-// === Module 13539: PremiumRewardsOrbsExperiment ===
+// === Module 13541: PremiumRewardsOrbsExperiment ===
 
-// Module 13539 (PremiumRewardsOrbsExperiment)
+// Module 13541 (PremiumRewardsOrbsExperiment)
 import c from "c" /* 576 */;
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1441 */;
 

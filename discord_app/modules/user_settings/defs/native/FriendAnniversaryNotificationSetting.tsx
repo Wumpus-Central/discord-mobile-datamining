@@ -1,10 +1,10 @@
-// === Module 15320: FriendAnniversaryNotificationSetting ===
+// === Module 15324: FriendAnniversaryNotificationSetting ===
 
-// Module 15320 (FriendAnniversaryNotificationSetting)
+// Module 15324 (FriendAnniversaryNotificationSetting)
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import SettingsConstants from "SettingsConstants" /* 7634 */;
-import FriendAnniversaryNotificationUtils from "FriendAnniversaryNotificationUtils" /* 15321 */;
+import FriendAnniversaryNotificationUtils from "FriendAnniversaryNotificationUtils" /* 15325 */;
 import SettingBuilders from "SettingBuilders" /* 11129 */;
 import size from "module_2" /* 2 */;
 

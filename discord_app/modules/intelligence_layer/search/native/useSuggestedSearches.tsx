@@ -1,6 +1,6 @@
-// === Module 16786: useSuggestedSearches ===
+// === Module 16805: useSuggestedSearches ===
 
-// Module 16786 (useSuggestedSearches)
+// Module 16805 (useSuggestedSearches)
 import SuggestedSearchStore from "SuggestedSearchStore" /* 12004 */;
 
 const require = globalThis.__r;

@@ -1,6 +1,6 @@
-// === Module 12953: UserProfileRemediatedNotice ===
+// === Module 12955: UserProfileRemediatedNotice ===
 
-// Module 12953 (UserProfileRemediatedNotice)
+// Module 12955 (UserProfileRemediatedNotice)
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 7913 */;

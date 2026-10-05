@@ -1,6 +1,6 @@
-// === Module 13721: GuildActionSheetActions ===
+// === Module 13723: GuildActionSheetActions ===
 
-// Module 13721 (GuildActionSheetActions)
+// Module 13723 (GuildActionSheetActions)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 587 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
@@ -34,9 +34,9 @@ import useOpenProfileSettingsDefault from "useOpenProfileSettings" /* 9416 */;
 import ChannelCollapseActionCreatorsDefault from "ChannelCollapseActionCreators" /* 10700 */;
 import OptInOnboardingUtils from "OptInOnboardingUtils" /* 11172 */;
 import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11186 */;
-import useIsServerThemeAvailableForGuildDefault from "useIsServerThemeAvailableForGuild" /* 13722 */;
-import markGuildsAsReadDefault from "markGuildsAsRead" /* 13771 */;
-import GuildAntiRaidModalActionCreators from "GuildAntiRaidModalActionCreators" /* 13777 */;
+import useIsServerThemeAvailableForGuildDefault from "useIsServerThemeAvailableForGuild" /* 13724 */;
+import markGuildsAsReadDefault from "markGuildsAsRead" /* 13773 */;
+import GuildAntiRaidModalActionCreators from "GuildAntiRaidModalActionCreators" /* 13779 */;
 import noop from "module_19" /* 19 */;
 import NewChannelsStore from "NewChannelsStore" /* 7043 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
@@ -572,7 +572,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   const cResult = guild(576).c(22);
   guild = guild.guild;
   let obj = guild(576);
-  const canManageChannels = guild(13772).useGuildActionSheetPermissions(guild).canManageChannels;
+  const canManageChannels = guild(13774).useGuildActionSheetPermissions(guild).canManageChannels;
   const tmp3 = useCanCreateAnEventDefault(guild.id);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildRoleStore];
@@ -591,7 +591,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   } else {
     tmp6 = cResult[2];
   }
-  const obj2 = guild(13772);
+  const obj2 = guild(13774);
   const stateFromStores = Group(504).useStateFromStores(first, tmp6);
   if (cResult[3] === tmp3) {
     if (cResult[4] === stateFromStores) {
@@ -733,7 +733,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   const GroupResult = Group(504);
 }) : ((guild) => {
   guild = guild.guild;
-  let obj = guild(13772);
+  let obj = guild(13774);
   const tmp3 = useCanCreateAnEventDefault(guild.id);
   const items = [GuildRoleStore];
   const items1 = [];
@@ -829,7 +829,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
     } else {
       tmp20 = cResult[8];
     }
-    const messageRequestPrivacyOption = tmp(13720).useMessageRequestPrivacyOption(tmp20);
+    const messageRequestPrivacyOption = tmp(13722).useMessageRequestPrivacyOption(tmp20);
     if (null != messageRequestPrivacyOption) {
       items.push(messageRequestPrivacyOption);
     }
@@ -903,7 +903,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
       cResult[15] = tmp31;
       tmp29 = tmp31;
     }
-    const tmpResult = tmp(13720);
+    const tmpResult = tmp(13722);
   }
   const tmp13 = closure_21(closure_26, { guild, user: currentUser });
   cResult[2] = guild;
@@ -920,7 +920,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   items.push(closure_21(closure_26, { guild, user: currentUser }));
   items.push(closure_21(closure_29, { guild }));
   const tmp4 = closure_7(guild, currentUser);
-  const messageRequestPrivacyOption = guild(13720).useMessageRequestPrivacyOption({ guild });
+  const messageRequestPrivacyOption = guild(13722).useMessageRequestPrivacyOption({ guild });
   if (null != messageRequestPrivacyOption) {
     items.push(messageRequestPrivacyOption);
   }
@@ -953,7 +953,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
     };
     t = items.push(closure_21(tmp9(6697).ActionSheetRow, obj3));
   }
-  let obj = guild(13720);
+  let obj = guild(13722);
 });
 function handleLeaveServer(guild) {
   ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -1044,7 +1044,7 @@ export const GuildActionSheetGameOrganizationActions = function GuildActionSheet
     obj3.label = intl.formatToPlainString(_modDef2391.EnTIIr, obj4);
     obj3.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13773, dependencyMap.paths), "GameOrganizationInviteActionSheet", { guildId: guild.id });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13775, dependencyMap.paths), "GameOrganizationInviteActionSheet", { guildId: guild.id });
     };
     obj2.children = closure_21(tmp(6697).ActionSheetRow, obj3);
     tmp3 = closure_21(tmp(6697).ActionSheetRow.Group, obj2);
@@ -1081,7 +1081,7 @@ export const GuildActionSheetSecondaryActions = function GuildActionSheetSeconda
   items.push(closure_21(closure_24, { guild }));
   items.push(closure_21(closure_29, { guild }));
   const obj3 = guild(7046);
-  const messageRequestPrivacyOption = guild(13720).useMessageRequestPrivacyOption({ guild });
+  const messageRequestPrivacyOption = guild(13722).useMessageRequestPrivacyOption({ guild });
   if (null != messageRequestPrivacyOption) {
     items.push(messageRequestPrivacyOption);
   }
@@ -1155,7 +1155,7 @@ export const GuildActionSheetSecondaryActions = function GuildActionSheetSeconda
     };
     t = items.push(closure_21(tmp3(6697).ActionSheetRow, obj9));
   }
-  const tmp3Result = guild(13720);
+  const tmp3Result = guild(13722);
 };
 export const GuildDeveloperOptionAction = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   const cResult = guild(576).c(18);

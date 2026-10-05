@@ -1,6 +1,6 @@
-// === Module 12922: WishlistUtils ===
+// === Module 12924: WishlistUtils ===
 
-// Module 12922 (WishlistUtils)
+// Module 12924 (WishlistUtils)
 import util from "util" /* 1126 */;
 import StorefrontUtils from "StorefrontUtils" /* 6732 */;
 import _slicedToArray from "module_32" /* 32 */;

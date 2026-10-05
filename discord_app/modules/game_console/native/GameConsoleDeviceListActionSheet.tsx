@@ -367,7 +367,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((platform) => {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -400,7 +400,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((platform) => {
             const ComponentDispatch = tmp4(stateFromStores[22]).ComponentDispatch;
             ComponentDispatch.dispatch(constants.TOGGLE_CALL_CONTROL_DRAWER);
             stateFromStores = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp13) {
           stateFromStores = tmp;
@@ -463,7 +463,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((platform) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -496,7 +496,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((platform) => {
           const ComponentDispatch = tmp4(1121).ComponentDispatch;
           ComponentDispatch.dispatch(constants.TOGGLE_CALL_CONTROL_DRAWER);
           dependencyMap = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp13) {
         dependencyMap = tmp;

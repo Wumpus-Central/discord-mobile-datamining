@@ -1,11 +1,12 @@
-// === Module 14342: subscriptionHelpers ===
+// === Module 14344: subscriptionHelpers ===
 
-// Module 14342 (subscriptionHelpers)
+// Module 14344 (subscriptionHelpers)
 import useIsScreenLandscape from "useIsScreenLandscape" /* 5912 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 7208 */;
 import useThermalState from "useThermalState" /* 8992 */;
-import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 14302 */;
+import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 14304 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
+import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 14303 */;
 import FramesStore from "FramesStore" /* 8703 */;
 import QuestStore from "QuestStore" /* 7187 */;
 

@@ -1,9 +1,9 @@
-// === Module 17860: useCreatorMonetizationEligibilityItems ===
+// === Module 17884: useCreatorMonetizationEligibilityItems ===
 
-// Module 17860 (useCreatorMonetizationEligibilityItems)
+// Module 17884 (useCreatorMonetizationEligibilityItems)
 import util from "util" /* 1126 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import formatDurationFromDaysDefault from "formatDurationFromDays" /* 17863 */;
+import formatDurationFromDaysDefault from "formatDurationFromDays" /* 17887 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -339,7 +339,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -403,7 +403,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0, arg1) {
             tmp13();
           }
           c2 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         } catch (tmp16) {
           c2 = tmp;
           throw tmp16;
@@ -466,7 +466,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -530,7 +530,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0, arg1) {
             tmp13();
           }
           c2 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         } catch (tmp16) {
           c2 = tmp;
           throw tmp16;

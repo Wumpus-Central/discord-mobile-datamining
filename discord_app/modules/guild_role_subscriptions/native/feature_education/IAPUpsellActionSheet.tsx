@@ -1,6 +1,6 @@
-// === Module 16169: IAPUpsellActionSheet ===
+// === Module 16173: IAPUpsellActionSheet ===
 
-// Module 16169 (IAPUpsellActionSheet)
+// Module 16173 (IAPUpsellActionSheet)
 import router_utils from "router_utils" /* 1112 */;
 import util from "util" /* 1126 */;
 import noop from "module_19" /* 19 */;
@@ -47,13 +47,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       }
       return tmp12;
     }
-    const obj2 = { imageSource: markAsDismissed(16171), header: tmp6, body: tmp7, cta: tmp8, onCTAPress: tmp4, markAsDismissed };
-    const tmp16 = jsx(markAsDismissed(16170), { imageSource: markAsDismissed(16171), header: tmp6, body: tmp7, cta: tmp8, onCTAPress: tmp4, markAsDismissed });
+    const obj2 = { imageSource: markAsDismissed(16175), header: tmp6, body: tmp7, cta: tmp8, onCTAPress: tmp4, markAsDismissed };
+    const tmp16 = jsx(markAsDismissed(16174), { imageSource: markAsDismissed(16175), header: tmp6, body: tmp7, cta: tmp8, onCTAPress: tmp4, markAsDismissed });
     cResult[6] = tmp4;
     cResult[7] = markAsDismissed;
     cResult[8] = tmp16;
     tmp12 = tmp16;
-    const tmp15 = markAsDismissed(16170);
+    const tmp15 = markAsDismissed(16174);
   }
   const fn = function l() {
     router_utils.transitionTo(Routes.CHANNEL(guildId, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   const obj = guildId(576);
 }) : ((arg0) => {
   ({ guildId: require, markAsDismissed } = arg0);
-  const obj = { imageSource: markAsDismissed(16171), header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null };
+  const obj = { imageSource: markAsDismissed(16175), header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null };
   const intl = util.intl;
   obj.header = intl.string(util.t.rBw4cE);
   const intl2 = util.intl;
@@ -78,5 +78,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     markAsDismissed(ContentDismissActionType.UNKNOWN);
   };
   obj.markAsDismissed = markAsDismissed;
-  return jsx(markAsDismissed(16170), { imageSource: markAsDismissed(16171), header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null });
+  return jsx(markAsDismissed(16174), { imageSource: markAsDismissed(16175), header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null });
 });

@@ -1,10 +1,10 @@
-// === Module 13668: ContactSyncUpsellCTA ===
+// === Module 13670: ContactSyncUpsellCTA ===
 
-// Module 13668 (ContactSyncUpsellCTA)
+// Module 13670 (ContactSyncUpsellCTA)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12325 */;
-import _modDef13669 from "module_13669" /* 13669 */;
+import _modDef13671 from "module_13671" /* 13671 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -167,8 +167,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
       }
       return tmp12;
     }
-    let obj3 = { onPress: tmp5, onLongPress: S, style: tmp7, iconSource: _modDef13669, title: tmp8, subtitle: tmp9 };
-    const tmp15 = jsx(_location(8895).FormCTA, { onPress: tmp5, onLongPress: S, style: tmp7, iconSource: _modDef13669, title: tmp8, subtitle: tmp9 });
+    let obj3 = { onPress: tmp5, onLongPress: S, style: tmp7, iconSource: _modDef13671, title: tmp8, subtitle: tmp9 };
+    const tmp15 = jsx(_location(8895).FormCTA, { onPress: tmp5, onLongPress: S, style: tmp7, iconSource: _modDef13671, title: tmp8, subtitle: tmp9 });
     cResult[8] = tmp5;
     cResult[9] = tmp7;
     cResult[10] = tmp15;
@@ -209,7 +209,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
       const result = location(6693).showSimpleActionSheet(obj2);
     },
     style: null,
-    iconSource: _modDef13669,
+    iconSource: _modDef13671,
     title: null,
     subtitle: null
   };
@@ -247,7 +247,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
       const result = location(6693).showSimpleActionSheet(obj2);
     },
     style: null,
-    iconSource: _modDef13669,
+    iconSource: _modDef13671,
     title: null,
     subtitle: null
   });

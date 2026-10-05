@@ -1,6 +1,6 @@
-// === Module 16050: ChannelItem ===
+// === Module 16054: ChannelItem ===
 
-// Module 16050 (ChannelItem)
+// Module 16054 (ChannelItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import router_utils from "router_utils" /* 1112 */;
@@ -9,7 +9,7 @@ import utils_ChannelUtils from "utils/ChannelUtils" /* 5812 */;
 import BookCheckIcon2 from "BookCheckIcon" /* 5859 */;
 import FastImageDefault from "FastImage" /* 5974 */;
 import BaseChannelItem from "BaseChannelItem" /* 12016 */;
-import _modDef16051 from "module_16051" /* 16051 */;
+import _modDef16055 from "module_16055" /* 16055 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 4930 */;
@@ -124,7 +124,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     if (tmp5) {
-      let tmp11 = _modDef16051;
+      let tmp11 = _modDef16055;
       let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
     } else {
       if (cResult[10] === channel) {
@@ -211,7 +211,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     if (tmp2) {
-      let tmp12 = _modDef16051;
+      let tmp12 = _modDef16055;
       let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
       let tmp9 = require;
     } else {
@@ -341,7 +341,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   const items3 = [userId];
   const stateFromStoresObject = userId(504).useStateFromStoresObject(items2, () => ({ status: PresenceStore.getStatus(userId), isMobileOnline: PresenceStore.isMobileOnline(userId), isVROnline: PresenceStore.isVROnline(userId) }), items3);
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
-  const obj3 = { user: stateFromStores, guildId: "o", size: userId(1188).AvatarSizes.XSMALL_20, style: tmp.dmAvatar, status, isMobileOnline, isVROnline, statusStyle: 1859076353 };
+  const obj3 = { user: stateFromStores, guildId: "o", size: userId(1188).AvatarSizes.XSMALL_20, style: tmp.dmAvatar, status, isMobileOnline, isVROnline, statusStyle: 1 };
   const items4 = [tmp.avatarStatus, ];
   if (avatarStatusSelected) {
     avatarStatusSelected = tmp.avatarStatusSelected;

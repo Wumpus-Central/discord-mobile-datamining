@@ -1,6 +1,6 @@
-// === Module 13091: ChatPreview ===
+// === Module 13093: ChatPreview ===
 
-// Module 13091 (ChatPreview)
+// Module 13093 (ChatPreview)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
@@ -222,7 +222,7 @@ class ChatPreviewBase extends PureComponent {
         const chatManager4 = applyArgumentsResult.chatManager;
         const jumpTargetId = tmp3.jumpTargetId;
         const previousRows = chatManager4.getPreviousRows();
-        let obj3 = { rows: previousRows, scrollToMessageId: jumpTargetId, jumpTargetId, jumpType: "Set", shouldInitialScroll: "Array", animated: "2025-11-video-end-card-v2", scrollPosition: "user", focusTargetId: null };
+        let obj3 = { rows: previousRows, scrollToMessageId: jumpTargetId, jumpTargetId, jumpType: "Symbol", shouldInitialScroll: "Array", animated: 0.301, scrollPosition: 1, focusTargetId: "hidden" };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
         if (!tmp7) {
           if (applyArgumentsResult.didPositionInitialScroll) {
@@ -293,7 +293,7 @@ class ChatPreviewBase extends PureComponent {
         message: applyArgumentsResult.getMessage(data.messageId),
         messageChannel: "System",
         selectedChannelId: null,
-        tapLinkData: "ix"
+        tapLinkData: "unicodeVersion"
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;

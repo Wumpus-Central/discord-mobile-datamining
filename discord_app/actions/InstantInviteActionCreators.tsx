@@ -431,7 +431,7 @@ let closure_43 = async function _transitionToGuildFromEventInvite(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -465,7 +465,7 @@ let closure_43 = async function _transitionToGuildFromEventInvite(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     } catch (tmp12) {
       c1 = tmp;
       throw tmp12;
@@ -670,7 +670,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -777,7 +777,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -1029,7 +1029,7 @@ export default {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {

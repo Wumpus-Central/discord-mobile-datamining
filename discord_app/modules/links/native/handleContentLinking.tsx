@@ -15,7 +15,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -45,7 +45,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
           let skipMessageFetch;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -122,7 +122,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
             const obj5 = closure_130_1(closure_130_2[6]);
           }
           c4 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
         if (safe) {
           const obj9 = { navigationReplace: closure_129_7, openChannel: true, skipMessageFetch };

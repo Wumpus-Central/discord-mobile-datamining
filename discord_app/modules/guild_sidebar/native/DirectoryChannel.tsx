@@ -1,6 +1,6 @@
-// === Module 16130: DirectoryChannel ===
+// === Module 16134: DirectoryChannel ===
 
-// Module 16130 (DirectoryChannel)
+// Module 16134 (DirectoryChannel)
 import nativeDefault from "native" /* 587 */;
 import router_utils from "router_utils" /* 1112 */;
 import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10651 */;
@@ -108,7 +108,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
         }
       }
       const obj4 = { onPress: tmp11, onLongPress: tmp12, style: tmp4.container, accessible: true, accessibilityRole: "button", accessibilityLabel: tmp13, accessibilityState: tmp16, channel: stateFromStores, selected, resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS };
-      const tmp21 = jsx(id(16050), { onPress: tmp11, onLongPress: tmp12, style: tmp4.container, accessible: true, accessibilityRole: "button", accessibilityLabel: tmp13, accessibilityState: tmp16, channel: stateFromStores, selected, resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS });
+      const tmp21 = jsx(id(16054), { onPress: tmp11, onLongPress: tmp12, style: tmp4.container, accessible: true, accessibilityRole: "button", accessibilityLabel: tmp13, accessibilityState: tmp16, channel: stateFromStores, selected, resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS });
       cResult[12] = stateFromStores;
       cResult[13] = tmp12;
       cResult[14] = tmp11;
@@ -174,8 +174,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
     obj2.channel = stateFromStores;
     obj2.selected = selected;
     obj2.resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
-    tmp7 = jsx(id(16050), { onPress: callback, onLongPress: tmp6, style: tmp.container, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, channel: null, selected: null, resolvedUnreadSetting: null });
-    const tmp10 = id(16050);
+    tmp7 = jsx(id(16054), { onPress: callback, onLongPress: tmp6, style: tmp.container, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, channel: null, selected: null, resolvedUnreadSetting: null });
+    const tmp10 = id(16054);
   }
   return tmp7;
 }));

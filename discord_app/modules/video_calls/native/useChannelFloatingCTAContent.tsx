@@ -1,6 +1,6 @@
-// === Module 17201: useChannelFloatingCTAContent ===
+// === Module 17225: useChannelFloatingCTAContent ===
 
-// Module 17201 (useChannelFloatingCTAContent)
+// Module 17225 (useChannelFloatingCTAContent)
 import dismissible_content from "dismissible_content" /* 2036 */;
 import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 9444 */;
 import noop from "module_19" /* 19 */;

@@ -1,6 +1,6 @@
-// === Module 17772: RoleIconActionSheet ===
+// === Module 17796: RoleIconActionSheet ===
 
-// Module 17772 (RoleIconActionSheet)
+// Module 17796 (RoleIconActionSheet)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1126 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
@@ -9,10 +9,10 @@ import TableRow from "TableRow" /* 5993 */;
 import TableRowGroup from "TableRowGroup" /* 6074 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6644 */;
 import ActionSheet from "ActionSheet" /* 6701 */;
-import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 17769 */;
+import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 17793 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17757 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17781 */;
 
 const require = globalThis.__r;
 
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -162,9 +162,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
               }
               if (closure_2_9.includes(c0)) {
                 const obj = _var(1481);
-                if (dataUriFileSizeResult <= _var(17773).ROLE_ICON_MAX_FILE_SIZE) {
-                  _var(17769).updateRoleIcon(closure_1, base64, null);
-                  const obj2 = _var(17769);
+                if (dataUriFileSizeResult <= _var(17797).ROLE_ICON_MAX_FILE_SIZE) {
+                  _var(17793).updateRoleIcon(closure_1, base64, null);
+                  const obj2 = _var(17793);
                 }
                 dataUriFileSizeResult = _var(1481).dataUriFileSize(base64);
               }
@@ -482,7 +482,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -504,18 +504,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
                   surrogates = closure_0.surrogates;
                 }
                 if (null != surrogates) {
-                  closure_0(17769).updateRoleIcon(surrogates, null, tmp26);
-                  const obj5 = closure_0(17769);
+                  closure_0(17793).updateRoleIcon(surrogates, null, tmp26);
+                  const obj5 = closure_0(17793);
                 }
               } else {
                 c6 = 1;
-                const tmp22 = closure_0(17769);
+                const tmp22 = closure_0(17793);
                 closure_4 = tmp22;
                 const updateRoleIcon = tmp22.updateRoleIcon;
                 closure_2 = surrogates;
                 c7 = 2;
                 c8 = 1;
-                const obj7 = { value: closure_0(17773).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
+                const obj7 = { value: closure_0(17797).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
                 return obj7;
               }
             }
@@ -577,7 +577,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -697,7 +697,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -719,18 +719,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
                   surrogates = closure_0.surrogates;
                 }
                 if (null != surrogates) {
-                  closure_0(17769).updateRoleIcon(surrogates, null, tmp26);
-                  const obj5 = closure_0(17769);
+                  closure_0(17793).updateRoleIcon(surrogates, null, tmp26);
+                  const obj5 = closure_0(17793);
                 }
               } else {
                 c6 = 1;
-                const tmp22 = closure_0(17769);
+                const tmp22 = closure_0(17793);
                 closure_4 = tmp22;
                 const updateRoleIcon = tmp22.updateRoleIcon;
                 closure_2 = surrogates;
                 c7 = 2;
                 c8 = 1;
-                const obj7 = { value: closure_0(17773).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
+                const obj7 = { value: closure_0(17797).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
                 return obj7;
               }
             }

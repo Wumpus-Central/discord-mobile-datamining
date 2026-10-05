@@ -1,6 +1,6 @@
-// === Module 15957: MessagesItemChannelAvatar ===
+// === Module 15961: MessagesItemChannelAvatar ===
 
-// Module 15957 (MessagesItemChannelAvatar)
+// Module 15961 (MessagesItemChannelAvatar)
 import nativeDefault from "native" /* 587 */;
 import GroupDMAvatarDefault from "GroupDMAvatar" /* 10648 */;
 import noop from "module_19" /* 19 */;
@@ -392,7 +392,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
             return isMobileOnlineResult;
           }
         }
-        const obj3 = { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: true, streaming: true, style: false, size: true, animate: true, typing: "ix", autoStatusCutout: 17072961 };
+        const obj3 = { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: null, streaming: "791966fb9a6f3ffee5b077e1ac5b0455", style: "hi.messages.791966fb9a6f3ffee5b077e1ac5b0455.compiled.messages", size: "jsona", animate: "AUDIT_LOG_FETCH_NEXT_PAGE_START", typing: null, autoStatusCutout: null };
         if (!stateFromStores2.isSystemUser()) {
           class H {
             constructor() {
@@ -538,7 +538,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
   } else {
     tmp11Result = null;
     if (null != stateFromStores2) {
-      const obj7 = { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: true, streaming: true, style: false, size: true, animate: true, typing: "ix", autoStatusCutout: 17072961 };
+      const obj7 = { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: null, streaming: "791966fb9a6f3ffee5b077e1ac5b0455", style: "hi.messages.791966fb9a6f3ffee5b077e1ac5b0455.compiled.messages", size: "jsona", animate: "AUDIT_LOG_FETCH_NEXT_PAGE_START", typing: null, autoStatusCutout: null };
       let tmp12 = null;
       if (!stateFromStores2.isSystemUser()) {
         tmp12 = status;
@@ -549,7 +549,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
       obj7.size = REFRESH_MEDIUM_32;
       obj7.animate = stateFromStores1;
       obj7.typing = stateFromStores;
-      tmp11Result = jsx(tmp3(1188).Avatar, { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: true, streaming: true, style: false, size: true, animate: true, typing: "ix", autoStatusCutout: 17072961 });
+      tmp11Result = jsx(tmp3(1188).Avatar, { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: null, streaming: "791966fb9a6f3ffee5b077e1ac5b0455", style: "hi.messages.791966fb9a6f3ffee5b077e1ac5b0455.compiled.messages", size: "jsona", animate: "AUDIT_LOG_FETCH_NEXT_PAGE_START", typing: null, autoStatusCutout: null });
     }
   }
   return tmp11Result;

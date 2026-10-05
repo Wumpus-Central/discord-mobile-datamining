@@ -1,6 +1,6 @@
-// === Module 17236: AudioRouteSwitchingStore ===
+// === Module 17260: AudioRouteSwitchingStore ===
 
-// Module 17236 (AudioRouteSwitchingStore)
+// Module 17260 (AudioRouteSwitchingStore)
 import _mod17 from "module_17" /* 17 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

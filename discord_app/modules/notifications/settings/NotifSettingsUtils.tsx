@@ -1,9 +1,9 @@
-// === Module 13488: settings/NotifSettingsUtils ===
+// === Module 13490: settings/NotifSettingsUtils ===
 
-// Module 13488 (settings/NotifSettingsUtils)
+// Module 13490 (settings/NotifSettingsUtils)
 import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1233 */;
-import notification_settings from "notification_settings" /* 13490 */;
-import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 13489 */;
+import notification_settings from "notification_settings" /* 13492 */;
+import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 13491 */;
 
 require = fn;
 let ReactCompilerGating = fn(558);

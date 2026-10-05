@@ -1,6 +1,6 @@
-// === Module 13059: VoiceChannelLinkEmbed ===
+// === Module 13061: VoiceChannelLinkEmbed ===
 
-// Module 13059 (VoiceChannelLinkEmbed)
+// Module 13061 (VoiceChannelLinkEmbed)
 import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;

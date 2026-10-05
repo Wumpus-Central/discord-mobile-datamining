@@ -1,6 +1,6 @@
-// === Module 17178: VoicePanelUI ===
+// === Module 17202: VoicePanelUI ===
 
-// Module 17178 (VoicePanelUI)
+// Module 17202 (VoicePanelUI)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -17,9 +17,9 @@ import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 97
 import roundToNearestPixelDefault from "roundToNearestPixel" /* 10725 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11901 */;
 import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11906 */;
-import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 17180 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17181 */;
-import PanelSizeUtils from "PanelSizeUtils" /* 17184 */;
+import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 17204 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17205 */;
+import PanelSizeUtils from "PanelSizeUtils" /* 17208 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
@@ -1968,7 +1968,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (tmp6[0]) {
     obj2 = { value: tmp4(AnalyticsLocationDefault.VOICE_PANEL).analyticsLocations, children: null };
     const obj3 = { children: null };
-    const items3 = [closure_21(tmp2(17186), {}), , ];
+    const items3 = [closure_21(tmp2(17210), {}), , ];
     obj4 = { opacity, onPress: dismissPanel };
     items3[1] = closure_21(closure_98, obj4);
     const obj5 = { gesture: tmp11, children: null };
@@ -1977,19 +1977,19 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     obj6.nativeID = "voice-panel-ui-" + channelId;
     obj6.layout = layoutTransition;
     obj6.onAccessibilityEscape = tmp2(8987);
-    const items4 = [closure_21(tmp2(17188), {}), , , ];
+    const items4 = [closure_21(tmp2(17212), {}), , , ];
     const obj7 = { wrapperOffset, children: null };
     const obj8 = { zIndex: 2, children: null };
     const obj9 = { wrapperOffset, gestureState, layout: layoutTransition };
-    obj8.children = closure_21(tmp2(17190), obj9);
+    obj8.children = closure_21(tmp2(17214), obj9);
     const items5 = [closure_21(channelId(6651).LayerScope, obj8), ];
     const obj10 = { gesture, children: null };
     const obj11 = { style: StyleSheet.absoluteFill, layout: layoutTransition, collapsable: false, children: null };
-    const tmp2Result = tmp2(17187);
+    const tmp2Result = tmp2(17211);
     const obj12 = { gesture: scrollNativeGesture, children: null };
     const obj13 = { layout: scrollViewLayoutTransition, ref: scrollerRef, onScroll: handleScroll, onMomentumScrollEnd: NOOP, animatedProps: scrollViewProps, style: tmp.scrollView, onContentSizeChange, contentContainerStyle: tmp.scrollViewContent, scrollEventThrottle: 8.333333333333334, children: null };
     const obj14 = { viewableChunks };
-    const items6 = [closure_21(tmp2(17246), obj14), closure_21(tmp2(17278), {})];
+    const items6 = [closure_21(tmp2(17270), obj14), closure_21(tmp2(17302), {})];
     obj13.children = items6;
     obj12.children = closure_22(closure_35, obj13);
     obj11.children = closure_21(channelId(6140).GestureDetector, obj12);
@@ -1997,9 +1997,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     items5[1] = closure_21(channelId(6140).GestureDetector, obj10);
     obj7.children = items5;
     items4[1] = closure_22(closure_94, obj7);
-    items4[2] = closure_21(tmp2(17282), {});
+    items4[2] = closure_21(tmp2(17306), {});
     const obj15 = { gestureState };
-    items4[3] = closure_21(tmp2(17288), obj15);
+    items4[3] = closure_21(tmp2(17312), obj15);
     obj6.children = items4;
     obj5.children = closure_22(tmp2Result, obj6);
     items3[2] = closure_21(channelId(6140).GestureDetector, obj5);

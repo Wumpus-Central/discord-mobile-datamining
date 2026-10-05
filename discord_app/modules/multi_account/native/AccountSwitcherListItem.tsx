@@ -1,6 +1,6 @@
-// === Module 15869: AccountSwitcherListItem ===
+// === Module 15873: AccountSwitcherListItem ===
 
-// Module 15869 (AccountSwitcherListItem)
+// Module 15873 (AccountSwitcherListItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -224,7 +224,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   ({ accountSwitcherListItem, accountInfo } = tmp5);
   if (cResult[12] !== tmp15) {
-    { user: null, guildId: "a" }.user = tmp15;
+    { user: null, guildId: "r" }.user = tmp15;
     class U {
       constructor() {
         return closure_1_7.getCurrentUser();
@@ -233,7 +233,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[12] = tmp15;
     cResult[13] = tmp35;
     let tmp33 = tmp35;
-    const obj6 = { user: null, guildId: "a" };
+    const obj6 = { user: null, guildId: "r" };
   } else {
     tmp33 = cResult[13];
   }
@@ -472,7 +472,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const merged = Object.assign(sortHandlers);
     const items2 = [leading, , ];
     const obj8 = { style: tmp.accountInfo, children: null };
-    const obj9 = { user: obj3, guildId: "a" };
+    const obj9 = { user: obj3, guildId: "r" };
     const items3 = [options(native.Avatar, obj9), ];
     const obj10 = { style: tmp.accountListTag, children: null };
     const obj11 = { style: tmp.tagContainer, children: null };

@@ -1,6 +1,6 @@
-// === Module 17429: AgeVerificationManager ===
+// === Module 17453: AgeVerificationManager ===
 
-// Module 17429 (AgeVerificationManager)
+// Module 17453 (AgeVerificationManager)
 import LoggerDefault from "Logger" /* 3 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1107 */;
 import Server from "Server" /* 1985 */;

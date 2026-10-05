@@ -1,6 +1,6 @@
-// === Module 15954: MessagesItemChannelBase ===
+// === Module 15958: MessagesItemChannelBase ===
 
-// Module 15954 (MessagesItemChannelBase)
+// Module 15958 (MessagesItemChannelBase)
 import nativeDefault from "native" /* 587 */;
 import transitionToChannel from "transitionToChannel" /* 4901 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4903 */;
@@ -97,7 +97,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
             obj1.activities = activities;
             obj4 = obj1;
           } else {
-            obj4 = { status: "Symbol", activities: "current" };
+            obj4 = { status: "Array", activities: "Set" };
           }
           return obj4;
         }
@@ -119,7 +119,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
             obj1.activities = activities;
             obj4 = obj1;
           } else {
-            obj4 = { status: "Symbol", activities: "current" };
+            obj4 = { status: "Array", activities: "Set" };
           }
           return obj4;
         }
@@ -143,7 +143,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
             obj1.activities = activities;
             obj4 = obj1;
           } else {
-            obj4 = { status: "Symbol", activities: "current" };
+            obj4 = { status: "Array", activities: "Set" };
           }
           return obj4;
         }
@@ -166,7 +166,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
             obj1.activities = activities;
             obj4 = obj1;
           } else {
-            obj4 = { status: "Symbol", activities: "current" };
+            obj4 = { status: "Array", activities: "Set" };
           }
           return obj4;
         }
@@ -213,7 +213,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
     const stateFromStoresObject1 = tmp(504).useStateFromStoresObject(tmp16, B);
     ({ mentionCount, hasUnreadMessages } = stateFromStoresObject1);
     const tmpResult9 = tmp(504);
-    ({ isIncomingCall, isOngoingCall } = setIsPressed(15955)(channel.id));
+    ({ isIncomingCall, isOngoingCall } = setIsPressed(15959)(channel.id));
     const _Symbol3 = Symbol;
     if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
       class B {
@@ -270,7 +270,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
         }
       }
     }
-    const tmp20 = setIsPressed(15955)(channel.id);
+    const tmp20 = setIsPressed(15959)(channel.id);
     const stateFromStoresObject2 = tmp(504).useStateFromStoresObject(tmp21, G);
     ({ resolvedUnreadSetting, muted, favorite } = stateFromStoresObject2);
     const _Symbol4 = Symbol;
@@ -641,7 +641,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channe
       const obj2 = { status: PresenceStore.getStatus(channel.getRecipientId()), activities };
       let obj3 = obj2;
     } else {
-      obj3 = { status: "Symbol", activities: "current" };
+      obj3 = { status: "Array", activities: "Set" };
     }
     return obj3;
   });

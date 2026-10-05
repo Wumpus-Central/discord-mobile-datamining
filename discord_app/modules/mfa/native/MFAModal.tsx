@@ -1,6 +1,6 @@
-// === Module 15495: MFAModal ===
+// === Module 15499: MFAModal ===
 
-// Module 15495 (MFAModal)
+// Module 15499 (MFAModal)
 import util from "util" /* 1126 */;
 import _modDef4809 from "module_4809" /* 4809 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
@@ -8,7 +8,7 @@ import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 
 import NavigatorHeader from "NavigatorHeader" /* 6010 */;
 import MFAUtils from "MFAUtils" /* 6439 */;
 import HeaderActionButton from "HeaderActionButton" /* 6880 */;
-import MfaStepsTypes from "MfaStepsTypes" /* 15496 */;
+import MfaStepsTypes from "MfaStepsTypes" /* 15500 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -82,7 +82,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((cancel) => {
             return;
           }
         }
-        let obj2 = { name: tmp(15496).MfaScreens.SELECT, params: null };
+        let obj2 = { name: tmp(15500).MfaScreens.SELECT, params: null };
         const obj3 = { mfaChallenge: tmp8, finish: tmp24 };
         obj2.params = obj3;
         cResult[19] = tmp24;
@@ -130,7 +130,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((cancel) => {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -162,7 +162,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((cancel) => {
           } else {
             tmp4(5093).popWithKey(MFA_MODAL_KEY);
             ticket = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp13) {
           ticket = tmp;
@@ -327,7 +327,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((cancel) => {
     finish(cancel[8]).popWithKey(MFA_MODAL_KEY);
     yield "IconComponent";
     ({ mfaType: closure_129_0, data: closure_129_1 } = closure_0);
-    return "Reflect";
+    return "Set";
   });
   let items1 = [finish, memo.ticket];
   finish = finish.useCallback(function() {
@@ -390,7 +390,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((cancel) => {
     obj3.headerRight = headerRight;
     obj3.render = function render(arg0) {
       const merged = Object.assign(arg0);
-      return closure_1_8(finish(15497), {});
+      return closure_1_8(finish(15501), {});
     };
     obj2[MfaStepsTypes.MfaScreens.SELECT] = obj3;
     const obj5 = {};
@@ -420,7 +420,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((cancel) => {
     obj5.headerRight = tmp12;
     obj5.render = function render(arg0) {
       const merged = Object.assign(arg0);
-      return closure_1_8(finish(15498), {});
+      return closure_1_8(finish(15502), {});
     };
     obj2[MfaStepsTypes.MfaScreens.WEBAUTHN] = obj5;
     const obj6 = {};
@@ -450,7 +450,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((cancel) => {
     obj6.headerRight = tmp20;
     obj6.render = function render(arg0) {
       const merged = Object.assign(arg0);
-      return closure_1_8(finish(15503), {});
+      return closure_1_8(finish(15507), {});
     };
     obj2[MfaStepsTypes.MfaScreens.TOTP] = obj6;
     const obj7 = {};
@@ -480,7 +480,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((cancel) => {
     obj7.headerRight = tmp28;
     obj7.render = function render(arg0) {
       const merged = Object.assign(arg0);
-      return closure_1_8(finish(15506), {});
+      return closure_1_8(finish(15510), {});
     };
     obj2[MfaStepsTypes.MfaScreens.BACKUP] = obj7;
     const obj8 = {};
@@ -510,7 +510,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((cancel) => {
     obj8.headerRight = tmp36;
     obj8.render = function render(arg0) {
       const merged = Object.assign(arg0);
-      return closure_1_8(finish(15507), {});
+      return closure_1_8(finish(15511), {});
     };
     obj2[MfaStepsTypes.MfaScreens.SMS] = obj8;
     const obj9 = {};
@@ -540,7 +540,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((cancel) => {
     obj9.headerRight = tmp44;
     obj9.render = function render(arg0) {
       const merged = Object.assign(arg0);
-      return closure_1_8(finish(15508), {});
+      return closure_1_8(finish(15512), {});
     };
     obj2[MfaStepsTypes.MfaScreens.PASSWORD] = obj9;
     return obj2;

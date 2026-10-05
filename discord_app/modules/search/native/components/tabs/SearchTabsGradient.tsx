@@ -1,6 +1,6 @@
-// === Module 16881: SearchTabsGradient ===
+// === Module 16900: SearchTabsGradient ===
 
-// Module 16881 (SearchTabsGradient)
+// Module 16900 (SearchTabsGradient)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useToken from "useToken" /* 4580 */;

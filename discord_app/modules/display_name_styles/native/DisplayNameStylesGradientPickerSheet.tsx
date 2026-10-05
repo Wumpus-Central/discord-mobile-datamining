@@ -1,6 +1,6 @@
-// === Module 15166: DisplayNameStylesGradientPickerSheet ===
+// === Module 15170: DisplayNameStylesGradientPickerSheet ===
 
-// Module 15166 (DisplayNameStylesGradientPickerSheet)
+// Module 15170 (DisplayNameStylesGradientPickerSheet)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
@@ -44,7 +44,7 @@ const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 obj10.alignItems = "center";
 obj10.justifyContent = "center";
 obj2.checkmarkOverlay = obj10;
-const size1 = { width: fn(15167).CHECKMARK_SIZE, height: fn(15167).CHECKMARK_SIZE };
+const size1 = { width: fn(15171).CHECKMARK_SIZE, height: fn(15171).CHECKMARK_SIZE };
 obj2.checkmark = size1;
 let obj8 = { height: 40, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj2.resetButtonContainer = { alignSelf: "stretch", flexDirection: "row", marginHorizontal: nativeDefault.space.PX_8 };
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((selectedColors) 
               onSelect(arg0) {
                           closure_0 = arg0;
                           const result = onSelectColors(displayNameStylesEffectConfig[13]).triggerHapticFeedback(onSelectColors(displayNameStylesEffectConfig[13]).HapticFeedbackTypes.IMPACT_MEDIUM);
-                          closure_1_5((arr) => arr.map(/* F154681 */ function() { ... }));
+                          closure_1_5((arr) => arr.map(/* F154989 */ function() { ... }));
                         },
               actionButtonVariant: "primary"
             };
@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((selectedColors) 
               onSelect(arg0) {
                           closure_0 = arg0;
                           const result = onSelectColors(displayNameStylesEffectConfig[13]).triggerHapticFeedback(onSelectColors(displayNameStylesEffectConfig[13]).HapticFeedbackTypes.IMPACT_MEDIUM);
-                          closure_1_5((arr) => arr.map(/* F154681 */ function() { ... }));
+                          closure_1_5((arr) => arr.map(/* F154989 */ function() { ... }));
                         },
               actionButtonVariant: "primary"
             };

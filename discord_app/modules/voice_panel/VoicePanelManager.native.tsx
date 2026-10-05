@@ -1,6 +1,6 @@
-// === Module 17974: VoicePanelManager ===
+// === Module 17996: VoicePanelManager ===
 
-// Module 17974 (VoicePanelManager)
+// Module 17996 (VoicePanelManager)
 import ChannelStore from "ChannelStore" /* 2051 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
 import VoicePanelStore from "VoicePanelStore" /* 5098 */;

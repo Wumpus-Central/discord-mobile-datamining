@@ -1,6 +1,6 @@
-// === Module 16882: useAutoSearchGuildChannelTab ===
+// === Module 16901: useAutoSearchGuildChannelTab ===
 
-// Module 16882 (useAutoSearchGuildChannelTab)
+// Module 16901 (useAutoSearchGuildChannelTab)
 import _mod12 from "module_12" /* 12 */;
 import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11966 */;
 import SearchUtils from "SearchUtils" /* 11968 */;

@@ -1,6 +1,6 @@
-// === Module 15293: SwipeRightToLeftSetting ===
+// === Module 15297: SwipeRightToLeftSetting ===
 
-// Module 15293 (SwipeRightToLeftSetting)
+// Module 15297 (SwipeRightToLeftSetting)
 import c from "c" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;

@@ -1,11 +1,11 @@
-// === Module 15817: NotifyFriendsOnProfileUpdateSetting ===
+// === Module 15821: NotifyFriendsOnProfileUpdateSetting ===
 
-// Module 15817 (NotifyFriendsOnProfileUpdateSetting)
+// Module 15821 (NotifyFriendsOnProfileUpdateSetting)
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import _modDef2691 from "module_2691" /* 2691 */;
 import SettingsConstants from "SettingsConstants" /* 7634 */;
-import NotifyFriendsOnProfileUpdateUtils from "NotifyFriendsOnProfileUpdateUtils" /* 15818 */;
+import NotifyFriendsOnProfileUpdateUtils from "NotifyFriendsOnProfileUpdateUtils" /* 15822 */;
 import SettingBuilders from "SettingBuilders" /* 11129 */;
 import size from "module_2" /* 2 */;
 

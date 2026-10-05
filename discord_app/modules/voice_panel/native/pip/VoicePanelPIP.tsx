@@ -1,6 +1,6 @@
-// === Module 17282: VoicePanelPIP ===
+// === Module 17306: VoicePanelPIP ===
 
-// Module 17282 (VoicePanelPIP)
+// Module 17306 (VoicePanelPIP)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4498 */;
@@ -14,10 +14,10 @@ import ExternalPipDefault from "ExternalPip" /* 9110 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 9774 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11901 */;
 import VoicePanelPIPHandoff from "VoicePanelPIPHandoff" /* 11908 */;
-import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 17180 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17181 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17183 */;
-import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 17283 */;
+import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 17204 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17205 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17207 */;
+import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 17307 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
 import FramesStore from "FramesStore" /* 8703 */;
@@ -32,7 +32,7 @@ const StyleSheet = get_ActivityIndicator.StyleSheet;
 const VoicePanelConstants = fn(11902);
 ({ DRAWER_SPRING_PHYSICS: closure_9, VoicePanelModes: c10, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
 const VoicePanelControlsModes = fn(11900).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17182).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(17206).VoicePanelPIPModes;
 const ActivityPanelModes = fn(8705).ActivityPanelModes;
 const isLaunched = fn(8704).isLaunched;
 const jsxProd = fn(21);

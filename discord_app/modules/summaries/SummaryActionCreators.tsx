@@ -38,7 +38,7 @@ let closure_13 = async function _fetchSummary() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -133,7 +133,7 @@ let closure_14 = async function _fetchSummaries() {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -259,7 +259,7 @@ let closure_16 = async function _fetchChannelAffinities() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -336,7 +336,7 @@ let closure_16 = async function _fetchChannelAffinities() {
         obj9.receivedAt = Date.now();
         closure_130_1(closure_130_2[7]).dispatch(obj9);
         c6 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp38) {
       closure_3 = tmp38;
@@ -441,7 +441,7 @@ let closure_18 = async function _fetchSummariesBulk(arg0) {
     flag2 = true;
   }
   closure_131_2 = flag2;
-  return "Reflect";
+  return "Set";
 };
 let closure_20 = async function _deleteSummary(arg0) {
   if (c6 === 2) {
@@ -454,7 +454,7 @@ let closure_20 = async function _deleteSummary(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -497,7 +497,7 @@ let closure_20 = async function _deleteSummary(arg0) {
         closure_130_1(closure_130_2[7]).dispatch(obj7);
         c4 = 0;
         c6 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp25) {
       closure_3 = tmp25;
@@ -578,7 +578,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             return { value, done: true };
           } else {
             c4 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else if (arg0 === 1) {
           c4 = 3;
@@ -637,7 +637,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           return { value, done: true };
         } else {
           c4 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else if (arg0 === 1) {
         c4 = 3;

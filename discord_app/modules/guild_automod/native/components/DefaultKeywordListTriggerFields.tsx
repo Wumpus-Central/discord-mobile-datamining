@@ -1,6 +1,6 @@
-// === Module 17672: DefaultKeywordListTriggerFields ===
+// === Module 17696: DefaultKeywordListTriggerFields ===
 
-// Module 17672 (DefaultKeywordListTriggerFields)
+// Module 17696 (DefaultKeywordListTriggerFields)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

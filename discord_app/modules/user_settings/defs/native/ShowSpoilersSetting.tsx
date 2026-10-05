@@ -1,6 +1,6 @@
-// === Module 15289: ShowSpoilersSetting ===
+// === Module 15293: ShowSpoilersSetting ===
 
-// Module 15289 (ShowSpoilersSetting)
+// Module 15293 (ShowSpoilersSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;

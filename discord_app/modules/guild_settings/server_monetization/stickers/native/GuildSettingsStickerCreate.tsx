@@ -1,6 +1,6 @@
-// === Module 17727: GuildSettingsStickerCreate ===
+// === Module 17751: GuildSettingsStickerCreate ===
 
-// Module 17727 (GuildSettingsStickerCreate)
+// Module 17751 (GuildSettingsStickerCreate)
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
@@ -129,7 +129,7 @@ export default noop.forwardRef((stickerId, arg1) => {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -179,7 +179,7 @@ export default noop.forwardRef((stickerId, arg1) => {
             if ("Cancelled" === errorStr) {
               c3 = 0;
               c5 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             } else if (null != base64) {
               if ("image/png" === mimeType) {
                 closure_129_11(base64);
@@ -213,7 +213,7 @@ export default noop.forwardRef((stickerId, arg1) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -251,7 +251,7 @@ export default noop.forwardRef((stickerId, arg1) => {
               }
               c5 = 0;
               c6 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             } else {
               if (null != _undefined) {
                 if (null != first1) {
@@ -271,7 +271,7 @@ export default noop.forwardRef((stickerId, arg1) => {
               }
               c5 = 0;
               c6 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           }
         } else {
@@ -475,7 +475,7 @@ export default noop.forwardRef((stickerId, arg1) => {
     obj18.style = tmp.stickerPreviewImage;
     tmp32Result = tmp32(c6, obj18);
   } else {
-    tmp32Result = tmp32(tmp31(17729).StickerPlusIcon, { size: "lg" });
+    tmp32Result = tmp32(tmp31(17753).StickerPlusIcon, { size: "lg" });
   }
   obj16.children = tmp32Result;
   items4[1] = onPressEmoji(stickerId(5909).PressableHighlight, obj16);

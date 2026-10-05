@@ -1,6 +1,6 @@
-// === Module 16342: ForLaterOpenActionButton ===
+// === Module 16346: ForLaterOpenActionButton ===
 
-// Module 16342 (ForLaterOpenActionButton)
+// Module 16346 (ForLaterOpenActionButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useToken from "useToken" /* 4580 */;
@@ -21,10 +21,10 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const point = { shape: fn(8469).CutoutShape.Circle, x: fn(16343).ICON_SIZE.sm - 7, y: fn(16343).ICON_SIZE.sm - 8, size: 10 };
+const point = { shape: fn(8469).CutoutShape.Circle, x: fn(16347).ICON_SIZE.sm - 7, y: fn(16347).ICON_SIZE.sm - 8, size: 10 };
 const createStyles = fn(4890);
 let obj = { container: { aspectRatio: 1, alignItems: "center", justifyContent: "center", position: "relative" }, iconAnchor: null, dot: null };
-let size = { width: fn(16343).ICON_SIZE.sm, height: fn(16343).ICON_SIZE.sm, position: "relative" };
+let size = { width: fn(16347).ICON_SIZE.sm, height: fn(16347).ICON_SIZE.sm, position: "relative" };
 obj.iconAnchor = size;
 const size1 = { position: "absolute", height: 6.5, width: 6.5, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION, borderRadius: nativeDefault.radii.lg, right: -2, bottom: -0.5 };
 obj.dot = size1;

@@ -1,6 +1,6 @@
-// === Module 16850: PeopleScreen ===
+// === Module 16869: PeopleScreen ===
 
-// Module 16850 (PeopleScreen)
+// Module 16869 (PeopleScreen)
 import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 11982 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -256,7 +256,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -292,7 +292,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
             const result = closure_1(onPressGroupDMItem[14]).trackSearchResultClicked(obj7);
             tmp5(closure_130_0, closure_130_2);
             c5 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp10) {
           c5 = tmp;
@@ -351,7 +351,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -388,7 +388,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((search
             const result = closure_1(stateFromStores[14]).trackSearchResultClicked(obj7);
             onPressDMItem(closure_130_0, closure_130_2);
             c5 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp10) {
           c5 = tmp;

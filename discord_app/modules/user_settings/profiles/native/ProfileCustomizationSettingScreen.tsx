@@ -1,6 +1,6 @@
-// === Module 14407: ProfileCustomizationSettingScreen ===
+// === Module 14411: ProfileCustomizationSettingScreen ===
 
-// Module 14407 (ProfileCustomizationSettingScreen)
+// Module 14411 (ProfileCustomizationSettingScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import ChatInputUtils from "ChatInputUtils" /* 4745 */;
@@ -8,11 +8,11 @@ import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5070 */;
 import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 6477 */;
 import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9419 */;
 import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 10659 */;
-import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 14408 */;
-import useUserProfileEditFormDefault from "useUserProfileEditForm" /* 14426 */;
-import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 14474 */;
-import useGuildProfileEditFormDefault from "useGuildProfileEditForm" /* 14475 */;
-import useMaybeFetchCollectiblesRecommendationsDefault from "useMaybeFetchCollectiblesRecommendations" /* 14484 */;
+import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 14412 */;
+import useUserProfileEditFormDefault from "useUserProfileEditForm" /* 14430 */;
+import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 14478 */;
+import useGuildProfileEditFormDefault from "useGuildProfileEditForm" /* 14479 */;
+import useMaybeFetchCollectiblesRecommendationsDefault from "useMaybeFetchCollectiblesRecommendations" /* 14488 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -402,7 +402,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -434,7 +434,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                   closure_128_3(true);
                 }
                 c2 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp9) {
               c2 = tmp;

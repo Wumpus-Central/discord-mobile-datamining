@@ -1,8 +1,8 @@
-// === Module 17175: panel/LeaveActivityButton ===
+// === Module 17199: panel/LeaveActivityButton ===
 
-// Module 17175 (panel/LeaveActivityButton)
+// Module 17199 (panel/LeaveActivityButton)
 import FramesNativeManagerDefault from "FramesNativeManager" /* 8978 */;
-import LeaveActivityButton from "LeaveActivityButton" /* 17165 */;
+import LeaveActivityButton from "LeaveActivityButton" /* 17189 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((frame)
     }
     return tmp4;
   }
-  const tmp5 = jsx(frame(17165).BaseLeaveActivityButton, {
+  const tmp5 = jsx(frame(17189).BaseLeaveActivityButton, {
     onPress() {
       setMode(ActivityPanelModes.DISCONNECTED);
       const timerId = setTimeout(() => {

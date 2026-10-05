@@ -1,10 +1,10 @@
-// === Module 17765: MemberRolesAbstractUI ===
+// === Module 17789: MemberRolesAbstractUI ===
 
-// Module 17765 (MemberRolesAbstractUI)
+// Module 17789 (MemberRolesAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5974 */;
-import _modDef17766 from "module_17766" /* 17766 */;
+import _modDef17790 from "module_17790" /* 17790 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -27,7 +27,7 @@ export const MemberRolesAbstractUI = ReactCompilerGating.isReactCompilerEnabled(
     num3 = scale;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef17766 };
+    const obj2 = { uri: _modDef17790 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -78,7 +78,7 @@ export const MemberRolesAbstractUI = ReactCompilerGating.isReactCompilerEnabled(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef17766 };
+  const obj2 = { uri: _modDef17790 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

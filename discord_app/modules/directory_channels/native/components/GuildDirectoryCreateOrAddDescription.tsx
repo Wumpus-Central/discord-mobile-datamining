@@ -29,7 +29,7 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -51,7 +51,7 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
               template = template.template;
               if (null == template) {
                 c5 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               } else {
                 c4 = 1;
                 c5 = 1;
@@ -88,7 +88,7 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
           return obj;
         }
         c5 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       } catch (tmp29) {
         c5 = tmp;
         throw tmp29;

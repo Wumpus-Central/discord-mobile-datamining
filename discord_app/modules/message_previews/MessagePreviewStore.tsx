@@ -1,11 +1,11 @@
-// === Module 13527: message_previews/MessagePreviewStore ===
+// === Module 13529: message_previews/MessagePreviewStore ===
 
-// Module 13527 (message_previews/MessagePreviewStore)
+// Module 13529 (message_previews/MessagePreviewStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import requireSortedDescending from "requireSortedDescending" /* 5435 */;
-import PreviewData from "PreviewData" /* 13528 */;
+import PreviewData from "PreviewData" /* 13530 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import MessageStore from "MessageStore" /* 5110 */;

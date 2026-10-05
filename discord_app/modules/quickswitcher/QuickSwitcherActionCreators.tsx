@@ -290,7 +290,7 @@ let closure_25 = async function _openInviteFromQuickSwitcher(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -328,7 +328,7 @@ let closure_25 = async function _openInviteFromQuickSwitcher(arg0) {
           const obj = closure_130_1(closure_130_2[15]);
         }
         c4 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp20) {
       c4 = tmp;
@@ -420,7 +420,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -454,7 +454,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
                     closure_128_0 = value;
                     tmp5(10719).openChannelTabActive(closure_128_0, null);
                     c3 = 3;
-                    return { value: "IconComponent", done: "IconComponent" };
+                    return { value: "IconComponent", done: null };
                   }
                 } catch (tmp16) {
                   c3 = tmp;
@@ -475,7 +475,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -509,7 +509,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
                     closure_128_0 = value;
                     tmp5(10719).openChannelTabActive(closure_128_0, null);
                     c3 = 3;
-                    return { value: "IconComponent", done: "IconComponent" };
+                    return { value: "IconComponent", done: null };
                   }
                 } catch (tmp16) {
                   c3 = tmp;

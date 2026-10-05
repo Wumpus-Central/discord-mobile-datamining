@@ -5,7 +5,7 @@ import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
 import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7229 */;
 import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8020 */;
-import conjuringActivity from "conjuringActivity" /* 10621 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10621 */;
 import StatusDisplayTypes from "StatusDisplayTypes" /* 10623 */;
 import getChannelCopyForEmbeddedActivityDefault from "getChannelCopyForEmbeddedActivity" /* 10624 */;
 import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10625 */;
@@ -94,7 +94,7 @@ export default function getActivityStatusText(name) {
     tmp17 = tmp2;
   }
   if (!isEmbeddedActivityDefault(name)) {
-    if (!tmp15Result.isConjuringActivity(name)) {
+    if (!tmp15Result.isConjurePresenceActivity(name)) {
       let type1;
       if (name != null) {
         type1 = name.type;
@@ -200,7 +200,7 @@ export default function getActivityStatusText(name) {
       obj17 = {};
       tmp15Result2 = StageChannelRichPresenceUtils;
     }
-    tmp15Result = conjuringActivity;
+    tmp15Result = conjurePresenceActivity;
   }
   const text = getChannelCopyForEmbeddedActivityDefault(tmp2);
   return { text, tooltip: text };

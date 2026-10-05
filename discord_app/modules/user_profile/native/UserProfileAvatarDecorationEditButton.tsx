@@ -1,11 +1,11 @@
-// === Module 14450: UserProfileAvatarDecorationEditButton ===
+// === Module 14454: UserProfileAvatarDecorationEditButton ===
 
-// Module 14450 (UserProfileAvatarDecorationEditButton)
+// Module 14454 (UserProfileAvatarDecorationEditButton)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 7828 */;
 import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 8468 */;
-import _modDef13009 from "module_13009" /* 13009 */;
+import _modDef13011 from "module_13011" /* 13011 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 

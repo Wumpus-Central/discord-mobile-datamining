@@ -1,6 +1,6 @@
-// === Module 15631: DesignSystemsTextSetting ===
+// === Module 15635: DesignSystemsTextSetting ===
 
-// Module 15631 (DesignSystemsTextSetting)
+// Module 15635 (DesignSystemsTextSetting)
 import Constants from "Constants" /* 1085 */;
 import SettingsConstants from "SettingsConstants" /* 7634 */;
 import SettingBuilders from "SettingBuilders" /* 11129 */;

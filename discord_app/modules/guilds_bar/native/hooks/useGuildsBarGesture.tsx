@@ -1,6 +1,6 @@
-// === Module 16220: useGuildsBarGesture ===
+// === Module 16224: useGuildsBarGesture ===
 
-// Module 16220 (useGuildsBarGesture)
+// Module 16224 (useGuildsBarGesture)
 import util from "util" /* 1126 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
@@ -16,7 +16,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import SortedGuildStore from "SortedGuildStore" /* 5616 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16221 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16225 */;
 import debounce from "debounce" /* 551 */;
 
 const require = globalThis.__r;
@@ -243,7 +243,7 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, fastListRef, map) {
     sectionItemFromPosition = current.getSectionItemFromPosition(bound, map);
   }
   if (sectionItemFromPosition == null) {
-    sectionItemFromPosition = { item: "done", positionPercentage: false };
+    sectionItemFromPosition = { item: "duration", positionPercentage: false };
   }
   const item = sectionItemFromPosition.item;
   if (null == item) {
@@ -276,7 +276,7 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, fastListRef, map) {
 }
 const Dimensions = fn(17).Dimensions;
 const GuildsNodeType = fn(5616).GuildsNodeType;
-const GuildsBarConstants = fn(16218);
+const GuildsBarConstants = fn(16222);
 ({ FastListRenderSections: c10, useGuildWrapperSize: closure_11 } = GuildsBarConstants);
 let c12 = 160;
 let c13 = 16.666666666666668;
@@ -602,7 +602,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    state1.setStateShallow({ dragSpecs: "Symbol", overSpecs: "current" });
+    state1.setStateShallow({ dragSpecs: "Array", overSpecs: "Set" });
     value = gestureState.get();
     if (null != value.mode) {
       const obj11 = {};

@@ -1,10 +1,10 @@
-// === Module 15810: ParentalControlsUseDataForQuestsSetting ===
+// === Module 15814: ParentalControlsUseDataForQuestsSetting ===
 
-// Module 15810 (ParentalControlsUseDataForQuestsSetting)
+// Module 15814 (ParentalControlsUseDataForQuestsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import _modDef2493 from "module_2493" /* 2493 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14622 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14626 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7048 */;
 
 require = fn;

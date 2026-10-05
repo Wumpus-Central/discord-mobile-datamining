@@ -1,7 +1,7 @@
-// === Module 18000: GlobalDiscoveryServersFeaturedSearchManager ===
+// === Module 18022: GlobalDiscoveryServersFeaturedSearchManager ===
 
-// Module 18000 (GlobalDiscoveryServersFeaturedSearchManager)
-import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore" /* 13515 */;
+// Module 18022 (GlobalDiscoveryServersFeaturedSearchManager)
+import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore" /* 13517 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
 
@@ -43,7 +43,7 @@ const prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -156,7 +156,7 @@ const prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -184,7 +184,7 @@ const prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
             closure_129_5 = undefined;
             lastFetchTimestamp = 1;
             c6 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else {
           if (1 === tmp7) {

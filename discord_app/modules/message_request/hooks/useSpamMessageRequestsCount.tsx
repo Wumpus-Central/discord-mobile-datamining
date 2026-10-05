@@ -1,6 +1,6 @@
-// === Module 17041: useSpamMessageRequestsCount ===
+// === Module 17065: useSpamMessageRequestsCount ===
 
-// Module 17041 (useSpamMessageRequestsCount)
+// Module 17065 (useSpamMessageRequestsCount)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6721 */;

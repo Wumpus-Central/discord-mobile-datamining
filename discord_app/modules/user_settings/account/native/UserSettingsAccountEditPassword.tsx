@@ -1,6 +1,6 @@
-// === Module 14558: UserSettingsAccountEditPassword ===
+// === Module 14562: UserSettingsAccountEditPassword ===
 
-// Module 14558 (UserSettingsAccountEditPassword)
+// Module 14562 (UserSettingsAccountEditPassword)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 587 */;
@@ -14,7 +14,7 @@ import UserSettingsAccountActionCreatorsAll from "UserSettingsAccountActionCreat
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6487 */;
 import showInvalidUsernameToastNative from "showInvalidUsernameToastNative" /* 6488 */;
 import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 6494 */;
-import _modDef14559 from "module_14559" /* 14559 */;
+import _modDef14563 from "module_14563" /* 14563 */;
 import noop from "module_19" /* 19 */;
 import LoginRequiredActionStore from "LoginRequiredActionStore" /* 2043 */;
 import UserSettingsAccountStore from "UserSettingsAccountStore" /* 6886 */;
@@ -29,7 +29,7 @@ const Constants = fn(1085);
 ({ AnalyticEvents: c10, LoginRequiredActions: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const state = { newPassword: "ix", password: 17072961 };
+const state = { newPassword: "unicodeVersion", password: 17087297 };
 const createStyles = fn(4890);
 let obj2 = { onePass: { width: 20, height: 20 }, unverifiedWrapper: { overflow: "hidden", borderRadius: nativeDefault.radii.xs, marginVertical: 16 }, container: { padding: 16 }, header: { marginBottom: 20 }, requiredActionsSubtitle: { textAlign: "center", marginTop: 8 }, requiredActionsTitle: { flex: 1, textAlign: "center" }, image: { marginTop: 12, marginBottom: 16, alignSelf: "center" } };
 let closure_15 = createStyles.createLegacyClassComponentStyles(obj2);
@@ -148,7 +148,7 @@ prototype["render"] = function render() {
   let tmp4Result = showForcedPasswordUpdate;
   if (showForcedPasswordUpdate) {
     const obj3 = { style: tmp.header, children: null };
-    const obj4 = { source: _modDef14559, style: tmp.image };
+    const obj4 = { source: _modDef14563, style: tmp.image };
     const items1 = [__initData(React4, obj4), , ];
     const obj5 = { style: tmp.requiredActionsTitle, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl = util.intl;

@@ -12,7 +12,7 @@ import AgeGatedFeature from "AgeGatedFeature" /* 5581 */;
 import usePreviousDefault from "usePrevious" /* 7946 */;
 import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8091 */;
 import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 8112 */;
-import ReactiveCheckActionCreators from "ReactiveCheckActionCreators" /* 13573 */;
+import ReactiveCheckActionCreators from "ReactiveCheckActionCreators" /* 13575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -66,7 +66,7 @@ function useAgeVerificationRunner(onComplete) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -221,7 +221,7 @@ let closure_27 = async function _maybePerformReactiveCheck() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

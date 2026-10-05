@@ -25,7 +25,7 @@ let closure_9 = async function _fetchProfile(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -62,7 +62,7 @@ let closure_9 = async function _fetchProfile(arg0) {
           closure_131_12 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -159,7 +159,7 @@ let closure_9 = async function _fetchProfile(arg0) {
         }
         c6 = 0;
         c8 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp91) {
       closure_5 = tmp91;
@@ -187,7 +187,7 @@ let closure_10 = async function _fetchMutualFriends() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -244,7 +244,7 @@ let closure_10 = async function _fetchMutualFriends() {
           closure_131_1(closure_131_2[7]).dispatch(obj11);
           c5 = 0;
           c7 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp32) {
         closure_4 = tmp32;

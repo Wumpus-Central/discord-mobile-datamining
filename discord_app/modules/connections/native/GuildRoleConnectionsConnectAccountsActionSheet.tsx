@@ -2590,7 +2590,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -2619,7 +2619,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
             return obj;
           } else {
             c0 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp11) {
           c0 = tmp;
@@ -2972,7 +2972,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
           obj60.onPlatformConnected = handlePlatformConnected;
           obj60.onPlatformIdentityAuthorize = handlePlatformIdentityAuthorize;
           platformType = undefined;
-          tmp57 = f57091;
+          tmp57 = f57119;
           if (tmp26 != null) {
             platformType = tmp26.platformType;
           }
@@ -3080,12 +3080,12 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
           obj74.children = intl4.string(tmp17(tmp18[27]).t.jndPhX);
           items14 = [, ];
           items14[0] = tmp36(tmp17(tmp18[26]).Text, obj74);
-          tmp49 = f57093;
+          tmp49 = f57121;
           obj75 = { account: null, setShowPreviewInvisibleIcon: null, setShowPreviewMetadata: null };
           obj75.account = found1;
           obj75.setShowPreviewInvisibleIcon = tmp16;
           obj75.setShowPreviewMetadata = tmp13;
-          items14[1] = tmp36(f57093, obj75);
+          items14[1] = tmp36(f57121, obj75);
           obj73.children = items14;
           items13[1] = tmp37(tmp38, obj73);
           obj69.children = items13;

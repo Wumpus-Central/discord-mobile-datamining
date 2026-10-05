@@ -1,13 +1,13 @@
-// === Module 14827: useBountiesModalVideoAnalytics ===
+// === Module 14831: useBountiesModalVideoAnalytics ===
 
-// Module 14827 (useBountiesModalVideoAnalytics)
+// Module 14831 (useBountiesModalVideoAnalytics)
 import MonitoringAgentDefault from "MonitoringAgent" /* 5409 */;
 import MetricEvents from "MetricEvents" /* 5414 */;
 import AdCreativeType from "AdCreativeType" /* 5630 */;
 import AnalyticsActions from "AnalyticsActions" /* 7202 */;
 import VideoQuestUtils from "VideoQuestUtils" /* 10940 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 14819 */;
-import AdsVideoUtils from "AdsVideoUtils" /* 14829 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 14823 */;
+import AdsVideoUtils from "AdsVideoUtils" /* 14833 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -98,7 +98,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -178,7 +178,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
             obj9.trackAdContentEvent(obj8);
             c4 = 0;
             c6 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp35) {
           closure_3 = tmp35;

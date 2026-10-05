@@ -1,6 +1,6 @@
-// === Module 14875: usePurchasedProductsSort ===
+// === Module 14879: usePurchasedProductsSort ===
 
-// Module 14875 (usePurchasedProductsSort)
+// Module 14879 (usePurchasedProductsSort)
 import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7064 */;
 import _slicedToArray from "module_32" /* 32 */;

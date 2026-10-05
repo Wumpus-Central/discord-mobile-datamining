@@ -1,6 +1,6 @@
-// === Module 16811: guild_channels/ChannelTitle ===
+// === Module 16830: guild_channels/ChannelTitle ===
 
-// Module 16811 (guild_channels/ChannelTitle)
+// Module 16830 (guild_channels/ChannelTitle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 4886 */;

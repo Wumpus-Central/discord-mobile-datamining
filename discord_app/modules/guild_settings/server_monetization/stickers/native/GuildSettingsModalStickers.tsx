@@ -1,13 +1,13 @@
-// === Module 17721: GuildSettingsModalStickers ===
+// === Module 17745: GuildSettingsModalStickers ===
 
-// Module 17721 (GuildSettingsModalStickers)
+// Module 17745 (GuildSettingsModalStickers)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import LockIcon from "LockIcon" /* 5879 */;
 import TableRow from "TableRow" /* 5993 */;
 import TableRowGroup from "TableRowGroup" /* 6074 */;
 import GuildBoostingUtils from "GuildBoostingUtils" /* 7666 */;
-import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 17725 */;
+import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 17749 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import PermissionStore from "PermissionStore" /* 4509 */;
@@ -24,14 +24,14 @@ const GuildFeatures = Constants.GuildFeatures;
 const MAX_STICKER_FILE_SIZE = fn(2031).MAX_STICKER_FILE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let obj = { tier: BoostedGuildTiers.NONE, title: null, IconComponent: "Array" };
+let obj = { tier: BoostedGuildTiers.NONE, title: null, IconComponent: "r" };
 let intl = fn(1126).intl;
 obj.title = intl.string(fn(1126).t.tfVXhP);
 let items = [obj, , , ];
 let obj2 = { tier: BoostedGuildTiers.TIER_1, title: null, IconComponent: null };
 let intl2 = fn(1126).intl;
 obj2.title = intl2.string(fn(1126).t.nzXtaS);
-obj2.IconComponent = fn(17722).BoostGemOutlineIcon;
+obj2.IconComponent = fn(17746).BoostGemOutlineIcon;
 items[1] = obj2;
 let obj3 = { tier: BoostedGuildTiers.TIER_2, title: null, IconComponent: null };
 let intl3 = fn(1126).intl;
@@ -41,7 +41,7 @@ items[2] = obj3;
 let obj4 = { tier: BoostedGuildTiers.TIER_3, title: null, IconComponent: null };
 const intl4 = fn(1126).intl;
 obj4.title = intl4.string(fn(1126).t.BfF6ED);
-obj4.IconComponent = fn(13328).BoostTier3Icon;
+obj4.IconComponent = fn(13330).BoostTier3Icon;
 items[3] = obj4;
 const createStyles = fn(4890);
 let closure_15 = createStyles.createStyles((arg0) => {

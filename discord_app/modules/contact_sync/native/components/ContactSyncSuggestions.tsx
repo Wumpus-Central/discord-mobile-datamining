@@ -410,7 +410,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((friendSuggestion
                 items1 = [, ];
                 items1[0] = jsxs(View, obj9);
                 tmp25 = jsx;
-                tmp26 = f60909;
+                tmp26 = f60937;
                 obj12 = { label: null };
                 tmp27 = closure_0;
                 tmp28 = closure_2;
@@ -418,14 +418,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((friendSuggestion
                 tmp29 = closure_0;
                 tmp30 = closure_2;
                 obj12.label = intl3.string(closure_0(closure_2[16]).t["1uAmCw"]);
-                items1[1] = jsx(f60909, obj12);
+                items1[1] = jsx(f60937, obj12);
                 obj1.children = items1;
                 return jsxs(Fragment, obj1);
               } else {
                 friendSuggestion = item.props.friendSuggestion;
                 tmp32 = closure_4;
                 tmp33 = jsx;
-                tmp34 = f60911;
+                tmp34 = f60939;
                 obj13 = { start: null, end: null, suggestion: null, selected: null, onSelect: null };
                 num = 1;
                 obj13.start = 1 === index;
@@ -437,7 +437,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((friendSuggestion
                 obj13.onSelect = closure_5;
                 tmp31 = jsxs;
                 items2 = [, ];
-                items2[0] = jsx(f60911, obj13);
+                items2[0] = jsx(f60939, obj13);
                 tmp5 = null;
                 if (index < friendSuggestions.length) {
                   tmp = jsx;

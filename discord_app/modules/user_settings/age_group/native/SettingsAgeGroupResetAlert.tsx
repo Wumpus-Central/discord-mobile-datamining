@@ -1,6 +1,6 @@
-// === Module 14540: SettingsAgeGroupResetAlert ===
+// === Module 14544: SettingsAgeGroupResetAlert ===
 
-// Module 14540 (SettingsAgeGroupResetAlert)
+// Module 14544 (SettingsAgeGroupResetAlert)
 import _modDef3045 from "module_3045" /* 3045 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               c2 = 1;
               c1 = 2;
               c3 = 1;
-              const obj6 = { value: tmp3(13573).resetAgeVerification(), done: false };
+              const obj6 = { value: tmp3(13575).resetAgeVerification(), done: false };
               return obj6;
             }
           } else if (1 === tmp7) {
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             tmp3.goBack();
             c2 = 0;
             c3 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp29) {
           if (tmp4 === c2) {
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -182,7 +182,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             dependencyMap = 1;
             c1 = 2;
             c3 = 1;
-            const obj6 = { value: tmp3(13573).resetAgeVerification(), done: false };
+            const obj6 = { value: tmp3(13575).resetAgeVerification(), done: false };
             return obj6;
           }
         } else if (1 === tmp7) {
@@ -205,7 +205,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           closure_128_0.goBack();
           dependencyMap = 0;
           c3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp29) {
         if (tmp4 === dependencyMap) {

@@ -204,7 +204,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -251,7 +251,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                           const obj2 = { value, done: true };
                           return obj2;
                         } else {
-                          return { value: "IconComponent", done: "IconComponent" };
+                          return { value: "IconComponent", done: null };
                         }
                       } else {
                         try {
@@ -309,7 +309,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                               return obj6;
                             } else {
                               c6 = 3;
-                              return { value: "IconComponent", done: "IconComponent" };
+                              return { value: "IconComponent", done: null };
                             }
                           } else if (3 === tmp7) {
                             if (arg0 === 1) {
@@ -369,7 +369,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
               }
             }
             c10 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else if (1 === tmp7) {
           c7 = 0;

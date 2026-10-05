@@ -1,6 +1,6 @@
-// === Module 13326: GuildBoostingUpsell ===
+// === Module 13328: GuildBoostingUpsell ===
 
-// Module 13326 (GuildBoostingUpsell)
+// Module 13328 (GuildBoostingUpsell)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -16,23 +16,23 @@ import ShieldUserIcon from "ShieldUserIcon" /* 9232 */;
 import StarIcon from "StarIcon" /* 9943 */;
 import HeadphonesIcon from "HeadphonesIcon" /* 12187 */;
 import StickerIcon from "StickerIcon" /* 12190 */;
-import _modDef13168 from "module_13168" /* 13168 */;
-import _modDef13177 from "module_13177" /* 13177 */;
-import _modDef13178 from "module_13178" /* 13178 */;
-import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 13203 */;
-import _modDef13305 from "module_13305" /* 13305 */;
-import _modDef13327 from "module_13327" /* 13327 */;
-import BoostTier3Icon from "BoostTier3Icon" /* 13328 */;
-import _modDef13330 from "module_13330" /* 13330 */;
-import _modDef13331 from "module_13331" /* 13331 */;
+import _modDef13170 from "module_13170" /* 13170 */;
+import _modDef13179 from "module_13179" /* 13179 */;
+import _modDef13180 from "module_13180" /* 13180 */;
+import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 13205 */;
+import _modDef13307 from "module_13307" /* 13307 */;
+import _modDef13329 from "module_13329" /* 13329 */;
+import BoostTier3Icon from "BoostTier3Icon" /* 13330 */;
 import _modDef13332 from "module_13332" /* 13332 */;
 import _modDef13333 from "module_13333" /* 13333 */;
 import _modDef13334 from "module_13334" /* 13334 */;
 import _modDef13335 from "module_13335" /* 13335 */;
-import GuildSubscriptionNoGuilds from "GuildSubscriptionNoGuilds" /* 13336 */;
-import PremiumSubscriptionPricingUpsellDefault from "PremiumSubscriptionPricingUpsell" /* 13340 */;
-import GuildBoostingGuildListDefault from "GuildBoostingGuildList" /* 13341 */;
-import PremiumSubscriptionUpsellDefault from "PremiumSubscriptionUpsell" /* 13342 */;
+import _modDef13336 from "module_13336" /* 13336 */;
+import _modDef13337 from "module_13337" /* 13337 */;
+import GuildSubscriptionNoGuilds from "GuildSubscriptionNoGuilds" /* 13338 */;
+import PremiumSubscriptionPricingUpsellDefault from "PremiumSubscriptionPricingUpsell" /* 13342 */;
+import GuildBoostingGuildListDefault from "GuildBoostingGuildList" /* 13343 */;
+import PremiumSubscriptionUpsellDefault from "PremiumSubscriptionUpsell" /* 13344 */;
 import noop from "module_19" /* 19 */;
 import SortedGuildStore from "SortedGuildStore" /* 5616 */;
 
@@ -74,30 +74,30 @@ class FEATURES_PREMIUM_GUILD_USER {
   }
 }
 function FEATURES_PREMIUM_GUILD() {
-  const obj = { icon: _modDef13331, label: null, IconComponent: null, color: null };
+  const obj = { icon: _modDef13333, label: null, IconComponent: null, color: null };
   const intl = util.intl;
   obj.label = intl.string(util.t.Ts7BVI);
   obj.IconComponent = ReactionIcon.ReactionIcon;
   obj.color = nativeDefault.unsafe_rawColors.PREMIUM_PERK_YELLOW;
   const items = [obj, , , , ];
-  const obj2 = { icon: _modDef13332, label: null, IconComponent: null, color: null };
+  const obj2 = { icon: _modDef13334, label: null, IconComponent: null, color: null };
   const intl2 = util.intl;
   obj2.label = intl2.string(util.t.QcJbt6);
   obj2.IconComponent = StickerIcon.StickerIcon;
   obj2.color = nativeDefault.unsafe_rawColors.PREMIUM_PERK_PURPLE;
   items[1] = obj2;
-  const obj3 = { icon: _modDef13333, label: null, color: "#4173da", IconComponent: null };
+  const obj3 = { icon: _modDef13335, label: null, color: "#4173da", IconComponent: null };
   const intl3 = util.intl;
   obj3.label = intl3.string(util.t.rFNkf5);
   obj3.IconComponent = HeadphonesIcon.HeadphonesIcon;
   items[2] = obj3;
-  const obj4 = { icon: _modDef13334, label: null, IconComponent: null, color: null };
+  const obj4 = { icon: _modDef13336, label: null, IconComponent: null, color: null };
   const intl4 = util.intl;
   obj4.label = intl4.string(util.t["BpjjS/"]);
   obj4.IconComponent = UploadIcon.UploadIcon;
   obj4.color = nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK;
   items[3] = obj4;
-  const obj5 = { icon: _modDef13335, label: null, IconComponent: null, color: null };
+  const obj5 = { icon: _modDef13337, label: null, IconComponent: null, color: null };
   const intl5 = util.intl;
   obj5.label = intl5.string(util.t["9g5Lgb"]);
   obj5.IconComponent = StarIcon.StarIcon;
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((hasAvailableSlot
   }
   ({ root, header } = tmp4);
   if (cResult[2] !== tmp4.imgPremiumGuild) {
-    const obj2 = { style: tmp4.imgPremiumGuild, source: _modDef13168 };
+    const obj2 = { style: tmp4.imgPremiumGuild, source: _modDef13170 };
     const tmp18 = React5(React4, obj2);
     cResult[2] = tmp4.imgPremiumGuild;
     cResult[3] = tmp18;
@@ -151,9 +151,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((hasAvailableSlot
   }
   const tmp12 = useThemeDefault();
   if (tmpResult6.isThemeDark(tmp12)) {
-    let tmp11Result = _modDef13177;
+    let tmp11Result = _modDef13179;
   } else {
-    tmp11Result = _modDef13178;
+    tmp11Result = _modDef13180;
   }
   if (cResult[4] === tmp4.logoPremiumGuild) {
     if (cResult[5] === tmp11Result) {
@@ -450,13 +450,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((hasAvailableSlot
   const obj4 = { style: tmp.root, children: null };
   const obj5 = { style: tmp.header, children: null };
   const tmp8 = useThemeDefault();
-  const items1 = [React5(React4, { style: tmp.imgPremiumGuild, source: _modDef13168 }), , , ];
+  const items1 = [React5(React4, { style: tmp.imgPremiumGuild, source: _modDef13170 }), , , ];
   const obj7 = { style: tmp.logoPremiumGuild, source: null };
-  const obj6 = { style: tmp.imgPremiumGuild, source: _modDef13168 };
+  const obj6 = { style: tmp.imgPremiumGuild, source: _modDef13170 };
   if (tmp2Result.isThemeDark(tmp8)) {
-    let tmp7Result = _modDef13177;
+    let tmp7Result = _modDef13179;
   } else {
-    tmp7Result = _modDef13178;
+    tmp7Result = _modDef13180;
   }
   obj7.source = tmp7Result;
   items1[1] = React5(React4, obj7);

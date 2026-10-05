@@ -1,6 +1,6 @@
-// === Module 13199: PremiumNitroNavigationStore ===
+// === Module 13201: PremiumNitroNavigationStore ===
 
-// Module 13199 (PremiumNitroNavigationStore)
+// Module 13201 (PremiumNitroNavigationStore)
 import ZustandStore from "ZustandStore" /* 4749 */;
 import size from "module_2" /* 2 */;
 

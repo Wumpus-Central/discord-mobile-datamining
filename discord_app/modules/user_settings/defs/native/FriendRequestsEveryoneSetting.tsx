@@ -1,11 +1,11 @@
-// === Module 14781: FriendRequestsEveryoneSetting ===
+// === Module 14785: FriendRequestsEveryoneSetting ===
 
-// Module 14781 (FriendRequestsEveryoneSetting)
+// Module 14785 (FriendRequestsEveryoneSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 6491 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14621 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14625 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 16756: useIsFrameRenderingElsewhere ===
+// === Module 16775: useIsFrameRenderingElsewhere ===
 
-// Module 16756 (useIsFrameRenderingElsewhere)
+// Module 16775 (useIsFrameRenderingElsewhere)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/frames/useIsFrameRenderingElsewhere.native.tsx");

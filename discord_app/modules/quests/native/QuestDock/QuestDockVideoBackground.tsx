@@ -1,11 +1,11 @@
-// === Module 15000: QuestDockVideoBackground ===
+// === Module 15004: QuestDockVideoBackground ===
 
-// Module 15000 (QuestDockVideoBackground)
+// Module 15004 (QuestDockVideoBackground)
 import _modDef683 from "module_683" /* 683 */;
 import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 1886 */;
 import spring from "spring" /* 5597 */;
 import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 6570 */;
-import QuestDockUtils from "QuestDockUtils" /* 14891 */;
+import QuestDockUtils from "QuestDockUtils" /* 14895 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;
@@ -16,7 +16,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ AppState: hasOwnProperty, StyleSheet, View: metroRequire } = get_ActivityIndicator);
 const QuestDockMode = fn(5623).QuestDockMode;
-const QuestDockConstants = fn(14892);
+const QuestDockConstants = fn(14896);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_9, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: c10 } = QuestDockConstants);
 const VerticalGradient = fn(1085).VerticalGradient;
 const jsxProd = fn(21);
@@ -54,7 +54,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const cResult = activeQuestDockMode(576).c(7);
   ({ children, style } = arg0);
   const tmp3 = closure_17();
-  activeQuestDockMode = noop.useContext(activeQuestDockMode(14893).QuestDockGestureContext).activeQuestDockMode;
+  activeQuestDockMode = noop.useContext(activeQuestDockMode(14897).QuestDockGestureContext).activeQuestDockMode;
   let obj = activeQuestDockMode(576);
   const fn = function n() {
     let num = 0;
@@ -97,7 +97,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 }) : ((arg0) => {
   let activeQuestDockMode;
   ({ children, style } = arg0);
-  activeQuestDockMode = noop.useContext(activeQuestDockMode(14893).QuestDockGestureContext).activeQuestDockMode;
+  activeQuestDockMode = noop.useContext(activeQuestDockMode(14897).QuestDockGestureContext).activeQuestDockMode;
   const tmp = closure_17();
   const fn = function s() {
     let num = 0;

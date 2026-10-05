@@ -1,6 +1,6 @@
-// === Module 14763: ConnectionsEmptyStateUpsell ===
+// === Module 14767: ConnectionsEmptyStateUpsell ===
 
-// Module 14763 (ConnectionsEmptyStateUpsell)
+// Module 14767 (ConnectionsEmptyStateUpsell)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtils from "AvatarUtils" /* 1402 */;
@@ -12,7 +12,7 @@ import Stack_Stack from "Stack/Stack" /* 5593 */;
 import Card from "Card" /* 5995 */;
 import ConnectionsHooks from "ConnectionsHooks" /* 7012 */;
 import authorizeConnectionDefault from "authorizeConnection" /* 8732 */;
-import ConnectionsTracking from "ConnectionsTracking" /* 14764 */;
+import ConnectionsTracking from "ConnectionsTracking" /* 14768 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -52,11 +52,11 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((platform) => {
     tmp6 = cResult[1];
   }
   if (cResult[2] !== platform.type) {
-    const connectionBackgroundColor = tmp(14765).getConnectionBackgroundColor(platform.type);
+    const connectionBackgroundColor = tmp(14769).getConnectionBackgroundColor(platform.type);
     cResult[2] = platform.type;
     cResult[3] = connectionBackgroundColor;
     let tmp7 = connectionBackgroundColor;
-    const tmpResult = tmp(14765);
+    const tmpResult = tmp(14769);
   } else {
     tmp7 = cResult[3];
   }

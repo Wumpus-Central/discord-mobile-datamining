@@ -1,12 +1,12 @@
-// === Module 17150: useMorphablePanelGesture ===
+// === Module 17174: useMorphablePanelGesture ===
 
-// Module 17150 (useMorphablePanelGesture)
+// Module 17174 (useMorphablePanelGesture)
 import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
 import HapticUtils from "HapticUtils" /* 4855 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 9774 */;
-import MorphablePanelUtils from "MorphablePanelUtils" /* 17148 */;
-import triggerIOSHapticDefault from "triggerIOSHaptic" /* 17151 */;
+import MorphablePanelUtils from "MorphablePanelUtils" /* 17172 */;
+import triggerIOSHapticDefault from "triggerIOSHaptic" /* 17175 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

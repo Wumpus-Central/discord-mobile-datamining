@@ -1,13 +1,13 @@
-// === Module 13412: SubscribeModalConfirmation ===
+// === Module 13414: SubscribeModalConfirmation ===
 
-// Module 13412 (SubscribeModalConfirmation)
+// Module 13414 (SubscribeModalConfirmation)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import _modDef4807 from "module_4807" /* 4807 */;
 import components_Button_Button from "components/Button/Button" /* 5594 */;
-import _modDef13413 from "module_13413" /* 13413 */;
-import PremiumGuildPreviewDefault from "PremiumGuildPreview" /* 13414 */;
+import _modDef13415 from "module_13415" /* 13415 */;
+import PremiumGuildPreviewDefault from "PremiumGuildPreview" /* 13416 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 12221 */;
@@ -227,7 +227,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   ({ guild, isModifyingSubscription, slots, onPremiumGuildSubscribe } = arg0);
   const tmp4 = closure_22();
   if (cResult[0] !== tmp4.subscribeImage) {
-    const obj2 = { style: tmp4.subscribeImage, source: _modDef13413 };
+    const obj2 = { style: tmp4.subscribeImage, source: _modDef13415 };
     const tmp9 = closure_1_19(timestampProducer, obj2);
     cResult[0] = tmp4.subscribeImage;
     cResult[1] = tmp9;
@@ -334,7 +334,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   ({ guild, isModifyingSubscription } = arg0);
   const tmp = closure_22();
   const obj = { children: null };
-  const items = [closure_1_19(timestampProducer, { style: tmp.subscribeImage, source: _modDef13413 }), , , , , ];
+  const items = [closure_1_19(timestampProducer, { style: tmp.subscribeImage, source: _modDef13415 }), , , , , ];
   const obj3 = { style: tmp.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.yTlZV0);
@@ -368,7 +368,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPremiumGuild
   onPremiumGuildSubscribe = onPremiumGuildSubscribe.onPremiumGuildSubscribe;
   const tmp4 = closure_22();
   const obj = previousGuildSubscriptionSlots(576);
-  const guildSubscriptionRemovalSource = previousGuildSubscriptionSlots(13423).useGuildSubscriptionRemovalSource();
+  const guildSubscriptionRemovalSource = previousGuildSubscriptionSlots(13425).useGuildSubscriptionRemovalSource();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildStore];
     cResult[0] = items;
@@ -394,7 +394,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPremiumGuild
   } else {
     tmp8 = cResult[2];
   }
-  const obj2 = previousGuildSubscriptionSlots(13423);
+  const obj2 = previousGuildSubscriptionSlots(13425);
   const stateFromStores = previousGuildSubscriptionSlots(504).useStateFromStores(first, tmp8);
   if (null == stateFromStores) {
     if (cResult[3] !== tmp4.loading) {
@@ -473,7 +473,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPremiumGuild
                 }
                 if (cResult[31] !== guild) {
                   const obj7 = { guild };
-                  const tmp42 = closure_19(onPremiumGuildSubscribe(13414), obj7);
+                  const tmp42 = closure_19(onPremiumGuildSubscribe(13416), obj7);
                   cResult[31] = guild;
                   cResult[32] = tmp42;
                   let tmp39 = tmp42;
@@ -571,7 +571,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPremiumGuild
             tmp35 = tmp37;
           }
           const obj14 = { style: tmp4.guildPreview, guild: stateFromStores };
-          const tmp32 = closure_19(onPremiumGuildSubscribe(13414), obj14);
+          const tmp32 = closure_19(onPremiumGuildSubscribe(13416), obj14);
           cResult[20] = stateFromStores;
           cResult[21] = tmp4.guildPreview;
           cResult[22] = tmp32;
@@ -602,8 +602,8 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPremiumGuild
   const onPremiumGuildSubscribe = previousGuildSubscriptionSlots.onPremiumGuildSubscribe;
   ({ guild, isModifyingSubscription } = previousGuildSubscriptionSlots);
   const tmp = closure_22();
-  const guildSubscriptionRemovalSource = prop(13423).useGuildSubscriptionRemovalSource();
-  const obj = prop(13423);
+  const guildSubscriptionRemovalSource = prop(13425).useGuildSubscriptionRemovalSource();
+  const obj = prop(13425);
   const items = [GuildStore];
   const stateFromStores = prop(504).useStateFromStores(items, () => {
     const found = prop.find((premiumGuildSubscription) => null != premiumGuildSubscription.premiumGuildSubscription);
@@ -638,7 +638,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPremiumGuild
     obj10.children = intl3.format(tmp2(1126).t["5zQYEz"], { guildCount: 1 });
     const items2 = [closure_19(tmp2(4886).Text, obj10), , , ];
     const obj11 = { style: tmp.guildPreview, guild: stateFromStores };
-    items2[1] = closure_19(onPremiumGuildSubscribe(13414), obj11);
+    items2[1] = closure_19(onPremiumGuildSubscribe(13416), obj11);
     const obj12 = { style: tmp.previewHeader, variant: "eyebrow", color: "text-default", children: null };
     const intl4 = tmp2(1126).intl;
     const obj13 = { slotCount: prop.length };
@@ -652,7 +652,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPremiumGuild
     obj14.end = tmp2(1105).HorizontalGradient.END;
     obj14.colors = Gradients.PREMIUM_GUILD;
     const obj15 = { guild };
-    obj14.children = closure_19(onPremiumGuildSubscribe(13414), obj15);
+    obj14.children = closure_19(onPremiumGuildSubscribe(13416), obj15);
     items2[3] = closure_19(onPremiumGuildSubscribe(5605), obj14);
     obj9.children = items2;
     items1[3] = closure_20(closure_7, obj9);
@@ -692,7 +692,7 @@ export default function SubscribeModalConfirmation(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

@@ -1,9 +1,9 @@
-// === Module 13189: useAppleSubscriptionOwnership ===
+// === Module 13191: useAppleSubscriptionOwnership ===
 
-// Module 13189 (useAppleSubscriptionOwnership)
+// Module 13191 (useAppleSubscriptionOwnership)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplePurchasesStore from "ApplePurchasesStore" /* 13190 */;
+import ApplePurchasesStore from "ApplePurchasesStore" /* 13192 */;
 import AppStateStore from "AppStateStore" /* 1986 */;
 import IAPStore from "IAPStore" /* 6739 */;
 

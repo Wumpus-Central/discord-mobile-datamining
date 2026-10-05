@@ -1,6 +1,6 @@
-// === Module 15010: QuestDockBountyIllustration ===
+// === Module 15014: QuestDockBountyIllustration ===
 
-// Module 15010 (QuestDockBountyIllustration)
+// Module 15014 (QuestDockBountyIllustration)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
@@ -8,15 +8,15 @@ import native from "native" /* 4589 */;
 import FastImageDefault from "FastImage" /* 5974 */;
 import APNGPlayer from "APNGPlayer" /* 8464 */;
 import BountiesMobileQuestBarExperiment2 from "BountiesMobileQuestBarExperiment" /* 9998 */;
-import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible" /* 15006 */;
-import _modDef15011 from "module_15011" /* 15011 */;
+import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible" /* 15010 */;
+import _modDef15015 from "module_15015" /* 15015 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;
 
 require = fn;
 const View = fn(17).View;
 const QuestsExperimentLocations = fn(5623).QuestsExperimentLocations;
-const QuestDockConstants = fn(14892);
+const QuestDockConstants = fn(14896);
 ({ QUEST_DOCK_COLLAPSED_HEIGHT, QUEST_DOCK_COLLAPSED_HEADER_PADDING_RIGHT } = QuestDockConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4890);
@@ -258,8 +258,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((shouldAnimate)
     }
     const effect = noop.useEffect(tmp7, tmp8);
     if (cResult[4] !== tmp4.fill) {
-      const obj4 = { ref, url: _modDef15011, style: tmp4.fill, autoplay: false };
-      const tmp13 = jsx(APNGPlayer.APNGPlayer, { ref, url: _modDef15011, style: tmp4.fill, autoplay: false });
+      const obj4 = { ref, url: _modDef15015, style: tmp4.fill, autoplay: false };
+      const tmp13 = jsx(APNGPlayer.APNGPlayer, { ref, url: _modDef15015, style: tmp4.fill, autoplay: false });
       cResult[4] = tmp4.fill;
       cResult[5] = tmp13;
       let tmp10 = tmp13;
@@ -295,7 +295,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((shouldAnimate)
       aPNGPlayerControls.pause();
     }
   }, items);
-  return jsx(APNGPlayer.APNGPlayer, { ref, url: _modDef15011, style: tmp.fill, autoplay: false });
+  return jsx(APNGPlayer.APNGPlayer, { ref, url: _modDef15015, style: tmp.fill, autoplay: false });
 });
 ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
@@ -330,7 +330,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     const _Symbol = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj3 = { uri: _modDef15011 };
+      const obj3 = { uri: _modDef15015 };
       cResult[4] = obj3;
       let tmp10 = obj3;
     } else {
@@ -363,7 +363,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     let tmp6Result = <closure_12 shouldAnimate={tmp5} />;
   } else {
     const obj3 = { source: null, style: null, resizeMode: "contain", enableAnimation: null, paused: null, accessible: false };
-    const obj4 = { uri: _modDef15011 };
+    const obj4 = { uri: _modDef15015 };
     obj3.source = obj4;
     obj3.style = tmp.fill;
     obj3.enableAnimation = !stateFromStores;

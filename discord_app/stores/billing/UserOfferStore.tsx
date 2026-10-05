@@ -5,7 +5,7 @@ import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import PremiumUtils from "PremiumUtils" /* 4528 */;
-import PremiumOfferReminderExperiment from "PremiumOfferReminderExperiment" /* 13139 */;
+import PremiumOfferReminderExperiment from "PremiumOfferReminderExperiment" /* 13141 */;
 import DiscountRecord from "DiscountRecord" /* 6960 */;
 import ReferralTrialStore from "ReferralTrialStore" /* 6961 */;
 import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 7734 */;
@@ -77,7 +77,7 @@ const PremiumConstants = fn(1379);
 ({ ANNUAL_DISCOUNT_IDS: c10, CHURN_DISCOUNT_IDS: closure_11, DISCOUNT_OFFERS_REQUIRES_REMINDER_ROLLOUT: closure_12, SubscriptionPlanInfo: map1, SubscriptionTrials: closure_14, TRIAL_OFFERS_REQUIRES_REMINDER_ROLLOUT: closure_15 } = PremiumConstants);
 const OfferTriggerTypes = fn(1096).OfferTriggerTypes;
 let closure_17 = performance.now();
-let cooldownExpirationTimestamps = { userOffersLastFetchedAtDate: "r", userTrialOffers: {}, userDiscountOffers: {}, userDiscounts: "\u270A\u{1F3FB}", isFetching: true, lastFetchSuccessful: null, shouldTriggerOffer: 8, cooldownExpirationTimestamps: { [OfferTriggerTypes.CHANNEL_OPENED]: 0, [OfferTriggerTypes.JOIN_VOICE_CHANNEL]: 0, [OfferTriggerTypes.PREMIUM_UPSELL_VIEWED]: 0, [OfferTriggerTypes.USER_PROFILE_ACTION]: 0, [OfferTriggerTypes.VIDEO_STREAM_ENDED]: 0 } };
+let cooldownExpirationTimestamps = { userOffersLastFetchedAtDate: "r", userTrialOffers: {}, userDiscountOffers: {}, userDiscounts: "\u{1F91E}\u{1F3FB}", isFetching: true, lastFetchSuccessful: null, shouldTriggerOffer: 9, cooldownExpirationTimestamps: { [OfferTriggerTypes.CHANNEL_OPENED]: 0, [OfferTriggerTypes.JOIN_VOICE_CHANNEL]: 0, [OfferTriggerTypes.PREMIUM_UPSELL_VIEWED]: 0, [OfferTriggerTypes.USER_PROFILE_ACTION]: 0, [OfferTriggerTypes.VIDEO_STREAM_ENDED]: 0 } };
 let closure_19 = cooldownExpirationTimestamps;
 const PersistedStore = initializeDefault.PersistedStore;
 class UserOfferStore extends PersistedStore {

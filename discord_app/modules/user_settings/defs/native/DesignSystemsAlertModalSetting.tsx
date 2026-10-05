@@ -1,6 +1,6 @@
-// === Module 15648: DesignSystemsAlertModalSetting ===
+// === Module 15652: DesignSystemsAlertModalSetting ===
 
-// Module 15648 (DesignSystemsAlertModalSetting)
+// Module 15652 (DesignSystemsAlertModalSetting)
 import Constants from "Constants" /* 1085 */;
 import SettingsConstants from "SettingsConstants" /* 7634 */;
 import SettingBuilders from "SettingBuilders" /* 11129 */;

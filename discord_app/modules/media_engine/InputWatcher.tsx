@@ -1,6 +1,6 @@
-// === Module 13887: InputWatcher ===
+// === Module 13889: InputWatcher ===
 
-// Module 13887 (InputWatcher)
+// Module 13889 (InputWatcher)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -29,7 +29,7 @@ class InputWatcher {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -150,7 +150,7 @@ class InputWatcher {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -187,7 +187,7 @@ class InputWatcher {
             const obj6 = { type: "AUDIO_INPUT_DETECTED", inputDetected: closure_128_1.inputDetected, lastUpdateTime: closure_128_1.lastUpdateTime };
             v1(inputDetected[10]).dispatch(obj6);
             inputDetected = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           } catch (tmp12) {
             inputDetected = tmp;
             throw tmp12;

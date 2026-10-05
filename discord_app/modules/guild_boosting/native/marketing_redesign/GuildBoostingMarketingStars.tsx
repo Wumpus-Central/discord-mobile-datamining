@@ -1,6 +1,6 @@
-// === Module 13383: GuildBoostingMarketingStars ===
+// === Module 13385: GuildBoostingMarketingStars ===
 
-// Module 13383 (GuildBoostingMarketingStars)
+// Module 13385 (GuildBoostingMarketingStars)
 import c from "c" /* 576 */;
 import inlineStyles from "inlineStyles" /* 8136 */;
 import noop from "module_19" /* 19 */;

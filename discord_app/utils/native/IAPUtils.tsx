@@ -51,7 +51,7 @@ let closure_16 = async function _restorePurchases(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -74,7 +74,7 @@ let closure_16 = async function _restorePurchases(arg0) {
             closure_132_3 = undefined;
             c7 = 1;
             c8 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -248,7 +248,7 @@ let closure_19 = async function _fetchStoreFront() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -368,7 +368,7 @@ let obj = {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -561,7 +561,7 @@ export const makeIAPRequest = function makeIAPRequest(arg0, arg1, arg2) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

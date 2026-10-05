@@ -1,6 +1,6 @@
-// === Module 16755: useFrame ===
+// === Module 16774: useFrame ===
 
-// Module 16755 (useFrame)
+// Module 16774 (useFrame)
 import FramesStore from "FramesStore" /* 8703 */;
 
 const require = globalThis.__r;

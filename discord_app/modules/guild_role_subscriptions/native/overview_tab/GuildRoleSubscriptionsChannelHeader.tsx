@@ -1,6 +1,6 @@
-// === Module 13103: GuildRoleSubscriptionsChannelHeader ===
+// === Module 13105: GuildRoleSubscriptionsChannelHeader ===
 
-// Module 13103 (GuildRoleSubscriptionsChannelHeader)
+// Module 13105 (GuildRoleSubscriptionsChannelHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;

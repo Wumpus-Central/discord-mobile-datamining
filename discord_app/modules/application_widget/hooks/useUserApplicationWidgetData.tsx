@@ -1,6 +1,6 @@
-// === Module 16579: useUserApplicationWidgetData ===
+// === Module 16585: useUserApplicationWidgetData ===
 
-// Module 16579 (useUserApplicationWidgetData)
+// Module 16585 (useUserApplicationWidgetData)
 import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7115 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7858 */;
 import UserApplicationIdentityActionCreatorsDefault from "UserApplicationIdentityActionCreators" /* 8692 */;

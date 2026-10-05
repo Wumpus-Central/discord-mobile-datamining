@@ -1,6 +1,6 @@
-// === Module 13713: ShareUtils ===
+// === Module 13715: ShareUtils ===
 
-// Module 13713 (ShareUtils)
+// Module 13715 (ShareUtils)
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4568 */;
 import _modDef4811 from "module_4811" /* 4811 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -17,7 +17,7 @@ let closure_6 = async function _sendShareMessage(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -43,7 +43,7 @@ let closure_6 = async function _sendShareMessage(arg0) {
           closure_130_6 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp4) {
         if (arg0 === 1) {

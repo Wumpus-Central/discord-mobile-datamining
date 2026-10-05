@@ -1,6 +1,6 @@
-// === Module 15089: SettingsAppearanceThemeSelectorItem ===
+// === Module 15093: SettingsAppearanceThemeSelectorItem ===
 
-// Module 15089 (SettingsAppearanceThemeSelectorItem)
+// Module 15093 (SettingsAppearanceThemeSelectorItem)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -13,11 +13,11 @@ import useA11yRolesNative from "useA11yRolesNative" /* 4594 */;
 import utils_ColorDefault from "utils/Color" /* 4728 */;
 import Pressables from "Pressables" /* 5909 */;
 import ThemedGradient from "ThemedGradient" /* 5911 */;
-import _modDef15090 from "module_15090" /* 15090 */;
-import SynchronizeIconNativeDefault from "SynchronizeIconNative" /* 15091 */;
+import _modDef15094 from "module_15094" /* 15094 */;
+import SynchronizeIconNativeDefault from "SynchronizeIconNative" /* 15095 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
-import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 15088 */;
+import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 15092 */;
 
 const ThemedGradientDefault = ThemedGradient;
 
@@ -116,7 +116,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
       let tmp18 = isThemeLocked;
       if (isThemeLocked) {
-        const obj5 = { source: _modDef15090, style: tmp6.lock };
+        const obj5 = { source: _modDef15094, style: tmp6.lock };
         tmp18 = timestampProducer(native.Icon, obj5);
       }
       cResult[11] = isThemeLocked;
@@ -155,7 +155,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   obj4.mixColorOverride = isThemeDarkResult ? closure_10 : closure_11;
   const items1 = [timestampProducer(ThemedGradientDefault, obj4), ];
   if (isThemeLocked) {
-    const obj6 = { source: _modDef15090, style: tmp4.lock };
+    const obj6 = { source: _modDef15094, style: tmp4.lock };
     isThemeLocked = timestampProducer(native.Icon, obj6);
   }
   items1[1] = isThemeLocked;
@@ -330,7 +330,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
       let tmp17 = isThemeLocked;
       if (isThemeLocked) {
-        const obj5 = { source: _modDef15090, style: tmp6.lock };
+        const obj5 = { source: _modDef15094, style: tmp6.lock };
         tmp17 = timestampProducer(native.Icon, obj5);
       }
       cResult[11] = isThemeLocked;
@@ -367,7 +367,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   obj4.customTheme = item;
   const items1 = [timestampProducer(ThemedGradient.CustomThemedGradient, obj4), ];
   if (isThemeLocked) {
-    const obj6 = { source: _modDef15090, style: tmp4.lock };
+    const obj6 = { source: _modDef15094, style: tmp4.lock };
     isThemeLocked = timestampProducer(native.Icon, obj6);
   }
   items1[1] = isThemeLocked;

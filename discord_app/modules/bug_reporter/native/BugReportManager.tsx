@@ -19,7 +19,7 @@ function showNotification(uri) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -62,7 +62,7 @@ function showNotification(uri) {
             }
           }
           c3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp14) {
         c3 = tmp;
@@ -85,7 +85,7 @@ function showNotification(uri) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -146,7 +146,7 @@ function showNotification(uri) {
             obj11.inAppNotificationId = tmp2(1266).v4();
             obj6.enqueueNotification(obj11);
             c3 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else if (arg0 === 1) {
           c3 = 3;
@@ -195,7 +195,7 @@ prototype["initBugReporter"] = function initBugReporter() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -252,7 +252,7 @@ prototype["initBugReporter"] = function initBugReporter() {
             })();
           }
           c3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp13) {
         c3 = tmp;

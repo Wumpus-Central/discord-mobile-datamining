@@ -1,6 +1,6 @@
-// === Module 16960: NoticeActionCreators ===
+// === Module 16979: NoticeActionCreators ===
 
-// Module 16960 (NoticeActionCreators)
+// Module 16979 (NoticeActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 

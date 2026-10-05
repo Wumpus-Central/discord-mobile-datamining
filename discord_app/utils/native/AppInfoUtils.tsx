@@ -1,6 +1,6 @@
-// === Module 17447: AppInfoUtils ===
+// === Module 17471: AppInfoUtils ===
 
-// Module 17447 (AppInfoUtils)
+// Module 17471 (AppInfoUtils)
 import ClientInfoUtils from "ClientInfoUtils" /* 1368 */;
 import size from "module_2" /* 2 */;
 

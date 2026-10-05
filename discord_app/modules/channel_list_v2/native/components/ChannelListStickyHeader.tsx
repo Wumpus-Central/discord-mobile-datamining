@@ -1,12 +1,12 @@
-// === Module 16057: ChannelListStickyHeader ===
+// === Module 16061: ChannelListStickyHeader ===
 
-// Module 16057 (ChannelListStickyHeader)
+// Module 16061 (ChannelListStickyHeader)
 import nativeDefault from "native" /* 587 */;
 import GuildBadgeV2Default from "GuildBadgeV2" /* 8394 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 13718 */;
-import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 16026 */;
-import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 16056 */;
-import openFavoritesGuildActionSheetDefault from "openFavoritesGuildActionSheet" /* 16058 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 13720 */;
+import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 16030 */;
+import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 16060 */;
+import openFavoritesGuildActionSheetDefault from "openFavoritesGuildActionSheet" /* 16062 */;
 import noop from "module_19" /* 19 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
 
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   const t = tmp(1126).t;
   const tmp13 = tmp11 ? t.hW8QDk : t["Gpyp/e"];
   if (cResult[2] === guild) {
-    const tmp15 = tmp8(16056)(guild);
+    const tmp15 = tmp8(16060)(guild);
     const iOSPressEffects = tmp(5998).useIOSPressEffects(4);
     ({ pressableStyles, onPressIn, onPressOut } = iOSPressEffects);
     if (cResult[5] !== guild) {
@@ -161,7 +161,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
                                                 if (cResult[51] !== tmp11) {
                                                   let tmp60 = null;
                                                   if (tmp11) {
-                                                    tmp60 = closure_6(tmp(16071).FavoritesGuildHeaderActionButton, {});
+                                                    tmp60 = closure_6(tmp(16075).FavoritesGuildHeaderActionButton, {});
                                                   }
                                                   cResult[51] = tmp11;
                                                   cResult[52] = tmp60;
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
                                                           let tmp79 = null;
                                                           if (tmp6) {
                                                             const obj4 = { targetRef: ref, guild };
-                                                            tmp79 = closure_6(tmp8(16077), obj4);
+                                                            tmp79 = closure_6(tmp8(16081), obj4);
                                                           }
                                                           cResult[66] = guild;
                                                           cResult[67] = tmp6;
@@ -238,7 +238,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
                                                       if (tmp9) {
                                                         const obj5 = { style: tmp7.joinButton, children: null };
                                                         const obj6 = { guildId: guild.id, joinSource: JoinGuildSources.CHANNEL_LIST_STICKY_HEADER_LURKER };
-                                                        obj5.children = closure_6(tmp8(16076), obj6);
+                                                        obj5.children = closure_6(tmp8(16080), obj6);
                                                         tmp70 = closure_6(closure_4, obj5);
                                                       }
                                                       cResult[60] = guild.id;
@@ -536,7 +536,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   const items6 = [closure_7(closure_8, obj3), ];
   let tmp24Result5 = null;
   if (isFavoritesGuildIdResult) {
-    tmp24Result5 = closure_6(tmp6(16071).FavoritesGuildHeaderActionButton, {});
+    tmp24Result5 = closure_6(tmp6(16075).FavoritesGuildHeaderActionButton, {});
   }
   items6[1] = tmp24Result5;
   obj15.children = items6;
@@ -550,7 +550,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   if (tmp24Result7) {
     const obj17 = { style: tmp.joinButton, children: null };
     const obj18 = { guildId: guild.id, joinSource: JoinGuildSources.CHANNEL_LIST_STICKY_HEADER_LURKER };
-    obj17.children = closure_6(tmp2(16076), obj18);
+    obj17.children = closure_6(tmp2(16080), obj18);
     tmp24Result7 = closure_6(closure_4, obj17);
   }
   items7[2] = tmp24Result7;
@@ -558,7 +558,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   let tmp24Result8 = null;
   if (flag3) {
     const obj20 = { targetRef: ref, guild };
-    tmp24Result8 = closure_6(tmp2(16077), obj20);
+    tmp24Result8 = closure_6(tmp2(16081), obj20);
   }
   items7[4] = tmp24Result8;
   obj14.children = items7;

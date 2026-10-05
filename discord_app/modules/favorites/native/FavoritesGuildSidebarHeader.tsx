@@ -1,6 +1,6 @@
-// === Module 16214: FavoritesGuildSidebarHeader ===
+// === Module 16218: FavoritesGuildSidebarHeader ===
 
-// Module 16214 (FavoritesGuildSidebarHeader)
+// Module 16218 (FavoritesGuildSidebarHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -35,7 +35,7 @@ function EmptyBody() {
   return timestampProducer(Text_Text.Text, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(16123).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(16127).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let c9 = "heading-md/semibold";

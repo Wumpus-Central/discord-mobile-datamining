@@ -30,7 +30,7 @@ let closure_11 = async function _loadMessageRequestData() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -50,7 +50,7 @@ let closure_11 = async function _loadMessageRequestData() {
             c3 = 0;
             closure_128_9 = null;
             c4 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           } else {
             closure_128_12();
             c1 = 2;
@@ -105,7 +105,7 @@ let closure_13 = async function _loadMessageRequestDataHelper() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     while (true) {

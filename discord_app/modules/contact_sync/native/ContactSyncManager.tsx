@@ -20,7 +20,7 @@ let closure_11 = async function _requestAndSyncContacts() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -97,7 +97,7 @@ let closure_11 = async function _requestAndSyncContacts() {
           if (null == phone) {
             c4 = 0;
             c6 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           } else {
             c5 = 2;
             c6 = 1;

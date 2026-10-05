@@ -1,19 +1,19 @@
-// === Module 16122: FavoritesGuildSuggestedChannels ===
+// === Module 16126: FavoritesGuildSuggestedChannels ===
 
-// Module 16122 (FavoritesGuildSuggestedChannels)
+// Module 16126 (FavoritesGuildSuggestedChannels)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef3367 from "module_3367" /* 3367 */;
 import components_Button_Button from "components/Button/Button" /* 5594 */;
 import XSmallIcon from "XSmallIcon" /* 6017 */;
 import useScaledRowHeightDefault from "useScaledRowHeight" /* 6546 */;
-import SearchableDestinationListRowDefault from "SearchableDestinationListRow" /* 16124 */;
-import handleFavoritesGuildAddSuggestedChannelDefault from "handleFavoritesGuildAddSuggestedChannel" /* 16125 */;
+import SearchableDestinationListRowDefault from "SearchableDestinationListRow" /* 16128 */;
+import handleFavoritesGuildAddSuggestedChannelDefault from "handleFavoritesGuildAddSuggestedChannel" /* 16129 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const FavoritesGuildSuggestionsStore = fn(16123);
+const FavoritesGuildSuggestionsStore = fn(16127);
 ({ useFavoritesGuildSuggestions: hasOwnProperty, useFavoritesGuildSuggestionsDismissal: metroRequire } = FavoritesGuildSuggestionsStore);
 const NOOP = fn(1085).NOOP;
 let closure_8 = fn(11697).getScaledCategoryRowHeight;
@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const cResult = arr(576).c(21);
   const tmp4 = closure_13();
   let obj = arr(576);
-  const categoryStyles = arr(16028).useCategoryStyles();
+  const categoryStyles = arr(16032).useCategoryStyles();
   arr = closure_5();
   const tmp6 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         const intl = util.intl;
         obj3.text = intl.string(util.t.OYkgVk);
         obj3.onPress = function onPress() {
-          const tmp = closure_1(16125);
+          const tmp = closure_1(16129);
           return tmp(arr(10711).getDestinationIdFromResult(closure_0));
         };
         obj2.trailing = options(components_Button_Button.Button, obj3);
@@ -134,17 +134,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     obj7.name = intl2.string(_modDef3367.oHWnLy);
     obj7.styles = categoryStyles;
     obj7.trailingAction = tmp10;
-    const renderCategoryItemResult = tmp(16028).renderCategoryItem(obj7);
+    const renderCategoryItemResult = tmp(16032).renderCategoryItem(obj7);
     cResult[5] = categoryStyles;
     cResult[6] = tmp10;
     cResult[7] = renderCategoryItemResult;
     tmp14 = renderCategoryItemResult;
-    const tmpResult = tmp(16028);
+    const tmpResult = tmp(16032);
   }
-  let obj2 = arr(16028);
+  let obj2 = arr(16032);
 }) : (() => {
   let tmp = closure_13();
-  const categoryStyles = arr(16028).useCategoryStyles();
+  const categoryStyles = arr(16032).useCategoryStyles();
   arr = closure_5();
   const tmp5 = closure_6();
   importDefault = tmp5;
@@ -169,7 +169,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     obj3.name = intl.string(_modDef3367.oHWnLy);
     obj3.styles = categoryStyles;
     obj3.trailingAction = memo;
-    const items2 = [tmp2(16028).renderCategoryItem(obj3), ];
+    const items2 = [tmp2(16032).renderCategoryItem(obj3), ];
     const obj4 = {
       style: tmp.rows,
       children: arr.map((item, index) => {
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           const intl = util.intl;
           obj3.text = intl.string(util.t.OYkgVk);
           obj3.onPress = function onPress() {
-            const tmp = closure_1(16125);
+            const tmp = closure_1(16129);
             return tmp(arr(10711).getDestinationIdFromResult(closure_0));
           };
           obj2.trailing = options(components_Button_Button.Button, obj3);
@@ -191,7 +191,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     items2[1] = closure_9(View, obj4);
     obj2.children = items2;
     tmp9 = closure_10(View, obj2);
-    const tmp2Result = tmp2(16028);
+    const tmp2Result = tmp2(16032);
   }
   return tmp9;
 });

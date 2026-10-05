@@ -1,6 +1,6 @@
-// === Module 14953: VideoQuestModalHeader ===
+// === Module 14957: VideoQuestModalHeader ===
 
-// Module 14953 (VideoQuestModalHeader)
+// Module 14957 (VideoQuestModalHeader)
 import nativeDefault from "native" /* 587 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 7208 */;
 import noop from "module_19" /* 19 */;
@@ -26,8 +26,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let textShadow = undefined !== withTextShadow && withTextShadow;
   const tmp5 = closure_7();
   let obj = quest(576);
-  quest = quest(14926).useVideoQuestModalContext().quest;
-  const tmpResult = quest(14926);
+  quest = quest(14930).useVideoQuestModalContext().quest;
+  const tmpResult = quest(14930);
   const questTaskDetails = quest(10911).useQuestTaskDetails(quest);
   if (cResult[0] === quest.id) {
     if (cResult[1] === questTaskDetails) {
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                       tmp34 = tmp37;
                     }
                     const obj4 = { iconColor: closeButtonIconColor, onClose };
-                    const tmp33 = closure_5(questTaskDetails(14948), obj4);
+                    const tmp33 = closure_5(questTaskDetails(14952), obj4);
                     cResult[23] = closeButtonIconColor;
                     cResult[24] = onClose;
                     cResult[25] = tmp33;
@@ -189,8 +189,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const withTextShadow = showCurrentVideoTime.withTextShadow;
   let textShadow = undefined !== withTextShadow && withTextShadow;
   const tmp2 = closure_7();
-  quest = quest(14926).useVideoQuestModalContext().quest;
-  let obj = quest(14926);
+  quest = quest(14930).useVideoQuestModalContext().quest;
+  let obj = quest(14930);
   const questTaskDetails = quest(10911).useQuestTaskDetails(quest);
   const tmp6 = useVideoQuestUIStore((arg0) => {
     let tmp = arg0.videoProgress[quest.id];
@@ -238,7 +238,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   obj7.children = gamePublisher;
   items1[1] = closure_5(quest(4886).Text, obj7);
   obj4.children = items1;
-  const items2 = [closure_6(View, obj4), closure_5(questTaskDetails(14948), { iconColor: closeButtonIconColor, onClose })];
+  const items2 = [closure_6(View, obj4), closure_5(questTaskDetails(14952), { iconColor: closeButtonIconColor, onClose })];
   obj3.children = items2;
   return closure_6(View, obj3);
 });

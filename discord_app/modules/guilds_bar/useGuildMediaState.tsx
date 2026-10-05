@@ -1,9 +1,9 @@
-// === Module 16267: useGuildMediaState ===
+// === Module 16271: useGuildMediaState ===
 
-// Module 16267 (useGuildMediaState)
+// Module 16271 (useGuildMediaState)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import ChannelTypes from "ChannelTypes" /* 1106 */;
-import BlockedUserUtils from "BlockedUserUtils" /* 13520 */;
+import BlockedUserUtils from "BlockedUserUtils" /* 13522 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
 import StageInstanceStore from "StageInstanceStore" /* 2056 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;

@@ -1,6 +1,6 @@
-// === Module 15050: FastAssetImage ===
+// === Module 15054: FastAssetImage ===
 
-// Module 15050 (FastAssetImage)
+// Module 15054 (FastAssetImage)
 import c from "c" /* 576 */;
 import StoreUtils from "StoreUtils" /* 5322 */;
 import FastImageDefault from "FastImage" /* 5974 */;

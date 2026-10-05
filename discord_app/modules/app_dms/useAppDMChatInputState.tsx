@@ -1,6 +1,6 @@
-// === Module 13100: useAppDMChatInputState ===
+// === Module 13102: useAppDMChatInputState ===
 
-// Module 13100 (useAppDMChatInputState)
+// Module 13102 (useAppDMChatInputState)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7858 */;
 import noop from "module_19" /* 19 */;

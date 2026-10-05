@@ -1,6 +1,6 @@
-// === Module 13192: PremiumSubscriptionInvoice ===
+// === Module 13194: PremiumSubscriptionInvoice ===
 
-// Module 13192 (PremiumSubscriptionInvoice)
+// Module 13194 (PremiumSubscriptionInvoice)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -30,7 +30,7 @@ let closure_14 = async function _createSubscriptionInvoicePreview(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -66,7 +66,7 @@ let closure_14 = async function _createSubscriptionInvoicePreview(arg0) {
           closure_129_11 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -166,7 +166,7 @@ let closure_16 = async function _updateSubscriptionInvoicePreview(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -203,7 +203,7 @@ let closure_16 = async function _updateSubscriptionInvoicePreview(arg0) {
           closure_129_12 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -307,7 +307,7 @@ let closure_18 = async function _createOneTimePurchaseInvoicePreview(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -334,7 +334,7 @@ let closure_18 = async function _createOneTimePurchaseInvoicePreview(arg0) {
           closure_129_7 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -415,7 +415,7 @@ let closure_20 = async function _getSubscriptionInvoice(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -437,7 +437,7 @@ let closure_20 = async function _getSubscriptionInvoice(arg0) {
           closure_129_2 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

@@ -1,6 +1,6 @@
-// === Module 16912: NewMessageScreen ===
+// === Module 16931: NewMessageScreen ===
 
-// Module 16912 (NewMessageScreen)
+// Module 16931 (NewMessageScreen)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
 import router_utils from "router_utils" /* 1112 */;
@@ -23,9 +23,9 @@ import NoResultsDefault from "NoResults" /* 10726 */;
 import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 11214 */;
 import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11216 */;
 import NewMessageUserListDefault from "NewMessageUserList" /* 11993 */;
-import GroupDMNitroUpsellBannerDefault from "GroupDMNitroUpsellBanner" /* 16856 */;
-import useOnMessageSendDefault from "useOnMessageSend" /* 16913 */;
-import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 16914 */;
+import GroupDMNitroUpsellBannerDefault from "GroupDMNitroUpsellBanner" /* 16875 */;
+import useOnMessageSendDefault from "useOnMessageSend" /* 16932 */;
+import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 16933 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -106,7 +106,7 @@ let closure_24 = async function _findMatchingPrivateChannelId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -281,7 +281,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               tmp5 = closure_1;
               tmp6 = closure_2;
               obj = closure_1(closure_2[20]);
-              obj1 = { type: "LOAD_MESSAGES_SUCCESS", channelId: null, messages: null, isBefore: false, isAfter: false, hasMoreBefore: false, hasMoreAfter: false, limit: 0, jump: "Reflect", isStale: "New Message Composer" };
+              obj1 = { type: "LOAD_MESSAGES_SUCCESS", channelId: null, messages: null, isBefore: false, isAfter: false, hasMoreBefore: false, hasMoreAfter: false, limit: 0, jump: "Set", isStale: "New Message Composer" };
               obj1.channelId = tmp.id;
               obj1.messages = [];
               dispatchResult = obj.dispatch(obj1);
@@ -326,7 +326,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 return () => {
                   const obj2 = { type: "CHANNEL_DELETE", channel: null };
                   const obj = first(584);
-                  obj2.channel = { id: length(6722).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "cursor" };
+                  obj2.channel = { id: length(6722).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "toCharArray$esjava$1" };
                   obj.dispatch(obj2);
                 };
               }
@@ -354,7 +354,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               tmp5 = closure_1;
               tmp6 = closure_2;
               obj = closure_1(closure_2[20]);
-              obj1 = { type: "LOAD_MESSAGES_SUCCESS", channelId: null, messages: null, isBefore: false, isAfter: false, hasMoreBefore: false, hasMoreAfter: false, limit: 0, jump: "Reflect", isStale: "New Message Composer" };
+              obj1 = { type: "LOAD_MESSAGES_SUCCESS", channelId: null, messages: null, isBefore: false, isAfter: false, hasMoreBefore: false, hasMoreAfter: false, limit: 0, jump: "Set", isStale: "New Message Composer" };
               obj1.channelId = tmp.id;
               obj1.messages = [];
               dispatchResult = obj.dispatch(obj1);
@@ -399,7 +399,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               return () => {
                 const obj2 = { type: "CHANNEL_DELETE", channel: null };
                 const obj = first(584);
-                obj2.channel = { id: length(6722).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "cursor" };
+                obj2.channel = { id: length(6722).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "toCharArray$esjava$1" };
                 obj.dispatch(obj2);
               };
             }
@@ -448,7 +448,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             return () => {
               const obj2 = { type: "CHANNEL_DELETE", channel: null };
               const obj = first(584);
-              obj2.channel = { id: length(6722).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "cursor" };
+              obj2.channel = { id: length(6722).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "toCharArray$esjava$1" };
               obj.dispatch(obj2);
             };
           }
@@ -495,7 +495,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -604,7 +604,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -692,7 +692,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         return () => {
           const obj2 = { type: "CHANNEL_DELETE", channel: null };
           const obj = first(584);
-          obj2.channel = { id: length(6722).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "cursor" };
+          obj2.channel = { id: length(6722).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "toCharArray$esjava$1" };
           obj.dispatch(obj2);
         };
       }
@@ -705,7 +705,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       tmp2 = stateFromStores.id === FakePlaceholderPrivateChannel.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
     }
     if (tmp2) {
-      const obj2 = { type: "LOAD_MESSAGES_SUCCESS", channelId: stateFromStores.id, messages: [], isBefore: false, isAfter: false, hasMoreBefore: false, hasMoreAfter: false, limit: 0, jump: "Reflect", isStale: "New Message Composer" };
+      const obj2 = { type: "LOAD_MESSAGES_SUCCESS", channelId: stateFromStores.id, messages: [], isBefore: false, isAfter: false, hasMoreBefore: false, hasMoreAfter: false, limit: 0, jump: "Set", isStale: "New Message Composer" };
       DispatcherDefault.dispatch(obj2);
     }
   }, items4);
@@ -874,7 +874,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
   fn.__initData = __initData2;
   if (recipientLimit.usePersonLimitCopy) {
     let obj2 = { title, memberCount: numInGroup + 1, recipientLimit };
-    return closure_17(recipientLimit(16914), obj2);
+    return closure_17(recipientLimit(16933), obj2);
   } else {
     const obj3 = { style: tmp.header, children: null };
     const obj4 = { title };
@@ -933,7 +933,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatPr
     const _Symbol = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
       const obj3 = { portal: tmp(1369).isAndroid() };
-      const tmp15 = closure_17(tmp(16599).PortalKeyboardRenderer, obj3);
+      const tmp15 = closure_17(tmp(16605).PortalKeyboardRenderer, obj3);
       cResult[6] = tmp15;
       let tmp13 = tmp15;
       const tmpResult = tmp(1369);
@@ -991,7 +991,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatPr
   const obj4 = { portal: null };
   const obj3 = { guildId, channelId, chatInputRef: noop.useRef(null), HACK_fixModalInteraction: true, alwaysRespectKeyboard: true, screenIndex: "new-message", secondaryTextFieldRef: tagListInputRef };
   obj4.portal = channelId(1369).isAndroid();
-  items1[1] = closure_17(channelId(16599).PortalKeyboardRenderer, obj4);
+  items1[1] = closure_17(channelId(16605).PortalKeyboardRenderer, obj4);
   obj2.children = items1;
   obj.children = closure_18(View, obj2);
   return closure_17(View, obj);
@@ -1356,7 +1356,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewMessa
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "IconComponent", done: "IconComponent" };
+                    return { value: "IconComponent", done: null };
                   }
                 } else {
                   try {
@@ -1559,7 +1559,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewMessa
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

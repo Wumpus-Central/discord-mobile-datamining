@@ -1,6 +1,6 @@
-// === Module 16754: useFrameLifecycle ===
+// === Module 16773: useFrameLifecycle ===
 
-// Module 16754 (useFrameLifecycle)
+// Module 16773 (useFrameLifecycle)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -45,7 +45,7 @@ function useFrameLifecycleState(applicationId) {
         const obj7 = { state: obj.Loading, frame: tmp3 };
         obj10 = obj7;
       } else if (isLoading) {
-        const obj8 = { state: obj.Loading, frame: "a" };
+        const obj8 = { state: obj.Loading, frame: "r" };
         obj10 = obj8;
       } else {
         if (null != data) {

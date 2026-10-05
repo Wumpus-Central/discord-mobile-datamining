@@ -1,6 +1,6 @@
-// === Module 14882: QuestHomeOrbShopCarousel ===
+// === Module 14886: QuestHomeOrbShopCarousel ===
 
-// Module 14882 (QuestHomeOrbShopCarousel)
+// Module 14886 (QuestHomeOrbShopCarousel)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,8 +10,8 @@ import AnalyticsActions from "AnalyticsActions" /* 7202 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7212 */;
 import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8421 */;
 import SkeletonCardDefault from "SkeletonCard" /* 8534 */;
-import usePopularOrbShopProducts from "usePopularOrbShopProducts" /* 14869 */;
-import QuestHomeOrbShopRewardCardDefault from "QuestHomeOrbShopRewardCard" /* 14883 */;
+import usePopularOrbShopProducts from "usePopularOrbShopProducts" /* 14873 */;
+import QuestHomeOrbShopRewardCardDefault from "QuestHomeOrbShopRewardCard" /* 14887 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
@@ -60,7 +60,7 @@ const ItemSeparatorComponent = ReactCompilerGating.isReactCompilerEnabled() ? ((
   const obj = { style: { width: PX_12 } };
   return options(View, obj);
 });
-const data = Array.from({ length: fn(14869).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
+const data = Array.from({ length: fn(14873).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
 const createStyles = fn(4890);
 let closure_17 = createStyles.createStyles(() => {
   const obj = { standaloneRoot: { marginTop: nativeDefault.space.PX_32 }, headerMediaRoot: null };
@@ -105,7 +105,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   });
 });
 fn(558);
-let obj3 = { length: fn(14869).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL };
+let obj3 = { length: fn(14873).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const cResult = c.c(12);
@@ -232,7 +232,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((cardHeight) =>
       class H {
         constructor() {
           obj = { width: listEdgeSpacing };
-          return jsx(f68826, obj);
+          return jsx(f68876, obj);
         }
       }
       cResult[4] = listEdgeSpacing;
@@ -241,7 +241,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((cardHeight) =>
       class H {
         constructor() {
           obj = { width: listEdgeSpacing };
-          return jsx(f68826, obj);
+          return jsx(f68876, obj);
         }
       }
     }
@@ -249,7 +249,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((cardHeight) =>
       class H {
         constructor() {
           obj = { width: listEdgeSpacing };
-          return jsx(f68826, obj);
+          return jsx(f68876, obj);
         }
       }
       cResult[6] = listEdgeSpacing;
@@ -258,7 +258,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((cardHeight) =>
       class H {
         constructor() {
           obj = { width: listEdgeSpacing };
-          return jsx(f68826, obj);
+          return jsx(f68876, obj);
         }
       }
     }
@@ -267,7 +267,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((cardHeight) =>
       class H {
         constructor() {
           obj = { width: listEdgeSpacing };
-          return jsx(f68826, obj);
+          return jsx(f68876, obj);
         }
       }
       const stringResult = obj2.string(cardWidth(listEdgeSpacing[13]).t.hVV8Wi);
@@ -280,7 +280,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((cardHeight) =>
       class H {
         constructor() {
           obj = { width: listEdgeSpacing };
-          return jsx(f68826, obj);
+          return jsx(f68876, obj);
         }
       }
       tmp11 = cResult[9];
@@ -289,7 +289,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((cardHeight) =>
       class H {
         constructor() {
           obj = { width: listEdgeSpacing };
-          return jsx(f68826, obj);
+          return jsx(f68876, obj);
         }
       }
       tmp14[0] = listStyle;
@@ -300,7 +300,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((cardHeight) =>
       class H {
         constructor() {
           obj = { width: listEdgeSpacing };
-          return jsx(f68826, obj);
+          return jsx(f68876, obj);
         }
       }
     }
@@ -308,7 +308,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((cardHeight) =>
       class H {
         constructor() {
           obj = { width: listEdgeSpacing };
-          return jsx(f68826, obj);
+          return jsx(f68876, obj);
         }
       }
     }
@@ -429,15 +429,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const tmp5 = undefined !== embedded && embedded;
   let ONYX = obtainableOrbRewards(504).useStateFromStores(tmp8, tmp9);
   if (tmp5) {
-    ONYX = obtainableOrbRewards(14859).ThemeTypes.ONYX;
+    ONYX = obtainableOrbRewards(14863).ThemeTypes.ONYX;
   }
   if (undefined !== replacesHeaderMedia && replacesHeaderMedia) {
-    let COLLECTIBLES_SHOP_CARD_WIDTH = obtainableOrbRewards(14883).QUEST_HOME_REPLACE_MEDIA_CARD_WIDTH;
+    let COLLECTIBLES_SHOP_CARD_WIDTH = obtainableOrbRewards(14887).QUEST_HOME_REPLACE_MEDIA_CARD_WIDTH;
   } else {
     COLLECTIBLES_SHOP_CARD_WIDTH = obtainableOrbRewards(8418).COLLECTIBLES_SHOP_CARD_WIDTH;
   }
   if (undefined !== replacesHeaderMedia && replacesHeaderMedia) {
-    COLLECTIBLES_SHOP_CARD_HEIGHT = obtainableOrbRewards(14883).QUEST_HOME_REPLACE_MEDIA_CARD_HEIGHT;
+    COLLECTIBLES_SHOP_CARD_HEIGHT = obtainableOrbRewards(14887).QUEST_HOME_REPLACE_MEDIA_CARD_HEIGHT;
   } else {
     COLLECTIBLES_SHOP_CARD_HEIGHT = obtainableOrbRewards(8418).COLLECTIBLES_SHOP_CARD_HEIGHT;
   }
@@ -459,7 +459,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     class Q {
       constructor() {
         obj = { width: closure_3 };
-        return jsx(f68826, obj);
+        return jsx(f68876, obj);
       }
     }
     cResult[6] = listEdgeSpacing;
@@ -468,7 +468,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     class Q {
       constructor() {
         obj = { width: closure_3 };
-        return jsx(f68826, obj);
+        return jsx(f68876, obj);
       }
     }
   }
@@ -476,7 +476,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     class G {
       constructor() {
         obj = { width: closure_3 };
-        return jsx(f68826, obj);
+        return jsx(f68876, obj);
       }
     }
     cResult[8] = listEdgeSpacing;
@@ -485,7 +485,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     class G {
       constructor() {
         obj = { width: closure_3 };
-        return jsx(f68826, obj);
+        return jsx(f68876, obj);
       }
     }
   }
@@ -498,14 +498,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     class G {
       constructor() {
         obj = { width: closure_3 };
-        return jsx(f68826, obj);
+        return jsx(f68876, obj);
       }
     }
     if (!tmp4) {
       class G {
         constructor() {
           obj = { width: closure_3 };
-          return jsx(f68826, obj);
+          return jsx(f68876, obj);
         }
       }
     }
@@ -516,7 +516,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     class G {
       constructor() {
         obj = { width: closure_3 };
-        return jsx(f68826, obj);
+        return jsx(f68876, obj);
       }
     }
   }

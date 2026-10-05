@@ -1,11 +1,11 @@
-// === Module 13386: GuildBoostingMarketingProgressBar ===
+// === Module 13388: GuildBoostingMarketingProgressBar ===
 
-// Module 13386 (GuildBoostingMarketingProgressBar)
+// Module 13388 (GuildBoostingMarketingProgressBar)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
 import spring from "spring" /* 5597 */;
 import GuildBoostingUtils from "GuildBoostingUtils" /* 7666 */;
-import GuildBoostingMarketingProgressBarMarker from "GuildBoostingMarketingProgressBarMarker" /* 13387 */;
+import GuildBoostingMarketingProgressBarMarker from "GuildBoostingMarketingProgressBarMarker" /* 13389 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;
@@ -18,9 +18,9 @@ const BoostedGuildTiers = fn(1085).BoostedGuildTiers;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4890);
-let obj2 = { progressBarContainer: { display: "flex", alignItems: "center", width: "100%", marginTop: 40, paddingHorizontal: fn(13387).MARKER_DIMENSIONS / 2 + 34 }, progressBar: { height: 54, maxWidth: 660, width: "100%" }, progressBarScrubber: null, progressBarTrack: null, progressBarFill: null, progressBarGradientFill: null };
-let obj3 = { display: "flex", alignItems: "center", width: "100%", marginTop: 40, paddingHorizontal: fn(13387).MARKER_DIMENSIONS / 2 + 34 };
-obj2.progressBarScrubber = { height: 8, top: fn(13387).MARKER_DIMENSIONS / 2 - 4, marginHorizontal: fn(13387).MARKER_DIMENSIONS / 2 + 2 };
+let obj2 = { progressBarContainer: { display: "flex", alignItems: "center", width: "100%", marginTop: 40, paddingHorizontal: fn(13389).MARKER_DIMENSIONS / 2 + 34 }, progressBar: { height: 54, maxWidth: 660, width: "100%" }, progressBarScrubber: null, progressBarTrack: null, progressBarFill: null, progressBarGradientFill: null };
+let obj3 = { display: "flex", alignItems: "center", width: "100%", marginTop: 40, paddingHorizontal: fn(13389).MARKER_DIMENSIONS / 2 + 34 };
+obj2.progressBarScrubber = { height: 8, top: fn(13389).MARKER_DIMENSIONS / 2 - 4, marginHorizontal: fn(13389).MARKER_DIMENSIONS / 2 + 2 };
 let size = { borderRadius: 8, height: "100%", width: "100%", position: "absolute", zIndex: 0, backgroundColor: nativeDefault.colors.SPINE_DEFAULT };
 obj2.progressBarTrack = size;
 obj2.progressBarFill = { borderRadius: 8, position: "absolute", height: "100%", left: 0, zIndex: 1 };
@@ -36,7 +36,7 @@ const __initData4 = { code: "function GuildBoostingMarketingProgressBarTsx4(){co
 const __initData5 = { code: "function GuildBoostingMarketingProgressBarTsx5(){const{width}=this.__closure;return width.get();}" };
 const __initData6 = { code: "function GuildBoostingMarketingProgressBarTsx6(width_0){const{BoostedGuildTiers,TIER_REACHED_OFFSET,revealedTier,runOnJS,setRevealedTier}=this.__closure;let tier=BoostedGuildTiers.NONE;if(width_0>=33.33-TIER_REACHED_OFFSET)tier=BoostedGuildTiers.TIER_1;if(width_0>=66.67-TIER_REACHED_OFFSET)tier=BoostedGuildTiers.TIER_2;if(width_0>=100-TIER_REACHED_OFFSET)tier=BoostedGuildTiers.TIER_3;if(tier!==revealedTier)runOnJS(setRevealedTier)(tier);}" };
 const ReactCompilerGating = fn(558);
-let obj4 = { height: 8, top: fn(13387).MARKER_DIMENSIONS / 2 - 4, marginHorizontal: fn(13387).MARKER_DIMENSIONS / 2 + 2 };
+let obj4 = { height: 8, top: fn(13389).MARKER_DIMENSIONS / 2 - 4, marginHorizontal: fn(13389).MARKER_DIMENSIONS / 2 + 2 };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingProgressBar.tsx");
 

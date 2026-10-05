@@ -1,6 +1,6 @@
-// === Module 17431: AppIconPremiumManager ===
+// === Module 17455: AppIconPremiumManager ===
 
-// Module 17431 (AppIconPremiumManager)
+// Module 17455 (AppIconPremiumManager)
 import LoggerDefault from "Logger" /* 3 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -51,7 +51,7 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -124,7 +124,7 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
             }
           }
           v3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp39) {
         v3 = tmp;

@@ -1,10 +1,10 @@
-// === Module 16999: WebhookPlusIcon ===
+// === Module 17023: WebhookPlusIcon ===
 
-// Module 16999 (WebhookPlusIcon)
+// Module 17023 (WebhookPlusIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 4579 */;
-import _mod17000 from "module_17000" /* 17000 */;
+import _mod17024 from "module_17024" /* 17024 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const WebhookPlusIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod17000;
+    const tmpResult = _mod17024;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const WebhookPlusIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17000, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17024, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

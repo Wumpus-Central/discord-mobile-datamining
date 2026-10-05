@@ -15,7 +15,7 @@ let closure_4 = async function _submitPollVote(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -37,7 +37,7 @@ let closure_4 = async function _submitPollVote(arg0) {
           ({ channelId: closure_129_0, messageId: closure_129_1, answerIds: closure_129_2 } = closure_0);
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -74,7 +74,7 @@ let closure_4 = async function _submitPollVote(arg0) {
       } else {
         c4 = 0;
         c6 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp21) {
       closure_3 = tmp21;
@@ -98,7 +98,7 @@ let closure_5 = async function _endPollEarly(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -119,7 +119,7 @@ let closure_5 = async function _endPollEarly(arg0) {
           ({ channelId: closure_129_0, messageId: closure_129_1 } = closure_0);
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -154,7 +154,7 @@ let closure_5 = async function _endPollEarly(arg0) {
       } else {
         c4 = 0;
         c6 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp28) {
       closure_3 = tmp28;

@@ -1,12 +1,12 @@
-// === Module 14580: UserSettingsAccountBackupCodes ===
+// === Module 14584: UserSettingsAccountBackupCodes ===
 
-// Module 14580 (UserSettingsAccountBackupCodes)
+// Module 14584 (UserSettingsAccountBackupCodes)
 import nativeDefault from "native" /* 587 */;
 import ToastUtils from "ToastUtils" /* 4567 */;
 import ClipboardUtils from "ClipboardUtils" /* 6688 */;
-import MFAActionCreatorsDefault from "MFAActionCreators" /* 14571 */;
+import MFAActionCreatorsDefault from "MFAActionCreators" /* 14575 */;
 import noop from "module_19" /* 19 */;
-import MFAStore from "MFAStore" /* 13555 */;
+import MFAStore from "MFAStore" /* 13557 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
@@ -324,7 +324,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       obj8.label = closure_6(tmp(4886).Text, obj9);
       obj8.onPress = function onPress() {
         const verificationKey = MFAStore.getVerificationKey();
-        const result = items2(14571).confirmViewBackupCodes(verificationKey, true);
+        const result = items2(14575).confirmViewBackupCodes(verificationKey, true);
       };
       obj7.children = closure_6(tmp(5993).TableRow, obj8);
       tmp28 = closure_6(tmp(6074).TableRowGroup, obj7);

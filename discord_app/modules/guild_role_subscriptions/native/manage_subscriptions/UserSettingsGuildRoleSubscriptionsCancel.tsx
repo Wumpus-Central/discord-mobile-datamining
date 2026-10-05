@@ -1,6 +1,6 @@
-// === Module 15040: UserSettingsGuildRoleSubscriptionsCancel ===
+// === Module 15044: UserSettingsGuildRoleSubscriptionsCancel ===
 
-// Module 15040 (UserSettingsGuildRoleSubscriptionsCancel)
+// Module 15044 (UserSettingsGuildRoleSubscriptionsCancel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -10,13 +10,13 @@ import Text_Text from "Text/Text" /* 4886 */;
 import GuildIconDefault from "GuildIcon" /* 5971 */;
 import FastImageDefault from "FastImage" /* 5974 */;
 import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6469 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15026 */;
-import FormSeparatorDefault from "FormSeparator" /* 15031 */;
-import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 15037 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15041 */;
-import _modDef15049 from "module_15049" /* 15049 */;
-import FastAssetImageDefault from "FastAssetImage" /* 15050 */;
-import GuildRoleSubscriptionCardAll from "GuildRoleSubscriptionCard" /* 15051 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15030 */;
+import FormSeparatorDefault from "FormSeparator" /* 15035 */;
+import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 15041 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15045 */;
+import _modDef15053 from "module_15053" /* 15053 */;
+import FastAssetImageDefault from "FastAssetImage" /* 15054 */;
+import GuildRoleSubscriptionCardAll from "GuildRoleSubscriptionCard" /* 15055 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -56,7 +56,7 @@ function CancelSubscriptionButtonFooter(guild) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -213,7 +213,7 @@ const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = "M/DD/YY";
 let createStyles = fn(4890);
-let obj2 = { container: { flex: 1 }, body: { marginVertical: 24, marginHorizontal: 16 }, heroImage: { width: "100%", height: "__initData", aspectRatio: "<string:2353406737>" }, footer: { borderTopColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER, borderTopWidth: 1, padding: 16 } };
+let obj2 = { container: { flex: 1 }, body: { marginVertical: 24, marginHorizontal: 16 }, heroImage: { width: "100%", height: "filter", aspectRatio: "<string:2353406737>" }, footer: { borderTopColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER, borderTopWidth: 1, padding: 16 } };
 let closure_13 = createStyles.createStyles(obj2);
 createStyles = fn(4890);
 let obj5 = { container: null, header: null, cactus: null };
@@ -345,7 +345,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               tmp51 = cResult[27];
             }
             if (cResult[28] !== tmp4.cactus) {
-              const obj15 = { source: _modDef15049, style: tmp4.cactus };
+              const obj15 = { source: _modDef15053, style: tmp4.cactus };
               const tmp58 = v65535(FastImageDefault, obj15);
               cResult[28] = tmp4.cactus;
               cResult[29] = tmp58;
@@ -441,7 +441,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const obj13 = { source: null, style: null };
   const formatToPlainStringResult = intl2.formatToPlainString(util.t.OVlNGT, { numEmojis: _slicedToArray(obj.useTierEmojiIds(listingId, guild.id), 1)[0].size, numChannels: _slicedToArray(obj2.useChannelBenefits(listingId), 1)[0].length, numIntangibles: _slicedToArray(obj3.useIntangibleBenefits(listingId), 1)[0].length });
   const obj10 = { variant: "text-sm/medium", color: "interactive-text-default", children: guild.name };
-  obj13.source = _modDef15049;
+  obj13.source = _modDef15053;
   obj13.style = tmp.cactus;
   items2[6] = v65535(FastImageDefault, obj13);
   obj7.children = items2;

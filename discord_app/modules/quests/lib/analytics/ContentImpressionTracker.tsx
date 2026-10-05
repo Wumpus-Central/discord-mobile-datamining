@@ -98,7 +98,7 @@ class QuestContentImpression {
           let obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -299,7 +299,7 @@ class QuestContentImpression {
               onImpressionCallback();
             }
             c3 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp34) {
           c3 = tmp;

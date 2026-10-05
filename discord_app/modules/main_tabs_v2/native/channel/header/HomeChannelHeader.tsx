@@ -1,6 +1,6 @@
-// === Module 13104: HomeChannelHeader ===
+// === Module 13106: HomeChannelHeader ===
 
-// Module 13104 (HomeChannelHeader)
+// Module 13106 (HomeChannelHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;

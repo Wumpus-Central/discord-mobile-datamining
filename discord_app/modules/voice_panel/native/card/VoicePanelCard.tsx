@@ -1,6 +1,6 @@
-// === Module 17247: VoicePanelCard ===
+// === Module 17271: VoicePanelCard ===
 
-// Module 17247 (VoicePanelCard)
+// Module 17271 (VoicePanelCard)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 4589 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4612 */;
@@ -12,9 +12,9 @@ import LinearGradientDefault from "LinearGradient" /* 5605 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7850 */;
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9074 */;
 import roundToNearestPixelDefault from "roundToNearestPixel" /* 10725 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17181 */;
-import computeCardBorderRadiusDefault from "computeCardBorderRadius" /* 17250 */;
-import calculateContentCenterOffsetDefault from "calculateContentCenterOffset" /* 17251 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17205 */;
+import computeCardBorderRadiusDefault from "computeCardBorderRadius" /* 17274 */;
+import calculateContentCenterOffsetDefault from "calculateContentCenterOffset" /* 17275 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
@@ -28,7 +28,7 @@ const StyleSheet = fn(17).StyleSheet;
 const VoicePanelConstants = fn(11902);
 ({ VoicePanelCTACard: closure_9, VoicePanelModes: c10, MODE_CHANGE_PHYSICS: closure_11, SPEAKING_PHYSICS: closure_12, VoicePanelCardItemType: map1 } = VoicePanelConstants);
 const VoicePanelControlsModes = fn(11900).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17182).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(17206).VoicePanelPIPModes;
 const EDGE_GUTTER = fn(11905).EDGE_GUTTER;
 const ApplicationStreamStates = fn(1085).ApplicationStreamStates;
 const ParticipantTypes = fn(4911).ParticipantTypes;
@@ -3591,7 +3591,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
           tmp39 = tmp54;
         }
       }
-      const obj10 = { isRinging: tmp13, avatarURI: "r", avatarDecoration: "ix", layout: layoutTransition2, layoutPhysics: physics };
+      const obj10 = { isRinging: tmp13, avatarURI: "r", avatarDecoration: "emoji", layout: layoutTransition2, layoutPhysics: physics };
       const tmp57 = closure_20(closure_42, obj10);
       cResult[54] = tmp13;
       cResult[55] = layoutTransition2;
@@ -3858,7 +3858,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
       tmp27 = closure_20;
     }
   }
-  const obj13 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "ix", layout: layoutTransition, layoutPhysics: physics };
+  const obj13 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "emoji", layout: layoutTransition, layoutPhysics: physics };
   tmp29Result = closure_20(closure_42, obj13);
   tmp27 = closure_20;
   const tmp5Result16 = scrollPosition(id2[14]);

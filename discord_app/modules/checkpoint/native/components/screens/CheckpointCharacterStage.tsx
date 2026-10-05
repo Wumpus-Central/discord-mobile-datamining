@@ -1,6 +1,6 @@
-// === Module 15529: CheckpointCharacterStage ===
+// === Module 15533: CheckpointCharacterStage ===
 
-// Module 15529 (CheckpointCharacterStage)
+// Module 15533 (CheckpointCharacterStage)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;

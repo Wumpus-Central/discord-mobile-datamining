@@ -1,11 +1,11 @@
-// === Module 15591: TextDisplayComponent ===
+// === Module 15595: TextDisplayComponent ===
 
-// Module 15591 (TextDisplayComponent)
+// Module 15595 (TextDisplayComponent)
 import _modDef38 from "module_38" /* 38 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 4877 */;
 import renderMessageMarkup from "renderMessageMarkup" /* 7531 */;
 import handleMessagesTapLink from "handleMessagesTapLink" /* 11239 */;
-import TextDisplayComponentViewNativeComponentDefault from "TextDisplayComponentViewNativeComponent" /* 15592 */;
+import TextDisplayComponentViewNativeComponentDefault from "TextDisplayComponentViewNativeComponent" /* 15596 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;

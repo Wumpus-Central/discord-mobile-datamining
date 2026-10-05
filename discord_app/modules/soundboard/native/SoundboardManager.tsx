@@ -1,16 +1,16 @@
-// === Module 14376: SoundboardManager ===
+// === Module 14380: SoundboardManager ===
 
-// Module 14376 (SoundboardManager)
+// Module 14380 (SoundboardManager)
 import LoggerDefault from "Logger" /* 3 */;
 import SoundboardActionCreators from "SoundboardActionCreators" /* 6841 */;
 import SoundUtils from "SoundUtils" /* 9562 */;
-import getVolumeForSoundDefault from "getVolumeForSound" /* 14378 */;
-import getSoundboardSoundURLDefault from "getSoundboardSoundURL" /* 14379 */;
+import getVolumeForSoundDefault from "getVolumeForSound" /* 14382 */;
+import getSoundboardSoundURLDefault from "getSoundboardSoundURL" /* 14383 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import SoundboardStore from "SoundboardStore" /* 5680 */;
-import BaseSoundboardManager from "BaseSoundboardManager" /* 14377 */;
+import BaseSoundboardManager from "BaseSoundboardManager" /* 14381 */;
 
 require = fn;
 let map = new Map();
@@ -76,7 +76,7 @@ const prototype = function SoundboardManager() {
     }
     await "IconComponent";
     ({ sound: closure_129_0, soundKey: closure_129_1, soundId: closure_129_2, userId: closure_129_3 } = applyArgumentsResult);
-    return "Reflect";
+    return "Set";
   });
   applyArgumentsResult._playSoundWithListener = function() {
     const self = this;

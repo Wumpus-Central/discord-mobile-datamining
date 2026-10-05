@@ -1,6 +1,6 @@
-// === Module 15518: openCheckpointModal ===
+// === Module 15522: openCheckpointModal ===
 
-// Module 15518 (openCheckpointModal)
+// Module 15522 (openCheckpointModal)
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
@@ -17,5 +17,5 @@ export default function openCheckpointModal(source) {
   }
   AnalyticsUtilsDefault.track(AnalyticEvents.CHECKPOINT_STARTED, { source });
   const obj2 = { source };
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15519, dependencyMap.paths), { didPlayerShareDataWithDiscord: flag }, "CHECKPOINT_MODAL");
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15523, dependencyMap.paths), { didPlayerShareDataWithDiscord: flag }, "CHECKPOINT_MODAL");
 };

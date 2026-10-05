@@ -1,6 +1,6 @@
-// === Module 15062: InputModeSetting ===
+// === Module 15066: InputModeSetting ===
 
-// Module 15062 (InputModeSetting)
+// Module 15066 (InputModeSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;

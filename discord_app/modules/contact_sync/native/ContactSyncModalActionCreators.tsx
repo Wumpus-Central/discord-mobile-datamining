@@ -37,7 +37,7 @@ let closure_26 = async function _handleNameInputScreenOrSuggestions(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -226,7 +226,7 @@ let closure_27 = async function _handlePhoneVerificationComplete(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -254,7 +254,7 @@ let closure_27 = async function _handlePhoneVerificationComplete(arg0) {
         return obj;
       } else {
         c2 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp8) {
       c2 = tmp;
@@ -277,7 +277,7 @@ let closure_28 = async function _startContactSync(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -319,7 +319,7 @@ let closure_28 = async function _startContactSync(arg0) {
           return obj;
         } else {
           c1 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp14) {
         c1 = tmp;
@@ -339,7 +339,7 @@ let closure_29 = async function _bulkAddFriendSuggestions(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -453,7 +453,7 @@ let closure_30 = async function _verifyPhone(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

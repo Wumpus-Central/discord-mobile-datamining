@@ -1,6 +1,6 @@
-// === Module 17195: useStableParticipant ===
+// === Module 17219: useStableParticipant ===
 
-// Module 17195 (useStableParticipant)
+// Module 17219 (useStableParticipant)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import NicknameUtils from "NicknameUtils" /* 5042 */;
 import useAvatarDecoration from "useAvatarDecoration" /* 7887 */;
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
       if (null == participant) {
         const user = UserStore.getUser(id);
         if (null != user) {
-          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "Set", ringing: null, hasVideo: "2026-05-quest-home-tile-redesign", isSelf: "user" };
+          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "Symbol", ringing: null, hasVideo: 0, isSelf: 1 };
           id = AuthenticationStore.getId();
           obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);
           obj3.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_2);
@@ -163,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) 
       if (null == participant) {
         const user = UserStore.getUser(id);
         if (null != user) {
-          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "Set", ringing: null, hasVideo: "2026-05-quest-home-tile-redesign", isSelf: "user" };
+          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "Symbol", ringing: null, hasVideo: 0, isSelf: 1 };
           id = AuthenticationStore.getId();
           obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);
           obj3.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_2);

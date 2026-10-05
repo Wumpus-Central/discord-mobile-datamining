@@ -1,8 +1,8 @@
-// === Module 17169: FramePanelController ===
+// === Module 17193: FramePanelController ===
 
-// Module 17169 (FramePanelController)
+// Module 17193 (FramePanelController)
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 8986 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 17170 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 17194 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 5118 */;
 import FramesStore from "FramesStore" /* 8703 */;
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
     }
   }
   const tmpResult = mainFrameId(504);
-  const tmp13 = jsx(mainFrameId(17137).BaseActivityPanelController, { context: FramePanelStateContextDefault, orientationLockStateForApp, mode, hasConnectedActivity: null != mainFrameId, connectedActivityAppId, currentApp, updateActivityPanelMode: tmp10, children });
+  const tmp13 = jsx(mainFrameId(17161).BaseActivityPanelController, { context: FramePanelStateContextDefault, orientationLockStateForApp, mode, hasConnectedActivity: null != mainFrameId, connectedActivityAppId, currentApp, updateActivityPanelMode: tmp10, children });
   cResult[5] = children;
   cResult[6] = connectedActivityAppId;
   cResult[7] = currentApp;
@@ -140,5 +140,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
     }
   }, items1);
   let obj = mainFrameId(504);
-  return jsx(mainFrameId(17137).BaseActivityPanelController, { context: FramePanelStateContextDefault, orientationLockStateForApp, mode, hasConnectedActivity: null != mainFrameId, connectedActivityAppId, currentApp, updateActivityPanelMode: callback, children: children.children });
+  return jsx(mainFrameId(17161).BaseActivityPanelController, { context: FramePanelStateContextDefault, orientationLockStateForApp, mode, hasConnectedActivity: null != mainFrameId, connectedActivityAppId, currentApp, updateActivityPanelMode: callback, children: children.children });
 });

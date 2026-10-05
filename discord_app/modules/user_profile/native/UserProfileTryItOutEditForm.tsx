@@ -1,6 +1,6 @@
-// === Module 15694: UserProfileTryItOutEditForm ===
+// === Module 15698: UserProfileTryItOutEditForm ===
 
-// Module 15694 (UserProfileTryItOutEditForm)
+// Module 15698 (UserProfileTryItOutEditForm)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -19,10 +19,10 @@ import userSettingToActivity from "userSettingToActivity" /* 10826 */;
 import UserProfileCustomStatusBubbleDefault from "UserProfileCustomStatusBubble" /* 10827 */;
 import UserProfileGradientContainerDefault from "UserProfileGradientContainer" /* 10842 */;
 import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 10843 */;
-import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles" /* 14425 */;
-import EditUserProfileAvatarDefault from "EditUserProfileAvatar" /* 14431 */;
-import UserProfileFloatingUpsell from "UserProfileFloatingUpsell" /* 14481 */;
-import UserProfileTryItOutGetPremiumUpsellDefault from "UserProfileTryItOutGetPremiumUpsell" /* 15695 */;
+import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles" /* 14429 */;
+import EditUserProfileAvatarDefault from "EditUserProfileAvatar" /* 14435 */;
+import UserProfileFloatingUpsell from "UserProfileFloatingUpsell" /* 14485 */;
+import UserProfileTryItOutGetPremiumUpsellDefault from "UserProfileTryItOutGetPremiumUpsell" /* 15699 */;
 import noop from "module_19" /* 19 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7831 */;
 
@@ -37,7 +37,7 @@ function EditableBanner(user) {
     const obj2 = { user, analyticsLocations, onBannerChange: null, isTryItOut: true };
     const obj = ActionSheetActionCreatorsDefault;
     obj2.onBannerChange = UserProfileActionCreators.setTryItOutBanner;
-    obj.openLazy(asyncRequireImpl(14414, dependencyMap.paths), "Change Banner", obj2);
+    obj.openLazy(asyncRequireImpl(14418, dependencyMap.paths), "Change Banner", obj2);
   }, items);
   let obj = { value: analyticsLocations, children: null };
   let obj2 = {};
@@ -49,7 +49,7 @@ function EditableBanner(user) {
   obj2.editButtonAccessibilityLabel = intl.string(user(1126).t.VqsHy0);
   obj2.bannerSafeArea = 12;
   obj2.isUserProfileEditingRefresh = true;
-  obj.children = closure_7(analyticsLocations(14412), obj2);
+  obj.children = closure_7(analyticsLocations(14416), obj2);
   return closure_7(user(6657).AnalyticsLocationProvider, obj);
 }
 get_ActivityIndicator = fn(17);

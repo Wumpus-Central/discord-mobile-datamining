@@ -1,6 +1,6 @@
-// === Module 14464: UserProfileTypingIndicatorEditButton ===
+// === Module 14468: UserProfileTypingIndicatorEditButton ===
 
-// Module 14464 (UserProfileTypingIndicatorEditButton)
+// Module 14468 (UserProfileTypingIndicatorEditButton)
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = fn;
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isTryItOut) => {
       const tmp16 = tmp8 === tmp(2036).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE;
       if (cResult[8] !== tmp16) {
         const obj4 = { showPremiumIcon: true, showNewBadge: tmp16 };
-        const tmp19 = jsx(tmp(14441).UserProfileEditFormLabelBadges, { showPremiumIcon: true, showNewBadge: tmp16 });
+        const tmp19 = jsx(tmp(14445).UserProfileEditFormLabelBadges, { showPremiumIcon: true, showNewBadge: tmp16 });
         cResult[8] = tmp16;
         cResult[9] = tmp19;
         let tmp17 = tmp19;
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isTryItOut) => {
         }
       }
       const obj7 = { label: tmp13, labelTrailing: tmp17, leading: tmp20, buttonText: tmp11, accessibilityValue: tmp24, onPress: tmp10 };
-      const tmp27 = jsx(tmp(14441).UserProfileEditFormButton, { label: tmp13, labelTrailing: tmp17, leading: tmp20, buttonText: tmp11, accessibilityValue: tmp24, onPress: tmp10 });
+      const tmp27 = jsx(tmp(14445).UserProfileEditFormButton, { label: tmp13, labelTrailing: tmp17, leading: tmp20, buttonText: tmp11, accessibilityValue: tmp24, onPress: tmp10 });
       cResult[14] = tmp11;
       cResult[15] = tmp10;
       cResult[16] = tmp17;
@@ -179,10 +179,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((isTryItOut) => {
   const intl2 = isTryItOut(1126).intl;
   obj5.label = intl2.string(nativeStackNavigation(3725)["pT+BVM"]);
   const obj4 = isTryItOut(11587);
-  obj5.labelTrailing = jsx(isTryItOut(14441).UserProfileEditFormLabelBadges, { showPremiumIcon: true, showNewBadge: tmp3[0] === isTryItOut(2036).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE });
+  obj5.labelTrailing = jsx(isTryItOut(14445).UserProfileEditFormLabelBadges, { showPremiumIcon: true, showNewBadge: tmp3[0] === isTryItOut(2036).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE });
   obj5.leading = jsx(nativeStackNavigation(11595), { config: currentCustomTypingIndicatorConfig, size: 24 });
   obj5.buttonText = stringResult;
   obj5.accessibilityValue = { text: stringResult };
   obj5.onPress = tmp5;
-  return jsx(isTryItOut(14441).UserProfileEditFormButton, { label: null, labelTrailing: null, leading: null, buttonText: null, accessibilityValue: null, onPress: null });
+  return jsx(isTryItOut(14445).UserProfileEditFormButton, { label: null, labelTrailing: null, leading: null, buttonText: null, accessibilityValue: null, onPress: null });
 });

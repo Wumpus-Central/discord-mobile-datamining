@@ -85,7 +85,7 @@ function loadThread(channelId) {
           }
         }).catch(() => {
           closure_11[id] = { type: "NOT_FOUND" };
-          const obj2 = { id, guild_id: null, parent_id: "Array" };
+          const obj2 = { id, guild_id: null, parent_id: "r" };
           let guildId;
           if (closure_1 != null) {
             const params = closure_1.params;

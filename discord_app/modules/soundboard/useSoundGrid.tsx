@@ -1,12 +1,12 @@
-// === Module 17206: useSoundGrid ===
+// === Module 17230: useSoundGrid ===
 
-// Module 17206 (useSoundGrid)
+// Module 17230 (useSoundGrid)
 import c from "c" /* 576 */;
 import SoundboardTypes from "SoundboardTypes" /* 5805 */;
 import GuildBoostingUtils from "GuildBoostingUtils" /* 7666 */;
 import useManageResourcePermissions from "useManageResourcePermissions" /* 9169 */;
-import useSoundOrganizer from "useSoundOrganizer" /* 17207 */;
-import TopSoundboardSoundsActionCreators from "TopSoundboardSoundsActionCreators" /* 17210 */;
+import useSoundOrganizer from "useSoundOrganizer" /* 17231 */;
+import TopSoundboardSoundsActionCreators from "TopSoundboardSoundsActionCreators" /* 17234 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
@@ -665,7 +665,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id, arg1, arg2
         const obj9 = { key: tmp13(5805).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
         const obj10 = { type: tmp13(5805).SoundboardSoundGridSectionType.DEFAULTS };
         obj9.categoryInfo = obj10;
-        const sortSoundsOldestToNewestCreationDate2 = tmp13(17207).sortSoundsOldestToNewestCreationDate;
+        const sortSoundsOldestToNewestCreationDate2 = tmp13(17231).sortSoundsOldestToNewestCreationDate;
         let result1 = value5;
         if (null != sortSoundsOldestToNewestCreationDate2) {
           result1 = sortSoundsOldestToNewestCreationDate2(value5);
@@ -691,7 +691,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id, arg1, arg2
         const obj12 = { key: tmp13(5805).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
         const obj13 = { type: tmp13(5805).SoundboardSoundGridSectionType.DEFAULTS };
         obj12.categoryInfo = obj13;
-        const sortSoundsOldestToNewestCreationDate3 = tmp13(17207).sortSoundsOldestToNewestCreationDate;
+        const sortSoundsOldestToNewestCreationDate3 = tmp13(17231).sortSoundsOldestToNewestCreationDate;
         let result2 = value6;
         if (null != sortSoundsOldestToNewestCreationDate3) {
           result2 = sortSoundsOldestToNewestCreationDate3(value6);

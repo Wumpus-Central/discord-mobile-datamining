@@ -1,6 +1,6 @@
-// === Module 16976: EasyChannelPermissionSettings ===
+// === Module 17000: EasyChannelPermissionSettings ===
 
-// Module 16976 (EasyChannelPermissionSettings)
+// Module 17000 (EasyChannelPermissionSettings)
 import nativeDefault from "native" /* 587 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5070 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5707 */;
@@ -11,7 +11,7 @@ import channel_permissions_ChannelPermissionsUtils from "channel_permissions/Cha
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 16977 */;
+import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 17001 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildRoleStore from "GuildRoleStore" /* 2106 */;
@@ -162,7 +162,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -218,7 +218,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
           return obj;
         } else {
           dependencyMap = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
         const items = [closure_128_0];
         v2 = 2;
@@ -242,7 +242,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -277,7 +277,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
           return obj;
         } else if (!value) {
           dependencyMap = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
         const intl = tmp5(1126).intl;
         const string = intl.string;

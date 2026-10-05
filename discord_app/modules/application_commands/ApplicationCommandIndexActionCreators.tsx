@@ -21,7 +21,7 @@ let closure_6 = async function _fetchApplicationCommandIndex(arg0, arg1) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -58,7 +58,7 @@ let closure_6 = async function _fetchApplicationCommandIndex(arg0, arg1) {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "IconComponent", done: "IconComponent" };
+                    return { value: "IconComponent", done: null };
                   }
                 } else {
                   try {
@@ -207,7 +207,7 @@ let closure_6 = async function _fetchApplicationCommandIndex(arg0, arg1) {
           return obj;
         } else {
           c2 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp10) {
         c2 = tmp;

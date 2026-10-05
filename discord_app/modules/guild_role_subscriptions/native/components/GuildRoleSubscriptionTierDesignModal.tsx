@@ -1,20 +1,20 @@
-// === Module 17940: GuildRoleSubscriptionTierDesignModal ===
+// === Module 17962: GuildRoleSubscriptionTierDesignModal ===
 
-// Module 17940 (GuildRoleSubscriptionTierDesignModal)
+// Module 17962 (GuildRoleSubscriptionTierDesignModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import useToken from "useToken" /* 4580 */;
 import RoleIconUtils from "RoleIconUtils" /* 6686 */;
 import FormHeaderDefault from "FormHeader" /* 9477 */;
-import FormStylesDefault from "FormStyles" /* 13708 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15041 */;
-import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 15052 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 17897 */;
-import FormImagePicker from "FormImagePicker" /* 17903 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17906 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 17922 */;
-import FormRoleColorPickerDefault from "FormRoleColorPicker" /* 17941 */;
+import FormStylesDefault from "FormStyles" /* 13710 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15045 */;
+import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 15056 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 17921 */;
+import FormImagePicker from "FormImagePicker" /* 17927 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17928 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 17944 */;
+import FormRoleColorPickerDefault from "FormRoleColorPicker" /* 17963 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ const FormImagePickerDefault = FormImagePicker;
 
 require = fn;
 const View = fn(17).View;
-const constants = fn(15019).GuildRoleSubscriptionsTierScenes;
+const constants = fn(15023).GuildRoleSubscriptionsTierScenes;
 const UPLOAD_SMALL_SIZE = fn(1085).UPLOAD_SMALL_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
@@ -241,7 +241,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   if (cResult[10] !== tmp10) {
     const fn = function x(icon) {
-      return closure_0({ icon: icon.uri, unicodeEmoji: "a" });
+      return closure_0({ icon: icon.uri, unicodeEmoji: "r" });
     };
     cResult[10] = tmp10;
     cResult[11] = fn;
@@ -324,7 +324,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   tmp30 = tmp32;
   const tmp4Result = FormImagePickerDefault;
 }) : (() => {
-  const tmp3 = role(13708)();
+  const tmp3 = role(13710)();
   const editStateContext = require("EditStateContextProvider").useEditStateContext();
   ({ editStateId, guildId } = editStateContext);
   const obj = require("EditStateContextProvider");
@@ -361,16 +361,16 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   obj8.imageUploadSize = UPLOAD_SMALL_SIZE;
   obj8.previewShape = require("FormImagePicker").PreviewShape.SQUIRCLE;
   obj8.setImage = function setImage(icon) {
-    return closure_0({ icon: icon.uri, unicodeEmoji: "a" });
+    return closure_0({ icon: icon.uri, unicodeEmoji: "r" });
   };
   obj8.disabled = roleSubscriptionSettingsDisabled;
-  items1[2] = closure_9(role(17903), obj8);
+  items1[2] = closure_9(role(17927), obj8);
   const obj9 = { style: tmp3.header, children: null };
-  const tmpResult3 = role(17903);
+  const tmpResult3 = role(17927);
   const intl3 = tmp4(1126).intl;
   obj9.children = intl3.string(require("util").t["W7hH+z"]);
   items1[3] = closure_9(role(9477), obj9);
-  items1[4] = closure_9(role(17941), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
+  items1[4] = closure_9(role(17963), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
   obj6.children = items1;
   return closure_10(closure_11, obj6);
 });

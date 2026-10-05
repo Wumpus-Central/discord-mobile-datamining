@@ -1,6 +1,6 @@
-// === Module 17617: UserOfferManager ===
+// === Module 17641: UserOfferManager ===
 
-// Module 17617 (UserOfferManager)
+// Module 17641 (UserOfferManager)
 import UserStore from "UserStore" /* 1377 */;
 import UserOfferStore from "UserOfferStore" /* 6959 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;

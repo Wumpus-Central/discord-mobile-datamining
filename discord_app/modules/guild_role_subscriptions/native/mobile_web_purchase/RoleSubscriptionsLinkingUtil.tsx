@@ -25,7 +25,7 @@ let closure_8 = async function _performRoleSubscriptionUpsellRedirect(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -108,7 +108,7 @@ let closure_9 = async function _performRoleSubscriptionTeamCreationRedirect() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -136,7 +136,7 @@ let closure_9 = async function _performRoleSubscriptionTeamCreationRedirect() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp7) {
       c0 = tmp;
@@ -155,7 +155,7 @@ let closure_10 = async function _performRoleSubscriptionEditPayoutRedirect(arg0)
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -183,7 +183,7 @@ let closure_10 = async function _performRoleSubscriptionEditPayoutRedirect(arg0)
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp8) {
       c1 = tmp;
@@ -212,7 +212,7 @@ let closure_12 = async function _performDeveloperPortalRedirectWithTokenHandoff(
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

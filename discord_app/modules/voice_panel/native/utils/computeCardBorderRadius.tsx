@@ -1,6 +1,6 @@
-// === Module 17250: computeCardBorderRadius ===
+// === Module 17274: computeCardBorderRadius ===
 
-// Module 17250 (computeCardBorderRadius)
+// Module 17274 (computeCardBorderRadius)
 import VoicePanelConstants from "VoicePanelConstants" /* 11902 */;
 import size from "module_2" /* 2 */;
 

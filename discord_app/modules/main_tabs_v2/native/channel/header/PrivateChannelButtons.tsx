@@ -1,6 +1,6 @@
-// === Module 13098: PrivateChannelButtons ===
+// === Module 13100: PrivateChannelButtons ===
 
-// Module 13098 (PrivateChannelButtons)
+// Module 13100 (PrivateChannelButtons)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1188 */;
@@ -14,10 +14,10 @@ import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 6548 */;
 import getPrivateChannelCallDefault from "getPrivateChannelCall" /* 10603 */;
 import useSearchContext from "useSearchContext" /* 11927 */;
 import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 11982 */;
-import ConfirmStartCall from "ConfirmStartCall" /* 12958 */;
-import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13101 */;
-import ChannelHeader from "ChannelHeader" /* 13102 */;
-import SafetyToolsButton from "SafetyToolsButton" /* 13118 */;
+import ConfirmStartCall from "ConfirmStartCall" /* 12960 */;
+import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13103 */;
+import ChannelHeader from "ChannelHeader" /* 13104 */;
+import SafetyToolsButton from "SafetyToolsButton" /* 13120 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
@@ -116,7 +116,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
   const tmp2Result7 = channelId(504);
   const items4 = [callParticipants];
   const stateFromStores3 = channelId(504).useStateFromStores(items4, () => callParticipants.supports(constants2.VIDEO));
-  const VideoGuardExperiment = tmp2(13099).VideoGuardExperiment;
+  const VideoGuardExperiment = tmp2(13101).VideoGuardExperiment;
   const videoEnabled = VideoGuardExperiment.useConfig({ location: "PrivateChannelButtons" }).videoEnabled;
   closure_7 = tmp10;
   const tmp2Result8 = channelId(504);
@@ -165,7 +165,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
     tmp15 = callParticipants.length > 0;
   }
   closure_11 = tmp15;
-  const tmp17 = screenIndex(13100)({ context: { type: "channel", channel: stateFromStores } });
+  const tmp17 = screenIndex(13102)({ context: { type: "channel", channel: stateFromStores } });
   application = tmp17.application;
   const items7 = [stateFromStores];
   callback = obj9.useCallback(() => {
@@ -228,7 +228,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
       const obj2 = { settings_type: "user", destination_pane: constants2.SETTINGS_APP_DMS_MENU, source_page: "app_dm_settings", application_id: application.id };
       AppAnalyticsUtilsDefault.trackWithMetadata(constants.SETTINGS_PANE_VIEWED, obj2);
       const obj4 = { userId: recipientId, channel: stateFromStores, application };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13117, dependencyMap.paths), "AppDMOptionsBottomSheet", obj4);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13119, dependencyMap.paths), "AppDMOptionsBottomSheet", obj4);
     }
   }, items11);
   if (inappropriateConversationSafetyToolsWarningForChannel != null) {
@@ -352,7 +352,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
                   if (0 === index) {
                     num = nativeDefault.space.PX_4;
                   }
-                  obj = { style: { marginLeft: num }, user: user.user, guildId: "r", size: native.AvatarSizes.XSMALL, cutout: "absolute" };
+                  obj = { style: { marginLeft: num }, user: user.user, guildId: "r", size: native.AvatarSizes.XSMALL, cutout: "telttur" };
                   if (index !== diff) {
                     const tmp7 = obj;
                   }
@@ -403,7 +403,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
             if (videoEnabled) {
               let VideoDenyIcon = tmp2(11234).VideoIcon;
             } else {
-              VideoDenyIcon = tmp2(13119).VideoDenyIcon;
+              VideoDenyIcon = tmp2(13121).VideoDenyIcon;
             }
             obj15.children = tmp33(VideoDenyIcon, { size: "sm" });
             tmp33(tmp2(5909).PressableOpacity, obj15);

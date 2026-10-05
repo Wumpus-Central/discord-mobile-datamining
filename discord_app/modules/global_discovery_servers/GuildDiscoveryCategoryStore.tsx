@@ -1,6 +1,6 @@
-// === Module 16410: GuildDiscoveryCategoryStore ===
+// === Module 16414: GuildDiscoveryCategoryStore ===
 
-// Module 16410 (GuildDiscoveryCategoryStore)
+// Module 16414 (GuildDiscoveryCategoryStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

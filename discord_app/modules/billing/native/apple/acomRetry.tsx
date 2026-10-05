@@ -1,8 +1,8 @@
-// === Module 13153: acomRetry ===
+// === Module 13155: acomRetry ===
 
-// Module 13153 (acomRetry)
+// Module 13155 (acomRetry)
 import BackoffDefault from "Backoff" /* 569 */;
-import ErrorUtilsAll from "ErrorUtils" /* 13148 */;
+import ErrorUtilsAll from "ErrorUtils" /* 13150 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -44,7 +44,7 @@ let closure_10 = async function _retryACOMRequest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

@@ -1,6 +1,6 @@
-// === Module 16204: GameCommunityMultiGuildUpsellCard ===
+// === Module 16208: GameCommunityMultiGuildUpsellCard ===
 
-// Module 16204 (GameCommunityMultiGuildUpsellCard)
+// Module 16208 (GameCommunityMultiGuildUpsellCard)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
@@ -126,7 +126,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -215,7 +215,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

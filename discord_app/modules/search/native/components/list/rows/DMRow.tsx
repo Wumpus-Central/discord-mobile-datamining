@@ -1,6 +1,6 @@
-// === Module 16802: DMRow ===
+// === Module 16821: DMRow ===
 
-// Module 16802 (DMRow)
+// Module 16821 (DMRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
@@ -8,7 +8,7 @@ import UserUtilsDefault from "UserUtils" /* 4722 */;
 import BotTagDefault from "BotTag" /* 8961 */;
 import _modDef9233 from "module_9233" /* 9233 */;
 import ActivityStatusDefault from "ActivityStatus" /* 10609 */;
-import _modDef13305 from "module_13305" /* 13305 */;
+import _modDef13307 from "module_13307" /* 13307 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -140,7 +140,7 @@ export default noop.memo(function DMRow(user) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -179,7 +179,7 @@ export default noop.memo(function DMRow(user) {
           c3 = 0;
           closure_128_8(false);
           c4 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp23) {
         closure_2 = tmp23;
@@ -220,7 +220,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result3 = null != premiumSince;
       if (tmp4Result3) {
         const obj6 = { style: title.tag, children: null };
-        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13305, disableColor: true };
+        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13307, disableColor: true };
         obj6.children = __initData2(native.Icon, obj7);
         tmp4Result3 = __initData2(timestampProducer, obj6);
       }

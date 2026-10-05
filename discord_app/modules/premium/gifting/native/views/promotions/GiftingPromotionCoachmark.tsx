@@ -1,6 +1,6 @@
-// === Module 17084: GiftingPromotionCoachmark ===
+// === Module 17108: GiftingPromotionCoachmark ===
 
-// Module 17084 (GiftingPromotionCoachmark)
+// Module 17108 (GiftingPromotionCoachmark)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6657 */;

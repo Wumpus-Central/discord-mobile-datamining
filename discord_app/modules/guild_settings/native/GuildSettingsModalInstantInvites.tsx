@@ -1,6 +1,6 @@
-// === Module 17793: GuildSettingsModalInstantInvites ===
+// === Module 17817: GuildSettingsModalInstantInvites ===
 
-// Module 17793 (GuildSettingsModalInstantInvites)
+// Module 17817 (GuildSettingsModalInstantInvites)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;

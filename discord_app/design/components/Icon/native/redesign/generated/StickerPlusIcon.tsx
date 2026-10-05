@@ -1,10 +1,10 @@
-// === Module 17729: StickerPlusIcon ===
+// === Module 17753: StickerPlusIcon ===
 
-// Module 17729 (StickerPlusIcon)
+// Module 17753 (StickerPlusIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 4579 */;
-import _mod17730 from "module_17730" /* 17730 */;
+import _mod17754 from "module_17754" /* 17754 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const StickerPlusIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod17730;
+    const tmpResult = _mod17754;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const StickerPlusIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17730, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17754, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

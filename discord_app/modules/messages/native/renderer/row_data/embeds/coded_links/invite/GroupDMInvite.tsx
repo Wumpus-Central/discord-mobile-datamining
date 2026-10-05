@@ -1,6 +1,6 @@
-// === Module 13048: GroupDMInvite ===
+// === Module 13050: GroupDMInvite ===
 
-// Module 13048 (GroupDMInvite)
+// Module 13050 (GroupDMInvite)
 import util from "util" /* 1126 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7604 */;
 import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 10025 */;

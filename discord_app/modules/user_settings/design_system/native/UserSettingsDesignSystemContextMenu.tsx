@@ -1,6 +1,6 @@
-// === Module 15657: UserSettingsDesignSystemContextMenu ===
+// === Module 15661: UserSettingsDesignSystemContextMenu ===
 
-// Module 15657 (UserSettingsDesignSystemContextMenu)
+// Module 15661 (UserSettingsDesignSystemContextMenu)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -13,8 +13,8 @@ import _modDef6589 from "module_6589" /* 6589 */;
 import _modDef7625 from "module_7625" /* 7625 */;
 import _modDef11181 from "module_11181" /* 11181 */;
 import _modDef12442 from "module_12442" /* 12442 */;
-import _modDef15658 from "module_15658" /* 15658 */;
-import _modDef15659 from "module_15659" /* 15659 */;
+import _modDef15662 from "module_15662" /* 15662 */;
+import _modDef15663 from "module_15663" /* 15663 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,7 +24,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let items = [_modDef12442, _modDef6589, _modDef7625, _modDef4811, _modDef4850, _modDef15658, _modDef15659, _modDef11181];
+let items = [_modDef12442, _modDef6589, _modDef7625, _modDef4811, _modDef4850, _modDef15662, _modDef15663, _modDef11181];
 let closure_10 = ["Launch Probe!", "Activate Laser", "Teleport Widget", "Engage Hyperdrive", "Deploy Robots", "Initiate Time Warp", "Beam Up Snacks", "Hack Database", "Trigger Cosmic Boom", "Unleash Space Vortex", "Activate Cloaking Device"];
 const createStyles = fn(4890);
 let obj2 = { container: { flexDirection: "column", gap: 12, padding: 16 }, card: { gap: 12 }, divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 12 } };
@@ -67,7 +67,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((label) => {
       closure_2 = _mod12.shuffle(items);
       const obj3 = { length: closure_1 };
       return Array.from({ length: closure_1 }).map((item, index) => {
-        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "a", action: "a" };
+        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "r", action: "toCharArray$esjava$1" };
         let str = "default";
         if (index === closure_0 - 1) {
           str = "destructive";
@@ -92,7 +92,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((label) => {
       let obj3 = { length: num2 };
       const tmpResult2 = tmp(12);
       const mapped1 = Array.from(obj3).map((item, index) => {
-        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "a", action: "a" };
+        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "r", action: "toCharArray$esjava$1" };
         let str = "default";
         if (index === closure_0 - 1) {
           str = "destructive";
@@ -192,7 +192,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((label) => {
         const obj2 = text(num[14]);
         const obj3 = { length };
         return Array.from({ length }).map((item, index) => {
-          const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "a", action: "a" };
+          const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "r", action: "toCharArray$esjava$1" };
           let str = "default";
           if (index === closure_0 - 1) {
             str = "destructive";
@@ -212,7 +212,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((label) => {
       const _Array2 = Array;
       const obj4 = { length: num };
       mapped = Array.from(obj4).map((item, index) => {
-        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "a", action: "a" };
+        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "r", action: "toCharArray$esjava$1" };
         let str = "default";
         if (index === closure_0 - 1) {
           str = "destructive";

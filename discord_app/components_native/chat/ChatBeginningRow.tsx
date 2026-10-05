@@ -53,7 +53,7 @@ import _modDef12126 from "module_12126" /* 12126 */;
 import ChannelAccessInfoDefault from "ChannelAccessInfo" /* 12127 */;
 import _modDef12261 from "module_12261" /* 12261 */;
 import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 12262 */;
-import openVibegrationsProjectInBuilderDefault from "openVibegrationsProjectInBuilder" /* 12264 */;
+import openConjureProjectInBuilderDefault from "openConjureProjectInBuilder" /* 12264 */;
 import PortalAccessibilityWorkaroundViewDefault from "PortalAccessibilityWorkaroundView" /* 12301 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -443,7 +443,7 @@ function ChatBeginningRowDM(channel) {
           } else {
             tmp4Result2 = null;
             if (constants8.PENDING_OUTGOING === stateFromStores) {
-              const obj14 = { text: null, size: "sm", variant: "active", disabled: true, onPress: "a" };
+              const obj14 = { text: null, size: "sm", variant: "active", disabled: true, onPress: "applicationId" };
               const intl9 = util.intl;
               obj14.text = intl9.string(util.t.xMH6vD);
               tmp4Result2 = closure_2_44(components_Button_Button.Button, obj14);
@@ -1793,6 +1793,7 @@ let closure_55 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   const stateFromStores = guild(id[48]).useStateFromStores(tmp7, tmp8);
   channel(id[60])(null != stateFromStores, "ChatBeginningRowGuildDefaultChannel: currentUser cannot be undefined");
   isGuildOwner(guild, stateFromStores);
+  const tmp11 = channel;
   const tmpResult = guild(id[48]);
   let obj5 = channel(id[61]);
   channel(id[61]).extractTimestamp(guild.id) < Date.now() - closure_37;
@@ -1806,12 +1807,14 @@ let closure_55 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   const isEligibleForGuildProgress = guild(id[62]).useIsEligibleForGuildProgress(guild);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [GuildSettingsStore];
-    const fn2 = function x() {
-      return errors.getErrors();
-    };
+    class D {
+      constructor() {
+        return closure_1_11.getErrors();
+      }
+    }
     cResult[4] = items1;
-    cResult[5] = fn2;
-    let tmp20 = fn2;
+    cResult[5] = D;
+    let tmp20 = D;
     let tmp19 = items1;
   } else {
     tmp19 = cResult[4];
@@ -1832,6 +1835,11 @@ let closure_55 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
       }
     }
     const items2 = [stateFromStoresObject.message];
+    class D {
+      constructor() {
+        return closure_1_11.getErrors();
+      }
+    }
     cResult[6] = stateFromStoresObject.message;
     cResult[7] = G;
     cResult[8] = items2;
@@ -1895,7 +1903,11 @@ let closure_55 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
           const result1 = instant_invite_InstantInviteUtils.showInstantInviteActionSheet(channel, obj2);
         }
       }
-      cResult[17] = channel;
+      class D {
+        constructor() {
+          return closure_1_11.getErrors();
+        }
+      }
       cResult[18] = guild;
       cResult[19] = re;
     }
@@ -1912,31 +1924,9 @@ let closure_55 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
       }
     }
     const _Symbol = Symbol;
-    if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-      class G {
-        constructor() {
-          if (null != closure_3.message) {
-            tmp2 = closure_0;
-            tmp3 = closure_2;
-            obj = closure_0(closure_2[63]);
-            presentErrorResult = obj.presentError(tmp.message);
-          }
-          return;
-        }
-      }
-      tmp28[0] = tmp11(tmp2[66]);
-      cResult[11] = tmp28;
-    } else {
-      class G {
-        constructor() {
-          if (null != closure_3.message) {
-            tmp2 = closure_0;
-            tmp3 = closure_2;
-            obj = closure_0(closure_2[63]);
-            presentErrorResult = obj.presentError(tmp.message);
-          }
-          return;
-        }
+    class D {
+      constructor() {
+        return closure_1_11.getErrors();
       }
     }
     const _Symbol2 = Symbol;
@@ -1953,6 +1943,11 @@ let closure_55 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
         }
       }
       const stringResult = obj9.string(tmp(tmp2[32]).t["Yhi9/N"]);
+      class D {
+        constructor() {
+          return closure_1_11.getErrors();
+        }
+      }
       cResult[12] = stringResult;
       let PERSONALIZE_SERVER = stringResult;
     } else {
@@ -2035,7 +2030,7 @@ let closure_55 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -2075,7 +2070,7 @@ let closure_55 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
               const obj2 = tmp5(9247);
             }
             c3 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp18) {
           c3 = tmp;
@@ -2439,7 +2434,7 @@ let closure_58 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditCo
   const tmp4 = closure_47();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1126).intl;
-    const stringResult = intl.string(_modDef3723.NXfIfj);
+    const stringResult = intl.string(_modDef3723.jMMrDM);
     cResult[0] = stringResult;
     let first = stringResult;
   } else {
@@ -2456,7 +2451,7 @@ let closure_58 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditCo
   }
   if (cResult[3] !== project) {
     const fn = function l() {
-      return openVibegrationsProjectInBuilderDefault(project);
+      return openConjureProjectInBuilderDefault(project);
     };
     cResult[3] = project;
     cResult[4] = fn;
@@ -2480,11 +2475,11 @@ let closure_58 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditCo
   project = project.project;
   const obj = { size: "sm", variant: "secondary", text: null, icon: null, onPress: null };
   const intl = project(1126).intl;
-  obj.text = intl.string(_modDef3723.NXfIfj);
+  obj.text = intl.string(_modDef3723.jMMrDM);
   const tmp = closure_47();
   obj.icon = closure_44(project(10058).PencilIcon, { size: "xs", style: closure_47().appDMButtonIcon });
   obj.onPress = function onPress() {
-    return openVibegrationsProjectInBuilderDefault(project);
+    return openConjureProjectInBuilderDefault(project);
   };
   return closure_44(project(5594).Button, obj);
 });
@@ -2640,7 +2635,7 @@ let closure_64 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBe
       }
       const onPress = tmp15;
       if (cResult[10] !== tmp14) {
-        class M {
+        class N {
           constructor() {
             tmp = closure_2;
             obj = closure_0(closure_2[114]);
@@ -2684,9 +2679,9 @@ let closure_64 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBe
             return;
           }
         }
-        cResult[11] = M;
+        cResult[11] = N;
       } else {
-        class M {
+        class N {
           constructor() {
             tmp = closure_2;
             obj = closure_0(closure_2[114]);
@@ -2731,7 +2726,7 @@ let closure_64 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBe
         }
       }
       if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-        class M {
+        class N {
           constructor() {
             tmp = closure_2;
             obj = closure_0(closure_2[114]);
@@ -2777,7 +2772,7 @@ let closure_64 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBe
         }
         cResult[12] = tmp18;
       } else {
-        class M {
+        class N {
           constructor() {
             tmp = closure_2;
             obj = closure_0(closure_2[114]);
@@ -2798,7 +2793,7 @@ let closure_64 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBe
       const tmp5Result = tmp5(tmp2[117]);
       const groupDMNitroAudience = tmp(tmp2[118]).useGroupDMNitroAudience();
       if (channel.recipients != null) {
-        class M {
+        class N {
           constructor() {
             tmp = closure_2;
             obj = closure_0(closure_2[114]);
@@ -2817,7 +2812,7 @@ let closure_64 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBe
         }
       }
       if (undefined == null) {
-        class M {
+        class N {
           constructor() {
             tmp = closure_2;
             obj = closure_0(closure_2[114]);
@@ -2838,7 +2833,7 @@ let closure_64 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBe
       const sum = tmp22 + 1;
       const _Symbol = Symbol;
       if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-        class M {
+        class N {
           constructor() {
             tmp = closure_2;
             obj = closure_0(closure_2[114]);
@@ -2883,7 +2878,7 @@ let closure_64 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBe
           }
         }
       } else {
-        class M {
+        class N {
           constructor() {
             tmp = closure_2;
             obj = closure_0(closure_2[114]);
@@ -2902,7 +2897,7 @@ let closure_64 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBe
         }
       }
       if (cResult[14] === groupDMNitroAudience) {
-        class M {
+        class N {
           constructor() {
             tmp = closure_2;
             obj = closure_0(closure_2[114]);
@@ -2922,7 +2917,7 @@ let closure_64 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBe
       }
       let result = stateFromStores;
       if (stateFromStores) {
-        class M {
+        class N {
           constructor() {
             tmp = closure_2;
             obj = closure_0(closure_2[114]);
@@ -2942,7 +2937,7 @@ let closure_64 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBe
         result = obj5.isGroupDMNitroUpsellAudience(groupDMNitroAudience);
       }
       if (result) {
-        class M {
+        class N {
           constructor() {
             tmp = closure_2;
             obj = closure_0(closure_2[114]);
@@ -2961,7 +2956,7 @@ let closure_64 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBe
         }
       }
       if (result) {
-        class M {
+        class N {
           constructor() {
             tmp = closure_2;
             obj = closure_0(closure_2[114]);
@@ -3028,7 +3023,7 @@ let closure_64 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBe
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -3116,7 +3111,7 @@ let closure_64 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBe
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -3368,7 +3363,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBegi
       }
     }
     if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-      class N {
+      class M {
         constructor(arg0) {
           height = channelId.nativeEvent.layout.height;
           tmp = closure_2((arg0) => {
@@ -3383,9 +3378,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBegi
           return;
         }
       }
-      cResult[16] = N;
+      cResult[16] = M;
     } else {
-      class N {
+      class M {
         constructor(arg0) {
           height = channelId.nativeEvent.layout.height;
           tmp = closure_2((arg0) => {
@@ -3402,7 +3397,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBegi
       }
     }
     if (null != null) {
-      class N {
+      class M {
         constructor(arg0) {
           height = channelId.nativeEvent.layout.height;
           tmp = closure_2((arg0) => {
@@ -3419,7 +3414,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBegi
       }
     }
     if (cResult[17] !== 0) {
-      class N {
+      class M {
         constructor(arg0) {
           height = channelId.nativeEvent.layout.height;
           tmp = closure_2((arg0) => {
@@ -3438,7 +3433,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBegi
       cResult[17] = num10;
       cResult[18] = tmp20;
     } else {
-      class N {
+      class M {
         constructor(arg0) {
           height = channelId.nativeEvent.layout.height;
           tmp = closure_2((arg0) => {
@@ -3455,7 +3450,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBegi
       }
     }
     if (cResult[19] === tmp4.container) {
-      class N {
+      class M {
         constructor(arg0) {
           height = channelId.nativeEvent.layout.height;
           tmp = closure_2((arg0) => {
@@ -3471,7 +3466,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBegi
         }
       }
       if (cResult[22] === channelId) {
-        class N {
+        class M {
           constructor(arg0) {
             height = channelId.nativeEvent.layout.height;
             tmp = closure_2((arg0) => {
@@ -3489,7 +3484,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBegi
       }
       let tmp23 = null != null;
       if (tmp23) {
-        class N {
+        class M {
           constructor(arg0) {
             height = channelId.nativeEvent.layout.height;
             tmp = closure_2((arg0) => {
@@ -3504,7 +3499,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBegi
             return;
           }
         }
-        const obj2 = { style: tmp4.contentWrapper, onLayout: N, children: null };
+        const obj2 = { style: tmp4.contentWrapper, onLayout: M, children: null };
         tmp23 = closure_44(closure_7, obj2, channelId);
       }
       cResult[22] = channelId;
@@ -3517,7 +3512,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBegi
     cResult[20] = tmp20;
     cResult[21] = items2;
   } else {
-    class N {
+    class M {
       constructor(arg0) {
         height = channelId.nativeEvent.layout.height;
         tmp = closure_2((arg0) => {
@@ -3533,7 +3528,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBegi
       }
     }
     if (!THREAD_CHANNEL_TYPES.has(stateFromStores.type)) {
-      class N {
+      class M {
         constructor(arg0) {
           height = channelId.nativeEvent.layout.height;
           tmp = closure_2((arg0) => {
@@ -3550,7 +3545,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBegi
       }
     }
     if (cResult[6] !== stateFromStores) {
-      class N {
+      class M {
         constructor(arg0) {
           height = channelId.nativeEvent.layout.height;
           tmp = closure_2((arg0) => {
@@ -3570,7 +3565,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBegi
       cResult[6] = stateFromStores;
       cResult[7] = tmp16;
     } else {
-      class N {
+      class M {
         constructor(arg0) {
           height = channelId.nativeEvent.layout.height;
           tmp = closure_2((arg0) => {

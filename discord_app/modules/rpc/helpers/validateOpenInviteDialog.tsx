@@ -1,10 +1,10 @@
-// === Module 14319: validateOpenInviteDialog ===
+// === Module 14321: validateOpenInviteDialog ===
 
-// Module 14319 (validateOpenInviteDialog)
+// Module 14321 (validateOpenInviteDialog)
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8514 */;
 import RPCErrorDefault from "RPCError" /* 9026 */;
 import canViewInviteModal from "canViewInviteModal" /* 9263 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14306 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14308 */;
 import FramesStore from "FramesStore" /* 8703 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
@@ -29,7 +29,7 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog(socket
       const surface = tmp46.surface;
       const type = surface.type;
       if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
-        const obj3 = { frame: tmp46, channel: "Array", guild: "cursor" };
+        const obj3 = { frame: tmp46, channel: "Array", guild: "toCharArray$esjava$1" };
         return obj3;
       } else {
         if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL !== type) {

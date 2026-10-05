@@ -28,7 +28,7 @@ let closure_12 = async function _fetchApplicationParts(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -93,7 +93,7 @@ let closure_12 = async function _fetchApplicationParts(arg0) {
         return obj;
       }
       c4 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     } catch (tmp6) {
       c4 = tmp;
       throw tmp6;
@@ -115,7 +115,7 @@ let closure_13 = async function _fetchUserParts(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -145,7 +145,7 @@ let closure_13 = async function _fetchUserParts(arg0) {
                               const obj3 = { value, done: true };
                               return obj3;
                             } else {
-                              return { value: "IconComponent", done: "IconComponent" };
+                              return { value: "IconComponent", done: null };
                             }
                           } else {
                             try {
@@ -173,7 +173,7 @@ let closure_13 = async function _fetchUserParts(arg0) {
                                 return obj;
                               } else {
                                 v3 = 3;
-                                return { value: "IconComponent", done: "IconComponent" };
+                                return { value: "IconComponent", done: null };
                               }
                             } catch (tmp8) {
                               v3 = tmp;
@@ -195,7 +195,7 @@ let closure_13 = async function _fetchUserParts(arg0) {
           return obj;
         } else {
           c1 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp6) {
         c1 = tmp;
@@ -219,7 +219,7 @@ let closure_14 = async function _fetchWatchedContentParts(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -255,7 +255,7 @@ let closure_14 = async function _fetchWatchedContentParts(arg0) {
           return obj;
         }
         c1 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       } catch (tmp11) {
         c1 = tmp;
         throw tmp11;
@@ -274,7 +274,7 @@ let closure_15 = async function _fetchListenedContentParts(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -305,7 +305,7 @@ let closure_15 = async function _fetchListenedContentParts(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     } catch (tmp7) {
       c1 = tmp;
       throw tmp7;
@@ -323,7 +323,7 @@ let closure_16 = async function _fetchTopArtistContentParts(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -353,7 +353,7 @@ let closure_16 = async function _fetchTopArtistContentParts(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     } catch (tmp10) {
       c1 = tmp;
       throw tmp10;
@@ -386,7 +386,7 @@ let closure_18 = async function _loadContentEntryParts(arg0) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -414,7 +414,7 @@ let closure_18 = async function _loadContentEntryParts(arg0) {
                   let obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -441,7 +441,7 @@ let closure_18 = async function _loadContentEntryParts(arg0) {
                               const obj2 = { value, done: true };
                               return obj2;
                             } else {
-                              return { value: "IconComponent", done: "IconComponent" };
+                              return { value: "IconComponent", done: null };
                             }
                           } else {
                             try {
@@ -469,7 +469,7 @@ let closure_18 = async function _loadContentEntryParts(arg0) {
                                 return obj;
                               } else {
                                 c0 = 3;
-                                return { value: "IconComponent", done: "IconComponent" };
+                                return { value: "IconComponent", done: null };
                               }
                             } catch (tmp7) {
                               c0 = tmp;
@@ -550,7 +550,7 @@ let closure_18 = async function _loadContentEntryParts(arg0) {
                       })());
                     }
                     v3 = 3;
-                    return { value: "IconComponent", done: "IconComponent" };
+                    return { value: "IconComponent", done: null };
                   }
                 } catch (tmp4) {
                   v3 = tmp;
@@ -589,7 +589,7 @@ let closure_18 = async function _loadContentEntryParts(arg0) {
             return obj5;
           } else {
             c11 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           if (3 === tmp8) {
@@ -770,7 +770,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useLoadM
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -1102,7 +1102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useLoadM
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

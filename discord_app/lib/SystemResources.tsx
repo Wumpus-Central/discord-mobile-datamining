@@ -93,7 +93,7 @@ prototype["getCurrentBattery"] = function getCurrentBattery() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -156,7 +156,7 @@ prototype["setLastBattery"] = function setLastBattery() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -186,7 +186,7 @@ prototype["setLastBattery"] = function setLastBattery() {
         } else {
           closure_0.lastBattery = value;
           c2 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp7) {
         c2 = tmp;
@@ -208,7 +208,7 @@ prototype["getBatteryLevelStats"] = function getBatteryLevelStats() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

@@ -1,6 +1,6 @@
-// === Module 13595: VoiceMemberUser ===
+// === Module 13597: VoiceMemberUser ===
 
-// Module 13595 (VoiceMemberUser)
+// Module 13597 (VoiceMemberUser)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1188 */;
@@ -13,12 +13,12 @@ import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 5097 */;
 import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7228 */;
 import useIsSpeakingDefault from "useIsSpeaking" /* 9018 */;
 import CallActionCreatorsDefault from "CallActionCreators" /* 9433 */;
-import _modDef13596 from "module_13596" /* 13596 */;
-import _modDef13597 from "module_13597" /* 13597 */;
 import _modDef13598 from "module_13598" /* 13598 */;
 import _modDef13599 from "module_13599" /* 13599 */;
 import _modDef13600 from "module_13600" /* 13600 */;
 import _modDef13601 from "module_13601" /* 13601 */;
+import _modDef13602 from "module_13602" /* 13602 */;
+import _modDef13603 from "module_13603" /* 13603 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
@@ -760,7 +760,7 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user
       const obj7 = { style: tmp2.row, children: null };
       let tmp22Result = null;
       if (user.isSpectating) {
-        const obj8 = { size: tmp8(1188).Icon.Sizes.REFRESH_SMALL_16, source: channel(13601), style: tmp21 };
+        const obj8 = { size: tmp8(1188).Icon.Sizes.REFRESH_SMALL_16, source: channel(13603), style: tmp21 };
         tmp22Result = closure_13(tmp8(1188).Icon, obj8);
       }
       const items3 = [tmp22Result, , , , ];
@@ -768,7 +768,7 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user
         items3[1] = null;
         let tmp22Result5 = null;
         if (tmp16) {
-          const obj9 = { size: tmp8(1188).Icon.Sizes.REFRESH_SMALL_16, source: channel(13598), style: tmp21 };
+          const obj9 = { size: tmp8(1188).Icon.Sizes.REFRESH_SMALL_16, source: channel(13600), style: tmp21 };
           tmp22Result5 = closure_13(tmp8(1188).Icon, obj9);
         }
         items3[2] = tmp22Result5;
@@ -784,18 +784,18 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user
           tmp25Result = closure_14(closure_5, obj7);
         } else {
           if (localVideoDisabled) {
-            const obj11 = { size: tmp8(1188).Icon.Sizes.REFRESH_SMALL_16, source: channel(13599), style: tmp2.voiceStatusIconMargin, disableColor: true };
+            const obj11 = { size: tmp8(1188).Icon.Sizes.REFRESH_SMALL_16, source: channel(13601), style: tmp2.voiceStatusIconMargin, disableColor: true };
             let obj12 = obj11;
           } else {
-            obj12 = { size: tmp8(1188).Icon.Sizes.REFRESH_SMALL_16, source: channel(13600), style: tmp21 };
+            obj12 = { size: tmp8(1188).Icon.Sizes.REFRESH_SMALL_16, source: channel(13602), style: tmp21 };
           }
           closure_13(tmp8(1188).Icon, obj12);
         }
       } else {
         if (tmp8Result6.isThemeDark(stateFromStores)) {
-          let tmp5Result = channel(13596);
+          let tmp5Result = channel(13598);
         } else {
-          tmp5Result = channel(13597);
+          tmp5Result = channel(13599);
         }
         const obj13 = { size: tmp8(1188).Icon.Sizes.REFRESH_SMALL_16, source: tmp5Result, style: tmp2.voiceStatusIconMargin, color: tmp21.tintColor, disableColor: localMute };
         closure_13(tmp8(1188).Icon, obj13);

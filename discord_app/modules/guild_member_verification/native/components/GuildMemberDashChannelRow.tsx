@@ -1,6 +1,6 @@
-// === Module 16135: GuildMemberDashChannelRow ===
+// === Module 16139: GuildMemberDashChannelRow ===
 
-// Module 16135 (GuildMemberDashChannelRow)
+// Module 16139 (GuildMemberDashChannelRow)
 import nativeDefault from "native" /* 587 */;
 import router_utils from "router_utils" /* 1112 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4702 */;
@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const tmp4 = closure_8();
   id = guild.id;
   let obj = id(576);
-  let num = id(16136).useSubmittedGuildJoinRequestTotal({ guildId: id });
+  let num = id(16140).useSubmittedGuildJoinRequestTotal({ guildId: id });
   if (num == null) {
     num = 0;
   }
@@ -213,13 +213,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[3] = tmp5;
   cResult[4] = I;
   tmp8 = I;
-  let obj2 = id(16136);
+  let obj2 = id(16140);
 }) : ((arg0) => {
   ({ guild, selected } = arg0);
   let hasItem;
   const tmp = closure_8();
   const id = guild.id;
-  let num = id(16136).useSubmittedGuildJoinRequestTotal({ guildId: id });
+  let num = id(16140).useSubmittedGuildJoinRequestTotal({ guildId: id });
   if (num == null) {
     num = 0;
   }
@@ -239,7 +239,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const ChannelModes = tmp2(12016).ChannelModes;
   const tmp7 = selected ? ChannelModes.SELECTED : ChannelModes.DEFAULT;
   let obj2 = { onPress: callback, style: tmp.container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, name: null, icon: null, channelInfo: null };
-  let obj = id(16136);
+  let obj = id(16140);
   const intl = tmp2(1126).intl;
   obj2.accessibilityLabel = intl.string(id(1126).t["9Oq93m"]);
   obj2.accessibilityState = { selected };

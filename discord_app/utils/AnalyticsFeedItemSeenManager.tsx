@@ -274,7 +274,7 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -303,7 +303,7 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
                 } else {
                   closure_128_0();
                   c2 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp9) {
                 c2 = tmp;
@@ -325,7 +325,7 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -356,7 +356,7 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
           } else {
             closure_129_0();
             c3 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp11) {
           c3 = tmp;

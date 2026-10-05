@@ -1,10 +1,10 @@
-// === Module 17892: GuildSettingsRoleSubscriptionsGroupEdit ===
+// === Module 17916: GuildSettingsRoleSubscriptionsGroupEdit ===
 
-// Module 17892 (GuildSettingsRoleSubscriptionsGroupEdit)
+// Module 17916 (GuildSettingsRoleSubscriptionsGroupEdit)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import ToastUtils from "ToastUtils" /* 4567 */;
-import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 17907 */;
+import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 17929 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -373,7 +373,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -641,7 +641,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

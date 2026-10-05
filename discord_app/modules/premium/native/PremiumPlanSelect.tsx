@@ -1,6 +1,6 @@
-// === Module 13345: PremiumPlanSelect ===
+// === Module 13347: PremiumPlanSelect ===
 
-// Module 13345 (PremiumPlanSelect)
+// Module 13347 (PremiumPlanSelect)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -20,15 +20,15 @@ import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 6915 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 8313 */;
 import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10394 */;
 import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10539 */;
-import openPremiumPlanWhatYouLoseActionSheetDefault from "openPremiumPlanWhatYouLoseActionSheet" /* 13179 */;
-import PremiumPlanWhatYouLoseActionSheet from "PremiumPlanWhatYouLoseActionSheet" /* 13180 */;
-import TreasureChestBannerSpotIllustration from "TreasureChestBannerSpotIllustration" /* 13347 */;
-import _modDef13349 from "module_13349" /* 13349 */;
-import _modDef13350 from "module_13350" /* 13350 */;
+import openPremiumPlanWhatYouLoseActionSheetDefault from "openPremiumPlanWhatYouLoseActionSheet" /* 13181 */;
+import PremiumPlanWhatYouLoseActionSheet from "PremiumPlanWhatYouLoseActionSheet" /* 13182 */;
+import TreasureChestBannerSpotIllustration from "TreasureChestBannerSpotIllustration" /* 13349 */;
 import _modDef13351 from "module_13351" /* 13351 */;
 import _modDef13352 from "module_13352" /* 13352 */;
 import _modDef13353 from "module_13353" /* 13353 */;
 import _modDef13354 from "module_13354" /* 13354 */;
+import _modDef13355 from "module_13355" /* 13355 */;
+import _modDef13356 from "module_13356" /* 13356 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -207,7 +207,7 @@ function withCurrentPlanAlternative(plans, productIdFromSubscription, productIdF
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
 let useNativeCheckoutStore = fn(6930).useNativeCheckoutStore;
-const PremiumPlanSelectStore = fn(13346);
+const PremiumPlanSelectStore = fn(13348);
 ({ setIsPurchasing: closure_14, usePremiumPlanSelectStore: closure_15 } = PremiumPlanSelectStore);
 const PremiumConstants = fn(1379);
 ({ GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_16, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_17, PRICE_PLACEHOLDER: closure_18, PremiumSubscriptionSKUs: closure_19, PremiumTypes: closure_20, SubscriptionIntervalTypes: closure_21, SubscriptionPlans: closure_22 } = PremiumConstants);
@@ -357,7 +357,7 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   obj.children = items;
   return __initData5(Stack_Stack.Stack, obj);
 });
-let closure_37 = { [_modDef13352]: "imgWumpusNitro", [_modDef13354]: "imgWumpusNitroBoost", [_modDef13351]: "imgWumpusNitroClassic", [_modDef13353]: "imgWumpusNitroClassicBoost", [_modDef13350]: "imgWumpusNitroTier0", [_modDef13349]: "imgBoost" };
+let closure_37 = { [_modDef13354]: "imgWumpusNitro", [_modDef13356]: "imgWumpusNitroBoost", [_modDef13353]: "imgWumpusNitroClassic", [_modDef13355]: "imgWumpusNitroClassicBoost", [_modDef13352]: "imgWumpusNitroTier0", [_modDef13351]: "imgBoost" };
 ReactCompilerGating = fn(558);
 let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const cResult = c.c(8);
@@ -723,21 +723,21 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? ((plan) => {
     tmp20 = 0 !== plan.numPremiumGuild;
   }
   if (null == plan.premiumTier) {
-    let tmp7Result = require("module_13349");
+    let tmp7Result = require("module_13351");
   } else if (0 !== plan.numPremiumGuild) {
     if (plan.premiumTier === closure_20.TIER_1) {
-      tmp7Result = require("module_13353");
+      tmp7Result = require("module_13355");
     } else {
-      tmp7Result = require("module_13354");
+      tmp7Result = require("module_13356");
     }
   } else {
     const premiumTier = plan.premiumTier;
     if (closure_20.TIER_0 === premiumTier) {
-      tmp7Result = require("module_13350");
-    } else if (closure_20.TIER_1 === premiumTier) {
-      tmp7Result = require("module_13351");
-    } else if (closure_20.TIER_2 === premiumTier) {
       tmp7Result = require("module_13352");
+    } else if (closure_20.TIER_1 === premiumTier) {
+      tmp7Result = require("module_13353");
+    } else if (closure_20.TIER_2 === premiumTier) {
+      tmp7Result = require("module_13354");
     }
   }
   const intl2 = tmp5(subscription[22]).intl;
@@ -1828,7 +1828,7 @@ let closure_46 = noop.forwardRef(function PremiumPlanSelect(isBoostPurchaseFlow,
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

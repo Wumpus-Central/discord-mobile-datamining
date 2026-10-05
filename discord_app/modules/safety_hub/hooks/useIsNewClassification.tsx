@@ -1,6 +1,6 @@
-// === Module 14555: useIsNewClassification ===
+// === Module 14559: useIsNewClassification ===
 
-// Module 14555 (useIsNewClassification)
+// Module 14559 (useIsNewClassification)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import size from "module_2" /* 2 */;
 

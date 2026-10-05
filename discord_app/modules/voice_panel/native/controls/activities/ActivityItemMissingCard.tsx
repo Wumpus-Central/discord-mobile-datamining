@@ -1,6 +1,6 @@
-// === Module 17262: ActivityItemMissingCard ===
+// === Module 17286: ActivityItemMissingCard ===
 
-// Module 17262 (ActivityItemMissingCard)
+// Module 17286 (ActivityItemMissingCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import NativeViewDefault from "NativeView" /* 5976 */;
@@ -124,7 +124,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((activity) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -153,7 +153,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((activity) => {
           return obj;
         } else {
           v3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp5) {
         v3 = tmp;
@@ -201,7 +201,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((activity) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -230,7 +230,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((activity) => {
           return obj;
         } else {
           v3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp5) {
         v3 = tmp;

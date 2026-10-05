@@ -1,6 +1,6 @@
-// === Module 16424: ICYMIJoinGuildsScreen ===
+// === Module 16428: ICYMIJoinGuildsScreen ===
 
-// Module 16424 (ICYMIJoinGuildsScreen)
+// Module 16428 (ICYMIJoinGuildsScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
@@ -10,14 +10,14 @@ import FastImageDefault from "FastImage" /* 5974 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8029 */;
 import ClipViewDefault from "ClipView" /* 8469 */;
 import ServerIcon from "ServerIcon" /* 8791 */;
-import ICYMIAnalytics2 from "ICYMIAnalytics" /* 14163 */;
-import ICYMIInfoModalTypes from "ICYMIInfoModalTypes" /* 16407 */;
+import ICYMIAnalytics2 from "ICYMIAnalytics" /* 14165 */;
+import ICYMIInfoModalTypes from "ICYMIInfoModalTypes" /* 16411 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import ICYMIPopularGuildsStore from "ICYMIPopularGuildsStore" /* 16423 */;
+import ICYMIPopularGuildsStore from "ICYMIPopularGuildsStore" /* 16427 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
@@ -29,7 +29,7 @@ const GuildFeatures = fn(1085).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 let c15 = 50;
-const createICYMIStyles = fn(16390);
+const createICYMIStyles = fn(16394);
 let closure_16 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, position: "relative", flex: 1, marginHorizontal: margin.margin }, scrollContentContainer: null, footer: null, title: null, subtitle: null, separator: null, featuredServerContainer: null, featuredServerInnerContainer: null, buttonContainer: null, featuredServerTitle: null, guildIcon: null, bannerImage: null, emptyBanner: null, guildsScrollContainer: null, guildsColumn: null, selectedServersRowContainer: null, selectedServerIcon: null, noServerContainer: null, noServerExtraContainer: null, pressableUnderlayColor: null, guildIconBorder: null };
   const obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, position: "relative", flex: 1, marginHorizontal: margin.margin };
@@ -997,7 +997,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -1076,7 +1076,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             const obj20 = stateFromStoresArray1(stateFromStores[29]);
             stateFromStoresArray1(stateFromStores[31]).popWithKey(tmp2(stateFromStores[32]).ICYMI_INFO_MODAL_KEY);
             c2 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp34) {
           c2 = tmp;
@@ -1231,7 +1231,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1278,7 +1278,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             const obj8 = v3(8029);
             const recommendedGuilds = v3(8029).getRecommendedGuilds();
             const obj9 = v3(8029);
-            v3(5093).popWithKey(stateFromStoresArray(16407).ICYMI_INFO_MODAL_KEY);
+            v3(5093).popWithKey(stateFromStoresArray(16411).ICYMI_INFO_MODAL_KEY);
             dependencyMap = 3;
             const obj13 = { value: undefined, done: true };
             return obj13;
@@ -1309,9 +1309,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           const obj19 = v3(8029);
           const recommendedGuilds1 = v3(8029).getRecommendedGuilds();
           const obj20 = v3(8029);
-          v3(5093).popWithKey(stateFromStoresArray(16407).ICYMI_INFO_MODAL_KEY);
+          v3(5093).popWithKey(stateFromStoresArray(16411).ICYMI_INFO_MODAL_KEY);
           dependencyMap = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp33) {
         dependencyMap = tmp;

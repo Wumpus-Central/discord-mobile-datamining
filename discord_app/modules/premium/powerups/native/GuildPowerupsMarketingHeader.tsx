@@ -1,6 +1,6 @@
-// === Module 13380: GuildPowerupsMarketingHeader ===
+// === Module 13382: GuildPowerupsMarketingHeader ===
 
-// Module 13380 (GuildPowerupsMarketingHeader)
+// Module 13382 (GuildPowerupsMarketingHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
@@ -9,8 +9,8 @@ import _modDef2525 from "module_2525" /* 2525 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12147 */;
 import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12170 */;
-import useMarketablePowerupPerksDefault from "useMarketablePowerupPerks" /* 13381 */;
-import orderMarketablePerksForDisplayDefault from "orderMarketablePerksForDisplay" /* 13382 */;
+import useMarketablePowerupPerksDefault from "useMarketablePowerupPerks" /* 13383 */;
+import orderMarketablePerksForDisplayDefault from "orderMarketablePerksForDisplay" /* 13384 */;
 import noop from "module_19" /* 19 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 4767 */;
 
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   const cResult = guild(576).c(13);
   guild = guild.guild;
   const tmp4 = closure_7();
-  arr = arr(13381)(guild.id);
+  arr = arr(13383)(guild.id);
   if (cResult[0] !== guild.id) {
     const fn = function s() {
       if (GuildPowerupsStore.shouldFetchCatalogForGuild(guild.id)) {
@@ -93,22 +93,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
                 num2 = 1;
                 if (1 === arr2.length) {
                   tmp5 = jsx;
-                  tmp6 = f63743;
+                  tmp6 = f63784;
                   obj1 = { powerup: null };
                   obj1.powerup = arr2[0];
-                  formatResult = jsx(f63743, obj1);
+                  formatResult = jsx(f63784, obj1);
                 } else {
                   tmp = closure_0;
                   intl = closure_0(tmp8[14]).intl;
                   obj = { perk1: null, perk2: null };
                   tmp2 = jsx;
-                  tmp3 = f63743;
+                  tmp3 = f63784;
                   obj5 = { powerup: null };
                   obj5.powerup = arr2[0];
-                  obj.perk1 = jsx(f63743, obj5);
+                  obj.perk1 = jsx(f63784, obj5);
                   obj6 = { powerup: null };
                   obj6.powerup = arr2[1];
-                  obj.perk2 = jsx(f63743, obj6);
+                  obj.perk2 = jsx(f63784, obj6);
                   formatResult = intl.format(tmp7(tmp8[15]).MNO3sG, obj);
                 }
                 return formatResult;
@@ -132,22 +132,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
                 num2 = 1;
                 if (1 === arr2.length) {
                   tmp5 = jsx;
-                  tmp6 = f63743;
+                  tmp6 = f63784;
                   obj1 = { powerup: null };
                   obj1.powerup = arr2[0];
-                  formatResult = jsx(f63743, obj1);
+                  formatResult = jsx(f63784, obj1);
                 } else {
                   tmp = closure_0;
                   intl = closure_0(tmp8[14]).intl;
                   obj = { perk1: null, perk2: null };
                   tmp2 = jsx;
-                  tmp3 = f63743;
+                  tmp3 = f63784;
                   obj5 = { powerup: null };
                   obj5.powerup = arr2[0];
-                  obj.perk1 = jsx(f63743, obj5);
+                  obj.perk1 = jsx(f63784, obj5);
                   obj6 = { powerup: null };
                   obj6.powerup = arr2[1];
-                  obj.perk2 = jsx(f63743, obj6);
+                  obj.perk2 = jsx(f63784, obj6);
                   formatResult = intl.format(tmp7(tmp8[15]).MNO3sG, obj);
                 }
                 return formatResult;
@@ -171,22 +171,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
                 num2 = 1;
                 if (1 === arr2.length) {
                   tmp5 = jsx;
-                  tmp6 = f63743;
+                  tmp6 = f63784;
                   obj1 = { powerup: null };
                   obj1.powerup = arr2[0];
-                  formatResult = jsx(f63743, obj1);
+                  formatResult = jsx(f63784, obj1);
                 } else {
                   tmp = closure_0;
                   intl = closure_0(tmp8[14]).intl;
                   obj = { perk1: null, perk2: null };
                   tmp2 = jsx;
-                  tmp3 = f63743;
+                  tmp3 = f63784;
                   obj5 = { powerup: null };
                   obj5.powerup = arr2[0];
-                  obj.perk1 = jsx(f63743, obj5);
+                  obj.perk1 = jsx(f63784, obj5);
                   obj6 = { powerup: null };
                   obj6.powerup = arr2[1];
-                  obj.perk2 = jsx(f63743, obj6);
+                  obj.perk2 = jsx(f63784, obj6);
                   formatResult = intl.format(tmp7(tmp8[15]).MNO3sG, obj);
                 }
                 return formatResult;
@@ -212,22 +212,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
                 num2 = 1;
                 if (1 === arr2.length) {
                   tmp5 = jsx;
-                  tmp6 = f63743;
+                  tmp6 = f63784;
                   obj1 = { powerup: null };
                   obj1.powerup = arr2[0];
-                  formatResult = jsx(f63743, obj1);
+                  formatResult = jsx(f63784, obj1);
                 } else {
                   tmp = closure_0;
                   intl = closure_0(tmp8[14]).intl;
                   obj = { perk1: null, perk2: null };
                   tmp2 = jsx;
-                  tmp3 = f63743;
+                  tmp3 = f63784;
                   obj5 = { powerup: null };
                   obj5.powerup = arr2[0];
-                  obj.perk1 = jsx(f63743, obj5);
+                  obj.perk1 = jsx(f63784, obj5);
                   obj6 = { powerup: null };
                   obj6.powerup = arr2[1];
-                  obj.perk2 = jsx(f63743, obj6);
+                  obj.perk2 = jsx(f63784, obj6);
                   formatResult = intl.format(tmp7(tmp8[15]).MNO3sG, obj);
                 }
                 return formatResult;
@@ -250,22 +250,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
                 num2 = 1;
                 if (1 === arr2.length) {
                   tmp5 = jsx;
-                  tmp6 = f63743;
+                  tmp6 = f63784;
                   obj1 = { powerup: null };
                   obj1.powerup = arr2[0];
-                  formatResult = jsx(f63743, obj1);
+                  formatResult = jsx(f63784, obj1);
                 } else {
                   tmp = closure_0;
                   intl = closure_0(tmp8[14]).intl;
                   obj = { perk1: null, perk2: null };
                   tmp2 = jsx;
-                  tmp3 = f63743;
+                  tmp3 = f63784;
                   obj5 = { powerup: null };
                   obj5.powerup = arr2[0];
-                  obj.perk1 = jsx(f63743, obj5);
+                  obj.perk1 = jsx(f63784, obj5);
                   obj6 = { powerup: null };
                   obj6.powerup = arr2[1];
-                  obj.perk2 = jsx(f63743, obj6);
+                  obj.perk2 = jsx(f63784, obj6);
                   formatResult = intl.format(tmp7(tmp8[15]).MNO3sG, obj);
                 }
                 return formatResult;
@@ -287,22 +287,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
                   num2 = 1;
                   if (1 === arr2.length) {
                     tmp5 = jsx;
-                    tmp6 = f63743;
+                    tmp6 = f63784;
                     obj1 = { powerup: null };
                     obj1.powerup = arr2[0];
-                    formatResult = jsx(f63743, obj1);
+                    formatResult = jsx(f63784, obj1);
                   } else {
                     tmp = closure_0;
                     intl = closure_0(tmp8[14]).intl;
                     obj = { perk1: null, perk2: null };
                     tmp2 = jsx;
-                    tmp3 = f63743;
+                    tmp3 = f63784;
                     obj5 = { powerup: null };
                     obj5.powerup = arr2[0];
-                    obj.perk1 = jsx(f63743, obj5);
+                    obj.perk1 = jsx(f63784, obj5);
                     obj6 = { powerup: null };
                     obj6.powerup = arr2[1];
-                    obj.perk2 = jsx(f63743, obj6);
+                    obj.perk2 = jsx(f63784, obj6);
                     formatResult = intl.format(tmp7(tmp8[15]).MNO3sG, obj);
                   }
                   return formatResult;

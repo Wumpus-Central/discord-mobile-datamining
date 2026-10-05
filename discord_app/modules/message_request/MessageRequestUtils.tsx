@@ -1,6 +1,6 @@
-// === Module 13648: MessageRequestUtils ===
+// === Module 13650: MessageRequestUtils ===
 
-// Module 13648 (MessageRequestUtils)
+// Module 13650 (MessageRequestUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import MessageRequestStore from "MessageRequestStore" /* 6720 */;
 import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6721 */;

@@ -1,6 +1,6 @@
-// === Module 14398: useRequestGatewaySocket ===
+// === Module 14402: useRequestGatewaySocket ===
 
-// Module 14398 (useRequestGatewaySocket)
+// Module 14402 (useRequestGatewaySocket)
 import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7253 */;
 import noop from "module_19" /* 19 */;
 

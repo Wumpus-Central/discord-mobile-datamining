@@ -1,13 +1,13 @@
-// === Module 15917: RedesignNotificationModal ===
+// === Module 15921: RedesignNotificationModal ===
 
-// Module 15917 (RedesignNotificationModal)
+// Module 15921 (RedesignNotificationModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12054 */;
 import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12055 */;
 import NewUserPermissionsOnboardingDefault from "NewUserPermissionsOnboarding" /* 12337 */;
-import _modDef15918 from "module_15918" /* 15918 */;
+import _modDef15922 from "module_15922" /* 15922 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -57,8 +57,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onComplete) => {
     tmp6 = cResult[3];
   }
   if (cResult[4] !== tmp4.notificationHeaderImage) {
-    let obj2 = { resizeMode: "contain", style: tmp4.notificationHeaderImage, source: _modDef15918 };
-    const tmp11 = <closure_4 resizeMode="contain" style={tmp4.notificationHeaderImage} source={_modDef15918} />;
+    let obj2 = { resizeMode: "contain", style: tmp4.notificationHeaderImage, source: _modDef15922 };
+    const tmp11 = <closure_4 resizeMode="contain" style={tmp4.notificationHeaderImage} source={_modDef15922} />;
     cResult[4] = tmp4.notificationHeaderImage;
     cResult[5] = tmp11;
     let tmp7 = tmp11;
@@ -127,8 +127,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onComplete) => {
     }
   }, items1);
   let obj2 = { onAllow: callback, onDontAllow: callback1, header: null, title: null, subtitle: null };
-  let obj3 = { resizeMode: "contain", style: tmp.notificationHeaderImage, source: _modDef15918 };
-  obj2.header = <closure_4 resizeMode="contain" style={tmp.notificationHeaderImage} source={_modDef15918} />;
+  let obj3 = { resizeMode: "contain", style: tmp.notificationHeaderImage, source: _modDef15922 };
+  obj2.header = <closure_4 resizeMode="contain" style={tmp.notificationHeaderImage} source={_modDef15922} />;
   const intl = onComplete(1126).intl;
   obj2.title = intl.string(onComplete(1126).t["3nx0b5"]);
   const intl2 = onComplete(1126).intl;

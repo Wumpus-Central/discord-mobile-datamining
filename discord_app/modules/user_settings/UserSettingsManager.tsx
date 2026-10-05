@@ -1,6 +1,6 @@
-// === Module 17616: UserSettingsManager ===
+// === Module 17640: UserSettingsManager ===
 
-// Module 17616 (UserSettingsManager)
+// Module 17640 (UserSettingsManager)
 import UserSettings from "UserSettings" /* 2028 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
 

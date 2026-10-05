@@ -1,10 +1,10 @@
-// === Module 16669: FrogIllocon ===
+// === Module 16680: FrogIllocon ===
 
-// Module 16669 (FrogIllocon)
+// Module 16680 (FrogIllocon)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5974 */;
-import _modDef16670 from "module_16670" /* 16670 */;
+import _modDef16681 from "module_16681" /* 16681 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -19,7 +19,7 @@ export const FrogIllocon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
     num = size;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef16670 };
+    const obj2 = { uri: _modDef16681 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -58,7 +58,7 @@ export const FrogIllocon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef16670 };
+  const obj2 = { uri: _modDef16681 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

@@ -1,6 +1,6 @@
-// === Module 16221: GuildsBarDnDStore ===
+// === Module 16225: GuildsBarDnDStore ===
 
-// Module 16221 (GuildsBarDnDStore)
+// Module 16225 (GuildsBarDnDStore)
 import c from "c" /* 576 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
@@ -19,7 +19,7 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   _require = arg0;
   closure_1 = arg1;
-  let obj = { dragSpecs: "Boolean", overSpecs: "done", dropSpecs: "toCharArray$esjava$1", dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "_createPressabilityConfig", scrollPosition: null, windowSize: "\u{1F64C}", setStateShallow: true, dropStart: 6, dropComplete: 3 };
+  let obj = { dragSpecs: "Boolean", overSpecs: "duration", dropSpecs: "toCharArray$esjava$1", dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "_createPressabilityConfig", scrollPosition: null, windowSize: "\u{1F44F}", setStateShallow: true, dropStart: 6, dropComplete: 4 };
   let obj2 = require("ReanimatedRexport");
   obj.gestureState = require("ReanimatedRexport").makeMutable(obj);
   let obj3 = require("ReanimatedRexport");
@@ -58,7 +58,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       const error = new Error("GuildsBarDnDStore.dropStart: you cannot start a drop while an existing drop is in progress");
       throw error;
     } else {
-      dropSpecs(1259).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "cursor" }));
+      dropSpecs(1259).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "toCharArray$esjava$1" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -115,7 +115,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     ({ dragSpecs, overSpecs, dropSpecs, dragDropInProgress } = arg0);
     if (null == dragSpecs) {
       if (null == dropSpecs) {
-        const obj2 = { isDragTarget: false, dragState: "done", overState: "toCharArray$esjava$1", itemSize: null, dragDropInProgress };
+        const obj2 = { isDragTarget: false, dragState: "duration", overState: "toCharArray$esjava$1", itemSize: null, dragDropInProgress };
         return obj2;
       }
     }
@@ -216,7 +216,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     ({ dragSpecs, overSpecs, dropSpecs, dragDropInProgress } = arg0);
     if (null == dragSpecs) {
       if (null == dropSpecs) {
-        const obj2 = { isDragTarget: false, dragState: "done", overState: "toCharArray$esjava$1", itemSize: null, dragDropInProgress };
+        const obj2 = { isDragTarget: false, dragState: "duration", overState: "toCharArray$esjava$1", itemSize: null, dragDropInProgress };
         return obj2;
       }
     }

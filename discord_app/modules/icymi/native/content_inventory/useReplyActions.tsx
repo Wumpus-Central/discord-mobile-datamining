@@ -1,6 +1,6 @@
-// === Module 16444: useReplyActions ===
+// === Module 16448: useReplyActions ===
 
-// Module 16444 (useReplyActions)
+// Module 16448 (useReplyActions)
 import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import MessageReactionsTypes from "MessageReactionsTypes" /* 7259 */;
@@ -78,7 +78,7 @@ export const useReplyActions = function useReplyActions(cResult) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -247,7 +247,7 @@ export const useReplyActions = function useReplyActions(cResult) {
         const obj3 = { itemId: user.id, itemType: str, actionParameters: { actionGestureType: "press", actionTargetElement: "item_container", actionIntentType: "open", actionDestinationType: null } };
         ICYMIActionCreatorsDefault.feedItemActioned(obj3);
         const obj5 = { content: user, author: tmp, sendMessage, onPressEmoji: callback1 };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16445, dependencyMap.paths), "ReactActionSheet", obj5);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16449, dependencyMap.paths), "ReactActionSheet", obj5);
       }
     }, items6);
     obj2.openEmojiPicker = callback2;

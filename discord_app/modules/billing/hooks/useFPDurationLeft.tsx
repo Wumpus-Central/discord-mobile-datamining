@@ -1,6 +1,6 @@
-// === Module 13265: useFPDurationLeft ===
+// === Module 13267: useFPDurationLeft ===
 
-// Module 13265 (useFPDurationLeft)
+// Module 13267 (useFPDurationLeft)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import useCountdownDefault from "useCountdown" /* 6948 */;

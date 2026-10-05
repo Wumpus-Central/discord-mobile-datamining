@@ -1,21 +1,21 @@
-// === Module 16009: HappeningNowCardActiveChannel ===
+// === Module 16013: HappeningNowCardActiveChannel ===
 
-// Module 16009 (HappeningNowCardActiveChannel)
+// Module 16013 (HappeningNowCardActiveChannel)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import router_utils from "router_utils" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import noop from "module_19" /* 19 */;
-import ActiveChannelsStore from "ActiveChannelsStore" /* 13516 */;
+import ActiveChannelsStore from "ActiveChannelsStore" /* 13518 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import TypingStore from "TypingStore" /* 11579 */;
 import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
 const View = fn(17).View;
-const MAX_STORED_MESSAGES = fn(13516).MAX_STORED_MESSAGES;
-let closure_10 = fn(15110).HappeningNowCardTrackingType;
+const MAX_STORED_MESSAGES = fn(13518).MAX_STORED_MESSAGES;
+let closure_10 = fn(15114).HappeningNowCardTrackingType;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_11, Routes: closure_12 } = Constants);
 const jsxProd = fn(21);

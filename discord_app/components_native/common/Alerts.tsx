@@ -1,16 +1,16 @@
-// === Module 17072: Alerts ===
+// === Module 17096: Alerts ===
 
-// Module 17072 (Alerts)
+// Module 17096 (Alerts)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import nativeDefault from "native" /* 587 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
 import Dialog from "Dialog" /* 5766 */;
 import KeyboardAwareViewDefault from "KeyboardAwareView" /* 6537 */;
-import ModalRegistryDefault from "ModalRegistry" /* 17073 */;
+import ModalRegistryDefault from "ModalRegistry" /* 17097 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;
-import PermissionSpeakStore from "PermissionSpeakStore" /* 13560 */;
-import PermissionVADStore from "PermissionVADStore" /* 14159 */;
+import PermissionSpeakStore from "PermissionSpeakStore" /* 13562 */;
+import PermissionVADStore from "PermissionVADStore" /* 14161 */;
 import SurveyStore from "SurveyStore" /* 5081 */;
 import AlertStore from "AlertStore" /* 11162 */;
 
@@ -152,7 +152,7 @@ AlertWrapper.prototype["render"] = function render() {
   return __initData2(Dialog.Dialog, obj2);
 };
 AlertWrapper.contextType = fn(4589).ThemeContext;
-let closure_18 = Object.freeze({ renderAlert: "done", renderKey: "toCharArray$esjava$1", props: "toCharArray$esjava$1" });
+let closure_18 = Object.freeze({ renderAlert: "marginBottom", renderKey: "unicodeVersion", props: "Reflect" });
 const ReactCompilerGating = fn(558);
 const tmp7 = new ModalRegistryDefault(items1);
 const size = fn(2);
@@ -188,7 +188,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             return <openModal.component />;
           };
         } else {
-          return { renderAlert: "done", renderKey: "toCharArray$esjava$1", props: "toCharArray$esjava$1" };
+          return { renderAlert: "marginBottom", renderKey: "unicodeVersion", props: "Reflect" };
         }
       }
     };
@@ -347,7 +347,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "done", renderKey: "toCharArray$esjava$1", props: "toCharArray$esjava$1" };
+        return { renderAlert: "marginBottom", renderKey: "unicodeVersion", props: "Reflect" };
       }
     }
   });

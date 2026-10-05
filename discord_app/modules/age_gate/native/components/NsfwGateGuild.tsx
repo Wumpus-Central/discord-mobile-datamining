@@ -1,12 +1,12 @@
-// === Module 17427: NsfwGateGuild ===
+// === Module 17451: NsfwGateGuild ===
 
-// Module 17427 (NsfwGateGuild)
+// Module 17451 (NsfwGateGuild)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
 import BackgroundImageDefault from "BackgroundImage" /* 6463 */;
 import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 8801 */;
-import _modDef17428 from "module_17428" /* 17428 */;
+import _modDef17452 from "module_17452" /* 17452 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import UserStore from "UserStore" /* 1377 */;
@@ -246,7 +246,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         return;
       }
     }
-    const obj4 = { source: _modDef17428, style: tmp4.image };
+    const obj4 = { source: _modDef17452, style: tmp4.image };
     const tmp25 = closure_11(closure_5, obj4);
     cResult[8] = tmp4.image;
     cResult[9] = tmp25;
@@ -668,7 +668,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let obj3 = { style: tmp.container, children: null };
   const items1 = [closure_11(currentUser(6463), {}), , , , , ];
   const formatResult = intl3.format(guildId(1126).t.Z12LNW, obj);
-  items1[1] = closure_11(closure_5, { source: currentUser(17428), style: tmp.image });
+  items1[1] = closure_11(closure_5, { source: currentUser(17452), style: tmp.image });
   items1[2] = closure_11(guildId(4886).Text, { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stringResult });
   items1[3] = closure_11(guildId(4886).Text, { style: tmp.description, variant: "text-md/normal", color: "text-default", children: stringResult1 });
   items1[4] = closure_11(guildId(4886).Text, { style: tmp.description, variant: "text-md/normal", color: "text-default", children: formatResult });

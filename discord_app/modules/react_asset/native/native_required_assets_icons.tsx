@@ -1,6 +1,6 @@
-// === Module 18080: native_required_assets_icons ===
+// === Module 18102: native_required_assets_icons ===
 
-// Module 18080 (native_required_assets_icons)
+// Module 18102 (native_required_assets_icons)
 import _modDef4578 from "module_4578" /* 4578 */;
 import _modDef4804 from "module_4804" /* 4804 */;
 import _modDef4821 from "module_4821" /* 4821 */;
@@ -56,25 +56,25 @@ import _modDef11564 from "module_11564" /* 11564 */;
 import _modDef12122 from "module_12122" /* 12122 */;
 import _modDef12191 from "module_12191" /* 12191 */;
 import _modDef12758 from "module_12758" /* 12758 */;
-import _modDef13128 from "module_13128" /* 13128 */;
-import _modDef13653 from "module_13653" /* 13653 */;
+import _modDef13130 from "module_13130" /* 13130 */;
 import _modDef13655 from "module_13655" /* 13655 */;
-import _modDef14775 from "module_14775" /* 14775 */;
-import _modDef14778 from "module_14778" /* 14778 */;
-import _modDef14952 from "module_14952" /* 14952 */;
-import _modDef15022 from "module_15022" /* 15022 */;
-import _modDef15555 from "module_15555" /* 15555 */;
-import _modDef16002 from "module_16002" /* 16002 */;
-import _modDef16336 from "module_16336" /* 16336 */;
-import _modDef16338 from "module_16338" /* 16338 */;
-import _modDef17699 from "module_17699" /* 17699 */;
-import _modDef18081 from "module_18081" /* 18081 */;
-import _modDef18082 from "module_18082" /* 18082 */;
-import _modDef18083 from "module_18083" /* 18083 */;
-import _modDef18084 from "module_18084" /* 18084 */;
-import _modDef18085 from "module_18085" /* 18085 */;
+import _modDef13657 from "module_13657" /* 13657 */;
+import _modDef14779 from "module_14779" /* 14779 */;
+import _modDef14782 from "module_14782" /* 14782 */;
+import _modDef14956 from "module_14956" /* 14956 */;
+import _modDef15026 from "module_15026" /* 15026 */;
+import _modDef15559 from "module_15559" /* 15559 */;
+import _modDef16006 from "module_16006" /* 16006 */;
+import _modDef16340 from "module_16340" /* 16340 */;
+import _modDef16342 from "module_16342" /* 16342 */;
+import _modDef17723 from "module_17723" /* 17723 */;
+import _modDef18103 from "module_18103" /* 18103 */;
+import _modDef18104 from "module_18104" /* 18104 */;
+import _modDef18105 from "module_18105" /* 18105 */;
+import _modDef18106 from "module_18106" /* 18106 */;
+import _modDef18107 from "module_18107" /* 18107 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/react_asset/native/native_required_assets_icons.tsx");
 
-export const NATIVE_REQUIRED_ASSETS_ICONS = { AnnouncementsIcon: _modDef5820, AppsIcon: _modDef5817, ArrowAngleLeftUpIcon: _modDef11367, ArrowAngleRightUpIcon: _modDef11317, ArrowLargeLeftIcon: _modDef6015, ArrowLargeRightIcon: _modDef15555, AttachmentIcon: _modDef10370, BellZIcon: _modDef13128, BoostGemIcon: _modDef4827, ChannelListMagnifyingGlassIcon: _modDef13655, CheckmarkLargeIcon: _modDef4578, ChatXIcon: _modDef12122, CheckmarkSmallIcon: _modDef6629, ChevronSmallDownIcon: _modDef10845, ChevronSmallRightIcon: _modDef6001, CircleErrorIcon: _modDef18081, CircleInformationIcon: _modDef18082, CircleQuestionIcon: _modDef14952, ClipsIcon: _modDef14778, ClockWarningIcon: _modDef11466, ConnectionAverageIcon: _modDef18083, ConnectionBadIcon: _modDef18084, ConnectionFineIcon: _modDef16338, ConnectionUnknownIcon: _modDef16336, DownloadIcon: _modDef4846, EyeIcon: _modDef6459, EyeSlashIcon: _modDef6457, GameControllerIcon: _modDef7820, GifIcon: _modDef7753, GroupIcon: _modDef5818, HandRequestSpeakIcon: _modDef9598, HomeIcon: _modDef17699, ImageBrokenIcon: _modDef18085, ImageIcon: _modDef5836, ImageWarningIcon: _modDef5837, LinkIcon: _modDef4840, LockIcon: _modDef5852, LockUnlockedIcon: _modDef10057, MaximizeIcon: _modDef11564, MicrophoneArrowRightIcon: _modDef9583, MicrophoneIcon: _modDef9690, MicrophoneSlashIcon: _modDef4821, MoreHorizontalIcon: _modDef7578, MusicIcon: _modDef9572, PaperIcon: _modDef7554, PauseIcon: _modDef7951, PencilIcon: _modDef7625, PhoneCallIcon: _modDef7524, PhoneHangUpIcon: _modDef7526, PinIcon: _modDef10693, PlayIcon: _modDef7949, PlaystationNeutralIcon: _modDef8547, PollsIcon: _modDef10368, ReactionIcon: _modDef8412, RefreshIcon: _modDef14775, ScreenIcon: _modDef8545, SignPostIcon: _modDef13653, SlashBoxIcon: _modDef10993, SpotifyNeutralIcon: _modDef16002, StageIcon: _modDef5821, StickerIcon: _modDef12191, SuperReactionIcon: _modDef8881, ThreadIcon: _modDef5814, TicketIcon: _modDef15022, TopicsIcon: _modDef11277, UserCheckIcon: _modDef7745, VoiceNormalIcon: _modDef5822, VoiceXIcon: _modDef9668, WarningIcon: _modDef4804, WindowLaunchIcon: _modDef12758, XSmallIcon: _modDef6018, XboxNeutralIcon: _modDef8353 };
+export const NATIVE_REQUIRED_ASSETS_ICONS = { AnnouncementsIcon: _modDef5820, AppsIcon: _modDef5817, ArrowAngleLeftUpIcon: _modDef11367, ArrowAngleRightUpIcon: _modDef11317, ArrowLargeLeftIcon: _modDef6015, ArrowLargeRightIcon: _modDef15559, AttachmentIcon: _modDef10370, BellZIcon: _modDef13130, BoostGemIcon: _modDef4827, ChannelListMagnifyingGlassIcon: _modDef13657, CheckmarkLargeIcon: _modDef4578, ChatXIcon: _modDef12122, CheckmarkSmallIcon: _modDef6629, ChevronSmallDownIcon: _modDef10845, ChevronSmallRightIcon: _modDef6001, CircleErrorIcon: _modDef18103, CircleInformationIcon: _modDef18104, CircleQuestionIcon: _modDef14956, ClipsIcon: _modDef14782, ClockWarningIcon: _modDef11466, ConnectionAverageIcon: _modDef18105, ConnectionBadIcon: _modDef18106, ConnectionFineIcon: _modDef16342, ConnectionUnknownIcon: _modDef16340, DownloadIcon: _modDef4846, EyeIcon: _modDef6459, EyeSlashIcon: _modDef6457, GameControllerIcon: _modDef7820, GifIcon: _modDef7753, GroupIcon: _modDef5818, HandRequestSpeakIcon: _modDef9598, HomeIcon: _modDef17723, ImageBrokenIcon: _modDef18107, ImageIcon: _modDef5836, ImageWarningIcon: _modDef5837, LinkIcon: _modDef4840, LockIcon: _modDef5852, LockUnlockedIcon: _modDef10057, MaximizeIcon: _modDef11564, MicrophoneArrowRightIcon: _modDef9583, MicrophoneIcon: _modDef9690, MicrophoneSlashIcon: _modDef4821, MoreHorizontalIcon: _modDef7578, MusicIcon: _modDef9572, PaperIcon: _modDef7554, PauseIcon: _modDef7951, PencilIcon: _modDef7625, PhoneCallIcon: _modDef7524, PhoneHangUpIcon: _modDef7526, PinIcon: _modDef10693, PlayIcon: _modDef7949, PlaystationNeutralIcon: _modDef8547, PollsIcon: _modDef10368, ReactionIcon: _modDef8412, RefreshIcon: _modDef14779, ScreenIcon: _modDef8545, SignPostIcon: _modDef13655, SlashBoxIcon: _modDef10993, SpotifyNeutralIcon: _modDef16006, StageIcon: _modDef5821, StickerIcon: _modDef12191, SuperReactionIcon: _modDef8881, ThreadIcon: _modDef5814, TicketIcon: _modDef15026, TopicsIcon: _modDef11277, UserCheckIcon: _modDef7745, VoiceNormalIcon: _modDef5822, VoiceXIcon: _modDef9668, WarningIcon: _modDef4804, WindowLaunchIcon: _modDef12758, XSmallIcon: _modDef6018, XboxNeutralIcon: _modDef8353 };

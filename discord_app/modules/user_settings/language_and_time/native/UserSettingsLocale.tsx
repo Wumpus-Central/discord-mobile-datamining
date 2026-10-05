@@ -1,10 +1,10 @@
-// === Module 15241: UserSettingsLocale ===
+// === Module 15245: UserSettingsLocale ===
 
-// Module 15241 (UserSettingsLocale)
+// Module 15245 (UserSettingsLocale)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import TableRadioRow from "TableRadioRow" /* 6071 */;
-import flags from "flags" /* 15242 */;
+import flags from "flags" /* 15246 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
@@ -33,7 +33,7 @@ let closure_11 = async function _handleLanguageChange(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -65,7 +65,7 @@ let closure_11 = async function _handleLanguageChange(arg0) {
       } else {
         closure_130_1(closure_130_2[8]).updateLocale(closure_129_0);
         c4 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp14) {
       c4 = tmp;

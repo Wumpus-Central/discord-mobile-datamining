@@ -1,12 +1,12 @@
-// === Module 15035: NavigateForwardButton ===
+// === Module 15039: NavigateForwardButton ===
 
-// Module 15035 (NavigateForwardButton)
+// Module 15039 (NavigateForwardButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import Pressables from "Pressables" /* 5909 */;
-import _modDef15036 from "module_15036" /* 15036 */;
+import _modDef15040 from "module_15040" /* 15040 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { source: _modDef15036 };
+      const obj2 = { source: _modDef15040 };
       const tmp11 = React3(native.Icon, obj2);
       cResult[3] = tmp11;
       let tmp8 = tmp11;
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   ({ onPress, text } = arg0);
   const tmp = closure_5();
   const obj = { style: tmp.container, onPress, children: null };
-  const items = [React3(Text_Text.Text, { style: tmp.text, variant: "text-md/semibold", color: "interactive-text-active", children: text }), React3(native.Icon, { source: _modDef15036 })];
+  const items = [React3(Text_Text.Text, { style: tmp.text, variant: "text-md/semibold", color: "interactive-text-active", children: text }), React3(native.Icon, { source: _modDef15040 })];
   obj.children = items;
   return React4(Pressables.PressableHighlight, obj);
 });

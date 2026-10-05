@@ -1,6 +1,6 @@
-// === Module 15142: AccessibilitySetting ===
+// === Module 15146: AccessibilitySetting ===
 
-// Module 15142 (AccessibilitySetting)
+// Module 15146 (AccessibilitySetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1188 */;
@@ -122,7 +122,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.G0neg7);
   },
   parent: null,
-  IconComponent: fn(15143).AccessibilityIcon,
+  IconComponent: fn(15147).AccessibilityIcon,
   useTrailing: tmp2,
   usePreNavigationAction: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const cResult = first(576).c(3);

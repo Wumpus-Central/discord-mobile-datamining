@@ -1,8 +1,8 @@
-// === Module 17349: MediaPlaybackPanelController ===
+// === Module 17373: MediaPlaybackPanelController ===
 
-// Module 17349 (MediaPlaybackPanelController)
-import MediaPlayerManagerDefault from "MediaPlayerManager" /* 14374 */;
-import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 17350 */;
+// Module 17373 (MediaPlaybackPanelController)
+import MediaPlayerManagerDefault from "MediaPlayerManager" /* 14378 */;
+import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 17374 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;
@@ -51,13 +51,13 @@ function useCoreState() {
   const obj7 = sharedValue(4612);
   const obj8 = { mode: sharedValue, MediaPlaybackPanelModes, MorphablePanelModes };
   const tmp9 = sharedValue3(1618)();
-  const tmp10 = sharedValue3(17139)(sharedValue3(1618)());
+  const tmp10 = sharedValue3(17163)(sharedValue3(1618)());
   const sharedValue6 = sharedValue(4612).useSharedValue(false);
   const obj9 = sharedValue(4612);
   const obj10 = sharedValue(4612);
   return { mode: sharedValue, morphablePanelMode: derivedValue, wrapperDimensions: sharedValue1, useReducedMotion: sharedValue3, pipState: sharedValue2, pipAvoidanceSpecs: tmp10, scrollPosition: sharedValue5, canShowPIP: sharedValue4, lockScrolling: sharedValue6, wrapperOffset: sharedValue(4612).useSharedValue({ x: 0, y: 0, gestureActive: false }) };
 }
-const MediaPlaybackPanelModes = fn(14375).MediaPlaybackPanelModes;
+const MediaPlaybackPanelModes = fn(14379).MediaPlaybackPanelModes;
 const ActivityPanelModes = fn(8705).ActivityPanelModes;
 const MorphablePanelModes = fn(11903).MorphablePanelModes;
 const jsx = fn(21).jsx;

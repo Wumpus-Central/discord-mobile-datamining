@@ -1,10 +1,10 @@
-// === Module 16073: FavoritesGuildAddActionSheet ===
+// === Module 16077: FavoritesGuildAddActionSheet ===
 
-// Module 16073 (FavoritesGuildAddActionSheet)
+// Module 16077 (FavoritesGuildAddActionSheet)
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4854 */;
 import openFavoritesGuildLimitUpsellDefault from "openFavoritesGuildLimitUpsell" /* 10039 */;
 import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 10706 */;
-import FavoritesGuildAddCategoryActionSheet from "FavoritesGuildAddCategoryActionSheet" /* 16074 */;
+import FavoritesGuildAddCategoryActionSheet from "FavoritesGuildAddCategoryActionSheet" /* 16078 */;
 import noop from "module_19" /* 19 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;

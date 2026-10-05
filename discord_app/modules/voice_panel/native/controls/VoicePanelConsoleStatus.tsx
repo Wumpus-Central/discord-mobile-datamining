@@ -1,6 +1,6 @@
-// === Module 17298: VoicePanelConsoleStatus ===
+// === Module 17322: VoicePanelConsoleStatus ===
 
-// Module 17298 (VoicePanelConsoleStatus)
+// Module 17322 (VoicePanelConsoleStatus)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 4589 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;

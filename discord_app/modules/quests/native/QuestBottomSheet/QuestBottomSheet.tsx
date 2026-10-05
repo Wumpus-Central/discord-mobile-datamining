@@ -1,6 +1,6 @@
-// === Module 14919: QuestBottomSheet ===
+// === Module 14923: QuestBottomSheet ===
 
-// Module 14919 (QuestBottomSheet)
+// Module 14923 (QuestBottomSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -14,18 +14,18 @@ import AnalyticsTypes from "AnalyticsTypes" /* 7212 */;
 import QuestActionCreators from "QuestActionCreators" /* 9994 */;
 import hooks_QuestHooks from "hooks/QuestHooks" /* 10911 */;
 import QuestPlatformUtils from "QuestPlatformUtils" /* 10918 */;
-import QuestHooks from "QuestHooks" /* 14888 */;
-import QuestBottomSheetHeaderDefault from "QuestBottomSheetHeader" /* 14920 */;
-import QuestBottomSheetFooterDefault from "QuestBottomSheetFooter" /* 14922 */;
-import QuestBottomSheetTaskSelectDefault from "QuestBottomSheetTaskSelect" /* 14960 */;
-import QuestBottomSheetConsoleConnectDefault from "QuestBottomSheetConsoleConnect" /* 14961 */;
+import QuestHooks from "QuestHooks" /* 14892 */;
+import QuestBottomSheetHeaderDefault from "QuestBottomSheetHeader" /* 14924 */;
+import QuestBottomSheetFooterDefault from "QuestBottomSheetFooter" /* 14926 */;
+import QuestBottomSheetTaskSelectDefault from "QuestBottomSheetTaskSelect" /* 14964 */;
+import QuestBottomSheetConsoleConnectDefault from "QuestBottomSheetConsoleConnect" /* 14965 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import QuestStore from "QuestStore" /* 7187 */;
 
 const require = globalThis.__r;
 
-const QuestBottomSheetProgressCard = QuestBottomSheetProgressCardWatchTask(14958);
+const QuestBottomSheetProgressCard = QuestBottomSheetProgressCardWatchTask(14962);
 require = fn;
 const useState = fn(19).useState;
 const View = fn(17).View;
@@ -836,8 +836,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
   const tmp5 = quest(quest(10911).useTaskPlatformScreen(quest, questTaskDetails), 3);
   closure_4 = tmp5[2];
   const obj5 = quest(10911);
-  const hasWatchVideoOnMobileTasks = quest(14888).useHasWatchVideoOnMobileTasks(quest.config);
-  const obj6 = quest(14888);
+  const hasWatchVideoOnMobileTasks = quest(14892).useHasWatchVideoOnMobileTasks(quest.config);
+  const obj6 = quest(14892);
   [tmp8, tmp9] = quest(closure_16({ quest, initialStep, location: _location }), 2);
   const userStatus = quest.userStatus;
   let completedAt;
@@ -1298,7 +1298,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((questId) => {
         class T {
           constructor() {
             obj = { quest: closure_3, initialStep, sourceQuestContent };
-            return jsx(f68962, obj);
+            return jsx(f69012, obj);
           }
         }
         const obj2 = { overrideVisibility: true, questOrQuests: stateFromStores, questContent: null, questContentPosition: null, sourceQuestContent: null, children: null };
@@ -1318,7 +1318,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((questId) => {
     class T {
       constructor() {
         obj = { quest: closure_3, initialStep, sourceQuestContent };
-        return jsx(f68962, obj);
+        return jsx(f69012, obj);
       }
     }
     cResult[3] = initialStep;

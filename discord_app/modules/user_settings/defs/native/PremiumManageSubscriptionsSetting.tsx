@@ -1,6 +1,6 @@
-// === Module 14791: PremiumManageSubscriptionsSetting ===
+// === Module 14795: PremiumManageSubscriptionsSetting ===
 
-// Module 14791 (PremiumManageSubscriptionsSetting)
+// Module 14795 (PremiumManageSubscriptionsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import PremiumUtils from "PremiumUtils" /* 4528 */;
@@ -66,7 +66,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t["z5YcJ+"]);
   },
   parent: null,
-  IconComponent: fn(14792).SubscriptionIcon,
+  IconComponent: fn(14796).SubscriptionIcon,
   usePreNavigationAction: tmp2,
   usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const cResult = c.c(1);

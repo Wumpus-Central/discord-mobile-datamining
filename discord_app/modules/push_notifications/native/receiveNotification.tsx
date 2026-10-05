@@ -1,6 +1,6 @@
-// === Module 18073: receiveNotification ===
+// === Module 18095: receiveNotification ===
 
-// Module 18073 (receiveNotification)
+// Module 18095 (receiveNotification)
 import LoggerDefault from "Logger" /* 3 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import initializeDefault from "initialize" /* 504 */;
@@ -53,7 +53,7 @@ let closure_22 = async function _waitForDataOrConnection(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -134,7 +134,7 @@ let closure_24 = async function _waitForNavigationReady() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -177,7 +177,7 @@ let closure_24 = async function _waitForNavigationReady() {
         return obj;
       }
       c0 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     } catch (tmp11) {
       c0 = tmp;
       throw tmp11;
@@ -226,7 +226,7 @@ let closure_27 = async function _handleStageNotification(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -254,7 +254,7 @@ let closure_27 = async function _handleStageNotification(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp7) {
       c1 = tmp;
@@ -273,7 +273,7 @@ let closure_28 = async function _handleGuildEventNotification(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -369,7 +369,7 @@ let closure_28 = async function _handleGuildEventNotification(arg0) {
         const obj = closure_130_0(closure_130_3[18]);
       }
       c4 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     } catch (tmp31) {
       c4 = tmp;
       throw tmp31;
@@ -387,7 +387,7 @@ let closure_29 = async function _handleRelationshipAddNotification(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -481,7 +481,7 @@ let closure_30 = async function _handleCallRingNotification(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -513,7 +513,7 @@ let closure_30 = async function _handleCallRingNotification(arg0) {
       } else {
         closure_130_0(closure_130_3[18]).transitionToChannel(closure_129_0.channel_id);
         c4 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp15) {
       c4 = tmp;
@@ -532,7 +532,7 @@ let closure_31 = async function _handleCallConnectNotification(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -601,7 +601,7 @@ let closure_31 = async function _handleCallConnectNotification(arg0) {
           closure_130_1(closure_130_3[31])(closure_129_0.channel_id);
         }
         c4 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp50) {
       c4 = tmp;
@@ -620,7 +620,7 @@ let closure_32 = async function _handleFriendSuggestionCreateNotification(arg0) 
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -677,7 +677,7 @@ let closure_32 = async function _handleFriendSuggestionCreateNotification(arg0) 
         obj.sourceAnalyticsLocations = items;
         closure_130_1(closure_130_3[24])(obj);
         c4 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp24) {
       c4 = tmp;
@@ -696,7 +696,7 @@ let closure_33 = async function _maybeAckNotificationCenter(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -1090,7 +1090,7 @@ function receiveNotification_(data) {
             if ("" !== data.deeplink) {
               let tmp19Result7 = tmp19(4867);
               let tmp19Result3Result = tmp19Result7(data.deeplink);
-              let tmp19Result8 = tmp19(13661);
+              let tmp19Result8 = tmp19(13663);
               let obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result8(obj17);
             }
@@ -1319,7 +1319,7 @@ function receiveNotification_(data) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(4867);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(13661);
+              tmp19Result8 = tmp19(13663);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result8(obj17);
             }
@@ -1548,7 +1548,7 @@ function receiveNotification_(data) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(4867);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(13661);
+              tmp19Result8 = tmp19(13663);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result8(obj17);
             }
@@ -1777,7 +1777,7 @@ function receiveNotification_(data) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(4867);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(13661);
+              tmp19Result8 = tmp19(13663);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result8(obj17);
             }
@@ -2006,7 +2006,7 @@ function receiveNotification_(data) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(4867);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(13661);
+              tmp19Result8 = tmp19(13663);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result8(obj17);
             }
@@ -2235,7 +2235,7 @@ function receiveNotification_(data) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(4867);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(13661);
+              tmp19Result8 = tmp19(13663);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result8(obj17);
             }
@@ -2464,7 +2464,7 @@ function receiveNotification_(data) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(4867);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(13661);
+              tmp19Result8 = tmp19(13663);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result8(obj17);
             }
@@ -2693,7 +2693,7 @@ function receiveNotification_(data) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(4867);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(13661);
+              tmp19Result8 = tmp19(13663);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result8(obj17);
             }
@@ -2922,7 +2922,7 @@ function receiveNotification_(data) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(4867);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(13661);
+              tmp19Result8 = tmp19(13663);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result8(obj17);
             }
@@ -3151,7 +3151,7 @@ function receiveNotification_(data) {
             if ("" !== data.deeplink) {
               tmp19Result7 = tmp19(4867);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(13661);
+              tmp19Result8 = tmp19(13663);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result8(obj17);
             }
@@ -3189,7 +3189,7 @@ export default function receiveNotification(getData, arg1) {
         if (data.receiving_user_id !== AuthenticationStore.getId()) {
           tmp7(6985);
           tmp7(5436);
-          tmp7(13438);
+          tmp7(13440);
           let receiving_user_id = data.receiving_user_id;
           receiving_user_id = tmp7(12059).switchAccount(receiving_user_id, false, arg1 ? constants.PUSH_NOTIFICATION_INITIAL : constants.PUSH_NOTIFICATION);
           receiving_user_id.then(() => {

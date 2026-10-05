@@ -18,9 +18,9 @@ import SwipeToMemberListUtils from "SwipeToMemberListUtils" /* 11127 */;
 import useSearchContext from "useSearchContext" /* 11927 */;
 import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 11928 */;
 import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 11982 */;
-import ConversationCoachmark from "ConversationCoachmark" /* 13094 */;
-import IconActionButtonDefault from "IconActionButton" /* 13095 */;
-import PrivateChannelButtonsDefault from "PrivateChannelButtons" /* 13098 */;
+import ConversationCoachmark from "ConversationCoachmark" /* 13096 */;
+import IconActionButtonDefault from "IconActionButton" /* 13097 */;
+import PrivateChannelButtonsDefault from "PrivateChannelButtons" /* 13100 */;
 import noop from "module_19" /* 19 */;
 import ActiveThreadsStore from "ActiveThreadsStore" /* 5692 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
@@ -898,7 +898,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     }
   }
   if (hasForumSearchQuery) {
-    ForumChannelCloseSearchButton = ForumChannelCloseSearchButton(13096).ForumChannelCloseSearchButton;
+    ForumChannelCloseSearchButton = ForumChannelCloseSearchButton(13098).ForumChannelCloseSearchButton;
     const obj = { channelId };
     let tmp10 = <ForumChannelCloseSearchButton channelId={channelId} />;
   } else {
@@ -951,7 +951,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   const obj3 = { style: containerStyle, children: null };
   if (obj2.useHasForumSearchQuery(channelId)) {
     const obj4 = { channelId };
-    let tmp4Result = jsx(tmp(13096).ForumChannelCloseSearchButton, { channelId });
+    let tmp4Result = jsx(tmp(13098).ForumChannelCloseSearchButton, { channelId });
   } else {
     if (!isDM) {
       if (!isMultiUserDM) {

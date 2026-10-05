@@ -1,6 +1,6 @@
-// === Module 14912: QuestDisclosureModalInner ===
+// === Module 14916: QuestDisclosureModalInner ===
 
-// Module 14912 (QuestDisclosureModalInner)
+// Module 14916 (QuestDisclosureModalInner)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import Text_Text from "Text/Text" /* 4886 */;
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const _Symbol = Symbol;
     ({ container, contentContainer } = tmp4);
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp10 = closure_6(tmp(14913).WumpusCouchSpotIllustration, {});
+      const tmp10 = closure_6(tmp(14917).WumpusCouchSpotIllustration, {});
       cResult[2] = tmp10;
       let tmp8 = tmp10;
     } else {

@@ -1,6 +1,6 @@
-// === Module 17423: ExistingUserAgeGate ===
+// === Module 17447: ExistingUserAgeGate ===
 
-// Module 17423 (ExistingUserAgeGate)
+// Module 17447 (ExistingUserAgeGate)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -14,7 +14,7 @@ const require = fn;
 const View = fn(17).View;
 const AgeGateConstants = fn(1110);
 ({ AgeGateAnalyticAction: closure_9, AgeGateSource: c10 } = AgeGateConstants);
-let closure_11 = fn(17422).ExistingUserAgeGateScreens;
+let closure_11 = fn(17446).ExistingUserAgeGateScreens;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, HelpdeskArticles: map1 } = Constants);
 const jsxProd = fn(21);
@@ -322,7 +322,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSuccess) => {
                                 const obj2 = { value, done: true };
                                 return obj2;
                               } else {
-                                return { value: "IconComponent", done: "IconComponent" };
+                                return { value: "IconComponent", done: null };
                               }
                             } else {
                               try {
@@ -364,7 +364,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSuccess) => {
                                   return obj;
                                 }
                                 c0 = 3;
-                                return { value: "IconComponent", done: "IconComponent" };
+                                return { value: "IconComponent", done: null };
                               } catch (tmp10) {
                                 c0 = tmp;
                                 throw tmp10;
@@ -632,7 +632,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSuccess) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -720,7 +720,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSuccess) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -762,7 +762,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onSuccess) => {
           return obj;
         }
         c0 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       } catch (tmp10) {
         c0 = tmp;
         throw tmp10;

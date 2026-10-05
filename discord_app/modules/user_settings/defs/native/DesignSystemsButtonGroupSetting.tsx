@@ -1,6 +1,6 @@
-// === Module 15640: DesignSystemsButtonGroupSetting ===
+// === Module 15644: DesignSystemsButtonGroupSetting ===
 
-// Module 15640 (DesignSystemsButtonGroupSetting)
+// Module 15644 (DesignSystemsButtonGroupSetting)
 import Constants from "Constants" /* 1085 */;
 import SettingsConstants from "SettingsConstants" /* 7634 */;
 import SettingBuilders from "SettingBuilders" /* 11129 */;

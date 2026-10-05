@@ -1,9 +1,9 @@
-// === Module 14245: MessageRequestLottie ===
+// === Module 14247: MessageRequestLottie ===
 
-// Module 14245 (MessageRequestLottie)
+// Module 14247 (MessageRequestLottie)
 import c from "c" /* 576 */;
 import LottieIcon from "LottieIcon" /* 9629 */;
-import _mod14246 from "module_14246" /* 14246 */;
+import _mod14248 from "module_14248" /* 14248 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("design/components/LottieIcon/native/g
 export const MessageRequestLottie = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod14246;
+    const tmpResult = _mod14248;
     cResult[0] = tmpResult;
     let first = tmpResult;
   } else {
@@ -38,5 +38,5 @@ export const MessageRequestLottie = noop.forwardRef(ReactCompilerGating.isReactC
   const obj2 = { dotLottie: first, animation: "all", ref, layers, markers: items };
 }) : ((arg0, ref) => {
   const merged = Object.assign(arg0);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod14246, animation: "all", ref, layers, markers: items });
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod14248, animation: "all", ref, layers, markers: items });
 }));

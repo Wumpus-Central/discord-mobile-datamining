@@ -1,10 +1,10 @@
-// === Module 15435: RecordPlayerIcon ===
+// === Module 15439: RecordPlayerIcon ===
 
-// Module 15435 (RecordPlayerIcon)
+// Module 15439 (RecordPlayerIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 4579 */;
-import _mod15436 from "module_15436" /* 15436 */;
+import _mod15440 from "module_15440" /* 15440 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const RecordPlayerIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod15436;
+    const tmpResult = _mod15440;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const RecordPlayerIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15436, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15440, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

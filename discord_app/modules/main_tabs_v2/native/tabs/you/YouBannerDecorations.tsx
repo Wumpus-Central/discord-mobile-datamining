@@ -1,6 +1,6 @@
-// === Module 16936: YouBannerDecorations ===
+// === Module 16955: YouBannerDecorations ===
 
-// Module 16936 (YouBannerDecorations)
+// Module 16955 (YouBannerDecorations)
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1370 */;
@@ -9,8 +9,8 @@ import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 469
 import QuestTypes from "QuestTypes" /* 5626 */;
 import useTrialOffer from "useTrialOffer" /* 6958 */;
 import QuestUtils from "QuestUtils" /* 10908 */;
-import PromotionsHooks from "PromotionsHooks" /* 13360 */;
-import you_tracking_Tracking from "you/tracking/Tracking" /* 16938 */;
+import PromotionsHooks from "PromotionsHooks" /* 13362 */;
+import you_tracking_Tracking from "you/tracking/Tracking" /* 16957 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 
@@ -164,7 +164,7 @@ export default noop.memo((navigateToSettings) => {
   const tmp2Result7 = navigateToSettings(gradientSecondaryBackground[22]);
   const isEligibleForQuests = navigateToSettings(gradientSecondaryBackground[24]).getIsEligibleForQuests();
   const tmp2Result8 = navigateToSettings(gradientSecondaryBackground[24]);
-  const hasVibegrationsGuild = navigateToSettings(gradientSecondaryBackground[25]).useHasVibegrationsGuild("YouBannerDecorations");
+  const hasConjureGuild = navigateToSettings(gradientSecondaryBackground[25]).useHasConjureGuild("YouBannerDecorations");
   const tmp2Result9 = navigateToSettings(gradientSecondaryBackground[25]);
   const tmp18 = null != navigateToSettings(gradientSecondaryBackground[12]).useTrialOffer(closure_9);
   currentUser = tmp18;
@@ -198,12 +198,12 @@ export default noop.memo((navigateToSettings) => {
     const obj2 = { fromContent: QuestTypes.QuestContent.USER_PROFILE_HEADER };
   }, items4);
   let tmp23 = null;
-  if (hasVibegrationsGuild) {
+  if (hasConjureGuild) {
     let obj2 = { IconComponent: tmp2(tmp3[33]).MagicWandIcon, accessibilityLabel: null, onPress: null };
     const intl = tmp2(tmp3[15]).intl;
-    obj2.accessibilityLabel = intl.string(tmp5(tmp3[34]).ZnvpQR);
+    obj2.accessibilityLabel = intl.string(tmp5(tmp3[34]).bHcJoe);
     obj2.onPress = tmp22;
-    tmp23 = closure_10(tmp5(tmp3[32]), obj2, "vibegrations");
+    tmp23 = closure_10(tmp5(tmp3[32]), obj2, "conjure");
     const tmp5Result = tmp5(tmp3[32]);
   }
   const items5 = [tmp23, , , , ];

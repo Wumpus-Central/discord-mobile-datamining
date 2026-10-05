@@ -35,7 +35,7 @@ let closure_12 = async function _fetchUserOffer(arg0) {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -63,7 +63,7 @@ let closure_12 = async function _fetchUserOffer(arg0) {
           closure_136_1 = flag;
           let obj8 = closure_2;
           if (closure_2 === undefined) {
-            obj8 = { offerId: "Symbol", paymentGatewayOverride: "current" };
+            obj8 = { offerId: "Array", paymentGatewayOverride: "Set" };
           }
           closure_136_2 = obj8;
           closure_136_3 = closure_3;
@@ -79,7 +79,7 @@ let closure_12 = async function _fetchUserOffer(arg0) {
           closure_136_13 = undefined;
           c12 = 1;
           c13 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

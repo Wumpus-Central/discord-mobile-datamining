@@ -1,14 +1,14 @@
-// === Module 14769: XboxTwoWayLinkUpsell ===
+// === Module 14773: XboxTwoWayLinkUpsell ===
 
-// Module 14769 (XboxTwoWayLinkUpsell)
+// Module 14773 (XboxTwoWayLinkUpsell)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
 import FastImageDefault from "FastImage" /* 5974 */;
 import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 8733 */;
-import OneWayToTwoWayLinkUpsell2 from "OneWayToTwoWayLinkUpsell" /* 14770 */;
-import _modDef14771 from "module_14771" /* 14771 */;
+import OneWayToTwoWayLinkUpsell2 from "OneWayToTwoWayLinkUpsell" /* 14774 */;
+import _modDef14775 from "module_14775" /* 14775 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -41,8 +41,8 @@ export const XboxTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEnabled()
     [tmp5, tmp6, tmp7] = cResult;
   }
   if (cResult[3] !== tmp4.upsellImage) {
-    const obj4 = { style: tmp4.upsellImage, source: _modDef14771, resizeMode: "contain" };
-    const tmp17 = jsx(FastImageDefault, { style: tmp4.upsellImage, source: _modDef14771, resizeMode: "contain" });
+    const obj4 = { style: tmp4.upsellImage, source: _modDef14775, resizeMode: "contain" };
+    const tmp17 = jsx(FastImageDefault, { style: tmp4.upsellImage, source: _modDef14775, resizeMode: "contain" });
     cResult[3] = tmp4.upsellImage;
     cResult[4] = tmp17;
     let tmp13 = tmp17;
@@ -103,7 +103,7 @@ export const XboxTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEnabled()
   const intl2 = util.intl;
   obj2.body = intl2.format(util.t.OnERSS, { help_article: articleURL });
   const obj3 = { style: tmp.upsellImage, source: null, resizeMode: "contain" };
-  obj3.source = _modDef14771;
+  obj3.source = _modDef14775;
   obj2.img = jsx(FastImageDefault, { style: tmp.upsellImage, source: null, resizeMode: "contain" });
   obj2.newIndicatorDismissibleContent = dismissible_content.DismissibleContent.XBOX_ONE_WAY_RECONNECT;
   obj2.onPress = function onPress() {

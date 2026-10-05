@@ -1,6 +1,6 @@
-// === Module 17728: guildSettingsStickerToasts ===
+// === Module 17752: guildSettingsStickerToasts ===
 
-// Module 17728 (guildSettingsStickerToasts)
+// Module 17752 (guildSettingsStickerToasts)
 import util from "util" /* 1126 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4568 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 4800 */;

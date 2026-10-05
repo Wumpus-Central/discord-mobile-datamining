@@ -1,13 +1,13 @@
-// === Module 14893: QuestDockGestureContext ===
+// === Module 14897: QuestDockGestureContext ===
 
-// Module 14893 (QuestDockGestureContext)
+// Module 14897 (QuestDockGestureContext)
 import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 11648 */;
 import noop from "module_19" /* 19 */;
-import QuestDockStore from "QuestDockStore" /* 14890 */;
+import QuestDockStore from "QuestDockStore" /* 14894 */;
 
 const require = fn;
 const QuestDockMode = fn(5623).QuestDockMode;
-const height = fn(14892).QUEST_DOCK_COLLAPSED_HEIGHT;
+const height = fn(14896).QUEST_DOCK_COLLAPSED_HEIGHT;
 const jsx = fn(21).jsx;
 const obj = { questDockWrapperSpecs: null, windowDimensions: null, activeQuestDockMode: null, minExpandedContentHeight: null };
 let ReanimatedHelperTypes = fn(6571);

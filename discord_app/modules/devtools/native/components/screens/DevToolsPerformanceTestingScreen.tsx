@@ -1,9 +1,9 @@
-// === Module 15603: DevToolsPerformanceTestingScreen ===
+// === Module 15607: DevToolsPerformanceTestingScreen ===
 
-// Module 15603 (DevToolsPerformanceTestingScreen)
+// Module 15607 (DevToolsPerformanceTestingScreen)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 14402 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 14406 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const _Object = Object;
-    const entries = Object.entries(tmp(15404).PerformanceTestingScreens);
+    const entries = Object.entries(tmp(15408).PerformanceTestingScreens);
     cResult[2] = entries;
     let arr = entries;
   } else {

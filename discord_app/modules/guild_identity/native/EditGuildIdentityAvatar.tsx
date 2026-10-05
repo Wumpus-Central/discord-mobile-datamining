@@ -1,6 +1,6 @@
-// === Module 14483: EditGuildIdentityAvatar ===
+// === Module 14487: EditGuildIdentityAvatar ===
 
-// Module 14483 (EditGuildIdentityAvatar)
+// Module 14487 (EditGuildIdentityAvatar)
 import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 8818 */;

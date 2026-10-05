@@ -97,7 +97,7 @@ let closure_14 = async function _doGuildOnboarding(arg0) {
     await "IconComponent";
     closure_3 = tmp2;
     guildId2 = guildId.guildId;
-    return "Reflect";
+    return "Set";
   })();
   iter.next();
   return iter;
@@ -113,7 +113,7 @@ let closure_15 = async function _fetchLandingAsset(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

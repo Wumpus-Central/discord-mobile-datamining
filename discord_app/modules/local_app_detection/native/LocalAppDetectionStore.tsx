@@ -1,10 +1,10 @@
-// === Module 13522: LocalAppDetectionStore ===
+// === Module 13524: LocalAppDetectionStore ===
 
-// Module 13522 (LocalAppDetectionStore)
+// Module 13524 (LocalAppDetectionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 13523 */;
-import LocalAppDetectionUtils from "LocalAppDetectionUtils" /* 13524 */;
+import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 13525 */;
+import LocalAppDetectionUtils from "LocalAppDetectionUtils" /* 13526 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ConsentStore from "ConsentStore" /* 6084 */;
 

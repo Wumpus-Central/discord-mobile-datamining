@@ -1,6 +1,6 @@
-// === Module 15594: CollectiblesTool ===
+// === Module 15598: CollectiblesTool ===
 
-// Module 15594 (CollectiblesTool)
+// Module 15598 (CollectiblesTool)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 4886 */;

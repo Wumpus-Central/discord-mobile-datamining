@@ -1,6 +1,6 @@
-// === Module 13593: VoiceMemberList ===
+// === Module 13595: VoiceMemberList ===
 
-// Module 13593 (VoiceMemberList)
+// Module 13595 (VoiceMemberList)
 import c from "c" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import Text_Text from "Text/Text" /* 4886 */;
@@ -10,8 +10,8 @@ import Form from "Form" /* 8895 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9481 */;
 import _modDef9715 from "module_9715" /* 9715 */;
 import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11212 */;
-import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 13589 */;
-import VoiceMemberUser from "VoiceMemberUser" /* 13595 */;
+import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 13591 */;
+import VoiceMemberUser from "VoiceMemberUser" /* 13597 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -118,8 +118,8 @@ let closure_28 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
         const intl = FormRow(1126).intl;
         obj2.accessibilityLabel = intl.string(FormRow(1126).t["6Qgrev"]);
         obj2.source = _modDef9715;
-        obj2.size = FormRow(13270).CircularIconButton.Sizes.MEDIUM_32;
-        const tmp19 = closure_23(FormRow(13270).CircularIconButton, obj2);
+        obj2.size = FormRow(13272).CircularIconButton.Sizes.MEDIUM_32;
+        const tmp19 = closure_23(FormRow(13272).CircularIconButton, obj2);
         const intl2 = FormRow(1126).intl;
         const stringResult = intl2.string(FormRow(1126).t["6Qgrev"]);
         cResult[5] = tmp19;
@@ -171,8 +171,8 @@ let closure_28 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((chan
       const intl = tmp4(1126).intl;
       obj3.accessibilityLabel = intl.string(tmp4(1126).t["6Qgrev"]);
       obj3.source = _modDef9715;
-      obj3.size = tmp4(13270).CircularIconButton.Sizes.MEDIUM_32;
-      obj2.leading = closure_23(tmp4(13270).CircularIconButton, obj3);
+      obj3.size = tmp4(13272).CircularIconButton.Sizes.MEDIUM_32;
+      obj2.leading = closure_23(tmp4(13272).CircularIconButton, obj3);
       const intl2 = tmp4(1126).intl;
       obj2.label = intl2.string(tmp4(1126).t["6Qgrev"]);
       obj2.onPress = function onPress() {
@@ -274,7 +274,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
         }
         let obj3 = { embeddedActivity: item, channelId, onItemPress: tmp13, isActionSheet };
-        const tmp17 = closure_23(tmp4(13594), obj3);
+        const tmp17 = closure_23(tmp4(13596), obj3);
         cResult[4] = channelId;
         cResult[5] = isActionSheet;
         cResult[6] = tmp13;
@@ -299,7 +299,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -383,13 +383,13 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const merged = Object.assign(item);
     obj4.onPress = onPressUser;
     obj4.isActionSheet = isActionSheet;
-    const tmp12 = closure_23(tmp4(13595), obj4);
+    const tmp12 = closure_23(tmp4(13597), obj4);
     cResult[9] = isActionSheet;
     cResult[10] = onPressUser;
     cResult[11] = item;
     cResult[12] = tmp12;
     tmp6 = tmp12;
-    const tmp4Result = tmp4(13595);
+    const tmp4Result = tmp4(13597);
   }
   let obj2 = require("analytics");
   tmp5 = undefined !== item.url && undefined !== item.applicationId;
@@ -410,7 +410,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -479,13 +479,13 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         },
       isActionSheet
     };
-    return closure_23(tmp2(13594), obj2);
+    return closure_23(tmp2(13596), obj2);
   } else {
     let obj3 = {};
     const merged = Object.assign(item);
     obj3.onPress = onPressUser;
     obj3.isActionSheet = isActionSheet;
-    return closure_23(tmp2(13595), obj3);
+    return closure_23(tmp2(13597), obj3);
   }
   let obj = isActionSheet(9101);
   tmp3 = undefined !== item.url && undefined !== item.applicationId;
@@ -860,7 +860,7 @@ export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? (f
               return sum;
             } else {
               if (tmp) {
-                tmp4 = tmp4(13594);
+                tmp4 = tmp4(13596);
                 calculateActivityRowHeight = tmp4.calculateActivityRowHeight;
                 let result = calculateActivityRowHeight(closure_4);
               } else {

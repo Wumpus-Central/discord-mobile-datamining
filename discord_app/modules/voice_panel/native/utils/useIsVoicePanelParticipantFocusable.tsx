@@ -1,6 +1,6 @@
-// === Module 17276: useIsVoicePanelParticipantFocusable ===
+// === Module 17300: useIsVoicePanelParticipantFocusable ===
 
-// Module 17276 (useIsVoicePanelParticipantFocusable)
+// Module 17300 (useIsVoicePanelParticipantFocusable)
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import participantHasVideo from "participantHasVideo" /* 9119 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;

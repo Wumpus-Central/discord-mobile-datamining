@@ -1,6 +1,6 @@
-// === Module 13903: Ellipsis ===
+// === Module 13905: Ellipsis ===
 
-// Module 13903 (Ellipsis)
+// Module 13905 (Ellipsis)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;

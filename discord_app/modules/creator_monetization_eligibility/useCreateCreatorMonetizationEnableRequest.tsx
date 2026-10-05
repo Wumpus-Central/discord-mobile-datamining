@@ -1,6 +1,6 @@
-// === Module 17884: useCreateCreatorMonetizationEnableRequest ===
+// === Module 17908: useCreateCreatorMonetizationEnableRequest ===
 
-// Module 17884 (useCreateCreatorMonetizationEnableRequest)
+// Module 17908 (useCreateCreatorMonetizationEnableRequest)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -28,7 +28,7 @@ export default function useCreateCreatorMonetizationEnableRequest(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

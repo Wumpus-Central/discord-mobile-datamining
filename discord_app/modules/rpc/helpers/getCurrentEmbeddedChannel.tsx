@@ -1,8 +1,8 @@
-// === Module 14310: getCurrentEmbeddedChannel ===
+// === Module 14312: getCurrentEmbeddedChannel ===
 
-// Module 14310 (getCurrentEmbeddedChannel)
+// Module 14312 (getCurrentEmbeddedChannel)
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8514 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14306 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14308 */;
 import FramesStore from "FramesStore" /* 8703 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 

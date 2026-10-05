@@ -1,10 +1,10 @@
-// === Module 14867: BountiesPosterSpotIllustration ===
+// === Module 14871: BountiesPosterSpotIllustration ===
 
-// Module 14867 (BountiesPosterSpotIllustration)
+// Module 14871 (BountiesPosterSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5974 */;
-import _modDef14868 from "module_14868" /* 14868 */;
+import _modDef14872 from "module_14872" /* 14872 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -27,7 +27,7 @@ export const BountiesPosterSpotIllustration = ReactCompilerGating.isReactCompile
     num3 = scale;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef14868 };
+    const obj2 = { uri: _modDef14872 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -78,7 +78,7 @@ export const BountiesPosterSpotIllustration = ReactCompilerGating.isReactCompile
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef14868 };
+  const obj2 = { uri: _modDef14872 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

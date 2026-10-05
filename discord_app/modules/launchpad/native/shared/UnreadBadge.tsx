@@ -1,10 +1,10 @@
-// === Module 17374: UnreadBadge ===
+// === Module 17398: UnreadBadge ===
 
-// Module 17374 (UnreadBadge)
+// Module 17398 (UnreadBadge)
 import c from "c" /* 576 */;
 import useFontScale from "useFontScale" /* 5602 */;
 import Badge from "Badge" /* 7503 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 16813 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 16832 */;
 import noop from "module_19" /* 19 */;
 
 const BadgeDefault = Badge;

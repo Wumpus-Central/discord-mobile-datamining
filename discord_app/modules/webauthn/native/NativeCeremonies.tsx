@@ -18,7 +18,7 @@ let closure_5 = async function _promptForRegisterCredential() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -45,7 +45,7 @@ let closure_5 = async function _promptForRegisterCredential() {
           let challenge;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -132,7 +132,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -150,7 +150,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
               closure_129_0 = closure_0;
               c5 = 1;
               c6 = 1;
-              return { value: "Reflect", done: true };
+              return { value: "Set", done: true };
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {

@@ -1,6 +1,6 @@
-// === Module 16305: useYouBarAccessibilityLabel ===
+// === Module 16309: useYouBarAccessibilityLabel ===
 
-// Module 16305 (useYouBarAccessibilityLabel)
+// Module 16309 (useYouBarAccessibilityLabel)
 import util from "util" /* 1126 */;
 import UserUtils from "UserUtils" /* 4722 */;
 import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10611 */;

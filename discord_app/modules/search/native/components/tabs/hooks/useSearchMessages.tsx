@@ -1,6 +1,6 @@
-// === Module 16860: useSearchMessages ===
+// === Module 16879: useSearchMessages ===
 
-// Module 16860 (useSearchMessages)
+// Module 16879 (useSearchMessages)
 import SearchUtils from "SearchUtils" /* 11968 */;
 import SearchMessageStore from "SearchMessageStore" /* 6784 */;
 import SearchQueryStore from "SearchQueryStore" /* 11967 */;

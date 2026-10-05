@@ -1,6 +1,6 @@
-// === Module 15969: useSuggestedFriends ===
+// === Module 15973: useSuggestedFriends ===
 
-// Module 15969 (useSuggestedFriends)
+// Module 15973 (useSuggestedFriends)
 import _modDef12 from "module_12" /* 12 */;
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;

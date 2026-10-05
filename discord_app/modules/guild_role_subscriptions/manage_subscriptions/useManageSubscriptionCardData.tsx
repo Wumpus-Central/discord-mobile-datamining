@@ -1,6 +1,6 @@
-// === Module 15037: useManageSubscriptionCardData ===
+// === Module 15041: useManageSubscriptionCardData ===
 
-// Module 15037 (useManageSubscriptionCardData)
+// Module 15041 (useManageSubscriptionCardData)
 import util from "util" /* 1126 */;
 import _modDef4461 from "module_4461" /* 4461 */;
 import PriceUtils from "PriceUtils" /* 6736 */;

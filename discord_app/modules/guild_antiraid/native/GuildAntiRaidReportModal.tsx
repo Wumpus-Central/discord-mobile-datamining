@@ -1,6 +1,6 @@
-// === Module 13778: GuildAntiRaidReportModal ===
+// === Module 13780: GuildAntiRaidReportModal ===
 
-// Module 13778 (GuildAntiRaidReportModal)
+// Module 13780 (GuildAntiRaidReportModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
@@ -16,7 +16,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GuildReportRaidModalConstants = fn(13779);
+const GuildReportRaidModalConstants = fn(13781);
 ({ getReportRaidHelpArticleURL: closure_7, getReportRaidTypeLabel: closure_8, REPORT_RAID_OPTIONS: closure_9 } = GuildReportRaidModalConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -346,7 +346,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCloseModal) =>
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -424,7 +424,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCloseModal) =>
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

@@ -1,6 +1,6 @@
-// === Module 14862: QuestHomeEmptyState ===
+// === Module 14866: QuestHomeEmptyState ===
 
-// Module 14862 (QuestHomeEmptyState)
+// Module 14866 (QuestHomeEmptyState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -10,7 +10,7 @@ import useChatLayoutDefault from "useChatLayout" /* 4739 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import LinearGradientDefault from "LinearGradient" /* 5605 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 6619 */;
-import _modDef14863 from "module_14863" /* 14863 */;
+import _modDef14867 from "module_14867" /* 14867 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -134,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               let tmp28 = null;
               if (!isChatLockedOpen) {
                 const obj5 = { children: null };
-                const obj6 = { style: tmp8.emptyImage, source: _modDef14863, resizeMode: "cover" };
+                const obj6 = { style: tmp8.emptyImage, source: _modDef14867, resizeMode: "cover" };
                 const items1 = [timestampProducer(React4, obj6), ];
                 const obj7 = { style: tmp8.gradient, end: null, start: null, colors: null };
                 ({ END: obj10.end, START: obj10.start } = VerticalGradient);
@@ -219,7 +219,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let tmp11Result = null;
   if (!useChatLayoutDefault().isChatLockedOpen) {
     const obj10 = { children: null };
-    const obj11 = { style: tmp5.emptyImage, source: _modDef14863, resizeMode: "cover" };
+    const obj11 = { style: tmp5.emptyImage, source: _modDef14867, resizeMode: "cover" };
     const items2 = [timestampProducer(React4, obj11), ];
     const obj22 = { style: tmp5.gradient, end: null, start: null, colors: null };
     ({ END: obj12.end, START: obj12.start } = VerticalGradient);

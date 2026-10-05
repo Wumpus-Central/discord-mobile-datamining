@@ -1,9 +1,9 @@
-// === Module 16785: SuggestedSearchList ===
+// === Module 16804: SuggestedSearchList ===
 
-// Module 16785 (SuggestedSearchList)
+// Module 16804 (SuggestedSearchList)
 import nativeDefault from "native" /* 587 */;
 import _modDef3919 from "module_3919" /* 3919 */;
-import SuggestedSearchRowDefault from "SuggestedSearchRow" /* 16787 */;
+import SuggestedSearchRowDefault from "SuggestedSearchRow" /* 16806 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -28,7 +28,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((smartS
   }
   const tmp5 = closure_6();
   const obj = smartSearchQuery(576);
-  const suggestedSearches = smartSearchQuery(16786).useSuggestedSearches(smartSearchQuery, smartSearchQuery.source).suggestedSearches;
+  const suggestedSearches = smartSearchQuery(16805).useSuggestedSearches(smartSearchQuery, smartSearchQuery.source).suggestedSearches;
   if (0 === suggestedSearches.length) {
     return null;
   } else {
@@ -112,7 +112,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((smartS
     cResult[4] = items1;
     tmp8 = items1;
   }
-  const tmpResult = smartSearchQuery(16786);
+  const tmpResult = smartSearchQuery(16805);
 }) : ((smartSearchQuery) => {
   smartSearchQuery = smartSearchQuery.smartSearchQuery;
   let flag = smartSearchQuery.topMargin;
@@ -120,7 +120,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((smartS
     flag = false;
   }
   const tmp = closure_6();
-  const suggestedSearches = smartSearchQuery(16786).useSuggestedSearches(smartSearchQuery, smartSearchQuery.source).suggestedSearches;
+  const suggestedSearches = smartSearchQuery(16805).useSuggestedSearches(smartSearchQuery, smartSearchQuery.source).suggestedSearches;
   let tmp7Result = null;
   if (0 !== suggestedSearches.length) {
     const items = [tmp.text, ];

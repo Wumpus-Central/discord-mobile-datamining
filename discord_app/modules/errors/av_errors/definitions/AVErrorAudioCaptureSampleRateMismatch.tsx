@@ -1,9 +1,9 @@
-// === Module 18019: AVErrorAudioCaptureSampleRateMismatch ===
+// === Module 18041: AVErrorAudioCaptureSampleRateMismatch ===
 
-// Module 18019 (AVErrorAudioCaptureSampleRateMismatch)
+// Module 18041 (AVErrorAudioCaptureSampleRateMismatch)
 import DurationsDefault from "Durations" /* 1102 */;
 import AVError from "AVError" /* 9095 */;
-import AVErrorContext from "AVErrorContext" /* 18007 */;
+import AVErrorContext from "AVErrorContext" /* 18029 */;
 import MediaEngineStatsStore from "MediaEngineStatsStore" /* 4928 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;

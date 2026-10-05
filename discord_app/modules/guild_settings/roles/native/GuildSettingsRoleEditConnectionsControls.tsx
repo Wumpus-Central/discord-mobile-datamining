@@ -1,6 +1,6 @@
-// === Module 17782: GuildSettingsRoleEditConnectionsControls ===
+// === Module 17806: GuildSettingsRoleEditConnectionsControls ===
 
-// Module 17782 (GuildSettingsRoleEditConnectionsControls)
+// Module 17806 (GuildSettingsRoleEditConnectionsControls)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -17,11 +17,11 @@ import TableRadioRow from "TableRadioRow" /* 6071 */;
 import TableRadioGroup from "TableRadioGroup" /* 6072 */;
 import ConnectionsUtils from "ConnectionsUtils" /* 6678 */;
 import CirclePlusIcon from "CirclePlusIcon" /* 10983 */;
-import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 17769 */;
-import GuildSettingsRoleEditConnectionConfigurationDefault from "GuildSettingsRoleEditConnectionConfiguration" /* 17783 */;
+import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 17793 */;
+import GuildSettingsRoleEditConnectionConfigurationDefault from "GuildSettingsRoleEditConnectionConfiguration" /* 17807 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 6623 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17757 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17781 */;
 
 require = fn;
 function renderRoleConnectionConfigurations(memo, arg1, locked, arg3, integrations) {
@@ -132,7 +132,7 @@ function AddConnectionButton(locked) {
     obj2.onCompleteIdentityApplication = function onCompleteIdentityApplication(arg0) {
       return closure_1_0(closure_2_9, arg0);
     };
-    obj.openLazy(asyncRequireImpl(17785, dependencyMap.paths), combined, obj2);
+    obj.openLazy(asyncRequireImpl(17809, dependencyMap.paths), combined, obj2);
   };
   return closure_10(components_Button_Button.Button, obj);
 }
@@ -454,9 +454,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   ({ locked, integrations } = guild);
   closure_13();
   let obj = guild(576);
-  const applicationIdentityLinkedRolesEnabled = guild(17786).useApplicationIdentityLinkedRolesEnabled(guild.id);
-  let obj2 = guild(17786);
-  const applicationIdentityLinkedRolesEnabled1 = guild(17788).useApplicationIdentityLinkedRolesEnabled(guild.id, "guild_settings_roles_edit_connections");
+  const applicationIdentityLinkedRolesEnabled = guild(17810).useApplicationIdentityLinkedRolesEnabled(guild.id);
+  let obj2 = guild(17810);
+  const applicationIdentityLinkedRolesEnabled1 = guild(17812).useApplicationIdentityLinkedRolesEnabled(guild.id, "guild_settings_roles_edit_connections");
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [GuildRoleMemberCountStore];
     cResult[0] = items;
@@ -569,7 +569,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   cResult[4] = items2;
   tmp10 = items2;
   tmp9 = fn;
-  let obj3 = guild(17788);
+  let obj3 = guild(17812);
 }) : ((guild) => {
   guild = guild.guild;
   const role = guild.role;
@@ -700,7 +700,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   const obj9 = {
     handleConnectionTapped(connectionType, applicationId) {
       const items = [...memo];
-      const obj = { connectionType, connectionMetadataField: "Array", applicationId, operator: "enumerable", value: 12290119973512344000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
+      const obj = { connectionType, connectionMetadataField: "Array", applicationId, operator: "runOnJS", value: "r" };
       items.push(obj);
       if (AND === ConnectionsUtils.ConnectionConfigurationRuleOperator.AND) {
         if (0 === items.length) {

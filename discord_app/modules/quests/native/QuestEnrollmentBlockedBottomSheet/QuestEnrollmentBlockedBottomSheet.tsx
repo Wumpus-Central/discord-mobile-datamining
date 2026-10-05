@@ -1,6 +1,6 @@
-// === Module 14966: QuestEnrollmentBlockedBottomSheet ===
+// === Module 14970: QuestEnrollmentBlockedBottomSheet ===
 
-// Module 14966 (QuestEnrollmentBlockedBottomSheet)
+// Module 14970 (QuestEnrollmentBlockedBottomSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -211,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((questId) => {
         class C {
           constructor() {
             obj = { questId, questEnrollmentBlockedUntil: closure_1, sourceQuestContent };
-            return jsx(f69268, obj);
+            return jsx(f69318, obj);
           }
         }
         const obj2 = { overrideVisibility: true, questOrQuests: stateFromStores, questContent: null, questContentPosition: null, sourceQuestContent: null, children: null };
@@ -231,7 +231,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((questId) => {
     class C {
       constructor() {
         obj = { questId, questEnrollmentBlockedUntil: closure_1, sourceQuestContent };
-        return jsx(f69268, obj);
+        return jsx(f69318, obj);
       }
     }
     cResult[3] = questEnrollmentBlockedUntil;

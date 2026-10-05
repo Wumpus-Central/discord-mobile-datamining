@@ -1,6 +1,6 @@
-// === Module 18094: DispatcherBridge ===
+// === Module 18116: DispatcherBridge ===
 
-// Module 18094 (DispatcherBridge)
+// Module 18116 (DispatcherBridge)
 import LoggerDefault from "Logger" /* 3 */;
 import libdiscoreExperiments from "libdiscoreExperiments" /* 559 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;

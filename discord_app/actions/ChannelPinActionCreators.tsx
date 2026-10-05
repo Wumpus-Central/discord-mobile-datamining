@@ -24,7 +24,7 @@ let obj = {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -123,7 +123,7 @@ let obj = {
               const obj4 = channelName(5707);
             });
             c3 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp10) {
           c3 = tmp;
@@ -144,7 +144,7 @@ let obj = {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -190,7 +190,7 @@ let obj = {
               return closure_1(5707).show(obj2);
             });
             c3 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp8) {
           c3 = tmp;

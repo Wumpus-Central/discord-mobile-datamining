@@ -1,6 +1,6 @@
-// === Module 14733: UserSettingsFamilyCenterParentalControls ===
+// === Module 14737: UserSettingsFamilyCenterParentalControls ===
 
-// Module 14733 (UserSettingsFamilyCenterParentalControls)
+// Module 14737 (UserSettingsFamilyCenterParentalControls)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef2493 from "module_2493" /* 2493 */;
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                   }
                   return;
                 }
-                setOptionsResult1 = closure_0.setOptions({ title: "Symbol", headerRight: "current" });
+                setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
                 return;
               }
             }
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "Symbol", headerRight: "current" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
                   return;
                 }
               }
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "Symbol", headerRight: "current" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
                   return;
                 }
               }
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "Symbol", headerRight: "current" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
                   return;
                 }
               }
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "Symbol", headerRight: "current" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
                   return;
                 }
               }
@@ -348,7 +348,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "Symbol", headerRight: "current" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
                   return;
                 }
               }
@@ -392,7 +392,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             }
             return;
           }
-          setOptionsResult1 = closure_0.setOptions({ title: "Symbol", headerRight: "current" });
+          setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
           return;
         }
       }
@@ -506,7 +506,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         stackNavigation.setOptions(obj);
       }
     }
-    stackNavigation.setOptions({ title: "Symbol", headerRight: "current" });
+    stackNavigation.setOptions({ title: "Array", headerRight: "Set" });
   }, items1);
   const obj4 = { label: null, id: null, page: null };
   let intl = tmp2(tmp3[16]).intl;

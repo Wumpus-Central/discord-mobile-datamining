@@ -1,15 +1,15 @@
-// === Module 14676: FamilyCenterActivityPage ===
+// === Module 14680: FamilyCenterActivityPage ===
 
-// Module 14676 (FamilyCenterActivityPage)
+// Module 14680 (FamilyCenterActivityPage)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 6619 */;
 import useUserLinks from "useUserLinks" /* 8295 */;
 import FamilyCenterDataConfirmationDefault from "FamilyCenterDataConfirmation" /* 11530 */;
-import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 14677 */;
-import FamilyCenterActivityBannerDefault from "FamilyCenterActivityBanner" /* 14679 */;
-import FamilyCenterFeatureRowDefault from "FamilyCenterFeatureRow" /* 14689 */;
-import FamilyCenterActivityCardDefault from "FamilyCenterActivityCard" /* 14693 */;
+import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 14681 */;
+import FamilyCenterActivityBannerDefault from "FamilyCenterActivityBanner" /* 14683 */;
+import FamilyCenterFeatureRowDefault from "FamilyCenterFeatureRow" /* 14693 */;
+import FamilyCenterActivityCardDefault from "FamilyCenterActivityCard" /* 14697 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

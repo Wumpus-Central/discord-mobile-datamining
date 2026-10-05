@@ -111,7 +111,7 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -192,7 +192,7 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
         }
       }
       c4 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     } catch (tmp33) {
       c4 = tmp;
       throw tmp33;

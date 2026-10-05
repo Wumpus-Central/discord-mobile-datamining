@@ -1,6 +1,6 @@
-// === Module 16603: useMediaKeyboardConfig ===
+// === Module 16609: useMediaKeyboardConfig ===
 
-// Module 16603 (useMediaKeyboardConfig)
+// Module 16609 (useMediaKeyboardConfig)
 import c from "c" /* 576 */;
 import Server from "Server" /* 1985 */;
 import ThreadHooks from "ThreadHooks" /* 6772 */;

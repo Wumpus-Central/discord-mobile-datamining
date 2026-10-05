@@ -1,6 +1,6 @@
-// === Module 14767: ConnectedAccount ===
+// === Module 14771: ConnectedAccount ===
 
-// Module 14767 (ConnectedAccount)
+// Module 14771 (ConnectedAccount)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native2 from "native" /* 1188 */;
@@ -20,9 +20,9 @@ import TableSwitchRow from "TableSwitchRow" /* 6698 */;
 import IconButton from "IconButton" /* 7575 */;
 import XLargeBoldIcon from "XLargeBoldIcon" /* 9385 */;
 import InfoBoxDefault from "InfoBox" /* 9459 */;
-import shouldWarnConnectedAccountTwoWayDefault from "shouldWarnConnectedAccountTwoWay" /* 14768 */;
-import XboxTwoWayLinkUpsell from "XboxTwoWayLinkUpsell" /* 14769 */;
-import PlayStationTwoWayLinkUpsell from "PlayStationTwoWayLinkUpsell" /* 14772 */;
+import shouldWarnConnectedAccountTwoWayDefault from "shouldWarnConnectedAccountTwoWay" /* 14772 */;
+import XboxTwoWayLinkUpsell from "XboxTwoWayLinkUpsell" /* 14773 */;
+import PlayStationTwoWayLinkUpsell from "PlayStationTwoWayLinkUpsell" /* 14776 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -772,7 +772,7 @@ prototype["renderMetadata"] = function renderMetadata() {
     if (self.state.metadataAlreadyRefreshed) {
       let tmp19Result = closure_14(tmp2(8451).CheckmarkLargeBoldIcon, { size: "sm" });
     } else {
-      tmp19Result = closure_14(tmp2(14774).RefreshIcon, { size: "sm" });
+      tmp19Result = closure_14(tmp2(14778).RefreshIcon, { size: "sm" });
     }
     const obj12 = { size: "sm", variant: "icon-only", icon: tmp19Result, accessibilityLabel: null, onPress: null, disabled: null };
     const intl3 = tmp2(1126).intl;

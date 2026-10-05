@@ -1,6 +1,6 @@
-// === Module 17363: LaunchPadPullTab ===
+// === Module 17387: LaunchPadPullTab ===
 
-// Module 17363 (LaunchPadPullTab)
+// Module 17387 (LaunchPadPullTab)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
 import spring from "spring" /* 5597 */;

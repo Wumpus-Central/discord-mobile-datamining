@@ -1,11 +1,11 @@
-// === Module 16178: ChannelsEmpty ===
+// === Module 16182: ChannelsEmpty ===
 
-// Module 16178 (ChannelsEmpty)
+// Module 16182 (ChannelsEmpty)
 import nativeDefault from "native" /* 587 */;
 import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 9214 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9247 */;
-import _modDef16179 from "module_16179" /* 16179 */;
-import _modDef16180 from "module_16180" /* 16180 */;
+import _modDef16183 from "module_16183" /* 16183 */;
+import _modDef16184 from "module_16184" /* 16184 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4509 */;
 
@@ -91,7 +91,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guild)
     }
   }
   const tmpResult = guild(573);
-  const youBarTotalHeight = guild(14897).useYouBarTotalHeight(16);
+  const youBarTotalHeight = guild(14901).useYouBarTotalHeight(16);
   if (cResult[8] !== youBarTotalHeight) {
     class S {
       constructor() {
@@ -140,7 +140,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guild)
       }
       const obj2 = { style: tmp4.personalizeButtonWrapper, children: null };
       const obj3 = { icon: null, label: null, onPress: null };
-      const obj4 = { source: _modDef16179, disableColor: true };
+      const obj4 = { source: _modDef16183, disableColor: true };
       obj3.icon = closure_8(tmp(1188).Icon, obj4);
       const intl = tmp(1126).intl;
       obj3.label = intl.string(tmp(1126).t["Yhi9/N"]);
@@ -157,7 +157,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guild)
   cResult[10] = tmp4.wrapper;
   cResult[11] = tmp14;
   cResult[12] = items2;
-  const tmpResult2 = guild(14897);
+  const tmpResult2 = guild(14901);
 }) : ((guild) => {
   guild = guild.guild;
   const tmp = closure_10();
@@ -176,13 +176,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guild)
   const obj = guild(573);
   const obj3 = { style: null, children: null };
   const items4 = [tmp.wrapper, ];
-  const obj2 = guild(14897);
-  items4[1] = { paddingBottom: guild(14897).useYouBarTotalHeight(16) };
+  const obj2 = guild(14901);
+  items4[1] = { paddingBottom: guild(14901).useYouBarTotalHeight(16) };
   obj3.style = items4;
   if (canCustomizeGuild) {
     const obj5 = { style: tmp.personalizeButtonWrapper, children: null };
     const obj6 = { icon: null, label: null, onPress: null };
-    const obj7 = { source: _modDef16179, disableColor: true };
+    const obj7 = { source: _modDef16183, disableColor: true };
     obj6.icon = closure_8(tmp2(1188).Icon, obj7);
     const intl = tmp2(1126).intl;
     obj6.label = intl.string(tmp2(1126).t["Yhi9/N"]);
@@ -192,8 +192,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guild)
   }
   const items5 = [canCustomizeGuild, ];
   const obj8 = { style: tmp.content, children: null };
-  const obj4 = { paddingBottom: guild(14897).useYouBarTotalHeight(16) };
-  const items6 = [closure_8(closure_5, { source: _modDef16180 }), , , ];
+  const obj4 = { paddingBottom: guild(14901).useYouBarTotalHeight(16) };
+  const items6 = [closure_8(closure_5, { source: _modDef16184 }), , , ];
   const obj10 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: null, children: null };
   const items7 = [, ];
   ({ text: arr8[0], headerText: arr8[1] } = tmp);

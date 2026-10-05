@@ -1,6 +1,6 @@
-// === Module 16126: GuildRoleSubscriptionsRow ===
+// === Module 16130: GuildRoleSubscriptionsRow ===
 
-// Module 16126 (GuildRoleSubscriptionsRow)
+// Module 16130 (GuildRoleSubscriptionsRow)
 import nativeDefault from "native" /* 587 */;
 import router_utils from "router_utils" /* 1112 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
@@ -29,7 +29,7 @@ export default function GuildRoleSubscriptionsRow(selected) {
     router_utils.transitionTo(Routes.CHANNEL(id, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
   }, items);
   const callback1 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16127, dependencyMap.paths), c1, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16131, dependencyMap.paths), c1, {
       guildId: id,
       onClose() {
         c1(dependencyMap[8]).hideActionSheet(closure_1_1);

@@ -1,6 +1,6 @@
-// === Module 13803: WideBannerDismissibleContentVersion ===
+// === Module 13805: WideBannerDismissibleContentVersion ===
 
-// Module 13803 (WideBannerDismissibleContentVersion)
+// Module 13805 (WideBannerDismissibleContentVersion)
 import ShopBlockType from "ShopBlockType" /* 7083 */;
 import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 7095 */;
 

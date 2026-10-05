@@ -1,15 +1,15 @@
-// === Module 13115: GuildChannelHeader ===
+// === Module 13117: GuildChannelHeader ===
 
-// Module 13115 (GuildChannelHeader)
+// Module 13117 (GuildChannelHeader)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
 import useChannelName from "useChannelName" /* 5043 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5812 */;
-import ChannelHeader from "ChannelHeader" /* 13102 */;
+import ChannelHeader from "ChannelHeader" /* 13104 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberCountStore from "ChannelMemberCountStore" /* 13116 */;
+import ChannelMemberCountStore from "ChannelMemberCountStore" /* 13118 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5436 */;
 import ChannelMemberStore from "ChannelMemberStore" /* 6782 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
@@ -90,7 +90,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
             }
           }
         }
-        const tmpResult4 = tmp(13109);
+        const tmpResult4 = tmp(13111);
         const result = tmpResult4.renderMemberCountText(online, total, tmp4, tmp18);
         cResult[8] = online;
         cResult[9] = tmp18;
@@ -200,7 +200,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     const count = ChannelMemberCountStore.requestCount(channel.guild_id, channel.id);
   }, items1);
   if (null == total) {
-    const tmpResult = tmp(13109);
+    const tmpResult = tmp(13111);
     return tmpResult.renderMemberCountText(online, total, flag, tmp(6104).ICON_SIZE[token]);
   }
   const obj2 = channel(504);
@@ -253,7 +253,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               if (channel != null) {
                 id = channel.id;
               }
-              const shouldChannelShowLoadingIndicator = guildId(13107).useShouldChannelShowLoadingIndicator(id);
+              const shouldChannelShowLoadingIndicator = guildId(13109).useShouldChannelShowLoadingIndicator(id);
               if (cResult[14] === channel) {
                 if (cResult[15] === shouldChannelShowLoadingIndicator) {
                   let tmp26 = cResult[16];
@@ -270,7 +270,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                             tmp26 = null != tmp15;
                           }
                           const obj4 = { accessibleTitle: tmp14, subtitle: cResult[22], disableArrow, guildId, icon };
-                          const renderChannelTitleResult = guildId(13109).renderChannelTitle(tmp7, obj4);
+                          const renderChannelTitleResult = guildId(13111).renderChannelTitle(tmp7, obj4);
                           if (cResult[23] === tmp26) {
                             if (cResult[24] === renderChannelTitleResult) {
                               let tmp39 = cResult[25];
@@ -282,14 +282,14 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                           cResult[24] = renderChannelTitleResult;
                           cResult[25] = obj5;
                           tmp39 = obj5;
-                          const tmpResult8 = guildId(13109);
+                          const tmpResult8 = guildId(13111);
                         }
                       }
                     }
                   }
                 }
                 if (tmp26) {
-                  let tmp29Result = closure_19(guildId(13107).ChannelHeaderLoadingIndicator, {});
+                  let tmp29Result = closure_19(guildId(13109).ChannelHeaderLoadingIndicator, {});
                 } else {
                   let tmp31 = tmp20;
                   if (tmp20) {
@@ -322,7 +322,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               cResult[15] = shouldChannelShowLoadingIndicator;
               cResult[16] = tmp28;
               tmp26 = tmp28;
-              const tmpResult7 = guildId(13107);
+              const tmpResult7 = guildId(13109);
             }
           }
         }
@@ -355,8 +355,8 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       let result;
       if (tmp8) {
         if (null != parentChannel) {
-          result = guildId(13109).renderParentChannelSubTitle(parentChannel);
-          const tmpResult9 = guildId(13109);
+          result = guildId(13111).renderParentChannelSubTitle(parentChannel);
+          const tmpResult9 = guildId(13111);
         }
       }
       cResult[6] = tmp8;
@@ -412,8 +412,8 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const obj3 = guildId(9899);
   if (tmp5) {
     if (null != parentChannel) {
-      const result = guildId(13109).renderParentChannelSubTitle(parentChannel);
-      const tmpResult = guildId(13109);
+      const result = guildId(13111).renderParentChannelSubTitle(parentChannel);
+      const tmpResult = guildId(13111);
     }
   }
   const formatToPlainStringResult = intl.formatToPlainString(tmp5 ? t["OkzL+Q"] : t.UbNmGc, { channelName: tmp3 });
@@ -446,7 +446,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     id = channel.id;
   }
   let isForumLikeChannelResult;
-  const shouldChannelShowLoadingIndicator = guildId(13107).useShouldChannelShowLoadingIndicator(id);
+  const shouldChannelShowLoadingIndicator = guildId(13109).useShouldChannelShowLoadingIndicator(id);
   if (channel != null) {
     isForumLikeChannelResult = channel.isForumLikeChannel();
   }
@@ -455,7 +455,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp18 = shouldChannelShowLoadingIndicator;
   }
   if (tmp18) {
-    let tmp19Result = closure_19(guildId(13107).ChannelHeaderLoadingIndicator, {});
+    let tmp19Result = closure_19(guildId(13109).ChannelHeaderLoadingIndicator, {});
   } else {
     let tmp21 = tmp12;
     if (tmp12) {
@@ -470,8 +470,8 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const tmp24 = null != parentChannel && result;
   }
   const obj6 = { node: null, hasSubtitle: null };
-  const tmpResult5 = guildId(13107);
-  obj6.node = guildId(13109).renderChannelTitle(tmp3, { accessibleTitle: formatToPlainStringResult, subtitle: tmp19Result, disableArrow, guildId, icon });
+  const tmpResult5 = guildId(13109);
+  obj6.node = guildId(13111).renderChannelTitle(tmp3, { accessibleTitle: formatToPlainStringResult, subtitle: tmp19Result, disableArrow, guildId, icon });
   if (!tmp18) {
     tmp18 = tmp12;
   }

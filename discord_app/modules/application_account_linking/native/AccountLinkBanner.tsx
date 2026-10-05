@@ -1,6 +1,6 @@
-// === Module 16115: AccountLinkBanner ===
+// === Module 16119: AccountLinkBanner ===
 
-// Module 16115 (AccountLinkBanner)
+// Module 16119 (AccountLinkBanner)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ButtonConstants from "ButtonConstants" /* 5600 */;
@@ -210,7 +210,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((startAuthoriza
     items3[2] = closure_6(View, obj9);
     obj6.children = items3;
     items2[1] = closure_7(View, obj6);
-    const obj10 = { user: stateFromStores, size: require("native").AvatarSizes.LARGE_48, guildId: "Array" };
+    const obj10 = { user: stateFromStores, size: require("native").AvatarSizes.LARGE_48, guildId: "r" };
     items2[2] = closure_6(require("native").Avatar, obj10);
     obj4.children = items2;
     items1[1] = closure_7(View, obj4);

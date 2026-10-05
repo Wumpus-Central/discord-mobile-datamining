@@ -20,20 +20,20 @@ import UserProfileActivityDefault from "UserProfileActivity" /* 12817 */;
 import UserProfileModeratorActionsDefault from "UserProfileModeratorActions" /* 12869 */;
 import UserProfileNoteDefault from "UserProfileNote" /* 12872 */;
 import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 12900 */;
-import VibegrationsCustomWidgetAddOptionDefault from "VibegrationsCustomWidgetAddOption" /* 12901 */;
-import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 12913 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 12921 */;
-import WishlistUtils from "WishlistUtils" /* 12922 */;
-import UserProfilePrivateInfoBannerDefault from "UserProfilePrivateInfoBanner" /* 12927 */;
-import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 12928 */;
-import UserProfileGameFriendsCardDefault from "UserProfileGameFriendsCard" /* 12930 */;
-import UserProfileConnections from "UserProfileConnections" /* 12931 */;
-import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 12936 */;
-import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 12941 */;
-import UserProfileMutualsDefault from "UserProfileMutuals" /* 12947 */;
-import UserProfileIncomingFriendRequestDefault from "UserProfileIncomingFriendRequest" /* 12948 */;
-import UserProfileRemediatedNoticeDefault from "UserProfileRemediatedNotice" /* 12953 */;
-import UserProfileContactButtonsDefault from "UserProfileContactButtons" /* 12954 */;
+import ConjureCustomWidgetAddOptionDefault from "ConjureCustomWidgetAddOption" /* 12901 */;
+import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 12915 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 12923 */;
+import WishlistUtils from "WishlistUtils" /* 12924 */;
+import UserProfilePrivateInfoBannerDefault from "UserProfilePrivateInfoBanner" /* 12929 */;
+import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 12930 */;
+import UserProfileGameFriendsCardDefault from "UserProfileGameFriendsCard" /* 12932 */;
+import UserProfileConnections from "UserProfileConnections" /* 12933 */;
+import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 12938 */;
+import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 12943 */;
+import UserProfileMutualsDefault from "UserProfileMutuals" /* 12949 */;
+import UserProfileIncomingFriendRequestDefault from "UserProfileIncomingFriendRequest" /* 12950 */;
+import UserProfileRemediatedNoticeDefault from "UserProfileRemediatedNotice" /* 12955 */;
+import UserProfileContactButtonsDefault from "UserProfileContactButtons" /* 12956 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7863 */;
@@ -799,7 +799,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     cResult[10] = C;
     tmp14 = C;
   }
-  const fn2 = function v() {
+  const fn2 = function b() {
     trackUserProfileAction({ action: "EDIT_PROFILE" });
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
     closeVoicePanelsDefault();
@@ -890,7 +890,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     if (cResult[7] !== isCurrentUser) {
       let tmp11 = isCurrentUser;
       if (isCurrentUser) {
-        tmp11 = closure_1_20(VibegrationsCustomWidgetAddOptionDefault, {});
+        tmp11 = closure_1_20(ConjureCustomWidgetAddOptionDefault, {});
       }
       cResult[7] = isCurrentUser;
       cResult[8] = tmp11;
@@ -950,7 +950,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const items1 = [tmp6, , ];
   if (isCurrentUser) {
-    isCurrentUser = closure_1_20(VibegrationsCustomWidgetAddOptionDefault, {});
+    isCurrentUser = closure_1_20(ConjureCustomWidgetAddOptionDefault, {});
   }
   items1[1] = isCurrentUser;
   items1[2] = closure_1_20(UserProfileWidgetsBoardDefault, { userId, isVisible, cardStyle: items });
@@ -1462,7 +1462,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user) 
   const tmp6Result34 = user(guildId[17]);
   const displayableBoardWidgets = user(guildId[71]).useDisplayableBoardWidgets(user.id);
   const tmp6Result35 = user(guildId[71]);
-  const tmp37 = displayableBoardWidgets.length > 0 || user(guildId[72]).useCanConjureVibegrationsCustomWidget("UserProfileContent", tmp9);
+  const tmp37 = displayableBoardWidgets.length > 0 || user(guildId[72]).useCanConjureCustomWidget("UserProfileContent", tmp9);
   closure_25 = tmp37;
   const tmp6Result36 = user(guildId[72]);
   const tmp38 = user(guildId[73]).useIsRecentActivityMobileEnabled("UserProfileContent") && null != stateFromStores;

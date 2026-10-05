@@ -1,6 +1,6 @@
-// === Module 13438: MultiAccountSwitchStore ===
+// === Module 13440: MultiAccountSwitchStore ===
 
-// Module 13438 (MultiAccountSwitchStore)
+// Module 13440 (MultiAccountSwitchStore)
 import LoggerDefault from "Logger" /* 3 */;
 import fast_connect from "fast_connect" /* 15 */;
 import initializeDefault from "initialize" /* 504 */;

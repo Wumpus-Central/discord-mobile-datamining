@@ -1,15 +1,15 @@
-// === Module 17907: GuildSettingsRoleSubscriptionContainer ===
+// === Module 17929: GuildSettingsRoleSubscriptionContainer ===
 
-// Module 17907 (GuildSettingsRoleSubscriptionContainer)
+// Module 17929 (GuildSettingsRoleSubscriptionContainer)
 import c from "c" /* 576 */;
-import GroupListingsFetchContext from "GroupListingsFetchContext" /* 15027 */;
-import useOnboardingMonetizationEnableFlowDefault from "useOnboardingMonetizationEnableFlow" /* 17883 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 17897 */;
+import GroupListingsFetchContext from "GroupListingsFetchContext" /* 15031 */;
+import useOnboardingMonetizationEnableFlowDefault from "useOnboardingMonetizationEnableFlow" /* 17907 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 17921 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
 
 const ErrorBlockDefault = tmp13(11852);
-const WarningNoticeDefault = tmp13(17856);
+const WarningNoticeDefault = tmp13(17880);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);

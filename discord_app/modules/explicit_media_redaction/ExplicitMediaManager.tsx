@@ -1,6 +1,6 @@
-// === Module 17468: ExplicitMediaManager ===
+// === Module 17492: ExplicitMediaManager ===
 
-// Module 17468 (ExplicitMediaManager)
+// Module 17492 (ExplicitMediaManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import flattenDefault from "flatten" /* 5000 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 5112 */;
@@ -9,7 +9,7 @@ import HarmTypeConfiguration from "HarmTypeConfiguration" /* 6798 */;
 import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 6800 */;
 import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7109 */;
 import ExplicitMediaRedactionActionCreators from "ExplicitMediaRedactionActionCreators" /* 8924 */;
-import uniqWithDefault from "uniqWith" /* 17470 */;
+import uniqWithDefault from "uniqWith" /* 17494 */;
 import ReferencedMessageStore from "ReferencedMessageStore" /* 7102 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelSectionStore from "ChannelSectionStore" /* 6783 */;
@@ -17,7 +17,7 @@ import ChannelStore from "ChannelStore" /* 2051 */;
 import MessageStore from "MessageStore" /* 5110 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
-import ExplicitMediaSearchStore from "ExplicitMediaSearchStore" /* 13504 */;
+import ExplicitMediaSearchStore from "ExplicitMediaSearchStore" /* 13506 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
 
 require = fn;
@@ -168,7 +168,7 @@ function handleUnscannedMessages(found2, isMessageUpdate) {
 }
 function processMessagesFromAction(firstMessages, isMessageUpdate) {
   const found = firstMessages.filter((item) => {
-    obj = obj(17469);
+    obj = obj(17493);
     let result = obj.hasAttachmentsEmbedsComponentsOrSnapshots(item);
     obj(6795);
     if (result) {
@@ -180,7 +180,7 @@ function processMessagesFromAction(firstMessages, isMessageUpdate) {
     if (null != referenced_message) {
       if ("referenced_message" in referenced_message) {
         if (null != referenced_message.referenced_message) {
-          obj = obj(17469);
+          obj = obj(17493);
           if (obj.hasAttachmentsEmbedsComponentsOrSnapshots(referenced_message.referenced_message)) {
             if (0 !== tmpResult.getEnabledHarmTypesForMessage(referenced_message.referenced_message)) {
               return referenced_message.referenced_message;
@@ -199,7 +199,7 @@ function processMessagesFromAction(firstMessages, isMessageUpdate) {
     HermesBuiltin.arraySpread(found1, HermesBuiltin.arraySpread(found, 0));
     tmp2 = items;
   }
-  const arr4 = obj2(17470)(tmp2, (id, id2) => id.id === id2.id && id.channel_id === id2.channel_id);
+  const arr4 = obj2(17494)(tmp2, (id, id2) => id.id === id2.id && id.channel_id === id2.channel_id);
   const found2 = arr4.filter((item) => {
     obj = obj(6795);
     return obj.hasUnscannedMedia(item);
@@ -546,7 +546,7 @@ function maybeScanMessagesForChannelId(channelId) {
   let tmp = 0 !== messages.length;
   if (tmp) {
     const found = messages.filter((item) => {
-      obj = obj(17469);
+      obj = obj(17493);
       let result = obj.hasAttachmentsEmbedsComponentsOrSnapshots(item);
       if (result) {
         result = 0 !== obj(6795).getEnabledHarmTypesForMessage(item);
@@ -560,7 +560,7 @@ function maybeScanMessagesForChannelId(channelId) {
           messageByReference = messageByReference.getMessageByReference(type.messageReference);
           if (messageByReference.state === constants.LOADED) {
             if (null != messageByReference.message) {
-              obj = obj(17469);
+              obj = obj(17493);
               if (obj.hasAttachmentsEmbedsComponentsOrSnapshots(messageByReference.message)) {
                 if (0 !== tmp5Result.getEnabledHarmTypesForMessage(messageByReference.message)) {
                   return messageByReference.message;
@@ -580,7 +580,7 @@ function maybeScanMessagesForChannelId(channelId) {
       HermesBuiltin.arraySpread(found1, HermesBuiltin.arraySpread(found, 0));
       tmp3 = items;
     }
-    const arr5 = obj2(17470)(tmp3, (id, id2) => id.id === id2.id && id.channel_id === id2.channel_id);
+    const arr5 = obj2(17494)(tmp3, (id, id2) => id.id === id2.id && id.channel_id === id2.channel_id);
     const found2 = arr5.filter((item) => {
       obj = obj(6795);
       return obj.hasUnscannedMedia(item);

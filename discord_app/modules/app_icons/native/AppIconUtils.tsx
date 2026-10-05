@@ -1,12 +1,12 @@
-// === Module 13259: AppIconUtils ===
+// === Module 13261: AppIconUtils ===
 
-// Module 13259 (AppIconUtils)
+// Module 13261 (AppIconUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1615 */;
 import useMountEffectDefault from "useMountEffect" /* 5590 */;
 import openUserSettings from "openUserSettings" /* 6885 */;
-import NativeAppIconModuleDefault from "NativeAppIconModule" /* 13260 */;
+import NativeAppIconModuleDefault from "NativeAppIconModule" /* 13262 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -35,7 +35,7 @@ let closure_14 = async function _fetchCurrentAppIcon() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -148,7 +148,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -180,7 +180,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             closure_128_0 = value;
             tmp2(closure_128_0);
             c3 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp12) {
           c3 = tmp;
@@ -243,7 +243,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -276,7 +276,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           closure_128_0 = value;
           closure_129_0(closure_128_0);
           c3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp12) {
         c3 = tmp;

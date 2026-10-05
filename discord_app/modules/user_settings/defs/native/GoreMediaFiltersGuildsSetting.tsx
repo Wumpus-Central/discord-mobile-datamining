@@ -1,6 +1,6 @@
-// === Module 14637: GoreMediaFiltersGuildsSetting ===
+// === Module 14641: GoreMediaFiltersGuildsSetting ===
 
-// Module 14637 (GoreMediaFiltersGuildsSetting)
+// Module 14641 (GoreMediaFiltersGuildsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
@@ -8,8 +8,8 @@ import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactio
 import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7109 */;
 import SettingsConstants from "SettingsConstants" /* 7634 */;
 import useUserIsTeen from "useUserIsTeen" /* 8294 */;
-import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 14629 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14630 */;
+import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 14633 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14634 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import SettingBuilders from "SettingBuilders" /* 11129 */;

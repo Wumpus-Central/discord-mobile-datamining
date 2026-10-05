@@ -1,6 +1,6 @@
-// === Module 13688: useDeviceCodeAuthorizeCallback ===
+// === Module 13690: useDeviceCodeAuthorizeCallback ===
 
-// Module 13688 (useDeviceCodeAuthorizeCallback)
+// Module 13690 (useDeviceCodeAuthorizeCallback)
 import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 6677 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -35,7 +35,7 @@ let closure_6 = async function _createTwoWayLink(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -191,7 +191,7 @@ let closure_6 = async function _createTwoWayLink(arg0, arg1) {
           } else {
             c8 = 0;
             c10 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else if (arg0 === 1) {
           c10 = 3;
@@ -271,7 +271,7 @@ export const useDeviceCodeAuthorizeCallback = ReactCompilerGating.isReactCompile
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -404,7 +404,7 @@ export const useDeviceCodeAuthorizeCallback = ReactCompilerGating.isReactCompile
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

@@ -1,6 +1,6 @@
-// === Module 12989: OrbCheckoutModalComponents ===
+// === Module 12991: OrbCheckoutModalComponents ===
 
-// Module 12989 (OrbCheckoutModalComponents)
+// Module 12991 (OrbCheckoutModalComponents)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -14,8 +14,8 @@ import OrbCheckoutUtils from "OrbCheckoutUtils" /* 6743 */;
 import OrbsIcon from "OrbsIcon" /* 8491 */;
 import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 10746 */;
 import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 10748 */;
-import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 12988 */;
-import useVirtualCurrencyBalance from "useVirtualCurrencyBalance" /* 12990 */;
+import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 12990 */;
+import useVirtualCurrencyBalance from "useVirtualCurrencyBalance" /* 12992 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -314,7 +314,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj3 = { style: tmp4.disclaimer, variant: "text-xxs/normal", color: "interactive-text-active", children: tmp5 };
 }) : (() => {
   const tmp = closure_8();
-  skuId = skuId(12988).useOrbCheckoutModalContext().skuId;
+  skuId = skuId(12990).useOrbCheckoutModalContext().skuId;
   const items = [skuId];
   const memo = noop.useMemo(() => OrbCheckoutUtils.getOrbCheckoutDisclaimerMessage(skuId), items);
   return closure_6(skuId(4886).Text, { style: tmp.disclaimer, variant: "text-xxs/normal", color: "interactive-text-active", children: memo });

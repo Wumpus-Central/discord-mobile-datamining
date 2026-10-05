@@ -1,12 +1,12 @@
-// === Module 14300: validateEmbeddedAppFrame ===
+// === Module 14302: validateEmbeddedAppFrame ===
 
-// Module 14300 (validateEmbeddedAppFrame)
+// Module 14302 (validateEmbeddedAppFrame)
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2016 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8514 */;
 import RPCErrorDefault from "RPCError" /* 9026 */;
 import RPCHelpers from "RPCHelpers" /* 9031 */;
+import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 14303 */;
 import FramesStore from "FramesStore" /* 8703 */;
-import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14301 */;
 
 require = fn;
 function validateEmbeddedAppFrame(transport) {
@@ -25,8 +25,8 @@ function validateEmbeddedAppFrame(transport) {
         if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL !== type) {
           if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL !== type) {
             if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
-              if (tmp35.applicationId === VibegrationsBuilderPreviewStore.getBuilderPreviewApplicationId()) {
-                let obj5 = { channelId: "Symbol", guildId: "current" };
+              if (tmp35.applicationId === ConjureBuilderPreviewStore.getBuilderPreviewApplicationId()) {
+                let obj5 = { channelId: "Array", guildId: "Set" };
               } else {
                 obj5 = null;
               }

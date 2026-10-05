@@ -1,10 +1,10 @@
-// === Module 16265: useGuildsBarBadges ===
+// === Module 16269: useGuildsBarBadges ===
 
-// Module 16265 (useGuildsBarBadges)
+// Module 16269 (useGuildsBarBadges)
 import native from "native" /* 1188 */;
 import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4701 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 16234 */;
-import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 16270 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 16238 */;
+import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 16274 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import GuildIncidentsStore from "GuildIncidentsStore" /* 11160 */;
@@ -271,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2
     }
     const tmpResult5 = tmp(504);
     const stateFromStores2 = tmp(504).useStateFromStores(tmp13, U, tmp17);
-    const tmp20 = stateFromStores(16266)(arg0);
+    const tmp20 = stateFromStores(16270)(arg0);
     const tmpResult6 = tmp(504);
     const token = tmp(4580).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
     const tmpResult7 = tmp(4580);

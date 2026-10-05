@@ -1,6 +1,6 @@
-// === Module 13656: MarkupReactGameMentionRule ===
+// === Module 13658: MarkupReactGameMentionRule ===
 
-// Module 13656 (MarkupReactGameMentionRule)
+// Module 13658 (MarkupReactGameMentionRule)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useGame from "useGame" /* 6812 */;

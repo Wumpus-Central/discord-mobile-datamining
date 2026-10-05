@@ -1,6 +1,6 @@
-// === Module 13907: NewTag ===
+// === Module 13909: NewTag ===
 
-// Module 13907 (NewTag)
+// Module 13909 (NewTag)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;

@@ -47,7 +47,7 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -164,7 +164,7 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
           }
           v0 = 0;
           c6 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp44) {
         if (tmp4 === v0) {

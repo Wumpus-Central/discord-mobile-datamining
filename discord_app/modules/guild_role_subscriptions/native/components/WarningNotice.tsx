@@ -1,6 +1,6 @@
-// === Module 17856: WarningNotice ===
+// === Module 17880: WarningNotice ===
 
-// Module 17856 (WarningNotice)
+// Module 17880 (WarningNotice)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef4807 from "module_4807" /* 4807 */;

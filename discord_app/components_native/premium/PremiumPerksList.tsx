@@ -1,6 +1,6 @@
-// === Module 15565: PremiumPerksList ===
+// === Module 15569: PremiumPerksList ===
 
-// Module 15565 (PremiumPerksList)
+// Module 15569 (PremiumPerksList)
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import noop from "module_19" /* 19 */;

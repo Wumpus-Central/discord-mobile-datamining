@@ -45,7 +45,7 @@ let closure_20 = async function _loadChannelHistory(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -126,7 +126,7 @@ let closure_21 = async function _loadEarlyCache(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -412,7 +412,7 @@ let closure_23 = async function _loadInitialGuilds(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -537,7 +537,7 @@ let closure_24 = async function _loadInitialGuildChannels(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -632,7 +632,7 @@ let closure_25 = async function _loadLateLazyCache(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -884,7 +884,7 @@ let closure_25 = async function _loadLateLazyCache(arg0) {
           }
         });
         c7 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp20) {
       c7 = tmp;
@@ -899,7 +899,7 @@ function resumeFluxAndSocket(arg0) {
   const Emitter = initializeDefault.Emitter;
   Emitter.batched(() => {
     try {
-      f154159();
+      f154466();
       dispatcher = dispatcher.dispatcher;
       if (dispatcher.hasStuffToDispatchNow()) {
         c2 = true;
@@ -1000,7 +1000,7 @@ prototype["loadCacheAsync"] = function loadCacheAsync(arg0, arg1) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1130,13 +1130,13 @@ prototype["loadCacheAsync"] = function loadCacheAsync(arg0, arg1) {
                 c5 = 1;
                 const obj11 = {
                   value: (function dontLoadLateLazyCache() {
-                                const f154159 = () => closure_1(_true[23]).dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
+                                const f154466 = () => closure_1(_true[23]).dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
                                 const socket = closure_5.getSocket();
                                 dependencyMap = false;
                                 const Emitter = socket(504).Emitter;
                                 Emitter.batched(() => {
                                   try {
-                                    f154159();
+                                    f154466();
                                     dispatcher = dispatcher.dispatcher;
                                     if (dispatcher.hasStuffToDispatchNow()) {
                                       c2 = true;

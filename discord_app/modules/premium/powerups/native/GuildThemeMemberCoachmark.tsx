@@ -1,6 +1,6 @@
-// === Module 16089: GuildThemeMemberCoachmark ===
+// === Module 16093: GuildThemeMemberCoachmark ===
 
-// Module 16089 (GuildThemeMemberCoachmark)
+// Module 16093 (GuildThemeMemberCoachmark)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef2525 from "module_2525" /* 2525 */;
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         return;
       }
     }
-    guildPowerupBannerImage = markAsDismissed(16090);
+    guildPowerupBannerImage = markAsDismissed(16094);
   }
   cResult[6] = stateFromStores;
   cResult[7] = stateFromStores1;
@@ -211,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   const obj2 = guildId(504);
   guildPowerupBannerImage = guildId(12177).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
   if (guildPowerupBannerImage == null) {
-    guildPowerupBannerImage = markAsDismissed(16090);
+    guildPowerupBannerImage = markAsDismissed(16094);
   }
   const diff = onDismiss - markAsDismissed(7671)(guildId).available;
   c5 = diff;

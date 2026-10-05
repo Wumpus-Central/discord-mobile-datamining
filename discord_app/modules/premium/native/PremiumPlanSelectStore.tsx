@@ -1,6 +1,6 @@
-// === Module 13346: PremiumPlanSelectStore ===
+// === Module 13348: PremiumPlanSelectStore ===
 
-// Module 13346 (PremiumPlanSelectStore)
+// Module 13348 (PremiumPlanSelectStore)
 import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 

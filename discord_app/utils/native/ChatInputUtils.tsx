@@ -18,8 +18,8 @@ function getBestActiveInput() {
       if (!map1.has("message-request")) {
         str = "new-message";
         if (!map1.has("new-message")) {
-          str = "vibegrations-preview";
-          if (!map1.has("vibegrations-preview")) {
+          str = "conjure-preview";
+          if (!map1.has("conjure-preview")) {
             const _Array = Array;
             const found = Array.from(map1.keys()).filter((item) => {
               let tmp = typeof item === "number";
@@ -144,8 +144,8 @@ export const getHighestActiveScreenIndex = function getHighestActiveScreenIndex(
       return "message-request";
     } else if (obj.has("new-message")) {
       return "new-message";
-    } else if (obj.has("vibegrations-preview")) {
-      return "vibegrations-preview";
+    } else if (obj.has("conjure-preview")) {
+      return "conjure-preview";
     } else {
       const _Array = Array;
       const found = Array.from(obj.keys()).filter((item) => {
@@ -195,8 +195,8 @@ export const getBestActiveInputForChannelId = function getBestActiveInputForChan
           if (!obj2.has("message-request")) {
             str = "new-message";
             if (!obj2.has("new-message")) {
-              str = "vibegrations-preview";
-              if (!obj2.has("vibegrations-preview")) {
+              str = "conjure-preview";
+              if (!obj2.has("conjure-preview")) {
                 const _Array = Array;
                 const found = Array.from(obj2.keys()).filter((item) => {
                   let tmp = typeof item === "number";

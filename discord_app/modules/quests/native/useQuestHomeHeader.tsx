@@ -1,6 +1,6 @@
-// === Module 14802: useQuestHomeHeader ===
+// === Module 14806: useQuestHomeHeader ===
 
-// Module 14802 (useQuestHomeHeader)
+// Module 14806 (useQuestHomeHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -9,7 +9,7 @@ import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6681 */;
-import QuestsIcon from "QuestsIcon" /* 14799 */;
+import QuestsIcon from "QuestsIcon" /* 14803 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -55,7 +55,7 @@ function FiltersButton(setSelectedSortMethod) {
   }
   const items = [setSelectedSortMethod, setSelectedFilters, selectedFilters, selectedSortMethod];
   const callback = selectedSortMethod.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14803, dependencyMap.paths), "QuestHomeSortingFilteringBottomSheet", { onSortMethodChange: setSelectedSortMethod, onFiltersChange: setSelectedFilters, initialSortMethod: selectedSortMethod, initialFilters: selectedFilters });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14807, dependencyMap.paths), "QuestHomeSortingFilteringBottomSheet", { onSortMethodChange: setSelectedSortMethod, onFiltersChange: setSelectedFilters, initialSortMethod: selectedSortMethod, initialFilters: selectedFilters });
   }, items);
   const obj = { icon: closure_8(setSelectedSortMethod(tmp3[23]).FiltersHorizontalIcon, { size: "sm", color: INTERACTIVE_TEXT_DEFAULT }), size: "sm", variant: str, onPress: callback, accessibilityLabel: null, scaleAmountInPx: 4 };
   const intl = setSelectedSortMethod(tmp3[11]).intl;

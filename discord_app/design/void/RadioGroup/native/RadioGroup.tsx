@@ -1,6 +1,6 @@
-// === Module 13908: RadioGroup ===
+// === Module 13910: RadioGroup ===
 
-// Module 13908 (RadioGroup)
+// Module 13910 (RadioGroup)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4594 */;
@@ -635,7 +635,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       items = [, ];
       items[0] = style;
       tmp = jsxs;
-      tmp3 = f65801;
+      tmp3 = f65842;
       arr2 = closure_1;
       if (arg1 === closure_1.length - 1) {
         obj1 = { marginBottom: 0 };

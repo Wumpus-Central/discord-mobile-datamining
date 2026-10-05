@@ -4,8 +4,8 @@
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _modDef1342 from "module_1342" /* 1342 */;
-import StageChannelSelfRichPresenceStoreDefault from "StageChannelSelfRichPresenceStore" /* 11118 */;
-import VibegrationsRichPresenceStoreDefault from "VibegrationsRichPresenceStore" /* 11119 */;
+import StageChannelSelfRichPresenceStoreDefault from "StageChannelSelfRichPresenceStore" /* 11119 */;
+import ConjureRichPresenceStore from "ConjureRichPresenceStore" /* 11118 */;
 
 function updateActivities() {
   items = [];
@@ -24,7 +24,7 @@ function updateActivities() {
   }
   return flag;
 }
-let items = [StageChannelSelfRichPresenceStoreDefault, VibegrationsRichPresenceStoreDefault];
+let items = [StageChannelSelfRichPresenceStoreDefault, ConjureRichPresenceStore];
 items = [];
 const Store = initializeDefault.Store;
 class FirstPartyRichPresenceStore extends Store {

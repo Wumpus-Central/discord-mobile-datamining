@@ -1,6 +1,6 @@
-// === Module 17368: useSimpleGuildDefaultColors ===
+// === Module 17392: useSimpleGuildDefaultColors ===
 
-// Module 17368 (useSimpleGuildDefaultColors)
+// Module 17392 (useSimpleGuildDefaultColors)
 import nativeDefault from "native" /* 587 */;
 import createStyles from "createStyles" /* 4890 */;
 import size from "module_2" /* 2 */;

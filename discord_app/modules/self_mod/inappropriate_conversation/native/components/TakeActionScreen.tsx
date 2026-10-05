@@ -1,6 +1,6 @@
-// === Module 15599: TakeActionScreen ===
+// === Module 15603: TakeActionScreen ===
 
-// Module 15599 (TakeActionScreen)
+// Module 15603 (TakeActionScreen)
 import nativeDefault from "native" /* 587 */;
 import LinkingDefault from "Linking" /* 4565 */;
 import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8080 */;
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((senderId) => {
                 let obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -289,7 +289,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((senderId) => {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

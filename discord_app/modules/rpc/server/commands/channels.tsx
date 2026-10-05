@@ -1,6 +1,6 @@
-// === Module 14309: channels ===
+// === Module 14311: channels ===
 
-// Module 14309 (channels)
+// Module 14311 (channels)
 import _modDef12 from "module_12" /* 12 */;
 import router_utils from "router_utils" /* 1112 */;
 import ChannelUtils from "ChannelUtils" /* 5035 */;
@@ -10,7 +10,7 @@ import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 
 import RPCErrorDefault from "RPCError" /* 9026 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9029 */;
 import RPCHelpers from "RPCHelpers" /* 9031 */;
-import getCurrentEmbeddedChannelDefault from "getCurrentEmbeddedChannel" /* 14310 */;
+import getCurrentEmbeddedChannelDefault from "getCurrentEmbeddedChannel" /* 14312 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;

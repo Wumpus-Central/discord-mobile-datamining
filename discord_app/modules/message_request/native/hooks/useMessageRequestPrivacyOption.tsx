@@ -1,6 +1,6 @@
-// === Module 13720: useMessageRequestPrivacyOption ===
+// === Module 13722: useMessageRequestPrivacyOption ===
 
-// Module 13720 (useMessageRequestPrivacyOption)
+// Module 13722 (useMessageRequestPrivacyOption)
 import c from "c" /* 576 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 6491 */;

@@ -1,11 +1,11 @@
-// === Module 13685: ActivateDevice ===
+// === Module 13687: ActivateDevice ===
 
-// Module 13685 (ActivateDevice)
+// Module 13687 (ActivateDevice)
 import nativeDefault from "native" /* 587 */;
 import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 1886 */;
 import ConsoleOAuthApplications from "ConsoleOAuthApplications" /* 8751 */;
-import _modDef13689 from "module_13689" /* 13689 */;
-import _modDef13690 from "module_13690" /* 13690 */;
+import _modDef13691 from "module_13691" /* 13691 */;
+import _modDef13692 from "module_13692" /* 13692 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -450,7 +450,7 @@ export const ActivateDevice = ReactCompilerGating.isReactCompilerEnabled() ? ((o
           return;
         }
       }
-      const source = obj9.makeSource(require("module_13697"));
+      const source = obj9.makeSource(require("module_13699"));
       cResult[22] = source;
     } else {
       class R {
@@ -571,11 +571,11 @@ export const ActivateDevice = ReactCompilerGating.isReactCompilerEnabled() ? ((o
       const userCodeData = first.userCodeData;
       const items = [ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID, ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID];
       if (items.includes(userCodeData.clientId)) {
-        closure_3(_modDef13689);
+        closure_3(_modDef13691);
       } else {
         const scopes = userCodeData.scopes;
         if (scopes.some((item) => first(first1[13]).isSocialLayerUmbrellaScope(item))) {
-          closure_3(_modDef13690);
+          closure_3(_modDef13692);
         }
       }
     }
@@ -609,7 +609,7 @@ export const ActivateDevice = ReactCompilerGating.isReactCompilerEnabled() ? ((o
   }
   const obj6 = { source: null, imageStyle: null, style: null, children: null };
   let obj2 = first(first1[9]);
-  obj6.source = first(first1[19]).makeSource(require("module_13697"));
+  obj6.source = first(first1[19]).makeSource(require("module_13699"));
   obj6.imageStyle = tmp.imageStyle;
   const items6 = [tmp.background];
   obj6.style = items6;

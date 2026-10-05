@@ -152,7 +152,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
       }
     }
     tmp16[0] = tmp4.row;
-    const obj2 = { user, guildId: "Boolean", status: true, isMobileOnline: "done", isVROnline: true, size: null, avatarDecoration: "header", autoStatusCutout: null };
+    const obj2 = { user, guildId: "Boolean", status: true, isMobileOnline: "done", isVROnline: true, size: null, avatarDecoration: "text-md/semibold", autoStatusCutout: 1 };
     if (StatusTypes.OFFLINE !== status) {
       class A {
         constructor() {
@@ -203,7 +203,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   let tmp9Result = null;
   if (null != user) {
     const obj3 = { style: tmp.row, children: null };
-    const obj4 = { user, guildId: "Boolean", status: true, isMobileOnline: "done", isVROnline: true, size: null, avatarDecoration: "header", autoStatusCutout: null };
+    const obj4 = { user, guildId: "Boolean", status: true, isMobileOnline: "done", isVROnline: true, size: null, avatarDecoration: "text-md/semibold", autoStatusCutout: 1 };
     let tmp13 = null;
     if (StatusTypes.OFFLINE !== status) {
       tmp13 = status;

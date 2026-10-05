@@ -1,6 +1,6 @@
-// === Module 13234: TieredTenureBadgePerkCard ===
+// === Module 13236: TieredTenureBadgePerkCard ===
 
-// Module 13234 (TieredTenureBadgePerkCard)
+// Module 13236 (TieredTenureBadgePerkCard)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
@@ -23,9 +23,9 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
   let obj = tieredTenureBadgeData(10875);
   const premiumSince = tieredTenureBadgeData(10875).usePremiumSince();
   let obj2 = tieredTenureBadgeData(10875);
-  const timeUntilNextBadge = tieredTenureBadgeData(13235).useTimeUntilNextBadge();
+  const timeUntilNextBadge = tieredTenureBadgeData(13237).useTimeUntilNextBadge();
   const tmp6 = closure_9();
-  let obj3 = tieredTenureBadgeData(13235);
+  let obj3 = tieredTenureBadgeData(13237);
   const items = [UserStore];
   const stateFromStores = tieredTenureBadgeData(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj4 = tieredTenureBadgeData(504);
@@ -76,7 +76,7 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
               const date = new Date(premiumSince);
               obj6.date = date;
               formatResult = intl3.format(tmp(1126).t.vwLvec, obj6);
-              tmp14 = stateFromStores(13237);
+              tmp14 = stateFromStores(13239);
             }
           }
         }
@@ -118,7 +118,7 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
     obj14.buttonOnPress = tmp11;
     const obj15 = { style: tmp6.imageContainer, children: null };
     const items4 = [tmp6.image, ];
-    const tmp34 = stateFromStores(13202);
+    const tmp34 = stateFromStores(13204);
     let upcomingBadge = tieredTenureBadgeData.status === tmp(10875).TieredTenureBadgeStatus.UPCOMING;
     if (!upcomingBadge) {
       upcomingBadge = tieredTenureBadgeData.status === tmp(10875).TieredTenureBadgeStatus.WITHHELD;

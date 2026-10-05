@@ -1,10 +1,10 @@
-// === Module 15155: useDisplayNameStylesNewItems ===
+// === Module 15159: useDisplayNameStylesNewItems ===
 
-// Module 15155 (useDisplayNameStylesNewItems)
+// Module 15159 (useDisplayNameStylesNewItems)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
-import DisplayNameStylesSeenStore from "DisplayNameStylesSeenStore" /* 15156 */;
+import DisplayNameStylesSeenStore from "DisplayNameStylesSeenStore" /* 15160 */;
 
 const require = globalThis.__r;
 

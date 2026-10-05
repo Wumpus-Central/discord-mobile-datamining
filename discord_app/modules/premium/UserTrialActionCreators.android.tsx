@@ -1,6 +1,6 @@
-// === Module 13154: UserTrialActionCreators ===
+// === Module 13156: UserTrialActionCreators ===
 
-// Module 13154 (UserTrialActionCreators)
+// Module 13156 (UserTrialActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserTrialOfferRecord from "UserTrialOfferRecord" /* 6963 */;
 
@@ -23,7 +23,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

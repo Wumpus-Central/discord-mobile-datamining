@@ -1,11 +1,11 @@
-// === Module 17079: MobileSurvey ===
+// === Module 17103: MobileSurvey ===
 
-// Module 17079 (MobileSurvey)
+// Module 17103 (MobileSurvey)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import LinkingDefault from "Linking" /* 4565 */;
 import _modDef8756 from "module_8756" /* 8756 */;
-import SurveyActionCreators from "SurveyActionCreators" /* 15582 */;
+import SurveyActionCreators from "SurveyActionCreators" /* 15586 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import SurveyStore from "SurveyStore" /* 5081 */;
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 return obj;
               }
               c0 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             } catch (tmp9) {
               c0 = tmp;
               throw tmp9;
@@ -215,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -243,7 +243,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               return obj;
             }
             c0 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           } catch (tmp9) {
             c0 = tmp;
             throw tmp9;

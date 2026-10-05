@@ -1,13 +1,13 @@
-// === Module 16297: GuildsBarDragPreview ===
+// === Module 16301: GuildsBarDragPreview ===
 
-// Module 16297 (GuildsBarDragPreview)
+// Module 16301 (GuildsBarDragPreview)
 import c from "c" /* 576 */;
 import _mod4492 from "module_4492" /* 4492 */;
 import native from "native" /* 4589 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
 import spring from "spring" /* 5597 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16221 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16225 */;
 
 require = fn;
 function getItemPreviewKey(id) {
@@ -17,7 +17,7 @@ function renderAnimatedItemPreview(key, node, transitionState, cleanUp) {
   return <closure_26 key={key} node={node} transitionState={transitionState} cleanUp={cleanUp} />;
 }
 const GuildsNodeType = fn(5616).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(16218).GUILD_ITEM_INSET_LEFT;
+const GUILD_ITEM_INSET_LEFT = fn(16222).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
 let createStyles = fn(4890);
 let closure_8 = createStyles.createStyles({ dragPreview: { position: "absolute", left: 0 }, animatedPreviewStyle: { position: "absolute" }, dragPreviewHome: { right: 0 } });
@@ -153,7 +153,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((dragRegion) =>
   if ("convert-after" === overState) {
     if (null != overNode) {
       if (cResult[0] !== overNode) {
-        const element = { type: listInsets.FOLDER, id: -1, parentId: "Reflect", name: "Array", color: "ix", expanded: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002086006742386161, children: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002225074310454486 };
+        const element = { type: listInsets.FOLDER, id: -1, parentId: "Set", name: "Array", color: "unicodeVersion", expanded: 27207746, children: 35933184 };
         const items = [overNode];
         element.children = items;
         cResult[0] = overNode;
@@ -310,7 +310,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((dragRegion) =>
   const memo = gestureState.useMemo(() => {
     if ("convert-after" === overState) {
       if (null != overNode) {
-        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "Reflect", name: "Array", color: "ix", expanded: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002086006742386161, children: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002225074310454486 };
+        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "Set", name: "Array", color: "unicodeVersion", expanded: 27207746, children: 35933184 };
         const items = [tmp2];
         element.children = items;
         return element;
@@ -669,7 +669,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         if (null != dragSpecs) {
           if (null != overSpecs) {
             state = overSpecs.state;
-            const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "text-xs/bold", scrollPosition: "text-muted", dragRegion: null, windowSize: null, dropComplete: "box-none", listInsets: null };
+            const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "-1", scrollPosition: null, dragRegion: "header", windowSize: 2, dropComplete: "heading-lg/semibold", listInsets: "mobile-text-heading-primary" };
             ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
             obj.overState = state;
             let node;
@@ -734,7 +734,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       if (null != dragSpecs) {
         if (null != overSpecs) {
           state = overSpecs.state;
-          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "text-xs/bold", scrollPosition: "text-muted", dragRegion: null, windowSize: null, dropComplete: "box-none", listInsets: null };
+          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "-1", scrollPosition: null, dragRegion: "header", windowSize: 2, dropComplete: "heading-lg/semibold", listInsets: "mobile-text-heading-primary" };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;
           let node;

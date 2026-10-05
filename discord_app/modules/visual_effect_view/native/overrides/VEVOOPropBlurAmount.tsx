@@ -1,6 +1,6 @@
-// === Module 15838: VEVOOPropBlurAmount ===
+// === Module 15842: VEVOOPropBlurAmount ===
 
-// Module 15838 (VEVOOPropBlurAmount)
+// Module 15842 (VEVOOPropBlurAmount)
 import c from "c" /* 576 */;
 import FormSwitch from "FormSwitch" /* 6699 */;
 import Form from "Form" /* 8895 */;
@@ -112,7 +112,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       tmp27 = tmp29;
     }
     const obj4 = { disabled: !tmp7, disabledOpacity: !tmp7, initialValue: ref, onValueChange: tmp13 };
-    const tmp25 = jsx(first1(15839), { disabled: !tmp7, disabledOpacity: !tmp7, initialValue: ref, onValueChange: tmp13 });
+    const tmp25 = jsx(first1(15843), { disabled: !tmp7, disabledOpacity: !tmp7, initialValue: ref, onValueChange: tmp13 });
     cResult[9] = !tmp7;
     cResult[10] = !tmp7;
     cResult[11] = tmp25;
@@ -176,7 +176,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   };
   const ref = noop.useRef(first);
-  obj.subLabel = jsx(first(15839), { disabled: !tmp3, disabledOpacity: !tmp3, initialValue: noop.useRef(first), onValueChange });
+  obj.subLabel = jsx(first(15843), { disabled: !tmp3, disabledOpacity: !tmp3, initialValue: noop.useRef(first), onValueChange });
   return jsx(Form.FormRow, {
     label: "Blur Amount " + str,
     leadingStyle: tmp.enabledSwitchStyle,

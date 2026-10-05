@@ -199,7 +199,7 @@ Object.defineProperty(prototype, "topic", {
       }
       let str = str2;
     } else {
-      require("vibegrationsTopicChannel");
+      require("conjureTopicChannel");
       str = "";
     }
     return str;
@@ -638,7 +638,7 @@ class UnknownChannelRecord extends ChannelRecordBase {
   }
 }
 UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
-  obj = { application_id: application_id.application_id, appliedTags: application_id.applied_tags, availableTags: null, bitrate_: null, defaultAutoArchiveDuration: null, defaultForumLayout: null, defaultReactionEmoji: null, defaultSortOrder: null, defaultTagSetting: null, defaultThreadRateLimitPerUser: null, flags_: null, gameId: null, guild_id: null, icon: null, iconEmoji: null, id: null, isMessageRequest: null, isMessageRequestTimestamp: null, isSpam: null, lastMessageId: null, lastNonMessageActivityTimestamp: null, lastPinTimestamp: null, member: null, memberCount: null, memberIdsPreview: null, memberListId: null, messageCount: null, name: null, nicks: null, nsfw_: null, originChannelId: null, ownerId: null, parent_id: null, parentChannelThreadType: "format", permissionOverwrites_: true, position_: true, rateLimitPerUser_: true, rawRecipients: true, recipients: true, recipientFlags: true, rtcRegion: "audio", safetyWarnings: null, blockedUserWarningDismissed: null, template: null, themeColor: null, threadMetadata: null, topic_: null, totalMessageSent: null, type: null, userLimit_: null, version: null, videoQualityMode: null, linkedLobby: null, hdStreamingUntil: null, hdStreamingBuyerId: null, voiceHangout: null };
+  obj = { application_id: application_id.application_id, appliedTags: application_id.applied_tags, availableTags: null, bitrate_: null, defaultAutoArchiveDuration: null, defaultForumLayout: null, defaultReactionEmoji: null, defaultSortOrder: null, defaultTagSetting: null, defaultThreadRateLimitPerUser: null, flags_: null, gameId: null, guild_id: null, icon: null, iconEmoji: null, id: null, isMessageRequest: null, isMessageRequestTimestamp: null, isSpam: null, lastMessageId: null, lastNonMessageActivityTimestamp: null, lastPinTimestamp: null, member: null, memberCount: null, memberIdsPreview: null, memberListId: null, messageCount: null, name: null, nicks: null, nsfw_: null, originChannelId: null, ownerId: null, parent_id: null, parentChannelThreadType: "formatToPlainString", permissionOverwrites_: true, position_: true, rateLimitPerUser_: true, rawRecipients: true, recipients: true, recipientFlags: true, rtcRegion: "D", safetyWarnings: "DD", blockedUserWarningDismissed: false, template: false, themeColor: "years", threadMetadata: "months", topic_: "weeks", totalMessageSent: "days", type: "hours", userLimit_: "minutes", version: "seconds", videoQualityMode: "validate", linkedLobby: null, hdStreamingUntil: "\u{1F693}", hdStreamingBuyerId: 6, voiceHangout: 677 };
   if (null == application_id.available_tags) {
     obj.availableTags = undefined;
     ({ bitrate: obj.bitrate_, default_auto_archive_duration: obj.defaultAutoArchiveDuration, default_forum_layout: obj.defaultForumLayout } = application_id);
@@ -818,7 +818,7 @@ GuildVocalChannelRecord["fromServer"] = function fromServer(application_id, arg1
   }
   obj.type = GUILD_VOICE;
   ({ user_limit: obj.userLimit_, version: obj.version, video_quality_mode: obj.videoQualityMode, hd_streaming_until: obj.hdStreamingUntil, hd_streaming_buyer_id: obj.hdStreamingBuyerId, voice_hangout: obj.voiceHangout } = application_id);
-  const result = obj5(2059).normalizeVibegrationsTopicChannelRecord(obj);
+  const result = obj5(2059).normalizeConjureTopicChannelRecord(obj);
   let GUILD_TEXT = result.type;
   if (GUILD_TEXT == null) {
     GUILD_TEXT = ChannelTypes.GUILD_TEXT;
@@ -896,7 +896,7 @@ GuildTextualChannelRecord["fromServer"] = function fromServer(application_id, ar
   }
   obj.type = GUILD_TEXT;
   ({ linked_lobby: obj.linkedLobby, hd_streaming_until: obj.hdStreamingUntil, hd_streaming_buyer_id: obj.hdStreamingBuyerId, version: obj.version } = application_id);
-  const result = obj5(2059).normalizeVibegrationsTopicChannelRecord(obj);
+  const result = obj5(2059).normalizeConjureTopicChannelRecord(obj);
   let GUILD_TEXT2 = result.type;
   if (GUILD_TEXT2 == null) {
     GUILD_TEXT2 = ChannelTypes.GUILD_TEXT;
@@ -1370,7 +1370,7 @@ export { DMChannelRecord };
 export { GroupDMChannelRecord };
 export const ThreadChannelRecord = prototype3;
 export const createChannelRecordFromServer = function createChannelRecordFromServer(arg0, arg1) {
-  const result = require("vibegrationsTopicChannel").normalizeVibegrationsTopicChannel(arg0);
+  const result = require("conjureTopicChannel").normalizeConjureTopicChannel(arg0);
   let GUILD_TEXT = result.type;
   if (GUILD_TEXT == null) {
     GUILD_TEXT = ChannelTypes.GUILD_TEXT;
@@ -1385,7 +1385,7 @@ export const createChannelRecordFromInvite = function createChannelRecordFromInv
   return createChannelRecord(type);
 };
 export const castChannelRecord = function castChannelRecord(arg0) {
-  const result = require("vibegrationsTopicChannel").normalizeVibegrationsTopicChannelRecord(arg0);
+  const result = require("conjureTopicChannel").normalizeConjureTopicChannelRecord(arg0);
   let GUILD_TEXT = result.type;
   if (GUILD_TEXT == null) {
     GUILD_TEXT = ChannelTypes.GUILD_TEXT;
@@ -1394,7 +1394,7 @@ export const castChannelRecord = function castChannelRecord(arg0) {
   if (tmp6 == null) {
     tmp6 = UnknownChannelRecord;
   }
-  obj = require("vibegrationsTopicChannel");
+  obj = require("conjureTopicChannel");
   return TypeUtils.dangerouslyCast(result, tmp6);
 };
 export { createChannelRecord };

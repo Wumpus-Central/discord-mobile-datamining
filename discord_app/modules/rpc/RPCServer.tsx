@@ -1,12 +1,12 @@
-// === Module 14365: RPCServer ===
+// === Module 14369: RPCServer ===
 
-// Module 14365 (RPCServer)
+// Module 14369 (RPCServer)
 import _modDef12 from "module_12" /* 12 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import RpcCommandInterception from "RpcCommandInterception" /* 8975 */;
 import RPCErrorDefault from "RPCError" /* 9026 */;
 import transformUserDefault from "transformUser" /* 9032 */;
-import validateScopeDefault from "validateScope" /* 14341 */;
+import validateScopeDefault from "validateScope" /* 14343 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -150,7 +150,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -258,7 +258,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -391,7 +391,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

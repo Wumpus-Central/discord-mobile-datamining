@@ -1,6 +1,6 @@
-// === Module 17501: FileUploadActionComponent ===
+// === Module 17525: FileUploadActionComponent ===
 
-// Module 17501 (FileUploadActionComponent)
+// Module 17525 (FileUploadActionComponent)
 import c from "c" /* 576 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 4792 */;
 import XSmallIcon from "XSmallIcon" /* 6017 */;
@@ -19,7 +19,7 @@ const util = obj(1126);
 const InteractionComponentUtils = obj(5114);
 const FileSizeUtils = obj(5317);
 const TableRow = obj(5993);
-const FileUpIcon = obj(15361);
+const FileUpIcon = obj(15365);
 require = fn;
 const View = fn(17).View;
 const DraftType = fn(7031).DraftType;
@@ -369,7 +369,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((fileTypes) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       while (true) {
@@ -405,7 +405,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((fileTypes) => {
               }
             }
             c8 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else if (1 === tmp5) {
           let v1 = 0;
@@ -544,7 +544,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((fileTypes) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       while (true) {
@@ -580,7 +580,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((fileTypes) => {
               }
             }
             c8 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else if (1 === tmp5) {
           let v1 = 0;

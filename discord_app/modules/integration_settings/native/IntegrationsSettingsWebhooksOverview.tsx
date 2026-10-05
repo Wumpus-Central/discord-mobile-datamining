@@ -1,6 +1,6 @@
-// === Module 16996: IntegrationsSettingsWebhooksOverview ===
+// === Module 17020: IntegrationsSettingsWebhooksOverview ===
 
-// Module 16996 (IntegrationsSettingsWebhooksOverview)
+// Module 17020 (IntegrationsSettingsWebhooksOverview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -9,7 +9,7 @@ import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
 import Stack_Stack from "Stack/Stack" /* 5593 */;
 import NavScrim from "NavScrim" /* 6536 */;
 import Form from "Form" /* 8895 */;
-import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 16998 */;
+import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 17022 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -18,7 +18,7 @@ import GuildChannelStore_mod from "GuildChannelStore" /* 4507 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import PermissionStore from "PermissionStore" /* 4509 */;
 import UserStore from "UserStore" /* 1377 */;
-import WebhooksStore from "WebhooksStore" /* 16997 */;
+import WebhooksStore from "WebhooksStore" /* 17021 */;
 
 require = fn;
 let closure_3 = ["channelId", "user"];
@@ -346,7 +346,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -470,7 +470,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -564,7 +564,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   items[1] = tmp4Result;
   if (0 === found.length) {
-    const obj2 = { Illustration: webhookType(17001).WebhookEmpty, title: null };
+    const obj2 = { Illustration: webhookType(17025).WebhookEmpty, title: null };
     if (webhookType === constants3.CHANNEL_FOLLOWER) {
       const intl2 = webhookType(1126).intl;
       dkHRkE = webhookType(1126).t.dkHRkE;

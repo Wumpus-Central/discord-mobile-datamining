@@ -1,6 +1,6 @@
-// === Module 12978: InlinePriceTag ===
+// === Module 12980: InlinePriceTag ===
 
-// Module 12978 (InlinePriceTag)
+// Module 12980 (InlinePriceTag)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -25,9 +25,9 @@ import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8
 import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder" /* 8523 */;
 import TagIcon from "TagIcon" /* 8524 */;
 import useProductDisableState from "useProductDisableState" /* 8531 */;
-import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 12982 */;
-import MobileNitroUpsellInShopPdpExperimentDefault from "MobileNitroUpsellInShopPdpExperiment" /* 12983 */;
-import useVirtualCurrencyData from "useVirtualCurrencyData" /* 12984 */;
+import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 12984 */;
+import MobileNitroUpsellInShopPdpExperimentDefault from "MobileNitroUpsellInShopPdpExperiment" /* 12985 */;
+import useVirtualCurrencyData from "useVirtualCurrencyData" /* 12986 */;
 import noop from "module_19" /* 19 */;
 import IAPStore from "IAPStore" /* 6739 */;
 
@@ -50,7 +50,7 @@ function ExpressiveNitroUpsell(arg0) {
       }
       if (closure_1_2) {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp9 = asyncRequireImpl(12979, dependencyMap.paths);
+        const tmp9 = asyncRequireImpl(12981, dependencyMap.paths);
         const obj2 = { analyticsLocations: null, title: null, description: null };
         const items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP_DETAILS_MODAL];
         obj2.analyticsLocations = items;

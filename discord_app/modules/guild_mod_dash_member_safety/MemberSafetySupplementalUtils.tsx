@@ -38,7 +38,7 @@ let closure_13 = async function _fetchMemberSupplemental(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

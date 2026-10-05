@@ -1,6 +1,6 @@
-// === Module 17162: QuestActivityUnenrolledModal ===
+// === Module 17186: QuestActivityUnenrolledModal ===
 
-// Module 17162 (QuestActivityUnenrolledModal)
+// Module 17186 (QuestActivityUnenrolledModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -13,12 +13,12 @@ import HeaderActionButton from "HeaderActionButton" /* 6880 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7212 */;
 import QuestActionCreators from "QuestActionCreators" /* 9994 */;
 import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 10958 */;
-import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 14917 */;
+import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 14921 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import QuestStore from "QuestStore" /* 7187 */;
-import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 17161 */;
+import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 17185 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -162,7 +162,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -192,7 +192,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
               } else {
                 first(5093).pop();
                 c2 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp9) {
               c2 = tmp;
@@ -419,7 +419,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -449,7 +449,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
         } else {
           v1(5093).pop();
           dependencyMap = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp9) {
         dependencyMap = tmp;

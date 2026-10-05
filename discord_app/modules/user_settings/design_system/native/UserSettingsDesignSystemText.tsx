@@ -1,6 +1,6 @@
-// === Module 15632: UserSettingsDesignSystemText ===
+// === Module 15636: UserSettingsDesignSystemText ===
 
-// Module 15632 (UserSettingsDesignSystemText)
+// Module 15636 (UserSettingsDesignSystemText)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useToken from "useToken" /* 4580 */;

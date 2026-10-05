@@ -498,7 +498,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCarouselScroll
               obj = { stat: onCarouselScroll, onRatingPress: null };
               tmp3 = undefined;
               tmp = jsx;
-              tmp2 = f56281;
+              tmp2 = f56309;
               if ("rating" === onCarouselScroll.type) {
                 tmp3 = onRatingPress;
               }
@@ -514,7 +514,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCarouselScroll
               obj = { stat: onCarouselScroll, onRatingPress: null };
               tmp3 = undefined;
               tmp = jsx;
-              tmp2 = f56281;
+              tmp2 = f56309;
               if ("rating" === onCarouselScroll.type) {
                 tmp3 = onRatingPress;
               }

@@ -1,20 +1,20 @@
-// === Module 15900: PrivacyHint ===
+// === Module 15904: PrivacyHint ===
 
-// Module 15900 (PrivacyHint)
+// Module 15904 (PrivacyHint)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4594 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import FormCheckbox from "FormCheckbox" /* 5991 */;
 import Form from "Form" /* 8895 */;
-import PromotionalEmailCheckBoxDefault from "PromotionalEmailCheckBox" /* 15901 */;
+import PromotionalEmailCheckBoxDefault from "PromotionalEmailCheckBox" /* 15905 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Pressable: closure_4 } = get_ActivityIndicator);
 const usePromoEmailConsentStore = fn(6083).usePromoEmailConsentStore;
-const useRegistrationUIStore = fn(15863).useRegistrationUIStore;
+const useRegistrationUIStore = fn(15867).useRegistrationUIStore;
 const MarketingURLs = fn(1085).MarketingURLs;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

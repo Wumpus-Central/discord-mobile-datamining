@@ -1,10 +1,10 @@
-// === Module 15749: CollectiblesShopViewAllCategoryItemsScreen ===
+// === Module 15753: CollectiblesShopViewAllCategoryItemsScreen ===
 
-// Module 15749 (CollectiblesShopViewAllCategoryItemsScreen)
+// Module 15753 (CollectiblesShopViewAllCategoryItemsScreen)
 import c from "c" /* 576 */;
 import useNavigation from "useNavigation" /* 1490 */;
 import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6490 */;
-import CollectiblesShopViewAllCategoryItemsDefault from "CollectiblesShopViewAllCategoryItems" /* 15750 */;
+import CollectiblesShopViewAllCategoryItemsDefault from "CollectiblesShopViewAllCategoryItems" /* 15754 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

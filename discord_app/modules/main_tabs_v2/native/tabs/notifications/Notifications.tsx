@@ -1,6 +1,6 @@
-// === Module 16339: notifications/Notifications ===
+// === Module 16343: notifications/Notifications ===
 
-// Module 16339 (notifications/Notifications)
+// Module 16343 (notifications/Notifications)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
@@ -14,12 +14,12 @@ import LayerScope from "LayerScope" /* 6651 */;
 import useAnalyticsLocations from "useAnalyticsLocations" /* 6657 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6681 */;
 import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11507 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 15938 */;
-import useForLaterCoachmarkDefault from "useForLaterCoachmark" /* 16340 */;
-import ForLaterOpenActionButtonDefault from "ForLaterOpenActionButton" /* 16342 */;
-import NotificationCenterActionButtonDefault from "NotificationCenterActionButton" /* 16344 */;
-import NotificationCenterPermissionNudgeDefault from "NotificationCenterPermissionNudge" /* 16348 */;
-import NotificationCenterForYou from "NotificationCenterForYou" /* 16349 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 15942 */;
+import useForLaterCoachmarkDefault from "useForLaterCoachmark" /* 16344 */;
+import ForLaterOpenActionButtonDefault from "ForLaterOpenActionButton" /* 16346 */;
+import NotificationCenterActionButtonDefault from "NotificationCenterActionButton" /* 16348 */;
+import NotificationCenterPermissionNudgeDefault from "NotificationCenterPermissionNudge" /* 16352 */;
+import NotificationCenterForYou from "NotificationCenterForYou" /* 16353 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
@@ -135,7 +135,7 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((nest
     const intl = tmp(1126).intl;
     obj7.accessibilityLabel = intl.string(tmp(1126).t["13/7kX"]);
     obj7.onPress = goBack;
-    obj7.children = closure_7(tmp(16341).LeftBackIconWithBadge, {});
+    obj7.children = closure_7(tmp(16345).LeftBackIconWithBadge, {});
     const items2 = [closure_7(tmp(5909).PressableOpacity, obj7), , ];
     const obj8 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", style: tmp4.headerText, maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
     const intl2 = tmp(1126).intl;
@@ -195,7 +195,7 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((nest
     const intl = tmp5(1126).intl;
     obj4.accessibilityLabel = intl.string(tmp5(1126).t["13/7kX"]);
     obj4.onPress = goBack;
-    obj4.children = closure_7(tmp5(16341).LeftBackIconWithBadge, {});
+    obj4.children = closure_7(tmp5(16345).LeftBackIconWithBadge, {});
     const items1 = [closure_7(tmp5(5909).PressableOpacity, obj4), , ];
     const obj5 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", style: tmp.headerText, maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
     const intl2 = tmp5(1126).intl;

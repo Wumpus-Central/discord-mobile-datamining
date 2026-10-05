@@ -1,11 +1,11 @@
-// === Module 16039: VoiceChannelUserLimit ===
+// === Module 16043: VoiceChannelUserLimit ===
 
-// Module 16039 (VoiceChannelUserLimit)
+// Module 16043 (VoiceChannelUserLimit)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import Text_Text from "Text/Text" /* 4886 */;
-import _modDef13600 from "module_13600" /* 13600 */;
+import _modDef13602 from "module_13602" /* 13602 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -132,7 +132,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   }
   let tmp7 = null;
   if (videoLimit) {
-    const obj8 = { source: _modDef13600, size: native.Icon.Sizes.REFRESH_SMALL_16, style: rect.videoIcon };
+    const obj8 = { source: _modDef13602, size: native.Icon.Sizes.REFRESH_SMALL_16, style: rect.videoIcon };
     tmp7 = React4(native.Icon, obj8);
   }
   cResult[0] = rect.videoIcon;
@@ -146,7 +146,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) 
   const obj2 = { style: rect.left, children: null };
   let tmp3 = null;
   if (videoLimit.videoLimit) {
-    const obj3 = { source: _modDef13600, size: native.Icon.Sizes.REFRESH_SMALL_16, style: rect.videoIcon };
+    const obj3 = { source: _modDef13602, size: native.Icon.Sizes.REFRESH_SMALL_16, style: rect.videoIcon };
     tmp3 = React4(native.Icon, obj3);
   }
   const items = [tmp3, ];

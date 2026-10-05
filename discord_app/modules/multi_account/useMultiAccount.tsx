@@ -1,6 +1,6 @@
-// === Module 15868: useMultiAccount ===
+// === Module 15872: useMultiAccount ===
 
-// Module 15868 (useMultiAccount)
+// Module 15872 (useMultiAccount)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

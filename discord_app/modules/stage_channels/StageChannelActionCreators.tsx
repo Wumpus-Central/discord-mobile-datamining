@@ -82,7 +82,7 @@ let closure_12 = async function _startStage(arg0, arg1, arg2, arg3) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -111,7 +111,7 @@ let closure_12 = async function _startStage(arg0, arg1, arg2, arg3) {
               return obj6;
             } else {
               c7 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           }
         } else if (arg0 === 1) {
@@ -146,7 +146,7 @@ let closure_13 = async function _editStage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -166,7 +166,7 @@ let closure_13 = async function _editStage(arg0) {
           return obj5;
         } else {
           c3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else if (arg0 === 1) {
         c3 = 3;
@@ -201,7 +201,7 @@ let closure_14 = async function _endStage(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -229,7 +229,7 @@ let closure_14 = async function _endStage(arg0) {
           return obj;
         } else {
           c1 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp8) {
         c1 = tmp;

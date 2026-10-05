@@ -1,6 +1,6 @@
-// === Module 17291: VoicePanelControlUtils ===
+// === Module 17315: VoicePanelControlUtils ===
 
-// Module 17291 (VoicePanelControlUtils)
+// Module 17315 (VoicePanelControlUtils)
 import roundToNearestPixelDefault from "roundToNearestPixel" /* 10725 */;
 import size from "module_2" /* 2 */;
 

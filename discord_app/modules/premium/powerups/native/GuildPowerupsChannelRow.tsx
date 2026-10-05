@@ -1,6 +1,6 @@
-// === Module 16143: GuildPowerupsChannelRow ===
+// === Module 16147: GuildPowerupsChannelRow ===
 
-// Module 16143 (GuildPowerupsChannelRow)
+// Module 16147 (GuildPowerupsChannelRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
@@ -9,8 +9,8 @@ import LayerContext from "LayerContext" /* 6652 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6681 */;
 import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12138 */;
 import GuildPowerupsNotification from "GuildPowerupsNotification" /* 12154 */;
-import useGuildPowerupsCoachmarkDefault from "useGuildPowerupsCoachmark" /* 16092 */;
-import SidebarCoachmarkOverlay from "SidebarCoachmarkOverlay" /* 16144 */;
+import useGuildPowerupsCoachmarkDefault from "useGuildPowerupsCoachmark" /* 16096 */;
+import SidebarCoachmarkOverlay from "SidebarCoachmarkOverlay" /* 16148 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -194,7 +194,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       if (cResult[9] !== tmp15) {
         const obj3 = { name: tmp26, mode: tmp15 };
         const tmp31 = closure_5(tmp(12016).BaseChannelName, obj3);
-        const obj4 = { mode: tmp15, IconComponent: tmp(16145).BoostTier2Icon };
+        const obj4 = { mode: tmp15, IconComponent: tmp(16149).BoostTier2Icon };
         const tmp32 = closure_5(tmp(12016).BaseChannelIcon, obj4);
         cResult[9] = tmp15;
         cResult[10] = tmp31;
@@ -349,7 +349,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   obj5.mode = DEFAULT;
   obj4.name = closure_5(tmp14(12016).BaseChannelName, obj5);
   const tmp3Result = dismissNewBadgeIfShown(12016);
-  obj4.icon = closure_5(tmp14(12016).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp14(16145).BoostTier2Icon });
+  obj4.icon = closure_5(tmp14(12016).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp14(16149).BoostTier2Icon });
   if (tmp6Result.showNewBadgeOnRow) {
     let tmp16Result = closure_5(tmp14(11919).NewBadge, {});
   } else {

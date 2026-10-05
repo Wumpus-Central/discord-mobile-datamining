@@ -1,8 +1,8 @@
-// === Module 13477: PrivateChannelHidingExperiment ===
+// === Module 13479: PrivateChannelHidingExperiment ===
 
-// Module 13477 (PrivateChannelHidingExperiment)
+// Module 13479 (PrivateChannelHidingExperiment)
 import c from "c" /* 576 */;
-import PrivateChannelHidingExperimentCache from "PrivateChannelHidingExperimentCache" /* 13478 */;
+import PrivateChannelHidingExperimentCache from "PrivateChannelHidingExperimentCache" /* 13480 */;
 import ApexExperiment from "ApexExperiment" /* 1440 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

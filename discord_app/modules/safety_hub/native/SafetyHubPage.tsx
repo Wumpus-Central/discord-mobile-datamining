@@ -1,6 +1,6 @@
-// === Module 14547: SafetyHubPage ===
+// === Module 14551: SafetyHubPage ===
 
-// Module 14547 (SafetyHubPage)
+// Module 14551 (SafetyHubPage)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -18,13 +18,13 @@ import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /
 import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8274 */;
 import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 11493 */;
 import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 11495 */;
-import useAvailableAgeVerificationMethods from "useAvailableAgeVerificationMethods" /* 14548 */;
+import useAvailableAgeVerificationMethods from "useAvailableAgeVerificationMethods" /* 14552 */;
 import noop from "module_19" /* 19 */;
 import SafetyHubStore from "SafetyHubStore" /* 8106 */;
 
 const require = globalThis.__r;
 
-const useShouldShowInitialGoogleWalletBanner = hyh4ls(14549);
+const useShouldShowInitialGoogleWalletBanner = hyh4ls(14553);
 require = fn;
 function handleLogInClick() {
   AuthenticationActionCreatorsDefault.closeSuspendedUser();
@@ -464,7 +464,7 @@ export default function SafetyHubPage(visible) {
   const effect = noop.useEffect(() => {
     if (visible) {
       if (null != safetyHubFetchError) {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14551, dependencyMap.paths), "SafetyHubErrorActionSheet", {});
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14555, dependencyMap.paths), "SafetyHubErrorActionSheet", {});
       }
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("SafetyHubErrorActionSheet");

@@ -1,9 +1,9 @@
-// === Module 14462: useNameplateSections ===
+// === Module 14466: useNameplateSections ===
 
-// Module 14462 (useNameplateSections)
+// Module 14466 (useNameplateSections)
 import util from "util" /* 1126 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7065 */;
-import useRecommendedCollectiblesSectionsDefault from "useRecommendedCollectiblesSections" /* 13002 */;
+import useRecommendedCollectiblesSectionsDefault from "useRecommendedCollectiblesSections" /* 13004 */;
 import _slicedToArray from "module_32" /* 32 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7053 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7068 */;
@@ -237,7 +237,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   dependencyMap = tmp4;
   const items2 = [first, tmp2[1], stateFromStores];
   obj2 = stateFromStores(573);
-  return first(13002)(useMemo(() => {
+  return first(13004)(useMemo(() => {
     let obj = CollectiblesUtils;
     const nameplates = obj.getNameplates(stateFromStores, first);
     const reduced = nameplates.reduce((premium_purchase, skuId) => {

@@ -1,6 +1,6 @@
-// === Module 17594: SavedMessagesManager ===
+// === Module 17618: SavedMessagesManager ===
 
-// Module 17594 (SavedMessagesManager)
+// Module 17618 (SavedMessagesManager)
 import ForLaterExperiment from "ForLaterExperiment" /* 7485 */;
 import SavedMessagesActions from "SavedMessagesActions" /* 11335 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -18,7 +18,7 @@ let closure_3 = async function _refreshSavedMessages() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

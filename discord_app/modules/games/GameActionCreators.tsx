@@ -53,7 +53,7 @@ let closure_9 = async function _fetchGamesWithSupplementalData(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -81,7 +81,7 @@ let closure_9 = async function _fetchGamesWithSupplementalData(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     } catch (tmp7) {
       c1 = tmp;
       throw tmp7;
@@ -100,7 +100,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -129,7 +129,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
         return obj;
       } else {
         v3 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp10) {
       v3 = tmp;

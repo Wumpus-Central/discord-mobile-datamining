@@ -1,6 +1,6 @@
-// === Module 14679: FamilyCenterActivityBanner ===
+// === Module 14683: FamilyCenterActivityBanner ===
 
-// Module 14679 (FamilyCenterActivityBanner)
+// Module 14683 (FamilyCenterActivityBanner)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -9,7 +9,7 @@ import Text_Text from "Text/Text" /* 4886 */;
 import useUserLinks from "useUserLinks" /* 8295 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8296 */;
 import useAgeSpecificText from "useAgeSpecificText" /* 11531 */;
-import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 14680 */;
+import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 14684 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   const tmpResult = useAgeSpecificText;
   const ageSpecificText1 = useAgeSpecificText.useAgeSpecificText(tmp13, tmp14);
-  const tmp4Result = importDefault(tmp5 ? 14687 : 14688);
+  const tmp4Result = importDefault(tmp5 ? 14691 : 14692);
   if (cResult[4] === tmp6.art) {
     if (cResult[5] === tmp4Result) {
       let tmp19 = cResult[6];
@@ -194,7 +194,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj4 = { style: tmp4.container, children: null };
   const obj5 = { source: null, style: null };
   const ageSpecificText1 = obj3.useAgeSpecificText(intl3.format(_modDef2493.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" }), intl4.format(_modDef2493.EMCf6j, { articleLink: "https://support.discord.com/hc/articles/14155043715735" }));
-  obj5.source = importDefault(tmp3 ? 14687 : 14688);
+  obj5.source = importDefault(tmp3 ? 14691 : 14692);
   obj5.style = tmp4.art;
   const items = [hasOwnProperty(React4, obj5), hasOwnProperty(Text_Text.Text, { style: tmp4.header, variant: "heading-lg/semibold", children: ageSpecificText }), hasOwnProperty(Text_Text.Text, { style: tmp4.description, variant: "text-sm/medium", color: "text-muted", children: ageSpecificText1 }), ];
   let tmp13Result = null;

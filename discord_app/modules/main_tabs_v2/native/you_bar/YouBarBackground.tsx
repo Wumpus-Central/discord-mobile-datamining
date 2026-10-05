@@ -1,6 +1,6 @@
-// === Module 16321: YouBarBackground ===
+// === Module 16325: YouBarBackground ===
 
-// Module 16321 (YouBarBackground)
+// Module 16325 (YouBarBackground)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
@@ -8,13 +8,13 @@ import useToken from "useToken" /* 4580 */;
 import spring from "spring" /* 5597 */;
 import LinearGradientDefault from "LinearGradient" /* 5605 */;
 import _modDef6052 from "module_6052" /* 6052 */;
-import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 14982 */;
+import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 14986 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = tmp4(4612);
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(14895);
+const YouBarConstants = fn(14899);
 const YOU_BAR_HEIGHT = YouBarConstants.YOU_BAR_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
 const jsxProd = fn(21);

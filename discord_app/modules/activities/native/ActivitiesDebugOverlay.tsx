@@ -1,6 +1,6 @@
-// === Module 17261: ActivitiesDebugOverlay ===
+// === Module 17285: ActivitiesDebugOverlay ===
 
-// Module 17261 (ActivitiesDebugOverlay)
+// Module 17285 (ActivitiesDebugOverlay)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;

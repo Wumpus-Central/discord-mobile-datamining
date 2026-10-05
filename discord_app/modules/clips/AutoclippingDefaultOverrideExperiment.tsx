@@ -1,6 +1,6 @@
-// === Module 13810: AutoclippingDefaultOverrideExperiment ===
+// === Module 13812: AutoclippingDefaultOverrideExperiment ===
 
-// Module 13810 (AutoclippingDefaultOverrideExperiment)
+// Module 13812 (AutoclippingDefaultOverrideExperiment)
 import ApexExperiment from "ApexExperiment" /* 1440 */;
 import size from "module_2" /* 2 */;
 

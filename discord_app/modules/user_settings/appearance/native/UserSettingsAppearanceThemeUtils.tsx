@@ -1,6 +1,6 @@
-// === Module 14975: UserSettingsAppearanceThemeUtils ===
+// === Module 14979: UserSettingsAppearanceThemeUtils ===
 
-// Module 14975 (UserSettingsAppearanceThemeUtils)
+// Module 14979 (UserSettingsAppearanceThemeUtils)
 import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
@@ -8,8 +8,8 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import ThemeActionCreators from "ThemeActionCreators" /* 4726 */;
 import UserSettingsActionCreators from "UserSettingsActionCreators" /* 8863 */;
 import CustomThemeMobileActionCreators from "CustomThemeMobileActionCreators" /* 11559 */;
-import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 14976 */;
-import SameAsDeviceThemeUtils from "SameAsDeviceThemeUtils" /* 14977 */;
+import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 14980 */;
+import SameAsDeviceThemeUtils from "SameAsDeviceThemeUtils" /* 14981 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1238 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
 

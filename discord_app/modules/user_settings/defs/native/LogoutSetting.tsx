@@ -1,6 +1,6 @@
-// === Module 15378: LogoutSetting ===
+// === Module 15382: LogoutSetting ===
 
-// Module 15378 (LogoutSetting)
+// Module 15382 (LogoutSetting)
 import Storage2 from "Storage" /* 510 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import util from "util" /* 1126 */;

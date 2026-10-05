@@ -1,6 +1,6 @@
-// === Module 12999: useHandleBuyNow ===
+// === Module 13001: useHandleBuyNow ===
 
-// Module 12999 (useHandleBuyNow)
+// Module 13001 (useHandleBuyNow)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -26,7 +26,7 @@ function useHandleBuyNow(product) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -59,7 +59,7 @@ function useHandleBuyNow(product) {
           const obj8 = { product: closure_128_0, useCategoryImage: true, stageCollectibleChangeForEditProfile: closure_128_2 };
           v1(10813).open(obj8);
           dependencyMap = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp17) {
         dependencyMap = tmp;
@@ -107,7 +107,7 @@ function useHandleBuyNow(product) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

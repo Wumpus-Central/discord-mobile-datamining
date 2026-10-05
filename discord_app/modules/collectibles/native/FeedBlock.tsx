@@ -1,8 +1,8 @@
-// === Module 15734: FeedBlock ===
+// === Module 15738: FeedBlock ===
 
-// Module 15734 (FeedBlock)
+// Module 15738 (FeedBlock)
 import nativeDefault from "native" /* 587 */;
-import ShopHomeSortType from "ShopHomeSortType" /* 15735 */;
+import ShopHomeSortType from "ShopHomeSortType" /* 15739 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
@@ -41,7 +41,7 @@ export default function _default(feedBlock) {
   const obj = feedBlock(504);
   let items1 = [ConsentStore];
   const stateFromStores1 = feedBlock(504).useStateFromStores(items1, () => ConsentStore.hasConsented(constants2.PERSONALIZATION));
-  let tmp6 = stateFromStores1(15714)();
+  let tmp6 = stateFromStores1(15718)();
   dependencyMap = tmp6;
   const items2 = [feedBlock.sortedSkuIds, tmp6, stateFromStores1];
   const memo = noop.useMemo(() => {
@@ -72,8 +72,8 @@ export default function _default(feedBlock) {
   }, items2);
   ({ isPersonalized, feedProducts } = memo);
   let obj2 = feedBlock(504);
-  const filteredAndSortedProducts = feedBlock(14872).useFilteredAndSortedProducts({ products: feedProducts, maxProducts: 36, screen });
-  const obj3 = feedBlock(14872);
+  const filteredAndSortedProducts = feedBlock(14876).useFilteredAndSortedProducts({ products: feedProducts, maxProducts: 36, screen });
+  const obj3 = feedBlock(14876);
   const items3 = [AccessibilityStore];
   const stateFromStores2 = feedBlock(504).useStateFromStores(items3, () => useReducedMotion.useReducedMotion);
   const obj4 = feedBlock(504);
@@ -124,7 +124,7 @@ export default function _default(feedBlock) {
   }
   items5[1] = tmp12Result;
   obj7.children = items5;
-  const items6 = [closure_12(closure_5, obj7), closure_11(stateFromStores1(15728), { products: filteredAndSortedProducts, loadingCardsNum: 36, preferVCPrice, accessibilityLabel: stringResult, disableBundleStaticBackground }), ];
+  const items6 = [closure_12(closure_5, obj7), closure_11(stateFromStores1(15732), { products: filteredAndSortedProducts, loadingCardsNum: 36, preferVCPrice, accessibilityLabel: stringResult, disableBundleStaticBackground }), ];
   const obj11 = { style: feedFooterOrbImage.feedFooter, children: null };
   const obj12 = { variant: "heading-lg/bold", accessibilityRole: "header", children: null };
   const intl4 = tmp(1126).intl;
@@ -138,7 +138,7 @@ export default function _default(feedBlock) {
     if (stateFromStores2) {
       const obj14 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
       const obj15 = { uri: null };
-      tmp5Result = tmp5(15737);
+      tmp5Result = tmp5(15741);
       obj15.uri = tmp5Result;
       obj14.source = obj15;
       feedFooterOrbImage = feedFooterOrbImage.feedFooterOrbImage;
@@ -146,12 +146,12 @@ export default function _default(feedBlock) {
       let tmp12Result2 = closure_11(closure_4, obj14);
     } else {
       if (tmpResult.isAndroid()) {
-        const obj16 = { url: tmp5(15738), autoplay: true, style: feedFooterOrbImage.feedFooterOrbImage, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
+        const obj16 = { url: tmp5(15742), autoplay: true, style: feedFooterOrbImage.feedFooterOrbImage, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
         tmp12Result2 = closure_11(tmp5(8465), obj16);
         const tmp5Result3 = tmp5(8465);
       } else {
         const obj17 = { source: null, enableAnimation: true, resizeMode: "contain", style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
-        const obj18 = { uri: tmp5(15738) };
+        const obj18 = { uri: tmp5(15742) };
         obj17.source = obj18;
         obj17.style = feedFooterOrbImage.feedFooterOrbImage;
         tmp12Result2 = closure_11(tmp5(5974), obj17);
@@ -162,11 +162,11 @@ export default function _default(feedBlock) {
   } else {
     const obj19 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
     if (stateFromStores) {
-      obj19.source = tmp(15739);
+      obj19.source = tmp(15743);
       obj19.style = feedFooterOrbImage.feedFooterImage;
       let tmp18 = obj19;
     } else {
-      obj19.source = tmp(15740);
+      obj19.source = tmp(15744);
       obj19.style = feedFooterOrbImage.feedFooterImage;
       tmp18 = obj19;
     }

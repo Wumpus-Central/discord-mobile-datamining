@@ -1,8 +1,8 @@
-// === Module 15789: ReactCompilerSetting ===
+// === Module 15793: ReactCompilerSetting ===
 
-// Module 15789 (ReactCompilerSetting)
+// Module 15793 (ReactCompilerSetting)
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import WrenchIcon from "WrenchIcon" /* 15385 */;
+import WrenchIcon from "WrenchIcon" /* 15389 */;
 import SettingBuilders from "SettingBuilders" /* 11129 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 14736: FamilyCenterParentalControlsScreenTime ===
+// === Module 14740: FamilyCenterParentalControlsScreenTime ===
 
-// Module 14736 (FamilyCenterParentalControlsScreenTime)
+// Module 14740 (FamilyCenterParentalControlsScreenTime)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
@@ -266,7 +266,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((readOnly) => {
       class P {
         constructor(arg0) {
           obj = { rule: readOnly, teenId: id, navigation: closure_1, readOnly };
-          return jsx(f68420, obj, readOnly.ruleId);
+          return jsx(f68470, obj, readOnly.ruleId);
         }
       }
       const tmp24 = closure_5(tmp(tmp2[10]).Text, obj4);
@@ -282,7 +282,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((readOnly) => {
     class P {
       constructor(arg0) {
         obj = { rule: readOnly, teenId: id, navigation: closure_1, readOnly };
-        return jsx(f68420, obj, readOnly.ruleId);
+        return jsx(f68470, obj, readOnly.ruleId);
       }
     }
     cResult[15] = navigation;

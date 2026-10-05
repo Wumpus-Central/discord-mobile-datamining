@@ -1,6 +1,6 @@
-// === Module 16770: useSearchSuggestionsGesture ===
+// === Module 16789: useSearchSuggestionsGesture ===
 
-// Module 16770 (useSearchSuggestionsGesture)
+// Module 16789 (useSearchSuggestionsGesture)
 import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
 import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11966 */;

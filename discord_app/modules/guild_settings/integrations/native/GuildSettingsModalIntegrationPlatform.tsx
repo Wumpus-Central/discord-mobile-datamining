@@ -1,6 +1,6 @@
-// === Module 17747: GuildSettingsModalIntegrationPlatform ===
+// === Module 17771: GuildSettingsModalIntegrationPlatform ===
 
-// Module 17747 (GuildSettingsModalIntegrationPlatform)
+// Module 17771 (GuildSettingsModalIntegrationPlatform)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AvatarUtils from "AvatarUtils" /* 1402 */;
@@ -15,8 +15,8 @@ import TableSwitchRow from "TableSwitchRow" /* 6698 */;
 import HeaderActionButton from "HeaderActionButton" /* 6880 */;
 import openUserSettings from "openUserSettings" /* 6885 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9247 */;
-import IntegrationTypes from "IntegrationTypes" /* 17678 */;
-import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations" /* 17708 */;
+import IntegrationTypes from "IntegrationTypes" /* 17702 */;
+import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations" /* 17732 */;
 import noop from "module_19" /* 19 */;
 import GuildSettingsStore from "GuildSettingsStore" /* 9248 */;
 

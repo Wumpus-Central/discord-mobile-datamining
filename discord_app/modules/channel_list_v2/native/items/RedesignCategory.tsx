@@ -1,6 +1,6 @@
-// === Module 16028: RedesignCategory ===
+// === Module 16032: RedesignCategory ===
 
-// Module 16028 (RedesignCategory)
+// Module 16032 (RedesignCategory)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
@@ -11,8 +11,8 @@ import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 6694 */
 import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10651 */;
 import useFavoritesGuildCategoryAddActionDefault from "useFavoritesGuildCategoryAddAction" /* 10705 */;
 import CategoryCollapseActionCreators from "CategoryCollapseActionCreators" /* 11175 */;
-import useFavoritesGuildCategoryFullNoticeDefault from "useFavoritesGuildCategoryFullNotice" /* 16029 */;
-import useFavoritesGuildCategoryLongPressDefault from "useFavoritesGuildCategoryLongPress" /* 16030 */;
+import useFavoritesGuildCategoryFullNoticeDefault from "useFavoritesGuildCategoryFullNotice" /* 16033 */;
+import useFavoritesGuildCategoryLongPressDefault from "useFavoritesGuildCategoryLongPress" /* 16034 */;
 import noop from "module_19" /* 19 */;
 import RecentlyActiveCollapseStore from "RecentlyActiveCollapseStore" /* 7042 */;
 import CategoryCollapseStore from "CategoryCollapseStore" /* 6612 */;

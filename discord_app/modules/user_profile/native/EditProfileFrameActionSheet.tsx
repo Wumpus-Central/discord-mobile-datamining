@@ -1,6 +1,6 @@
-// === Module 14456: EditProfileFrameActionSheet ===
+// === Module 14460: EditProfileFrameActionSheet ===
 
-// Module 14456 (EditProfileFrameActionSheet)
+// Module 14460 (EditProfileFrameActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -11,7 +11,7 @@ import useShopProductItems from "useShopProductItems" /* 7842 */;
 import useCollectiblesDataDefault from "useCollectiblesData" /* 7844 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7858 */;
 import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 10998 */;
-import EditProfileFrameSection from "EditProfileFrameSection" /* 14458 */;
+import EditProfileFrameSection from "EditProfileFrameSection" /* 14462 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7068 */;

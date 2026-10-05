@@ -1,12 +1,12 @@
-// === Module 16962: ChannelDetailsNavigator ===
+// === Module 16981: ChannelDetailsNavigator ===
 
-// Module 16962 (ChannelDetailsNavigator)
+// Module 16981 (ChannelDetailsNavigator)
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HeaderShared from "HeaderShared" /* 7498 */;
 import navigateToThreadCreation from "navigateToThreadCreation" /* 11019 */;
 import _modDef12442 from "module_12442" /* 12442 */;
-import ChannelSettingsModal from "ChannelSettingsModal" /* 16963 */;
+import ChannelSettingsModal from "ChannelSettingsModal" /* 16982 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const constants = fn(10653).ChannelDetailsNavigatorScreens;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const SearchNavigatorScreens = fn(16794).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(16813).SearchNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = Object.freeze({});

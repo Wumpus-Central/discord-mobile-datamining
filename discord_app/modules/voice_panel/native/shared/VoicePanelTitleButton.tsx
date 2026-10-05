@@ -1,6 +1,6 @@
-// === Module 17223: VoicePanelTitleButton ===
+// === Module 17247: VoicePanelTitleButton ===
 
-// Module 17223 (VoicePanelTitleButton)
+// Module 17247 (VoicePanelTitleButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -13,10 +13,10 @@ import _modDef6638 from "module_6638" /* 6638 */;
 import native from "native" /* 8567 */;
 import ShieldLockIcon from "ShieldLockIcon" /* 9431 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11901 */;
-import QuestActivityButtonDefault from "QuestActivityButton" /* 17160 */;
-import VoicePanelHeaderUserState from "VoicePanelHeaderUserState" /* 17196 */;
-import _modDef17224 from "module_17224" /* 17224 */;
-import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 17225 */;
+import QuestActivityButtonDefault from "QuestActivityButton" /* 17184 */;
+import VoicePanelHeaderUserState from "VoicePanelHeaderUserState" /* 17220 */;
+import _modDef17248 from "module_17248" /* 17248 */;
+import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 17249 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 5118 */;
 import StageInstanceStore from "StageInstanceStore" /* 2056 */;
@@ -198,13 +198,13 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
       return tmp11;
     }
   }
-  const tmp12 = options(native.HeaderButton, { accessibilityRole: "button", accessibilityHint: first, accessibilityLabel: tmp9, text: name, icon: _modDef17224, iconPosition: "start", onPress });
+  const tmp12 = options(native.HeaderButton, { accessibilityRole: "button", accessibilityHint: first, accessibilityLabel: tmp9, text: name, icon: _modDef17248, iconPosition: "start", onPress });
   cResult[3] = name;
   cResult[4] = onPress;
   cResult[5] = tmp9;
   cResult[6] = tmp12;
   tmp11 = tmp12;
-  const obj4 = { accessibilityRole: "button", accessibilityHint: first, accessibilityLabel: tmp9, text: name, icon: _modDef17224, iconPosition: "start", onPress };
+  const obj4 = { accessibilityRole: "button", accessibilityHint: first, accessibilityLabel: tmp9, text: name, icon: _modDef17248, iconPosition: "start", onPress };
 }) : ((arg0) => {
   ({ participant, onPress } = arg0);
   const context = noop.useContext(VoicePanelStateContextDefault);
@@ -216,7 +216,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
   const intl2 = util.intl;
   obj2.accessibilityLabel = intl2.formatToPlainString(util.t.I0mOAs, { username: name });
   obj2.text = name;
-  obj2.icon = _modDef17224;
+  obj2.icon = _modDef17248;
   obj2.onPress = onPress;
   return options(native.HeaderButton, obj2);
 });
@@ -566,7 +566,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj = guildId(576);
   const tmp4 = channelId;
   const derivedStateFromSharedValue = guildId(7941).useDerivedStateFromSharedValue(focused, first);
-  const tmp8 = tmp4(17195)(derivedStateFromSharedValue, channelId, guildId);
+  const tmp8 = tmp4(17219)(derivedStateFromSharedValue, channelId, guildId);
   if (cResult[1] === channelId) {
     if (cResult[2] === guildId) {
       let tmp9 = cResult[3];
@@ -660,7 +660,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     return id;
   });
-  const tmp3 = channelId(17195)(derivedStateFromSharedValue, channelId, guildId);
+  const tmp3 = channelId(17219)(derivedStateFromSharedValue, channelId, guildId);
   const items = [guildId, channelId];
   const onPress = noop.useCallback(() => {
     const result = VoicePanelSettingsActionCreators.openVoicePanelSettingsActionSheet(guildId, channelId);

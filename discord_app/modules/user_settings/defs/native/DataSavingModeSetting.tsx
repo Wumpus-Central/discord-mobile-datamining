@@ -1,11 +1,11 @@
-// === Module 15283: DataSavingModeSetting ===
+// === Module 15287: DataSavingModeSetting ===
 
-// Module 15283 (DataSavingModeSetting)
+// Module 15287 (DataSavingModeSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;
-import UserSettingsText from "UserSettingsText" /* 15281 */;
+import UserSettingsText from "UserSettingsText" /* 15285 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
 
 require = fn;

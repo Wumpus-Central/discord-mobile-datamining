@@ -1,6 +1,6 @@
-// === Module 15057: PremiumRestoreSubscriptionSetting ===
+// === Module 15061: PremiumRestoreSubscriptionSetting ===
 
-// Module 15057 (PremiumRestoreSubscriptionSetting)
+// Module 15061 (PremiumRestoreSubscriptionSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;

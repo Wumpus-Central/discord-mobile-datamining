@@ -1,9 +1,9 @@
-// === Module 16981: useGetOrFetchChannelOverwriteUsers ===
+// === Module 17005: useGetOrFetchChannelOverwriteUsers ===
 
-// Module 16981 (useGetOrFetchChannelOverwriteUsers)
+// Module 17005 (useGetOrFetchChannelOverwriteUsers)
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5705 */;
-import _modDef16982 from "module_16982" /* 16982 */;
+import _modDef17006 from "module_17006" /* 17006 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
       const found = values.filter((type) => type.type === closure_1_0(stateFromStoresArray[4]).PermissionOverwriteType.MEMBER);
       items = found.map((id) => id.id);
     }
-    return _modDef16982(items, (arg0) => stateFromStoresArray.includes(arg0));
+    return _modDef17006(items, (arg0) => stateFromStoresArray.includes(arg0));
   }, items2), 2);
   first = tmp2[0];
   noop = tmp4;

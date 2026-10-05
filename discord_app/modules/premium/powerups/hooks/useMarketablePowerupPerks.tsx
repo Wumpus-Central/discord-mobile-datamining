@@ -1,6 +1,6 @@
-// === Module 13381: useMarketablePowerupPerks ===
+// === Module 13383: useMarketablePowerupPerks ===
 
-// Module 13381 (useMarketablePowerupPerks)
+// Module 13383 (useMarketablePowerupPerks)
 import Powerups from "Powerups" /* 4771 */;
 import useGameServerPerkDefault from "useGameServerPerk" /* 12235 */;
 import noop from "module_19" /* 19 */;

@@ -1,11 +1,11 @@
-// === Module 13710: ShareScreen ===
+// === Module 13712: ShareScreen ===
 
-// Module 13710 (ShareScreen)
+// Module 13712 (ShareScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import HeaderShared from "HeaderShared" /* 7498 */;
-import ShareAttachmentsDefault from "ShareAttachments" /* 13714 */;
-import ShareEmbedDefault from "ShareEmbed" /* 13715 */;
+import ShareAttachmentsDefault from "ShareAttachments" /* 13716 */;
+import ShareEmbedDefault from "ShareEmbed" /* 13717 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -122,7 +122,7 @@ export default function ShareScreen(appEntryKey) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -210,7 +210,7 @@ export default function ShareScreen(appEntryKey) {
                                   const obj2 = { value, done: true };
                                   return obj2;
                                 } else {
-                                  return { value: "IconComponent", done: "IconComponent" };
+                                  return { value: "IconComponent", done: null };
                                 }
                               } else {
                                 try {
@@ -232,7 +232,7 @@ export default function ShareScreen(appEntryKey) {
                                       let channel2;
                                       c5 = 1;
                                       c6 = 1;
-                                      return { value: "Reflect", done: true };
+                                      return { value: "Set", done: true };
                                     }
                                   } else if (1 === tmp7) {
                                     if (arg0 === 1) {
@@ -363,7 +363,7 @@ export default function ShareScreen(appEntryKey) {
             closure_129_8(false);
             closure_129_9.current = false;
             React = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else if (arg0 === 1) {
           React = 3;

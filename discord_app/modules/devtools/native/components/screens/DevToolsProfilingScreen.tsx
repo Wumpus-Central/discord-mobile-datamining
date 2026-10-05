@@ -1,13 +1,13 @@
-// === Module 15486: DevToolsProfilingScreen ===
+// === Module 15490: DevToolsProfilingScreen ===
 
-// Module 15486 (DevToolsProfilingScreen)
+// Module 15490 (DevToolsProfilingScreen)
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import Stack_Stack from "Stack/Stack" /* 5593 */;
 import TableRow from "TableRow" /* 5993 */;
 import TableRowGroup from "TableRowGroup" /* 6074 */;
 import ComponentProfiler from "ComponentProfiler" /* 12534 */;
-import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores" /* 15487 */;
+import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores" /* 15491 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp19 = closure_5(tmp(15487).DevToolsProfilingUseStateFromStores, {});
+      const tmp19 = closure_5(tmp(15491).DevToolsProfilingUseStateFromStores, {});
       cResult[5] = tmp19;
       let tmp17 = tmp19;
     } else {

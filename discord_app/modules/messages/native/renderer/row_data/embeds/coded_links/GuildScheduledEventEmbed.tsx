@@ -1,6 +1,6 @@
-// === Module 13050: GuildScheduledEventEmbed ===
+// === Module 13052: GuildScheduledEventEmbed ===
 
-// Module 13050 (GuildScheduledEventEmbed)
+// Module 13052 (GuildScheduledEventEmbed)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2066 */;
@@ -19,7 +19,7 @@ import useCanInviteForGuildEvent from "useCanInviteForGuildEvent" /* 9262 */;
 import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 9271 */;
 import GuildScheduledEventHeaderUtils from "GuildScheduledEventHeaderUtils" /* 9272 */;
 import icons_ShareDefault from "icons/Share" /* 9518 */;
-import _modDef13051 from "module_13051" /* 13051 */;
+import _modDef13053 from "module_13053" /* 13053 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7037 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
@@ -152,7 +152,7 @@ function createGuildScheduledEventEmbed(type) {
   }
   obj8.badgeCount = toLocaleStringResult;
   const tmpResult4 = GuildScheduledEventManagerDefault;
-  obj8.badgeIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13051);
+  obj8.badgeIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13053);
   let assetUriForEmbed4;
   if (null != eventLocationIconSource) {
     assetUriForEmbed4 = renderer_EmbedUtils.getAssetUriForEmbed(eventLocationIconSource);

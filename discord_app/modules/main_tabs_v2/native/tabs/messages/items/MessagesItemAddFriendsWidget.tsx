@@ -1,6 +1,6 @@
-// === Module 16018: MessagesItemAddFriendsWidget ===
+// === Module 16022: MessagesItemAddFriendsWidget ===
 
-// Module 16018 (MessagesItemAddFriendsWidget)
+// Module 16022 (MessagesItemAddFriendsWidget)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -8,9 +8,9 @@ import RootNavigationRef from "RootNavigationRef" /* 4737 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import Pressables from "Pressables" /* 5909 */;
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8054 */;
-import IconActionButtonDefault from "IconActionButton" /* 13095 */;
-import _modDef13665 from "module_13665" /* 13665 */;
-import _modDef16019 from "module_16019" /* 16019 */;
+import IconActionButtonDefault from "IconActionButton" /* 13097 */;
+import _modDef13667 from "module_13667" /* 13667 */;
+import _modDef16023 from "module_16023" /* 16023 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ let closure_11 = async function _getFriendInviteCode() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -113,7 +113,7 @@ let closure_13 = async function _handleShare() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -149,7 +149,7 @@ let closure_13 = async function _handleShare() {
         const obj6 = { link: closure_129_1(closure_129_2[12])(closure_128_0) };
         obj5.handleOpenShareSheet(closure_128_0, null, intl.formatToPlainString(closure_129_0(closure_129_2[10]).t.PJf9P9, obj6), closure_129_6.ADD_FRIENDS_WIDGET);
         c3 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp7) {
       c3 = tmp;
@@ -178,7 +178,7 @@ let closure_15 = async function _handleLink() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -211,7 +211,7 @@ let closure_15 = async function _handleLink() {
         closure_128_0 = value;
         closure_129_0(closure_129_2[11]).handleCopy(closure_128_0, null, closure_129_6.ADD_FRIENDS_WIDGET);
         c3 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp15) {
       c3 = tmp;
@@ -223,7 +223,7 @@ const View = fn(17).View;
 const InstantInviteSources = fn(1085).InstantInviteSources;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const sum = fn(13095).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
+const sum = fn(13097).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
 const createStyles = fn(4890);
 let obj = { container: { height: sum, paddingHorizontal: nativeDefault.space.PX_8, justifyContent: "space-between", flexDirection: "row", alignItems: "center" }, title: null, actions: null, actionIcon: null };
 let obj3 = { height: sum, paddingHorizontal: nativeDefault.space.PX_8, justifyContent: "space-between", flexDirection: "row", alignItems: "center" };
@@ -294,7 +294,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp14 = cResult[5];
   }
   if (cResult[6] !== tmp4.actionIcon) {
-    const obj4 = { style: actionIcon, variant: "filled", source: _modDef13665, onPress: handleShare, accessibilityLabel: tmp14 };
+    const obj4 = { style: actionIcon, variant: "filled", source: _modDef13667, onPress: handleShare, accessibilityLabel: tmp14 };
     const tmp21 = React5(IconActionButtonDefault, obj4);
     cResult[6] = tmp4.actionIcon;
     cResult[7] = tmp21;
@@ -311,7 +311,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp22 = cResult[8];
   }
   if (cResult[9] !== tmp4.actionIcon) {
-    const obj5 = { style: tmp4.actionIcon, variant: "filled", source: _modDef16019, onPress: handleLink, accessibilityLabel: tmp22 };
+    const obj5 = { style: tmp4.actionIcon, variant: "filled", source: _modDef16023, onPress: handleLink, accessibilityLabel: tmp22 };
     const tmp29 = React5(IconActionButtonDefault, obj5);
     cResult[9] = tmp4.actionIcon;
     cResult[10] = tmp29;
@@ -376,12 +376,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   obj2.children = React5(Text_Text.Text, obj3);
   const items = [React5(Pressables.PressableHighlight, obj2), ];
   const obj4 = { style: tmp.actions, children: null };
-  const obj5 = { style: tmp.actionIcon, variant: "filled", source: _modDef13665, onPress: handleShare, accessibilityLabel: null };
+  const obj5 = { style: tmp.actionIcon, variant: "filled", source: _modDef13667, onPress: handleShare, accessibilityLabel: null };
   const intl3 = util.intl;
   obj5.accessibilityLabel = intl3.string(util.t.Ej3B3Y);
   const items1 = [React5(IconActionButtonDefault, obj5), ];
   const obj6 = { style: tmp.actionIcon, variant: "filled", source: null, onPress: null, accessibilityLabel: null };
-  obj6.source = _modDef16019;
+  obj6.source = _modDef16023;
   obj6.onPress = handleLink;
   const intl4 = util.intl;
   obj6.accessibilityLabel = intl4.string(util.t.WqhZss);

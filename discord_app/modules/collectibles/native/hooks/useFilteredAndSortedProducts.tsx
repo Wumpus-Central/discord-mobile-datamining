@@ -1,11 +1,11 @@
-// === Module 14872: useFilteredAndSortedProducts ===
+// === Module 14876: useFilteredAndSortedProducts ===
 
-// Module 14872 (useFilteredAndSortedProducts)
+// Module 14876 (useFilteredAndSortedProducts)
 import c from "c" /* 576 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
-import useBadBundleFilter from "useBadBundleFilter" /* 14873 */;
-import useAndroidUnsyncedFilter from "useAndroidUnsyncedFilter" /* 14874 */;
-import usePurchasedProductsSort from "usePurchasedProductsSort" /* 14875 */;
+import useBadBundleFilter from "useBadBundleFilter" /* 14877 */;
+import useAndroidUnsyncedFilter from "useAndroidUnsyncedFilter" /* 14878 */;
+import usePurchasedProductsSort from "usePurchasedProductsSort" /* 14879 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 

@@ -1,10 +1,10 @@
-// === Module 17104: ShopIllocon ===
+// === Module 17128: ShopIllocon ===
 
-// Module 17104 (ShopIllocon)
+// Module 17128 (ShopIllocon)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5974 */;
-import _modDef17105 from "module_17105" /* 17105 */;
+import _modDef17129 from "module_17129" /* 17129 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -19,7 +19,7 @@ export const ShopIllocon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
     num = size;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef17105 };
+    const obj2 = { uri: _modDef17129 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -58,7 +58,7 @@ export const ShopIllocon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef17105 };
+  const obj2 = { uri: _modDef17129 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

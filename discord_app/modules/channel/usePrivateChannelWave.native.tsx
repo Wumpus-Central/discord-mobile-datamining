@@ -1,6 +1,6 @@
-// === Module 15960: usePrivateChannelWave ===
+// === Module 15964: usePrivateChannelWave ===
 
-// Module 15960 (usePrivateChannelWave)
+// Module 15964 (usePrivateChannelWave)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1) => {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1) => {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

@@ -1,6 +1,6 @@
-// === Module 17036: useMutualGuilds ===
+// === Module 17060: useMutualGuilds ===
 
-// Module 17036 (useMutualGuilds)
+// Module 17060 (useMutualGuilds)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import noop from "module_19" /* 19 */;
 import UserProfileStore from "UserProfileStore" /* 7111 */;

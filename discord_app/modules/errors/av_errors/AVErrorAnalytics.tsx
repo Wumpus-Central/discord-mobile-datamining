@@ -1,6 +1,6 @@
-// === Module 18025: AVErrorAnalytics ===
+// === Module 18047: AVErrorAnalytics ===
 
-// Module 18025 (AVErrorAnalytics)
+// Module 18047 (AVErrorAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import ProcessUtilsDefault from "ProcessUtils" /* 1363 */;
 import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4884 */;

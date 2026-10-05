@@ -1,6 +1,6 @@
-// === Module 17097: ConnectionDeprecationBottomSheet ===
+// === Module 17121: ConnectionDeprecationBottomSheet ===
 
-// Module 17097 (ConnectionDeprecationBottomSheet)
+// Module 17121 (ConnectionDeprecationBottomSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtils from "AvatarUtils" /* 1402 */;
@@ -9,7 +9,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854
 import Icon from "Icon" /* 5596 */;
 import useStartAuthorizeDefault from "useStartAuthorize" /* 6660 */;
 import GameIcon from "GameIcon" /* 6667 */;
-import AccountLinkManager from "AccountLinkManager" /* 17098 */;
+import AccountLinkManager from "AccountLinkManager" /* 17122 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 5118 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5440 */;

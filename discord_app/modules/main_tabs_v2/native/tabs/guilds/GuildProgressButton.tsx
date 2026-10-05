@@ -1,6 +1,6 @@
-// === Module 16118: GuildProgressButton ===
+// === Module 16122: GuildProgressButton ===
 
-// Module 16118 (GuildProgressButton)
+// Module 16122 (GuildProgressButton)
 import nativeDefault from "native" /* 587 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10723 */;
 import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 11813 */;
@@ -32,8 +32,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
       }
       const _Symbol = Symbol;
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { source: completed(16119) };
-        const tmp15 = jsx(tmp(8897).RowButton.Icon, { source: completed(16119) });
+        const obj3 = { source: completed(16123) };
+        const tmp15 = jsx(tmp(8897).RowButton.Icon, { source: completed(16123) });
         const intl = tmp(1126).intl;
         const stringResult = intl.string(tmp(1126).t.o3HK3d);
         cResult[7] = tmp15;
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   }, items1);
   let obj2 = { icon: null, label: null, subLabel: null, onPress: null, trailing: null };
   let obj = guild(12130);
-  obj2.icon = jsx(guild(8897).RowButton.Icon, { source: completed(16119) });
+  obj2.icon = jsx(guild(8897).RowButton.Icon, { source: completed(16123) });
   const intl = guild(1126).intl;
   obj2.label = intl.string(guild(1126).t.o3HK3d);
   obj2.subLabel = subtitle;

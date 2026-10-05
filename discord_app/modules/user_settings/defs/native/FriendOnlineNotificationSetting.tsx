@@ -1,10 +1,10 @@
-// === Module 15323: FriendOnlineNotificationSetting ===
+// === Module 15327: FriendOnlineNotificationSetting ===
 
-// Module 15323 (FriendOnlineNotificationSetting)
+// Module 15327 (FriendOnlineNotificationSetting)
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import SettingsConstants from "SettingsConstants" /* 7634 */;
-import FriendOnlineNotificationUtils from "FriendOnlineNotificationUtils" /* 15324 */;
+import FriendOnlineNotificationUtils from "FriendOnlineNotificationUtils" /* 15328 */;
 import SettingBuilders from "SettingBuilders" /* 11129 */;
 import size from "module_2" /* 2 */;
 

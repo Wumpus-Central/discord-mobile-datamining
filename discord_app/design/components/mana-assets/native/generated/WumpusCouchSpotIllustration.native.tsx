@@ -1,10 +1,10 @@
-// === Module 14913: WumpusCouchSpotIllustration ===
+// === Module 14917: WumpusCouchSpotIllustration ===
 
-// Module 14913 (WumpusCouchSpotIllustration)
+// Module 14917 (WumpusCouchSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5974 */;
-import _modDef14914 from "module_14914" /* 14914 */;
+import _modDef14918 from "module_14918" /* 14918 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -27,7 +27,7 @@ export const WumpusCouchSpotIllustration = ReactCompilerGating.isReactCompilerEn
     num3 = scale;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef14914 };
+    const obj2 = { uri: _modDef14918 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -78,7 +78,7 @@ export const WumpusCouchSpotIllustration = ReactCompilerGating.isReactCompilerEn
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef14914 };
+  const obj2 = { uri: _modDef14918 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

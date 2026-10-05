@@ -1,9 +1,9 @@
-// === Module 12960: WishlistViewerCoachmark ===
+// === Module 12962: WishlistViewerCoachmark ===
 
-// Module 12960 (WishlistViewerCoachmark)
+// Module 12962 (WishlistViewerCoachmark)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import _modDef12961 from "module_12961" /* 12961 */;
+import _modDef12963 from "module_12963" /* 12963 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const cResult = c.c(6);
   const tmp3 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef12961 };
+    const obj2 = { uri: _modDef12963 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -48,8 +48,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
 }) : (() => {
   const tmp = closure_8();
   const obj = { style: tmp.imageContainer, children: null };
-  const obj2 = { source: { uri: _modDef12961 }, style: tmp.image };
-  obj.children = <hasOwnProperty source={{ uri: _modDef12961 }} style={tmp.image} />;
+  const obj2 = { source: { uri: _modDef12963 }, style: tmp.image };
+  obj.children = <hasOwnProperty source={{ uri: _modDef12963 }} style={tmp.image} />;
   return <React4 style={tmp.imageContainer}>{null}</React4>;
 });
 ReactCompilerGating = fn(558);

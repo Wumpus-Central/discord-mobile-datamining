@@ -1,6 +1,6 @@
-// === Module 16230: GuildsBarAnimatedItemWrapper ===
+// === Module 16234: GuildsBarAnimatedItemWrapper ===
 
-// Module 16230 (GuildsBarAnimatedItemWrapper)
+// Module 16234 (GuildsBarAnimatedItemWrapper)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -14,7 +14,7 @@ function renderUnreadIndicator(arg0, sharedId, transitionState, cleanUp) {
   return closure_1_8(closure_18, { sharedId: sharedId.sharedId, id: sharedId.id, selected: sharedId.selected, transitionState, cleanUp }, arg0);
 }
 const IOS_POINTER_STYLE = fn(5611).IOS_POINTER_STYLE;
-const GuildsBarConstants = fn(16218);
+const GuildsBarConstants = fn(16222);
 ({ GUILD_ITEM_HIT_SLOP: hasOwnProperty, GUILD_ITEM_INSET_LEFT: metroRequire, useGuildWrapperSize: closure_7 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

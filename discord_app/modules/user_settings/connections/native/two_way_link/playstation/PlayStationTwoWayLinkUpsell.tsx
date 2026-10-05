@@ -1,14 +1,14 @@
-// === Module 14772: PlayStationTwoWayLinkUpsell ===
+// === Module 14776: PlayStationTwoWayLinkUpsell ===
 
-// Module 14772 (PlayStationTwoWayLinkUpsell)
+// Module 14776 (PlayStationTwoWayLinkUpsell)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
 import FastImageDefault from "FastImage" /* 5974 */;
 import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 8764 */;
-import OneWayToTwoWayLinkUpsell2 from "OneWayToTwoWayLinkUpsell" /* 14770 */;
-import _modDef14773 from "module_14773" /* 14773 */;
+import OneWayToTwoWayLinkUpsell2 from "OneWayToTwoWayLinkUpsell" /* 14774 */;
+import _modDef14777 from "module_14777" /* 14777 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -41,8 +41,8 @@ export const PlayStationTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEn
     [tmp5, tmp6, tmp7] = cResult;
   }
   if (cResult[3] !== tmp4.upsellImage) {
-    const obj4 = { style: tmp4.upsellImage, source: _modDef14773, resizeMode: "contain" };
-    const tmp17 = jsx(FastImageDefault, { style: tmp4.upsellImage, source: _modDef14773, resizeMode: "contain" });
+    const obj4 = { style: tmp4.upsellImage, source: _modDef14777, resizeMode: "contain" };
+    const tmp17 = jsx(FastImageDefault, { style: tmp4.upsellImage, source: _modDef14777, resizeMode: "contain" });
     cResult[3] = tmp4.upsellImage;
     cResult[4] = tmp17;
     let tmp13 = tmp17;
@@ -78,7 +78,7 @@ export const PlayStationTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEn
   const intl2 = util.intl;
   obj2.body = intl2.format(util.t.lTZBit, { help_article: articleURL });
   const obj3 = { style: tmp.upsellImage, source: null, resizeMode: "contain" };
-  obj3.source = _modDef14773;
+  obj3.source = _modDef14777;
   obj2.img = jsx(FastImageDefault, { style: tmp.upsellImage, source: null, resizeMode: "contain" });
   obj2.newIndicatorDismissibleContent = dismissible_content.DismissibleContent.PS_ONE_WAY_RECONNECT;
   obj2.onPress = function onPress() {

@@ -1,6 +1,6 @@
-// === Module 16205: GuildsEmpty ===
+// === Module 16209: GuildsEmpty ===
 
-// Module 16205 (GuildsEmpty)
+// Module 16209 (GuildsEmpty)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -10,7 +10,7 @@ import Text_Text from "Text/Text" /* 4886 */;
 import Stack_Stack from "Stack/Stack" /* 5593 */;
 import components_Button_Button from "components/Button/Button" /* 5594 */;
 import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12357 */;
-import _modDef16206 from "module_16206" /* 16206 */;
+import _modDef16210 from "module_16210" /* 16210 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -64,7 +64,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((contentContainerStyl
       let tmp6 = cResult[2];
     }
     if (cResult[3] !== tmp4.illustration) {
-      const obj2 = { source: _modDef16206, style: tmp4.illustration };
+      const obj2 = { source: _modDef16210, style: tmp4.illustration };
       const tmp11 = __initData2(hasOwnProperty, obj2);
       cResult[3] = tmp4.illustration;
       cResult[4] = tmp11;
@@ -238,7 +238,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((contentContainerStyl
   obj.contentContainerStyle = items;
   const obj2 = { children: null };
   const obj3 = { style: tmp.content, children: null };
-  const obj4 = { style: tmp.illustrationWrapper, children: __initData2(hasOwnProperty, { source: _modDef16206, style: tmp.illustration }) };
+  const obj4 = { style: tmp.illustrationWrapper, children: __initData2(hasOwnProperty, { source: _modDef16210, style: tmp.illustration }) };
   const items1 = [__initData2(timestampProducer, obj4), ];
   const obj6 = { style: tmp.textWrapper, children: null };
   const obj7 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: null, children: null };
@@ -319,7 +319,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((style)
     const effect = noop.useEffect(tmp13, tmp14);
     const isScreenLandscape = tmp(5912).useIsScreenLandscape();
     const tmpResult3 = tmp(5912);
-    const youBarTotalHeight = tmp(14897).useYouBarTotalHeight();
+    const youBarTotalHeight = tmp(14901).useYouBarTotalHeight();
     if (!stateFromStores) {
       return null;
     } else {
@@ -400,7 +400,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((style)
       cResult[9] = items2;
       tmp20 = items2;
     }
-    const tmpResult4 = tmp(14897);
+    const tmpResult4 = tmp(14901);
   }
   const fn2 = function w() {
     if (null != selectedGuildId) {
@@ -496,7 +496,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((style)
   }, items1);
   const tmp7 = selectedGuildId(8422);
   const isScreenLandscape = navigation(5912).useIsScreenLandscape();
-  navigation(14897);
+  navigation(14901);
   let tmp14Result = null;
   if (stateFromStores) {
     const obj4 = { style: null, children: null };

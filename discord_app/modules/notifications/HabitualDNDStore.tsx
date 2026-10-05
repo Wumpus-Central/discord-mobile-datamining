@@ -1,6 +1,6 @@
-// === Module 13530: HabitualDNDStore ===
+// === Module 13532: HabitualDNDStore ===
 
-// Module 13530 (HabitualDNDStore)
+// Module 13532 (HabitualDNDStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;

@@ -1,6 +1,6 @@
-// === Module 17556: TouchableUploadAvatar ===
+// === Module 17580: TouchableUploadAvatar ===
 
-// Module 17556 (TouchableUploadAvatar)
+// Module 17580 (TouchableUploadAvatar)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -8,7 +8,7 @@ import native from "native" /* 1188 */;
 import Pressables from "Pressables" /* 5909 */;
 import FastImageDefault from "FastImage" /* 5974 */;
 import _modDef12442 from "module_12442" /* 12442 */;
-import _modDef13673 from "module_13673" /* 13673 */;
+import _modDef13675 from "module_13675" /* 13675 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   ({ avatarSource, showPendingAvatar, onSelectAvatar } = arg0);
   const tmp5 = closure_6();
   if (!(undefined !== showPendingAvatar && showPendingAvatar)) {
-    let tmp7 = _modDef13673;
+    let tmp7 = _modDef13675;
   } else {
     tmp7 = avatarSource;
   }
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const tmp = closure_6();
   if (!showPendingAvatar) {
-    let tmp3 = _modDef13673;
+    let tmp3 = _modDef13675;
   } else {
     tmp3 = avatarSource;
   }

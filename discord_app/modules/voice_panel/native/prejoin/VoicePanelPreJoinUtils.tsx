@@ -1,6 +1,6 @@
-// === Module 17281: VoicePanelPreJoinUtils ===
+// === Module 17305: VoicePanelPreJoinUtils ===
 
-// Module 17281 (VoicePanelPreJoinUtils)
+// Module 17305 (VoicePanelPreJoinUtils)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import size from "module_2" /* 2 */;
 

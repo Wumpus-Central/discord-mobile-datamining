@@ -9,7 +9,7 @@ import MusicIcon from "MusicIcon" /* 9571 */;
 import ActivityStatusIconDefault from "ActivityStatusIcon" /* 10615 */;
 import TvIcon from "TvIcon" /* 10616 */;
 import ActivityStatusTextDefault from "ActivityStatusText" /* 10618 */;
-import conjuringActivity from "conjuringActivity" /* 10621 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10621 */;
 import getActivityStatusTextDefault from "getActivityStatusText" /* 10622 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ function getActivityStatusIcon(activity) {
   const flag = false;
   let tmp = dependencyMap;
   if (!isEmbeddedActivityDefault(activity)) {
-    if (!obj.isConjuringActivity(activity)) {
+    if (!obj.isConjurePresenceActivity(activity)) {
       if (activity.type === ActivityTypes.PLAYING) {
         let GameControllerIcon = GameControllerIcon2.GameControllerIcon;
       } else if (activity.type === ActivityTypes.LISTENING) {
@@ -36,7 +36,7 @@ function getActivityStatusIcon(activity) {
       }
       return GameControllerIcon;
     }
-    obj = conjuringActivity;
+    obj = conjurePresenceActivity;
   }
   if (flag) {
     tmp = GameControllerIcon2;

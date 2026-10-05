@@ -1,6 +1,6 @@
-// === Module 17972: SelectInviteRolesActionSheet ===
+// === Module 17994: SelectInviteRolesActionSheet ===
 
-// Module 17972 (SelectInviteRolesActionSheet)
+// Module 17994 (SelectInviteRolesActionSheet)
 import _mod12 from "module_12" /* 12 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import _slicedToArray from "module_32" /* 32 */;

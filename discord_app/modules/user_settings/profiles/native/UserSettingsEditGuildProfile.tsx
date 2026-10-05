@@ -1,6 +1,6 @@
-// === Module 14474: UserSettingsEditGuildProfile ===
+// === Module 14478: UserSettingsEditGuildProfile ===
 
-// Module 14474 (UserSettingsEditGuildProfile)
+// Module 14478 (UserSettingsEditGuildProfile)
 import nativeDefault from "native" /* 587 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7858 */;
 import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9419 */;

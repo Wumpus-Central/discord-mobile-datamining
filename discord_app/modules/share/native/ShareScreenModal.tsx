@@ -1,6 +1,6 @@
-// === Module 13709: ShareScreenModal ===
+// === Module 13711: ShareScreenModal ===
 
-// Module 13709 (ShareScreenModal)
+// Module 13711 (ShareScreenModal)
 import LoggerDefault from "Logger" /* 3 */;
 import ChannelTypes from "ChannelTypes" /* 1106 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
@@ -13,7 +13,7 @@ require = fn;
 function onClose() {
   ModalActionCreatorsDefault.popWithKey(SHARE_SCREEN_MODAL_KEY);
 }
-const SHARE_SCREEN_MODAL_KEY = fn(13662).SHARE_SCREEN_MODAL_KEY;
+const SHARE_SCREEN_MODAL_KEY = fn(13664).SHARE_SCREEN_MODAL_KEY;
 const jsx = fn(21).jsx;
 let closure_9 = new LoggerDefault("ShareScreenModal");
 const ReactCompilerGating = fn(558);
@@ -152,7 +152,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((shareId) => {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -244,7 +244,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((shareId) => {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -346,7 +346,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((shareId) => {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -431,7 +431,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((shareId) => {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

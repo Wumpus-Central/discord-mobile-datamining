@@ -1,6 +1,6 @@
-// === Module 15696: ProfileCustomizationTryItOutSettingScreen ===
+// === Module 15700: ProfileCustomizationTryItOutSettingScreen ===
 
-// Module 15696 (ProfileCustomizationTryItOutSettingScreen)
+// Module 15700 (ProfileCustomizationTryItOutSettingScreen)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1394 */;

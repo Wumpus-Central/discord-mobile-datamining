@@ -1,6 +1,6 @@
-// === Module 18095: libDiscoreSmokeTest ===
+// === Module 18117: libDiscoreSmokeTest ===
 
-// Module 18095 (libDiscoreSmokeTest)
+// Module 18117 (libDiscoreSmokeTest)
 import LoggerDefault from "Logger" /* 3 */;
 import libdiscoreExperiments from "libdiscoreExperiments" /* 559 */;
 import initLibdiscore from "initLibdiscore" /* 566 */;
@@ -29,7 +29,7 @@ let closure_7 = async function _libDiscoreSmokeTest() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

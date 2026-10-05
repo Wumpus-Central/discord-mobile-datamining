@@ -17,7 +17,7 @@ let closure_8 = async function _computeBoundPairwiseFingerprint(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

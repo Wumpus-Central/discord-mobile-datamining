@@ -1,6 +1,6 @@
-// === Module 17006: IconLabelBlock ===
+// === Module 17030: IconLabelBlock ===
 
-// Module 17006 (IconLabelBlock)
+// Module 17030 (IconLabelBlock)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import shared from "shared" /* 4729 */;

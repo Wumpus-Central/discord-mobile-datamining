@@ -1,6 +1,6 @@
-// === Module 14603: Blocked ===
+// === Module 14607: Blocked ===
 
-// Module 14603 (Blocked)
+// Module 14607 (Blocked)
 import c from "c" /* 576 */;
 import shared from "shared" /* 4729 */;
 import _mod7905 from "module_7905" /* 7905 */;
@@ -16,13 +16,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_14604");
+          return require("module_14608");
         },
       darker() {
-          return require("module_14605");
+          return require("module_14609");
         },
       light() {
-          return require("module_14606");
+          return require("module_14610");
         }
     };
     const illustrationSource = _mod7905.getIllustrationSource(theme, obj3);
@@ -38,13 +38,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj = shared;
   return _mod7905.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_14604");
+      return require("module_14608");
     },
     darker() {
-      return require("module_14605");
+      return require("module_14609");
     },
     light() {
-      return require("module_14606");
+      return require("module_14610");
     }
   });
 });
@@ -53,13 +53,13 @@ ReactCompilerGating = fn(558);
 function getBlockedSource(theme) {
   return _mod7905.getIllustrationSource(theme, {
     dark() {
-      return require("module_14604");
+      return require("module_14608");
     },
     darker() {
-      return require("module_14605");
+      return require("module_14609");
     },
     light() {
-      return require("module_14606");
+      return require("module_14610");
     }
   });
 }

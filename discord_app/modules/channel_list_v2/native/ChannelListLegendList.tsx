@@ -1,16 +1,16 @@
-// === Module 16181: ChannelListLegendList ===
+// === Module 16185: ChannelListLegendList ===
 
-// Module 16181 (ChannelListLegendList)
+// Module 16185 (ChannelListLegendList)
 import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
 import FastList from "FastList" /* 6569 */;
-import useChannelListFlatDataDefault from "useChannelListFlatData" /* 16182 */;
+import useChannelListFlatDataDefault from "useChannelListFlatData" /* 16186 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ Fragment: closure_4, jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let closure_7 = [];
-let closure_8 = { item: "done", positionPercentage: false };
+let closure_8 = { item: "duration", positionPercentage: false };
 let closure_9 = { zIndex: 5 };
 let closure_10 = { code: "function ChannelListLegendListTsx1(event){const{scrollPosValue,onScrollWorklet,onScroll,runOnJS}=this.__closure;scrollPosValue.set(event.contentOffset.y);onScrollWorklet(event.contentOffset.y,event.contentSize.height,event.layoutMeasurement.height);if(onScroll!=null){runOnJS(onScroll)();}}" };
 const size = fn(2);
@@ -311,7 +311,7 @@ export default noop.memo(noop.forwardRef(function ChannelListLegendList(footerSi
   }
   const obj4 = { children: null };
   const animatedScrollHandler = obj2.useAnimatedScrollHandler(Q);
-  const items6 = [onScroll(tmp5(16020).AnimatedLegendList, { ref, contentContainerStyle: memo3, data: tmp3.listData, drawDistance: listViewportHeight, estimatedHeaderSize: headerSize, getFixedItemSize: callback3, getItemType: callback1, initialScrollOffset: memo, keyExtractor: callback2, ListHeaderComponent: memo2, ListHeaderComponentStyle: renderSectionFooter, onEndReached, onEndReachedThreshold: num, onScroll: obj2.useAnimatedScrollHandler(Q), recycleItems: true, renderItem: callback, scrollIndicatorInsets: memo4 }), renderAccessory(memo1)];
+  const items6 = [onScroll(tmp5(16024).AnimatedLegendList, { ref, contentContainerStyle: memo3, data: tmp3.listData, drawDistance: listViewportHeight, estimatedHeaderSize: headerSize, getFixedItemSize: callback3, getItemType: callback1, initialScrollOffset: memo, keyExtractor: callback2, ListHeaderComponent: memo2, ListHeaderComponentStyle: renderSectionFooter, onEndReached, onEndReachedThreshold: num, onScroll: obj2.useAnimatedScrollHandler(Q), recycleItems: true, renderItem: callback, scrollIndicatorInsets: memo4 }), renderAccessory(memo1)];
   obj4.children = items6;
   return onScrollWorklet(listViewportHeight, obj4);
 }));

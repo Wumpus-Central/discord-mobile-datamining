@@ -179,7 +179,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guild)
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -207,7 +207,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guild)
           return obj;
         } else if (null == value) {
           c2 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         } else {
           if (!closure_128_5) {
             const AccessibilityAnnouncer = tmp4(4590).AccessibilityAnnouncer;

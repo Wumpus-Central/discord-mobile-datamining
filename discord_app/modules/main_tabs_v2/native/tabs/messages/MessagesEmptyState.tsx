@@ -1,6 +1,6 @@
-// === Module 15974: MessagesEmptyState ===
+// === Module 15978: MessagesEmptyState ===
 
-// Module 15974 (MessagesEmptyState)
+// Module 15978 (MessagesEmptyState)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
@@ -10,8 +10,8 @@ import Text_Text from "Text/Text" /* 4886 */;
 import components_Button_Button from "components/Button/Button" /* 5594 */;
 import useIsScreenLandscape from "useIsScreenLandscape" /* 5912 */;
 import useTrackImpressionDefault from "useTrackImpression" /* 8422 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 14897 */;
-import _modDef15975 from "module_15975" /* 15975 */;
+import useYouBarTotalHeight from "useYouBarTotalHeight" /* 14901 */;
+import _modDef15979 from "module_15979" /* 15979 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -241,7 +241,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         cResult[14] = tmp24;
         cResult[15] = tmp31;
       }
-      const obj6 = { resizeMode: "contain", source: _modDef15975, style: null };
+      const obj6 = { resizeMode: "contain", source: _modDef15979, style: null };
       const size = { height: result1, width: bound };
       obj6.style = size;
       const tmp27 = closure_1_8(timestampProducer, obj6);
@@ -303,7 +303,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj5 = { style: tmp.container, onLayout: callback, children: null };
   const obj6 = { style: tmp.innerContainer, children: null };
   const obj7 = { style: tmp.imageContainer, children: null };
-  const obj8 = { resizeMode: "contain", source: _modDef15975, style: null };
+  const obj8 = { resizeMode: "contain", source: _modDef15979, style: null };
   if (result < c10) {
     let result1 = c11 * (result / c10);
   } else {

@@ -1,6 +1,6 @@
-// === Module 17284: VoicePanelPIPContent ===
+// === Module 17308: VoicePanelPIPContent ===
 
-// Module 17284 (VoicePanelPIPContent)
+// Module 17308 (VoicePanelPIPContent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
@@ -15,10 +15,10 @@ import ExternalPipDefault from "ExternalPip" /* 9110 */;
 import VideoRendererNativeComponentDefault from "VideoRendererNativeComponent" /* 9115 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11901 */;
 import VoicePanelCardLayoutManager from "VoicePanelCardLayoutManager" /* 11904 */;
-import VideoActionCreators from "VideoActionCreators" /* 17133 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17181 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17183 */;
-import VoicePanelStreamOutputSinkStack from "VoicePanelStreamOutputSinkStack" /* 17249 */;
+import VideoActionCreators from "VideoActionCreators" /* 17157 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17205 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17207 */;
+import VoicePanelStreamOutputSinkStack from "VoicePanelStreamOutputSinkStack" /* 17273 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
@@ -68,7 +68,7 @@ function areParticipantsEqual(arg0, arg1) {
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const VoicePanelModes = fn(11902).VoicePanelModes;
-const VoicePanelPIPModes = fn(17182).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(17206).VoicePanelPIPModes;
 let Constants = fn(1085);
 ({ ApplicationStreamStates: closure_16, ComponentActions: closure_17 } = Constants);
 Constants = fn(2011);
@@ -1726,11 +1726,11 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled() ? ((participantId)
   let callback2;
   ({ transitionState, transitionCleanUp, layoutTransition } = participantId);
   const tmp = closure_24();
-  const mode = participantId(17183).usePIPState().mode;
+  const mode = participantId(17207).usePIPState().mode;
   let tmp4 = closure_28(tmp, transitionState, transitionCleanUp);
   const context = video.useContext(mode(11901));
   ({ channelId: c2, layoutManager } = context);
-  let obj = participantId(17183);
+  let obj = participantId(17207);
   let tmp2 = participantId;
   const items = [callback2];
   const stateFromStoresObject = participantId(573).useStateFromStoresObject(items, () => {

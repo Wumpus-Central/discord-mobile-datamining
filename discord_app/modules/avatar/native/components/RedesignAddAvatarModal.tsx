@@ -1,8 +1,8 @@
-// === Module 17565: RedesignAddAvatarModal ===
+// === Module 17589: RedesignAddAvatarModal ===
 
-// Module 17565 (RedesignAddAvatarModal)
+// Module 17589 (RedesignAddAvatarModal)
 import nativeDefault from "native" /* 587 */;
-import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 17544 */;
+import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 17568 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -513,7 +513,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -550,7 +550,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
             pendingImage = undefined;
             if (null != base64) {
               const obj11 = { imageUri: base64, description: null };
-              const obj = tmp2(14415);
+              const obj = tmp2(14419);
               obj11.description = tmp2(7840).generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj11);
               const obj3 = tmp2(7840);

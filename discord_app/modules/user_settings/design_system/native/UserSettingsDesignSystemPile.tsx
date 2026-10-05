@@ -1,6 +1,6 @@
-// === Module 15677: UserSettingsDesignSystemPile ===
+// === Module 15681: UserSettingsDesignSystemPile ===
 
-// Module 15677 (UserSettingsDesignSystemPile)
+// Module 15681 (UserSettingsDesignSystemPile)
 import c from "c" /* 576 */;
 import native from "native" /* 1188 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1405 */;
@@ -11,7 +11,7 @@ import Card from "Card" /* 5995 */;
 import ClipView from "ClipView" /* 8469 */;
 import Pile from "Pile" /* 10739 */;
 import ListUtils from "ListUtils" /* 12285 */;
-import AvatarDuoPile from "AvatarDuoPile" /* 14273 */;
+import AvatarDuoPile from "AvatarDuoPile" /* 14275 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           const DEFAULT_AVATARS = size(1405).DEFAULT_AVATARS;
           const substr = DEFAULT_AVATARS.slice(0, 2);
           obj3.children = substr.map((source, index) => closure_2_6(native.Avatar, { source, size }, index));
-          items[1] = closure_6(size(14273).AvatarDuoPile, obj3);
+          items[1] = closure_6(size(14275).AvatarDuoPile, obj3);
           obj.children = items;
           return closure_7(size(5593).Stack, obj, children);
         })
@@ -342,7 +342,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       const DEFAULT_AVATARS = size(1405).DEFAULT_AVATARS;
       const substr = DEFAULT_AVATARS.slice(0, 2);
       obj3.children = substr.map((source, index) => closure_2_6(native.Avatar, { source, size }, index));
-      items[1] = closure_6(size(14273).AvatarDuoPile, obj3);
+      items[1] = closure_6(size(14275).AvatarDuoPile, obj3);
       obj.children = items;
       return closure_7(size(5593).Stack, obj, children);
     })
@@ -357,7 +357,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       const DEFAULT_AVATARS = size(1405).DEFAULT_AVATARS;
       const substr = DEFAULT_AVATARS.slice(0, 2);
       obj3.children = substr.map((source, index) => closure_2_6(native.Avatar, { source, size }, index));
-      items[1] = closure_6(size(14273).AvatarDuoPile, obj3);
+      items[1] = closure_6(size(14275).AvatarDuoPile, obj3);
       obj.children = items;
       return closure_7(size(5593).Stack, obj, children);
     })

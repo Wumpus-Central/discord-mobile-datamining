@@ -1,6 +1,6 @@
-// === Module 17370: CutoutImage ===
+// === Module 17394: CutoutImage ===
 
-// Module 17370 (CutoutImage)
+// Module 17394 (CutoutImage)
 import v1 from "v1" /* 1266 */;
 import inlineStylesDefault from "inlineStyles" /* 8136 */;
 import _slicedToArray from "module_32" /* 32 */;

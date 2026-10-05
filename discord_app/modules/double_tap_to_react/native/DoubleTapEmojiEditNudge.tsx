@@ -79,7 +79,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
                 closure_0 = closure_1_3(async (_location) => {
                   c3 = 0;
                   c4 = 0;
-                  return (/* F152129 */ function*() { ... })();
+                  return (/* F152413 */ function*() { ... })();
                 });
                 obj1.onPressEmoji = function() {
                   const self = this;
@@ -105,7 +105,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
                 closure_0 = closure_1_3(async (_location) => {
                   c3 = 0;
                   c4 = 0;
-                  return (/* F152129 */ function*() { ... })();
+                  return (/* F152413 */ function*() { ... })();
                 });
                 obj1.onPressEmoji = function() {
                   const self = this;
@@ -131,7 +131,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
                 closure_0 = closure_1_3(async (_location) => {
                   c3 = 0;
                   c4 = 0;
-                  return (/* F152129 */ function*() { ... })();
+                  return (/* F152413 */ function*() { ... })();
                 });
                 obj1.onPressEmoji = function() {
                   const self = this;
@@ -160,7 +160,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
                 closure_0 = closure_1_3(async (_location) => {
                   c3 = 0;
                   c4 = 0;
-                  return (/* F152129 */ function*() { ... })();
+                  return (/* F152413 */ function*() { ... })();
                 });
                 obj1.onPressEmoji = function() {
                   const self = this;
@@ -185,7 +185,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
                 closure_0 = closure_1_3(async (_location) => {
                   c3 = 0;
                   c4 = 0;
-                  return (/* F152129 */ function*() { ... })();
+                  return (/* F152413 */ function*() { ... })();
                 });
                 obj1.onPressEmoji = function() {
                   const self = this;
@@ -210,7 +210,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
                 closure_0 = closure_1_3(async (_location) => {
                   c3 = 0;
                   c4 = 0;
-                  return (/* F152129 */ function*() { ... })();
+                  return (/* F152413 */ function*() { ... })();
                 });
                 obj1.onPressEmoji = function() {
                   const self = this;
@@ -250,7 +250,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
         closure_0 = closure_1_3(async (_location) => {
           c3 = 0;
           c4 = 0;
-          return (/* F152129 */ function*() { ... })();
+          return (/* F152413 */ function*() { ... })();
         });
         obj1.onPressEmoji = function() {
           const self = this;
@@ -275,7 +275,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
           closure_0 = closure_1_3(async (_location) => {
             c3 = 0;
             c4 = 0;
-            return (/* F152129 */ function*() { ... })();
+            return (/* F152413 */ function*() { ... })();
           });
           obj1.onPressEmoji = function() {
             const self = this;
@@ -304,7 +304,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
         closure_0 = closure_1_3(async (_location) => {
           c3 = 0;
           c4 = 0;
-          return (/* F152129 */ function*() { ... })();
+          return (/* F152413 */ function*() { ... })();
         });
         obj1.onPressEmoji = function() {
           const self = this;
@@ -369,7 +369,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -408,7 +408,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
               const obj17 = { emoji: closure_129_0 };
               const result = _location(9879).showDoubleTapEmojiUpdatedToast(obj17);
               c4 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp12) {
             c4 = tmp;

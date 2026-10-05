@@ -1,6 +1,6 @@
-// === Module 17577: ConnectGuardianShareModal ===
+// === Module 17601: ConnectGuardianShareModal ===
 
-// Module 17577 (ConnectGuardianShareModal)
+// Module 17601 (ConnectGuardianShareModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -8,7 +8,7 @@ import _modDef2493 from "module_2493" /* 2493 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
 import NavigatorHeader from "NavigatorHeader" /* 6010 */;
 import Modal from "Modal" /* 10976 */;
-import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 14684 */;
+import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 14688 */;
 import noop from "module_19" /* 19 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7048 */;
 
@@ -55,7 +55,7 @@ function ConnectGuardianShareScreen() {
   if (null != stateFromStores) {
     if (null != stateFromStores1) {
       const obj11 = { shareActions: "full", linkCode: stateFromStores, expiresAt: stateFromStores1, onRefresh: getLinkCode };
-      let tmp11Result = closure_6(tmp2(14685).ConnectGuardianCard, obj11);
+      let tmp11Result = closure_6(tmp2(14689).ConnectGuardianCard, obj11);
     }
     const obj12 = { children: null };
     const obj13 = { children: null };

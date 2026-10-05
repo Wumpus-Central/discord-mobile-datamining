@@ -1,9 +1,9 @@
-// === Module 13577: NUFChannelsActionSheet ===
+// === Module 13579: NUFChannelsActionSheet ===
 
-// Module 13577 (NUFChannelsActionSheet)
+// Module 13579 (NUFChannelsActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import NUFChannelIllustrationDefault from "NUFChannelIllustration" /* 13578 */;
-import NUFTemplateV2Default from "NUFTemplateV2" /* 13585 */;
+import NUFChannelIllustrationDefault from "NUFChannelIllustration" /* 13580 */;
+import NUFTemplateV2Default from "NUFTemplateV2" /* 13587 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

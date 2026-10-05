@@ -1,16 +1,16 @@
-// === Module 14999: QuestDockUnenrolledBackground ===
+// === Module 15003: QuestDockUnenrolledBackground ===
 
-// Module 14999 (QuestDockUnenrolledBackground)
+// Module 15003 (QuestDockUnenrolledBackground)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useToken from "useToken" /* 4580 */;
-import QuestHooks from "QuestHooks" /* 14888 */;
-import QuestDockCreativeContext from "QuestDockCreativeContext" /* 14921 */;
-import QuestDockVideoBackgroundDefault from "QuestDockVideoBackground" /* 15000 */;
+import QuestHooks from "QuestHooks" /* 14892 */;
+import QuestDockCreativeContext from "QuestDockCreativeContext" /* 14925 */;
+import QuestDockVideoBackgroundDefault from "QuestDockVideoBackground" /* 15004 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const expandedHeight = fn(14892).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
+const expandedHeight = fn(14896).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

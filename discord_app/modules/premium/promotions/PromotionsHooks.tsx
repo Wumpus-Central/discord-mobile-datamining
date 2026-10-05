@@ -1,11 +1,11 @@
-// === Module 13360: PromotionsHooks ===
+// === Module 13362: PromotionsHooks ===
 
-// Module 13360 (PromotionsHooks)
+// Module 13362 (PromotionsHooks)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
-import PromotionUtils from "PromotionUtils" /* 13226 */;
+import PromotionUtils from "PromotionUtils" /* 13228 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import PromotionsStore from "PromotionsStore" /* 10396 */;

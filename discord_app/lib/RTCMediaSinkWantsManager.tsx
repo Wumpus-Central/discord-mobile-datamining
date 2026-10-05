@@ -1,6 +1,6 @@
-// === Module 13615: RTCMediaSinkWantsManager ===
+// === Module 13617: RTCMediaSinkWantsManager ===
 
-// Module 13615 (RTCMediaSinkWantsManager)
+// Module 13617 (RTCMediaSinkWantsManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;

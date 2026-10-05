@@ -1,6 +1,6 @@
-// === Module 17152: ActivityPanelFocusedView ===
+// === Module 17176: ActivityPanelFocusedView ===
 
-// Module 17152 (ActivityPanelFocusedView)
+// Module 17176 (ActivityPanelFocusedView)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,8 +10,8 @@ import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
 import timing from "timing" /* 4891 */;
 import spring from "spring" /* 5597 */;
 import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 9134 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17144 */;
-import ActivityPanelHeaderDefault from "ActivityPanelHeader" /* 17153 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17168 */;
+import ActivityPanelHeaderDefault from "ActivityPanelHeader" /* 17177 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
@@ -23,7 +23,7 @@ require = fn;
 const ActivityLayoutMode = fn(2011).ActivityLayoutMode;
 const ActivityPanelConstants = fn(8705);
 ({ ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_8, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_9, ActivityPanelModes: c10 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(17147);
+const ActivityPanelNativeConstants = fn(17171);
 ({ DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: closure_11, DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_12, DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: map1 } = ActivityPanelNativeConstants);
 const ThemeTypes = fn(1085).ThemeTypes;
 const IS_IOS = fn(11902).IS_IOS;

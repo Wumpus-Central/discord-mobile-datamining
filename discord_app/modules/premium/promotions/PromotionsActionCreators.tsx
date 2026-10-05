@@ -1,10 +1,10 @@
-// === Module 13224: PromotionsActionCreators ===
+// === Module 13226: PromotionsActionCreators ===
 
-// Module 13224 (PromotionsActionCreators)
+// Module 13226 (PromotionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import wrappers from "wrappers" /* 1228 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import MarketingComponentPlatform from "MarketingComponentPlatform" /* 13225 */;
+import MarketingComponentPlatform from "MarketingComponentPlatform" /* 13227 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
 import UserStore from "UserStore" /* 1377 */;
@@ -110,7 +110,7 @@ let closure_11 = async function _fetchClaimedOutboundPromotionCodes() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

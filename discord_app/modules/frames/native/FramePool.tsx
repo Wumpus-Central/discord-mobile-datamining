@@ -1,13 +1,13 @@
-// === Module 17122: FramePool ===
+// === Module 17146: FramePool ===
 
-// Module 17122 (FramePool)
+// Module 17146 (FramePool)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import v1 from "v1" /* 1266 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 8986 */;
 import WebViewContext from "WebViewContext" /* 9139 */;
-import FramePoolManagerDefault from "FramePoolManager" /* 16590 */;
+import FramePoolManagerDefault from "FramePoolManager" /* 16596 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 8703 */;
@@ -103,7 +103,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((frame) => {
         }
       }
     }
-    const syncExternalStore = noop.useSyncExternalStore(first1(16590).subscribe, tmp15);
+    const syncExternalStore = noop.useSyncExternalStore(first1(16596).subscribe, tmp15);
     if (cResult[11] !== syncExternalStore) {
       class S {
         constructor() {
@@ -145,7 +145,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((frame) => {
       }
     }
     const obj3 = { frame, iframeId: first1, onActivityCrash: tmp13, presentation: tmp18 };
-    const tmp24 = jsx(first1(17123), { frame, iframeId: first1, onActivityCrash: tmp13, presentation: tmp18 }, first1);
+    const tmp24 = jsx(first1(17147), { frame, iframeId: first1, onActivityCrash: tmp13, presentation: tmp18 }, first1);
     cResult[13] = frame;
     cResult[14] = first1;
     cResult[15] = tmp18;
@@ -187,14 +187,14 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((frame) => {
   const callback = noop.useCallback(() => {
     dependencyMap(v1.v4());
   }, []);
-  let syncExternalStore = noop.useSyncExternalStore(iframeId(16590).subscribe, () => FramePoolManagerDefault.getWinningTargetState(id));
+  let syncExternalStore = noop.useSyncExternalStore(iframeId(16596).subscribe, () => FramePoolManagerDefault.getWinningTargetState(id));
   let obj = { frame, iframeId, onActivityCrash: callback, presentation: null };
   if (syncExternalStore == null) {
     const obj2 = { layoutMode: constants.FOCUSED };
     syncExternalStore = obj2;
   }
   obj.presentation = syncExternalStore;
-  return jsx(iframeId(17123), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
+  return jsx(iframeId(17147), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
 });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/FramePool.tsx");

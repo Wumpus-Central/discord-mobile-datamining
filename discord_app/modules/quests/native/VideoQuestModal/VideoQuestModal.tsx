@@ -1,6 +1,6 @@
-// === Module 14925: VideoQuestModal ===
+// === Module 14929: VideoQuestModal ===
 
-// Module 14925 (VideoQuestModal)
+// Module 14929 (VideoQuestModal)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
 import spring from "spring" /* 5597 */;
@@ -9,15 +9,15 @@ import AnalyticsActions from "AnalyticsActions" /* 7202 */;
 import QuestUtils from "QuestUtils" /* 10908 */;
 import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 10958 */;
 import applyOrientationLock2 from "applyOrientationLock" /* 10964 */;
-import QuestDockGestureContext from "QuestDockGestureContext" /* 14893 */;
-import VideoQuestModalContextDefault from "VideoQuestModalContext" /* 14926 */;
+import QuestDockGestureContext from "QuestDockGestureContext" /* 14897 */;
+import VideoQuestModalContextDefault from "VideoQuestModalContext" /* 14930 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(14892).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
+let closure_6 = fn(14896).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

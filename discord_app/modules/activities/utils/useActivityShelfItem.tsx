@@ -58,7 +58,7 @@ function useOnActivityItemSelected(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -124,7 +124,7 @@ function useOnActivityItemSelected(arg0) {
           } else if (1 === tmp8) {
             c3 = 0;
             c5 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           } else {
             if (2 === tmp8) {
               if (arg0 === 1) {
@@ -145,7 +145,7 @@ function useOnActivityItemSelected(arg0) {
             } else if (3 === tmp8) {
               c3 = 0;
               c5 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             } else if (4 === tmp8) {
               if (arg0 === 1) {
                 c5 = 3;
@@ -163,7 +163,7 @@ function useOnActivityItemSelected(arg0) {
               c3 = 0;
             }
             c5 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
           c3 = 0;
           c5 = 3;
@@ -193,7 +193,7 @@ function useOnActivityItemSelected(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -249,7 +249,7 @@ function useOnActivityItemSelected(arg0) {
             return obj;
           }
           c0 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         } catch (tmp17) {
           c0 = tmp;
           throw tmp17;

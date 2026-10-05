@@ -1,19 +1,19 @@
-// === Module 17237: useSpeakerTooltips ===
+// === Module 17261: useSpeakerTooltips ===
 
-// Module 17237 (useSpeakerTooltips)
+// Module 17261 (useSpeakerTooltips)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
 import useCoachmark from "useCoachmark" /* 9882 */;
-import VoicePanelConsoleFacepile from "VoicePanelConsoleFacepile" /* 17240 */;
+import VoicePanelConsoleFacepile from "VoicePanelConsoleFacepile" /* 17264 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ConsoleVoiceUpsellStore = fn(17235);
+const ConsoleVoiceUpsellStore = fn(17259);
 ({ setVoiceUpsellDismissed: hasOwnProperty, useConsoleVoiceUpsellStore: metroRequire } = ConsoleVoiceUpsellStore);
 let VoicePanelControlsModes = fn(11900).VoicePanelControlsModes;
 const ContentDismissActionType = fn(2048).ContentDismissActionType;

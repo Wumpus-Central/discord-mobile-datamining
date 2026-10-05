@@ -1,6 +1,6 @@
-// === Module 13927: Avatar ===
+// === Module 13929: Avatar ===
 
-// Module 13927 (Avatar)
+// Module 13929 (Avatar)
 import nativeDefault from "native" /* 587 */;
 import _modDef4819 from "module_4819" /* 4819 */;
 import IconDefault from "Icon" /* 5596 */;
@@ -9,10 +9,10 @@ import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 84
 import ClipView from "ClipView" /* 8469 */;
 import _modDef9126 from "module_9126" /* 9126 */;
 import CutoutableAvatarImage from "CutoutableAvatarImage" /* 12851 */;
-import Status_StatusUtils from "Status/StatusUtils" /* 13916 */;
-import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 13917 */;
-import Status from "Status" /* 13918 */;
-import SpeakerPulseDefault from "SpeakerPulse" /* 13928 */;
+import Status_StatusUtils from "Status/StatusUtils" /* 13918 */;
+import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 13919 */;
+import Status from "Status" /* 13920 */;
+import SpeakerPulseDefault from "SpeakerPulse" /* 13930 */;
 import noop from "module_19" /* 19 */;
 
 const CutoutableAvatarImageDefault = CutoutableAvatarImage;

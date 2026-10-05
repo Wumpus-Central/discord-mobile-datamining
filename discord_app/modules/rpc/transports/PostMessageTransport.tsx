@@ -133,7 +133,7 @@ class PostMessageTransport extends EventEmitter {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -274,7 +274,7 @@ class PostMessageTransport extends EventEmitter {
               logger2.info("Socket Validated: " + closure_132_4.id);
               constants = 0;
               constants2 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             } else {
               const logger = closure_133_1.logger;
               const _HermesInternal = HermesInternal;
@@ -323,7 +323,7 @@ class PostMessageTransport extends EventEmitter {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -370,7 +370,7 @@ class PostMessageTransport extends EventEmitter {
               c5 = 0;
               closure_131_1.disconnectSocket(closure_130_0, closure_130_1);
               c7 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             c5 = 0;

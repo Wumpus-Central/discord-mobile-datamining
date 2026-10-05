@@ -1,6 +1,6 @@
-// === Module 17767: GuildSettingsRoleItem ===
+// === Module 17791: GuildSettingsRoleItem ===
 
-// Module 17767 (GuildSettingsRoleItem)
+// Module 17791 (GuildSettingsRoleItem)
 import nativeDefault from "native" /* 587 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5705 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -960,7 +960,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -989,7 +989,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
             }
             onPress(5705).deleteRole(guildId, tmp2.id);
             c2 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           } catch (tmp16) {
             c2 = tmp;
             throw tmp16;
@@ -1102,7 +1102,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
                 const obj4 = { value, done: true };
                 return obj4;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -1131,7 +1131,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildI
                 }
                 GuildActionCreatorsDefault.deleteRole(guildId, tmp2.id);
                 c2 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               } catch (tmp16) {
                 c2 = tmp;
                 throw tmp16;

@@ -1,6 +1,6 @@
-// === Module 16251: FavoritesGuildCoachmarkGraphic ===
+// === Module 16255: FavoritesGuildCoachmarkGraphic ===
 
-// Module 16251 (FavoritesGuildCoachmarkGraphic)
+// Module 16255 (FavoritesGuildCoachmarkGraphic)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;

@@ -1,6 +1,6 @@
-// === Module 17854: GuildSettingsRoleSubscriptionWelcomeView ===
+// === Module 17878: GuildSettingsRoleSubscriptionWelcomeView ===
 
-// Module 17854 (GuildSettingsRoleSubscriptionWelcomeView)
+// Module 17878 (GuildSettingsRoleSubscriptionWelcomeView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -9,11 +9,11 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854
 import Text_Text from "Text/Text" /* 4886 */;
 import NavigatorConstants from "NavigatorConstants" /* 6068 */;
 import ErrorBlockDefault from "ErrorBlock" /* 11852 */;
-import WarningNoticeDefault from "WarningNotice" /* 17856 */;
-import EligibilityActionSheet from "EligibilityActionSheet" /* 17859 */;
-import HowItWorksSectionDefault from "HowItWorksSection" /* 17867 */;
-import CreatorBenefitsSectionDefault from "CreatorBenefitsSection" /* 17871 */;
-import CreatorHighlightSectionDefault from "CreatorHighlightSection" /* 17880 */;
+import WarningNoticeDefault from "WarningNotice" /* 17880 */;
+import EligibilityActionSheet from "EligibilityActionSheet" /* 17883 */;
+import HowItWorksSectionDefault from "HowItWorksSection" /* 17891 */;
+import CreatorBenefitsSectionDefault from "CreatorBenefitsSection" /* 17895 */;
+import CreatorHighlightSectionDefault from "CreatorHighlightSection" /* 17904 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -38,7 +38,7 @@ function StartEarningButton(isTermsAccepted) {
   const callback = noop.useCallback(() => submitAcceptTermsRequest(), items);
   const callback1 = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
-    return obj.openLazy(asyncRequireImpl(17859, dependencyMap.paths), EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY, {
+    return obj.openLazy(asyncRequireImpl(17883, dependencyMap.paths), EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY, {
       eligibility,
       onRequireModeratorMFAClick() {
         navigation.push(constants.SECURITY);
@@ -113,9 +113,9 @@ function StartEarningButton(isTermsAccepted) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const creatorPortalUrl = fn(15019).CREATOR_REVENUE_PORTAL_URL;
+const creatorPortalUrl = fn(15023).CREATOR_REVENUE_PORTAL_URL;
 const GuildSettingsSections = fn(1085).GuildSettingsSections;
-const constants = fn(17855).CreatorMonetizationOnboardingMarketingSection;
+const constants = fn(17879).CreatorMonetizationOnboardingMarketingSection;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const createStyles = fn(4890);

@@ -1,9 +1,9 @@
-// === Module 17170: FramePanelStateContext ===
+// === Module 17194: FramePanelStateContext ===
 
-// Module 17170 (FramePanelStateContext)
+// Module 17194 (FramePanelStateContext)
 import noop from "module_19" /* 19 */;
 
-const context = noop.createContext(fn(17144).activityPanelStateContextDefault);
+const context = noop.createContext(fn(17168).activityPanelStateContextDefault);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelStateContext.tsx");
 

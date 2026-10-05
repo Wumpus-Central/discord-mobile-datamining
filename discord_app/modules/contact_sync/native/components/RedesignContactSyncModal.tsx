@@ -71,7 +71,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -116,7 +116,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
               const _setTimeout = setTimeout;
               const timerId = setTimeout(() => closure_1_1(false), 2000);
               c3 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else if (arg0 === 1) {
             c3 = 3;
@@ -171,7 +171,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -424,7 +424,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((navigateToLand
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -457,7 +457,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((navigateToLand
             const _setTimeout = setTimeout;
             const timerId = setTimeout(() => dependencyMap(false), 2000);
             c3 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp17) {
           c3 = tmp;
@@ -584,7 +584,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((navigateToLand
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -617,7 +617,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((navigateToLand
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => dependencyMap(false), 2000);
           c3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp17) {
         c3 = tmp;

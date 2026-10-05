@@ -1,6 +1,6 @@
-// === Module 15178: CustomTypingIndicatorEmojiSlots ===
+// === Module 15182: CustomTypingIndicatorEmojiSlots ===
 
-// Module 15178 (CustomTypingIndicatorEmojiSlots)
+// Module 15182 (CustomTypingIndicatorEmojiSlots)
 import c from "c" /* 576 */;
 import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1398 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
@@ -21,7 +21,7 @@ const jsx = fn(21).jsx;
 let c7 = 28;
 let c8 = 0.4;
 let c9 = 1.14;
-let items = [fn(15179).EmojiAngryFaceWithHornsIcon, fn(15181).EmojiColdFaceIcon, fn(15183).EmojiCowboyHatFaceIcon, fn(15185).EmojiCryingFaceIcon, fn(15187).EmojiDisguisedFaceIcon, fn(15189).EmojiFaceVomitingIcon, fn(15191).EmojiFaceWithMonocleIcon, fn(15193).EmojiFaceWithSpiralEyesIcon, fn(15195).EmojiMeltingFaceIcon, fn(15197).EmojiMoneyMouthFaceIcon, fn(15199).EmojiNerdFaceIcon, fn(15201).EmojiPartyingFaceIcon, fn(15203).EmojiSalutingFaceIcon, fn(15205).EmojiSkullIcon, fn(15207).EmojiSmilingFaceWithHornsIcon, fn(15209).EmojiSmilingFaceWithSunglassesIcon, fn(15211).EmojiSquintingFaceWithTongueIcon, fn(15213).EmojiUpsideDownFaceIcon, fn(15215).EmojiWoozyFaceIcon, fn(15217).EmojiZanyFaceIcon, fn(15219).EmojiRollingOnTheFloorLaughingIcon, fn(15221).EmojiSmilingFaceWithHeartsIcon];
+let items = [fn(15183).EmojiAngryFaceWithHornsIcon, fn(15185).EmojiColdFaceIcon, fn(15187).EmojiCowboyHatFaceIcon, fn(15189).EmojiCryingFaceIcon, fn(15191).EmojiDisguisedFaceIcon, fn(15193).EmojiFaceVomitingIcon, fn(15195).EmojiFaceWithMonocleIcon, fn(15197).EmojiFaceWithSpiralEyesIcon, fn(15199).EmojiMeltingFaceIcon, fn(15201).EmojiMoneyMouthFaceIcon, fn(15203).EmojiNerdFaceIcon, fn(15205).EmojiPartyingFaceIcon, fn(15207).EmojiSalutingFaceIcon, fn(15209).EmojiSkullIcon, fn(15211).EmojiSmilingFaceWithHornsIcon, fn(15213).EmojiSmilingFaceWithSunglassesIcon, fn(15215).EmojiSquintingFaceWithTongueIcon, fn(15217).EmojiUpsideDownFaceIcon, fn(15219).EmojiWoozyFaceIcon, fn(15221).EmojiZanyFaceIcon, fn(15223).EmojiRollingOnTheFloorLaughingIcon, fn(15225).EmojiSmilingFaceWithHeartsIcon];
 const createStyles = fn(4890);
 let closure_11 = createStyles.createStyles({ slot: { flex: 1, height: 64, alignItems: "center", justifyContent: "center" } });
 let ReactCompilerGating = fn(558);

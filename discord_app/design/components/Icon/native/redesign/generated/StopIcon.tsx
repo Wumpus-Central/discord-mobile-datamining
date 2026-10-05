@@ -1,10 +1,10 @@
-// === Module 16698: StopIcon ===
+// === Module 16709: StopIcon ===
 
-// Module 16698 (StopIcon)
+// Module 16709 (StopIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 4579 */;
-import _mod16699 from "module_16699" /* 16699 */;
+import _mod16710 from "module_16710" /* 16710 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const StopIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod16699;
+    const tmpResult = _mod16710;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const StopIcon = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16699, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16710, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

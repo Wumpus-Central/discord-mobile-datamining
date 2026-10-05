@@ -1,6 +1,6 @@
-// === Module 16128: GuildHomeChannelRow ===
+// === Module 16132: GuildHomeChannelRow ===
 
-// Module 16128 (GuildHomeChannelRow)
+// Module 16132 (GuildHomeChannelRow)
 import nativeDefault from "native" /* 587 */;
 import router_utils from "router_utils" /* 1112 */;
 import BaseChannelItemDefault from "BaseChannelItem" /* 12016 */;
@@ -62,8 +62,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((selected) => {
   if (cResult[6] !== tmp6) {
     const obj3 = { name: tmp10, mode: tmp6 };
     const tmp15 = jsx(tmp(12016).BaseChannelName, { name: tmp10, mode: tmp6 });
-    const obj4 = { mode: tmp6, IconComponent: tmp(13652).SignPostIcon };
-    const tmp16 = jsx(tmp(12016).BaseChannelIcon, { mode: tmp6, IconComponent: tmp(13652).SignPostIcon });
+    const obj4 = { mode: tmp6, IconComponent: tmp(13654).SignPostIcon };
+    const tmp16 = jsx(tmp(12016).BaseChannelIcon, { mode: tmp6, IconComponent: tmp(13654).SignPostIcon });
     cResult[6] = tmp6;
     cResult[7] = tmp15;
     cResult[8] = tmp16;
@@ -123,6 +123,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((selected) => {
   obj2.name = intl2.string(tmp5(1126).t.VbpLyU);
   obj2.mode = DEFAULT;
   obj.name = jsx(tmp5(12016).BaseChannelName, { name: null, mode: null });
-  obj.icon = jsx(tmp5(12016).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(13652).SignPostIcon });
+  obj.icon = jsx(tmp5(12016).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(13654).SignPostIcon });
   return <tmp7 onPress={callback} style={closure_7().container} accessible accessibilityLabel={null} accessibilityState={null} mode={null} name={null} icon={null} />;
 });

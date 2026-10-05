@@ -1,6 +1,6 @@
-// === Module 13377: ChevronSmallUpIcon ===
+// === Module 13379: ChevronSmallUpIcon ===
 
-// Module 13377 (ChevronSmallUpIcon)
+// Module 13379 (ChevronSmallUpIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 4579 */;

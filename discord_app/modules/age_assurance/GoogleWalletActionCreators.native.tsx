@@ -19,7 +19,7 @@ let closure_6 = async function _requestGoogleWalletVerification() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -97,7 +97,7 @@ let closure_7 = async function _verifyGoogleWalletCredential() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -152,7 +152,7 @@ let closure_7 = async function _verifyGoogleWalletCredential() {
             return obj;
           }
           c1 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp6) {
         c1 = tmp;
@@ -172,7 +172,7 @@ let closure_8 = async function _checkGoogleWalletAvailable() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

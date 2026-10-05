@@ -1,6 +1,6 @@
-// === Module 14341: validateScope ===
+// === Module 14343: validateScope ===
 
-// Module 14341 (validateScope)
+// Module 14343 (validateScope)
 import Constants from "Constants" /* 5316 */;
 import size from "module_2" /* 2 */;
 

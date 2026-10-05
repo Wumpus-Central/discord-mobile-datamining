@@ -208,7 +208,7 @@ let closure_14 = async function _getCommonClickEventProperties(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -234,7 +234,7 @@ let closure_14 = async function _getCommonClickEventProperties(arg0) {
           closure_130_6 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -346,7 +346,7 @@ let closure_16 = async function _trackQuestContentClicked() {
   await "IconComponent";
   closure_7 = tmp2;
   ({ questId: closure_135_0, questContent: closure_135_1, questContentCTA: closure_135_2, questContentPosition: closure_135_3, questContentRowIndex: closure_135_4, impressionId: closure_135_5, clickId: closure_135_6, trackGuildAndChannelMetadata: closure_135_7, sourceQuestContent: closure_135_8 } = closure_0);
-  return "Reflect";
+  return "Set";
 };
 function trackAdContentClicked() {
   const self = this;
@@ -370,7 +370,7 @@ let closure_18 = async function _trackAdContentClicked() {
   await "IconComponent";
   closure_4 = tmp2;
   ({ adContentId: closure_132_0, relatedQuestId: closure_132_1, adCreativeType: closure_132_2, questContent: closure_132_3, questContentCTA: closure_132_4, questContentPosition: closure_132_5, questContentRowIndex: closure_132_6, impressionId: closure_132_7, trackGuildAndChannelMetadata: closure_132_8, sourceQuestContent: closure_132_9 } = closure_0);
-  return "Reflect";
+  return "Set";
 };
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const items = [, , ];

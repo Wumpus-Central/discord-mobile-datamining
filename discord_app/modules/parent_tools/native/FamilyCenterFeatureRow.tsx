@@ -1,6 +1,6 @@
-// === Module 14689: FamilyCenterFeatureRow ===
+// === Module 14693: FamilyCenterFeatureRow ===
 
-// Module 14689 (FamilyCenterFeatureRow)
+// Module 14693 (FamilyCenterFeatureRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -13,9 +13,9 @@ import EyeIcon from "EyeIcon" /* 6458 */;
 import _modDef9522 from "module_9522" /* 9522 */;
 import useAgeSpecificText from "useAgeSpecificText" /* 11531 */;
 import _modDef12013 from "module_12013" /* 12013 */;
-import QrCodeIcon from "QrCodeIcon" /* 14686 */;
-import _modDef14690 from "module_14690" /* 14690 */;
-import ChatCheckIcon from "ChatCheckIcon" /* 14691 */;
+import QrCodeIcon from "QrCodeIcon" /* 14690 */;
+import _modDef14694 from "module_14694" /* 14694 */;
+import ChatCheckIcon from "ChatCheckIcon" /* 14695 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp23 = cResult[6];
   }
   if (cResult[7] !== ageSpecificText) {
-    const obj2 = { icon: _modDef14690, IconComponent: ChatCheckIcon.ChatCheckIcon, header: tmp23, description: ageSpecificText };
+    const obj2 = { icon: _modDef14694, IconComponent: ChatCheckIcon.ChatCheckIcon, header: tmp23, description: ageSpecificText };
     cResult[7] = ageSpecificText;
     cResult[8] = obj2;
     let tmp26 = obj2;
@@ -198,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const intl6 = util.intl;
   const obj4 = { icon: null, IconComponent: null, header: null, description: null };
   const ageSpecificText2 = obj3.useAgeSpecificText(intl5.string(_modDef2493["+pi4Yt"]), intl6.string(_modDef2493["1xPTwE"]));
-  obj4.icon = _modDef14690;
+  obj4.icon = _modDef14694;
   obj4.IconComponent = ChatCheckIcon.ChatCheckIcon;
   const intl7 = util.intl;
   obj4.header = intl7.string(_modDef2493["001l3m"]);

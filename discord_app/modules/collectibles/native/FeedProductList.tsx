@@ -1,8 +1,8 @@
-// === Module 15728: FeedProductList ===
+// === Module 15732: FeedProductList ===
 
-// Module 15728 (FeedProductList)
+// Module 15732 (FeedProductList)
 import c from "c" /* 576 */;
-import CollectiblesShopCardsGridDefault from "CollectiblesShopCardsGrid" /* 15730 */;
+import CollectiblesShopCardsGridDefault from "CollectiblesShopCardsGrid" /* 15734 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   ({ loadingCardsNum, accessibilityLabel } = arg0);
   const tmp2 = closure_5();
   let obj = num(576);
-  const cardLayout = num(15729).useCardLayout();
+  const cardLayout = num(15733).useCardLayout();
   ({ columns, cardWidth } = cardLayout);
   num = cardWidth;
   const rowWidth = cardLayout.rowWidth;
@@ -83,12 +83,12 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   cResult[4] = tmp2.skeletonRow;
   cResult[5] = items;
   tmp4 = items;
-  let obj2 = num(15729);
+  let obj2 = num(15733);
 }) : (function SkeletonGrid(accessibilityLabel) {
   const loadingCardsNum = accessibilityLabel.loadingCardsNum;
   num = undefined;
   const tmp = closure_5();
-  const cardLayout = num(15729).useCardLayout();
+  const cardLayout = num(15733).useCardLayout();
   ({ columns, cardWidth: num } = cardLayout);
   const items = [];
   for (let num = 0; num < loadingCardsNum; num = num + columns) {

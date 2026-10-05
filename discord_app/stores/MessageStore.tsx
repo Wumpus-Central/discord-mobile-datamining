@@ -17,7 +17,7 @@ import GatewayConnectionStore from "GatewayConnectionStore" /* 5436 */;
 import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7109 */;
 import MessageQueue from "MessageQueue" /* 7462 */;
 import canEditMessageDefault from "canEditMessage" /* 11378 */;
-import GuildAutomodMessageStoreUtils from "GuildAutomodMessageStoreUtils" /* 13572 */;
+import GuildAutomodMessageStoreUtils from "GuildAutomodMessageStoreUtils" /* 13574 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ImpersonateStore from "ImpersonateStore" /* 2105 */;
@@ -99,7 +99,7 @@ let closure_31 = async function _addPushNotificationMessageIfNotCached(arg0, arg
         const obj5 = { value, done: true };
         return obj5;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -147,7 +147,7 @@ let closure_31 = async function _addPushNotificationMessageIfNotCached(arg0, arg
           }
           c5 = 0;
           c7 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
         closure_132_28.log("Push notification message not in cache, adding directly", closure_131_1.id, closure_131_1.channel_id);
         orCreate = closure_132_1(closure_132_2[19]).getOrCreate(closure_131_0);

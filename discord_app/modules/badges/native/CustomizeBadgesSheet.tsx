@@ -1,6 +1,6 @@
-// === Module 14444: CustomizeBadgesSheet ===
+// === Module 14448: CustomizeBadgesSheet ===
 
-// Module 14444 (CustomizeBadgesSheet)
+// Module 14448 (CustomizeBadgesSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -27,8 +27,8 @@ import openPremiumModalDefault from "openPremiumModal" /* 8914 */;
 import roundToNearestPixelDefault from "roundToNearestPixel" /* 10725 */;
 import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 10881 */;
 import BadgeUtils from "BadgeUtils" /* 10889 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 12921 */;
-import BadgeGrid from "BadgeGrid" /* 14445 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 12923 */;
+import BadgeGrid from "BadgeGrid" /* 14449 */;
 import noop from "module_19" /* 19 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7831 */;
 import UserStore from "UserStore" /* 1377 */;
@@ -201,7 +201,7 @@ function getSlotOffset(arg0, arg1) {
   return point;
 }
 let obj14 = { position: "absolute", start: 0, end: 0, bottom: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_12, textAlign: "center" };
-getSlotOffset.__closure = { BADGE_GRID_COLUMNS: fn(14445).BADGE_GRID_COLUMNS, BADGE_GRID_GAP: fn(14445).BADGE_GRID_GAP };
+getSlotOffset.__closure = { BADGE_GRID_COLUMNS: fn(14449).BADGE_GRID_COLUMNS, BADGE_GRID_GAP: fn(14449).BADGE_GRID_GAP };
 getSlotOffset.__workletHash = 8647997879684;
 getSlotOffset.__initData = { code: "function getSlotOffset_CustomizeBadgesSheetTsx1(index,tileSize){const{BADGE_GRID_COLUMNS,BADGE_GRID_GAP}=this.__closure;const column=index%BADGE_GRID_COLUMNS;return{x:column*(tileSize+BADGE_GRID_GAP),y:Math.floor(index/BADGE_GRID_COLUMNS)*(tileSize+BADGE_GRID_GAP)};}" };
 ReactCompilerGating = fn(558);
@@ -459,7 +459,7 @@ let closure_24 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((badg
                             obj.onLongPress = fn;
                             obj.delayLongPress = tmp2(tmp3[12]).CONTEXT_MENU_LONG_PRESS_DURATION_MS;
                             obj.style = closure_5;
-                            obj.children = tmp(f67396, { badge: tmp5, alwaysVisible: tmp7 });
+                            obj.children = tmp(f67446, { badge: tmp5, alwaysVisible: tmp7 });
                             return tmp(closure_0(closure_2[25]).PressableScale, obj);
                           }
                         }
@@ -533,7 +533,7 @@ let closure_24 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((badg
                           obj.onLongPress = fn;
                           obj.delayLongPress = tmp2(tmp3[12]).CONTEXT_MENU_LONG_PRESS_DURATION_MS;
                           obj.style = closure_5;
-                          obj.children = tmp(f67396, { badge: tmp5, alwaysVisible: tmp7 });
+                          obj.children = tmp(f67446, { badge: tmp5, alwaysVisible: tmp7 });
                           return tmp(closure_0(closure_2[25]).PressableScale, obj);
                         }
                       }
@@ -594,7 +594,7 @@ let closure_24 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((badg
                         obj.onLongPress = fn;
                         obj.delayLongPress = tmp2(tmp3[12]).CONTEXT_MENU_LONG_PRESS_DURATION_MS;
                         obj.style = closure_5;
-                        obj.children = tmp(f67396, { badge: tmp5, alwaysVisible: tmp7 });
+                        obj.children = tmp(f67446, { badge: tmp5, alwaysVisible: tmp7 });
                         return tmp(closure_0(closure_2[25]).PressableScale, obj);
                       }
                     }
@@ -657,7 +657,7 @@ let closure_24 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((badg
                 obj.onLongPress = fn;
                 obj.delayLongPress = tmp2(tmp3[12]).CONTEXT_MENU_LONG_PRESS_DURATION_MS;
                 obj.style = closure_5;
-                obj.children = tmp(f67396, { badge: tmp5, alwaysVisible: tmp7 });
+                obj.children = tmp(f67446, { badge: tmp5, alwaysVisible: tmp7 });
                 return tmp(closure_0(closure_2[25]).PressableScale, obj);
               }
             }
@@ -753,7 +753,7 @@ let closure_24 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((badg
         obj.onLongPress = fn;
         obj.delayLongPress = tmp2(tmp3[12]).CONTEXT_MENU_LONG_PRESS_DURATION_MS;
         obj.style = closure_5;
-        obj.children = tmp(f67396, { badge: tmp5, alwaysVisible: tmp7 });
+        obj.children = tmp(f67446, { badge: tmp5, alwaysVisible: tmp7 });
         return tmp(closure_0(closure_2[25]).PressableScale, obj);
       }
     }

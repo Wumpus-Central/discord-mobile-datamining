@@ -1,9 +1,9 @@
-// === Module 15811: ParentalControlsUseDataForQuests3PSetting ===
+// === Module 15815: ParentalControlsUseDataForQuests3PSetting ===
 
-// Module 15811 (ParentalControlsUseDataForQuests3PSetting)
+// Module 15815 (ParentalControlsUseDataForQuests3PSetting)
 import util from "util" /* 1126 */;
 import useSelectedTeen from "useSelectedTeen" /* 8297 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14622 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14626 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7048 */;
 
 require = fn;

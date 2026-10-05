@@ -1,10 +1,10 @@
-// === Module 13328: BoostTier3Icon ===
+// === Module 13330: BoostTier3Icon ===
 
-// Module 13328 (BoostTier3Icon)
+// Module 13330 (BoostTier3Icon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 4579 */;
-import _mod13329 from "module_13329" /* 13329 */;
+import _mod13331 from "module_13331" /* 13331 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const BoostTier3Icon = ReactCompilerGating.isReactCompilerEnabled() ? ((a
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod13329;
+    const tmpResult = _mod13331;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const BoostTier3Icon = ReactCompilerGating.isReactCompilerEnabled() ? ((a
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13329, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13331, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

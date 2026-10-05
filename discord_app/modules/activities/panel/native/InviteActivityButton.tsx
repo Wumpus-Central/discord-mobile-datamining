@@ -1,6 +1,6 @@
-// === Module 17155: InviteActivityButton ===
+// === Module 17179: InviteActivityButton ===
 
-// Module 17155 (InviteActivityButton)
+// Module 17179 (InviteActivityButton)
 import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11393 */;
@@ -48,7 +48,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((applic
     if (cResult[4] !== stateFromStores) {
       const fn2 = function y() {
         const obj = ActionSheetActionCreatorsDefault;
-        obj.openLazy(asyncRequireImpl(17156, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
+        obj.openLazy(asyncRequireImpl(17180, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
       };
       cResult[4] = stateFromStores;
       cResult[5] = fn2;
@@ -93,7 +93,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((applic
     const obj2 = {
       onPress() {
           const obj = ActionSheetActionCreatorsDefault;
-          obj.openLazy(asyncRequireImpl(17156, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
+          obj.openLazy(asyncRequireImpl(17180, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
         },
       icon: stateFromStores(9715),
       text: null,
@@ -110,7 +110,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((applic
     tmp4 = jsx(tmp(5594).Button, {
       onPress() {
           const obj = ActionSheetActionCreatorsDefault;
-          obj.openLazy(asyncRequireImpl(17156, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
+          obj.openLazy(asyncRequireImpl(17180, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
         },
       icon: stateFromStores(9715),
       text: null,

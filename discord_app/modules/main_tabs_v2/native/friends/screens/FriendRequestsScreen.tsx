@@ -1,12 +1,12 @@
-// === Module 16928: FriendRequestsScreen ===
+// === Module 16947: FriendRequestsScreen ===
 
-// Module 16928 (FriendRequestsScreen)
+// Module 16947 (FriendRequestsScreen)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 587 */;
 import useAlertStore from "useAlertStore" /* 5709 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7850 */;
-import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 16352 */;
-import getPendingRelationshipIds from "getPendingRelationshipIds" /* 16930 */;
+import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 16356 */;
+import getPendingRelationshipIds from "getPendingRelationshipIds" /* 16949 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7124 */;
@@ -454,7 +454,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       stringResult = intl4.string(tmp6(1126).t["yvzX/Z"]);
     }
     const obj16 = { title: stringResult, illustration: null, disableBackgroundOverlay: true };
-    WumpusCouchSpotIllustration = tmp6(14913).WumpusCouchSpotIllustration;
+    WumpusCouchSpotIllustration = tmp6(14917).WumpusCouchSpotIllustration;
     obj16.illustration = WumpusCouchSpotIllustration;
     obj15.children = tmp30(tmp2(10726), obj16);
     tmp30(tmp31, obj15);

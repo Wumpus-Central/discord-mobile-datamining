@@ -1,6 +1,6 @@
-// === Module 16533: JoinRequestActionSheetContent ===
+// === Module 16537: JoinRequestActionSheetContent ===
 
-// Module 16533 (JoinRequestActionSheetContent)
+// Module 16537 (JoinRequestActionSheetContent)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -12,7 +12,7 @@ import CircleXIcon from "CircleXIcon" /* 4797 */;
 import Text_Text from "Text/Text" /* 4886 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7850 */;
 import HourglassIcon from "HourglassIcon" /* 12702 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 16531 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 16535 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 
@@ -106,7 +106,7 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user
                             if (cResult[29] !== user) {
                               const obj4 = { user };
                               cResult[29] = user;
-                              cResult[30] = closure_8(joinRequest(12947), obj4);
+                              cResult[30] = closure_8(joinRequest(12949), obj4);
                               class S {
                                 constructor() {
                                   obj = { userId: user.id, onClose() { ... } };
@@ -114,7 +114,7 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user
                                   return;
                                 }
                               }
-                              const tmp29 = closure_8(joinRequest(12947), obj4);
+                              const tmp29 = closure_8(joinRequest(12949), obj4);
                             }
                             if (cResult[31] === tmp5.primaryInfo) {
                               if (cResult[32] === tmp27) {
@@ -327,7 +327,7 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((user
     const obj10 = { user, displayProfile, badgeContainerBackground: containerBackground, isPreviewingChanges: false };
     const items4 = [closure_8(tmp6(12881).PrimaryInfo, obj10), ];
     const obj11 = { user };
-    items4[1] = closure_8(joinRequest(12947), obj11);
+    items4[1] = closure_8(joinRequest(12949), obj11);
     obj9.children = items4;
     obj7.children = closure_9(View, obj9);
     items2[1] = closure_8(joinRequest(10842), obj7);
@@ -1525,7 +1525,7 @@ export default noop.memo(function JoinRequestActionSheetContent(displayProfile) 
   obj6.children = mapped;
   items1[2] = closure_8(View, obj6);
   items1[3] = closure_8(closure_17, { joinRequest, user });
-  items1[4] = closure_8(memo(16534), { guildId: joinRequest.guildId, userId: joinRequest.userId, selectedJoinRequestId: joinRequest.joinRequestId });
+  items1[4] = closure_8(memo(16538), { guildId: joinRequest.guildId, userId: joinRequest.userId, selectedJoinRequestId: joinRequest.joinRequestId });
   obj.children = items1;
   return closure_9(View, obj);
 });

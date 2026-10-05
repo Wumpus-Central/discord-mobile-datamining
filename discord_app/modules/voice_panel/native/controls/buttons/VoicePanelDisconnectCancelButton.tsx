@@ -1,6 +1,6 @@
-// === Module 17313: VoicePanelDisconnectCancelButton ===
+// === Module 17337: VoicePanelDisconnectCancelButton ===
 
-// Module 17313 (VoicePanelDisconnectCancelButton)
+// Module 17337 (VoicePanelDisconnectCancelButton)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
 import StreamActionCreators from "StreamActionCreators" /* 5032 */;

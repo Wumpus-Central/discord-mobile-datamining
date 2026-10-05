@@ -4,7 +4,7 @@
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import SocialSdkGameResolver from "SocialSdkGameResolver" /* 11121 */;
-import OverlayTypes from "OverlayTypes" /* 13805 */;
+import OverlayTypes from "OverlayTypes" /* 13807 */;
 import GameStore from "GameStore" /* 2007 */;
 import DetectableGameStore from "DetectableGameStore" /* 2024 */;
 import LibraryApplicationStore from "LibraryApplicationStore" /* 6902 */;

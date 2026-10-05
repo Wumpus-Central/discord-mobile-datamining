@@ -1,10 +1,10 @@
-// === Module 17407: DisguiseSpotIllustration ===
+// === Module 17431: DisguiseSpotIllustration ===
 
-// Module 17407 (DisguiseSpotIllustration)
+// Module 17431 (DisguiseSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 5974 */;
-import _modDef17408 from "module_17408" /* 17408 */;
+import _modDef17432 from "module_17432" /* 17432 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -27,7 +27,7 @@ export const DisguiseSpotIllustration = ReactCompilerGating.isReactCompilerEnabl
     num3 = scale;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef17408 };
+    const obj2 = { uri: _modDef17432 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -78,7 +78,7 @@ export const DisguiseSpotIllustration = ReactCompilerGating.isReactCompilerEnabl
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef17408 };
+  const obj2 = { uri: _modDef17432 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

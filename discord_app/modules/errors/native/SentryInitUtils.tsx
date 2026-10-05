@@ -15,7 +15,7 @@ import MetaQuestUtils from "MetaQuestUtils" /* 1615 */;
 import DeviceUtils from "DeviceUtils" /* 4866 */;
 import ReleaseChannelUtils from "ReleaseChannelUtils" /* 5410 */;
 import MetricEvents from "MetricEvents" /* 5414 */;
-import AppCrashedReasons2 from "AppCrashedReasons" /* 13894 */;
+import AppCrashedReasons2 from "AppCrashedReasons" /* 13896 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -34,7 +34,7 @@ let closure_15 = async function _maybeBackfillMissingBreadcrumbsFromTelemetryRin
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -634,7 +634,7 @@ export const initSentry = function initSentry() {
           if (tmp15Result14.isAndroid()) {
             str2 = "android";
           }
-          const obj3 = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "34920500000000", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@349.5.0-2+349205", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
+          const obj3 = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "35020000000000", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@350.0.0-2+350200", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
           items = [PRIMARY_DOMAIN];
           obj3.tracePropagationTargets = items;
           const items1 = [registerSpanErrorInstrumentation, , ];
@@ -665,7 +665,7 @@ export const initSentry = function initSentry() {
           };
           tmp15Result13.init(obj3);
           const tmp15Result16 = _mod686;
-          _mod686.setTag("buildNumber", "34920500000000");
+          _mod686.setTag("buildNumber", "35020000000000");
           const tmp15Result17 = _mod686;
           _mod686.setTag("appVersion", constants.Version);
           const tmp15Result18 = _mod686;

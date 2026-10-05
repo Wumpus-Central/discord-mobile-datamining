@@ -1,6 +1,6 @@
-// === Module 15151: useDisplayNameStylesPendingName ===
+// === Module 15155: useDisplayNameStylesPendingName ===
 
-// Module 15151 (useDisplayNameStylesPendingName)
+// Module 15155 (useDisplayNameStylesPendingName)
 import UserUtilsDefault from "UserUtils" /* 4722 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7831 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;

@@ -1,14 +1,14 @@
-// === Module 17663: getRuleInfo ===
+// === Module 17687: getRuleInfo ===
 
-// Module 17663 (getRuleInfo)
+// Module 17687 (getRuleInfo)
 import LinkIcon from "LinkIcon" /* 4839 */;
 import AtIcon from "AtIcon" /* 5874 */;
 import RobotIcon from "RobotIcon" /* 8958 */;
 import Constants from "Constants" /* 11474 */;
-import MenuIcon from "MenuIcon" /* 15743 */;
-import ChannelListPlusIcon from "ChannelListPlusIcon" /* 17664 */;
-import _modDef17666 from "module_17666" /* 17666 */;
-import BaseRuleInfo from "BaseRuleInfo" /* 17667 */;
+import MenuIcon from "MenuIcon" /* 15747 */;
+import ChannelListPlusIcon from "ChannelListPlusIcon" /* 17688 */;
+import _modDef17690 from "module_17690" /* 17690 */;
+import BaseRuleInfo from "BaseRuleInfo" /* 17691 */;
 import size from "module_2" /* 2 */;
 
 const AutomodTriggerType = Constants.AutomodTriggerType;
@@ -40,7 +40,7 @@ export const getRuleInfo = function getRuleInfo(triggerType, rule) {
             }
           }
         }
-        const obj7 = { source: _modDef17666 };
+        const obj7 = { source: _modDef17690 };
         tmp9 = obj7;
       }
       if (tmp9 == null) {

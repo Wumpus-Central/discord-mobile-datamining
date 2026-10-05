@@ -43,7 +43,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -95,7 +95,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
             c3 = 0;
             closure_129_2(false);
             c5 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           } else {
             let guildId;
             if (channel2 != null) {
@@ -105,7 +105,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
             c3 = 0;
             closure_129_2(false);
             c5 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         }
       } catch (tmp37) {

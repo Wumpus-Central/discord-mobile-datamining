@@ -1,6 +1,6 @@
-// === Module 12918: UserProfileRecentActivityCard ===
+// === Module 12920: UserProfileRecentActivityCard ===
 
-// Module 12918 (UserProfileRecentActivityCard)
+// Module 12920 (UserProfileRecentActivityCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;

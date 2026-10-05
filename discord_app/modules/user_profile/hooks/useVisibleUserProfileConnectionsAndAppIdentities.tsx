@@ -1,10 +1,10 @@
-// === Module 12932: useVisibleUserProfileConnectionsAndAppIdentities ===
+// === Module 12934: useVisibleUserProfileConnectionsAndAppIdentities ===
 
-// Module 12932 (useVisibleUserProfileConnectionsAndAppIdentities)
+// Module 12934 (useVisibleUserProfileConnectionsAndAppIdentities)
 import PlatformsDefault from "Platforms" /* 5442 */;
 import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6663 */;
-import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 12933 */;
-import useUserProfileConnectionsDefault from "useUserProfileConnections" /* 12934 */;
+import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 12935 */;
+import useUserProfileConnectionsDefault from "useUserProfileConnections" /* 12936 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

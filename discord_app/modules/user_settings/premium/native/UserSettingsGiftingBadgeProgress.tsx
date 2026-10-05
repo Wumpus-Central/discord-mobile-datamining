@@ -1,6 +1,6 @@
-// === Module 13376: UserSettingsGiftingBadgeProgress ===
+// === Module 13378: UserSettingsGiftingBadgeProgress ===
 
-// Module 13376 (UserSettingsGiftingBadgeProgress)
+// Module 13378 (UserSettingsGiftingBadgeProgress)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef2589 from "module_2589" /* 2589 */;
@@ -816,7 +816,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsLocatio
     obj23.children = intl5.string(tmp4(2589).WZ4cXA);
     const items6 = [closure_9(tmp7(4886).Text, obj23), ];
     if (tmp11Result) {
-      let ChevronSmallDownIcon = tmp7(13377).ChevronSmallUpIcon;
+      let ChevronSmallDownIcon = tmp7(13379).ChevronSmallUpIcon;
     } else {
       ChevronSmallDownIcon = tmp7(10844).ChevronSmallDownIcon;
     }

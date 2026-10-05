@@ -1,6 +1,6 @@
-// === Module 14934: useVideoQuestPlayerAnalytics ===
+// === Module 14938: useVideoQuestPlayerAnalytics ===
 
-// Module 14934 (useVideoQuestPlayerAnalytics)
+// Module 14938 (useVideoQuestPlayerAnalytics)
 import MonitoringAgentDefault from "MonitoringAgent" /* 5409 */;
 import MetricEvents from "MetricEvents" /* 5414 */;
 import QuestTypes from "QuestTypes" /* 5626 */;
@@ -11,8 +11,8 @@ import AnalyticsActions from "AnalyticsActions" /* 7202 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7212 */;
 import AdDataUtils from "AdDataUtils" /* 7218 */;
 import VideoQuestUtils from "VideoQuestUtils" /* 10940 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 14819 */;
-import AdsVideoUtils from "AdsVideoUtils" /* 14829 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 14823 */;
+import AdsVideoUtils from "AdsVideoUtils" /* 14833 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import NetworkStore from "NetworkStore" /* 4939 */;
@@ -58,7 +58,7 @@ export default function useVideoQuestPlayerAnalytics(duration) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -154,7 +154,7 @@ export default function useVideoQuestPlayerAnalytics(duration) {
             obj13.trackQuestEvent(obj12);
             c6 = 0;
             c8 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp53) {
           closure_5 = tmp53;

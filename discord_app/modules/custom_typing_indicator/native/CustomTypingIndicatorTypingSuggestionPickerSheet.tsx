@@ -1,6 +1,6 @@
-// === Module 15176: CustomTypingIndicatorTypingSuggestionPickerSheet ===
+// === Module 15180: CustomTypingIndicatorTypingSuggestionPickerSheet ===
 
-// Module 15176 (CustomTypingIndicatorTypingSuggestionPickerSheet)
+// Module 15180 (CustomTypingIndicatorTypingSuggestionPickerSheet)
 import nativeDefault from "native" /* 587 */;
 import _modDef3725 from "module_3725" /* 3725 */;
 import _slicedToArray from "module_32" /* 32 */;

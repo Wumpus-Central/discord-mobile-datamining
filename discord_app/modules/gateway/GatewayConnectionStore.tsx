@@ -7,10 +7,10 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import DiscordAppStateDefault from "DiscordAppState" /* 10015 */;
-import GatewaySocketSingleton from "GatewaySocketSingleton" /* 13437 */;
-import ConnectionStateDefault from "ConnectionState" /* 13454 */;
-import PauseGatewaySocketAll from "PauseGatewaySocket" /* 13475 */;
-import dispatchSocketMessageDefault from "dispatchSocketMessage" /* 13486 */;
+import GatewaySocketSingleton from "GatewaySocketSingleton" /* 13439 */;
+import ConnectionStateDefault from "ConnectionState" /* 13456 */;
+import PauseGatewaySocketAll from "PauseGatewaySocket" /* 13477 */;
+import dispatchSocketMessageDefault from "dispatchSocketMessage" /* 13488 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -39,7 +39,7 @@ let closure_25 = async function _handleConnectionOpen(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -173,7 +173,7 @@ function handleLocalPresenceChange() {
 const Constants = fn(1085);
 ({ RTCConnectionStates: closure_15, AppStates: closure_16 } = Constants);
 const UserSettingsTypes = fn(1095).UserSettingsTypes;
-fn(13437).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
+fn(13439).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
 let closure_19 = new LoggerDefault("ConnectionStore");
 let closure_20 = 0;
 let c21 = null;
@@ -505,9 +505,9 @@ const gatewayConnectionStore = new GatewayConnectionStore(DispatcherDefault, {
         const allActiveStreamKeys1 = StreamRTCConnectionStore.getAllActiveStreamKeys();
         const found = allActiveStreamKeys1.filter((item) => item !== closure_0);
         const item = found.forEach((item) => {
-          const socket = closure_0(13437).socket;
+          const socket = closure_0(13439).socket;
           if (socket.isSessionEstablished()) {
-            const socket2 = closure_0(13437).socket;
+            const socket2 = closure_0(13439).socket;
             socket2.streamDelete(item);
           }
         });

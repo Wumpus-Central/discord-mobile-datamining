@@ -19,7 +19,7 @@ let closure_10 = async function _isDefaultChannelThresholdMetAfterDelete(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -82,7 +82,7 @@ let closure_12 = async function _isChattableChannelThresholdMetAfterChannelChang
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -220,7 +220,7 @@ let closure_13 = async function _checkChattableChannelThresholdMetAfterChannelPe
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

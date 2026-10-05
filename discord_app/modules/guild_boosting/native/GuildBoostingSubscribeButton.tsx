@@ -31,7 +31,7 @@ let closure_15 = async function _handleBoostPress() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -69,7 +69,7 @@ let closure_15 = async function _handleBoostPress() {
         } else {
           closure_131_0(closure_131_2[10]).closeApplyBoostModal();
           c5 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp10) {
         c5 = tmp;

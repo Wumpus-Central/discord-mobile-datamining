@@ -13,7 +13,7 @@ let result = size.fileFinishedImporting("modules/routing/transitionToGuild.nativ
 
 export const transitionToGuild = function transitionToGuild(guildId, arg1) {
   const obj = getGuildTransitionRoute;
-  const result = DeprecatedLayoutAnimation.DeprecatedLayoutAnimation({ duration: 0, create: "r", update: "emoji", delete: "toCharArray$esjava$1" });
+  const result = DeprecatedLayoutAnimation.DeprecatedLayoutAnimation({ duration: 0, create: "r", update: "enabled", delete: "toCharArray$esjava$1" });
   const obj3 = router_utils;
   const obj4 = { navigationReplace: true };
   const merged = Object.assign(arg1);

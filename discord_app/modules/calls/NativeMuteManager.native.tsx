@@ -1,6 +1,6 @@
-// === Module 13626: NativeMuteManager ===
+// === Module 13628: NativeMuteManager ===
 
-// Module 13626 (NativeMuteManager)
+// Module 13628 (NativeMuteManager)
 import LoggerDefault from "Logger" /* 3 */;
 import inject from "inject" /* 2001 */;
 import Timers from "Timers" /* 2046 */;

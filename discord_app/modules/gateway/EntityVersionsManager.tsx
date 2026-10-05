@@ -1,6 +1,6 @@
-// === Module 17467: EntityVersionsManager ===
+// === Module 17491: EntityVersionsManager ===
 
-// Module 17467 (EntityVersionsManager)
+// Module 17491 (EntityVersionsManager)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
@@ -36,7 +36,7 @@ function handleDeletedEntityIds(guild_id) {
       const item = keys.forEach((id) => {
         if (!set1.has(id)) {
           const obj2 = { type: "CHANNEL_DELETE", channel: null };
-          const obj3 = { guild_id: set3, id, parent_id: "Array" };
+          const obj3 = { guild_id: set3, id, parent_id: "r" };
           obj2.channel = obj3;
           set3(584).dispatch(obj2);
           const obj = set3(584);

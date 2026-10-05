@@ -1,13 +1,13 @@
-// === Module 15880: RegisterPhoneOrEmailInput ===
+// === Module 15884: RegisterPhoneOrEmailInput ===
 
-// Module 15880 (RegisterPhoneOrEmailInput)
+// Module 15884 (RegisterPhoneOrEmailInput)
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 6451 */;
 import noop from "module_19" /* 19 */;
 import PhoneStore from "PhoneStore" /* 6430 */;
 
 require = fn;
-const RegistrationUIStore = fn(15863);
+const RegistrationUIStore = fn(15867);
 ({ setRegistrationErrors: hasOwnProperty, useRegistrationUIStore: metroRequire } = RegistrationUIStore);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);

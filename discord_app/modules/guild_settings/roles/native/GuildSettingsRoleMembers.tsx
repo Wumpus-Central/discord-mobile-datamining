@@ -1,6 +1,6 @@
-// === Module 17781: GuildSettingsRoleMembers ===
+// === Module 17805: GuildSettingsRoleMembers ===
 
-// Module 17781 (GuildSettingsRoleMembers)
+// Module 17805 (GuildSettingsRoleMembers)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -97,7 +97,7 @@ export default function GuildSettingsRoleMembers(guild) {
   const callback1 = found.useCallback(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Add Role Members", location_page: "Role Settings", location_section: "Members" });
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj2.openLazy(asyncRequireImpl(17762, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, { guild, role });
+    obj2.openLazy(asyncRequireImpl(17786, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, { guild, role });
   }, items3);
   closure_6 = found.useCallback((item) => {
     item = item.item;

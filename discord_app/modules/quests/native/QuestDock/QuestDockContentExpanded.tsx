@@ -1,13 +1,13 @@
-// === Module 14984: QuestDockContentExpanded ===
+// === Module 14988: QuestDockContentExpanded ===
 
-// Module 14984 (QuestDockContentExpanded)
+// Module 14988 (QuestDockContentExpanded)
 import spring from "spring" /* 5597 */;
-import QuestDockUtils from "QuestDockUtils" /* 14891 */;
+import QuestDockUtils from "QuestDockUtils" /* 14895 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const QuestDockMode = fn(5623).QuestDockMode;
-let QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(14892).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+let QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(14896).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
 const createStyles = fn(4890);
 let obj = { wrapper: null };

@@ -1,6 +1,6 @@
-// === Module 15365: ChangeLogModal ===
+// === Module 15369: ChangeLogModal ===
 
-// Module 15365 (ChangeLogModal)
+// Module 15369 (ChangeLogModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -14,7 +14,7 @@ import openMediaModal from "openMediaModal" /* 7933 */;
 import common_VideoDefault from "common/Video" /* 7983 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 9442 */;
 import _modDef10123 from "module_10123" /* 10123 */;
-import _modDef15366 from "module_15366" /* 15366 */;
+import _modDef15370 from "module_15370" /* 15370 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -164,7 +164,7 @@ prototype["renderVideo"] = function renderVideo() {
             },
         useLocalHTML: true
       };
-      const items = [closure_7(_modDef15366, obj4), ];
+      const items = [closure_7(_modDef15370, obj4), ];
       let tmp6Result = null;
       if (!tmp2) {
         const obj5 = { style: tmp.videoOverlay, source: null };

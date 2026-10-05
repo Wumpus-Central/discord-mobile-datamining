@@ -1,6 +1,6 @@
-// === Module 14860: BountiesModalContent ===
+// === Module 14864: BountiesModalContent ===
 
-// Module 14860 (BountiesModalContent)
+// Module 14864 (BountiesModalContent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
@@ -19,7 +19,7 @@ import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /*
 import VideoQuestUtils from "VideoQuestUtils" /* 10940 */;
 import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 10958 */;
 import AnimationUtils from "AnimationUtils" /* 11009 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 14807 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 14811 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -56,7 +56,7 @@ function doRewardEarnedHapticFeedback() {
 let View = fn(17).View;
 const QuestConstants = fn(5623);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(14811);
+const BountiesModalConstants = fn(14815);
 ({ getBountyVideoEndAppStoreSheetHeight: c10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, ComponentActions: map1 } = Constants);
@@ -279,7 +279,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
                                 const obj3 = { value, done: true };
                                 return obj3;
                               } else {
-                                return { value: "IconComponent", done: "IconComponent" };
+                                return { value: "IconComponent", done: null };
                               }
                             } else {
                               try {
@@ -341,7 +341,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
                                     }
                                   }
                                   ref = 3;
-                                  return { value: "IconComponent", done: "IconComponent" };
+                                  return { value: "IconComponent", done: null };
                                 }
                               } catch (tmp40) {
                                 if (tmp4 === c3) {
@@ -506,7 +506,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -567,7 +567,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
             }
           }
           c5 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp40) {
         if (tmp4 === c3) {
@@ -963,7 +963,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((bountyId) => {
               class C {
                 constructor() {
                   obj = { bounty: closure_3, sourceQuestContent };
-                  return jsx(f68770, obj);
+                  return jsx(f68820, obj);
                 }
               }
               let obj3 = { theme: ThemeTypes.DARK, children: null };
@@ -983,7 +983,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((bountyId) => {
             class C {
               constructor() {
                 obj = { bounty: closure_3, sourceQuestContent };
-                return jsx(f68770, obj);
+                return jsx(f68820, obj);
               }
             }
             cResult[9] = id;

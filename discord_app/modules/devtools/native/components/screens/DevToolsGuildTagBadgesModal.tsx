@@ -1,9 +1,9 @@
-// === Module 15579: DevToolsGuildTagBadgesModal ===
+// === Module 15583: DevToolsGuildTagBadgesModal ===
 
-// Module 15579 (DevToolsGuildTagBadgesModal)
+// Module 15583 (DevToolsGuildTagBadgesModal)
 import HeaderShared from "HeaderShared" /* 7498 */;
 import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10662 */;
-import DevToolsGuildTagBadgesScreenDefault from "DevToolsGuildTagBadgesScreen" /* 15580 */;
+import DevToolsGuildTagBadgesScreenDefault from "DevToolsGuildTagBadgesScreen" /* 15584 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

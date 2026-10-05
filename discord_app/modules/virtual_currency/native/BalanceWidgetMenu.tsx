@@ -1,6 +1,6 @@
-// === Module 15571: BalanceWidgetMenu ===
+// === Module 15575: BalanceWidgetMenu ===
 
-// Module 15571 (BalanceWidgetMenu)
+// Module 15575 (BalanceWidgetMenu)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -162,7 +162,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               const obj2 = QuestUtils;
               obj2.openQuestHome({ filter: constants3.VIRTUAL_CURRENCY, fromContent: QuestTypes.QuestContent.MOBILE_ORBS_ONBOARDING_DC });
             };
-            obj.trailing = closure_9(closure_1(15572), {});
+            obj.trailing = closure_9(closure_1(15576), {});
             return closure_9(closure_10, obj);
           } else {
             return null;
@@ -184,7 +184,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               const obj2 = QuestUtils;
               obj2.openQuestHome({ filter: constants3.VIRTUAL_CURRENCY, fromContent: QuestTypes.QuestContent.MOBILE_ORBS_ONBOARDING_DC });
             };
-            obj.trailing = closure_9(closure_1(15572), {});
+            obj.trailing = closure_9(closure_1(15576), {});
             return closure_9(closure_10, obj);
           } else {
             return null;
@@ -214,7 +214,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         const obj2 = QuestUtils;
         obj2.openQuestHome({ filter: constants3.VIRTUAL_CURRENCY, fromContent: QuestTypes.QuestContent.MOBILE_ORBS_ONBOARDING_DC });
       };
-      obj.trailing = closure_9(closure_1(15572), {});
+      obj.trailing = closure_9(closure_1(15576), {});
       return closure_9(closure_10, obj);
     } else {
       return null;

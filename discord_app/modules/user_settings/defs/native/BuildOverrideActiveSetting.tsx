@@ -1,12 +1,12 @@
-// === Module 15627: BuildOverrideActiveSetting ===
+// === Module 15631: BuildOverrideActiveSetting ===
 
-// Module 15627 (BuildOverrideActiveSetting)
+// Module 15631 (BuildOverrideActiveSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11399 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 14402 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14646 */;
-import DevToolsContent from "DevToolsContent" /* 15621 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 14406 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14650 */;
+import DevToolsContent from "DevToolsContent" /* 15625 */;
 import BuildOverrideStore from "BuildOverrideStore" /* 11082 */;
 
 require = fn;
@@ -89,7 +89,7 @@ const pressable = SettingBuilders.createPressable({
     return "Build Override Active";
   },
   parent: null,
-  IconComponent: fn(14774).RefreshIcon,
+  IconComponent: fn(14778).RefreshIcon,
   useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const cResult = c.c(2);
     const tmp4 = closure_4();

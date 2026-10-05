@@ -1,9 +1,9 @@
-// === Module 17494: InteractionModalManager ===
+// === Module 17518: InteractionModalManager ===
 
-// Module 17494 (InteractionModalManager)
+// Module 17518 (InteractionModalManager)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import openInteractionIframeModalDefault from "openInteractionIframeModal" /* 17506 */;
-import closeIFrameModalDefault from "closeIFrameModal" /* 17509 */;
+import openInteractionIframeModalDefault from "openInteractionIframeModal" /* 17530 */;
+import closeIFrameModalDefault from "closeIFrameModal" /* 17533 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 5118 */;
 import InteractionStore from "InteractionStore" /* 7600 */;
@@ -21,7 +21,7 @@ let closure_8 = async function _handleInteractionModalCreate(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -106,7 +106,7 @@ let closure_8 = async function _handleInteractionModalCreate(arg0) {
           let obj = closure_130_1(closure_130_2[9]);
         }
         c4 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp19) {
       c4 = tmp;

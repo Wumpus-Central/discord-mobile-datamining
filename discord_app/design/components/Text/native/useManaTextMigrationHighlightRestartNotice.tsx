@@ -1,6 +1,6 @@
-// === Module 14258: useManaTextMigrationHighlightRestartNotice ===
+// === Module 14260: useManaTextMigrationHighlightRestartNotice ===
 
-// Module 14258 (useManaTextMigrationHighlightRestartNotice)
+// Module 14260 (useManaTextMigrationHighlightRestartNotice)
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 4889 */;

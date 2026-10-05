@@ -1,6 +1,6 @@
-// === Module 17783: GuildSettingsRoleEditConnectionConfiguration ===
+// === Module 17807: GuildSettingsRoleEditConnectionConfiguration ===
 
-// Module 17783 (GuildSettingsRoleEditConnectionConfiguration)
+// Module 17807 (GuildSettingsRoleEditConnectionConfiguration)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -15,7 +15,7 @@ import TableRow from "TableRow" /* 5993 */;
 import XSmallIcon from "XSmallIcon" /* 6017 */;
 import TableRowGroup from "TableRowGroup" /* 6074 */;
 import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11180 */;
-import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 17784 */;
+import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 17808 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -144,7 +144,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     if (cResult[0] !== bot) {
-      const obj3 = { size: native.AvatarSizes.XSMALL, user: bot, guildId: "Array" };
+      const obj3 = { size: native.AvatarSizes.XSMALL, user: bot, guildId: "r" };
       const tmp26 = onChangeText(native.Avatar, obj3);
       cResult[0] = bot;
       cResult[1] = tmp26;
@@ -165,7 +165,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             name1 = getOrFetchApplicationBatched.name;
           }
         } else if (cResult[2] !== getOrFetchApplicationBatched.bot) {
-          const obj4 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "Array" };
+          const obj4 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "r" };
           const tmp20 = onChangeText(native.Avatar, obj4);
           cResult[2] = getOrFetchApplicationBatched.bot;
           cResult[3] = tmp20;
@@ -280,7 +280,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     application2 = integration.application;
   }
   if (null != application2) {
-    const obj2 = { size: native.AvatarSizes.XSMALL, user: null, guildId: "Array" };
+    const obj2 = { size: native.AvatarSizes.XSMALL, user: null, guildId: "r" };
     let bot;
     if (integration != null) {
       const application = integration.application;
@@ -301,7 +301,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
       let tmp11;
       if (null != bot1) {
-        const obj3 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "Array" };
+        const obj3 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "r" };
         tmp11 = onChangeText(native.Avatar, obj3);
       }
       let name1;
@@ -1282,7 +1282,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((existingPendin
   if (num == null) {
     num = -1;
   }
-  const realizedOperatorForResult = metadataField(17784).realizedOperatorFor(existingPendingConfiguration.operator);
+  const realizedOperatorForResult = metadataField(17808).realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   value = undefined;
   if (existingPendingConfiguration != null) {
@@ -1290,9 +1290,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((existingPendin
       value = iter.value;
     }
   }
-  let obj = metadataField(17784);
-  const tmpResult = metadataField(17784);
-  str1 = metadataField(17784).displayedValueFor(value, realizedOperatorForResult).toString();
+  let obj = metadataField(17808);
+  const tmpResult = metadataField(17808);
+  str1 = metadataField(17808).displayedValueFor(value, realizedOperatorForResult).toString();
   let mapped = noop;
   [value] = noop.useState(str1);
   closure_10 = tmp9;
@@ -1406,7 +1406,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((existingPendin
     };
     return onInputValueChange(metadataField(6698).TableSwitchRow, obj8, metadataField);
   }
-  const str = metadataField(17784).displayedValueFor(value, realizedOperatorForResult);
+  const str = metadataField(17808).displayedValueFor(value, realizedOperatorForResult);
 });
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {

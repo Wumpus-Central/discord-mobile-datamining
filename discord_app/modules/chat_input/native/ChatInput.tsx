@@ -533,7 +533,7 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -557,7 +557,7 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
               closure_129_4 = undefined;
               c3 = 1;
               c4 = 1;
-              return { value: "Reflect", done: true };
+              return { value: "Set", done: true };
             }
           } else {
             if (1 === tmp5) {

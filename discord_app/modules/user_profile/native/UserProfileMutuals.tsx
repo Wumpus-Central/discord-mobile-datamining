@@ -1,6 +1,6 @@
-// === Module 12947: UserProfileMutuals ===
+// === Module 12949: UserProfileMutuals ===
 
-// Module 12947 (UserProfileMutuals)
+// Module 12949 (UserProfileMutuals)
 import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import noop from "module_19" /* 19 */;
@@ -74,7 +74,7 @@ export default function UserProfileMutuals(user) {
             },
         children: null
       };
-      const obj4 = { size: tmp2(1188).AvatarSizes.SIZE_16, totalCount: mapped.length, names: mapped.map((username) => username.username), children: mapped.map((user) => closure_1_6(user(_undefined[16]).Avatar, { user, size: user(_undefined[16]).AvatarSizes.SIZE_16, guildId: "Array" }, user.id)) };
+      const obj4 = { size: tmp2(1188).AvatarSizes.SIZE_16, totalCount: mapped.length, names: mapped.map((username) => username.username), children: mapped.map((user) => closure_1_6(user(_undefined[16]).Avatar, { user, size: user(_undefined[16]).AvatarSizes.SIZE_16, guildId: "r" }, user.id)) };
       const items = [closure_6(tmp2(12850).AvatarPile, obj4), ];
       const obj5 = { variant, color, children: tmp5(12280)(mutualFriends.length) };
       items[1] = closure_6(tmp2(4886).Text, obj5);

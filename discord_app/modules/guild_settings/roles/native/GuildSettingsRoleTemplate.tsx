@@ -1,6 +1,6 @@
-// === Module 17760: GuildSettingsRoleTemplate ===
+// === Module 17784: GuildSettingsRoleTemplate ===
 
-// Module 17760 (GuildSettingsRoleTemplate)
+// Module 17784 (GuildSettingsRoleTemplate)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -23,7 +23,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Dimensions, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildSettingsRoleConstants = fn(17756);
+const GuildSettingsRoleConstants = fn(17780);
 ({ PermissionTemplateTypes: closure_9, PermissionTemplates: c10, DEFAULT_TEMPLATE_TYPE: closure_11 } = GuildSettingsRoleConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, GuildFeatures: map1 } = Constants);

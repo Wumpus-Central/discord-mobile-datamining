@@ -1,10 +1,10 @@
-// === Module 14818: BountiesScrollVideoItem ===
+// === Module 14822: BountiesScrollVideoItem ===
 
-// Module 14818 (BountiesScrollVideoItem)
+// Module 14822 (BountiesScrollVideoItem)
 import QuestContent from "QuestContent" /* 5628 */;
 import AdCreativeType from "AdCreativeType" /* 5630 */;
 import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 10958 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 14819 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 14823 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -283,7 +283,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -339,7 +339,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
               });
             }
             c5 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp27) {
           closure_2 = tmp27;
@@ -462,7 +462,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -517,7 +517,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((bounty) => {
             });
           }
           c5 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp27) {
         if (tmp4 === c3) {

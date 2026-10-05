@@ -1,6 +1,6 @@
-// === Module 17692: GuildFeedItemTypes ===
+// === Module 17716: GuildFeedItemTypes ===
 
-// Module 17692 (GuildFeedItemTypes)
+// Module 17716 (GuildFeedItemTypes)
 import size from "module_2" /* 2 */;
 
 const obj = { ALL: new Set(["conversation", "forum_post", "message", "message_bundle"]) };

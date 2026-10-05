@@ -1,6 +1,6 @@
-// === Module 13725: GuildTagActionCreators ===
+// === Module 13727: GuildTagActionCreators ===
 
-// Module 13725 (GuildTagActionCreators)
+// Module 13727 (GuildTagActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1377 */;
@@ -21,7 +21,7 @@ let closure_6 = async function _adoptGuildIdentity() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

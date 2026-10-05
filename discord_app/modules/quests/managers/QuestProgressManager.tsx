@@ -1,6 +1,6 @@
-// === Module 18064: QuestProgressManager ===
+// === Module 18086: QuestProgressManager ===
 
-// Module 18064 (QuestProgressManager)
+// Module 18086 (QuestProgressManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
@@ -25,7 +25,7 @@ import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
 import DetectableGameStore from "DetectableGameStore" /* 2024 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4914 */;
 import QuestStore from "QuestStore" /* 7187 */;
-import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 17161 */;
+import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 17185 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
 
 require = fn;
@@ -334,7 +334,7 @@ class QuestProgressManager extends tmp4 {
       await "IconComponent";
       closure_1 = tmp2;
       applicationId = applyArgumentsResult.applicationId;
-      return "Reflect";
+      return "Set";
     });
     obj1.FRAME_LAUNCH = function FRAME_LAUNCH(arg0) {
       const self = this;

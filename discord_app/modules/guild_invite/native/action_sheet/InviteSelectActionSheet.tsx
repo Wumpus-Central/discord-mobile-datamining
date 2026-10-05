@@ -1,6 +1,6 @@
-// === Module 17973: InviteSelectActionSheet ===
+// === Module 17995: InviteSelectActionSheet ===
 
-// Module 17973 (InviteSelectActionSheet)
+// Module 17995 (InviteSelectActionSheet)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import TableRadioRow from "TableRadioRow" /* 6071 */;

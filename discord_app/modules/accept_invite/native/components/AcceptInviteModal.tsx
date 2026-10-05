@@ -1,6 +1,6 @@
-// === Module 17418: AcceptInviteModal ===
+// === Module 17442: AcceptInviteModal ===
 
-// Module 17418 (AcceptInviteModal)
+// Module 17442 (AcceptInviteModal)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import InviteCodeUtils from "InviteCodeUtils" /* 4872 */;
 import AcceptInviteContainerDefault from "AcceptInviteContainer" /* 12382 */;

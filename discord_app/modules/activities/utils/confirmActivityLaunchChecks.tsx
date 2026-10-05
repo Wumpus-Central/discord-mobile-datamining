@@ -27,7 +27,7 @@ let closure_8 = async function _getOrFetchApplicationForLaunch(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -50,7 +50,7 @@ let closure_8 = async function _getOrFetchApplicationForLaunch(arg0) {
           closure_131_3 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -92,7 +92,7 @@ let closure_8 = async function _getOrFetchApplicationForLaunch(arg0) {
         obj7.locationKind = closure_131_3;
         closure_132_1(closure_132_2[6]).dispatch(obj7);
         c8 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       } else if (arg0 === 1) {
         c8 = 3;
         throw value;
@@ -129,7 +129,7 @@ let closure_9 = async function _confirmActivityChange(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -150,7 +150,7 @@ let closure_9 = async function _confirmActivityChange(arg0) {
           ({ currentEmbeddedApplication: closure_129_0, shouldClosePopoutOnLeaveCurrentEmbeddedApplication: closure_129_1, onConfirmActivityLaunchChecksAlertOpen: closure_129_2 } = closure_0);
           c2 = 1;
           c3 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -221,7 +221,7 @@ let closure_10 = async function _confirmActivityAgeGate(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -246,7 +246,7 @@ let closure_10 = async function _confirmActivityAgeGate(arg0) {
           closure_131_5 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -362,7 +362,7 @@ let closure_11 = async function _confirmExternalAppLaunch(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -386,7 +386,7 @@ let closure_11 = async function _confirmExternalAppLaunch(arg0) {
           closure_131_4 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp5) {

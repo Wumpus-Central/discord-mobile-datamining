@@ -1,6 +1,6 @@
-// === Module 17351: MediaPlaybackPanelUI ===
+// === Module 17375: MediaPlaybackPanelUI ===
 
-// Module 17351 (MediaPlaybackPanelUI)
+// Module 17375 (MediaPlaybackPanelUI)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
@@ -13,10 +13,10 @@ import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
 import LayerScope from "LayerScope" /* 6651 */;
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9074 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 9774 */;
-import MorphablePanelUtils from "MorphablePanelUtils" /* 17148 */;
-import useMorphablePanelGesture from "useMorphablePanelGesture" /* 17150 */;
-import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 17350 */;
-import MediaPlaybackPipDefault from "MediaPlaybackPip" /* 17352 */;
+import MorphablePanelUtils from "MorphablePanelUtils" /* 17172 */;
+import useMorphablePanelGesture from "useMorphablePanelGesture" /* 17174 */;
+import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 17374 */;
+import MediaPlaybackPipDefault from "MediaPlaybackPip" /* 17376 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 9156 */;
@@ -26,7 +26,7 @@ const useMorphablePanelGestureDefault = useMorphablePanelGesture;
 
 require = fn;
 const useContext = fn(19).useContext;
-const MediaPlaybackPanelConstants = fn(14375);
+const MediaPlaybackPanelConstants = fn(14379);
 ({ MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: closure_7, MediaPlaybackPanelModes: closure_8 } = MediaPlaybackPanelConstants);
 const IS_IOS = fn(11903).IS_IOS;
 const BORDER_RADIUS_PHYSICS = fn(11902).BORDER_RADIUS_PHYSICS;

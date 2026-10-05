@@ -1,6 +1,6 @@
-// === Module 14359: transformGuildMember ===
+// === Module 14363: transformGuildMember ===
 
-// Module 14359 (transformGuildMember)
+// Module 14363 (transformGuildMember)
 import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1972 */;
 import size from "module_2" /* 2 */;
 

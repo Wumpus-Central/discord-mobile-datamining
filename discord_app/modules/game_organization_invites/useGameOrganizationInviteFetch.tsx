@@ -1,8 +1,8 @@
-// === Module 17530: useGameOrganizationInviteFetch ===
+// === Module 17554: useGameOrganizationInviteFetch ===
 
-// Module 17530 (useGameOrganizationInviteFetch)
+// Module 17554 (useGameOrganizationInviteFetch)
 import DurationsDefault from "Durations" /* 1102 */;
-import GameOrganizationInviteActionCreatorsDefault from "GameOrganizationInviteActionCreators" /* 17531 */;
+import GameOrganizationInviteActionCreatorsDefault from "GameOrganizationInviteActionCreators" /* 17555 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 11083 */;
 
@@ -37,7 +37,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -65,7 +65,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp8) {
       c1 = tmp;

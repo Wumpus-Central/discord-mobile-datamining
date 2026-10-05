@@ -1,6 +1,6 @@
-// === Module 16326: YouBarName ===
+// === Module 16330: YouBarName ===
 
-// Module 16326 (YouBarName)
+// Module 16330 (YouBarName)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import GuildTagDefault from "GuildTag" /* 9395 */;
@@ -8,7 +8,7 @@ import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" 
 import useUserVoiceActivity from "useUserVoiceActivity" /* 10612 */;
 import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10633 */;
 import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10844 */;
-import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 16327 */;
+import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 16331 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
 import ChannelStore from "ChannelStore" /* 2051 */;

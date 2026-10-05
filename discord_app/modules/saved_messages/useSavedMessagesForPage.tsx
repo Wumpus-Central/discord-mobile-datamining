@@ -1,9 +1,9 @@
-// === Module 13122: useSavedMessagesForPage ===
+// === Module 13124: useSavedMessagesForPage ===
 
-// Module 13122 (useSavedMessagesForPage)
+// Module 13124 (useSavedMessagesForPage)
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import SavedMessagesTypes from "SavedMessagesTypes" /* 7495 */;
-import useRefreshSavedMessagesDefault from "useRefreshSavedMessages" /* 13123 */;
+import useRefreshSavedMessagesDefault from "useRefreshSavedMessages" /* 13125 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SavedMessagesStore from "SavedMessagesStore" /* 11283 */;
@@ -160,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp11 = cResult[5];
   }
   const effect = noop.useEffect(M, tmp11);
-  first(13123)();
+  first(13125)();
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     class M {
       constructor() {

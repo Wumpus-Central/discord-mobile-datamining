@@ -1,6 +1,6 @@
-// === Module 14409: UserProfileEditForm ===
+// === Module 14413: UserProfileEditForm ===
 
-// Module 14409 (UserProfileEditForm)
+// Module 14413 (UserProfileEditForm)
 import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import Text_Text from "Text/Text" /* 4886 */;
@@ -8,8 +8,8 @@ import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreat
 import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 7837 */;
 import UserProfileActionCreators from "UserProfileActionCreators" /* 7838 */;
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7868 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 12921 */;
-import _modDef14411 from "module_14411" /* 14411 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 12923 */;
+import _modDef14415 from "module_14415" /* 14415 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7863 */;
 import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9417 */;
@@ -51,7 +51,7 @@ function EditUserProfileBanner(user) {
       fn = (banner) => user(isTryItOut[19]).setPendingChanges({ banner });
     }
     obj2.onBannerChange = fn;
-    const tmp3 = asyncRequireImpl(14414, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(14418, dependencyMap.paths);
     let banner;
     if (displayProfile != null) {
       banner = displayProfile.banner;
@@ -73,10 +73,10 @@ const FLOATING_UPSELL_HEIGHT = fn(6707).FLOATING_UPSELL_HEIGHT;
 const Constants = fn(1085);
 ({ DISPLAY_NAME_MAX_LENGTH: closure_9, PRONOUNS_MAX_LENGTH: c10, UserSettingsSections: closure_11 } = Constants);
 let closure_12 = fn(1095).ProfileCustomizationScrollPositions;
-const constants2 = fn(14410).UserProfileEditAutoFocusElement;
+const constants2 = fn(14414).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let obj = { assetOrigin: fn(6486).AssetOriginTypes.NEW_ASSET, imageUri: _modDef14411, staticImageUri: _modDef14411, description: "", originalAsset: "unicodeVersion" };
+let obj = { assetOrigin: fn(6486).AssetOriginTypes.NEW_ASSET, imageUri: _modDef14415, staticImageUri: _modDef14415, description: "", originalAsset: "code" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditForm.tsx");

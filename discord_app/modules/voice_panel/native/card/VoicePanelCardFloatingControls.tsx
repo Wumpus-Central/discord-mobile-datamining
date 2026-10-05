@@ -1,6 +1,6 @@
-// === Module 17268: VoicePanelCardFloatingControls ===
+// === Module 17292: VoicePanelCardFloatingControls ===
 
-// Module 17268 (VoicePanelCardFloatingControls)
+// Module 17292 (VoicePanelCardFloatingControls)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -19,12 +19,12 @@ import VoiceStateIconUtils from "VoiceStateIconUtils" /* 9336 */;
 import VoiceXIcon from "VoiceXIcon" /* 9667 */;
 import _modDef9748 from "module_9748" /* 9748 */;
 import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11901 */;
-import useStableParticipant from "useStableParticipant" /* 17195 */;
-import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 17197 */;
-import _modDef17224 from "module_17224" /* 17224 */;
-import getRandomNumberInRangeDefault from "getRandomNumberInRange" /* 17254 */;
-import _modDef17269 from "module_17269" /* 17269 */;
-import _modDef17270 from "module_17270" /* 17270 */;
+import useStableParticipant from "useStableParticipant" /* 17219 */;
+import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 17221 */;
+import _modDef17248 from "module_17248" /* 17248 */;
+import getRandomNumberInRangeDefault from "getRandomNumberInRange" /* 17278 */;
+import _modDef17293 from "module_17293" /* 17293 */;
+import _modDef17294 from "module_17294" /* 17294 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4879 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
@@ -119,13 +119,13 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((voicePlatform)
   fn.__workletHash = 3270040588948;
   fn.__initData = __initData;
   const animatedStyle = controlsSpecs(4612).useAnimatedStyle(fn);
-  let tmp4Result = _modDef17224;
+  let tmp4Result = _modDef17248;
   if (voicePlatform === constants2.XBOX) {
-    tmp4Result = _modDef17269;
+    tmp4Result = _modDef17293;
   } else if (voicePlatform === constants2.MOBILE) {
     tmp4Result = _modDef9748;
   } else if (voicePlatform === constants2.QUEST) {
-    tmp4Result = _modDef17270;
+    tmp4Result = _modDef17294;
   }
   if (cResult[0] === animatedStyle) {
     if (cResult[1] === tmp3.iconWithoutBackground) {
@@ -173,13 +173,13 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((voicePlatform)
   fn.__workletHash = 15914667672663;
   fn.__initData = __initData2;
   const animatedStyle = controlsSpecs(4612).useAnimatedStyle(fn);
-  let tmp2Result = _modDef17224;
+  let tmp2Result = _modDef17248;
   if (voicePlatform === constants2.XBOX) {
-    tmp2Result = _modDef17269;
+    tmp2Result = _modDef17293;
   } else if (voicePlatform === constants2.MOBILE) {
     tmp2Result = _modDef9748;
   } else if (voicePlatform === constants2.QUEST) {
-    tmp2Result = _modDef17270;
+    tmp2Result = _modDef17294;
   }
   const obj3 = { source: tmp2Result, style: null };
   const items = [tmp.iconWithoutBackground, animatedStyle];
@@ -462,18 +462,18 @@ let closure_31 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((part
             }
           }
         }
-        let obj2 = { icon: tmp4(17271), onPress: tmp6, style: tmp5, layout, accessibilityLabel: cResult[5] };
-        const tmp15 = closure_16(tmp4(17164), obj2);
+        let obj2 = { icon: tmp4(17295), onPress: tmp6, style: tmp5, layout, accessibilityLabel: cResult[5] };
+        const tmp15 = closure_16(tmp4(17188), obj2);
         cResult[6] = tmp6;
         cResult[7] = layout;
         cResult[8] = cResult[5];
         cResult[9] = tmp5;
         cResult[10] = tmp15;
         tmp12 = tmp15;
-        const tmp4Result = tmp4(17164);
+        const tmp4Result = tmp4(17188);
       }
     }
-    const result = tmp(17195).isStableActivityParticipant(participant);
+    const result = tmp(17219).isStableActivityParticipant(participant);
     const intl = tmp(1126).intl;
     const string = intl.string;
     let t = tmp(1126).t;
@@ -488,7 +488,7 @@ let closure_31 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((part
     cResult[3] = isSelf;
     cResult[4] = participant;
     cResult[5] = stringResult;
-    let tmpResult = tmp(17195);
+    let tmpResult = tmp(17219);
   }
   const fn = function o() {
     if (obj.isStableStreamParticipant(participant)) {
@@ -545,12 +545,12 @@ let closure_31 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((part
   }, items);
   let obj = { icon: null, onPress: null, style: null, layout: null, accessibilityLabel: null };
   const tmp = closure_30(controlsHidden);
-  obj.icon = guildId(17271);
+  obj.icon = guildId(17295);
   obj.onPress = callback;
   obj.style = tmp;
   obj.layout = layout;
-  const tmp4 = guildId(17164);
-  const result = participant(17195).isStableActivityParticipant(participant);
+  const tmp4 = guildId(17188);
+  const result = participant(17219).isStableActivityParticipant(participant);
   const intl = participant(1126).intl;
   const string = intl.string;
   const t = participant(1126).t;
@@ -989,7 +989,7 @@ let closure_50 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   }
   let tmp4 = gameRecord;
   let obj = showGameTag(576);
-  showGameTag = gameRecord(17274).useConfig(first).showGameTag;
+  showGameTag = gameRecord(17298).useConfig(first).showGameTag;
   const first1 = gameRecord(9392)(userId, arg0.guildId, showGameTag)[0];
   let tmp6;
   if (showGameTag) {
@@ -1030,7 +1030,7 @@ let closure_50 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
               }
             }
             const obj6 = { game: gameRecord, userId, textColor };
-            const tmp17 = closure_16(tmp4(17275), obj6);
+            const tmp17 = closure_16(tmp4(17299), obj6);
             cResult[11] = gameRecord;
             cResult[12] = textColor;
             cResult[13] = userId;
@@ -1075,17 +1075,17 @@ let closure_50 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
   cResult[7] = items;
   tmp12 = items;
   tmp11 = fn;
-  const obj3 = gameRecord(17274);
+  const obj3 = gameRecord(17298);
   obj5 = noop;
 }) : ((arg0) => {
   ({ userId, textColor } = arg0);
   let gameRecord;
   dependencyMap = undefined;
   noop = undefined;
-  const showGameTag = gameRecord(17274).useConfig({ location: "VoicePanelCardFloatingControls" }).showGameTag;
+  const showGameTag = gameRecord(17298).useConfig({ location: "VoicePanelCardFloatingControls" }).showGameTag;
   const first = gameRecord(9392)(userId, arg0.guildId, showGameTag)[0];
   let tmp5;
-  let obj = gameRecord(17274);
+  let obj = gameRecord(17298);
   if (showGameTag) {
     let application_id;
     if (first != null) {
@@ -1120,7 +1120,7 @@ let closure_50 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0
     if (null != gameRecord) {
       if (!tmp8) {
         const obj2 = { game: gameRecord, userId, textColor };
-        let tmp12 = closure_16(tmp(17275), obj2);
+        let tmp12 = closure_16(tmp(17299), obj2);
       }
       return tmp12;
     }

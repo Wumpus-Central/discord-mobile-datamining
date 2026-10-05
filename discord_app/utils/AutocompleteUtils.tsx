@@ -1739,7 +1739,7 @@ export default {
         return hasItem;
       },
       type,
-      allowEmptyQueries: "CONNECTION_OPEN"
+      allowEmptyQueries: false
     };
     obj.channels = this.queryChannels(obj2).map((record) => record.record);
     return obj;

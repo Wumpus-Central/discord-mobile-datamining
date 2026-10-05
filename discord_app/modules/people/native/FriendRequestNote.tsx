@@ -1,8 +1,8 @@
-// === Module 12950: FriendRequestNote ===
+// === Module 12952: FriendRequestNote ===
 
-// Module 12950 (FriendRequestNote)
+// Module 12952 (FriendRequestNote)
 import nativeDefault from "native" /* 587 */;
-import PeopleListTracking from "PeopleListTracking" /* 12952 */;
+import PeopleListTracking from "PeopleListTracking" /* 12954 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4519 */;

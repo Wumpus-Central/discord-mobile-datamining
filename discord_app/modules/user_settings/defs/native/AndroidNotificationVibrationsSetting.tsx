@@ -1,13 +1,13 @@
-// === Module 15315: AndroidNotificationVibrationsSetting ===
+// === Module 15319: AndroidNotificationVibrationsSetting ===
 
-// Module 15315 (AndroidNotificationVibrationsSetting)
+// Module 15319 (AndroidNotificationVibrationsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import SettingsConstants from "SettingsConstants" /* 7634 */;
-import SettingsNotificationUtils from "SettingsNotificationUtils" /* 15303 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 15307 */;
-import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15301 */;
+import SettingsNotificationUtils from "SettingsNotificationUtils" /* 15307 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15311 */;
+import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15305 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import SettingBuilders_mod from "SettingBuilders" /* 11129 */;
 import size from "module_2" /* 2 */;

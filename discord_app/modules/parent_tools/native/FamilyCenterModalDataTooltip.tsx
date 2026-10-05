@@ -1,6 +1,6 @@
-// === Module 14695: FamilyCenterModalDataTooltip ===
+// === Module 14699: FamilyCenterModalDataTooltip ===
 
-// Module 14695 (FamilyCenterModalDataTooltip)
+// Module 14699 (FamilyCenterModalDataTooltip)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let obj = { [USER_INTERACTION]: fn(5855).ChatIcon, [USER_CALLED]: fn(11532).PhoneIcon, [USER_ADD]: fn(4831).FriendsIcon, [GUILD_ADD]: fn(13392).ServerGridIcon, [GUILD_INTERACTION]: fn(5857).ThreadIcon, [PURCHASES]: fn(8127).CreditCardIcon, [TOTAL_VOICE_MINUTES]: fn(4849).ClockIcon, [GIFTS]: fn(10766).GiftIcon };
+let obj = { [USER_INTERACTION]: fn(5855).ChatIcon, [USER_CALLED]: fn(11532).PhoneIcon, [USER_ADD]: fn(4831).FriendsIcon, [GUILD_ADD]: fn(13394).ServerGridIcon, [GUILD_INTERACTION]: fn(5857).ThreadIcon, [PURCHASES]: fn(8127).CreditCardIcon, [TOTAL_VOICE_MINUTES]: fn(4849).ClockIcon, [GIFTS]: fn(10766).GiftIcon };
 ({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } = fn(7049).TeenActionDisplayType);
 let createStyles = fn(4890);
 let obj3 = { row: { display: "flex", flexDirection: "row", width: "100%", alignItems: "center", marginBottom: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm }, content: { flexShrink: 1 }, iconContainer: null, header: null, icon: null };
@@ -231,7 +231,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           [tmp2, obj] = tmp;
           obj1 = { IconComponent: closure_8[tmp2], header: obj.tooltipHeader(), description: null };
           tmp3 = jsx;
-          tmp4 = f68273;
+          tmp4 = f68323;
           tmp5 = closure_0;
           obj1.description = obj.tooltipDescription(tmp5);
           return tmp3(tmp4, obj1, tmp2);
@@ -246,7 +246,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           [tmp2, obj] = tmp;
           obj1 = { IconComponent: closure_8[tmp2], header: obj.tooltipHeader(), description: null };
           tmp3 = jsx;
-          tmp4 = f68273;
+          tmp4 = f68323;
           tmp5 = closure_0;
           obj1.description = obj.tooltipDescription(tmp5);
           return tmp3(tmp4, obj1, tmp2);
